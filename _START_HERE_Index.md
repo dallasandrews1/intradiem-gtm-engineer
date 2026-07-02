@@ -82,4 +82,4 @@ The four preflight blockers, all people-gated, all expected until Jul 6 access; 
 3. `deliverability_green`: domain warmup to green before any volume (sending-domain access).
 4. `security_audit_current`: first permission audit + log sanitization + least-privilege review, run by the owner on Day 1 with company access.
 
-Residual, filenames only: earlier git commits of .gitignore and AUDIT_FINDINGS.md name the relocated personal files (contents were never committed). Rewrite history before the Bitbucket import if even the names should not travel; otherwise import as-is.
+Residual: CLOSED. Personal filenames were scrubbed from all git history on Jul 1 2026 (owner-approved rewrite; see AUDIT_FINDINGS.md addendum). History is clean for the Bitbucket import.
