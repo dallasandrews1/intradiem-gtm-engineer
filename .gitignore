@@ -1,0 +1,47 @@
+# OS and editor junk
+.DS_Store
+.~lock.*#
+*.tmp
+_wtest.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Secrets and local env (none committed today; keep it that way)
+.env
+.env.*
+*.pem
+*.key
+
+# Logs and transient runtime state
+logs/
+*.log
+gtm-hosted-platform/brain/logs/
+intradiem-signal-engine/data/suppression_state.json
+intradiem-signal-engine/data/notified_state.json
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Packaged deliverable bundles (regenerable; keep the sources, not the zips)
+*.zip
+
+# Personal / interview-era files. PENDING OWNER DECISION before the Bitbucket
+# move: these are Dallas's private documents and should not enter the employer
+# repo. Remove from this list only deliberately.
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
+[redacted-personal-file]
