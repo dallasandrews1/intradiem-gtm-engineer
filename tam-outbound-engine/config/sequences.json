@@ -1,0 +1,9 @@
+{
+  "_comment": "A 4-touch cadence. The angle shifts touch to touch so the sequence does not repeat: open on the trigger and offer a one-page read (no meeting), connect on LinkedIn, switch to a spoken voicemail, then land the number and ask for the meeting.",
+  "cadence": [
+    { "day": 1, "channel": "Email", "subject": "{subj}", "blocks": ["hook", "insight", "proof", "cta1"] },
+    { "day": 2, "channel": "LinkedIn", "subject": "", "blocks": ["li"] },
+    { "day": 4, "channel": "Call", "subject": "", "blocks": ["call"] },
+    { "day": 7, "channel": "Email", "subject": "Re: {subj}", "blocks": ["bump", "cta2"] }
+  ]
+}

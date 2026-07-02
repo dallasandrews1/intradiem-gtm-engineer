@@ -1,0 +1,5 @@
+{
+  "_comment": "Provenance marker for the TAM strike list. Flip data_source to 'live' only when the account/trigger data is a real Intradiem TAM or CRM export.",
+  "data_source": "mock",
+  "data_source_note": "mock = seeded demo fixtures; treat fit scores, ROI figures, fresh-trigger flags, and seller assignments as illustrative, not real."
+}

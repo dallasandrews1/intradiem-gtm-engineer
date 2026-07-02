@@ -1,0 +1,58 @@
+{
+  "_comment": "Buying committee + message blocks. Vars: {company} {agent_count} {industry_lower} {roi_annual} {roi_per_agent} {trigger_detail} {stakes} {idle_benchmark} {insight_tail} {peer_outcome} {acd} {wfm} {first_name} {seller_first}. Every day-1 email carries four beats: the trigger, the stakes (why now / cost of waiting), a teaching insight with a number that challenges their assumption, and a peer outcome that mirrors them. First touch offers a one-page read (no meeting); the meeting ask is a specific diagnostic in the final touch. Benchmark and peer numbers come from proof.json and must be verified before sending.",
+  "personas": [
+    {
+      "id": "cc_ops",
+      "role": "VP / Director, Contact Center Operations",
+      "subj": "the idle time headcount won't fix",
+      "hook": "Saw that {trigger_detail}. {stakes}",
+      "insight": "Most ops leaders peg idle time near 5%. On floors your size it's usually three times that, {insight_tail}. On ~{agent_count} agents that's about {roi_annual} a year, roughly {roi_per_agent} per agent, sitting on your floor right now.",
+      "proof": "{peer_outcome}.",
+      "cta1": "Want the one-page read on where that idle time is hiding at {company}? No meeting needed to start.",
+      "li": "{first_name}, saw that {trigger_detail}. Most ops leaders peg idle time near 5%; on floors your size it's usually three times that, and it's recoverable without adding heads. Worth a quick connect?",
+      "call": "Hi {first_name}, it's {seller_first} with Intradiem. Reason for the call: {trigger_detail}, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~{agent_count} agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks {first_name}.",
+      "bump": "Last one from me. On ~{agent_count} agents it's about {roi_per_agent} per agent a year, call it {roi_annual}. {peer_outcome}. I'd rather show you the assumptions than have you take it on faith.",
+      "cta2": "Or give me 15 minutes and I'll walk your floor's actual number and where it's hiding, Thursday or Friday?"
+    },
+    {
+      "id": "wfm",
+      "role": "Manager / Director, Workforce Management",
+      "subj": "intraday, on top of {wfm}",
+      "hook": "Saw that {trigger_detail}. {stakes}",
+      "insight": "The intraday exception work, the real-time reallocations and call-outs your team chases by hand, is the one job that doesn't get easier with more analysts. We automate it on top of {wfm}, so it stops landing on your team's queue.",
+      "proof": "{peer_outcome}.",
+      "cta1": "Want a quick side-by-side of how your team handles intraday today versus automated? Happy to send it.",
+      "li": "{first_name}, saw that {trigger_detail}. The intraday exception work is the part that doesn't scale with more analysts; we automate it on top of {wfm}. Worth connecting?",
+      "call": "Hi {first_name}, it's {seller_first} with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of {wfm}. Given {trigger_detail}, I thought it was worth a look. I'm at [your number].",
+      "bump": "Last note. If your team spends real hours on intraday adjustments, that's the time we hand back, on top of {wfm}, with no rip and replace. {peer_outcome}.",
+      "cta2": "Got 15 minutes this week to see it run on a {wfm} setup?"
+    },
+    {
+      "id": "cx",
+      "role": "VP, Customer Experience",
+      "subj": "CSAT through the ramp",
+      "hook": "Saw that {trigger_detail}. {stakes}",
+      "insight": "Here's what bites later: new-agent classes carry the most idle time and the least coaching right when volume peaks, so CSAT dips and early attrition climbs exactly when you can least afford it. We deliver coaching inside idle seconds, so quality holds through the ramp without adding to the schedule.",
+      "proof": "{peer_outcome}.",
+      "cta1": "Want a short write-up on holding CSAT through a ramp like this? No meeting needed.",
+      "li": "{first_name}, saw that {trigger_detail}. New classes are when CSAT and attrition are most at risk; we coach agents inside the shift so quality holds. Worth connecting?",
+      "call": "Hi {first_name}, it's {seller_first} with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+      "bump": "Last note. Coaching that happens inside the shift means quality climbs through a ramp instead of dipping. {peer_outcome}.",
+      "cta2": "Or 15 minutes on what this does for CSAT and early attrition, Thursday or Friday?"
+    },
+    {
+      "id": "finance",
+      "role": "CFO / VP Finance or Operations (cost owner)",
+      "subj": "the seven-figure line on your floor",
+      "hook": "Saw that {trigger_detail}. {stakes}",
+      "insight": "In a contact center your size, {idle_benchmark}, {insight_tail}. On ~{agent_count} agents, recovering about 3 minutes per agent-hour is roughly {roi_per_agent} per agent a year, around {roi_annual} across the floor. Simple assumptions, easy to pressure-test.",
+      "proof": "{peer_outcome}.",
+      "cta1": "Want the one-page version of that math for {company}, with the assumptions laid out? No meeting needed.",
+      "li": "{first_name}, on a floor the size of {company}'s, the recoverable idle labor is usually a seven-figure line nobody is tracking. Given {trigger_detail}, worth a quick connect?",
+      "call": "Hi {first_name}, it's {seller_first} with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given {trigger_detail}, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+      "bump": "Following up with the figure: about {roi_annual} a year, or {roi_per_agent} per agent, with no new heads. {peer_outcome}. Glad to walk the assumptions.",
+      "cta2": "Or 15 minutes to pressure-test the number against your floor, Thursday or Friday?"
+    }
+  ],
+  "core_committee": ["cc_ops", "finance"]
+}

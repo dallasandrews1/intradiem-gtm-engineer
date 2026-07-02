@@ -1,0 +1,13 @@
+{
+  "_comment": "The teaching benchmark and peer outcomes that earn the meeting. THESE ARE PLACEHOLDERS. Replace every number and claim here with verified Intradiem proof points before anything sends. Never send an unverified stat or customer claim. Use categories, never a real customer's name, unless you have explicit reference approval.",
+  "idle_benchmark": "12 to 18% of paid agent time is idle",
+  "insight_tail": "and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching",
+  "peer_outcome_by_industry": {
+    "Health Insurance": "A Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity in two quarters, with no new hires",
+    "Financial Services": "A lender your size deferred a full planned hiring class after recovering idle agent time",
+    "Banking": "A bank your size pulled back a seven-figure idle-labor line in under two quarters",
+    "Insurance": "A national carrier your size held CSAT steady through a ramp while cutting idle time",
+    "Healthcare Services": "A healthcare services team your size recovered meaningful capacity without adding heads",
+    "Other": "A team your size recovered idle capacity without adding heads"
+  }
+}

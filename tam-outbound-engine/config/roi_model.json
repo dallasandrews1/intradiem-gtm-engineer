@@ -1,0 +1,6 @@
+{
+  "_comment": "Per-account recoverable labor cost. annual = agents * (idle_minutes_per_agent_hour / 60) * productive_hours_per_year * loaded_hourly_cost. Conservative defaults; tune with real numbers.",
+  "idle_minutes_per_agent_hour": 3,
+  "productive_hours_per_year": 1700,
+  "loaded_hourly_cost": 28
+}
