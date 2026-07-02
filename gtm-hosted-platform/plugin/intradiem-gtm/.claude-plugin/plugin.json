@@ -1,0 +1,13 @@
+{
+  "name": "intradiem-gtm",
+  "version": "1.1.0",
+  "description": "Ask in plain language for net-new strike plans and install-base expansion signals. Connects to the central Intradiem GTM brain over the network. No local install. The engine, data, and Clay stay server-side with the GTM owner.",
+  "author": { "name": "Dallas Andrews" },
+  "mcpServers": {
+    "intradiem-gtm": {
+      "type": "http",
+      "url": "https://intradiem-gtm-system.onrender.com/mcp",
+      "headers": { "X-API-Key": "SET_THE_CLAUDE_KEY_HERE" }
+    }
+  }
+}
