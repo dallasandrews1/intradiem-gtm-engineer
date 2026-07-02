@@ -1,25 +1,85 @@
-# Intradiem GTM Engineer — Start Here
+# Intradiem GTM Engineer, Portfolio Index
 
-*Status: HIRED. Offer accepted Jun 15, 2026. Start date: Jul 6, 2026. GTM Engineer, reporting to Naveen Thilagan.*
-*This folder is now the Day-1 operating kit, not interview prep. Interview-era docs are still here but superseded — see bottom.*
+This workspace is the Day-1 operating kit for the GTM Engineer role (start Jul 6 2026, reporting to Naveen Thilagan): three Python engines, a cohesion layer, a hosted platform, skills, and the canonical Star Ratings data.
+Health check, one command: `python3 gtm-cohesion-layer/conductor.py --preflight` (currently NOT READY on the four expected people-gated blockers; anything else red is a regression).
+Day-1 build sequence lives in `Clay_Day1_Build_Order.md`. Audit history lives in `AUDIT_FINDINGS.md`.
+Canonical universe file: `StarRatings_Universe_2026_TimePhased.csv` (307 contracts, locked read-only).
+Git: repository on `main`, tests green (tam 21/21, signal 14/14), nothing pushed.
 
-## Read in this order on Day 1
+## Master table
 
-1. **`Q3_Bulletproof_Operating_Plan.md`** — the plan. What you're measured on (4 directives), what "great" looks like (Section 05 Golden List), the 8-week pilot spine, premortem fixes, weekly cadence. Posture: partnership with Naveen, numbers are a "rough sketch" to co-shape.
+| Asset | Type | What it does | Fed by | Feeds | Status |
+|---|---|---|---|---|---|
+| `intradiem-signal-engine/signal_processor.py` | engine | Computes 6 expansion/risk signals per install-base account and routes AE/CSM/HOLD | `data/accounts.csv`, `config/thresholds.json` | `data/signals.json`, MCP server, notifier, impact engine, hosted brain | live on sample data; wires on reporting-export access (real accounts.csv) |
+| `intradiem-signal-engine/intradiem_mcp_server.py` | engine | MCP wrapper: query signals inside Claude (get_expansion_signals, score_all, etc.) | same engine + data as signal_processor | Claude Desktop / Cowork | live on sample data |
+| `intradiem-signal-engine/notifier.py` | engine | Routes each firing signal to its AE/CSM owner via Slack or email | signal results + `data/owners.csv` | Slack DMs / email (dry-run by default) | seeded, wires on SLACK_BOT_TOKEN plus real owners.csv (Salesforce owner export) |
+| `intradiem-signal-engine/build_dashboard.py` | engine | Injects signals.json into a deployed dashboard page | `data/signals.json` | FLAG: injects `~/Desktop/outputs/intradiem-deploy/index.html`, OUTSIDE this workspace. The in-tree `GTM Engine - deploy/` page is a static showcase with no injection marker; do not expect it to refresh | live; target path is workspace-external |
+| `intradiem-signal-engine/run_daily.sh` + `com.intradiem.signals.daily.plist` | config | Daily 7am loop: score signals, refresh Desktop dashboard, TAM plays, impact, dry-run digests | all three engines | `logs/` digests, Desktop deploy copies | live (launchd), dry-run by design; also hardcodes `~/.venvs/intradiem/bin/python` |
+| `intradiem-signal-engine/test_signal_processor.py` | config | Regression suite for signal routing | engine + sample data | pass/fail | live, 14/14 |
+| `intradiem-signal-engine/data/` (accounts.csv, owners.csv, signals.json) + `config/thresholds.json` | config | Swap-in data layer and threshold governance; signals.json is generated output | accounts/owners: hand-built samples; signals.json: the engine | engine, MCP, notifier, dashboard | seeded, wires on reporting-export + Salesforce owner access |
+| `tam-outbound-engine/account_engine.py` | engine | Scores net-new accounts (fit 0-100 + trigger recency), builds full strike plans with committee, ROI, 4-touch sequences | `data/tam_accounts.csv`, `data/triggers.csv`, `data/sellers.csv`, all `config/*.json` | `account_plays.json`, `data/tam_plays.json`(+.min), MCP, notifier, impact, brain | live on sample data; wires on Apollo/Clay enrichment access (real CSVs) |
+| `tam-outbound-engine/tam_mcp_server.py` | engine | MCP wrapper: list_strike_accounts, get_strike_plan, accounts_for_seller | account_engine + its data | Claude Desktop / Cowork | live on sample data |
+| `tam-outbound-engine/tam_notifier.py` | engine | Each seller's morning ranked strike list | account_engine + `data/sellers.csv` | Slack/print (dry-run default) | seeded, wires on SLACK_BOT_TOKEN |
+| `tam-outbound-engine/test_account_engine.py` | config | Regression suite incl. trigger and copy checks | engine + sample data | pass/fail | live, 21/21 |
+| `tam-outbound-engine/config/` (icp_weights, triggers, personas, sequences, roi_model, proof, meta) | config | The tunable layer: fit weights, trigger taxonomy (the moat), personas, cadence, ROI math, proof lines | hand-tuned; triggers.json updated post-audit (call-center wording removed) | account_engine | live; proof.json and roi_model.json are self-labeled placeholders, verify before any send |
+| `tam-outbound-engine/data/` (tam_accounts, triggers, sellers CSVs; tam_plays.json generated; tam_seed.json) | config | Swap-in data layer | samples; tam_plays: the engine | engine and downstream | seeded, wires on enrichment access. FLAG: `tam_seed.json` has no live consumer anywhere in the tree (the dashboard seed is inlined in the page); reference only |
+| `tam-outbound-engine/AmeriHealth_Strike_Plan_example.md` | doc | Worked example of one full strike plan | account_engine output | reader | live (sample figures, placeholder ROI) |
+| `impact/impact_engine.py` | engine | One ELT scorecard: opportunity surfaced vs realized, never blended | `../intradiem-signal-engine/data/signals.json`, `../tam-outbound-engine/data/tam_plays.json` + `config/roi_model.json`, `impact/outcomes.csv` | `impact.json`, conductor stage 7, brain, Desktop dashboard Impact tab | live on seeded inputs; realized side wires as outcomes.csv gets real rows |
+| `impact/outcomes.csv` + `impact/impact.json` | config | Realized results ledger (append-only) and generated scorecard | outcomes: you; impact.json: the engine | impact_engine, dashboards | seeded, wires on real meetings/pipeline |
+| `gtm-cohesion-layer/conductor.py` | engine | Weekly 7-stage orchestrator, fail-closed, human gate, deliverability gate, critic, preflight | `engine_state.json`, `GTM_Engine_Build_Spec.md` (hashed reread), the three engines read-only | writes `engine_state.json` | seeded (DRY_RUN=True); wires on Jul 6 via TODO(live) hooks to Clay, sender, Salesforce; preflight NOT READY on the four people-gated blockers |
+| `gtm-cohesion-layer/engine_state.json` | canonical file | Single source of truth every dashboard reads; conductor writes it | conductor runs; owner edits for ratification flags | all five cohesion dashboards | seeded, wires on access (attribution flags, baseline, deliverability, security block); star_ratings counts updated post-audit (98 Tier A+B / 307 universe) |
+| `gtm-cohesion-layer/` dashboards (control_tower, attribution_dashboard, approval_queue, deliverability_monitor, variant_tracker .html) | live artifact | The visible engine: headline numbers, funnel + credit line, human approve/reject, domain health, variant winners | `fetch('engine_state.json')` relative path; placeholder banner on failure | you and Naveen (demo + operation) | live front-ends on seeded state |
+| `gtm-cohesion-layer/Clay_Build_Pack.md` | doc | Click-by-click Clay table build (column-level UI mechanics) | hand-built pre-access | Day-1 Clay build, via Build Order | live as reference; Build Order deltas override its stale assumptions |
+| `gtm-cohesion-layer/Attribution_Loop_Spec.md` | doc | Reply-sync agent spec: reply, classify, funnel, source-scoped | hand-built | Jul 6 wiring of stage 7 | awaiting access (Salesforce + sequencer webhook) |
+| `gtm-cohesion-layer/Weekly_Conductor_Runbook.md` + `_README_Cohesion_Layer.md` | doc | The 7-stage motion, gates, live-wire checklist, go-live gate | hand-built | operator (you) | live as runbook |
+| `gtm-hosted-platform/brain/app.py` (+ Dockerfile, requirements) | engine | FastAPI brain: /v1/strike, /v1/signals, /v1/impact behind X-API-Key, request log | imports account_engine, signal_processor, impact_engine directly | Slack app, Claude plugin, `logs/requests.jsonl` (audit + adoption metric) | awaiting access: hosting deploy + GTM_API_KEYS (plugin.json expects intradiem-gtm-system.onrender.com) |
+| `gtm-hosted-platform/slack/slack_app.py` | engine | Socket Mode `/strikeplan` command for sellers | brain URL + BRAIN_API_KEY | seller DMs | awaiting access: Slack app creation, bot + app tokens |
+| `gtm-hosted-platform/plugin/intradiem-gtm/` (plugin.json, gtm_client.py, strike-plans SKILL, RULES_OF_THE_ROAD) | skill | Install-free seller surface: plain-language strike plans via the brain | brain MCP endpoint (key is a placeholder) | sellers' Claude | awaiting access: brain deployed + claude key set |
+| `intradiem-signal-to-play/SKILL.md` | skill | One account signal to three synchronized outputs (Marketing brief, Sales alert, outreach draft) | intradiem-signals + intradiem-tam MCPs when live-pulling | coordinated GTM action | live (loads in Claude; MCP pulls need servers configured) |
+| `intradiem-competitive-intel/SKILL.md` | skill | Competitor mention to wedge brief (Verint, NICE, Calabrio, in-house, status quo) | call/email/RFP input | Sales counter-narrative | live |
+| `intradiem-content-engine/SKILL.md` | skill | One source asset to full multi-channel content set | source asset + intradiem-verified-metrics (external skill) for every claim | Marketing | live |
+| `intradiem-roi-business-case/SKILL.md` | skill | Economic-buyer 1-page business case from call transcripts | transcript metrics | CFO/COO case | live |
+| `StarRatings_Universe_2026_TimePhased.csv` | canonical file | The 307-contract sub-4.0 universe with time-phased addressability (17 cols incl. addr_2028_musd, wavg_2026) | CMS 2026 Stars data via Fable_Prompt_Universe_Rebuild + QBP rerun | Tiered csv, Clay CMS import, MessageGen lookups | live canonical (locked read-only; duplicate-column defect fixed in audit) |
+| `StarRatings_Targets_2026_Tiered.csv` | canonical file | Tiering on addr_2028: A=34, A+B=98 contracts, 32 parents, $2,511M | TimePhased csv | Clay Accounts table, RunConfig, first-week target order | live canonical |
+| `StarRatings_PersonaPull_RunConfig_TierAB.csv` | canonical file | Per-parent persona-pull run parameters (caps, segments, 32 parents) | Tiered csv | Day-1 persona pull into Clay Contacts | live canonical |
+| `StarRatings_PersonaPull_Runbook.md` | doc | Filters, dedup vs the 157, caps, persona_key rules, Molina step-0 product-line check | Targeting flags + RunConfig | Day-1 contact sourcing | live runbook, executes on Clay access |
+| `StarRatings_Earnings_Signals_2026.csv` | canonical file | Verified earnings/press quotes + angle lines per parent (batch 2 complete) | earnings/filings sweep | Clay why_now, qbp_earnings_pressure and quality_identity_gap fits | live canonical (UHC line time-stamped in audit) |
+| `StarRatings_Targeting_Flags_2026.md` | doc | Suppression/routing rules: Molina MAPD, Cigna-to-HCSC, UHC proof line, exits | verified sweeps | Clay motion_exclude, persona-pull step 0, messaging rules | live (engine-wiring claim corrected in audit; rule lives in Clay) |
+| `Clay_Day1_Build_Order.md` | doc | THE Day-1 sequence: which file seeds which table, deltas overriding the Build Pack, gates | all canonical files + Build Pack | the Jul 6 build | live, executes on Clay + Salesforce access |
+| `Clay_MessageGen_SystemPrompt_v2.md` | canonical file | v2.1 system prompt for the Clay Message Gen AI column (window beat, payment-year clause, time-stamped UHC line) | verified-claims rules + TimePhased columns | Clay L4 Message Gen table | live canonical |
+| `Clay_Engine_Full_Architecture.md` | doc | End-to-end Clay engine architecture narrative | design work | reader context | live reference |
+| `StarRatings_Universe_2026_Canonical.csv` | canonical file | Predecessor universe, no time-phased columns | CMS data (earlier pass) | nothing (superseded by TimePhased; only reference is the supersession note) | archived in place (locked) |
+| `StarRatings_Accounts_2026_Rollup.csv`, `StarRatings_BuyingCommittee_Clay_Import.csv`, `StarRatings_BuyingCommittee_Top5.csv`, `StarRatings_CliffEdge_Target_List.xlsx` | canonical file | Pre-TimePhased era rollups, committee pulls, cliff-edge list | earlier universe passes | referenced only by the historical context-bridge prompt | archived in place (reference; superseded by the canonical set above) |
+| `StarRatings_CSuite_OnePager.html` | live artifact | C-suite one-page Star Ratings thesis (also shipped in intradiem-handoff/) | canonical Star Ratings data (baked) | exec conversations | live |
+| `Day1_Audit_Console_LIVE.html` | live artifact | Salesforce/Slack foundation-audit console; sample data behind a MODE flag | CONFIG.tools connectors when MODE='live' | Day-1 org audit | seeded, wires on Salesforce + Slack connector access |
+| `GTM Engine - deploy/` + `Star Ratings Play - deploy/` | live artifact | Self-contained static showcase pages with host-anywhere READMEs | baked content (no fetch, no injection) | shareable links (Netlify/Vercel/Pages) | live static; NOT refreshed by run_daily.sh (that feeds the Desktop copy) |
+| `GTM_Engine_for_Naveen_Review.html` | live artifact | Single-file engine walkthrough built for Naveen's review | baked content | Naveen | live static |
+| `GTM_Engineer_Operating_System` (.md canonical; .html/.pdf/.docx exports) + `GTM_Engineer_Operating_System_Intradiem` (.html/.pdf) | doc | The operating-system narrative: how all the tools compose into one motion | hand-built | onboarding + exec framing | live reference |
+| `Q3_Bulletproof_Operating_Plan.md` | doc | The plan: 4 directives, Golden List, 8-week pilot spine, premortems, cadence | strategy work | what you are measured on | live, the operating plan |
+| `Grand_Strategy_6_12_Month.md` + `Production_Rollout_Plan.md` + `Arsenal_and_Rollout_Playbook.md` | doc | 6-12 month strategy, production rollout, tool-by-tool arsenal | strategy work | roadmap | live reference |
+| `Day_One_Checklist.md` + `day1-prerequisites-sf-slack-setup.md` + `First_Two_Weeks_Meeting_Plan.md` | doc | Access order, SF/Slack prerequisites, meeting plan | planning | Jul 6 execution | live, executes on start |
+| `Naveen_FirstOneOnOne_Agenda.md`, `Naveen_Send_Note.md`, `Naveen_Reply_and_Leave_Behind.md`, `Naveen_Walkthrough_Talk_Track.md` | doc | Naveen-facing collateral: agenda, send notes, talk track | strategy + engine outputs | manager relationship | live |
+| `GTM_Engine_Build_Spec.md` | doc | The standing spec the conductor rereads and hashes every run (north_star anti-drift) | design decisions | conductor stage 0 | live, load-bearing (do not move or rename without updating conductor) |
+| `Message_Variant_Starter_Pack.md` + `Nathan_Pilot_One_Pager.md` + `Devoted_WholeParent_StrikePlan.md` | doc | Variant seeds, AE pilot one-pager, whole-parent strike plan example | canonical data + verified claims | first sends, pilot, Devoted play | live (Devoted UHC line time-stamped in audit) |
+| `VERIFICATION_AUDIT.md` | doc | Standing audit of every stat/claim vs the Value Repository | intradiem-verified-metrics skill (external) | verified-claims discipline everywhere | live, reread before touching outbound copy |
+| `AUDIT_FINDINGS.md` | doc | This audit: findings, fixes, resolutions, relocation addendum | the 10-step pre-Bitbucket audit | audit history | live record |
+| `CLAUDE.md` | doc | Guidance for future Claude Code instances in this repo | repo scan | Claude Code sessions | live |
+| `intradiem-brand-kit.md` | doc | Intradiem palette/type system (#FE5000 orange, ink, paper); two-mode rule vs personal brand | Intradiem site theme | every Intradiem-context deliverable | live |
+| `Fable_Prompt_Universe_Rebuild.md`, `Fable_Prompt_QBP_Rerun.md`, `Fable_Prompts_Portable_Deliverables.md`, `Fable_Context_Bridge_Prompt.md` | doc | Portable prompts to rebuild the universe, rerun QBP math, regenerate deliverables, bridge context | canonical column definitions | reproducibility of the data layer | live reference |
+| `ClaudeDesign_Intradiem_Reskin_Prompt.md` + `GTM_Engineer_ClaudeDesign_BuildPrompt.md` | doc | Design prompts for on-brand page builds | brand kit | page generation | live reference |
+| `claude-design-handoff/` (7 files) | doc | Packaged design handoff: build prompt, content, brand, verified metrics, IA reference | brand kit + verified metrics | external design build | live package |
+| `intradiem-handoff/` (prompt, send note, one-pager, 2 static pages) | live artifact | Shareable handoff bundle for Naveen review | engine + canonical outputs | Naveen | live package |
+| `Dallas_Andrews_30-60-90` (6 files: Intradiem/OnBrand/OnePager, docx+pdf) | doc | The 30-60-90 plan in three treatments | plan content + brand kit | onboarding conversations | live reference (pre-start drafts; Q3 plan supersedes for operation) |
+| `SALESFORCE_FOUNDATIONAL_TEMPLATE.pdf` | doc | Salesforce foundational reference | external template | Day-1 SF audit | live reference |
+| `Bitbucket_Access_Request.md`, `momentum-architecture-and-diy-guide.md`, `call-recording-slack-bridge-pattern.md`, `handoff-addendum-public-portfolio.md`, `intradiem-context-handoff.md` | doc | Access request draft, architecture guides, portfolio addendum, session context bridge | working notes | reference | live reference |
+| `_archive/` (superseded seeds incl. the two audit-archived Clay CSVs, old dashboards, mockups, early node build) | archived | Historical artifacts kept for reference | n/a | nothing current | archived, one collapsed unit |
+| Gitignored working files (3 root .zip bundles, `_wtest.txt`, `.DS_Store`, office lock file) | archived | Packaged bundles and scratch; excluded from git | n/a | nothing | ignored, not in repo |
 
-2. **`gtm-cohesion-layer/_README_Cohesion_Layer.md`** — the engine. The connective tissue tying every tool into one motion. Open `control_tower.html` to see/demo it. The **Live-wire checklist** + **preflight go-live gate** are your literal Jul-6 to-do list.
+## Open items
+The four preflight blockers, all people-gated, all expected until Jul 6 access; clearing them IS the go-live checklist:
+1. `attribution_ratified`: ratify the credit line in writing with Naveen + 3 Salesforce fields live (Salesforce access).
+2. `baseline_set`: numeric 1x baseline and 10x target in engine_state.json (agreed with Naveen, week 1).
+3. `deliverability_green`: domain warmup to green before any volume (sending-domain access).
+4. `security_audit_current`: first permission audit + log sanitization + least-privilege review, run by the owner on Day 1 with company access.
 
-3. **`Day_One_Checklist.md`** + **`day1-prerequisites-sf-slack-setup.md`** — access, data swaps, and the order to turn things on. Validate before automating.
-
-4. **`Clay_Build_Pack.md`** (in `gtm-cohesion-layer/`) — click-by-click Clay rebuild in ~2 hrs once you have a workspace. Design in the free trial, template into Intradiem.
-
-## Running on autopilot until Day 1
-- **Live front door:** the `command-center` artifact (canonical). Also live: golden-list, control-plane, roi-calculator, dallas-mission-control.
-- **Scheduled:** `daily-signal-scan` (weekday 7am briefing) + `weekly-gtm-conductor` (Mon 8am preflight + conductor + Command Center refresh). Both dry-run/seeded until Jul 6.
-- **Expected preflight verdict pre-access:** NOT READY, four blockers — attribution_ratified, baseline_set, deliverability_green, security_audit_current. Those four ARE the go-live checklist. Any other blocker = regression.
-
-## The Day-1 do-nothing-else move
-Ratify attribution in writing with Naveen (credit at the qualified-reply/meeting-sourced line + 3 Salesforce fields + 1× baseline) and stand up contact-level source tagging before any volume scales. Collaborative framing, not defensive.
-
-## Superseded (interview-era)
-All interview, panel, salary, and resume files moved OUT of this workspace to `~/Documents/job-search-archive/` on Jul 1 2026 ahead of the Bitbucket import. The 30-60-90 drafts remain here for reference. The offer is signed; those docs did their job.
+Residual, filenames only: earlier git commits of .gitignore and AUDIT_FINDINGS.md name the relocated personal files (contents were never committed). Rewrite history before the Bitbucket import if even the names should not travel; otherwise import as-is.
