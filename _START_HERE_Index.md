@@ -21,5 +21,5 @@
 ## The Day-1 do-nothing-else move
 Ratify attribution in writing with Naveen (credit at the qualified-reply/meeting-sourced line + 3 Salesforce fields + 1× baseline) and stand up contact-level source tagging before any volume scales. Collaborative framing, not defensive.
 
-## Superseded (interview-era — keep for reference, don't operate from)
-`[redacted-personal-file]`, `[redacted-personal-file]`, `[redacted-personal-file]`, `[redacted-personal-file]`, `[redacted-personal-file]`, and the 30-60-90 drafts. The offer is signed; these did their job.
+## Superseded (interview-era)
+All interview, panel, salary, and resume files moved OUT of this workspace to `~/Documents/job-search-archive/` on Jul 1 2026 ahead of the Bitbucket import. The 30-60-90 drafts remain here for reference. The offer is signed; those docs did their job.

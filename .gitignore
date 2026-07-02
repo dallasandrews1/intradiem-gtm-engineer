@@ -30,20 +30,10 @@ intradiem-signal-engine/data/notified_state.json
 # Packaged deliverable bundles (regenerable; keep the sources, not the zips)
 *.zip
 
-# Personal / interview-era files. PENDING OWNER DECISION before the Bitbucket
-# move: these are Dallas's private documents and should not enter the employer
-# repo. Remove from this list only deliberately.
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
-[redacted-personal-file]
+# Personal-file guard. Job-search era docs were moved out of this workspace
+# (2026-07-01); these patterns keep any future strays out of the repo.
+*[Rr]esume*
+*nterview*
+*[Ss]alary*
+*egotiation*
 _archive/zi7Zjxcl
-[redacted-personal-file]
