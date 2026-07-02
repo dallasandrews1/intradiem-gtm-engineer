@@ -1,0 +1,308 @@
+contract_id,parent_org,marketing_name,members,overall_star_2026,cs_star,clin_star,gross_forgone_qbp_musd,addressable_forgone_qbp_musd,addressable_pct,confidence,primary_sources,addr_2028_musd,addr_2029plus_musd,pct_2028,pct_2029plus,wavg_2026
+H5216,Humana Inc.,Humana,2405635,3.5,3.7,3.2,1172.7,340.2,0.29,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,456.7,521.2,0.39,0.44,3.42
+H5619,Humana Inc.,Humana,487278,3,3.1,3.1,500.7,244.5,0.49,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,277.0,307.2,0.55,0.61,3.15
+H0028,Humana Inc.,Humana,332419,3.5,3.4,3.6,162.1,91.5,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,105.2,117.6,0.65,0.73,3.43
+H3805,"UnitedHealth Group, Inc.",UnitedHealthcare,285454,3.5,3.4,3.5,139.2,74.2,0.53,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,88.7,117.1,0.64,0.84,3.49
+H6622,Humana Inc.,Humana,339824,3.5,3.5,3.4,165.7,72.9,0.44,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,86.9,86.5,0.52,0.52,3.54
+H8768,"UnitedHealth Group, Inc.",UnitedHealthcare,306218,3.5,3.3,3.3,149.3,71.2,0.48,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,83.2,103.6,0.56,0.69,3.51
+H3312,CVS Health Corporation,Aetna Medicare,103808,3,3.0,3.2,106.7,59.6,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,64.7,74.9,0.61,0.70,3.04
+H5141,"Clover Health Holdings, Inc.",Clover Health,153117,3.5,3.1,3.5,74.6,49.1,0.66,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,47.2,52.2,0.63,0.70,3.42
+H5970,Humana Inc.,Humana,88806,3,3.1,3.1,91.2,45.7,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,52.8,64.2,0.58,0.70,3.13
+H3931,CVS Health Corporation,Aetna Medicare,71661,3,3.0,3.2,73.6,40.6,0.55,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,44.0,47.9,0.60,0.65,2.90
+H1468,Humana Inc.,Humana,136925,3.5,3.5,3.6,66.8,34.7,0.52,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,39.3,45.4,0.59,0.68,3.43
+H3447,"Elevance Health, Inc.",Anthem HealthKeepers,155204,3.5,3.3,3.1,75.7,32.1,0.42,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,37.5,44.9,0.50,0.59,3.33
+H3817,"Cambia Health Solutions, Inc.",Regence BlueCross BlueShield of Oregon,51411,3,3.2,3.5,52.8,31.5,0.60,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,35.2,42.9,0.67,0.81,3.32
+H2775,Centene Corporation,Wellcare,60651,3,2.8,2.7,62.3,30.1,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,33.7,37.5,0.54,0.60,2.92
+H4161,"Elevance Health, Inc.",Anthem Blue Cross Partnership Plan,52014,3,2.8,3.0,53.4,29.2,0.55,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,32.5,38.1,0.61,0.71,2.85
+H5599,Centene Corporation,Wellcare By Fidelis Care,69023,3,3.0,2.5,70.9,28.5,0.40,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,33.2,40.3,0.47,0.57,2.77
+H0544,"Elevance Health, Inc.",Anthem Blue Cross,49674,3,2.9,3.0,51.0,26.8,0.52,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,30.4,37.3,0.60,0.73,3.25
+H1278,"UnitedHealth Group, Inc.",UnitedHealthcare,137055,3.5,3.6,3.4,66.8,26.7,0.40,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,34.5,42.1,0.52,0.63,3.54
+H5549,Visiting Nurse Service of New York,VNS Health Medicare,67361,3.5,3.0,3.7,32.8,26.1,0.80,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,26.9,28.2,0.82,0.86,3.27
+H5496,Imperial Health Plan of California,"Imperial Health Plan of California, Inc.",52035,3.5,2.8,4.2,25.4,25.4,1.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,25.4,25.4,1.00,1.00,3.61
+H7301,CVS Health Corporation,Aetna Medicare,97761,3.5,3.5,3.6,47.7,25.4,0.53,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,28.9,34.5,0.61,0.72,3.44
+H4868,Centene Corporation,Wellcare,41683,3,2.9,3.0,42.8,22.8,0.53,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,25.5,30.6,0.60,0.71,3.01
+H4624,"Zing Health Consolidator, Inc",Zing Health,36021,2.5,2.3,2.8,37.0,21.9,0.59,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,22.5,20.2,0.61,0.55,2.45
+H7607,"Clever Care Health Plan, Inc.",Clever Care Health Plan,50156,3.5,3.0,3.8,24.5,21.2,0.87,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,22.7,23.5,0.93,0.96,3.56
+H5793,CVS Health Corporation,Aetna Medicare,61346,3.5,3.4,3.7,29.9,20.0,0.67,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,21.2,23.7,0.71,0.79,3.41
+H8889,Medica Holding Company,Medica,112248,3.5,3.8,3.6,54.7,19.9,0.36,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,22.2,35.8,0.41,0.65,3.55
+H3379,"UnitedHealth Group, Inc.",UnitedHealthcare,100833,3.5,3.6,3.4,49.2,19.4,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,23.9,34.1,0.49,0.69,3.56
+H3204,Presbyterian Healthcare Services,Presbyterian Health Plan,53755,3,3.3,2.7,55.2,19.1,0.35,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,18.5,32.2,0.34,0.58,2.91
+H0354,Health Care Service Corporation,Cigna HealthCare,75201,3.5,3.6,3.6,36.7,18.3,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,21.2,27.5,0.58,0.75,3.41
+H3418,"UnitedHealth Group, Inc.",UnitedHealthcare,47402,3.5,3.0,3.6,23.1,16.2,0.70,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,17.7,20.3,0.77,0.88,3.35
+H5525,Humana Inc.,Humana,175520,3.5,3.8,3.0,85.6,15.3,0.18,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,24.0,12.2,0.28,0.14,3.34
+H5649,"Molina Healthcare, Inc.",Central Health Medicare Plan,35257,3,3.2,2.8,36.2,15.2,0.42,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,18.3,24.3,0.51,0.67,3.18
+H0294,"UnitedHealth Group, Inc.",UnitedHealthcare,69933,3.5,3.6,3.5,34.1,15.1,0.44,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,18.8,24.4,0.55,0.72,3.33
+H3335,"Lifetime Healthcare, Inc.","Excellus Health Plan, Inc",86142,3.5,3.7,3.5,42.0,15.1,0.36,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,11.3,21.6,0.27,0.52,3.60
+H3949,Health Care Service Corporation,Cigna HealthCare,37441,3,3.5,3.2,38.5,15.1,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,17.4,21.5,0.45,0.56,3.22
+H8894,INLAND EMPIRE HEALTH PLAN,IEHP DualChoice,38439,3,3.1,2.5,39.5,14.8,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,14.6,19.7,0.37,0.50,3.00
+H3192,CVS Health Corporation,Aetna Medicare,27799,3,3.2,3.2,28.6,13.5,0.47,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,14.8,12.5,0.52,0.44,3.11
+H1224,Local Initiative Health Authority for LA County,L.A. Care Health Plan,30796,3,3.1,2.8,31.6,13.4,0.42,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,14.9,17.7,0.47,0.56,3.09
+H1608,CVS Health Corporation,Aetna Medicare,118272,3.5,3.8,3.5,57.7,12.9,0.22,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,18.4,0.0,0.32,0.00,3.51
+H3533,Humana Inc.,Humana,28961,3,3.1,2.8,29.8,12.2,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,14.6,18.3,0.49,0.61,3.15
+H0672,Health Care Service Corporation,Cigna HealthCare,25514,3,2.9,2.7,26.2,12.1,0.46,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,13.4,14.2,0.51,0.54,2.85
+H1416,Centene Corporation,Wellcare,57504,3,3.6,2.5,59.1,11.1,0.19,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,15.9,12.3,0.27,0.21,3.21
+H8634,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM, OK, TX",27555,3,3.2,2.7,28.3,10.9,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,11.3,14.5,0.40,0.51,2.92
+H3528,"Molina Healthcare, Inc.",ConnectiCare,47730,3.5,3.7,3.6,23.3,10.6,0.45,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,12.6,17.5,0.54,0.75,3.62
+H3561,Centene Corporation,Wellcare By Health Net,46980,3.5,3.2,3.0,22.9,10.1,0.44,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,12.1,14.5,0.53,0.63,3.31
+H3822,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM",21506,3,3.5,3.4,22.1,10.0,0.45,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,9.8,13.4,0.44,0.61,3.31
+H7849,Health Care Service Corporation,Cigna HealthCare,29238,3,3.3,2.5,30.0,9.7,0.32,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,11.2,13.4,0.37,0.45,2.93
+H3251,Health Care Service Corporation,Blue Cross and Blue Shield of New Mexico,20586,2.5,3.0,2.8,21.2,9.6,0.45,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,10.2,14.4,0.48,0.68,2.71
+H5433,Orange County Health Authority,CalOptima Health OneCare,18849,3,2.7,2.7,19.4,9.6,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.8,12.3,0.50,0.64,2.79
+H5439,Centene Corporation,Wellcare By Health Net,19665,3,3.0,2.9,20.2,9.4,0.47,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,11.0,14.6,0.54,0.72,2.93
+H3038,"Molina Healthcare, Inc.",Molina Healthcare of California,29863,3,3.5,2.9,30.7,9.2,0.30,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,12.2,16.8,0.40,0.55,3.17
+H0755,"UnitedHealth Group, Inc.",UnitedHealthcare,93668,3.5,3.8,3.2,45.7,9.1,0.20,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,13.8,27.6,0.30,0.60,3.41
+H8432,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield HP,43986,3.5,3.3,3.0,21.4,9.1,0.43,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,10.7,13.3,0.50,0.62,3.29
+H1994,"Intermountain Health Care, Inc.",Select Health,66554,3.5,3.8,3.6,32.4,9.0,0.28,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,2.4,9.7,0.07,0.30,3.63
+H3288,CVS Health Corporation,Aetna Medicare,67539,3.5,3.7,3.1,32.9,9.0,0.27,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,11.5,16.2,0.35,0.49,3.54
+H0523,CVS Health Corporation,Aetna Medicare,11384,3,2.8,3.6,11.7,8.6,0.74,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.0,9.8,0.77,0.84,3.12
+H5475,Centene Corporation,Wellcare,20141,3,3.0,2.5,20.7,8.1,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.5,11.6,0.46,0.56,2.88
+H6200,Lumeris Group Holdings Corporation,Essence Healthcare,10976,3,3.1,3.7,11.3,8.1,0.72,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,8.2,9.3,0.72,0.82,3.27
+H2923,"Devoted Health, Inc.",Devoted Health,16437,3.5,2.7,4.2,8.0,8.0,1.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,8.0,8.0,1.00,1.00,3.57
+H8908,Humana Inc.,Humana,22259,3,3.3,2.7,22.9,7.8,0.34,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.5,11.1,0.42,0.48,2.95
+H4141,Humana Inc.,Humana,124430,3.5,3.9,3.4,60.7,7.6,0.12,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,16.8,0.0,0.28,0.00,3.61
+H4937,California Physicians' Service,Blue Shield of California,45627,3.5,3.6,3.2,22.2,7.5,0.34,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,8.9,14.0,0.40,0.63,3.45
+H8578,"Baystate Health, Inc.",Health New England Medicare Advantage Plans,9841,3,3.0,3.6,10.1,7.2,0.71,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.2,8.7,0.71,0.86,3.21
+H4982,CVS Health Corporation,Aetna Medicare,9688,3,2.3,3.3,10.0,7.1,0.71,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.4,8.1,0.74,0.81,2.79
+H2509,"UnitedHealth Group, Inc.",UnitedHealthcare,72626,3.5,3.8,3.1,35.4,6.7,0.19,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,10.9,5.6,0.31,0.16,3.40
+H5628,"Molina Healthcare, Inc.",Molina Healthcare of Utah & Idaho,16985,3,3.2,2.7,17.5,6.7,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.9,9.5,0.45,0.54,3.00
+H6815,Centene Corporation,Wellcare By Health Net,12601,3,2.8,2.8,12.9,6.6,0.51,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.4,8.6,0.57,0.66,2.91
+H0351,Centene Corporation,Wellcare By Allwell,23988,3.5,3.3,3.4,11.7,6.4,0.55,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.5,8.3,0.64,0.71,3.39
+H0982,"Athena Healthcare Holdings, LLC",Solis Health Plans,21953,3.5,3.5,3.6,10.7,6.4,0.60,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,5.6,0.0,0.52,0.00,3.42
+H5779,Centene Corporation,Wellcare,13171,3,3.1,2.9,13.5,6.3,0.47,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.3,8.2,0.54,0.61,3.00
+H6586,"Devoted Health, Inc.",Devoted Health,7256,3,2.5,3.7,7.5,6.3,0.84,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.5,6.8,0.86,0.90,3.02
+H8849,"Elevance Health, Inc.",Wellpoint,55070,3.5,3.7,3.1,26.8,6.3,0.23,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.6,14.3,0.36,0.53,3.59
+H3864,PacificSource,PacificSource Medicare,52821,3.5,3.7,3.1,25.8,6.2,0.24,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.4,11.5,0.17,0.44,3.42
+H7379,"CareFirst, Inc.",CareFirst BlueCross BlueShield Medicare Advantage,46358,3.5,3.9,3.6,22.6,5.9,0.26,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.8,0.0,0.30,0.00,3.69
+H0562,Centene Corporation,Wellcare By Health Net,24647,3.5,3.5,3.4,12.0,5.8,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.9,9.0,0.58,0.75,3.51
+H5434,Guidewell Mutual Holding Corporation,Florida Blue,62044,3.5,3.8,3.1,30.2,5.8,0.19,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,8.3,13.5,0.27,0.45,3.51
+H1666,Health Care Service Corporation,"Blue Cross and Blue Shield of NM, TX",15914,3,3.4,2.8,16.4,5.6,0.34,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.8,8.6,0.35,0.53,3.05
+H5823,"Molina Healthcare, Inc.","Molina Healthcare of Washington, Inc.",13256,3,3.1,2.7,13.6,5.6,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.6,8.7,0.49,0.64,3.00
+H8173,"Devoted Health, Inc.",Devoted Health,11405,3.5,2.8,4.3,5.6,5.6,1.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,5.6,5.6,1.00,1.00,3.31
+H3832,Hawaii Medical Service Association,HMSA Akamai Advantage,37817,3.5,3.6,3.1,18.4,5.5,0.30,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.8,11.4,0.37,0.62,3.40
+H5590,Centene Corporation,Wellcare By Allwell,26455,3.5,3.3,3.0,12.9,5.5,0.43,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.6,8.3,0.52,0.64,3.26
+H0423,New York City Health and Hospitals Corporation,MetroPlus Health Plan,13517,3.5,3.2,3.8,6.6,5.4,0.81,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.1,4.7,0.78,0.71,3.62
+H5926,"Molina Healthcare, Inc.",Molina Healthcare of Michigan,15595,3,3.4,2.7,16.0,5.3,0.33,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,6.4,8.1,0.40,0.50,3.16
+H0908,Centene Corporation,Wellcare By Allwell,9227,3,2.7,2.9,9.5,5.2,0.54,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.7,5.9,0.60,0.62,2.93
+H3113,"UnitedHealth Group, Inc.",UnitedHealthcare,80289,3.5,3.8,3.0,39.1,5.2,0.13,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,9.1,5.3,0.23,0.14,3.53
+H5828,"Elevance Health, Inc.",Wellpoint,27710,3,3.6,2.2,28.5,5.2,0.18,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,7.1,6.3,0.25,0.22,2.96
+H6743,ATRIO Health Plans,ATRIO Health Plans,21188,2.5,3.3,1.9,21.8,5.2,0.24,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.4,9.1,0.25,0.42,2.51
+H5826,Community Health Plan of Washington,Community Health Plan of WA Medicare Advantage,8975,3,3.0,3.1,9.2,4.9,0.53,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.2,6.4,0.57,0.69,3.05
+H2108,Health Care Service Corporation,Cigna HealthCare,12780,3,3.3,2.8,13.1,4.7,0.36,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.3,6.7,0.41,0.51,3.01
+H8330,"Point32Health, Inc.",Tufts Health Plan,15506,3.5,3.2,3.5,7.6,4.6,0.61,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.8,6.0,0.63,0.79,3.42
+H7006,ATRIO Health Plans,ATRIO Health Plans,10542,2,2.7,2.2,10.8,4.5,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.7,5.7,0.44,0.53,2.32
+H9485,Mass General Brigham Incorporated,Mass General Brigham Health Plan,17823,3.5,3.7,3.7,8.7,4.5,0.51,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.7,6.0,0.54,0.69,3.54
+H9955,"Molina Healthcare, Inc.",Molina Healthcare of Ohio,14295,3,3.4,2.8,14.7,4.5,0.31,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.9,8.5,0.40,0.58,3.13
+H2458,Medica Holding Company,Medica,13830,3,3.5,3.0,14.2,4.4,0.31,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.7,7.8,0.33,0.55,3.22
+H1610,CVS Health Corporation,Aetna Better Health of Virginia,11494,3,3.2,2.4,11.8,4.1,0.34,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.6,4.1,0.39,0.35,2.88
+H8764,Montage Health,Aspire Health,8361,3,3.2,3.1,8.6,4.1,0.47,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.2,5.8,0.49,0.68,3.09
+H9065,"Elevance Health, Inc.",AMH Health,15038,3.5,3.1,3.3,7.3,4.1,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.6,5.5,0.63,0.76,3.28
+H9364,Centene Corporation,Wellcare,14975,3.5,3.2,3.4,7.3,4.1,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.7,5.6,0.65,0.76,3.39
+H2056,CVS Health Corporation,Aetna Medicare,8029,3,2.9,2.9,8.2,4.0,0.49,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.4,5.5,0.54,0.68,2.83
+H2686,"Devoted Health, Inc.",Devoted Health,10596,3.5,3.2,3.8,5.2,4.0,0.78,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.1,4.6,0.78,0.89,3.42
+H5009,"Cambia Health Solutions, Inc.",Regence BlueShield,10501,3,3.4,3.0,10.8,4.0,0.37,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.9,7.5,0.45,0.69,3.26
+H6019,Health Plan of San Mateo,HEALTH PLAN OF SAN MATEO,8542,3,3.0,2.8,8.8,4.0,0.46,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.0,5.8,0.46,0.66,3.01
+H4711,CVS Health Corporation,Aetna Medicare,8461,3,3.2,3.0,8.7,3.9,0.45,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.5,4.5,0.51,0.51,3.03
+H0571,Chinese Hospital Association,CCHP (Chinese Community Health Plan),5756,3,2.5,3.2,5.9,3.8,0.64,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.8,4.5,0.65,0.77,2.96
+H2168,"Village Care of New York, Inc.",VillageCareMAX,10919,3.5,3.2,3.7,5.3,3.8,0.70,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.9,4.0,0.74,0.75,3.56
+H3347,"Elderplan, Inc.",Elderplan,26603,3.5,3.5,2.9,13.0,3.7,0.29,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.0,5.2,0.31,0.40,3.24
+H5273,"Point32Health, Inc.",CarePartners of Connecticut,11059,3.5,3.3,3.7,5.4,3.7,0.68,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.8,4.5,0.70,0.83,3.43
+H5587,Blue Cross Blue Shield of Arizona,Blue Cross Blue Shield of Arizona Health Choice,8642,3.5,2.8,3.8,4.2,3.7,0.87,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.6,3.8,0.87,0.91,3.38
+H9096,Medica Holding Company,Dean Advantage,11533,3.5,3.7,3.9,5.6,3.7,0.66,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,3.6,4.9,0.64,0.87,3.69
+R6801,"UnitedHealth Group, Inc.",UnitedHealthcare,39248,3.5,3.7,2.6,19.1,3.6,0.19,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,5.1,5.0,0.27,0.26,3.20
+H8181,Blue Cross Blue Shield of Nebraska,Blue Cross and Blue Shield of Nebraska,21759,3,3.8,3.1,22.4,3.5,0.15,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,4.0,3.5,0.18,0.15,3.22
+H5410,Health Care Service Corporation,Cigna HealthCare,16030,3.5,3.4,3.2,7.8,3.4,0.43,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.9,4.4,0.50,0.56,3.45
+H3748,CVS Health Corporation,Aetna Medicare,4436,3,3.1,3.6,4.6,3.2,0.71,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.5,3.9,0.76,0.85,3.32
+H5087,Centene Corporation,Wellcare,13417,3.5,3.1,3.1,6.5,3.2,0.49,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.7,4.1,0.57,0.63,3.24
+H5361,"Independence Health Group, Inc.",AmeriHealth,7602,2.5,2.9,2.4,7.8,3.2,0.41,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.4,4.4,0.43,0.56,2.68
+H6018,"Devoted Health, Inc.",Devoted Health,8244,3.5,2.7,3.7,4.0,3.2,0.79,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.3,3.3,0.82,0.82,3.15
+H2737,"Baystate Health, Inc.",Health New England Medicare Advantage Plans,4919,2.5,2.8,3.2,5.1,3.1,0.62,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.2,4.0,0.64,0.78,2.85
+H8189,Centene Corporation,Wellcare by Allwell,12953,3.5,3.3,3.3,6.3,3.1,0.49,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,3.5,3.5,0.55,0.56,3.20
+H1914,Centene Corporation,Wellcare,11263,3.5,2.9,3.1,5.5,3.0,0.55,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.5,4.0,0.64,0.72,3.25
+H6876,"Zing Health Consolidator, Inc",Zing Health,6199,3,2.7,2.6,6.4,3.0,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.2,1.2,0.50,0.19,2.67
+H0913,Centene Corporation,Wellcare,13173,3.5,3.2,3.0,6.4,2.9,0.44,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.4,3.5,0.53,0.55,3.24
+H4045,SANTA CLARA COUNTY HEALTH AUTHORITY,Santa Clara Family Health Plan,11853,3.5,3.2,3.1,5.8,2.9,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.9,3.8,0.50,0.66,3.32
+H5859,"CareOregon, Inc.",CareOregon Advantage,13288,3.5,3.3,3.2,6.5,2.9,0.46,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.9,4.5,0.45,0.69,3.25
+H8211,"UnitedHealth Group, Inc.",UnitedHealthcare,17153,3,3.7,2.3,17.6,2.9,0.17,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,4.1,6.6,0.24,0.37,2.97
+H8597,CVS Health Corporation,Aetna Medicare,14486,3.5,3.4,3.2,7.1,2.9,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.3,2.7,0.47,0.38,3.20
+H9207,Thomas Jefferson University,Jefferson Health Plans,25870,3.5,3.8,3.2,12.6,2.9,0.23,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.3,4.5,0.19,0.36,3.38
+H2819,California Physicians' Service,Blue Shield of California,14956,3.5,3.6,3.4,7.3,2.8,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.3,5.4,0.45,0.73,3.50
+H4544,"UnitedHealth Group, Inc.",Peoples Health,8883,2.5,3.3,2.4,9.1,2.8,0.31,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.5,4.4,0.38,0.48,2.70
+H8854,"CareFirst, Inc.",CareFirst BlueCross BlueShield Medicare Advantage,8387,3,3.3,2.5,8.6,2.8,0.32,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.0,3.4,0.35,0.39,2.87
+H1423,"Elevance Health, Inc.",Wellpoint,3956,3,2.7,3.3,4.1,2.7,0.67,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.0,3.3,0.72,0.80,3.16
+H2486,Humana Inc.,Humana,4123,3,3.0,3.5,4.2,2.7,0.65,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.9,2.8,0.70,0.68,3.21
+H5843,Banner Health,Banner Medicare Advantage,7436,3.5,3.0,3.6,3.6,2.7,0.74,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.8,3.0,0.78,0.84,3.33
+H9706,Health Care Service Corporation,Blue Cross and Blue Shield of Texas,6144,2.5,3.1,2.7,6.3,2.7,0.42,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.7,3.2,0.43,0.51,2.70
+H4704,"Elevance Health, Inc.",Anthem Blue Cross Life and Health Insurance Compan,8227,2.5,3.1,1.9,8.5,2.6,0.31,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.1,4.5,0.37,0.53,2.50
+H9231,"Devoted Health, Inc.",Devoted Health,7658,3.5,2.9,3.4,3.7,2.5,0.66,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.6,2.5,0.71,0.69,3.17
+H3890,Johns Hopkins Healthcare LLC,Johns Hopkins Advantage MD,6849,3,3.5,3.1,7.0,2.4,0.34,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.4,3.6,0.34,0.52,3.25
+H4623,Humana Inc.,Humana,11052,3.5,3.5,3.4,5.4,2.3,0.42,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.8,3.3,0.51,0.62,3.33
+H0712,Centene Corporation,Wellcare,7196,3.5,3.1,3.5,3.5,2.2,0.64,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.4,2.7,0.70,0.77,3.36
+H6851,"BMC Health System, Inc.",WellSense Health Plan,4271,3,3.0,3.0,4.4,2.2,0.51,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.3,2.8,0.53,0.64,3.17
+H7149,CVS Health Corporation,Aetna Medicare,9347,3.5,3.5,3.5,4.6,2.2,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,2.5,1.9,0.55,0.41,3.27
+H7284,Humana Inc.,Humana,11709,3.5,3.5,3.3,5.7,2.2,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.8,2.4,0.49,0.41,3.42
+H2117,Centene Corporation,Wellcare,5247,3,3.1,2.6,5.4,2.1,0.40,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.5,3.0,0.47,0.55,2.97
+H1664,Centene Corporation,Wellcare By Allwell,4067,3,2.8,2.8,4.2,2.0,0.49,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.4,2.3,0.56,0.54,2.84
+H3928,CVS Health Corporation,Aetna Medicare,4929,3,3.4,3.0,5.1,2.0,0.39,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,2.2,1.7,0.43,0.33,2.89
+H5580,Mercy Care,Mercy Care Advantage,10852,3,3.6,2.3,11.2,2.0,0.18,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.5,3.7,0.14,0.33,3.08
+H6348,Centene Corporation,Wellcare By Allwell,6373,3,3.4,2.7,6.5,2.0,0.31,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.5,1.3,0.39,0.20,3.10
+H3240,"Elevance Health, Inc.",Wellpoint,14405,3,3.8,2.5,14.8,1.9,0.13,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.0,2.7,0.20,0.18,3.16
+H6399,CVS Health Corporation,Aetna Better Health of New Jersey,7170,3,3.5,2.5,7.4,1.9,0.26,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.4,3.0,0.32,0.41,3.11
+H3080,"Devoted Health, Inc.",Devoted Health,9640,3.5,3.6,3.4,4.7,1.8,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.0,0.0,0.43,0.00,3.43
+H4869,Gold Kidney Health Plan,Gold Kidney Health Plan,4844,3,3.3,2.6,5.0,1.8,0.35,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.7,1.8,0.34,0.36,2.95
+H5989,"Healthfirst, Inc.",Healthfirst Medicare Plan,13716,3.5,3.6,3.0,6.7,1.8,0.28,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.3,3.4,0.34,0.50,3.46
+H7518,Centene Corporation,Wellcare,3402,3,2.7,2.7,3.5,1.8,0.52,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.8,1.4,0.52,0.39,2.82
+H9888,"Devoted Health, Inc.",Devoted Health,15557,3.5,3.7,3.1,7.6,1.8,0.24,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.3,1.2,0.30,0.16,3.58
+H0907,"Elevance Health, Inc.",Wellpoint,4260,3,3.2,2.8,4.4,1.7,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.0,1.9,0.46,0.44,2.91
+H8385,Sanford Health,Align powered by Sanford Health Plan,9033,3.5,3.8,3.7,4.4,1.7,0.38,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,2.2,0.0,0.49,0.00,3.63
+H2915,Centene Corporation,Wellcare By Allwell,14783,3.5,3.7,3.1,7.2,1.6,0.22,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.3,1.1,0.32,0.15,3.40
+H3499,Centene Corporation,Wellcare By Allwell,4065,3,3.3,2.8,4.2,1.6,0.37,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.9,1.9,0.44,0.44,3.08
+H0107,Health Care Service Corporation,Blue Cross and Blue Shield of Montana,101119,3.5,4.0,3.0,49.3,1.5,0.03,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,12.9,0.00,0.26,3.49
+H1112,Centene Corporation,Wellcare,27133,3.5,3.8,2.8,13.2,1.5,0.12,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.8,0.0,0.21,0.00,3.52
+H1225,Johns Hopkins Healthcare LLC,Johns Hopkins Advantage MD,7639,3.5,3.6,3.4,3.7,1.5,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.5,2.4,0.40,0.64,3.54
+H1607,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,8192,3.5,3.7,3.5,4.0,1.5,0.38,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.0,2.7,0.51,0.67,3.68
+H2174,Centene Corporation,Wellcare By Trillium,4460,3,3.3,2.5,4.6,1.5,0.33,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.9,2.6,0.42,0.57,2.83
+H3975,Centene Corporation,Wellcare,3810,3,3.2,2.7,3.9,1.5,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.8,1.5,0.46,0.39,2.94
+H4346,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,6932,3.5,3.1,2.9,3.4,1.5,0.45,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.8,2.1,0.52,0.61,3.27
+H5209,"Molina Healthcare, Inc.",My Choice Wisconsin,2671,3,2.9,3.2,2.7,1.5,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.7,2.0,0.62,0.74,3.12
+H9615,"MVP Health Care, Inc.",MVP HEALTH CARE,32070,3.5,3.9,3.1,15.6,1.5,0.10,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,5.8,0.00,0.37,3.58
+H2463,Humana Inc.,Humana,4384,3,3.5,3.0,4.5,1.4,0.32,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.9,1.9,0.43,0.43,3.12
+H4835,CVS Health Corporation,Aetna Medicare,3608,3,3.4,3.0,3.7,1.4,0.38,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.7,2.1,0.45,0.56,3.15
+H4909,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,10970,3.5,3.6,2.9,5.3,1.4,0.25,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.9,2.6,0.36,0.49,3.32
+H5991,"EmblemHealth, Inc.",EmblemHealth,2366,3,2.7,2.9,2.4,1.4,0.56,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.5,1.7,0.62,0.71,2.92
+R1532,Humana Inc.,Humana,3822,2.5,3.2,2.6,3.9,1.4,0.36,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.7,1.6,0.44,0.42,2.70
+H0034,"Hamaspik of Rockland County, Inc.","Hamaspik, Inc.",2153,3,2.7,3.1,2.2,1.3,0.58,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,1.3,0.60,0.60,3.14
+H1215,Centene Corporation,Wellcare,3021,3,3.3,3.1,3.1,1.3,0.41,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.5,1.6,0.48,0.53,3.17
+H1395,Centene Corporation,Wellcare,2686,3,2.9,2.8,2.8,1.3,0.49,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.6,1.6,0.56,0.56,2.85
+H6545,"Devoted Health, Inc.",Devoted Health,2585,3.5,2.7,4.4,1.3,1.3,1.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,1.3,1.00,1.00,3.32
+H7199,"Devoted Health, Inc.",Devoted Health,2598,3.5,2.6,4.4,1.3,1.3,1.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,1.3,1.00,1.00,3.36
+H7464,"UnitedHealth Group, Inc.",UnitedHealthcare,16920,3.5,3.8,2.8,8.2,1.3,0.16,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.1,3.6,0.25,0.44,3.33
+R3444,"UnitedHealth Group, Inc.",UnitedHealthcare,4954,3,3.6,2.7,5.1,1.3,0.26,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.8,2.3,0.35,0.44,3.21
+H0473,Humana Inc.,Humana,16295,3.5,3.8,2.8,7.9,1.2,0.15,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,1.9,1.7,0.24,0.21,3.30
+H1894,"Elevance Health, Inc.",Wellpoint,2322,3,2.6,2.7,2.4,1.2,0.51,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.4,1.5,0.59,0.63,2.78
+H2836,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,2508,3,3.2,3.1,2.6,1.2,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.4,1.8,0.55,0.68,3.06
+H4073,Centene Corporation,Wellcare,6500,3.5,3.3,2.9,3.2,1.2,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.5,1.1,0.48,0.35,3.21
+H5928,California Physicians' Service,Blue Shield of California,7880,3.5,3.6,3.2,3.8,1.2,0.31,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.4,2.0,0.37,0.53,3.54
+H0111,Centene Corporation,Wellcare,5977,3.5,3.3,2.9,2.9,1.1,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,1.5,0.46,0.53,3.31
+H2593,"Elevance Health, Inc.",Wellpoint,13319,3.5,3.7,2.5,6.5,1.1,0.17,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.1,3.3,0.32,0.51,3.28
+H6550,Centene Corporation,Wellcare By Allwell,2209,3,2.9,2.8,2.3,1.1,0.48,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,0.9,0.55,0.41,2.96
+H1360,"UnitedHealth Group, Inc.",UnitedHealthcare,2404,3,3.3,2.9,2.5,1.0,0.40,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.2,1.0,0.47,0.40,3.07
+H5422,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,14459,3.5,3.8,2.6,7.0,1.0,0.14,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.6,0.0,0.22,0.00,3.16
+H5608,Denver Health and Hospital Authority,Elevate Medicare Advantage,5080,3.5,3.7,3.5,2.5,1.0,0.39,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.0,1.6,0.40,0.62,3.54
+H6847,Mass General Brigham Incorporated,Mass General Brigham Health Plan,2062,3.5,3.1,4.2,1.0,1.0,1.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.0,1.0,1.00,1.00,3.66
+H9306,"LifeBridge Health, Inc.",Alterwood Advantage,13670,3.5,3.8,2.6,6.7,1.0,0.14,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.6,1.7,0.23,0.25,3.23
+H5965,Centene Corporation,Wellcare,1598,2.5,2.3,2.5,1.6,0.9,0.54,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.0,1.0,0.60,0.62,2.64
+H7115,Memorial Hermann Health System,Memorial Hermann Health Plan,14748,3.5,3.8,3.0,7.2,0.9,0.13,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.1,0.0,0.15,0.00,3.35
+R7220,Humana Inc.,Humana,3013,2.5,3.4,2.6,3.1,0.9,0.30,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.2,1.7,0.39,0.54,2.82
+H4733,Community Health Group,Community Health Group,9901,3.5,3.8,2.7,4.8,0.8,0.16,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,2.1,0.14,0.45,3.40
+H5386,Sharp Healthcare,Sharp Health Plan,19572,3.5,3.9,3.3,9.5,0.8,0.08,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,4.2,0.00,0.45,3.49
+H6322,McLaren Health Care Corporation,McLaren Medicare,2416,3,3.2,2.4,2.5,0.8,0.33,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.8,1.0,0.33,0.42,2.81
+H6813,"Devoted Health, Inc.",Devoted Health,2911,3.5,3.1,3.4,1.4,0.8,0.58,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.9,1.0,0.63,0.74,3.21
+H3810,"AllCare Health, Inc.",AllCare Advantage,2436,2.5,3.3,2.0,2.5,0.7,0.27,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.6,0.9,0.24,0.34,2.54
+H3811,"Samaritan Health Services, Inc.",Samaritan Advantage Health Plans,1420,3,2.9,2.9,1.5,0.7,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.8,1.0,0.50,0.65,2.89
+H3814,ATRIO Health Plans,ATRIO Health Plans,2076,2,2.9,1.5,2.1,0.7,0.31,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,1.1,0.33,0.50,2.11
+H5854,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,36755,3.5,4.0,3.3,17.9,0.7,0.04,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.4,5.7,0.19,0.32,3.59
+H7605,"Devoted Health, Inc.",Devoted Health,2362,3.5,3.4,3.6,1.2,0.7,0.59,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.7,0.8,0.62,0.67,3.30
+H9699,USAble Mutual Insurance Company,Arkansas Blue Medicare,7937,3,3.9,2.7,8.2,0.7,0.09,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,1.8,0.05,0.22,3.26
+H1722,"Healthfirst, Inc.",Healthfirst Medicare Plan,1926,3,3.3,2.6,2.0,0.6,0.32,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.8,1.0,0.39,0.49,3.11
+H5377,Humana Inc.,Humana,3512,3.5,3.6,3.3,1.7,0.6,0.38,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.8,0.7,0.47,0.41,3.38
+H5810,"Molina Healthcare, Inc.",Molina Healthcare of California,1367,3,2.9,2.7,1.4,0.6,0.46,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,0.9,0.54,0.65,2.85
+H6237,"Cambia Health Solutions, Inc.",Regence BlueCross BlueShield of Oregon,1862,3.5,3.3,3.7,0.9,0.6,0.68,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,0.8,0.74,0.87,3.47
+H8379,Corewell Health,Priority Health Medicare,8685,3.5,3.8,3.1,4.2,0.6,0.15,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,1.1,0.7,0.26,0.16,3.35
+R5361,Humana Inc.,Humana,5530,3,3.9,3.0,5.7,0.6,0.10,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.3,1.1,0.23,0.20,3.32
+H1350,"Gemstone Holdings, Inc.",Blue Cross of Idaho,32406,3.5,4.0,3.0,15.8,0.5,0.03,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,2.3,0.00,0.14,3.40
+H1659,"UnitedHealth Group, Inc.",UnitedHealthcare,2412,3,3.7,2.7,2.5,0.5,0.20,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,1.1,0.30,0.45,3.15
+H2237,Humana Inc.,iCare,920,2.5,2.6,2.6,0.9,0.5,0.50,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.5,0.6,0.55,0.62,2.54
+H5969,AlohaCare,AlohaCare,2540,3.5,3.3,3.0,1.2,0.5,0.42,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.5,0.7,0.44,0.60,3.27
+H8133,Health Care Service Corporation,Blue Cross and Blue Shield of Texas,2581,3,3.7,2.6,2.7,0.5,0.19,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.6,0.16,0.22,3.20
+H9387,Centene Corporation,Wellcare By Allwell,916,2.5,2.6,2.7,0.9,0.5,0.52,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.5,0.4,0.58,0.50,2.60
+H3777,CuraCor Solutions Corp.,Experience Health,1993,3.5,3.7,3.6,1.0,0.4,0.45,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.4,0.3,0.44,0.30,3.48
+H4676,"Troy Holdings, Inc.",Troy Medicare,1707,3,3.5,2.4,1.8,0.4,0.25,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.0,0.21,0.00,2.93
+H7323,Centene Corporation,Wellcare,2101,3.5,3.2,2.7,1.0,0.4,0.37,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.3,0.45,0.27,3.21
+H8552,"Elevance Health, Inc.",Anthem Blue Cross Life and Health Insurance Compan,1075,2.5,3.1,2.3,1.1,0.4,0.33,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.7,0.40,0.61,2.75
+H9147,CuraCor Solutions Corp.,Blue Cross and Blue Shield of North Carolina,3346,3.5,3.5,2.7,1.6,0.4,0.27,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.2,0.28,0.14,3.20
+H9460,Health Care Service Corporation,Cigna HealthCare,1545,3,3.5,2.4,1.6,0.4,0.23,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.5,0.5,0.29,0.29,3.02
+R5826,Humana Inc.,Humana,4651,3.5,3.7,2.9,2.3,0.4,0.19,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.7,1.0,0.29,0.43,3.41
+H1365,"Martin's Point Health Care, Inc.",Martin's Point Generations Advantage,3614,3.5,3.8,3.2,1.8,0.3,0.18,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.6,0.9,0.32,0.52,3.44
+H4754,PacificSource,PacificSource Medicare,2524,3,3.8,2.8,2.6,0.3,0.13,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,1.2,0.06,0.46,3.32
+H4931,Banner Health,Banner Medicare Advantage,10807,3.5,3.9,2.9,5.3,0.3,0.05,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.3,0.0,0.06,0.00,3.49
+H6158,USAble Mutual Insurance Company,Arkansas Blue Medicare,4884,3,3.9,2.2,5.0,0.3,0.06,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.2,0.4,0.04,0.09,3.03
+H7093,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,10178,3.5,3.9,2.6,5.0,0.3,0.06,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.8,1.7,0.15,0.33,3.36
+H7678,"Molina Healthcare, Inc.","Molina Healthcare of Texas, Inc.",2691,3.5,3.6,2.8,1.3,0.3,0.24,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.4,0.31,0.27,3.42
+H8547,Health Care Service Corporation,Blue Cross and Blue Shield of Illinois,1553,3.5,3.7,3.4,0.8,0.3,0.35,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.2,0.0,0.31,0.00,3.33
+H9431,CVS Health Corporation,Aetna Medicare,693,3,3.4,3.1,0.7,0.3,0.41,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.3,0.5,0.46,0.71,3.14
+H9678,"Healthfirst, Inc.",Healthfirst Medicare Plan,642,3,3.1,2.8,0.7,0.3,0.44,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.4,0.50,0.63,3.03
+H9986,"Independent Living Systems, LLC",Florida Complete Care,1349,3,3.6,2.7,1.4,0.3,0.21,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,,0.11,,3.04
+H0074,Centene Corporation,Wellcare,1540,3.5,3.5,2.5,0.8,0.2,0.26,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.3,0.1,0.35,0.14,3.22
+H0783,Humana Inc.,Humana,514,2.5,3.2,2.5,0.5,0.2,0.35,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.2,0.2,0.43,0.46,2.63
+H5294,Centene Corporation,Wellcare By Allwell,17183,3.5,4.0,2.6,8.4,0.2,0.02,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.0,1.0,0.11,0.12,3.26
+H8554,Health Care Service Corporation,"Blue Cross and Blue Shield of OK, TX",777,3,3.5,2.7,0.8,0.2,0.29,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.2,0.1,0.29,0.17,3.16
+H2563,Sentara Health Care (SHC),Sentara Medicare,908,3.5,3.5,2.6,0.4,0.1,0.27,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,0.2,0.29,0.38,3.25
+H6154,Medica Holding Company,Medica,1792,3.5,3.9,3.3,0.9,0.1,0.13,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.2,0.4,0.22,0.41,3.58
+H7123,UPMC Health System,UPMC for Life Complete Care,1470,3.5,3.9,2.9,0.7,0.1,0.07,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,0.0,0.08,0.00,3.47
+H0104,BlueCross BlueShield of Alabama,Blue Cross and Blue Shield of Alabama,113779,3.5,4.6,2.8,55.5,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.73
+H0251,"UnitedHealth Group, Inc.",UnitedHealthcare,77244,3.5,4.5,2.7,37.7,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.52
+H0321,"UnitedHealth Group, Inc.",UnitedHealthcare,70442,3.5,4.0,2.8,34.3,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.8,0.0,0.11,0.00,3.33
+H0432,"UnitedHealth Group, Inc.",UnitedHealthcare,55509,3.5,4.0,3.1,27.1,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,2.8,0.0,0.10,0.00,3.54
+H0439,Health Care Service Corporation,Cigna HealthCare,30323,3.5,4.2,3.1,14.8,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.44
+H1189,CHRISTUS Health,CHRISTUS Health Advantage,8889,3.5,4.2,3.0,4.3,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.70
+H1304,"Cambia Health Solutions, Inc.",Regence BlueShield of Idaho,864,3.5,4.1,2.9,0.4,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.2,0.03,0.49,3.44
+H1347,BlueCross BlueShield of Alabama,Patrius Health,4652,3,4.2,2.2,4.8,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.4,0.00,0.08,3.27
+H1692,CVS Health Corporation,Aetna Medicare,21778,3.5,4.1,3.0,10.6,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.38
+H1799,"Molina Healthcare, Inc.",Passport Advantage,2163,3.5,4.3,2.4,1.1,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.46
+H1947,"Elevance Health, Inc.",Healthy Blue,3324,3.5,4.2,2.3,1.6,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.40
+H1993,Astiva Health Holdings Incorporated,Astiva Health,49525,3.5,4.1,3.3,24.1,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.63
+H2247,"UnitedHealth Group, Inc.",UnitedHealthcare,39446,3.5,4.1,2.5,19.2,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.0,0.02,0.00,3.21
+H2400,"BrightSpring Health Services, Inc.",Signature Advantage (HMO SNP),1072,3,4.1,2.9,1.1,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,,0.00,,3.17
+H2419,South Country Health Alliance,South Country Health Alliance,932,3.5,4.0,3.4,0.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.3,0.00,0.57,3.57
+H2422,"HealthPartners, Inc.",HealthPartners,5717,3.5,4.0,3.4,2.8,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.3,1.5,0.12,0.53,3.60
+H2491,Centene Corporation,Wellcare,10505,3.5,4.0,2.8,5.1,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.4,0.0,0.08,0.00,3.52
+H2816,Centene Corporation,Wellcare,1842,3.5,4.4,2.8,0.9,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.44
+H3186,Sanford Health,Align powered by Sanford Health Plan,2916,3,4.0,3.0,3.0,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,0.0,0.04,0.00,3.26
+H3239,CVS Health Corporation,Aetna Medicare,53406,3.5,4.1,2.9,26.0,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.33
+H3259,BlueCross BlueShield of Tennessee,BlueCare Plus Tennessee,30362,3.5,4.0,2.6,14.8,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.22
+H3653,MEDICAL MUTUAL OF OHIO,Paramount Elite Medicare Plans,15240,3.5,4.4,3.0,7.4,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.63
+H3672,"The Health Plan of West Virginia, Inc.",The Health Plan,7271,3.5,4.3,2.8,3.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.41
+H3755,St Francis Health System & St John Health System,CommunityCare Senior Health Plan (HMO),37953,3.5,4.2,3.2,18.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.59
+H3979,Health Care Service Corporation,Blue Cross and Blue Shield of Oklahoma,3188,3.5,4.1,3.1,1.6,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.39
+H4005,Guidewell Mutual Holding Corporation,Triple-S Advantage,6601,3.5,4.0,3.2,3.2,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,1.4,0.00,0.45,3.49
+H4213,USAble Mutual Insurance Company,Arkansas Blue Medicare,2288,3.5,4.1,2.6,1.1,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.30
+H4471,"Elevance Health, Inc.",Anthem Blue Cross,104863,3,4.1,2.6,107.7,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,15.1,,0.14,,3.10
+H4605,"Cambia Health Solutions, Inc.",Regence BlueCross BlueShield of Utah,7257,3.5,4.4,3.0,3.5,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.65
+H5008,"UnitedHealth Group, Inc.",UnitedHealthcare,58534,3.5,4.1,2.7,28.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.1,0.0,0.04,0.00,3.37
+H5106,Highmark Health,Highmark Blue Cross Blue Shield,15915,3.5,4.2,3.1,7.8,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,1.2,0.00,0.16,3.49
+H5322,"UnitedHealth Group, Inc.",UnitedHealthcare,217118,3.5,4.0,3.0,105.8,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,10.2,0.0,0.10,0.00,3.56
+H5325,CVS Health Corporation,Aetna Medicare,18871,3.5,4.1,2.8,9.2,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.25
+H5435,"UnitedHealth Group, Inc.",UnitedHealthcare,1454,2.5,4.0,1.8,1.5,0.0,0.01,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,0.4,0.08,0.27,2.83
+H5900,Blue Cross Blue Shield of Michigan Mutual Ins. Co.,Wellmark Advantage Health Plan,43913,3.5,4.1,3.4,21.4,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.66
+H5995,ATRIO Health Plans,ATRIO Health Plans,196,2.5,4.0,2.2,0.2,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,,0.00,,2.62
+H6078,"Elevance Health, Inc.",Blue Medicare Advantage,21190,3.5,4.4,3.0,10.3,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.60
+H6202,Blue Cross Blue Shield of Michigan Mutual Ins. Co.,NextBlue of North Dakota,6683,3.5,4.3,3.3,3.3,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.54
+H6529,"SIHO Holding, Inc.",MyTruAdvantage,2291,3.5,4.2,3.0,1.1,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.44
+H6595,"UnitedHealth Group, Inc.",UnitedHealthcare,28812,3.5,4.3,2.4,14.0,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.37
+H6832,"Curana Health Holdings, LLC",Align Senior Care,1440,2.5,4.1,1.9,1.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,,0.00,,2.50
+H6874,"Aspirus, Inc.",Aspirus Health Plan,6039,3.5,4.2,3.1,2.9,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.40
+H7063,Blue Cross Blue Shield of Kansas,Blue Cross and Blue Shield of Kansas,10240,3.5,4.0,3.0,5.0,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.49
+H8145,Humana Inc.,Humana,29536,3.5,4.2,3.1,14.4,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.33
+H8176,"Molina Healthcare, Inc.",Molina Healthcare of South Carolina,3168,3.5,4.0,2.7,1.5,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.1,0.0,0.07,0.00,3.58
+H8604,"The Health Plan of West Virginia, Inc.",The Health Plan,6899,3.5,4.4,2.9,3.4,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.48
+H8649,CVS Health Corporation,Aetna Medicare,1434,3.5,4.0,2.9,0.7,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.03,0.00,3.38
+H8947,"West Virginia United Health System, Inc.",Peak Health,12475,3.5,4.0,3.2,6.1,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.71
+H9042,"SIHO Holding, Inc.",MyTruAdvantage,8430,3,4.3,2.8,8.7,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.22
+H9153,"SNP Holdings, LLC",West Virginia Senior Advantage,1607,3,4.1,2.6,1.7,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,,0.00,,2.98
+H9525,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,93167,3.5,4.0,2.9,45.4,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,3.8,5.8,0.08,0.13,3.60
+H9630,Centene Corporation,Wellcare By Allwell,21298,3.5,4.0,2.7,10.4,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.8,0.0,0.08,0.00,3.42
+H9730,Centene Corporation,Wellcare,36253,3.5,4.0,2.8,17.7,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,1.4,0.0,0.08,0.00,3.49
+R0110,Humana Inc.,Humana,39605,3.5,4.2,3.1,19.3,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.58
+R0759,"UnitedHealth Group, Inc.",UnitedHealthcare,20522,3.5,4.3,3.0,10.0,0.0,0.00,medium,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026; NEW-FALLER,0.0,0.0,0.00,0.00,3.44
+R4182,Humana Inc.,Humana,12402,3.5,4.2,2.7,6.0,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.0,0.00,0.00,3.43
+R5941,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,13568,3.5,4.3,2.9,6.6,0.0,0.00,high,CMS-2026-SR(Oct8-2025)+MeasureStars; CMS-Enr-Jun2026; KFF-QBP; MedPAC-2026,0.0,0.9,0.00,0.14,3.59
+H2456,UCare Minnesota,UCare's MSHO,,3,3.3,2.8,,,,low,missing enrollment or measure-level stars,,,,,3.09
+H3071,Group 1001,Clear Spring Health,,3,2.7,2.9,,,,low,missing enrollment or measure-level stars,,,,,2.81
+H3536,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield,,3.5,3.5,2.8,,,,low,missing enrollment or measure-level stars,,,,,3.25
+H5937,UCare Minnesota,UCare,,3,3.5,2.6,,,,low,missing enrollment or measure-level stars,,,,,3.12
+H6379,Group 1001,Clear Spring Health,,3,2.1,3.4,,,,low,missing enrollment or measure-level stars,,,,,2.81
+H6672,Group 1001,Clear Spring Health,,2.5,1.7,2.7,,,,low,missing enrollment or measure-level stars,,,,,2.24
+H6898,Blue Cross Blue Shield of Michigan Mutual Ins. Co.,Vermont Blue Advantage,,3.5,4.2,3.4,,,,low,missing enrollment or measure-level stars,,,,,3.76
+H7389,Health Care Service Corporation,Cigna Healthcare,,2.5,2.8,2.2,,,,low,missing enrollment or measure-level stars,,,,,2.56
+H8070,UCare Minnesota,UCare,,3.5,4.0,3.1,,,,low,missing enrollment or measure-level stars,,,,,3.54
+R7444,"UnitedHealth Group, Inc.",UnitedHealthcare,,3.5,4.6,3.1,,,,low,missing enrollment or measure-level stars,,,,,3.43
