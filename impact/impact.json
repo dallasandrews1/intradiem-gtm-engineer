@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-06-13T16:55:59.558438",
+  "headline_opportunity_surfaced": 41650000,
+  "headline_opportunity_label": "$41.6M",
+  "net_new": {
+    "accounts_targeted": 6,
+    "hot_today": 6,
+    "roi_surfaced": 41650000,
+    "roi_surfaced_label": "$41.6M",
+    "hot_roi_surfaced": 41650000,
+    "hot_roi_surfaced_label": "$41.6M",
+    "strike_plans": 6,
+    "committee_contacts_mapped": 20,
+    "sequence_messages_drafted": 80,
+    "assumptions": {
+      "idle_minutes_per_agent_hour": 3,
+      "productive_hours_per_year": 1700,
+      "loaded_hourly_cost": 28,
+      "per_agent_per_year": 2380,
+      "per_agent_label": "$2,380"
+    },
+    "breakdown": [
+      {
+        "company": "AmeriHealth Caritas",
+        "agent_count": 3000,
+        "roi_annual": 7140000,
+        "roi_label": "$7.1M"
+      },
+      {
+        "company": "Navient",
+        "agent_count": 2500,
+        "roi_annual": 5950000,
+        "roi_label": "$6.0M"
+      },
+      {
+        "company": "Health Care Service Corporation",
+        "agent_count": 5000,
+        "roi_annual": 11900000,
+        "roi_label": "$11.9M"
+      },
+      {
+        "company": "OneMain Financial",
+        "agent_count": 2800,
+        "roi_annual": 6664000,
+        "roi_label": "$6.7M"
+      },
+      {
+        "company": "Bread Financial",
+        "agent_count": 2000,
+        "roi_annual": 4760000,
+        "roi_label": "$4.8M"
+      },
+      {
+        "company": "Lincoln Financial Group",
+        "agent_count": 2200,
+        "roi_annual": 5236000,
+        "roi_label": "$5.2M"
+      }
+    ]
+  },
+  "install_base": {
+    "accounts_monitored": 6,
+    "accounts_with_signal": 5,
+    "signals_firing": 6,
+    "ae_routes": 3,
+    "csm_routes": 4
+  },
+  "realized": {
+    "logged_outcomes": 2,
+    "meetings_booked": 1,
+    "pipeline_created": 180000.0,
+    "pipeline_created_label": "$180K",
+    "revenue_won": 0,
+    "revenue_won_label": "$0"
+  }
+}
