@@ -1,0 +1,15 @@
+# First 1-1 Agenda: Naveen / Dallas
+
+**1. Sequencer decision.** Recommendation on the table: run the first motion on Clay's native sequencer since it's already set up, and graduate to a dedicated tool when daily volume approaches warmed-account capacity or we need blacklist monitoring. Want your call on the graduation trigger so it's decided before it's urgent.
+
+**2. Co-shaping the Q3 targets.** You called 15 / 10x / 200 a rough sketch. I've built baseline math and instrumentation as a starting point, not a position. Proposal: keep the numbers provisional for 30 days while we see what one full weekly push actually produces, then set targets off real throughput.
+
+**3. What good looks like: attribution.** My motion and Nate's Star Ratings outbound will touch overlapping accounts. Before either of us sends at volume, I want the three of us to agree on how a reply, meeting, and opportunity get credited, and to define it so Nate's results get more visible, not less. I have a draft reply-sync loop to react to; it's a starting point for that conversation, not a finished system.
+
+**4. Squad hours.** Three motions are running in parallel: Star Ratings, back-office contact build, BDR throughput. I'd like a rough weekly split for Nate, Genna, and Sierra so I plan asks against real capacity instead of guessing.
+
+**5. My Star Ratings idea: the addressability cut.** Short version: instead of ranking sub-4.0 plans by the gross bonus gap, I score each contract by the slice of its star gap that sits in customer-service and admin measures, the ones we actually move, and target the biggest addressable dollar. It changes the target order meaningfully and it hands Persona 2 a number an actuary won't reject. I'll walk you through the math and the current target list live; it's built to re-run every October release, so it's a standing input, not a one-time list.
+
+**6. Clay ownership handoff.** You offered me the environment. To take it properly I want: current state from the consultant (what's built, what's stubbed), the system prompt that crafts messaging (I have a v2 drafted to react to), and where intent signals stand, since earnings-call and QBP-loss signals are ready to wire once I have access. Day-one goal is an audit against the architecture I've mapped, then a build list we sequence together.
+
+**7. Rule-text check on the measure changes (joint, not a correction).** Working through the CY2027 final rule against our messaging, one thing worth confirming together: the Call Center measures come out for 2028 Stars, and the broader measure cuts actually push the addressable service gap up over time, not down, since CMS is removing the measures plans already top out on and concentrating weight into the CAHPS experience core by 2029. If that read holds, it sharpens the thesis: the near-term urgency is that complaints, appeals, and customer-service measures still price 2028 bonus dollars only through this December, and the long-term story is that our ground gets more valuable, not less. I want your read on the exact measure list so our copy is precise.
