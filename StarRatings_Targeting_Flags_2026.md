@@ -6,7 +6,7 @@ Suppression and routing rules that ride on top of the canonical universe. Apply 
 Molina is exiting MAPD / Part D in plan year 2027 (~$1B premiums) to focus on its dual-eligible book, which it keeps. Verified: Fierce Healthcare, Becker's, Molina Q4 2025 release.
 - Action: suppress Molina straight-MAPD contracts (no point pitching a book being wound down), but KEEP Molina dual-eligible / MMP contracts (My Choice Wisconsin, Senior Whole Health-type). Confirm each Molina contract's product line before it enters a sequence.
 - Molina contracts in the universe to check: H5649 (Central Health Medicare Plan), H3528 (ConnectiCare), H3038 (Molina Healthcare of California), H5209 (My Choice Wisconsin). H2224 (Senior Whole Health) already graduated to 4.0+.
-- This is wired into the signal engine: `qbp_earnings_pressure` suppresses for contracts flagged for divestiture/line-exit, so the earnings signal won't fire Molina MAPD into outreach.
+- Where this rule lives: Clay's `motion_exclude` formula column (Molina straight-MAPD contracts, per Clay_Day1_Build_Order.md delta 4) plus the persona-pull step-0 product-line check (confirm each Molina contract's product line before it enters a sequence). It is NOT wired into the signal engine; engine-level line-exit suppression on `qbp_earnings_pressure` is a post-start enhancement, not a pre-start requirement.
 
 ## 2. Cigna to HCSC / HealthSpring (routing only, targeting intact)
 Cigna sold its Medicare business to HCSC, closed March 19 2025; the plans rebrand HealthSpring for 2026. Verified: PRNewswire, Healthcare Dive, HealthSpring.com.

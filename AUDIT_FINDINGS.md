@@ -101,3 +101,16 @@ engine_state.json is explicitly SEEDED (_meta.status: "SEEDED, pre-access placeh
 5. Archive or keep StarRatings_Motion_Clay_Seed.csv and StarRatings_Accounts_Clay_Seed.csv (superseded era: C32/D01-live play text, Horizon rows). Recommend moving to _archive/. (Step 5.)
 6. Confirm the personal-file exclusions in .gitignore are the right set before the Bitbucket import; also decide on [redacted-personal-file] which is currently tracked. (Step 9.)
 
+---
+
+## Resolutions (owner decisions, applied 2026-07-01)
+
+All six DECISION-NEEDED items were decided by the owner and applied as follows. After every change: tam 21/21, signal 14/14, preflight unchanged (NOT READY, the four expected people-gated reds), and both edited JSON files parse clean.
+
+1. RESOLVED (flags doc corrected): StarRatings_Targeting_Flags_2026.md line 9 no longer claims engine wiring. It now states the Molina rule lives in Clay's motion_exclude column (Build Order delta 4) plus the persona-pull step-0 product-line check, and that engine-level line-exit suppression is a post-start enhancement. No engine code changed.
+2. RESOLVED (accepted as-is): security_audit_current stays red as the expected fourth blocker. Owner runs the permission audit on Day 1 with company access. No change.
+3. RESOLVED (copy fixed): tam-outbound-engine/config/triggers.json. Both plays now read "CAHPS, complaints, appeals, and customer-service measures"; call center no longer appears as a movable measure anywhere prospect-facing. 21/21 tests still pass.
+4. RESOLVED (state updated): gtm-cohesion-layer/engine_state.json list_health.accounts_by_motion now carries star_ratings: 98 (Tier A+B working set), star_ratings_tier_ab: 98, star_ratings_universe_total: 307, and a _note explaining both figures shrink after the Day-1 non-customer filter. Verified no code or dashboard iterates accounts_by_motion, so the added fields are inert to consumers.
+5. RESOLVED (archived): StarRatings_Motion_Clay_Seed.csv and StarRatings_Accounts_Clay_Seed.csv moved to _archive/ via git mv, each with a one-line "# SUPERSEDED 2026-07-01" note prepended naming the replacement files.
+6. RESOLVED (history rewritten): [redacted-personal-file] removed from all git history via filter-branch (nothing was ever pushed), backup refs deleted, reflog expired, gc run. The file remains on disk and is now gitignored. Confirmed exclusion list (all 13 verified via git check-ignore): [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file].
+

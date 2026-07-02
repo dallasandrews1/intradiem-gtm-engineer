@@ -39,14 +39,14 @@
     "qbp_earnings_pressure": {
       "label": "Stars/QBP financial pressure disclosed",
       "weight": 22,
-      "play": "Lead with the parent's own disclosed number, then localize: 'your own guidance names Stars as the headwind; contract [ID] is forgoing an est. $[X]M/yr, and $[Y]M of that gap sits in the CAHPS/complaints/call-center measures our platform acts on.' Route the QBP dollar column from the universe file as the personalization variable.",
+      "play": "Lead with the parent's own disclosed number, then localize: 'your own guidance names Stars as the headwind; contract [ID] is forgoing an est. $[X]M/yr, and $[Y]M of that gap sits in the CAHPS, complaints, appeals, and customer-service measures our platform acts on.' Route the QBP dollar column from the universe file as the personalization variable.",
       "stakes": "Parent has publicly committed capital or guidance to fixing Stars, so budget and executive attention exist now; the cost of waiting is another full ratings cycle of forgone bonus, and the disclosure itself is the prospect's language, not ours.",
       "route_personas": ["finance", "cc_ops"]
     },
     "quality_identity_gap": {
       "label": "Public quality identity contradicts sub-4.0 CS score",
       "weight": 15,
-      "play": "The account publicly markets itself on quality or service (state 5-star rating, US News award, brand-as-experience) while its CMS customer-service Star sits below 4.0. Mirror their own language back: 'you lead publicly on quality, and the gap to the 4.0 bonus on [contract] is sitting almost entirely in the CAHPS, complaints, and call-center measures, which is the exact part that contradicts the brand.' Personalize on the addressable dollar plus their own public quality claim.",
+      "play": "The account publicly markets itself on quality or service (state 5-star rating, US News award, brand-as-experience) while its CMS customer-service Star sits below 4.0. Mirror their own language back: 'you lead publicly on quality, and the gap to the 4.0 bonus on [contract] is sitting almost entirely in the CAHPS, complaints, appeals, and customer-service measures, which is the exact part that contradicts the brand.' Personalize on the addressable dollar plus their own public quality claim.",
       "stakes": "The gap between the public quality brand and the CS score is a reputational and a revenue exposure at once; every cycle it persists, the marketing promise and the CMS scorecard diverge further and the forgone bonus compounds.",
       "route_personas": ["cx", "cc_ops"]
     }

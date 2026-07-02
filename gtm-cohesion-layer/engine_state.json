@@ -21,7 +21,10 @@
   "list_health": {
     "accounts_total": 6,
     "accounts_by_motion": {
-      "star_ratings": 38,
+      "_note": "star_ratings = Tier A+B working set from StarRatings_Targets_2026_Tiered.csv (98 contracts, 32 parents, ranked on addr_2028_musd). Full sub-4.0 universe = 307 (StarRatings_Universe_2026_TimePhased.csv). Both shrink after the Day-1 non-customer filter (Clay_Day1_Build_Order.md step 2b).",
+      "star_ratings": 98,
+      "star_ratings_tier_ab": 98,
+      "star_ratings_universe_total": 307,
       "back_office": 157
     },
     "accounts_by_grade": {
