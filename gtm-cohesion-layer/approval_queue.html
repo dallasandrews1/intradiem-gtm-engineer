@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM Engine — Approval Queue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{--bg:#14181F;--panel:#1B212B;--line:#2A323C;--txt:#ECEAE6;--mut:#9AA0A8;--accent:#FF8A5C;--good:#43b96a;--bad:#f0655a;--warn:#E0A23C;--edit:#FE5000}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.55 "Inter",-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:28px;max-width:920px;margin:0 auto}
+  h1{font-size:21px;font-weight:800;font-family:"Outfit",sans-serif;letter-spacing:-.01em}
+  .sub{color:var(--mut);font-size:12.5px;margin-top:4px}
+  .principle{background:rgba(254,80,0,.08);border:1px solid var(--accent);border-radius:8px;padding:9px 13px;font-size:12.5px;margin:16px 0;color:#FFCBB2}
+  .counts{display:flex;gap:10px;margin:14px 0 6px;flex-wrap:wrap}
+  .count{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 13px;font-size:12.5px}
+  .count b{font-size:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:14px}
+  .card.gone{opacity:.45}
+  .row1{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+  .who{font-weight:650}
+  .meta{color:var(--mut);font-size:12px;margin-top:2px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .tag{font-size:10.5px;padding:2px 8px;border-radius:20px;border:1px solid var(--line);color:var(--mut)}
+  .tag.g{color:var(--good);border-color:var(--good)} .tag.a{color:var(--accent);border-color:var(--accent)} .tag.ex{color:var(--warn);border-color:var(--warn)}
+  .signal{font-size:12px;color:var(--warn);margin-top:8px}
+  textarea{width:100%;margin-top:10px;background:#14181F;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:10px;font:13px/1.5 inherit;resize:vertical;min-height:84px}
+  .btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  button{border:1px solid var(--line);background:#14181F;color:var(--txt);border-radius:8px;padding:7px 14px;font-size:12.5px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  .approve{border-color:var(--good);color:var(--good)} .reject{border-color:var(--bad);color:var(--bad)} .edit{border-color:var(--edit);color:var(--edit)}
+  .status{font-size:12px;font-weight:600;margin-top:8px}
+  .empty{color:var(--mut);text-align:center;padding:40px;border:1px dashed var(--line);border-radius:12px;margin-top:16px}
+  footer{color:var(--mut);font-size:11.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:12px}
+  .gate{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:16px 0}
+  .gate h2{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-family:"Outfit",sans-serif;margin-bottom:8px}
+  .gate.alarm{border-color:var(--bad);background:rgba(240,101,90,.07)}
+  .gaterow{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+  .pill{font-size:11.5px;padding:4px 10px;border-radius:20px;border:1px solid var(--line);color:var(--mut)}
+  .pill.ok{color:var(--good);border-color:var(--good)} .pill.no{color:var(--warn);border-color:var(--warn)} .pill.alarm{color:var(--bad);border-color:var(--bad)}
+  .relbox{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:var(--mut)}
+  select{background:#14181F;color:var(--txt);border:1px solid var(--line);border-radius:7px;padding:6px 9px;font:12.5px inherit}
+  select.owner{border-color:var(--bad);color:var(--bad)}
+  .ownerwarn{font-size:11.5px;color:var(--bad);margin-top:6px;display:none}
+  .quality{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:14px 0}
+  .quality.bad{border-color:var(--bad);background:rgba(240,101,90,.07)}
+  .quality h2{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);font-family:"Outfit",sans-serif;margin-bottom:8px}
+  .qrow{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+  .big{font-size:22px;font-weight:800;font-family:"Outfit",sans-serif}
+  .card.held{opacity:1;border-color:var(--warn);background:rgba(224,162,60,.06)}
+  .heldwhy{font-size:12px;color:var(--warn);margin-top:8px;line-height:1.5}
+  .heldwhy b{color:#F2C77A}
+</style>
+</head>
+<body>
+  <h1>GTM Engine — Approval Queue</h1>
+  <div class="sub">Nothing leaves the building without your release. The conductor drafts; you judge.</div>
+  <div class="principle">“AI does the enrichment. People keep the judgment. Outbound engineered rather than sprayed. Human approval before anything leaves the building.” — this queue is that guardrail, made operational.</div>
+  <div class="gate" id="opgate"></div>
+  <div class="counts" id="counts"></div>
+  <div id="quality"></div>
+  <div id="list"></div>
+  <footer id="foot"></footer>
+
+<script>
+const FALLBACK={approval_queue:{items:[]},_meta:{status:""}};
+let state, counts={approved:0,rejected:0,edited:0};
+// GAP 1 — this-session outcome tally (preview only; live, the release handler appends to resolved_ledger).
+let sessionDQ={clean:0,edited:0,rejected:0};
+
+function chip(t,cls){return `<span class="tag ${cls||''}">${t}</span>`}
+function motionKey(m){return (m||'').toLowerCase().indexOf('back')>-1?'back_office':'star_ratings';}
+function ops(){return (state.guardrails&&state.guardrails.throughput_by_operator&&state.guardrails.throughput_by_operator.operators)||
+  [{name:'Dallas Andrews'},{name:'Genna'},{name:'Nate Belfield'}];}
+function ownerName(){return (state.guardrails&&state.guardrails.operator_test&&state.guardrails.operator_test.owner_name)||'Dallas Andrews';}
+// Owner is identified by the stable is_owner flag, never by a bare name string (matches conductor).
+function isOwner(n){const rec=ops().find(o=>o.name===n);if(rec&&typeof rec.is_owner==='boolean')return rec.is_owner;return n===ownerName();}
+
+function renderGate(){
+  const el=document.getElementById('opgate'); if(!el) return;
+  const g=state.guardrails;
+  if(!g){el.style.display='none';return;}
+  const tp=g.throughput_by_operator||{}, ot=g.operator_test||{};
+  const share=Math.round((tp.dallas_share||0)*100), ceil=Math.round((tp.dallas_share_ceiling||0.2)*100);
+  const alarm=!!tp.alarm; el.className='gate'+(alarm?' alarm':'');
+  const need=ot.required_team_releases||2;
+  const motpills=Object.entries(ot.by_motion||{}).map(([m,r])=>{
+    const ok=r.status==='operable';
+    return `<span class="pill ${ok?'ok':'no'}">${m.replace('_',' ')}: ${r.consecutive_team_releases||0}/${need} team releases · ${ok?'operable ✓':'not yet'}</span>`;
+  }).join('');
+  el.innerHTML=`<h2>Operator-test gate — operable by the team, not by ${ownerName().split(' ')[0]}</h2>
+    <div class="gaterow">
+      <span class="pill ${alarm?'alarm':'ok'}">${ownerName().split(' ')[0]} released ${share}% this week (ceiling ${ceil}%)${alarm?' — BOTTLENECK':''}</span>
+      ${motpills}
+    </div>
+    <div class="meta" style="margin-top:8px">A motion only counts as overhauled once a non-${ownerName().split(' ')[0]} operator releases its batch unaided, ${need} weeks running. Every release ${ownerName().split(' ')[0]} makes resets that motion's streak.</div>`;
+}
+
+function renderQuality(){
+  const el=document.getElementById('quality'); if(!el) return;
+  const dq=state.draft_quality||{}, cr=state.critic||{};
+  const ar=dq.acceptance_rate, floor=dq.floor!=null?dq.floor:0.5;
+  const below=!!dq.below_floor;
+  el.className='quality'+(below?' bad':'');
+  const pct=ar==null?'—':Math.round(ar*100)+'%';
+  const ex=dq.example?' <span class="tag ex">example</span>':'';
+  const sess=(sessionDQ.clean+sessionDQ.edited+sessionDQ.rejected)>0
+    ? ` · this session: ${sessionDQ.clean} clean / ${sessionDQ.edited} edited / ${sessionDQ.rejected} rejected`:'';
+  el.innerHTML=`<h2>Cost per accepted change — is the draft engine actually saving you work?</h2>
+    <div class="qrow">
+      <span class="big" style="color:${below?'var(--bad)':'var(--good)'}">${pct}</span>
+      <span class="meta">clean-accept rate (floor ${Math.round(floor*100)}%)${ex}</span>
+      <span class="pill ${below?'alarm':'ok'}">${dq.clean_accept||0} clean · ${dq.edited_then_approved||0} edited · ${dq.rejected||0} rejected</span>
+      <span class="pill ${cr.held?'no':'ok'}">critic held ${cr.held||0}/${cr.checked||0} before they reached you</span>
+    </div>
+    <div class="meta" style="margin-top:8px">${below
+      ? '⚠ Below floor — you’re rewriting more than half of what the engine drafts. The DRAFT ENGINE is the bottleneck, not the gate. Fix the drafts (or the variants) before scaling volume.'
+      : 'A clean accept = sent with no edit (the loop saved the work). An edit = you did the work the loop was supposed to remove. Edited and rejected both count against the loop.'}${sess}</div>`;
+}
+
+function render(){
+  const items=state.approval_queue.items||[];
+  const pending=items.filter(i=>i.status==='pending').length;
+  document.getElementById('counts').innerHTML=
+    `<div class="count"><b>${pending}</b> pending</div>`+
+    `<div class="count" style="color:var(--good)"><b>${counts.approved}</b> approved</div>`+
+    `<div class="count" style="color:var(--edit)"><b>${counts.edited}</b> edited</div>`+
+    `<div class="count" style="color:var(--bad)"><b>${counts.rejected}</b> rejected</div>`;
+
+  const list=document.getElementById('list');
+  if(!items.length){list.innerHTML=`<div class="empty">Queue empty. Run the conductor (Stage 4) to populate drafts.</div>`;return;}
+
+  list.innerHTML=items.map((it,idx)=>{
+    const held=it.status==='critic_held';
+    const done=it.status!=='pending';
+    let statusLine='';
+    if(it.status==='approved') statusLine=`<div class="status" style="color:var(--good)">✓ Approved → released to sender by <b>${it.released_by||'—'}</b> (variant ${it.variant_id})${isOwner(it.released_by)?' · ⚠ owner release — streak reset':''}</div>`;
+    if(it.status==='rejected') statusLine=`<div class="status" style="color:var(--bad)">✕ Rejected — not sent</div>`;
+    if(held) statusLine=`<div class="heldwhy">⛔ <b>Held by the critic — never reached your queue.</b> The draft engine (maker) is not the gate (checker). Fix these before it can be released:<br>${(it.critic_reasons||['(no reason recorded)']).map(r=>'• '+r).join('<br>')}</div>`;
+    const opOptions=ops().map(o=>`<option value="${o.name}"${isOwner(o.name)?' data-owner="1"':''}${!isOwner(o.name)&&o===ops().find(x=>!isOwner(x.name))?' selected':''}>${o.name}${isOwner(o.name)?' (owner — resets streak)':''}</option>`).join('');
+    return `<div class="card ${held?'held':(done?'gone':'')}">
+      <div class="row1">
+        <div><div class="who">${it.account} — <span style="color:var(--mut)">${it.contact}</span></div>
+        <div class="meta">${it.motion} · ${it.channel}</div></div>
+        <div class="tags">${chip('Grade '+it.grade,it.grade==='A'?'g':'a')}${chip(it.persona_match,'a')}${chip('email '+it.email_status,it.email_status==='valid'?'g':'')}${held?chip('CRITIC HELD','ex'):''}${it.example?chip('EXAMPLE','ex'):''}</div>
+      </div>
+      <div class="signal">▲ ${it.top_signal}</div>
+      <textarea id="d${idx}" ${(done||held)?'disabled':''}>${it.draft}</textarea>
+      ${done?statusLine:`<div class="relbox">Released by
+        <select id="op${idx}" onchange="onOp(${idx})">${opOptions}</select>
+      </div>
+      <div class="ownerwarn" id="ow${idx}">⚠ Owner release. The team isn't operating this — it resets ${motion(idx)} operator-test streak to 0. Have ${ops().find(x=>!isOwner(x.name)).name.split(' ')[0]} release it instead.</div>
+      <div class="btns">
+        <button class="approve" onclick="act(${idx},'approved')">Approve &amp; release</button>
+        <button class="edit" onclick="edit(${idx})">Save edit</button>
+        <button class="reject" onclick="act(${idx},'rejected')">Reject</button>
+      </div>`}
+    </div>`;
+  }).join('');
+}
+
+function motion(idx){return motionKey((state.approval_queue.items[idx]||{}).motion);}
+function onOp(idx){const sel=document.getElementById('op'+idx);if(!sel)return;
+  const owner=isOwner(sel.value);sel.className=owner?'owner':'';
+  const w=document.getElementById('ow'+idx);if(w)w.style.display=owner?'block':'none';}
+
+function recordRelease(name,mkey){
+  const g=state.guardrails;if(!g)return;
+  const tp=g.throughput_by_operator||{},ot=g.operator_test||{};
+  (tp.operators||[]).forEach(o=>{if(o.name===name)o.released_this_week=(o.released_this_week||0)+1;});
+  // recompute share + alarm
+  const total=(tp.operators||[]).reduce((a,o)=>a+(o.released_this_week||0),0);
+  const dal=(tp.operators||[]).reduce((a,o)=>a+(isOwner(o.name)?(o.released_this_week||0):0),0);
+  tp.total_released_this_week=total;tp.dallas_share=total?+(dal/total).toFixed(4):0;
+  tp.alarm=!!(total&&tp.dallas_share>(tp.dallas_share_ceiling||0.2));
+  // operator-test streak: team release advances it, owner release resets it
+  const rec=(ot.by_motion||{})[mkey];if(rec){
+    if(isOwner(name)){rec.consecutive_team_releases=0;}
+    else{rec.consecutive_team_releases=(rec.consecutive_team_releases||0)+1;}
+    rec.last_released_by=name;rec.status=(rec.consecutive_team_releases>=(ot.required_team_releases||2))?'operable':'not_yet_operable';
+  }
+}
+
+function act(idx,status){const it=state.approval_queue.items[idx];
+  if(status==='approved'){const sel=document.getElementById('op'+idx);const who=sel?sel.value:ownerName();
+    it.released_by=who;recordRelease(who,motion(idx));counts.approved++;
+    // GAP 1 — an approve AFTER an edit is NOT a clean accept; the loop didn't save that work.
+    const outcome=it._edited?'edited':'clean';sessionDQ[outcome]++;
+    (state.approval_queue.resolved_ledger=state.approval_queue.resolved_ledger||[]).push({variant_id:it.variant_id,outcome:it._edited?'edited':'clean_accept',session:true});}
+  else{counts.rejected++;sessionDQ.rejected++;
+    (state.approval_queue.resolved_ledger=state.approval_queue.resolved_ledger||[]).push({variant_id:it.variant_id,outcome:'rejected',session:true});}
+  it.status=status;renderGate();renderQuality();render();}
+function edit(idx){const it=state.approval_queue.items[idx];const t=document.getElementById('d'+idx);it.draft=t.value;it._edited=true;counts.edited++;
+  // edit keeps it pending — you can still approve/reject after editing, but it's now flagged as edited
+  flash(idx);renderQuality();}
+function flash(idx){const t=document.getElementById('d'+idx);t.style.borderColor='var(--edit)';setTimeout(()=>t.style.borderColor='',700);}
+
+function boot(s){state=s;
+  document.getElementById('foot').innerHTML=`State: <b>${s._meta.status||''}</b>. Actions here are local preview — on Jul 6 the Approve button writes <code>sequence_status=queued</code>, stamps <code>released_by</code>, and hands the row to Nate’s sender; nothing else does.`;
+  renderGate();renderQuality();render();}
+
+function loadErrorBanner(){document.body.insertAdjacentHTML('afterbegin','<div style="background:#5a1a1a;border:1px solid #f0655a;color:#ffd2cc;padding:10px 14px;border-radius:8px;margin-bottom:14px;font:13px/1.4 Inter,sans-serif">⚠ Could not load <code>engine_state.json</code> — showing PLACEHOLDER data, NOT live state. Do not make decisions on these numbers.</div>');}
+fetch('engine_state.json').then(r=>r.ok?r.json():Promise.reject()).then(boot).catch(()=>{loadErrorBanner();boot(FALLBACK);});
+</script>
+</body>
+</html>

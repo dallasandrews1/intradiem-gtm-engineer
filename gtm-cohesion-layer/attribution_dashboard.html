@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM Engine — Attribution Funnel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{
+    --bg:#14181F; --panel:#1B212B; --line:#2A323C; --txt:#ECEAE6; --mut:#9AA0A8;
+    --accent:#FF8A5C; --good:#43b96a; --warn:#E0A23C; --bad:#f0655a; --credit:#FE5000;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.5 "Inter",-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:28px;max-width:1100px;margin:0 auto}
+  h1{font-size:21px;font-weight:800;font-family:"Outfit",sans-serif;letter-spacing:-.01em}
+  h2,.kpi .n{font-family:"Outfit",sans-serif}
+  .sub{color:var(--mut);font-size:12.5px;margin-top:4px}
+  .banner{background:#3d2b00;border:1px solid var(--warn);color:#f0c674;padding:9px 13px;border-radius:8px;font-size:12.5px;margin:16px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .panel h2{font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);margin-bottom:14px}
+  .motion-tag{font-size:10.5px;padding:2px 8px;border-radius:20px;border:1px solid var(--line);color:var(--accent);margin-left:8px;vertical-align:middle}
+  .step{display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .step:last-child{border-bottom:0}
+  .step .lab{color:var(--mut)}
+  .step .val{font-weight:650;font-variant-numeric:tabular-nums}
+  .credit{background:linear-gradient(90deg,rgba(254,80,0,.12),transparent);margin:0 -8px;padding:7px 8px;border-radius:6px;border-bottom:1px dashed var(--credit)}
+  .credit .lab{color:var(--credit);font-weight:600}
+  .bar{height:5px;background:var(--line);border-radius:3px;margin-top:3px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent)}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .kpi .n{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+  .kpi .l{color:var(--mut);font-size:12px;margin-top:3px}
+  .pill{font-size:11px;padding:2px 9px;border-radius:20px;display:inline-block;margin-top:8px}
+  .p-good{background:rgba(63,185,80,.15);color:var(--good)} .p-bad{background:rgba(248,81,73,.15);color:var(--bad)} .p-warn{background:rgba(210,153,34,.15);color:var(--warn)}
+  footer{color:var(--mut);font-size:11.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+  <h1>GTM Engine — Attribution Funnel</h1>
+  <div class="sub" id="sub">Source-of-truth: engine_state.json · the credit line is highlighted in <span style="color:var(--credit)">orange</span></div>
+  <div class="banner" id="banner"></div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid">
+    <div class="panel" id="p-star"></div>
+    <div class="panel" id="p-bo"></div>
+  </div>
+
+  <footer id="foot"></footer>
+
+<script>
+// Fallback mirrors engine_state.json so the page renders standalone (file://).
+// When served, it fetches the live file so all dashboards stay in sync.
+const FALLBACK = {
+  "_meta":{"last_updated":"2026-06-24","status":"SEEDED — pre-access placeholders"},
+  "baseline":{"one_x_qualified_replies_per_week":null,"ratified_with_naveen":false,
+    "deliverability_floor":{"min_open_rate":0.40,"max_spam_rate":0.003,"max_bounce_rate":0.03}},
+  "funnel":{
+    "star_ratings":{"contacts_enriched":0,"messages_sent":0,"delivered":0,"opens":0,"replies":0,"qualified_replies":0,"meetings_booked":0,"meetings_confirmed":0},
+    "back_office":{"contacts_enriched":0,"messages_sent":0,"delivered":0,"opens":0,"replies":0,"qualified_replies":0,"meetings_booked":0,"meetings_confirmed":0},
+    "targets":{"vetted_meetings":15,"qualified_replies_per_week_10x":null,"back_office_contacts":200}},
+  "deliverability":{"overall_health":"not_started"},
+  "attribution_contract":{"ratified_in_writing":false,
+    "fields_live_in_salesforce":{"gtm_engine_sourced":false,"source_motion":false,"sourced_date":false}}
+};
+
+const order=[["contacts_enriched","Contacts enriched"],["messages_sent","Messages sent"],["delivered","Delivered"],["opens","Opens"],["replies","Replies"],["qualified_replies","Qualified replies"],["meetings_confirmed","Meetings (confirmed)"]];
+const creditKeys=new Set(["qualified_replies","meetings_confirmed"]);
+
+function funnelHTML(title,tag,f){
+  const top=Math.max(f.contacts_enriched,1);
+  let rows=order.map(([k,l])=>{
+    const v=f[k]||0, w=Math.round((v/top)*100);
+    const cr=creditKeys.has(k)?" credit":"";
+    return `<div class="step${cr}"><div style="flex:1"><div class="lab">${l}</div><div class="bar"><i style="width:${w}%"></i></div></div><div class="val">${v.toLocaleString()}</div></div>`;
+  }).join("");
+  return `<h2>${title}<span class="motion-tag">${tag}</span></h2>${rows}`;
+}
+
+function render(s){
+  const f=s.funnel, star=f.star_ratings, bo=f.back_office, t=f.targets;
+  const totalMtg=(star.meetings_confirmed||0)+(bo.meetings_confirmed||0);
+  const totalQR=(star.qualified_replies||0)+(bo.qualified_replies||0);
+  const ac=s.attribution_contract||{};
+  const ratified=ac.ratified_in_writing;
+
+  // banner: the Week-1 gate
+  const b=document.getElementById('banner');
+  if(!ratified){
+    b.innerHTML="⚠ <b>Attribution not yet ratified.</b> Until Naveen confirms the credit line in writing + the 3 Salesforce fields exist, these numbers are a claim, not an instrument. This is the Week-1, do-nothing-else move.";
+  }else{ b.style.display="none"; }
+
+  document.getElementById('kpis').innerHTML=`
+    <div class="kpi"><div class="n">${totalMtg}<span style="font-size:15px;color:var(--mut)"> / ${t.vetted_meetings}</span></div><div class="l">Vetted meetings sourced (confirmed)</div>
+      <span class="pill ${totalMtg>=t.vetted_meetings?'p-good':'p-warn'}">${Math.round(totalMtg/t.vetted_meetings*100)}% to target</span></div>
+    <div class="kpi"><div class="n">${totalQR}</div><div class="l">Qualified replies (engine-sourced)</div>
+      <span class="pill ${s.baseline.one_x_qualified_replies_per_week?'p-good':'p-warn'}">${s.baseline.one_x_qualified_replies_per_week?('vs '+s.baseline.one_x_qualified_replies_per_week+'/wk baseline'):'baseline not set'}</span></div>
+    <div class="kpi"><div class="n">${(bo.contacts_enriched||0)}<span style="font-size:15px;color:var(--mut)"> / ${t.back_office_contacts}</span></div><div class="l">Back-office contacts (qualified)</div>
+      <span class="pill ${(s.deliverability.overall_health==='green')?'p-good':'p-warn'}">deliverability: ${s.deliverability.overall_health}</span></div>`;
+
+  document.getElementById('p-star').innerHTML=funnelHTML("Star Ratings motion","new logo",star);
+  document.getElementById('p-bo').innerHTML=funnelHTML("Back Office motion","install base",bo);
+
+  const fl=ac.fields_live_in_salesforce||{};
+  document.getElementById('foot').innerHTML=
+    `State: <b>${s._meta.status||''}</b> · updated ${s._meta.last_updated||'—'} · `+
+    `SF fields live → gtm_engine_sourced:${fl.gtm_engine_sourced?'✓':'✗'} source_motion:${fl.source_motion?'✓':'✗'} sourced_date:${fl.sourced_date?'✓':'✗'} · `+
+    `Only <code>gtm_engine_sourced=true</code> rows count here. Reps keep conversion credit from the reply forward.`;
+}
+
+function loadErrorBanner(){document.body.insertAdjacentHTML('afterbegin','<div style="background:#5a1a1a;border:1px solid #f0655a;color:#ffd2cc;padding:10px 14px;border-radius:8px;margin-bottom:14px;font:13px/1.4 Inter,sans-serif">⚠ Could not load <code>engine_state.json</code> — showing PLACEHOLDER data, NOT live state. Do not make decisions on these numbers.</div>');}
+fetch('engine_state.json').then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{loadErrorBanner();render(FALLBACK);});
+</script>
+</body>
+</html>

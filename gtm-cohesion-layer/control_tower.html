@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM Engine — Control Tower</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{--bg:#14181F;--panel:#1B212B;--line:#2A323C;--txt:#ECEAE6;--mut:#9AA0A8;--accent:#FF8A5C;--good:#43b96a;--bad:#f0655a;--warn:#E0A23C;--win:#FE5000}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.55 "Inter",-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:26px;max-width:1080px;margin:0 auto}
+  h1{font-size:22px;font-weight:800;font-family:"Outfit",sans-serif;letter-spacing:-.01em}
+  h2,h3{font-family:"Outfit",sans-serif}
+  .kpi .n,.node .t{font-family:"Outfit",sans-serif}
+  .sub{color:var(--mut);font-size:12.5px;margin-top:3px}
+  .strip{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 15px;min-width:140px}
+  .kpi .n{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+  .kpi .l{font-size:11px;color:var(--mut);margin-top:2px}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .d-green{background:var(--good)} .d-warm{background:var(--warn)} .d-red{background:var(--bad)} .d-off{background:#555}
+
+  .lineWrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:22px}
+  .lineWrap h2{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut);margin-bottom:14px}
+  .flow{display:flex;align-items:stretch;gap:6px;overflow-x:auto;padding-bottom:6px}
+  .node{flex:1;min-width:96px;background:#14181F;border:1px solid var(--line);border-radius:10px;padding:10px 9px;text-align:center;position:relative}
+  .node .s{font-size:10px;color:var(--mut)} .node .t{font-size:12px;font-weight:600;margin-top:3px} .node .w{font-size:10px;margin-top:4px;color:var(--mut)}
+  .node.gate{border-color:var(--win)} .node.gate .t{color:var(--win)}
+  .node.gate2{border-color:var(--warn)} .node.gate2 .t{color:var(--warn)}
+  .arrow{align-self:center;color:var(--mut);font-size:14px}
+  .src{display:flex;gap:10px;margin-bottom:12px;font-size:12px;color:var(--mut);flex-wrap:wrap}
+  .src b{color:var(--accent)}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--txt);display:block;transition:border-color .15s}
+  .card:hover{border-color:var(--accent)}
+  .card h3{font-size:15px;display:flex;align-items:center;justify-content:space-between}
+  .open{font-size:11px;color:var(--accent)}
+  .card .what{font-size:12.5px;color:var(--mut);margin-top:7px}
+  .card .say{font-size:12px;margin-top:10px;padding:9px 11px;background:rgba(254,80,0,.08);border-left:2px solid var(--accent);border-radius:4px;color:#FFCBB2}
+  .card .live{font-size:12px;margin-top:9px;font-weight:600}
+  .guardrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .guard{background:#14181F;border:1px solid var(--line);border-radius:10px;padding:12px 13px}
+  .guard.alarm{border-color:var(--bad);background:rgba(240,101,90,.07)}
+  .guard .gl{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut)}
+  .guard .gv{font-size:16px;font-weight:700;font-family:"Outfit",sans-serif;margin-top:4px;font-variant-numeric:tabular-nums}
+  .guard .gd{font-size:11.5px;color:var(--mut);margin-top:5px}
+  .guard .ok{color:var(--good)} .guard .no{color:var(--warn)} .guard .bad{color:var(--bad)}
+  @media(max-width:720px){.guardrow{grid-template-columns:1fr}}
+  footer{color:var(--mut);font-size:11.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+  <h1>GTM Engine — Control Tower</h1>
+  <div class="sub" id="sub">One screen for the whole line. Open this first. Every tile below opens a live window.</div>
+
+  <div class="strip" id="strip"></div>
+
+  <div class="lineWrap">
+    <h2>The line — one weekly push, seven steps</h2>
+    <div class="src">Source: <b>Clay</b> (enrich + score + tag) &nbsp;→&nbsp; <b>conductor.py</b> runs the steps &nbsp;→&nbsp; writes <b>engine_state.json</b> &nbsp;→&nbsp; every window below reads it.</div>
+    <div class="flow" id="flow"></div>
+  </div>
+
+  <div class="lineWrap" id="guardWrap">
+    <h2>Guardrails — premortem tripwires (fail loud, fail early)</h2>
+    <div class="guardrow" id="guard"></div>
+  </div>
+
+  <div class="grid" id="cards"></div>
+  <footer id="foot"></footer>
+
+<script>
+const FALLBACK={_meta:{status:""},list_health:{accounts_by_grade:{A:0,B:0,C:0,D:0}},funnel:{star_ratings:{meetings_confirmed:0,qualified_replies:0},back_office:{meetings_confirmed:0,qualified_replies:0,contacts_enriched:0},targets:{vetted_meetings:15,back_office_contacts:200}},deliverability:{overall_health:"not_started"},signals:{top_signals:[]},approval_queue:{pending:0},experiments:{winning_variant:null},impact:{},conductor:{last_run:"never"},guardrails:null};
+
+const STAGES=[
+  {s:"1",t:"Refresh",w:"re-enrich"},
+  {s:"2",t:"Re-score",w:"grade A–D"},
+  {s:"3",t:"Signals",w:"who's hot"},
+  {s:"4",t:"Draft",w:"3 variants"},
+  {s:"5",t:"Approve",w:"YOU release",gate:1},
+  {s:"6",t:"Send",w:"if green",gate:2},
+  {s:"7",t:"Measure",w:"funnel+win"},
+];
+
+function light(h){return h==='green'?'d-green':h==='warming'||h==='warm'?'d-warm':h==='not_started'?'d-off':'d-red';}
+
+function render(s){
+  const f=s.funnel, g=s.list_health.accounts_by_grade;
+  const mtg=(f.star_ratings.meetings_confirmed||0)+(f.back_office.meetings_confirmed||0);
+  const qr=(f.star_ratings.qualified_replies||0)+(f.back_office.qualified_replies||0);
+  const win=s.experiments.winning_variant; const wtxt=Array.isArray(win)?win.join(', '):(win||'TBD');
+
+  document.getElementById('strip').innerHTML=`
+    <div class="kpi"><div class="n">${mtg} / ${f.targets.vetted_meetings}</div><div class="l">Vetted meetings sourced</div></div>
+    <div class="kpi"><div class="n">${qr}</div><div class="l">Qualified replies</div></div>
+    <div class="kpi"><div class="n">${g.A}·${g.B}·${g.C}·${g.D}</div><div class="l">Accounts A·B·C·D</div></div>
+    <div class="kpi"><div class="n">${(s.signals.top_signals||[]).length}</div><div class="l">Accounts signalling</div></div>
+    <div class="kpi"><div class="n"><span class="dot ${light(s.deliverability.overall_health)}"></span>${s.deliverability.overall_health}</div><div class="l">Deliverability gate</div></div>
+    <div class="kpi"><div class="n">${s.impact.opportunity_surfaced||'—'}</div><div class="l">Opportunity surfaced</div></div>`;
+
+  document.getElementById('flow').innerHTML=STAGES.map((n,i)=>{
+    const cls=n.gate===1?'node gate':n.gate===2?'node gate2':'node';
+    return `<div class="${cls}"><div class="s">step ${n.s}</div><div class="t">${n.t}</div><div class="w">${n.w}</div></div>`+
+      (i<STAGES.length-1?'<div class="arrow">▸</div>':'');
+  }).join('');
+
+  const cards=[
+    {href:"attribution_dashboard.html",h:"① Attribution Funnel",what:"Where your credit lives. The funnel for both motions — contacts → sent → replies → qualified → meetings — counting only engine-sourced records.",say:"“My engine sourced X qualified replies and Y meetings this week, by motion, separate from rep conversion credit.”",live:`${qr} qualified replies tracked`},
+    {href:"approval_queue.html",h:"② Approval Queue",what:"The human gate. Drafts wait here; you approve, edit, or reject. Nothing sends without you.",say:"“AI enriches and drafts, but a human approves every send. We engineer outbound, we don't spray it.”",live:`${s.approval_queue.pending} awaiting your release`},
+    {href:"deliverability_monitor.html",h:"③ Deliverability Monitor",what:"The send gate. Domain health vs. the floor. Green = safe to scale; anything else holds volume.",say:"“We protect the warm domains. Volume only scales when deliverability is green — reputation before reach.”",live:`status: ${s.deliverability.overall_health}`},
+    {href:"variant_tracker.html",h:"④ Variant Tracker",what:"Which message wins, by qualified-reply rate per segment. Winners get promoted, losers retire.",say:"“We run message experiments continuously. Right now '"+wtxt+"' is winning its segment — that becomes the control.”",live:`winner: ${wtxt}`},
+  ];
+  document.getElementById('cards').innerHTML=cards.map(c=>`
+    <a class="card" href="${c.href}">
+      <h3>${c.h}<span class="open">open ↗</span></h3>
+      <div class="what">${c.what}</div>
+      <div class="live" style="color:var(--accent)">▸ ${c.live}</div>
+      <div class="say"><b>Say to an exec:</b> ${c.say}</div>
+    </a>`).join('');
+
+  renderGuard(s);
+
+  document.getElementById('foot').innerHTML=`State: <b>${s._meta.status||''}</b> · last conductor run: ${s.conductor.last_run||'never'}. The two colored steps are your send guardrails: <span style="color:var(--win)">step 5 (human approve)</span> and <span style="color:var(--warn)">step 6 (deliverability gate)</span>. The three panels above are your premortem tripwires — they recompute every conductor run. Also live as a Cowork artifact: your private <b>mission-control</b> tracker.`;
+}
+
+function renderGuard(s){
+  const wrap=document.getElementById('guardWrap'), el=document.getElementById('guard');
+  const g=s.guardrails;
+  if(!g){if(wrap)wrap.style.display='none';return;}
+  if(wrap)wrap.style.display='';
+  const tp=g.throughput_by_operator||{}, ot=g.operator_test||{}, wip=g.wip||{};
+  const share=Math.round((tp.dallas_share||0)*100), ceil=Math.round((tp.dallas_share_ceiling||0.2)*100);
+  const owner=(ot.owner_name||'Dallas Andrews').split(' ')[0];
+  // 1: operator-test per motion
+  const need=ot.required_team_releases||2;
+  const mot=Object.entries(ot.by_motion||{}).map(([m,r])=>{
+    const ok=r.status==='operable';
+    return `<span class="${ok?'ok':'no'}">${m.replace('_',' ')} ${r.consecutive_team_releases||0}/${need}${ok?' ✓':''}</span>`;
+  }).join(' · ');
+  // 3: wip
+  const scaling=Object.entries(wip.motions||{}).filter(([m,st])=>st==='scaling').map(([m])=>m.replace('_',' '));
+  const wipViol=!!wip.violation;
+  el.innerHTML=`
+    <div class="guard ${tp.alarm?'alarm':''}">
+      <div class="gl">① Bottleneck — operable by team?</div>
+      <div class="gv ${tp.alarm?'bad':'ok'}">${owner} ${share}% <span style="font-size:11px;color:var(--mut)">/ ${ceil}% ceiling</span></div>
+      <div class="gd">${tp.alarm?`⚠ ${owner} is the bottleneck. Don't scale — fix operability first.`:`${owner}'s share of releases is under ceiling. Team is operating it.`}</div>
+    </div>
+    <div class="guard">
+      <div class="gl">② Operator-test — overhauled yet?</div>
+      <div class="gv">${mot||'—'}</div>
+      <div class="gd">A motion counts as overhauled only after ${need} unaided team releases. Owner releases reset the streak.</div>
+    </div>
+    <div class="guard ${wipViol?'alarm':''}">
+      <div class="gl">③ WIP-of-one — anti-sprawl</div>
+      <div class="gv ${wipViol?'bad':'ok'}">${scaling.length}/${wip.scaling_limit||1} scaling</div>
+      <div class="gd">${wipViol?'⚠ Too many motions in flight. Park all but one.':`Scaling: <b>${scaling.join(', ')||'none'}</b>. ${(wip.backlog||[]).length} item(s) parked in backlog.`}</div>
+    </div>`;
+}
+function loadErrorBanner(){document.body.insertAdjacentHTML('afterbegin','<div style="background:#5a1a1a;border:1px solid #f0655a;color:#ffd2cc;padding:10px 14px;border-radius:8px;margin-bottom:14px;font:13px/1.4 Inter,sans-serif">⚠ Could not load <code>engine_state.json</code> — showing PLACEHOLDER data, NOT live state. Do not make decisions on these numbers.</div>');}
+fetch('engine_state.json').then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{loadErrorBanner();render(FALLBACK);});
+</script>
+</body>
+</html>

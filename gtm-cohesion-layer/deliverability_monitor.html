@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM Engine — Deliverability Monitor</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{--bg:#14181F;--panel:#1B212B;--line:#2A323C;--txt:#ECEAE6;--mut:#9AA0A8;--accent:#FF8A5C;--good:#43b96a;--bad:#f0655a;--warn:#E0A23C}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.55 "Inter",-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:28px;max-width:980px;margin:0 auto}
+  h1{font-size:21px;font-weight:800;font-family:"Outfit",sans-serif;letter-spacing:-.01em}
+  h2{font-family:"Outfit",sans-serif}
+  .sub{color:var(--mut);font-size:12.5px;margin-top:4px}
+  .hero{display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+  .light{width:54px;height:54px;border-radius:50%;flex:0 0 auto}
+  .green{background:radial-gradient(circle at 35% 30%,#5fe07a,#238636)} .warm{background:radial-gradient(circle at 35% 30%,#f2cc60,#bb8009)} .red{background:radial-gradient(circle at 35% 30%,#ff7b72,#c93026)} .off{background:#30363d}
+  .hero h2{font-size:17px} .hero p{color:var(--mut);font-size:12.5px;margin-top:2px}
+  .floor{background:rgba(254,80,0,.08);border:1px solid var(--accent);border-radius:8px;padding:9px 13px;font-size:12.5px;color:#FFCBB2;margin-bottom:14px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:11px 13px;font-size:13px;border-bottom:1px solid var(--line)}
+  th{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+  tr:last-child td{border-bottom:0}
+  .ok{color:var(--good)} .ko{color:var(--bad)} .wn{color:var(--warn)}
+  .mono{font-variant-numeric:tabular-nums}
+  .note{color:var(--mut);font-size:12px;margin-top:14px}
+  footer{color:var(--mut);font-size:11.5px;margin-top:22px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+  <h1>GTM Engine — Deliverability Monitor</h1>
+  <div class="sub">Premortem P1: 10× sends on cold domains poison the 157 warm contacts. Green here is the gate the conductor checks before Stage 6 (Send).</div>
+  <div class="floor" id="floor"></div>
+  <div class="hero"><div class="light off" id="light"></div><div><h2 id="verdict">—</h2><p id="verdictsub"></p></div></div>
+  <table><thead><tr><th>Domain</th><th>Age</th><th>Cap / sent</th><th>Open</th><th>Bounce</th><th>Spam</th><th>Blacklist</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table>
+  <div class="note" id="note"></div>
+  <footer id="foot"></footer>
+
+<script>
+const FALLBACK={deliverability:{domains:[],overall_health:"not_started"},baseline:{deliverability_floor:{min_open_rate:0.4,max_spam_rate:0.003,max_bounce_rate:0.03}},_meta:{status:""}};
+
+function pct(n){return (n==null)?'—':(n*100).toFixed(n<0.01?2:1)+'%'}
+
+function render(s){
+  const fl=s.baseline.deliverability_floor;
+  document.getElementById('floor').innerHTML=`<b>Deliverability floor:</b> open ≥ ${pct(fl.min_open_rate)} · bounce ≤ ${pct(fl.max_bounce_rate)} · spam ≤ ${pct(fl.max_spam_rate)}. A domain breaching any of these is pulled from rotation; the 10× number is void while breached.`;
+
+  const ds=s.deliverability.domains||[];
+  let anyBreach=false, anyWarm=false;
+  document.getElementById('rows').innerHTML=ds.length?ds.map(d=>{
+    const bounceBad=d.bounce_rate>fl.max_bounce_rate, spamBad=d.spam_complaints>fl.max_spam_rate, openBad=d.open_rate!=null&&d.open_rate<fl.min_open_rate;
+    const breach=bounceBad||spamBad||d.blacklisted;
+    if(breach)anyBreach=true; if(d.status==='warming')anyWarm=true;
+    let st = breach?'<span class="ko">PULL FROM ROTATION</span>' : (d.status==='warming'?'<span class="wn">warming</span>':'<span class="ok">healthy</span>');
+    return `<tr>
+      <td>${d.domain}${d.example?' <span class="wn" style="font-size:10px">(example)</span>':''}</td>
+      <td class="mono">${d.age_days}d</td>
+      <td class="mono">${d.sent_today}/${d.daily_cap}</td>
+      <td class="mono ${openBad?'wn':'ok'}">${pct(d.open_rate)}</td>
+      <td class="mono ${bounceBad?'ko':'ok'}">${pct(d.bounce_rate)}</td>
+      <td class="mono ${spamBad?'ko':'ok'}">${pct(d.spam_complaints)}</td>
+      <td class="${d.blacklisted?'ko':'ok'}">${d.blacklisted?'YES':'clean'}</td>
+      <td>${st}</td></tr>`;
+  }).join(''):`<tr><td colspan="8" style="color:var(--mut);text-align:center;padding:24px">No domains configured. Stand up warmup before any volume.</td></tr>`;
+
+  // verdict light
+  const light=document.getElementById('light'), v=document.getElementById('verdict'), vs=document.getElementById('verdictsub');
+  if(!ds.length){light.className='light off';v.textContent='NOT STARTED';vs.textContent='No sending infrastructure yet. Build warmup/rotation/monitoring before Stage 6 is ever unblocked.';}
+  else if(anyBreach){light.className='light red';v.textContent='BLOCKED';vs.textContent='A domain breached the floor. Conductor Stage 6 will skip Send. Fix before scaling.';}
+  else if(anyWarm){light.className='light warm';v.textContent='WARMING';vs.textContent='Domains healthy but still warming. Small instrumented sends only — do not scale volume yet.';}
+  else{light.className='light green';v.textContent='GREEN';vs.textContent='All domains within floor. Conductor Stage 6 (Send) is cleared to fire approved rows.';}
+
+  document.getElementById('note').innerHTML=`Protecting <b>${s.deliverability.warm_contacts_protected||0}</b> warm contacts. Overall health flag in state: <b>${s.deliverability.overall_health}</b>. The conductor reads this exact flag — it only sends when it reads "green".`;
+  document.getElementById('foot').innerHTML=`State: <b>${s._meta.status||''}</b> · last checked ${s.deliverability.last_checked||'—'}. On Jul 6, the monitor agent writes these rows from the real sending stack (warmup tool / ESP webhooks).`;
+}
+function loadErrorBanner(){document.body.insertAdjacentHTML('afterbegin','<div style="background:#5a1a1a;border:1px solid #f0655a;color:#ffd2cc;padding:10px 14px;border-radius:8px;margin-bottom:14px;font:13px/1.4 Inter,sans-serif">⚠ Could not load <code>engine_state.json</code> — showing PLACEHOLDER data, NOT live state. Do not make decisions on these numbers.</div>');}
+fetch('engine_state.json').then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{loadErrorBanner();render(FALLBACK);});
+</script>
+</body>
+</html>

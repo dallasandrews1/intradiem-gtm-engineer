@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GTM Engine — Variant Experiment Tracker</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+  :root{--bg:#14181F;--panel:#1B212B;--line:#2A323C;--txt:#ECEAE6;--mut:#9AA0A8;--accent:#FF8A5C;--good:#43b96a;--bad:#f0655a;--warn:#E0A23C;--win:#FE5000}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font:14px/1.55 "Inter",-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);padding:28px;max-width:960px;margin:0 auto}
+  h1{font-size:21px;font-weight:800;font-family:"Outfit",sans-serif;letter-spacing:-.01em}
+  h2,.vid,.m .n{font-family:"Outfit",sans-serif}
+  .sub{color:var(--mut);font-size:12.5px;margin-top:4px}
+  .why{background:rgba(254,80,0,.08);border:1px solid var(--accent);border-radius:8px;padding:9px 13px;font-size:12.5px;color:#FFCBB2;margin:16px 0}
+  .seg{margin-top:22px}
+  .seg h2{font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);margin-bottom:10px}
+  .v{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+  .v.win{border-color:var(--win);box-shadow:0 0 0 1px rgba(254,80,0,.30)}
+  .v.retire{opacity:.6}
+  .vtop{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+  .vid{font-weight:700;font-size:15px}
+  .hyp{color:var(--mut);font-size:12.5px;margin-top:2px}
+  .badge{font-size:10.5px;padding:2px 9px;border-radius:20px;font-weight:600}
+  .b-win{background:rgba(254,80,0,.18);color:var(--win)} .b-retire{background:rgba(248,81,73,.15);color:var(--bad)} .b-test{background:rgba(210,153,34,.15);color:var(--warn)} .b-under{background:rgba(139,148,158,.15);color:var(--mut)}
+  .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+  .m{text-align:center} .m .n{font-size:17px;font-weight:650;font-variant-numeric:tabular-nums} .m .l{font-size:10.5px;color:var(--mut);margin-top:1px}
+  .qrbar{height:6px;background:var(--line);border-radius:3px;margin-top:10px;overflow:hidden}
+  .qrbar i{display:block;height:100%;background:var(--win)}
+  .rec{font-size:12px;margin-top:9px;color:var(--mut)}
+  footer{color:var(--mut);font-size:11.5px;margin-top:24px;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+  <h1>Variant Experiment Tracker</h1>
+  <div class="sub">Which message actually wins — by qualified-reply rate, per segment. The loop that turns one push into a smarter push.</div>
+  <div class="why">This is the Rippling proof made real: team-wide experimentation, no engineering. The conductor recomputes winners every run; a variant needs <b id="ms">40</b> sends before it can be declared. Winners get promoted into the next draft cycle; losers retire.</div>
+  <div id="segs"></div>
+  <footer id="foot"></footer>
+
+<script>
+const FALLBACK={experiments:{min_sample:40,active_variants:[],winning_variant:null},_meta:{status:""}};
+const rate=(a,b)=>b?(a/b):0;
+const pct=n=>(n*100).toFixed(1)+'%';
+
+function badge(st){
+  const map={winner:['WINNER','b-win'],retire:['RETIRE','b-retire'],testing:['TESTING','b-test'],under_sample:['NEEDS SAMPLE','b-under']};
+  const [t,c]=map[st]||['TESTING','b-test']; return `<span class="badge ${c}">${t}</span>`;
+}
+
+function render(s){
+  const e=s.experiments; document.getElementById('ms').textContent=e.min_sample;
+  const vs=e.active_variants||[];
+  if(!vs.length){document.getElementById('segs').innerHTML='<div style="color:var(--mut);padding:30px;text-align:center;border:1px dashed var(--line);border-radius:12px">No variants yet. The conductor populates these once sends start.</div>';return;}
+  // group by segment
+  const segs={}; vs.forEach(v=>{(segs[v.segment]=segs[v.segment]||[]).push(v)});
+  const maxQR=Math.max(...vs.map(v=>rate(v.qualified_replies,v.sent)),0.0001);
+  document.getElementById('segs').innerHTML=Object.entries(segs).map(([seg,group])=>{
+    const cards=group.sort((a,b)=>rate(b.qualified_replies,b.sent)-rate(a.qualified_replies,a.sent)).map(v=>{
+      const qr=rate(v.qualified_replies,v.sent), opn=rate(v.opens,v.sent), rep=rate(v.replies,v.sent);
+      let rec='';
+      if(v.status==='winner')rec='→ Promote: make this the control for this segment; draft next challenger against it.';
+      else if(v.status==='retire')rec='→ Retire: under half the winner’s qualified-reply rate. Stop sending.';
+      else if(v.status==='under_sample')rec=`→ Hold: only ${v.sent} sends, needs ${e.min_sample}. Keep testing before judging.`;
+      else rec='→ Keep testing.';
+      return `<div class="v ${v.status==='winner'?'win':v.status==='retire'?'retire':''}">
+        <div class="vtop"><div><span class="vid">${v.variant_id}</span> ${v.example?'<span class="badge b-under">EXAMPLE</span>':''}<div class="hyp">${v.hypothesis}</div></div>${badge(v.status)}</div>
+        <div class="metrics">
+          <div class="m"><div class="n">${v.sent}</div><div class="l">sent</div></div>
+          <div class="m"><div class="n">${pct(opn)}</div><div class="l">open</div></div>
+          <div class="m"><div class="n">${pct(rep)}</div><div class="l">reply</div></div>
+          <div class="m"><div class="n" style="color:var(--win)">${pct(qr)}</div><div class="l">qual. reply</div></div>
+          <div class="m"><div class="n">${v.meetings}</div><div class="l">meetings</div></div>
+        </div>
+        <div class="qrbar"><i style="width:${Math.round(qr/maxQR*100)}%"></i></div>
+        <div class="rec">${rec}</div>
+      </div>`;
+    }).join('');
+    return `<div class="seg"><h2>${seg}</h2>${cards}</div>`;
+  }).join('');
+
+  const w=e.winning_variant; const wtxt=Array.isArray(w)?w.join(' · '):(w||'none yet');
+  document.getElementById('foot').innerHTML=`State: <b>${s._meta.status||''}</b> · current winner(s): <b style="color:var(--win)">${wtxt}</b>. Qualified-reply rate is the judge — opens and replies are vanity until they qualify. On Jul 6 these counts come from real reply_status, scoped to engine-sourced rows.`;
+}
+function loadErrorBanner(){document.body.insertAdjacentHTML('afterbegin','<div style="background:#5a1a1a;border:1px solid #f0655a;color:#ffd2cc;padding:10px 14px;border-radius:8px;margin-bottom:14px;font:13px/1.4 Inter,sans-serif">⚠ Could not load <code>engine_state.json</code> — showing PLACEHOLDER data, NOT live state. Do not make decisions on these numbers.</div>');}
+fetch('engine_state.json').then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{loadErrorBanner();render(FALLBACK);});
+</script>
+</body>
+</html>

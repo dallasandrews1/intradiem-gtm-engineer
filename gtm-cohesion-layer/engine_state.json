@@ -1,0 +1,734 @@
+{
+  "_meta": {
+    "name": "GTM Engine \u2014 Single Source of Truth",
+    "owner": "Dallas Andrews",
+    "purpose": "One state file every dashboard reads from. Fixes dashboard drift. Conductor writes here after each weekly run; reply-sync agent updates the funnel; deliverability monitor updates inbox health. SEEDED values below are placeholders until live Clay/Salesforce/inbox access (Jul 6 2026) \u2014 replace, do not trust.",
+    "schema_version": "1.0",
+    "last_updated": "2026-06-29",
+    "status": "SEEDED \u2014 pre-access placeholders"
+  },
+  "baseline": {
+    "_note": "The written 1x baseline ratified with Naveen in Week 1. 10x is measured against this, as qualified replies/week, gated by the deliverability floor.",
+    "one_x_qualified_replies_per_week": null,
+    "ratified_with_naveen": false,
+    "ratified_date": null,
+    "deliverability_floor": {
+      "min_open_rate": 0.4,
+      "max_spam_rate": 0.003,
+      "max_bounce_rate": 0.03
+    }
+  },
+  "list_health": {
+    "accounts_total": 6,
+    "accounts_by_motion": {
+      "star_ratings": 38,
+      "back_office": 157
+    },
+    "accounts_by_grade": {
+      "A": 3,
+      "B": 1,
+      "C": 2,
+      "D": 0
+    },
+    "contacts_total": 157,
+    "contacts_qualified_back_office": 0,
+    "contacts_target_back_office": 200,
+    "clay_credits_remaining": 5000,
+    "last_enrichment_refresh": null,
+    "stale_records_over_30d": 0
+  },
+  "funnel": {
+    "_note": "All numbers split by motion and sourced ONLY from records where gtm_engine_sourced = true. This is the credit line.",
+    "star_ratings": {
+      "contacts_enriched": 0,
+      "messages_sent": 0,
+      "delivered": 0,
+      "opens": 0,
+      "replies": 0,
+      "qualified_replies": 0,
+      "meetings_booked": 0,
+      "meetings_confirmed": 0
+    },
+    "back_office": {
+      "contacts_enriched": 0,
+      "messages_sent": 0,
+      "delivered": 0,
+      "opens": 0,
+      "replies": 0,
+      "qualified_replies": 0,
+      "meetings_booked": 0,
+      "meetings_confirmed": 0
+    },
+    "targets": {
+      "vetted_meetings": 15,
+      "qualified_replies_per_week_10x": null,
+      "back_office_contacts": 200
+    }
+  },
+  "deliverability": {
+    "_note": "Premortem P1. Must be green BEFORE volume scales. Monitor updates this block.",
+    "domains": [
+      {
+        "domain": "EXAMPLE-outbound-1.com",
+        "example": true,
+        "status": "warming",
+        "age_days": 12,
+        "daily_cap": 30,
+        "sent_today": 18,
+        "open_rate": 0.44,
+        "bounce_rate": 0.012,
+        "spam_complaints": 0.0008,
+        "blacklisted": false
+      },
+      {
+        "domain": "EXAMPLE-outbound-2.com",
+        "example": true,
+        "status": "warming",
+        "age_days": 5,
+        "daily_cap": 15,
+        "sent_today": 9,
+        "open_rate": 0.38,
+        "bounce_rate": 0.041,
+        "spam_complaints": 0.0011,
+        "blacklisted": false
+      }
+    ],
+    "warm_contacts_protected": 157,
+    "overall_health": "warming",
+    "last_checked": "2026-06-24"
+  },
+  "approval_queue": {
+    "_note": "Human approval before anything leaves the building. Conductor drafts land here; Dallas approves/edits/rejects; only approved items flow to the sender.",
+    "pending": 1,
+    "approved_today": 0,
+    "rejected_today": 0,
+    "edited_today": 0,
+    "items": [
+      {
+        "id": "EX-001",
+        "example": true,
+        "motion": "Star Ratings",
+        "account": "EXAMPLE Health Plan",
+        "contact": "VP, Medicare Stars",
+        "persona_match": "Primary",
+        "grade": "A",
+        "email_status": "valid",
+        "top_signal": "QBP avg 3.9 \u2014 in bonus-cliff window",
+        "variant_id": "SR-v2",
+        "channel": "email",
+        "status": "pending",
+        "released_by": null,
+        "draft": "Saw [plan] sits just under the 4.0 bonus cliff. Most teams treat that as a quality problem; the ones who hold the bonus treat it as a workforce-capacity problem \u2014 reallocating idle time into the exact member touches that move the measure. Worth 20 min on how that played out for a top-5 payer?",
+        "critic_status": "pass",
+        "critic_reasons": []
+      },
+      {
+        "id": "EX-002",
+        "example": true,
+        "motion": "Back Office",
+        "account": "EXAMPLE (current customer)",
+        "contact": "Director, Claims Operations",
+        "persona_match": "Primary",
+        "grade": "B",
+        "email_status": "valid",
+        "top_signal": "Claims-backlog mention in ops update",
+        "variant_id": "BO-v1",
+        "channel": "email",
+        "status": "critic_held",
+        "released_by": null,
+        "draft": "You already run Intradiem on the phones. The same real-time orchestration runs on claims backlog \u2014 pulling idle capacity to the queue before SLAs slip, no new headcount. Curious whether your back office is in scope yet?",
+        "critic_status": "held",
+        "critic_reasons": [
+          "motion 'Back Office' out of scope this cycle (in-scope: star_ratings)"
+        ]
+      },
+      {
+        "id": "EX-003",
+        "example": true,
+        "motion": "Star Ratings",
+        "account": "EXAMPLE Regional Plan",
+        "contact": "CFO",
+        "persona_match": "Primary",
+        "grade": "B",
+        "email_status": "risky",
+        "top_signal": "Earnings-call Stars mention",
+        "variant_id": "SR-v1",
+        "channel": "email",
+        "status": "critic_held",
+        "released_by": null,
+        "critic_status": "held",
+        "critic_reasons": [
+          "email_status='risky' (not deliverable)",
+          "unverified figure(s): $50M, 4.2 points \u2014 verify vs intradiem-verified-metrics"
+        ],
+        "draft": "Closing the Stars gap is worth $50M in bonus payments to a plan your size, and most teams recover 4.2 points in 90 days. Worth 15 minutes? \u2014 EXAMPLE held by critic: unverified figures + risky email."
+      }
+    ],
+    "critic_held": 2,
+    "resolved_ledger": [
+      {
+        "variant_id": "SR-v2",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v2",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v2",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v2",
+        "outcome": "edited",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v1",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v1",
+        "outcome": "edited",
+        "example": true
+      },
+      {
+        "variant_id": "SR-v1",
+        "outcome": "rejected",
+        "example": true
+      },
+      {
+        "variant_id": "BO-v1",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "BO-v1",
+        "outcome": "clean_accept",
+        "example": true
+      },
+      {
+        "variant_id": "BO-v1",
+        "outcome": "edited",
+        "example": true
+      }
+    ],
+    "volume_blocked": true
+  },
+  "signals": {
+    "_note": "Freshest firing triggers from the signal engine. Tier 1 fires outreach into the queue; Tier 2 raises priority; Tier 3 lifts grade only.",
+    "tier1_active": 3,
+    "tier2_active": 0,
+    "last_scan": "2026-06-29T20:56",
+    "top_signals": [
+      {
+        "company": "Centene Corporation",
+        "signals_fired": 2,
+        "route": "AE"
+      },
+      {
+        "company": "Synchrony Financial",
+        "signals_fired": 1,
+        "route": "AE"
+      },
+      {
+        "company": "CareSource",
+        "signals_fired": 1,
+        "route": "CSM"
+      },
+      {
+        "company": "Molina Healthcare",
+        "signals_fired": 1,
+        "route": "CSM"
+      },
+      {
+        "company": "Highmark Health",
+        "signals_fired": 1,
+        "route": "AE"
+      }
+    ]
+  },
+  "experiments": {
+    "_note": "Variant performance \u2014 closes the messaging loop (Rippling proof = team-wide experimentation). Conductor recomputes winners each run; needs min_sample before declaring. Promote winners, retire losers.",
+    "min_sample": 40,
+    "active_variants": [
+      {
+        "variant_id": "SR-v1",
+        "example": true,
+        "motion": "Star Ratings",
+        "segment": "VP/Dir Medicare Stars",
+        "hypothesis": "Lead with the 4.0 bonus-cliff dollar risk",
+        "sent": 64,
+        "opens": 31,
+        "replies": 5,
+        "qualified_replies": 3,
+        "meetings": 1,
+        "status": "retire",
+        "qr_rate": 0.0469
+      },
+      {
+        "variant_id": "SR-v2",
+        "example": true,
+        "motion": "Star Ratings",
+        "segment": "VP/Dir Medicare Stars",
+        "hypothesis": "Reframe Stars as a workforce-capacity problem",
+        "sent": 61,
+        "opens": 34,
+        "replies": 9,
+        "qualified_replies": 6,
+        "meetings": 2,
+        "status": "winner",
+        "qr_rate": 0.0984
+      },
+      {
+        "variant_id": "BO-v1",
+        "example": true,
+        "motion": "Back Office",
+        "segment": "Dir Claims Ops (install base)",
+        "hypothesis": "\"You already run us on the phones\" wedge",
+        "sent": 52,
+        "opens": 27,
+        "replies": 6,
+        "qualified_replies": 4,
+        "meetings": 1,
+        "status": "winner",
+        "qr_rate": 0.0769
+      },
+      {
+        "variant_id": "BO-v2",
+        "example": true,
+        "motion": "Back Office",
+        "segment": "Dir Claims Ops (install base)",
+        "hypothesis": "Lead with backlog/SLA-slip pain",
+        "sent": 18,
+        "opens": 7,
+        "replies": 1,
+        "qualified_replies": 0,
+        "meetings": 0,
+        "status": "testing",
+        "qr_rate": 0.0
+      }
+    ],
+    "winning_variant": [
+      "SR-v2 (9.8% QR)",
+      "BO-v1 (7.7% QR)"
+    ]
+  },
+  "conductor": {
+    "_note": "Weekly motion run log. One push per week \u2192 full cadence.",
+    "last_run": "2026-06-29T20:56:09",
+    "last_run_status": "completed (dry-run)",
+    "runs": [
+      {
+        "started": "2026-06-29T20:56:09",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-25T08:24:28",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-25T08:08:03",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-25T08:06:36",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-25T08:06:36",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-25T08:03:48",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_spec_reread",
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_critic",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T19:16:39",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T19:10:17",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T18:04:08",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T17:58:11",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T17:49:17",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      },
+      {
+        "started": "2026-06-24T17:41:26",
+        "status": "completed (dry-run)",
+        "stages_completed": [
+          "stage_refresh",
+          "stage_rescore",
+          "stage_scan_signals",
+          "stage_draft",
+          "stage_approve",
+          "stage_send",
+          "stage_instrument",
+          "stage_guardrails"
+        ],
+        "dry_run": true
+      }
+    ],
+    "degraded_stages": []
+  },
+  "attribution_contract": {
+    "_note": "The Week-1 written agreement with Naveen. Until ratified, leave false.",
+    "engine_credited_at": "qualified_reply_and_meeting_sourced",
+    "rep_credited_at": "conversion_from_reply_forward",
+    "fields_live_in_salesforce": {
+      "gtm_engine_sourced": false,
+      "source_motion": false,
+      "sourced_date": false
+    },
+    "ratified_in_writing": false,
+    "ratified_date": null
+  },
+  "impact": {
+    "opportunity_surfaced": "$41.6M",
+    "strike_plans": 6,
+    "committee_contacts_mapped": 20,
+    "sequence_messages_drafted": 80,
+    "expansion_signals": 6,
+    "meetings_booked": 1,
+    "pipeline_created": "$180K",
+    "sources": {
+      "tam_plays": true,
+      "signals": true,
+      "outcomes": true
+    },
+    "data_complete": true,
+    "refreshed": "2026-06-29"
+  },
+  "north_star": {
+    "_note": "GAP 3 (anti-drift, loop-engineering step 10). The standing spec the conductor REREADS every run. State = where the engine IS; this = where it's GOING + the constraints that must never silently disappear over a long multi-week sequence. spec_file is hashed each run; a change is logged to drift_log. The critic (Stage 4b) enforces in_scope_motion and approved_claims.",
+    "spec_file": "GTM_Engine_Build_Spec.md",
+    "spec_present": true,
+    "spec_hash": "6dbacb25001b",
+    "last_reread": "2026-06-29",
+    "in_scope_motion": "star_ratings",
+    "draft_max_chars": 600,
+    "immovable_constraints": [
+      "AI enriches, people judge, human approval before anything sends",
+      "Measurement before volume; ICP before sourcing",
+      "Back-office motion requires is_current_customer (install-base wedge)",
+      "Only Primary/Secondary personas are in ICP; never IC-level or Out",
+      "Engine owns sourcing credit at the source tag; reps own conversion credit",
+      "Exactly one motion scaling at a time (WIP-of-one)"
+    ],
+    "approved_claims": [],
+    "drift_log": []
+  },
+  "critic": {
+    "checked": 3,
+    "passed": 1,
+    "held": 2,
+    "held_rate": 0.6667,
+    "held_items": [
+      {
+        "id": "EX-002",
+        "reasons": [
+          "motion 'Back Office' out of scope this cycle (in-scope: star_ratings)"
+        ]
+      },
+      {
+        "id": "EX-003",
+        "reasons": [
+          "email_status='risky' (not deliverable)",
+          "unverified figure(s): $50M, 4.2 points \u2014 verify vs intradiem-verified-metrics"
+        ]
+      }
+    ],
+    "last_run": "2026-06-29T20:56"
+  },
+  "draft_quality": {
+    "_note": "GAP 1 (cost-per-accepted-change, loop-engineering step 11). clean_accept = approved with NO human edit (the loop saved the work). edited_then_approved = a human had to rewrite first (the loop did NOT save that work). rejected = waste. acceptance_rate = clean_accept / resolved. BELOW floor (0.5) means you're doing the review work the loop was supposed to remove \u2014 the DRAFT ENGINE is the bottleneck, not the gate. Recomputed every run from approval_queue.resolved_ledger. Values below are EXAMPLE until live.",
+    "floor": 0.5,
+    "example": true,
+    "clean_accept": 6,
+    "edited_then_approved": 3,
+    "rejected": 1,
+    "resolved": 10,
+    "acceptance_rate": 0.6,
+    "below_floor": false,
+    "by_variant": {
+      "SR-v2": {
+        "clean_accept": 3,
+        "edited_then_approved": 1,
+        "rejected": 0,
+        "resolved": 4,
+        "acceptance_rate": 0.75,
+        "below_floor": false
+      },
+      "SR-v1": {
+        "clean_accept": 1,
+        "edited_then_approved": 1,
+        "rejected": 1,
+        "resolved": 3,
+        "acceptance_rate": 0.3333,
+        "below_floor": true
+      },
+      "BO-v1": {
+        "clean_accept": 2,
+        "edited_then_approved": 1,
+        "rejected": 0,
+        "resolved": 3,
+        "acceptance_rate": 0.6667,
+        "below_floor": false
+      }
+    }
+  },
+  "security": {
+    "_note": "GAP 4 (security tax, loop-engineering step 14). An unattended loop is an unattended attack surface. Enforced as a CADENCE, not memory: conductor warns when an audit is overdue; preflight makes a stale audit or disabled log-sanitization a go-live FAIL. Seeded values are NOT yet live.",
+    "audit_interval_days": 30,
+    "last_permission_audit": null,
+    "audit_overdue": true,
+    "days_until_audit": null,
+    "log_sanitization_enabled": false,
+    "skill_install_policy": "Audit source before install; never auto-install community skills (520/17,022 audited skills leak credentials).",
+    "connector_scopes": [
+      {
+        "connector": "Salesforce",
+        "scope": "read+write (opportunity, contact source fields)",
+        "least_privilege_reviewed": false
+      },
+      {
+        "connector": "email_sender",
+        "scope": "send-as outbound domains only",
+        "least_privilege_reviewed": false
+      },
+      {
+        "connector": "Slack",
+        "scope": "post to alert channel only",
+        "least_privilege_reviewed": false
+      },
+      {
+        "connector": "Clay",
+        "scope": "read+write tables",
+        "least_privilege_reviewed": false
+      }
+    ]
+  },
+  "guardrails": {
+    "_note": "Premortem fixes, enforced by the system instead of by memory. Three tripwires that fail loudly and early: (1) operator-test = is this operable by the TEAM or only by Dallas; (2) throughput-by-operator = is Dallas the bottleneck; (3) WIP-of-one = anti-sprawl. The conductor recomputes the derived fields (status/share/alarm/violation) on every run so these can't drift. Dallas is the OWNER who designs the motion; the team are the OPERATORS who run it. A motion only counts as overhauled when the operators run it without him.",
+    "operator_test": {
+      "_note": "Definition of done for a motion is NOT 'it works when Dallas runs it' \u2014 it is 'a non-Dallas operator released the weekly batch unaided, N weeks running.' Each batch released by Dallas resets the streak to 0. Status flips to 'operable' only at required_team_releases.",
+      "required_team_releases": 2,
+      "owner_name": "Dallas Andrews",
+      "owner_id": "dallas",
+      "by_motion": {
+        "star_ratings": {
+          "status": "not_yet_operable",
+          "consecutive_team_releases": 0,
+          "last_released_by": null,
+          "last_release_date": null
+        },
+        "back_office": {
+          "status": "not_yet_operable",
+          "consecutive_team_releases": 0,
+          "last_released_by": null,
+          "last_release_date": null
+        }
+      }
+    },
+    "throughput_by_operator": {
+      "_note": "Premortem Failure #1 tripwire. If Dallas's share of releases exceeds the ceiling, the engine is operable-by-Dallas = a bottleneck capped at his bandwidth, not a 10x team motion. alarm=true means DO NOT scale; fix operability first. Recomputed each run from released_this_week. INTEGRITY: owner is matched by is_owner flag (stable), NEVER by display-name string. A released_by value that resolves to no known operator fails LOUD (integrity_error) rather than being silently counted as a team release.",
+      "dallas_share_ceiling": 0.2,
+      "window": "this_week",
+      "window_start": null,
+      "operators": [
+        {
+          "id": "dallas",
+          "name": "Dallas Andrews",
+          "role": "engineer (owner, not operator)",
+          "is_owner": true,
+          "released_this_week": 0
+        },
+        {
+          "id": "genna",
+          "name": "Genna",
+          "role": "sales (operator)",
+          "is_owner": false,
+          "released_this_week": 0
+        },
+        {
+          "id": "nate",
+          "name": "Nate Belfield",
+          "role": "sales (operator)",
+          "is_owner": false,
+          "released_this_week": 0
+        }
+      ],
+      "total_released_this_week": 0,
+      "dallas_share": 0.0,
+      "alarm": false,
+      "integrity_error": null,
+      "last_week": null
+    },
+    "wip": {
+      "_note": "Premortem Failure #3 tripwire. Exactly ONE motion may be 'scaling' at a time. Every other motion and every standing modernize-the-engine OKR item stays in 'backlog' until the scaling motion passes its operator_test. violation=true if more than scaling_limit motions are 'scaling'.",
+      "scaling_limit": 1,
+      "motions": {
+        "star_ratings": "scaling",
+        "back_office": "backlog"
+      },
+      "backlog": [
+        "back_office motion (200 contacts)",
+        "10x throughput build-out",
+        "interactive pitches",
+        "ROI / pricing calculators",
+        "custom demos per meeting",
+        "digital sales room",
+        "activation control plane",
+        "in-product white-space messaging"
+      ],
+      "violation": false
+    }
+  }
+}
