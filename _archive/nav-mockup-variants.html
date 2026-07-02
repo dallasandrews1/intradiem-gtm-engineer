@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nav grouping — side-by-side variants · Intradiem GTM</title>
+<style>
+  :root{
+    --purple-dark:#1E1145; --purple:#3D1F8C; --purple-mid:#5B2D90;
+    --vio:#A78BFA; --bg:#F5F3FF; --card:#FFFFFF; --text:#111827; --muted:#6B7280;
+    --border:#E5E7EB; --green:#16A34A; --amber:#B45309; --line:rgba(255,255,255,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:#140C30}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);font-size:13px;padding:28px 14px 60px}
+  .wrap{max-width:1180px;margin:0 auto}
+  .pagehead{color:#fff;margin-bottom:8px}
+  .pagehead h1{font-size:20px;font-weight:800;letter-spacing:-.01em}
+  .pagehead p{color:rgba(255,255,255,.55);font-size:13px;margin-top:6px;max-width:760px}
+  .note{color:rgba(255,255,255,.4);font-size:11.5px;margin-top:6px}
+
+  .board{background:var(--card);border-radius:14px;overflow:hidden;margin-top:26px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+  .badge{display:flex;align-items:center;gap:10px;padding:13px 20px;background:#fff;border-bottom:1px solid var(--border)}
+  .badge .tag{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+  .tag.cur{background:#F3F4F6;color:#6B7280}
+  .tag.rec{background:#DCFCE7;color:#166534}
+  .tag.alt{background:#EDE9FF;color:#5B2D90}
+  .badge h2{font-size:14px;font-weight:700}
+  .badge .sub{color:var(--muted);font-size:12px;font-weight:500}
+
+  /* dark hero strip */
+  .hero{background:var(--purple-dark);color:#fff;padding:18px 24px 0}
+  .hero .kick{font-size:9.5px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.4);text-transform:uppercase}
+  .hero h3{font-size:21px;font-weight:800;line-height:1.15;margin-top:6px}
+  .hero h3 span{color:var(--vio)}
+  .hero .read{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:10px;max-width:880px;line-height:1.5}
+  .hero .read b{color:rgba(255,255,255,.85)}
+
+  /* shared tab atoms (exact live styling) */
+  .tabbar{background:var(--purple-dark);border-bottom:1px solid var(--line);padding:0 24px;display:flex;margin-top:16px}
+  .tab{padding:11px 15px;font-size:12px;font-weight:500;color:rgba(255,255,255,.45);cursor:pointer;border-bottom:2px solid transparent}
+  .tab:hover{color:rgba(255,255,255,.72)}
+  .tab.active{color:#fff;border-bottom-color:var(--vio)}
+
+  /* Option A grouped lanes (panels) */
+  .gbar{background:var(--purple-dark);padding:14px 24px;display:flex;gap:14px;align-items:stretch;border-bottom:1px solid var(--line);margin-top:16px}
+  .gcol{flex:1;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:11px;overflow:hidden}
+  .gcap{display:flex;align-items:center;gap:7px;padding:9px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  .gcap .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+  .grow{display:flex;padding:5px 6px;gap:2px}
+  .gtab{padding:8px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.5);cursor:pointer;border-radius:7px}
+  .gtab:hover{color:rgba(255,255,255,.78)}
+  .gtab.active{font-weight:700;color:#fff;background:rgba(167,139,250,.18)}
+
+  /* Option B lane cards */
+  .lanes{background:var(--purple-dark);padding:16px 24px;display:flex;gap:12px;border-bottom:1px solid var(--line);margin-top:16px}
+  .lane{flex:1;border-radius:10px;padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);cursor:pointer}
+  .lane.on{background:rgba(167,139,250,.16);border-color:rgba(167,139,250,.6)}
+  .lane .ic{font-size:18px;line-height:1}
+  .lane .lt{color:#fff;font-weight:700;font-size:14px;margin-top:7px}
+  .lane .ls{color:rgba(255,255,255,.45);font-size:11px;margin-top:3px}
+
+  /* light content stub */
+  .body{background:var(--bg);padding:20px 24px 26px}
+  .body h4{font-size:16px;font-weight:800}
+  .body .lead{color:var(--muted);font-size:12.5px;margin-top:5px;max-width:760px}
+  .stub{height:60px;border-radius:8px;background:linear-gradient(90deg,#fff, #faf9ff);border:1px solid var(--border);margin-top:14px;display:flex;align-items:center;padding:0 16px;color:#9ca3af;font-size:11.5px;font-style:italic}
+
+  .verdict{margin-top:12px;padding:12px 16px;border-radius:8px;font-size:12px;line-height:1.55}
+  .v-rec{background:#F0FDF4;border:1px solid #BBF7D0;color:#14532D}
+  .v-alt{background:#F7F5FF;border:1px solid #E0D7FF;color:#4C1D95}
+  .v-cur{background:#F9FAFB;border:1px solid var(--border);color:#374151}
+  .verdict b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="pagehead">
+    <h1>Navigation grouping — side-by-side variants</h1>
+    <p>Same site, same content, same styling. Only the navigation between the hero and the content changes. Compare how a first-time panelist experiences each on entry.</p>
+    <div class="note">Non-destructive mockup. Nothing here is deployed. Colors and tab styling pulled directly from the live site (intradiem.dallasandrews.dev).</div>
+  </div>
+
+  <!-- ================= CURRENT ================= -->
+  <div class="board">
+    <div class="badge"><span class="tag cur">Current</span><h2>Seven flat tabs</h2><span class="sub">all equal weight, one row</span></div>
+    <div class="hero">
+      <div class="kick">GTM Signal Engine · Working Prototype</div>
+      <h3>Two halves of the GTM role.<br><span>One working prototype.</span></h3>
+      <div class="read"><b>My read:</b> the expansion motion is the day-one mandate and the free-trial funnel is a 6–12 month build…</div>
+    </div>
+    <div class="tabbar">
+      <div class="tab">📨 Strike List</div>
+      <div class="tab">📊 Impact</div>
+      <div class="tab">🚨 Signal Queue</div>
+      <div class="tab">📈 PLG Signal Framework</div>
+      <div class="tab active">🧭 Product Console</div>
+      <div class="tab">🎯 ICP Account Scoring</div>
+      <div class="tab">⚙️ Scoring Model</div>
+    </div>
+    <div class="body">
+      <h4>Product Console</h4>
+      <div class="lead">A product view of the same engine — what's instrumented, what's live vs. specced, what I'd build first and what I'd leave out.</div>
+      <div class="stub">[ tab content renders here — tables, stat cards, roadmap ]</div>
+      <div class="verdict v-cur"><b>The issue:</b> seven equal labels give no hierarchy. The copy already says "the other tabs show the engine running, this one shows the build" — but the nav doesn't reflect that, so the structure lands as a wall of choices.</div>
+    </div>
+  </div>
+
+  <!-- ================= OPTION A ================= -->
+  <div class="board">
+    <div class="badge"><span class="tag rec">Option A · recommended</span><h2>Grouped lanes, all visible</h2><span class="sub">captioned clusters · zero extra clicks</span></div>
+    <div class="hero">
+      <div class="kick">GTM Signal Engine · Working Prototype</div>
+      <h3>Two halves of the GTM role.<br><span>One working prototype.</span></h3>
+      <div class="read"><b>My read:</b> the expansion motion is the day-one mandate and the free-trial funnel is a 6–12 month build…</div>
+    </div>
+    <div class="gbar">
+      <div class="gcol">
+        <div class="gcap" style="color:#A78BFA"><span class="dot" style="background:#A78BFA"></span>Expansion engine</div>
+        <div class="grow">
+          <div class="gtab">📈 PLG Framework</div>
+          <div class="gtab">🚨 Signal Queue</div>
+          <div class="gtab">📊 Impact</div>
+        </div>
+      </div>
+      <div class="gcol">
+        <div class="gcap" style="color:#34D399"><span class="dot" style="background:#34D399"></span>Net-new engine</div>
+        <div class="grow">
+          <div class="gtab">📨 Strike List</div>
+          <div class="gtab">🎯 ICP Scoring</div>
+          <div class="gtab">⚙️ Scoring Model</div>
+        </div>
+      </div>
+      <div class="gcol">
+        <div class="gcap" style="color:#FBBF24"><span class="dot" style="background:#FBBF24"></span>The build</div>
+        <div class="grow">
+          <div class="gtab active">🧭 Product Console</div>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <h4>Product Console</h4>
+      <div class="lead">Same content, unchanged. Only the nav now carries hierarchy.</div>
+      <div class="stub">[ identical tab content — nothing below the nav changes ]</div>
+      <div class="verdict v-rec"><b>Why this wins:</b> the lanes mirror your "two halves" headline, so the nav <i>proves</i> the thesis before they read a word. Every tab stays one click away — nothing hidden, so your strongest proof is never buried. Lowest engineering lift: it's a restructure of one existing nav bar, not new pages or routing.</div>
+    </div>
+  </div>
+
+  <!-- ================= OPTION B ================= -->
+  <div class="board">
+    <div class="badge"><span class="tag alt">Option B · your original idea</span><h2>Three big entry lanes</h2><span class="sub">pick a lane → its tabs reveal</span></div>
+    <div class="hero">
+      <div class="kick">GTM Signal Engine · Working Prototype</div>
+      <h3>Two halves of the GTM role.<br><span>One working prototype.</span></h3>
+      <div class="read"><b>My read:</b> the expansion motion is the day-one mandate and the free-trial funnel is a 6–12 month build…</div>
+    </div>
+    <div class="lanes">
+      <div class="lane on">
+        <div class="ic">📈</div>
+        <div class="lt">Expansion Engine</div>
+        <div class="ls">Existing install base · Signal Queue, PLG Framework, Impact</div>
+      </div>
+      <div class="lane">
+        <div class="ic">📨</div>
+        <div class="lt">Net-New Engine</div>
+        <div class="ls">Acquisition · Strike List, ICP Scoring, Scoring Model</div>
+      </div>
+      <div class="lane">
+        <div class="ic">🧭</div>
+        <div class="lt">The Build</div>
+        <div class="ls">Product Console · what I shipped &amp; why</div>
+      </div>
+    </div>
+    <div class="body">
+      <h4>Expansion Engine</h4>
+      <div class="lead">Selecting a lane would reveal that lane's tabs (a second row) and open the first one.</div>
+      <div class="stub">[ sub-tabs for the chosen lane appear here, then the tab content ]</div>
+      <div class="verdict v-alt"><b>Trade-off:</b> cleanest first impression and closest to what you described — but it adds a click to reach any tab, and a panelist who picks one lane may never see the others. Higher build (two-level nav state) and the risk of burying proof. Use this only if you want the entry to feel like a deliberate "choose your path."</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

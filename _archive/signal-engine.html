@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intradiem GTM Signal Engine · Role-View Console — Dallas Andrews</title>
+<style>
+  :root{
+    --bg:#0e1116; --card:#161b22; --card2:#11161d; --line:#2a313c; --line2:#343d4b;
+    --ink:#e6edf3; --mut:#8b97a6; --faint:#5b6675;
+    --grn:#2f9e6b; --grn2:#46c08a; --amb:#e0a93b; --red:#e5534b; --blu:#4a90d9; --vio:#7c6cf0; --vio2:#b3a9f5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(900px 520px at 50% -6%,rgba(124,108,240,.11),transparent),var(--bg);color:var(--ink);font:13px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:18px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto}
+  a{color:var(--vio2);text-decoration:none}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  /* HEADER */
+  header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+  .bm{display:flex;align-items:center;gap:11px}
+  .glyph{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#7c6cf0,#5d4fd0);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;color:#fff;letter-spacing:.02em;box-shadow:0 0 0 1px rgba(124,108,240,.5)}
+  header h1{font-size:19px;font-weight:700;letter-spacing:-.01em}
+  .bm .sub{font-size:12px;color:var(--mut);margin-top:2px}
+  .hmeta{text-align:right;font-size:11px;color:var(--mut)}
+  .hmeta b{color:var(--ink)}
+  /* HERO */
+  .hero{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:16px}
+  .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--mut);font-weight:700;margin-bottom:10px}
+  .hero-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .hero-l{flex:1;min-width:320px}
+  .hero h2{font-size:29px;line-height:1.18;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+  .hero h2 span{color:var(--vio2)}
+  .quote{background:rgba(124,108,240,.08);border:1px solid rgba(124,108,240,.28);border-left:3px solid var(--vio);border-radius:0 8px 8px 0;padding:11px 14px;font-size:13px;line-height:1.6;color:var(--ink);max-width:760px}
+  .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+  .pill{font-size:11px;font-weight:600;padding:4px 11px;border-radius:6px;background:var(--card);border:1px solid var(--line)}
+  .pill.g{border-color:rgba(70,192,138,.4);color:var(--grn2)}
+  .pill.a{border-color:rgba(224,169,59,.4);color:#e0c07a}
+  .pill.b{border-color:rgba(74,144,217,.4);color:#9cc4ec}
+  .pill.v{border-color:rgba(124,108,240,.5);color:var(--vio2)}
+  .statcluster{display:grid;grid-template-columns:repeat(2,minmax(96px,1fr));gap:10px;align-content:start}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;text-align:center;min-width:104px}
+  .stat .n{font-size:26px;font-weight:800;line-height:1;color:var(--vio2)}
+  .stat .l{font-size:10.5px;color:var(--mut);margin-top:5px;line-height:1.3}
+  /* CAVEAT */
+  .caveat{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--amb);border-radius:0 8px 8px 0;padding:10px 13px;margin-bottom:16px;font-size:11.5px;color:var(--mut);line-height:1.5}
+  .caveat b{color:var(--ink)}.caveat .ic{color:var(--amb);font-weight:800;flex-shrink:0}
+  .caveat .mono{color:var(--vio2);font-size:10.5px}
+  /* TABS */
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:16px;flex-wrap:wrap}
+  .tab{display:flex;align-items:center;gap:9px;padding:11px 16px;cursor:pointer;border-bottom:2px solid transparent;color:var(--mut);font-size:13px;font-weight:600;transition:.12s;margin-bottom:-1px}
+  .tab:hover{color:var(--ink)}
+  .tab.on{color:var(--ink);border-bottom-color:var(--vio)}
+  .tab .tdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .tab small{display:block;font-size:10px;color:var(--faint);font-weight:500;letter-spacing:.02em}
+  .panel{display:none}.panel.on{display:block}
+  /* SHARED CARD SYSTEM */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:13px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+  .span2{grid-column:span 2}.span3{grid-column:span 3}
+  .card h3{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:7px;font-weight:700}
+  .card h3 .hint{margin-left:auto;font-weight:600;color:var(--faint);text-transform:none;letter-spacing:0}
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+  .intro{font-size:13px;line-height:1.6;color:var(--ink);background:rgba(124,108,240,.06);border:1px solid rgba(124,108,240,.22);border-radius:10px;padding:12px 15px;margin-bottom:13px}
+  .intro b{color:var(--vio2)}
+  /* GATE */
+  .gate-row{display:flex;align-items:flex-start;gap:11px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px;cursor:pointer}
+  .gate-row:last-child{border:0}.gate-row:hover{background:rgba(255,255,255,.015)}
+  .chk{width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px;font-weight:800}
+  .c-done{background:rgba(70,192,138,.18);border:1px solid rgba(70,192,138,.5);color:var(--grn2)}
+  .c-wait{background:rgba(224,169,59,.14);border:1px solid rgba(224,169,59,.5);color:var(--amb)}
+  .c-block{background:rgba(139,151,166,.08);border:1px solid var(--faint);color:var(--faint)}
+  .gl{flex:1}.gl strong{display:block;margin-bottom:2px}.gl span{color:var(--mut);font-size:11px}
+  .pill2{font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:5px;white-space:nowrap}
+  .p-done{background:rgba(70,192,138,.12);color:var(--grn2);border:1px solid rgba(70,192,138,.3)}
+  .p-wait{background:rgba(224,169,59,.12);color:var(--amb);border:1px solid rgba(224,169,59,.3)}
+  .p-block{background:rgba(139,151,166,.08);color:var(--faint);border:1px solid rgba(139,151,166,.25)}
+  .gdet{display:none;font-size:11px;color:var(--mut);background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;margin:4px 0 2px;line-height:1.55}
+  .gdet.open{display:block}.gdet code{color:var(--vio2);font-family:ui-monospace,Menlo,monospace;font-size:10.5px}
+  /* STACK */
+  .srow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
+  .srow:last-child{border:0}
+  .layer{font-size:9.5px;padding:3px 8px;border-radius:5px;font-weight:700;white-space:nowrap}
+  .l-e{background:rgba(74,144,217,.1);border:1px solid rgba(74,144,217,.3);color:#9cc4ec}
+  .l-n{background:rgba(70,192,138,.1);border:1px solid rgba(70,192,138,.3);color:var(--grn2)}
+  .l-p{background:rgba(224,169,59,.1);border:1px solid rgba(224,169,59,.3);color:var(--amb)}
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;font-size:11.5px}
+  th{text-align:left;color:var(--mut);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:0 10px 8px 0;border-bottom:1px solid var(--line2)}
+  td{padding:9px 10px 9px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}
+  tr:last-child td{border:0}
+  .yes{color:var(--grn2);font-weight:700}.no{color:var(--red);font-weight:700}
+  /* QUESTIONS / DONT */
+  .q{background:rgba(124,108,240,.07);border-left:3px solid var(--vio);padding:9px 12px;border-radius:0 7px 7px 0;margin-bottom:9px;font-size:12px;line-height:1.55}
+  .q:last-child{margin-bottom:0}
+  .q .ql{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--vio2);margin-bottom:3px;font-weight:700}
+  .dont{display:flex;gap:9px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.4}
+  .dont:last-child{border:0}.dont .x{color:var(--red);font-weight:800;flex-shrink:0}
+  /* SCORECARD */
+  .sc{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+  .scb{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:13px;text-align:center}
+  .scb .n{font-size:23px;font-weight:800;line-height:1}.scb .l{font-size:10.5px;color:var(--mut);margin-top:5px;line-height:1.35}
+  /* QUEUE (pipeline) */
+  .qrow{border-bottom:1px solid var(--line);padding:11px 0;cursor:pointer}
+  .qrow:last-child{border:0}.qrow:hover{background:rgba(255,255,255,.015)}
+  .qtop{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .co{font-weight:700;font-size:14px}.dom{font-size:11px;color:var(--faint)}
+  .badge{font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:5px;white-space:nowrap}
+  .b-ae{background:rgba(70,192,138,.14);border:1px solid rgba(70,192,138,.4);color:var(--grn2)}
+  .b-csm{background:rgba(74,144,217,.14);border:1px solid rgba(74,144,217,.4);color:#9cc4ec}
+  .b-risk{background:rgba(229,83,75,.14);border:1px solid rgba(229,83,75,.4);color:#f0938f}
+  .sig{font-size:12px;color:var(--mut);margin-top:6px}.sig strong{font-family:ui-monospace,Menlo,monospace;font-size:11px}
+  .bar{height:5px;border-radius:3px;background:var(--line);margin:6px 0 2px;overflow:hidden;max-width:340px}.bar-fill{height:100%;border-radius:3px}
+  .expand{margin-left:auto;font-size:10px;color:var(--faint);white-space:nowrap}
+  .raw{display:none;margin-top:9px}.raw.open{display:block}
+  .raw pre{background:#0a0d12;border:1px solid var(--line2);border-radius:8px;padding:11px 13px;font-family:ui-monospace,Menlo,monospace;font-size:10.5px;line-height:1.5;color:#cfe9dd;overflow-x:auto;margin-top:6px}
+  .raw .rl{font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint)}.raw .rl b{color:var(--vio2)}
+  .act{font-size:11px;color:var(--ink);background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:7px 10px;margin-top:9px;line-height:1.5}.act b{color:var(--grn2)}
+  ul.del{list-style:none}
+  ul.del li{padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12px;display:flex;gap:9px;line-height:1.4}
+  ul.del li:last-child{border:0}ul.del .i{color:var(--grn2);flex-shrink:0;font-weight:700}
+  /* FLOW */
+  .flow{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-top:8px}
+  .fs{flex:1;text-align:center;padding:11px 6px;border-right:1px solid var(--line)}.fs:last-child{border:0}
+  .fs.active{background:rgba(124,108,240,.12)}
+  .fl{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}.fv{font-size:11.5px;font-weight:700}
+  .defer{background:rgba(124,108,240,.07);border:1px solid rgba(124,108,240,.28);border-radius:10px;padding:13px 16px;font-size:13px;line-height:1.6;font-style:italic;color:var(--ink)}
+  .learn{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12px;line-height:1.6;margin-top:9px}.learn .qq{color:var(--vio2);font-style:italic}
+  /* PROOF (marketing) */
+  .pe{border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:10px;cursor:pointer;transition:.14s;background:var(--card2)}
+  .pe:last-child{margin-bottom:0}.pe:hover{border-color:var(--line2)}
+  .pe.sel{border-color:rgba(124,108,240,.5);background:rgba(124,108,240,.08);box-shadow:0 0 0 1px rgba(124,108,240,.4) inset}
+  .pe-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+  .pe-co{font-size:14px;font-weight:700}
+  .pe-b{font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:5px;white-space:nowrap}
+  .pb-story{background:rgba(70,192,138,.15);border:1px solid rgba(70,192,138,.4);color:var(--grn2)}
+  .pb-up{background:rgba(74,144,217,.15);border:1px solid rgba(74,144,217,.4);color:#9cc4ec}
+  .pb-hold{background:rgba(229,83,75,.13);border:1px solid rgba(229,83,75,.35);color:#f0938f}
+  .pe-sig{font-size:11.5px;color:var(--mut);margin-bottom:5px}.pe-sig strong{font-family:ui-monospace,Menlo,monospace;font-size:11px}
+  .pe-story{font-size:12px;color:var(--ink);line-height:1.5}
+  .brief{background:#0a0d12;border:1px solid var(--line2);border-radius:10px;padding:14px 15px}
+  .brief .bt{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--vio2);font-weight:700;margin-bottom:3px}
+  .brief .bsub{font-size:12px;color:var(--mut);margin-bottom:11px;font-weight:600}
+  .br{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:11.5px}.br:last-child{border:0}
+  .bk{color:var(--faint);min-width:92px;flex-shrink:0;font-size:10px;text-transform:uppercase;letter-spacing:.04em;padding-top:1px}
+  .bv{color:var(--ink);line-height:1.45}.bv.hi{color:var(--vio2);font-weight:700}
+  .gen{font-size:10px;color:var(--faint);margin-top:11px;display:flex;align-items:center;gap:6px}
+  .gen .pulse{width:6px;height:6px;border-radius:50%;background:var(--grn2);animation:p 2s infinite}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(70,192,138,.5)}70%{box-shadow:0 0 0 6px rgba(70,192,138,0)}100%{box-shadow:0 0 0 0 rgba(70,192,138,0)}}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .bacol{border:1px solid var(--line);border-radius:9px;padding:11px 13px}
+  .bacol h4{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;font-weight:700}
+  .bacol.bef h4{color:var(--red)}.bacol.aft h4{color:var(--grn2)}
+  .bi{font-size:11.5px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.06);display:flex;gap:8px;align-items:flex-start;line-height:1.4}.bi:last-child{border:0}.bi .m{flex-shrink:0}
+  .qbox{background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:12px;line-height:1.55;font-style:italic;color:var(--ink);margin-top:8px}
+  footer{text-align:center;padding:18px 0 4px;font-size:11px;color:var(--faint);border-top:1px solid var(--line);margin-top:16px}
+  footer .built{color:var(--mut);margin-bottom:5px;line-height:1.6}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}.span2,.span3{grid-column:auto}.sc{grid-template-columns:repeat(2,1fr)}.ba{grid-template-columns:1fr}.hero h2{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="bm">
+      <div class="glyph">ID</div>
+      <div>
+        <h1>Intradiem GTM Signal Engine</h1>
+        <div class="sub">Role-view console · built by Dallas Andrews ahead of the GTM Engineer interview</div>
+      </div>
+    </div>
+    <div class="hmeta">
+      <b>Dallas Andrews</b> · June 2026<br>
+      One engine · three seats at the table
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Role-View Console · Built before the interview, meant to be reworked with you</div>
+    <div class="hero-grid">
+      <div class="hero-l">
+        <h2>One signal engine.<br><span>Three seats at your table.</span></h2>
+        <div class="quote">The same engine that powers the prototype feeds three different jobs: it routes pipeline for Nathan, it stays governed for Genna, and it hands Sierra a proof point the morning it fires. One system, surfaced three ways — not three tools.</div>
+        <div class="pills">
+          <span class="pill v">⚙️ Custom Signal MCP — queryable live</span>
+          <span class="pill g">📈 PLG signal routing</span>
+          <span class="pill b">🛡️ Governed, read-only by default</span>
+          <span class="pill a">🏆 Proof → content pipeline</span>
+        </div>
+      </div>
+      <div class="statcluster">
+        <div class="stat"><div class="n">3</div><div class="l">accounts<br>monitored</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">signals<br>fired</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">AE routes<br>fired</div></div>
+        <div class="stat"><div class="n">1</div><div class="l">engine,<br>four lenses</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRAFT POSTURE -->
+  <div style="display:flex;gap:10px;align-items:flex-start;background:rgba(124,108,240,.09);border:1px solid rgba(124,108,240,.35);border-radius:10px;padding:12px 15px;margin-bottom:13px;font-size:12px;line-height:1.6;color:var(--ink)">
+    <span style="color:var(--vio2);font-weight:800;flex-shrink:0">▶</span>
+    <div><b style="color:var(--vio2)">I built this because I think better in working software than in slides — and it's real.</b> It's also deliberately unfinished where it should be: nothing is deployed, nothing touches your stack, and every threshold, field, and route is a placeholder until we set it together. I expect you'll change half of it — not because it's rough, but because each of you knows things about this business I can't know yet. That's the half I'm here to learn.</div>
+  </div>
+
+  <!-- CAVEAT -->
+  <div class="caveat">
+    <span class="ic">⚑</span>
+    <div><b>Honest scope, up front.</b> The Signal MCP is a working tool I built in Cowork and can query live (<span class="mono">list_monitored_accounts</span> / <span class="mono">get_expansion_signals</span>) — the JSON in the Pipeline tab is a captured response from a real run, so the proof stands on its own whether or not I pull it up live in the room. The customer usage values it serves are <b>modeled</b> on public firmographics and realistic platform behavior, not Intradiem's production event stream. Day one points the same processor at the real reporting export — architecture identical, only the data source swaps. Same engine as <a href="https://intradiem.dallasandrews.dev">intradiem.dallasandrews.dev</a>.</div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <div class="tab on" data-p="prod" onclick="tab('prod',this)"><span class="tdot" style="background:var(--blu)"></span>Product Console<small>Chris · SVP Product Management</small></div>
+    <div class="tab" data-p="ops" onclick="tab('ops',this)"><span class="tdot" style="background:var(--vio)"></span>Ops Console<small>Genna · Dir. Global Sales Ops</small></div>
+    <div class="tab" data-p="pipe" onclick="tab('pipe',this)"><span class="tdot" style="background:var(--grn2)"></span>Pipeline Queue<small>Nathan · Pipeline Dev Lead</small></div>
+    <div class="tab" data-p="mkt" onclick="tab('mkt',this)"><span class="tdot" style="background:var(--amb)"></span>Proof Engine<small>Sierra · Lead Digital Marketing</small></div>
+  </div>
+
+  <!-- ===================== PRODUCT / BUSBEE ===================== -->
+  <div class="panel on" id="p-prod">
+    <div class="intro">For <b>Chris Busbee</b> — you've lived inside this product for years, so this view skips the pitch. It reads the same engine the other three tabs use, but as a <b>product surface</b>: what it instruments, what's live versus what I'd build next, where the data honestly comes from, and what I'd deliberately <b>not</b> build. The three other tabs show the engine doing its job for the GTM team. This one shows the thinking underneath it — which is the part you're actually evaluating.</div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--blu)"></span>The 60-Second Read</h3>
+      <div class="sc">
+        <div class="scb"><div class="n" style="color:var(--blu)">4</div><div class="l">signal types live in the MCP — queryable right now</div></div>
+        <div class="scb"><div class="n" style="color:var(--vio2)">8</div><div class="l">in the full taxonomy, each mapped to a product event</div></div>
+        <div class="scb"><div class="n" style="color:var(--grn2)">0</div><div class="l">black-box models — every route is rule-based &amp; auditable</div></div>
+        <div class="scb"><div class="n" style="color:var(--amb)">Nightly</div><div class="l">install base scored before a rep opens Salesforce</div></div>
+      </div>
+      <div style="margin-top:11px;font-size:11.5px;color:var(--mut);line-height:1.55">The honest version up front: the prototype fires <b style="color:var(--ink)">4 signal types</b> off modeled usage data today. The taxonomy below is the product roadmap — what I'd instrument and in what order. I'd rather show you the real 4 and the plan for the rest than fake a finished system you'd see through in a minute.</div>
+    </div></div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--grn2)"></span>Signal Taxonomy — Every Signal Traces to a Product Event</h3>
+      <table>
+        <tr><th>Signal</th><th>Product-event source</th><th>What it detects</th><th>Data path</th><th>Route</th><th>Status</th></tr>
+        <tr><td><b>seat_utilization</b></td><td>Active-agent count vs. contracted licenses</td><td>Account near capacity → expansion timing</td><td>Native</td><td>AE</td><td><span class="yes">Live</span></td></tr>
+        <tr><td><b>automation_volume_drop</b></td><td>Automations triggered / idle-time actions, rolling window</td><td>Usage decline → churn risk forming</td><td>Native</td><td>CSM</td><td><span class="yes">Live</span></td></tr>
+        <tr><td><b>coaching_coverage</b></td><td>% of agents receiving automated coaching/training actions</td><td>Shallow deployment → adoption risk</td><td>Native</td><td>CSM</td><td><span class="yes">Live</span></td></tr>
+        <tr><td><b>crm_not_connected</b></td><td>Integration registry — WFM live, CRM not</td><td>Depth upsell / cross-sell open</td><td>Native</td><td>AE</td><td><span class="yes">Live</span></td></tr>
+        <tr><td>idle_time_reclaimed</td><td>Core DWO outcome — productive minutes recovered from idle</td><td>ROI proof + expansion timing in one signal</td><td>Native · needs aggregation</td><td>AE / Mktg</td><td><span style="color:var(--amb);font-weight:700">Proposed</span></td></tr>
+        <tr><td>module_activation_gap</td><td>Entitled DWO modules vs. modules actually active</td><td>Paying for modules they don't run → cross-sell</td><td>Native</td><td>AE</td><td><span style="color:var(--amb);font-weight:700">Proposed</span></td></tr>
+        <tr><td>agent_coverage_ratio</td><td>% of licensed agents actually receiving automations</td><td>Under-deployment (risk) or saturation (expand)</td><td>Native</td><td>CSM / AE</td><td><span style="color:var(--amb);font-weight:700">Proposed</span></td></tr>
+        <tr><td>champion_job_change</td><td>Buyer/champion departure — Clay enrichment pass</td><td>Renewal risk → multithread the account</td><td>External</td><td>CSM</td><td><span style="color:var(--amb);font-weight:700">Proposed</span></td></tr>
+      </table>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Note the discipline: not one of these is a clickstream metric. The expansion signal in this product isn't "did they click a feature" — it's buried in contact-center outcome data. That's the whole reason it needs building, and the whole reason a generic PLG tool can't see it. More on that below.</div>
+    </div></div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--blu)"></span>"How would you actually get the data?" — The Honest Maturity Curve</h3>
+        <div class="flow">
+          <div class="fs"><div class="fl">Day 1</div><div class="fv">Nightly export + cron</div></div>
+          <div class="fs"><div class="fl">Day 30</div><div class="fv">2 signals validated, baselines set</div></div>
+          <div class="fs active"><div class="fl">Day 45</div><div class="fv" style="color:var(--amb)">1 signal worked into real pipeline</div></div>
+          <div class="fs"><div class="fl">Day 60</div><div class="fv">Lands in rep workspace pre-SF</div></div>
+          <div class="fs"><div class="fl">Day 90</div><div class="fv" style="color:var(--grn2)">Export → live event API</div></div>
+        </div>
+        <div style="margin-top:11px;font-size:11px;color:var(--mut);line-height:1.55">I won't claim a live API on day one — there isn't one, and a product leader would catch it. Day one is a reporting export on a cron with 30-day rolling windows and 14-day suppression. The architecture doesn't change when the data source swaps to a live stream at day 90; only the input does. That's the point of building it as a thin signal layer instead of a pipeline rebuild.</div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--red)"></span>What I'd Deliberately Not Build</h3>
+        <div class="dont"><span class="x">✕</span><span>A black-box "health score" on day one — unauditable signals die in ops review</span></div>
+        <div class="dont"><span class="x">✕</span><span>Vanity signals (logins, dashboard views) that don't predict revenue</span></div>
+        <div class="dont"><span class="x">✕</span><span>The full 8-signal taxonomy at once — ship the narrow wedge that proves value first</span></div>
+        <div class="dont"><span class="x">✕</span><span>A second analytics platform ops has to govern when a thin layer will do</span></div>
+        <div style="margin-top:11px;font-size:11.5px;color:var(--mut);font-style:italic">Knowing what to leave out is most of the judgment. Rule-based and auditable beats clever-but-opaque every time it touches a system of record.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--vio)"></span>Build vs. Buy — Why Not Just Point Pendo or Gainsight PX at It</h3>
+        <div style="font-size:12px;line-height:1.65;color:var(--ink)">Those tools instrument <b>app clickstream</b> for self-serve SaaS — feature adoption, funnel drop-off, in-app guides. Intradiem's expansion signal doesn't live in clicks. It lives in <b style="color:var(--blu)">seat_utilization against contract</b>, <b style="color:var(--blu)">idle-time reclaimed</b>, and <b style="color:var(--blu)">automation volume</b> across a 250k-agent install base — outcome data a generic PLG tool has no concept of.
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--line);color:var(--mut)">So the asset isn't telemetry plumbing — that's commodity. The asset is the <b style="color:var(--ink)">domain-specific signal logic and routing</b> sitting on the event stream you already own. Build the thin layer; don't buy a second platform your ops team has to govern and your reps have to learn. The build-vs-buy line is exactly where a GTM Engineer earns the title.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--grn2)"></span>What I'd Build First — and Why</h3>
+        <div style="font-size:12px;line-height:1.6;color:var(--ink)"><b style="color:var(--grn2)">seat_utilization.</b> Cleanest expansion signal in the set: near-zero false positives, tied directly to revenue, trivial to validate against a closed expansion. Prove the wedge on the signal nobody can argue with, earn the right to instrument the rest.
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--line);color:var(--mut)">The signal is the easy 20%. What a <span class="mono" style="font-size:11px;color:var(--vio2)">coaching_coverage</span> drop <em>means</em> in a live contact center — that's the 80% I can't fake, which is why every threshold here is a placeholder until the people who run the motion set it.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--amb)"></span>From 3 Demo Accounts to the Install Base — The Product Motion</h3>
+      <div class="flow">
+        <div class="fs"><div class="fl">Today</div><div class="fv">3 accounts, modeled data</div></div>
+        <div class="fs"><div class="fl">Phase 1</div><div class="fv">Full install base scored nightly</div></div>
+        <div class="fs active"><div class="fl">Phase 2</div><div class="fv" style="color:var(--amb)">Signals route pre-SF, no triage</div></div>
+        <div class="fs"><div class="fl">Phase 3</div><div class="fv">Proof points feed marketing same-day</div></div>
+        <div class="fs"><div class="fl">Outcome</div><div class="fv" style="color:var(--grn2)">Expansion becomes systematic</div></div>
+      </div>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">The product motion in one line: every account in the base scored every night, the highest-signal accounts already on top when a rep opens Salesforce, and every outcome that fires also becoming a dated proof point for marketing. Expansion stops being something a rep remembers to check and becomes something the system surfaces. That's the difference between a report and an operating motion across 250k+ agents.</div>
+    </div></div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--blu)"></span>What I'd Want Your Read On</h3>
+      <div class="q"><div class="ql">Platform modernization</div>"When you modernized the data architecture in 2025, what did it newly expose at the event level that the GTM motion still isn't using? That's where I'd start instrumenting."</div>
+      <div class="q"><div class="ql">Where the wedge is</div>"Is expansion-signal infrastructure on the existing install base the first motion to build — or is net-new PQL instrumentation the bigger unlock? They're different architectures and I'd sequence around your answer."</div>
+      <div class="q"><div class="ql">The bar for production</div>"What would make you comfortable putting a signal-routing layer like this in front of a customer — what's your bar for 'production' on data that touches their usage?"</div>
+    </div></div>
+  </div>
+
+  <!-- ===================== OPS / GENNA ===================== -->
+  <div class="panel" id="p-ops">
+    <div class="intro">For <b>Genna Barrett-Moeller</b> — the ops backbone <b>is</b> the system. Everything this engine ships either strengthens it or quietly creates debt against it. This view shows exactly what I'd ship, what it touches, and where your sign-off gates it — <b>before</b> a single field reaches Salesforce. I'd want your read on the stack and data model before building anything that touches them.</div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--vio)"></span>Deployment Gate — Expansion Signal Engine <span class="hint">click any row</span></h3>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-done">✓</div><div class="gl"><strong>Ops notified before build started</strong><span>Sales Ops sees the intake before code exists</span></div><span class="pill2 p-done">Done</span></div>
+        <div class="gdet">Standing rule: no GTM build enters your stack without an intake row first. Row zero of every project I'd run.</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-done">✓</div><div class="gl"><strong>Read-only on day one</strong><span>Processor consumes the event export — zero writes to any system of record</span></div><span class="pill2 p-done">Done</span></div>
+        <div class="gdet">The MCP exposes <code>get_expansion_signals(domain)</code> — a read. It computes thresholds on a copy of the data and cannot mutate Salesforce, Gainsight, or WFM. Write access is a separate, gated step below.</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-done">✓</div><div class="gl"><strong>Overlap check — no duplicate tooling</strong><span>Confirmed gap: no signal-routing layer between product events and CRM</span></div><span class="pill2 p-done">Done</span></div>
+        <div class="gdet">If an existing tool already did this, I'd extend it, not ship a parallel one. Shadow tools that duplicate a governed system are how stacks rot — I'd kill my own build before I'd fragment yours.</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-wait">⋯</div><div class="gl"><strong>Data governance review</strong><span>Which usage fields can be accessed, by whom, and how they reach an AE — your call</span></div><span class="pill2 p-wait">Your input</span></div>
+        <div class="gdet">Open question for you: who owns the customer product-usage schema, and what's the approval path to surface a derived signal (e.g. <code>seat_utilization ≥ 85%</code>) into an AE's workspace?</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-wait">⋯</div><div class="gl"><strong>CRM field-mapping approval</strong><span>Signal output → Salesforce fields require your schema sign-off</span></div><span class="pill2 p-wait">Your input</span></div>
+        <div class="gdet">Proposed write is one Task + three fields (<code>signal_type</code>, <code>signal_value</code>, <code>fired_at</code>) via Salesforce Flow — never direct API. Flow means signals queue through an outage instead of dropping. You approve the schema first.</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-block">—</div><div class="gl"><strong>Rollback plan documented</strong><span>Blocked until the data model is confirmed</span></div><span class="pill2 p-block">Blocked</span></div>
+        <div class="gdet">Rollback = disable the Flow + remove the field. Trivial because the build is additive. I won't mark this done until the schema is locked, on principle.</div>
+        <div class="gate-row" onclick="tog(this)"><div class="chk c-block">—</div><div class="gl"><strong>Production ship approval</strong><span>Nothing reaches production without your explicit sign-off above</span></div><span class="pill2 p-block">Awaiting gov.</span></div>
+        <div class="gdet">The gate I won't move on my own. Your sign-off is the last row by design — the line between a sanctioned system and a shadow tool.</div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--blu)"></span>Where New Tools Live in Your Stack</h3>
+        <div class="srow"><span class="layer l-e">Existing</span><span style="flex:1">Salesforce — source of truth</span></div>
+        <div class="srow"><span class="layer l-e">Existing</span><span style="flex:1">ACD (Genesys / Five9)</span></div>
+        <div class="srow"><span class="layer l-e">Existing</span><span style="flex:1">WFM (Verint / NICE / Calabrio)</span></div>
+        <div class="srow"><span class="layer l-e">Existing</span><span style="flex:1">Intradiem — event stream <em style="color:var(--faint)">(read source)</em></span></div>
+        <div class="srow"><span class="layer l-n">New</span><span style="flex:1">Signal MCP — reads events, routes</span></div>
+        <div class="srow"><span class="layer l-n">New</span><span style="flex:1">Clay enrichment — context on fire</span></div>
+        <div class="srow"><span class="layer l-p">Proposed</span><span style="flex:1">SF Flow write — gated on you</span></div>
+        <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Every new layer is <b style="color:var(--ink)">additive</b>. No existing system modified. The only proposed write is gated above.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card span3">
+        <h3><span class="dot" style="background:var(--grn2)"></span>What Touches Your Systems — Governance Ledger</h3>
+        <table>
+          <tr><th>Component</th><th>Access</th><th>Writes to SoR?</th><th>Mechanism</th><th>Gate</th></tr>
+          <tr><td><b>Signal MCP</b> <span class="mono" style="color:var(--vio2);font-size:10.5px">get_expansion_signals</span></td><td>Read-only</td><td class="no">No</td><td>Threshold checks on rolling windows; 14-day per-signal suppression</td><td>Shipped</td></tr>
+          <tr><td><b>Clay enrichment</b></td><td>Read (external)</td><td class="no">No</td><td>Weekly pass — champion job-change, firmographics</td><td>Shipped</td></tr>
+          <tr><td><b>Routing logic</b></td><td>Internal</td><td class="no">No</td><td>Rule-based: expansion→AE, health→CSM. No model, fully auditable</td><td>Shipped</td></tr>
+          <tr><td><b>Salesforce write</b></td><td>Scoped Flow</td><td class="yes">Yes — gated</td><td>1 Task + 3 fields via Flow (queues through outages, never direct API)</td><td><b style="color:var(--amb)">Your sign-off</b></td></tr>
+        </table>
+        <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Three of four components never touch a system of record. The fourth — the only write — is failure-safe and waits on you. Suppression and rolling windows exist for <b style="color:var(--ink)">your</b> benefit: they stop the same alert firing weekly and keep point-in-time noise out of Salesforce.</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--vio)"></span>What I'd Bring to You Before Building Anything</h3>
+        <div class="q"><div class="ql">Governance boundary</div>"Where's the line between something a GTM Engineer should ship fast and something that has to live inside governed ops? Where have you seen that crossed badly?"</div>
+        <div class="q"><div class="ql">CRM ownership</div>"What's today's process for evaluating a new data write that touches Salesforce — who owns the review, and what does approval look like?"</div>
+        <div class="q"><div class="ql">Shadow-to-sanctioned path</div>"If I build a prototype in two weeks the AEs love, what's the path from useful shadow tool to sanctioned system here?"</div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--red)"></span>What I Won't Do</h3>
+        <div class="dont"><span class="x">✕</span><span>Ship to production without ops review — ever</span></div>
+        <div class="dont"><span class="x">✕</span><span>Write to Salesforce without your schema approval</span></div>
+        <div class="dont"><span class="x">✕</span><span>Stand up shadow tools that fragment your stack</span></div>
+        <div class="dont"><span class="x">✕</span><span>Onboard AEs to a system without your sign-off</span></div>
+        <div class="dont"><span class="x">✕</span><span>Move fast on data access without a governance model</span></div>
+        <div style="margin-top:11px;font-size:11.5px;color:var(--mut);font-style:italic">Your backbone is what makes everything else work. My job is to extend it, not stress-test it in production.</div>
+      </div>
+    </div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--grn2)"></span>What Good Looks Like at 90 Days — From the Ops Seat</h3>
+      <div class="sc">
+        <div class="scb"><div class="n" style="color:var(--vio2)">0</div><div class="l">Ungoverned tools in production</div></div>
+        <div class="scb"><div class="n" style="color:var(--grn2)">1</div><div class="l">Signal engine — ops-reviewed &amp; approved</div></div>
+        <div class="scb"><div class="n" style="color:var(--blu)">100%</div><div class="l">Builds logged with ops intake before start</div></div>
+        <div class="scb"><div class="n" style="color:var(--amb)">Weekly</div><div class="l">Ops check-in on every active build</div></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ===================== PIPELINE / NATHAN ===================== -->
+  <div class="panel" id="p-pipe">
+    <div class="intro">For <b>Nathan Belfield</b> — you built this pipeline motion from the inside and ran Intradiem as a customer at Assurant, so you'll see which signals are real and which are noise long before I will. This view is infrastructure that scales <b>your</b> motion — a co-pilot, not a replacement. Every threshold and route below is a placeholder until you set it, and nothing here decides anything you don't want it to: it proposes, you approve. The calibration is the part I can't fake — that's yours.</div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--grn2)"></span>Expansion Signal Queue — Install Base <span class="hint">click a row for the raw MCP response</span></h3>
+        <div class="qrow" onclick="rawtog(this)">
+          <div class="qtop"><span class="co">Synchrony Financial</span><span class="dom">synchrony.com</span><span class="badge b-ae">→ AE</span><span class="expand">▾ raw response</span></div>
+          <div class="sig"><strong style="color:var(--grn2)">seat_utilization · 88.9%</strong> — account near capacity</div>
+          <div class="bar"><div class="bar-fill" style="width:88.9%;background:var(--grn2)"></div></div>
+          <div class="act"><b>AE play:</b> open the expansion conversation — seats or next module. They're running out of room because the product is working, not because adoption failed.</div>
+          <div class="raw"><div class="rl">response · <b>get_expansion_signals("synchrony.com")</b></div>
+<pre>{
+  "company": "Synchrony Financial",
+  "domain": "synchrony.com",
+  "signals_fired": 1,
+  "primary_routing": "AE",
+  "signals": [
+    { "type": "seat_utilization", "value": 88.9, "route": "AE",
+      "reason": "Account near capacity — expansion conversation warranted" }
+  ]
+}</pre></div>
+        </div>
+        <div class="qrow" onclick="rawtog(this)">
+          <div class="qtop"><span class="co">Centene Corporation</span><span class="dom">centene.com</span><span class="badge b-ae">→ AE</span><span class="badge b-csm">+ CSM</span><span class="expand">▾ raw response</span></div>
+          <div class="sig"><strong style="color:var(--amb)">coaching_coverage · 45%</strong> — adoption risk · <strong style="color:var(--blu)">crm_not_connected</strong> — upsell open</div>
+          <div class="bar"><div class="bar-fill" style="width:45%;background:var(--amb)"></div></div>
+          <div class="act"><b>Dual-thread:</b> CSM works the coaching gap; AE runs the CRM-integration conversation in parallel. Two motions, one account, same morning.</div>
+          <div class="raw"><div class="rl">response · <b>get_expansion_signals("centene.com")</b></div>
+<pre>{
+  "company": "Centene Corporation",
+  "domain": "centene.com",
+  "signals_fired": 2,
+  "primary_routing": "AE",
+  "signals": [
+    { "type": "coaching_coverage", "value": 45.0, "route": "CSM",
+      "reason": "Low coaching coverage — adoption risk" },
+    { "type": "crm_not_connected", "value": 95, "route": "AE",
+      "reason": "WFM connected, CRM not integrated — upsell opportunity" }
+  ]
+}</pre></div>
+        </div>
+        <div class="qrow" onclick="rawtog(this)">
+          <div class="qtop"><span class="co">CareSource</span><span class="dom">caresource.com</span><span class="badge b-risk">⚠ CSM</span><span class="expand">▾ raw response</span></div>
+          <div class="sig"><strong style="color:var(--red)">automation_volume_drop · −33.3%</strong> — churn risk developing</div>
+          <div class="bar"><div class="bar-fill" style="width:33.3%;background:var(--red)"></div></div>
+          <div class="act"><b>CSM play:</b> engage before renewal. Find the root cause before it becomes a churn conversation — the signal health scores catch too late.</div>
+          <div class="raw"><div class="rl">response · <b>get_expansion_signals("caresource.com")</b></div>
+<pre>{
+  "company": "CareSource",
+  "domain": "caresource.com",
+  "signals_fired": 1,
+  "primary_routing": "CSM",
+  "signals": [
+    { "type": "automation_volume_drop", "value": -33.3, "route": "CSM",
+      "reason": "Significant automation drop — churn risk" }
+  ]
+}</pre></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--vio)"></span>What You'd Stop Doing by Hand <span class="hint">you still make the calls</span></h3>
+        <ul class="del">
+          <li><span class="i">✓</span>Daily manual scan of account health across the install base</li>
+          <li><span class="i">✓</span>Seat-utilization checks — pulled and routed automatically</li>
+          <li><span class="i">✓</span>Coaching-coverage reporting — fires only on a threshold crossing</li>
+          <li><span class="i">✓</span>Spotting accounts with an unintegrated CRM layer</li>
+          <li><span class="i">✓</span>Churn-risk triage before it surfaces in a QBR</li>
+          <li><span class="i">✓</span>The first-pass AE/CSM route — proposed and logged, always yours to override</li>
+        </ul>
+        <div style="margin-top:11px;font-size:11px;color:var(--mut);font-style:italic">You run the motion. This clears the triage so the highest-signal accounts are already on top when you open Salesforce.</div>
+      </div>
+    </div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--blu)"></span>Signal → Pipeline Action — How It Runs</h3>
+      <div class="flow">
+        <div class="fs"><div class="fl">Product event</div><div class="fv">Usage data export</div></div>
+        <div class="fs active"><div class="fl">Signal MCP</div><div class="fv">Threshold + suppression</div></div>
+        <div class="fs"><div class="fl">Routing</div><div class="fv">Proposed: AE or CSM</div></div>
+        <div class="fs"><div class="fl">AE workspace</div><div class="fv" style="color:var(--amb)">Lands before 7am</div></div>
+        <div class="fs"><div class="fl">Pipeline</div><div class="fv" style="color:var(--grn2)">Worked, not found</div></div>
+      </div>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Day-one reality: not a webhook stream — a daily export on a cron, 30-day rolling windows, 14-day suppression so the same account doesn't re-fire weekly. Day 45: one validated signal worked into pipeline. Day 60: it lands in the AE workspace before Salesforce opens, no manual triage step.</div>
+    </div></div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--amb)"></span>The Part I Can't Build Without You</h3>
+        <div class="defer">"You built the pipeline motion from the inside, and you ran Intradiem as a customer at Assurant — you'll see which signals are real and which are noise long before I will. I'm not here to take that over. I'm here to build the infrastructure that makes it scale. What have you already got working that I should build around?"</div>
+        <div class="learn">Before I'd set a single threshold or decide what routes to an AE vs. a CSM, the questions I'd want your read on:
+          <div style="margin-top:7px" class="qq">"What's the most annoying manual part of pipeline development you'd hand off tomorrow if you could?"</div>
+          <div style="margin-top:6px" class="qq">"From your Assurant days running the product — what did it make obvious that the GTM motion still isn't using?"</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--grn2)"></span>How I'd Work With You</h3>
+        <div style="font-size:12px;line-height:1.65;color:var(--ink)">Your signal calibration is the constraint that makes this accurate — worth more than any enrichment vendor I can call. My job is to remove the bottlenecks <em style="color:var(--grn2)">around</em> your motion, not redesign it.
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--line);color:var(--mut)">The tool is the easy part. Knowing what a <span class="mono" style="font-size:11px;color:var(--vio2)">coaching_coverage</span> drop means in a real contact center vs. on a dashboard — that's you. I'd rather build what you point at than guess.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== MARKETING / SIERRA ===================== -->
+  <div class="panel" id="p-mkt">
+    <div class="intro">For <b>Sierra Jones</b> — nine years in, you know which customer stories move pipeline and which live in a deck nobody opens. This view doesn't explain the product to you; it feeds you raw material while it's still warm. Same engine that routes pipeline, pointed at marketing — <b>you</b> keep every editorial call.</div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--amb)"></span>Proof Events — Same Stream as Pipeline <span class="hint">click one → brief builds on the right</span></h3>
+        <div class="pe sel" onclick="pick('syn',this)">
+          <div class="pe-h"><span class="pe-co">Synchrony Financial</span><span class="pe-b pb-story">🏆 Case-study seed</span></div>
+          <div class="pe-sig"><strong style="color:var(--grn2)">seat_utilization · 88.9%</strong> — running at near capacity</div>
+          <div class="pe-story">Scaled Intradiem to near-maximum capacity — not because adoption failed, because it worked. <em style="color:var(--grn2)">"We ran out of room because the product delivered exactly what it promised."</em> An NRR / expansion-ROI story writing itself.</div>
+        </div>
+        <div class="pe" onclick="pick('cen',this)">
+          <div class="pe-h"><span class="pe-co">Centene Corporation</span><span class="pe-b pb-up">🔌 Integration story</span></div>
+          <div class="pe-sig"><strong style="color:var(--blu)">crm_not_connected</strong> — WFM live, CRM layer not yet connected</div>
+          <div class="pe-story">A platform-depth angle: customers who connect CRM unlock a second layer of automation. <em style="color:#9cc4ec">"Full value comes from full integration"</em> — proof-of-depth, not just proof-of-use.</div>
+        </div>
+        <div class="pe" onclick="pick('car',this)">
+          <div class="pe-h"><span class="pe-co">CareSource</span><span class="pe-b pb-hold">⚠ Hold — not yet a proof point</span></div>
+          <div class="pe-sig"><strong style="color:var(--red)">automation_volume_drop · −33.3%</strong> — routed to CSM, not marketing</div>
+          <div class="pe-story">Flagged so you know it exists, not pushed to you. If CSM recovers the account and volume rebounds, <em style="color:var(--mut)">that</em> becomes a churn-recovery story worth capturing. The engine won't hand you a win that hasn't happened yet.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--grn2)"></span>Auto-Generated Content Brief</h3>
+        <div class="brief">
+          <div class="bt">Draft brief</div>
+          <div class="bsub" id="b-sub">Synchrony Financial · seat utilization 88.9%</div>
+          <div class="br"><span class="bk">Account</span><span class="bv" id="b-acct">Synchrony Financial</span></div>
+          <div class="br"><span class="bk">Signal</span><span class="bv hi" id="b-sig">seat_utilization 88.9%</span></div>
+          <div class="br"><span class="bk">Story type</span><span class="bv" id="b-type">Expansion / ROI proof</span></div>
+          <div class="br"><span class="bk">Angle</span><span class="bv" id="b-angle">"Ran out of room because it worked"</span></div>
+          <div class="br"><span class="bk">Quote</span><span class="bv" id="b-quote">"We've onboarded so many agents we need more capacity"</span></div>
+          <div class="br"><span class="bk">Campaign fit</span><span class="bv" id="b-fit">NRR · expansion testimonial · ROI proof</span></div>
+          <div class="br"><span class="bk">Next step</span><span class="bv" id="b-next">CSM flags to marketing — open the customer-story conversation</span></div>
+          <div class="br"><span class="bk">Urgency</span><span class="bv hi" id="b-urg">This week — before the expansion conversation closes</span></div>
+          <div class="gen"><span class="pulse"></span>Drafted from the signal — yours to approve, kill, or sharpen</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid"><div class="card span3">
+      <h3><span class="dot" style="background:var(--amb)"></span>Signal → Content Pipeline</h3>
+      <div class="flow">
+        <div class="fs"><div class="fl">Product event</div><div class="fv">Outcome threshold hit</div></div>
+        <div class="fs active"><div class="fl">Signal MCP</div><div class="fv">Proof event created</div></div>
+        <div class="fs"><div class="fl">Content brief</div><div class="fv" style="color:var(--amb)">Auto-drafted</div></div>
+        <div class="fs"><div class="fl">Your queue</div><div class="fv">Lands while warm</div></div>
+        <div class="fs"><div class="fl">Campaign</div><div class="fv" style="color:var(--grn2)">Your call</div></div>
+      </div>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">No more chasing CSM for wins weeks after they happen. Proof points surface the morning the product delivers the outcome — date-stamped, with a draft angle attached. You own every editorial decision; you just stop starting from a blank page.</div>
+    </div></div>
+
+    <div class="grid">
+      <div class="card span2">
+        <h3><span class="dot" style="background:var(--grn2)"></span>What Changes for Marketing</h3>
+        <div class="ba">
+          <div class="bacol bef"><h4>Today — what you chase</h4>
+            <div class="bi"><span class="m" style="color:var(--red)">✗</span>Ask CSM for wins — wait weeks for a reply</div>
+            <div class="bi"><span class="m" style="color:var(--red)">✗</span>Proof arrives stale — story already closed</div>
+            <div class="bi"><span class="m" style="color:var(--red)">✗</span>Best ROI moments stay inside accounts, never surface</div>
+            <div class="bi"><span class="m" style="color:var(--red)">✗</span>Campaign copy goes generic when real proof isn't there</div>
+          </div>
+          <div class="bacol aft"><h4>With this engine</h4>
+            <div class="bi"><span class="m" style="color:var(--grn2)">✓</span>Proof lands in your queue the morning it fires</div>
+            <div class="bi"><span class="m" style="color:var(--grn2)">✓</span>Draft brief attached — angle, quote, urgency</div>
+            <div class="bi"><span class="m" style="color:var(--grn2)">✓</span>Every expansion signal is a case study before the AE closes it</div>
+            <div class="bi"><span class="m" style="color:var(--grn2)">✓</span>Campaigns backed by date-stamped product outcomes</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot" style="background:var(--amb)"></span>What I'd Want to Learn From You</h3>
+        <div style="font-size:12px;line-height:1.6;color:var(--ink)">Before I'd decide what's worth routing to you vs. holding, I'd want your read:</div>
+        <div class="qbox">"How does marketing get customer proof today — and how fresh is it by the time it reaches a campaign?"</div>
+        <div class="qbox">"What's the one story from the last year you wish you'd had six months earlier?"</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="built">Built by Dallas Andrews · GTM Engineer candidate · custom Signal MCP server (the Pipeline JSON is its live response) · Apollo + Clay enrichment · Claude in Cowork for routing &amp; brief logic</div>
+    <a href="https://intradiem.dallasandrews.dev">intradiem.dallasandrews.dev</a> &nbsp;·&nbsp; the engine &nbsp;|&nbsp; this console = the same engine, surfaced for Ops · Pipeline · Marketing
+  </footer>
+
+</div>
+<script>
+  function tab(p,el){
+    document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on')});
+    el.classList.add('on');
+    document.querySelectorAll('.panel').forEach(function(pn){pn.classList.remove('on')});
+    document.getElementById('p-'+p).classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  function tog(row){var d=row.nextElementSibling;if(d&&d.classList.contains('gdet'))d.classList.toggle('open');}
+  function rawtog(row){var r=row.querySelector('.raw');if(r)r.classList.toggle('open');var e=row.querySelector('.expand');if(e)e.textContent=r&&r.classList.contains('open')?'▴ hide response':'▾ raw response';}
+  var DATA={
+    syn:{sub:"Synchrony Financial · seat utilization 88.9%",acct:"Synchrony Financial",sig:"seat_utilization 88.9%",type:"Expansion / ROI proof",angle:'"Ran out of room because it worked"',quote:'"We\'ve onboarded so many agents we need more capacity"',fit:"NRR · expansion testimonial · ROI proof",next:"CSM flags to marketing — open the customer-story conversation",urg:"This week — before the expansion conversation closes",hi:true},
+    cen:{sub:"Centene Corporation · CRM not connected",acct:"Centene Corporation",sig:"crm_not_connected",type:"Platform-depth / integration proof",angle:'"Full value comes from full integration"',quote:'"Connecting CRM unlocked a second layer of automation"',fit:"Product-depth · integration case · cross-sell proof",next:"AE owns the upsell — marketing seeds the depth narrative in parallel",urg:"Warm — runs alongside the AE integration conversation",hi:true},
+    car:{sub:"CareSource · automation drop −33.3% (HOLD)",acct:"CareSource",sig:"automation_volume_drop −33.3%",type:"Not a proof point — routed to CSM",angle:"Hold — no win to tell yet",quote:"None — pending account recovery",fit:"Potential future churn-recovery story (if volume rebounds)",next:"Hold. Re-evaluate in 30 days if CSM recovers the account",urg:"None — flagged for awareness, not action",hi:false}
+  };
+  function pick(k,el){
+    document.querySelectorAll('#p-mkt .pe').forEach(function(p){p.classList.remove('sel')});
+    el.classList.add('sel');
+    var d=DATA[k];
+    set('b-sub',d.sub);set('b-acct',d.acct);set('b-sig',d.sig);set('b-type',d.type);set('b-angle',d.angle);set('b-quote',d.quote);set('b-fit',d.fit);set('b-next',d.next);set('b-urg',d.urg);
+    document.getElementById('b-sig').className='bv'+(d.hi?' hi':'');
+    document.getElementById('b-urg').className='bv'+(d.hi?' hi':'');
+  }
+  function set(id,v){var e=document.getElementById(id);if(e)e.textContent=v;}
+</script>
+</body>
+</html>

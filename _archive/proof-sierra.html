@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Engine · Proof → Content Engine — for Sierra Jones</title>
+<style>
+  :root{
+    --bg:#0b0e13; --bg2:#0e1219; --card:#141a23; --card2:#10151d; --line:#232c39; --line2:#2c3645;
+    --ink:#e8eef6; --mut:#8a97a8; --faint:#5b6675;
+    --ae:#46c08a; --csm:#5aa2e6; --risk:#e5675f; --warn:#e0a93b; --gov:#8b7cf0;
+    --accent:#e0a93b; --accent-soft:rgba(224,169,59,.13); --accent-line:rgba(224,169,59,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 80% -10%,rgba(224,169,59,.06),transparent),var(--bg);color:var(--ink);font:13px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:18px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto}
+  a{color:#e6c578;text-decoration:none}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:6px;flex-wrap:wrap;gap:10px}
+  .brandmark{display:flex;align-items:center;gap:9px}
+  .glyph{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#c98f25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#1c1404;box-shadow:0 0 0 1px var(--accent-line)}
+  header h1{font-size:18px;font-weight:700;letter-spacing:-.01em}
+  header h1 span{color:#e6c578}
+  .sub{font-size:12px;color:var(--mut);margin-top:3px}
+  .meta{font-size:11px;color:var(--mut);text-align:right}
+  .tag{display:inline-block;background:var(--accent-soft);border:1px solid var(--accent-line);color:#e6c578;padding:3px 11px;border-radius:6px;font-size:11px;font-weight:600}
+  .sysmap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 6px;font-size:11px;color:var(--faint)}
+  .sysmap .lbl{text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--mut)}
+  .surface{display:flex;align-items:center;gap:7px;padding:5px 11px;border-radius:7px;border:1px solid var(--line);background:var(--card2);color:var(--mut)}
+  .surface.active{border-color:var(--accent-line);background:var(--accent-soft);color:#e6c578;font-weight:600}
+  .surface small{display:block;font-size:9px;color:var(--faint);letter-spacing:.04em}
+  .surface .sdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+  .arrow{color:var(--line2);font-size:13px}
+  .caveat{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:0 8px 8px 0;padding:10px 13px;margin:12px 0 16px;font-size:11.5px;color:var(--mut);line-height:1.5}
+  .caveat b{color:var(--ink)}
+  .caveat .ic{color:var(--warn);font-weight:800;flex-shrink:0}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#e6c578}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:13px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+  .span2{grid-column:span 2}.span3{grid-column:span 3}
+  .card h2{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:7px;font-weight:700}
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+  .principle{background:linear-gradient(120deg,var(--accent-soft),transparent);border:1px solid var(--accent-line);border-radius:10px;padding:13px 16px;font-size:13.5px;line-height:1.6;margin-bottom:14px;color:var(--ink);font-style:italic}
+  /* PROOF EVENTS (selectable) */
+  .pe{border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:10px;cursor:pointer;transition:.14s;background:var(--card2)}
+  .pe:last-child{margin-bottom:0}
+  .pe:hover{border-color:var(--line2)}
+  .pe.sel{border-color:var(--accent-line);background:var(--accent-soft);box-shadow:0 0 0 1px var(--accent-line) inset}
+  .pe-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:5px}
+  .pe-co{font-size:14px;font-weight:700}
+  .pe-b{font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:5px;white-space:nowrap;letter-spacing:.03em}
+  .pb-story{background:rgba(70,192,138,.15);border:1px solid rgba(70,192,138,.4);color:var(--ae)}
+  .pb-upsell{background:rgba(90,162,230,.15);border:1px solid rgba(90,162,230,.4);color:#9cc4ec}
+  .pb-hold{background:rgba(229,103,95,.13);border:1px solid rgba(229,103,95,.35);color:#f0938f}
+  .pe-sig{font-size:11.5px;color:var(--mut);margin-bottom:5px}
+  .pe-sig strong{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px}
+  .pe-story{font-size:12px;color:var(--ink);line-height:1.5}
+  .pe-story em{font-style:italic}
+  .hint{font-size:10px;color:var(--faint);margin-top:7px}
+  /* BRIEF PANEL */
+  .brief{background:#080b10;border:1px solid var(--line2);border-radius:10px;padding:14px 15px;position:sticky;top:14px}
+  .brief .bt{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:700;margin-bottom:3px}
+  .brief .bsub{font-size:12px;color:var(--mut);margin-bottom:11px;font-weight:600}
+  .br{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:11.5px}
+  .br:last-child{border:0}
+  .bk{color:var(--faint);min-width:96px;flex-shrink:0;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;padding-top:1px}
+  .bv{color:var(--ink);line-height:1.45}
+  .bv.hi{color:var(--accent);font-weight:700}
+  .gen{font-size:10px;color:var(--faint);margin-top:11px;display:flex;align-items:center;gap:6px}
+  .gen .pulse{width:6px;height:6px;border-radius:50%;background:var(--ae);box-shadow:0 0 0 0 rgba(70,192,138,.5);animation:p 2s infinite}
+  @keyframes p{0%{box-shadow:0 0 0 0 rgba(70,192,138,.5)}70%{box-shadow:0 0 0 6px rgba(70,192,138,0)}100%{box-shadow:0 0 0 0 rgba(70,192,138,0)}}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+  .bacol{border:1px solid var(--line);border-radius:9px;padding:11px 13px}
+  .bacol h3{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;font-weight:700}
+  .bacol.bef h3{color:var(--risk)}.bacol.aft h3{color:var(--ae)}
+  .bi{font-size:11.5px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.06);display:flex;gap:8px;align-items:flex-start;line-height:1.4}
+  .bi:last-child{border:0}.bi .m{flex-shrink:0}
+  .flow{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-top:8px}
+  .fs{flex:1;text-align:center;padding:11px 6px;border-right:1px solid var(--line)}
+  .fs:last-child{border:0}
+  .fl{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .fv{font-size:11.5px;font-weight:700}
+  .qbox{background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;font-size:12px;line-height:1.55;font-style:italic;color:var(--ink);margin-top:8px}
+  footer{text-align:center;padding:18px 0 4px;font-size:11px;color:var(--faint);border-top:1px solid var(--line);margin-top:6px}
+  footer .built{color:var(--mut);margin-bottom:4px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.span2,.span3{grid-column:auto}.ba{grid-template-columns:1fr}.brief{position:static}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brandmark">
+        <div class="glyph">S</div>
+        <div>
+          <h1>Signal Engine · <span>Proof → Content Engine</span></h1>
+          <div class="sub">Every customer win is a proof point. This routes them to you the moment they fire.</div>
+        </div>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="tag">Built for Sierra Jones · Lead Digital Marketing Strategist</span>
+      <div style="margin-top:6px">Jun 11, 2026 · Dallas Andrews</div>
+    </div>
+  </header>
+
+  <div class="sysmap">
+    <span class="lbl">One signal engine · three role surfaces</span>
+    <span class="arrow">·</span>
+    <a class="surface" href="https://ops.dallasandrews.dev"><span class="sdot" style="background:var(--gov)"></span>Ops Console<small>Genna · governance gate</small></a>
+    <span class="arrow">→</span>
+    <a class="surface" href="https://pipeline.dallasandrews.dev"><span class="sdot" style="background:var(--ae)"></span>Pipeline Queue<small>Nathan · live routing</small></a>
+    <span class="arrow">→</span>
+    <span class="surface active"><span class="sdot" style="background:var(--warn)"></span>Proof Engine<small>content briefs</small></span>
+  </div>
+
+  <div class="caveat">
+    <span class="ic">⚑</span>
+    <div><b>Honest scope.</b> Same Signal MCP that feeds pipeline, pointed at marketing. The proof events below are its real output (<span class="mono">get_expansion_signals</span>); the underlying usage values are <b>modeled</b>, not Intradiem's production stream. The engine routes the signal — <b>you</b> decide which story is worth telling. You've done that for nine years; this just makes sure the raw material reaches you while it's still warm.</div>
+  </div>
+
+  <div class="principle">
+    "Marketing usually gets starved on customer proof — the best stories happen inside accounts, never reach the campaign team, and are stale by the time they do. This pipes them to you the moment the product delivers the outcome you sell."
+  </div>
+
+  <div class="grid">
+    <div class="card span2">
+      <h2><span class="dot" style="background:var(--warn)"></span>Proof Events — Same Stream as Pipeline <span style="margin-left:auto;font-weight:600;color:var(--faint);text-transform:none;letter-spacing:0">click one → brief builds on the right</span></h2>
+
+      <div class="pe sel" data-k="syn" onclick="pick('syn',this)">
+        <div class="pe-h"><span class="pe-co">Synchrony Financial</span><span class="pe-b pb-story">🏆 Case-study seed</span></div>
+        <div class="pe-sig"><strong style="color:var(--ae)">seat_utilization · 88.9%</strong> — running at near capacity</div>
+        <div class="pe-story">Scaled Intradiem to near-maximum capacity — not because adoption failed, because it worked. <em style="color:var(--ae)">"We ran out of room because the product delivered exactly what it promised."</em> That's an NRR / expansion-ROI story writing itself.</div>
+      </div>
+
+      <div class="pe" data-k="cen" onclick="pick('cen',this)">
+        <div class="pe-h"><span class="pe-co">Centene Corporation</span><span class="pe-b pb-upsell">🔌 Integration story</span></div>
+        <div class="pe-sig"><strong style="color:var(--csm)">crm_not_connected</strong> — WFM live, CRM layer not yet connected</div>
+        <div class="pe-story">A platform-depth angle: customers who connect CRM unlock a second layer of workflow automation. <em style="color:#9cc4ec">"Full value comes from full integration"</em> — proof-of-depth, not just proof-of-use.</div>
+      </div>
+
+      <div class="pe" data-k="car" onclick="pick('car',this)">
+        <div class="pe-h"><span class="pe-co">CareSource</span><span class="pe-b pb-hold">⚠ Hold — not yet a proof point</span></div>
+        <div class="pe-sig"><strong style="color:var(--risk)">automation_volume_drop · −33.3%</strong> — routed to CSM, not marketing</div>
+        <div class="pe-story">Flagged so you know it exists, not pushed to you. If CSM recovers the account and volume rebounds, <em style="color:var(--mut)">that</em> becomes a churn-recovery story worth capturing. The engine won't hand you a win that hasn't happened yet.</div>
+      </div>
+      <div class="hint">The engine routes and drafts. The editorial call — which of these earns a campaign — stays yours.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot" style="background:var(--ae)"></span>Auto-Generated Content Brief</h2>
+      <div class="brief">
+        <div class="bt">Draft brief</div>
+        <div class="bsub" id="b-sub">Synchrony Financial · seat utilization 88.9%</div>
+        <div class="br"><span class="bk">Account</span><span class="bv" id="b-acct">Synchrony Financial</span></div>
+        <div class="br"><span class="bk">Signal</span><span class="bv hi" id="b-sig">seat_utilization 88.9%</span></div>
+        <div class="br"><span class="bk">Story type</span><span class="bv" id="b-type">Expansion / ROI proof</span></div>
+        <div class="br"><span class="bk">Angle</span><span class="bv" id="b-angle">"Ran out of room because it worked"</span></div>
+        <div class="br"><span class="bk">Quote to pursue</span><span class="bv" id="b-quote">"We've onboarded so many agents we need more capacity"</span></div>
+        <div class="br"><span class="bk">Campaign fit</span><span class="bv" id="b-fit">NRR story · expansion testimonial · ROI proof</span></div>
+        <div class="br"><span class="bk">Next step</span><span class="bv" id="b-next">CSM flags to marketing — open the customer-story conversation</span></div>
+        <div class="br"><span class="bk">Urgency</span><span class="bv hi" id="b-urg">This week — before the expansion conversation closes</span></div>
+        <div class="gen"><span class="pulse"></span>Drafted from the signal — yours to approve, kill, or sharpen</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card span3">
+      <h2><span class="dot" style="background:var(--warn)"></span>Signal → Content Pipeline</h2>
+      <div class="flow">
+        <div class="fs"><div class="fl">Product event</div><div class="fv">Outcome threshold hit</div></div>
+        <div class="fs"><div class="fl">Signal MCP</div><div class="fv">Proof event created</div></div>
+        <div class="fs"><div class="fl">Content brief</div><div class="fv" style="color:var(--accent)">Auto-drafted</div></div>
+        <div class="fs"><div class="fl">Your queue</div><div class="fv">Lands while warm</div></div>
+        <div class="fs"><div class="fl">Campaign</div><div class="fv" style="color:var(--ae)">Your call</div></div>
+      </div>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">No more chasing CSM for customer wins weeks after they happen. Proof points surface the morning the product delivers the outcome — date-stamped, with a draft angle attached. You still own every editorial decision; you just stop starting from a blank page.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card span2">
+      <h2><span class="dot" style="background:var(--ae)"></span>What Changes for Marketing</h2>
+      <div class="ba">
+        <div class="bacol bef">
+          <h3>Today — what you chase</h3>
+          <div class="bi"><span class="m" style="color:var(--risk)">✗</span>Ask CSM for customer wins — wait weeks for a reply</div>
+          <div class="bi"><span class="m" style="color:var(--risk)">✗</span>Proof arrives stale — story already closed</div>
+          <div class="bi"><span class="m" style="color:var(--risk)">✗</span>Best ROI moments stay inside accounts, never surface</div>
+          <div class="bi"><span class="m" style="color:var(--risk)">✗</span>Campaign copy goes generic when real proof isn't there</div>
+        </div>
+        <div class="bacol aft">
+          <h3>With this engine</h3>
+          <div class="bi"><span class="m" style="color:var(--ae)">✓</span>Proof lands in your queue the morning it fires</div>
+          <div class="bi"><span class="m" style="color:var(--ae)">✓</span>Draft brief attached — angle, quote, urgency</div>
+          <div class="bi"><span class="m" style="color:var(--ae)">✓</span>Every expansion signal is a case study before the AE closes it</div>
+          <div class="bi"><span class="m" style="color:var(--ae)">✓</span>Campaigns backed by date-stamped product outcomes</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2><span class="dot" style="background:var(--warn)"></span>What I'd Want to Learn From You</h2>
+      <div style="font-size:12px;line-height:1.6;color:var(--ink)">
+        You've been at Intradiem nine years — you know which customer stories actually move pipeline and which ones live in a deck nobody opens. Before I'd decide what's worth routing to you vs. holding, I'd want your read:
+      </div>
+      <div class="qbox">"How does marketing get customer proof today — and how fresh is it by the time it reaches a campaign?"</div>
+      <div class="qbox">"What's the one story from the last year you wish you'd had six months earlier?"</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="built">Built by Dallas Andrews · GTM Engineer candidate · same custom Signal MCP that feeds pipeline · brief drafting via Claude in Cowork</div>
+    <a href="https://proof.dallasandrews.dev">proof.dallasandrews.dev</a> &nbsp;·&nbsp; one of three role surfaces on the same signal engine
+  </footer>
+
+</div>
+<script>
+  var DATA={
+    syn:{sub:"Synchrony Financial · seat utilization 88.9%",acct:"Synchrony Financial",sig:"seat_utilization 88.9%",type:"Expansion / ROI proof",angle:'"Ran out of room because it worked"',quote:'"We\'ve onboarded so many agents we need more capacity"',fit:"NRR story · expansion testimonial · ROI proof",next:"CSM flags to marketing — open the customer-story conversation",urg:"This week — before the expansion conversation closes",hi:true},
+    cen:{sub:"Centene Corporation · CRM not connected",acct:"Centene Corporation",sig:"crm_not_connected",type:"Platform-depth / integration proof",angle:'"Full value comes from full integration"',quote:'"Connecting CRM unlocked a second layer of automation"',fit:"Product-depth story · integration case · cross-sell proof",next:"AE owns the upsell — marketing seeds the depth narrative in parallel",urg:"Warm — runs alongside the AE integration conversation",hi:true},
+    car:{sub:"CareSource · automation drop −33.3% (HOLD)",acct:"CareSource",sig:"automation_volume_drop −33.3%",type:"Not a proof point — routed to CSM",angle:"Hold — no win to tell yet",quote:"None — pending account recovery",fit:"Potential future churn-recovery story (if volume rebounds)",next:"Hold. Re-evaluate in 30 days if CSM recovers the account",urg:"None — flagged for awareness, not action",hi:false}
+  };
+  function pick(k,el){
+    document.querySelectorAll('.pe').forEach(function(p){p.classList.remove('sel')});
+    el.classList.add('sel');
+    var d=DATA[k];
+    set('b-sub',d.sub);set('b-acct',d.acct);set('b-sig',d.sig);set('b-type',d.type);
+    set('b-angle',d.angle);set('b-quote',d.quote);set('b-fit',d.fit);set('b-next',d.next);set('b-urg',d.urg);
+    document.getElementById('b-sig').className='bv'+(d.hi?' hi':'');
+    document.getElementById('b-urg').className='bv'+(d.hi?' hi':'');
+  }
+  function set(id,v){document.getElementById(id).textContent=v;}
+</script>
+</body>
+</html>

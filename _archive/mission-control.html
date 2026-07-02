@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dallas — Mission Control</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f6f5fb;
+  --card:#ffffff;
+  --ink:#1a1530;
+  --ink-soft:#5b5470;
+  --line:#e7e3f2;
+  --accent:#5b3df5;
+  --accent-soft:#efeafe;
+  --green:#1a8f5b; --green-bg:#e6f6ee;
+  --amber:#b6791b; --amber-bg:#fcf3e0;
+  --red:#c2354a; --red-bg:#fbe9ec;
+  --shadow:0 1px 3px rgba(26,21,48,.06),0 8px 24px rgba(26,21,48,.05);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:22px 20px 64px}
+a{color:var(--accent);text-decoration:none}
+
+/* header */
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:6px}
+.head h1{font-size:20px;margin:0;letter-spacing:-.3px}
+.head .sub{color:var(--ink-soft);font-size:13px;margin-top:3px}
+.phasebar{display:flex;gap:6px;margin:14px 0 22px;flex-wrap:wrap}
+.phase{font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--ink-soft)}
+.phase.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* glance */
+.glance{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:14px;margin-bottom:26px}
+@media(max-width:820px){.glance{grid-template-columns:1fr}}
+.gcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 17px;box-shadow:var(--shadow)}
+.gcard h2{font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--ink-soft);margin:0 0 11px}
+.statuslamp{display:flex;align-items:center;gap:12px}
+.lamp{width:46px;height:46px;border-radius:50%;flex:none;position:relative}
+.lamp::after{content:"";position:absolute;inset:7px;border-radius:50%;background:rgba(255,255,255,.45)}
+.lamp.green{background:var(--green)} .lamp.amber{background:var(--amber)} .lamp.red{background:var(--red)}
+.lamp-txt b{font-size:16px;display:block;letter-spacing:-.2px}
+.lamp-txt span{font-size:12.5px;color:var(--ink-soft)}
+.flaglist,.actlist{margin:0;padding:0;list-style:none;font-size:13px}
+.flaglist li,.actlist li{padding:7px 0;border-top:1px solid var(--line);display:flex;gap:9px;align-items:flex-start}
+.flaglist li:first-child,.actlist li:first-child{border-top:none}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;margin-top:6px}
+.dot.red{background:var(--red)} .dot.amber{background:var(--amber)} .dot.green{background:var(--green)}
+.actlist li .n{width:18px;height:18px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;margin-top:1px}
+.muted{color:var(--ink-soft);font-size:12px}
+.empty{color:var(--ink-soft);font-size:12.5px;font-style:italic;padding:6px 0}
+
+/* panels */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.ptop{display:flex;align-items:center;gap:12px;padding:15px 18px;cursor:pointer;user-select:none}
+.ptop:hover{background:#fbfaff}
+.ptop .ico{width:30px;height:30px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:15px;flex:none}
+.ptop h3{margin:0;font-size:15px;letter-spacing:-.2px;flex:1}
+.ptop .meta{font-size:12px;color:var(--ink-soft)}
+.chip{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:.4px}
+.chip.green{background:var(--green-bg);color:var(--green)}
+.chip.amber{background:var(--amber-bg);color:var(--amber)}
+.chip.red{background:var(--red-bg);color:var(--red)}
+.chip.flat{background:#eee9f6;color:var(--ink-soft)}
+.caret{transition:transform .18s;color:var(--ink-soft);font-size:13px}
+.panel.open .caret{transform:rotate(90deg)}
+.pbody{display:none;padding:4px 18px 18px}
+.panel.open .pbody{display:block}
+
+/* rows */
+.row{padding:13px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:none}
+.row .rt{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.row .rt b{font-size:13.5px;font-weight:600}
+.row .note{font-size:12.5px;color:var(--ink-soft);margin-top:3px}
+.bar{height:7px;border-radius:5px;background:#efecf7;margin-top:9px;overflow:hidden}
+.bar > i{display:block;height:100%;border-radius:5px}
+.bar > i.green{background:var(--green)} .bar > i.amber{background:var(--amber)} .bar > i.red{background:var(--red)} .bar>i.accent{background:var(--accent)}
+.metricval{font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+
+/* checklist */
+.check{display:flex;gap:11px;padding:11px 0;border-top:1px solid var(--line);align-items:flex-start;cursor:pointer}
+.check:first-child{border-top:none}
+.box{width:19px;height:19px;border-radius:6px;border:2px solid #cfc8e6;flex:none;margin-top:1px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;transition:.12s}
+.check.done .box{background:var(--green);border-color:var(--green)}
+.check.done .ctxt b{text-decoration:line-through;color:var(--ink-soft)}
+.ctxt b{font-size:13.5px;font-weight:600;display:block}
+.ctxt span{font-size:12.5px;color:var(--ink-soft)}
+
+/* ledger */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-soft);font-weight:600;padding:8px 10px 8px 0;border-bottom:1px solid var(--line)}
+td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.due{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:6px}
+.who{color:var(--ink-soft);font-size:12px}
+
+.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:680px){.relgrid{grid-template-columns:1fr}}
+.relcard{border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.relcard .rn{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.relcard .rn b{font-size:13.5px}
+.relcard .role{font-size:11.5px;color:var(--ink-soft)}
+.relcard .watch{font-size:12.5px;color:var(--ink-soft);margin-top:7px}
+
+.footnote{font-size:11.5px;color:var(--ink-soft);margin-top:18px;text-align:center;line-height:1.6}
+.wire{font-size:11px;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:2px 7px;display:inline-block;margin-top:8px}
+.addrow{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.addrow input,.addrow select{font:inherit;font-size:12.5px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+.addrow button,.btn{font:inherit;font-size:12.5px;font-weight:600;padding:7px 13px;border:none;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}
+.btn.ghost{background:#fff;border:1px solid var(--line);color:var(--ink-soft)}
+.reviewstamp{font-size:11.5px;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <div>
+      <h1>Mission Control <span style="font-weight:400;color:var(--ink-soft);font-size:15px">· Dallas @ Intradiem</span></h1>
+      <div class="sub" id="subline">GTM Engineer · reporting to Naveen · private to you</div>
+    </div>
+    <div style="text-align:right">
+      <div class="reviewstamp" id="reviewstamp"></div>
+      <button class="btn ghost" id="reviewbtn" style="margin-top:6px">Mark reviewed today</button>
+    </div>
+  </div>
+  <div class="phasebar" id="phasebar"></div>
+
+  <!-- GLANCE -->
+  <div class="glance">
+    <div class="gcard">
+      <h2>Overall</h2>
+      <div class="statuslamp">
+        <div class="lamp" id="lamp"></div>
+        <div class="lamp-txt"><b id="lampword"></b><span id="lampnote"></span></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <h2>⚠ Watch now</h2>
+      <ul class="flaglist" id="flaglist"></ul>
+    </div>
+    <div class="gcard">
+      <h2>↗ Today's top 3</h2>
+      <ul class="actlist" id="actlist"></ul>
+    </div>
+  </div>
+
+  <div id="panels"></div>
+
+  <div class="footnote">
+    Built to protect you and keep you sharp. Self-contained today, seeded from your real state.<br>
+    Tell me what changed and I'll update it — or use the panels to log/check things yourself (saved on this device).<br>
+    Provisional Q3 targets are Naveen's "rough sketch" to co-shape, not commitments.
+  </div>
+</div>
+
+<script>
+/* ---------- STATE (seeded from your real status; edit via chat or inline) ---------- */
+const TODAY = (()=>{const d=new Date();d.setHours(0,0,0,0);return d;})(); // live: staleness alarms depend on the real clock
+const START = new Date('2026-07-06');
+const Q3_END = new Date('2026-09-30');
+
+const STATE = {
+  reviewedISO: null,
+  naveenWorking: '',        // Naveen's own words: what "working" looks like at 90 days (your REAL scoreboard)
+  targetsConfirmed: false,  // have 15 / 10x / 200 been co-defined with Naveen yet?
+  externalSignals: [],      // {dateISO, source, quote, myRead, disconfirming} — the only sensor pointed outward
+
+  // 1. Q3 MANDATES (provisional, co-shape with Naveen)
+  mandates: [
+    {id:'m1', name:'15 vetted new-logo meetings', target:15, current:0, unit:'meetings',
+     note:'Senior WFM/Ops officers via Star Ratings + back-office Clay motion. Lives in reps’ reply-handling — instrument upstream.', wire:'Gmail / Apollo / signals MCP'},
+    {id:'m2', name:'10× BDR throughput', target:100, current:0, unit:'qual. replies/wk (proxy)',
+     note:'Redefine 10× as qualified replies/week, NOT raw sends — raw 10× poisons the 157 warm contacts.', wire:'Apollo / email infra'},
+    {id:'m3', name:'200+ back-office contacts', target:200, current:0, unit:'qualified contacts',
+     note:'Must be QUALIFIED against a real ICP (define w/ Scott Kemme) and paced to GA so they don’t decay.', wire:'Clay / Apollo'},
+    {id:'m4', name:'Build + maintain growth engine', target:100, current:35, unit:'% standing OKR',
+     note:'Lists, signals, instrumentation, cadence. The durable value — robust to whatever targets land. Engines already built, need real-data wiring.', wire:'signals + TAM MCPs'}
+  ],
+
+  // 2. WEEK-1 INSTRUMENTATION (the keystone — protects the whole number)
+  instrumentation: [
+    {id:'i1', label:'Attribution defined in writing with Naveen', sub:'Engine credited at the qualified-reply / meeting-sourced line. Do this Week 1, framed as “co-define what good looks like.”', done:false},
+    {id:'i2', label:'Contact-level source tagging LIVE before scaling volume', sub:'Measurement before volume. No 10× sends until tagging fires.', done:false},
+    {id:'i3', label:'Deliverability infra stood up (warmup / rotation / monitoring)', sub:'P1. Protects the 157 warm contacts from cold-domain blast.', done:false},
+    {id:'i4', label:'Back-office ICP defined with Scott Kemme', sub:'Before sourcing the 200. ICP before sourcing.', done:false}
+  ],
+
+  // 3. TOOL / SYSTEM HEALTH (what you built)
+  tools: [
+    {id:'t1', name:'Install-base signal engine', status:'sample', note:'6 signals, routing AE>CSM>HOLD, 14/14 tests. Needs real Intradiem telemetry export to go live.'},
+    {id:'t2', name:'TAM outbound engine', status:'sample', note:'ICP×why-now scoring, ROI, committee, sequences. 21/21 tests. proof.json benchmark + peer claims are PLACEHOLDERS — verify before any send.'},
+    {id:'t3', name:'Impact / measurement layer', status:'sample', note:'$41.6M surfaced (estimated) vs realized, kept separate. Honest assumptions dropdown.'},
+    {id:'t4', name:'Hosted platform (brain + Slack + plugin)', status:'built', note:'FastAPI brain, Slack /strikeplan, Claude plugin. Tested end-to-end. Needs hosting + tokens to distribute.'},
+    {id:'t5', name:'Live site deploy (intradiem.dallasandrews.dev)', status:'pending', note:'Cloudflare redeploy pending: index.html + signals.json + tam_plays.json + impact.json. Stale zip temp files to trash.'}
+  ],
+
+  // 4. RELATIONSHIPS
+  relationships: [
+    {id:'r1', name:'Naveen Thilagan', role:'Manager · Product Strategy', health:'green', watch:'Warm, partnership posture. Win: co-define attribution Week 1 collaboratively, not defensively.'},
+    {id:'r2', name:'Nate Belfield', role:'Pipeline Dev Lead', health:'amber', watch:'Highest scope overlap = credit risk. Meetings book through his reps. Make him a beneficiary of the engine, not a rival. Manage early.'},
+    {id:'r3', name:'Scott Kemme', role:'Business readiness', health:'amber', watch:'Gatekeeper of back-office ICP. You need a Week-1 working session or mandate #3 is built on sand.'},
+    {id:'r4', name:'Genna Barrett-Moeller', role:'Dir Global Sales Ops', health:'green', watch:'Panel ally. Ops partner for instrumentation/SFDC. Keep looped on measurement.'},
+    {id:'r5', name:'Sierra Jones', role:'Lead Digital Marketing', health:'green', watch:'Marketing surface for proof points / content engine. Feed her verified wins.'},
+    {id:'r6', name:'Chris Busbee', role:'SVP Product Mgmt', health:'green', watch:'Sponsor. Cares about judgment + market-share growth. Surface signal, not activity. Don’t over-touch.'}
+  ],
+
+  // 5. PROMISE LEDGER (reputation protector — your #1 premortem risk)
+  promises: [
+    // {what, who, dueISO, status:'open'|'done'|'risk'}
+  ],
+
+  // 6. PROOF / RECEIPTS
+  proof: [
+    // {dateISO, what, evidence}
+  ]
+};
+
+/* ---------- helpers ---------- */
+const $ = s=>document.querySelector(s);
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+const daysBetween=(a,b)=>Math.round((b-a)/864e5);
+const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+function weekKey(d){const t=new Date(d);const j=new Date(t.getFullYear(),0,1);return t.getFullYear()+'-w'+Math.ceil((((t-j)/864e5)+j.getDay()+1)/7);}
+function curWeek(){return weekKey(TODAY);}
+function touch(){local.edits=local.edits||{};const k=curWeek();local.edits[k]=(local.edits[k]||0)+1;}
+function lastSignalDays(){if(!STATE.externalSignals.length)return null;const last=STATE.externalSignals.map(s=>new Date(s.dateISO)).sort((a,b)=>b-a)[0];return daysBetween(last,TODAY);}
+function realMovesThisWeek(){const k=curWeek();let n=0;STATE.proof.forEach(p=>{if(p.dateISO&&weekKey(new Date(p.dateISO))===k)n++;});STATE.externalSignals.forEach(s=>{if(s.dateISO&&weekKey(new Date(s.dateISO))===k)n++;});return n;}
+const LS='dallas_mc_v1';
+function loadLocal(){try{return JSON.parse(localStorage.getItem(LS))||{}}catch(e){return{}}}
+function saveLocal(o){try{localStorage.setItem(LS,JSON.stringify(o))}catch(e){}}
+let local = loadLocal();
+// merge local overrides
+if(local.instrumentation){STATE.instrumentation.forEach(i=>{if(local.instrumentation[i.id]!=null)i.done=local.instrumentation[i.id];});}
+if(local.reviewedISO)STATE.reviewedISO=local.reviewedISO;
+if(local.promises)STATE.promises=local.promises;
+if(local.proof)STATE.proof=local.proof;
+if(local.naveenWorking!=null)STATE.naveenWorking=local.naveenWorking;
+if(local.targetsConfirmed!=null)STATE.targetsConfirmed=local.targetsConfirmed;
+if(local.externalSignals)STATE.externalSignals=local.externalSignals;
+if(local.edits==null)local.edits={};
+if(local.openPanels==null)local.openPanels={};
+
+/* ---------- phase ---------- */
+function phase(){
+  if(TODAY<START)return 'pre';
+  const d=daysBetween(START,TODAY);
+  if(d<=30)return 'd30'; if(d<=60)return 'd60'; if(d<=90)return 'd90'; return 'post';
+}
+function renderPhase(){
+  const labels=[['pre','Pre-start'],['d30','Days 1–30'],['d60','31–60'],['d90','61–90'],['post','Steady']];
+  const cur=phase();const pb=$('#phasebar');pb.innerHTML='';
+  labels.forEach(([k,t])=>{const c=el('div','phase'+(k===cur?' on':''),t);pb.appendChild(c);});
+  const dd=daysBetween(TODAY,START);
+  $('#subline').innerHTML = (dd>0?`Starts in <b>${dd} days</b> (Jul 6) · `:`Day ${daysBetween(START,TODAY)} in role · `)+
+    `${Math.max(0,daysBetween(TODAY,Q3_END))} days to Q3 close · GTM Engineer · private to you`;
+}
+
+/* ---------- intel engine: compute flags + actions ---------- */
+function computeFlags(){
+  const f=[];
+  // instrumentation not done while pre/early = high stakes
+  const insDone=STATE.instrumentation.filter(i=>i.done).length;
+  if(insDone<STATE.instrumentation.length){
+    const sev = (phase()==='pre')?'amber':'red';
+    f.push({sev, t:`Week-1 instrumentation ${insDone}/${STATE.instrumentation.length} locked — attribution + source-tagging must land before volume.`});
+  }
+  // overdue / at-risk promises
+  STATE.promises.forEach(p=>{
+    if(p.status==='done')return;
+    const due=p.dueISO?new Date(p.dueISO):null;
+    if(p.status==='risk')f.push({sev:'red',t:`At-risk commitment: “${p.what}” to ${p.who}.`});
+    else if(due && daysBetween(TODAY,due)<0)f.push({sev:'red',t:`OVERDUE: “${p.what}” to ${p.who} (${fmt(due)}).`});
+    else if(due && daysBetween(TODAY,due)<=3)f.push({sev:'amber',t:`Due soon: “${p.what}” to ${p.who} (${fmt(due)}).`});
+  });
+  // tools that block mandates and still on sample/pending
+  if(STATE.tools.some(t=>t.status==='pending'))f.push({sev:'amber',t:'Live site deploy pending — not a blocker yet, but stale before Day 1.'});
+  if(STATE.tools.some(t=>t.id==='t2'))f.push({sev:'amber',t:'TAM proof.json claims are unverified placeholders — verify before anything sends to a prospect.'});
+  // relationship watch
+  STATE.relationships.filter(r=>r.health==='amber').forEach(r=>{
+    f.push({sev:'amber',t:`Relationship to manage: ${r.name} — ${r.role}.`});
+  });
+  // review staleness
+  if(STATE.reviewedISO){
+    const since=daysBetween(new Date(STATE.reviewedISO),TODAY);
+    if(since>=3)f.push({sev:'amber',t:`You haven’t reviewed this in ${since} days — a dashboard you don’t check can’t protect you.`});
+  }
+  // KEYSTONE: external signal — are you flying on your own reflection? (defeats the Blind Oracle)
+  const lsd=lastSignalDays();
+  if(lsd===null){
+    f.push({sev: phase()==='pre'?'amber':'red', t:'No outside read logged yet — until you feed it a real quote from someone else, this tool can only mirror you.'});
+  } else if(lsd>=7){
+    f.push({sev:'red', t:`No outside read in ${lsd} days — you’re running on your own reflection. Log one verbatim read from Naveen / Nate / a rep.`});
+  }
+  // flattery detector — if every outside read is positive, you’re hearing the polite version
+  const recent=STATE.externalSignals.filter(s=>daysBetween(new Date(s.dateISO),TODAY)<=30);
+  if(recent.length>=2 && !recent.some(s=>s.disconfirming)){
+    f.push({sev:'amber', t:'Every outside read this month was flattering — either you’re crushing it, or you’re only getting the polite version. Go dig for the one you don’t want to hear.'});
+  }
+  // grooming guardrail — touching the tool more than you move in the world
+  const edits=(local.edits&&local.edits[curWeek()])||0; const moves=realMovesThisWeek();
+  if(edits>=6 && edits>moves*2){
+    f.push({sev:'amber', t:`You’ve touched this tool ${edits}× this week and logged ${moves} real moves. Groom less, move more — go have the conversation.`});
+  }
+  // optimizing a scoreboard that isn’t real yet
+  if(!STATE.targetsConfirmed && phase()!=='pre'){
+    f.push({sev:'amber', t:'Q3 targets still not co-defined with Naveen — you may be optimizing numbers that were only a rough sketch.'});
+  }
+  const order={red:0,amber:1,green:2};
+  return f.sort((a,b)=>order[a.sev]-order[b.sev]);
+}
+function computeActions(){
+  // ranked next-best-actions, derived
+  const a=[];
+  const firstIns=STATE.instrumentation.find(i=>!i.done);
+  if(firstIns)a.push(firstIns.id==='i1'
+    ? 'Lock the attribution definition with Naveen in writing (Week 1, framed as co-defining success).'
+    : `Close the keystone: ${firstIns.label}.`);
+  if(STATE.relationships.find(r=>r.id==='r3'&&r.health!=='green'))a.push('Book a Week-1 working session with Scott Kemme to define the back-office ICP before sourcing the 200.');
+  if(STATE.relationships.find(r=>r.id==='r2'&&r.health!=='green'))a.push('Pre-empt the credit war: show Nate how the engine feeds his reps qualified meetings (ally, not rival).');
+  if(STATE.tools.some(t=>t.id==='t2'))a.push('Verify the TAM proof.json benchmark + peer claims with real Intradiem data before any send.');
+  if(STATE.tools.some(t=>t.status==='pending'))a.push('Redeploy the live site (index.html + 3 JSON feeds); trash the stale zip temp files.');
+  a.push('Log today’s wins to the Proof panel — you can’t win the attribution fight on memory.');
+  if(lastSignalDays()===null||lastSignalDays()>=7)a.unshift('Capture one outside read: a verbatim quote from Naveen / Nate / a rep on how you and the engine are landing — log it in Outside Read.');
+  if(!STATE.naveenWorking)a.unshift('Ask Naveen what “working” looks like to him at 90 days, and log his exact words — that is your real scoreboard.');
+  return a.slice(0,3);
+}
+function overall(){
+  const flags=computeFlags();
+  if(flags.some(f=>f.sev==='red'))return['red','Needs attention','Red flags active — see Watch now'];
+  if(flags.some(f=>f.sev==='amber'))return['amber','On track, watch a few','Pre-start posture: lock Week-1 moves'];
+  return['green','Healthy','Nothing on fire'];
+}
+
+/* ---------- render glance ---------- */
+function renderGlance(){
+  const [lamp,word,note]=overall();
+  $('#lamp').className='lamp '+lamp;
+  $('#lampword').textContent=word;
+  $('#lampnote').textContent=note;
+  const fl=$('#flaglist');fl.innerHTML='';
+  const flags=computeFlags();
+  if(!flags.length)fl.appendChild(el('li','',`<span class="empty">All clear.</span>`));
+  flags.slice(0,6).forEach(f=>{
+    const li=el('li');li.appendChild(el('span','dot '+f.sev));li.appendChild(el('span','',f.t));fl.appendChild(li);
+  });
+  const al=$('#actlist');al.innerHTML='';
+  computeActions().forEach((t,i)=>{
+    const li=el('li');li.appendChild(el('span','n',(i+1)));li.appendChild(el('span','',t));al.appendChild(li);
+  });
+}
+
+/* ---------- panels ---------- */
+function panel(id,icon,title,chip,meta,bodyFn){
+  const open = !!local.openPanels[id];
+  const p=el('div','panel'+(open?' open':''));p.dataset.id=id;
+  const top=el('div','ptop');
+  top.innerHTML=`<div class="ico">${icon}</div><h3>${title}</h3>${chip?`<span class="chip ${chip[1]}">${chip[0]}</span>`:''}<span class="meta">${meta||''}</span><span class="caret">▶</span>`;
+  top.onclick=()=>{p.classList.toggle('open');local.openPanels[id]=p.classList.contains('open');saveLocal(local);};
+  p.appendChild(top);
+  const body=el('div','pbody');bodyFn(body);p.appendChild(body);
+  return p;
+}
+function statusChip(){
+  // worst across mandates/instrumentation drives nothing here; per-panel chips set inline
+}
+
+function renderPanels(){
+  const root=$('#panels');root.innerHTML='';
+
+  /* Q3 Mandates */
+  root.appendChild(panel('mandates','🎯','Q3 Mandate Progress',[STATE.targetsConfirmed?'confirmed':'rough sketch',STATE.targetsConfirmed?'green':'flat'],'Naveen’s sketch, not your scoreboard',b=>{
+    const banner=el('div','');
+    banner.style.cssText='background:var(--amber-bg);color:var(--amber);padding:10px 12px;border-radius:9px;margin:6px 0 4px;font-size:12.5px';
+    banner.innerHTML='These are Naveen’s <b>“rough sketch,”</b> not your real scoreboard. A low bar is not a verdict. Your actual evaluation lives in the <b>Outside Read</b> panel — manage that, not these.';
+    b.appendChild(banner);
+    const tc=el('div','check'+(STATE.targetsConfirmed?' done':''));tc.style.borderTop='none';
+    tc.innerHTML=`<div class="box">${STATE.targetsConfirmed?'✓':''}</div><div class="ctxt"><b>Targets co-defined with Naveen</b><span>Until checked, the bars below are provisional — don’t let them drive your behavior.</span></div>`;
+    tc.onclick=()=>{STATE.targetsConfirmed=!STATE.targetsConfirmed;local.targetsConfirmed=STATE.targetsConfirmed;touch();saveLocal(local);renderAll();};
+    b.appendChild(tc);
+    STATE.mandates.forEach(m=>{
+      const pct=Math.min(100,Math.round(m.current/m.target*100));
+      const col = !STATE.targetsConfirmed?'accent':(pct>=66?'green':pct>=33?'amber':'red');
+      const row=el('div','row');
+      row.innerHTML=`<div class="rt"><b>${m.name}</b><span class="metricval">${m.current} / ${m.target} ${m.unit}</span></div>
+        <div class="bar"><i class="${col}" style="width:${Math.max(3,pct)}%"></i></div>
+        <div class="note">${m.note} <span class="wire">wire: ${m.wire}</span></div>`;
+      b.appendChild(row);
+    });
+    b.appendChild(el('div','note','Pre-start: bars are baselines. They fill once your accounts + Clay are provisioned (Jul 6) and the engines wire to real data.'));
+  }));
+
+  /* Instrumentation keystone */
+  const insDone=STATE.instrumentation.filter(i=>i.done).length;
+  root.appendChild(panel('instr','🔑','Week-1 Instrumentation & Attribution',
+    [insDone===STATE.instrumentation.length?'locked':'open',insDone===STATE.instrumentation.length?'green':'red'],
+    `${insDone}/${STATE.instrumentation.length} locked`,b=>{
+    b.appendChild(el('div','note','The keystone. This protects your whole number — measurement before volume, ICP before sourcing. Tap to check off.'));
+    STATE.instrumentation.forEach(i=>{
+      const c=el('div','check'+(i.done?' done':''));
+      c.innerHTML=`<div class="box">${i.done?'✓':''}</div><div class="ctxt"><b>${i.label}</b><span>${i.sub}</span></div>`;
+      c.onclick=()=>{i.done=!i.done;local.instrumentation=local.instrumentation||{};local.instrumentation[i.id]=i.done;touch();saveLocal(local);renderAll();};
+      b.appendChild(c);
+    });
+  }));
+
+  /* Outside Read — the only sensor pointed at the world (premortem + audit fix) */
+  const lsd2=lastSignalDays();
+  root.appendChild(panel('outside','📡','Outside Read — external signal',
+    [lsd2===null?'none yet':(lsd2>=7?'stale':'fresh'), lsd2===null?'red':(lsd2>=7?'red':'green')],
+    lsd2===null?'feed it a real quote':lsd2+'d since last',b=>{
+    b.appendChild(el('div','note','The one panel the rest of this dashboard can’t fake. Everything else mirrors you; this is the only sensor pointed outward. Log <b>verbatim</b> reads from other people — and flag the ones you didn’t want to hear.'));
+    const nw=el('div','row');
+    nw.innerHTML=`<div class="rt"><b>Naveen’s definition of “working” at 90 days</b></div>
+      <div class="note">${STATE.naveenWorking?STATE.naveenWorking:'<i>Not captured. Ask him this week and log his exact words — this is your real scoreboard.</i>'}</div>`;
+    b.appendChild(nw);
+    const nwEdit=el('div','addrow');
+    nwEdit.innerHTML=`<input id="nw_in" placeholder="Naveen’s exact words…" style="flex:3;min-width:200px"><button id="nw_save">Save</button>`;
+    b.appendChild(nwEdit);
+    nwEdit.querySelector('#nw_in').value=STATE.naveenWorking||'';
+    nwEdit.querySelector('#nw_save').onclick=()=>{STATE.naveenWorking=nwEdit.querySelector('#nw_in').value.trim();local.naveenWorking=STATE.naveenWorking;touch();saveLocal(local);renderAll();};
+    const t=el('table');t.style.marginTop='12px';
+    t.innerHTML='<thead><tr><th>Date</th><th>Source</th><th>What they said</th><th>Hard?</th><th></th></tr></thead>';
+    const tb=el('tbody');
+    if(!STATE.externalSignals.length)tb.innerHTML='<tr><td colspan="5"><span class="empty">No outside reads yet. This emptiness is the alarm — log one.</span></td></tr>';
+    STATE.externalSignals.slice().reverse().forEach(s=>{
+      const idx=STATE.externalSignals.indexOf(s);
+      const tr=el('tr');
+      tr.innerHTML=`<td class="due">${s.dateISO?fmt(new Date(s.dateISO)):'—'}</td><td class="who">${s.source||'—'}</td>
+        <td><b>“${s.quote}”</b>${s.myRead?`<div class="note">${s.myRead}</div>`:''}</td>
+        <td>${s.disconfirming?'<span class="tag" style="background:var(--amber-bg);color:var(--amber)">yes</span>':'<span class="who">no</span>'}</td>
+        <td style="text-align:right"></td>`;
+      const x=el('button','btn ghost','✕');x.style.padding='3px 9px';x.onclick=()=>{STATE.externalSignals.splice(idx,1);persistSignals();renderAll();};tr.lastChild.appendChild(x);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);b.appendChild(t);
+    const add=el('div','addrow');
+    add.innerHTML=`<input id="es_src" placeholder="Who" style="flex:1;min-width:80px">
+      <input id="es_q" placeholder="Their exact words (verbatim)" style="flex:2;min-width:150px">
+      <input id="es_r" placeholder="Your read (optional)" style="flex:2;min-width:110px">
+      <label style="font-size:12px;color:var(--ink-soft);display:flex;align-items:center;gap:5px"><input type="checkbox" id="es_d"> didn’t want to hear it</label>
+      <button id="es_add">Log read</button>`;
+    b.appendChild(add);
+    add.querySelector('#es_add').onclick=()=>{
+      const q=add.querySelector('#es_q').value.trim();if(!q)return;
+      STATE.externalSignals.push({dateISO:new Date().toISOString().slice(0,10),source:add.querySelector('#es_src').value.trim(),quote:q,myRead:add.querySelector('#es_r').value.trim(),disconfirming:add.querySelector('#es_d').checked});
+      persistSignals();renderAll();
+    };
+    const edits=(local.edits&&local.edits[curWeek()])||0;const moves=realMovesThisWeek();
+    const gr=el('div','note');gr.style.marginTop='12px';
+    gr.innerHTML=`<b>Action vs. admiration this week:</b> ${edits} tool edits · ${moves} real moves logged. ${edits>=6&&edits>moves*2?'<span style="color:var(--amber)">You’re grooming the instrument — go move.</span>':'Keep real moves ≥ edits.'}`;
+    b.appendChild(gr);
+  }));
+
+  /* Tools */
+  const toolBad=STATE.tools.filter(t=>t.status!=='built'&&t.status!=='live').length;
+  root.appendChild(panel('tools','🔧','Tool / System Health',
+    [toolBad?`${toolBad} need wiring`:'all live',toolBad?'amber':'green'],`${STATE.tools.length} systems`,b=>{
+    STATE.tools.forEach(t=>{
+      const map={live:['LIVE','green'],built:['BUILT','green'],sample:['SAMPLE DATA','amber'],pending:['DEPLOY PENDING','red']};
+      const [lbl,cl]=map[t.status]||['?','flat'];
+      const row=el('div','row');
+      row.innerHTML=`<div class="rt"><b>${t.name}</b><span class="chip ${cl}">${lbl}</span></div><div class="note">${t.note}</div>`;
+      b.appendChild(row);
+    });
+  }));
+
+  /* Relationships */
+  const relAmber=STATE.relationships.filter(r=>r.health!=='green').length;
+  root.appendChild(panel('rels','🤝','Political / Relationship Health',
+    [relAmber?`${relAmber} to manage`:'steady',relAmber?'amber':'green'],`${STATE.relationships.length} people`,b=>{
+    const g=el('div','relgrid');
+    STATE.relationships.forEach(r=>{
+      const c=el('div','relcard');
+      c.innerHTML=`<div class="rn"><b>${r.name}</b><span class="dot ${r.health}" style="margin-top:6px"></span></div>
+        <div class="role">${r.role}</div><div class="watch">${r.watch}</div>`;
+      g.appendChild(c);
+    });
+    b.appendChild(g);
+  }));
+
+  /* Promise ledger */
+  const openP=STATE.promises.filter(p=>p.status!=='done');
+  root.appendChild(panel('promises','📝','Promise Ledger',
+    [openP.length?`${openP.length} open`:'clear',openP.some(p=>p.status==='risk')?'red':openP.length?'amber':'green'],
+    'every commitment you make',b=>{
+    b.appendChild(el('div','note','Your #1 premortem risk is over-promising. Log every commitment here the moment you make it.'));
+    const t=el('table');
+    t.innerHTML='<thead><tr><th>Commitment</th><th>To</th><th>Due</th><th>Status</th><th></th></tr></thead>';
+    const tb=el('tbody');
+    if(!STATE.promises.length)tb.innerHTML='<tr><td colspan="5"><span class="empty">No commitments logged yet. Add one below — or tell me and I’ll log it.</span></td></tr>';
+    STATE.promises.forEach((p,idx)=>{
+      const due=p.dueISO?new Date(p.dueISO):null;
+      const overdue=due&&p.status!=='done'&&daysBetween(TODAY,due)<0;
+      const stMap={open:['Open','flat'],done:['Done','green'],risk:['At risk','red']};
+      let [sl,sc]=stMap[p.status]||['Open','flat'];
+      if(overdue){sl='Overdue';sc='red';}
+      const tr=el('tr');
+      tr.innerHTML=`<td><b>${p.what}</b></td><td class="who">${p.who}</td><td class="due">${due?fmt(due):'—'}</td>
+        <td><span class="tag ${sc}" style="background:var(--${sc==='flat'?'accent-soft':sc+'-bg'});color:var(--${sc==='flat'?'ink-soft':sc})">${sl}</span></td>
+        <td style="text-align:right"></td>`;
+      const act=tr.lastChild;
+      if(p.status!=='done'){const d=el('button','btn ghost','✓');d.style.padding='3px 9px';d.onclick=()=>{p.status='done';persistPromises();renderAll();};act.appendChild(d);}
+      const x=el('button','btn ghost','✕');x.style.cssText='padding:3px 9px;margin-left:5px';x.onclick=()=>{STATE.promises.splice(idx,1);persistPromises();renderAll();};act.appendChild(x);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);b.appendChild(t);
+    const add=el('div','addrow');
+    add.innerHTML=`<input id="p_what" placeholder="What you promised" style="flex:2;min-width:160px">
+      <input id="p_who" placeholder="To whom" style="flex:1;min-width:90px">
+      <input id="p_due" type="date" style="flex:1">
+      <button id="p_add">Log it</button>`;
+    b.appendChild(add);
+    add.querySelector('#p_add').onclick=()=>{
+      const w=add.querySelector('#p_what').value.trim();if(!w)return;
+      STATE.promises.push({what:w,who:add.querySelector('#p_who').value.trim()||'—',dueISO:add.querySelector('#p_due').value||null,status:'open'});
+      persistPromises();renderAll();
+    };
+  }));
+
+  /* Proof */
+  root.appendChild(panel('proof','🏆','Proof / Receipts',
+    [STATE.proof.length?`${STATE.proof.length} logged`:'start logging','flat'],'evidence for reviews + attribution',b=>{
+    b.appendChild(el('div','note','Capture wins with evidence as they happen — fuel for 30/60/90 reviews and the credit conversation.'));
+    const t=el('table');
+    t.innerHTML='<thead><tr><th>Date</th><th>Win</th><th>Evidence / link</th><th></th></tr></thead>';
+    const tb=el('tbody');
+    if(!STATE.proof.length)tb.innerHTML='<tr><td colspan="4"><span class="empty">No receipts yet. Log your first win below.</span></td></tr>';
+    STATE.proof.slice().reverse().forEach((p)=>{
+      const realIdx=STATE.proof.indexOf(p);
+      const tr=el('tr');
+      tr.innerHTML=`<td class="due">${p.dateISO?fmt(new Date(p.dateISO)):'—'}</td><td><b>${p.what}</b></td><td class="who">${p.evidence||''}</td><td style="text-align:right"></td>`;
+      const x=el('button','btn ghost','✕');x.style.padding='3px 9px';x.onclick=()=>{STATE.proof.splice(realIdx,1);persistProof();renderAll();};tr.lastChild.appendChild(x);
+      tb.appendChild(tr);
+    });
+    t.appendChild(tb);b.appendChild(t);
+    const add=el('div','addrow');
+    add.innerHTML=`<input id="pf_what" placeholder="What you achieved" style="flex:2;min-width:160px">
+      <input id="pf_ev" placeholder="Evidence (link / metric / who saw it)" style="flex:2;min-width:140px">
+      <button id="pf_add">Log win</button>`;
+    b.appendChild(add);
+    add.querySelector('#pf_add').onclick=()=>{
+      const w=add.querySelector('#pf_what').value.trim();if(!w)return;
+      STATE.proof.push({dateISO:new Date().toISOString().slice(0,10),what:w,evidence:add.querySelector('#pf_ev').value.trim()});
+      persistProof();renderAll();
+    };
+  }));
+
+  /* Trend (honest) */
+  root.appendChild(panel('trend','📈','Trend (week over week)',null,'honest, no fake lines',b=>{
+    b.appendChild(el('div','note','Direction matters more than any single number. This stays empty on purpose until there are at least two real data points — no trend lines invented from one reading.'));
+    b.appendChild(el('div','empty','Baseline set. Trend builds as you log weekly snapshots (tell me “snapshot this week” and I’ll start the series).'));
+  }));
+}
+
+function persistPromises(){local.promises=STATE.promises;touch();saveLocal(local);}
+function persistProof(){local.proof=STATE.proof;touch();saveLocal(local);}
+function persistSignals(){local.externalSignals=STATE.externalSignals;touch();saveLocal(local);}
+
+function renderReview(){
+  const r=$('#reviewstamp');
+  if(STATE.reviewedISO){const d=daysBetween(new Date(STATE.reviewedISO),TODAY);
+    r.textContent = d===0?'Reviewed today':`Last reviewed ${d} day${d>1?'s':''} ago`;}
+  else r.textContent='Not reviewed yet';
+}
+$('#reviewbtn').onclick=()=>{STATE.reviewedISO=new Date().toISOString().slice(0,10);local.reviewedISO=STATE.reviewedISO;touch();saveLocal(local);renderAll();};
+
+function renderAll(){renderPhase();renderGlance();renderPanels();renderReview();}
+renderAll();
+</script>
+</body>
+</html>

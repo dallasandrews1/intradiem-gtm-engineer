@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intradiem GTM Signal Engine · Dallas Andrews</title>
+<style>
+:root {
+  color-scheme: light;
+  --purple-dark: #1E1145;
+  --purple: #3D1F8C;
+  --purple-mid: #5B2D90;
+  --purple-light: #EDE9FF;
+  --purple-pale: #F7F5FF;
+  --green: #16A34A;
+  --green-bg: #DCFCE7;
+  --amber: #B45309;
+  --amber-bg: #FEF3C7;
+  --slate: #374151;
+  --slate-bg: #F3F4F6;
+  --red: #B91C1C;
+  --red-bg: #FEE2E2;
+  --blue: #1D4ED8;
+  --blue-bg: #DBEAFE;
+  --partner-color: #0369A1;
+  --partner-bg: #E0F2FE;
+  --competitor-color: #7C2D12;
+  --competitor-bg: #FFEDD5;
+  --border: #E5E7EB;
+  --bg: #F5F3FF;
+  --card: #FFFFFF;
+  --text: #111827;
+  --muted: #6B7280;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#140C30;min-height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:13px;max-width:1360px;margin:0 auto;box-shadow:0 0 80px rgba(0,0,0,0.5)}
+
+/* HEADER */
+.header{background:var(--purple-dark);color:white;padding:14px 28px;display:flex;justify-content:space-between;align-items:center}
+.header-left{display:flex;align-items:center;gap:14px}
+.logo{width:38px;height:38px;background:linear-gradient(135deg,#7C3AED,#A78BFA);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:white;flex-shrink:0}
+.header-title h1{font-size:16px;font-weight:800;letter-spacing:-0.4px}
+.header-title p{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px}
+.header-right{text-align:right;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.7}
+.header-right strong{color:rgba(255,255,255,0.65)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#2D1B69 0%,#1E1145 100%);padding:28px 28px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+.hero-inner{display:grid;grid-template-columns:1fr 260px;gap:32px;align-items:start;padding-bottom:22px}
+.hero-label{font-size:10px;font-weight:700;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:10px}
+.hero-headline{font-size:24px;font-weight:800;color:white;line-height:1.2;letter-spacing:-0.6px;margin-bottom:14px}
+.hero-moat{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.65;padding:11px 14px;border-left:3px solid #A78BFA;background:rgba(167,139,250,0.1);border-radius:0 7px 7px 0;margin-bottom:14px}
+.hero-pills{display:flex;gap:6px;flex-wrap:wrap}
+.hero-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:20px;font-size:10px;font-weight:600;border:1px solid}
+.pill-exp{background:rgba(22,163,74,0.15);border-color:rgba(22,163,74,0.4);color:#4ADE80}
+.pill-new{background:rgba(139,92,246,0.15);border-color:rgba(139,92,246,0.4);color:#C4B5FD}
+.pill-arch{background:rgba(59,130,246,0.15);border-color:rgba(59,130,246,0.4);color:#93C5FD}
+.pill-accounts{background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.4);color:#FCD34D}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hero-stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:9px;padding:14px 12px;text-align:center}
+.hero-stat-num{font-size:30px;font-weight:900;color:#A78BFA;line-height:1;margin-bottom:5px}
+.hero-stat-label{font-size:10px;color:rgba(255,255,255,0.4);line-height:1.5}
+.hero-hook{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;border-top:1px solid rgba(255,255,255,0.08);padding:10px 0}
+.hook-label{font-weight:700;color:rgba(255,255,255,0.65);margin-right:5px}
+
+/* TABS */
+.tabs{background:var(--purple-dark);border-bottom:1px solid rgba(255,255,255,0.1);padding:0 28px;display:flex}
+.tab{padding:11px 16px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.45);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s}
+.tab:hover{color:rgba(255,255,255,0.7)}
+.tab.active{color:white;border-bottom-color:#A78BFA}
+
+/* SUMMARY STRIP */
+.summary-strip{background:var(--card);border-bottom:1px solid var(--border);padding:10px 28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.stat{display:flex;align-items:center;gap:7px}
+.stat-num{font-size:18px;font-weight:800;line-height:1}
+.stat-label{font-size:10px;color:var(--muted);line-height:1.4}
+.stat-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.stat-divider{width:1px;height:26px;background:var(--border)}
+
+/* CONTROLS */
+.controls{background:var(--card);border-bottom:1px solid var(--border);padding:9px 28px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.filter-label{font-size:11px;color:var(--muted);font-weight:500;margin-right:2px}
+.filter-btn{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:white;color:var(--muted);transition:all .12s}
+.filter-btn:hover{border-color:var(--purple-mid);color:var(--purple-mid)}
+.filter-btn.active{background:var(--purple-mid);color:white;border-color:var(--purple-mid)}
+.controls-divider{width:1px;height:18px;background:var(--border);margin:0 2px}
+.controls-right{margin-left:auto;font-size:11px;color:var(--muted)}
+
+/* SCORING BAR */
+.scoring-bar{background:var(--purple-pale);border-bottom:1px solid var(--purple-light);padding:7px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.scoring-bar-title{font-size:10px;font-weight:700;color:var(--purple-mid);text-transform:uppercase;letter-spacing:.8px}
+.score-dim{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--slate)}
+.score-dim-dot{width:6px;height:6px;border-radius:2px}
+.scoring-bar-note{margin-left:auto;font-size:10px;color:var(--muted)}
+
+/* TABLE */
+.table-wrap{padding:0 28px 32px}
+.account-table{width:100%;border-collapse:collapse;margin-top:12px}
+.account-table th{text-align:left;padding:7px 11px;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;border-bottom:2px solid var(--border);background:var(--bg);position:sticky;top:0}
+.account-table td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:middle}
+.account-row{cursor:pointer;transition:background .1s}
+.account-row:hover td{background:var(--purple-pale)}
+.account-row.expanded td{background:var(--purple-pale);border-bottom:none}
+.account-name{font-weight:600;font-size:13px}
+.account-hq{font-size:10px;color:var(--muted);margin-top:1px}
+.industry-tag{display:inline-block;padding:2px 6px;border-radius:4px;font-size:10px;font-weight:500;background:var(--slate-bg);color:var(--slate)}
+.tech-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600}
+.tech-partner{background:var(--partner-bg);color:var(--partner-color)}
+.tech-competitor{background:var(--competitor-bg);color:var(--competitor-color)}
+.tech-neutral{background:#F3F4F6;color:#374151}
+.tech-unknown{background:var(--slate-bg);color:var(--muted)}
+.pain-pills{display:flex;flex-wrap:wrap;gap:3px}
+.pain-pill{display:inline-block;padding:1px 6px;border-radius:3px;font-size:10px;background:#FEF9C3;color:#713F12}
+.score-cell{display:flex;align-items:center;gap:7px}
+.score-num{font-size:15px;font-weight:800;line-height:1}
+.score-bar-wrap{width:36px;height:4px;background:var(--border);border-radius:2px}
+.score-bar-fill{height:4px;border-radius:2px}
+.tier-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:700;white-space:nowrap}
+.tier1{background:var(--green-bg);color:var(--green)}
+.tier2{background:var(--amber-bg);color:var(--amber)}
+.tier3{background:var(--slate-bg);color:var(--slate)}
+.motion-text{font-size:11px;font-weight:600}
+.motion-ae{color:var(--green)}
+.motion-bdr{color:var(--amber)}
+.motion-nurture{color:var(--muted)}
+.expand-arrow{font-size:11px;color:var(--muted);transition:transform .15s}
+.expanded .expand-arrow{transform:rotate(180deg);color:var(--purple-mid)}
+.detail-row td{background:var(--purple-pale)!important;padding:0;border-bottom:2px solid var(--purple-light)}
+.detail-inner{padding:0 11px 14px 11px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.detail-section{background:white;border-radius:8px;padding:13px;border:1px solid var(--purple-light)}
+.detail-section-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--purple-mid);margin-bottom:9px}
+.buyer-chip{display:inline-flex;align-items:center;gap:4px;background:var(--purple-light);color:var(--purple-mid);padding:3px 9px;border-radius:6px;font-size:11px;font-weight:600;margin-bottom:8px}
+.score-breakdown{display:flex;flex-direction:column;gap:6px}
+.score-dim-row{display:flex;align-items:center;gap:7px}
+.score-dim-label{font-size:11px;color:var(--slate);width:108px;flex-shrink:0}
+.score-dim-bar{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden}
+.score-dim-fill{height:100%;border-radius:3px}
+.score-dim-val{font-size:11px;font-weight:700;width:30px;text-align:right}
+.dim-industry{background:#8B5CF6}
+.dim-size{background:#3B82F6}
+.dim-tech{background:#10B981}
+.dim-pain{background:#F59E0B}
+.outreach-text{font-size:12px;color:var(--slate);line-height:1.6}
+.outreach-opener{font-size:11px;color:var(--muted);margin-top:7px;padding-top:7px;border-top:1px dashed var(--border)}
+.outreach-opener strong{color:var(--purple-mid)}
+
+/* PLG TAB */
+.exp-wrap{padding:22px 28px;display:flex;flex-direction:column;gap:18px}
+.exp-header-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;margin-bottom:12px}
+.exp-header-left{flex:1}
+.exp-header h2{font-size:20px;font-weight:800;color:var(--purple-dark);letter-spacing:-.4px;margin-bottom:7px}
+.exp-header p{font-size:13px;color:var(--muted);line-height:1.6}
+.exp-header-right{display:flex;gap:10px;flex-shrink:0;padding-top:4px}
+.exp-stat{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:9px;padding:12px 18px;text-align:center;min-width:80px}
+.exp-stat-num{font-size:26px;font-weight:900;line-height:1;margin-bottom:4px}
+.exp-stat-label{font-size:10px;color:var(--muted);line-height:1.4}
+.plg-note{font-size:11px;color:var(--muted);line-height:1.6;padding:8px 11px;background:var(--purple-pale);border-radius:6px;border-left:3px solid var(--purple-mid)}
+
+/* ARCH SECTION */
+.arch-section{background:white;border:1px solid var(--border);border-radius:10px;padding:18px}
+.arch-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.arch-title span{font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;background:var(--blue-bg);color:var(--blue)}
+.arch-flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap}
+.arch-node{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:7px;padding:9px 13px;font-size:11px;text-align:center;min-width:110px;flex:1}
+.arch-node strong{display:block;font-size:13px;font-weight:700;color:var(--purple);margin-bottom:3px}
+.arch-node span{font-size:10px;color:var(--muted);line-height:1.4}
+.arch-arrow{color:var(--purple-mid);font-size:16px;padding:0 5px;font-weight:700;display:flex;align-items:center}
+.arch-node.highlight{background:linear-gradient(135deg,#EDE9FF,#DDD6FE);border-color:#A78BFA}
+.arch-node.highlight strong{color:var(--purple-dark)}
+
+/* ARCH NOTE CARDS */
+.arch-note-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.arch-note-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:13px 15px}
+.anc-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:var(--purple-mid);margin-bottom:7px}
+.anc-body{font-size:12px;color:var(--muted);line-height:1.65}
+.anc-body a{color:#7C3AED;font-weight:600;text-decoration:none}
+.anc-body a:hover{text-decoration:underline}
+
+/* SIGNAL GRID */
+.signal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.signal-card{background:white;border-radius:9px;border:1px solid var(--border);padding:16px;display:flex;flex-direction:column;gap:8px}
+.signal-card.expansion{border-left:3px solid var(--green)}
+.signal-card.risk{border-left:3px solid var(--red)}
+.signal-header{display:flex;align-items:center;gap:7px}
+.signal-icon{font-size:17px}
+.signal-name{font-size:14px;font-weight:700;color:var(--text);flex:1}
+.signal-type{font-size:10px;font-weight:600;padding:2px 7px;border-radius:3px;flex-shrink:0}
+.signal-type.exp{background:var(--green-bg);color:var(--green)}
+.signal-type.risk{background:var(--red-bg);color:var(--red)}
+.signal-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.signal-threshold{font-size:11px;background:var(--slate-bg);border-radius:4px;padding:4px 9px;color:var(--slate)}
+.signal-threshold strong{color:var(--text)}
+.signal-route{font-size:11px;color:var(--purple-mid);font-weight:600}
+
+/* ROUTING TABLE */
+.routing-section{background:white;border-radius:9px;border:1px solid var(--border);padding:16px}
+.routing-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px}
+.routing-table{width:100%;border-collapse:collapse}
+.routing-table th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);padding:5px 9px;border-bottom:1px solid var(--border);text-align:left}
+.routing-table td{font-size:12px;padding:8px 9px;border-bottom:1px solid var(--border);color:var(--slate)}
+.routing-table tr:last-child td{border-bottom:none}
+
+/* METHODOLOGY TAB */
+.method-wrap{padding:22px 28px;display:flex;flex-direction:column;gap:16px}
+.method-header-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:28px}
+.method-header-left{flex:1}
+.method-header h2{font-size:20px;font-weight:800;color:var(--purple-dark);letter-spacing:-.4px;margin-bottom:7px}
+.method-header p{font-size:13px;color:var(--muted);line-height:1.6}
+.method-header-right{display:flex;gap:10px;flex-shrink:0;padding-top:4px}
+.method-box{background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:9px;padding:16px}
+.method-box h3{font-size:11px;font-weight:700;color:var(--purple-mid);margin-bottom:10px;text-transform:uppercase;letter-spacing:.6px}
+.method-dims{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.method-dim{background:white;border-radius:6px;padding:10px;border:1px solid var(--purple-light)}
+.method-dim-name{font-size:12px;font-weight:700;margin-bottom:5px}
+.method-dim-name.ind{color:#8B5CF6}
+.method-dim-name.siz{color:#3B82F6}
+.method-dim-name.tec{color:#10B981}
+.method-dim-name.pai{color:#F59E0B}
+.method-dim-items{font-size:11px;color:var(--muted);line-height:1.9}
+
+.hidden{display:none}
+
+/* ===== GROUPED NAV LANES (added) ===== */
+.nav-lanes{background:var(--purple-dark);padding:14px 28px;display:flex;gap:14px;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.nav-lane{flex:1;min-width:220px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:11px;overflow:hidden}
+.nav-lane .lane-cap{display:flex;align-items:center;gap:7px;padding:9px 14px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.nav-lane .lane-cap .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.nav-lane .lane-tabs{display:flex;padding:5px 6px;gap:2px;flex-wrap:wrap}
+.nav-lanes .tab{padding:8px 12px;font-size:12px;font-weight:500;color:rgba(255,255,255,.5);cursor:pointer;border:none;border-radius:7px;background:transparent}
+.nav-lanes .tab:hover{color:rgba(255,255,255,.78)}
+.nav-lanes .tab.active{font-weight:700;color:#fff;background:rgba(167,139,250,.18);border:none}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="logo">ID</div>
+    <div class="header-title">
+      <h1>Intradiem GTM Signal Engine</h1>
+      <p>GTM signal infrastructure for Intradiem · working prototype</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div><strong>Dallas Andrews</strong> · June 2026</div>
+    <div>ICP: Healthcare Insurance · Banking · Financial Services</div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label">GTM Signal Engine · Working Prototype</div>
+      <h2 class="hero-headline">Two halves of the GTM role.<br>One working prototype.</h2>
+      <div class="hero-moat">WFM systems tell you what agents should be doing. Intradiem acts on agents in the idle seconds between scheduled events, the gap WFM never addresses. That gap is the moat.</div>
+      <div class="hero-pills">
+        <span class="hero-pill pill-exp">📈 PLG Signal Framework + PQL Routing</span>
+        <span class="hero-pill pill-accounts">🎯 20 Scored ICP Accounts</span>
+        <span class="hero-pill pill-arch">⚙️ Salesforce + Gainsight Design</span>
+        <span class="hero-pill" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.4);color:#6EE7B7">🤖 Claude + Apollo + Clay MCP Stack</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">6</div>
+          <div class="hero-stat-label">PLG signals<br>mapped</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20</div>
+          <div class="hero-stat-label">ICP accounts<br>scored</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">routing<br>decisions</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2</div>
+          <div class="hero-stat-label">systems<br>live</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-hook">
+    <span class="hook-label">My read:</span>the expansion motion is the day-one mandate and the free trial funnel is a 6-12 month build. If that is right, day 30 is concrete: instrument seat utilization and coaching coverage, wire to Salesforce, get one AE to close one expansion before building the rest. If the sequencing is different, the architecture changes enough to be worth a conversation.
+  </div>
+</div>
+
+<div class="nav-lanes">
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#A78BFA"><span class="dot" style="background:#A78BFA"></span>Expansion engine</div>
+    <div class="lane-tabs">
+      <div class="tab" onclick="switchTab('expansion',this)">📈 PLG Framework</div>
+      <div class="tab" onclick="switchTab('signals',this)">🚨 Signal Queue</div>
+      <div class="tab" onclick="switchTab('impact',this)">📊 Impact</div>
+    </div>
+  </div>
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#34D399"><span class="dot" style="background:#34D399"></span>Net-new engine</div>
+    <div class="lane-tabs">
+      <div class="tab active" onclick="switchTab('strike',this)">📨 Strike List</div>
+      <div class="tab" onclick="switchTab('accounts',this)">🎯 ICP Scoring</div>
+      <div class="tab" onclick="switchTab('methodology',this)">⚙️ Scoring Model</div>
+    </div>
+  </div>
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#FBBF24"><span class="dot" style="background:#FBBF24"></span>The build</div>
+    <div class="lane-tabs">
+      <div class="tab" onclick="switchTab('product',this)">🧭 Product Console</div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: PRODUCT CONSOLE -->
+<div id="tab-product" class="hidden">
+  <div class="exp-wrap">
+    <div class="exp-header">
+      <div class="exp-header-inner">
+        <div class="exp-header-left">
+          <h2>Product Console</h2>
+          <p>A product view of the same engine. What is instrumented and queryable today, where the data comes from, what to build first, and what to leave out. The other six tabs show the engine running. This one shows the build decisions behind it.</p>
+        </div>
+        <div class="exp-header-right">
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--purple)">6</div>
+            <div class="exp-stat-label">signals<br>instrumented</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--green)">4</div>
+            <div class="exp-stat-label">queryable live<br>via custom MCP</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--blue)">0</div>
+            <div class="exp-stat-label">black-box models<br>all rule-based</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--amber)">90</div>
+            <div class="exp-stat-label">day path to<br>live event API</div>
+          </div>
+        </div>
+      </div>
+      <div class="plg-note"><strong style="color:var(--purple-mid)">Status:</strong> Four of the six signals return live JSON from a custom MCP server (<code style="font-family:ui-monospace,Menlo,monospace;font-size:11px">get_expansion_signals(domain)</code>, <code style="font-family:ui-monospace,Menlo,monospace;font-size:11px">list_monitored_accounts</code>). Two are specced, not built. Usage values are modeled on public firmographics, not Intradiem's production event stream.</div>
+    </div>
+
+    <!-- SIGNAL TAXONOMY AS PRODUCT SURFACE -->
+    <div class="arch-section">
+      <div class="arch-title">Signal taxonomy: every signal traces to a product event <span>Instrumentation map</span></div>
+      <table class="routing-table">
+        <thead><tr><th>Signal</th><th>Product-event source</th><th>What it detects</th><th>Data path</th><th>Route</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Seat utilization</strong></td><td>Active-agent count vs. contracted licenses</td><td>Near capacity → expansion timing</td><td>Native</td><td>AE</td><td><span style="color:var(--green);font-weight:700">● Live in MCP</span></td></tr>
+          <tr><td><strong>Coaching coverage</strong></td><td>% of roster receiving automated coaching actions</td><td>Partial deployment → land-and-expand gap</td><td>Native</td><td>CSM</td><td><span style="color:var(--green);font-weight:700">● Live in MCP</span></td></tr>
+          <tr><td><strong>Automation volume drop</strong></td><td>Automation events triggered, rolling window</td><td>Usage decline → churn risk before health scores</td><td>Native</td><td>CSM</td><td><span style="color:var(--green);font-weight:700">● Live in MCP</span></td></tr>
+          <tr><td><strong>CRM not connected</strong></td><td>Integration registry, WFM live, CRM absent</td><td>Back-office expansion / second revenue line</td><td>Native</td><td>AE</td><td><span style="color:var(--green);font-weight:700">● Live in MCP</span></td></tr>
+          <tr><td>Rule engine under 35%</td><td>Active rules vs. tier entitlement</td><td>Unfinished onboarding / undiscovered use case</td><td>Native</td><td>CSM</td><td><span style="color:var(--amber);font-weight:700">○ Specced</span></td></tr>
+          <tr><td>Champion job change</td><td>LinkedIn / Clay enrichment pass</td><td>Renewal risk → rebuild the relationship</td><td>External</td><td>AE + CSM</td><td><span style="color:var(--amber);font-weight:700">○ Specced</span></td></tr>
+        </tbody>
+      </table>
+      <div class="arch-note-grid" style="grid-template-columns:1fr">
+        <div class="arch-note-card">
+          <div class="anc-title">Why these and not clickstream</div>
+          <div class="anc-body">None of these are clickstream metrics. The expansion signal lives in contact-center outcome data: seats against contract, automation volume, idle time. A general-purpose PLG tool does not capture that. The build-versus-buy note below covers why.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA SOURCING MATURITY -->
+    <div class="arch-section">
+      <div class="arch-title">Where the data comes from, day 1 to day 90 <span>Roadmap</span></div>
+      <div class="arch-flow">
+        <div class="arch-node"><strong>Day 1</strong><span>Nightly reporting export on a cron. No live API.</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Day 30</strong><span>Two signals validated, baselines set</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node highlight"><strong>Day 45</strong><span>One signal worked into pipeline by a rep</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Day 60</strong><span>Lands in rep workspace before Salesforce opens</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Day 90</strong><span>Export swaps to a live event stream</span></div>
+      </div>
+      <div class="arch-note-grid">
+        <div class="arch-note-card">
+          <div class="anc-title">Why the architecture holds</div>
+          <div class="anc-body">The processor reads 30-day rolling windows with 14-day suppression per signal per account. Day-one input is a daily CSV. Day-90 input is a live stream. Same logic, different source. That is why it is a thin signal layer, not a pipeline rebuild.</div>
+        </div>
+        <div class="arch-note-card">
+          <div class="anc-title">What to build first</div>
+          <div class="anc-body"><strong style="color:var(--green)">Seat utilization.</strong> Lowest false-positive rate, tied to revenue, easy to validate against a closed expansion. Ship that signal, then add the rest. Every threshold stays a placeholder until the team that runs the motion sets it.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUILD VS BUY + WON'T BUILD -->
+    <div class="signal-grid">
+      <div class="signal-card expansion">
+        <div class="signal-header"><span class="signal-icon">🧩</span><span class="signal-name">Build vs. buy: why not point Pendo or Gainsight PX at it</span></div>
+        <div class="signal-desc">Those tools instrument app clickstream for self-serve SaaS: feature adoption, funnel drop-off, in-app guides. Intradiem's expansion signal does not live in clicks. It lives in seat utilization against contract, idle time, and automation volume across a 250,000-agent install base, which those tools do not capture.</div>
+        <div class="signal-threshold"><strong>The call:</strong> the value is the signal logic and routing on the event stream you already own, not the telemetry plumbing. Build that layer. Do not add a second platform that ops has to govern and reps have to learn.</div>
+        <div class="signal-route">Wrong tool for this data shape</div>
+      </div>
+      <div class="signal-card risk">
+        <div class="signal-header"><span class="signal-icon">🚫</span><span class="signal-name">What not to build</span></div>
+        <div class="signal-desc">What to leave out:</div>
+        <div class="signal-threshold">A black-box health score on day one. Unauditable signals do not pass ops review.<br>Vanity signals (logins, dashboard views) that do not predict revenue.<br>The full six-signal taxonomy at once. Ship the one that proves value first.<br>A second analytics platform when a thin layer does the job.</div>
+        <div class="signal-route">Rule-based and auditable, because anything that writes to a system of record has to pass ops review</div>
+      </div>
+    </div>
+
+    <!-- SCALE / PRODUCT MOTION -->
+    <div class="arch-section">
+      <div class="arch-title">From 3 demo accounts to the full install base <span>Scale</span></div>
+      <div class="arch-flow">
+        <div class="arch-node"><strong>Today</strong><span>3 accounts, modeled data, live MCP</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Phase 1</strong><span>Full install base scored nightly</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node highlight"><strong>Phase 2</strong><span>Signals route before Salesforce, no manual triage</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Phase 3</strong><span>Each outcome logged as a dated proof point</span></div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node"><strong>Outcome</strong><span>Expansion the system surfaces, not the rep recalls</span></div>
+      </div>
+      <div class="arch-note-grid" style="grid-template-columns:1fr">
+        <div class="arch-note-card">
+          <div class="anc-body" style="color:var(--slate)">Every account scored nightly, the highest-signal accounts on top before a rep opens Salesforce, each outcome logged as a dated proof point for marketing. The goal is expansion the system surfaces instead of a rep remembering to check, across 250,000+ agents.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUESTIONS FOR BUSBEE -->
+    <div class="routing-section">
+      <div class="routing-title">What I'd want your read on</div>
+      <table class="routing-table">
+        <tbody>
+          <tr><td style="width:170px"><strong style="color:var(--purple-mid)">Platform modernization</strong></td><td>When you modernized the data architecture in 2025, what did it expose at the event level that the GTM motion is not yet using? That is where I would start instrumenting.</td></tr>
+          <tr><td><strong style="color:var(--purple-mid)">Where to start</strong></td><td>Is expansion-signal infrastructure on the existing install base the first motion to build, or is net-new PQL instrumentation the bigger opportunity? They are different builds, and I would sequence around your answer.</td></tr>
+          <tr><td><strong style="color:var(--purple-mid)">The bar for production</strong></td><td>What is your bar for putting a signal-routing layer like this in front of a customer, on data that touches their usage?</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- TAB: STRIKE LIST (net-new TAM outbound, generated from the TAM engine) -->
+<div id="tab-strike">
+  <div style="background:var(--amber-bg);border-bottom:1px solid #FDE68A;padding:10px 28px;font-size:12px;display:flex;align-items:center;gap:9px">
+    <span style="font-weight:800;color:var(--amber);white-space:nowrap">&#9888;&#65039; SAMPLE DATA</span>
+    <span style="color:#92400E;line-height:1.5">Real companies, sample triggers and ROI assumptions to demonstrate the engine. Swap the enrichment feed for real Apollo and Clay output to go live. The benchmark and peer claims in the copy must be verified before any send.</span>
+  </div>
+  <div class="summary-strip" id="sl-summary"></div>
+  <div class="exp-wrap">
+    <div class="exp-header"><div class="exp-header-inner"><div class="exp-header-left">
+      <h2>Strike List</h2>
+      <p>Net-new target accounts ranked by fit and why-now. Each one carries a quantified ROI, the buying committee, and a ready-to-send sequence per persona. Work the top of the list. Click an account for the full plan.</p>
+    </div></div></div>
+    <div id="sl-list"></div>
+  </div>
+  <script type="application/json" id="tam-data">{"generated_at":"2026-06-13T16:22:42.014568","accounts":[{"company":"AmeriHealth Caritas","domain":"amerihealthcaritas.com","industry":"Health Insurance","agent_count":3000,"icp_total":92,"tier":1,"fresh":true,"roi_label":"$7.1M","roi_per_agent_label":"$2,380","triggers":[{"label":"Hiring WFM / RTA / workforce staff","detail":"you're hiring Workforce Management analysts and RTAs","date":"2026-06-08","play":"They are solving intraday with headcount. Lead with automate-versus-hire math before the roles fill."},{"label":"Contact center or market expansion","detail":"you won two new Medicaid state contracts","date":"2026-06-05","play":"Volume is scaling. Best time to add automation is during expansion, before headcount locks in."}],"seller":"Jordan Kim"},{"company":"Navient","domain":"navient.com","industry":"Financial Services","agent_count":2500,"icp_total":85,"tier":1,"fresh":true,"roi_label":"$6.0M","roi_per_agent_label":"$2,380","triggers":[{"label":"Cost reduction or efficiency mandate","detail":"your last earnings call flagged a board-level cost mandate","date":"2026-05-18","play":"Direct ROI story. Recover idle labor cost already on the payroll."},{"label":"Hiring WFM / RTA / workforce staff","detail":"you're hiring workforce management staff","date":"2026-04-10","play":"They are solving intraday with headcount. Lead with automate-versus-hire math before the roles fill."}],"seller":"Alex Rivera"},{"company":"Health Care Service Corporation","domain":"hcsc.com","industry":"Health Insurance","agent_count":5000,"icp_total":83,"tier":1,"fresh":true,"roi_label":"$11.9M","roi_per_agent_label":"$2,380","triggers":[{"label":"Cost reduction or efficiency mandate","detail":"you've set operational efficiency targets for 2026","date":"2026-06-02","play":"Direct ROI story. Recover idle labor cost already on the payroll."},{"label":"Contact center or market expansion","detail":"member growth across your five Blue Cross states is driving call volume","date":"2026-05-20","play":"Volume is scaling. Best time to add automation is during expansion, before headcount locks in."}],"seller":"Jordan Kim"},{"company":"OneMain Financial","domain":"onemain.com","industry":"Financial Services","agent_count":2800,"icp_total":73,"tier":2,"fresh":true,"roi_label":"$6.7M","roi_per_agent_label":"$2,380","triggers":[{"label":"Hiring WFM / RTA / workforce staff","detail":"you're in a contact center hiring push","date":"2026-05-30","play":"They are solving intraday with headcount. Lead with automate-versus-hire math before the roles fill."},{"label":"Contact center or market expansion","detail":"you're balancing branch and contact center volume with active hiring","date":"2026-04-20","play":"Volume is scaling. Best time to add automation is during expansion, before headcount locks in."}],"seller":"Alex Rivera"},{"company":"Bread Financial","domain":"breadfinancial.com","industry":"Financial Services","agent_count":2000,"icp_total":64,"tier":2,"fresh":true,"roi_label":"$4.8M","roi_per_agent_label":"$2,380","triggers":[{"label":"New operations or CX leader","detail":"you brought in a new VP of Customer Operations","date":"2026-06-01","play":"New exec wants an early, measurable win. Offer a fast ROI proof."},{"label":"Cost reduction or efficiency mandate","detail":"you kicked off a cost reduction program","date":"2026-02-01","play":"Direct ROI story. Recover idle labor cost already on the payroll."}],"seller":"Alex Rivera"},{"company":"Lincoln Financial Group","domain":"lincolnfinancial.com","industry":"Insurance","agent_count":2200,"icp_total":61,"tier":2,"fresh":true,"roi_label":"$5.2M","roi_per_agent_label":"$2,380","triggers":[{"label":"CSAT, AHT, or service-quality pressure","detail":"you're in the middle of a digital and claims modernization push","date":"2026-05-25","play":"Coaching delivered in idle time lifts quality without adding to the schedule."},{"label":"New operations or CX leader","detail":"you brought in a new VP of Operations","date":"2026-03-15","play":"New exec wants an early, measurable win. Offer a fast ROI proof."}],"seller":"Jordan Kim"}]}</script>
+</div>
+
+<!-- TAB: IMPACT (ELT scorecard, generated from the impact engine) -->
+<div id="tab-impact" class="hidden">
+  <div style="background:var(--amber-bg);border-bottom:1px solid #FDE68A;padding:10px 28px;font-size:12px;display:flex;align-items:center;gap:9px">
+    <span style="font-weight:800;color:var(--amber);white-space:nowrap">&#9888;&#65039; SAMPLE DATA</span>
+    <span style="color:#92400E;line-height:1.5">These figures run on sample accounts and sample assumptions to demonstrate the engine. The $41.6M is estimated recoverable cost in front of reps, not booked revenue. Real numbers appear once live data and verified Intradiem benchmarks are in. Expand the breakdown below to see exactly how it is calculated.</span>
+  </div>
+  <div class="exp-wrap">
+    <div class="exp-header"><div class="exp-header-inner"><div class="exp-header-left">
+      <h2>Impact Scorecard</h2>
+      <p>What this system has put on the table, the activity behind it, and the results realized so far. Opportunity surfaced is estimated recoverable cost in front of reps, not booked revenue. Realized is the number that grows as deals move.</p>
+    </div></div></div>
+    <div id="im-headline"></div>
+    <div id="im-body"></div>
+  </div>
+  <script type="application/json" id="impact-data">{"generated_at":"2026-06-13T16:55:59.558438","headline_opportunity_surfaced":41650000,"headline_opportunity_label":"$41.6M","net_new":{"accounts_targeted":6,"hot_today":6,"roi_surfaced":41650000,"roi_surfaced_label":"$41.6M","hot_roi_surfaced":41650000,"hot_roi_surfaced_label":"$41.6M","strike_plans":6,"committee_contacts_mapped":20,"sequence_messages_drafted":80,"assumptions":{"idle_minutes_per_agent_hour":3,"productive_hours_per_year":1700,"loaded_hourly_cost":28,"per_agent_per_year":2380,"per_agent_label":"$2,380"},"breakdown":[{"company":"AmeriHealth Caritas","agent_count":3000,"roi_annual":7140000,"roi_label":"$7.1M"},{"company":"Navient","agent_count":2500,"roi_annual":5950000,"roi_label":"$6.0M"},{"company":"Health Care Service Corporation","agent_count":5000,"roi_annual":11900000,"roi_label":"$11.9M"},{"company":"OneMain Financial","agent_count":2800,"roi_annual":6664000,"roi_label":"$6.7M"},{"company":"Bread Financial","agent_count":2000,"roi_annual":4760000,"roi_label":"$4.8M"},{"company":"Lincoln Financial Group","agent_count":2200,"roi_annual":5236000,"roi_label":"$5.2M"}]},"install_base":{"accounts_monitored":6,"accounts_with_signal":5,"signals_firing":6,"ae_routes":3,"csm_routes":4},"realized":{"logged_outcomes":2,"meetings_booked":1,"pipeline_created":180000.0,"pipeline_created_label":"$180K","revenue_won":0,"revenue_won_label":"$0"}}</script>
+</div>
+
+<!-- TAB: SIGNAL QUEUE (live install base, generated from the engine) -->
+<div id="tab-signals" class="hidden">
+  <!-- Remove this banner once accounts.csv is a real Intradiem export -->
+  <div style="background:var(--amber-bg);border-bottom:1px solid #FDE68A;padding:10px 28px;font-size:12px;display:flex;align-items:center;gap:9px">
+    <span style="font-weight:800;color:var(--amber);white-space:nowrap">&#9888;&#65039; SAMPLE DATA</span>
+    <span style="color:#92400E;line-height:1.5">Placeholder numbers that demonstrate the engine, not live Intradiem customer data. The scoring is real and deterministic. Swap accounts.csv for a real export to go live.</span>
+  </div>
+  <div class="summary-strip" id="sq-summary"></div>
+  <div class="exp-wrap">
+    <div class="exp-header">
+      <div class="exp-header-inner">
+        <div class="exp-header-left">
+          <h2>Signal Queue</h2>
+          <p>The live install base. Every monitored account scored against the six signals, highest first, routed to AE or CSM. This is the daily view: open it, work the top of the queue. Generated from the signal processor, so it never drifts from the MCP.</p>
+        </div>
+      </div>
+    </div>
+    <div class="signal-grid" id="sq-cards"></div>
+    <div id="sq-worked" style="margin-top:16px"></div>
+    <div class="plg-note" id="sq-clean" style="margin-top:14px"></div>
+    <div style="font-size:10px;color:var(--muted);margin-top:6px" id="sq-gen"></div>
+  </div>
+  <script type="application/json" id="signal-data">{"generated_at":"2026-06-13T05:04:17.570924+00:00","accounts":[{"company":"Synchrony Financial","domain":"synchrony.com","signals_fired":1,"primary_routing":"AE","signals":[{"type":"seat_utilization","value":88.9,"route":"AE","reason":"Seats at 88.9% of contract. Near capacity, expansion warranted."}]},{"company":"Centene Corporation","domain":"centene.com","signals_fired":2,"primary_routing":"AE","signals":[{"type":"coaching_coverage","value":45.0,"route":"CSM","reason":"Coaching reaches only 45.0% of agents. Deployment gap."},{"type":"crm_not_connected","value":120,"route":"AE","reason":"WFM live 120 days, CRM not connected. Back-office expansion."}]},{"company":"CareSource","domain":"caresource.com","signals_fired":1,"primary_routing":"CSM","signals":[{"type":"automation_volume_drop","value":-33.3,"route":"CSM","reason":"Automation volume down 33.3% MoM for 2 months. Churn risk forming."}]},{"company":"Molina Healthcare","domain":"molina.com","signals_fired":1,"primary_routing":"CSM","signals":[{"type":"rule_engine_active","value":25.0,"route":"CSM","reason":"Only 25.0% of available rules active. Onboarding or use-case gap."}]},{"company":"Highmark Health","domain":"highmark.org","signals_fired":1,"primary_routing":"AE","signals":[{"type":"champion_job_change","value":55,"route":"AE+CSM","reason":"Champion departed, 55 days to renewal. Rebuild the relationship."}]},{"company":"Ally Financial","domain":"ally.com","signals_fired":0,"primary_routing":"HOLD","signals":[]}]}</script>
+</div>
+
+<!-- TAB 1: EXPANSION -->
+<div id="tab-expansion" class="hidden">
+  <div class="exp-wrap">
+    <div class="exp-header">
+      <div class="exp-header-inner">
+        <div class="exp-header-left">
+          <h2>PLG Signal Framework + PQL Routing</h2>
+          <p>250,000+ agents generating product data every day. Six signals instrumented first: four expansion triggers that surface a product-qualified account, two churn risk signals that fire before health scores catch up. Each routes to the right motion automatically.</p>
+        </div>
+        <div class="exp-header-right">
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--green)">4</div>
+            <div class="exp-stat-label">Expansion<br>signals</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--red)">2</div>
+            <div class="exp-stat-label">Churn risk<br>signals</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--purple)">2</div>
+            <div class="exp-stat-label">Route<br>targets</div>
+          </div>
+        </div>
+      </div>
+      <div class="plg-note"><strong style="color:var(--purple-mid)">Note on PLG motion:</strong> This framework covers the existing customer expansion case. If the primary mandate is free trial infrastructure from scratch, the data source shifts from Intradiem's usage event stream to a trial product event stream via Segment or Mixpanel, and the routing target becomes conversion rather than upsell. Same signal processor architecture, different event schema.</div>
+    </div>
+
+    <div class="arch-section">
+      <div class="arch-title">How it works in production <span>Integration design</span></div>
+      <div class="arch-flow">
+        <div class="arch-node">
+          <strong>Intradiem Platform</strong>
+          <span>Usage events, coaching logs, schedule adherence, rule activity</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node highlight">
+          <strong>Signal Processor</strong>
+          <span>Threshold checks on rolling windows, flags anomalies, assigns signal type</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <strong>Routing Rules</strong>
+          <span>Expansion goes to AE. Health risk goes to CSM. Churn goes to both.</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <strong>CRM / CS Platform</strong>
+          <span>Task created, health score updated, Slack alert on urgent signals</span>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">
+          <strong>Rep Action</strong>
+          <span>Expansion call, health check, or renewal risk review</span>
+        </div>
+      </div>
+
+      <div class="arch-note-grid">
+        <div class="arch-note-card">
+          <div class="anc-title">Production architecture</div>
+          <div class="anc-body">Runs on Salesforce and Gainsight, the stack most enterprise health plans and financial services companies already have. The only custom piece is the signal processor sitting between Intradiem's event stream and the CRM. Everything else is Salesforce Flow and Gainsight Rules Engine configuration.</div>
+        </div>
+        <div class="arch-note-card">
+          <div class="anc-title">Technical specifics</div>
+          <div class="anc-body">30-day rolling averages, not point-in-time snapshots. 14-day suppression window per signal per account so the same alert doesn't fire weekly. Failure-safe: writes to Salesforce via Flow, not direct API, so signals queue through outages rather than drop. Champion job change runs as a weekly Clay enrichment pass.</div>
+        </div>
+        <div class="arch-note-card">
+          <div class="anc-title">How this was built</div>
+          <div class="anc-body">Apollo MCP for company data, Clay for enrichment pipeline design, Claude in Cowork for routing logic. The signal processor is a standalone Python script: evaluates all six signals against rolling-window thresholds, applies the suppression window, outputs routing decisions. Runs against sample data out of the box. Code: <a href="https://github.com/dallasandrews1/intradiem-signal-processor">github.com/dallasandrews1/intradiem-signal-processor</a></div>
+        </div>
+        <div class="arch-note-card">
+          <div class="anc-title">Day one reality</div>
+          <div class="anc-body">Not a live webhook stream. Day one is a daily CSV export from Intradiem's reporting module running on a cron job. The 30-day rolling average works fine on daily data. The architecture shown is the 90-day state. Start with one signal, one destination, one AE expansion before building the pipeline. Designing the full architecture up front means you know what you are building toward.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="signal-grid">
+      <div class="signal-card expansion">
+        <div class="signal-header"><span class="signal-icon">📈</span><span class="signal-name">Agent Seat Utilization at 85%+</span><span class="signal-type exp">Expansion</span></div>
+        <div class="signal-desc">When a customer's licensed seats are running at 85% capacity, they need more before they've asked. The customer proved value and ran out of room.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> Licensed agents active at 85%+ over a rolling 30 days</div>
+        <div class="signal-route">Route to AE with expansion proposal and ROI model</div>
+      </div>
+      <div class="signal-card expansion">
+        <div class="signal-header"><span class="signal-icon">🎓</span><span class="signal-name">Coaching Coverage Under 60%</span><span class="signal-type exp">Expansion</span></div>
+        <div class="signal-desc">High coaching frequency but low roster coverage means they've deployed Intradiem on part of their team and stopped. They're getting value but leaving 40% of their agents unautomated.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> 20+ coaching sessions per day, but fewer than 60% of agents receiving them in the past 30 days</div>
+        <div class="signal-route">Route to CSM for deployment expansion conversation</div>
+      </div>
+      <div class="signal-card expansion">
+        <div class="signal-header"><span class="signal-icon">⚙️</span><span class="signal-name">Rule Engine Under 35% Active</span><span class="signal-type exp">Expansion</span></div>
+        <div class="signal-desc">If a customer is only using a third of the available rules, they either didn't finish onboarding or there's a use case they haven't discovered yet: back-office automation, VTO delivery, after-call work reduction. A QBR conversation fixes this.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> Active rules below 35% of what's available for their tier</div>
+        <div class="signal-route">Route to CSM for QBR with a use case discovery agenda</div>
+      </div>
+      <div class="signal-card expansion">
+        <div class="signal-header"><span class="signal-icon">🔌</span><span class="signal-name">WFM Connected, CRM Not</span><span class="signal-type exp">Expansion</span></div>
+        <div class="signal-desc">They set up the scheduling integration but never connected the CRM or back-office systems. That's a separate product conversation and a separate revenue line. 90 days of WFM usage with zero CRM connections is the tell.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> WFM integration active 90+ days, zero CRM or back-office connections</div>
+        <div class="signal-route">Route to AE for back-office expansion pitch</div>
+      </div>
+      <div class="signal-card risk">
+        <div class="signal-header"><span class="signal-icon">⚠️</span><span class="signal-name">Automation Volume Dropping</span><span class="signal-type risk">Churn Risk</span></div>
+        <div class="signal-desc">If total automation events are down 20% month over month for two straight months, someone on the WFM team is working around the system. This doesn't show up in health scores until it's too late. The fix is a stakeholder mapping call, not a feature walk.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> Automation event volume down 20%+ MoM for two consecutive months</div>
+        <div class="signal-route">CSM initiates health check immediately. Urgent.</div>
+      </div>
+      <div class="signal-card risk">
+        <div class="signal-header"><span class="signal-icon">🔄</span><span class="signal-name">Champion Changed Jobs</span><span class="signal-type risk">Churn Risk</span></div>
+        <div class="signal-desc">The person who bought Intradiem just left. Their replacement didn't make the decision and has no attachment to it. If this happens within 90 days of renewal, the AE needs to own the relationship rebuild before procurement does.</div>
+        <div class="signal-threshold"><strong>Threshold:</strong> LinkedIn job change detected for the primary champion within 90 days of renewal</div>
+        <div class="signal-route">AE and CSM both get alerted. New stakeholder mapping starts immediately. Urgent.</div>
+      </div>
+    </div>
+
+    <div class="routing-section">
+      <div class="routing-title">Signal routing summary</div>
+      <table class="routing-table">
+        <thead><tr><th>Signal</th><th>Trigger</th><th>Route to</th><th>Action</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td>Seat utilization 85%+</td><td>Rolling 30-day avg</td><td>AE</td><td>Expansion proposal + ROI model</td><td style="color:var(--green);font-weight:700">High</td></tr>
+          <tr><td>Coaching coverage under 60%</td><td>30-day calculation</td><td>CSM</td><td>Deployment review + expansion path</td><td style="color:var(--green);font-weight:700">High</td></tr>
+          <tr><td>Rule engine under 35%</td><td>Account tier benchmark</td><td>CSM</td><td>QBR agenda: use case discovery</td><td style="color:var(--amber);font-weight:700">Med</td></tr>
+          <tr><td>CRM not connected</td><td>90-day audit</td><td>AE</td><td>Back-office expansion pitch</td><td style="color:var(--amber);font-weight:700">Med</td></tr>
+          <tr><td>Automation volume down 20% x2</td><td>Weekly calculation</td><td>CSM</td><td>Health check + executive outreach</td><td style="color:var(--red);font-weight:700">Urgent</td></tr>
+          <tr><td>Champion job change</td><td>Clay / LinkedIn monitoring</td><td>AE + CSM</td><td>Stakeholder map + renewal risk review</td><td style="color:var(--red);font-weight:700">Urgent</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: ICP ACCOUNTS -->
+<div id="tab-accounts" class="hidden">
+  <div class="summary-strip" id="summary-strip"></div>
+
+  <!-- CLAY LIVE ENRICHMENT CALLOUT -->
+  <div style="background:#F0FDF4;border-bottom:1px solid #BBF7D0;padding:10px 28px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <span style="font-size:11px;font-weight:700;color:#15803D;text-transform:uppercase;letter-spacing:.7px;">Live Clay Enrichment</span>
+      <span style="font-size:10px;color:#16A34A;background:#DCFCE7;border:1px solid #BBF7D0;padding:1px 7px;border-radius:10px;">Run June 10, 2026</span>
+      <span style="font-size:10px;color:#6B7280;margin-left:4px;">Apollo + BuiltWith + LinkedIn job scraper across all 20 accounts. HOT = Tier 1 + active WFM/CC hiring signal.</span>
+    </div>
+    <table style="width:100%;border-collapse:collapse;font-size:11px;">
+      <thead>
+        <tr style="background:#DCFCE7;">
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Company</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Verified Tech Stack</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Active Hiring Signal</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Open Jobs Found</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">ICP Score</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Motion</th>
+          <th style="text-align:left;padding:5px 10px;color:#15803D;font-weight:700;border-bottom:1px solid #BBF7D0;">Flag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:white;border-bottom:1px solid #DCFCE7;">
+          <td style="padding:6px 10px;font-weight:600;">Synchrony Financial</td>
+          <td style="padding:6px 10px;"><span style="background:#DBEAFE;color:#1D4ED8;padding:1px 7px;border-radius:4px;font-weight:600;font-size:10px;">Genesys</span></td>
+          <td style="padding:6px 10px;"><span style="color:#16A34A;font-weight:700;">YES</span></td>
+          <td style="padding:6px 10px;">3</td>
+          <td style="padding:6px 10px;font-weight:800;">85</td>
+          <td style="padding:6px 10px;">Direct AE</td>
+          <td style="padding:6px 10px;"><span style="background:#FEF08A;color:#713F12;padding:1px 8px;border-radius:10px;font-weight:700;font-size:10px;">HOT</span></td>
+        </tr>
+        <tr style="background:white;border-bottom:1px solid #DCFCE7;">
+          <td style="padding:6px 10px;font-weight:600;">Centene Corporation</td>
+          <td style="padding:6px 10px;"><span style="background:#FFEDD5;color:#7C2D12;padding:1px 7px;border-radius:4px;font-weight:600;font-size:10px;">Verint</span></td>
+          <td style="padding:6px 10px;"><span style="color:#16A34A;font-weight:700;">YES</span></td>
+          <td style="padding:6px 10px;">10</td>
+          <td style="padding:6px 10px;font-weight:800;">85</td>
+          <td style="padding:6px 10px;">Direct AE</td>
+          <td style="padding:6px 10px;"><span style="background:#FEF08A;color:#713F12;padding:1px 8px;border-radius:10px;font-weight:700;font-size:10px;">HOT</span></td>
+        </tr>
+        <tr style="background:white;">
+          <td style="padding:6px 10px;font-weight:600;">CareSource</td>
+          <td style="padding:6px 10px;"><span style="background:#DBEAFE;color:#1D4ED8;padding:1px 7px;border-radius:4px;font-weight:600;font-size:10px;">Five9</span></td>
+          <td style="padding:6px 10px;"><span style="color:#16A34A;font-weight:700;">YES</span></td>
+          <td style="padding:6px 10px;">1</td>
+          <td style="padding:6px 10px;font-weight:800;">82</td>
+          <td style="padding:6px 10px;">Direct AE</td>
+          <td style="padding:6px 10px;"><span style="background:#FEF08A;color:#713F12;padding:1px 8px;border-radius:10px;font-weight:700;font-size:10px;">HOT</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:6px;font-size:10px;color:#6B7280;">Three accounts from the live enrichment run that scored HOT: Tier 1 ICP fit plus active WFM or contact center hiring confirmed. Enrichment stack: Apollo (firmographics), BuiltWith (tech stack), LinkedIn Jobs (hiring signal). Full 20-account scored table below with per-dimension breakdown.</div>
+  </div>
+
+  <div class="controls">
+    <span class="filter-label">Tier</span>
+    <button class="filter-btn active" onclick="setFilter('tier','all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('tier','1',this)">Tier 1</button>
+    <button class="filter-btn" onclick="setFilter('tier','2',this)">Tier 2</button>
+    <button class="filter-btn" onclick="setFilter('tier','3',this)">Tier 3</button>
+    <div class="controls-divider"></div>
+    <span class="filter-label">Industry</span>
+    <button class="filter-btn active" onclick="setFilter('industry','all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('industry','Health Insurance',this)">Health Insurance</button>
+    <button class="filter-btn" onclick="setFilter('industry','Financial Services',this)">Financial Services</button>
+    <button class="filter-btn" onclick="setFilter('industry','Banking',this)">Banking</button>
+    <button class="filter-btn" onclick="setFilter('industry','Insurance',this)">Insurance</button>
+    <div class="controls-divider"></div>
+    <span class="filter-label">Tech</span>
+    <button class="filter-btn active" onclick="setFilter('tech','all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('tech','partner',this)">Five9 / Genesys</button>
+    <button class="filter-btn" onclick="setFilter('tech','competitor',this)">Verint / Calabrio</button>
+    <button class="filter-btn" onclick="setFilter('tech','unknown',this)">Unknown</button>
+    <div class="controls-right" id="result-count"></div>
+  </div>
+  <div class="scoring-bar">
+    <span class="scoring-bar-title">Score dimensions</span>
+    <div class="score-dim"><div class="score-dim-dot" style="background:#8B5CF6"></div>Industry /25</div>
+    <div class="score-dim"><div class="score-dim-dot" style="background:#3B82F6"></div>CC Scale /25</div>
+    <div class="score-dim"><div class="score-dim-dot" style="background:#10B981"></div>Tech stack /25</div>
+    <div class="score-dim"><div class="score-dim-dot" style="background:#F59E0B"></div>Pain signal /25</div>
+    <span class="scoring-bar-note">Tier 1 = 76+ (Direct AE) · Tier 2 = 55-75 (BDR) · Tier 3 = under 55 (Nurture) · Click a row to expand · Data: LinkedIn, ZoomInfo, BuiltWith, June 2026, best-effort estimates, not validated against Intradiem's CRM</span>
+  </div>
+  <div class="table-wrap">
+    <table class="account-table" id="account-table">
+      <thead>
+        <tr>
+          <th>Company</th><th>Industry</th><th>Employees</th><th>Tech stack</th>
+          <th>Pain signals</th><th style="cursor:pointer" onclick="sortBy()">Score ↕</th>
+          <th>Tier</th><th>Motion</th><th></th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TAB 3: METHODOLOGY -->
+<div id="tab-methodology" class="hidden">
+  <div class="method-wrap">
+    <div class="method-header">
+      <div class="method-header-inner">
+        <div class="method-header-left">
+          <h2>Scoring model</h2>
+          <p>Four dimensions, 25 points each, 100 max. Sources are public: tech stack from ZoomInfo and BuiltWith, pain signals from LinkedIn job posts and press releases, employee count from LinkedIn. Best-effort estimates as of June 2026, not validated against Intradiem's CRM. Designed to refresh weekly via a Clay or Apollo enrichment run.</p>
+        </div>
+        <div class="method-header-right">
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:#8B5CF6">4</div>
+            <div class="exp-stat-label">Score<br>dimensions</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--purple)">100</div>
+            <div class="exp-stat-label">Max<br>score</div>
+          </div>
+          <div class="exp-stat">
+            <div class="exp-stat-num" style="color:var(--green)">3</div>
+            <div class="exp-stat-label">Tier<br>thresholds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="method-box">
+      <h3>Score dimensions</h3>
+      <div class="method-dims">
+        <div class="method-dim">
+          <div class="method-dim-name ind">Industry /25</div>
+          <div class="method-dim-items">Health Insurance: 25<br>Financial Services: 20<br>Banking: 20<br>Insurance: 18<br>Healthcare Services: 15<br>Other: 8</div>
+        </div>
+        <div class="method-dim">
+          <div class="method-dim-name siz">CC Scale /25</div>
+          <div class="method-dim-items">50,000+: 25<br>10,000-50,000: 22<br>5,000-10,000: 18<br>1,000-5,000: 12<br>Under 1,000: 5</div>
+        </div>
+        <div class="method-dim">
+          <div class="method-dim-name tec">Tech Stack /25</div>
+          <div class="method-dim-items">Five9 (partner): 25<br>Genesys (partner): 23<br>Verint (competitor): 20<br>Calabrio (competitor): 18<br>NICE inContact: 15<br>Unknown: 8</div>
+        </div>
+        <div class="method-dim">
+          <div class="method-dim-name pai">Pain Signal /25</div>
+          <div class="method-dim-items">WFM hiring + cost program: 25<br>Active WFM hiring: 22<br>Active CC hiring: 20<br>Cost reduction announced: 18<br>Digital transformation: 15<br>No signal: 5</div>
+        </div>
+      </div>
+    </div>
+    <div class="routing-section">
+      <div class="routing-title">Tier thresholds</div>
+      <table class="routing-table">
+        <thead><tr><th>Tier</th><th>Score</th><th>Motion</th><th>Logic</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tier-badge tier1">Tier 1</span></td><td>76-100</td><td class="motion-text motion-ae">Direct AE</td><td>Strong fit plus a live signal. AE opens with research. Target: meeting in 10 days.</td></tr>
+          <tr><td><span class="tier-badge tier2">Tier 2</span></td><td>55-75</td><td class="motion-text motion-bdr">BDR Sequence</td><td>Solid fit, weaker signal or smaller scale. Multi-touch cadence. Target: meeting in 30 days.</td></tr>
+          <tr><td><span class="tier-badge tier3">Tier 3</span></td><td>Under 55</td><td class="motion-text motion-nurture">Nurture</td><td>Below current scale or no active signal. Watch for WFM hiring or tech stack change. Re-score monthly.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const ACCOUNTS=[
+  {id:1,name:"Synchrony Financial",industry:"Financial Services",hq:"Stamford, CT",employees:"~20,000",tech:"Genesys",tech_type:"partner",pain:["Active WFM hiring Q1 2026","Cost optimization program"],buyer:"SVP Customer Care Operations",s_i:20,s_s:22,s_t:23,s_p:20,
+  outreach:"Synchrony runs Genesys. No integration story to sell, it already connects. The pitch is the math. At 20,000 agents with a $28/hr fully loaded labor cost, recovering 3 idle minutes per agent per hour is worth roughly $50M annually. That's the number. Their active WFM hiring is the tell that they're trying to solve this problem with headcount instead.",
+  opener:"'Your WFM team is actively hiring. Before those roles are filled, I want to show you what the headcount cost looks like if you automate the problem instead. The math on 20,000 agents is a big number.'"},
+
+  {id:2,name:"Molina Healthcare",industry:"Health Insurance",hq:"Long Beach, CA",employees:"~16,000",tech:"NICE inContact",tech_type:"neutral",pain:["CC expansion into 3 new states","Active WFM analyst hiring"],buyer:"VP Member Services Operations",s_i:25,s_s:22,s_t:15,s_p:20,
+  outreach:"Molina expanded into three new states last year and is hiring WFM analysts to keep up. That's the tell. They're staffing up to handle intraday complexity manually. NICE is their CCaaS platform, Intradiem layers on top. Lead with the build-vs-automate framing before they lock in the headcount.",
+  opener:"'You expanded into three new markets and you're hiring WFM staff to manage the volume. I work with the top Medicaid plans to automate exactly what those analysts would be doing.'"},
+
+  {id:3,name:"Highmark Health",industry:"Health Insurance",hq:"Pittsburgh, PA",employees:"~40,000",tech:"NICE inContact",tech_type:"neutral",pain:["Ops efficiency program launched 2025","Digital transformation initiative"],buyer:"Chief Customer Officer",s_i:25,s_s:25,s_t:15,s_p:18,
+  outreach:"Highmark announced an ops efficiency program in 2025. Direct opening. Across their BCBS markets, at roughly 4,000 contact center agents, recovering 3 idle minutes per agent per hour is around $11M annually at a conservative loaded rate. That's the number to open with. Ask for a peer reference call with another BCBS plan before the first meeting.",
+  opener:"'We work with several Blue Cross plans on ops efficiency. The recoverable labor cost number across your agent population is around $11M annually. I want to see if the conversation makes sense for Highmark.'"},
+
+  {id:4,name:"Centene Corporation",industry:"Health Insurance",hq:"St. Louis, MO",employees:"~70,000",tech:"Verint",tech_type:"competitor",pain:["WFM consolidation across subsidiaries","Efficiency focus post-restructure"],buyer:"Chief Customer Officer",s_i:25,s_s:25,s_t:20,s_p:15,
+  outreach:"Centene has consolidated a dozen health plan acquisitions and their contact center operations are still fragmented across subsidiaries. The pitch isn't one contact center. It's a consistent automation layer across all of them. Verint handles workforce optimization. Intradiem handles what happens between the scheduled activities. At roughly 8,000 CC agents across the enterprise, that's over $20M in recoverable labor cost annually.",
+  opener:"'You're running contact centers across multiple subsidiary plans. The consolidation story is a consistent automation layer on top of fragmented WFM setups. The labor math across your agent population is over $20M annually.'"},
+
+  {id:5,name:"Ally Financial",industry:"Banking",hq:"Detroit, MI",employees:"~11,000",tech:"Verint",tech_type:"competitor",pain:["Active WFM hiring","CX expansion initiative"],buyer:"VP Customer Experience Operations",s_i:20,s_s:22,s_t:20,s_p:20,
+  outreach:"Ally is a Verint shop actively hiring WFM and running a CX expansion initiative. Verint does scheduling and QA. Intradiem handles the real-time exceptions WFM managers are still touching manually. At roughly 2,000 contact center agents, that's around $5-6M in recoverable labor cost annually, before you count the coaching and compliance value on top.",
+  opener:"'You're a Verint shop with active WFM hiring. I want to show you how Intradiem closes the gap between what Verint schedules and what your floor does between calls. The labor math on your agent population is around $5-6M annually.'"},
+
+  {id:6,name:"Health Care Service Corporation",industry:"Health Insurance",hq:"Chicago, IL",employees:"~25,000",tech:"Unknown",tech_type:"unknown",pain:["Member growth driving CC volume","Cost efficiency targets announced"],buyer:"VP Member Operations",s_i:25,s_s:25,s_t:8,s_p:18,
+  outreach:"HCSC is the 4th largest health insurer in the US, Blue Cross across five states. No tech signal in our data probably means legacy infrastructure or an unmapped setup. Both work as openings. A company this size without a visible WFO platform is almost certainly handling intraday staffing manually.",
+  opener:"'We work with the top five US health plans. I want to share what a similar plan is saving annually and see if the conversation makes sense for HCSC.'"},
+
+  {id:7,name:"CareSource",industry:"Health Insurance",hq:"Dayton, OH",employees:"~5,000",tech:"Five9",tech_type:"partner",pain:["Expanding into new Medicaid markets","Active CC hiring"],buyer:"VP Member Services",s_i:25,s_s:12,s_t:25,s_p:20,
+  outreach:"CareSource runs Five9, which means the Intradiem integration is already built and tested. They're expanding into new Medicaid markets and hiring contact center staff right now. Best time to have this conversation is during expansion, not after headcount is locked in.",
+  opener:"'You're on Five9. Intradiem connects natively, no new infrastructure required. I want to show you what another Medicaid plan your size is doing before you finalize your new hires.'"},
+
+  {id:8,name:"Navient",industry:"Financial Services",hq:"Wilmington, DE",employees:"~7,000",tech:"Calabrio",tech_type:"competitor",pain:["Board-level cost mandate","Active WFM hiring"],buyer:"SVP Operations",s_i:20,s_s:18,s_t:18,s_p:22,
+  outreach:"Navient handles student loan contacts under heavy regulatory scrutiny and has a board-level cost mandate. They're a Calabrio shop hiring WFM staff. Calabrio plans and schedules. Intradiem automates the intraday exceptions that WFM managers are still handling manually. Lead with the labor cost math.",
+  opener:"'You have a board cost mandate and you're still adding WFM headcount. Intradiem handles the intraday decisions Calabrio leaves to your team. Worth 20 minutes to show you the math.'"},
+
+  {id:9,name:"Blue Cross Blue Shield of Michigan",industry:"Health Insurance",hq:"Detroit, MI",employees:"~7,000",tech:"Genesys",tech_type:"partner",pain:["Digital modernization initiative","Member services efficiency targets"],buyer:"VP Member Services",s_i:25,s_s:18,s_t:23,s_p:15,
+  outreach:"BCBS Michigan runs Genesys and has a digital modernization initiative in flight. The integration is already built. The pitch: they've invested in Genesys for scheduling, Intradiem makes those schedules execute in real time without someone manually handling every exception.",
+  opener:"'You're on Genesys and running a digital modernization push. The Intradiem integration is already built. I want to show you what BCBS plans in other markets are getting back in labor cost annually.'"},
+
+  {id:10,name:"Bread Financial",industry:"Financial Services",hq:"Columbus, OH",employees:"~8,000",tech:"Calabrio",tech_type:"competitor",pain:["Cost reduction program Q4 2025","Restructuring contact center ops"],buyer:"VP Customer Operations",s_i:20,s_s:18,s_t:18,s_p:20,
+  outreach:"Bread Financial is restructuring ops with an active cost mandate. Calabrio is their WFO platform. The framing: they invested in Calabrio to schedule and manage quality. Intradiem recovers the idle time that Calabrio's schedule leaves on the floor. Not a replacement, an ROI capture on what they already paid for.",
+  opener:"'You're restructuring ops and carrying a Calabrio investment. Intradiem captures the gap between what Calabrio schedules and what your floor actually does between calls.'"},
+
+  {id:11,name:"Magellan Health",industry:"Health Insurance",hq:"Scottsdale, AZ",employees:"~9,000",tech:"Unknown",tech_type:"unknown",pain:["Behavioral health demand surge","Post-pandemic CC scale"],buyer:"VP Clinical Operations",s_i:25,s_s:18,s_t:8,s_p:15,
+  outreach:"Magellan handles behavioral health calls: high compliance requirements, high cost per interaction, high stakes on agent development. Coaching that gets delivered during idle time rather than scheduled separately is a real outcome here, not just a cost story. Lead with agent quality, not efficiency.",
+  opener:"'Behavioral health calls have the highest compliance and quality stakes in the industry. We help managed care plans get coaching to agents during their shifts, not on top of them.'"},
+
+  {id:12,name:"OneMain Financial",industry:"Financial Services",hq:"Evansville, IN",employees:"~9,000",tech:"Unknown",tech_type:"unknown",pain:["Active CC hiring","Branch plus CC complexity"],buyer:"VP Customer Service Operations",s_i:20,s_s:18,s_t:8,s_p:18,
+  outreach:"OneMain has branches feeding inbound call volume, which creates scheduling complexity most WFM tools weren't built for. No tech signal in the data suggests legacy setup or nothing installed. BDR play is discovery-first. Get a call about how they manage intraday scheduling today, then pitch from there.",
+  opener:"'Managing intraday staffing across branches and a contact center at the same time is a problem most WFM tools don't solve well. I want to see how you're handling it today.'"},
+
+  {id:13,name:"AmeriHealth Caritas",industry:"Health Insurance",hq:"Philadelphia, PA",employees:"~7,000",tech:"Unknown",tech_type:"unknown",pain:["New Medicaid contracts in 2 states 2025","Active CC hiring"],buyer:"VP Member Operations",s_i:25,s_s:18,s_t:8,s_p:18,
+  outreach:"AmeriHealth won two new Medicaid state contracts in 2025 and is building out contact center capacity. This is the best time to have the conversation. Automation infrastructure is cheaper to build during expansion than after headcount is already on payroll.",
+  opener:"'You just won two new state contracts and you're hiring into them. I work with Medicaid plans to automate the intraday complexity that comes with that growth before it turns into a headcount problem.'"},
+
+  {id:14,name:"Lincoln Financial Group",industry:"Insurance",hq:"Radnor, PA",employees:"~13,000",tech:"NICE inContact",tech_type:"neutral",pain:["Digital transformation initiative","Claims modernization program"],buyer:"VP Operations",s_i:18,s_s:22,s_t:15,s_p:15,
+  outreach:"Lincoln Financial runs NICE and has a digital transformation program in progress. NICE handles scheduling and QA. The question is who handles the intraday exceptions. If it's still a WFM manager making manual adjustments, that's the gap. Lead with a peer reference from another life or annuity carrier.",
+  opener:"'You're running NICE for scheduling. I want to show you what happens to intraday efficiency when the manual exception handling goes away.'"},
+
+  {id:15,name:"Independence Blue Cross",industry:"Health Insurance",hq:"Philadelphia, PA",employees:"~6,000",tech:"Unknown",tech_type:"unknown",pain:["Member experience initiative","ACA marketplace growth driving volume"],buyer:"VP Member Services",s_i:25,s_s:18,s_t:8,s_p:12,
+  outreach:"IBX leads with member experience, not cost. That changes the angle. Don't open with idle time math. Open with NPS and agent experience. Intradiem delivers coaching during shifts without adding to the schedule, which affects both. ACA marketplace growth is driving inbound volume, which is the forcing function.",
+  opener:"'ACA marketplace growth is adding inbound volume and staffing complexity. We help Blue Cross plans automate the intraday decisions that affect both member experience and agent burnout.'"},
+
+  {id:16,name:"Unum Group",industry:"Insurance",hq:"Chattanooga, TN",employees:"~10,000",tech:"Unknown",tech_type:"unknown",pain:["Disability claims automation focus","Agent productivity initiative"],buyer:"SVP Customer Operations",s_i:18,s_s:22,s_t:8,s_p:15,
+  outreach:"Unum handles disability and life insurance calls: compliance-heavy, time-sensitive, high cost per interaction. Agent development matters here because a poorly handled claims call has real downstream consequences. Intradiem gets coaching into idle time agents are already paid for.",
+  opener:"'Disability claims calls are among the most compliance-sensitive interactions in insurance. We help carriers get more coaching to agents without adding it to the schedule.'"},
+
+  {id:17,name:"DaVita",industry:"Healthcare Services",hq:"Denver, CO",employees:"~50,000",tech:"Unknown",tech_type:"unknown",pain:["Back-office efficiency program","Shared services scaling"],buyer:"VP Shared Services Operations",s_i:15,s_s:25,s_t:8,s_p:12,
+  outreach:"DaVita's contact center handles patient billing and payer calls across hundreds of dialysis centers. This is a back-office automation entry point, not a traditional contact center sale. Find the VP of Shared Services. The pitch is back-office structured work automation, which is a different conversation than frontline WFM.",
+  opener:"'Your patient billing and services teams handle structured high-volume work across hundreds of locations. That's the back-office automation use case we were built for.'"},
+
+  {id:18,name:"Western & Southern Financial",industry:"Insurance",hq:"Cincinnati, OH",employees:"~5,000",tech:"Unknown",tech_type:"unknown",pain:["Digital modernization initiative"],buyer:"VP Operations",s_i:18,s_s:12,s_t:8,s_p:12,
+  outreach:"Mid-size insurance group in early-stage digital modernization. No active hiring signal yet. Watch for WFM or contact center hiring. That's when to move this to BDR.",
+  opener:"Nurture. Re-score in 90 days. Move to BDR if WFM hiring signal appears."},
+
+  {id:19,name:"Enova International",industry:"Financial Services",hq:"Chicago, IL",employees:"~2,000",tech:"Unknown",tech_type:"unknown",pain:["Online lending scale"],buyer:"VP Operations",s_i:20,s_s:8,s_t:8,s_p:10,
+  outreach:"Growing digital lender but below Intradiem's current ICP threshold on contact center scale. Re-score when they cross 3,000 employees or announce a contact center investment.",
+  opener:"Nurture. Re-score quarterly. Trigger to BDR if headcount exceeds 3,000."},
+
+  {id:20,name:"World Acceptance Corporation",industry:"Financial Services",hq:"Greenville, SC",employees:"~4,000",tech:"Unknown",tech_type:"unknown",pain:["Branch efficiency focus"],buyer:"SVP Operations",s_i:20,s_s:12,s_t:8,s_p:10,
+  outreach:"Branch-first consumer finance company with limited contact center presence. Below current ICP threshold. No active outreach warranted until they signal a contact center investment.",
+  opener:"Nurture. Passive monitoring only."}
+];
+
+ACCOUNTS.forEach(a=>{a.score=a.s_i+a.s_s+a.s_t+a.s_p;a.tier=a.score>=76?1:a.score>=55?2:3;a.motion=a.tier===1?'Direct AE':a.tier===2?'BDR Sequence':'Nurture'});
+
+let filters={tier:'all',industry:'all',tech:'all'};
+let sortDir=-1;
+let expandedId=null;
+
+function scoreColor(s){return s>=76?'var(--green)':s>=55?'var(--amber)':'var(--slate)'}
+function techLabel(t){
+  if(t==='partner')return{label:'✓ Partner',cls:'tech-partner'};
+  if(t==='competitor')return{label:'⚡ Competitor',cls:'tech-competitor'};
+  if(t==='neutral')return{label:'◎ CCaaS',cls:'tech-neutral'};
+  return{label:'? Unknown',cls:'tech-unknown'};
+}
+
+function renderSummary(data){
+  const t1=data.filter(a=>a.tier===1).length,t2=data.filter(a=>a.tier===2).length,t3=data.filter(a=>a.tier===3).length;
+  const avg=data.length?Math.round(data.reduce((s,a)=>s+a.score,0)/data.length):0;
+  document.getElementById('summary-strip').innerHTML=`
+    <div class="stat"><div class="stat-num">${data.length}</div><div class="stat-label">Accounts<br>scored</div></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><div class="stat-dot" style="background:var(--green)"></div><div class="stat-num" style="color:var(--green)">${t1}</div><div class="stat-label">Tier 1<br>Direct AE</div></div>
+    <div class="stat"><div class="stat-dot" style="background:var(--amber)"></div><div class="stat-num" style="color:var(--amber)">${t2}</div><div class="stat-label">Tier 2<br>BDR</div></div>
+    <div class="stat"><div class="stat-dot" style="background:var(--slate)"></div><div class="stat-num" style="color:var(--slate)">${t3}</div><div class="stat-label">Tier 3<br>Nurture</div></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><div class="stat-num" style="color:var(--purple)">${avg}</div><div class="stat-label">Avg score<br>/100</div></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><div class="stat-num" style="color:var(--partner-color)">${data.filter(a=>a.tech_type==='partner').length}</div><div class="stat-label">Partner<br>stack</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--competitor-color)">${data.filter(a=>a.tech_type==='competitor').length}</div><div class="stat-label">Competitor<br>displacement</div></div>`;
+}
+
+function filtered(){
+  return ACCOUNTS.filter(a=>{
+    if(filters.tier!=='all'&&a.tier!==parseInt(filters.tier))return false;
+    if(filters.industry!=='all'&&a.industry!==filters.industry)return false;
+    if(filters.tech!=='all'&&a.tech_type!==filters.tech)return false;
+    return true;
+  }).sort((a,b)=>sortDir*(b.score-a.score));
+}
+
+function render(){
+  const data=filtered();
+  renderSummary(data);
+  document.getElementById('result-count').textContent=`${data.length} of ${ACCOUNTS.length} accounts`;
+  const tbody=document.getElementById('table-body');
+  tbody.innerHTML='';
+  data.forEach(a=>{
+    const tl=techLabel(a.tech_type);
+    const isExp=expandedId===a.id;
+    const row=document.createElement('tr');
+    row.className='account-row'+(isExp?' expanded':'');
+    row.onclick=()=>{expandedId=isExp?null:a.id;render()};
+    const fc=scoreColor(a.score);
+    row.innerHTML=`
+      <td><div class="account-name">${a.name}</div><div class="account-hq">${a.hq}</div></td>
+      <td><span class="industry-tag">${a.industry}</span></td>
+      <td>${a.employees}</td>
+      <td><span class="tech-badge ${tl.cls}">${tl.label} · ${a.tech}</span></td>
+      <td><div class="pain-pills">${a.pain.map(p=>`<span class="pain-pill">${p}</span>`).join('')}</div></td>
+      <td><div class="score-cell"><span class="score-num" style="color:${fc}">${a.score}</span><div class="score-bar-wrap"><div class="score-bar-fill" style="width:${a.score}%;background:${fc}"></div></div></div></td>
+      <td><span class="tier-badge tier${a.tier}">Tier ${a.tier}</span></td>
+      <td><span class="motion-text motion-${a.tier===1?'ae':a.tier===2?'bdr':'nurture'}">${a.motion}</span></td>
+      <td><span class="expand-arrow">${isExp?'▲':'▼'}</span></td>`;
+    tbody.appendChild(row);
+    if(isExp){
+      const det=document.createElement('tr');
+      det.className='detail-row';
+      det.innerHTML=`<td colspan="9"><div class="detail-inner">
+        <div class="detail-section">
+          <div class="detail-section-title">Score breakdown</div>
+          <div class="buyer-chip">🎯 ${a.buyer}</div>
+          <div class="score-breakdown">
+            <div class="score-dim-row"><span class="score-dim-label">Industry</span><div class="score-dim-bar"><div class="score-dim-fill dim-industry" style="width:${(a.s_i/25)*100}%"></div></div><span class="score-dim-val">${a.s_i}/25</span></div>
+            <div class="score-dim-row"><span class="score-dim-label">CC scale</span><div class="score-dim-bar"><div class="score-dim-fill dim-size" style="width:${(a.s_s/25)*100}%"></div></div><span class="score-dim-val">${a.s_s}/25</span></div>
+            <div class="score-dim-row"><span class="score-dim-label">Tech stack</span><div class="score-dim-bar"><div class="score-dim-fill dim-tech" style="width:${(a.s_t/25)*100}%"></div></div><span class="score-dim-val">${a.s_t}/25</span></div>
+            <div class="score-dim-row"><span class="score-dim-label">Pain signal</span><div class="score-dim-bar"><div class="score-dim-fill dim-pain" style="width:${(a.s_p/25)*100}%"></div></div><span class="score-dim-val">${a.s_p}/25</span></div>
+          </div>
+        </div>
+        <div class="detail-section">
+          <div class="detail-section-title">Outreach angle</div>
+          <div class="outreach-text">${a.outreach}</div>
+          <div class="outreach-opener"><strong>Opening line:</strong> ${a.opener}</div>
+        </div>
+      </div></td>`;
+      tbody.appendChild(det);
+    }
+  });
+}
+
+function setFilter(type,val,btn){
+  filters[type]=val;
+  btn.closest('.controls').querySelectorAll('.filter-btn').forEach(b=>{
+    if(b.onclick&&b.onclick.toString().includes(`'${type}'`))b.classList.remove('active');
+  });
+  btn.classList.add('active');
+  expandedId=null;
+  render();
+}
+
+function sortBy(){sortDir*=-1;render()}
+
+function switchTab(name,el){
+  ['strike','impact','signals','product','expansion','accounts','methodology'].forEach(t=>{
+    document.getElementById('tab-'+t).classList.add('hidden');
+  });
+  document.getElementById('tab-'+name).classList.remove('hidden');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  if(name==='accounts')render();
+}
+
+/* SIGNAL QUEUE: live install-base view, generated from the signal engine */
+var RISK_TYPES={automation_volume_drop:1,champion_job_change:1};
+var LAST_DATA={};
+var QSTATE_KEY='intradiem_queue_state';
+var SNOOZE_DAYS=7;
+function loadQState(){try{return JSON.parse(localStorage.getItem(QSTATE_KEY)||'{}');}catch(e){return {};}}
+function saveQState(s){try{localStorage.setItem(QSTATE_KEY,JSON.stringify(s));}catch(e){}}
+function acctStatus(domain){
+  var s=loadQState()[domain];
+  if(!s)return null;
+  if(s.status==='snoozed'&&s.until&&Date.now()>s.until)return null;
+  return s;
+}
+function markAccount(domain,action){
+  var s=loadQState();
+  if(action==='reopen')delete s[domain];
+  else if(action==='snoozed')s[domain]={status:'snoozed',until:Date.now()+SNOOZE_DAYS*86400000};
+  else s[domain]={status:'actioned',until:null};
+  saveQState(s);
+  renderSignalQueue(LAST_DATA);
+}
+function routeBadge(route){
+  var c=route.indexOf('AE')>-1?'background:var(--green-bg);color:var(--green)':'background:var(--blue-bg);color:var(--blue)';
+  return '<span class="tier-badge" style="'+c+'">'+route+'</span>';
+}
+function qBtn(domain,action,label){
+  return '<button onclick="markAccount(\''+domain+'\',\''+action+'\')" style="padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:white;color:var(--purple-mid);font-size:11px;font-weight:600;cursor:pointer">'+label+'</button>';
+}
+function renderSignalQueue(data){
+  LAST_DATA=data||{};
+  var accts=(data&&data.accounts?data.accounts.slice():[]).sort(function(a,b){return b.signals_fired-a.signals_fired;});
+  var firing=accts.filter(function(a){return a.signals_fired>0;});
+  var clean=accts.length-firing.length, ae=0, csm=0;
+  firing.forEach(function(a){a.signals.forEach(function(s){if(s.route.indexOf('AE')>-1)ae++;if(s.route.indexOf('CSM')>-1)csm++;});});
+  var active=[], worked=[];
+  firing.forEach(function(a){(acctStatus(a.domain)?worked:active).push(a);});
+  var ss=document.getElementById('sq-summary');
+  if(ss)ss.innerHTML='<div class="stat"><div class="stat-num">'+accts.length+'</div><div class="stat-label">Accounts<br>monitored</div></div>'
+    +'<div class="stat-divider"></div>'
+    +'<div class="stat"><div class="stat-num" style="color:var(--purple)">'+active.length+'</div><div class="stat-label">To work<br>now</div></div>'
+    +'<div class="stat"><div class="stat-dot" style="background:var(--green)"></div><div class="stat-num" style="color:var(--green)">'+ae+'</div><div class="stat-label">AE<br>routes</div></div>'
+    +'<div class="stat"><div class="stat-dot" style="background:var(--blue)"></div><div class="stat-num" style="color:var(--blue)">'+csm+'</div><div class="stat-label">CSM<br>routes</div></div>'
+    +'<div class="stat-divider"></div>'
+    +'<div class="stat"><div class="stat-num" style="color:var(--slate)">'+worked.length+'</div><div class="stat-label">Worked /<br>snoozed</div></div>';
+  var wrap=document.getElementById('sq-cards');
+  if(wrap){
+    wrap.innerHTML='';
+    active.forEach(function(a){
+      var isRisk=a.signals.some(function(s){return RISK_TYPES[s.type];});
+      var rows=a.signals.map(function(s){
+        return '<div class="signal-threshold"><strong>'+s.type+'</strong> &middot; '+s.value+' &rarr; '+s.route
+          +'<div style="margin-top:3px;color:var(--muted)">'+s.reason+'</div></div>';
+      }).join('');
+      var actions='<div style="display:flex;gap:6px;margin-top:9px">'+qBtn(a.domain,'actioned','&#10003; Mark actioned')+qBtn(a.domain,'snoozed','&#9200; Snooze '+SNOOZE_DAYS+'d')+'</div>';
+      var card=document.createElement('div');
+      card.className='signal-card '+(isRisk?'risk':'expansion');
+      card.innerHTML='<div class="signal-header"><span class="signal-name">'+a.company+'</span>'
+        +'<span class="account-hq" style="flex:1">'+a.domain+'</span>'+routeBadge(a.primary_routing)+'</div>'+rows+actions;
+      wrap.appendChild(card);
+    });
+    if(!active.length)wrap.innerHTML='<div class="plg-note" style="grid-column:1/-1">Queue clear. Every firing account has been worked or snoozed.</div>';
+  }
+  var wk=document.getElementById('sq-worked');
+  if(wk){
+    if(worked.length){
+      var items=worked.map(function(a){
+        var st=acctStatus(a.domain), label=(st&&st.status==='snoozed')?('snoozed until '+new Date(st.until).toLocaleDateString()):'actioned';
+        return '<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:12px">'
+          +'<span style="color:var(--slate)">'+a.company+' <span style="color:var(--muted)">&middot; '+label+'</span></span>'
+          +'<span style="margin-left:auto">'+qBtn(a.domain,'reopen','reopen')+'</span></div>';
+      }).join('');
+      wk.innerHTML='<div class="arch-title" style="margin-bottom:6px">Worked / snoozed <span>'+worked.length+'</span></div>'+items;
+    }else{wk.innerHTML='';}
+  }
+  var cl=document.getElementById('sq-clean');
+  if(cl)cl.innerHTML='<strong style="color:var(--purple-mid)">'+clean+' accounts clear.</strong> No signal firing this run. The queue only surfaces accounts that need a motion.';
+  var g=document.getElementById('sq-gen');
+  if(g)g.textContent=data&&data.generated_at?'Generated '+data.generated_at.slice(0,19).replace('T',' ')+' UTC':'';
+}
+(function(){
+  var seed={}, el=document.getElementById('signal-data');
+  if(el){try{seed=JSON.parse(el.textContent||'{}');}catch(e){}}
+  renderSignalQueue(seed);
+  fetch('signals.json').then(function(r){return r.ok?r.json():null;}).then(function(d){if(d)renderSignalQueue(d);}).catch(function(){});
+})();
+
+/* STRIKE LIST: net-new TAM outbound, generated from the TAM engine */
+var LAST_TAM={};
+function slEsc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+function slToggle(i){var d=document.getElementById('sl-d-'+i);if(d)d.style.display=(d.style.display==='none'?'block':'none');}
+function renderStrikeList(data){
+  LAST_TAM=data||{};
+  var accts=(data&&data.accounts)?data.accounts:[];
+  var hot=accts.filter(function(a){return a.fresh;}).length;
+  var t1=accts.filter(function(a){return a.tier===1;}).length;
+  var avg=accts.length?Math.round(accts.reduce(function(s,a){return s+a.icp_total;},0)/accts.length):0;
+  var ss=document.getElementById('sl-summary');
+  if(ss)ss.innerHTML='<div class="stat"><div class="stat-num">'+accts.length+'</div><div class="stat-label">Target<br>accounts</div></div>'
+    +'<div class="stat-divider"></div>'
+    +'<div class="stat"><div class="stat-dot" style="background:var(--green)"></div><div class="stat-num" style="color:var(--green)">'+hot+'</div><div class="stat-label">Hot<br>today</div></div>'
+    +'<div class="stat"><div class="stat-num" style="color:var(--purple)">'+t1+'</div><div class="stat-label">Tier 1<br>Direct AE</div></div>'
+    +'<div class="stat-divider"></div>'
+    +'<div class="stat"><div class="stat-num">'+avg+'</div><div class="stat-label">Avg fit<br>/100</div></div>';
+  var wrap=document.getElementById('sl-list');
+  if(!wrap)return;
+  wrap.innerHTML='';
+  accts.forEach(function(a,i){
+    var tierCls=a.tier===1?'tier1':a.tier===2?'tier2':'tier3';
+    var topTrig=(a.triggers&&a.triggers[0])?a.triggers[0].label:'no fresh trigger';
+    var flag=a.fresh?'<span class="tier-badge" style="background:#FEF08A;color:#713F12">HOT</span>':'';
+    var owner=a.seller?(typeof a.seller==='string'?a.seller:(a.seller.seller_name||'')):'';
+    var card=document.createElement('div');
+    card.className='signal-card expansion';
+    card.style.marginBottom='10px';
+    var head='<div class="signal-header" style="cursor:pointer" onclick="slToggle('+i+')">'
+      +'<span class="signal-name">'+slEsc(a.company)+'</span>'
+      +'<span class="account-hq" style="flex:1">'+slEsc(a.domain)+' &middot; '+slEsc(a.industry)+'</span>'
+      +flag+' <span class="tier-badge '+tierCls+'">Tier '+a.tier+'</span>'
+      +' <span class="tier-badge" style="background:var(--purple-light);color:var(--purple-mid)">fit '+a.icp_total+'</span>'
+      +' <span class="tier-badge" style="background:var(--green-bg);color:var(--green)">'+slEsc(a.roi_label)+'/yr</span></div>';
+    var sub='<div class="signal-desc" style="cursor:pointer" onclick="slToggle('+i+')">Why now: '+slEsc(topTrig)
+      +(owner?(' &middot; owner '+slEsc(owner)):'')+' &middot; <span style="color:var(--purple-mid)">click for the full plan</span></div>';
+    var detail='<div id="sl-d-'+i+'" style="display:none;margin-top:10px">';
+    detail+='<div class="detail-section-title">Why now</div>';
+    (a.triggers||[]).forEach(function(t){
+      detail+='<div class="signal-threshold" style="margin-bottom:6px"><strong>'+slEsc(t.label)+'</strong> &middot; '+slEsc(t.detail)+' ('+slEsc(t.date)+')<div style="margin-top:3px;color:var(--muted)">'+slEsc(t.play)+'</div></div>';
+    });
+    if(a.committee&&a.committee.length){
+      detail+='<div class="detail-section-title" style="margin-top:12px">Buying committee and sequences</div>';
+      a.committee.forEach(function(m){
+        detail+='<div style="margin-top:10px;font-weight:700;color:var(--purple-mid);font-size:12px">'+slEsc(m.role)+'</div>';
+        (m.sequence||[]).forEach(function(s){
+          var subj=s.subject?(' &middot; Subject: '+slEsc(s.subject)):'';
+          detail+='<div class="signal-threshold" style="margin-top:6px"><strong>Day '+s.day+' &middot; '+slEsc(s.channel)+'</strong>'+subj
+            +'<div style="margin-top:4px;white-space:pre-wrap;color:var(--text)">'+slEsc(s.body)+'</div></div>';
+        });
+      });
+    } else {
+      detail+='<div class="signal-desc" style="margin-top:10px;color:var(--muted)">The full committee and sequences load on the live site (tam_plays.json next to index.html).</div>';
+    }
+    detail+='</div>';
+    card.innerHTML=head+sub+detail;
+    wrap.appendChild(card);
+  });
+}
+(function(){
+  var seed={}, el=document.getElementById('tam-data');
+  if(el){try{seed=JSON.parse(el.textContent||'{}');}catch(e){}}
+  renderStrikeList(seed);
+  fetch('tam_plays.json').then(function(r){return r.ok?r.json():null;}).then(function(d){if(d)renderStrikeList(d);}).catch(function(){});
+})();
+
+/* IMPACT: ELT scorecard, generated from the impact engine */
+var LAST_IMPACT={};
+function imStat(num,label,color){return '<div class="exp-stat"><div class="exp-stat-num" style="color:'+(color||'var(--purple)')+'">'+num+'</div><div class="exp-stat-label">'+label+'</div></div>';}
+function imToggle(){var dd=document.getElementById('im-calc'),t=document.getElementById('im-calc-toggle');if(!dd)return;var hidden=(dd.style.display==='none'||dd.style.display==='');dd.style.display=hidden?'block':'none';if(t&&LAST_IMPACT.net_new)t.innerHTML=(hidden?'▾':'▸')+' How we get to '+LAST_IMPACT.net_new.roi_surfaced_label;}
+function renderImpact(d){
+  if(!d||!d.net_new)return;
+  LAST_IMPACT=d;
+  var nn=d.net_new,ib=d.install_base,rz=d.realized;
+  var head=document.getElementById('im-headline');
+  if(head)head.innerHTML='<div class="arch-section" style="text-align:center;background:linear-gradient(135deg,#2D1B69,#1E1145);border:none">'
+    +'<div style="font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,0.5)">Opportunity surfaced this period</div>'
+    +'<div style="font-size:52px;font-weight:900;color:#A78BFA;line-height:1.1;margin:6px 0">'+nn.roi_surfaced_label+'</div>'
+    +'<div style="font-size:13px;color:rgba(255,255,255,0.6);max-width:640px;margin:0 auto">Estimated recoverable customer cost the system has put in front of reps, across '+nn.accounts_targeted+' target accounts, plus '+ib.signals_firing+' live expansion signals on the install base.</div></div>';
+  if(head){
+    var a=nn.assumptions||{}, bd=nn.breakdown||[];
+    var rows=bd.map(function(b){return '<tr><td style="padding:4px 8px">'+b.company+'</td><td style="padding:4px 8px;text-align:right">'+(b.agent_count||0).toLocaleString()+'</td><td style="padding:4px 8px;text-align:right;color:var(--muted)">x '+(a.per_agent_label||'')+'</td><td style="padding:4px 8px;text-align:right;font-weight:700">'+b.roi_label+'</td></tr>';}).join('');
+    head.innerHTML+='<div style="margin-top:12px">'
+      +'<div onclick="imToggle()" id="im-calc-toggle" style="cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--purple-mid);background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:8px;padding:8px 12px">▸ How we get to '+nn.roi_surfaced_label+'</div>'
+      +'<div id="im-calc" style="display:none;margin-top:10px;background:white;border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:left">'
+      +'<div style="font-size:12px;color:var(--slate);line-height:1.6">Each account is its agent count times a recoverable cost per agent. The per-agent figure comes from three assumptions you control in roi_model.json:</div>'
+      +'<div style="font-size:12px;color:var(--slate);margin:8px 0;line-height:1.9">&bull; '+(a.idle_minutes_per_agent_hour||3)+' idle minutes recovered per agent-hour<br>&bull; '+((a.productive_hours_per_year||1700)).toLocaleString()+' productive agent-hours per year<br>&bull; $'+(a.loaded_hourly_cost||28)+' fully loaded hourly cost<br><b>= '+(a.per_agent_label||'')+' recoverable per agent per year</b></div>'
+      +'<table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:6px"><thead><tr style="color:var(--muted);font-size:10px;text-transform:uppercase"><th style="text-align:left;padding:4px 8px">Account</th><th style="text-align:right;padding:4px 8px">Agents</th><th style="text-align:right;padding:4px 8px">Per agent</th><th style="text-align:right;padding:4px 8px">Recoverable</th></tr></thead><tbody>'+rows
+      +'<tr style="border-top:2px solid var(--border);font-weight:800"><td style="padding:6px 8px">Total surfaced</td><td></td><td></td><td style="padding:6px 8px;text-align:right;color:var(--green)">'+nn.roi_surfaced_label+'</td></tr></tbody></table>'
+      +'<div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.6">Change any assumption in roi_model.json and every number here updates. This is estimated recoverable cost in front of reps on sample data, not booked revenue. Verify against real Intradiem benchmarks before using it externally.</div>'
+      +'</div></div>';
+  }
+  var body=document.getElementById('im-body');
+  if(body)body.innerHTML=
+    '<div class="arch-section"><div class="arch-title">Opportunity surfaced</div><div class="method-dims" style="grid-template-columns:repeat(3,1fr)">'
+    +imStat(nn.roi_surfaced_label,'Net-new recoverable ROI','var(--green)')
+    +imStat(nn.hot_roi_surfaced_label,'Hot today ('+nn.hot_today+' accounts)','var(--green)')
+    +imStat(nn.accounts_targeted,'Target accounts scored')
+    +'</div></div>'
+    +'<div class="arch-section"><div class="arch-title">System activity, no extra headcount</div><div class="method-dims" style="grid-template-columns:repeat(5,1fr)">'
+    +imStat(nn.strike_plans,'Strike plans')
+    +imStat(nn.committee_contacts_mapped,'Contacts mapped')
+    +imStat(nn.sequence_messages_drafted,'Messages drafted')
+    +imStat(ib.accounts_monitored,'Install base scored')
+    +imStat(ib.signals_firing,'Signals firing','var(--amber)')
+    +'</div></div>'
+    +'<div class="arch-section"><div class="arch-title">Realized, the number you grow</div><div class="method-dims" style="grid-template-columns:repeat(3,1fr)">'
+    +imStat(rz.meetings_booked,'Meetings booked','var(--blue)')
+    +imStat(rz.pipeline_created_label,'Pipeline created','var(--blue)')
+    +imStat(rz.revenue_won_label,'Revenue won','var(--green)')
+    +'</div><div class="anc-body" style="margin-top:10px;color:var(--muted)">Realized results come from outcomes.csv. Keep opportunity surfaced and realized clearly separate when you present: one is what the system found, the other is what closed.</div></div>';
+}
+(function(){var seed={},el=document.getElementById('impact-data');if(el){try{seed=JSON.parse(el.textContent||'{}');}catch(e){}}renderImpact(seed);fetch('impact.json').then(function(r){return r.ok?r.json():null;}).then(function(d){if(d)renderImpact(d);}).catch(function(){});})();
+</script>
+</body>
+</html>

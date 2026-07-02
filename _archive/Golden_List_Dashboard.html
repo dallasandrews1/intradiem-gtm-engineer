@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Golden List — Live Account Intelligence Layer</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1a1d21; --muted:#5f6670; --line:#e6e8ec;
+    --a:#0f6e56; --aBg:#e1f5ee; --b:#185fa5; --bBg:#e6f1fb; --c:#854f0b; --cBg:#faeeda; --d:#5f5e5a; --dBg:#f1efe8;
+    --sr:#534ab7; --srBg:#eeedfe; --bo:#0f6e56; --boBg:#e1f5ee; --accent:#26215c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;padding:24px}
+  .wrap{max-width:1100px;margin:0 auto}
+  h1{font-size:22px;font-weight:600;margin:0}
+  .sub{color:var(--muted);font-size:13px;margin:2px 0 0}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+  .badge{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;background:var(--dBg);color:var(--muted);padding:4px 10px;border-radius:999px}
+  .filters{display:flex;gap:8px;margin-bottom:18px}
+  .filters button{font:inherit;font-size:13px;font-weight:500;padding:7px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;cursor:pointer}
+  .filters button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .tile .lbl{font-size:12px;color:var(--muted);margin-bottom:6px}
+  .tile .val{font-size:26px;font-weight:600;line-height:1}
+  .tile .note{font-size:11px;color:var(--muted);margin-top:5px}
+  .grid{display:grid;grid-template-columns:1.45fr 1fr;gap:18px}
+  @media(max-width:840px){.grid{grid-template-columns:1fr}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .panel h2{font-size:15px;font-weight:600;margin:0 0 12px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;color:var(--muted);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.03em;padding:0 8px 8px;border-bottom:1px solid var(--line)}
+  td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  .co{font-weight:600}
+  .co small{display:block;font-weight:400;color:var(--muted);font-size:11px}
+  .pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px}
+  .g-A{background:var(--aBg);color:var(--a)} .g-B{background:var(--bBg);color:var(--b)} .g-C{background:var(--cBg);color:var(--c)} .g-D{background:var(--dBg);color:var(--d)}
+  .m-sr{background:var(--srBg);color:var(--sr)} .m-bo{background:var(--boBg);color:var(--bo)}
+  .funnel-row{margin-bottom:12px}
+  .funnel-row .fl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+  .fl .name{color:var(--muted)} .fl .num{font-weight:600}
+  .bar{height:9px;background:var(--dBg);border-radius:999px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+  .sig{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+  .sig:last-child{border-bottom:none}
+  .sig .t{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;height:fit-content;white-space:nowrap}
+  .t1{background:#fcebeb;color:#a32d2d} .t2{background:#faeeda;color:#854f0b} .tb{background:#e1f5ee;color:#0f6e56}
+  .sig .act{color:var(--muted)}
+  .foot{color:var(--muted);font-size:11.5px;margin-top:18px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Golden List <span style="font-weight:400;color:var(--muted)">· live account intelligence layer</span></h1>
+      <p class="sub">Every campaign, sequence, and agent runs off this list. Scored · enriched · signal-aware · source-tagged for attribution.</p>
+    </div>
+    <span class="badge">Sample data · illustrative</span>
+  </div>
+
+  <div class="filters" id="filters">
+    <button data-m="all" class="on">All motions</button>
+    <button data-m="sr">Star Ratings</button>
+    <button data-m="bo">Back office</button>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Accounts — scored &amp; graded</h2>
+      <table>
+        <thead><tr><th>Account</th><th>Motion</th><th>Stars</th><th>Fit</th><th>Intent</th><th>Grade</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <div>
+      <div class="panel" style="margin-bottom:18px">
+        <h2>Instrumentation funnel</h2>
+        <div id="funnel"></div>
+      </div>
+      <div class="panel">
+        <h2>Signal feed</h2>
+        <div id="signals"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="foot">Attribution: engine credited at the qualified-reply / meeting-sourced line via read-only source tags (<code>gtm_engine_sourced</code>, <code>source_motion</code>, <code>sourced_date</code>). Reps own conversion from the reply forward. AI enriches; people keep the judgment; human approval before anything sends. Numbers are illustrative placeholders to co-shape with Naveen.</p>
+</div>
+
+<script>
+const accounts=[
+ {co:"Summit MA Plan",contact:"Dir, Medicare Stars",m:"sr",vert:"Payer",stars:3.94,fit:90,intent:78,sig:"Earnings-call Stars mention (T1)"},
+ {co:"Point32 Health",contact:"Kristen Dowd · VP Medicare Stars",m:"sr",vert:"Payer",stars:3.91,fit:88,intent:72,sig:"QBP 3.91 — near cliff"},
+ {co:"Cascade Health Plan",contact:"VP Quality",m:"sr",vert:"Payer",stars:3.88,fit:82,intent:65,sig:"New Stars leader (T2)"},
+ {co:"Lone Star Care",contact:"VP Finance",m:"sr",vert:"Payer",stars:3.76,fit:74,intent:58,sig:"Stars language in 10-Q (T1)"},
+ {co:"Gulf Coast Health",contact:"Dir, Medicare",m:"sr",vert:"Payer",stars:3.69,fit:61,intent:40,sig:"Quality hiring cluster (T2)"},
+ {co:"Meridian Health",contact:"VP Operations · claims",m:"bo",vert:"Claims ops",stars:null,fit:80,intent:55,sig:"Automation initiative (signal)"},
+ {co:"Anchor Insurance",contact:"Dir, Enrollment Ops",m:"bo",vert:"Enrollment ops",stars:null,fit:72,intent:48,sig:"Backlog / SLA news"},
+ {co:"Northwind Benefits",contact:"VP Shared Services",m:"bo",vert:"Billing ops",stars:null,fit:68,intent:35,sig:"Ops leadership change"},
+];
+const funnels={
+ sr:{enriched:157,sent:612,opens:367,replies:78,qreplies:22,meetings:9},
+ bo:{enriched:86,sent:240,opens:132,replies:28,qreplies:11,meetings:4},
+};
+const signals=[
+ {t:"T1",cls:"t1",txt:"October CMS Star Ratings release",act:"Refresh stars, re-rank, sequence in-window accounts"},
+ {t:"T1",cls:"t1",txt:"“Star Rating” in Summit MA 10-Q",act:"Trigger Finance-persona sequence"},
+ {t:"T2",cls:"t2",txt:"New VP Quality at Cascade",act:"New-leader angle"},
+ {t:"T2",cls:"t2",txt:"Quality hiring cluster at Gulf Coast",act:"Queue sequence"},
+ {t:"BO",cls:"tb",txt:"Automation initiative at Meridian",act:"Back-office orchestration angle"},
+];
+function grade(a){if(a.fit>=70&&a.intent>=60)return"A";if(a.fit>=70)return"B";if(a.fit>=50)return"C";return"D";}
+let cur="all";
+function fa(){return cur==="all"?accounts:accounts.filter(a=>a.m===cur);}
+function sumF(){const ks=cur==="all"?["sr","bo"]:[cur];const o={enriched:0,sent:0,opens:0,replies:0,qreplies:0,meetings:0};ks.forEach(k=>{for(const f in o)o[f]+=funnels[k][f];});return o;}
+function render(){
+ const list=fa();
+ const aCount=list.filter(a=>grade(a)==="A").length;
+ const avgFit=Math.round(list.reduce((s,a)=>s+a.fit,0)/list.length);
+ const f=sumF();
+ document.getElementById("tiles").innerHTML=[
+  ["Accounts",list.length,"scored &amp; graded"],
+  ["A-grade",aCount,"work first"],
+  ["Avg fit score",avgFit,"of 100"],
+  ["Qualified replies",f.qreplies,"the 10× unit"],
+  ["Meetings booked",f.meetings,"engine-sourced"],
+ ].map(t=>`<div class="tile"><div class="lbl">${t[0]}</div><div class="val">${t[1]}</div><div class="note">${t[2]}</div></div>`).join("");
+ document.getElementById("rows").innerHTML=list.map(a=>{const g=grade(a);return `<tr>
+   <td class="co">${a.co}<small>${a.contact}</small></td>
+   <td><span class="pill ${a.m==="sr"?"m-sr":"m-bo"}">${a.m==="sr"?"Star Ratings":"Back office"}</span></td>
+   <td>${a.stars?a.stars.toFixed(2):"—"}</td>
+   <td>${a.fit}</td><td>${a.intent}</td>
+   <td><span class="pill g-${g}">${g}</span></td></tr>`;}).join("");
+ const stages=[["Enriched",f.enriched],["Sent",f.sent],["Opens",f.opens],["Replies",f.replies],["Qualified replies",f.qreplies],["Meetings",f.meetings]];
+ const max=f.sent||1;
+ document.getElementById("funnel").innerHTML=stages.map(s=>`<div class="funnel-row"><div class="fl"><span class="name">${s[0]}</span><span class="num">${s[1].toLocaleString()}</span></div><div class="bar"><i style="width:${Math.max(4,Math.round(s[1]/max*100))}%"></i></div></div>`).join("");
+ const sg=cur==="bo"?signals.filter(s=>s.cls==="tb"):cur==="sr"?signals.filter(s=>s.cls!=="tb"):signals;
+ document.getElementById("signals").innerHTML=sg.map(s=>`<div class="sig"><span class="t ${s.cls}">${s.t}</span><div><div>${s.txt}</div><div class="act">${s.act}</div></div></div>`).join("");
+}
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;cur=b.dataset.m;[...document.querySelectorAll("#filters button")].forEach(x=>x.classList.toggle("on",x===b));render();});
+render();
+</script>
+</body>
+</html>

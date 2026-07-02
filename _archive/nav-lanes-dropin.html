@@ -1,0 +1,89 @@
+<!--
+  ===========================================================================
+  GROUPED NAV LANES — DROP-IN for intradiem.dallasandrews.dev
+  ===========================================================================
+  Verified live against the deployed page on June 15, 2026. Fully compatible
+  with the existing switchTab(name, el) function and all #tab-* panels — no JS
+  changes required. The clickable items keep class="tab" so switchTab()'s
+  querySelectorAll('.tab') and active-toggle keep working unchanged.
+
+  HOW TO INSTALL (two edits to index.html):
+    1) Paste the <style> block below anywhere inside your existing <style>…</style>
+       (or just before </head>).
+    2) Replace the entire current  <div class="tabs"> … </div>  block
+       (the 7-tab row) with the <div class="nav-lanes"> … </div> block below.
+    Nothing else changes. Default open tab stays Strike List, as it is today.
+
+  Notes:
+    - Lane labels are color-coded to your existing signal-dot palette
+      (violet / green / amber) so it reads as native, not bolted on.
+    - Tab labels shortened for the lanes (e.g. "PLG Framework"); restore full
+      names if you prefer — only the visible text changes, not the switchTab id.
+  ===========================================================================
+-->
+
+<!-- ========== 1) ADD THIS CSS ========== -->
+<style>
+.nav-lanes{
+  background:var(--purple-dark);
+  padding:14px 28px;
+  display:flex;gap:14px;align-items:stretch;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  flex-wrap:wrap;                 /* wraps cleanly on laptop / mobile */
+}
+.nav-lane{
+  flex:1;min-width:220px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:11px;overflow:hidden;
+}
+.nav-lane .lane-cap{
+  display:flex;align-items:center;gap:7px;
+  padding:9px 14px;
+  background:rgba(255,255,255,.04);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+}
+.nav-lane .lane-cap .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.nav-lane .lane-tabs{display:flex;padding:5px 6px;gap:2px;flex-wrap:wrap}
+
+/* restyle the existing .tab items inside the lanes — keeps switchTab() working */
+.nav-lanes .tab{
+  padding:8px 12px;font-size:12px;font-weight:500;
+  color:rgba(255,255,255,.5);cursor:pointer;
+  border:none;border-radius:7px;background:transparent;
+}
+.nav-lanes .tab:hover{color:rgba(255,255,255,.78)}
+.nav-lanes .tab.active{font-weight:700;color:#fff;background:rgba(167,139,250,.18);border:none}
+</style>
+
+
+<!-- ========== 2) REPLACE THE <div class="tabs">…</div> WITH THIS ========== -->
+<div class="nav-lanes">
+
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#A78BFA"><span class="dot" style="background:#A78BFA"></span>Expansion engine</div>
+    <div class="lane-tabs">
+      <div class="tab" onclick="switchTab('expansion',this)">📈 PLG Framework</div>
+      <div class="tab" onclick="switchTab('signals',this)">🚨 Signal Queue</div>
+      <div class="tab" onclick="switchTab('impact',this)">📊 Impact</div>
+    </div>
+  </div>
+
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#34D399"><span class="dot" style="background:#34D399"></span>Net-new engine</div>
+    <div class="lane-tabs">
+      <div class="tab active" onclick="switchTab('strike',this)">📨 Strike List</div>
+      <div class="tab" onclick="switchTab('accounts',this)">🎯 ICP Scoring</div>
+      <div class="tab" onclick="switchTab('methodology',this)">⚙️ Scoring Model</div>
+    </div>
+  </div>
+
+  <div class="nav-lane">
+    <div class="lane-cap" style="color:#FBBF24"><span class="dot" style="background:#FBBF24"></span>The build</div>
+    <div class="lane-tabs">
+      <div class="tab" onclick="switchTab('product',this)">🧭 Product Console</div>
+    </div>
+  </div>
+
+</div>

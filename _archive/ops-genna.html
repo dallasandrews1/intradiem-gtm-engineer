@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Engine · Ops Governance Console — for Genna Barrett-Moeller</title>
+<style>
+  :root{
+    --bg:#0b0e13; --bg2:#0e1219; --card:#141a23; --card2:#10151d; --line:#232c39; --line2:#2c3645;
+    --ink:#e8eef6; --mut:#8a97a8; --faint:#5b6675;
+    --ae:#46c08a; --csm:#5aa2e6; --risk:#e5675f; --warn:#e0a93b; --gov:#8b7cf0;
+    --accent:#8b7cf0; --accent-soft:rgba(139,124,240,.14); --accent-line:rgba(139,124,240,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 80% -10%,rgba(139,124,240,.06),transparent),var(--bg);color:var(--ink);font:13px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:18px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto}
+  a{color:#b3a9f5;text-decoration:none}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:6px;flex-wrap:wrap;gap:10px}
+  .brandmark{display:flex;align-items:center;gap:9px}
+  .glyph{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--accent),#5d4fd0);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;box-shadow:0 0 0 1px var(--accent-line)}
+  header h1{font-size:18px;font-weight:700;letter-spacing:-.01em}
+  header h1 span{color:#b3a9f5}
+  .sub{font-size:12px;color:var(--mut);margin-top:3px}
+  .meta{font-size:11px;color:var(--mut);text-align:right}
+  .tag{display:inline-block;background:var(--accent-soft);border:1px solid var(--accent-line);color:#c8c0f8;padding:3px 11px;border-radius:6px;font-size:11px;font-weight:600}
+  .sysmap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 6px;font-size:11px;color:var(--faint)}
+  .sysmap .lbl{text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:var(--mut)}
+  .surface{display:flex;align-items:center;gap:7px;padding:5px 11px;border-radius:7px;border:1px solid var(--line);background:var(--card2);color:var(--mut)}
+  .surface.active{border-color:var(--accent-line);background:var(--accent-soft);color:#c8c0f8;font-weight:600}
+  .surface small{display:block;font-size:9px;color:var(--faint);letter-spacing:.04em}
+  .surface .sdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+  .arrow{color:var(--line2);font-size:13px}
+  .caveat{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:0 8px 8px 0;padding:10px 13px;margin:12px 0 16px;font-size:11.5px;color:var(--mut);line-height:1.5}
+  .caveat b{color:var(--ink)}
+  .caveat .ic{color:var(--warn);font-weight:800;flex-shrink:0}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;color:#b3a9f5}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:13px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+  .span2{grid-column:span 2}.span3{grid-column:span 3}
+  .card h2{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:7px;font-weight:700}
+  .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+  .principle{background:linear-gradient(120deg,var(--accent-soft),transparent);border:1px solid var(--accent-line);border-radius:10px;padding:13px 16px;font-size:13.5px;line-height:1.6;margin-bottom:14px;color:var(--ink)}
+  .principle b{color:#c8c0f8}
+  .gate-row{display:flex;align-items:flex-start;gap:11px;padding:9px 0;border-bottom:1px solid var(--line);font-size:12px;cursor:pointer;transition:.12s}
+  .gate-row:last-child{border:0}
+  .gate-row:hover{background:rgba(255,255,255,.015)}
+  .chk{width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:1px;font-weight:800}
+  .c-done{background:rgba(70,192,138,.18);border:1px solid rgba(70,192,138,.5);color:var(--ae)}
+  .c-wait{background:rgba(224,169,59,.14);border:1px solid rgba(224,169,59,.5);color:var(--warn)}
+  .c-block{background:rgba(139,151,166,.08);border:1px solid var(--faint);color:var(--faint)}
+  .gl{flex:1}.gl strong{display:block;margin-bottom:2px}.gl span{color:var(--mut);font-size:11px}
+  .pill{font-size:9.5px;font-weight:700;padding:3px 8px;border-radius:5px;white-space:nowrap;letter-spacing:.03em}
+  .p-done{background:rgba(70,192,138,.12);color:var(--ae);border:1px solid rgba(70,192,138,.3)}
+  .p-wait{background:rgba(224,169,59,.12);color:var(--warn);border:1px solid rgba(224,169,59,.3)}
+  .p-block{background:rgba(139,151,166,.08);color:var(--faint);border:1px solid rgba(139,151,166,.25)}
+  .gate-detail{display:none;font-size:11px;color:var(--mut);background:var(--card2);border:1px solid var(--line);border-radius:7px;padding:9px 11px;margin:4px 0 2px;line-height:1.55}
+  .gate-detail.open{display:block}
+  .gate-detail code{color:#b3a9f5;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px}
+  .stack-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:12px}
+  .stack-row:last-child{border:0}
+  .layer{font-size:9.5px;padding:3px 8px;border-radius:5px;font-weight:700;white-space:nowrap;letter-spacing:.03em}
+  .l-exist{background:rgba(90,162,230,.1);border:1px solid rgba(90,162,230,.3);color:#9cc4ec}
+  .l-new{background:rgba(70,192,138,.1);border:1px solid rgba(70,192,138,.3);color:var(--ae)}
+  .l-prop{background:rgba(224,169,59,.1);border:1px solid rgba(224,169,59,.3);color:var(--warn)}
+  table{width:100%;border-collapse:collapse;font-size:11.5px}
+  th{text-align:left;color:var(--mut);font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:0 10px 8px 0;border-bottom:1px solid var(--line2)}
+  td{padding:9px 10px 9px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}
+  tr:last-child td{border:0}
+  .yes{color:var(--ae);font-weight:700}.no{color:var(--risk);font-weight:700}
+  .q{background:var(--accent-soft);border-left:3px solid var(--accent);padding:9px 12px;border-radius:0 7px 7px 0;margin-bottom:9px;font-size:12px;line-height:1.55}
+  .q:last-child{margin-bottom:0}
+  .q .ql{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:#b3a9f5;margin-bottom:3px;font-weight:700}
+  .dont{display:flex;gap:9px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12px;line-height:1.4}
+  .dont:last-child{border:0}.dont .x{color:var(--risk);font-weight:800;flex-shrink:0}
+  .sc{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+  .sc-box{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:13px;text-align:center}
+  .sc-box .n{font-size:24px;font-weight:800;line-height:1}
+  .sc-box .l{font-size:10.5px;color:var(--mut);margin-top:5px;line-height:1.35}
+  footer{text-align:center;padding:18px 0 4px;font-size:11px;color:var(--faint);border-top:1px solid var(--line);margin-top:6px}
+  footer .built{color:var(--mut);margin-bottom:4px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.span2,.span3{grid-column:auto}.sc{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brandmark">
+        <div class="glyph">S</div>
+        <div>
+          <h1>Signal Engine · <span>Ops Governance Console</span></h1>
+          <div class="sub">How a GTM Engineer extends your ops backbone — through governance, not around it</div>
+        </div>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="tag">Built for Genna Barrett-Moeller · Director of Global Sales Operations</span>
+      <div style="margin-top:6px">Jun 11, 2026 · Dallas Andrews</div>
+    </div>
+  </header>
+
+  <div class="sysmap">
+    <span class="lbl">One signal engine · three role surfaces</span>
+    <span class="arrow">·</span>
+    <span class="surface active"><span class="sdot" style="background:var(--gov)"></span>Ops Console<small>governance &amp; deploy gate</small></span>
+    <span class="arrow">→</span>
+    <a class="surface" href="https://pipeline.dallasandrews.dev"><span class="sdot" style="background:var(--ae)"></span>Pipeline Queue<small>Nathan · live routing</small></a>
+    <span class="arrow">→</span>
+    <a class="surface" href="https://proof.dallasandrews.dev"><span class="sdot" style="background:var(--warn)"></span>Proof Engine<small>Sierra · content briefs</small></a>
+  </div>
+
+  <div class="caveat">
+    <span class="ic">⚑</span>
+    <div><b>Honest scope, up front.</b> The Signal MCP is real and queryable live (built in Cowork — <span class="mono">list_monitored_accounts</span> / <span class="mono">get_expansion_signals</span>). The customer usage values it serves are <b>modeled</b> on public firmographics and realistic platform behavior — not Intradiem's production event stream. Day one points the same processor at the real reporting export. Architecture identical; only the data source swaps. Nothing here is claimed as live production data.</div>
+  </div>
+
+  <div class="principle">
+    Every build starts with a conversation with you. The ops backbone <b>is</b> the system — everything a GTM Engineer ships either strengthens it or quietly creates debt against it. This console exists so you can see exactly what I'd ship, what it touches, and where your sign-off gates it — <b>before</b> a single field reaches Salesforce. I'd want your read on the stack and the data model before I build anything that touches them.
+  </div>
+
+  <div class="grid">
+    <div class="card span2">
+      <h2><span class="dot" style="background:var(--gov)"></span>Deployment Gate — Current Build: Expansion Signal Engine <span style="margin-left:auto;font-weight:600;color:var(--faint);text-transform:none;letter-spacing:0">click any row</span></h2>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-done">✓</div>
+        <div class="gl"><strong>Ops notified before build started</strong><span>No surprise tooling — Sales Ops sees the intake before code exists</span></div>
+        <span class="pill p-done">Done</span>
+      </div>
+      <div class="gate-detail">Standing rule: no GTM build enters your stack without an intake row here first. This is row zero of every project I'd run.</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-done">✓</div>
+        <div class="gl"><strong>Read-only on day one</strong><span>Signal processor consumes the product event export — zero writes to any system of record</span></div>
+        <span class="pill p-done">Done</span>
+      </div>
+      <div class="gate-detail">The MCP exposes <code>get_expansion_signals(domain)</code> — a read. It computes thresholds on a copy of the data. It cannot mutate Salesforce, Gainsight, or the WFM layer. Write access is a separate, gated step below.</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-done">✓</div>
+        <div class="gl"><strong>Overlap check — no duplicate tooling</strong><span>Confirmed gap: no existing signal-routing layer between product events and CRM</span></div>
+        <span class="pill p-done">Done</span>
+      </div>
+      <div class="gate-detail">If an existing tool already did this, I'd extend it rather than ship a parallel one. Shadow tools that duplicate a governed system are how stacks rot — I'd rather kill my own build than fragment yours.</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-wait">⋯</div>
+        <div class="gl"><strong>Data governance review</strong><span>Which customer usage fields can be accessed, by whom, and how they reach an AE — your call</span></div>
+        <span class="pill p-wait">Your input</span>
+      </div>
+      <div class="gate-detail">Open question for you: who owns the customer product-usage schema, and what's the approval path to surface a derived signal (e.g. <code>seat_utilization ≥ 85%</code>) into an AE's workspace?</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-wait">⋯</div>
+        <div class="gl"><strong>CRM field-mapping approval</strong><span>Signal output → Salesforce task/activity fields require your schema sign-off</span></div>
+        <span class="pill p-wait">Your input</span>
+      </div>
+      <div class="gate-detail">Proposed write is one Task + three fields (<code>signal_type</code>, <code>signal_value</code>, <code>fired_at</code>) via Salesforce Flow — never direct API. Flow means signals queue through an outage instead of dropping. You approve the field schema before anything is created.</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-block">—</div>
+        <div class="gl"><strong>Rollback plan documented</strong><span>Blocked until the data model is confirmed — can't scope rollback against an unconfirmed schema</span></div>
+        <span class="pill p-block">Blocked</span>
+      </div>
+      <div class="gate-detail">Rollback = disable the Flow + remove the custom field. Trivial because the build is additive. I won't mark this done until the schema above is locked, on principle.</div>
+
+      <div class="gate-row" onclick="tog(this)">
+        <div class="chk c-block">—</div>
+        <div class="gl"><strong>Production ship approval</strong><span>Nothing reaches production without your explicit sign-off on every row above</span></div>
+        <span class="pill p-block">Awaiting gov.</span>
+      </div>
+      <div class="gate-detail">This is the gate I won't move on my own. Your sign-off is the last row by design — that's the line between a sanctioned system and a shadow tool.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot" style="background:var(--csm)"></span>Where New Tools Live in Your Stack</h2>
+      <div class="stack-row"><span class="layer l-exist">Existing</span><span style="flex:1">Salesforce — source of truth, AE workspace</span></div>
+      <div class="stack-row"><span class="layer l-exist">Existing</span><span style="flex:1">ACD (Genesys / Five9) — call routing</span></div>
+      <div class="stack-row"><span class="layer l-exist">Existing</span><span style="flex:1">WFM (Verint / NICE / Calabrio) — scheduling</span></div>
+      <div class="stack-row"><span class="layer l-exist">Existing</span><span style="flex:1">Intradiem — product event stream <em style="color:var(--faint)">(read source)</em></span></div>
+      <div class="stack-row"><span class="layer l-new">New</span><span style="flex:1">Signal MCP — reads events, computes routes</span></div>
+      <div class="stack-row"><span class="layer l-new">New</span><span style="flex:1">Clay enrichment — account context on fire</span></div>
+      <div class="stack-row"><span class="layer l-prop">Proposed</span><span style="flex:1">SF Flow write — gated on your approval</span></div>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Every new layer is <b style="color:var(--ink)">additive</b>. No existing system is modified. The only proposed write is gated above.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card span3">
+      <h2><span class="dot" style="background:var(--ae)"></span>What Touches Your Systems — Governance Ledger</h2>
+      <table>
+        <tr><th>Component</th><th>Access</th><th>Writes to SoR?</th><th>Mechanism</th><th>Gate</th></tr>
+        <tr><td><b>Signal MCP</b> <span class="mono">get_expansion_signals</span></td><td>Read-only</td><td class="no">No</td><td>Threshold checks on rolling windows; 14-day per-signal suppression</td><td>Shipped</td></tr>
+        <tr><td><b>Clay enrichment</b></td><td>Read (external)</td><td class="no">No</td><td>Weekly pass — champion job-change, firmographics</td><td>Shipped</td></tr>
+        <tr><td><b>Routing logic</b></td><td>Internal</td><td class="no">No</td><td>Rule-based: expansion→AE, health→CSM. No model, fully auditable</td><td>Shipped</td></tr>
+        <tr><td><b>Salesforce write</b></td><td>Scoped Flow</td><td class="yes">Yes — gated</td><td>1 Task + 3 fields via Flow (queues through outages, never direct API)</td><td><b style="color:var(--warn)">Your sign-off</b></td></tr>
+      </table>
+      <div style="margin-top:11px;font-size:10.5px;color:var(--mut);line-height:1.5">Three of four components never touch a system of record. The fourth — the only write — is failure-safe and waits on you. <b style="color:var(--ink)">Suppression and rolling windows exist for your benefit, not the AE's:</b> they stop the same alert firing weekly and keep point-in-time noise from becoming busywork in Salesforce.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card span2">
+      <h2><span class="dot" style="background:var(--gov)"></span>What I'd Bring to You Before Building Anything</h2>
+      <div class="q"><div class="ql">Governance boundary</div>"Where's the line between something a GTM Engineer should ship fast and something that has to live inside governed ops? Where have you seen that line get crossed badly?"</div>
+      <div class="q"><div class="ql">CRM ownership</div>"What's today's process for evaluating a new data write that touches Salesforce — who owns the review, and what does approval actually look like?"</div>
+      <div class="q"><div class="ql">Shadow-to-sanctioned path</div>"If I build a prototype in two weeks that the AEs love, what's the path from useful shadow tool to sanctioned system in your org?"</div>
+    </div>
+    <div class="card">
+      <h2><span class="dot" style="background:var(--risk)"></span>What I Won't Do</h2>
+      <div class="dont"><span class="x">✕</span><span>Ship to production without ops review — ever</span></div>
+      <div class="dont"><span class="x">✕</span><span>Write to Salesforce without your schema approval</span></div>
+      <div class="dont"><span class="x">✕</span><span>Stand up shadow tools that fragment your stack</span></div>
+      <div class="dont"><span class="x">✕</span><span>Onboard AEs to a system without your sign-off</span></div>
+      <div class="dont"><span class="x">✕</span><span>Move fast on data access without a governance model</span></div>
+      <div style="margin-top:11px;font-size:11.5px;color:var(--mut);font-style:italic">Your backbone is what makes everything else work. My job is to extend it, not stress-test it in production.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card span3">
+      <h2><span class="dot" style="background:var(--ae)"></span>What Good Looks Like at 90 Days — From the Ops Seat</h2>
+      <div class="sc">
+        <div class="sc-box"><div class="n" style="color:#b3a9f5">0</div><div class="l">Ungoverned tools in production</div></div>
+        <div class="sc-box"><div class="n" style="color:var(--ae)">1</div><div class="l">Signal engine — ops-reviewed &amp; approved</div></div>
+        <div class="sc-box"><div class="n" style="color:var(--csm)">100%</div><div class="l">Builds logged with ops intake before start</div></div>
+        <div class="sc-box"><div class="n" style="color:var(--warn)">Weekly</div><div class="l">Ops check-in on every active build</div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="built">Built by Dallas Andrews · GTM Engineer candidate · Apollo + Clay for enrichment design · Claude in Cowork for routing logic · custom Signal MCP server (read-only, queryable live)</div>
+    <a href="https://ops.dallasandrews.dev">ops.dallasandrews.dev</a> &nbsp;·&nbsp; one of three role surfaces on the same signal engine
+  </footer>
+
+</div>
+<script>
+  function tog(row){var d=row.nextElementSibling;if(d&&d.classList.contains('gate-detail'))d.classList.toggle('open');}
+</script>
+</body>
+</html>
