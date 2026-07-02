@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Engineer — Intradiem Console</title>
+<style>
+  :root{ color-scheme: light;
+    --deep:#14181F; --text:#1B1F26; --mid:#FE5000; --creme:#FAF8F6;
+    --lilac1:#EFEBE6; --lilac2:#DED8D0; --sea:#C24A12; --sea2:#FE7A3D;
+    --peri:#FBF3EE; --gray:#666; --green:#2f8f4e; --amber:#b5751a; --red:#c0392b;
+    --amberbg:#fdf4e3; --greenbg:#eef7f0; --redbg:#fbeceb;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Lato',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--creme);color:var(--text);line-height:1.5;}
+  .wrap{max-width:1120px;margin:0 auto;padding-bottom:40px;}
+  h1,h2,h3,.eyebrow,.stat-num,.pill,.card-h,.tab,.src{font-family:'Outfit','Segoe UI',sans-serif;}
+
+  header.hero{background:var(--deep);color:#fff;padding:28px 36px 22px;position:relative;overflow:hidden;}
+  header.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sea2),var(--mid));}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sea2);margin-bottom:9px;}
+  header.hero h1{font-size:26px;font-weight:800;letter-spacing:-.02em;}
+  .hero-sub{color:#C9C4BC;font-size:13.5px;margin-top:5px;}
+  .modebadge{position:absolute;top:22px;right:30px;font-family:'Outfit';font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;padding:6px 12px;border-radius:6px;}
+
+  .tabs{background:var(--deep);display:flex;gap:0;padding:0 30px;border-bottom:1px solid #2A323C;}
+  .tab{background:none;border:none;cursor:pointer;color:#B9B1A6;font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:13px 22px;border-bottom:3px solid transparent;transition:.15s;}
+  .tab:hover{color:#fff;}
+  .tab.active{color:#fff;border-bottom-color:var(--sea2);}
+
+  .banner{display:flex;gap:12px;align-items:flex-start;background:var(--amberbg);border-left:4px solid var(--amber);color:#6b4a14;font-size:13px;padding:11px 20px;}
+  .banner b{color:#5a3e10;}
+
+  .lane{display:none;} .lane.show{display:block;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:20px 24px 0;}
+  .card{background:#fff;border:1px solid var(--lilac1);border-radius:11px;padding:17px 19px;}
+  .card.full{grid-column:1 / -1;}
+  .card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;font-weight:700;font-size:14.5px;color:var(--text);margin-bottom:3px;}
+  .card-h .right{display:flex;gap:6px;align-items:center;flex-shrink:0;}
+  .tag{font-family:'Outfit';font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--sea);background:var(--lilac1);padding:2px 7px;border-radius:5px;}
+  .src{font-size:9.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:5px;}
+  .src.sf{background:#eaf1fc;color:#1a5fb4;} .src.slack{background:#f0e9fb;color:#6b21a8;}
+  .src.both{background:var(--peri);color:var(--mid);} .src.road{background:#f1efe9;color:#7a6f57;}
+  .card-sub{font-size:11.5px;color:var(--gray);margin-bottom:11px;}
+
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:2px;}
+  th{text-align:left;font-family:'Outfit';font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mid);padding:5px 8px;border-bottom:2px solid var(--lilac2);}
+  td{padding:5px 8px;border-bottom:1px solid var(--lilac1);color:#3a3346;}
+  tr:nth-child(even) td{background:var(--peri);}
+  td.r,th.r{text-align:right;}
+
+  .flag{display:flex;align-items:center;gap:9px;font-size:13px;padding:6px 0;border-bottom:1px solid var(--lilac1);}
+  .flag:last-child{border-bottom:none;}
+  .ic{width:18px;height:18px;border-radius:50%;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;font-family:'Outfit';}
+  .ic.ok{background:var(--green);} .ic.warn{background:var(--amber);} .ic.bad{background:var(--red);}
+  .flag .lbl{flex:1;color:#3a3346;} .flag .val{font-family:'Outfit';font-weight:700;color:var(--text);}
+
+  .statrow{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;}
+  .stat{flex:1;min-width:96px;} .stat-num{font-size:30px;font-weight:800;color:var(--mid);line-height:1;}
+  .stat-num.warn{color:var(--amber);} .stat-num.bad{color:var(--red);} .stat-num.ok{color:var(--green);}
+  .stat-sub{font-size:11px;color:var(--gray);margin-top:5px;}
+
+  .meter{height:9px;border-radius:6px;background:var(--lilac1);overflow:hidden;margin:7px 0 3px;}
+  .meter>span{display:block;height:100%;background:linear-gradient(90deg,var(--mid),var(--sea));}
+  .bars{margin-top:6px;}
+  .bar{display:flex;align-items:center;gap:9px;margin-bottom:6px;font-size:12px;}
+  .bar .bn{width:118px;color:#3a3346;flex-shrink:0;}
+  .bar .bt{flex:1;height:14px;background:var(--lilac1);border-radius:4px;overflow:hidden;}
+  .bar .bt>span{display:block;height:100%;background:var(--mid);}
+  .bar .bv{width:36px;text-align:right;font-family:'Outfit';font-weight:700;color:var(--text);}
+
+  .verdict{margin-top:11px;background:var(--deep);color:#fff;border-radius:9px;padding:12px 15px;font-size:13px;}
+  .verdict b{color:var(--sea2);}
+  .insight{margin-top:10px;font-size:12.5px;color:#5a4a3a;background:var(--amberbg);border-left:3px solid var(--amber);padding:9px 12px;border-radius:0 6px 6px 0;}
+
+  .golive{margin:20px 24px 0;background:var(--lilac1);border:1px solid var(--lilac2);border-radius:11px;padding:16px 22px;font-size:12.5px;color:#3a3346;}
+  .golive h3{font-family:'Outfit';font-size:12.5px;color:var(--text);text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px;}
+  .golive ol{margin:0 0 0 18px;} .golive li{margin-bottom:5px;}
+  .golive code{background:#fff;border:1px solid var(--lilac2);border-radius:4px;padding:1px 6px;font-family:'Outfit',monospace;font-size:11.5px;color:var(--deep);}
+  footer{text-align:center;color:var(--gray);font-size:11px;margin-top:22px;padding:0 24px;}
+  @media(max-width:760px){ .grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">GTM Engineer · Live Console</div>
+    <h1>Intradiem GTM Console</h1>
+    <div class="hero-sub">Salesforce + Slack · the Operating System, running on live data</div>
+    <div class="modebadge" id="modeBadge">SAMPLE MODE</div>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" data-lane="audit">Foundation Audit</button>
+    <button class="tab" data-lane="pipeline">Pipeline Health</button>
+    <button class="tab" data-lane="growth">Growth Engine</button>
+  </div>
+
+  <div class="banner" id="banner">
+    <span>⚠️</span>
+    <div><b>Showing sample data.</b> No Salesforce/Slack connectors are attached yet. On July 6: connect both, flip one line (<b>MODE → 'live'</b>), confirm the connector tool names, and every card reads your real org. See <b>“Go live in one step.”</b></div>
+  </div>
+
+  <!-- LANE 1 -->
+  <div class="lane show" id="lane-audit">
+    <div class="grid">
+      <div class="card" id="card-conn"></div>
+      <div class="card" id="card-foundation"></div>
+      <div class="card" id="card-objects"></div>
+      <div class="card" id="card-hygiene"></div>
+      <div class="card full" id="card-coverage"></div>
+      <div class="card full" id="card-gap"></div>
+    </div>
+  </div>
+
+  <!-- LANE 2 -->
+  <div class="lane" id="lane-pipeline">
+    <div class="grid">
+      <div class="card" id="card-stale"></div>
+      <div class="card" id="card-slipped"></div>
+      <div class="card" id="card-threaded"></div>
+      <div class="card" id="card-freshness"></div>
+      <div class="card full" id="card-meddic"></div>
+    </div>
+  </div>
+
+  <!-- LANE 3 -->
+  <div class="lane" id="lane-growth">
+    <div class="grid">
+      <div class="card full" id="card-csuite"></div>
+      <div class="card full" id="card-event"></div>
+      <div class="card" id="card-motion"></div>
+      <div class="card" id="card-impact"></div>
+    </div>
+  </div>
+
+  <div class="golive">
+    <h3>Go live in one step</h3>
+    <ol>
+      <li>In Cowork, connect the <b>Salesforce</b> and <b>Slack</b> connectors.</li>
+      <li>Tell Claude <i>“flip the console to live.”</i> That sets <code>CONFIG.MODE='live'</code> — the single switch.</li>
+      <li>Confirm connector tool names in <code>CONFIG.tools</code>. Every card tagged <b>SF</b>/<b>SLACK</b> has its query coded behind the flag. Cards tagged <b>ROADMAP</b> need an added data source (recording tool / product telemetry) and are clearly marked.</li>
+    </ol>
+  </div>
+
+  <footer>GTM Engineer Operating System · Intradiem Console · Dallas Andrews // GTM Engineer // Day 1: July 6, 2026</footer>
+</div>
+
+<script>
+/* ───────────────────────── ONE-STEP SWITCH ─────────────────────────
+   Flip MODE to 'live' after Salesforce + Slack are connected. Single change.
+   Each adapter has a live branch; the only org-specific detail is the
+   connector tool names + a few custom field API names. */
+const CONFIG = {
+  MODE: 'sample',                                  // 'sample' | 'live'
+  tools: {
+    sfQuery:   'mcp__salesforce__query',           // confirm once Salesforce connected
+    slackList: 'mcp__slack__list_channels'         // confirm once Slack connected
+  },
+  fields: { arr:'Committed_ARR__c', staleDays:21, freshDays:7 }  // tune to org
+};
+function unwrap(r){ try { return r.structuredContent ?? JSON.parse(r.content[0].text); } catch(e){ return r; } }
+async function sf(soql){ const r = await window.cowork.callMcpTool(CONFIG.tools.sfQuery, { soql }); return unwrap(r); }
+const LIVE = CONFIG.MODE!=='sample';   // 'live' and 'demo' both exercise the real call→parse path
+
+/* DEMO MODE: simulates the connector so the live SOQL→parse path runs end-to-end
+   with realistic Salesforce REST shapes. Proves the plumbing before real connectors exist.
+   Set CONFIG.MODE='demo' to watch it; 'sample' for the clean static view; 'live' on July 6. */
+if(CONFIG.MODE==='demo'){
+  window.cowork = { callMcpTool: async (name, args)=>{
+    const q=(args.soql||'').toLowerCase(); let recs=[];
+    if(q.includes('from organization')) recs=[{Id:'00Dxx0000000001'}];
+    else if(q.includes('from recordtype')) recs=[{Name:'New Business'},{Name:'Expansion'},{Name:'Renewal'}];
+    else if(q.includes('group by stagename')) recs=[{s:'Discovery',c:34},{s:'Qualification',c:21},{s:'Solution Alignment',c:13},{s:'Commercials',c:7},{s:'Contracting',c:4}];
+    else if(q.includes('group by owner')) recs=[1,2,3,4,5,6,7,8,9].map(i=>({o:'AE '+i,c:i}));
+    else if(q.includes("type='call'")) recs=[{c:41}];
+    else if(q.includes('closedate<today')) recs=[{c:17}];
+    else if(q.includes('lastactivitydate')) recs=[{c:28}];
+    return { content:[{ text: JSON.stringify({ records: recs }) }] };  // mirrors Cowork's wrapped MCP result
+  }};
+}
+
+/* ───────────────────────── SAMPLE DATA (open pipeline = 79 throughout) ───────────────────────── */
+const S = {
+  connection:[
+    {label:'Salesforce ↔ Slack connector', state:'ok',   val:'Active'},
+    {label:'My user mapped (email/SAML)',   state:'warn', val:'Verify'},
+    {label:'API access on integration user',state:'bad',  val:'Not enabled'},
+    {label:'Channels for Records (Opp/Acct)',state:'warn',val:'Opp only'}
+  ],
+  recordTypes:[{name:'New Business',include:'Primary'},{name:'Expansion',include:'Conditional'},{name:'Renewal',include:'Excluded'}],
+  stages:[{stage:'Discovery',open:34},{stage:'Qualification',open:21},{stage:'Solution Alignment',open:13},{stage:'Commercials',open:7},{stage:'Contracting',open:4}],
+  owners:9,
+  objects:[
+    {field:'Next_Steps__c',state:'ok'},{field:'Last_Call_Date__c',state:'ok'},
+    {field:'MEDDIC score fields',state:'bad'},{field:'Contact Roles enabled (Opp)',state:'warn'},
+    {field:'Area_of_Responsibility__c (Contact)',state:'bad'}
+  ],
+  hygiene:{duplicates:14, missingEmail:23, unlinked:41},
+  coverage:{withChannel:30, total:79},
+  gap:[
+    {q:'Call summaries posting to Slack?', a:'Yes', flag:true},
+    {q:'Salesforce activity logs current?', a:'Inconsistent', flag:true},
+    {q:'Managers read Slack (not SF) for deal intel?', a:'Yes', flag:true},
+    {q:'Slack → Salesforce automation running?', a:'No', flag:true}
+  ],
+  stale:{count:28, total:79, value:4.9},
+  slipped:{count:17, total:79},
+  threaded:{single:46, total:79},
+  freshness:{thisWeek:41, lastWeek:53, calendarConnected:0.62},
+  meddic:[{stage:'Discovery',pct:12},{stage:'Qualification',pct:31},{stage:'Solution Align.',pct:44},{stage:'Commercials',pct:70},{stage:'Contracting',pct:90}],
+  csuite:{withCsuite:17, total:79, meetings30d:6, target:0.5},
+  event:{attendees:71, influenced:19, pipeline:4.2, wonCount:5, wonValue:1.1, cadence:'2x / year'},
+  motion:{newLogo:34, expansion:45, winRate:24, cycleDays:142},
+  impact:{surfaced:6.8, realized:1.1, meetings:6}
+};
+
+/* ───────────────────────── ADAPTERS ───────────────────────── */
+const A = {
+  connection:async()=>{ if(!LIVE) return S.connection;
+    const o=[]; try{ await sf('SELECT Id FROM Organization LIMIT 1'); o.push({label:'Salesforce API reachable',state:'ok',val:'OK'});}catch(e){o.push({label:'Salesforce API reachable',state:'bad',val:'No access'});} return o; },
+  recordTypes:async()=>{ if(!LIVE) return S.recordTypes;
+    const d=await sf("SELECT Name FROM RecordType WHERE SobjectType='Opportunity'"); return (d.records||d).map(r=>({name:r.Name,include:'review'})); },
+  stages:async()=>{ if(!LIVE) return S.stages;
+    const d=await sf("SELECT StageName s, COUNT(Id) c FROM Opportunity WHERE IsClosed=false GROUP BY StageName"); return (d.records||d).map(r=>({stage:r.s,open:r.c})); },
+  owners:async()=>{ if(!LIVE) return S.owners;
+    const d=await sf("SELECT Owner.Name o, COUNT(Id) c FROM Opportunity WHERE IsClosed=false GROUP BY Owner.Name"); return (d.records||d).length; },
+  objects:async()=> S.objects,   /* LIVE: describe Opportunity/Contact fields, map presence → state */
+  hygiene:async()=> S.hygiene,   /* LIVE: dup rule report; email=null; contacts w/o OpportunityContactRole */
+  coverage:async()=>{ if(!LIVE) return S.coverage;
+    /* LIVE: total = open opps (SF); withChannel = Slack channels matched to account slug */ return S.coverage; },
+  gap:async()=> S.gap,
+  stale:async()=>{ if(!LIVE) return S.stale;
+    const d=await sf(`SELECT COUNT(Id) c FROM Opportunity WHERE IsClosed=false AND (LastActivityDate<LAST_N_DAYS:${CONFIG.fields.staleDays} OR LastActivityDate=null)`); return {count:(d.records?d.records[0].c:d), total:S.stale.total, value:S.stale.value}; },
+  slipped:async()=>{ if(!LIVE) return S.slipped;
+    const d=await sf("SELECT COUNT(Id) c FROM Opportunity WHERE IsClosed=false AND CloseDate<TODAY"); return {count:(d.records?d.records[0].c:d), total:S.slipped.total}; },
+  threaded:async()=> S.threaded, /* LIVE: per-opp OpportunityContactRole count ≤1 (2-step aggregate) */
+  freshness:async()=>{ if(!LIVE) return S.freshness;
+    const d=await sf(`SELECT COUNT(Id) c FROM Task WHERE Type='Call' AND ActivityDate=LAST_N_DAYS:${CONFIG.fields.freshDays}`); return {thisWeek:(d.records?d.records[0].c:d), lastWeek:S.freshness.lastWeek, calendarConnected:S.freshness.calendarConnected}; },
+  meddic:async()=> S.meddic,     /* LIVE: % opps per stage with min MEDDIC fields set (depends on fields existing) */
+  csuite:async()=> S.csuite,     /* LIVE: open opps w/ OpportunityContactRole→Contact.Title matching C-level regex */
+  event:async()=> S.event,       /* LIVE: Campaign Type='Event' + CampaignMember status + influenced Opportunities */
+  motion:async()=> S.motion,     /* LIVE: new-logo vs expansion record-type split; win rate + avg cycle last 4 qtrs */
+  impact:async()=> S.impact      /* LIVE: surfaced = influenced open pipeline; realized = closed-won from my plays + outcomes log */
+};
+
+/* ───────────────────────── RENDER HELPERS ───────────────────────── */
+const el=id=>document.getElementById(id);
+const ic=s=>s==='ok'?'✓':s==='warn'?'!':'✕';
+const src=(t)=>({sf:'<span class="src sf">SF</span>',slack:'<span class="src slack">Slack</span>',both:'<span class="src both">SF+Slack</span>',road:'<span class="src road">Roadmap</span>'}[t]);
+const head=(title,move,source)=>`<div class="card-h">${title}<span class="right"><span class="tag">${move}</span>${src(source)}</span></div>`;
+const $=(n)=>'$'+n+'M';
+
+async function render(){
+  el('modeBadge').textContent = LIVE?'LIVE':'SAMPLE MODE';
+  if(LIVE) el('banner').style.display='none';
+
+  /* ---- LANE 1: FOUNDATION AUDIT ---- */
+  const conn=await A.connection();
+  el('card-conn').innerHTML=head('Connection Health','Move 1','both')+`<div class="card-sub">Nothing routes or writes without these.</div>`+
+    conn.map(c=>`<div class="flag"><span class="ic ${c.state}">${ic(c.state)}</span><span class="lbl">${c.label}</span><span class="val">${c.val}</span></div>`).join('');
+
+  const [rts,stages,owners]=[await A.recordTypes(),await A.stages(),await A.owners()];
+  el('card-foundation').innerHTML=head('Salesforce Foundation','Move 3','sf')+`<div class="card-sub">Record types, stages, owners, revenue source-of-truth.</div>`+
+    `<table><tr><th>Open Stage</th><th class="r">Opps</th></tr>${stages.map(s=>`<tr><td>${s.stage}</td><td class="r">${s.open}</td></tr>`).join('')}</table>
+     <div style="margin-top:9px;font-size:12px;color:#3a3346"><b>Record types:</b> ${rts.map(r=>r.name+' ('+r.include+')').join(' · ')}<br><b>Active owners:</b> ${owners} · <b>ARR field:</b> ${CONFIG.fields.arr}</div>`;
+
+  const objs=await A.objects();
+  el('card-objects').innerHTML=head('Object Readiness','Move 6','sf')+`<div class="card-sub">Do the fields the AI writes to exist?</div>`+
+    objs.map(o=>`<div class="flag"><span class="ic ${o.state}">${ic(o.state)}</span><span class="lbl">${o.field}</span><span class="val">${o.state==='ok'?'Present':o.state==='warn'?'Partial':'Missing'}</span></div>`).join('');
+
+  const h=await A.hygiene();
+  el('card-hygiene').innerHTML=head('Contact Hygiene','Move 1','sf')+`<div class="card-sub">Dirty data routes calls to N/A and breaks write-back.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num warn">${h.duplicates}</div><div class="stat-sub">Duplicates</div></div>
+     <div class="stat"><div class="stat-num bad">${h.missingEmail}</div><div class="stat-sub">Missing email</div></div>
+     <div class="stat"><div class="stat-num bad">${h.unlinked}</div><div class="stat-sub">No Opp Contact Role</div></div></div>`;
+
+  const cov=await A.coverage(); const cpct=Math.round(cov.withChannel/cov.total*100);
+  el('card-coverage').innerHTML=head('Opportunity → Slack Channel Coverage','Move 4','both')+`<div class="card-sub">Share of open opps with a deal room.</div>`+
+    `<div class="statrow"><div class="stat" style="max-width:150px"><div class="stat-num ${cpct<60?'warn':'ok'}">${cpct}%</div><div class="stat-sub">${cov.withChannel} of ${cov.total} open opps</div></div>
+     <div style="flex:1"><div class="meter"><span style="width:${cpct}%"></span></div><div style="font-size:11.5px;color:var(--gray)">${cov.total-cov.withChannel} opps without a deal room — distribution-layer gap.</div></div></div>`;
+
+  const g=await A.gap(); const live=g.filter(x=>x.flag).length;
+  el('card-gap').innerHTML=head('The Middleware Gap Meter','Move 2','both')+`<div class="card-sub">3+ flags = the bridge is missing and there's a build.</div>`+
+    g.map(x=>`<div class="flag"><span class="ic ${x.flag?'bad':'ok'}">${x.flag?'!':'✓'}</span><span class="lbl">${x.q}</span><span class="val" style="color:${x.flag?'var(--red)':'var(--green)'}">${x.a}</span></div>`).join('')+
+    `<div class="verdict"><b>${live} of ${g.length} gap signals firing.</b> Capture exists; the write-back loop doesn't. This is the Day-1 build.</div>`;
+
+  /* ---- LANE 2: PIPELINE HEALTH ---- */
+  const st=await A.stale(); const stp=Math.round(st.count/st.total*100);
+  el('card-stale').innerHTML=head('Stale Opportunities','Risk','sf')+`<div class="card-sub">Open opps with no activity in ${CONFIG.fields.staleDays}+ days.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num ${stp>30?'bad':'warn'}">${st.count}</div><div class="stat-sub">${stp}% of open pipeline</div></div>
+     <div class="stat"><div class="stat-num">${$(st.value)}</div><div class="stat-sub">at-risk value</div></div></div>
+     <div class="meter"><span style="width:${stp}%"></span></div>`;
+
+  const sl=await A.slipped(); const slp=Math.round(sl.count/sl.total*100);
+  el('card-slipped').innerHTML=head('Slipped Close Dates','Forecast','sf')+`<div class="card-sub">Open opps with a close date already in the past.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num ${slp>15?'bad':'warn'}">${sl.count}</div><div class="stat-sub">${slp}% of open opps — forecast hygiene</div></div></div>
+     <div class="insight">Every slipped date is a forecast lie. Auto-flag to the owner's Slack DM the morning a close date passes.</div>`;
+
+  const th=await A.threaded(); const thp=Math.round(th.single/th.total*100);
+  el('card-threaded').innerHTML=head('Single-Threaded Deals','Risk','sf')+`<div class="card-sub">Open opps with ≤1 contact role — one champion away from dead.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num ${thp>50?'bad':'warn'}">${thp}%</div><div class="stat-sub">${th.single} of ${th.total} open opps</div></div></div>
+     <div class="meter"><span style="width:${thp}%"></span></div>`;
+
+  const fr=await A.freshness(); const dlt=Math.round((fr.thisWeek-fr.lastWeek)/fr.lastWeek*100);
+  el('card-freshness').innerHTML=head('Activity Freshness','Adoption','sf')+`<div class="card-sub">Calls logged in the last ${CONFIG.fields.freshDays} days vs prior week.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num ${dlt<0?'warn':'ok'}">${fr.thisWeek}</div><div class="stat-sub">calls (${dlt>0?'+':''}${dlt}% WoW)</div></div>
+     <div class="stat"><div class="stat-num ${fr.calendarConnected<0.9?'warn':'ok'}">${Math.round(fr.calendarConnected*100)}%</div><div class="stat-sub">reps w/ calendar connected <span class="src road" style="margin-left:2px">Roadmap</span></div></div></div>
+     <div class="insight">Calendar connection is the #1 rollout killer — if it's not ~100%, the capture layer is starving.</div>`;
+
+  const md=await A.meddic();
+  el('card-meddic').innerHTML=head('MEDDIC Completeness by Stage','Move 7','sf')+`<div class="card-sub">% of open opps per stage with minimum qualification fields set — the case for a stage-gate validation rule.</div>`+
+    `<div class="bars">${md.map(m=>`<div class="bar"><span class="bn">${m.stage}</span><span class="bt"><span style="width:${m.pct}%;background:${m.pct<40?'var(--red)':m.pct<70?'var(--amber)':'var(--green)'}"></span></span><span class="bv">${m.pct}%</span></div>`).join('')}</div>
+     <div class="insight">Early stages are near-empty. A validation rule blocking advance past Qualification without 4 fields set stops data quality collapsing within 90 days.</div>`;
+
+  /* ---- LANE 3: GROWTH ENGINE ---- */
+  const cs=await A.csuite(); const csp=Math.round(cs.withCsuite/cs.total*100);
+  el('card-csuite').innerHTML=head('C-Suite Penetration','Mandate','sf')+`<div class="card-sub">Open opps with a C-level contact engaged + executive meetings booked. Intradiem's #1 named GTM gap.</div>`+
+    `<div class="statrow"><div class="stat" style="max-width:140px"><div class="stat-num ${csp<40?'bad':'ok'}">${csp}%</div><div class="stat-sub">opps with C-suite engaged (target ${Math.round(cs.target*100)}%)</div></div>
+     <div class="stat" style="max-width:140px"><div class="stat-num ${cs.meetings30d<10?'warn':'ok'}">${cs.meetings30d}</div><div class="stat-sub">C-suite meetings booked, last 30d</div></div>
+     <div style="flex:1;min-width:180px"><div class="meter"><span style="width:${csp}%"></span></div><div style="font-size:11.5px;color:var(--gray)">${cs.total-cs.withCsuite} open opps have no executive thread.</div></div></div>
+     <div class="verdict"><b>This is the deal-maker metric.</b> C-suite relationships directly accelerate the market-share mandate. The existing invite-only executive event is the proven motion to land these meetings — instrument it first, then test appetite before adding frequency. Partner with its owner; keep it elite.</div>`;
+
+  const ev=await A.event();
+  el('card-event').innerHTML=head('Executive Event Motion','Mandate','sf')+`<div class="card-sub">Pipeline influenced by Intradiem's existing invite-only executive event — its highest-converting motion. Instrument first; partner with the owner.</div>`+
+    `<div class="statrow">
+       <div class="stat"><div class="stat-num">${ev.attendees}</div><div class="stat-sub">attendees</div></div>
+       <div class="stat"><div class="stat-num">${ev.influenced}</div><div class="stat-sub">opps influenced</div></div>
+       <div class="stat"><div class="stat-num ok">${$(ev.pipeline)}</div><div class="stat-sub">influenced pipeline</div></div>
+       <div class="stat"><div class="stat-num ok">${$(ev.wonValue)}</div><div class="stat-sub">closed-won (${ev.wonCount})</div></div>
+       <div class="stat"><div class="stat-num warn">${ev.cadence}</div><div class="stat-sub">current cadence</div></div>
+     </div>
+     <div class="insight">Highest conversion signal in the building. Its value may be its rarity — instrument the existing cadence and test appetite before assuming more frequency. Don't annex it; partner with whoever owns it.</div>`;
+
+  const mo=await A.motion();
+  el('card-motion').innerHTML=head('Market-Share Motion','Mandate','sf')+`<div class="card-sub">New-logo vs expansion mix + conversion — the share-growth scoreboard.</div>`+
+    `<div class="bars"><div class="bar"><span class="bn">New-logo opps</span><span class="bt"><span style="width:${Math.round(mo.newLogo/(mo.newLogo+mo.expansion)*100)}%"></span></span><span class="bv">${mo.newLogo}</span></div>
+     <div class="bar"><span class="bn">Expansion opps</span><span class="bt"><span style="width:${Math.round(mo.expansion/(mo.newLogo+mo.expansion)*100)}%;background:var(--sea)"></span></span><span class="bv">${mo.expansion}</span></div></div>
+     <div class="statrow" style="margin-top:8px"><div class="stat"><div class="stat-num ${mo.winRate<25?'warn':'ok'}">${mo.winRate}%</div><div class="stat-sub">win rate (4 qtrs)</div></div>
+     <div class="stat"><div class="stat-num">${mo.cycleDays}d</div><div class="stat-sub">avg sales cycle</div></div></div>`;
+
+  const im=await A.impact();
+  el('card-impact').innerHTML=head('Impact Scorecard','Measure','both')+`<div class="card-sub">Surfaced (estimated) kept distinct from realized (closed). My contribution, visible.</div>`+
+    `<div class="statrow"><div class="stat"><div class="stat-num">${$(im.surfaced)}</div><div class="stat-sub">opportunity surfaced</div></div>
+     <div class="stat"><div class="stat-num ok">${$(im.realized)}</div><div class="stat-sub">realized (closed-won)</div></div>
+     <div class="stat"><div class="stat-num">${im.meetings}</div><div class="stat-sub">meetings driven</div></div></div>
+     <div class="insight">Never blur surfaced vs realized — it's the discipline that makes the number trusted by ELT.</div>`;
+}
+
+/* tabs */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.lane').forEach(x=>x.classList.remove('show'));
+  t.classList.add('active'); el('lane-'+t.dataset.lane).classList.add('show');
+}));
+render();
+</script>
+</body>
+</html>

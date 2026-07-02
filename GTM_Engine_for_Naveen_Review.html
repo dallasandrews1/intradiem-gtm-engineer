@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GTM Engine · a working draft for review</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+  :root{
+    --forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--lime-bright:#A4CE3A;
+    --ink:#15231B;--ink-soft:#3E4D44;--dim:#7A877E;
+    --paper:#FAFBF7;--card:#FFFFFF;--mist:#F0F4ED;--mist-2:#E7EEE3;--line:#E2E7DD;--line-2:#D4DCCE;
+    --gold:#E0A23B;--spark:#FE5000;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:15px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px 60px}
+  .eyebrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--spark)}
+  h1{font-family:"Playfair Display",serif;font-weight:800;letter-spacing:-.01em;line-height:1.12}
+  h2{font-family:"Playfair Display",serif;font-weight:700;color:var(--forest);font-size:23px;letter-spacing:-.01em;margin:0 0 4px}
+  h3{font-family:"Playfair Display",serif;font-weight:700;color:var(--forest);font-size:16px;margin:0 0 4px}
+  p{margin:10px 0}
+  .hero{background:var(--forest);color:#fff;border-radius:20px;padding:40px 40px 34px;margin:26px 0 30px;border-top:5px solid var(--lime)}
+  .hero h1{color:#fff;font-size:36px;margin:14px 0 0}
+  .hero .lede{color:#dfead6;font-size:16px;margin:14px 0 0;max-width:640px}
+  .hero .by{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:var(--lime);margin-top:22px;text-transform:uppercase}
+  section{margin:34px 0}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+  .sec-num{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--green);font-weight:600}
+  .cap{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:6px}
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  @media(max-width:620px){.tiles{grid-template-columns:1fr}}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(20,40,25,.04),0 12px 34px rgba(20,40,25,.05)}
+  .tile h3{margin-bottom:5px}
+  .tile p{font-size:13.5px;color:var(--ink-soft);margin:0}
+  .tile.wide{grid-column:1 / -1;background:var(--mist-2);border-color:var(--line-2)}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  th{text-align:left;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:600;background:var(--mist);padding:12px 16px;border-bottom:1px solid var(--line)}
+  td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft)}
+  td:first-child{font-weight:600;color:var(--ink);width:34%}
+  tr:last-child td{border-bottom:none}
+  .phase{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border-bottom:none}
+  .phase .when{flex:0 0 150px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11px;font-weight:600;color:var(--spark);text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+  .phase .what{flex:1}
+  .phase .what b{color:var(--forest)}
+  .ask{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  @media(max-width:620px){.ask{grid-template-columns:1fr}}
+  .ask .q{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:16px 18px}
+  .ask .q .n{font-family:"Playfair Display",serif;font-size:26px;color:var(--gold);font-weight:800;line-height:1}
+  .ask .q p{font-size:14px;color:var(--ink-soft);margin:8px 0 0}
+  .close{font-size:16px;color:var(--forest);font-family:"Playfair Display",serif;font-style:italic;margin-top:26px;line-height:1.5}
+  .foot{margin-top:30px;padding-top:14px;border-top:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--dim)}
+  @media print{body{font-size:12.5px}.hero{padding:28px}.tile{box-shadow:none}.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow" style="color:var(--lime)">GTM Engine · Working Draft</div>
+    <h1>The engine, built and ready to shape with you</h1>
+    <p class="lede">A working version of the motion, running on the connectors. Demo data today, and I am holding the Q3 numbers as direction until we set them together. Walk through it and tell me where to push and where to pull back.</p>
+    <div class="by">Dallas Andrews · GTM Engineer · for Naveen's review · before July 6</div>
+  </div>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>What is built</h2></div>
+    <div class="cap">Seven working pieces, live in the Cowork sidebar</div>
+    <div class="tiles">
+      <div class="tile"><h3>Command Center</h3><p>The whole engine in one view: the acquisition funnel, the install-base funnel, the gates, and the engine-sourced scoreboard.</p></div>
+      <div class="tile"><h3>Golden List</h3><p>Accounts scored by fit and why-now. Click any one for the full strike plan, committee, and ready sequences.</p></div>
+      <div class="tile"><h3>Strike Room</h3><p>Pick an account and it builds the pitch from the live plan: snapshot, ROI, triggers, committee, sequences per persona.</p></div>
+      <div class="tile"><h3>ROI Calculator</h3><p>Idle-labor recovery math with every assumption exposed. Loads a real account to cross-check the engine's own quote.</p></div>
+      <div class="tile wide"><h3>Activation &amp; White-Space Control Plane</h3><p>The install-base side. Adoption gaps, expansion white-space, and churn risk per customer, each with a recommended play and an in-product message.</p></div>
+      <div class="tile"><h3>The orchestration underneath</h3><p>A weekly conductor that drafts, screens each draft through an objective critic, holds for human approval, and only sends when deliverability is green. Clay and attribution sit under it.</p></div>
+      <div class="tile"><h3>The cadence</h3><p>A daily 7am signal briefing and a Monday engine run. It moves whether or not I am watching it.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>How it hits the numbers</h2></div>
+    <p>Holding your sketch as direction, here is where each piece points.</p>
+    <table>
+      <thead><tr><th>Goal</th><th>What the engine does for it</th></tr></thead>
+      <tbody>
+        <tr><td>15 new-logo meetings</td><td>Net-new Star Ratings motion sourcing off the Golden List, Strike Room building each pitch.</td></tr>
+        <tr><td>10x throughput</td><td>The weekly conductor turns one push into a standing, gated motion.</td></tr>
+        <tr><td>200 back-office contacts</td><td>Signals surface the install-base white-space, Clay sources and source-tags the contacts.</td></tr>
+        <tr><td>Build the engine</td><td>The documented motion, runnable by the team without me.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>How I would sequence it</h2></div>
+    <p>A first draft of the phasing, open to reshaping.</p>
+    <div class="phase"><div class="when">Before I start</div><div class="what">Nothing goes live. I rehearse, we align on what good looks like.</div></div>
+    <div class="phase"><div class="when">First two weeks</div><div class="what">Align on <b>how each goal is defined and credited</b>, lock the back-office ICP with Scott, get access, read before touching.</div></div>
+    <div class="phase"><div class="when">First 30 days</div><div class="what">Golden List live, net-new piloted small with one rep, every step instrumented, deliverability first.</div></div>
+    <div class="phase"><div class="when">30 to 60 days</div><div class="what">Keep what converts, turn the Star Ratings motion weekly, start back-office into the install base.</div></div>
+    <div class="phase"><div class="when">60 to 90 days</div><div class="what">Present real, source-tagged numbers, then hand the motion to the team so it runs without me.</div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Two things I want your read on first</h2></div>
+    <div class="ask">
+      <div class="q"><div class="n">1</div><p><b>How we define and credit each goal</b>, so we are grading the work against the same thing from day one.</p></div>
+      <div class="q"><div class="n">2</div><p><b>The back-office ICP</b>, since that buyer is not obvious yet and I would rather lock it with you and Scott than guess.</p></div>
+    </div>
+    <p class="close">None of it is locked. It is built to give us something real to react to.</p>
+  </section>
+
+  <div class="foot">Dallas Andrews · GTM Engineer · working draft for discussion · runs on demo data</div>
+
+</div>
+</body>
+</html>

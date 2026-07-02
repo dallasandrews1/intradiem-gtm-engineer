@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTM Engineer Operating System — Dallas Andrews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blurple-deep:#14181F;
+    --blurple-text:#1B1F26;
+    --blurple-mid:#FE5000;
+    --creme:#FAF8F6;
+    --lilac-1:#EFEBE6;
+    --lilac-2:#DED8D0;
+    --lilac-3:#B9B1A6;
+    --seafoam-1:#FFE9DF;
+    --seafoam-2:#FE7A3D;
+    --seafoam-3:#C24A12;
+    --peri-1:#FBF3EE;
+    --peri-2:#F7E7DC;
+    --gray:#666666;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{font-size:16px;}
+  body{
+    font-family:'Lato',system-ui,sans-serif;
+    color:var(--blurple-text);
+    background:var(--creme);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:920px;margin:0 auto;background:var(--creme);}
+  h1,h2,h3,h4,.eyebrow,.num,.pill,.move-title,.layer th{font-family:'Outfit',sans-serif;}
+
+  /* ── HEADER ── */
+  .hero{
+    background:var(--blurple-deep);
+    color:#fff;
+    padding:64px 60px 54px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:5px;
+    background:linear-gradient(90deg,var(--seafoam-2),var(--blurple-mid));
+  }
+  .hero::after{
+    content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;border-radius:50%;
+    background:radial-gradient(circle,rgba(80,28,210,0.38),transparent 68%);
+  }
+  .eyebrow{
+    font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--seafoam-2);margin-bottom:20px;
+  }
+  .hero h1{
+    font-weight:800;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-0.02em;
+    max-width:740px;position:relative;z-index:1;
+  }
+  .hero h1 em{font-style:normal;color:#FF8A5C;}
+  .hero-sub{
+    margin-top:20px;font-size:16px;color:#C9C4BC;max-width:620px;line-height:1.55;position:relative;z-index:1;
+  }
+  .meta{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.16);
+    border-radius:6px;padding:8px 14px;font-size:12.5px;font-weight:500;color:#e8e3f5;letter-spacing:0.02em;
+  }
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--seafoam-2);}
+
+  /* ── BODY ── */
+  .body{padding:52px 60px 20px;}
+  section{margin-bottom:46px;}
+  .sec-label{
+    font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--blurple-mid);margin-bottom:14px;
+  }
+  h2{font-weight:700;font-size:26px;letter-spacing:-0.01em;color:var(--blurple-text);margin-bottom:14px;line-height:1.15;}
+  p{font-size:15.5px;color:#3a3346;margin-bottom:12px;}
+  p strong{color:var(--blurple-text);font-weight:700;}
+  .lead{font-size:17px;color:#3a3346;}
+
+  /* conviction callout */
+  .callout{
+    background:linear-gradient(135deg,var(--blurple-deep),#2A323C);
+    color:#fff;border-radius:12px;padding:30px 34px;margin:8px 0 4px;
+    position:relative;overflow:hidden;
+  }
+  .callout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--seafoam-2);}
+  .callout .q-label{font-family:'Outfit',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--seafoam-2);margin-bottom:10px;font-weight:600;}
+  .callout p{color:#F3EFEA;font-size:18px;line-height:1.5;margin:0;font-weight:400;}
+  .callout p b{color:#fff;font-weight:700;}
+
+  /* operating loop */
+  .moves{display:flex;flex-direction:column;gap:14px;}
+  .move{
+    display:grid;grid-template-columns:54px 1fr;gap:20px;align-items:start;
+    background:#fff;border:1px solid var(--lilac-1);border-radius:10px;padding:20px 24px;
+    transition:box-shadow .15s;
+  }
+  .move:hover{box-shadow:0 6px 24px rgba(37,13,83,0.08);}
+  .num{
+    font-family:'Outfit',sans-serif;font-weight:800;font-size:24px;line-height:1;color:#fff;
+    background:var(--blurple-mid);border-radius:8px;width:54px;height:54px;display:flex;align-items:center;justify-content:center;
+  }
+  .move-title{font-weight:700;font-size:17px;color:var(--blurple-text);margin-bottom:5px;}
+  .move p{font-size:14.5px;color:#4a4357;margin:0;}
+  .move p em{font-style:normal;color:var(--blurple-mid);font-weight:600;}
+
+  /* layers table */
+  table{width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;box-shadow:0 1px 0 var(--lilac-1);font-size:14.5px;}
+  .layer th{
+    background:var(--blurple-deep);color:#fff;text-align:left;padding:13px 18px;font-weight:600;font-size:13px;letter-spacing:0.03em;
+  }
+  .layer td{padding:13px 18px;border-bottom:1px solid var(--lilac-1);vertical-align:top;color:#3a3346;}
+  .layer tr:nth-child(even) td{background:var(--peri-1);}
+  .layer tr:nth-child(odd) td{background:#fff;}
+  .layer td:first-child{border-left:4px solid var(--seafoam-2);font-weight:700;color:var(--blurple-text);font-family:'Outfit',sans-serif;}
+
+  /* two-up cards */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .card{background:#fff;border:1px solid var(--lilac-1);border-radius:10px;padding:22px 24px;}
+  .card.lilac{background:var(--lilac-1);border-color:var(--lilac-2);}
+  .card.peri{background:var(--peri-1);border-color:var(--peri-2);}
+  .card h4{font-weight:700;font-size:15px;color:var(--blurple-text);margin-bottom:8px;}
+  .card p{font-size:14px;color:#4a4357;margin:0;}
+  .card p b{color:var(--blurple-mid);}
+
+  /* timeline */
+  .timeline{display:flex;flex-direction:column;gap:0;border-left:3px solid var(--lilac-2);margin-left:8px;padding-left:0;}
+  .tl-item{position:relative;padding:0 0 22px 28px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:-9px;top:3px;width:15px;height:15px;border-radius:50%;background:var(--blurple-mid);border:3px solid var(--creme);}
+  .tl-when{font-family:'Outfit',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--blurple-mid);margin-bottom:4px;}
+  .tl-item p{font-size:14.5px;color:#4a4357;margin:0;}
+
+  /* diagnostic groups */
+  .diag{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .diag-col h4{font-family:'Outfit',sans-serif;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;color:var(--seafoam-3);margin-bottom:10px;font-weight:700;}
+  .diag-col ul{list-style:none;}
+  .diag-col li{font-size:13.5px;color:#4a4357;padding:7px 0 7px 18px;position:relative;border-bottom:1px solid var(--lilac-1);line-height:1.4;}
+  .diag-col li:last-child{border-bottom:none;}
+  .diag-col li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:50%;background:var(--blurple-mid);}
+
+  /* principles */
+  .principles{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;}
+  .principles li{list-style:none;font-size:14.5px;color:#4a4357;padding-left:24px;position:relative;line-height:1.45;}
+  .principles li::before{content:"→";position:absolute;left:0;top:0;color:var(--blurple-mid);font-weight:700;}
+  .principles li b{color:var(--blurple-text);font-weight:700;}
+
+  /* proof */
+  .proof{background:var(--lilac-1);border-radius:12px;padding:26px 30px;}
+  .proof .file{font-family:'Outfit',sans-serif;font-weight:600;font-size:13.5px;color:var(--blurple-deep);background:#fff;border:1px solid var(--lilac-2);border-radius:6px;padding:2px 9px;display:inline-block;}
+  .proof-item{padding:10px 0;border-bottom:1px solid var(--lilac-2);font-size:14px;color:#4a4357;}
+  .proof-item:last-child{border-bottom:none;}
+
+  /* footer */
+  .footer{background:var(--blurple-deep);color:#C9C4BC;text-align:center;padding:30px 60px;margin-top:30px;font-size:13px;}
+  .footer b{color:#fff;font-family:'Outfit',sans-serif;font-weight:600;}
+  .footer .accent{color:var(--seafoam-2);}
+
+  @media print{
+    @page{margin:0;size:A4;}
+    body{background:#fff;}
+    .page{max-width:100%;}
+    .move:hover{box-shadow:none;}
+    .hero{padding:42px 48px 36px;}
+    .hero h1{font-size:32px;}
+    .body{padding:34px 48px 8px;}
+    section{margin-bottom:30px;}
+    h2{font-size:22px;}
+    /* flex containers get pushed whole by the print engine — make them block so children paginate */
+    .moves,.timeline{display:block;}
+    .move{margin-bottom:14px;}
+    /* keep small blocks intact, let sections flow to avoid big gaps */
+    .move,.callout,.card,.proof-item,.tl-item,.layer tr{break-inside:avoid;}
+    .hero::after{display:none;}
+    .footer{margin-top:18px;padding:22px 48px;}
+  }
+  @media(max-width:680px){
+    .hero,.body{padding-left:26px;padding-right:26px;}
+    .grid2,.diag,.principles{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="eyebrow">GTM Engineering · Operating System</div>
+    <h1>Turn Salesforce + Slack into a <em>self-running deal-intelligence machine</em>.</h1>
+    <p class="hero-sub">The repeatable method behind every system I shipped at League — distilled to the moves that transfer. Tool-agnostic, anchored on the two systems Intradiem already runs.</p>
+    <div class="meta">
+      <span class="pill"><span class="dot"></span>Dallas Andrews · GTM Engineer</span>
+      <span class="pill"><span class="dot"></span>Intradiem · Day 1: July 6, 2026</span>
+      <span class="pill"><span class="dot"></span>Stack: Salesforce + Slack</span>
+    </div>
+  </header>
+
+  <main class="body">
+
+    <section>
+      <div class="sec-label">The Thesis</div>
+      <h2>What a GTM Engineer actually does</h2>
+      <p class="lead">Every B2B GTM org has the same shape: <strong>Salesforce is the database, Slack is where reps actually live,</strong> and a layer of point tools sits in between. What's almost always missing is the <strong>middleware</strong> — the thing that reads what happened, structures it, routes it to the right people, and writes it back to the CRM without a human retyping anything.</p>
+      <p>A GTM Engineer finds that missing layer, proves the gap is real, and closes it — fast, with the tools already in the building, before asking for new budget.</p>
+      <div class="callout">
+        <div class="q-label">The architectural conviction</div>
+        <p>Salesforce is the system of record. Slack is the interface. AI is the middleware that reads from one and writes to the other — so a rep has <b>near-zero reason to open Salesforce</b> during their day.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-label">The Operating Loop</div>
+      <h2>Seven moves, every build, in order</h2>
+      <div class="moves">
+        <div class="move">
+          <div class="num">1</div>
+          <div><div class="move-title">Diagnose before you build</div><p>Audit what exists before writing a line of code. Most failures are "built on broken data" failures. Three layers: the <em>connection</em> (is SF↔Slack wired and user-mapped?), the <em>object</em> (do the fields the AI writes to exist?), the <em>data</em> (deduped contacts, correct emails, populated roles?).</p></div>
+        </div>
+        <div class="move">
+          <div class="num">2</div>
+          <div><div class="move-title">Find the missing middleware</div><p>Name the manual gap out loud. The pattern: a tool posts intelligence into Slack, humans read it, then retype it into Salesforce — or skip it, so the CRM rots. Three quick questions and you've located the build.</p></div>
+        </div>
+        <div class="move">
+          <div class="num">3</div>
+          <div><div class="move-title">Lock the foundation</div><p>Before tooling, write down how the org's data is interpreted: record types, the revenue source-of-truth field, the real stage list, the hygiene risks. A persistent <em>Foundational Rules</em> file every AI session loads — so every tool shares one definition of "correct."</p></div>
+        </div>
+        <div class="move">
+          <div class="num">4</div>
+          <div><div class="move-title">Architect in four layers</div><p>Decompose every build into Capture → Intelligence → Distribution → Write-back, then map each to a tool that exists or a thin piece you build. The layering is the portable part — the vendor never matters.</p></div>
+        </div>
+        <div class="move">
+          <div class="num">5</div>
+          <div><div class="move-title">Engineer the intelligence</div><p>The "magic" is a prompt, not a model. <em>Context-enriched</em> (transcript + SF object context, not one-pass) and <em>stage-aware</em> (a different schema-enforced prompt per pipeline stage). Short and actionable beats a wall of text.</p></div>
+        </div>
+        <div class="move">
+          <div class="num">6</div>
+          <div><div class="move-title">Close the loop</div><p>Most DIY builds stop at "posted to Slack." Don't. The differentiator is the write-back — activity record, next-steps, contact intelligence, qualification fields — automatic or two-click. This is what makes Slack a headless front end for Salesforce.</p></div>
+        </div>
+        <div class="move">
+          <div class="num">7</div>
+          <div><div class="move-title">Govern, enforce, roll out</div><p>A system that works Day 1 and rots by Day 90 is a failure. Validation rules, dedupe rules, monitoring for OAuth/token failures. Then roll out in order: <em>connections first</em> (the most-skipped, most-fatal step), clean data before launch, 30 days of tuning.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-label">The Architecture Lens</div>
+      <h2>Every intelligence build is the same four layers</h2>
+      <table class="layer">
+        <thead><tr><th style="width:20%">Layer</th><th style="width:42%">Job</th><th style="width:38%">Build with what's already there</th></tr></thead>
+        <tbody>
+          <tr><td>1. Capture</td><td>Get a speaker-attributed transcript / signal somewhere readable</td><td>Existing recorder, or any tool that outputs a transcript</td></tr>
+          <tr><td>2. Intelligence</td><td>Transcript + CRM context → structured output</td><td>Claude API + a stage-aware prompt</td></tr>
+          <tr><td>3. Distribution</td><td>Route the structured output to the right Slack channel(s)</td><td>Slack API / webhook</td></tr>
+          <tr><td>4. Write-back</td><td>Push the structured fields into Salesforce</td><td>SF REST API, or a lightweight Slack→SF tool</td></tr>
+        </tbody>
+      </table>
+      <div style="margin-top:18px;" class="grid2">
+        <div class="card peri"><h4>The prompt is the product · Rule 1</h4><p><b>Context-enriched, not one-pass.</b> Feed the model the transcript plus the SF object context — stage, ARR, account, existing next steps. That's what produces source attribution and stage awareness instead of generic summary.</p></div>
+        <div class="card peri"><h4>The prompt is the product · Rule 2</h4><p><b>Stage-aware schema.</b> A different extraction prompt per stage, each returning a defined JSON schema. A late-stage call focuses on legal/PO/signatures; an early call on pain + stakeholders.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-label">Application</div>
+      <h2>Day 1 → Week 1 at a Salesforce + Slack org</h2>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-when">Day 1 · Access + Audit</div><p>Get SF read access; run discovery queries (record types, stages, owners, revenue field, custom fields). Confirm the SF↔Slack connector is live and my own user is mapped. Map the stack in writing and name the middleware gap publicly — a specific written artifact, not a verbal claim.</p></div>
+        <div class="tl-item"><div class="tl-when">Days 2–3 · Foundation</div><p>Fill the Salesforce Foundational Rules file for this org. Audit the object layer (do next-steps / call-date / qualification fields exist? are Contact Roles enabled?). Run a contact email + duplicate audit on open-pipeline accounts.</p></div>
+        <div class="tl-item"><div class="tl-when">Days 4–5 · First Proof</div><p>Stand up the smallest end-to-end slice that demonstrates the loop: capture → intelligence → Slack post → SF write-back, scoped to my own calls first. A live "call happened → Slack post → SF logged itself" demo beats any deck.</p></div>
+        <div class="tl-item"><div class="tl-when">Throughout · Partner, don't lone-wolf</div><p>Find the RevOps/Salesforce admin and the Slack admin early — nothing routes or writes without them. Frame every build as closing a gap they already feel.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-label">The Walk-In Kit</div>
+      <h2>Day-1 diagnostic questions</h2>
+      <div class="diag">
+        <div class="diag-col">
+          <h4>Stack &amp; Gap</h4>
+          <ul>
+            <li>What conversation tool are you using, and does it connect to SF or just Slack?</li>
+            <li>How do reps update Salesforce after a call — manual or automated?</li>
+            <li>Do managers read Slack or SF for deal intel?</li>
+            <li>Any Slack→SF automation running today?</li>
+          </ul>
+        </div>
+        <div class="diag-col">
+          <h4>Foundation</h4>
+          <ul>
+            <li>What fields are reps required to fill?</li>
+            <li>Is there a qualification framework with real SF fields behind it?</li>
+            <li>Deal-room channels in Slack + a naming convention?</li>
+            <li>Who owns the SF config and who owns Slack?</li>
+          </ul>
+        </div>
+        <div class="diag-col">
+          <h4>Hygiene &amp; Access</h4>
+          <ul>
+            <li>Is SF↔Slack user-mapped cleanly by email/SAML?</li>
+            <li>Is API access enabled on the integration user?</li>
+            <li>Any security boundaries to respect (data-crossing, PII)?</li>
+            <li>Where do duplicates and free-text fields live?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-label">Operating Beliefs</div>
+      <h2>The principles underneath the method</h2>
+      <ul class="principles">
+        <li><b>The gap is the write-back, not the capture.</b> Capturing intelligence is easy and already happening; getting it back into the system of record automatically is the unsolved part.</li>
+        <li><b>Ship the path of least resistance first.</b> A Slack webhook ships in hours; a fully-approved CRM integration takes weeks. Get value flowing, then close the loop.</li>
+        <li><b>The prompt is the product.</b> Stage-aware, context-enriched, schema-enforced. That's the leverage.</li>
+        <li><b>Consistency comes from a shared knowledge layer,</b> not each tool's individual config. One Foundational Rules file beats five tools guessing.</li>
+        <li><b>Design for failure.</b> Tokens expire, users get unmapped, data drifts. Monitoring and validation rules separate a demo from a system.</li>
+        <li><b>Adoption is an ordering problem.</b> Connections first, clean data before launch, 30 days of tuning. Skip the order and the best architecture sits idle.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="sec-label">Evidence</div>
+      <h2>Proof artifacts behind the method</h2>
+      <div class="proof">
+        <div class="proof-item"><span class="file">momentum-architecture-and-diy-guide.md</span> — Full reverse-engineering of a production call-intelligence stack and a layer-by-layer plan to replicate it with Claude API + Slack API + SF REST API at near-zero new cost.</div>
+        <div class="proof-item"><span class="file">call-recording-slack-bridge-pattern.md</span> — The portable recording→Slack→CRM bridge: channel architecture, exact message schema, qualification scoring taxonomy, and where the manual gap sits. Real production post examples included.</div>
+        <div class="proof-item"><span class="file">day1-prerequisites-sf-slack-setup.md</span> — The full Day-1 audit: SF↔Slack native connector setup, the object/field layer the AI writes to, contact-data hygiene fixes, security blockers to expect, complete pre-build checklist.</div>
+        <div class="proof-item"><span class="file">SALESFORCE_FOUNDATIONAL_TEMPLATE.pdf</span> — The reusable knowledge-layer template: record-type filters, currency/revenue source-of-truth, stage definitions, and the discovery queries to run before building anything.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p><b>The GTM Engineer Operating System</b> &nbsp;·&nbsp; Extracted from builds shipped at League &nbsp;·&nbsp; Tool-agnostic, anchored on Salesforce + Slack</p>
+    <p style="margin-top:6px;">Dallas Andrews &nbsp;<span class="accent">//</span>&nbsp; GTM Engineer, Intradiem &nbsp;<span class="accent">//</span>&nbsp; Day 1: July 6, 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>

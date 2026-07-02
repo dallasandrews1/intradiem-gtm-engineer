@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Engine, Built Before Day One · Dallas Andrews</title>
+
+<!--
+  ============================================================================
+  THE GTM ENGINE · Dallas Andrews · GTM Engineer · Intradiem · Day 1 Jul 6 2026
+  Single self-contained file. No backend, no storage, no frameworks. Open from
+  disk or share as a link. All copy/data hard-coded from the handoff files.
+
+  METRIC INTEGRITY (the hard rule). Every number is chipped one of three ways:
+    VERIFIED  (green)  = confirmed fact, state plainly.
+        League build: 12+ tools / 30+ skills / 5 org areas · 157 Director+ contacts ·
+        38 plans <4.0 · 5,000 Clay credits · 40+ data sources ·
+        12 preflight assertions / 4 blockers.
+    DRY-RUN   (amber)  = illustrative, seeded, goes live Jul 6, NEVER real pipeline.
+        Any "$ surfaced", funnel counts, variant reply-rates, control-tower numbers.
+    TARGET    (gray)   = Q3 goal, provisional, to co-shape.
+        15 meetings · 10x throughput · 200+ back-office contacts.
+
+  SWAP-IN AFTER JUL 6: real Salesforce/Clay numbers replace the seeded ones and
+  the amber DRY-RUN chips flip to VERIFIED green. The chip system stays in the
+  markup. Go-live is a label change, not a redesign. Look for `data-seed`.
+  ============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --orange:#1F7340; --orange-deep:#16432C; --orange-light:#25B56F; --orange-tint:#E7EEE3;
+    --spark:#FE5000; --spark-soft:#F47920; --gold:#E0A23B; --lime:#B6D94C;
+    --shadow:0 1px 2px rgba(20,40,25,.05),0 12px 34px rgba(20,40,25,.08); --shadow-lg:0 2px 6px rgba(20,40,25,.06),0 26px 54px rgba(20,40,25,.16);
+    --ink:#15231B; --ink-2:#3E4D44; --text:#15231B; --paper:#FAFBF7; --white:#FFFFFF;
+    --line:#E2E7DD; --line-2:#D4DCCE; --row:#F0F4ED; --row-2:#E7EEE3;
+    --gray:#51605A; --gray-2:#7A877E;
+    --ff-label:'JetBrains Mono',monospace;
+    --ok:#2f8f4e; --ok-bg:#E7EEE3; --ok-line:#BFD8C6;
+    --warn:#9a6313; --warn-bg:#FBF1E1; --warn-line:#ECD3A8;
+    --neu:#3E4D44; --neu-bg:#EEF1EC; --neu-line:#D7DED3;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    font-family:'DM Sans',sans-serif; color:var(--text); background:var(--paper);
+    line-height:1.6; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    display:flex; align-items:flex-start; min-height:100vh;
+  }
+  h1,h2,h3,h4,.dsp,.eyebrow,.num,.chip,.tab,.btn,.kdot-label{font-family:var(--ff-label);}
+  a{color:inherit;}
+  ::selection{background:var(--orange-tint);}
+
+  /* ============ INTEGRITY CHIPS ============ */
+  .chip{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    padding:3px 9px 3px 8px;border-radius:5px;display:inline-flex;align-items:center;gap:6px;
+    white-space:nowrap;border:1px solid;vertical-align:middle;line-height:1.4;}
+  .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none;}
+  .chip.verified{color:var(--ok);background:var(--ok-bg);border-color:var(--ok-line);}
+  .chip.dryrun{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-line);}
+  .chip.target{color:var(--neu);background:var(--neu-bg);border-color:var(--neu-line);}
+  .chip.live{color:var(--orange);background:var(--orange-tint);border-color:#BFD8C6;}
+  .chip.sm{font-size:9.5px;padding:2px 7px 2px 6px;}
+  .chip.ghost{background:transparent;}
+
+  /* ============ SIDEBAR RAIL ============ */
+  .rail{position:sticky;top:0;align-self:flex-start;flex:none;width:248px;height:100vh;overflow-y:auto;
+    background:linear-gradient(180deg,#1A4D31 0%,#143E28 100%);color:#EAF2E6;
+    border-right:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;padding:22px 16px;z-index:40;}
+  .rail::-webkit-scrollbar{width:0;}
+  .rail .rail-top{padding:4px 4px 0;}
+  .rail .logo{display:inline-flex;align-items:center;gap:9px;background:#fff;border-radius:12px;padding:9px 14px;
+    font-family:'Playfair Display',serif;font-weight:800;font-size:18px;color:#16432C;letter-spacing:-.01em;}
+  .rail .logo .logo-mk{width:20px;height:20px;flex:none;}
+  .rail .logo sup{font-size:9px;font-weight:700;vertical-align:super;margin-left:1px;color:#16432C;}
+  .rail .rail-navlabel{font-family:var(--ff-label);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7FA98C;margin:4px 6px 12px;}
+  .rail .rail-label{font-family:var(--ff-label);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7FA98C;margin:13px 6px 20px;line-height:1.4;}
+  .rail-nav{display:flex;flex-direction:column;gap:1px;}
+
+  /* ============ HERO ============ */
+  .hero{background:var(--paper);color:var(--text);position:relative;overflow:hidden;padding:58px 40px 26px;}
+  .hero::after{content:"";position:absolute;right:-160px;top:-140px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,115,64,.06) 0%,rgba(31,115,64,0) 68%);pointer-events:none;}
+  .hero::before{content:none;}
+  .hero-in{max-width:var(--maxw);margin:0 auto;position:relative;z-index:1;}
+  .eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--spark);
+    display:flex;align-items:center;gap:12px;margin-bottom:26px;}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--spark);}
+  .hero h1{font-weight:800;font-size:clamp(36px,5.2vw,66px);line-height:1.04;letter-spacing:-.025em;max-width:16ch;color:var(--orange-deep);}
+  .hero h1 .spark{color:var(--spark);position:relative;white-space:nowrap;}
+  .hero .sub{margin-top:26px;font-size:19px;color:var(--neu);max-width:62ch;line-height:1.55;font-weight:400;}
+  .hero .sub b{color:var(--text);font-weight:600;}
+  .hero .posture{margin-top:22px;font-size:14.5px;color:var(--gray);max-width:66ch;line-height:1.55;
+    border-left:2px solid var(--line-2);padding-left:16px;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;}
+  .hero .pill{font-size:13px;font-weight:500;color:var(--text);border:1px solid var(--line-2);
+    background:#fff;padding:8px 15px;border-radius:100px;}
+  .hero .pill b{color:var(--text);font-weight:600;}
+
+  /* ============ NAV ITEMS + PRESENTER ============ */
+  .nav-item{display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;appearance:none;border:none;
+    background:none;cursor:pointer;padding:9px 12px;border-radius:9px;color:#CFE2CB;transition:background .15s,color .15s;position:relative;}
+  .nav-item:hover{background:rgba(255,255,255,.06);color:#fff;}
+  .nav-item.on{background:rgba(255,255,255,.10);color:#fff;}
+  .nav-item.on::before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:3px;border-radius:0 3px 3px 0;background:var(--lime);}
+  .nav-item .ni-n{font-family:var(--ff-label);font-size:11px;color:#7FA98C;flex:none;width:18px;padding-top:3px;}
+  .nav-item.on .ni-n{color:var(--lime);}
+  .nav-item .ni-t{font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;line-height:1.25;display:flex;flex-direction:column;}
+  .nav-item .ni-t small{font-weight:400;font-size:11.5px;color:#8FB39A;letter-spacing:0;margin-top:1px;}
+  .nav-item.on .ni-t small{color:#B9D2B0;}
+  .rail-foot{margin-top:auto;padding:18px 4px 4px;}
+  .toggle{appearance:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);cursor:pointer;
+    font-family:var(--ff-label);font-size:12px;font-weight:600;color:#CFE2CB;
+    padding:8px 9px 8px 14px;border-radius:100px;display:flex;align-items:center;gap:10px;transition:.18s;white-space:nowrap;width:100%;justify-content:space-between;}
+  .toggle:hover{border-color:rgba(255,255,255,.34);color:#fff;}
+  .toggle .sw{width:34px;height:20px;border-radius:100px;background:rgba(255,255,255,.18);position:relative;transition:background .2s;flex:none;}
+  .toggle .sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .2s;}
+  .toggle[aria-pressed="true"]{color:#fff;border-color:var(--lime);background:rgba(182,217,76,.14);}
+  .toggle[aria-pressed="true"] .sw{background:var(--lime);}
+  .toggle[aria-pressed="true"] .sw::after{transform:translateX(14px);}
+
+  /* ============ LAYOUT ============ */
+  .content{flex:1;min-width:0;}
+  main{max-width:1040px;margin:0 auto;padding:0 52px;}
+  .cap,.tool,.motion,.proof,.trip,.tower-card,.tier{transition:transform .2s,box-shadow .2s,border-color .2s;}
+  .cap:hover,.tool:hover,.motion:hover,.proof:hover,.trip:hover,.tower-card:hover,.tier:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--line-2);}
+  section.sec{padding:76px 0 8px;scroll-margin-top:70px;border-top:1px solid var(--line);}
+  section.sec:first-of-type{border-top:none;}
+  .sec-head{margin-bottom:8px;}
+  .sec-eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--spark);
+    display:flex;align-items:center;gap:11px;margin-bottom:16px;}
+  .sec-eyebrow .sn{color:var(--spark);font-weight:700;}
+  h2.title{font-weight:800;font-size:clamp(27px,3.2vw,38px);line-height:1.1;letter-spacing:-.022em;color:var(--orange-deep);max-width:22ch;}
+  .lead{font-size:19px;line-height:1.55;color:var(--neu);max-width:66ch;margin-top:18px;}
+  .lead .hl{background:linear-gradient(transparent 60%,var(--row-2) 60%);font-weight:600;padding:0 1px;}
+  .body{font-size:16px;color:var(--gray);max-width:68ch;margin-top:16px;}
+  .body strong{color:var(--text);font-weight:600;}
+
+  /* talk-track (presenter only) */
+  .talk{display:none;margin-top:20px;background:var(--ink);color:#E7E3DE;border-radius:11px;padding:16px 20px;
+    font-size:15px;line-height:1.55;max-width:74ch;position:relative;border-left:4px solid var(--orange);}
+  .talk b{color:#fff;}
+  .talk .tlab{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--orange-light);display:block;margin-bottom:7px;}
+  body.present .talk{display:block;}
+
+  /* ============ EXPANDABLE CARD (generic) ============ */
+  .exp{background:#fff;border:1px solid var(--line-2);border-radius:13px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+  .exp.open{border-color:#BFD3C2;box-shadow:0 10px 34px -20px rgba(20,24,31,.32);}
+  .exp-head{display:flex;align-items:center;gap:18px;padding:20px 22px;cursor:pointer;width:100%;text-align:left;
+    background:none;border:none;font-family:inherit;color:inherit;}
+  .exp-head:focus-visible{outline:2px solid var(--orange);outline-offset:-2px;border-radius:13px;}
+  .exp-titles{flex:1;min-width:0;}
+  .exp-t{font-family:var(--ff-label);font-weight:600;font-size:19px;color:var(--text);letter-spacing:-.01em;}
+  .exp-tag{font-size:14.5px;color:var(--gray);margin-top:3px;}
+  .enter{flex:none;display:flex;align-items:center;gap:7px;color:var(--orange-deep);font-family:var(--ff-label);
+    font-weight:600;font-size:13px;transition:.2s;}
+  .enter .chev{width:18px;height:18px;transition:transform .28s;}
+  .exp.open .enter{color:var(--gray);}
+  .exp.open .enter .chev{transform:rotate(180deg);}
+  .exp.open .enter .etxt{opacity:.6;}
+  .exp-body{max-height:0;overflow:hidden;transition:max-height .36s ease;}
+  .exp.open .exp-body,body.present .exp .exp-body{max-height:600px;}
+  .exp-inner{padding:2px 24px 24px;border-top:1px solid var(--line);margin-top:-1px;padding-top:20px;}
+  .exp-inner p{font-size:15.5px;color:var(--neu);line-height:1.62;max-width:74ch;}
+  .exp-inner p+p{margin-top:12px;}
+  .exp-inner strong{color:var(--text);font-weight:600;}
+  body.present .exp-head{cursor:default;}
+
+  /* ============ 01 TRANSFORM TABLE ============ */
+  .xform{margin-top:32px;display:flex;flex-direction:column;gap:10px;}
+  .xrow{display:grid;grid-template-columns:1fr 56px 1.25fr;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--line-2);border-radius:12px;padding:16px 20px;transition:.2s;}
+  .xrow:hover{border-color:#BFD3C2;}
+  .xrow .from{font-size:15.5px;color:var(--gray);}
+  .xrow .arr{display:flex;justify-content:center;color:var(--orange);font-size:20px;font-weight:700;}
+  .xrow .to{font-family:var(--ff-label);font-weight:600;font-size:16.5px;color:var(--text);letter-spacing:-.01em;}
+  .xrow .to b{color:var(--orange-deep);}
+  .xclose{margin-top:24px;background:var(--ink);color:#fff;border-radius:13px;padding:30px 34px;position:relative;overflow:hidden;}
+  .xclose::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange);}
+  .xclose p{font-size:19px;line-height:1.5;max-width:60ch;color:#E7E3DE;}
+  .xclose p b{color:#fff;font-weight:700;}
+
+  /* ============ 02 HUB & SPOKE ============ */
+  .golden-grid{margin-top:34px;display:grid;grid-template-columns:1fr;gap:34px;}
+  .hub-wrap{position:relative;}
+  .hubspoke{position:relative;width:100%;max-width:680px;height:540px;margin:0 auto;}
+  .hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:210px;height:210px;border-radius:50%;
+    background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:24px;z-index:3;box-shadow:0 24px 60px -26px rgba(20,24,31,.5);}
+  .hub::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px dashed rgba(31,115,64,.35);}
+  .hub .hl1{font-family:var(--ff-label);font-weight:700;font-size:20px;letter-spacing:-.01em;line-height:1.1;}
+  .hub .hl2{font-size:11.5px;color:var(--orange-light);margin-top:8px;letter-spacing:.04em;line-height:1.4;}
+  .spoke{position:absolute;width:166px;background:#fff;border:1px solid var(--line-2);border-radius:11px;
+    padding:13px 15px;z-index:2;transition:.2s;}
+  .spoke:hover{border-color:var(--orange-light);box-shadow:0 8px 24px -16px rgba(20,24,31,.35);}
+  .spoke .sk-n{font-family:var(--ff-label);font-weight:700;font-size:11px;color:var(--orange);letter-spacing:.08em;}
+  .spoke .sk-t{font-family:var(--ff-label);font-weight:600;font-size:15px;color:var(--text);margin-top:3px;letter-spacing:-.01em;line-height:1.2;}
+  .spoke.s1{left:50%;top:0;transform:translateX(-50%);}
+  .spoke.s2{right:0;top:27%;}
+  .spoke.s3{right:0;bottom:27%;}
+  .spoke.s4{left:50%;bottom:0;transform:translateX(-50%);}
+  .spoke.s5{left:0;bottom:27%;}
+  .spoke.s6{left:0;top:27%;}
+  .spoke-line{position:absolute;left:50%;top:50%;height:1px;background:linear-gradient(90deg,rgba(31,115,64,.5),rgba(37,181,111,0));
+    transform-origin:left center;z-index:1;}
+
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+  .cap{background:var(--row);border:1px solid var(--line-2);border-radius:13px;padding:24px 24px 26px;}
+  .cap .cv{font-family:var(--ff-label);font-weight:800;font-size:14px;letter-spacing:.04em;color:var(--orange);
+    display:flex;align-items:center;gap:9px;margin-bottom:11px;}
+  .cap .cv .cdot{width:9px;height:9px;border-radius:3px;background:var(--orange);}
+  .cap h4{font-family:var(--ff-label);font-weight:600;font-size:18px;color:var(--text);margin-bottom:9px;letter-spacing:-.01em;}
+  .cap p{font-size:14.5px;color:var(--gray);line-height:1.55;}
+  .cap p .nbr{color:var(--text);font-weight:600;}
+  .artifact{margin-top:22px;background:#fff;border:1px solid var(--line-2);border-left:4px solid var(--orange);
+    border-radius:0 12px 12px 0;padding:22px 26px;display:flex;gap:18px;align-items:flex-start;}
+  .artifact .alab{font-family:var(--ff-label);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--orange-deep);flex:none;padding-top:2px;}
+  .artifact p{font-size:15px;color:var(--neu);line-height:1.55;}
+  .artifact p b{color:var(--text);}
+
+  /* ============ 03 ENGINE FLOW ============ */
+  .flow-scroll{margin-top:32px;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin;}
+  .flow{display:flex;align-items:stretch;gap:0;min-width:max-content;padding:4px 0;}
+  .stage{flex:none;width:118px;background:#fff;border:1px solid var(--line-2);border-radius:11px;padding:13px 12px;
+    display:flex;flex-direction:column;gap:6px;position:relative;}
+  .stage .stn{font-family:var(--ff-label);font-weight:700;font-size:11px;color:var(--gray-2);letter-spacing:.04em;}
+  .stage .stt{font-family:var(--ff-label);font-weight:600;font-size:14px;color:var(--text);line-height:1.2;letter-spacing:-.01em;}
+  .stage.gate{background:var(--ink);border-color:var(--ink);}
+  .stage.gate .stn{color:var(--orange-light);}
+  .stage.gate .stt{color:#fff;}
+  .stage.gate .gtag{font-family:var(--ff-label);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--orange);margin-top:auto;}
+  .farr{flex:none;display:flex;align-items:center;color:var(--line-2);font-size:16px;padding:0 5px;}
+  .flow-legend{display:flex;gap:18px;margin-top:14px;flex-wrap:wrap;font-size:12.5px;color:var(--gray);align-items:center;}
+  .flow-legend .lg{display:flex;align-items:center;gap:7px;}
+  .flow-legend .lg .box{width:13px;height:13px;border-radius:4px;border:1px solid var(--line-2);}
+  .flow-legend .lg .box.gate{background:var(--ink);border-color:var(--ink);}
+
+  .layers{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:0;margin-top:34px;}
+  .layer{background:#fff;border:1px solid var(--line-2);border-radius:13px;padding:24px 24px 26px;display:flex;flex-direction:column;}
+  .layer.human{background:var(--ink);border-color:var(--ink);}
+  .layer .lnum{font-family:var(--ff-label);font-weight:800;font-size:13px;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;margin-bottom:12px;}
+  .layer.human .lnum{color:var(--orange-light);}
+  .layer h4{font-family:var(--ff-label);font-weight:700;font-size:21px;color:var(--text);letter-spacing:-.01em;margin-bottom:8px;}
+  .layer.human h4{color:#fff;}
+  .layer p{font-size:14.5px;color:var(--gray);line-height:1.55;}
+  .layer.human p{color:#C9CCD2;}
+  .layer.human p b{color:#fff;}
+  .lconn{display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:22px;font-weight:700;padding:0 14px;}
+  .layer-tagline{margin-top:18px;text-align:center;font-family:var(--ff-label);font-weight:600;font-size:19px;
+    color:var(--text);letter-spacing:-.01em;}
+  .layer-tagline b{color:var(--orange-deep);}
+
+  .tower{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .tower-card{background:var(--row);border:1px solid var(--line-2);border-radius:13px;padding:24px 26px;}
+  .tower-card .tt{font-family:var(--ff-label);font-weight:700;font-size:18px;color:var(--text);letter-spacing:-.01em;
+    margin-bottom:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .tower-card p{font-size:14.5px;color:var(--gray);line-height:1.55;}
+  .tower-card p b{color:var(--text);}
+
+  /* ============ 04 GUARDRAILS ============ */
+  .principle{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .principle .pr{flex:1;min-width:200px;background:var(--ink);color:#fff;border-radius:12px;padding:20px 22px;position:relative;}
+  .principle .pr .prk{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-light);margin-bottom:8px;}
+  .principle .pr .prt{font-family:var(--ff-label);font-weight:700;font-size:18px;letter-spacing:-.01em;}
+  .principle .pr .prt b{color:var(--orange);}
+  .tripwires{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .trip{background:#fff;border:1px solid var(--line-2);border-radius:13px;padding:24px 24px 26px;}
+  .trip .ttag{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--orange-deep);margin-bottom:9px;display:flex;align-items:center;gap:8px;}
+  .trip .ttag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);}
+  .trip h4{font-family:var(--ff-label);font-weight:600;font-size:17px;color:var(--text);letter-spacing:-.01em;margin-bottom:8px;}
+  .trip p{font-size:14px;color:var(--gray);line-height:1.55;}
+  .trip p b{color:var(--text);}
+
+  .preflight{margin-top:22px;background:var(--ink);border-radius:14px;overflow:hidden;}
+  .pf-top{padding:22px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--ink-2);}
+  .pf-cmd{font-family:var(--ff-label);font-weight:600;font-size:14px;color:#fff;background:var(--ink-2);
+    padding:8px 14px;border-radius:8px;letter-spacing:.01em;}
+  .pf-cmd .dollar{color:var(--orange-light);}
+  .pf-verdict{font-family:var(--ff-label);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--bad,#e07a6a);display:flex;align-items:center;gap:8px;color:#FF8A5C;}
+  .pf-verdict::before{content:"";width:9px;height:9px;border-radius:50%;background:#FF8A5C;box-shadow:0 0 0 3px rgba(255,138,92,.2);}
+  .pf-note{font-size:13px;color:#9298A0;margin-left:auto;}
+  .pf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink-2);}
+  .pf-item{background:var(--ink);padding:20px 22px;}
+  .pf-item .pfn{font-family:var(--ff-label);font-weight:800;font-size:13px;color:var(--orange);letter-spacing:.1em;margin-bottom:9px;}
+  .pf-item .pft{font-family:var(--ff-label);font-weight:600;font-size:15px;color:#fff;letter-spacing:-.01em;margin-bottom:5px;}
+  .pf-item .pfd{font-size:12.5px;color:#9298A0;line-height:1.45;}
+  .pf-foot{padding:16px 28px;font-size:13.5px;color:#C9CCD2;line-height:1.5;}
+  .pf-foot b{color:#fff;}
+
+  /* ============ 05 PROOF ============ */
+  .proof-frame{margin-top:30px;background:var(--row);border:1px solid var(--line-2);border-radius:12px;padding:18px 22px;
+    font-size:15px;color:var(--neu);line-height:1.55;display:flex;gap:12px;align-items:flex-start;}
+  .proof-frame b{color:var(--text);}
+  .proof-grid{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .proof{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:28px 30px;}
+  .proof .pco{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap;}
+  .proof .pname{font-family:var(--ff-label);font-weight:700;font-size:22px;color:var(--text);letter-spacing:-.02em;}
+  .proof .pstat{font-family:var(--ff-label);font-weight:800;font-size:clamp(28px,3.4vw,40px);color:var(--orange);
+    letter-spacing:-.02em;line-height:1.05;}
+  .proof .pstat .u{font-size:.5em;color:var(--gray);font-weight:600;letter-spacing:0;}
+  .proof .prow{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 16px;}
+  .proof .pmini{font-family:var(--ff-label);font-weight:600;font-size:13px;color:var(--text);
+    background:var(--row);border:1px solid var(--line-2);border-radius:8px;padding:7px 12px;}
+  .proof .pmini b{color:var(--orange-deep);}
+  .proof p{font-size:14px;color:var(--gray);line-height:1.55;}
+  .proof p b{color:var(--text);}
+  .standard{margin-top:18px;background:var(--ink);color:#fff;border-radius:12px;padding:24px 28px;
+    font-size:17px;line-height:1.5;max-width:74ch;}
+  .standard b{color:var(--orange-light);}
+
+  /* ============ 06 GOALS ============ */
+  .goals{margin-top:32px;display:flex;flex-direction:column;gap:12px;}
+  .goal .exp-head{align-items:flex-start;}
+  .goal .gnum{flex:none;width:58px;height:58px;border-radius:11px;background:var(--orange);color:#fff;
+    font-family:var(--ff-label);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;
+    letter-spacing:-.02em;line-height:1;text-align:center;transition:background .2s;}
+  .goal.open .gnum{background:var(--ink);}
+  .goal .exp-tag{margin-top:5px;}
+  .gdetail{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:4px;border:1px solid var(--line);border-radius:11px;overflow:hidden;}
+  .gd{padding:18px 20px;border-right:1px solid var(--line);}
+  .gd:last-child{border-right:none;}
+  .gd .gdh{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    margin-bottom:9px;}
+  .gd.deliver .gdh{color:var(--orange-deep);}
+  .gd.risk .gdh{color:var(--warn);}
+  .gd.indic .gdh{color:var(--ok);}
+  .gd p{font-size:14px;color:var(--neu);line-height:1.55;}
+  .gd p b{color:var(--text);}
+
+  /* ============ 07 MOTIONS ============ */
+  .motions{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .motion{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:28px 30px;position:relative;}
+  .motion.staged{background:var(--row);}
+  .motion .mstat{display:inline-flex;margin-bottom:14px;}
+  .badge{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:4px 10px;border-radius:6px;}
+  .badge.scaling{background:var(--orange);color:#fff;}
+  .badge.held{background:var(--neu-bg);color:var(--neu);border:1px solid var(--neu-line);}
+  .motion h3{font-family:var(--ff-label);font-weight:700;font-size:23px;color:var(--text);letter-spacing:-.02em;margin-bottom:10px;}
+  .motion p{font-size:15px;color:var(--gray);line-height:1.58;}
+  .motion p b{color:var(--text);}
+  .factrow{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;}
+  .fact{font-family:var(--ff-label);font-weight:600;font-size:13px;color:var(--text);
+    background:var(--row);border:1px solid var(--line-2);border-radius:8px;padding:7px 12px;display:flex;align-items:baseline;gap:6px;}
+  .fact .fv{font-weight:800;font-size:16px;color:var(--orange-deep);}
+  .motion.staged .fact{background:#fff;}
+  .signals{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .tier{background:#fff;border:1px solid var(--line-2);border-radius:12px;padding:20px 22px;}
+  .tier .th{font-family:var(--ff-label);font-weight:700;font-size:12.5px;letter-spacing:.04em;color:var(--orange-deep);
+    text-transform:uppercase;margin-bottom:4px;}
+  .tier .tsub{font-size:12px;color:var(--gray-2);font-family:var(--ff-label);font-weight:600;letter-spacing:.02em;margin-bottom:12px;}
+  .tier ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .tier li{font-size:13.5px;color:var(--neu);line-height:1.4;padding-left:16px;position:relative;}
+  .tier li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--orange);}
+  .tier:nth-child(2) li::before{background:var(--orange-light);}
+  .tier:nth-child(3) li::before{background:var(--line-2);}
+
+  /* ============ 08 MODERNIZING ============ */
+  .modern-lead{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;}
+  .swap{font-size:14px;color:var(--gray);font-family:var(--ff-label);font-weight:600;
+    background:#fff;border:1px solid var(--line-2);border-radius:100px;padding:8px 16px;}
+  .swap b{color:var(--orange-deep);}
+  .tools{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .tool{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:0;overflow:hidden;display:flex;flex-direction:column;}
+  .tool .tprev .prev-seed{position:absolute;top:10px;right:12px;font-family:var(--ff-label);font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F6B98A;background:rgba(0,0,0,.28);border:1px solid rgba(244,121,32,.55);border-radius:5px;padding:2px 7px;}
+  .tool .tprev{height:118px;background:
+      linear-gradient(135deg,var(--ink) 0%,var(--ink-2) 100%);
+    position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:14px 16px;}
+  .tool .tprev .stripes{position:absolute;inset:0;opacity:.5;
+    background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 11px);}
+  .tool .tprev .glow{position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;
+    background:radial-gradient(circle,rgba(31,115,64,.35),rgba(37,181,111,0) 70%);}
+  .tool .tprev .ph{position:relative;font-family:var(--ff-label);font-size:10.5px;font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;color:#9298A0;}
+  .tool .tbody{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;}
+  .tool h4{font-family:var(--ff-label);font-weight:700;font-size:17px;color:var(--text);letter-spacing:-.01em;margin-bottom:7px;}
+  .tool p{font-size:13.5px;color:var(--gray);line-height:1.5;flex:1;}
+  .tool .tchip{margin-top:14px;}
+  .live-note{margin-top:22px;font-size:14px;color:var(--gray);background:var(--warn-bg);border:1px solid var(--warn-line);
+    border-radius:10px;padding:14px 18px;line-height:1.5;}
+  .live-note b{color:var(--warn);}
+
+  /* ============ 09 INVENTORY ============ */
+  .inv{margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .inv-group{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:24px 26px;}
+  .inv-group.wide{grid-column:1 / -1;}
+  .inv-group .igh{font-family:var(--ff-label);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--orange-deep);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .inv-group .igh::after{content:"";flex:1;height:1px;background:var(--line);}
+  .inv-list{display:flex;flex-direction:column;gap:11px;}
+  .inv-item{display:flex;gap:12px;align-items:flex-start;}
+  .inv-item .ck{flex:none;width:18px;height:18px;border-radius:5px;background:var(--ok-bg);border:1px solid var(--ok-line);
+    display:flex;align-items:center;justify-content:center;margin-top:2px;}
+  .inv-item .ck svg{width:11px;height:11px;color:var(--ok);}
+  .inv-item .it{font-size:14px;color:var(--neu);line-height:1.5;}
+  .inv-item .it b{color:var(--text);font-weight:600;}
+  .inv-item .it code{font-family:var(--ff-label);background:var(--row-2);color:var(--orange-deep);font-size:12px;
+    font-weight:600;padding:1px 6px;border-radius:5px;}
+  .ops{counter-reset:op;display:flex;flex-direction:column;gap:12px;}
+  .op{display:flex;gap:16px;align-items:flex-start;}
+  .op .opn{flex:none;width:30px;height:30px;border-radius:8px;background:var(--orange);color:#fff;
+    font-family:var(--ff-label);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;}
+  .op .opt{font-size:14.5px;color:var(--neu);line-height:1.55;padding-top:3px;}
+  .op .opt b{color:var(--text);font-weight:600;}
+  .inv-close{margin-top:22px;background:var(--ink);color:#fff;border-radius:13px;padding:28px 32px;position:relative;overflow:hidden;}
+  .inv-close::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--orange);}
+  .inv-close p{font-size:19px;line-height:1.5;max-width:64ch;color:#E7E3DE;}
+  .inv-close p b{color:#fff;}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--ink);color:#fff;text-align:center;padding:64px 40px 60px;margin-top:64px;position:relative;}
+  footer::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:linear-gradient(90deg,var(--spark-soft) 0%,var(--spark) 60%,#D8400A 100%);}
+  footer .feye{font-family:var(--ff-label);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--orange-light);margin-bottom:20px;}
+  footer .fbig{font-family:var(--ff-label);font-weight:700;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em;
+    max-width:24ch;margin:0 auto;line-height:1.2;}
+  footer .fbig b{color:var(--orange);}
+  footer .fline{font-size:15px;color:#C9CCD2;margin-top:20px;max-width:62ch;margin-left:auto;margin-right:auto;line-height:1.6;}
+  footer .fmeta{font-family:var(--ff-label);font-size:13px;letter-spacing:.06em;color:var(--orange-light);margin-top:26px;text-transform:uppercase;}
+
+  /* ============ REVEAL ============ */
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+  .rv.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion: reduce){
+    .rv{opacity:1 !important;transform:none !important;transition:none;}
+    .exp-body{transition:none;}
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:960px){
+    body{flex-direction:column;}
+    .rail{width:auto;height:auto;position:static;flex-direction:column;}
+    .rail-nav{flex-direction:row;flex-wrap:wrap;gap:4px;}
+    .nav-item{width:auto;}
+    .nav-item.on::before{display:none;}
+    .rail-foot{margin-top:14px;}
+    main{padding:0 28px;}
+  }
+  @media(max-width:980px){
+    .caps,.tools,.signals,.tripwires{grid-template-columns:1fr 1fr;}
+    .pf-grid{grid-template-columns:1fr 1fr;}
+    .gdetail{grid-template-columns:1fr;}
+    .gd{border-right:none;border-bottom:1px solid var(--line);}
+    .gd:last-child{border-bottom:none;}
+    .layers{grid-template-columns:1fr;}
+    .lconn{transform:rotate(90deg);padding:8px 0;}
+  }
+  @media(max-width:760px){
+    .hero{padding:48px 24px 56px;}
+    main{padding:0 24px;}
+    .rail-in{padding:0 16px;}
+    .proof-grid,.tower,.motions,.caps,.tools,.signals,.tripwires,.inv,.principle .pr,.xrow{grid-template-columns:1fr;}
+    .xrow{grid-template-columns:1fr;gap:6px;text-align:left;}
+    .xrow .arr{justify-content:flex-start;transform:rotate(90deg);width:24px;}
+    .pf-grid{grid-template-columns:1fr;}
+    .inv-group.wide{grid-column:auto;}
+    .present .toggle{padding:6px 7px 6px 11px;}
+    /* hub & spoke -> stacked list */
+    .hubspoke{height:auto;max-width:none;display:flex;flex-direction:column;gap:10px;}
+    .hub{position:static;transform:none;width:100%;height:auto;border-radius:13px;flex-direction:row;justify-content:flex-start;gap:14px;padding:20px 22px;}
+    .hub::after{display:none;}
+    .hub .hl2{margin-top:0;}
+    .spoke{position:static !important;transform:none !important;width:100%;}
+    .spoke-line{display:none;}
+    .principle{flex-direction:column;}
+  }
+
+  /* ============ PRINT ============ */
+  @media print{
+    @page{margin:13mm;}
+    body{background:#fff;}
+    .suite,.rail,.present{display:none !important;}
+    .hero::after,.xclose::before,.inv-close::before{display:none;}
+    section.sec{padding:20px 0;break-inside:avoid;}
+    .exp-body{max-height:none !important;}
+    .enter .chev{display:none;}
+    .talk{display:block !important;}
+    .exp,.cap,.proof,.trip,.tool,.motion,.layer,.tower-card,.inv-group{break-inside:avoid;box-shadow:none !important;}
+    .rv{opacity:1 !important;transform:none !important;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    main{max-width:none;}
+  }
+  h1,h2,h3,h4,.dsp,.hero h1,.exp-t,.xrow .to,.hub .hl1,.spoke .sk-t,.cap h4,.stage .stt,.layer h4,.layer-tagline,.tower-card .tt,.principle .pr .prt,.trip h4,.pf-item .pft,.proof .pname,.proof .pstat,.motion h3,.tool h4,.goal .gnum,footer .fbig{font-family:'Playfair Display',serif !important;}
+  h2.title,.exp-t,.cap h4,.tower-card .tt,.trip h4,.proof .pname,.motion h3,.tool h4{color:var(--orange-deep) !important;}
+  /* ============ MOTIONS INTERACTIVE ============ */
+  .m-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px;}
+  .m-card{position:relative;background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:22px 24px 22px 27px;cursor:pointer;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;text-align:left;width:100%;appearance:none;font:inherit;}
+  .m-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--line-2);transition:background .2s;}
+  .m-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+  .m-card.sel{border-color:#BFD3C2;box-shadow:var(--shadow-lg);}
+  .m-card.star.sel::before{background:var(--spark);}
+  .m-card.bo.sel::before{background:var(--lime);}
+  .m-card .m-kick{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:9px;}
+  .m-card.star .m-kick{color:var(--spark);}
+  .m-card.bo .m-kick{color:var(--orange);}
+  .m-card h3{font-family:'Playfair Display',serif;font-weight:700;font-size:23px;color:var(--orange-deep);margin-bottom:8px;letter-spacing:-.01em;}
+  .m-card p{font-size:14.5px;color:var(--gray);line-height:1.55;}
+  .m-card .m-lever{display:inline-block;margin-top:14px;font-family:var(--ff-label);font-size:12px;color:var(--orange-deep);background:var(--row-2);border-radius:8px;padding:7px 12px;}
+  .statband{margin-top:16px;background:linear-gradient(120deg,var(--orange) 0%,var(--orange-deep) 100%);color:#fff;border-radius:14px;padding:26px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  .statband .sv{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(34px,5vw,52px);line-height:1;}
+  .statband .sl{font-size:15px;color:#CDE6D5;max-width:46ch;line-height:1.45;}
+  .statband .sl b{color:#fff;}
+  .statband .schip{margin-left:auto;}
+  .subtabs{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;}
+  .subtab{appearance:none;cursor:pointer;font-family:var(--ff-label);font-size:13px;font-weight:600;color:var(--neu);background:#fff;border:1px solid var(--line-2);border-radius:100px;padding:9px 18px;transition:.15s;}
+  .subtab:hover{border-color:#BFD3C2;color:var(--text);}
+  .subtab.on{background:var(--orange-deep);color:#fff;border-color:var(--orange-deep);}
+  .panelwrap{margin-top:16px;}
+  .panel{display:none;background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:30px 32px;}
+  .panel.on{display:block;}
+  body.present .panel{display:block;margin-bottom:14px;}
+  .panel .p-kick{font-family:var(--ff-label);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--spark);margin-bottom:10px;}
+  .panel h4{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(21px,2.5vw,29px);color:var(--orange-deep);margin-bottom:22px;line-height:1.15;letter-spacing:-.01em;}
+  .p-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .p-tile{background:var(--row);border-radius:12px;padding:20px 22px;}
+  .p-tile .pt-h{font-family:var(--ff-label);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+  .p-tile p{font-size:14px;color:var(--neu);line-height:1.55;}
+  .p-sum{margin-top:18px;background:#FFF3EC;border:1px solid #FAD9C7;border-radius:10px;padding:16px 20px;font-size:15px;color:var(--neu);font-style:italic;line-height:1.5;}
+  @media(max-width:860px){ .m-cards,.p-grid,.legend-grid{grid-template-columns:1fr;} }
+  /* ============ GENERIC TABSET DRILL-DOWN ============ */
+  .tset-panels{margin-top:20px;}
+  .tset-panel{display:none;background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:26px 30px;}
+  .tset-panel.on{display:block;}
+  body.present .tset-panel{display:block;margin-bottom:12px;}
+  .tset-panel .tp-k{font-family:var(--ff-label);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--spark);margin-bottom:9px;}
+  .tset-panel .tp-h{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--orange-deep);margin-bottom:10px;letter-spacing:-.01em;}
+  .tset-panel p{font-size:15px;color:var(--neu);line-height:1.6;max-width:78ch;}
+  .tset-hint{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-2);}
+  .stage{cursor:pointer;transition:transform .15s,box-shadow .15s,border-color .15s;}
+  .stage:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+  .stage.sel{border-color:var(--orange);box-shadow:var(--shadow-lg);}
+  .stage.gate.sel{border-color:var(--spark);}
+  .trip{cursor:pointer;}
+  .trip:hover{border-color:#BFD3C2;}
+  .trip.sel{border-color:var(--orange);box-shadow:var(--shadow-lg);}
+  .tool{cursor:pointer;}
+  .tool.sel{border-color:var(--orange);box-shadow:var(--shadow-lg);}
+  .spoke{cursor:pointer;}
+  .spoke.sel{border-color:var(--orange);box-shadow:var(--shadow-lg);}
+  .m-card:focus,.subtab:focus,.nav-item:focus,.tool:focus,.stage:focus,.trip:focus,.spoke:focus,.exp-head:focus,.toggle:focus{outline:none;}
+  .m-card:focus-visible,.subtab:focus-visible,.nav-item:focus-visible,.tool:focus-visible,.stage:focus-visible,.trip:focus-visible,.spoke:focus-visible,.toggle:focus-visible{outline:2px solid var(--spark);outline-offset:2px;}
+  @keyframes panelfade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  @media (prefers-reduced-motion: no-preference){ .panel.on,.tset-panel.on{animation:panelfade .26s ease;} }
+</style>
+</head>
+<body>
+
+<!-- ============ SUITE NAV ============ -->
+<aside class="rail" id="rail" aria-label="Section navigation">
+  <div class="rail-top">
+    <div class="logo"><svg class="logo-mk" viewBox="0 0 20 20" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="2.2" fill="#1F7340"/><rect x="11" y="1" width="8" height="8" rx="2.2" fill="#25B56F"/><rect x="1" y="11" width="8" height="8" rx="2.2" fill="#A4CE3A"/><rect x="11" y="11" width="8" height="8" rx="2.2" fill="#FE5000"/></svg>Intradiem<sup>&reg;</sup></div>
+    <div class="rail-label">GTM Engineer &middot; Operating System</div>
+  </div>
+  <div class="rail-navlabel">The engine, by click</div>
+  <nav class="rail-nav">
+    <button class="nav-item on" data-go="s00"><span class="ni-n">00</span><span class="ni-t">Start<small>For Naveen</small></span></button>
+    <button class="nav-item" data-go="s01"><span class="ni-n">01</span><span class="ni-t">Thesis<small>The system</small></span></button>
+    <button class="nav-item" data-go="s02"><span class="ni-n">02</span><span class="ni-t">Golden List<small>The build pack</small></span></button>
+    <button class="nav-item" data-go="s03"><span class="ni-n">03</span><span class="ni-t">Engine<small>Cohesion layer</small></span></button>
+    <button class="nav-item" data-go="s04"><span class="ni-n">04</span><span class="ni-t">Guardrails<small>The product</small></span></button>
+    <button class="nav-item" data-go="s06"><span class="ni-n">05</span><span class="ni-t">Q3 Goals<small>Four targets</small></span></button>
+    <button class="nav-item" data-go="s07"><span class="ni-n">06</span><span class="ni-t">Motions<small>Star Ratings</small></span></button>
+    <button class="nav-item" data-go="s08"><span class="ni-n">07</span><span class="ni-t">Tools<small>Live now</small></span></button>
+    <button class="nav-item" data-go="s09"><span class="ni-n">08</span><span class="ni-t">Ready<small>Day-1 plan</small></span></button>
+  </nav>
+  <div class="rail-foot">
+    <button class="toggle present" id="presentBtn" aria-pressed="false" aria-label="Toggle presenter mode">Presenter<span class="sw"></span></button>
+  </div>
+</aside>
+<div class="content">
+
+<!-- ============ 00 · HERO ============ -->
+<header class="hero" id="s00">
+  <div class="hero-in">
+    <div class="eyebrow">The GTM Engine · Built before day one</div>
+    <h1>The engine, built<br>before <span class="spark">day one.</span></h1>
+    <p class="sub">Ready to run, built to co-shape. A GTM acquisition engine, <b>enriched, scored, measured, and gated</b>, prepared for July 6, so we start from a system instead of a blank page.</p>
+    <p class="posture">This is a contribution to shape with Naveen and the team. The durable value is the engine itself, and it holds up against whatever targets we land on together.</p>
+    <div class="meta">
+      <span class="pill"><b>Dallas Andrews</b> · GTM Engineer</span>
+      <span class="pill">Reporting to <b>Naveen Thilagan</b></span>
+      <span class="pill">Day 1: <b>July 6, 2026</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STICKY RAIL ============ -->
+
+
+<main>
+
+  <!-- ============ 00 · ORIENTATION ============ -->
+  <section class="sec rv" id="orient" aria-labelledby="h00">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">00</span> For you, Naveen</div>
+      <h2 class="title" id="h00">Where I&rsquo;d point the engine first.</h2>
+    </div>
+    <p class="lead">Two things before any of the build below: the sharper target I would aim the live motion at, and how to read every number on this page.</p>
+    <div style="margin-top:26px;background:#fff;border:1px solid var(--line-2);border-left:4px solid var(--spark);border-radius:0 12px 12px 0;padding:26px 30px;">
+      <div style="font-family:var(--ff-label);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--spark);margin-bottom:10px;">One read I&rsquo;d add</div>
+      <p style="font-size:16.5px;color:var(--neu);line-height:1.6;max-width:84ch;">Not all 38 sub-4.0 plans are ours to move. A Star Rating is a composite, and most plans miss the line on measures we do not touch. The winnable set is the plans whose gap sits in the <b style="color:var(--text);">call-center measures</b> Queue Optimizer actually moves, not the clinical or HEDIS ones. So the engine&rsquo;s first job is not raw volume against 38. It is isolating the subset where our lever changes the rating. That is the first cut I would make, and I would want your read on it.</p>
+    </div>
+    <div class="exp open" style="margin-top:16px;">
+      <div style="padding:22px 26px;">
+        <div style="font-family:var(--ff-label);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:6px;">The number legend</div>
+        <p style="font-size:13.5px;color:var(--gray);line-height:1.5;margin-bottom:16px;">Every figure on this page is labeled one of three ways. This is the integrity contract, so no number is left to guess at.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;" class="legend-grid">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span class="chip verified">Verified</span><span style="font-size:13.5px;color:var(--neu);line-height:1.45;">Confirmed fact, stated plainly.</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span class="chip dryrun">Dry-run</span><span style="font-size:13.5px;color:var(--neu);line-height:1.45;">Illustrative, seeded, goes live Jul 6. Never real pipeline.</span></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span class="chip target">Target</span><span style="font-size:13.5px;color:var(--neu);line-height:1.45;">Q3 goal, provisional, to co-shape. Never a promise to defend.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>I open with the one cut I would make, then the number legend so you always know what is verified, what is seeded until access, and what is a target we shape together. Everything after this is the engine that delivers it.</div>
+  </section>
+
+  <!-- ============ 01 · THESIS ============ -->
+  <section class="sec rv" id="s01" aria-labelledby="h01">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">01</span> The thesis</div>
+      <h2 class="title" id="h01">You said pipeline is a system output. I built the system.</h2>
+    </div>
+    <p class="lead">We already agree on the worldview: reps should be selling, not researching, and pipeline should come out of a system instead of manual grind. So I will not re-argue it. The part a strategy page cannot show is the running machine underneath it, and the rails that prove it works. That is what the rest of this page is.</p>
+    <div class="xclose">
+      <p>Your page made the case for the engine. This one <b>is</b> the engine: built, gated, and measured, so the thesis runs every week instead of living on a slide.</p>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>We already agree here, so I keep it short. Your page argued that pipeline is a system output. My job is the system itself, and the rails that prove it. Everything after this is that machine.</div>
+  </section>
+
+  <!-- ============ 02 · GOLDEN LIST ============ -->
+  <section class="sec rv" id="s02" aria-labelledby="h02">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">02</span> The Golden List · the foundation</div>
+      <h2 class="title" id="h02">Your Golden List, with the build pack that stands it up.</h2>
+    </div>
+    <p class="lead">The Golden List is your foundation, and you have already defined what it does. What did not exist yet is the click-by-click build that turns the concept into a <span class="hl">live Clay base on Day 1</span>. I wrote it.</p>
+
+    <div class="tabset">
+    <div class="golden-grid">
+      <div class="hub-wrap">
+        <div class="hubspoke" role="img" aria-label="Golden List hub feeding six components: account scoring, contact enrichment, intent signals, outreach sequences, rep prioritization, pipeline reporting">
+          <div class="hub">
+            <div class="hl1">The Golden List</div>
+            <div class="hl2">one live layer · six jobs</div>
+          </div>
+          <div class="spoke s1 sel" data-target="j1"><div class="sk-n">01</div><div class="sk-t">Account scoring</div></div>
+          <div class="spoke s2" data-target="j2"><div class="sk-n">02</div><div class="sk-t">Contact enrichment</div></div>
+          <div class="spoke s3" data-target="j3"><div class="sk-n">03</div><div class="sk-t">Intent signals</div></div>
+          <div class="spoke s4" data-target="j4"><div class="sk-n">04</div><div class="sk-t">Outreach sequences</div></div>
+          <div class="spoke s5" data-target="j5"><div class="sk-n">05</div><div class="sk-t">Rep prioritization</div></div>
+          <div class="spoke s6" data-target="j6"><div class="sk-n">06</div><div class="sk-t">Pipeline reporting</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:var(--ff-label);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:16px;">What I built on top of it</div>
+        <div class="artifact" style="margin-top:0;">
+          <span class="alab">Ready now</span>
+          <p><b>A click-by-click Clay Build Pack.</b> Tables, columns, enrichment waterfalls, fit and grade formulas, signal columns, source-tag writes, and webhooks, all in build order. It stands the Golden List up as a live Clay base in about <b>two hours on Day 1</b>, instead of being designed from scratch while the quarter is already running.</p>
+        </div>
+        <p class="body" style="margin-top:18px;max-width:none;">It also feeds the current Star Ratings enrichment from <b>40+ sources</b>, with the fit and grade formulas that decide which accounts a rep works first. <span class="chip verified sm">Verified</span></p>
+        <p class="body" style="margin-top:14px;max-width:none;">That is the difference between a concept on a page and a base a rep can pull from in week one.</p>
+      </div>
+    </div>
+    <div class="tset-panels">
+      <div class="tset-panel on" data-key="j1"><div class="tp-k">Job 01</div><div class="tp-h">Account scoring</div><p>Every target account scored by fit and intent, so reps work the most winnable first instead of the whole list at once.</p></div>
+      <div class="tset-panel" data-key="j2"><div class="tp-k">Job 02</div><div class="tp-h">Contact enrichment</div><p>Director-plus contacts enriched from 40+ sources, so each record carries the context a message needs to land.</p></div>
+      <div class="tset-panel" data-key="j3"><div class="tp-k">Job 03</div><div class="tp-h">Intent signals</div><p>Hiring, tech-stack, news, and contract signals layered on, so outreach fires when the account is most ready.</p></div>
+      <div class="tset-panel" data-key="j4"><div class="tp-k">Job 04</div><div class="tp-h">Outreach sequences</div><p>The list feeds sequences directly through Clay, so a scored account becomes a contextual touch with no manual handoff.</p></div>
+      <div class="tset-panel" data-key="j5"><div class="tp-k">Job 05</div><div class="tp-h">Rep prioritization</div><p>The grade tells a rep which accounts to work today, so attention follows the highest-probability revenue.</p></div>
+      <div class="tset-panel" data-key="j6"><div class="tp-k">Job 06</div><div class="tp-h">Pipeline reporting</div><p>Source-tagged from the first touch, so every meeting traces back to the motion that produced it.</p></div>
+    </div>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>The Golden List is your idea, so I will not re-explain it. The thing that did not exist is the build pack that stands it up as a live Clay base in about two hours on day one. That is what I added.</div>
+  </section>
+
+  <!-- ============ 03 · THE ENGINE ============ -->
+  <section class="sec rv" id="s03" aria-labelledby="h03">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">03</span> The engine · the cohesion layer</div>
+      <h2 class="title" id="h03">One weekly motion. Seven stages. Gated where it matters.</h2>
+    </div>
+    <p class="lead">A single conductor runs the week from end to end, and stops dead at the gates. <span class="hl">The gates are not optional steps; they are the point.</span></p>
+
+    <div class="tabset">
+    <div class="flow-scroll" role="img" aria-label="Weekly conductor stages, click any stage for detail">
+      <div class="flow">
+        <div class="stage sel" data-target="s0"><div class="stn">0</div><div class="stt">Re-read spec</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s1"><div class="stn">1</div><div class="stt">Refresh</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s2"><div class="stn">2</div><div class="stt">Re-score</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s3"><div class="stn">3</div><div class="stt">Scan signals</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s4"><div class="stn">4</div><div class="stt">Draft</div></div>
+        <div class="farr">→</div>
+        <div class="stage gate" data-target="s4b"><div class="stn">4b</div><div class="stt">Objective critic</div><div class="gtag">Gate</div></div>
+        <div class="farr">→</div>
+        <div class="stage gate" data-target="s5"><div class="stn">5</div><div class="stt">Human approve</div><div class="gtag">Gate</div></div>
+        <div class="farr">→</div>
+        <div class="stage gate" data-target="s6"><div class="stn">6</div><div class="stt">Send</div><div class="gtag">Deliv. gate</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s7"><div class="stn">7</div><div class="stt">Instrument</div></div>
+        <div class="farr">→</div>
+        <div class="stage" data-target="s8"><div class="stn">8</div><div class="stt">Guardrails</div></div>
+      </div>
+    </div>
+    <div class="flow-legend">
+      <div class="lg"><span class="box"></span> Automated stage</div>
+      <div class="lg"><span class="box gate"></span> Gate: the line stops here until it passes</div>
+      <div class="lg" style="margin-left:auto;"><span class="tset-hint">Click any stage &rarr;</span></div>
+    </div>
+    <div class="tset-panels">
+      <div class="tset-panel on" data-key="s0"><div class="tp-k">Stage 0 · Automated</div><div class="tp-h">Re-read the spec</div><p>Every run starts by re-reading the build spec and re-asserting the single in-scope motion. Drift is logged. The conductor never wanders off-brief.</p></div>
+      <div class="tset-panel" data-key="s1"><div class="tp-k">Stage 1 · Automated</div><div class="tp-h">Refresh the data</div><p>Pulls the latest account and contact data into the Golden List, so the week runs on current reality, not last week's snapshot.</p></div>
+      <div class="tset-panel" data-key="s2"><div class="tp-k">Stage 2 · Automated</div><div class="tp-h">Re-score the list</div><p>Re-scores fit and grade across the list, so the most winnable accounts rise to the top before a single message is drafted.</p></div>
+      <div class="tset-panel" data-key="s3"><div class="tp-k">Stage 3 · Automated</div><div class="tp-h">Scan the signals</div><p>Sweeps the signal library for fresh triggers and routes each to the right owner. A new signal changes the outreach angle.</p></div>
+      <div class="tset-panel" data-key="s4"><div class="tp-k">Stage 4 · Automated</div><div class="tp-h">Draft</div><p>The maker drafts a contextual message per record at the top of the queue. Fast and tireless, but it never gets the last word.</p></div>
+      <div class="tset-panel" data-key="s4b"><div class="tp-k">Stage 4b · Gate</div><div class="tp-h">The objective critic holds</div><p>An independent reviewer holds any draft that fails deliverability, ICP and persona, in-scope motion, verified claims, or length. The maker cannot sweet-talk it.</p></div>
+      <div class="tset-panel" data-key="s5"><div class="tp-k">Stage 5 · Gate</div><div class="tp-h">A human approves</div><p>Dallas or the rep approves, edits, or rejects. Nothing leaves the building without a person. The judgment stays human.</p></div>
+      <div class="tset-panel" data-key="s6"><div class="tp-k">Stage 6 · Deliverability gate</div><div class="tp-h">Send, only when green</div><p>Send is gated on a green deliverability check: warmup, rotation, spam and blacklist monitoring. Scaling cannot turn into spray-and-burn.</p></div>
+      <div class="tset-panel" data-key="s7"><div class="tp-k">Stage 7 · Automated</div><div class="tp-h">Instrument</div><p>Every send is source-tagged and metered into the attribution funnel, so credit is captured while the window still counts.</p></div>
+      <div class="tset-panel" data-key="s8"><div class="tp-k">Stage 8 · Automated</div><div class="tp-h">Guardrails run</div><p>WIP-of-one, throughput-by-operator, and the operator-test recompute every cycle. The system has to survive me.</p></div>
+    </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <div style="font-family:var(--ff-label);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:18px;">The line that matters · maker → critic → human</div>
+      <div class="layers">
+        <div class="layer">
+          <div class="lnum">Layer 1 · Maker</div>
+          <h4>The draft engine</h4>
+          <p>Refreshes, re-scores, scans signals, and drafts outreach for every record. Fast and tireless, but it never gets the last word.</p>
+        </div>
+        <div class="lconn">→</div>
+        <div class="layer">
+          <div class="lnum">Layer 2 · Checker</div>
+          <h4>An objective critic</h4>
+          <p>An independent reviewer that <b style="color:var(--text);">holds</b> bad drafts on deliverability, ICP/persona, in-scope motion, verified-claims, and length. It can't be sweet-talked by the maker.</p>
+        </div>
+        <div class="lconn">→</div>
+        <div class="layer human">
+          <div class="lnum">Layer 3 · Human</div>
+          <h4>Dallas / the rep approves</h4>
+          <p>Nothing leaves the building without a person. <b>The judgment stays human</b>, and the gate is where it lives.</p>
+        </div>
+      </div>
+      <div class="layer-tagline">I automate <b>around</b> the judgment, not the judgment itself.</div>
+    </div>
+
+    <div class="tower">
+      <div class="tower-card">
+        <div class="tt">The control tower <span class="chip dryrun sm" data-seed>Dry-run</span></div>
+        <p>The single front door: one screen with headline numbers, the seven-step diagram, and a tile per window. <b>The numbers shown are seeded</b> until Salesforce and Clay connect on go-live.</p>
+      </div>
+      <div class="tower-card">
+        <div class="tt">One source of truth</div>
+        <p>A single state file every dashboard reads and the conductor writes. <b>It kills dashboard drift</b>, so there is exactly one version of what is true at any moment.</p>
+      </div>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>This is the centerpiece, and here's the sentence I'd want to land with you: <b>I don't automate the judgment. I automate everything around it, and I put a hard human gate where the judgment lives.</b> Three layers, not one. The maker drafts, an independent reviewer holds anything off-spec, and a person approves before a single message leaves the building.</div>
+  </section>
+
+  <!-- ============ 04 · GUARDRAILS ============ -->
+  <section class="sec rv" id="s04" aria-labelledby="h04">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">04</span> Guardrails as the product</div>
+      <h2 class="title" id="h04">The guardrails are the product.</h2>
+    </div>
+    <p class="lead">This is what separates <span class="hl">engineered</span> from <span class="hl">sprayed</span>. The governing principle, in order:</p>
+    <div class="principle">
+      <div class="pr"><div class="prk">First</div><div class="prt"><b>Measurement</b> before volume</div></div>
+      <div class="pr"><div class="prk">Then</div><div class="prt"><b>ICP</b> before sourcing</div></div>
+      <div class="pr"><div class="prk">Always</div><div class="prt"><b>Human</b> before send</div></div>
+    </div>
+
+    <div style="margin-top:40px;font-family:var(--ff-label);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);">Three self-policing tripwires · from a pre-mortem</div>
+    <div class="tabset">
+    <div class="tripwires">
+      <div class="trip sel" data-target="t1">
+        <div class="ttag">Tripwire 1</div>
+        <h4>WIP-of-one</h4>
+        <p>Only one motion scales at a time, which prevents sprawl. Star Ratings is the one; everything else waits in backlog until it earns the slot.</p>
+      </div>
+      <div class="trip" data-target="t2">
+        <div class="ttag">Tripwire 2</div>
+        <h4>Throughput-by-operator</h4>
+        <p>Alarms if my share of weekly releases exceeds a <b>20% ceiling</b>. "Done" means the team runs it unaided, not "works when Dallas runs it."</p>
+      </div>
+      <div class="trip" data-target="t3">
+        <div class="ttag">Tripwire 3</div>
+        <h4>Operator-test</h4>
+        <p>A motion only flips to "operable" after <b>two consecutive batches</b> released by a non-Dallas operator. The system has to survive me.</p>
+      </div>
+    </div>
+    <div class="tset-panels">
+      <div class="tset-panel on" data-key="t1"><div class="tp-k">Tripwire 1 &middot; anti-sprawl</div><div class="tp-h">WIP-of-one</div><p>Only one motion is allowed to scale at a time. Star Ratings holds the slot; Back Office and every modernize-OKR item sit in backlog. The conductor flags a violation the moment a second motion is marked scaling, so sprawl cannot creep in while my back is turned.</p></div>
+      <div class="tset-panel" data-key="t2"><div class="tp-k">Tripwire 2 &middot; anti-bottleneck</div><div class="tp-h">Throughput-by-operator</div><p>An alarm fires if my share of weekly releases passes a 20% ceiling. The point is that "done" means the team runs the motion unaided, not "it works when Dallas runs it." If I become the bottleneck, the number tells on me before anyone has to.</p></div>
+      <div class="tset-panel" data-key="t3"><div class="tp-k">Tripwire 3 &middot; durability</div><div class="tp-h">Operator-test</div><p>A motion only flips to "operable" after two consecutive batches are released by a non-Dallas operator. Every release I make resets the streak. The system has to survive me leaving the room, or it is not really done.</p></div>
+    </div>
+    </div>
+
+    <div class="preflight">
+      <div class="pf-top">
+        <span class="pf-cmd"><span class="dollar">$</span> conductor --preflight</span>
+        <span class="pf-verdict">Not ready: 4 blockers</span>
+        <span class="pf-note">12 assertions run · all structural / contract / guardrail checks PASS <span class="chip verified sm" style="margin-left:4px;">Verified by running it</span></span>
+      </div>
+      <div class="pf-grid">
+        <div class="pf-item"><div class="pfn">01</div><div class="pft">Align on attribution</div><div class="pfd">Credit at the qualified-reply / meeting-sourced line, agreed together.</div></div>
+        <div class="pf-item"><div class="pfn">02</div><div class="pft">Set the 1× baseline</div><div class="pfd">Establish the starting throughput before any multiple can be claimed.</div></div>
+        <div class="pf-item"><div class="pfn">03</div><div class="pft">Deliverability green</div><div class="pfd">Warmup, rotation, spam/blacklist monitoring all clear.</div></div>
+        <div class="pf-item"><div class="pfn">04</div><div class="pft">Security audit current</div><div class="pfd">Review refreshed against go-live access scope.</div></div>
+      </div>
+      <div class="pf-foot">The gate is <b>fail-closed</b>: it refuses to go live until green. Those four blockers <b>are the Day-1 checklist</b>. Nothing else is in the way. Deliverability is a priority send-gate, so scaling cannot turn into reckless volume that burns the <b>157 sourced contacts</b>. <span class="chip verified sm" style="margin-left:4px;">Verified</span></div>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>I ran the preflight before access, and it correctly reports <b>NOT READY with exactly four blockers</b>. That's not a bug. It is the design. Those four items are literally our Day-1 checklist. Everything structural already passes. The guardrails aren't decoration around the engine; they <b>are</b> the product.</div>
+  </section>
+
+  <!-- ============ 06 · Q3 GOALS ============ -->
+  <section class="sec rv" id="s06" aria-labelledby="h06">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">05</span> The four Q3 goals</div>
+      <h2 class="title" id="h06">Four targets, and how the engine delivers each.</h2>
+    </div>
+    <p class="lead">Per your welcome note, these are a <span class="hl">rough sketch we'll shape together</span>. Every target below is provisional. Open any card for how the engine delivers it, the pre-mortem risk, and the leading indicator I own.</p>
+
+    <div class="goals">
+      <div class="exp goal">
+        <button class="exp-head" aria-expanded="false">
+          <span class="gnum">15</span>
+          <span class="exp-titles"><span class="exp-t">15 vetted new-logo meetings <span class="chip target sm">Target</span></span><span class="exp-tag">Senior tech officers in WFM / Ops</span></span>
+          <span class="enter"><span class="etxt">Enter</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </button>
+        <div class="exp-body"><div class="exp-inner">
+          <div class="gdetail">
+            <div class="gd deliver"><div class="gdh">How the engine delivers</div><p>Sourced via the <b>Star Ratings</b> motion (MA payers at the bonus cliff) plus the back-office motion via Clay. Enriched, scored, and contextual.</p></div>
+            <div class="gd risk"><div class="gdh">Pre-mortem risk</div><p>Meetings live in reps' reply-handling, and those are people I don't manage. Conversion isn't fully mine to control.</p></div>
+            <div class="gd indic"><div class="gdh">Indicator I own</div><p><b>Qualified replies sourced</b> and source-tagged. The part of the funnel the engine owns end to end.</p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="exp goal">
+        <button class="exp-head" aria-expanded="false">
+          <span class="gnum">10×</span>
+          <span class="exp-titles"><span class="exp-t">10× BDR messaging throughput <span class="chip target sm">Target</span></span><span class="exp-tag">Defined as qualified replies per week, not raw sends</span></span>
+          <span class="enter"><span class="etxt">Enter</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </button>
+        <div class="exp-body"><div class="exp-inner">
+          <div class="gdetail">
+            <div class="gd deliver"><div class="gdh">How the engine delivers</div><p>One push becomes a motion that runs <b>every week</b>. Gated by a deliverability floor so a multiple means real replies, not volume.</p></div>
+            <div class="gd risk"><div class="gdh">Pre-mortem risk</div><p>Vanity volume burns domains. A "10×" measured in sends would poison the sourced contacts we depend on.</p></div>
+            <div class="gd indic"><div class="gdh">Indicator I own</div><p><b>Qualified replies per week</b>, behind a deliverability gate. The honest definition of throughput.</p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="exp goal">
+        <button class="exp-head" aria-expanded="false">
+          <span class="gnum">200</span>
+          <span class="exp-titles"><span class="exp-t">200+ back-office contacts <span class="chip target sm">Target</span></span><span class="exp-tag">Inside existing customers' back offices</span></span>
+          <span class="enter"><span class="etxt">Enter</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </button>
+        <div class="exp-body"><div class="exp-inner">
+          <div class="gdetail">
+            <div class="gd deliver"><div class="gdh">How the engine delivers</div><p>Sourced via Clay inside the install base and sold into existing customers. <b>This number is mine regardless of product timing.</b></p></div>
+            <div class="gd risk"><div class="gdh">Pre-mortem risk</div><p>Sourcing against a non-existent ICP. Fixed by defining the ICP with <b>Scott Kemme in Week 1.</b></p></div>
+            <div class="gd indic"><div class="gdh">Indicator I own</div><p><b>Enriched, source-tagged contacts</b> added to the install-base white-space view.</p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="exp goal">
+        <button class="exp-head" aria-expanded="false">
+          <span class="gnum" style="font-size:13px;">Build<br>+ keep</span>
+          <span class="exp-titles"><span class="exp-t">Build + maintain the growth engine <span class="chip target sm" style="background:var(--neu-bg);">Standing OKR</span></span><span class="exp-tag">Lists · signals · measurement · cadence · agents</span></span>
+          <span class="enter"><span class="etxt">Enter</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+        </button>
+        <div class="exp-body"><div class="exp-inner">
+          <div class="gdetail">
+            <div class="gd deliver"><div class="gdh">How the engine delivers</div><p>A living system that stays current: lists, signals, measurement, cadence, agents, calculators, control plane. All maintained, not shipped once.</p></div>
+            <div class="gd risk"><div class="gdh">Pre-mortem risk</div><p>A system that works Day 1 and rots by Day 90. The throughput + operator tripwires exist to prevent exactly this.</p></div>
+            <div class="gd indic"><div class="gdh">Indicator I own</div><p>The engine stays green: preflight passes, guardrails report no integrity errors, the team runs it unaided.</p></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:22px;"><strong>Where I come in:</strong> I own the GTM engineering behind all three numbers. The Clay build, the enrichment and signal library, the list expansion, and the measurement that turns a number into a motion that repeats.</p>
+    <div class="talk"><span class="tlab">Talk track</span>I want to hold these loosely and on purpose. You called them a rough sketch, and I agree, so every one is chipped <b>Target</b>. What I'm confident about isn't the number, it's the mechanism: for each goal I can show you how the engine produces it, the risk I've already war-gamed, and the one leading indicator I'll own and report.</div>
+  </section>
+
+  <!-- ============ 07 · MOTIONS ============ -->
+  <section class="sec rv" id="s07" aria-labelledby="h07">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">06</span> Motions in play</div>
+      <h2 class="title" id="h07">One motion scales at a time. On purpose.</h2>
+    </div>
+    <p class="lead">Star Ratings is live and scaling. Back Office is staged behind it, on purpose. Pick a motion, then click through why it is a buyer now, how the engine runs it, who it reaches, what fires the outreach, the cadence, and where it stands.</p>
+
+    <div class="m-cards">
+      <button class="m-card star sel" data-motion="star">
+        <div class="m-kick">In market &middot; pipeline</div>
+        <h3>Star Ratings</h3>
+        <p>Medicare Advantage payers at the 4.0 Star cliff. We move the call-center measures that decide the bonus.</p>
+        <span class="m-lever">Lever &middot; Queue Optimizer</span>
+      </button>
+      <button class="m-card bo" data-motion="bo">
+        <div class="m-kick">In market &middot; white space</div>
+        <h3>Back Office</h3>
+        <p>The manual back office inside existing customers that has not bought yet. We replace spreadsheets, not an incumbent.</p>
+        <span class="m-lever">Lever &middot; Back Office Optimizer</span>
+      </button>
+    </div>
+
+    <div class="statband" data-band="star">
+      <span class="sv">5%</span>
+      <span class="sl"><b>quality bonus on the plan's payments</b> for every MA plan that crosses 4.0 Stars. Recurring, and board-level. Many sit just under the line.</span>
+      <span class="schip"><span class="chip verified sm">Verified &middot; CMS rule</span></span>
+    </div>
+    <div class="statband" data-band="bo" style="display:none;">
+      <span class="sv">200+</span>
+      <span class="sl"><b>back-office contacts to source</b> inside existing customers, once the ICP is set with Scott Kemme.</span>
+      <span class="schip"><span class="chip target sm">Target</span></span>
+    </div>
+
+    <div class="subtabs" role="tablist">
+      <button class="subtab on" data-tab="why">Why now</button>
+      <button class="subtab" data-tab="machine">The machine</button>
+      <button class="subtab" data-tab="personas">Personas</button>
+      <button class="subtab" data-tab="triggers">Triggers</button>
+      <button class="subtab" data-tab="cadence">Cadence</button>
+      <button class="subtab" data-tab="status">Status</button>
+    </div>
+    <div class="panelwrap">
+      <div class="panel on" data-motion="star" data-tab="why"><div class="p-kick">STAR RATINGS · WHY NOW</div><h4>Why Medicare Advantage payers are a buyer now</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">The problem they feel</div><p>Each MA contract earns a Star Rating. Cross 4.0 and the plan earns the 5% CMS quality bonus on its payments. Miss it and the money is gone. Many plans sit just under the line.</p></div><div class="p-tile"><div class="pt-h">What we do about it</div><p>Intradiem holds contact-center service level and cuts answer times in real time, with no added headcount. That moves the call-center measures that feed the rating, contract by contract.</p></div><div class="p-tile"><div class="pt-h">Why the timing is now</div><p>The call-center measures are scored through the 2028 Stars, then phased out. The window to sell this clean attribution story is open now and finite.</p></div></div><div class="p-sum">We help MA plans hold service levels in the contact center, which moves the Star measures that decide whether contracts clear 4.0 and unlock the bonus.</div></div>
+      <div class="panel" data-motion="star" data-tab="machine"><div class="p-kick">STAR RATINGS · THE MACHINE</div><h4>How the engine runs the motion</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Source and enrich</div><p>From CMS data, Clay finds Director-plus contacts in Finance, Stars, and Medicare across 38 non-customer plans under 4.0, and enriches each record from 40+ sources.</p></div><div class="p-tile"><div class="pt-h">Draft and gate</div><p>It drafts a contextual message per record. An independent reviewer holds anything off-spec, deliverability is checked, and a person approves before a single send.</p></div><div class="p-tile"><div class="pt-h">Make it compound</div><p>The signal library re-fires accounts on fresh triggers, a movability grade ranks the most winnable plans, and source-tagged credit proves what the motion sourced.</p></div></div><div class="p-sum">AI does the enrichment and drafting. People keep the judgment. That is the difference between an engine and a spray.</div></div>
+      <div class="panel" data-motion="star" data-tab="personas"><div class="p-kick">STAR RATINGS · PERSONAS</div><h4>Who the motion reaches</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Finance</div><p>VP and Director Finance who own the quality-bonus math and feel the 5% on the whole contract directly.</p></div><div class="p-tile"><div class="pt-h">Stars and quality</div><p>Director-plus Stars and Quality leaders who are accountable for the rating itself.</p></div><div class="p-tile"><div class="pt-h">Medicare and ops</div><p>Medicare and contact-center operations leaders who can actually move the call-center measures.</p></div></div><div class="p-sum">Director-plus, at non-customer MA plans sitting under 4.0. The people who own the number and can act on it.</div></div>
+      <div class="panel" data-motion="star" data-tab="triggers"><div class="p-kick">STAR RATINGS · TRIGGERS</div><h4>The signal library that fires outreach</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Tier 1 · act immediately</div><p>CMS releases, Stars language in SEC filings, and earnings-call mentions. The hard, dated events.</p></div><div class="p-tile"><div class="pt-h">Tier 2 · this week</div><p>A plan slipping under 4.0, a new quality leader, or hiring clusters in quality and Medicare.</p></div><div class="p-tile"><div class="pt-h">Tier 3 · context</div><p>Background firmographics, technographic shifts, and secondary intent that raise priority.</p></div></div><div class="p-sum">A fresh trigger re-fires the account with an updated angle, so the list re-prioritizes itself instead of going stale.</div></div>
+      <div class="panel" data-motion="star" data-tab="cadence"><div class="p-kick">STAR RATINGS · CADENCE</div><h4>One weekly motion, run by the conductor</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Daily</div><p>A 7am weekday signal scan surfaces the day's priority strikes and expansion signals.</p></div><div class="p-tile"><div class="pt-h">Weekly</div><p>Monday 8am: preflight, the conductor run, and a refreshed Command Center. One push becomes a motion that repeats.</p></div><div class="p-tile"><div class="pt-h">Gated</div><p>Every send clears the reviewer, the human approve gate, and a deliverability check before it leaves.</p></div></div><div class="p-sum">The motion runs every week without a person babysitting it, and it stops dead at the gates.</div></div>
+      <div class="panel" data-motion="star" data-tab="status"><div class="p-kick">STAR RATINGS · STATUS</div><h4>Where the motion stands today</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Live now</div><p>157 Director-plus contacts across 38 plans under 4.0, built on 5,000 Clay credits.</p></div><div class="p-tile"><div class="pt-h">Cleared</div><p>Security review complete. Clay rolled out to the outreach team after training and build sessions.</p></div><div class="p-tile"><div class="pt-h">Verified</div><p>These are the team's confirmed current state, not projections.</p></div></div><div class="p-sum">Scaling now as the single WIP-of-one motion. Everything else waits until it earns the slot.</div></div>
+      <div class="panel" data-motion="bo" data-tab="why"><div class="p-kick">BACK OFFICE · WHY NOW</div><h4>The white space inside our own customers</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">The gap</div><p>Manual back-office work inside existing customers that has not bought anything yet. We replace spreadsheets, not an incumbent.</p></div><div class="p-tile"><div class="pt-h">Why us</div><p>Front-office relationships have not handed over back-office leads, so we source them ourselves through Clay.</p></div><div class="p-tile"><div class="pt-h">What opens it</div><p>Back Office Optimizer GA, targeted around September (Chris Busbee's product), turns the white space into a real motion.</p></div></div><div class="p-sum">A second motion aimed at our own install base, sourced rather than handed to us.</div></div>
+      <div class="panel" data-motion="bo" data-tab="machine"><div class="p-kick">BACK OFFICE · THE MACHINE</div><h4>The same engine, re-pointed</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Source</div><p>Clay sources contacts inside the install base and maps the back-office white space per account.</p></div><div class="p-tile"><div class="pt-h">Run</div><p>The same enrich, draft, review, approve, and deliverability-gated send engine, aimed at a new segment.</p></div><div class="p-tile"><div class="pt-h">Instrument</div><p>Source-tagged, so the 200-contact target is measured the same way as Star Ratings.</p></div></div><div class="p-sum">It reuses the same engine. It re-points once the ICP and the product are ready.</div></div>
+      <div class="panel" data-motion="bo" data-tab="personas"><div class="p-kick">BACK OFFICE · PERSONAS</div><h4>Who we reach, once the ICP is set</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Target</div><p>Back-office and operations leaders inside existing customers.</p></div><div class="p-tile"><div class="pt-h">Dependency</div><p>The exact ICP is defined with Scott Kemme in week one, before any sourcing.</p></div><div class="p-tile"><div class="pt-h">Why that order</div><p>Sourcing against an undefined ICP is the fastest way to waste the install base. ICP before sourcing.</p></div></div><div class="p-sum">Defined first, sourced second. That sequence is a guardrail, not a delay.</div></div>
+      <div class="panel" data-motion="bo" data-tab="triggers"><div class="p-kick">BACK OFFICE · TRIGGERS</div><h4>Expansion signals inside the base</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Expansion</div><p>Install-base growth, new back-office hiring, and process-change signals.</p></div><div class="p-tile"><div class="pt-h">Risk</div><p>Service or backlog signals that open a back-office conversation.</p></div><div class="p-tile"><div class="pt-h">Tuned later</div><p>The trigger set is finalized after the ICP work, so it fires on the right moments.</p></div></div><div class="p-sum">Owner-routed signals, tuned once the ICP tells us what good looks like.</div></div>
+      <div class="panel" data-motion="bo" data-tab="cadence"><div class="p-kick">BACK OFFICE · CADENCE</div><h4>It joins the weekly run when it earns the slot</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Held</div><p>Staged in backlog today. Only one motion scales at a time.</p></div><div class="p-tile"><div class="pt-h">Trigger to start</div><p>It earns the slot when Star Ratings has handed off and Back Office Optimizer is GA.</p></div><div class="p-tile"><div class="pt-h">Then</div><p>It folds into the same Monday conductor run, with no new machinery.</p></div></div><div class="p-sum">Restraint is the WIP-of-one guardrail doing its job, not a gap.</div></div>
+      <div class="panel" data-motion="bo" data-tab="status"><div class="p-kick">BACK OFFICE · STATUS</div><h4>Staged, by design</h4><div class="p-grid"><div class="p-tile"><div class="pt-h">Blocked on</div><p>ICP definition with Scott Kemme, and Back Office Optimizer GA around September.</p></div><div class="p-tile"><div class="pt-h">Target</div><p>200-plus back-office contacts inside existing customers, sourced through Clay.</p></div><div class="p-tile"><div class="pt-h">Not yet</div><p>Correctly not scaling. It is real, and it is held on purpose.</p></div></div><div class="p-sum">The engine is ready for it. The timing is deliberate.</div></div>
+    </div>
+
+    <div class="talk"><span class="tlab">Talk track</span>Same move your Motions section makes: pick a motion, then click through it. Star Ratings is live, so I am not reciting numbers back to you. The tabs show how the engine runs it, who it reaches, what fires it, the weekly cadence, and the verified status. Back Office is the same engine re-pointed, held on purpose until it earns the slot. One motion scales at a time.</div>
+  </section>
+
+  <!-- ============ 08 · MODERNIZING ============ -->
+  <section class="sec rv" id="s08" aria-labelledby="h08">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">07</span> Modernizing · the live tools</div>
+      <h2 class="title" id="h08">The tools are already live. Here they are.</h2>
+    </div>
+    <p class="lead">Your page made the case for tools instead of decks and calculators instead of spreadsheets. I will not restate it. These are the actual tools, open and clickable today.</p>
+    <div class="tabset">
+    <div class="tools">
+      <div class="tool sel" data-target="c1">
+        <div class="tprev"><div class="stripes"></div><div class="glow"></div><span class="prev-seed">Dry-run</span><div class="ph">Command Center</div></div>
+        <div class="tbody">
+          <h4>Command Center</h4>
+          <p>The single live front door. Gates, approvals, deliverability, variant winners, and attribution credit in one screen.</p>
+          <div class="tchip"><span class="chip dryrun sm" data-seed>Dry-run snapshot</span></div>
+        </div>
+      </div>
+      <div class="tool" data-target="c2">
+        <div class="tprev"><div class="stripes"></div><div class="glow"></div><div class="ph">Golden List board</div></div>
+        <div class="tbody">
+          <h4>Golden List board</h4>
+          <p>Accounts scored and graded. The foundation layer, made visible and sortable.</p>
+          <div class="tchip"><span class="chip live sm">Live front-end</span></div>
+        </div>
+      </div>
+      <div class="tool" data-target="c3">
+        <div class="tprev"><div class="stripes"></div><div class="glow"></div><div class="ph">Control Plane</div></div>
+        <div class="tbody">
+          <h4>Control Plane</h4>
+          <p>The install-base white-space view. The 200 back-office target, mapped per account.</p>
+          <div class="tchip"><span class="chip live sm">Live front-end</span></div>
+        </div>
+      </div>
+      <div class="tool" data-target="c4">
+        <div class="tprev"><div class="stripes"></div><div class="glow"></div><div class="ph">ROI Calculator</div></div>
+        <div class="tbody">
+          <h4>ROI Calculator</h4>
+          <p>A live economic-impact tool. The CFO business case, built from inputs instead of a static PDF.</p>
+          <div class="tchip"><span class="chip live sm">Live front-end</span></div>
+        </div>
+      </div>
+      <div class="tool" data-target="c5">
+        <div class="tprev"><div class="stripes"></div><div class="glow"></div><span class="prev-seed">Dry-run</span><div class="ph">Mission Control</div></div>
+        <div class="tbody">
+          <h4>Mission Control</h4>
+          <p>The daily personal tracker. What to work, in what order, today.</p>
+          <div class="tchip"><span class="chip dryrun sm" data-seed>Dry-run snapshot</span></div>
+        </div>
+      </div>
+      <div class="tool" style="background:var(--ink);border-color:var(--ink);">
+        <div class="tprev" style="height:auto;flex:1;align-items:center;justify-content:center;"><div class="stripes"></div><div class="glow"></div><div class="ph" style="color:var(--orange-light);font-size:13px;text-align:center;line-height:1.5;">The engine that built<br>this page is the engine<br>I'm showing you.</div></div>
+      </div>
+    </div>
+    <div class="tset-panels">
+      <div class="tset-panel on" data-key="c1"><div class="tp-k">Live front door &middot; dry-run</div><div class="tp-h">Command Center</div><p>The canonical front door. One screen with the gate states, the approval queue, deliverability, the winning variants, and attribution credit. The numbers are seeded until Salesforce and Clay connect on Day 1, and the chips say so.</p></div>
+      <div class="tset-panel" data-key="c2"><div class="tp-k">Foundation &middot; live front-end</div><div class="tp-h">Golden List board</div><p>The foundation layer made visible: every account scored and graded, sortable by fit, intent, and signal. Live today; it reads the real Clay base the moment it is wired.</p></div>
+      <div class="tset-panel" data-key="c3"><div class="tp-k">Install base &middot; live front-end</div><div class="tp-h">Control Plane</div><p>The install-base white-space view. The 200 back-office target mapped per account, so the staged motion is ready to point the day the ICP lands with Scott Kemme.</p></div>
+      <div class="tset-panel" data-key="c4"><div class="tp-k">Economics &middot; live front-end</div><div class="tp-h">ROI Calculator</div><p>The CFO business case as a live tool. Inputs in, economic impact out, instead of a static PDF. The lever behind both the Star Ratings and Back Office economics.</p></div>
+      <div class="tset-panel" data-key="c5"><div class="tp-k">Daily ops &middot; dry-run</div><div class="tp-h">Mission Control</div><p>My daily personal tracker: what to work, in what order, today, so the weekly motion keeps its rhythm. Seeded until go-live.</p></div>
+    </div>
+    </div>
+    <div class="live-note"><b>Read the chips:</b> these are live front-ends. The engine windows run on a <b>seeded snapshot</b> until Salesforce and Clay connect on Day 1, so any funnel count, dollar figure, or variant rate inside them is illustrative until then.</div>
+    <div class="talk"><span class="tlab">Talk track</span>The tool is the proof, and you are looking at one. The front-ends are live today. The numbers inside the engine windows are seeded until we wire real data on day one, and the chips say so plainly.</div>
+  </section>
+
+  <!-- ============ 09 · READY ============ -->
+  <section class="sec rv" id="s09" aria-labelledby="h09">
+    <div class="sec-head">
+      <div class="sec-eyebrow"><span class="sn">08</span> The head start</div>
+      <h2 class="title" id="h09">A running head start, not a finished system.</h2>
+    </div>
+    <p class="lead">I built the foundation before day one so we do not start from a blank page. It runs dry-run today. Day 1 wires it to live data, and the build keeps going from there, <span class="hl">tuned to what each quarter needs.</span></p>
+
+    <div class="inv">
+      <div class="inv-group">
+        <div class="igh">Engines</div>
+        <div class="inv-list">
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Cohesion conductor</b>: the 7-stage weekly orchestrator with maker, reviewer, and human gates and a 12-assertion <code>--preflight</code>. Fail-closed.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>TAM and outbound engine</b>: new-logo target accounts with fit and tier scoring, fresh-trigger detection, ROI, and seller routing.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Signal engine</b>: install-base expansion and risk signals, routed to the owner.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Impact engine</b>: a measurement scorecard, source-tagged. <span class="chip dryrun sm" data-seed>Dry-run outputs</span></span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Single source of truth</b>: <code>engine_state.json</code>. Every dashboard reads it, the conductor writes it.</span></div>
+        </div>
+      </div>
+
+      <div class="inv-group">
+        <div class="igh">Dashboards &amp; artifacts</div>
+        <div class="inv-list">
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Command Center</b>: the single live front door.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Golden List</b> · <b>Control Plane</b> · <b>ROI Calculator</b> · <b>Mission Control</b>.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Day-1 Audit Console</b>: a Salesforce-schema refit checklist for go-live.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it">Local dev twins: control tower, attribution, approval queue, deliverability, and variant tracker. All promote to live Jul 6.</span></div>
+        </div>
+      </div>
+
+      <div class="inv-group">
+        <div class="igh">Skills library</div>
+        <div class="inv-list">
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>Signal-to-Play</b>: one account signal becomes a Marketing brief, a Sales alert, and an outreach draft.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>ROI business case</b> · <b>Competitive intel</b> · <b>Content engine</b> · <b>Verified-metrics</b> citation discipline.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it">Plus the cognitive-calibration + strategic-premortem layers that gate the work.</span></div>
+        </div>
+      </div>
+
+      <div class="inv-group">
+        <div class="igh">Scheduled automations · running (dry-run)</div>
+        <div class="inv-list">
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>daily-signal-scan</b>: a weekday 7am prioritized target and expansion briefing.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it"><b>weekly-gtm-conductor</b>: Monday 8am preflight, conductor run, and Command Center refresh.</span></div>
+          <div class="inv-item"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span class="it">Build specs &amp; packs: <b>GTM Engine Build Spec</b> · <b>Clay Build Pack</b> · <b>Attribution Loop Spec</b> · message-variant starter pack · Q3 operating plan.</span></div>
+        </div>
+      </div>
+
+      <div class="inv-group wide">
+        <div class="igh">Day-1 / Week-1 order of operations · where the build starts</div>
+        <div class="ops">
+          <div class="op"><span class="opn">1</span><span class="opt"><b>Align with Naveen on attribution</b>. Agree on credit at the qualified-reply and meeting-sourced line, 3 Salesforce fields, and the 1× baseline. The first-week priority.</span></div>
+          <div class="op"><span class="opn">2</span><span class="opt">Build Clay from the Build Pack on a 10-row test slice; confirm ICP / scoring with Naveen + Scott Kemme.</span></div>
+          <div class="op"><span class="opn">3</span><span class="opt">Stand up deliverability warmup → monitor green before any volume.</span></div>
+          <div class="op"><span class="opn">4</span><span class="opt">Flip the conductor live (preflight must be green); wire Clay / sender / Salesforce hooks; keep the Monday schedule.</span></div>
+          <div class="op"><span class="opn">5</span><span class="opt">First real run: small, 3 variants / segment, human-approved, instrumented.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inv-close">
+      <p>This is a foundation, not a finished system. Day 1 wires it to live data. From there the real work runs: <b>tuning it, expanding it, and building what each quarter needs.</b> The head start just means we are not designing from a blank page while the clock is running.</p>
+    </div>
+    <div class="talk"><span class="tlab">Talk track</span>This is the close: the inventory. Engines, dashboards, a skills library, and scheduled automations already running dry-run. The honest summary is that the foundation is standing, so we are not starting from zero. Day 1 connects it to real data, and from there I keep building it out. That part is the job, not a one-time setup.</div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="feye">The partnership line</div>
+  <p class="fbig">Built before day one to accelerate us. A contribution to <b>shape together</b>, not a plan to execute at you.</p>
+  <p class="fline">The engine is the durable value, and it holds up against whatever targets we land on together.</p>
+  <div class="fmeta">Dallas Andrews · GTM Engineer · starting July 6, 2026</div>
+</footer>
+</div><!-- /.content -->
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- EXPANDABLE CARDS ---------- */
+  document.querySelectorAll('.exp .exp-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      if(document.body.classList.contains('present')) return; // all open in presenter mode
+      var card = head.closest('.exp');
+      var open = card.classList.toggle('open');
+      head.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  /* ---------- PRESENTER MODE ---------- */
+  var presentBtn = document.getElementById('presentBtn');
+  presentBtn.addEventListener('click', function(){
+    var on = document.body.classList.toggle('present');
+    presentBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    document.querySelectorAll('.exp .exp-head').forEach(function(h){
+      h.setAttribute('aria-expanded', on ? 'true' : 'false');
+    });
+  });
+
+  /* ---------- SMOOTH SCROLL FROM RAIL ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.nav-item[data-go]'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var el = document.getElementById(tab.getAttribute('data-go'));
+      if(!el) return;
+      var y = el.getBoundingClientRect().top + window.pageYOffset - 56;
+      window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* ---------- SCROLL-SPY ---------- */
+  var spied = tabs.map(function(t){ return { tab:t, el:document.getElementById(t.getAttribute('data-go')) }; })
+                  .filter(function(s){ return s.el; });
+  var rail = document.getElementById('rail');
+  function setActive(tab){
+    tabs.forEach(function(t){ t.classList.toggle('on', t===tab); });
+    if(tab) tab.scrollIntoView({block:'nearest'});
+  }
+  function onScroll(){
+    var mark = window.pageYOffset + 120;
+    var current = spied[0];
+    for(var i=0;i<spied.length;i++){
+      if(spied[i].el.offsetTop <= mark) current = spied[i];
+    }
+    if(current) setActive(current.tab);
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll, { passive:true });
+  onScroll();
+
+  /* ---------- REVEAL ---------- */
+  var revs = document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(r){ r.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin:'0px 0px -8% 0px', threshold:0.06 });
+    revs.forEach(function(r){ io.observe(r); });
+  }
+
+  /* ---------- DRAW HUB-AND-SPOKE CONNECTOR LINES ---------- */
+  function drawSpokes(){
+    var stage = document.querySelector('.hubspoke');
+    if(!stage) return;
+    // only on the radial (desktop) layout
+    var isStacked = window.getComputedStyle(stage).flexDirection === 'column';
+    stage.querySelectorAll('.spoke-line').forEach(function(l){ l.remove(); });
+    if(isStacked) return;
+    var hub = stage.querySelector('.hub');
+    var hb = hub.getBoundingClientRect(), sb = stage.getBoundingClientRect();
+    var cx = hb.left - sb.left + hb.width/2, cy = hb.top - sb.top + hb.height/2;
+    stage.querySelectorAll('.spoke').forEach(function(sp){
+      var pb = sp.getBoundingClientRect();
+      var px = pb.left - sb.left + pb.width/2, py = pb.top - sb.top + pb.height/2;
+      var dx = px - cx, dy = py - cy;
+      var len = Math.sqrt(dx*dx + dy*dy);
+      var ang = Math.atan2(dy, dx) * 180 / Math.PI;
+      var line = document.createElement('div');
+      line.className = 'spoke-line';
+      line.style.width = len + 'px';
+      line.style.transform = 'rotate(' + ang + 'deg)';
+      stage.insertBefore(line, stage.firstChild);
+    });
+  }
+  if(document.readyState !== 'loading') setTimeout(drawSpokes, 60);
+  else window.addEventListener('DOMContentLoaded', function(){ setTimeout(drawSpokes, 60); });
+  window.addEventListener('resize', function(){ clearTimeout(window.__sp); window.__sp = setTimeout(drawSpokes, 120); });
+  window.addEventListener('load', function(){ setTimeout(drawSpokes, 80); });
+})();
+</script>
+<script>
+(function(){
+  var sec=document.getElementById('s07'); if(!sec) return;
+  var cards=sec.querySelectorAll('.m-card'),subtabs=sec.querySelectorAll('.subtab'),panels=sec.querySelectorAll('.panel'),bands=sec.querySelectorAll('[data-band]');
+  var cur={motion:'star',tab:'why'};
+  function show(){
+    cards.forEach(function(c){c.classList.toggle('sel',c.dataset.motion===cur.motion);});
+    subtabs.forEach(function(t){t.classList.toggle('on',t.dataset.tab===cur.tab);});
+    panels.forEach(function(p){p.classList.toggle('on',p.dataset.motion===cur.motion&&p.dataset.tab===cur.tab);});
+    bands.forEach(function(b){b.style.display=b.dataset.band===cur.motion?'flex':'none';});
+  }
+  cards.forEach(function(c){c.addEventListener('click',function(){cur.motion=c.dataset.motion;show();});});
+  subtabs.forEach(function(t){t.addEventListener('click',function(){cur.tab=t.dataset.tab;show();});});
+  show();
+})();
+</script>
+<script>
+document.querySelectorAll('.tabset').forEach(function(ts){
+  var trigs=ts.querySelectorAll('[data-target]'), panels=ts.querySelectorAll('[data-key]');
+  function sel(k){
+    trigs.forEach(function(t){t.classList.toggle('sel',t.getAttribute('data-target')===k);});
+    panels.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-key')===k);});
+  }
+  trigs.forEach(function(t){
+    t.setAttribute('tabindex','0'); t.setAttribute('role','button');
+    t.addEventListener('click',function(){sel(t.getAttribute('data-target'));});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();sel(t.getAttribute('data-target'));}});
+  });
+  if(trigs[0]) sel(trigs[0].getAttribute('data-target'));
+});
+</script>
+</body>
+</html>
