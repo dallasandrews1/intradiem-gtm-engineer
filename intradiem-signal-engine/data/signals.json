@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-06-13T05:04:17.570924+00:00",
+  "accounts": [
+    {
+      "company": "Synchrony Financial",
+      "domain": "synchrony.com",
+      "signals_fired": 1,
+      "primary_routing": "AE",
+      "signals": [
+        {
+          "type": "seat_utilization",
+          "value": 88.9,
+          "route": "AE",
+          "reason": "Seats at 88.9% of contract. Near capacity, expansion warranted."
+        }
+      ]
+    },
+    {
+      "company": "Centene Corporation",
+      "domain": "centene.com",
+      "signals_fired": 2,
+      "primary_routing": "AE",
+      "signals": [
+        {
+          "type": "coaching_coverage",
+          "value": 45.0,
+          "route": "CSM",
+          "reason": "Coaching reaches only 45.0% of agents. Deployment gap."
+        },
+        {
+          "type": "crm_not_connected",
+          "value": 120,
+          "route": "AE",
+          "reason": "WFM live 120 days, CRM not connected. Back-office expansion."
+        }
+      ]
+    },
+    {
+      "company": "CareSource",
+      "domain": "caresource.com",
+      "signals_fired": 1,
+      "primary_routing": "CSM",
+      "signals": [
+        {
+          "type": "automation_volume_drop",
+          "value": -33.3,
+          "route": "CSM",
+          "reason": "Automation volume down 33.3% MoM for 2 months. Churn risk forming."
+        }
+      ]
+    },
+    {
+      "company": "Molina Healthcare",
+      "domain": "molina.com",
+      "signals_fired": 1,
+      "primary_routing": "CSM",
+      "signals": [
+        {
+          "type": "rule_engine_active",
+          "value": 25.0,
+          "route": "CSM",
+          "reason": "Only 25.0% of available rules active. Onboarding or use-case gap."
+        }
+      ]
+    },
+    {
+      "company": "Highmark Health",
+      "domain": "highmark.org",
+      "signals_fired": 1,
+      "primary_routing": "AE",
+      "signals": [
+        {
+          "type": "champion_job_change",
+          "value": 55,
+          "route": "AE+CSM",
+          "reason": "Champion departed, 55 days to renewal. Rebuild the relationship."
+        }
+      ]
+    },
+    {
+      "company": "Ally Financial",
+      "domain": "ally.com",
+      "signals_fired": 0,
+      "primary_routing": "HOLD",
+      "signals": []
+    }
+  ]
+}

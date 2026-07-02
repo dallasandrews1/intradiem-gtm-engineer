@@ -1,0 +1,47 @@
+{
+  "_comment": "Single source of truth for signal thresholds and routing. Edit values here, never in code. All percentages are 0-100.",
+  "data_source": "mock",
+  "data_source_note": "mock = data/accounts.csv holds seeded demo fixtures; treat all dates, percentages, and renewal clocks as illustrative, not real. Flip to 'live' only when accounts.csv is a real Intradiem reporting export.",
+  "signals": {
+    "seat_utilization": {
+      "label": "Agent seat utilization",
+      "min_pct": 85.0,
+      "route": "AE",
+      "type": "expansion"
+    },
+    "coaching_coverage": {
+      "label": "Coaching coverage",
+      "max_pct": 60.0,
+      "min_sessions_per_day": 20,
+      "route": "CSM",
+      "type": "expansion"
+    },
+    "rule_engine_active": {
+      "label": "Rule engine active",
+      "max_pct": 35.0,
+      "route": "CSM",
+      "type": "expansion"
+    },
+    "crm_not_connected": {
+      "label": "CRM not connected",
+      "min_wfm_days_active": 90,
+      "route": "AE",
+      "type": "expansion"
+    },
+    "automation_volume_drop": {
+      "label": "Automation volume dropping",
+      "max_mom_pct": -20.0,
+      "consecutive_months": 2,
+      "route": "CSM",
+      "type": "risk"
+    },
+    "champion_job_change": {
+      "label": "Champion changed jobs",
+      "max_days_to_renewal": 90,
+      "route": "AE+CSM",
+      "type": "risk"
+    }
+  },
+  "suppression_days": 14,
+  "routing_priority": ["AE", "CSM", "HOLD"]
+}

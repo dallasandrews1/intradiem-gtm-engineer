@@ -1,0 +1,7 @@
+domain,company,licensed_seats,active_seats,total_agents,agents_coached,coaching_sessions_per_day,available_rules,active_rules,wfm_connected,crm_connected,wfm_days_active,automation_vol_current,automation_vol_prev1,automation_vol_prev2,champion_changed,days_to_renewal
+synchrony.com,Synchrony Financial,18000,16002,16002,14000,30,50,40,true,true,400,5000,4900,4850,false,200
+centene.com,Centene Corporation,9000,6000,8000,3600,25,60,30,true,false,120,4000,3950,3900,false,300
+caresource.com,CareSource,5000,3000,5000,3500,22,40,20,true,true,365,1600,2400,3000,false,60
+molina.com,Molina Healthcare,12000,8400,12000,9000,28,80,20,true,true,500,7000,6900,6850,false,240
+highmark.org,Highmark Health,16000,12000,16000,13000,35,70,45,true,true,420,9000,8950,8900,true,55
+ally.com,Ally Financial,4000,2400,4000,3200,26,50,40,true,true,300,3000,2980,2960,false,280
