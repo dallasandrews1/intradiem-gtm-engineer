@@ -64,3 +64,40 @@ engine_state.json is explicitly SEEDED (_meta.status: "SEEDED, pre-access placeh
 - NOTE: `north_star.approved_claims` is empty. The live-wire checklist (cohesion README) requires seeding it with the verified figures before go-live so the critic can allow them. Known to-do, not a new finding.
 - PASS: All other state fields either match their documented sources or are structural placeholders (nulls, zeros, false flags) that preflight already gates on.
 
+## Step 9: repo hygiene for the Bitbucket move
+- PASS: Secrets scan clean. Grepped for Slack tokens (xoxb/xapp), OpenAI-style keys, AWS AKIA keys, bearer tokens, private key blocks, and hardcoded api_key assignments across py/json/md/html/sh/csv/txt/plist. Zero hits. The plugin manifest carries the placeholder "SET_THE_CLAUDE_KEY_HERE"; the brain and the stdio client read keys from env vars only. No .env files exist.
+- FIX-APPLIED: Created .gitignore covering OS junk (.DS_Store, .~lock files, *.tmp, _wtest.txt), __pycache__/*.pyc, node_modules/, env and key files, logs/ plus the brain request log, transient engine state (suppression_state.json, notified_state.json), .claude/settings.local.json, *.zip bundles, one unnamed junk zip (_archive/zi7Zjxcl), and a clearly-labeled personal/interview-era section.
+- DECISION-NEEDED: Personal files excluded from git pending your call. The .gitignore keeps [redacted-personal-file], [redacted-personal-file], both resume files, [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], [redacted-personal-file], and [redacted-personal-file] OUT of the repo. These are your private documents and should not enter Intradiem's Bitbucket; if any belongs in, remove its line deliberately. They remain on disk untouched.
+- NOTE: [redacted-personal-file] IS tracked (it is the interview demo one-pager, an artifact rather than private material). Drop it from the archive commit if you want zero interview-era files in company history.
+- FIX-APPLIED: git init (branch main) plus 12 commits, one per logical unit: foundation, signal engine, TAM engine, impact, cohesion layer, hosted platform, Star Ratings motion data, agent skills, operating plan docs, HTML surfaces and handoffs, portable prompts, reference material. Working tree clean. Nothing pushed anywhere.
+
+## Step 10: summary
+
+| # | Check | Result |
+|---|---|---|
+| 1 | Repo map / CLAUDE.md | DONE (CLAUDE.md created this session) |
+| 2 | Test suites | PASS: tam 21/21, signal 14/14; no suites exist for cohesion layer or impact |
+| 3 | Conductor preflight | NOT READY as expected, but 4 reds vs the expected 3 (extra: security_audit_current) |
+| 4 | Seed files + TimePhased integrity | PASS after 1 fix (duplicate column block); all counts and totals verified |
+| 5 | Stale-reference sweep | 3 fixes applied (UHC time-stamps); 2 superseded seed CSVs flagged; no stale totals |
+| 6 | triggers.json + personas | Triggers and persona keys PASS; Molina suppression MISSING (blocker); call-center wording flagged |
+| 7 | HTML artifacts | PASS; one cosmetic fallback staleness noted |
+| 8 | engine_state consistency | 1 disagreement (star_ratings 38 vs canonical 307/98); rest seeded-by-design |
+| 9 | Hygiene / git | Secrets clean; .gitignore created; 12 logical commits on main; no push |
+
+### Fixes applied (files touched)
+1. StarRatings_Universe_2026_TimePhased.csv: removed duplicated 5-column block (22 to 17 columns, 307 rows unchanged, re-locked read-only).
+2. StarRatings_Earnings_Signals_2026.csv row 7: UHC angle_line now says "under the prior rules".
+3. Fable_Prompts_Portable_Deliverables.md line 43: UHC proof line time-stamped, retirement noted.
+4. Devoted_WholeParent_StrikePlan.md line 45: same UHC time-stamp treatment.
+5. .gitignore: created.
+6. Git repository initialized with 12 logical commits.
+
+### DECISION-NEEDED list (your calls, in priority order)
+1. Molina line-exit suppression does not exist in code despite StarRatings_Targeting_Flags_2026.md claiming it is "wired into the signal engine". Pick: (a) wire a suppression flag into triggers.json + account_engine.py, or (b) correct the flags doc to say the rule lives in Clay motion_exclude. (Step 6, blocker.)
+2. Fourth preflight red (security_audit_current): accept as known pre-Jul-6 state per _START_HERE_Index.md, or run the first permission audit now to get to the expected 3. (Step 3.)
+3. Trigger play copy in triggers.json still lists "call-center" among movable measures in both qbp_earnings_pressure and quality_identity_gap. Suggested: "CAHPS, complaints, appeals, and customer-service measures". (Step 6.)
+4. engine_state.json list_health.accounts_by_motion.star_ratings = 38 vs canonical 307-universe / 98 Tier A+B. Tell me which number and I will set it. (Step 8.)
+5. Archive or keep StarRatings_Motion_Clay_Seed.csv and StarRatings_Accounts_Clay_Seed.csv (superseded era: C32/D01-live play text, Horizon rows). Recommend moving to _archive/. (Step 5.)
+6. Confirm the personal-file exclusions in .gitignore are the right set before the Bitbucket import; also decide on [redacted-personal-file] which is currently tracked. (Step 9.)
+
