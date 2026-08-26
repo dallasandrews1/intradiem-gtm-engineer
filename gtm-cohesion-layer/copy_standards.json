@@ -1,0 +1,43 @@
+{
+  "_comment": "Copy-standards gate for the Stage 4b critic. Source of truth: the Jul 9 2026 natural-CTA standard (Message_Variant_Starter_Pack.md 1A gold-standard sample; intradiem-first-draft-engine + intradiem-copy-sharpener SKILL.md updates; Clay_MessageGen_SystemPrompt_v2.md v2.2). Edit THIS file to change the gate; never hardcode phrases in conductor.py.",
+  "banned_phrases": [
+    "I would value",
+    "I'd value",
+    "would value connecting",
+    "trade notes",
+    "trading notes",
+    "compare notes",
+    "comparing notes",
+    "compare of notes",
+    "pick your brain",
+    "touch base",
+    "circle back",
+    "deep dive",
+    "I'd love to",
+    "happy to",
+    "hope you're well",
+    "hope you are well",
+    "I know you're busy",
+    "companies like yours",
+    "plans your size and stage",
+    "leaders in your space",
+    "I help organizations"
+  ],
+  "banned_chars": {
+    "—": "em dash (AI tell; use periods, commas, colons)"
+  },
+  "uncontracted_tells": [
+    "I would",
+    "I will",
+    "I am",
+    "you will",
+    "you are",
+    "we are",
+    "that is",
+    "it is",
+    "does not",
+    "do not",
+    "cannot"
+  ],
+  "_uncontracted_note": "Matched on word boundaries, case-sensitive as written, in prospect-facing draft text only. The contraction rule is absolute in cold copy (I'd, I'll, I'm, you'll, that's, doesn't). A held draft goes back through the first-draft-engine, not a one-word patch."
+}

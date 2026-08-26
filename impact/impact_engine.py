@@ -33,6 +33,10 @@ TAM = os.path.join(HERE, "..", "tam-outbound-engine", "data", "tam_plays.json")
 ROI_MODEL = os.path.join(HERE, "..", "tam-outbound-engine", "config", "roi_model.json")
 OUTCOMES = os.path.join(HERE, "outcomes.csv")
 
+# GTM Engineer role start. Outcomes dated before this are interview-era demo data and are
+# never counted as realized. See realized_metrics().
+ROLE_START = "2026-07-06"
+
 
 def load_json(path):
     if not os.path.exists(path):
@@ -92,13 +96,31 @@ def install_base_metrics(sig):
 
 
 def realized_metrics(path):
+    # ROLE_START gate, added 2026-08-07. outcomes.csv shipped with two demo rows dated
+    # 2026-06-10 and 2026-06-11, three weeks BEFORE the role started. They produced a
+    # standing "1 meeting booked / $180K pipeline" that the control tower then rendered
+    # under a hardcoded REALIZED label, while the receipts ledger said 0 meetings / $0.
+    # Two files in one repo disagreed about whether a meeting had happened.
+    # Anything dated before ROLE_START is interview-era demo data and is never counted as
+    # realized. It is reported separately so the exclusion is visible rather than silent.
     meetings = 0
     pipeline = 0
     won = 0
     rows = 0
+    excluded = 0
+    undated = 0
     if os.path.exists(path):
         with open(path, newline="") as f:
             for r in csv.DictReader(f):
+                d = (r.get("date") or "").strip()
+                if not d:
+                    # An undated row cannot be proven to be post-start, so it fails closed.
+                    undated += 1
+                    excluded += 1
+                    continue
+                if d < ROLE_START:
+                    excluded += 1
+                    continue
                 rows += 1
                 t = (r.get("type") or "").strip().lower()
                 v = float(r.get("value") or 0)
@@ -112,6 +134,9 @@ def realized_metrics(path):
         "logged_outcomes": rows, "meetings_booked": meetings,
         "pipeline_created": pipeline, "pipeline_created_label": fmt_money(pipeline),
         "revenue_won": won, "revenue_won_label": fmt_money(won),
+        "excluded_pre_role_rows": excluded,
+        "excluded_undated_rows": undated,
+        "role_start": ROLE_START,
     }
 
 
@@ -137,6 +162,10 @@ def build(today=None):
         "net_new": nn, "install_base": ib, "realized": rz,
         "sources": sources,
         "data_complete": all(sources.values()),
+        # Added 2026-08-07. The surfaced total is produced by roi_model.json, whose defaults
+        # the repo's own docs flag as placeholder assumptions. Nothing downstream could tell
+        # a placeholder dollar from a verified one, so the basis now travels WITH the number.
+        "surfaced_basis": "VERIFIED" if (load_json(ROI_MODEL) or {}).get("_verified") else "UNVERIFIED",
     }
 
 
@@ -160,9 +189,20 @@ def print_scorecard(d):
     print(f"  Pipeline created ....................... {rz['pipeline_created_label']:>8}")
     print(f"  Revenue won ............................ {rz['revenue_won_label']:>8}")
     print("\n" + line)
-    print(f"Headline for ELT: the system has surfaced {nn['roi_surfaced_label']} in recoverable")
+    basis = d.get("surfaced_basis", "UNVERIFIED")
+    tag = "" if basis == "VERIFIED" else " [UNVERIFIED]"
+    print(f"Headline for ELT: the system has surfaced {nn['roi_surfaced_label']}{tag} in recoverable")
     print(f"customer cost and {ib['signals_firing']} live expansion signals, with {rz['meetings_booked']} meeting(s) and")
     print(f"{rz['pipeline_created_label']} in pipeline realized so far.")
+    if basis != "VERIFIED":
+        print("")
+        print("SURFACED IS UNVERIFIED. It derives from roi_model.json placeholder assumptions,")
+        print("not from Intradiem-verified figures. Never blend it with the realized line above,")
+        print("and never put it in a leadership readout without the [UNVERIFIED] marker.")
+    if rz.get("excluded_pre_role_rows"):
+        print("")
+        print(f"NOTE: {rz['excluded_pre_role_rows']} outcome row(s) dated before {rz['role_start']} were")
+        print("excluded as pre-role demo data and are NOT in the realized figures above.")
     print(line)
 
 

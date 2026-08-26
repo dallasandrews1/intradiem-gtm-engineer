@@ -75,7 +75,8 @@ def main():
     p.add_argument("--channel", choices=["slack", "email", "both"], default="slack")
     args = p.parse_args()
 
-    groups = by_seller(eng.build_plays(eng.load_cfg(), date.today()))
+    plays, _ = eng.build_plays(eng.load_cfg(), date.today())
+    groups = by_seller(plays)
     mode = "LIVE SEND" if args.send else "DRY RUN (nothing sent)"
     print("=" * 60)
     print(f"TAM strike-list digest  |  {mode}  |  {len(groups)} seller(s)")

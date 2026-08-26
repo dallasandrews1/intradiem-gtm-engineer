@@ -13,7 +13,7 @@ conductor.py  →  WIP gate (0)  →  7 stages, in order, fail-closed  →  guar
 | 2 | **Re-score** | refreshed rows | fit/intent/grade formulas | grade, intent_score, list_health.accounts_by_grade | — |
 | 3 | **Scan signals** | §6 signal sources | intradiem-signal-engine | signals.top_signals, top_signal | — |
 | 4 | **Draft** | A/B/C grade + fired signals | first-draft-engine → copy-sharpener (3 variants/segment) | approval_queue.items[] | **never sends — drafts only** |
-| 4b | **Critic** | drafted items, north_star | objective verifier (maker≠checker) | critic{}, critic_status/reasons per item | **OBJECTIVE GATE: holds bad drafts before the human queue (deliverability, ICP, in-scope, claims, length)** |
+| 4b | **Critic** | drafted items, north_star, copy_standards.json | objective verifier (maker≠checker) | critic{}, critic_status/reasons per item | **OBJECTIVE GATE: holds bad drafts before the human queue (deliverability, ICP, in-scope, claims, length, copy standards: banned phrases, em dashes, uncontracted tells per the Jul 9 natural-CTA standard; edit copy_standards.json to change the list)** |
 | 5 | **Approve** | approval_queue (critic-passed only) | (human) Dallas approves/edits/rejects | sequence_status=queued on approved | **HARD GATE: nothing proceeds without human approval** |
 | 6 | **Send** | approved + valid email | Nate's sender | sequence_status=sent | **blocked if deliverability != green** |
 | 7 | **Instrument** | SF/inbox activity, resolved_ledger | reply-sync agent, compute_draft_quality | funnel, reply_status, draft_quality (acceptance rate), conductor.runs[] | warns if acceptance < 0.5 floor (draft engine is the bottleneck) |

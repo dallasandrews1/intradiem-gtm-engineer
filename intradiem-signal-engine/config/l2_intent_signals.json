@@ -1,0 +1,493 @@
+{
+  "_comment": "L2 intent layer. External market signals fire point values onto an account's intent_score, which layers on top of the L1 cliff-edge fit. Config over code: edit points/tiers/cadence/motions here, never in l2_intent_scorer.py or in the Clay formula text. All dollar/credit figures are placeholder assumptions until confirmed against Clay's live per-provider pricing (see Clay_Credit_Ledger.md). Self-cleaning is the defining behavior: an account that reaches 4.0, OR that is an existing customer, no longer belongs in the new-logo motion, so it drops to intent 0 and out of the motion. The list stays honest without manual pruning.",
+  "data_source": "mock",
+  "data_source_note": "mock = data/l2_signals.csv holds seeded demo fixtures. Flip to 'live' only when l2_signals.csv is fed from real Clay signal columns / war-room logs. 6sense keyword-intent signals (sixsense_rpa_keyword_intent, sixsense_itsm_keyword_intent, sixsense_ccaas_keyword_intent, added Jul 27 2026 per John Norton's proposal) are defined below but stay unfired until l2_signals.csv gets real 6sense rows; pending confirmation of whether 6sense's Salesforce managed package (sixsense__ namespace, confirmed installed) already writes intent fields onto the Account object, which would let this ride the existing SF->Clay connector instead of needing separate 6sense access.",
+  "active_motion": "star_ratings",
+  "active_motion_note": "The scorer only sums signals whose 'motions' list contains active_motion. This is the motion dimension: the same config and scorer serve the Star Ratings cliff motion and the back-office motion without a rebuild. Set to 'back_office' to score that motion once its signal columns are stood up.",
+  "intent_scale": {
+    "min": 0,
+    "max": 100,
+    "grade_lift_threshold": 40
+  },
+  "self_cleaning": {
+    "_comment": "The account-level kill switch. Two conditions drop an account out of the motion with intent forced to 0: (1) it reached or exceeded graduated_star, or (2) it is an existing customer. Customer exclusion is a property of the score, not a downstream convention, so a customer cannot leak into any intent-driven path even if a filter forgets to exclude it.",
+    "graduated_star": 4.0,
+    "star_field": "overall_star_2026",
+    "customer_field": "customer_flag",
+    "on_graduate": {
+      "force_intent": 0,
+      "status": "graduated",
+      "drop_from_motion": true
+    },
+    "on_customer": {
+      "force_intent": 0,
+      "status": "excluded",
+      "drop_from_motion": true
+    }
+  },
+  "motion_overrides": {
+    "_comment": "Per-motion deviations from the global self_cleaning. Absent motion (e.g. star_ratings) = global behavior unchanged. This is what makes the fork a fork and not a copy: the back-office install-base motion INVERTS the customer kill switch because the customer's back office IS the target, then swaps in front-office-risk suppression and an install-base warm base. One config, one scorer, opposite kill switches.",
+    "back_office": {
+      "universe_note": "Mandate 3 / install-base motion: contacts in the BACK offices of companies whose FRONT offices are already Intradiem customers. customer_flag is therefore NOT an exclusion here. The net-new BOO-launch universe is a separate motion that keeps customer exclusion on; do not conflate.",
+      "self_cleaning": {
+        "customer_is_exclusion": false,
+        "graduation_applies": false,
+        "risk_field": "fo_risk_flag",
+        "risk_status": "suppressed_risk",
+        "risk_note": "An existing customer in active renewal escalation or open front-office risk is a bad expansion target; suppress to intent 0 until the owner clears it. Mirrors the signal-engine risk read and the ICP suppression rule.",
+        "cleared_field": "owner_cleared",
+        "uncleared_status": "pending_owner",
+        "cleared_note": "Back-office campaigns inside a customer coordinate with that account's AE/CSM before any send. owner_cleared is a SEND gate, not an intent kill: an uncleared account still scores and counts, it just is not sendable yet."
+      },
+      "base_term": {
+        "field": "install_base",
+        "points": 10,
+        "tier": 2,
+        "_comment": "The warm front-office relationship gives the customer's back office a base intent before any external signal fires - the install-base analogue of new_faller. Every qualified install-base account surfaces at 10 so the motion is never empty while signals accrue."
+      }
+    },
+    "install_base": {
+      "universe_note": "Front-office install-base EXPANSION motion (added Jul 14 2026): more seats, more automation, attach plays inside contact centers that are already customers. Same inverted kill switch as back_office (the customer IS the target), same fo_risk suppression and owner_cleared send gate. Differs from back_office in its signal set: these are FIRST-PARTY telemetry signals read from the L1 signal engine (data/accounts.csv), zero credits, deterministic. The L1 engine's two RISK signals (automation_volume_drop, champion_job_change) do not score expansion intent here; they feed fo_risk_flag via the signal-engine risk read, which suppresses the account and routes it to the AE/CSM through the L1 notifier instead. Expansion and risk never share a lane.",
+      "self_cleaning": {
+        "customer_is_exclusion": false,
+        "graduation_applies": false,
+        "risk_field": "fo_risk_flag",
+        "risk_status": "suppressed_risk",
+        "risk_note": "fo_risk_flag here is fed by the L1 risk signals (automation_volume_drop, champion_job_change) and any open renewal escalation. A risk account is an AE/CSM save motion, never an expansion target; suppress to 0 until the owner clears it.",
+        "cleared_field": "owner_cleared",
+        "uncleared_status": "pending_owner",
+        "cleared_note": "Expansion outreach inside a live customer coordinates with the account's AE/CSM before any send. owner_cleared is a SEND gate, not an intent kill: an uncleared account still scores and counts, it just is not sendable yet."
+      },
+      "base_term": {
+        "field": "install_base",
+        "points": 10,
+        "tier": 2,
+        "_comment": "Every current customer surfaces at 10 so the expansion motion is never empty while telemetry signals accrue. Same base as back_office by design: the two install-base motions read the same warm-base truth."
+      }
+    }
+  },
+  "new_faller_base": {
+    "_comment": "A contract that fell out of 4.0 this cycle auto-surfaces at this base intent with zero credits, before any external signal fires. Mirrors the live Clay formula's new_faller term. Read from the star_field row, not from the signals feed.",
+    "field": "new_faller",
+    "points": 20,
+    "tier": 1
+  },
+  "recency": {
+    "_comment": "REFERENCE-ONLY decay model. Signals decay so a stale trigger can't hold an account hot forever: full weight inside fresh_days, linear to stale_floor by stale_days. The live Clay layer does NOT compute in-formula decay; it approximates this via refresh-expiry (a signal only stays hot while the monthly re-run still returns it). Keep this block for the reference scorer and for the day the live layer adds a per-signal date; do not claim in-formula decay in the live build.",
+    "applies_to": "reference_scorer",
+    "fresh_days": 30,
+    "stale_days": 120,
+    "stale_floor": 0.4
+  },
+  "signals": {
+    "sec_filing_stars": {
+      "label": "Stars language in an SEC filing",
+      "points": 30,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires the account into outreach.",
+      "velocity": "slow",
+      "cadence_bucket": "monthly_full",
+      "est_credits_per_account": 3,
+      "route_personas": [
+        "finance",
+        "cc_ops"
+      ],
+      "source": "SEC full-text search / filing monitor; parent-level",
+      "applies_note": "Only trips for public parents. Most eligible parents are Blues / provider-sponsored and will never fire this; see point-weight note in the audit.",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "earnings_stars_mention": {
+      "label": "Stars/QBP named on an earnings call",
+      "points": 25,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires; strongest when it's the prospect's own disclosed number.",
+      "velocity": "event",
+      "cadence_bucket": "event_triggered",
+      "est_credits_per_account": 3,
+      "route_personas": [
+        "finance",
+        "cc_ops"
+      ],
+      "source": "earnings-call transcript scan around the parent's reporting week",
+      "applies_note": "Public parents only.",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "measure_slippage": {
+      "label": "CMS Stars slippage with a QO-addressable soft spot",
+      "points": 20,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires. First-party, deterministic, free, and directly on-thesis: a plan that just declined year-over-year AND whose weak domain is the one Queue Optimizer moves.",
+      "velocity": "slow",
+      "cadence_bucket": "monthly_full",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits: computed from CMS public Star Ratings data (2025 vs 2026), not a paid enrichment.",
+      "definition": "FIRES when overall_star declined 2025->2026 (star_delta < 0) AND the plan's 2025 Health Plan Customer Service domain (HD5) OR Member Experience/CAHPS domain (HD3) is <= 3.0. Movement + a QO-addressable soft spot. Built Jul 12 2026 from the uploaded 2025 Star Ratings Data Tables joined to our 2026 universe by contract_id; 22 of 98 contracts fire, each row carries a traceable measure_slippage_why.",
+      "data_file": "greenlight-pack/CMS_Star_Movement_25v26.csv",
+      "route_personas": [
+        "cc_ops",
+        "quality"
+      ],
+      "source": "first-party public CMS Star Ratings: 2025 Domain Stars (HD5 Customer Service, HD3 Member Experience) + 2025/2026 Summary Overall; NOT clinical/HEDIS. Refresh at each October CMS release.",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "quality_leadership_change": {
+      "label": "New quality / Stars / member-experience leader",
+      "points": 10,
+      "points_note": "Dropped 20->10 on Jul 11 2026: this signal is AI web-research (directional), not deterministic like job-postings, so it nudges rather than dominates. Spot-check found real execs but over-calling on recency (e.g. an existing Medicare growth VP read as 'yes'). Treat a 'yes' as a lead to verify, not an auto-fire.",
+      "tier": 2,
+      "tier_note": "Demoted to Tier 2 on Jul 12 2026: raises priority within the already-fired set rather than firing an account into outreach on an unverified AI signal. Promote a fired account to outreach only after a human verifies the appointment.",
+      "velocity": "slow",
+      "cadence_bucket": "monthly_full",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "cc_ops",
+        "cx"
+      ],
+      "source": "Clay 'Use AI' web-research (Claygent) column on Accounts (Master); prompt tightened Jul 11 to require a DATED last-12-months appointment AND an explicit quality/Stars/CAHPS/HEDIS/member-experience remit, else 'no'",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "quality_hiring_cluster": {
+      "label": "Cluster of quality / CAHPS / Stars job postings",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the already-fired set; a fast mover.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "cc_ops",
+        "wfm",
+        "finance"
+      ],
+      "source": "job-postings enrichment; count >= 3 relevant reqs in trailing 30 days",
+      "threshold": 3,
+      "threshold_note": "Cluster = 3 or more relevant reqs. The live Clay formula was corrected Jul 12 from '> 0' to '>= 3' to match this, and must read the keyword-filtered quality count, not the raw all-roles total.",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "sixsense_ccaas_keyword_intent": {
+      "label": "6sense intent surge on customer-service-platform / CCaaS keywords",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the fired set. 6sense shows the account is researching, not that a deal or mandate exists yet; treat as a fast-mover nudge until a pattern of hits validates it as a stronger signal.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits if pulled off the existing 6sense Salesforce fields via the SF->Clay import (an import, not a paid enrichment); revisit if the eventual source is a separate paid API call.",
+      "route_personas": [
+        "cc_ops",
+        "wfm"
+      ],
+      "source": "6sense Hot Accounts / ICP Email Alert, weekly; account-level keyword intent (e.g. 'customer service platform', CCaaS category terms), added Jul 27 2026 per John Norton's proposal",
+      "applies_note": "PENDING: confirm the exact keyword taxonomy 6sense is tracking (Norton flagged he isn't confident the right keywords are even being collected) before trusting this as more than a directional nudge.",
+      "motions": [
+        "star_ratings"
+      ]
+    },
+    "claims_backlog_news": {
+      "label": "Claims backlog / operational-strain news",
+      "points": 10,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority; a fast mover.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "bo_claims",
+        "coo_finance"
+      ],
+      "source": "news monitor for backlog / service-strain language",
+      "motion_note": "Moved out of the Star Ratings motion on Jul 12 2026. Claims backlog is a back-office buying signal, not a Stars-cliff signal: it predicts a back-office opportunity, not that a Medicare plan is a better Stars target. Scored only when active_motion = back_office.",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "bo_cost_mandate": {
+      "label": "Public cost-out / operational-efficiency / restructuring mandate",
+      "points": 20,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires into outreach. Most on-thesis back-office signal: a named efficiency or cost-reduction mandate is the buyer explicitly stating the problem Intradiem solves (capacity without headcount).",
+      "velocity": "event",
+      "cadence_bucket": "event_triggered",
+      "est_credits_per_account": 3,
+      "route_personas": [
+        "coo_finance",
+        "shared_services"
+      ],
+      "source": "earnings-call / press-release / news scan for cost-reduction, operational-efficiency, margin, or restructuring language tied to operations",
+      "applies_note": "Public parents strongest (own disclosed mandate). Private targets can still fire via press/news.",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "bo_hiring_cluster": {
+      "label": "Cluster of back-office / claims / payment / processing job postings",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the fired set; a fast mover. Back-office analogue of quality_hiring_cluster.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "bo_claims",
+        "payment_ops",
+        "shared_services"
+      ],
+      "source": "job-postings enrichment; count >= 3 relevant back-office reqs (claims processor, adjudication, payment ops, document processing, shared services) in trailing 30 days",
+      "threshold": 3,
+      "threshold_note": "Cluster = 3 or more relevant reqs; read the keyword-filtered back-office count, not the raw all-roles total. Mirrors the >=3 discipline the audit forced on quality_hiring_cluster.",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "sla_penalty_backlog": {
+      "label": "Regulatory / contractual SLA penalty or mandated backlog remediation",
+      "points": 20,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires. A penalty or remediation order is a dated, external forcing function on the exact queue Intradiem addresses.",
+      "velocity": "event",
+      "cadence_bucket": "event_triggered",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "bo_claims",
+        "coo_finance"
+      ],
+      "source": "regulator / DOI / CMS / news monitor for claims-processing SLA penalties, consent orders, or mandated backlog clearance (strongest in insurance / healthcare)",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "bpo_transition": {
+      "label": "BPO / outsourcing contract change or in-sourcing move",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority. A workforce in flux (BPO churn, in-sourcing, new outsourcing RFP) is a rare window where back-office ops is actively re-tooling and open to a better model.",
+      "velocity": "event",
+      "cadence_bucket": "event_triggered",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "coo_finance",
+        "shared_services"
+      ],
+      "source": "news / filings monitor for BPO contract wins/losses, in-sourcing announcements, or back-office outsourcing RFPs",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "sixsense_rpa_keyword_intent": {
+      "label": "6sense intent surge on RPA / automation-platform keywords (e.g. UiPath)",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the fired set, same caution as sixsense_ccaas_keyword_intent: intent, not a confirmed mandate.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits if pulled off the existing 6sense Salesforce fields via the SF->Clay import.",
+      "route_personas": [
+        "bo_claims",
+        "shared_services"
+      ],
+      "source": "6sense Hot Accounts / ICP Email Alert, weekly; account-level keyword intent on RPA/automation-platform terms, added Jul 27 2026 per John Norton's proposal",
+      "applies_note": "PENDING: same keyword-taxonomy confirmation as sixsense_ccaas_keyword_intent.",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "sixsense_itsm_keyword_intent": {
+      "label": "6sense intent surge on ITSM / case-management keywords (e.g. ServiceNow)",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the fired set, same caution as the other 6sense signals.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits if pulled off the existing 6sense Salesforce fields via the SF->Clay import.",
+      "route_personas": [
+        "shared_services",
+        "it_ops"
+      ],
+      "source": "6sense Hot Accounts / ICP Email Alert, weekly; account-level keyword intent on ITSM/case-management terms, added Jul 27 2026 per John Norton's proposal",
+      "applies_note": "PENDING: same keyword-taxonomy confirmation as sixsense_ccaas_keyword_intent.",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "transaction_volume_surge": {
+      "label": "Enrollment / claims / payment volume surge",
+      "points": 10,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority; a fast mover. Seasonal or event-driven volume spikes (open enrollment, catastrophe claims, payment peaks) are when backlog and overtime spike and the pain is loudest.",
+      "velocity": "fast",
+      "cadence_bucket": "weekly_delta",
+      "est_credits_per_account": 2,
+      "route_personas": [
+        "bo_claims",
+        "payment_ops"
+      ],
+      "source": "news / seasonal calendar / enrollment-window monitor for volume-surge language in the target's transaction functions",
+      "motions": [
+        "back_office"
+      ]
+    },
+    "seat_utilization_headroom": {
+      "label": "Seat utilization at or above expansion threshold",
+      "points": 20,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires into the expansion motion. The cleanest more-seats signal there is: the licenses they bought are fully used.",
+      "velocity": "slow",
+      "cadence_bucket": "daily_telemetry",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits: first-party telemetry from the L1 signal engine (data/accounts.csv seat_utilization vs config/thresholds.json). Never a paid enrichment.",
+      "route_personas": [
+        "cc_ops",
+        "wfm"
+      ],
+      "source": "L1 signal engine seat_utilization read (signal_processor.py), threshold per config/thresholds.json",
+      "motions": [
+        "install_base"
+      ]
+    },
+    "crm_not_connected": {
+      "label": "CRM connector not attached",
+      "points": 15,
+      "tier": 1,
+      "tier_note": "Tier 1 = fires. Deterministic attach play: a live deployment running without the CRM connector is a named, scoped expansion conversation.",
+      "velocity": "slow",
+      "cadence_bucket": "daily_telemetry",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits: first-party telemetry (L1 crm_connected flag).",
+      "route_personas": [
+        "cc_ops",
+        "it_ops"
+      ],
+      "source": "L1 signal engine crm_not_connected read (signal_processor.py)",
+      "motions": [
+        "install_base"
+      ]
+    },
+    "coaching_coverage_gap": {
+      "label": "Coaching coverage below threshold",
+      "points": 15,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority within the fired set. Under-used coaching automation is a use-more-of-what-you-own conversation that often precedes a seat conversation.",
+      "velocity": "slow",
+      "cadence_bucket": "daily_telemetry",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits: first-party telemetry (L1 coaching_coverage vs threshold).",
+      "route_personas": [
+        "cc_ops",
+        "wfm"
+      ],
+      "source": "L1 signal engine coaching_coverage read (signal_processor.py)",
+      "motions": [
+        "install_base"
+      ]
+    },
+    "rule_engine_active": {
+      "label": "Rule engine heavily active (power-user account)",
+      "points": 10,
+      "tier": 2,
+      "tier_note": "Tier 2 = raises priority. A power-user account is the best-qualified audience for the next module; nudges, never fires on its own.",
+      "velocity": "slow",
+      "cadence_bucket": "daily_telemetry",
+      "est_credits_per_account": 0,
+      "est_credits_note": "Zero credits: first-party telemetry (L1 rule_engine_active flag).",
+      "route_personas": [
+        "cc_ops"
+      ],
+      "source": "L1 signal engine rule_engine_active read (signal_processor.py)",
+      "motions": [
+        "install_base"
+      ]
+    }
+  },
+  "cadence": {
+    "_comment": "Ratified Jul 11 2026 against the 5,000-credit MONTHLY Clay budget; credit estimates corrected Jul 12 to parent-grain (26 rows) after the audit found the live table was scoring at contract grain (98 rows), which would have cost ~3x. Run the paid signals on the 26-row parent helper table and lookup back to contracts (free). measure_slippage is first-party and free.",
+    "budget_credits_per_month": 5000,
+    "flag_at_credits": 3000,
+    "alert_at_credits": 3500,
+    "grain": "parent",
+    "monthly_full": {
+      "signals": [
+        "sec_filing_stars",
+        "earnings_stars_mention",
+        "measure_slippage",
+        "quality_leadership_change",
+        "quality_hiring_cluster"
+      ],
+      "scope": "26 eligible non-customer parents",
+      "est_credits": 260,
+      "est_credits_note": "26 parents x ~10 paid credits (sec 3 + earnings 3 + leadership 2 + hiring 2 + measure 0). Contract grain would be ~980; parent grain + free lookup is the fix.",
+      "schedule": "day 1 of month"
+    },
+    "weekly_delta": {
+      "signals": [
+        "quality_hiring_cluster"
+      ],
+      "scope": "top-tier fast-mover parents",
+      "est_credits": 60,
+      "schedule": "Mondays"
+    },
+    "event_triggered": {
+      "signals": [
+        "earnings_stars_mention",
+        "sec_filing_stars",
+        "measure_slippage",
+        "quality_leadership_change",
+        "quality_hiring_cluster"
+      ],
+      "scope": "full sweep around parent earnings weeks and the October CMS release",
+      "est_credits": 260,
+      "schedule": "ad hoc"
+    },
+    "steady_state_est_credits_per_month": 520,
+    "back_office": {
+      "_comment": "Back-office motion credit plan. Standing up the motion (this config, the scorer fork, the Clay table architecture, the ICP v0) is 0 credits. The two paid steps are HELD until the ICP is ratified and an explicit go is given: (1) the persona pull that sources the 200 install-base back-office contacts, (2) the monthly per-parent back-office signal sweep. Both pre-estimate and log to the ledger before spending, same discipline as the Stars motion.",
+      "persona_pull_est_credits": "held - estimate at pull-spec time against ~200 contacts x enrichment waterfall; sample 50 first",
+      "monthly_signal_sweep": {
+        "signals": [
+          "bo_cost_mandate",
+          "bo_hiring_cluster",
+          "sla_penalty_backlog",
+          "bpo_transition",
+          "transaction_volume_surge",
+          "claims_backlog_news"
+        ],
+        "grain": "parent",
+        "est_credits_per_parent": 11,
+        "schedule": "held until ICP ratified + explicit go"
+      }
+    },
+    "install_base": {
+      "_comment": "Install-base expansion motion credit plan: the entire signal set is first-party telemetry already collected by the L1 engine's daily run (run_daily.sh, 7am launchd). ZERO Clay credits at steady state. The L1 risk signals feed fo_risk_flag (suppression + AE/CSM routing via notifier.py); the four expansion signals above feed this L2 intent score. Contacts for this motion come from the existing install-base contact set, not a paid persona pull.",
+      "daily_telemetry": {
+        "signals": [
+          "seat_utilization_headroom",
+          "crm_not_connected",
+          "coaching_coverage_gap",
+          "rule_engine_active"
+        ],
+        "grain": "account",
+        "est_credits_per_account": 0,
+        "schedule": "daily, alongside run_daily.sh"
+      },
+      "risk_feed_note": "automation_volume_drop and champion_job_change stay L1-only risk signals: they set fo_risk_flag consumed here as suppression, and route AE/CSM per config/thresholds.json routing (AE > CSM > HOLD)."
+    }
+  },
+  "credit_discipline": {
+    "_comment": "The paid enrichment does not fire autonomously. Each scheduled run pre-estimates and appends to Clay_Credit_Ledger.md, then holds the paid write for an explicit go. Free monitoring (measure_slippage from owned data, war-room web research) runs on schedule; the credit-spending Clay enrichment is queued, not auto-charged. Every paid enrichment column carries a run condition of new_logo_eligible == TRUE so credits never fire on a customer or ineligible row.",
+    "pre_estimate_before_run": true,
+    "ledger": "Clay_Credit_Ledger.md",
+    "paid_run_requires_explicit_go": true,
+    "enrichment_run_condition": "new_logo_eligible == \"TRUE\""
+  }
+}

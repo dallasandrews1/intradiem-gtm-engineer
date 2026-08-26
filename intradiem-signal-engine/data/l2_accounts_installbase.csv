@@ -1,0 +1,6 @@
+account,customer_flag,install_base,fo_risk_flag,owner_cleared
+Humana,TRUE,TRUE,FALSE,TRUE
+Capita,TRUE,TRUE,FALSE,FALSE
+Foundever (Sitel),TRUE,TRUE,FALSE,TRUE
+Ameriprise Financial,TRUE,TRUE,TRUE,TRUE
+Canadian Imperial Bank Of Commerce (CIBC),TRUE,TRUE,FALSE,FALSE

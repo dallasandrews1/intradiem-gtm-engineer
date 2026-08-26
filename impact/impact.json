@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-06-13T16:55:59.558438",
+  "generated_at": "2026-08-07T00:57:08.664164",
   "headline_opportunity_surfaced": 41650000,
   "headline_opportunity_label": "$41.6M",
   "net_new": {
     "accounts_targeted": 6,
-    "hot_today": 6,
+    "hot_today": 0,
     "roi_surfaced": 41650000,
     "roi_surfaced_label": "$41.6M",
-    "hot_roi_surfaced": 41650000,
-    "hot_roi_surfaced_label": "$41.6M",
+    "hot_roi_surfaced": 0,
+    "hot_roi_surfaced_label": "$0",
     "strike_plans": 6,
     "committee_contacts_mapped": 20,
     "sequence_messages_drafted": 80,
@@ -27,16 +27,16 @@
         "roi_label": "$7.1M"
       },
       {
-        "company": "Navient",
-        "agent_count": 2500,
-        "roi_annual": 5950000,
-        "roi_label": "$6.0M"
-      },
-      {
         "company": "Health Care Service Corporation",
         "agent_count": 5000,
         "roi_annual": 11900000,
         "roi_label": "$11.9M"
+      },
+      {
+        "company": "Navient",
+        "agent_count": 2500,
+        "roi_annual": 5950000,
+        "roi_label": "$6.0M"
       },
       {
         "company": "OneMain Financial",
@@ -66,11 +66,21 @@
     "csm_routes": 4
   },
   "realized": {
-    "logged_outcomes": 2,
-    "meetings_booked": 1,
-    "pipeline_created": 180000.0,
-    "pipeline_created_label": "$180K",
+    "logged_outcomes": 0,
+    "meetings_booked": 0,
+    "pipeline_created": 0,
+    "pipeline_created_label": "$0",
     "revenue_won": 0,
-    "revenue_won_label": "$0"
-  }
+    "revenue_won_label": "$0",
+    "excluded_pre_role_rows": 0,
+    "excluded_undated_rows": 0,
+    "role_start": "2026-07-06"
+  },
+  "sources": {
+    "tam_plays": true,
+    "signals": true,
+    "outcomes": true
+  },
+  "data_complete": true,
+  "surfaced_basis": "UNVERIFIED"
 }

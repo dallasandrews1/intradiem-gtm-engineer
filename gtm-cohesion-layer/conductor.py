@@ -36,6 +36,44 @@ CLAIM_PATTERNS = [
     r"\b\d+(?:\.\d+)?x\b",
 ]
 
+# Copy-standards gate (Jul 9 2026 natural-CTA standard). Phrases/tells live in
+# copy_standards.json (config over code); missing/invalid file logs a warn and skips
+# the check rather than poisoning the run.
+COPY_STANDARDS_PATH = os.path.join(HERE, "copy_standards.json")
+
+
+def load_copy_standards():
+    try:
+        with open(COPY_STANDARDS_PATH) as f:
+            cs = json.load(f)
+        # A tell only counts when a word follows it ("that is the angle" -> "that's the angle").
+        # Clause-final uses ("how close that is.") can't contract and are not tells.
+        tells = [re.compile(r"\b" + re.escape(t) + r"\s+\w") for t in cs.get("uncontracted_tells", [])]
+        return {
+            "phrases": [p.lower() for p in cs.get("banned_phrases", [])],
+            "chars": cs.get("banned_chars", {}),
+            "tells": list(zip(cs.get("uncontracted_tells", []), tells)),
+        }
+    except Exception:
+        return None
+
+
+def copy_standard_reasons(draft, cs):
+    """Objective phrase-level checks from copy_standards.json. Returns held-reasons."""
+    reasons = []
+    low = draft.lower()
+    hits = sorted({p for p in cs["phrases"] if p in low})
+    if hits:
+        reasons.append("copy standard: banned phrase(s) " + ", ".join(f"'{h}'" for h in hits))
+    for ch, why in cs["chars"].items():
+        if ch in draft:
+            reasons.append(f"copy standard: banned character '{ch}' ({why})")
+    tells = sorted({t for t, rx in cs["tells"] if rx.search(draft)})
+    if tells:
+        reasons.append("copy standard: uncontracted " + ", ".join(f"'{t}'" for t in tells)
+                       + " (contractions required; rewrite via first-draft-engine)")
+    return reasons
+
 ENGINES = {
     "signal": os.path.join(ROOT, "intradiem-signal-engine", "signal_processor.py"),
     "tam":    os.path.join(ROOT, "tam-outbound-engine", "account_engine.py"),
@@ -205,6 +243,9 @@ def stage_critic(s):
     approved_claims = {a.lower() for a in ns.get("approved_claims", [])}
     max_len = ns.get("draft_max_chars", 600)
     in_scope = ns.get("in_scope_motion")  # set by stage_spec_reread; None => ambiguous
+    copy_std = load_copy_standards()
+    if copy_std is None:
+        log("4b Critic", "copy_standards.json missing/invalid -> phrase gate skipped this run", "warn")
     checked = passed = held = 0
     held_items = []
     for it in items:
@@ -234,6 +275,8 @@ def stage_critic(s):
             reasons.append("empty draft")
         elif len(draft) > max_len:
             reasons.append(f"draft {len(draft)} chars > {max_len} cap")
+        if copy_std and draft.strip():
+            reasons.extend(copy_standard_reasons(draft, copy_std))
         if reasons:
             it["critic_status"] = "held"
             it["critic_reasons"] = reasons

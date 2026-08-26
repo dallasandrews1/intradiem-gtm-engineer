@@ -21,6 +21,7 @@ Config (edit, never touch code):
     config/personas.json     buying committee + message blocks
     config/sequences.json    the cadence
     config/roi_model.json    recoverable-cost assumptions
+    config/customer_denylist.json  confirmed-customer exclusion (SF report + aliases)
 
 Usage:
     python account_engine.py                 # ranked action list + write account_plays.json
@@ -32,6 +33,7 @@ import argparse
 import csv
 import json
 import os
+import re
 from datetime import datetime, date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -170,12 +172,52 @@ def render_sequence(persona, cadence, v):
     steps = []
     for step in cadence:
         body = "\n\n".join(fill(persona[b], v) for b in step["blocks"] if persona.get(b))
-        steps.append({
+        touch = {
             "day": step["day"], "channel": step["channel"],
             "subject": fill(step["subject"], sv) if step["subject"] else "",
             "body": body,
-        })
+        }
+        if step["channel"] == "Call":
+            # body stays the voicemail (backward compatible); live_script is the
+            # if-they-answer script from the persona's call_live block.
+            touch["voicemail"] = body
+            if persona.get("call_live"):
+                touch["live_script"] = fill(persona["call_live"], v)
+        steps.append(touch)
     return steps
+
+
+def norm_name(s):
+    s = re.sub(r"[^a-z0-9 ]", " ", s.lower())
+    s = re.sub(r"\b(inc|llc|plc|ltd|corp|corporation|company|co|group|holdings)\b", " ", s)
+    return " ".join(s.split())
+
+
+def load_customer_denylist():
+    dl = load_json("customer_denylist.json")
+    sf_names = set()
+    sf_path = os.path.join(HERE, dl.get("sf_report_csv", ""))
+    if dl.get("sf_report_csv") and os.path.exists(sf_path):
+        with open(sf_path, newline="") as f:
+            sf_names = {norm_name(r["account_name"]) for r in csv.DictReader(f)}
+    return {
+        "domains": set(dl.get("domains", [])),
+        "aliases": [norm_name(a) for a in dl.get("name_aliases", [])],
+        "sf_names": sf_names,
+    }
+
+
+def customer_match(acct, dl):
+    """Why this account is a confirmed customer, or None if it's clean."""
+    if acct["domain"] in dl["domains"]:
+        return f"domain {acct['domain']} on denylist"
+    name = norm_name(acct["company"])
+    if name in dl["sf_names"]:
+        return "exact name match in SF customer report"
+    for a in dl["aliases"]:
+        if re.search(r"\b" + re.escape(a) + r"\b", name):
+            return f"name matches customer alias '{a}'"
+    return None
 
 
 def build_plays(cfg, today):
@@ -186,9 +228,17 @@ def build_plays(cfg, today):
     for r in trig_rows:
         by_domain.setdefault(r["domain"], []).append(r)
 
+    denylist = load_customer_denylist()
     plays = []
+    excluded = []
     cadence = cfg["seq"]["cadence"]
     for acct in accounts:
+        reason = customer_match(acct, denylist)
+        if reason:
+            excluded.append({"company": acct["company"], "domain": acct["domain"],
+                             "customer_excluded": True, "match": reason,
+                             "route": "install-base expansion, never cold"})
+            continue
         scored = score_account(acct, by_domain.get(acct["domain"], []), cfg, today)
         seller = sellers.get(acct["domain"])
         committee = []
@@ -205,7 +255,7 @@ def build_plays(cfg, today):
         plays.append(scored)
 
     plays.sort(key=lambda x: (x["fresh"], x["tier"] == 1, x["icp_total"], x["why_now_raw"]), reverse=True)
-    return plays
+    return plays, excluded
 
 
 def load_cfg():
@@ -278,9 +328,14 @@ def main():
 
     today = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else date.today()
     cfg = load_cfg()
-    plays = build_plays(cfg, today)
+    plays, excluded = build_plays(cfg, today)
 
     if args.plan:
+        shut = next((e for e in excluded if e["domain"] == args.plan), None)
+        if shut:
+            print(f"{shut['company']} is a confirmed customer ({shut['match']}): "
+                  f"no cold strike plan. Route as install-base expansion.")
+            return
         match = next((p for p in plays if p["domain"] == args.plan), None)
         if not match:
             print(f"{args.plan} not in the target set")
@@ -290,10 +345,14 @@ def main():
 
     if args.output:
         with open(args.output, "w") as f:
-            json.dump({"generated_at": datetime.now().isoformat(), "accounts": plays}, f, indent=2)
-        print(f"Wrote {len(plays)} account plays to {args.output}")
+            json.dump({"generated_at": datetime.now().isoformat(), "accounts": plays,
+                       "excluded_customers": excluded}, f, indent=2)
+        print(f"Wrote {len(plays)} account plays to {args.output} "
+              f"({len(excluded)} confirmed customer(s) excluded)")
 
     print_ranked(plays, args.top)
+    for e in excluded:
+        print(f"EXCLUDED (customer): {e['company']} ({e['domain']}) - {e['match']}; {e['route']}")
 
 
 if __name__ == "__main__":

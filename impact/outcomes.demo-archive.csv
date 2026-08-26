@@ -1,0 +1,9 @@
+# ARCHIVED 2026-08-07. These two rows shipped with the interview-era build and are dated
+# BEFORE the GTM Engineer role started (2026-07-06). They were the sole source of the
+# standing "1 meeting booked / $180,000 pipeline" realized figure that the control tower
+# rendered under a hardcoded REALIZED label, contradicting the receipts ledger's 0 meetings
+# and $0. Kept here so nothing is lost and the provenance stays readable. NOT read by
+# impact_engine.py. Do not move these back into outcomes.csv.
+date,account,type,value,note
+2026-06-10,AmeriHealth Caritas,meeting,0,Discovery booked with VP Contact Center Ops off the WFM-hiring play
+2026-06-11,Navient,pipeline,180000,Qualified opp created after the cost-mandate sequence

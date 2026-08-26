@@ -65,6 +65,15 @@ if [ -d "$IMPACT" ]; then
   )
 fi
 
+# 6. Hub linter: re-derive every claim on Start_Here_Index.html from its source
+#    and flag drift (the 21/21 -> 25/25 class of bug). Non-fatal so a drift never
+#    breaks the data run; the warning is what matters.
+PROJECT="/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer"
+if [ -f "$PROJECT/hub_verify.py" ]; then
+  echo "--- hub_verify ---"
+  "$PY" "$PROJECT/hub_verify.py" || echo "!! hub drift detected — a number on Start Here contradicts its source. Fix before showing the page."
+fi
+
 # Short summary to the log.
 OWNERS="$(grep -c '^To: ' "$DIGEST" || true)"
 echo "[$(date)] Daily run complete. $OWNERS owner(s) would be notified (expansion). See the digests above."

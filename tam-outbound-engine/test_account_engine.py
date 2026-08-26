@@ -8,7 +8,7 @@ import account_engine as eng
 
 def run():
     cfg = eng.load_cfg()
-    plays = eng.build_plays(cfg, date(2026, 6, 13))
+    plays, excluded = eng.build_plays(cfg, date(2026, 6, 13))
     by = {p["domain"]: p for p in plays}
     checks = []
 
@@ -22,7 +22,7 @@ def run():
     check("AmeriHealth ROI = $7.1M", am["roi_label"] == "$7.1M" and am["roi_annual"] == 7_140_000)
     check("AmeriHealth has a fresh trigger", am["fresh"] is True)
     check("AmeriHealth committee = 4 personas",
-          [m["persona_id"] for m in am["committee"]] == ["cc_ops", "wfm", "cx", "finance"])
+          [m["persona_id"] for m in am["committee"]] == ["cc_ops", "wfm", "cx", "coo_finance"])
     check("Every committee member has a 4-touch sequence",
           all(len(m["sequence"]) == 4 for m in am["committee"]))
     check("Sequence channels are Email, LinkedIn, Call, Email",
@@ -30,6 +30,16 @@ def run():
     ops_t1 = am["committee"][0]["sequence"][0]["body"]
     ops_t4 = am["committee"][0]["sequence"][3]["body"]
     fin_t1 = am["committee"][-1]["sequence"][0]["body"]
+    call_touches = [s for m in am["committee"] for s in m["sequence"] if s["channel"] == "Call"]
+    check("Every call touch carries a live-answer script",
+          all(t.get("live_script") for t in call_touches))
+    check("Every call touch keeps a voicemail (== body, backward compatible)",
+          all(t.get("voicemail") == t["body"] and t["body"] for t in call_touches))
+    check("Live scripts have opener, ask, and objection handles",
+          all("OPEN:" in t["live_script"] and "THE ASK:" in t["live_script"]
+              and t["live_script"].count("IF '") >= 4 for t in call_touches))
+    check("Live scripts fully rendered (no unresolved merge fields)",
+          all("{" not in t["live_script"] for t in call_touches))
     check("Persona-relevant trigger rendered", "Workforce Management analysts" in ops_t1)
     check("Stakes / why-now cost-of-waiting in touch 1", "locks into your run-rate" in ops_t1)
     check("Teaching insight that challenges the assumption", "Most ops leaders peg idle time near 5%" in ops_t1)
@@ -41,8 +51,10 @@ def run():
     check("Finance per-agent anchor in touch 1", "$2,380" in fin_t1)
     check("Finance carries its own stakes", "locks into your run-rate" in fin_t1)
 
-    hcsc = by["hcsc.com"]
-    check("HCSC ROI = $11.9M (5000 agents)", hcsc["roi_label"] == "$11.9M")
+    check("HCSC (confirmed customer) is out of the cold plays", "hcsc.com" not in by)
+    check("HCSC lands in excluded_customers with a match reason",
+          any(e["domain"] == "hcsc.com" and e["customer_excluded"] and e["match"] for e in excluded))
+    check("No other account was excluded", len(excluded) == 1)
 
     check("Every account got a seller", all(p["seller"] for p in plays))
     check("Fresh-trigger accounts sort above stale ones",

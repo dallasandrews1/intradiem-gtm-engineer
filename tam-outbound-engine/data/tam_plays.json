@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T16:26:56.245601",
+  "generated_at": "2026-07-09T18:23:33.322791",
   "accounts": [
     {
       "company": "AmeriHealth Caritas",
@@ -12,12 +12,12 @@
         "industry": 25,
         "scale": 18,
         "tech": 25,
-        "pain": 24
+        "pain": 23
       },
-      "icp_total": 92,
+      "icp_total": 91,
       "tier": 1,
-      "why_now_raw": 47.0,
-      "fresh": true,
+      "why_now_raw": 46.2,
+      "fresh": false,
       "roi_annual": 7140000,
       "roi_label": "$7.1M",
       "roi_per_agent": 2380,
@@ -32,10 +32,10 @@
           "stakes": "Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.",
           "route_personas": [
             "cc_ops",
-            "finance",
+            "coo_finance",
             "wfm"
           ],
-          "score": 25.0
+          "score": 24.8
         },
         {
           "type": "cc_expansion",
@@ -48,7 +48,7 @@
             "cc_ops",
             "cx"
           ],
-          "score": 22.0
+          "score": 21.4
         }
       ],
       "seller": {
@@ -79,7 +79,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're hiring Workforce Management analysts and RTAs, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~3,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're hiring Workforce Management analysts and RTAs, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~3,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're hiring Workforce Management analysts and RTAs, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~3,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. Saw that you're hiring Workforce Management analysts and RTAs. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 3,000 agents that's roughly $7.1M a year sitting inside the schedule. We recover it in real time on top of Five9 and NICE, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at AmeriHealth Caritas? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have NICE': You should keep it. NICE builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity in two quarters, with no new hires. If that's directionally true for you, it's worth a look before the quarter gets away."
             },
             {
               "day": 7,
@@ -110,7 +112,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of NICE. Given you're hiring Workforce Management analysts and RTAs, I thought it was worth a look. I'm at [your number]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of NICE. Given you're hiring Workforce Management analysts and RTAs, I thought it was worth a look. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of NICE. Given you're hiring Workforce Management analysts and RTAs, I thought it was worth a look. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. With you're hiring Workforce Management analysts and RTAs, what's eating the team more right now: the intraday exception queue itself, or reforecasting around it?\n\nIF THEY ENGAGE (30 sec): Reason I ask: analysts clear the plan, but the exception work between reads never makes the plan. We automate that layer on top of NICE: offline windows, adherence nudges, schedule moves, all rule-based, in the moment. Your rules, run automatically, instead of your team chasing them by hand.\n\nTHE ASK: Open to a quick look at what your exception load actually looks like? If NICE already covers it, I'll tell you that and get out of your way.\n\nIF 'I'm in the middle of something': Fair, 15 seconds. We make NICE act intraday instead of report on it. If that's a real gap, the one-pager explains itself. Worth sending?\n\nIF 'Send me something': Will do. Quick calibration so it's useful: roughly how many intraday exceptions does the team touch a day, dozens or hundreds?\n\nIF 'We built our own scripts / RPA': Keep them, they prove the need. The scripts usually break at scale because someone has to maintain them at 2pm on a Tuesday. Ours is the maintained version of what you built.\n\nIF 'Not a priority': Understood. One thing to watch: when you're hiring Workforce Management analysts and RTAs plays out, the exception load usually doubles before the plan catches up. That's the moment this pays for itself."
             },
             {
               "day": 7,
@@ -141,7 +145,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. With you won two new Medicaid state contracts, which worries you more: CSAT dipping through the ramp, or the new class attriting before they're solid?\n\nIF THEY ENGAGE (30 sec): Asking because ramps are when idle time and coaching gaps peak at the same time. We find the idle pockets in real time and turn them into micro-coaching and training inside the shift, no pulling agents off the floor. Quality holds through the ramp instead of dipping and recovering.\n\nTHE ASK: Would you be against a quick look at how you're protecting quality through the ramp? Fifteen minutes, and you keep the math either way.\n\nIF 'I'm in the middle of something': Fair, 20 seconds. Quality dips lag ramps by about a quarter, and by then it's in your CSAT. Cheaper to coach inside the ramp than repair after it. Send you the one-pager?\n\nIF 'Send me something': Sure. So it lands: is the bigger gap right now coaching time or training completion?\n\nIF 'We already have coaching tools': Most teams do. The missing part is the when. We create the time for it inside idle moments, so the tool you already own actually gets used.\n\nIF 'Not a priority': Got it. One thing to watch: new-agent classes carry the most idle time and the least coaching, right when volume peaks. If that flips priority mid-quarter, the math will be ready."
             },
             {
               "day": 7,
@@ -152,7 +158,7 @@
           ]
         },
         {
-          "persona_id": "finance",
+          "persona_id": "coo_finance",
           "role": "CFO / VP Finance or Operations (cost owner)",
           "relevant_trigger": "wfm_hiring",
           "sequence": [
@@ -172,165 +178,15 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're hiring Workforce Management analysts and RTAs, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're hiring Workforce Management analysts and RTAs, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're hiring Workforce Management analysts and RTAs, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. On a floor of 3,000 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $7.1M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of Five9 and NICE. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $7.1M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have NICE': You've got the scheduling layer. This is the execution layer inside it, additive to whatever NICE already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
             },
             {
               "day": 7,
               "channel": "Email",
               "subject": "Re: the seven-figure line on your floor",
               "body": "Following up with the figure: about $7.1M a year, or $2,380 per agent, with no new heads. A Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity in two quarters, with no new hires. Glad to walk the assumptions.\n\nOr 15 minutes to pressure-test the number against your floor, Thursday or Friday?"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "company": "Navient",
-      "domain": "navient.com",
-      "industry": "Financial Services",
-      "agent_count": 2500,
-      "acd": "Genesys",
-      "wfm": "Calabrio",
-      "dims": {
-        "industry": 20,
-        "scale": 18,
-        "tech": 25,
-        "pain": 22
-      },
-      "icp_total": 85,
-      "tier": 1,
-      "why_now_raw": 43.3,
-      "fresh": true,
-      "roi_annual": 5950000,
-      "roi_label": "$6.0M",
-      "roi_per_agent": 2380,
-      "roi_per_agent_label": "$2,380",
-      "triggers": [
-        {
-          "type": "cost_mandate",
-          "label": "Cost reduction or efficiency mandate",
-          "detail": "your last earnings call flagged a board-level cost mandate",
-          "date": "2026-05-18",
-          "play": "Direct ROI story. Recover idle labor cost already on the payroll.",
-          "stakes": "That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.",
-          "route_personas": [
-            "finance",
-            "cc_ops"
-          ],
-          "score": 24.0
-        },
-        {
-          "type": "wfm_hiring",
-          "label": "Hiring WFM / RTA / workforce staff",
-          "detail": "you're hiring workforce management staff",
-          "date": "2026-04-10",
-          "play": "They are solving intraday with headcount. Lead with automate-versus-hire math before the roles fill.",
-          "stakes": "Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.",
-          "route_personas": [
-            "cc_ops",
-            "finance",
-            "wfm"
-          ],
-          "score": 19.3
-        }
-      ],
-      "seller": {
-        "domain": "navient.com",
-        "seller_name": "Alex Rivera",
-        "seller_email": "alex.rivera@intradiem.com",
-        "seller_slack": "@alex.rivera"
-      },
-      "committee": [
-        {
-          "persona_id": "cc_ops",
-          "role": "VP / Director, Contact Center Operations",
-          "relevant_trigger": "cost_mandate",
-          "sequence": [
-            {
-              "day": 1,
-              "channel": "Email",
-              "subject": "the idle time headcount won't fix",
-              "body": "Saw that your last earnings call flagged a board-level cost mandate. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.\n\nMost ops leaders peg idle time near 5%. On floors your size it's usually three times that, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On ~2,500 agents that's about $6.0M a year, roughly $2,380 per agent, sitting on your floor right now.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant the one-page read on where that idle time is hiding at Navient? No meeting needed to start."
-            },
-            {
-              "day": 2,
-              "channel": "LinkedIn",
-              "subject": "",
-              "body": "[First name], saw that your last earnings call flagged a board-level cost mandate. Most ops leaders peg idle time near 5%; on floors your size it's usually three times that, and it's recoverable without adding heads. Worth a quick connect?"
-            },
-            {
-              "day": 4,
-              "channel": "Call",
-              "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: your last earnings call flagged a board-level cost mandate, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,500 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
-            },
-            {
-              "day": 7,
-              "channel": "Email",
-              "subject": "Re: the idle time headcount won't fix",
-              "body": "Last one from me. On ~2,500 agents it's about $2,380 per agent a year, call it $6.0M. A lender your size deferred a full planned hiring class after recovering idle agent time. I'd rather show you the assumptions than have you take it on faith.\n\nOr give me 15 minutes and I'll walk your floor's actual number and where it's hiding, Thursday or Friday?"
-            }
-          ]
-        },
-        {
-          "persona_id": "wfm",
-          "role": "Manager / Director, Workforce Management",
-          "relevant_trigger": "wfm_hiring",
-          "sequence": [
-            {
-              "day": 1,
-              "channel": "Email",
-              "subject": "intraday, on top of Calabrio",
-              "body": "Saw that you're hiring workforce management staff. Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.\n\nThe intraday exception work, the real-time reallocations and call-outs your team chases by hand, is the one job that doesn't get easier with more analysts. We automate it on top of Calabrio, so it stops landing on your team's queue.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant a quick side-by-side of how your team handles intraday today versus automated? Happy to send it."
-            },
-            {
-              "day": 2,
-              "channel": "LinkedIn",
-              "subject": "",
-              "body": "[First name], saw that you're hiring workforce management staff. The intraday exception work is the part that doesn't scale with more analysts; we automate it on top of Calabrio. Worth connecting?"
-            },
-            {
-              "day": 4,
-              "channel": "Call",
-              "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Calabrio. Given you're hiring workforce management staff, I thought it was worth a look. I'm at [your number]."
-            },
-            {
-              "day": 7,
-              "channel": "Email",
-              "subject": "Re: intraday, on top of Calabrio",
-              "body": "Last note. If your team spends real hours on intraday adjustments, that's the time we hand back, on top of Calabrio, with no rip and replace. A lender your size deferred a full planned hiring class after recovering idle agent time.\n\nGot 15 minutes this week to see it run on a Calabrio setup?"
-            }
-          ]
-        },
-        {
-          "persona_id": "finance",
-          "role": "CFO / VP Finance or Operations (cost owner)",
-          "relevant_trigger": "cost_mandate",
-          "sequence": [
-            {
-              "day": 1,
-              "channel": "Email",
-              "subject": "the seven-figure line on your floor",
-              "body": "Saw that your last earnings call flagged a board-level cost mandate. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.\n\nIn a contact center your size, 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On ~2,500 agents, recovering about 3 minutes per agent-hour is roughly $2,380 per agent a year, around $6.0M across the floor. Simple assumptions, easy to pressure-test.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant the one-page version of that math for Navient, with the assumptions laid out? No meeting needed."
-            },
-            {
-              "day": 2,
-              "channel": "LinkedIn",
-              "subject": "",
-              "body": "[First name], on a floor the size of Navient's, the recoverable idle labor is usually a seven-figure line nobody is tracking. Given your last earnings call flagged a board-level cost mandate, worth a quick connect?"
-            },
-            {
-              "day": 4,
-              "channel": "Call",
-              "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given your last earnings call flagged a board-level cost mandate, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
-            },
-            {
-              "day": 7,
-              "channel": "Email",
-              "subject": "Re: the seven-figure line on your floor",
-              "body": "Following up with the figure: about $6.0M a year, or $2,380 per agent, with no new heads. A lender your size deferred a full planned hiring class after recovering idle agent time. Glad to walk the assumptions.\n\nOr 15 minutes to pressure-test the number against your floor, Thursday or Friday?"
             }
           ]
         }
@@ -347,12 +203,12 @@
         "industry": 25,
         "scale": 22,
         "tech": 13,
-        "pain": 23
+        "pain": 21
       },
-      "icp_total": 83,
+      "icp_total": 81,
       "tier": 1,
-      "why_now_raw": 46.0,
-      "fresh": true,
+      "why_now_raw": 41.9,
+      "fresh": false,
       "roi_annual": 11900000,
       "roi_label": "$11.9M",
       "roi_per_agent": 2380,
@@ -366,10 +222,10 @@
           "play": "Direct ROI story. Recover idle labor cost already on the payroll.",
           "stakes": "That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.",
           "route_personas": [
-            "finance",
+            "coo_finance",
             "cc_ops"
           ],
-          "score": 24.0
+          "score": 22.9
         },
         {
           "type": "cc_expansion",
@@ -382,7 +238,7 @@
             "cc_ops",
             "cx"
           ],
-          "score": 22.0
+          "score": 19.1
         }
       ],
       "seller": {
@@ -413,7 +269,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you've set operational efficiency targets for 2026, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~5,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you've set operational efficiency targets for 2026, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~5,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you've set operational efficiency targets for 2026, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~5,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. Saw that you've set operational efficiency targets for 2026. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 5,000 agents that's roughly $11.9M a year sitting inside the schedule. We recover it in real time on top of Unknown and Unknown, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at Health Care Service Corporation? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have Unknown': You should keep it. Unknown builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity in two quarters, with no new hires. If that's directionally true for you, it's worth a look before the quarter gets away."
             },
             {
               "day": 7,
@@ -444,7 +302,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. With member growth across your five Blue Cross states is driving call volume, which worries you more: CSAT dipping through the ramp, or the new class attriting before they're solid?\n\nIF THEY ENGAGE (30 sec): Asking because ramps are when idle time and coaching gaps peak at the same time. We find the idle pockets in real time and turn them into micro-coaching and training inside the shift, no pulling agents off the floor. Quality holds through the ramp instead of dipping and recovering.\n\nTHE ASK: Would you be against a quick look at how you're protecting quality through the ramp? Fifteen minutes, and you keep the math either way.\n\nIF 'I'm in the middle of something': Fair, 20 seconds. Quality dips lag ramps by about a quarter, and by then it's in your CSAT. Cheaper to coach inside the ramp than repair after it. Send you the one-pager?\n\nIF 'Send me something': Sure. So it lands: is the bigger gap right now coaching time or training completion?\n\nIF 'We already have coaching tools': Most teams do. The missing part is the when. We create the time for it inside idle moments, so the tool you already own actually gets used.\n\nIF 'Not a priority': Got it. One thing to watch: new-agent classes carry the most idle time and the least coaching, right when volume peaks. If that flips priority mid-quarter, the math will be ready."
             },
             {
               "day": 7,
@@ -455,7 +315,7 @@
           ]
         },
         {
-          "persona_id": "finance",
+          "persona_id": "coo_finance",
           "role": "CFO / VP Finance or Operations (cost owner)",
           "relevant_trigger": "cost_mandate",
           "sequence": [
@@ -475,13 +335,173 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you've set operational efficiency targets for 2026, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you've set operational efficiency targets for 2026, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you've set operational efficiency targets for 2026, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. On a floor of 5,000 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $11.9M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of Unknown and Unknown. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $11.9M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have Unknown': You've got the scheduling layer. This is the execution layer inside it, additive to whatever Unknown already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
             },
             {
               "day": 7,
               "channel": "Email",
               "subject": "Re: the seven-figure line on your floor",
               "body": "Following up with the figure: about $11.9M a year, or $2,380 per agent, with no new heads. A Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity in two quarters, with no new hires. Glad to walk the assumptions.\n\nOr 15 minutes to pressure-test the number against your floor, Thursday or Friday?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Navient",
+      "domain": "navient.com",
+      "industry": "Financial Services",
+      "agent_count": 2500,
+      "acd": "Genesys",
+      "wfm": "Calabrio",
+      "dims": {
+        "industry": 20,
+        "scale": 18,
+        "tech": 25,
+        "pain": 18
+      },
+      "icp_total": 81,
+      "tier": 1,
+      "why_now_raw": 35.5,
+      "fresh": false,
+      "roi_annual": 5950000,
+      "roi_label": "$6.0M",
+      "roi_per_agent": 2380,
+      "roi_per_agent_label": "$2,380",
+      "triggers": [
+        {
+          "type": "cost_mandate",
+          "label": "Cost reduction or efficiency mandate",
+          "detail": "your last earnings call flagged a board-level cost mandate",
+          "date": "2026-05-18",
+          "play": "Direct ROI story. Recover idle labor cost already on the payroll.",
+          "stakes": "That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.",
+          "route_personas": [
+            "coo_finance",
+            "cc_ops"
+          ],
+          "score": 20.5
+        },
+        {
+          "type": "wfm_hiring",
+          "label": "Hiring WFM / RTA / workforce staff",
+          "detail": "you're hiring workforce management staff",
+          "date": "2026-04-10",
+          "play": "They are solving intraday with headcount. Lead with automate-versus-hire math before the roles fill.",
+          "stakes": "Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.",
+          "route_personas": [
+            "cc_ops",
+            "coo_finance",
+            "wfm"
+          ],
+          "score": 15.0
+        }
+      ],
+      "seller": {
+        "domain": "navient.com",
+        "seller_name": "Alex Rivera",
+        "seller_email": "alex.rivera@intradiem.com",
+        "seller_slack": "@alex.rivera"
+      },
+      "committee": [
+        {
+          "persona_id": "cc_ops",
+          "role": "VP / Director, Contact Center Operations",
+          "relevant_trigger": "cost_mandate",
+          "sequence": [
+            {
+              "day": 1,
+              "channel": "Email",
+              "subject": "the idle time headcount won't fix",
+              "body": "Saw that your last earnings call flagged a board-level cost mandate. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.\n\nMost ops leaders peg idle time near 5%. On floors your size it's usually three times that, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On ~2,500 agents that's about $6.0M a year, roughly $2,380 per agent, sitting on your floor right now.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant the one-page read on where that idle time is hiding at Navient? No meeting needed to start."
+            },
+            {
+              "day": 2,
+              "channel": "LinkedIn",
+              "subject": "",
+              "body": "[First name], saw that your last earnings call flagged a board-level cost mandate. Most ops leaders peg idle time near 5%; on floors your size it's usually three times that, and it's recoverable without adding heads. Worth a quick connect?"
+            },
+            {
+              "day": 4,
+              "channel": "Call",
+              "subject": "",
+              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: your last earnings call flagged a board-level cost mandate, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,500 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Reason for the call: your last earnings call flagged a board-level cost mandate, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,500 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. Saw that your last earnings call flagged a board-level cost mandate. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 2,500 agents that's roughly $6.0M a year sitting inside the schedule. We recover it in real time on top of Genesys and Calabrio, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at Navient? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have Calabrio': You should keep it. Calabrio builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A lender your size deferred a full planned hiring class after recovering idle agent time. If that's directionally true for you, it's worth a look before the quarter gets away."
+            },
+            {
+              "day": 7,
+              "channel": "Email",
+              "subject": "Re: the idle time headcount won't fix",
+              "body": "Last one from me. On ~2,500 agents it's about $2,380 per agent a year, call it $6.0M. A lender your size deferred a full planned hiring class after recovering idle agent time. I'd rather show you the assumptions than have you take it on faith.\n\nOr give me 15 minutes and I'll walk your floor's actual number and where it's hiding, Thursday or Friday?"
+            }
+          ]
+        },
+        {
+          "persona_id": "wfm",
+          "role": "Manager / Director, Workforce Management",
+          "relevant_trigger": "wfm_hiring",
+          "sequence": [
+            {
+              "day": 1,
+              "channel": "Email",
+              "subject": "intraday, on top of Calabrio",
+              "body": "Saw that you're hiring workforce management staff. Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.\n\nThe intraday exception work, the real-time reallocations and call-outs your team chases by hand, is the one job that doesn't get easier with more analysts. We automate it on top of Calabrio, so it stops landing on your team's queue.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant a quick side-by-side of how your team handles intraday today versus automated? Happy to send it."
+            },
+            {
+              "day": 2,
+              "channel": "LinkedIn",
+              "subject": "",
+              "body": "[First name], saw that you're hiring workforce management staff. The intraday exception work is the part that doesn't scale with more analysts; we automate it on top of Calabrio. Worth connecting?"
+            },
+            {
+              "day": 4,
+              "channel": "Call",
+              "subject": "",
+              "body": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Calabrio. Given you're hiring workforce management staff, I thought it was worth a look. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Calabrio. Given you're hiring workforce management staff, I thought it was worth a look. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. With you're hiring workforce management staff, what's eating the team more right now: the intraday exception queue itself, or reforecasting around it?\n\nIF THEY ENGAGE (30 sec): Reason I ask: analysts clear the plan, but the exception work between reads never makes the plan. We automate that layer on top of Calabrio: offline windows, adherence nudges, schedule moves, all rule-based, in the moment. Your rules, run automatically, instead of your team chasing them by hand.\n\nTHE ASK: Open to a quick look at what your exception load actually looks like? If Calabrio already covers it, I'll tell you that and get out of your way.\n\nIF 'I'm in the middle of something': Fair, 15 seconds. We make Calabrio act intraday instead of report on it. If that's a real gap, the one-pager explains itself. Worth sending?\n\nIF 'Send me something': Will do. Quick calibration so it's useful: roughly how many intraday exceptions does the team touch a day, dozens or hundreds?\n\nIF 'We built our own scripts / RPA': Keep them, they prove the need. The scripts usually break at scale because someone has to maintain them at 2pm on a Tuesday. Ours is the maintained version of what you built.\n\nIF 'Not a priority': Understood. One thing to watch: when you're hiring workforce management staff plays out, the exception load usually doubles before the plan catches up. That's the moment this pays for itself."
+            },
+            {
+              "day": 7,
+              "channel": "Email",
+              "subject": "Re: intraday, on top of Calabrio",
+              "body": "Last note. If your team spends real hours on intraday adjustments, that's the time we hand back, on top of Calabrio, with no rip and replace. A lender your size deferred a full planned hiring class after recovering idle agent time.\n\nGot 15 minutes this week to see it run on a Calabrio setup?"
+            }
+          ]
+        },
+        {
+          "persona_id": "coo_finance",
+          "role": "CFO / VP Finance or Operations (cost owner)",
+          "relevant_trigger": "cost_mandate",
+          "sequence": [
+            {
+              "day": 1,
+              "channel": "Email",
+              "subject": "the seven-figure line on your floor",
+              "body": "Saw that your last earnings call flagged a board-level cost mandate. That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.\n\nIn a contact center your size, 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On ~2,500 agents, recovering about 3 minutes per agent-hour is roughly $2,380 per agent a year, around $6.0M across the floor. Simple assumptions, easy to pressure-test.\n\nA lender your size deferred a full planned hiring class after recovering idle agent time.\n\nWant the one-page version of that math for Navient, with the assumptions laid out? No meeting needed."
+            },
+            {
+              "day": 2,
+              "channel": "LinkedIn",
+              "subject": "",
+              "body": "[First name], on a floor the size of Navient's, the recoverable idle labor is usually a seven-figure line nobody is tracking. Given your last earnings call flagged a board-level cost mandate, worth a quick connect?"
+            },
+            {
+              "day": 4,
+              "channel": "Call",
+              "subject": "",
+              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given your last earnings call flagged a board-level cost mandate, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given your last earnings call flagged a board-level cost mandate, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. On a floor of 2,500 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $6.0M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of Genesys and Calabrio. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $6.0M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have Calabrio': You've got the scheduling layer. This is the execution layer inside it, additive to whatever Calabrio already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
+            },
+            {
+              "day": 7,
+              "channel": "Email",
+              "subject": "Re: the seven-figure line on your floor",
+              "body": "Following up with the figure: about $6.0M a year, or $2,380 per agent, with no new heads. A lender your size deferred a full planned hiring class after recovering idle agent time. Glad to walk the assumptions.\n\nOr 15 minutes to pressure-test the number against your floor, Thursday or Friday?"
             }
           ]
         }
@@ -498,12 +518,12 @@
         "industry": 20,
         "scale": 18,
         "tech": 13,
-        "pain": 22
+        "pain": 19
       },
-      "icp_total": 73,
+      "icp_total": 70,
       "tier": 2,
-      "why_now_raw": 43.5,
-      "fresh": true,
+      "why_now_raw": 38.0,
+      "fresh": false,
       "roi_annual": 6664000,
       "roi_label": "$6.7M",
       "roi_per_agent": 2380,
@@ -518,10 +538,10 @@
           "stakes": "Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out.",
           "route_personas": [
             "cc_ops",
-            "finance",
+            "coo_finance",
             "wfm"
           ],
-          "score": 25.0
+          "score": 23.3
         },
         {
           "type": "cc_expansion",
@@ -534,7 +554,7 @@
             "cc_ops",
             "cx"
           ],
-          "score": 18.5
+          "score": 14.7
         }
       ],
       "seller": {
@@ -565,7 +585,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: you're in a contact center hiring push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,800 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
+              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: you're in a contact center hiring push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,800 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Reason for the call: you're in a contact center hiring push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,800 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. Saw that you're in a contact center hiring push. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 2,800 agents that's roughly $6.7M a year sitting inside the schedule. We recover it in real time on top of Unknown and Unknown, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at OneMain Financial? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. Once those reqs close, that cost locks into your run-rate, and the new heads won't recover the idle time they're meant to cover. It's far cheaper to fix before the offers go out. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have Unknown': You should keep it. Unknown builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A lender your size deferred a full planned hiring class after recovering idle agent time. If that's directionally true for you, it's worth a look before the quarter gets away."
             },
             {
               "day": 7,
@@ -596,7 +618,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Unknown. Given you're in a contact center hiring push, I thought it was worth a look. I'm at [your number]."
+              "body": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Unknown. Given you're in a contact center hiring push, I thought it was worth a look. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Quick one: adding analysts won't touch the intraday exception work, and that's the part we automate on top of Unknown. Given you're in a contact center hiring push, I thought it was worth a look. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. With you're in a contact center hiring push, what's eating the team more right now: the intraday exception queue itself, or reforecasting around it?\n\nIF THEY ENGAGE (30 sec): Reason I ask: analysts clear the plan, but the exception work between reads never makes the plan. We automate that layer on top of Unknown: offline windows, adherence nudges, schedule moves, all rule-based, in the moment. Your rules, run automatically, instead of your team chasing them by hand.\n\nTHE ASK: Open to a quick look at what your exception load actually looks like? If Unknown already covers it, I'll tell you that and get out of your way.\n\nIF 'I'm in the middle of something': Fair, 15 seconds. We make Unknown act intraday instead of report on it. If that's a real gap, the one-pager explains itself. Worth sending?\n\nIF 'Send me something': Will do. Quick calibration so it's useful: roughly how many intraday exceptions does the team touch a day, dozens or hundreds?\n\nIF 'We built our own scripts / RPA': Keep them, they prove the need. The scripts usually break at scale because someone has to maintain them at 2pm on a Tuesday. Ours is the maintained version of what you built.\n\nIF 'Not a priority': Understood. One thing to watch: when you're in a contact center hiring push plays out, the exception load usually doubles before the plan catches up. That's the moment this pays for itself."
             },
             {
               "day": 7,
@@ -627,7 +651,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes."
+              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. With you're balancing branch and contact center volume with active hiring, which worries you more: CSAT dipping through the ramp, or the new class attriting before they're solid?\n\nIF THEY ENGAGE (30 sec): Asking because ramps are when idle time and coaching gaps peak at the same time. We find the idle pockets in real time and turn them into micro-coaching and training inside the shift, no pulling agents off the floor. Quality holds through the ramp instead of dipping and recovering.\n\nTHE ASK: Would you be against a quick look at how you're protecting quality through the ramp? Fifteen minutes, and you keep the math either way.\n\nIF 'I'm in the middle of something': Fair, 20 seconds. Quality dips lag ramps by about a quarter, and by then it's in your CSAT. Cheaper to coach inside the ramp than repair after it. Send you the one-pager?\n\nIF 'Send me something': Sure. So it lands: is the bigger gap right now coaching time or training completion?\n\nIF 'We already have coaching tools': Most teams do. The missing part is the when. We create the time for it inside idle moments, so the tool you already own actually gets used.\n\nIF 'Not a priority': Got it. One thing to watch: new-agent classes carry the most idle time and the least coaching, right when volume peaks. If that flips priority mid-quarter, the math will be ready."
             },
             {
               "day": 7,
@@ -638,7 +664,7 @@
           ]
         },
         {
-          "persona_id": "finance",
+          "persona_id": "coo_finance",
           "role": "CFO / VP Finance or Operations (cost owner)",
           "relevant_trigger": "wfm_hiring",
           "sequence": [
@@ -658,7 +684,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in a contact center hiring push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
+              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in a contact center hiring push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in a contact center hiring push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. On a floor of 2,800 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $6.7M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of Unknown and Unknown. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $6.7M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have Unknown': You've got the scheduling layer. This is the execution layer inside it, additive to whatever Unknown already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
             },
             {
               "day": 7,
@@ -681,12 +709,12 @@
         "industry": 20,
         "scale": 12,
         "tech": 18,
-        "pain": 14
+        "pain": 13
       },
-      "icp_total": 64,
+      "icp_total": 63,
       "tier": 2,
-      "why_now_raw": 27.6,
-      "fresh": true,
+      "why_now_raw": 26.6,
+      "fresh": false,
       "roi_annual": 4760000,
       "roi_label": "$4.8M",
       "roi_per_agent": 2380,
@@ -703,7 +731,7 @@
             "cc_ops",
             "cx"
           ],
-          "score": 18.0
+          "score": 17.0
         },
         {
           "type": "cost_mandate",
@@ -713,7 +741,7 @@
           "play": "Direct ROI story. Recover idle labor cost already on the payroll.",
           "stakes": "That target is due this fiscal period, and this is recoverable cost you can book now, without a transformation project or new headcount.",
           "route_personas": [
-            "finance",
+            "coo_finance",
             "cc_ops"
           ],
           "score": 9.6
@@ -747,7 +775,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: you brought in a new VP of Customer Operations, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
+              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: you brought in a new VP of Customer Operations, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Reason for the call: you brought in a new VP of Customer Operations, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,000 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. Saw that you brought in a new VP of Customer Operations. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 2,000 agents that's roughly $4.8M a year sitting inside the schedule. We recover it in real time on top of Unknown and Calabrio, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at Bread Financial? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. Your first 90 days is when you can still pick the win, and recoverable labor cost is the fastest one on the floor. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have Calabrio': You should keep it. Calabrio builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A lender your size deferred a full planned hiring class after recovering idle agent time. If that's directionally true for you, it's worth a look before the quarter gets away."
             },
             {
               "day": 7,
@@ -778,7 +808,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes."
+              "body": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. With you brought in a new VP of Customer Operations, which worries you more: CSAT dipping through the ramp, or the new class attriting before they're solid?\n\nIF THEY ENGAGE (30 sec): Asking because ramps are when idle time and coaching gaps peak at the same time. We find the idle pockets in real time and turn them into micro-coaching and training inside the shift, no pulling agents off the floor. Quality holds through the ramp instead of dipping and recovering.\n\nTHE ASK: Would you be against a quick look at how you're protecting quality through the ramp? Fifteen minutes, and you keep the math either way.\n\nIF 'I'm in the middle of something': Fair, 20 seconds. Quality dips lag ramps by about a quarter, and by then it's in your CSAT. Cheaper to coach inside the ramp than repair after it. Send you the one-pager?\n\nIF 'Send me something': Sure. So it lands: is the bigger gap right now coaching time or training completion?\n\nIF 'We already have coaching tools': Most teams do. The missing part is the when. We create the time for it inside idle moments, so the tool you already own actually gets used.\n\nIF 'Not a priority': Got it. One thing to watch: new-agent classes carry the most idle time and the least coaching, right when volume peaks. If that flips priority mid-quarter, the math will be ready."
             },
             {
               "day": 7,
@@ -789,7 +821,7 @@
           ]
         },
         {
-          "persona_id": "finance",
+          "persona_id": "coo_finance",
           "role": "CFO / VP Finance or Operations (cost owner)",
           "relevant_trigger": "cost_mandate",
           "sequence": [
@@ -809,7 +841,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you kicked off a cost reduction program, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
+              "body": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you kicked off a cost reduction program, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Alex with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you kicked off a cost reduction program, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Alex with Intradiem. Quick question. On a floor of 2,000 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $4.8M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of Unknown and Calabrio. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $4.8M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have Calabrio': You've got the scheduling layer. This is the execution layer inside it, additive to whatever Calabrio already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
             },
             {
               "day": 7,
@@ -832,12 +866,12 @@
         "industry": 18,
         "scale": 12,
         "tech": 18,
-        "pain": 13
+        "pain": 11
       },
-      "icp_total": 61,
+      "icp_total": 59,
       "tier": 2,
-      "why_now_raw": 26.8,
-      "fresh": true,
+      "why_now_raw": 22.1,
+      "fresh": false,
       "roi_annual": 5236000,
       "roi_label": "$5.2M",
       "roi_per_agent": 2380,
@@ -854,7 +888,7 @@
             "cx",
             "cc_ops"
           ],
-          "score": 16.0
+          "score": 14.4
         },
         {
           "type": "leadership_change",
@@ -867,7 +901,7 @@
             "cc_ops",
             "cx"
           ],
-          "score": 10.8
+          "score": 7.7
         }
       ],
       "seller": {
@@ -898,7 +932,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're in the middle of a digital and claims modernization push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,200 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're in the middle of a digital and claims modernization push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,200 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: you're in the middle of a digital and claims modernization push, and most floors your size carry 12 to 18% idle time that headcount won't fix. On ~2,200 agents that's real money, and it's cheaper to address before those roles fill. I'm at [your number], or there's a link in my email. Thanks [First name].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. Saw that you're in the middle of a digital and claims modernization push. What's the bigger risk on your floor right now: the idle time those moves won't recover, or service levels slipping while everything's in motion?\n\nIF THEY ENGAGE (30 sec): Reason I ask: most ops leaders peg idle time near 5%. On floors your size it usually runs 12 to 18% of paid agent time is idle, and most of it isn't breaks, it's the seconds between scheduled activities that nothing is watching. On about 2,200 agents that's roughly $5.2M a year sitting inside the schedule. We recover it in real time on top of NICE and NICE, no headcount change.\n\nTHE ASK: Would you be opposed to a quick look at where that idle time hides at Lincoln Financial Group? If the math doesn't hold on your floor, you'll know inside 15 minutes.\n\nIF 'I'm in the middle of something': Totally fair, 20 seconds. Every month it slips, agents churn and CSAT compounds downward, and both get more expensive to claw back. If that lands, I'll send the one-page read and you decide if it's worth 15 minutes.\n\nIF 'Send me something': Happy to. So it's the right one page: is intraday idle showing up more in shrinkage or in overtime right now?\n\nIF 'We already have NICE': You should keep it. NICE builds the schedule; we act inside it when the day breaks from plan. Different layer, same floor.\n\nIF 'Not a priority': Understood. Most tell me that until the number's on paper. A national carrier your size held CSAT steady through a ramp while cutting idle time. If that's directionally true for you, it's worth a look before the quarter gets away."
             },
             {
               "day": 7,
@@ -929,7 +965,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes."
+              "body": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Reason for the call: ramps like yours usually cost you CSAT and early attrition, and we help you coach inside idle time so quality holds. I'm at [your number] if it's worth a few minutes.",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. With you're in the middle of a digital and claims modernization push, which worries you more: CSAT dipping through the ramp, or the new class attriting before they're solid?\n\nIF THEY ENGAGE (30 sec): Asking because ramps are when idle time and coaching gaps peak at the same time. We find the idle pockets in real time and turn them into micro-coaching and training inside the shift, no pulling agents off the floor. Quality holds through the ramp instead of dipping and recovering.\n\nTHE ASK: Would you be against a quick look at how you're protecting quality through the ramp? Fifteen minutes, and you keep the math either way.\n\nIF 'I'm in the middle of something': Fair, 20 seconds. Quality dips lag ramps by about a quarter, and by then it's in your CSAT. Cheaper to coach inside the ramp than repair after it. Send you the one-pager?\n\nIF 'Send me something': Sure. So it lands: is the bigger gap right now coaching time or training completion?\n\nIF 'We already have coaching tools': Most teams do. The missing part is the when. We create the time for it inside idle moments, so the tool you already own actually gets used.\n\nIF 'Not a priority': Got it. One thing to watch: new-agent classes carry the most idle time and the least coaching, right when volume peaks. If that flips priority mid-quarter, the math will be ready."
             },
             {
               "day": 7,
@@ -940,7 +978,7 @@
           ]
         },
         {
-          "persona_id": "finance",
+          "persona_id": "coo_finance",
           "role": "CFO / VP Finance or Operations (cost owner)",
           "relevant_trigger": "csat_pressure",
           "sequence": [
@@ -960,7 +998,9 @@
               "day": 4,
               "channel": "Call",
               "subject": "",
-              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in the middle of a digital and claims modernization push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number]."
+              "body": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in the middle of a digital and claims modernization push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "voicemail": "Hi [First name], it's Jordan with Intradiem. Quick one: on a floor your size the recoverable idle labor runs into the millions a year, and given you're in the middle of a digital and claims modernization push, the window to capture it is now, not after. I'd like to put a real number in front of you. I'm at [your number].",
+              "live_script": "OPEN: Hi [First name], Jordan with Intradiem. Quick question. On a floor of 2,200 agents, if idle labor is running 12 to 18% of paid agent time is idle instead of the 5% in the plan, whose line does that surface on first: yours or ops?\n\nIF THEY ENGAGE (30 sec): That gap is usually worth about $5.2M a year, around $2,380 per agent. We recover it in real time with the stack you already own, on top of NICE and NICE. No capex, no added heads; the labor is already paid for either way.\n\nTHE ASK: Would you be opposed to seeing that math run on your numbers instead of mine? Fifteen minutes, your inputs, and if it doesn't clear your hurdle rate we part friends.\n\nIF 'I'm in the middle of something': Fair. The headline: roughly $5.2M a year in recoverable idle labor, existing stack, no capex. The one-pager shows the assumptions. Worth a send?\n\nIF 'Send me something': Absolutely. To make it real: should I run it at your loaded cost per agent hour, or use the industry default and let your team correct it?\n\nIF 'We already have NICE': You've got the scheduling layer. This is the execution layer inside it, additive to whatever NICE already saves you.\n\nIF 'Not a priority': Understood. It's the rare line item that's already funded, since the labor's paid for whether it's idle or not. When cost per contact comes under review, that's the moment for this."
             },
             {
               "day": 7,
