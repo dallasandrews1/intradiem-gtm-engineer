@@ -37,3 +37,21 @@ intradiem-signal-engine/data/notified_state.json
 *[Ss]alary*
 *egotiation*
 _archive/zi7Zjxcl
+
+# Local secrets and env for the automation swarm (LEMLIST_API_KEY lives here)
+automation/config/*.env
+
+# Tool caches and editor backups
+.wrangler/
+*.bak
+
+# Stray upload/snapshot zips that landed at the root (Jul 9 coordinator snapshot)
+ziltSwKH
+
+# Superseded Jul 9-15 AirDrop migration pack (contains interview-era memory copies);
+# the versioned coordinator/ folder replaces it. Relocate out of the workspace.
+work-migration-pack/
+
+# Personal, never work-repo material
+*TAIS*
+linkedin-about*
