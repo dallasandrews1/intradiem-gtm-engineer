@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.dallasandrews.gtm.lemlistrelay</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/zsh</string>
+		<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/run_lemlist_relay.sh</string>
+	</array>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Minute</key>
+		<integer>10</integer>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/logs/_launchd_lemlistrelay.out</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/logs/_launchd_lemlistrelay.err</string>
+</dict>
+</plist>

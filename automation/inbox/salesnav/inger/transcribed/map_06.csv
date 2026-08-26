@@ -1,0 +1,7 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Guardian Life,3,map,Tom Ciesla,Head of Customer Service T...,yes,,0,CRM,No role,"Top-level card, no connector to any other card; No highlights right now"
+Guardian Life,3,map,Rich Pagliarini,Head of Group Service and I...,yes,,0,CRM,No role,"Top-level card; dashed connector down to Joshua Staller; No highlights right now"
+Guardian Life,3,map,Joshua Staller,Head of Workforce Manage...,yes,Rich Pagliarini,1,CRM,No role,"Hangs directly below Rich Pagliarini by dashed connector; No highlights right now"
+Guardian Life,3,recommended,Aimee Bernardo,Senior Product Mana...,yes,,,,,"2nd degree; sidebar Recommended leads to add"
+Guardian Life,3,recommended,Jennifer Grosso,Senior Information Te...,yes,,,,,"3rd degree; sidebar Recommended leads to add"
+Guardian Life,3,recommended,Nick Celli,Underwriting Consult...,yes,,,,,"3rd degree; sidebar Recommended leads to add"

@@ -1,0 +1,22 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Assurant,18,map,Joe Surber,Chief Technology Officer,no,,0,CRM,No role,green check CRM badge
+Assurant,18,map,Andy Cooper,Senior Vice President Infras...,yes,Joe Surber,1,CRM,No role,CRM badge shows a gray slashed-circle icon instead of the green check; likely one of the 4 counted in the header Update CRM (4) button
+Assurant,18,map,Anish Mehra,"VP, Technology - Digital Co...",yes,Andy Cooper,2,CRM,No role,green check CRM badge
+Assurant,18,map,Jennifer Cerchiai,"Associate Vice President, S...",yes,Andy Cooper,2,CRM,No role,green check CRM badge
+Assurant,18,map,Russell Hemmelgarn,Network Engineer,no,Anish Mehra,3,CRM,No role,green check CRM badge; gray placeholder avatar (no photo)
+Assurant,18,map,Lori Aakre,Manager Voice Services Op...,yes,Russell Hemmelgarn,4,CRM,No role,green check CRM badge
+Assurant,18,map,Lisa Callais,Senior Engineer - Call Center Services/Platform Operations,no,Russell Hemmelgarn,4,,No role,placeholder card (dashed border; name is plain text not a profile link; title shown in parentheses; no CRM badge; no highlights line)
+Assurant,18,map,Julie Martin,"Director, Solutions Engineer...",yes,Lisa Callais,5,CRM,No role,CRM badge shows a gray slashed-circle icon instead of the green check; likely one of the 4 counted in the header Update CRM (4) button
+Assurant,18,map,Vicki Lashay,"AVP, Learning Delivery",no,,0,CRM,No role,green check CRM badge
+Assurant,18,map,Josh Scovil,Manager - Functional Learning & Development,no,Vicki Lashay,1,,No role,placeholder card (dashed border; name is plain text not a profile link; title shown in parentheses; no CRM badge; no highlights line)
+Assurant,18,map,Frank Thomas,Operations Training & Development Specialist,no,Vicki Lashay,1,,No role,placeholder card (dashed border; plain-text name; title in parentheses; no CRM badge); a second linked Frank Thomas card sits beside it under the same parent, possible duplicate person
+Assurant,18,map,Frank Thomas,"Manager, Strategic Learning...",yes,Vicki Lashay,1,CRM,No role,green check CRM badge; linked profile card; a placeholder Frank Thomas card also hangs from Vicki Lashay
+Assurant,18,map,Marjorie Tessier,VP - Data Analytics (Entpris...,yes,,0,UpdateCRM,No role,red ! Update CRM badge; gray placeholder avatar (no photo); title spelling Entpris... transcribed as shown
+Assurant,18,map,Nikki Gresham,Director- Service Level Man...,yes,Marjorie Tessier,1,CRM,No role,green check CRM badge
+Assurant,18,map,Josh Perry,Sr. Business Unit System Analyst,no,Nikki Gresham,2,,No role,placeholder card (dashed border; plain-text name; title in parentheses; no CRM badge; no highlights line)
+Assurant,18,map,Cynthia Danford,"Mgr, Operations Workforce ...",yes,Nikki Gresham,2,CRM,No role,green check CRM badge
+Assurant,18,map,Gary Mann,"President, APAC",no,,0,CRM,No role,green check CRM badge; gray placeholder avatar (no photo)
+Assurant,18,map,Amy Veasley,"AVP, Operations",no,Gary Mann,1,UpdateCRM,No role,red ! Update CRM badge
+Assurant,18,recommended,Josh Mitchell,Director of Catastrop...,yes,,,,,2nd degree; sidebar Recommended leads to add
+Assurant,18,recommended,Dominique Hu...,Customer Care Team...,yes,,,,,2nd degree; NAME is truncated in the sidebar (shown as Dominique Hu...); sidebar Recommended leads to add
+Assurant,18,recommended,Michele Ovalle,Sr Manager,no,,,,,2nd degree; sidebar Recommended leads to add

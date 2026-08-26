@@ -1,0 +1,16 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Prudential Financial,12,map,Andrew Sullivan,Chairman,no,,0,CRM,No role,Recently posted on LinkedIn; top of tree
+Prudential Financial,12,map,Carolynn Smith,Head of USB Service and Cl...,yes,Andrew Sullivan,1,CRM,No role,Recently changed position
+Prudential Financial,12,map,Louise Coleman,VP Process Management,no,Andrew Sullivan,1,,No role,"Placeholder card (dashed, no LinkedIn profile, no CRM badge); shown as 'Louise Coleman (VP Process Management)'"
+Prudential Financial,12,map,Scott Case,Head of Technology and Op...,yes,Andrew Sullivan,1,UpdateCRM,No role,Recently posted on LinkedIn; the single Update CRM item counted in the header badge
+Prudential Financial,12,map,"Thomas Zenit, MBA",Director Project Management,no,Louise Coleman,2,CRM,No role,No highlights right now
+Prudential Financial,12,map,Nash Roth,Call Center Director,no,Louise Coleman,2,CRM,No role,No highlights right now
+Prudential Financial,12,map,Suyoon Shin,"VP, Product Owner - Voice a...",yes,Scott Case,2,CRM,No role,No highlights right now; no photo (default avatar)
+Prudential Financial,12,map,Vijay Ponnada,"Director, Global Voice and Contact Center Cloud Technologies",no,Suyoon Shin,3,,No role,"Placeholder card (dashed, no LinkedIn profile, no CRM badge); shown as 'Vijay Ponnada (Director, Global Voice and Contact Center Cloud Technologies)'; connector bus from Suyoon Shin verified, not from Nash Roth"
+Prudential Financial,12,map,Karuna Dadia,"Director, Voice & Contact C...",yes,Suyoon Shin,3,CRM,No role,No highlights right now
+Prudential Financial,12,map,Mark Farrington,Sr Telecom Network,no,Suyoon Shin,3,CRM,No role,No highlights right now; no photo (default avatar)
+Prudential Financial,12,map,Sajan Babu,Senior Specialist – Database Programmer/Administra...,yes,Mark Farrington,4,,No role,"Placeholder card (dashed, no LinkedIn profile, no CRM badge); shown as 'Sajan Babu - Senior Specialist – Database Programmer/Administra...'"
+Prudential Financial,12,map,Brian Kittell,"Team Lead, Telecom Network",no,Mark Farrington,4,CRM,No role,No highlights right now; no photo (default avatar)
+Prudential Financial,12,recommended,Stephanie Solis,Business Analyst,no,,,,,3rd degree; sidebar Recommended leads to add
+Prudential Financial,12,recommended,Robert Jakobs...,CIO Financial Manag...,yes,,,,,2nd degree; sidebar Recommended leads to add; name itself truncated in sidebar
+Prudential Financial,12,recommended,Bob O'Connell,Lead Metrics and Da...,yes,,,,,2nd degree; sidebar Recommended leads to add

@@ -1,0 +1,84 @@
+{
+  "live": false,
+  "note": "Daily Action Brief job. live=false writes renders to automation/logs/action-brief-<date>.md and posts NOTHING. live=true posts each brief to the channel its rep routes to in lemlist_channels.json. PAUSED 2026-08-17 per Dallas: the lemlist trial ended and the plan gate blocks the actions the briefs would assign (approvals, sends), so briefs stay dry-run until the lemlist purchase completes. Flip back to true the day the paid plan is active. The relay stays live independently: an inbound reply is still actionable from the rep's own inbox. This flag is independent of the relay's live flag; never edit lemlist_channels.json from this job.",
+  "reps": {
+    "nathan": {
+      "display": "Nate",
+      "timezone": "America/New_York",
+      "route": "nathan",
+      "briefs": {
+        "stars": {
+          "title": "\u2b50 Nate's Daily Action Brief \u00b7 Star Ratings (US)",
+          "campaigns": {
+            "cam_sh3JCJoxtEHyjGrsw": "Resurrection",
+            "cam_viEbB6HkYsCPtxKbi": "Quality",
+            "cam_2gy9hmEvMjYEuPZ8A": "Finance"
+          },
+          "lane_tagged": true,
+          "playbook_sources": [
+            "motions/shared/Cold_Call_Playbook_Aug2.md",
+            "StarRatings_Wave1_Persona_Sequences_Jul13.md",
+            "motions/star_ratings/Lemlist_Variable_Stage_Jul31.md"
+          ]
+        },
+        "blitz": {
+          "title": "\u26a1 Nate's Daily Action Brief \u00b7 Blitz (Citizens / The Hartford)",
+          "campaigns": {
+            "cam_yWefPqaDhNNv4RyQK": "Citizens",
+            "cam_fYp7Nh9wB72gfMke6": "The Hartford"
+          },
+          "lane_tagged": true,
+          "playbook_sources": [
+            "motions/shared/Cold_Call_Playbook_Aug2.md"
+          ],
+          "held_leads": [
+            {
+              "name": "Jeffrey Foss",
+              "company": "Citizens",
+              "reason": "warm play, Keegan re-entry; never a blank connect"
+            }
+          ]
+        }
+      }
+    },
+    "jack": {
+      "display": "Jack",
+      "timezone": "Europe/London",
+      "route": "jack",
+      "briefs": {
+        "insurance_fs": {
+          "title": "\ud83c\udfe6 Jack's Daily Action Brief \u00b7 UK Insurance / FS",
+          "campaigns": {
+            "cam_nwKASgttBM6QT8XGq": "Insurance/FS"
+          },
+          "lane_tagged": false,
+          "playbook_sources": [
+            "motions/shared/Cold_Call_Playbook_Aug2.md",
+            "motions/uk_insurance_fs/UK_Insurance_FS_Motion_Spec_v1.md"
+          ]
+        },
+        "airlines": {
+          "title": "\u2708\ufe0f Jack's Daily Action Brief \u00b7 UK Airlines",
+          "campaigns": {
+            "cam_fHGtNHbbj7LmThFgX": "Airlines"
+          },
+          "lane_tagged": false,
+          "playbook_sources": [
+            "motions/shared/Cold_Call_Playbook_Aug2.md",
+            "motions/uk_airlines/UK_Airlines_Wave1_Variable_Stage_Aug1.md"
+          ]
+        }
+      }
+    }
+  },
+  "post_window_local": {
+    "start": "07:00",
+    "end": "08:30"
+  },
+  "state": {
+    "last_posted": {
+      "nathan": "2026-08-26",
+      "jack": "2026-08-26"
+    }
+  }
+}

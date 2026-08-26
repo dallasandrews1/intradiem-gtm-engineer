@@ -1,0 +1,11 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Cleveland Clinic,8,map,Lisa Yerian,Executive Vice President an...,yes,,0,CRM,No role,Top of tree; three direct reports hang from her connector
+Cleveland Clinic,8,map,Rena Thompson,Senior Director of Operations,no,Lisa Yerian,1,CRM,No role,
+Cleveland Clinic,8,map,Eric Kokochak,Director Call Center Operations,no,Lisa Yerian,1,,No role,"Placeholder card (dashed border; name not a profile link; no CRM badge; no highlights line); card text reads ""Eric Kokochak - Director Call Center Operations"""
+Cleveland Clinic,8,map,Scott Faini,"Senior Director, Unified Co...",yes,Lisa Yerian,1,CRM,No role,"3rd degree; also listed in sidebar Recommended leads marked Added (sidebar title reads ""Senior Director, Unifi..."")"
+Cleveland Clinic,8,map,Linda Reid,Unknown,no,Rena Thompson,2,,No role,"Placeholder card (dashed border; no profile link; no CRM badge); card text reads ""Linda Reid - Unknown""; title field is literally Unknown"
+Cleveland Clinic,8,map,Shantel Adams,Supervisor,no,Rena Thompson,2,,No role,"Placeholder card (dashed border; no profile link; no CRM badge); card text reads ""Shantel Adams - Supervisor"""
+Cleveland Clinic,8,map,Mary Kay Pienta,Program Manager Access Tr...,yes,Shantel Adams,3,CRM,No role,
+Cleveland Clinic,8,map,Adam Gilbert,Senior Project Manager,no,Shantel Adams,3,,No role,"Placeholder card (dashed border; no profile link; no CRM badge); card text reads ""Adam Gilbert - Senior Project Manager"""
+Cleveland Clinic,8,recommended,Mounika Rao,Lead/Senior Data En...,yes,,,,,2nd degree; sidebar Recommended leads to add; Add button (not on canvas)
+Cleveland Clinic,8,recommended,Steve Pomedli,"Physician, Medical Di...",yes,,,,,2nd degree; sidebar Recommended leads to add; Add button (not on canvas)

@@ -1,0 +1,6 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Zurich North America,2,map,Sean Felton,"VP, Procurement & Supply C...",yes,,0,CRM,No role,"No highlights right now; no connector lines on canvas, both cards top-level side by side"
+Zurich North America,2,map,Evan Olson,Product Owner,no,,0,CRM,No role,"No highlights right now; no connector lines on canvas, both cards top-level side by side"
+Zurich North America,2,recommended,Jack Thoms,Surety Underwriter,no,,,,,3rd
+Zurich North America,2,recommended,Shiloe Gaconn...,Compliance Assuran...,yes,,,,,"3rd; name truncated on sidebar, visible part transcribed as shown"
+Zurich North America,2,recommended,Lance Ballard,Commercial Property...,yes,,,,,3rd

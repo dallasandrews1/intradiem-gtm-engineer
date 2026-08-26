@@ -1,0 +1,53 @@
+{
+  "live": true,
+  "note": "LAUNCH ROUTING (Aug 15 2026, per Dallas): canary ended. STANDING RULE: every campaign routes to the sequence owner's gtm-outbound channel, nathan -> #gtm-outbound-nathan (C0BM9V6KGSG), jack -> #gtm-outbound-jack (C0BN0JT9D6U). Any campaign whose sequences belong to a rep gets a campaign_channel_map entry at build time; the relay flags unmapped campaigns as unroutable. live=false remains the kill switch. Old canary channel was Dallas's #relay-test C0BM86CV138.",
+  "channels": {
+    "nathan": "C0BM9V6KGSG",
+    "jack": "C0BN0JT9D6U"
+  },
+  "campaign_channel_map": {
+    "cam_sh3JCJoxtEHyjGrsw": "nathan",
+    "cam_viEbB6HkYsCPtxKbi": "nathan",
+    "cam_2gy9hmEvMjYEuPZ8A": "nathan",
+    "cam_nwKASgttBM6QT8XGq": "jack",
+    "cam_fHGtNHbbj7LmThFgX": "jack",
+    "cam_yWefPqaDhNNv4RyQK": "nathan",
+    "cam_fYp7Nh9wB72gfMke6": "nathan"
+  },
+  "seen_activity_ids": [
+    "act_o2eTPbcrASmPFHmDo",
+    "act_ns6khS5JPEhLzWTf6",
+    "act_uR4dtn32nacY9DFH7",
+    "act_uHLL2mSrsgNC2GJNA",
+    "act_xsbvWJ2ahycXys3iN",
+    "act_reyTyGsoB4EPN8fQe",
+    "act_EdqwQH3TdoDZ47w3a",
+    "act_QfTADHeP7RkbgynYP",
+    "act_hutCPYBZxuJCZpNMg",
+    "act_ArdvBLK2PucWLe4DF",
+    "act_m9FnopLAEwScTPFR9",
+    "act_QdRykB5zdrPjTeawC",
+    "act_qRXaZWZjiKRG3S5y5",
+    "act_Pf4q8frvkTy2g4kKD",
+    "act_4RdkMFwMpQWCEEruT",
+    "act_cicwDHf79aZgJkdpr",
+    "act_vcd7RthAJSxFYaWyJ",
+    "act_mt3jhLBgpoTYPuzw5",
+    "act_QD8WXX23EBhJPJshk",
+    "act_QoRYi3XPcBtrKQo3j",
+    "act_E4Q4djjgKRCgea3PN",
+    "act_BJCGkxApF5TL5kKkQ",
+    "act_FbDTFg9nu7hg3fou9",
+    "act_dd2CatQjYBvxjE7Mo",
+    "act_d4nqnsLgsyDav6MH6",
+    "act_CedEW4sqLnfz8dGow",
+    "act_RRQN5bvqPNMcvWCX5",
+    "act_P27gapLA4bWoepFTL",
+    "act_Qotyv3cSg5ytznyHi",
+    "act_gBTt575Q9GESKpYqm",
+    "act_2rLcehLZKDx5gRrWG",
+    "act_hb3yCvtFvezuLjGEb",
+    "act_QBQCxpoiTsjstrdhX",
+    "act_fAgArAKrkH3Jj5nn7"
+  ]
+}

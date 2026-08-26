@@ -1,0 +1,12 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Rogers Communications,8,map,Tony Staffieri,Chief Executive Officer,no,,0,CRM,No role,highlight: Recently posted on LinkedIn
+Rogers Communications,8,map,Terrie Tweddle,Chief Brand and Communic...,yes,Tony Staffieri,1,UpdateCRM,No role,badge reads CRM with gray slashed-circle icon (not green check); header shows Update CRM (1) and this is the only non-green badge on the map; no photo (placeholder avatar)
+Rogers Communications,8,map,Scott Thomson,"Vice President, Customer S...",yes,Terrie Tweddle,2,CRM,No role,
+Rogers Communications,8,map,Tracy Markwood,VP Solution Centres & Supp...,yes,Scott Thomson,3,CRM,No role,
+Rogers Communications,8,map,Phil Phifer,"Sr. Director, Demand & Cap...",yes,Tracy Markwood,4,CRM,No role,left child of Tracy Markwood via horizontal connector
+Rogers Communications,8,map,Mirella Mastroianni,"Director, Customer Care Op...",yes,Tracy Markwood,4,CRM,No role,right child of Tracy Markwood via horizontal connector
+Rogers Communications,8,map,Maurizio Porrovecchio,Senior Manager - Workforce...,yes,Phil Phifer,5,CRM,No role,
+Rogers Communications,8,map,Jamie Miller,Manager Workforce Systems,no,Maurizio Porrovecchio,6,CRM,No role,
+Rogers Communications,8,recommended,Namrata M.,"Product Owner, Servi...",yes,,,,,3rd degree; last name abbreviated to initial in sidebar
+Rogers Communications,8,recommended,Edmund Chan,Sr Capital Manageme...,yes,,,,,3rd degree
+Rogers Communications,8,recommended,Abhishek Gwal,Senior Software Engi...,yes,,,,,3rd degree

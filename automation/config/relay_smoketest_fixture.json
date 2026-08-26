@@ -1,0 +1,42 @@
+{
+  "_comment": "SYNTHETIC fixture for the relay structural smoke test. Not real Lemlist data. Never used by run_lemlist_relay.sh; only run_relay_smoketest.sh reads this. Shaped to match Lemlist /api/activities objects.",
+  "activities": [
+    {
+      "_id": "act_SMOKETEST_0001",
+      "type": "emailsReplied",
+      "campaignId": "cam_sh3JCJoxtEHyjGrsw",
+      "campaignName": "Stars - Resurrection (Nate)",
+      "leadFirstName": "Dana",
+      "leadLastName": "Whitfield",
+      "leadEmail": "dana.whitfield@example-health.com",
+      "companyName": "Example Health Plan",
+      "jobTitle": "VP, Medicare Quality and Stars",
+      "date": "2026-07-31T23:05:00.000Z",
+      "text": "Appreciate the note. Honestly we're heads down until the October ratings come out, so this isn't the right moment. Circle back in the fall if you're still around."
+    },
+    {
+      "_id": "act_SMOKETEST_0002",
+      "type": "linkedinInviteAccepted",
+      "campaignId": "cam_viEbB6HkYsCPtxKbi",
+      "campaignName": "Stars - Fresh Pool / Quality (Nate)",
+      "leadFirstName": "Marcus",
+      "leadLastName": "Reyes",
+      "leadEmail": "marcus.reyes@example-care.com",
+      "companyName": "Example Care Group",
+      "jobTitle": "Director, Member Experience",
+      "date": "2026-07-31T23:06:00.000Z"
+    },
+    {
+      "_id": "act_SMOKETEST_0003",
+      "type": "emailsBounced",
+      "campaignId": "cam_2gy9hmEvMjYEuPZ8A",
+      "campaignName": "Stars - Fresh Pool / Finance (Nate)",
+      "leadFirstName": "Priya",
+      "leadLastName": "Nadkarni",
+      "leadEmail": "p.nadkarni@example-benefits.com",
+      "companyName": "Example Benefits",
+      "jobTitle": "SVP Finance",
+      "date": "2026-07-31T23:07:00.000Z"
+    }
+  ]
+}

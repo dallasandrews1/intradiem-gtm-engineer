@@ -1,0 +1,19 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+McKesson,15,map,Brian Tyler,CEO,no,,0,CRM,No role,root of main tree; green check CRM badge
+McKesson,15,map,Joan Eliasek,"President, North American ...",yes,Brian Tyler,1,CRM,No role,left child of Brian Tyler; green check CRM badge
+McKesson,15,map,Someone potentially missing here,,no,Brian Tyler,1,,No role,empty placeholder node (not a person) with gray avatar and text "Someone potentially missing here"; right child of Brian Tyler; Joshua Phillips hangs from it
+McKesson,15,map,Terry Guirey,"VP, Customer Service",no,Joan Eliasek,2,,No role,placeholder card (dashed border, gray avatar, no profile link, no CRM badge); card text reads "Terry Guirey (VP, Customer Service)"
+McKesson,15,map,Ronda Johnson,"Sr. Director, Workforce Opti...",yes,Terry Guirey,3,CRM,No role,green check CRM badge
+McKesson,15,map,Paul Lanigan,Workforce Manager,no,Ronda Johnson,4,CRM,No role,leftmost of Ronda Johnson's three children; green check CRM badge
+McKesson,15,map,Kaitlyn Moon,Customer Service Rep,no,Ronda Johnson,4,,No role,placeholder card (dashed border, gray avatar, no profile link, no CRM badge); card text reads "Kaitlyn Moon (Customer Service Rep)"
+McKesson,15,map,Renee Lucci,Senior System Administrator,no,Ronda Johnson,4,CRM,No role,rightmost of Ronda Johnson's three children; green check CRM badge
+McKesson,15,map,Joshua Phillips,Vice President,no,Someone potentially missing here,2,CRM,No role,hangs from the empty placeholder node under Brian Tyler; green check CRM badge
+McKesson,15,map,"Anthony Reeves, MBA","Senior Director, Business So...",yes,Joshua Phillips,3,UpdateCRM,No role,badge reads "CRM" but with a gray slashed-circle icon instead of the green check; header shows "Update CRM (1)" so this is the one lead not in Salesforce
+McKesson,15,map,Kelly Facemyer,"Manager, Operations",no,"Anthony Reeves, MBA",4,,No role,placeholder card (dashed border, gray avatar, no profile link, no CRM badge); card text reads "Kelly Facemyer (Manager, Operations)"; leftmost of Anthony Reeves's four children
+McKesson,15,map,Chris Roche,Senior Manager Business In...,yes,"Anthony Reeves, MBA",4,CRM,No role,gray default avatar; green check CRM badge
+McKesson,15,map,Damien Dando,Sr Pharmacy Operations Ma...,yes,"Anthony Reeves, MBA",4,CRM,No role,gray default avatar; green check CRM badge
+McKesson,15,map,Rene G.,Performance Coach and Qu...,yes,"Anthony Reeves, MBA",4,CRM,No role,last name abbreviated to initial on card; rightmost of Anthony Reeves's four children; green check CRM badge
+McKesson,15,map,Arthur Boco,Telecom Manager,no,,0,CRM,No role,standalone card at top-right of canvas at the same level as Brian Tyler with no connector line to any card; gray default avatar; green check CRM badge
+McKesson,15,recommended,Sunil T.,Sr. UI Architect,no,,,,,2nd degree; sidebar recommended lead; last name abbreviated to initial
+McKesson,15,recommended,Jake Ramirez,Medical Copay Agent,no,,,,,2nd degree; sidebar recommended lead
+McKesson,15,recommended,Emmanuel Ad...,Lead Technical Produ...,yes,,,,,2nd degree; sidebar recommended lead; name itself truncated on screen

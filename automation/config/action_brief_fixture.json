@@ -1,0 +1,193 @@
+{
+  "_note": "Fixture for the Daily Action Brief render test (FIXTURE=1). v5 (Aug 2): dial scripts rebuilt to the research-grounded call contract in format spec v2.3 + motions/shared/Cold_Call_Playbook_Aug2.md (four-beat opener with the reason before the 30-second contract, availability yes/no openers banned, engage segments end on a check question, asks name the payoff, new busy + brush_off branches, Jack's calls now carry motion pushback from the airlines v1.4 quick-handles). v4 (Aug 2): v3 spoken-voice scripts plus structured autopilot per format spec v2.2, each rep's autopilot carries summary (the counts line) and sends (full email copy of today's automated sends, always rendered as a thread). nathan's sends stage the distinct-copy path (4 real E2s, per-lead contract_line resolved, each renders in full); jack's stage BOTH paths (2 distinct E1s with real opener_lines, then the real closing-the-file step as a shared template, {{firstName}} visible, 6 recipients, renders once). All send copy is the real campaign template resolved with real staged variables, see autopilot._sends_note. Calls carry SEGMENTED scripts (opener / if_they_engage / ask / pushback / voicemail); the composer renders each segment as its own labeled block and never merges them. replies carry relay_draft:false meaning no relay draft exists, so the brief drafts fresh and THREADS it. Never posted; renders go to the log only. jack insurance_fs is deliberately empty to prove per-brief silence.",
+  "replies": [
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Finance",
+      "lead": "Thornton", "company": "Clover Health",
+      "relay_draft": false,
+      "text": "We model this internally. What would you add that our actuarial team doesn't already have?"
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines",
+      "lead": "Marc Giles", "title": "Head of Customer Experience", "company": "Aer Lingus",
+      "relay_draft": false,
+      "text": "Interesting timing. Who else are you working with on this?"
+    }
+  ],
+  "tasks": [
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Quality", "type": "call",
+      "lead": "Pedro Rivera", "company": "NYC Health + Hospitals",
+      "call_kind": "Call 1 of 2, accepted your connect, NO voicemail (that comes with call 2)",
+      "script": {
+        "opener": "Pedro, it's Nathan with Intradiem, we connected on LinkedIn this week. The reason I'm calling: that last half star up to 4.0 mostly comes down to the customer-service measures, and they're being scored right now, not in October. Can I take 30 seconds, and you tell me if it's not for you?",
+        "if_they_engage": "So the thing about those measures is they get scored on how service holds up during your busiest weeks. By the time anything shows in a report, that week's already banked. What we do is keep the floor steady in the moment, when volume spikes, so the measures hold on their own. Does that match how it looks from where you sit?",
+        "ask": "Would it be worth 15 minutes to look at which of your contracts sit closest to the line? I'll walk you through the public numbers I'm seeing, and you can tell me where they're off.",
+        "busy": "Completely get it. Ten seconds so you know what this was: the half star to 4.0 is sitting in the service measures, and they're being scored right now. When's better this week for a proper 15 minutes?",
+        "brush_off": "Fair enough, I won't push. One thing before I go: is that because the service measures are already holding through your peak weeks, or just not the priority right now? Either way, appreciate you being straight with me. I'll leave you be.",
+        "pushback": [
+          {
+            "objection": "Wait for the October ratings.",
+            "handle": "Fair, but the October release just reports a window that's closing right now. If you wait for it, next year's number is already mostly set. The half star moves during the year, not on release day."
+          },
+          {
+            "objection": "We already have WFM.",
+            "handle": "Right, and keep it. WFM tells you what's supposed to happen with staffing. We handle what actually happens when the day moves, the response in the moment. It sits alongside WFM, it doesn't replace it."
+          }
+        ]
+      }
+    },
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Finance", "type": "call",
+      "lead": "Laurie Martin", "company": "Baystate Health",
+      "call_kind": "Leave this voicemail",
+      "script": {
+        "voicemail": "Laurie, it's Nathan with Intradiem. I sent you a note about the star position on Baystate's plan, near 3.0. The fastest path back toward the bonus line runs through the operational measures, and that's the part I wanted to talk through with you. I'm at [your number], or just reply to the email. Thanks Laurie."
+      }
+    },
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Finance", "type": "invite",
+      "lead": "Goldberg", "company": "Point32Health"
+    },
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Finance", "type": "invite",
+      "lead": "Ingram", "company": "L.A. Care"
+    },
+    {
+      "rep": "nathan", "brief": "stars", "lane": "Quality", "type": "voice_note",
+      "lead": "Andrew Breuckman", "company": "Community Health Plan of Washington",
+      "rendered_script": "Hey, it's Nathan Belfield, appreciate the connect. Quick context: at about 3.0, CHPW's next half-star is decided in the customer-service measures, and they're scored on day-to-day service performance between now and December. Worth fifteen minutes to walk through which measures usually move first? Thanks."
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "call",
+      "lead": "John Leighton", "title": "Customer Service Director", "company": "easyJet",
+      "call_kind": "Dial, voicemail fallback below",
+      "script": {
+        "opener": "John, it's Jack Ohagan at Intradiem. We haven't spoken before, so I'll be quick. I'm calling about the morning after a disrupted day, what it does to a service team once a delay crosses the three hour mark. Have you got 30 seconds, and you can tell me if it's not relevant?",
+        "if_they_engage": "Basically, when a delay crosses three hours, it's usually because the recovery was running a shift behind the disruption, not because it couldn't be helped. And your service team feels all of it the next morning, all at once. Is that how it plays out at easyJet?",
+        "ask": "Worth a proper 15 minutes on what those days actually cost at easyJet? If it turns out that morning's already staffed right, I'll say so and leave you alone.",
+        "busy": "No problem at all. Ten seconds so you know what this was: the morning after a disrupted day, and the staffing call the night before that decides how bad it gets. When suits better this week for a real 15 minutes?",
+        "brush_off": "Fair enough, I won't push. One thing before I go: is that because the morning after a bad day is already staffed and handled, or just not the priority right now? Either way, thanks for being straight with me. I'll leave you be.",
+        "pushback": [
+          {
+            "objection": "That's an ops problem, not mine.",
+            "handle": "Fair, the delay itself is ops. The morning after is yours though. The claims, the calls and the re-bookings all land on your team at once, and how bad that morning gets was mostly decided by staffing calls made the night before. That's the bit I wanted to talk through."
+          }
+        ],
+        "voicemail": "John, it's Jack Ohagan, sorry to miss you. I sent you a note about the three hour mark, and what the morning after a disrupted day does to a service team. That's the bit I wanted to talk through. I'm on [your number], or just reply to the email. Thanks John."
+      }
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "call",
+      "lead": "Suzanne Roddie", "title": "COO", "company": "Virgin Atlantic",
+      "call_kind": "Dial, voicemail fallback below",
+      "script": {
+        "opener": "Suzanne, it's Jack Ohagan at Intradiem. We haven't spoken before, so I'll keep it short. I'm calling about the three hour mark, where a delay starts costing 520 pounds a seat, and the night-before staffing call that usually decides it. Have you got 30 seconds, and you can tell me if it's not one for you?",
+        "if_they_engage": "What I keep seeing is the delays that cross into compensation usually weren't unavoidable. They're the ones where the recovery was running a shift behind, and that gets set up the night before, not on the day. Does that match what you see on your side?",
+        "ask": "Worth 15 minutes to see where that shows up at Virgin Atlantic?",
+        "busy": "Completely understand. Ten seconds so you know what this was: the delays that cross into compensation, and the night-before staffing call that usually decides them. When's better this week for a proper 15 minutes?",
+        "brush_off": "Fair enough, I won't push. Before I go: is that because the recovery side of a disrupted day is already well covered, or just not the priority right now? Either way, appreciate you being straight. I'll leave you be.",
+        "pushback": [
+          {
+            "objection": "Our planning and WFM tools already cover this.",
+            "handle": "Right, and keep them. Planning sets what's supposed to happen. This is about the moment the day breaks the plan, the response while it's still happening. It sits alongside the planning stack, it doesn't replace it."
+          }
+        ],
+        "voicemail": "Suzanne, it's Jack Ohagan, sorry to miss you. It's about the note I sent on the three hour mark, and the delays that end up costing 520 pounds a seat. I'm on [your number], or just reply to the email. Thanks Suzanne."
+      }
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "invite",
+      "lead": "Kelly Valentine", "company": "easyJet"
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "invite",
+      "lead": "Chris F.", "company": "Jet2"
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "dm",
+      "lead": "Izabella Lenkiewicz", "company": "Ryanair",
+      "rendered_script": "Izabella, I sent you a note by email, figured LinkedIn might be quicker. Short version: once a delay crosses three hours it starts costing £220 to £520 a passenger, and the ones that get there usually had a recovery running a shift behind the disruption. Worth 15 minutes to look at what those days cost at Ryanair?"
+    },
+    {
+      "rep": "jack", "brief": "airlines", "lane": "Airlines", "type": "voice_note",
+      "lead": "Darren Kelly", "title": "Head of Customer Contact", "company": "Virgin Atlantic",
+      "rendered_script": "Hi Darren, it's Jack Ohagan. Quick thought for you: when the airline has a bad day, your team gets all of it the next morning. And how bad that morning is mostly comes down to staffing calls made the night before. So when a bad day is forming, how much warning does your team actually get?"
+    }
+  ],
+  "autopilot": {
+    "_sends_note": "Send copy below is the REAL campaign template per step (pulled from the Lemlist sequences Aug 2), resolved with each lead's real staged variables from the locked lists. Never stage invented leads or invented send copy here: the sends thread exists to show the rep exactly what fires, and staged copy that can't come from the API (or makes plan/star-position claims outside the locked qbp list) breaks both the render test and the claims gate.",
+    "nathan": {
+      "summary": "Finance: 4 \"the cliff is being priced in now\" emails send this morning · Quality: 1 profile visit · Resurrection: 9 profile visits, invite approvals land in tomorrow's brief",
+      "sends": [
+        {
+          "lane": "Finance",
+          "step": "Email 2 of 5, the cliff is being priced in now",
+          "distinct_copy": true,
+          "emails": [
+            {
+              "lead": "Michael Marrone", "company": "Point32Health",
+              "subject": "the cliff is being priced in now",
+              "body": "Hi Michael, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. At 3.5, Point32 is in the narrow band where this measurement year still decides which side of the bonus line the book lands on.\n\nMaking that execution consistent under load is what Intradiem does, which is why the movable measures stay movable. Fifteen minutes and I'll walk the finance view on what holding the next half-star costs versus what the bonus returns.\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nNathan Belfield"
+            },
+            {
+              "lead": "Mike Rains", "company": "Cambia",
+              "subject": "the cliff is being priced in now",
+              "body": "Hi Mike, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. With both Cambia contracts at 3.0, one improvement in the service measures moves the entire book at once, and it's rare for one initiative to carry that much.\n\nMaking that execution consistent under load is what Intradiem does, which is why the movable measures stay movable. Fifteen minutes and I'll walk the finance view on what holding the next half-star costs versus what the bonus returns.\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nNathan Belfield"
+            },
+            {
+              "lead": "Kathryn Qin", "company": "Blue Shield of California",
+              "subject": "the cliff is being priced in now",
+              "body": "Hi Kathryn, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. For a book Blue Shield's size, the dollars on that half-star are large enough that holding service steady through the fall peak is a finance decision, not just a quality one.\n\nMaking that execution consistent under load is what Intradiem does, which is why the movable measures stay movable. Fifteen minutes and I'll walk the finance view on what holding the next half-star costs versus what the bonus returns.\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nNathan Belfield"
+            },
+            {
+              "lead": "Zhishen Yang", "company": "NYC Health + Hospitals",
+              "subject": "the cliff is being priced in now",
+              "body": "Hi Zhishen, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. For a public-system book, that half-star is one of the few revenue paths that doesn't require new membership or new rates, just execution in the service measures.\n\nMaking that execution consistent under load is what Intradiem does, which is why the movable measures stay movable. Fifteen minutes and I'll walk the finance view on what holding the next half-star costs versus what the bonus returns.\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nNathan Belfield"
+            }
+          ]
+        }
+      ]
+    },
+    "jack_airlines": {
+      "summary": "2 \"the three hour mark\" emails + 6 \"closing the file\" emails send this morning · 5 profile visits · 2 like + follow",
+      "sends": [
+        {
+          "lane": "Airlines",
+          "step": "Email 1 of 5, the three hour mark",
+          "distinct_copy": true,
+          "emails": [
+            {
+              "lead": "Adrian Dunne", "company": "Aer Lingus",
+              "subject": "the three hour mark",
+              "body": "Hi Adrian,\n\nRunning short haul and transatlantic out of the same hub means carrying both ends of the compensation scale at once, 250 euro on one side of the operation and the top band on the other. The pattern across airline ops and service teams is that the expensive part of a disrupted day is rarely the delay itself, it's the recovery running a shift behind it, the claims, the calls and the re-accommodation all landing on a team staffed for a normal day. That's what decides whether an afternoon crosses the three hour mark and starts billing per passenger.\n\nThought it might be worth talking through where the recovery lags at Aer Lingus and what's holding it there. Have 15 minutes in the next couple of weeks?\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nJack"
+            },
+            {
+              "lead": "Mark Shaw", "company": "British Airways",
+              "subject": "the three hour mark",
+              "body": "Hi Mark,\n\nRunning the operation as post holder means owning a July where Europe logged its busiest day ever and a week where one flight in five was held by flow restrictions. The pattern across airline ops and service teams is that the expensive part of a disrupted day is rarely the delay itself, it's the recovery running a shift behind it, the claims, the calls and the re-accommodation all landing on a team staffed for a normal day. That's what decides whether an afternoon crosses the three hour mark and starts billing per passenger.\n\nThought it might be worth talking through where the recovery lags at British Airways and what's holding it there. Have 15 minutes in the next couple of weeks?\n\nIf you'd rather not hear from me, one word and I'll stop.\n\nJack"
+            }
+          ]
+        },
+        {
+          "lane": "Airlines",
+          "step": "Email 5 of 5, closing the file",
+          "distinct_copy": false,
+          "template": {
+            "subject": "closing the file",
+            "body": "Hi {{firstName}}, I'll close the file here. One thought worth keeping: the cheapest compensation claim is the one where the recovery beat the three hour mark, and that gets decided by how fast the operation reshapes around a bad day, not by the weather. When the disruption bill becomes a priority, that's the seam I work. Glad to help whenever the timing fits.\n\nEither way, this is my last note.\n\nJack Ohagan"
+          },
+          "recipients": [
+            { "lead": "John Tanner", "company": "Aer Lingus" },
+            { "lead": "Viktorija Diestelkamp", "company": "British Airways" },
+            { "lead": "René de Groot", "company": "British Airways" },
+            { "lead": "Ollie Watkins", "company": "Jet2" },
+            { "lead": "Louise Smith", "company": "Jet2" },
+            { "lead": "Neal McMahon", "company": "Ryanair" }
+          ]
+        }
+      ]
+    }
+  },
+  "yesterday": { "nathan": "5 tasks done, 0 skipped", "jack_airlines": "6 tasks done, 0 skipped" }
+}

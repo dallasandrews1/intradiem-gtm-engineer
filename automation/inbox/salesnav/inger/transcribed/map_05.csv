@@ -1,0 +1,11 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Goldman Sachs,7,map,Eric Folsom,Managing Director,no,,0,UpdateCRM,No role,"Top of tree; the only Update CRM badge on the map (header Update CRM counter shows 1); no photo (grey avatar)"
+Goldman Sachs,7,map,Tricia Clemons,Operations Manager,no,Eric Folsom,1,,No role,"Placeholder card (dashed border, name not a link, no CRM badge, no highlights line); card text reads 'Tricia Clemons - Operations Manager'; leftmost child of Eric Folsom"
+Goldman Sachs,7,map,Cory Koehler,Managing Director/Head of WFM,no,Eric Folsom,1,,No role,"Placeholder card (dashed border, name not a link, no CRM badge, no highlights line); card text reads 'Cory Koehler - Managing Director/Head of WFM'; second child of Eric Folsom"
+Goldman Sachs,7,map,Shannon Terry,"Vice President, Head of Wor...",yes,Eric Folsom,1,CRM,No role,"Third child of Eric Folsom; has photo"
+Goldman Sachs,7,map,"Randall Terry , MBA",Vice President,no,Eric Folsom,1,CRM,No role,"Name shown exactly as 'Randall Terry , MBA' (space before comma); rightmost child of Eric Folsom; has photo"
+Goldman Sachs,7,map,Shanequia Harris,Customer Service Represen...,yes,Tricia Clemons,2,CRM,No role,"Card shows a company line 'Liberty Mutual Insurance' under the title, so she may not be at Goldman Sachs; hangs from the Tricia Clemons placeholder card"
+Goldman Sachs,7,map,Akilah Coleman,Associate,no,Cory Koehler,2,CRM,No role,"Hangs from the Cory Koehler placeholder card; has photo"
+Goldman Sachs,7,recommended,Karthik Doose...,Associate,no,,,,,"Name truncated in sidebar as 'Karthik Doose...'; 1st degree; not on canvas"
+Goldman Sachs,7,recommended,Logan Johnson,Senior Analyst,no,,,,,"1st degree; not on canvas"
+Goldman Sachs,7,recommended,Justin Stahl,Managing Director | ...,yes,,,,,"2nd degree; not on canvas"

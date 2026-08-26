@@ -1,0 +1,10 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+DIRECTV,6,map,Laurie Giammona,Executive Vice President & ...,yes,,0,UpdateCRM,No role,Top of tree; header Update CRM button shows badge 1 (this is the one card not in Salesforce)
+DIRECTV,6,map,Toni Bell,VP Customer Care,no,Laurie Giammona,1,CRM,No role,No profile photo (placeholder avatar)
+DIRECTV,6,map,Sandra Jalbert,"Director Workforce, Attenda...",yes,Toni Bell,2,CRM,No role,Leftmost of three children under Toni Bell; no profile photo (placeholder avatar)
+DIRECTV,6,map,Jason Young,Director Call Center Schedu...,yes,Toni Bell,2,CRM,No role,Middle child under Toni Bell (directly below her)
+DIRECTV,6,map,Jeff Haskins,Senior Director of Operation...,yes,Toni Bell,2,CRM,No role,Rightmost child under Toni Bell
+DIRECTV,6,map,Chris Cheney,"Sr. Manager, Customer Care...",yes,Sandra Jalbert,3,CRM,No role,Hangs directly below Sandra Jalbert via vertical connector
+DIRECTV,6,recommended,Frank Balester,"Lead, Finance Techn...",yes,,,,,3rd degree; sidebar Recommended leads to add
+DIRECTV,6,recommended,David McGinnis,Director of Continuo...,yes,,,,,3rd degree; sidebar Recommended leads to add
+DIRECTV,6,recommended,Baskar Rama...,Project Manager/Scr...,yes,,,,,3rd degree; sidebar Recommended leads to add; NAME truncated on screen (Baskar Rama...); no profile photo

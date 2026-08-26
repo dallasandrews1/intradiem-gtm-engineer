@@ -1,0 +1,10 @@
+
+## Addendum 2026-08-20: Clay read path re-pointed to the CLI (headless access fix)
+
+The Clay MCP plugin tools `mcp__plugin_clay_clay__table` / `__read` / `__surfaces_*` that `gate-integrity-auditor`, `table-hygiene`, `credit-strategist`, and `pipeline-receipts-tracker` listed in their `tools:` line no longer exist (plugin 2.6.0 ships skills plus the `clay` CLI 0.5.0, no MCP tools). That is why gate-integrity and table-hygiene failed headless Aug 17-20. All four agent defs (both copies, `~/.claude/agents/` and `~/coordinator/.claude/agents/`) now read Clay through the CLI only: `clay tables rows list/get`, `clay tables columns get/list`, `clay tables get`, `clay audiences records ...`, `clay credits`, with the binary resolved as `command -v clay || newest ~/.claude/plugins/cache/clay-plugins/clay/*/bin/clay` because launchd PATH is not guaranteed. Row JSON is parsed with `automation/lib/clay_rows2tsv.py` (`json.loads(strict=False)`) because some tables carry raw control characters that break `jq`. Verified interactively 2026-08-20: 524 WFM L3 rows read in 17 s, 143 Stars Contacts rows read, 0 credits (action-execution balance only).
+
+`gate-integrity-auditor` gained check 7: the customer-exclusion UNION (SF Audiences segment `audseg_0tk324emMVGAwsna7g4` Customer or Partner + install-base table `t_0ti4jj1hfZyEWcfirfU` + `tam-outbound-engine/config/customer_denylist.json` + motion L1 `customer_flag=TRUE`) is checked against every live send table's own customer flag, with a new GATE INERT verdict class for rows the union says are customers but the table's own flag says are not, even while HOLD. Salesforce Account Type alone is not sufficient (Elevance Health and TD Bank absent from the synced set; Cigna, Assurant, Farmers, McKesson, Citi, British Gas tagged Prospect).
+
+`pipeline-receipts-tracker` may read Salesforce deals via `clay audiences records --entity-type deals` as a CANDIDATE surfaced-pipeline source only; counted receipts still come only from `credit_pipeline_receipts.md` and `impact/outcomes.csv`.
+
+Guardrail unchanged on all four: read-only, never `clay update`, never touch the plugin install, never spend.

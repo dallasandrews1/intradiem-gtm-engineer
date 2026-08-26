@@ -1,0 +1,15 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Travelers,11,map,Alan Schnitzer,Chairman of the Board,no,,0,CRM,No role,Recently posted on LinkedIn
+Travelers,11,map,Mojgan Lefebvre,EVP and Chief Technology a...,yes,Alan Schnitzer,1,CRM,No role,Recently posted on LinkedIn
+Travelers,11,map,Pete Collins,Head Of Operations,no,Mojgan Lefebvre,2,CRM,No role,
+Travelers,11,map,Denice D Paul,SVP Business Insurance Op...,yes,Pete Collins,3,UpdateCRM,No role,
+Travelers,11,map,Sam Kedala,Vice President Operational ...,yes,Pete Collins,3,CRM,No role,
+Travelers,11,map,Crystal O'Connor,"AVP, PI Operational Effectiv...",yes,Sam Kedala,4,CRM,No role,
+Travelers,11,map,Kristi White Holcombe,"Sr. Director, Workforce Man...",yes,Crystal O'Connor,5,UpdateCRM,No role,
+Travelers,11,map,Dallas Simmons,"Manager, Business Process ...",yes,Crystal O'Connor,5,CRM,No role,Recently posted on LinkedIn
+Travelers,11,map,Erin Walpole,Director of Workforce Mana...,yes,Kristi White Holcombe,6,UpdateCRM,No role,
+Travelers,11,map,Scott Marshall,Director Workforce Manage...,yes,Kristi White Holcombe,6,CRM,No role,
+Travelers,11,map,Darlene Parks,Tax Expert,no,Erin Walpole,7,CRM,No role,Card shows company line Intuit under the title (not a Travelers employee per the card)
+Travelers,11,recommended,Bryan Mincher,Assistant Vice Presid...,yes,,,,,2nd degree
+Travelers,11,recommended,Frankie De An...,Associate Claim Rep,no,,,,,3rd degree; name truncated on sidebar as shown
+Travelers,11,recommended,Wendell Ladd,"VP, Cybersecurity",no,,,,,2nd degree

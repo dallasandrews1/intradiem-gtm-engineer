@@ -1,0 +1,7 @@
+
+CRASH-RESILIENT LOGGING (hard rules for this run; exists because long runs have died on dropped connections minutes from the finish, losing everything):
+- Create today's dated log file FIRST, before any research or long work, with its header and a line "RUN IN PROGRESS since <time>".
+- Append each section to that file AS YOU COMPLETE IT. Never hold findings in memory for one final write.
+- When the run finishes, replace the "RUN IN PROGRESS" line with "RUN COMPLETE <time>".
+- If today's dated log ALREADY exists and still says RUN IN PROGRESS, a prior attempt died mid-run: do NOT start over. Read it, keep its completed sections, add "[RESUMED <time>]" under the header, and continue from where it stops.
+- The RUN IN PROGRESS marker is the crash signal: downstream readers (the rundown, swarm-health) treat a log stuck IN PROGRESS as a partial run, never as a clean finish.

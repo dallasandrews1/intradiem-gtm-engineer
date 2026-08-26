@@ -1,0 +1,253 @@
+{
+  "_doc": "Runtime config for the signal-marketing loop (motions/signal_marketing_loop/). dry_run=true means: no webhook posts, no Audiences stamps, no Slack, no lemlist, no Salesforce; everything that would have happened is written to automation/logs/. Flip live_stamp / live_lane_a only on Dallas's explicit ask.",
+  "dry_run": true,
+  "live_stamp": false,
+  "live_lane_a": false,
+  "web_intent": {
+    "table_id": "t_0tkbo3tEWnp4abaaaTb",
+    "workbook_id": "wb_0tkbo3sbAuHXMbNAwpw",
+    "source_column": "f_0tkbo3trQpFPEFW4dZ3",
+    "domain_column": "f_0tkbo3tba84UDcMjt9i",
+    "created_at_column": "f_created_at",
+    "_note": "Table created by Dallas 2026-08-25 (new row per visit). The source cell is an object: .domain plus .websiteEvents[] (each with .path and, per Clay docs, time/referrer/UTM fields). The scorer parses that object directly; column_overrides kept for safety.",
+    "column_overrides": {},
+    "tracking_snippet": "<script src=\"https://static.claydar.com/init.v1.js?id=cXnI1ezWwu\"></script>",
+    "snippet_received": "2026-08-25"
+  },
+  "audiences": {
+    "company_fields": {
+      "heat_score": "audf_0tkbgjwfqXfbz3tVvFE",
+      "heat_reasons": "audf_0tkbgjw5yKPSuiQ6kxP",
+      "heat_lane": "audf_0tkbgjx4SbZbS8yNu4j",
+      "heat_updated": "audf_0tkbgjxAYwK64ZxUtjd",
+      "heat_cohort": "audf_0tkbgjxozeptXEZDecr",
+      "account_type": "audf_0timw0xX6CfUdJXJznM",
+      "ownership": "audf_0timw1g4xm73uPV2vBu"
+    },
+    "people_fields": {
+      "persona_key": "audf_0tk33nse4Dbnq9ofgGM",
+      "webinar_route": "audf_0tk33nscwuvhobuKwH8",
+      "enriched_title": "audf_0tk33nsYJyeCWonp4FA",
+      "company_domain": "audf_0tk33ntxQy4KyigBAmi",
+      "triage": "audf_0tk33ntEfhyygaiHmYb",
+      "lead_source": "audf_0timw8gjiJpc5Kmdocm",
+      "owner_id": "audf_0timw93AWnwkAbNguBv",
+      "account_id": "audf_0timw68Jf4dTsQQqq38",
+      "person_signal": "audf_0tkbpqqoebvN3zTmzbd",
+      "person_signal_date": "audf_0tkbpqq7XiDESb6hZA6",
+      "person_signal_detail": "audf_0tkbpqqozXiHyan2WC4",
+      "linkedin_url": "linkedin_url",
+      "title": "title"
+    },
+    "segments": {
+      "heat_list": "audseg_0tkbglis6qhvceQSZzJ",
+      "lane_a_queue": "audseg_0tkbgljnEDPCFGqwHka",
+      "cohort_pool": "audseg_0tkbgljqW8NToVQnDSN",
+      "customer_am": "audseg_0tkbglj2HPXwazijzsm",
+      "webinar_leads": "audseg_0tk335bt7YKafui6nbh",
+      "cold_outbound_exclusion": "audseg_0tk324emMVGAwsna7g4",
+      "current_customers_sf": "audseg_0tk31v7TVNZnw5yRnVf",
+      "sf_closed_lost_aged_companies": "audseg_0tkbpsgNm3aaB2ydJaz",
+      "sf_closed_lost_aged_people": "audseg_0tkbpsgDgSH7hDchH8T",
+      "sf_open_deal_moved_companies": "audseg_0tkbpshtP3k2bxRFFmy",
+      "sf_renewal_120d_companies": "audseg_0tkbpshGdT8nbdCovik",
+      "li_engaged_people": "audseg_0tkbpshaAW3mcvvobJ4",
+      "sf_customer_active_90d_helper": "audseg_0tkbpu9rwEBwWVYzSao",
+      "jc_watch_test_roster_people": "audseg_0tkbpyip5Kkvyok7wdd"
+    }
+  },
+  "workflows": {
+    "heat_stamp": {
+      "id": "wf_0tkbgk0UytzkPQWmakX",
+      "trigger_id": "7e97bfc7-ceec-4caf-9234-82b21348f604",
+      "webhook_url": "https://api.clay.com/v3/sources/webhook/708e230c-4d16-48f1-8cb0-739f057cba69"
+    },
+    "lane_a": {
+      "id": "wf_0tkbgk02Xub84UtnRXS",
+      "trigger_id": "4dfd8c70-b4f6-47b6-9a4f-fab99851b975",
+      "webhook_url": "https://api.clay.com/v3/sources/webhook/80539c3e-5afc-4373-a9bd-1c2ece9e2e3c"
+    },
+    "li_engagement": {
+      "_doc": "Signal 3, two workflows because list mode (Repeat) is not enabled on this workspace. A takes one post URL and returns the engager list (1.0 credit per post: reactions 0.5 + comments 0.5). B takes one engager and stamps Clay Person Signal/Date/Detail on an EXISTING Audiences person by LinkedIn URL, or exits net_new (0 credits). Fan-out = heat-list-scorer reads A's run output and starts B via a routine with --bulk (webinar backfill pattern). Both DRAFT, not published.",
+      "A": {
+        "id": "wf_0tkbpqrVPgA4h5NKanZ",
+        "trigger_id": "905bd2b4-5c1b-43da-9e37-21aed5f275d3",
+        "trigger_type": "manual",
+        "inputs": [
+          "post_url",
+          "post_label",
+          "signal_family"
+        ],
+        "nodes": {
+          "trigger": "wfn_0tkbpsocH5T86uvpM6w",
+          "reactions": "wfn_0tkbpuvYeTauu7d3WGN",
+          "comments": "wfn_0tkbpuwicTWG8B6EwxB",
+          "merge": "wfn_0tkbpx3wB5E9oswUqEN"
+        },
+        "output_path": "$.engagers",
+        "state": "draft, validated 2026-08-25"
+      },
+      "B": {
+        "id": "wf_0tkbq0fNEMoG6PTVFfg",
+        "trigger_id": "c66c9e3e-9bd9-4464-8db6-5bc914faf19b",
+        "trigger_type": "manual",
+        "inputs": [
+          "linkedin_url",
+          "name",
+          "title",
+          "signal",
+          "signal_date",
+          "detail"
+        ],
+        "nodes": {
+          "trigger": "wfn_0tkbq0fZpdqPjuFNF4K",
+          "lookup": "wfn_0tkbq0gWQyiaAMvYa2P",
+          "known": "wfn_0tkbq0hQKBs9tTTm47n",
+          "gate": "wfn_0tkbq0hb2b7GpG3jaAG",
+          "stamp": "wfn_0tkbq0iKoic6DEGdY9M",
+          "net_new_exit": "wfn_0tkbq0jMR37CwiwthVR"
+        },
+        "state": "draft, validated 2026-08-25"
+      },
+      "post_urls": [],
+      "_post_urls_note": "Paste the 5 latest intradiem.com company post URLs here (linkedin.com/posts/intradiem_...). LinkedIn's company page is a login wall from the CLI, so a human supplies them."
+    }
+  },
+  "channels": {
+    "nathan": "C0BM9V6KGSG",
+    "jack": "C0BN0JT9D6U"
+  },
+  "rep_by_country": {
+    "default": "nathan",
+    "GB": "jack",
+    "UK": "jack",
+    "United Kingdom": "jack",
+    "IE": "jack",
+    "Ireland": "jack"
+  },
+  "thresholds": {
+    "rep_min": 60,
+    "cohort_min": 20,
+    "fit_min": 50,
+    "hold_rolloff_days": 45,
+    "web_return_window_days": 7,
+    "web_return_cap": 3,
+    "rep_realert_days": 7,
+    "icp_personas": [
+      "cc_ops",
+      "wfm",
+      "cx",
+      "finance",
+      "bo_claims",
+      "bo_shared",
+      "coo_finance"
+    ],
+    "icp_industries": [
+      "Healthcare",
+      "Financial Services",
+      "Insurance",
+      "Retail",
+      "Telecom",
+      "Utilities",
+      "Hospital & Health Care",
+      "Banking",
+      "Telecommunications"
+    ],
+    "icp_min_employees": 1000
+  },
+  "cohort": {
+    "anchor_tuesday": "2026-09-08",
+    "interval_days": 14,
+    "min_matchable": 300,
+    "holdout_share": 0.5,
+    "contacts_per_account": 6,
+    "sf_campaign_prefix": "GTM Eng",
+    "motion_label": "All-Hands Sprint",
+    "lemlist_campaign_ids": {
+      "nathan": "",
+      "jack": ""
+    },
+    "extra_domains_file": "motions/signal_marketing_loop/cohorts/next_wave_domains.txt",
+    "ads_live_lag_days": 2,
+    "email1_lag_days": 5,
+    "ads_off_lag_days": 25
+  },
+  "exclusion": {
+    "install_base_table": "t_0ti4jj1hfZyEWcfirfU",
+    "denylist_files": [
+      "tam-outbound-engine/data/customer_denylist.csv"
+    ],
+    "our_domains": [
+      "intradiem.com"
+    ],
+    "competitor_domains": [
+      "nice.com",
+      "verint.com",
+      "calabrio.com",
+      "genesys.com",
+      "assembled.com",
+      "playvox.com",
+      "alvaria.com",
+      "aspect.com",
+      "injixo.com",
+      "eleveo.com",
+      "talkdesk.com",
+      "8x8.com"
+    ],
+    "partner_domains": [
+      "five9.com",
+      "c1.com",
+      "onec1.com",
+      "calldesign.com.au",
+      "3xg.com"
+    ],
+    "personal_email_domains": [
+      "gmail.com",
+      "yahoo.com",
+      "hotmail.com",
+      "outlook.com",
+      "aol.com",
+      "icloud.com",
+      "comcast.net",
+      "att.net",
+      "verizon.net",
+      "me.com",
+      "live.com",
+      "msn.com",
+      "proton.me",
+      "protonmail.com"
+    ]
+  },
+  "sources": {
+    "staged_signals_csv": "automation/logs/staged_signals.csv",
+    "triggers_csv": "tam-outbound-engine/data/triggers.csv",
+    "tam_accounts_csv": "tam-outbound-engine/data/tam_accounts.csv",
+    "stars_tiered_csv": "StarRatings_Targets_2026_Tiered.csv",
+    "relay_log_glob": "automation/logs/lemlist-relay-*.md",
+    "state_file": "automation/logs/.heat_state.json",
+    "domain_cache": "automation/logs/.heat_domain_cache.json"
+  },
+  "sf_activity": {
+    "_doc": "Signal 4. Company-level sf_activity events read from Audiences segments at 0 credits. customer_quiet_90d = current_customers_sf minus sf_customer_active_90d_helper (NoItems ColOp returned server_error 2026-08-25).",
+    "enabled_dry_run": true,
+    "subtypes": {
+      "closed_lost_aged": {
+        "segment": "sf_closed_lost_aged_companies",
+        "lane_hint": "cohort_or_rep",
+        "_note": "stage Contain 'Closed Lost' only; Unqualified-stage opps excluded (they were half the naive is_closed+not-won set). 68 companies / 170 people on 2026-08-25."
+      },
+      "open_deal_moved": {
+        "segment": "sf_open_deal_moved_companies",
+        "lane_hint": "hold"
+      },
+      "renewal_120d": {
+        "segment": "sf_renewal_120d_companies",
+        "lane_hint": "customer_am"
+      },
+      "customer_quiet_90d": {
+        "segment": "computed",
+        "lane_hint": "customer_am"
+      }
+    }
+  }
+}

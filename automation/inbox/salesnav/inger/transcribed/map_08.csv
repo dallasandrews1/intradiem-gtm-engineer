@@ -1,0 +1,19 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+MetLife,15,map,Michel A. Khalaf,"President & CEO, MetLife, In...",yes,,0,CRM,No role,"CRM badge shows circle-slash icon, not green check; highlight: Recently posted on LinkedIn"
+MetLife,15,map,Bill Pappas,EVP-Head of Global Technol...,yes,Michel A. Khalaf,1,CRM,No role,green check CRM; highlight: Recently posted on LinkedIn
+MetLife,15,map,Merrilee Matchett,Head of Global Customer Se...,yes,Bill Pappas,2,CRM,No role,"CRM badge shows circle-slash icon, not green check"
+MetLife,15,map,"Gabriel ""Gabe"" Lopez","Senior Vice President, Retir...",yes,Merrilee Matchett,3,CRM,No role,"CRM badge shows circle-slash icon, not green check; no children (no connector stub below card)"
+MetLife,15,map,"Donna L. Carr, CEP",Senior Vice President,no,Merrilee Matchett,3,CRM,No role,"CRM badge shows circle-slash icon, not green check; connector stub below card feeds the horizontal line to Mukund, Joseph Mele, Jill Davis"
+MetLife,15,map,Anika Wall,Vice President of Strategic ...,yes,Merrilee Matchett,3,CRM,No role,"CRM badge shows circle-slash icon, not green check"
+MetLife,15,map,Mukund Chandrase...,Director,no,"Donna L. Carr, CEP",4,CRM,No role,"green check CRM; name truncated on card; sits directly below Gabriel Lopez but the connector line originates from Donna L. Carr (Lopez has no stub), so parent assigned to Carr"
+MetLife,15,map,Joseph Mele,Assistant Vice President,no,"Donna L. Carr, CEP",4,CRM,No role,"CRM badge shows circle-slash icon, not green check"
+MetLife,15,map,Jill Davis,Business Manager,no,"Donna L. Carr, CEP",4,UpdateCRM,No role,
+MetLife,15,map,Saulius Baliutavicius,Vice President Operations Safe-Guard Products International,no,Anika Wall,4,UpdateCRM,No role,title shown in full across three lines on the card
+MetLife,15,map,Devon M Cunningham,Manager,no,Anika Wall,4,CRM,No role,green check CRM
+MetLife,15,map,"Matthew Fuglesang,...",Director - Workforce Manag...,yes,Joseph Mele,5,CRM,No role,"CRM badge shows circle-slash icon, not green check; name truncated on card"
+MetLife,15,map,Devon F.,Business Manager,no,Jill Davis,5,CRM,No role,"CRM badge shows circle-slash icon, not green check; placeholder avatar (no photo)"
+MetLife,15,map,Hollie Penix,Product Owner,no,Devon M Cunningham,5,CRM,No role,green check CRM; placeholder avatar (no photo)
+MetLife,15,map,Poonam Khawaja,Resource Optimization Anal...,yes,Hollie Penix,6,CRM,No role,green check CRM
+MetLife,15,recommended,Keneisha H.,Senior Client Service ...,yes,,,,,3rd degree; sidebar Recommended leads to add; sidebar shows No saved leads at MetLife
+MetLife,15,recommended,Davina Wilkins,Absence Manageme...,yes,,,,,3rd degree; sidebar Recommended leads to add; sidebar shows No saved leads at MetLife
+MetLife,15,recommended,Ivonne B. T.,Senior Billing Analyst,no,,,,,3rd degree; sidebar Recommended leads to add; sidebar shows No saved leads at MetLife
