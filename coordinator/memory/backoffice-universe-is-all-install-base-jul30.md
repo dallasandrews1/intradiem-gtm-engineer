@@ -1,0 +1,20 @@
+---
+name: backoffice-universe-is-all-install-base-jul30
+description: Jul 30 2026 - all 15 Tier-1 back-office accounts verified as active Intradiem customers, so Nate's cold prospect lane has zero accounts and must be sourced net-new; sprint 1 set to Centene
+metadata:
+  type: project
+---
+
+2026-07-30: matched all 15 Tier-1 back-office accounts against Nate's Salesforce active-customer report (`greenlight-pack/Active_Customers_SF_Jul10.csv`, 101 rows). **Every one is an active customer:** Aetna, Capita, Cigna, Elevance, Foundever, Goldman Sachs, Humana, JPMorgan Chase, MetLife, Molina, Prudential, Synchrony, US Bancorp, UnitedHealthcare, Wells Fargo.
+
+**Consequence:** the entire back-office universe, including the 313 enriched contacts in "Back Office Contacts - Master List", is **install base**, and routes to Savannah and the AM lane. The prospect-blitz lane described in the Nate plan of action has **zero accounts in it today** and has to be sourced net-new in Clay. This is consistent with how the universe was built (off Savannah's 214-row install-base campaign seed), so it is not a sourcing error, it is what that universe always was. The 313-vs-seed dedup in [[backoffice-dedup-broken-lookup-jul26]] answers "is this person already in Savannah's campaign," which is a DIFFERENT question from "is this person's employer a customer" — passing that dedup is not a customer-exclusion check.
+
+**Alias trap, caught live.** The first day-1 brief was built on HCSC. Searching the customer report for "HCSC" returns nothing; the account is listed as **Health Care Service Corporation** and has been a confirmed customer since [[customer-file-landed-jul10]]. A name-string gate would have passed a current customer into a cold sprint aimed at its EVP COO. Standing rule now baked into the plan doc: entity check on legal name, subsidiaries and recent acquisitions runs BEFORE the real-row gate, not after.
+
+**Sprint 1 = Centene** (Dallas delegated the pick). Clean twice: the Jul 8 Naveen call ("Centene, include, a big one") and the Jul 10 reconciliation. Other verified-clean candidates checked against the 101: Highmark, GuideWell/Florida Blue, Independence, EmblemHealth, Healthfirst, Point32, Sentara, Premera, Regence/Cambia; BPOs Conduent, Cognizant, Genpact, Concentrix, TTEC, Alorica, Telus, Wipro; FS/insurance Bank of America, Truist, Ally, Discover, State Farm, Allstate, Nationwide, Chubb, Aflac, Unum, Lincoln, Principal, Voya, Transamerica. Caveat that applies to all of them: absent from a Jul 10 export means "not in that file," not "verified non-customer."
+
+**Centene research cluster (verified + dated, in the day-1 brief with a sources block):** Voluntary Separation Program opened to most of 61,000 employees Jun 15-16 2026, Sarah London "when our membership shifts, we need to shift our organization accordingly," layoffs possible (Healthcare Dive Jun 16 2026). ACA membership 5.6M end-2025 to 3.6M Q1 2026, down 54% YoY; Medicaid down ~500K to 12.4M; total at-risk 26.3M from 27.9M; Q1 revenue $49.9B, net $1.5B, adj EPS $3.37, Medicaid MLR 93.1%, public breakeven-Medicaid-by-2027 target (Healthcare Dive Apr 28 2026). CY2025 CMS-0057-F prior auth disclosures: ~12.2M standard requests, 117 plans, 34 states, 18.0% standard denial rate vs ~11.5% national, **57% of appealed denials overturned**, avg standard decision 3.6 days (AuthDenied aggregation, updated Jul 21 2026). Exec restructure Apr 6 2026: Daniel Finke Group President Markets and Commercial (owns Medicaid + Commercial, ex-CEO Convey Health Solutions), Michael Carson Group President Medicare and Specialty, both to Sarah London, **no COO named** (Centene press release). The 57%-overturned figure is the sharpest back-office wedge in the file: work being done twice, landing in appeals.
+
+**Unverified, flagged in the brief:** Centene posts "Workforce Real-Time Management Analyst II" roles, but both live posting URLs 404'd on fetch, so block 2A references the roles generically and needs a live-link confirm before sending as written.
+
+Related: [[backoffice-live-build-state-jul23]], [[backoffice-icp-maryann-reframe-jul23]], [[clay-input-rule-refined]].

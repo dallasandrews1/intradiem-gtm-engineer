@@ -1,0 +1,35 @@
+---
+name: backoffice-icp-maryann-reframe-jul23
+description: Jul 23 2026 Mary Ann Chandler (SVP Strategic Account Management, oversees all existing-customer accounts) meeting reframed the back-office ICP from a single claims-ops layer into a 4-persona buying committee with a hard Director+ gate; motion officially blessed for the quarter
+metadata:
+  node_type: memory
+  type: project
+---
+
+Jul 23 2026: GTM tool intro meeting (Naveen, **Mary Ann Chandler / "MAC"** = SVP Strategic Account Management, oversees all existing-customer accounts (not just a single AM's book) — so she's the right single point of contact across every account in this motion regardless of which individual AM owns it, **Savannah** = ops/SF-upload + back-office campaign owner, Chris Busbee present/quiet, Dallas). Mary Ann is the account-management gate for the existing-customer back-office motion. Outcome: motion **blessed** ("the whole team has a goal to work with you guys to identify their back office contacts this quarter, goal in place, let's go") and the ICP got materially reworked. Supersedes the single-persona claims-ops framing in [[backoffice-motion-forked-jul13]].
+
+**THE CORRECTION — Dallas's first pull was the wrong SEAT.** The ~111 senior-claims list Dallas showed = *"the right operations people, but not the right people making the decisions on the tools"* (Mary Ann, re: Cigna). Right pain, wrong buyer.
+
+**New model = 4-persona buying committee:**
+1. **Operations leaders** (VP/Dir Claims, Claims Ops, Grievances, Utilization Mgmt) — feel the pain, worth marketing to, but do NOT decide on tools.
+2. **Back-office product owners** — the internal owner the tool sits under. SEPARATE from the WFM product owner. Only exists post-purchase; at an existing customer they're the champion who pitches BOO back up the chain.
+3. **Claims IT / claims-technology** — tech people tied to the claims dept. The IT decision-maker on the tool. Ex (Cigna): **Rich = "Director, Workforce Engagement Engineering"** (no "back office" in title but IS the IT decision maker). MAC's emphasis: "IT claims / technology people associated with claims departments," distinct from generic IT.
+4. **Executive** (COO, SVP Operations) — marketing's top-of-funnel entry; gets pushed down to director.
+
+**HARD GATE: Director and above ONLY.** Naveen asked twice whether manager/IT-level contacts help; MAC: *"I do not."* Marketing starts high (COO/SVP pain), pitch always lands at director, director pulls in SVP. Never enter an existing customer below director.
+
+**Two account segments to tag:** (a) **WFM-deployed** accounts — have a WFM product owner, but back office is a separate animal with its own product + IT people (target those); (b) **not-yet-WFM** accounts — no back-office product owner exists yet, target operations + IT only.
+
+**Title guidance:** payers/insurance have NO literal "back office" (use VP/Dir Claims, Claims Ops, Grievances, UM); financial services DOES have literal "VP Back Office" (keep). Add: claims-IT/claims-technology titles, product-owner titles, and technology/product titles that include "back office"; Savannah's old net = anyone with back office / claims / fraud in title; plus "back office" variants of WFM and IT.
+
+**Inputs Dallas is folding in before re-pull:** (1) Savannah's maintained back-office campaign list (~5 Cigna names) to compare/contrast; Cigna = calibration account MAC knows cold. (2) Jean Marie's + Rich's Cigna titles as golden product-owner + IT-decision-maker reference. (3) Cheryl's marketing titles doc (Naveen shared) to smoke-check.
+
+**Process/handoff chain (locked):** Dallas rebuilds criteria → re-pull SMALL corrected sample → email group example list to smoke-check → MAC/AMs eyeball for familiar names, give the nod → **Savannah** uploads approved contacts to Salesforce → drops into back-office campaign → refresh campaign with **BOO / product roadmap** (it's stale, never had Back Office Optimizer in it) → MAC + **Sierra/marketing** build emails + targeted display/Google ads → **Nate** calls in. Messaging is warm + marketing-led here (existing relationships), NOT Dallas's cold MessageGen.
+
+**Savannah's list validated the model (Jul 23, 214 contacts, campaign "Cust Sales - Back Office Contacts"):** 73% claims (157/214), 66% Director+ → it IS the ops layer, senior on ops, THIN on product-owner/claims-IT/exec (exactly where Clay adds value). Director+ gate would drop ~72 legacy rows (mgr/supervisor/analyst/adjuster). Surfaced the missing persona: a **Workforce/WFO cluster** our tool sits under (Workforce Engagement Engineering, Back Office Workforce Planning, Workforce Planning, WFM, WFO Solutions, Real-Time Ops, Workforce Effectiveness) — widened bo_product_owner to catch it. **Cigna calibration = the proof:** her 5 Cigna → 2 managers dropped by gate; Melissa Foy=ops; **Rich Turner (Dir, Workforce Engagement Engineering)=bo_claims_it**; **Jeanmarie Morrison (Sr Dir Back Office Workforce Planning)=bo_product_owner**. The two people MAC named by seat are caught by the two new personas. Import her 214 as the ops_leader SEED + dedup source. **AM LANE MAP (Account Owner col) is bigger than Mary Ann+Rachel:** Inger Escamilla 70, Omar Velasquez 52, Alex Bauer 36, Mary Ann Chandler 35, Andy Giemza 11, Rachel DiBello 7 — route each account's smoke-check to its OWNER.
+
+**SCOPE DECISION (Jul 23):** the deliverable Dallas owes the group = an updated ENRICHED contacts list across accounts, produced once the Cowork table is built — NOT a Cigna-only thing (Cigna was only Mary Ann's in-room spot-check). Criteria are already validated FREE against Savannah's 214 (caught Rich+Jeanmarie, dropped the managers), so no paid validation run is needed. First list scope = the **15 Tier-1 accounts** (highest-fit, credit-disciplined, cleanest for AMs); expand to full 101 install base only after AMs nod. Cowork build runs the 4 personas × Director+ gate across all 15, deduped vs the seed, hard-stop for credit estimate before any spend. The Cigna one-pager (BackOffice_Cigna_Calibration_Jul23.html) is an OPTIONAL pre-read for Mary Ann, not the deliverable.
+
+**Mary Ann's own words, verified via Otter transcript (Jul 27 pull):** "I am not a tech person... you're gonna have to repeat and go very slowly for me." Her actual ask for the contact lists was "sending this over to the ANDs and letting them kind of look at it, see if there's anything familiar" — a glance/smoke-check, not a technical review. **How to apply:** anything that reaches her directly (email, attachments) must stay plain-language and simple — no Clay/build jargon, no internal enrichment detail, no more than a handful of columns per list. Save the technical explanation for Dallas, never for her.
+
+**Misc:** Clay does NOT do phone numbers; Dallas has a ZoomInfo connect for short-term number pulls. Savannah must be on future calls (she's the SF/campaign operator). Trap: don't re-source blindly and burn credits before MAC validates the new criteria — the wrong-persona 111 already showed the cost. See [[backoffice-motion-forked-jul13]], [[intradiem-q3-mandates]], [[intradiem-backoffice-icp]].

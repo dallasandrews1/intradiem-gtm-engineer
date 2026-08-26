@@ -4,7 +4,7 @@ This workspace is the Day-1 operating kit for the GTM Engineer role (start Jul 6
 Health check, one command: `python3 gtm-cohesion-layer/conductor.py --preflight` (currently NOT READY on the four expected people-gated blockers; anything else red is a regression).
 Day-1 build sequence lives in `Clay_Day1_Build_Order.md`. Audit history lives in `AUDIT_FINDINGS.md`.
 Canonical universe file: `StarRatings_Universe_2026_TimePhased.csv` (307 contracts, locked read-only).
-Git: repository on `main`, tests green (tam 25/25, signal 14/14), nothing pushed.
+Git: repository on `main`, tests green (tam 39/39, signal 14/14); all work through Aug 26 2026 committed, remote push staged in `coordinator/BOOTSTRAP_WORK_LAPTOP.md` step 0. `coordinator/` carries the Claude instruction set, skills, agents, and memory to any clone (`coordinator/sync.sh install`).
 
 ## Master table
 

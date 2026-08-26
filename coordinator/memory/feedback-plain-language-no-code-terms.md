@@ -1,0 +1,12 @@
+---
+name: feedback-plain-language-no-code-terms
+description: "Dallas's Aug 25 2026 rule: deliverables and chat use natural human language, never programming or data-structure vocabulary (root, node, hangs under, parent/child, slug, key); say senior executive, reports up to, top of the map"
+metadata:
+  type: feedback
+---
+
+Aug 25 2026, on the back-office map artifact: "what does 'roots' even mean? use natural human language not coding language."
+
+**Why:** the pages go to account managers and leadership; a word that only makes sense inside a tree diagram or a codebase makes the reader stop and reduces trust in the rest of the page.
+
+**How to apply:** before delivering, scan headings, labels, and column names for engineering vocabulary and replace with the reader's words: root -> senior executive / top of the map; hangs under / parent -> reports up to; node -> person; key/slug/id never appear. Internal file and column names can stay technical; anything a colleague reads cannot. Related: [[feedback-no-showy-deliverable-copy]], [[feedback-deliver-the-new-thing-not-the-input]].

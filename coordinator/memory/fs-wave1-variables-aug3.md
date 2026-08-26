@@ -1,0 +1,14 @@
+---
+name: fs-wave1-variables-aug3
+description: Aug 3 fs-v1.0 pass - all 147 non-excluded FS committee contacts classified and 73 given critic-gated per-contact variables (74 out-of-scope by design); CSV + stage doc are source of truth; insurance lane now variable-complete pre-load
+metadata:
+  type: project
+---
+
+Aug 3 2026: the FS wave-1 variable generation pass ran end to end (Dallas's trigger), closing the gap that insurance had no per-contact personalization while being the first-out lane.
+
+**How it ran:** 6 parallel generation agents (Barclays, HSBC, NatWest, fintechs, Nationwide/TSB/CVM, insurers), each grounded in first-draft-engine + copy-sharpener + First_Touch_CTA_Doctrine_Aug3 and the FOS-verified figure table; then one gtm-copy-reviewer critic pass over all 292 pieces. Prompt lineage fs-v1.0; 10 template-echo contract_lines and 3 flags fixed as v1.0-c1. Verified-claims gate was clean on every piece (only £680, eight-week rule, and per-firm FOS H2 2025 figures; TSB zero numbers; fee exposure always estimate-framed).
+
+**Result:** 73 IN with all four variables (opener_line, contract_line, vm_hook, voice_script), 74 OUT-OF-SCOPE with no copy by design (wholesale/CIB, technology, HR, audit/controls, B2B-merchant seats; PayPal netted only 3 of 9, NatWest 6 of 20, HSBC 7 of 29), 8 AXA rows EXCLUDED. This doubled as the title-classification pass the graded universe had open (`seat_v2` column). Source of truth: `motions/uk_insurance_fs/UK_FS_Committee_Contacts_v1.csv` (new columns seat_v2, scope, scope_reason, 4 variables, critic_verdict, prompt_version) mirrored in `UK_FS_Wave1_Variable_Stage_Aug3.md`.
+
+**Exec decisions made same day at Dallas's delegation** (motions/jack/Exec_Decisions_Aug3.md, applied as the CSV wave_status column): wave 1 = 62 UK-resident operational contacts; Group ExCo (Bright, Ashton-Rigby, White) tagged WAVE2-EXCO-STRIKE for bespoke strike sequences; 4 EU/ROI contacts tagged WAVE2-EU-HOLD; 4 division-ambiguous (Sault, Britain, Khan, Feindel) tagged VERIFY-DIVISION-FIRST behind a 5-minute LinkedIn check by Jack; fraud COOs/Oakes/Oulidi/Turner stay wave 1; Lloyds stays out until a falling-complaints angle is written; enrichment pre-approved (~290 credits) executing only after Jack's DNC-scope confirm; both campaign schedules verified correct (Europe/London 09:00-18:00 weekdays), leaving clicks-off + reply-stops as load-day UI toggles. Launch chain has two human touches left: Jack's confirm + division checks, then Dallas's Start. The Lemlist FS test lead (lea_bfuEidAhDYEDFAx95) now carries Thorne's final fs-v1.0 lines so previews match real copy. Still standing: no loads happened; DNC-scope confirm from Jack, per-wave enrichment, settings pass, real-row exclusion check, delete TEST leads, then Start on Dallas's word. Related: [[uk-first-touch-offer-cta-aug3]], [[matt-jack-sync-aug3]], [[jack-uk-lemlist-campaign-aug1]].

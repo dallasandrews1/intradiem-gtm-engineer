@@ -1,0 +1,16 @@
+---
+name: cost-mandate-motion-current-state
+description: "Cost-Mandate motion: first net-new motion since Stars/Back Office, no Intradiem-computed numbers allowed, H1 verification found 4 of 5 anchor accounts were wrong; workflow live-built, all rows HOLD, nothing sent"
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: catchup-jul17-2026
+---
+
+Cost-Mandate (`cost_mandate_xvert`) is the first net-new motion built to the Star Ratings quality bar: cross-vertical (healthcare, FS, insurance, retail, telecom, utilities), targeting companies under a public cost/efficiency mandate. Defining design constraint, unlike Stars (verified public CMS dollar figure): **no Intradiem-computed number is allowed anywhere** — the only permitted personalization figure is the prospect's own disclosed number, attributed and dated, with a hard fallback to qualitative framing when empty.
+
+**Built across 4 sessions** (S1 accounts+signals in GTM Engine workbook → S2 migrated to its own `Cost-Mandate Motion` workbook, cross-workbook Lookup against Back Office confirmed working, 7-row contact slice enriched → S3 pasted MessageGen+critic, ran the slice, **all 5 rows FAILED** the critic → S4 a deliberate hardening pass Dallas demanded at a "bet your career" bar, not a "does it run" bar).
+
+**H1 correction — the load-bearing finding:** the disclosed dollar figures (Citi 300 roles, Walmart 306, Nike 1,400, J&J 56) had come straight from an LLM research column, never checked against a primary source. Dallas required every figure be verified against a real citation (`signal_source_url` + `signal_source_date`, within 90 days) before any send. When verification ran, it found the original 5 anchor accounts were largely the WRONG universe: Citi's figure was stale/aggregate, Abbott had no figure, J&J's cut belonged to a different division than the contact, Walmart's 306 was site-scoped not company-level. **Only Nike's 1,400 survived clean.** This is documented as "the engine correctly refused to fabricate," not a system failure — the fix was re-sourcing accounts (Acrisure located and locked as a genuine replacement), not loosening the gate. Two other hardening fixes: a malformed-JSON double-encode guard after Sonnet silently double-encoded 2 of 5 drafts, and a ZeroBounce deliverability gate.
+
+**Precise current state (repo vs. Clay, per [[built-means-in-the-live-tool]]):** a 7-Function pipeline and a 22-node Clay Workflow (`wf_0tiane7qgXQ6PH9UdBA`) are BUILT AND LIVE in Clay, validating clean and ending at `send_ready=HOLD` with no send node. All 7 rows in the hardened slice are HOLD (fail-closed working as designed). Workflow was briefly blocked at node 6 by a Clay platform bug (agent-node `edit_node` silently drops input-token bindings, reproduced 5 ways) — fixed via a manual UI pin-bind, not a code fix; a Clay bug report was drafted but not filed (Dallas's call, not urgent). **Nothing has sent, nothing is loaded to a real campaign.** Workbook spend: 51 credits/52 actions MTD (Clay Usage page, authoritative — the ledger undercounts, see [[clay-credit-ledger-state-jul16]]). The real 150-200-account signal-first universe wave is gated as a separate, not-yet-approved credit GO. Ties to [[clay-golden-standard-and-motion-runbook]], [[clay-functions-build-status]], [[cost-mandate-strike-room-accounts-jul16-17]].

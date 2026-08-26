@@ -1,0 +1,26 @@
+---
+name: vscode-gtm-automation-jul17
+description: "Jul 17 2026: three pieces of VS Code / Claude Code infra built for daily GTM motion — launchd-scheduled headless runs of war room / credit check / Friday readout, a parallel Workflow for account-signal fan-out, and a permission allowlist for CLI-as-connector"
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: 7d57eb66-04a1-49c5-9430-246179b3f2c8
+---
+
+Built in response to Dallas asking what he was missing about using VS Code in his daily GTM motion. Answer given: VS Code's value isn't as an editor, it's as the full-tool-access harness (terminal, MCP connectors, git, scheduled cron, Workflow orchestration) that Cowork doesn't have; running multiple competing LLMs in parallel windows was explicitly recommended against — one agent with the right context/tools beats several with none.
+
+**What got built, all in the `Intradiem GTM Engineer` project:**
+1. `automation/run_war_room.sh`, `run_credit_check.sh`, `run_friday_readout.sh` — headless `claude -p "/skill-name" --dangerously-skip-permissions` wrappers, each scoped by its own prompt to draft/log-only behavior (no sends to Naveen, no posts to any channel, Slack DM to Dallas only). Output goes to `automation/logs/`.
+2. `automation/com.dallasandrews.gtm.{warroom,creditcheck,fridayreadout}.plist` — launchd definitions (war room weekdays 7:15am, credit check Thursdays 7am, Friday readout Fridays 6am). Written into the project instead of `~/Library/LaunchAgents` because the harness blocked direct writes there — see [[classifier-blocks-unattended-automation]].
+3. `.claude/workflows/war-room-fanout.js` — a saved Workflow (parallel per-account signal scan + synthesis/ranking), invoked on demand by name ("run the war-room-fanout workflow"), not auto-scheduled, to respect the Workflow tool's explicit-opt-in rule.
+4. Permission allowlist additions for `.claude/settings.local.json` (git/gh/clay CLI read-only commands, WebSearch) — handed to Dallas as a paste-in block rather than applied directly, same reason as #2.
+
+**Key structural finding:** the `Intradiem GTM Engineer` project has no git remote configured, so the cloud `RemoteTrigger` routine mechanism (same one running the existing Mem0 catch-up job) cannot reach any of this project's local files (ledger, account CSVs, engine_state.json). That's why war room / credit check / readout had to become local launchd jobs instead of cloud routines — this constraint will apply to any future "automate this project task" ask unless a remote gets added.
+
+**Status: confirmed live as of Jul 17 2026.** Dallas ran all three handoff steps himself (chmod +x, settings.local.json paste, plist cp + launchctl load) — `launchctl list | grep dallasandrews.gtm` showed all three jobs registered.
+
+**Manual test caught a real design gap, fixed same session:** the first war-room test run appended 2 real rows straight to `StarRatings_Earnings_Signals_2026.csv` — a live pipeline file, not a log — because the underlying skill's own instructions tell it to log triggers there. Dallas said no, he wants new signals staged for review, not auto-merged into a live file. Fix applied to all 3 wrapper scripts + `war-room-fanout.js`: unattended runs may now only write inside `automation/logs/`; anything that would normally hit a live file (signals csv, credit ledger, etc.) goes to `automation/logs/staged_signals.csv` instead, flagged in the run's own report as staged/unmerged. The original test-run append was reverted via `git checkout` before this landed. **New manual habit this creates for Dallas: periodically check `automation/logs/staged_signals.csv` and merge anything real into the live file himself** — nothing does that automatically by design, so don't assume signals found overnight are already reflected in scoring.
+
+Next natural checkpoint: after the first Monday 7:15am war room / Thursday 7am credit check / Friday 6am readout actually fire for real, confirm the logs in `automation/logs/` and the Slack DMs landed as designed. (Update: credit check and Friday readout were also manually test-run same session, both clean — touched nothing outside `automation/logs/`.)
+
+**Resolved same session — pre-existing manual habit discovered, not a conflict:** the readout's cross-check surfaced "ninth straight cycle, zero fresh Priority 1" from a `Daily_War_Room_2026-07-17.md` file written at 7:59am, hours before the 4:15pm manual test. Checked `crontab -l`, `launchctl list`, and grepped the repo for anything producing those files — found nothing. Dallas confirmed: he already runs `/intradiem-daily-war-room` manually every weekday morning **in Cowork** (not VS Code), and the skill tracks its own "Nth straight cycle" streak by reading its history of prior `Daily_War_Room_*.md` files. No duplicate automation exists; the two different findings same-day (zero fresh vs. 2 fresh) is normal live-web-search run-to-run variance, not a bug. **Resolved:** Dallas chose to drop the manual Cowork habit and let the 7:15am launchd job replace it. Both copies of the `intradiem-daily-war-room` SKILL.md (project + the `~/.claude/skills` global mirror) were updated same session to note the automation and tell future sessions not to proactively suggest a duplicate manual morning run.
