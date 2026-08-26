@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+:root{--forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--ink:#15231B;--ink-soft:#3E4D44;--dim:#7A877E;--paper:#FAFBF7;--card:#FFFFFF;--mist:#F0F4ED;--mist2:#E7EEE3;--line:#E2E7DD;--line2:#D4DCCE;--spark:#FE5000;--gold:#E0A23B;}
+*{box-sizing:border-box;margin:0;padding:0}
+@media print{body{zoom:1.333333}}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:9.2pt;line-height:1.5}
+.page{page-break-after:always;padding:10pt 40pt 6pt}
+.page:last-child{page-break-after:auto}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:6.6pt;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:6pt}
+.eyebrow .sp{color:var(--spark)}
+h1.sec{font-family:'Playfair Display',serif;font-size:21pt;font-weight:800;color:var(--forest);margin-bottom:10pt;line-height:1.15}
+h2.sub{font-family:'Playfair Display',serif;font-size:12.5pt;font-weight:700;color:var(--green);margin:12pt 0 6pt}
+p{margin-bottom:7pt;color:var(--ink-soft)}
+p strong{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:7pt 0;font-size:7.8pt}
+th{font-family:'JetBrains Mono',monospace;font-size:6.4pt;letter-spacing:.12em;text-transform:uppercase;color:var(--forest);text-align:left;padding:5pt 7pt;border-bottom:1.5pt solid var(--forest);background:var(--mist)}
+td{padding:4pt 6pt;border-bottom:.6pt solid var(--line);vertical-align:top;color:var(--ink-soft)}
+tr:nth-child(even) td{background:var(--mist)}
+td:first-child{color:var(--ink);font-weight:500}
+.callout{background:var(--mist);border-left:2.5pt solid var(--green);padding:8pt 11pt;border-radius:0 4pt 4pt 0;margin:8pt 0}
+.callout.spark{border-left-color:var(--spark)}
+.callout.dark{background:var(--forest);border-left-color:var(--lime);color:#E8F0E9}
+.callout.dark p, .callout.dark{color:#E8F0E9}
+.callout.dark strong{color:var(--lime)}
+/* contact pages */
+.chead{background:var(--forest);color:#fff;border-radius:6pt;padding:12pt 14pt;margin-bottom:10pt;display:flex;justify-content:space-between;align-items:flex-start}
+.chead .num{font-family:'JetBrains Mono',monospace;font-size:7pt;letter-spacing:.2em;color:var(--lime);margin-bottom:3pt}
+.chead h3{font-family:'Playfair Display',serif;font-size:15pt;font-weight:800;line-height:1.1}
+.chead .title{font-size:8.6pt;color:#CBD9CE;margin-top:2pt}
+.chips{text-align:right}
+.chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:6.2pt;letter-spacing:.1em;text-transform:uppercase;padding:2.5pt 6pt;border-radius:8pt;margin:0 0 3pt 3pt;background:rgba(182,217,76,.18);color:var(--lime);border:.6pt solid rgba(182,217,76,.5)}
+.chip.hot{background:rgba(254,80,0,.15);color:#FFB08A;border-color:rgba(254,80,0,.5)}
+.touch{background:var(--card);border:.8pt solid var(--line2);border-radius:5pt;padding:8pt 11pt;margin-bottom:7pt;page-break-inside:avoid}
+.touch .tlabel{font-family:'JetBrains Mono',monospace;font-size:6.4pt;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:3pt}
+.touch .tlabel .day{color:var(--spark)}
+.touch .subj{font-weight:700;color:var(--forest);font-size:9.4pt;margin-bottom:4pt;font-family:'DM Sans',sans-serif}
+.touch p{margin-bottom:5pt;font-size:8.8pt}
+.touch p:last-child{margin-bottom:0}
+.touch.live{background:var(--mist);border-color:var(--green)}
+.touch.live .tlabel{color:var(--forest)}
+.script-line{margin-bottom:4.5pt;font-size:8.8pt}
+.script-line em.slab{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:6.6pt;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:600;display:block;margin-bottom:1pt}
+.sig{font-family:'JetBrains Mono',monospace;font-size:7.6pt;color:var(--dim)}
+.foot{display:none}
+
+ul,ol{margin:0 0 7pt 15pt;color:var(--ink-soft)}
+li{margin-bottom:3.5pt;font-size:8.9pt;line-height:1.45}
+li strong{color:var(--ink)}
+code{font-family:'JetBrains Mono',monospace;font-size:7.6pt;background:var(--mist2);padding:1pt 3pt;border-radius:2pt;color:var(--forest)}
+h2.sub{page-break-after:avoid}
+.page .foot{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:6pt;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);border-top:.6pt solid var(--line);padding-top:5pt;margin-top:9pt}

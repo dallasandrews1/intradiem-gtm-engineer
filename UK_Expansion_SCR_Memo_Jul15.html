@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UK Expansion — Jul 15 2026</title>
+<style>
+  :root {
+    --ink: #14181F;
+    --paper: #FAF8F6;
+    --orange: #FE5000;
+    --hl-fact: #e7efe4;
+    --hl-tension: #fdeae2;
+    --hl-anchor: #e8edf2;
+    --muted: #6b7280;
+    --rule: #d9d4cd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #eceae6;
+    color: var(--ink);
+    line-height: 1.5;
+    font-size: 13.5px;
+  }
+  .page {
+    background: var(--paper);
+    max-width: 850px;
+    margin: 24px auto;
+    padding: 56px 64px 64px;
+    box-shadow: 0 2px 14px rgba(20,24,31,.12);
+  }
+  @media print {
+    body { background: var(--paper); }
+    .page { box-shadow: none; margin: 0 auto; page-break-after: always; }
+  }
+  .topbar {
+    display: flex; justify-content: space-between;
+    font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700; margin-bottom: 34px;
+  }
+  .topbar .tag { color: var(--orange); }
+  h1 { font-size: 27px; line-height: 1.22; letter-spacing: -.01em; margin-bottom: 12px; }
+  .byline { font-size: 12px; color: var(--muted); padding-bottom: 18px; border-bottom: 2px solid var(--ink); margin-bottom: 8px; }
+  .byline strong { color: var(--ink); }
+  .sec { padding: 22px 0 20px; border-top: 1px solid var(--rule); }
+  .sec:first-of-type { border-top: none; }
+  .sec h2 { font-size: 17px; display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .dash { display: inline-block; width: 26px; height: 4px; border-radius: 2px; }
+  .d-s { background: #5b7a99; } .d-c { background: var(--orange); } .d-r { background: #5d8a5e; }
+  p, li { margin-bottom: 8px; }
+  ul { padding-left: 20px; margin: 6px 0 4px; }
+  li { padding-left: 2px; }
+  .hl-fact    { background: var(--hl-fact);    padding: 1px 4px; border-radius: 2px; }
+  .hl-tension { background: var(--hl-tension); padding: 1px 4px; border-radius: 2px; }
+  .hl-anchor  { background: var(--hl-anchor);  padding: 1px 4px; border-radius: 2px; }
+  sup { color: var(--orange); font-weight: 700; font-size: 9px; }
+  .lede { font-weight: 700; }
+  .ask {
+    margin-top: 14px; border: 1.5px solid var(--ink); border-radius: 4px;
+    padding: 14px 18px; background: #fff;
+  }
+  .ask h3 { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+  .ask ol { padding-left: 20px; }
+  .ask li { margin-bottom: 5px; }
+  .foot { margin-top: 26px; font-size: 10.5px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; }
+  /* ---------- page 2 ---------- */
+  .p2 h1 { font-size: 30px; margin-bottom: 10px; }
+  .p2 .intro { color: #3f4650; max-width: 620px; margin-bottom: 26px; }
+  .p2sec { border-top: 1px solid var(--rule); padding: 18px 0 14px; }
+  .p2sec .hd { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .p2sec .hd h2 { font-size: 16px; }
+  .p2sec .hd .q { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+  .s-col { color: #5b7a99; } .c-col { color: var(--orange); } .r-col { color: #5d8a5e; }
+  .p2sec .gist { font-size: 12.5px; color: #3f4650; margin-bottom: 14px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .card h4 { font-size: 12.5px; margin-bottom: 4px; display: flex; gap: 7px; align-items: baseline; }
+  .num {
+    flex: none; width: 16px; height: 16px; border-radius: 50%; background: var(--ink); color: #fff;
+    font-size: 9.5px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center;
+    position: relative; top: 2px;
+  }
+  .card p { font-size: 11.5px; color: #3f4650; margin: 0; }
+  .strip { border-top: 2px solid var(--ink); margin-top: 26px; padding-top: 14px; }
+  .strip h3 { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+  .strip .two { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .strip h4 { font-size: 13px; border-top: 2px solid var(--ink); padding-top: 8px; margin-bottom: 5px; }
+  .strip p, .strip li { font-size: 11.5px; color: #3f4650; }
+  .strip ul { padding-left: 18px; }
+  .readaloud { background: #fff; border: 1px dashed var(--rule); border-radius: 4px; padding: 12px 16px; margin-top: 10px; font-size: 11.5px; }
+  .readaloud em { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 : THE MEMO ================= -->
+<div class="page">
+  <div class="topbar">
+    <div><span>Internal</span> &nbsp;<span class="tag">Draft for discussion</span></div>
+    <div>July 15, 2026</div>
+  </div>
+
+  <h1>UK Expansion:<br>Extending the Engine, Not Copying the US Playbook</h1>
+  <div class="byline"><strong>Prepared by</strong> &nbsp;Dallas Andrews (GTM Engineer) &nbsp;·&nbsp; For discussion with Naveen Thilagan · M. Rumins · J. O'Hagan (UK)</div>
+
+  <!-- SITUATION -->
+  <div class="sec">
+    <h2><span class="dash d-s"></span> Situation</h2>
+    <p><span class="hl-anchor">Naveen asked me on Monday to extend the engine behind the US motion to the UK business.</span><sup>1</sup> That's what this meeting is for. Where the US motion stands today:</p>
+    <ul>
+      <li><span class="hl-anchor">The Star Ratings motion is live: 143 contacts staged behind human approval gates, first sequences drafted, nothing sends without sign-off.</span><sup>2</sup> Sales is already asking for more. After reviewing the Centene contact and messaging work, Nathan asked us to run a batch of his accounts next.</li>
+      <li>The engine stood up a second motion (back-office) in two days: built Monday, and by Tuesday night a 59-contact US and UK sample was pulled and fully email-verified at 86 credits against a 150-to-250 estimate.</li>
+      <li>Spend is disciplined: <span class="hl-anchor">864 of 5,000 monthly Clay credits used to date (as of Jul 14), and every run is estimated and logged before it happens.</span><sup>3</sup></li>
+    </ul>
+    <p>The part that matters for the UK: everything except sourcing carries over for free. Universe tables, grading formulas, tier logic, committee specs and send gates all transfer to a new market at zero credits. Only contact sourcing and signal enrichment cost money.</p>
+  </div>
+
+  <!-- COMPLICATION -->
+  <div class="sec">
+    <h2><span class="dash d-c"></span> Complication</h2>
+    <p class="lede"><span class="hl-tension">The engine works where one thing exists: a public, recurring customer-service score with money attached. We haven't confirmed what that score is in the UK, or whether it sits in the vertical Intradiem wants to win first.</span><sup>4</sup></p>
+    <ul>
+      <li><span class="hl-tension">The blocker isn't data or credits. It's a choice that hasn't been made: which forcing function.</span><sup>5</sup> Three candidates exist (Ofwat C-MeX in water, Citizens Advice star ratings in energy, FCA complaints data in financial services), and each points at a different universe, different personas and different messaging. Build before choosing and we build the wrong table.</li>
+      <li>The default path, copying the US motion onto a list of UK contact-center accounts, spends credits on a cold, unranked universe with no trigger behind it. That's the exact spend the credit discipline exists to prevent.</li>
+    </ul>
+    <p>What it costs to leave the choice unmade:</p>
+    <ul>
+      <li><span class="hl-tension">C-MeX results land once a year, in the autumn. If water is the right lane and nothing is built when rankings drop, the best UK trigger of the year hits an empty table.</span><sup>6</sup></li>
+      <li>Back Office Optimizer goes GA in September, and the financial-services lane (claims, disputes, collections) is that product's home turf. Capita and Foundever, both with large UK operations, already sit in our back-office cohort with no UK lane to run in.</li>
+    </ul>
+  </div>
+
+  <!-- RECOMMENDATION -->
+  <div class="sec">
+    <h2><span class="dash d-r"></span> Recommendation</h2>
+    <p class="lede">Approve a two-week verification pass at zero credits, with water and C-MeX as the working hypothesis. If your install-base or lost-deal picture points somewhere else, that changes the pick, not the plan:</p>
+    <ul>
+      <li><span class="hl-fact">Week one: verify the three scoring sources and pull the public tables. Imports are free, so this costs nothing.</span><sup>7</sup> Week two: a graded, tiered UK universe in its own workbook, a first-cut ICP for the lead vertical, and a priced sourcing estimate this group approves or kills.</li>
+      <li><span class="hl-fact">The back-office build is the precedent: stood up in a day, sampled the next, 100% verification rate, well under its credit estimate.</span><sup>8</sup> Same gates apply here. Nothing sends and nothing spends past the logged estimate until the owners in this room say go.</li>
+    </ul>
+    <p><span class="hl-fact">The other two options are a straight copy of the US motion, which spends credits with no trigger behind it, or waiting for the Stars motion's first results, which gives up the autumn C-MeX window and the September BOO alignment. The verification pass is the only option that costs nothing and keeps both windows open.</span><sup>9</sup></p>
+
+    <div class="ask">
+      <h3>Decisions needed from this meeting</h3>
+      <ol>
+        <li><strong>Pick the lead vertical.</strong> Confirm water and C-MeX as the working hypothesis, or override it with what you know about UK product fit, logos or partner motion.</li>
+        <li><strong>Send the UK picture by Friday, July 17.</strong> Current UK customers, near-misses and closed-lost deals, plus any prior work on UK regulatory scoring so we don't rebuild known ground.</li>
+        <li><strong>Agree the readout date.</strong> Graded UK universe and a priced sourcing estimate back to this group by <strong>Friday, July 24</strong>. Owner: Dallas. Cost to that point: zero credits.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="foot">US figures above come straight from the Clay usage ledger. UK regulatory details (C-MeX framework and timing, Citizens Advice cadence, FCA data granularity) get verified in week one before anything is built on them.</div>
+</div>
+
+<!-- ================= PAGE 2 : PRESENTER NOTES (DALLAS ONLY) ================= -->
+<div class="page p2">
+  <div class="topbar">
+    <div><span class="tag">Presenter notes. Not for the room.</span></div>
+    <div>Page 2 of 2</div>
+  </div>
+
+  <h1>Why each piece sits where it does.</h1>
+  <p class="intro">Same SCR spine, tuned for a listen-first intro meeting: the recommendation is the cheapest possible ask, a free two-week pass, so anything the room pushes back on becomes input instead of a fight. Each number below maps to a marker on page 1.</p>
+
+  <div class="p2sec">
+    <div class="hd"><h2><span class="s-col">S</span> &nbsp;Situation</h2><div class="q s-col">What's changing?</div></div>
+    <p class="gist">Everything in this section is something Naveen, Rumins or O'Hagan already accepts or can't dispute. If anyone argues with the Situation, stop and settle that before moving on.</p>
+    <div class="cards">
+      <div class="card"><h4><span class="num">1</span>Open on their own ask</h4><p>First line is Naveen's Monday request, paraphrased, not quoted. Nobody argues with a meeting they called, and nobody's casual email ends up on display in front of the UK team.</p></div>
+      <div class="card"><h4><span class="num">2</span>Anchor on proof they accept</h4><p>143 staged, gates held, and Nathan asking for more accounts. His behavior is the proof. Stronger than pasting his Slack message, and it keeps him looking sharp.</p></div>
+      <div class="card"><h4><span class="num">3</span>Tie to what this room is measured on</h4><p>Spend discipline. 864 of 5,000 logged (as of Jul 14) sets the frame of "careful with money" before any ask lands.</p></div>
+    </div>
+  </div>
+
+  <div class="p2sec">
+    <div class="hd"><h2><span class="c-col">C</span> &nbsp;Complication</h2><div class="q c-col">Why do something now?</div></div>
+    <p class="gist">One sentence carries the tension. Every bullet under it is evidence for that sentence, not a competing claim. This was the main rewrite from the v0 straw-man, which had four open questions doing the job of one tension.</p>
+    <div class="cards">
+      <div class="card"><h4><span class="num">4</span>State it in one sentence</h4><p>The UK score isn't confirmed and might not match the vertical. If you say one thing in the meeting, it's the bold line.</p></div>
+      <div class="card"><h4><span class="num">5</span>Root cause, not symptom</h4><p>The root cause is an unmade decision, not missing data. Framed that way, the fix is a choice this room can make today instead of a research project.</p></div>
+      <div class="card"><h4><span class="num">6</span>Price the wait</h4><p>Two real windows: autumn C-MeX results and September BOO GA. Don't state the C-MeX month harder than "autumn" in the room. The exact date gets confirmed in week one.</p></div>
+    </div>
+  </div>
+
+  <div class="p2sec">
+    <div class="hd"><h2><span class="r-col">R</span> &nbsp;Recommendation</h2><div class="q r-col">What should we do?</div></div>
+    <p class="gist">An approach, not a build request. And it ends with an explicit ask block: decisions, owner, date, cost. A memo that ends on "this is the best path forward" ends on a conclusion. This one ends on a decision.</p>
+    <div class="cards">
+      <div class="card"><h4><span class="num">7</span>Sell the pass, not the table</h4><p>A free, gated, reversible verification pass is a plan anyone in the room can defend upward. "Let me build the UK table" is a build request. Don't make it.</p></div>
+      <div class="card"><h4><span class="num">8</span>Precedent over promise</h4><p>The back-office build is proof the fork works: done last week, under budget, fully verified. Saying yes to a repeat of a thing that worked is easy.</p></div>
+      <div class="card"><h4><span class="num">9</span>Name the alternatives, then price them</h4><p>Copy loses on credits. Waiting loses on windows. Both stay on the table and both lose on one number each. Handles "why not just wait" before anyone asks it.</p></div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <h3>Run these before 9am</h3>
+    <div class="two">
+      <div>
+        <h4>The 30-second version</h4>
+        <p>Read only the highlighted lines. This is the hallway pitch if the meeting compresses:</p>
+        <div class="readaloud">"You asked me to extend the engine to the UK. The US motion is live, Sales is asking for more, and spend is disciplined. The engine works where a public, money-attached service score exists. We haven't confirmed the UK's, and that choice is the blocker, not data. So: two-week verification pass, zero credits, same gates, readout July 24. I need the vertical pick and your install-base picture."<br><em>About 25 seconds. If the argument doesn't survive this cut, the structure is wrong.</em></div>
+      </div>
+      <div>
+        <h4>Flex points and open items</h4>
+        <ul>
+          <li><strong>If the room kills water:</strong> swap the pick, keep the ask. The process is the asset, not the guess. Concede fast.</li>
+          <li><strong>If they say wait for Stars results:</strong> agree with the instinct, then price it. Waiting costs the autumn window and the September alignment. The pass is a free way to wait.</li>
+          <li><strong>Confirm Rumins' first name before the meeting.</strong> The v0 note said Steve; Naveen's Monday email said Matt. The doc stays surname-only until confirmed.</li>
+          <li><strong>Confirm the C-MeX publication month in week one.</strong> It's the one outside claim carrying real weight in the memo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+{
+ "generated": "2026-07-31 night",
+ "gate_note": "All contacts inside the locked Jul 31 section 9 load lists. Fresh pool hand-checked against the 101-account customer file (zero hits). Resurrection cohort verified by send-event history (zero customer sends). Campaigns are Draft; loading is staging, Start stays Dallas's hand.",
+ "held_out": {
+  "resurrection": [
+   "Yale (Devoted) - source first name is 'W.', would render 'Hi W.,'; needs real first name from Clay export"
+  ],
+  "awaiting_clay_export": [
+   "Resurrection: Stewart, McAdam, Thorstad (Medica); Shah, O'Connor (Devoted); Lewis, Hoseini (Centene); Katula (Clever Care); Lee, Choo, Gomez (CalOptima); Oubre (Blue Shield CA); Holmes (Clover); Martin, Romay (Solis); Sugai, Morgan (HMSA); Weaver, Munoz (Zing); Graham (CHPW); Kurup (Point32); Lowman (ATRIO); Donna S. (L.A. Care); Remington P. (IEHP)",
+   "Finance: Ingram (L.A. Care), Martin (Baystate), Hoenstine (Zing), Chio (IEHP), Battersby (CHPW), Faulring (CHPW), Huang (CalOptima)",
+   "Quality: Rivera (NYC H+H), Breuckman (CHPW)"
+  ]
+ },
+ "loads": [
+  {
+   "campaignId": "cam_sh3JCJoxtEHyjGrsw",
+   "campaign": "Stars - Resurrection (Nate)",
+   "deduplicate": true,
+   "leads": [
+    {
+     "email": "shawn.larsen@medica.com",
+     "firstName": "Shawn",
+     "companyName": "Medica",
+     "companyDomain": "medica.com",
+     "customVariables": {
+      "plan_name": "Medica"
+     },
+     "lastName": "Larsen"
+    },
+    {
+     "email": "julee.smith@medica.com",
+     "firstName": "Julee",
+     "companyName": "Medica",
+     "companyDomain": "medica.com",
+     "customVariables": {
+      "plan_name": "Medica"
+     },
+     "lastName": "Smith"
+    },
+    {
+     "email": "melissa.chapman@devoted.com",
+     "firstName": "Mel",
+     "companyName": "Devoted Health",
+     "companyDomain": "devoted.com",
+     "customVariables": {
+      "plan_name": "Devoted"
+     },
+     "lastName": "Chapman"
+    },
+    {
+     "email": "jrosenbaum@devoted.com",
+     "firstName": "Julia",
+     "companyName": "Devoted Health",
+     "companyDomain": "devoted.com",
+     "customVariables": {
+      "plan_name": "Devoted"
+     },
+     "lastName": "Rosenbaum"
+    },
+    {
+     "email": "hilary.gerstein@devoted.com",
+     "firstName": "Hilary",
+     "companyName": "Devoted Health",
+     "companyDomain": "devoted.com",
+     "customVariables": {
+      "plan_name": "Devoted"
+     },
+     "lastName": "Gerstein"
+    },
+    {
+     "email": "dquinn@devoted.com",
+     "firstName": "Dan",
+     "companyName": "Devoted Health",
+     "companyDomain": "devoted.com",
+     "customVariables": {
+      "plan_name": "Devoted"
+     },
+     "lastName": "Quinn"
+    },
+    {
+     "email": "mhiltibidal@centene.com",
+     "firstName": "Matt",
+     "companyName": "Centene",
+     "companyDomain": "centene.com",
+     "customVariables": {
+      "plan_name": "Centene"
+     },
+     "lastName": "Hiltibidal"
+    },
+    {
+     "email": "steven.haggard@ccmapd.com",
+     "firstName": "Steven",
+     "companyName": "Clever Care Health Plan",
+     "companyDomain": "ccmapd.com",
+     "customVariables": {
+      "plan_name": "Clever Care"
+     },
+     "lastName": "Haggard"
+    },
+    {
+     "email": "thomas.manetti@ccmapd.com",
+     "firstName": "Thomas",
+     "companyName": "Clever Care Health Plan",
+     "companyDomain": "ccmapd.com",
+     "customVariables": {
+      "plan_name": "Clever Care"
+     },
+     "lastName": "Manetti"
+    },
+    {
+     "email": "richard.greene@ccmapd.com",
+     "firstName": "Richard",
+     "companyName": "Clever Care Health Plan",
+     "companyDomain": "ccmapd.com",
+     "customVariables": {
+      "plan_name": "Clever Care"
+     },
+     "lastName": "Greene"
+    },
+    {
+     "email": "sue.dahlkamp@imperialhealthplan.com",
+     "firstName": "Sue",
+     "companyName": "Imperial Health Plan",
+     "companyDomain": "imperialhealthplan.com",
+     "customVariables": {
+      "plan_name": "Imperial"
+     },
+     "lastName": "Dahlkamp"
+    },
+    {
+     "email": "andranik.barsegyan@imperialhealthholdings.com",
+     "firstName": "Andranik",
+     "companyName": "Imperial Health Holdings",
+     "companyDomain": "imperialhealthholdings.com",
+     "customVariables": {
+      "plan_name": "Imperial"
+     },
+     "lastName": "Barsegyan"
+    },
+    {
+     "email": "meeta.bindra@imperialhealthplan.com",
+     "firstName": "Meeta",
+     "companyName": "Imperial Health Plan",
+     "companyDomain": "imperialhealthplan.com",
+     "customVariables": {
+      "plan_name": "Imperial"
+     },
+     "lastName": "Bindra"
+    },
+    {
+     "email": "kassie.maroney@blueshieldca.com",
+     "firstName": "Kassie",
+     "companyName": "Blue Shield of California",
+     "companyDomain": "blueshieldca.com",
+     "customVariables": {
+      "plan_name": "Blue Shield of California"
+     },
+     "lastName": "Maroney"
+    },
+    {
+     "email": "giancarla.addison@cloverhealth.com",
+     "firstName": "Giancarla",
+     "companyName": "Clover Health",
+     "companyDomain": "cloverhealth.com",
+     "customVariables": {
+      "plan_name": "Clover"
+     },
+     "lastName": "Addison"
+    },
+    {
+     "email": "peter.kuipers@cloverhealth.com",
+     "firstName": "Peter",
+     "companyName": "Clover Health",
+     "companyDomain": "cloverhealth.com",
+     "customVariables": {
+      "plan_name": "Clover"
+     },
+     "lastName": "Kuipers"
+    },
+    {
+     "email": "csoler@solishealthplans.com",
+     "firstName": "Carlos",
+     "companyName": "Solis Health Plans",
+     "companyDomain": "solishealthplans.com",
+     "customVariables": {
+      "plan_name": "Solis"
+     },
+     "lastName": "Soler"
+    },
+    {
+     "email": "anton_teehankee@hmsa.com",
+     "firstName": "Anton",
+     "companyName": "HMSA",
+     "companyDomain": "hmsa.com",
+     "customVariables": {
+      "plan_name": "HMSA"
+     },
+     "lastName": "Teehankee"
+    },
+    {
+     "email": "sarodes@nychhc.org",
+     "firstName": "Sudha",
+     "companyName": "NYC Health + Hospitals",
+     "companyDomain": "nychhc.org",
+     "customVariables": {
+      "plan_name": "Health + Hospitals"
+     }
+    },
+    {
+     "email": "mark.dabney@chpw.org",
+     "firstName": "Mark",
+     "companyName": "Community Health Plan of Washington",
+     "companyDomain": "chpw.org",
+     "customVariables": {
+      "plan_name": "CHPW"
+     },
+     "lastName": "Dabney"
+    },
+    {
+     "email": "kristen.dowd@point32health.org",
+     "firstName": "Kristen",
+     "companyName": "Point32Health",
+     "companyDomain": "point32health.org",
+     "customVariables": {
+      "plan_name": "Point32"
+     },
+     "lastName": "Dowd"
+    },
+    {
+     "email": "jasmine.stone@atriohp.com",
+     "firstName": "Jasmine",
+     "companyName": "ATRIO Health Plans",
+     "companyDomain": "atriohp.com",
+     "customVariables": {
+      "plan_name": "ATRIO"
+     },
+     "lastName": "Stone"
+    },
+    {
+     "email": "deb.schweikert@cambiahealth.com",
+     "firstName": "Deborah",
+     "companyName": "Cambia Health Solutions",
+     "companyDomain": "cambiahealth.com",
+     "customVariables": {
+      "plan_name": "Cambia"
+     },
+     "lastName": "Schweikert"
+    }
+   ]
+  },
+  {
+   "campaignId": "cam_2gy9hmEvMjYEuPZ8A",
+   "campaign": "Stars - Fresh Pool / Finance (Nate)",
+   "deduplicate": true,
+   "leads": [
+    {
+     "email": "laure.goldberg@point32health.org",
+     "firstName": "Laure",
+     "lastName": "Goldberg",
+     "companyName": "Point32Health",
+     "companyDomain": "point32health.org",
+     "customVariables": {
+      "plan_name": "Point32",
+      "qbp_avg": "3.5",
+      "opener_line": "from the finance seat the 4.0 line is really a quality-bonus question, and Point32's book looks to be sitting at about 3.5, one half-star from the bonus turning on.",
+      "contract_line": "For a combined book like Harvard Pilgrim and Tufts sitting at 3.5, the half-star between here and 4.0 is revenue the plan still controls this year.",
+      "vm_hook": "I sent you a note on the quality-bonus math at Point32, a 3.5 book one half-star from the bonus line, and why the points that are still movable this cycle are operational, not clinical.",
+      "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version of my note: Point32 looks to be about a half-star from the 4.0 bonus line, and the measures that still move this cycle are the service ones, decided in day-to-day service operations during peak weeks. If modeling that cliff is on your desk, worth fifteen minutes on it whenever it suits? Thanks."
+     }
+    },
+    {
+     "email": "michael.marrone@point32health.org",
+     "firstName": "Michael",
+     "lastName": "Marrone",
+     "companyName": "Point32Health",
+     "companyDomain": "point32health.org",
+     "customVariables": {
+      "plan_name": "Point32",
+      "qbp_avg": "3.5",
+      "opener_line": "one number kept my attention this week: 3.5. That's about where Point32's weighted average sits, and at 3.5 the whole quality-bonus question comes down to a half-star of mostly operational measures.",
+      "contract_line": "At 3.5, Point32 is in the narrow band where this measurement year still decides which side of the bonus line the book lands on.",
+      "vm_hook": "I emailed you about Point32's combined Harvard Pilgrim and Tufts book sitting near 3.5, and why one improvement in the service measures moves the combined book at once.",
+      "voice_script": "Hey, Nathan Belfield here, appreciate the connect. The reason I reached out: at roughly 3.5, Point32's combined book moves together once the service measures move, and that's happening in the live weeks, not in October. If that model crosses your desk, worth a short call sometime? Thanks."
+     }
+    },
+    {
+     "email": "mike.rains@cambiahealth.com",
+     "firstName": "Mike",
+     "lastName": "Rains",
+     "companyName": "Cambia Health Solutions",
+     "companyDomain": "cambiahealth.com",
+     "customVariables": {
+      "plan_name": "Cambia",
+      "qbp_avg": "3.0",
+      "opener_line": "what stood out on Cambia's book is that both contracts sit at 3.0 exactly, so the average isn't hiding anything: the whole book is one operational push from moving together.",
+      "contract_line": "With both Cambia contracts at 3.0, one improvement in the service measures moves the entire book at once, and it's rare for one initiative to carry that much.",
+      "vm_hook": "I sent a note on Cambia's two contracts both sitting at 3.0, and why that makes the operational measures unusually valuable this cycle.",
+      "voice_script": "Hey, it's Nathan Belfield, appreciate you connecting. The thing that caught my eye: both of Cambia's contracts sit at exactly 3.0, so one push in the service measures moves the whole book together. That's a rare setup. If the star model is in your world, worth fifteen minutes sometime? Thanks."
+     }
+    },
+    {
+     "email": "kathryn.qin@blueshieldca.com",
+     "firstName": "Kathryn",
+     "lastName": "Qin",
+     "companyName": "Blue Shield of California",
+     "companyDomain": "blueshieldca.com",
+     "customVariables": {
+      "plan_name": "Blue Shield of California",
+      "qbp_avg": "3.5",
+      "opener_line": "at about 3.5, Blue Shield of California is inside the band where one half-star decides whether the quality bonus turns on, and the measures still movable this cycle are the operational ones.",
+      "contract_line": "For a book Blue Shield's size, the dollars on that half-star are large enough that holding service steady through the fall peak is a finance decision, not just a quality one.",
+      "vm_hook": "I emailed on Blue Shield's position near 3.5, one half-star from the bonus line, and why the movable points this cycle are operational.",
+      "voice_script": "Hey, Nathan Belfield here, thanks for connecting. My note in short: Blue Shield sits about a half-star from the 4.0 bonus line, and that half-star lives in the service measures being scored right now, in the live weeks. If you're modeling that exposure, worth fifteen minutes on it? Thanks."
+     }
+    },
+    {
+     "email": "clay.thornton@cloverhealth.com",
+     "firstName": "Clay",
+     "lastName": "Thornton",
+     "companyName": "Clover Health",
+     "companyDomain": "cloverhealth.com",
+     "customVariables": {
+      "plan_name": "Clover",
+      "qbp_avg": "3.5",
+      "opener_line": "at roughly 3.5, Clover sits one half-star from the bonus line, and for an MA-focused book that bonus is a bigger share of the economics than it is for a diversified payer.",
+      "contract_line": "For a book this concentrated in Medicare Advantage, the half-star decides the bonus and the bonus is a large share of the whole picture.",
+      "vm_hook": "I emailed about Clover sitting near 3.5, a half-star from the bonus, and why for an MA-focused book the operational measures are the highest-value points this cycle.",
+      "voice_script": "Hey, it's Nathan Belfield, appreciate the connect. Short version: Clover's about a half-star off the bonus line, and for a book as MA-focused as Clover's that half-star is real money. The measures that still move it this cycle are service measures, decided in the live weeks. If it's on your desk, worth a few minutes on it sometime? Thanks."
+     }
+    },
+    {
+     "email": "heather_miyasato@hmsa.com",
+     "firstName": "Heather",
+     "lastName": "Miyasato",
+     "companyName": "HMSA",
+     "companyDomain": "hmsa.com",
+     "customVariables": {
+      "plan_name": "HMSA",
+      "qbp_avg": "3.5",
+      "opener_line": "at about 3.5, HMSA sits one half-star from the 4.0 bonus line, and the measures still movable this measurement year are the operational ones, not the clinical ones.",
+      "contract_line": "For HMSA, holding service steady through the fall peak is what decides which side of the bonus line the book lands on before the number ever publishes.",
+      "vm_hook": "I sent you a note on HMSA's position near 3.5, one half-star from the quality bonus, and why the movable points this cycle are operational.",
+      "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. My note in one breath: HMSA's about a half-star from the bonus line, that half-star lives in the service measures, and those are decided in the live weeks between now and December. Worth fifteen minutes on the finance view whenever it suits? Thanks."
+     }
+    },
+    {
+     "email": "yangz7@nychhc.org",
+     "firstName": "Zhishen",
+     "lastName": "Yang",
+     "companyName": "NYC Health + Hospitals",
+     "companyDomain": "nychhc.org",
+     "customVariables": {
+      "plan_name": "Health + Hospitals",
+      "qbp_avg": "3.5",
+      "opener_line": "at roughly 3.5, the Health + Hospitals book sits one half-star from the bonus line, and for a safety-net plan, bonus dollars carry more weight in the budget than they do almost anywhere else.",
+      "contract_line": "For a public-system book, that half-star is one of the few revenue paths that doesn't require new membership or new rates, just execution in the service measures.",
+      "vm_hook": "I emailed about the plan's position near 3.5, one half-star from the bonus, and why the operational measures are the movable points this cycle.",
+      "voice_script": "Hey, it's Nathan Belfield, thanks for the connect. Short version: the book sits about a half-star from the 4.0 bonus line, and for a safety-net plan that bonus is one of the cleanest paths to new revenue there is. The deciding measures are operational, scored in the live weeks. Worth a short call sometime? Thanks."
+     }
+    },
+    {
+     "email": "mlynch@solishealthplans.com",
+     "firstName": "Michael",
+     "lastName": "Lynch",
+     "companyName": "Solis Health Plans",
+     "companyDomain": "solishealthplans.com",
+     "customVariables": {
+      "plan_name": "Solis",
+      "qbp_avg": "3.5",
+      "opener_line": "at about 3.5, Solis is one half-star from the 4.0 bonus line, and for an MA plan Solis's size, clearing that line changes how much rebate flows into next year's benefits.",
+      "contract_line": "For a book Solis's size, clearing 4.0 this cycle changes next year's benefit economics, which is why the timing matters more than the October release date suggests.",
+      "vm_hook": "I sent a note on Solis sitting near 3.5, one half-star from the bonus line, and why the movable measures this cycle are operational, not clinical.",
+      "voice_script": "Hey, it's Nathan Belfield, appreciate the connect. The reason I reached out: Solis is about a half-star from the bonus line, and clearing it feeds straight into next year's benefits and enrollment. The deciding measures are the service ones, scored in live weeks. Worth fifteen minutes whenever it works? Thanks."
+     }
+    }
+   ]
+  }
+ ]
+}

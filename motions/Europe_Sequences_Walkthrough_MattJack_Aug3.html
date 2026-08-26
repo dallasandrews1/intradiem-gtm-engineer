@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Europe Engine · UK Session · 3 Aug 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --id-green:#2CB56E;
+  --id-orange:#F58220;
+  --id-dark-green:#014637;
+  --id-light-green:#A5CE38;
+  --id-yellow:#FDBE3E;
+  --id-deep-green:#228751;
+  --id-blue:#0F4C99;
+  --id-text:#363636;
+  --id-white:#FFFFFF;
+  --id-callout-fill:#F2F2F2;
+  --id-font:'Open Sans', Tahoma, sans-serif;
+  --id-radius:8px;
+  --rule:rgba(1,70,55,.14);
+  --tint:rgba(44,181,110,.12);
+  --tint-soft:rgba(44,181,110,.08);
+  --otint:rgba(245,130,32,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;text-shadow:none}
+body{font-family:var(--id-font);color:var(--id-text);background:var(--id-callout-fill);line-height:1.55;font-size:15px;text-align:left}
+.sheet{max-width:1120px;margin:0 auto;background:var(--id-white);box-shadow:0 2px 24px rgba(1,70,55,.10)}
+.wrap{max-width:1060px;margin:0 auto}
+
+/* hero */
+.hero{background:var(--id-dark-green);color:var(--id-white);padding:64px 48px 52px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-30%;right:-10%;width:640px;height:640px;background:radial-gradient(circle,rgba(44,181,110,.3),transparent 62%);pointer-events:none}
+.hero .logo{width:187px;height:46px;margin-bottom:34px;position:relative}
+.hero .logo .wm{fill:var(--id-white)}
+.eyebrow{font-size:13px;font-weight:700}
+.hero .eyebrow{color:var(--id-white);margin-bottom:14px;position:relative}
+.hero h1{font-weight:700;font-size:44px;line-height:1.12;max-width:840px;color:var(--id-white);position:relative}
+.hero h1 .spark{border-bottom:5px solid var(--id-green)}
+.hero .sub{margin-top:18px;font-size:16.5px;color:var(--id-white);max-width:760px;position:relative}
+.hero .who{margin-top:26px;font-size:13px;font-weight:600;color:var(--id-white);position:relative}
+
+/* statband */
+.statband{background:var(--id-dark-green);color:var(--id-white);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.stat{padding:24px 28px;border-right:1px solid rgba(255,255,255,.14)}
+.stat:last-child{border-right:none}
+.stat .n{font-weight:700;font-size:30px;color:var(--id-white)}
+.stat .n::after{content:"";display:block;width:34px;height:3px;background:var(--id-green);margin-top:6px}
+.stat .l{font-size:13px;color:var(--id-white);margin-top:8px}
+
+/* sections */
+section{padding:48px;border-bottom:1px solid var(--rule)}
+.sec-eyebrow{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-bottom:10px}
+h2{font-weight:700;font-size:27px;line-height:1.18;margin-bottom:16px;color:var(--id-dark-green)}
+h3{color:var(--id-dark-green)}
+p{margin-bottom:12px;color:var(--id-text);max-width:860px}
+strong{font-weight:700}
+
+/* quote strip */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 6px}
+.q{background:var(--tint-soft);border:1px solid var(--tint);border-radius:var(--id-radius);padding:18px 20px}
+.q .t{font-size:15px;font-weight:600;line-height:1.45;color:var(--id-text)}
+.q .a{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-top:10px}
+
+/* lane cards */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.lane{border:1px solid var(--rule);border-radius:var(--id-radius);padding:22px 24px}
+.lane.now{border-left:4px solid var(--id-orange)}
+.lane.next{border-left:4px solid var(--id-green)}
+.lane .chip{font-size:13px;font-weight:700;display:inline-block;padding:3px 12px;border-radius:var(--id-radius);margin-bottom:12px;color:var(--id-dark-green)}
+.lane.now .chip{background:var(--otint)}
+.lane.next .chip{background:var(--tint)}
+.lane h3{font-weight:700;font-size:18px;margin-bottom:8px}
+.lane p{font-size:14px;margin-bottom:0}
+
+/* tables */
+table{width:100%;border-collapse:collapse;margin:18px 0 6px;font-size:14px}
+th{font-size:13px;font-weight:700;color:var(--id-deep-green);text-align:left;padding:10px 12px;border-bottom:2px solid var(--id-green)}
+td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:nth-child(even) td{background:var(--id-callout-fill)}
+td .why{font-size:13.5px}
+
+/* big number cards */
+.bignums{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.bn{border:1px solid var(--rule);border-radius:var(--id-radius);padding:20px 22px}
+.bn.hot{border-color:rgba(245,130,32,.55);border-width:2px}
+.bn .n{font-weight:700;font-size:30px;color:var(--id-dark-green)}
+.bn .l{font-size:13.5px;color:var(--id-text);margin-top:6px;line-height:1.45}
+
+/* campaign chip */
+.camp{display:flex;align-items:center;gap:14px;background:var(--id-callout-fill);border:1px solid var(--rule);border-radius:var(--id-radius);padding:14px 18px;margin:16px 0 4px;flex-wrap:wrap}
+.camp .id{font-size:13.5px;font-weight:600;color:var(--id-dark-green)}
+.camp .tag{font-size:13px;font-weight:700;padding:3px 12px;border-radius:var(--id-radius);background:var(--tint);color:var(--id-dark-green)}
+
+/* callout + gate */
+.callout{border-left:4px solid var(--id-orange);background:var(--otint);border-radius:0 var(--id-radius) var(--id-radius) 0;padding:16px 20px;margin:18px 0}
+.gate{border-left:4px solid var(--id-green);background:var(--tint-soft);border-radius:0 var(--id-radius) var(--id-radius) 0;padding:16px 20px;margin:18px 0}
+.callout p,.gate p{margin-bottom:0;font-size:14.5px}
+
+/* sequence tree */
+.tree{margin:22px 0 8px}
+.trunk{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.step{background:var(--id-dark-green);color:var(--id-white);border-radius:var(--id-radius);padding:14px 16px;font-size:13.5px;min-width:150px;flex:1}
+.step .d{font-size:13px;font-weight:700;color:var(--id-white);border-bottom:2px solid var(--id-green);display:inline-block;padding-bottom:2px;margin-bottom:7px}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.branch{border:1px solid var(--rule);border-radius:var(--id-radius);padding:16px 18px}
+.branch.b1{border-top:3px solid var(--id-green)}
+.branch.b2{border-top:3px solid var(--id-orange)}
+.branch.b3{border-top:3px solid var(--id-yellow)}
+.branch .bh{font-size:13px;font-weight:700;color:var(--id-dark-green);margin-bottom:10px}
+.branch ol{margin-left:18px;font-size:13.5px;color:var(--id-text)}
+.branch li{margin-bottom:5px}
+.branch .man{font-size:13px;font-weight:600;color:var(--id-deep-green)}
+
+/* stack row */
+.stack{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0 8px}
+.layer{border:1px solid var(--rule);border-radius:var(--id-radius);padding:20px}
+.layer .num{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-bottom:10px}
+.layer h3{font-weight:700;font-size:16px;margin-bottom:8px}
+.layer p{font-size:13.5px;margin-bottom:0}
+.layer.own{border:2px solid var(--id-orange)}
+
+/* rails */
+.rails{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 8px}
+.rail{border:1px solid var(--rule);border-left:4px solid var(--id-green);border-radius:var(--id-radius);padding:16px 20px}
+.rail h3{font-weight:700;font-size:15px;margin-bottom:6px}
+.rail p{font-size:13.5px;margin-bottom:0}
+
+/* asks */
+.asks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+.ask{border:2px solid var(--id-orange);border-radius:var(--id-radius);padding:22px}
+.ask .num{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-bottom:10px}
+.ask h3{font-weight:700;font-size:17px;margin-bottom:8px}
+.ask p{font-size:13.5px;margin-bottom:0}
+
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);margin:24px 0 4px;border-top:2px solid var(--id-green)}
+.tls{padding:16px 18px 0;border-left:1px solid var(--rule)}
+.tls:first-child{border-left:none}
+.tls .w{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-bottom:6px}
+.tls p{font-size:13.5px;margin-bottom:0}
+
+/* footer */
+.foot{background:var(--id-dark-green);color:var(--id-white);padding:28px 48px;display:flex;align-items:center;justify-content:space-between}
+.foot .logo{width:100px;height:24.6px}
+.foot .logo .wm{fill:var(--id-white)}
+.foot .m{font-size:13px;font-weight:600}
+
+@media print{
+  body{background:var(--id-white)}
+  .sheet{box-shadow:none}
+  section,.hero,.foot{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .lane,.bn,.branch,.layer,.ask,.rail,.q{break-inside:avoid}
+}
+@media (max-width:900px){
+  .statband,.bignums,.branches,.stack,.asks,.quotes,.tl{grid-template-columns:1fr 1fr}
+  .lanes,.rails{grid-template-columns:1fr}
+  .hero h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBE3E"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE38"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path class="wm" d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z"/>
+<path class="wm" d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z"/>
+</symbol></svg>
+
+<div class="sheet">
+
+<div class="hero">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <div class="eyebrow">Europe lane &middot; Working session &middot; 3 August 2026</div>
+  <h1>Everything Jack proved by hand, <span class="spark">wired to run at scale</span></h1>
+  <div class="sub">Two sequence motions sit built in draft for the UK lane, on Jack's own cadence and evidence. This walks the decisions behind them and ends with the three inputs that let the first wave load. A head start, not a finished product. It gets sharper every wave.</div>
+  <div class="who">Dallas Andrews &middot; for Matt Rumins, Simon Bland, and Jack Ohagan</div>
+</div>
+
+<div class="statband">
+  <div class="stat"><div class="n">52</div><div class="l">Qualified FS groups, from the regulator's own data</div></div>
+  <div class="stat"><div class="n">76</div><div class="l">Airline committee contacts sourced and graded</div></div>
+  <div class="stat"><div class="n">44</div><div class="l">Sequence steps built across 2 draft campaigns</div></div>
+  <div class="stat"><div class="n">0</div><div class="l">Contacts loaded until the exclusion scope is confirmed</div></div>
+</div>
+
+<section>
+  <div class="sec-eyebrow">01 &middot; The starting point</div>
+  <h2>This starts from what Jack already proved, not from a theory</h2>
+  <p>Jack books ten quality meetings a quarter with LinkedIn and email, entirely by hand. He named the verticals, the dead markets, the channel rules, and the cadence on our strategy call. The engine changes none of that. It takes the motion he already runs and gives it reach, so the same judgment can work five accounts at once instead of two.</p>
+  <div class="quotes">
+    <div class="q"><div class="t">Insurance and financial services have "the strongest proof points." Two of the largest UK insurers already run Intradiem.</div><div class="a">Jack, on lane one</div></div>
+    <div class="q"><div class="t">Airlines are "completely untouched... now is the time. They're going to be feeling it a lot more. It's summer, it's busy."</div><div class="a">Jack, on lane two</div></div>
+    <div class="q"><div class="t">The average UK close runs about 18 months, and it starts too slowly. Airlines and retail are already the push from UK leadership.</div><div class="a">The problem this engine attacks</div></div>
+  </div>
+  <p>The argument in one line: the 18-month cycle can't be shortened from the middle, but the front of it can. More of the right committees entered earlier, with every touch prepped, so Jack's ten meetings of effort chases twenty meetings of surface.</p>
+</section>
+
+<section>
+  <div class="sec-eyebrow">02 &middot; The decision trail</div>
+  <h2>Two lanes in, and what got deliberately parked</h2>
+  <div class="lanes">
+    <div class="lane now">
+      <div class="chip">Lane one &middot; goes first</div>
+      <h3>UK Insurance + Financial Services</h3>
+      <p>Jack's own ranking. Densest proof, the enterprise prize, and no season, so it starts as soon as its gates clear. The forcing function is a public number with a price tag on it.</p>
+    </div>
+    <div class="lane next">
+      <div class="chip">Lane two &middot; staged</div>
+      <h3>UK + Ireland Airlines</h3>
+      <p>Matt's push and Jack's "now is the time." Built today, deliberately started late August so the sequence's back half lands right after peak, when the summer's claims backlog is arriving.</p>
+    </div>
+  </div>
+  <table>
+    <tr><th>Parked or killed</th><th>Why, in one line</th></tr>
+    <tr><td><strong>Water utilities</strong></td><td class="why">Best-looking signal on paper, but water runs five-year budget cycles. A deal outside the current cycle waits five years. The signal was right, the buying reality kills it.</td></tr>
+    <tr><td><strong>Germany</strong></td><td class="why">Workers' rights rules make the technology effectively unusable there.</td></tr>
+    <tr><td><strong>Nordics</strong></td><td class="why">Four-day weeks. Agents aren't burnt out, so the pain we solve is cold.</td></tr>
+    <tr><td><strong>Retail</strong></td><td class="why">Parked, not dead. Offshored BPO agents leak roughly one account in ten, so it needs its own universe logic. It can follow airlines with its own spine.</td></tr>
+    <tr><td><strong>BPOs</strong></td><td class="why">On the bench with Jack's own counter-proof attached: the BPO nobody had contacted took a POV in two months. Bigger agent populations, more value.</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="sec-eyebrow">03 &middot; Lane one</div>
+  <h2>Insurance and FS: the &pound;680 meter is already running</h2>
+  <p>Every complaint that reaches the Financial Ombudsman costs the firm <strong>&pound;680, win or lose</strong>, and the volumes get published twice a year with the firm's name on them. That's the same structural shape as the Stars cliff edge in the US motion: a public number with a price tag attached, landing on the exact surfaces Intradiem touches.</p>
+  <div class="bignums">
+    <div class="bn"><div class="n">&pound;680</div><div class="l">Per ombudsman case in 2026/27, upheld or not. The ombudsman's published fee, not our number.</div></div>
+    <div class="bn hot"><div class="n">+87.8%</div><div class="l">NatWest's addressable complaint growth, H2 over H1 2025, from the FOS's own firm-level data.</div></div>
+    <div class="bn"><div class="n">&pound;4.71M</div><div class="l">NatWest's half-year fee exposure at the current rate. An estimate against published volumes, labeled that way in copy.</div></div>
+  </div>
+  <p>The universe came from the regulator's list, not a firmographic guess: 235 business groups publishing complaint data, cut to <strong>52</strong> whose complaint drivers plausibly move with workforce orchestration. Handling delays, capacity, coaching gaps. Firms whose complaints are driven by pricing or product design got dropped no matter how bad their number looks, because we can't honestly help them. The mid-sequence email runs on the second public hook, the eight-week referral rule.</p>
+  <p>Committee: five seats per firm, Director and above. Head of Complaints is the sharpest entry because they own the published number and the per-case fee personally. COO is the economic buyer, and the seat that shortens an 18-month cycle when engaged early.</p>
+  <div class="camp">
+    <span class="tag">Built &middot; in draft</span>
+    <span class="id">UK &ndash; Insurance / FS (Jack) &middot; 22 steps &middot; Europe/London &middot; zero leads loaded</span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-eyebrow">04 &middot; Lane two</div>
+  <h2>Airlines: a legal clock that starts at three hours</h2>
+  <p>Land three or more hours late for a reason within the airline's control and every passenger is owed a fixed payment under UK261: <strong>&pound;220, &pound;350 or &pound;520</strong> depending on distance, claimable for up to six years. One delayed A320 at ~180 seats is a five-figure exposure event on a single rotation. And when disruption hits, the compensation is only the visible cost. The claims backlog, the contact-centre surge, and the re-accommodation queue that follow are all workforce surfaces.</p>
+  <div class="bignums">
+    <div class="bn"><div class="n">37,659</div><div class="l">Flights on 24 July 2026, the all-time European traffic record (Eurocontrol week 30).</div></div>
+    <div class="bn hot"><div class="n">1 in 5</div><div class="l">Flights held by flow restrictions that same week. More than one in four arrived late.</div></div>
+    <div class="bn"><div class="n">41</div><div class="l">Wave-1 contacts already carrying reviewed, personalised copy variables, ready to load.</div></div>
+  </div>
+  <p>Twelve accounts graded, six passenger airlines in wave 1 with easyJet as the sprint account, ground handlers staged behind them with their own copy spine, because their exposure is contractual SLA, not passenger compensation. One honest gap: TUI belongs in this universe and its committee wouldn't resolve through Clay, so it gets sourced separately before wave 2.</p>
+  <div class="callout"><p><strong>The timing is deliberate.</strong> Airlines does not start in August. Ops and ground seats are in peak firefighting and nothing lands. Start is staged for late August at the earliest, so calls and the direct back half of the sequence arrive in September, right after peak, while the summer's claims backlog is still arriving and the pain is fresh. Insurance has no season, so it goes first.</p></div>
+  <div class="camp">
+    <span class="tag">Built &middot; in draft</span>
+    <span class="id">UK &ndash; Airlines (Jack) &middot; 22 steps &middot; Europe/London &middot; zero leads loaded</span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-eyebrow">05 &middot; The sequence</div>
+  <h2>Jack's cadence, wired to the last branch</h2>
+  <p>This is the sprint Jack described on our call, systematised. Ten days, multichannel, two accounts in flight at a time, and every path ends in a reply, a meeting, or a clean exit. Both campaigns run the same tree with lane-specific copy.</p>
+  <div class="tree">
+    <div class="trunk">
+      <div class="step"><div class="d">Day 1</div>Email, then LinkedIn profile visit, then a note-less connection request. All three the same day; the visit is what makes the invite land.</div>
+      <div class="step"><div class="d">Day 2</div>Call, leave a voicemail. It references the email's subject and names Jack at the end, never the opening. Add value, get out.</div>
+      <div class="step"><div class="d">Then it branches</div>On whether the invite is accepted within two days, and on whether we hold a phone number.</div>
+    </div>
+    <div class="branches">
+      <div class="branch b1">
+        <div class="bh">Invite accepted</div>
+        <ol>
+          <li>DM in Jack's own line: "shot you a note via email, thought LinkedIn might be quicker" <span class="man">(manual approve)</span></li>
+          <li>Voice note <span class="man">(manual, Jack's voice)</span></li>
+          <li>Second call</li>
+          <li>Mid-sequence email, new angle on the same idea</li>
+          <li>Day 10: "closing the file"</li>
+        </ol>
+      </div>
+      <div class="branch b2">
+        <div class="bh">Not accepted &middot; phone held</div>
+        <ol>
+          <li>Call</li>
+          <li>WhatsApp touch <span class="man">(manual approve)</span></li>
+          <li>Follow-up call</li>
+          <li>Mid-sequence email</li>
+          <li>WhatsApp nudge <span class="man">(manual approve)</span></li>
+          <li>Breakup</li>
+        </ol>
+      </div>
+      <div class="branch b3">
+        <div class="bh">Not accepted &middot; no phone</div>
+        <ol>
+          <li>Like + follow + profile visit</li>
+          <li>Mid-sequence email</li>
+          <li>Breakup</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <p>Details that matter: every email carries an opt-out line and the breakup says plainly it's the last note. Sign-off runs "Jack" through day 5 and "Jack Ohagan" from day 6. A reply anywhere stops everything, instantly. And the copy carries zero Intradiem statistics; every number in it belongs to a regulator and is cited that way.</p>
+</section>
+
+<section>
+  <div class="sec-eyebrow">06 &middot; The stack</div>
+  <h2>The stack, and why lemlist is the piece that holds it together</h2>
+  <div class="stack">
+    <div class="layer">
+      <div class="num">01 &middot; Clay</div>
+      <h3>Sources</h3>
+      <p>Universes built from public regulator data, graded and committee-mapped. Zero enrichment credits spent so far; emails and phones enrich per wave, only after the exclusion list clears.</p>
+    </div>
+    <div class="layer">
+      <div class="num">02 &middot; Claude</div>
+      <h3>Builds and briefs</h3>
+      <p>Every number verified at the primary source. Copy drafted, sharpened, and adversarially reviewed before it's staged. Each weekday at 07:30 London, a brief in #gtm-outbound-jack lists exactly what's due, and replies relay in the moment they land.</p>
+    </div>
+    <div class="layer">
+      <div class="num">03 &middot; Lemlist</div>
+      <h3>Executes</h3>
+      <p>One tool holding the whole branching tree: email, LinkedIn steps, call tasks and WhatsApp off a single lead record, with conditional logic, and a full stop the moment anyone replies.</p>
+    </div>
+    <div class="layer own">
+      <div class="num">04 &middot; Jack</div>
+      <h3>Sells</h3>
+      <p>His identity on every touch. LinkedIn and WhatsApp stay manual-approve, his voice pass gates every word, and only a human starts a campaign. The engine preps; Jack sends.</p>
+    </div>
+  </div>
+  <p>The reason it's lemlist specifically: this cadence is LinkedIn and WhatsApp first, which is Jack's market. An email sequencer can't run it, and running it by hand is exactly the ceiling Jack's at now. Lemlist is the only layer in this stack that can hold Jack's full tree in one place. I maintain the machine and keep improving it; the selling stays entirely his.</p>
+  <p>And the meetings don't stop at Jack's calendar. Every one hands to Simon with the account's full picture attached: the forcing-function numbers, what's been touched, what the committee looks like, and what got a reply. The engine's real output is qualified committee conversations entering Simon's pipeline earlier in the cycle.</p>
+</section>
+
+<section>
+  <div class="sec-eyebrow">07 &middot; The rails</div>
+  <h2>What makes it safe to put Jack's name on automation</h2>
+  <div class="rails">
+    <div class="rail"><h3>The exclusion check is a hard gate</h3><p>The UK customer list is in and already applied: AXA's contacts are excluded from the universe. The check still reruns on real rows at every load, including legal-name variants and subsidiaries. No exceptions, no synthetic shortcuts.</p></div>
+    <div class="rail"><h3>Claims discipline</h3><p>Zero Intradiem statistics in this copy. Every figure belongs to the FOS, the CAA or Eurocontrol and is cited as theirs. The two UK insurer customers stay unnamed everywhere until clearance says otherwise.</p></div>
+    <div class="rail"><h3>UK solicitation rules, respected</h3><p>Opt-out language on every email, sends bucketed by account, never blasted. Spray and pray is a legal exposure here, not just a deliverability problem, so it doesn't exist in this motion.</p></div>
+    <div class="rail"><h3>Nothing starts by itself</h3><p>Both campaigns sit in draft until an explicit start. Two accounts in flight at a time, waves loaded deliberately, and the airlines start window is calendar-staged, not automatic.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-eyebrow">08 &middot; The investment path</div>
+  <h2>How the money decision happens, without this room deciding it today</h2>
+  <p>Everything above was built on the free tier and open data. It has cost nothing to get here. The tool proves itself the same way the motion does: with receipts.</p>
+  <div class="gate"><p><strong>The staged path:</strong> the 14-day trial is running now. Around 13 August the receipts land: sends, replies, meetings booked, and cost per meeting. Naveen takes the paid case to Chris in QBR week with those numbers in hand, with Jason in the approval path. Today's session doesn't need to touch budget at all.</p></div>
+  <p>What the paid seat unlocks for Jack when that lands: his own mailbox with proper warmup, a custom tracking domain, LinkedIn at real volume instead of trial limits, and a connected WhatsApp sender. The frame for the decision when it comes: Jack's target is ten meetings a quarter and his stated ambition is double that. In a market where a close takes 18 months, the entire value of this engine is how many committees enter the top of that cycle this quarter, and the receipts will show what each one cost.</p>
+  <div class="callout"><p><strong>Today's only decision is alignment.</strong> Does this motion look right to the two of you, and can we clear the three inputs below? The money conversation is already staged for when the evidence exists.</p></div>
+</section>
+
+<section>
+  <div class="sec-eyebrow">09 &middot; The asks</div>
+  <h2>Three inputs only this room has</h2>
+  <div class="asks">
+    <div class="ask">
+      <div class="num">Ask 01 &middot; Jack</div>
+      <h3>Confirm the exclusion list is complete</h3>
+      <p>The 7-account UK customer list is in and AXA's contacts are already excluded from the universe. Confirm that's the full do-not-contact scope, nothing open-opportunity or partner to add, and wave 1 can load.</p>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 02 &middot; Jack + Simon</div>
+      <h3>Thirty minutes on voice and history</h3>
+      <p>Jack's bookings file against the drafted copy so every step sounds like him, plus Simon's read on which target accounts have live history that should shape or skip a touch.</p>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 03 &middot; Matt</div>
+      <h3>The path when receipts land</h3>
+      <p>Backing on the seat conversation with Jason once the day-14 numbers exist, and one clearance question to run down: whether the two UK insurer customers can ever be named in copy.</p>
+    </div>
+  </div>
+  <div class="tl">
+    <div class="tls"><div class="w">This week</div><p>Exclusion scope confirmed + voice pass done, insurance wave 1 loads and starts.</p></div>
+    <div class="tls"><div class="w">~13 August</div><p>Trial receipts: sends, replies, meetings, cost per meeting.</p></div>
+    <div class="tls"><div class="w">QBR week</div><p>Naveen presents the paid case to Chris with the receipts.</p></div>
+    <div class="tls"><div class="w">Late August</div><p>Airlines start window opens; back half lands post-peak September.</p></div>
+  </div>
+</section>
+
+<div class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <div class="m">Europe outbound engine &middot; Dallas Andrews &middot; 3 August 2026</div>
+</div>
+
+</div>
+</body>
+</html>

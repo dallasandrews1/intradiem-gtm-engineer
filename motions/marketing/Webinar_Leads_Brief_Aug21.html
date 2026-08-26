@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Webinar Lead Routing</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet"><style>
+/* Palette + type lifted from the Intradiem Interactive Demo so this page and the deck read as one product */
+:root{
+  --green:#2DB56E; --green-600:#228752; --green-300:#7BD3A0; --green-100:#C4ECD4;
+  --forest:#014637; --orange:#F58220; --orange-600:#D96D12; --blue:#0F4C99;
+  --ink:#202020; --ink-2:#5A5A5A; --ink-3:#9A9A9A;
+  --bg:#FFFFFF; --sidebar:#F5F4F2; --zebra:#FAFAFA;
+  --tint:rgba(45,181,110,.12); --tint-soft:rgba(45,181,110,.08);
+  --otint:rgba(245,130,32,.10); --otint-line:rgba(245,130,32,.28);
+  --line:#E0E0E0; --line-strong:#BDBDBD; --r:8px;
+  --ff:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --ff-mono:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --shadow:0 1px 2px rgba(20,30,25,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--sidebar);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:1120px;margin:0 auto;background:var(--bg)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 30px}
+.eyebrow{font-family:var(--ff-mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+.logo{height:26px;width:auto;display:block;color:#014637}
+
+/* HERO */
+.hero{background:var(--forest);color:#fff;padding:60px 0 54px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.30),transparent 62%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .logo{height:46px;margin-bottom:24px;color:#fff}
+.hero .eyebrow{color:var(--green-300)}
+.hero h1{font-weight:900;font-size:46px;line-height:1.06;margin:14px 0 16px;letter-spacing:-.02em;max-width:20ch}
+.hero h1 .spark{color:var(--green-300)}
+.hero p.sub{font-size:18px;max-width:68ch;color:#C7DAD1}
+.hero p.sub b{color:#fff;font-weight:700}
+.hero .meta{margin-top:34px;display:grid;grid-template-columns:repeat(4,auto);gap:14px 44px;justify-content:start}
+.hero .meta div{color:#fff;font-size:14.5px;font-weight:500}
+.hero .meta div span{display:block;font-family:var(--ff-mono);color:var(--green-300);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:5px}
+
+/* SECTIONS */
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+section > .wrap > .eyebrow{color:var(--green-600)}
+h2{font-weight:900;font-size:30px;line-height:1.12;margin:10px 0 10px;letter-spacing:-.02em}
+h2 + .lede{font-size:16px;color:var(--ink-2);margin-bottom:22px;max-width:78ch}
+h3{font-weight:700;font-size:20px;margin:28px 0 8px;letter-spacing:-.01em}
+p{color:var(--ink-2);max-width:78ch;margin-top:10px;font-size:15.5px}
+p b,li b,td b{color:var(--ink);font-weight:700}
+
+/* TL;DR */
+.tldr{background:var(--tint-soft);border:1px solid var(--tint);border-left:4px solid var(--green);border-radius:var(--r);padding:24px 30px}
+.tldr .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:10px}
+.tldr h3{margin:0 0 8px;font-size:19px}
+.tldr ul{list-style:none}
+.tldr li{padding:8px 0 8px 24px;position:relative;font-size:15.5px;color:var(--ink-2)}
+.tldr li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:2px;background:var(--green)}
+.tldr li b{color:var(--ink)}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:var(--shadow)}
+.card.full{grid-column:1/-1}
+.tag{display:inline-block;font-family:var(--ff-mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:12px}
+.tag.go{background:var(--tint);color:var(--green-600)}
+.tag.now{background:#FDECD9;color:var(--orange-600)}
+.tag.gem{background:var(--tint);color:var(--green-600)}
+.tag.hold{background:var(--zebra);color:var(--ink-3);border:1px solid var(--line)}
+.card h4{font-size:19px;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
+.card p{font-size:14.5px;margin-top:0;max-width:none}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14.5px}
+th{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-600);text-align:left;padding:0 16px 10px 0;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:12px 16px 12px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--zebra)}
+.seat{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+
+/* PHASES */
+.phase{display:flex;gap:18px;margin-bottom:16px;align-items:flex-start}
+.phase-num{flex-shrink:0;width:52px;height:52px;border-radius:var(--r);background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;letter-spacing:-.02em}
+.phase.p1 .phase-num{background:var(--green-600)}
+.phase.p2 .phase-num{background:var(--green)}
+.phase.p3 .phase-num{background:var(--green-300);color:var(--forest)}
+.phase-body{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;box-shadow:var(--shadow)}
+.phase-body h4{font-size:19px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+.phase-body .when{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:12px}
+.phase-body ul{list-style:none}
+.phase-body li{padding:5px 0 5px 22px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.phase-body li::before{content:"→";position:absolute;left:0;color:var(--green-600);font-weight:700}
+
+/* CALLOUT (caution) + GATE (safe / verified) */
+.callout{background:var(--otint);border:1px solid var(--otint-line);border-left:4px solid var(--orange);border-radius:var(--r);padding:20px 26px;margin-top:20px}
+.callout h4{font-size:18px;font-weight:700;color:var(--orange-600);margin-bottom:6px;letter-spacing:-.01em}
+.callout p{font-size:14.5px;color:var(--ink-2);margin-top:0;max-width:none}
+.callout p b{color:var(--ink)}
+.gate{background:var(--tint-soft);border:1px solid var(--tint);border-left:4px solid var(--green);border-radius:var(--r);padding:20px 26px;margin-top:20px}
+.gate h4{font-size:18px;font-weight:700;color:var(--green-600);margin-bottom:6px;letter-spacing:-.01em}
+.gate p{font-size:14.5px;color:var(--ink-2);margin-top:0;max-width:none}
+.gate p b{color:var(--ink)}
+
+/* OPS */
+.ops{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px}
+.ops .o{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.ops .o .n{font-family:var(--ff-mono);font-weight:600;font-size:11px;letter-spacing:.1em;color:var(--green-600);background:var(--tint);width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.ops .o h4{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:7px}
+.ops .o p{font-size:13px;margin:0;max-width:none}
+
+/* STATBAND */
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;background:var(--forest);border-radius:var(--r);padding:24px 32px;margin-top:8px;position:relative;overflow:hidden}
+.statband::after{content:"";position:absolute;right:-130px;top:-150px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.22),transparent 62%)}
+.statband > div{position:relative;z-index:1}
+.statband .n{font-weight:900;font-size:28px;color:var(--green-300);letter-spacing:-.01em;line-height:1.1}
+.statband .l{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:#9DBBAE;text-transform:uppercase;margin-top:9px;line-height:1.6}
+
+/* FOOT */
+.foot{padding:26px 0 46px;text-align:center;color:var(--ink-3);font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;background:var(--bg);text-transform:uppercase}
+.foot .logo{height:26px;display:inline-block;margin:0 auto 12px;opacity:.85}
+.foot span{display:block;margin-top:4px}
+
+@media(max-width:860px){
+  .hero h1{font-size:32px}
+  .hero .meta{grid-template-columns:1fr 1fr}
+  .grid,.ops,.statband{grid-template-columns:1fr}
+  .phase{flex-direction:column;gap:12px}
+}
+@media print{
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:14mm}
+  .card,.phase,.ops .o,.statband,.gate,.callout,.tldr{break-inside:avoid}
+  section{break-inside:auto}
+}
+
+.tw{overflow-x:auto;margin-top:4px}
+.hero .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18)}
+.hero .meta div{font-size:14px;color:#fff}
+.hero .meta span{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#7BD3A0;margin-bottom:4px}
+section{padding:34px 0 8px}
+.card table{margin-top:8px;font-size:13.5px}
+.card td,.card th{padding:8px 12px 8px 0}
+h1,h2,h3,h4{text-wrap:balance}
+ul.plain{list-style:none;margin-top:8px}
+ul.plain li{padding:9px 0 9px 24px;position:relative;font-size:15.5px;color:var(--ink-2);max-width:80ch}
+ul.plain li::before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:2px;background:var(--green)}
+ul.plain li b{color:var(--ink)}
+td,th{font-variant-numeric:tabular-nums}
+</style>
+</head><body><svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/>
+</symbol></svg>
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow">Marketing · Webinar leads · Clay</div>
+    <h1>Webinar registrants: <span class="spark">enrichment, classification, routing</span></h1>
+    <p class="sub">The 1,016 Salesforce leads with Lead Source "Webinar", run through a Clay workflow on August 20. Each record now carries a role category, a route, a corrected title and company domain, and a triage flag, stored as fields in Clay Audiences.</p>
+    <div class="meta">
+      <div><span>For</span>Carter Woods</div>
+      <div><span>From</span>Dallas Andrews</div>
+      <div><span>Date</span>August 21, 2026</div>
+      <div><span>Attached</span>Webinar_Leads_Enriched_Routed_Aug20.csv</div>
+    </div>
+  </div>
+</header>
+
+<section><div class="wrap">
+  <div class="tldr">
+    <div class="k">Cover note</div>
+    <h3>Why this exists and what I need from you</h3>
+    <ul>
+      <li>You raised webinar enrichment on the 18th. Rather than bring a plan, I ran the pass on the existing registrants so we could look at real output.</li>
+      <li>I did it before we talked, on records your team owns. The five new fields are prefixed "Clay" so they're obvious, nothing else depends on them, and they can be renamed or removed in a minute. Nothing was sent and nothing was written to Salesforce.</li>
+      <li>The ask: tell me whether this is useful, what you'd change, and who else should see it.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Findings</div>
+  <h2>What the data shows</h2>
+  <ul class="plain">
+    <li><b>560 of 875 reachable registrants hold a target role</b> (the roles Intradiem sells to: workforce management, contact-center operations, back-office operations). 431 workforce management, 116 contact-center operations, 12 back office or claims.</li>
+    <li><b>Of those 560:</b> 176 at Prospect accounts, 275 at accounts not in the Salesforce sync, 94 at current customers (flagged on every row).</li>
+    <li><b>52 are Director or above.</b> Top 12 below, all in the CSV.</li>
+    <li><b>954 of 1,016 records have no Lead Status in Salesforce.</b> If useful, the route field can feed that.</li>
+    <li><b>Enrichment:</b> 334 profiles found, 277 titles updated, 104 company domains corrected (dish.com to echostar.com, betmgm.com to betmgminc.com). 170 credits.</li>
+    <li><b>Excluded before enrichment:</b> 90 personal emails, 34 competitor registrants (Alvaria 10, Genesys 7, NICE 7, Verint 5, Aspect 3, Five9 2), 13 Intradiem. "WebHelp Registration" (2,831, customer help-portal signups) was kept out.</li>
+  </ul>
+  <div class="statband">
+    <div><div class="n">1,016</div><div class="l">Registrants processed</div></div>
+    <div><div class="n">560</div><div class="l">Target role, routed bdr_review</div></div>
+    <div><div class="n">315</div><div class="l">Routed nurture</div></div>
+    <div><div class="n">137</div><div class="l">Skipped at triage</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Detail</div>
+  <h2>The 560 in target roles</h2>
+  <div class="grid">
+    <div class="card"><h4>By role</h4><div class='tw'><table><thead><tr><th>Role</th><th>People</th></tr></thead><tbody><tr><td>Workforce management</td><td>431</td></tr><tr><td>Contact-center operations</td><td>116</td></tr><tr><td>Back office / shared services</td><td>10</td></tr><tr><td>Claims operations</td><td>2</td></tr><tr><td>Customer experience</td><td>1</td></tr></tbody></table></div></div>
+    <div class="card"><h4>By Salesforce relationship</h4><div class='tw'><table><thead><tr><th>Relationship</th><th>People</th></tr></thead><tbody><tr><td>Prospect account in Salesforce</td><td>176</td></tr><tr><td>Account not in the Salesforce sync</td><td>275</td></tr><tr><td>Current customer (Salesforce flag or known brand domain)</td><td>94</td></tr><tr><td>No Account Type, or Partner</td><td>15</td></tr></tbody></table></div></div>
+  </div>
+  <h3>Director and above, top 12</h3>
+  <div class='tw'><table><thead><tr><th>Name</th><th>Title</th><th>Company</th><th>Role</th><th>Salesforce</th></tr></thead><tbody><tr><td>Iliyana Zdravkova</td><td>Head of Workforce &amp; Spend Management gTech Users &amp; Products Operations Google</td><td>Google</td><td>Workforce management</td><td>Prospect</td></tr><tr><td>Jonathan Feiner</td><td>Director of Workforce Management and Shared Services</td><td>Ally</td><td>Back office / shared services</td><td>Prospect</td></tr><tr><td>Jason Jacobs</td><td>Contact Center Technology Director</td><td>Duke Energy Corporation</td><td>Contact-center operations</td><td>Prospect</td></tr><tr><td>Alina Kogan</td><td>Senior Director, Life New Business / Digital Operations</td><td>MassMutual</td><td>Contact-center operations</td><td>Prospect</td></tr><tr><td>Chad Blanton</td><td>Director, WFM</td><td>North</td><td>Workforce management</td><td>Prospect</td></tr><tr><td>John Campbell</td><td>Director, Shared Services</td><td>Raymond James</td><td>Back office / shared services</td><td>Prospect</td></tr><tr><td>Russell McCullough</td><td>WFM Director</td><td>TTEC</td><td>Workforce management</td><td>Prospect</td></tr><tr><td>Andrea Christian</td><td>Vice President, Workforce Management</td><td>JPMorgan Chase &amp; Co.</td><td>Workforce management</td><td>Not in SF sync</td></tr><tr><td>Sharlyn Ruyan</td><td>Member Service Center Vice President</td><td>globalcu.org</td><td>Contact-center operations</td><td>Not in SF sync</td></tr><tr><td>Michael Duffy</td><td>Director Workforce Management</td><td>ShyftOff</td><td>Workforce management</td><td>Not in SF sync</td></tr><tr><td>Rosemary Eady</td><td>VP, WFM</td><td>enclaraphrmacia.com</td><td>Workforce management</td><td>Not in SF sync</td></tr><tr><td>Todd Gladden</td><td>SVP - US Operations</td><td>PlanMen</td><td>Contact-center operations</td><td>Not in SF sync</td></tr></tbody></table></div>
+  <h3>Accounts with the most registrants</h3>
+  <div class='tw'><table><thead><tr><th>Domain</th><th>People</th><th>Salesforce</th></tr></thead><tbody><tr><td>ttec.com</td><td>12</td><td>Prospect</td></tr><tr><td>adp.com</td><td>8</td><td>Prospect</td></tr><tr><td>erieinsurance.com</td><td>6</td><td>Prospect</td></tr><tr><td>usaa.com</td><td>6</td><td>Prospect</td></tr><tr><td>dish.com</td><td>5</td><td>Prospect</td></tr><tr><td>progressive.com</td><td>5</td><td>Prospect</td></tr><tr><td>zillowgroup.com</td><td>5</td><td>Prospect</td></tr><tr><td>aaawa.com</td><td>4</td><td>Prospect</td></tr><tr><td>concentrix.com</td><td>13</td><td>Not in sync</td></tr><tr><td>barclays.com</td><td>8</td><td>Not in sync</td></tr><tr><td>acg.aaa.com</td><td>6</td><td>Not in sync</td></tr><tr><td>wsib.on.ca</td><td>6</td><td>Not in sync</td></tr><tr><td>globalcu.org</td><td>5</td><td>Not in sync</td></tr><tr><td>awesomecx.com</td><td>4</td><td>Not in sync</td></tr></tbody></table></div>
+  <p>Customer accounts, for account owners rather than outbound: humana.com 17, evernorth.com 11, kp.org 8, cigna.com 7, syf.com 6, cvshealth.com 4, edwardjones.com 4, optum.com 4.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">How it runs</div>
+  <h2>The workflow</h2>
+  <div class="ops">
+    <div class="o"><div class="n">01</div><h4>Triage</h4><p>Personal email, competitor domain, Intradiem address, or no email: stop, no spend.</p></div>
+    <div class="o"><div class="n">02</div><h4>Enrich</h4><p>Person enrichment by email, 0.5 credits only when a profile is found.</p></div>
+    <div class="o"><div class="n">03</div><h4>Classify</h4><p>Best available title to a role category (shared Function plus a rules fallback).</p></div>
+    <div class="o"><div class="n">04</div><h4>Route and store</h4><p>Target role: bdr_review, otherwise nurture. Results written to the five Clay fields on the record.</p></div>
+  </div>
+  <p>Live on the "Webinar Leads" segment for new registrants; the backlog ran once. Fields: Clay Persona Key, Clay Webinar Route, Clay Enriched Title, Clay Company Domain, Clay Triage. Rename or remove at will.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Caveats</div>
+  <h2>Before using the list</h2>
+  <div class="callout"><h4>Salesforce Account Type is incomplete</h4><p>Elevance Health and TD Bank are absent from the synced companies; Cigna, Assurant, Farmers, McKesson, Citi and British Gas are tagged Prospect; about 300 accounts have no type; brand domains (syf.com, evernorth.com) don't match the one domain stored per account. The customer flag here combines the Salesforce flag, the install-base list and known brand domains. Suppression on Account Type alone would include customers.</p></div>
+  <div class="callout"><h4>Role classification is a first pass</h4><p>315 reachable registrants landed outside target roles (analysts, consultants, sales and project titles without a function word). A short review would move some of them; the workflow applies any change on the next run.</p></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Questions for you</div>
+  <h2>Your call</h2>
+  <ul class="plain">
+    <li>Is a role category and route on each registrant useful to you, and do the labels make sense for how marketing segments?</li>
+    <li>Where, if anywhere, should the result land outside Clay: Salesforce Lead Status, a Slack channel, the marketing platform? The workflow has the step; it's unconnected.</li>
+    <li>Should the 176 registrants at Prospect accounts go to Sales, and who should hear about the 94 at customer accounts?</li>
+    <li>Who else should see this before anything is acted on?</li>
+  </ul>
+</div></section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Source: Clay Audiences (Salesforce sync) · workflow wf_0tk333zvDnGg4YcikFp · CSV: Webinar_Leads_Enriched_Routed_Aug20.csv · counts as of August 20, 2026</span>
+</footer>
+</div>
+</body></html>

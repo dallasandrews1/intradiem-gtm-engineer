@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back Office Motion — Cigna Calibration</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+:root{
+  --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+  --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+  --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist-2:#E7EEE3;
+  --line:#E2E7DD; --line-2:#D4DCCE;
+  --spark:#FE5000; --gold:#E0A23B;
+  --ff-head:'Playfair Display',serif; --ff-body:'DM Sans',system-ui,sans-serif; --ff-label:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--ff-body);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:840px;margin:0 auto;background:var(--card);box-shadow:0 1px 40px rgba(21,35,27,.08)}
+.hero{background:var(--forest);color:#fff;padding:38px 48px 34px}
+.eyebrow{font-family:var(--ff-label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);font-weight:600}
+.hero h1{font-family:var(--ff-head);font-weight:800;font-size:31px;line-height:1.14;margin-top:12px;letter-spacing:-.01em}
+.hero p{color:#cdd8ce;font-size:14.5px;margin-top:12px;max-width:620px}
+.body{padding:34px 48px 40px}
+.lead{font-size:15px;color:var(--ink-soft);margin-bottom:26px}
+.lead b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:6px 0 8px}
+th{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:left;padding:0 10px 10px;font-weight:600;border-bottom:1.5px solid var(--line-2)}
+td{padding:13px 10px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+.name{font-weight:600;color:var(--ink)}
+.title{color:var(--ink-soft);font-size:13px}
+.pill{display:inline-block;font-family:var(--ff-label);font-size:10.5px;font-weight:600;letter-spacing:.03em;padding:5px 11px;border-radius:20px;white-space:nowrap}
+.caught{background:var(--mist-2);color:var(--green);border:1px solid #cfe0d3}
+.gate{background:#F1F1EE;color:var(--dim);border:1px solid var(--line-2)}
+.persona{font-family:var(--ff-label);font-size:11px;color:var(--green);font-weight:600}
+.mark{color:var(--green-bright);font-weight:700}
+.note{background:var(--mist);border-left:3px solid var(--green);padding:16px 20px;border-radius:0 8px 8px 0;margin-top:24px;font-size:13.5px;color:var(--ink-soft)}
+.note b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 15px}
+.stat .n{font-family:var(--ff-head);font-weight:800;font-size:24px;color:var(--green)}
+.stat .l{font-family:var(--ff-label);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:5px}
+.foot{padding:18px 48px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:11.5px;font-family:var(--ff-label);letter-spacing:.04em}
+.spark{color:var(--spark)}
+h2.sec{font-family:var(--ff-head);font-weight:700;font-size:18px;color:var(--ink);margin:4px 0 14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Back Office Motion · Targeting Calibration</div>
+    <h1>Rebuilt the targeting, checked it against your Cigna contacts</h1>
+    <p>From today's conversation: the first pull found the right operations people but not the ones who decide on the tools. Here's the reworked model, tested against the five Cigna contacts already on the back-office campaign.</p>
+  </div>
+  <div class="body">
+    <p class="lead">Targeting now runs as a <b>four-persona buying committee</b> — operations leaders, back-office product owners, claims technology, and the COO/SVP layer — filtered to <b>director and above</b>. Below, each of your Cigna contacts against the new criteria.</p>
+
+    <h2 class="sec">Your five Cigna contacts, under the new criteria</h2>
+    <table>
+      <thead><tr><th>Contact</th><th>Title</th><th style="text-align:right">Result</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="name">Melissa Foy</span></td>
+          <td class="title">Global Director, Claims Services</td>
+          <td style="text-align:right"><span class="pill caught">✓ Operations leader</span></td>
+        </tr>
+        <tr>
+          <td><span class="name">Rich Turner</span></td>
+          <td class="title">Director, Workforce Engagement Engineering</td>
+          <td style="text-align:right"><span class="pill caught">✓ Claims technology</span></td>
+        </tr>
+        <tr>
+          <td><span class="name">Jeanmarie Morrison</span></td>
+          <td class="title">Senior Director, Back Office Workforce Planning</td>
+          <td style="text-align:right"><span class="pill caught">✓ Product owner</span></td>
+        </tr>
+        <tr>
+          <td><span class="name">Brianna Shea</span></td>
+          <td class="title">Short Term Disability Claims Manager</td>
+          <td style="text-align:right"><span class="pill gate">Held · below director</span></td>
+        </tr>
+        <tr>
+          <td><span class="name">Sandy Brick</span></td>
+          <td class="title">Divisional Manager, Claims Operations</td>
+          <td style="text-align:right"><span class="pill gate">Held · below director</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>Why this matters:</b> the two people you'd point to as the real decision seats — Rich on the technology side, Jeanmarie on back-office workforce — are caught by the two new personas we added today. The two manager-level contacts fall below the director line we agreed to hold. The model is picking the same people you already know are right.
+    </div>
+
+    <h2 class="sec" style="margin-top:30px">Checked against the full maintained list</h2>
+    <div class="grid">
+      <div class="stat"><div class="n">214</div><div class="l">Contacts reviewed</div></div>
+      <div class="stat"><div class="n">66%</div><div class="l">Already director+</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Personas, not 1</div></div>
+      <div class="stat"><div class="n">Next</div><div class="l">Cigna sample to eyeball</div></div>
+    </div>
+
+    <div class="note" style="border-left-color:var(--gold);background:#FBF6EC">
+      <b>Your move:</b> I'll pull a small, corrected Cigna-only list against these criteria and send it over for you and the AMs to eyeball for names that look right or wrong. Nothing gets sourced at scale until you've given the nod.
+    </div>
+  </div>
+  <div class="foot">
+    <span>Intradiem · GTM Engineering</span>
+    <span class="spark">Existing-customer back office · Jul 2026</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+@media print{body{zoom:1.333333}}
+html,body{width:6.375in;height:8.25in;overflow:hidden}
+body{font-family:'DM Sans',system-ui,sans-serif}
+.cover{width:6.375in;height:8.25in;background:linear-gradient(160deg,#0F3322 0%,#16432C 55%,#1B5236 100%);color:#fff;padding:40pt 38pt;position:relative;overflow:hidden}
+.cover:before{content:'';position:absolute;right:-120pt;top:-120pt;width:340pt;height:340pt;border-radius:50%;background:radial-gradient(circle,rgba(182,217,76,.14),transparent 65%)}
+.logochip{display:inline-block;background:#fff;border-radius:6pt;padding:9pt 14pt;margin-bottom:30pt}
+.logochip img{height:22pt;display:block}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:8pt;letter-spacing:.28em;text-transform:uppercase;color:#B6D94C;font-weight:600;margin-bottom:14pt}
+.eyebrow .sp{color:#FE5000}
+h1{font-family:'Playfair Display',serif;font-size:31pt;font-weight:900;line-height:1.06;margin-bottom:10pt}
+.sub{font-size:12.5pt;color:#C9D8CD;max-width:400pt;line-height:1.5;margin-bottom:26pt}
+.stats{display:flex;gap:10pt;margin-bottom:0}
+.stat{background:rgba(255,255,255,.06);border:.8pt solid rgba(182,217,76,.35);border-radius:6pt;padding:10pt 13pt;flex:1}
+.stat .v{font-family:'Playfair Display',serif;font-size:16.5pt;font-weight:800;color:#B6D94C;margin-bottom:2pt}
+.stat .v.sp{color:#FF8A50}
+.stat .k{font-family:'JetBrains Mono',monospace;font-size:6.2pt;letter-spacing:.14em;text-transform:uppercase;color:#9FB8A6}
+.foot{position:absolute;bottom:32pt;left:38pt;right:38pt;display:flex;justify-content:space-between;align-items:flex-end;border-top:.8pt solid rgba(255,255,255,.18);padding-top:12pt}
+.foot .l{font-size:9pt;color:#C9D8CD;line-height:1.6}
+.foot .l strong{color:#fff}
+.foot .r{font-family:'JetBrains Mono',monospace;font-size:7pt;letter-spacing:.18em;text-transform:uppercase;color:#9FB8A6;text-align:right;line-height:1.8}

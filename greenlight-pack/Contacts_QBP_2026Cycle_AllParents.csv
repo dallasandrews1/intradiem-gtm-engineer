@@ -1,0 +1,30 @@
+parent_key,parent_org,cliff_edge_contracts_3.5star,account_forgone_qbp_musd,cs_addressable_musd,rollup_all_sub4_contracts,rollup_gross_forgone_musd,rollup_addressable_musd,mode
+aetna,CVS Health Corporation,10,226.4,72.4,23,507.2,222.6,cliff_3.5star
+atriohp,ATRIO Health Plans,0,,,4,34.9,10.4,no_cliff_3.0star_uses_rollup_label
+baystatehealth,"Baystate Health, Inc.",0,,,2,15.2,10.3,no_cliff_3.0star_uses_rollup_label
+blueshieldca,California Physicians' Service,3,33.3,11.5,3,33.3,11.5,cliff_3.5star
+caloptima,Orange County Health Authority,0,,,1,19.4,9.6,no_cliff_3.0star_uses_rollup_label
+cambiahealth,"Cambia Health Solutions, Inc.",3,4.8,0.6,5,68.4,36.1,cliff_3.5star
+carefirst,"CareFirst, Inc.",1,22.6,5.9,2,31.2,8.7,cliff_3.5star
+centene,Centene Corporation,21,165.8,52.5,42,520.7,198.2,cliff_3.5star
+chpw,Community Health Plan of Washington,0,,,1,9.2,4.9,no_cliff_3.0star_uses_rollup_label
+clevercarehealthplan,"Clever Care Health Plan, Inc.",1,24.5,21.2,1,24.5,21.2,cliff_3.5star
+cloverhealth,"Clover Health Holdings, Inc.",1,74.6,49.1,1,74.6,49.1,cliff_3.5star
+cvshealth,CVS Health Corporation,10,226.4,72.4,23,507.2,222.6,cliff_3.5star
+devoted,"Devoted Health, Inc.",11,44.0,31.0,12,51.5,37.3,cliff_3.5star
+excellusbcbs,"Lifetime Healthcare, Inc.",1,42.0,15.1,1,42.0,15.1,cliff_3.5star
+guidewell,Guidewell Mutual Holding Corporation,2,33.4,5.8,2,33.4,5.8,cliff_3.5star
+hcsc,Health Care Service Corporation,6,111.0,23.5,19,318.2,105.0,cliff_3.5star
+humana,Humana Inc.,14,1776.3,568.9,25,2443.7,886.8,cliff_3.5star
+iehp,INLAND EMPIRE HEALTH PLAN,0,,,1,39.5,14.8,no_cliff_3.0star_uses_rollup_label
+imperialhealthplan,Imperial Health Plan of California,1,25.4,25.4,1,25.4,25.4,cliff_3.5star
+lacare,Local Initiative Health Authority for LA County,0,,,1,31.6,13.4,no_cliff_3.0star_uses_rollup_label
+lumeris,Lumeris Group Holdings Corporation,0,,,1,11.3,8.1,no_cliff_3.0star_uses_rollup_label
+massgeneralbrigham,Mass General Brigham Incorporated,2,9.7,5.5,2,9.7,5.5,cliff_3.5star
+medica,Medica Holding Company,3,61.2,23.7,4,75.4,28.1,cliff_3.5star
+myzinghealth,"Zing Health Consolidator, Inc",0,,,2,43.4,24.9,no_cliff_3.0star_uses_rollup_label
+nychealthandhospitals,New York City Health and Hospitals Corporation,1,6.6,5.4,1,6.6,5.4,cliff_3.5star
+phs,Presbyterian Healthcare Services,0,,,1,55.2,19.1,no_cliff_3.0star_uses_rollup_label
+point32health,"Point32Health, Inc.",2,13.0,8.3,2,13.0,8.3,cliff_3.5star
+uhc,"UnitedHealth Group, Inc.",20,885.8,248.7,26,924.1,257.2,cliff_3.5star
+vnshealth,Visiting Nurse Service of New York,1,32.8,26.1,1,32.8,26.1,cliff_3.5star

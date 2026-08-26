@@ -1,0 +1,99 @@
+contract_id,parent_org,marketing_name,members,overall_star_2026,cs_star,clin_star,addressable_forgone_qbp_musd,addr_2028_musd,addr_2029plus_musd,tier,new_faller,structural_exclude,decision_maker_found,confidence
+H5216,Humana Inc.,Humana,2405635,3.5,3.7,3.2,340.2,456.7,521.2,A,FALSE,FALSE,FALSE,medium
+H5619,Humana Inc.,Humana,487278,3,3.1,3.1,244.5,277.0,307.2,A,FALSE,FALSE,FALSE,medium
+H0028,Humana Inc.,Humana,332419,3.5,3.4,3.6,91.5,105.2,117.6,A,FALSE,FALSE,FALSE,medium
+H3805,"UnitedHealth Group, Inc.",UnitedHealthcare,285454,3.5,3.4,3.5,74.2,88.7,117.1,A,TRUE,FALSE,FALSE,medium
+H6622,Humana Inc.,Humana,339824,3.5,3.5,3.4,72.9,86.9,86.5,A,FALSE,FALSE,FALSE,medium
+H8768,"UnitedHealth Group, Inc.",UnitedHealthcare,306218,3.5,3.3,3.3,71.2,83.2,103.6,A,FALSE,FALSE,FALSE,high
+H3312,CVS Health Corporation,Aetna Medicare,103808,3,3.0,3.2,59.6,64.7,74.9,A,FALSE,FALSE,FALSE,medium
+H5970,Humana Inc.,Humana,88806,3,3.1,3.1,45.7,52.8,64.2,A,FALSE,FALSE,FALSE,medium
+H5141,"Clover Health Holdings, Inc.",Clover Health,153117,3.5,3.1,3.5,49.1,47.2,52.2,A,TRUE,FALSE,FALSE,high
+H3931,CVS Health Corporation,Aetna Medicare,71661,3,3.0,3.2,40.6,44.0,47.9,A,FALSE,FALSE,FALSE,medium
+H1468,Humana Inc.,Humana,136925,3.5,3.5,3.6,34.7,39.3,45.4,A,TRUE,FALSE,FALSE,medium
+H3447,"Elevance Health, Inc.",Anthem HealthKeepers,155204,3.5,3.3,3.1,32.1,37.5,44.9,A,FALSE,FALSE,FALSE,medium
+H3817,"Cambia Health Solutions, Inc.",Regence BlueCross BlueShield of Oregon,51411,3,3.2,3.5,31.5,35.2,42.9,A,FALSE,FALSE,FALSE,high
+H1278,"UnitedHealth Group, Inc.",UnitedHealthcare,137055,3.5,3.6,3.4,26.7,34.5,42.1,A,TRUE,FALSE,FALSE,high
+H2775,Centene Corporation,Wellcare,60651,3,2.8,2.7,30.1,33.7,37.5,A,FALSE,FALSE,FALSE,medium
+H5599,Centene Corporation,Wellcare By Fidelis Care,69023,3,3.0,2.5,28.5,33.2,40.3,A,FALSE,FALSE,FALSE,medium
+H4161,"Elevance Health, Inc.",Anthem Blue Cross Partnership Plan,52014,3,2.8,3.0,29.2,32.5,38.1,A,FALSE,FALSE,FALSE,medium
+H0544,"Elevance Health, Inc.",Anthem Blue Cross,49674,3,2.9,3.0,26.8,30.4,37.3,A,FALSE,FALSE,FALSE,medium
+H7301,CVS Health Corporation,Aetna Medicare,97761,3.5,3.5,3.6,25.4,28.9,34.5,A,TRUE,FALSE,FALSE,high
+H5549,Visiting Nurse Service of New York,VNS Health Medicare,67361,3.5,3.0,3.7,26.1,26.9,28.2,A,FALSE,FALSE,FALSE,medium
+H4868,Centene Corporation,Wellcare,41683,3,2.9,3.0,22.8,25.5,30.6,A,FALSE,FALSE,FALSE,medium
+H5496,Imperial Health Plan of California,"Imperial Health Plan of California, Inc.",52035,3.5,2.8,4.2,25.4,25.4,25.4,A,FALSE,FALSE,FALSE,medium
+H5525,Humana Inc.,Humana,175520,3.5,3.8,3.0,15.3,24.0,12.2,A,FALSE,FALSE,FALSE,medium
+H3379,"UnitedHealth Group, Inc.",UnitedHealthcare,100833,3.5,3.6,3.4,19.4,23.9,34.1,A,FALSE,FALSE,FALSE,medium
+H7607,"Clever Care Health Plan, Inc.",Clever Care Health Plan,50156,3.5,3.0,3.8,21.2,22.7,23.5,A,FALSE,FALSE,FALSE,medium
+H4624,"Zing Health Consolidator, Inc",Zing Health,36021,2.5,2.3,2.8,21.9,22.5,20.2,A,FALSE,FALSE,FALSE,medium
+H8889,Medica Holding Company,Medica,112248,3.5,3.8,3.6,19.9,22.2,35.8,A,FALSE,FALSE,FALSE,medium
+H5793,CVS Health Corporation,Aetna Medicare,61346,3.5,3.4,3.7,20.0,21.2,23.7,A,TRUE,FALSE,FALSE,medium
+H0354,Health Care Service Corporation,Cigna HealthCare,75201,3.5,3.6,3.6,18.3,21.2,27.5,A,TRUE,FALSE,FALSE,medium
+H0294,"UnitedHealth Group, Inc.",UnitedHealthcare,69933,3.5,3.6,3.5,15.1,18.8,24.4,A,FALSE,FALSE,FALSE,medium
+H3204,Presbyterian Healthcare Services,Presbyterian Health Plan,53755,3,3.3,2.7,19.1,18.5,32.2,A,FALSE,FALSE,FALSE,medium
+H1608,CVS Health Corporation,Aetna Medicare,118272,3.5,3.8,3.5,12.9,18.4,0.0,A,TRUE,FALSE,FALSE,medium
+H5649,"Molina Healthcare, Inc.",Central Health Medicare Plan,35257,3,3.2,2.8,15.2,18.3,24.3,A,FALSE,TRUE,FALSE,medium
+H3418,"UnitedHealth Group, Inc.",UnitedHealthcare,47402,3.5,3.0,3.6,16.2,17.7,20.3,A,FALSE,FALSE,FALSE,high
+H3949,Health Care Service Corporation,Cigna HealthCare,37441,3,3.5,3.2,15.1,17.4,21.5,B,FALSE,FALSE,FALSE,medium
+H4141,Humana Inc.,Humana,124430,3.5,3.9,3.4,7.6,16.8,0.0,B,TRUE,FALSE,FALSE,medium
+H1416,Centene Corporation,Wellcare,57504,3,3.6,2.5,11.1,15.9,12.3,B,FALSE,FALSE,FALSE,medium
+H4471,"Elevance Health, Inc.",Anthem Blue Cross,104863,3,4.1,2.6,0.0,15.1,,B,FALSE,FALSE,FALSE,medium
+H1224,Local Initiative Health Authority for LA County,L.A. Care Health Plan,30796,3,3.1,2.8,13.4,14.9,17.7,B,FALSE,FALSE,FALSE,medium
+H3192,CVS Health Corporation,Aetna Medicare,27799,3,3.2,3.2,13.5,14.8,12.5,B,FALSE,FALSE,FALSE,medium
+H8894,INLAND EMPIRE HEALTH PLAN,IEHP DualChoice,38439,3,3.1,2.5,14.8,14.6,19.7,B,FALSE,FALSE,FALSE,medium
+H3533,Humana Inc.,Humana,28961,3,3.1,2.8,12.2,14.6,18.3,B,FALSE,FALSE,FALSE,medium
+H0755,"UnitedHealth Group, Inc.",UnitedHealthcare,93668,3.5,3.8,3.2,9.1,13.8,27.6,B,TRUE,FALSE,FALSE,high
+H0672,Health Care Service Corporation,Cigna HealthCare,25514,3,2.9,2.7,12.1,13.4,14.2,B,FALSE,FALSE,FALSE,medium
+H3528,"Molina Healthcare, Inc.",ConnectiCare,47730,3.5,3.7,3.6,10.6,12.6,17.5,B,FALSE,TRUE,FALSE,high
+H3038,"Molina Healthcare, Inc.",Molina Healthcare of California,29863,3,3.5,2.9,9.2,12.2,16.8,B,FALSE,TRUE,FALSE,medium
+H3561,Centene Corporation,Wellcare By Health Net,46980,3.5,3.2,3.0,10.1,12.1,14.5,B,FALSE,FALSE,FALSE,medium
+H3288,CVS Health Corporation,Aetna Medicare,67539,3.5,3.7,3.1,9.0,11.5,16.2,B,FALSE,FALSE,FALSE,medium
+H3335,"Lifetime Healthcare, Inc.","Excellus Health Plan, Inc",86142,3.5,3.7,3.5,15.1,11.3,21.6,B,TRUE,FALSE,FALSE,high
+H8634,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM, OK, TX",27555,3,3.2,2.7,10.9,11.3,14.5,B,FALSE,FALSE,FALSE,medium
+H7849,Health Care Service Corporation,Cigna HealthCare,29238,3,3.3,2.5,9.7,11.2,13.4,B,FALSE,FALSE,FALSE,high
+H5439,Centene Corporation,Wellcare By Health Net,19665,3,3.0,2.9,9.4,11.0,14.6,B,FALSE,FALSE,FALSE,high
+H2509,"UnitedHealth Group, Inc.",UnitedHealthcare,72626,3.5,3.8,3.1,6.7,10.9,5.6,B,FALSE,FALSE,FALSE,medium
+H8432,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield HP,43986,3.5,3.3,3.0,9.1,10.7,13.3,B,FALSE,FALSE,FALSE,medium
+H3251,Health Care Service Corporation,Blue Cross and Blue Shield of New Mexico,20586,2.5,3.0,2.8,9.6,10.2,14.4,B,FALSE,FALSE,FALSE,medium
+H5322,"UnitedHealth Group, Inc.",UnitedHealthcare,217118,3.5,4.0,3.0,0.0,10.2,0.0,B,TRUE,FALSE,FALSE,medium
+H3822,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM",21506,3,3.5,3.4,10.0,9.8,13.4,B,TRUE,FALSE,FALSE,high
+H5433,Orange County Health Authority,CalOptima Health OneCare,18849,3,2.7,2.7,9.6,9.8,12.3,B,FALSE,FALSE,FALSE,medium
+H8849,"Elevance Health, Inc.",Wellpoint,55070,3.5,3.7,3.1,6.3,9.6,14.3,B,FALSE,FALSE,FALSE,medium
+H5475,Centene Corporation,Wellcare,20141,3,3.0,2.5,8.1,9.5,11.6,B,FALSE,FALSE,FALSE,medium
+H8908,Humana Inc.,Humana,22259,3,3.3,2.7,7.8,9.5,11.1,B,FALSE,FALSE,FALSE,medium
+H3113,"UnitedHealth Group, Inc.",UnitedHealthcare,80289,3.5,3.8,3.0,5.2,9.1,5.3,B,FALSE,FALSE,FALSE,medium
+H0523,CVS Health Corporation,Aetna Medicare,11384,3,2.8,3.6,8.6,9.0,9.8,B,FALSE,FALSE,FALSE,high
+H4937,California Physicians' Service,Blue Shield of California,45627,3.5,3.6,3.2,7.5,8.9,14.0,B,FALSE,FALSE,FALSE,high
+H5434,Guidewell Mutual Holding Corporation,Florida Blue,62044,3.5,3.8,3.1,5.8,8.3,13.5,B,FALSE,FALSE,FALSE,high
+H6200,Lumeris Group Holdings Corporation,Essence Healthcare,10976,3,3.1,3.7,8.1,8.2,9.3,B,TRUE,FALSE,FALSE,high
+H2923,"Devoted Health, Inc.",Devoted Health,16437,3.5,2.7,4.2,8.0,8.0,8.0,B,FALSE,FALSE,FALSE,medium
+H5628,"Molina Healthcare, Inc.",Molina Healthcare of Utah & Idaho,16985,3,3.2,2.7,6.7,7.9,9.5,B,FALSE,FALSE,FALSE,medium
+H0351,Centene Corporation,Wellcare By Allwell,23988,3.5,3.3,3.4,6.4,7.5,8.3,B,FALSE,FALSE,FALSE,medium
+H4982,CVS Health Corporation,Aetna Medicare,9688,3,2.3,3.3,7.1,7.4,8.1,B,FALSE,FALSE,FALSE,high
+H6815,Centene Corporation,Wellcare By Health Net,12601,3,2.8,2.8,6.6,7.4,8.6,B,FALSE,FALSE,FALSE,high
+H5779,Centene Corporation,Wellcare,13171,3,3.1,2.9,6.3,7.3,8.2,B,FALSE,FALSE,FALSE,high
+H8578,"Baystate Health, Inc.",Health New England Medicare Advantage Plans,9841,3,3.0,3.6,7.2,7.2,8.7,B,FALSE,FALSE,FALSE,high
+H5828,"Elevance Health, Inc.",Wellpoint,27710,3,3.6,2.2,5.2,7.1,6.3,B,FALSE,FALSE,FALSE,medium
+H0562,Centene Corporation,Wellcare By Health Net,24647,3.5,3.5,3.4,5.8,6.9,9.0,B,FALSE,FALSE,FALSE,medium
+H7379,"CareFirst, Inc.",CareFirst BlueCross BlueShield Medicare Advantage,46358,3.5,3.9,3.6,5.9,6.8,0.0,B,FALSE,FALSE,FALSE,high
+H3832,Hawaii Medical Service Association,HMSA Akamai Advantage,37817,3.5,3.6,3.1,5.5,6.8,11.4,B,FALSE,FALSE,FALSE,high
+H5823,"Molina Healthcare, Inc.","Molina Healthcare of Washington, Inc.",13256,3,3.1,2.7,5.6,6.6,8.7,B,FALSE,FALSE,FALSE,medium
+H5590,Centene Corporation,Wellcare By Allwell,26455,3.5,3.3,3.0,5.5,6.6,8.3,B,FALSE,FALSE,FALSE,medium
+H6586,"Devoted Health, Inc.",Devoted Health,7256,3,2.5,3.7,6.3,6.5,6.8,B,FALSE,FALSE,FALSE,high
+H5926,"Molina Healthcare, Inc.",Molina Healthcare of Michigan,15595,3,3.4,2.7,5.3,6.4,8.1,B,FALSE,FALSE,FALSE,medium
+H9955,"Molina Healthcare, Inc.",Molina Healthcare of Ohio,14295,3,3.4,2.8,4.5,5.9,8.5,B,FALSE,FALSE,FALSE,medium
+H1666,Health Care Service Corporation,"Blue Cross and Blue Shield of NM, TX",15914,3,3.4,2.8,5.6,5.8,8.6,B,FALSE,FALSE,FALSE,high
+H0908,Centene Corporation,Wellcare By Allwell,9227,3,2.7,2.9,5.2,5.7,5.9,B,FALSE,FALSE,FALSE,medium
+H0982,"Athena Healthcare Holdings, LLC",Solis Health Plans,21953,3.5,3.5,3.6,6.4,5.6,0.0,B,TRUE,FALSE,FALSE,medium
+H8173,"Devoted Health, Inc.",Devoted Health,11405,3.5,2.8,4.3,5.6,5.6,5.6,B,TRUE,FALSE,FALSE,medium
+H6743,ATRIO Health Plans,ATRIO Health Plans,21188,2.5,3.3,1.9,5.2,5.4,9.1,B,FALSE,FALSE,FALSE,high
+H2108,Health Care Service Corporation,Cigna HealthCare,12780,3,3.3,2.8,4.7,5.3,6.7,B,FALSE,FALSE,FALSE,medium
+H5826,Community Health Plan of Washington,Community Health Plan of WA Medicare Advantage,8975,3,3.0,3.1,4.9,5.2,6.4,B,FALSE,FALSE,FALSE,medium
+H0423,New York City Health and Hospitals Corporation,MetroPlus Health Plan,13517,3.5,3.2,3.8,5.4,5.1,4.7,B,FALSE,FALSE,FALSE,medium
+R6801,"UnitedHealth Group, Inc.",UnitedHealthcare,39248,3.5,3.7,2.6,3.6,5.1,5.0,B,FALSE,FALSE,FALSE,medium
+H5009,"Cambia Health Solutions, Inc.",Regence BlueShield,10501,3,3.4,3.0,4.0,4.9,7.5,B,FALSE,FALSE,FALSE,high
+H8330,"Point32Health, Inc.",Tufts Health Plan,15506,3.5,3.2,3.5,4.6,4.8,6.0,B,FALSE,FALSE,FALSE,medium
+H7006,ATRIO Health Plans,ATRIO Health Plans,10542,2,2.7,2.2,4.5,4.7,5.7,B,FALSE,FALSE,FALSE,medium
+H9485,Mass General Brigham Incorporated,Mass General Brigham Health Plan,17823,3.5,3.7,3.7,4.5,4.7,6.0,B,FALSE,FALSE,FALSE,high
+H2458,Medica Holding Company,Medica,13830,3,3.5,3.0,4.4,4.7,7.8,B,FALSE,FALSE,FALSE,medium
+H9364,Centene Corporation,Wellcare,14975,3.5,3.2,3.4,4.1,4.7,5.6,B,FALSE,FALSE,FALSE,medium
+H1610,CVS Health Corporation,Aetna Better Health of Virginia,11494,3,3.2,2.4,4.1,4.6,4.1,B,FALSE,FALSE,FALSE,medium

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Ratings Motion · Forcing Function Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--lime-bright:#A4CE3A;
+  --ink:#15231B;--ink-soft:#3E4D44;--dim:#7A877E;
+  --paper:#FAFBF7;--card:#FFFFFF;--mist:#F0F4ED;--mist-2:#E7EEE3;--line:#E2E7DD;--line-2:#D4DCCE;
+  --gold:#E0A23B;--orange:#FE5000;
+  --shadow:0 1px 2px rgba(20,40,25,.04),0 12px 34px rgba(20,40,25,.07);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:15px;line-height:1.5}
+.sheet{max-width:900px;margin:26px auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--forest);margin:0;line-height:1.14}
+.mono{font-family:"JetBrains Mono",monospace}
+.kick{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);font-weight:600}
+.head{background:linear-gradient(150deg,#16432C,#0F2E1B);color:#fff;padding:30px 34px}
+.head .kick{color:var(--lime-bright)}
+.head h1{color:#fff;font-size:29px;font-weight:800;margin:9px 0 8px}
+.head p{margin:0;color:#DCEBDF;font-size:14.5px;max-width:70ch}
+.body{padding:28px 34px 32px}
+section{margin-bottom:26px}
+.st{display:flex;align-items:baseline;gap:12px;margin-bottom:9px}
+.st h2{font-size:19px;font-weight:700}
+p.lead{margin:0 0 4px;font-size:15px}
+.ff{background:#fff;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:16px 18px;font-size:15.5px}
+.ff b{color:var(--forest)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+.pc .role{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:600}
+.pc h3{font-size:16px;margin:5px 0 8px}
+.pc .feel{font-size:13.5px;color:var(--ink-soft);margin:0 0 10px}
+.pc .ang{font-size:13px;color:var(--ink);border-top:1px solid var(--line);padding-top:9px}
+.pc .ang b{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;display:block;margin-bottom:3px;color:var(--green)}
+.wedge{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wedge .w{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.wedge .w.yes{border-left:3px solid var(--green-bright)}
+.wedge .w.no{border-left:3px solid var(--line-2)}
+.wedge .lbl{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;margin-bottom:7px}
+.wedge .yes .lbl{color:var(--green)}
+.wedge .no .lbl{color:var(--dim)}
+.wedge ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-soft)}
+.wedge li{margin:3px 0}
+.disc{background:#16432C;color:#fff;border-radius:12px;padding:20px 22px}
+.disc .kick{color:var(--lime-bright)}
+.disc h2{color:#fff;font-size:18px;margin:8px 0 14px}
+.disc .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.disc .col .h{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.disc .can .h{color:var(--lime-bright)}
+.disc .cant .h{color:#F4A28A}
+.disc ul{margin:0;padding-left:0;list-style:none}
+.disc li{position:relative;padding:6px 0 6px 20px;font-size:13.5px;color:#E4EFE6;border-top:1px solid rgba(255,255,255,.12)}
+.disc li:first-child{border-top:none}
+.disc .can li:before{content:"✓";position:absolute;left:0;color:var(--lime-bright);font-weight:700}
+.disc .cant li:before{content:"✕";position:absolute;left:0;color:#F4A28A;font-weight:700}
+.foot{font-size:12px;color:var(--dim);margin-top:8px;font-family:"JetBrains Mono",monospace}
+@media(max-width:760px){.grid3,.wedge,.disc .two{grid-template-columns:1fr}}
+@media print{body{background:#fff}.sheet{box-shadow:none;border:none;margin:0}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="head">
+    <span class="kick">Star Ratings Motion · Forcing Function Brief · for the outbound team</span>
+    <h1>What this motion is really about, and what every message must earn its way to</h1>
+    <p>The one page to read before writing a Star Ratings message. It names the pressure the prospect actually feels, who feels it, the slice of the problem we can honestly speak to, and the hard line on what we may and may not claim.</p>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <div class="st"><span class="kick">01</span><h2>The forcing function</h2></div>
+      <div class="ff"><b>A Medicare Advantage plan below 4.0 Stars forgoes its CMS Quality Bonus Payment.</b> That is real, recurring money tied directly to the rating, and the gap between a 3.5-star contract and the 4.0 bonus line is a half-star. The plan feels it across the org, and leadership is running to close it before the next cycle locks. Our job is to reach the people who own that number with a reason it matters right now.</div>
+    </section>
+
+    <section>
+      <div class="st"><span class="kick">02</span><h2>Why it bites now</h2></div>
+      <p class="lead">CMS resets Star Ratings every October, so the window is annual and unforgiving. On the current 2026-cycle cut, the sharpest targets are the cliff-edge contracts sitting at exactly 3.5 stars, one half-star under the bonus line, where a small operational move on the addressable measures can flip the payment. Plans further back sit at 3.0 and are a longer-horizon play; we say so honestly rather than manufacture a same-cycle cliff. Every figure we use here is an estimate from public CMS data, labeled as such, because the prospect knows their exact picture better than we do.</p>
+    </section>
+
+    <section>
+      <div class="st"><span class="kick">03</span><h2>Who feels it, and the angle for each</h2></div>
+      <div class="grid3">
+        <div class="pc">
+          <div class="role">Owns the number</div>
+          <h3>Chief Medicare Officer · VP Stars / Quality</h3>
+          <p class="feel">The rating is their scorecard. A half-star slip is their name on the miss, and they are accountable for the improvement plan.</p>
+          <div class="ang"><b>Message angle</b>Lead with the specific measures inside their control and a credible path to move them before the cycle closes.</div>
+        </div>
+        <div class="pc">
+          <div class="role">Feels the money</div>
+          <h3>CFO · VP Finance</h3>
+          <p class="feel">Sees the forgone bonus as a line item. Responds to the size of the exposure framed against something they already track, not to feature talk.</p>
+          <div class="ang"><b>Message angle</b>Quantify the exposure as a public-data estimate, then connect closing it to an operational lever, never a vague promise.</div>
+        </div>
+        <div class="pc">
+          <div class="role">Operates in it</div>
+          <h3>VP / Dir Contact Center · Member Services · Ops</h3>
+          <p class="feel">Owns the customer-service and admin measures that actually move Stars. Feels the staffing, adherence, and backlog pressure every day.</p>
+          <div class="ang"><b>Message angle</b>Speak to the operational measures directly; this is where Queue Optimizer and the workforce-orchestration story land hardest.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="st"><span class="kick">04</span><h2>The wedge, stated honestly</h2></div>
+      <p class="lead">Not all of a plan's Star gap is ours to move. The winnable slice is the operational and customer-service-addressable measures. We anchor there and let the prospect route us to the rest. Claiming the whole Star gap is where credibility dies.</p>
+      <div class="wedge">
+        <div class="w yes">
+          <div class="lbl">Where we speak · addressable</div>
+          <ul>
+            <li>The still-scoring customer-service measures: CAHPS customer service, complaints, disenrollment. Not the retired Call Center Monitoring secret-shopper measure.</li>
+            <li>Administrative and access measures driven by ops execution</li>
+            <li>Schedule adherence, shrinkage, and backlog that operations controls</li>
+            <li>The Queue Optimizer and Dynamic Workforce Orchestration angle</li>
+          </ul>
+        </div>
+        <div class="w no">
+          <div class="lbl">Where we do not overreach</div>
+          <ul>
+            <li>Clinical and HEDIS measures we do not move</li>
+            <li>Pharmacy and medication-adherence clinical outcomes</li>
+            <li>Anything implying we lift the full Star rating on our own</li>
+            <li>Measures already retired or changing in the next cycle, including the Call Center Monitoring measure, gone for 2028 Stars</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="disc">
+        <span class="kick">05 · The hard line</span>
+        <h2>What we may claim, and what we may not</h2>
+        <div class="two">
+          <div class="col can">
+            <div class="h">Cleared to send</div>
+            <ul>
+              <li>Star levels, forgone-QBP estimates, and cliff counts, always labeled "estimate from public CMS data."</li>
+              <li>The UnitedHealthcare $190M figure as UHC's own stated court claim, under the prior rules, historical proof only. Never imply moving that measure still earns bonus; it is retired for 2028 Stars.</li>
+              <li>Intradiem sells Dynamic Workforce Orchestration across contact centers and back offices, six verticals.</li>
+            </ul>
+          </div>
+          <div class="col cant">
+            <div class="h">Do not send</div>
+            <ul>
+              <li>The Humana story, or any named or blind customer outcome. No verified Intradiem customer result exists in the Value Repository yet, so it does not ship.</li>
+              <li>Any idle-time percentage, or any Intradiem ROI, NRR, or performance metric. All unsourced placeholders.</li>
+              <li>Intercom or Rippling proof points. Other vendors' results, never ours to claim.</li>
+              <li>The stale "157 Director+ contacts" and "38 sub-4.0 plans" counts. Prior-cycle numbers, superseded.</li>
+              <li>Profit or revenue percentages we cannot defend from public filings on that specific plan.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot" style="color:#9FB6A6;margin-top:14px">Source of truth: Intradiem Value Repository. A claim not in that file does not reach a prospect. When a verified customer story is approved, it gets added there first, then it can lead.</div>
+      </div>
+    </section>
+
+    <p class="foot">Star Ratings new-logo motion · public-data framing, labeled · Dallas Andrews, GTM Engineer</p>
+  </div>
+</div>
+</body>
+</html>

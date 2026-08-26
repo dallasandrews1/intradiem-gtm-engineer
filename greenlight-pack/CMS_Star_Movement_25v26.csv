@@ -1,0 +1,99 @@
+contract_id,parent_org,marketing_name,overall_star_2025,overall_star_2026,star_delta_25to26,cms_customer_service_star_2025,cms_member_experience_star_2025,cms_complaints_star_2025,measure_slippage,measure_slippage_why
+H5216,Humana Inc.,Humana,3.5,3.5,0.0,4.0,4.0,4.0,FALSE,
+H5619,Humana Inc.,Humana,3.5,3.0,-0.5,4.0,3.0,4.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H0028,Humana Inc.,Humana,3.5,3.5,0.0,4.0,4.0,3.0,FALSE,
+H3805,"UnitedHealth Group, Inc.",UnitedHealthcare,4.0,3.5,-0.5,4.0,3.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H6622,Humana Inc.,Humana,3.5,3.5,0.0,4.0,4.0,3.0,FALSE,
+H8768,"UnitedHealth Group, Inc.",UnitedHealthcare,3.5,3.5,0.0,4.0,3.0,4.0,FALSE,
+H3312,CVS Health Corporation,Aetna Medicare,3.5,3.0,-0.5,4.0,4.0,4.0,FALSE,
+H5970,Humana Inc.,Humana,3.5,3.0,-0.5,4.0,4.0,4.0,FALSE,
+H5141,"Clover Health Holdings, Inc.",Clover Health,4.0,3.5,-0.5,4.0,3.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H3931,CVS Health Corporation,Aetna Medicare,3.5,3.0,-0.5,4.0,3.0,4.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H1468,Humana Inc.,Humana,4.0,3.5,-0.5,4.0,4.0,3.0,FALSE,
+H3447,"Elevance Health, Inc.",Anthem HealthKeepers,3.5,3.5,0.0,4.0,4.0,4.0,FALSE,
+H3817,"Cambia Health Solutions, Inc.",Regence BlueCross BlueShield of Oregon,3.5,3.0,-0.5,4.0,3.0,4.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H1278,"UnitedHealth Group, Inc.",UnitedHealthcare,4.0,3.5,-0.5,5.0,3.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H2775,Centene Corporation,Wellcare,2.5,3.0,0.5,3.0,2.0,3.0,FALSE,
+H5599,Centene Corporation,Wellcare By Fidelis Care,3.5,3.0,-0.5,3.0,3.0,3.0,TRUE,"Overall 3.5->3.0 (-0.5); weak QO domain: Customer Service 3.0, Member Experience 3.0 (2025 CMS)"
+H4161,"Elevance Health, Inc.",Anthem Blue Cross Partnership Plan,3.0,3.0,0.0,4.0,,3.0,FALSE,
+H0544,"Elevance Health, Inc.",Anthem Blue Cross,3.0,3.0,0.0,4.0,1.0,3.0,FALSE,
+H7301,CVS Health Corporation,Aetna Medicare,4.0,3.5,-0.5,3.0,4.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Customer Service 3.0 (2025 CMS)
+H5549,Visiting Nurse Service of New York,VNS Health Medicare,3.5,3.5,0.0,4.0,2.0,3.0,FALSE,
+H4868,Centene Corporation,Wellcare,3.5,3.0,-0.5,4.0,,4.0,FALSE,
+H5496,Imperial Health Plan of California,"Imperial Health Plan of California, Inc.",3.5,3.5,0.0,4.0,,2.0,FALSE,
+H5525,Humana Inc.,Humana,3.5,3.5,0.0,4.0,4.0,3.0,FALSE,
+H3379,"UnitedHealth Group, Inc.",UnitedHealthcare,3.5,3.5,0.0,4.0,3.0,4.0,FALSE,
+H7607,"Clever Care Health Plan, Inc.",Clever Care Health Plan,3.0,3.5,0.5,3.0,,3.0,FALSE,
+H4624,"Zing Health Consolidator, Inc",Zing Health,3.5,2.5,-1.0,3.0,3.0,3.0,TRUE,"Overall 3.5->2.5 (-1.0); weak QO domain: Customer Service 3.0, Member Experience 3.0 (2025 CMS)"
+H8889,Medica Holding Company,Medica,3.5,3.5,0.0,3.0,4.0,5.0,FALSE,
+H5793,CVS Health Corporation,Aetna Medicare,4.0,3.5,-0.5,4.0,3.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H0354,Health Care Service Corporation,Cigna HealthCare,4.0,3.5,-0.5,4.0,3.0,3.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H0294,"UnitedHealth Group, Inc.",UnitedHealthcare,3.0,3.5,0.5,4.0,3.0,4.0,FALSE,
+H3204,Presbyterian Healthcare Services,Presbyterian Health Plan,3.0,3.0,0.0,4.0,3.0,4.0,FALSE,
+H1608,CVS Health Corporation,Aetna Medicare,4.0,3.5,-0.5,4.0,4.0,4.0,FALSE,
+H5649,"Molina Healthcare, Inc.",Central Health Medicare Plan,2.5,3.0,0.5,4.0,1.0,3.0,FALSE,
+H3418,"UnitedHealth Group, Inc.",UnitedHealthcare,3.0,3.5,0.5,4.0,1.0,4.0,FALSE,
+H3949,Health Care Service Corporation,Cigna HealthCare,3.5,3.0,-0.5,4.0,3.0,3.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H4141,Humana Inc.,Humana,4.0,3.5,-0.5,4.0,4.0,3.0,FALSE,
+H1416,Centene Corporation,Wellcare,3.5,3.0,-0.5,3.0,4.0,4.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Customer Service 3.0 (2025 CMS)
+H4471,"Elevance Health, Inc.",Anthem Blue Cross,,3.0,,,,,FALSE,
+H1224,Local Initiative Health Authority for LA County,L.A. Care Health Plan,3.0,3.0,0.0,4.0,2.0,3.0,FALSE,
+H3192,CVS Health Corporation,Aetna Medicare,3.5,3.0,-0.5,4.0,4.0,3.0,FALSE,
+H8894,INLAND EMPIRE HEALTH PLAN,IEHP DualChoice,3.0,3.0,0.0,3.0,3.0,5.0,FALSE,
+H3533,Humana Inc.,Humana,3.0,3.0,0.0,4.0,3.0,3.0,FALSE,
+H0755,"UnitedHealth Group, Inc.",UnitedHealthcare,4.0,3.5,-0.5,4.0,4.0,4.0,FALSE,
+H0672,Health Care Service Corporation,Cigna HealthCare,2.5,3.0,0.5,4.0,2.0,2.0,FALSE,
+H3528,"Molina Healthcare, Inc.",ConnectiCare,3.5,3.5,0.0,4.0,3.0,4.0,FALSE,
+H3038,"Molina Healthcare, Inc.",Molina Healthcare of California,,3.0,,,,,FALSE,
+H3561,Centene Corporation,Wellcare By Health Net,2.5,3.5,1.0,,,1.0,FALSE,
+H3288,CVS Health Corporation,Aetna Medicare,3.5,3.5,0.0,4.0,4.0,4.0,FALSE,
+H3335,"Lifetime Healthcare, Inc.","Excellus Health Plan, Inc",4.0,3.5,-0.5,3.0,4.0,5.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Customer Service 3.0 (2025 CMS)
+H8634,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM, OK, TX",3.5,3.0,-0.5,4.0,3.0,4.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H7849,Health Care Service Corporation,Cigna HealthCare,3.0,3.0,0.0,4.0,3.0,3.0,FALSE,
+H5439,Centene Corporation,Wellcare By Health Net,3.0,3.0,0.0,5.0,2.0,4.0,FALSE,
+H2509,"UnitedHealth Group, Inc.",UnitedHealthcare,,3.5,,,,,FALSE,
+H8432,"Elevance Health, Inc.",Anthem Blue Cross and Blue Shield HP,3.0,3.5,0.5,4.0,3.0,4.0,FALSE,
+H3251,Health Care Service Corporation,Blue Cross and Blue Shield of New Mexico,3.0,2.5,-0.5,5.0,2.0,4.0,TRUE,Overall 3.0->2.5 (-0.5); weak QO domain: Member Experience 2.0 (2025 CMS)
+H5322,"UnitedHealth Group, Inc.",UnitedHealthcare,4.0,3.5,-0.5,5.0,4.0,3.0,FALSE,
+H3822,Health Care Service Corporation,"Blue Cross and Blue Shield of IL, NM",4.0,3.0,-1.0,4.0,3.0,4.0,TRUE,Overall 4.0->3.0 (-1.0); weak QO domain: Member Experience 3.0 (2025 CMS)
+H5433,Orange County Health Authority,CalOptima Health OneCare,2.5,3.0,0.5,4.0,1.0,4.0,FALSE,
+H8849,"Elevance Health, Inc.",Wellpoint,3.5,3.5,0.0,5.0,,3.0,FALSE,
+H5475,Centene Corporation,Wellcare,3.0,3.0,0.0,3.0,3.0,3.0,FALSE,
+H8908,Humana Inc.,Humana,3.0,3.0,0.0,4.0,,3.0,FALSE,
+H3113,"UnitedHealth Group, Inc.",UnitedHealthcare,3.5,3.5,0.0,5.0,3.0,3.0,FALSE,
+H0523,CVS Health Corporation,Aetna Medicare,3.0,3.0,0.0,4.0,2.0,3.0,FALSE,
+H4937,California Physicians' Service,Blue Shield of California,2.5,3.5,1.0,4.0,1.0,3.0,FALSE,
+H5434,Guidewell Mutual Holding Corporation,Florida Blue,3.5,3.5,0.0,4.0,4.0,4.0,FALSE,
+H6200,Lumeris Group Holdings Corporation,Essence Healthcare,4.0,3.0,-1.0,,4.0,4.0,FALSE,
+H2923,"Devoted Health, Inc.",Devoted Health,,3.5,,,,,FALSE,
+H5628,"Molina Healthcare, Inc.",Molina Healthcare of Utah & Idaho,3.0,3.0,0.0,4.0,3.0,3.0,FALSE,
+H0351,Centene Corporation,Wellcare By Allwell,3.0,3.5,0.5,4.0,2.0,4.0,FALSE,
+H4982,CVS Health Corporation,Aetna Medicare,2.5,3.0,0.5,3.0,1.0,2.0,FALSE,
+H6815,Centene Corporation,Wellcare By Health Net,3.0,3.0,0.0,4.0,2.0,3.0,FALSE,
+H5779,Centene Corporation,Wellcare,3.0,3.0,0.0,4.0,2.0,2.0,FALSE,
+H8578,"Baystate Health, Inc.",Health New England Medicare Advantage Plans,3.5,3.0,-0.5,3.0,3.0,5.0,TRUE,"Overall 3.5->3.0 (-0.5); weak QO domain: Customer Service 3.0, Member Experience 3.0 (2025 CMS)"
+H5828,"Elevance Health, Inc.",Wellpoint,3.0,3.0,0.0,5.0,3.0,3.0,FALSE,
+H0562,Centene Corporation,Wellcare By Health Net,3.0,3.5,0.5,4.0,2.0,4.0,FALSE,
+H7379,"CareFirst, Inc.",CareFirst BlueCross BlueShield Medicare Advantage,3.5,3.5,0.0,,4.0,5.0,FALSE,
+H3832,Hawaii Medical Service Association,HMSA Akamai Advantage,3.5,3.5,0.0,4.0,3.0,4.0,FALSE,
+H5823,"Molina Healthcare, Inc.","Molina Healthcare of Washington, Inc.",3.0,3.0,0.0,4.0,1.0,4.0,FALSE,
+H5590,Centene Corporation,Wellcare By Allwell,3.5,3.5,0.0,5.0,2.0,4.0,FALSE,
+H6586,"Devoted Health, Inc.",Devoted Health,,3.0,,,,,FALSE,
+H5926,"Molina Healthcare, Inc.",Molina Healthcare of Michigan,3.0,3.0,0.0,4.0,2.0,4.0,FALSE,
+H9955,"Molina Healthcare, Inc.",Molina Healthcare of Ohio,3.0,3.0,0.0,4.0,3.0,3.0,FALSE,
+H1666,Health Care Service Corporation,"Blue Cross and Blue Shield of NM, TX",3.0,3.0,0.0,4.0,3.0,4.0,FALSE,
+H0908,Centene Corporation,Wellcare By Allwell,3.5,3.0,-0.5,5.0,3.0,3.0,TRUE,Overall 3.5->3.0 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H0982,"Athena Healthcare Holdings, LLC",Solis Health Plans,4.0,3.5,-0.5,,5.0,3.0,FALSE,
+H8173,"Devoted Health, Inc.",Devoted Health,4.0,3.5,-0.5,5.0,3.0,4.0,TRUE,Overall 4.0->3.5 (-0.5); weak QO domain: Member Experience 3.0 (2025 CMS)
+H6743,ATRIO Health Plans,ATRIO Health Plans,3.0,2.5,-0.5,3.0,3.0,4.0,TRUE,"Overall 3.0->2.5 (-0.5); weak QO domain: Customer Service 3.0, Member Experience 3.0 (2025 CMS)"
+H2108,Health Care Service Corporation,Cigna HealthCare,3.0,3.0,0.0,4.0,2.0,3.0,FALSE,
+H5826,Community Health Plan of Washington,Community Health Plan of WA Medicare Advantage,3.0,3.0,0.0,2.0,2.0,4.0,FALSE,
+H0423,New York City Health and Hospitals Corporation,MetroPlus Health Plan,3.0,3.5,0.5,3.0,,3.0,FALSE,
+R6801,"UnitedHealth Group, Inc.",UnitedHealthcare,3.5,3.5,0.0,4.0,4.0,3.0,FALSE,
+H5009,"Cambia Health Solutions, Inc.",Regence BlueShield,3.0,3.0,0.0,4.0,2.0,4.0,FALSE,
+H8330,"Point32Health, Inc.",Tufts Health Plan,3.0,3.5,0.5,4.0,2.0,4.0,FALSE,
+H7006,ATRIO Health Plans,ATRIO Health Plans,3.0,2.0,-1.0,,3.0,4.0,TRUE,Overall 3.0->2.0 (-1.0); weak QO domain: Member Experience 3.0 (2025 CMS)
+H9485,Mass General Brigham Incorporated,Mass General Brigham Health Plan,3.5,3.5,0.0,,4.0,,FALSE,
+H2458,Medica Holding Company,Medica,3.0,3.0,0.0,3.0,3.0,4.0,FALSE,
+H9364,Centene Corporation,Wellcare,3.0,3.5,0.5,3.0,2.0,4.0,FALSE,
+H1610,CVS Health Corporation,Aetna Better Health of Virginia,3.0,3.0,0.0,3.0,3.0,3.0,FALSE,

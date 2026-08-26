@@ -1,0 +1,45 @@
+# Daily War Room, 2026-07-15
+
+Window swept: last 24-72 hours (Jul 13 to Jul 15), plus follow-through on the live threads (Stars recalculation litigation wave, Centene cost-out, Elevance $115M suit). Sender for all angle notes: Nathan Belfield.
+
+Universes scanned: the 32 Tier A+B Star Ratings parents in `StarRatings_Targets_2026_Tiered.csv` (98 contracts). Back-office motion: news sweep ran against `BackOffice_Target_Universe_v1.csv` (101 accounts) and the Jul 14 sample-pull cohort; returned only generic 2026 claims-backlog / cost-pressure market content, no target-account award, renewal, repatriation, or WARN. Named accounts: Devoted Health, no fresh news this cycle.
+
+## Priority 1, Act Today
+
+**No fresh Priority 1 fired in this window.** Both live Priority 1 threads are carried, not re-fired:
+
+- **Centene Corporation (carried from Jul 7, sequence in flight):** No new public development in the window. The voluntary separation window closed Jul 1-2; still no company announcement, WARN filing, or press report confirming an involuntary number [UNVERIFIED forum chatter remains the only source and is not usable in copy]. Q2 earnings remain the forcing moment: **July 28, 2026**. Escalation rule stands: any confirmed involuntary-layoff announcement ahead of Jul 28 fires same-day. Stale-headline trap still live in search: the Feb 2021 "Centene 3,000 layoffs" story is a Neidorff-era event, never current.
+- **Elevance Health (carried from Jul 6):** No new filing or ruling on the live $115M recalculation suit (Southern District of Georgia, filed Jul 1) in the window. Elevance reports Q2 **July 22 before open**; expect prepared Stars language. Stale-headline trap remains: "Elevance loses star ratings suit" headlines are the August 2025 CAHPS/rounding case, not a 2026 ruling.
+
+## Priority 2, Prepare This Week
+
+- **The Q2 earnings stretch opens tomorrow: UHG reports Jul 16, 8:00am ET.** UHG is install-base, so this is context staging, not outbound: Street consensus ~$4.85 EPS on ~$110.8B revenue (18.6% YoY EPS growth), risk-based commercial membership forecast down to ~7.26M from 8.44M. The value of the call is the read-through Stars/MA-margin language it produces for the non-customer parents that follow (Elevance Jul 22, Molina Jul 22, Centene Jul 28, Humana Jul 29, CVS Aug 5). Action: per-parent `qbp_earnings_pressure` angles must be locked today; route nothing outbound on UHG itself. Classified: install-base staging. Owner: Dallas locks staging today.
+- **Stars recalculation litigation wave holds at four plaintiffs, no new entrant or ruling in the window.** The publicly-priced disputed-Stars total is unchanged (Elevance $115M + SCAN $125M + Alignment $50M, plus the underlying Clover win); no fifth plaintiff and no court movement Jul 13-15. This stays the DEFENSIVE framing under every pre-staged earnings angle: Elevance is one of four insurers making the identical APA claim, a pattern not an outlier, and the industry has now publicly priced disputed Stars at $290M+. Persona: SVP Stars / VP Medicare, Finance secondary. Play: folds into `qbp_earnings_pressure` variants, no standalone send. Verified proof: prospect-side public numbers only, no Intradiem claim required.
+- **Marginal-contract re-verification pass is due end of day today (Jul 15), carried from Jul 14.** Scope which Tier A/B marginal contracts the June 2026 upward-only recalculation quietly graduated, before the first send window of the earnings stretch opens Jul 16. Hard deadline to protect addressable math.
+
+## Priority 3, Context
+
+- **Tech-stack sweep: no target-account move.** Verint/Calabrio remain in post-merger integration under Thoma Bravo (dual-platform, no forced migrations); the only fresh CCaaS-health item is NICE's AOK Bayern CXone deployment (a German statutory insurer, Jan 2026, not a US target). Fires nothing. Standing wedge unchanged: a fresh CCaaS/WFM investment is a reason to talk, never a blocker; we are the real-time action layer on the stack they already bought.
+- **HCA cut its 2026 earnings forecast on ACA coverage losses (Healthcare Dive, this week).** HCA is a hospital system, not a Tier A/B parent, so it fires no outreach; logged only as macro confirmation that ACA/coverage-driven cost pressure across the sector is real, which reinforces the cost-mandate thesis at the market level.
+- **No quality-leadership moves, hiring clusters, outages, M&A, or BPO contract events surfaced on any Tier A/B or back-office target in this window.** (Elevance's spring mid-level and Carelon appointments are stale, not fresh; no new Stars/Quality VP change on any target parent.)
+
+## Accounts with No New Signals
+
+Humana Inc. (customer; Jul 29 earnings is calendar staging), CVS Health Corporation (customer; Aug 5), UnitedHealth Group (customer; Jul 16 staging above), Molina Healthcare (Jul 22 staging; MAPD-exit suppression applies), Health Care Service Corporation, Elevance Health (carried, no re-fire), Centene Corporation (carried, no re-fire), Clover Health Holdings (suppressed Jul 7), California Physicians' Service, Cambia Health Solutions, CareFirst, Point32Health, Lifetime Healthcare, Athena Healthcare Holdings, Baystate Health, Mass General Brigham, New York City Health and Hospitals Corporation, Visiting Nurse Service of New York, Imperial Health Plan of California, Medica Holding Company, Hawaii Medical Service Association, Community Health Plan of Washington, Guidewell Mutual Holding Corporation, Local Initiative Health Authority for LA County (LA Care), Inland Empire Health Plan, Orange County Health Authority, Presbyterian Healthcare Services, Lumeris Group Holdings, ATRIO Health Plans, Clever Care Health Plan, Zing Health Consolidator, Devoted Health.
+
+## Triggers Logged to TAM Engine
+
+None this cycle. No new account-level signal fired. The existing Elevance `qbp_earnings_pressure` trigger (Jul 6) and Centene `cost_mandate` trigger (Jul 7) both stay fresh under decay rules; the litigation wave reinforces the Elevance row without adding a new one. Logging nothing today is the correct output, not a gap.
+
+## Executive Summary
+
+Eighth cycle with zero fresh Priority 1. The material fact today is timing, not a new signal: the Q2 earnings stretch opens tomorrow with UHG (Jul 16, 8am ET), so this is the last full staging day before the first send window. The Stars litigation wave held flat at four plaintiffs and $290M+ publicly priced with no new entrant or ruling Jul 13-15, so the pre-staged `qbp_earnings_pressure` framing is unchanged and ready. The marginal-contract re-verification pass is due end of day today to protect addressable math before Jul 16. Two hygiene traps remain live in search (Aug 2025 "Elevance loses" headline; Feb 2021 "Centene 3,000 layoffs" story), and Centene's involuntary-layoff number is still unconfirmed with Q2 (Jul 28) as the forcing moment.
+
+## Today's Action List
+
+1. Lock per-parent `qbp_earnings_pressure` staging today ahead of the Jul 16 UHG open, folding the four-plaintiff / $290M+ litigation framing into the Elevance double-variant. UHG, Humana, CVS are install-base: stage context, route nothing outbound.
+2. Close the marginal-contract re-verification pass by end of day today (Jul 15).
+3. Same-day escalation watch on Centene for any confirmed involuntary-layoff announcement ahead of Jul 28; forum chatter is not a trigger.
+4. Back-office motion: news sweep ran against `BackOffice_Target_Universe_v1.csv`; nothing fired this cycle.
+
+Sources this cycle: [Healthcare Dive](https://www.healthcaredive.com/news/scan-alignment-sue-cms-ma-star-ratings-recalculation-clover-lawsuits/825091/) / [Healthcare Finance News](https://www.healthcarefinancenews.com/news/scan-alignment-sue-cms-over-medicare-advantage-star-ratings) / [MedCity News](https://medcitynews.com/2026/07/elevance-sues-star-ratings/) (Stars litigation wave, four plaintiffs, held flat), [Alphastreet](https://news.alphastreet.com/unitedhealth-group-q2-2026-earnings-preview-july-16-street-expects-4-85-eps/) / [UnitedHealth Group](https://www.unitedhealthgroup.com/newsroom/2026/2026-06-11-uhg-announces-q2-earnings-release-date.html) (UHG Jul 16 open), [Newsweek](https://www.newsweek.com/centene-layoffs-2026-medicaid-medicare-insurance-obamacare-coverage-12076026) / [Insurance Business](https://www.insurancebusinessmag.com/us/news/life-insurance/insurance-giant-moves-to-shrink-workforce-with-broad-buyouts--report-578970.aspx) (Centene buyout thread, carried, no involuntary number), [Healthcare Dive](https://www.healthcaredive.com/news/hca-cuts-2026-earnings-ACA-coverage-losses/825147/) (HCA forecast cut, macro context, not a target), [Aragon Research](https://aragonresearch.com/thoma-bravo-buys-verint-for-2b-and-merges-calabrio-and-verint/) / [No Jitter](https://www.nojitter.com/contact-centers/following-the-combination-with-calabrio-the-new-verint-focuses-on-integration) (Verint/Calabrio integration, no target move), [Modern Healthcare](https://www.modernhealthcare.com/insurance/mh-cms-2026-medicare-advantage-star-ratings/) (CMS recalculation background).

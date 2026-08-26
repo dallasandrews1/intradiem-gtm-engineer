@@ -1,0 +1,102 @@
+account_name,type,industry,active_customer_date,total_licenses
+CENTRICA PLC,Customer,Utilities,6/15/2019,
+British Gas,Customer,Utilities,12/30/2015,5000
+Virgin Media O2 (UK),Customer,Telco/Cable,3/31/2021,10000
+Capita,Customer,Technology,12/22/2023,
+AXA (UK),Customer,Insurance,7/2/2018,700
+VitalityHealth,Customer,Healthcare Insurance,8/25/2022,1100
+Sanlam RSA,Customer,Banking,12/21/2023,250
+Auto & General Insurance Company,Customer,Insurance,3/15/2023,#Error!
+Royal Bank of Canada (RBC),Customer,Banking,3/31/2023,5775
+MetLife,Customer,Fin Services,6/30/2017,1200
+The Travelers Companies,Customer,Insurance,4/12/2021,#Error!
+SCAN Health Plan,Customer,Insurance,,
+Amica Mutual,Customer,Home & Auto Insurance,,
+Baylor Scott & White Health,Customer,Healthcare Provider,,
+Kaiser Permanente (KPIT),Customer,Healthcare Provider,9/15/2000,16633
+Kaiser NCal,Customer,Healthcare Provider,9/15/2000,2568
+Kaiser MAS Clinical,Customer,Healthcare Provider,9/15/2000,875
+Kaiser NW Clinical,Customer,Healthcare Provider,9/15/2000,755
+Kaiser CO Clinical,Customer,Healthcare Provider,9/15/2000,480
+Kaiser SCal Clinical,Customer,Healthcare Provider,9/15/2000,5216
+Kaiser MSCC,Customer,Healthcare Provider,9/15/2000,3380
+Kaiser Pharmacy,Customer,Healthcare Provider,9/15/2000,975
+Kaiser GA Clinical (ASCC),Customer,Healthcare Provider,9/15/2000,449
+Kaiser KPOC,Customer,Healthcare Provider,9/15/2000,445
+Molina Healthcare,Customer,Health Insurance,11/1/2025,
+Anthology,Customer,Other,3/1/2017,750
+Kaiser Washington,Customer,Healthcare Provider,5/6/2022,1300
+Capital Group,Customer,Div Financial Services,9/11/2025,
+Prudential Financial,Customer,Fin Services,11/21/2018,750
+Health Care Service Corporation,Customer,Healthcare Insurance,7/24/2023,5500
+McKesson Medical Surgical,Customer,Healthcare Provider,,625
+Vibrant Emotional Health,Customer,Healthcare Provider,4/5/2024,
+McKesson,Customer,Healthcare Provider,3/19/2014,636
+Cleveland Clinic,Customer,Healthcare Provider,6/30/2022,#Error!
+The Northwestern Mutual Life Insurance Company,Customer,Fin Services,1/28/2021,1071
+Progressive Leasing,Customer,Div Financial Services,3/24/2025,
+Guardian Life,Customer,Fin Services,12/28/2023,410
+Social Finance (SoFi),Customer,Fin Services,12/24/2019,1052
+Charter Communications,Customer,Telco/Cable,8/14/2023,#Error!
+Citicorp Credit Services,Customer,Banking,12/31/2012,#Error!
+Farmers Insurance,Customer,Insurance,3/13/2011,555
+Foundever (Sitel),Customer,Outsourcer,12/24/2010,326
+Snap Finance LLC,Customer,Fin Services,11/25/2020,377
+Wells Fargo,Customer,Div Financial Services,3/26/2024,
+Wells Fargo (Alvaria),Customer,Div Financial Services,11/12/2024,
+Wells Fargo (Five9),Customer,Div Financial Services,3/26/2024,2500
+The Home Depot,Customer,Retail,1/27/2023,3055
+AT&T Enterprise Group,Customer,Telco/Cable,12/23/2005,28024
+American Express Global Business Travel,Customer,Travel,6/28/2019,2500
+Elevance Health,Customer,Healthcare Insurance,12/21/2016,5298
+DIRECTV,Customer,Telco_Cable,7/24/2025,
+AT&T Entertainment Group,Customer,Telco_Cable,12/31/2003,
+Assurant,Customer,Insurance,12/19/2017,1835
+AccorHotels,Customer,Travel,11/18/2015,190
+Royal Automobile Club Victoria (RACV),Customer,Home & Auto Insurance,,
+JPMorgan Chase,Customer,Banking,6/29/2018,33000
+Aetna Provider Services,Customer,Healthcare Insurance,8/1/2013,
+Aetna Medicare,Customer,Healthcare Insurance,8/1/2013,
+Aetna,Customer,Healthcare Insurance,8/1/2013,7100
+CVS Health PBM,Customer,Healthcare Insurance,8/1/2013,#Error!
+CVS Health Retail,Customer,Healthcare Insurance,8/1/2013,868
+CVS Health Specialty,Customer,Healthcare Insurance,8/1/2013,6300
+Goldman Sachs,Customer,Fin Services,12/15/2023,#Error!
+CVS Health,Customer,Healthcare Insurance,3/22/2019,20000
+Aetna Dental,Customer,Healthcare Insurance,8/1/2013,
+Aetna Medicaid,Customer,Health Insurance,,
+OptumRx,Customer,Healthcare Insurance,,
+WellMed Medical,Customer,Healthcare_Provider,8/29/2016,
+UnitedHealthcare,Customer,Healthcare Insurance,8/29/2016,28482
+UnitedHealth Group (UHG),Customer,Healthcare Insurance,8/29/2016,
+Optum,Customer,Healthcare Insurance,8/29/2016,
+CIGNA,Customer,Healthcare Insurance,12/28/2017,15000
+Rogers Communications Canada,Customer,Telco/Cable,12/19/2010,8250
+Humana,Customer,Healthcare Insurance,1/30/2020,2520
+ADT,Customer,Other,10/26/2020,490
+Commonwealth Edison Company,Customer,Utilities,7/7/2020,418
+Cox Communications,Customer,Telco/Cable,12/18/2012,3183
+Ameriprise Financial,Customer,Fin Services,6/30/2017,800
+Cox Automotive,Customer,Retail,1/16/2025,
+PECO,Customer,Utilities,10/11/2020,216
+Cox Enterprises Inc,Customer,Cable,12/18/2012,
+Exelon Corporation,Customer,Utilities,7/7/2020,1174
+PG&E Corporation,Customer,Utilities,12/26/2013,1129
+Pepco Holdings(PHI),Customer,Utilities,12/19/2020,540
+Southern California Edison Company,Customer,Utilities,6/28/2016,500
+Dominion Energy,Customer,Utilities,,
+CAA Club Group,Customer,Home & Auto Insurance,8/30/2024,
+PNC Financial,Customer,Banking,11/22/2019,#Error!
+TD Bank Group,Customer,Div Financial Services,6/30/2025,
+Canadian Imperial Bank Of Commerce (CIBC),Customer,Banking,3/29/2023,4000
+Edward Jones,Customer,Div Financial Services,8/13/2025,
+Synchrony Financial,Customer,Fin Services,4/30/2021,6291
+US Bancorp,Customer,Banking,12/18/2023,250
+TIAA-CREF,Customer,Div Financial Services,,
+Amazon,Customer,Retail,2/19/2024,250
+Blue Cross Blue Shield of North Carolina,Customer,Health Insurance,,
+Evolent,Customer,Healthcare Provider,,
+Illumifin,Customer,Div Financial Services,,
+PG&E TSC,Customer,,,
+Southall Travel,Customer,Travel,,
+MSH Reimbursement,Customer,,,

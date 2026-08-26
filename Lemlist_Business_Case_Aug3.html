@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The case for Lemlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --id-green:#2CB56E;
+  --id-orange:#F58220;
+  --id-dark-green:#014637;
+  --id-deep-green:#228751;
+  --id-blue:#0F4C99;
+  --id-text:#363636;
+  --id-white:#FFFFFF;
+  --id-callout-fill:#F2F2F2;
+  --id-line:#E0E0E0;
+  --id-font:'Open Sans', Tahoma, sans-serif;
+  --id-radius:8px;
+}
+*{margin:0;padding:0;box-sizing:border-box;text-shadow:none}
+html{-webkit-font-smoothing:antialiased}
+body{font-family:var(--id-font);font-size:16px;line-height:1.55;color:var(--id-text);background:var(--id-callout-fill);text-align:left}
+.sheet{max-width:1000px;margin:0 auto;background:var(--id-white);box-shadow:0 2px 24px rgba(0,0,0,.08)}
+h1,h2,h3{font-family:var(--id-font);font-weight:800;letter-spacing:normal;text-transform:none;color:var(--id-dark-green)}
+a{color:var(--id-blue);text-decoration:underline}
+.eyebrow{font-size:13px;font-weight:700;color:var(--id-deep-green);margin-bottom:10px}
+.hero{background:var(--id-dark-green);color:var(--id-white);padding:56px 56px 48px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(44,181,110,.35),transparent 70%);pointer-events:none}
+.hero .eyebrow{color:var(--id-white)}
+.hero h1{color:var(--id-white);font-size:40px;line-height:1.15;margin:14px 0 18px;max-width:760px}
+.hero p{max-width:760px;font-size:17px;color:var(--id-white)}
+.logo{width:170px;height:42px}
+.wm{fill:var(--id-white)}
+.foot .wm{fill:var(--id-dark-green)}
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--id-dark-green);border-top:1px solid rgba(255,255,255,.15)}
+.stat{padding:26px 24px;border-left:1px solid rgba(255,255,255,.15)}
+.stat:first-child{border-left:0}
+.stat .n{font-size:28px;font-weight:800;color:var(--id-white)}
+.stat .l{font-size:13px;color:var(--id-white);margin-top:4px}
+section{padding:44px 56px;border-top:1px solid var(--id-line)}
+section h2{font-size:24px;color:var(--id-deep-green);margin:8px 0 16px}
+section p{margin-bottom:14px;max-width:820px}
+ul{margin:0 0 14px 20px;max-width:820px}
+li{margin-bottom:10px}
+table{width:100%;border-collapse:collapse;margin:18px 0 6px;font-size:15px}
+th{font-size:13px;font-weight:700;color:var(--id-deep-green);text-align:left;padding:10px 14px;border-bottom:2px solid var(--id-green)}
+td{padding:11px 14px;border-bottom:1px solid var(--id-line);vertical-align:top}
+tr:nth-child(even) td{background:#FAFAFA}
+td.num{white-space:nowrap;font-weight:600;color:var(--id-dark-green)}
+.card{border-radius:var(--id-radius);background:var(--id-callout-fill);padding:22px 24px;margin:16px 0}
+.card.ask{border-left:4px solid var(--id-orange)}
+.card.gate{border-left:4px solid var(--id-green)}
+.card h3{font-size:16px;margin-bottom:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px}
+.total td{background:var(--id-dark-green) !important;color:var(--id-white);font-weight:700}
+.total td.num{color:var(--id-white)}
+.foot{padding:30px 56px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--id-line)}
+.foot .meta{font-size:13px;color:var(--id-text)}
+.foot .logo{width:120px;height:30px}
+@media print{
+  body{background:var(--id-white)}
+  .sheet{box-shadow:none;max-width:none}
+  section,.card,table,.statband{break-inside:avoid}
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+@media (max-width:720px){
+  .hero,section,.foot{padding-left:24px;padding-right:24px}
+  .statband{grid-template-columns:1fr 1fr}
+  .grid2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBE3E"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE38"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path class="wm" d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z"/>
+<path class="wm" d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z"/>
+</symbol></svg>
+
+<div class="sheet">
+
+<div class="hero">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <div class="eyebrow" style="margin-top:26px">GTM outbound tooling &middot; joint case from Matt, Jack, Nate, and Dallas &middot; August 3, 2026</div>
+  <h1>The case for Lemlist</h1>
+  <p>We've built an outbound engine with a head start most teams would need a quarter to assemble: Clay decides who to contact and why, the Claude layer writes and quality-gates the copy, and our reps stay in control of every send. What's missing is the arm that executes the sequences across email, LinkedIn, phone, and WhatsApp. That's Lemlist. The campaigns are already built inside it on a 14-day trial. This is the case for keeping it.</p>
+</div>
+
+<div class="statband">
+  <div class="stat"><div class="n">$4,164</div><div class="l">per year, all three seats, platform total</div></div>
+  <div class="stat"><div class="n">3 seats</div><div class="l">Nate (US), Jack (UK and Europe), Dallas (build)</div></div>
+  <div class="stat"><div class="n">5 campaigns</div><div class="l">built and staged during the trial, ready to run</div></div>
+  <div class="stat"><div class="n">Aug 13</div><div class="l">trial ends and drops to a free tier that can't run them</div></div>
+</div>
+
+<section>
+  <div class="eyebrow">The ask</div>
+  <h2>Three seats, $347 a month, live within days of a yes</h2>
+  <div class="card ask">
+    <h3>Approve three annual Lemlist Multichannel Expert seats: $4,164 per year.</h3>
+    <p style="margin:0">That covers the platform for all three senders, about $116 per seat per month. Warmup, the LinkedIn extension, calling tasks, and 1,500 data-enrichment credits per seat per month are included in the plan, not add-ons on top. The number may come down after the sales call (one line item, $432 per year, drops if seats already include extra sender slots, a question we'll ask before signing).</p>
+  </div>
+  <table>
+    <tr><th>Line</th><th>Detail</th><th>Annual</th></tr>
+    <tr><td>Platform seats</td><td>3 Multichannel Expert seats at $87 per seat per month, billed annually</td><td class="num">$3,132</td></tr>
+    <tr><td>Add-ons</td><td>$86 per month (extra sender slots and WhatsApp; partly removable, see above)</td><td class="num">$1,032</td></tr>
+    <tr class="total"><td>Lemlist total</td><td>The full platform ask</td><td class="num">$4,164</td></tr>
+  </table>
+  <p style="font-size:14px">Two small lines sit outside Lemlist and go through IT, not this approval: four Microsoft 365 mailboxes for the sending identities (roughly $32 to $50 per month at standard licensing) and one lookalike sending domain (about $15 per year), plus a modest metered buffer if we use the dialer. We've kept them visible so there's no surprise later.</p>
+</section>
+
+<section>
+  <div class="eyebrow">Why this tool</div>
+  <h2>It completes a system we've already invested in</h2>
+  <p>We already pay for Clay, and it's doing its job: sourcing, enriching, and gating the right contacts at the right accounts. Clay is the front half of the motion. Lemlist is the back half, the layer that takes a finished, verified contact list and runs the actual conversation across channels. Without it, everything the front half produces gets sent by hand, one message at a time, and the motion caps at hand speed.</p>
+  <ul>
+    <li><strong>One tool runs the whole sequence.</strong> Email, LinkedIn visits and connects, call tasks, voice notes, and WhatsApp live in a single sequence that adapts to what the prospect does. If someone accepts a connect, the conversation moves to LinkedIn. If there's no phone number, the lead takes the email path automatically. No second tool, no manual handoffs between channels.</li>
+    <li><strong>It's an AI tool, and it's built to be driven by one.</strong> Lemlist ships AI variables and sequence generation natively, and its API is how our Claude layer works: every campaign in the trial was built, loaded, and quality-checked programmatically. The reps run their campaigns themselves; the engine keeps them supplied.</li>
+    <li><strong>Deliverability comes included.</strong> Mailbox warmup and custom tracking domains are bundled in the paid plan. Those are the pieces that keep cold email out of spam folders, and they're usually separate line items.</li>
+    <li><strong>It fixes a defect we've already documented.</strong> Our previous sequencer kept emailing prospects after they had replied (it happened twice in wave 1) and double-enrolled ten contacts across campaigns. Lemlist stops the lead and everyone else at the same company the moment a reply lands. When we're emailing executives, that difference is reputation, not convenience.</li>
+    <li><strong>The credits offset other spend.</strong> Three seats bring 4,500 enrichment credits a month, which takes real load off the Clay budget for verified emails and contact data.</li>
+  </ul>
+</section>
+
+<section>
+  <div class="eyebrow">Proof, not promise</div>
+  <h2>The trial already did the work</h2>
+  <p>This isn't a request to go evaluate a tool. The evaluation happened inside the free trial, and the output is staged and waiting:</p>
+  <div class="grid2">
+    <div class="card"><h3>US: three Star Ratings campaigns, staged</h3><p style="margin:0;font-size:14px">A re-engagement campaign and two fresh-pool campaigns (quality and finance lanes) with adaptive multichannel sequences, built for Nate as sender. Every loaded contact was hand-verified against the full customer list before load: zero current customers in the pool.</p></div>
+    <div class="card"><h3>UK: two campaigns built for Jack</h3><p style="margin:0;font-size:14px">Insurance and financial services (62-contact first wave staged) plus airlines, on London business-hours schedules. Jack booked two meetings last week running outreach by hand; his seat is what that looks like at system speed, and he has his own build list starting with event follow-up sequences.</p></div>
+    <div class="card"><h3>Visibility wired into Slack</h3><p style="margin:0;font-size:14px">When a prospect replies, the rep's channel gets the reply plus a drafted response waiting to be edited and sent. Meetings, bounces, and pending tasks surface the same day. Managers see the motion working in the open, not in a month-end report.</p></div>
+    <div class="card gate"><h3>Guardrails that survive scale</h3><p style="margin:0;font-size:14px">Nothing sends without a person pressing start. Current customers are excluded and hand-verified before any load. Every claim in copy passes a verification gate. LinkedIn steps require human approval. Opt-out on every email. Daily send caps protect the rep's mailbox.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Why now</div>
+  <h2>The trial ends August 13, and the campaigns are ready today</h2>
+  <p>When the trial lapses it falls to a free tier that can't run multichannel sequences, and the staged campaigns sit idle. A yes converts to live sends within days: sign annual (asking the sender-slot question first), IT provisions the four mailboxes and the domain, Nate and Jack connect their accounts, and the reps press start on campaigns that already exist. The US Stars motion is also time-boxed by the measurement calendar; every week of delay is a week of the window we're writing to.</p>
+  <p>This is a head start, not a finished product. The build keeps going either way: more motions, more verticals, and the sequences Jack and Nate want to run themselves. What the licenses decide is whether the team operates the engine or keeps watching it in draft.</p>
+</section>
+
+<div class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <div class="meta">Prepared by Dallas Andrews, GTM Engineer &middot; with Matt, Jack, and Nate &middot; August 3, 2026</div>
+</div>
+
+</div>
+</body>
+</html>

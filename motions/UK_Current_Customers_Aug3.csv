@@ -1,0 +1,8 @@
+name,type,billing_city,billing_country,shipping_city,shipping_country,csm,account_owner,active_since,current_acd,current_wfm,industry,agent_total
+American Express Global Business Travel,Customer,Montreal,Canada,London,United Kingdom,DeAndra Scheidt,Omar Velasquez,2019-06-28,Cisco PAPI,IEX,Travel,6500
+AXA (UK),Customer,London,United Kingdom,London,UK,Scott McHaffie,Matt Rumins,2018-07-02,Genesys Cloud;IPFX PAPI,,Insurance,5000
+British Gas,Customer,London,United Kingdom,,,Scott McHaffie,Matt Rumins,2015-12-30,Amazon Connect ACD,Aspect,Utilities,13000
+Capita,Customer,London,United Kingdom,,,Scott McHaffie,Simon Bland,2023-12-22,Amazon Connect ACD,Aspect,Technology,2000
+CENTRICA PLC,Customer,Windsor,United Kingdom,Windsor,United Kingdom,Scott McHaffie,Matt Rumins,2019-06-15,,,Utilities,
+Virgin Media O2 (UK),Customer,Hook,United Kingdom,Hook,United Kingdom,Scott McHaffie,Matt Rumins,2021-03-31,Amazon Connect ACD,IEX,Telco/Cable,10000
+VitalityHealth,Customer,London,United Kingdom,STOCKPORT,United Kingdom,Scott McHaffie,Matt Rumins,2022-08-25,Aspect Via,Aspect,Healthcare Insurance,1100

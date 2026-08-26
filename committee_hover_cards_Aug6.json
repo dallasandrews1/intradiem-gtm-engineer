@@ -1,0 +1,1890 @@
+{
+  "_meta": {
+    "purpose": "Hover-card data for the committee node maps on the 'Who we sell to, sector by sector' slide. Keyed product.sector.role so nodes can be wired directly.",
+    "built": "2026-08-06",
+    "sources": "Apollo pull Aug 6 2026 against ICP evidence accounts; Stars buying-committee pull; Aug 5 back-office buyer research",
+    "photo_field": "Path relative to the deploy folder. Sourced from Apollo and downloaded locally so nothing hotlinks an expiring LinkedIn CDN URL. null where the person has no profile photo; the card falls back to initials.",
+    "weights": "QO runs one scale on every tab: economic buyer 92, evaluator 88, champion 72, gatekeeper 58. Banking and retail champions run 66 because neither carries a penalty node. BOO weights are the slide's existing 96 / 78 / 66 / 42.",
+    "bands": "Both products use the walk-away floor (200) as the band floor. QO sweet spot 5,000 - 15,000 carried once at slide level, not per tab.",
+    "decisions": [
+      "QO runs five tabs: healthcare payers, insurance, banking and financial services, telecom, BPO and shared services.",
+      "Large retail sits inside the BPO tab as the no-penalty variant. Home Depot carries zero penalty-bearing queues, so it does not headline a tab.",
+      "BOO gatekeeper node relabelled per tab to the real function, replacing 'IT Security'. Weight unchanged at 42.",
+      "BOO champion node relabelled per tab, since 'Quality / Stars lead' only holds in healthcare."
+    ],
+    "install_base": "ib flag marks accounts where Intradiem already owns the front office. Badged on the node.",
+    "headline_field": "Live LinkedIn headline as of 2026-08-06, shown on the hover card.",
+    "retired_field": "true where LinkedIn shows the person as retired or out of the seat. The hover card renders a re-verify warning. Michele Cleary (RBC), Ken Solon (Prudential), Bridget Reidy (Exelon), Sylvie Duquette (Rogers).",
+    "corrections_2026_08_06": [
+      "Point32Health set to ib:false. It is absent from greenlight-pack/Active_Customers_SF_Jul10.csv (the 101-row Salesforce active-customer export) and was previously flagged inconsistently across tabs.",
+      "IB flags on all other nodes verified against that same Salesforce export: 20 of 21 companies are active customers, so near-universal IB is correct by design, not a bug.",
+      "OPEN: \"US Bank / Elavon\" matches US Bancorp in Salesforce, but Elavon is a subsidiary, so that node inherits its IB claim from the parent. Unresolved."
+    ],
+    "lanes": "Two lanes per tab. nodes = install base (accounts already running Intradiem). nn_nodes = net new (accounts never sold to). Identical structure: same sectors, same four roles, same influence weights.",
+    "customer_exclusion": "Every net-new account validated against greenlight-pack/Active_Customers_SF_Jul10.csv (101-row Salesforce export). Zero current customers appear on the net-new lane. The check caught UnitedHealth Group, Humana, CVS Health, Elevance, Molina and HCSC sitting inside the Tier A/B net-new account file, and Guardian Life and Molina inside sourcing results.",
+    "seat_currency": "Contacts whose LinkedIn showed they had left the seat were replaced with the person currently holding it: Michele Cleary to Kristina Maxwell-Smith (RBC), Ken Solon to Greg Hafner (Prudential), Bridget Reidy to Mike Innocenzo (Exelon), Sylvie Duquette to Scott Thomson (Rogers).",
+    "open_items": [
+      "\"US Bank / Elavon\" matches US Bancorp in the Salesforce export, but Elavon is a subsidiary, so that node inherits its install-base status from the parent."
+    ]
+  },
+  "qo": {
+    "healthcare_payers": {
+      "band": "200 - 100,000+ agents",
+      "operation": "Member and provider service queues on multi-skill routing. Service measures feeding Stars, and intraday queue moves still made by hand.",
+      "triggers": [
+        "Stars slipping below 4.0",
+        "Annual enrollment peak",
+        "40 percent or more of queues carrying penalties",
+        "RTA team consumed by manual queue swaps"
+      ],
+      "not_a_fit": "Providers and small regional plans under 200 agents. Back-office-only claims operations, which is BOO.",
+      "named_accounts": [
+        "Humana",
+        "Cigna-Evernorth",
+        "Aetna and CVS",
+        "Optum and UHG"
+      ],
+      "nodes": [
+        {
+          "id": "qo.healthcare_payers.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "EVP, Insurance Customer Contact Center",
+          "name": "Hubert Rivera",
+          "title": "EVP, Insurance Customer Contact Center",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/huberthrivera/",
+          "photo": "img/huberthrivera.jpg",
+          "why": "Owns the contact center P&L and the service measures that feed the Stars bonus.",
+          "ib": true,
+          "headline": "Executive, Insurance Customer Contact Center at Humana"
+        },
+        {
+          "id": "qo.healthcare_payers.evaluator",
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Director, Workforce Management",
+          "name": "Mark Ritcher",
+          "title": "Director, Workforce Management",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/mark-ritcher-576a876",
+          "photo": null,
+          "why": "Owns the WFM and the ACD that QO sits on top of. Does the queue moves by hand today.",
+          "ib": true,
+          "headline": "Director - Workforce Management at Humana"
+        },
+        {
+          "id": "qo.healthcare_payers.champion",
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "VP, Medicare Stars Program",
+          "name": "Kristen Dowd",
+          "title": "VP, Medicare Stars Program",
+          "company": "Point32Health",
+          "linkedin": "https://www.linkedin.com/in/kristen-dowd-14408222/",
+          "photo": null,
+          "why": "Has a deadline the ops leaders don't, which is what moves the timeline.",
+          "ib": false,
+          "headline": "VP, Medicare Stars Program at Point32Health"
+        },
+        {
+          "id": "qo.healthcare_payers.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "Sr Director, Contact Center Platform Engineering",
+          "name": "Matthew Diioia",
+          "title": "Sr Director, Contact Center Platform Engineering",
+          "company": "Cigna Healthcare",
+          "linkedin": "https://www.linkedin.com/in/mattdiioia",
+          "photo": "img/mattdiioia.jpg",
+          "why": "Owns the ACD integration. Nothing lands without them.",
+          "ib": true,
+          "headline": "Sr. Director, Contact Center Platform Engineering"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Ami Bhatt",
+          "title": "VP, Customer Service and Operations",
+          "company": "Cigna",
+          "linkedin": "https://www.linkedin.com/in/amib"
+        },
+        {
+          "name": "Alison Abromaitis",
+          "title": "Sr Director, Customer Service and Contact Center",
+          "company": "Evernorth",
+          "linkedin": "https://www.linkedin.com/in/alisonabromaitis"
+        },
+        {
+          "name": "Colin Fitzgerald",
+          "title": "IT Principal Director, Contact Center Platform Architecture",
+          "company": "Evernorth",
+          "linkedin": "https://www.linkedin.com/in/fitzgec"
+        },
+        {
+          "name": "Mark Riddlesworth",
+          "title": "VP, Contact Center Operations and Enterprise Global Strategy",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/markriddlesworth/"
+        },
+        {
+          "name": "Parichay Dewan",
+          "title": "Director, Workforce Management",
+          "company": "Optum",
+          "linkedin": "https://www.linkedin.com/in/parichaydewan"
+        },
+        {
+          "name": "Amy Hill",
+          "title": "Sr Director, Workforce Planning and Management",
+          "company": "Optum",
+          "linkedin": "https://www.linkedin.com/in/amy-kiger-hill-a198976"
+        },
+        {
+          "name": "Adam Cincoski",
+          "title": "Workforce Management Leader",
+          "company": "CVS Health",
+          "linkedin": "https://www.linkedin.com/in/adam-cincoski-a829266"
+        },
+        {
+          "name": "Katey Whitney",
+          "title": "Sr Director, Workforce Planning and Management",
+          "company": "UnitedHealth Group",
+          "linkedin": "https://www.linkedin.com/in/kateywhitney"
+        },
+        {
+          "name": "Tricia Taylor-Lyphout",
+          "title": "Chief Operations Officer",
+          "company": "Aetna",
+          "linkedin": "https://www.linkedin.com/in/tricia-taylor-lyphout-mph-mba-4115737/"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "VP, Contact Center Operations",
+          "name": "Kim Nocas",
+          "title": "Vice President Contact Center Operations",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/kim-nocas-8262605",
+          "why": "Owns the contact center that carries Centene's member and provider queues, and the service measures underneath the Stars bonus.",
+          "ib": false,
+          "photo": null,
+          "headline": "Vice President, Call Center Operations Prescription Drug Plan"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Sr Director, Workforce Management",
+          "name": "Christopher Salvatore",
+          "title": "Senior Director, Workforce Management",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/christopher-salvatore-45aa187",
+          "why": "Runs the forecast and the intraday plan. He is the one who tests whether automation actually returns capacity.",
+          "ib": false,
+          "photo": "img/christopher-salvatore-45aa187.jpg",
+          "headline": "Vice President, Workforce Management at Centene Corporation"
+        },
+        {
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "VP, Quality and Risk Adjustment",
+          "name": "Kari Gilson",
+          "title": "Vice President, Quality & Risk Adjustment Process Improvement",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/kari-hadley-gilson-mph-cphq-b265b297",
+          "why": "Carries the quality and risk adjustment numbers that move Stars. She feels the service gap before the contact center does.",
+          "ib": false,
+          "photo": null,
+          "headline": "Vice President, Quality & Risk Adjustment Process Improvement at Centene"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "IT Director, Contact Center Technologies",
+          "name": "Tony Sideris",
+          "title": "IT Director, Transformation Programs, Contact Center Technologies",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/tony-sideris",
+          "why": "Owns the contact center platform roadmap. Nothing touches the floor without passing through his transformation queue.",
+          "ib": false,
+          "photo": "img/tony-sideris.jpg",
+          "headline": "Director, Information Technology"
+        }
+      ],
+      "nn_named_accounts": [
+        "Centene"
+      ]
+    },
+    "insurance": {
+      "band": "200 - 6,000 agents",
+      "operation": "Policy service, claims and device-care queues under contractual SLAs, with a named intraday desk moving people by hand.",
+      "triggers": [
+        "Contractual SLA penalties in client or partner agreements",
+        "Recent breach that reached the board",
+        "Event-driven volume spikes",
+        "Intraday desk at capacity"
+      ],
+      "not_a_fit": "Under 200 agents. No service level commitments.",
+      "named_accounts": [
+        "MetLife",
+        "Assurant"
+      ],
+      "nodes": [
+        {
+          "id": "qo.insurance.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "Head of Global Customer Service and Operations",
+          "name": "Merrilee Matchett",
+          "title": "Head of Global Customer Service and Operations",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/merrilee-matchett-397257b",
+          "photo": null,
+          "why": "Runs the global service org, penalties included.",
+          "ib": true,
+          "headline": "Head of Global Customer Service & Operations at MetLife"
+        },
+        {
+          "id": "qo.insurance.evaluator",
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Director, Workforce Management",
+          "name": "Matthew Fuglesang",
+          "title": "Director, Workforce Management",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/matthew-fuglesang",
+          "photo": "img/matthew-fuglesang.jpg",
+          "why": "Owns the forecast and the schedule QO writes back to.",
+          "ib": true,
+          "headline": "Director, Workforce Management & Strategic Planning"
+        },
+        {
+          "id": "qo.insurance.champion",
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "Intraday Manager",
+          "name": "Lance Owen",
+          "title": "Intraday Manager",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/lance-owen-a72679b0",
+          "photo": null,
+          "why": "Already does QO's job by hand, full time.",
+          "ib": true,
+          "headline": "Intraday Manager"
+        },
+        {
+          "id": "qo.insurance.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "VP, Technology, Digital Contact Center",
+          "name": "Anish Mehra",
+          "title": "VP, Technology, Digital Contact Center",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/mehraanish",
+          "photo": "img/mehraanish.jpg",
+          "why": "Owns the contact center technology stack and the integration review.",
+          "ib": true,
+          "headline": "VP, Technology - Digital Contact Center at Assurant | AI | Omnichannel | Chat Bots | IVR | WFO | QM | Analytics | Virtualization"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Judith Sawyer",
+          "title": "Director, Customer Care Operations",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/judith-sawyer-28786327"
+        },
+        {
+          "name": "Wanzel Jessie",
+          "title": "AVP, Service Delivery Operations",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/wanzel-jessie"
+        },
+        {
+          "name": "Cassie Sours",
+          "title": "AVP, Global Customer Service and Operations",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/cassiesours"
+        },
+        {
+          "name": "Gabriel Fuoco",
+          "title": "LATAM VP, Operations and Service Delivery",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/gabriel-fuoco-873171a"
+        },
+        {
+          "name": "George Perera",
+          "title": "Director, Software Engineering, Digital and Contact Center Delivery",
+          "company": "Assurant",
+          "linkedin": "https://www.linkedin.com/in/george-perera-40b4297"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "Chief Operating Officer",
+          "name": "Anna King",
+          "title": "Chief Operating Officer",
+          "company": "Aviva",
+          "linkedin": "https://www.linkedin.com/in/anna-king-39281623/",
+          "why": "Owns the operation end to end, so the cost of idle and the cost of missed service both land on her line.",
+          "ib": false,
+          "photo": null,
+          "headline": "Chief Operating Officer - UK Commercial & Distribution"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Group Infrastructure and Operations Director",
+          "name": "John Lyons",
+          "title": "Group Infrastructure and Operations Director",
+          "company": "Aviva",
+          "linkedin": "https://www.linkedin.com/in/john-lyons-8a283831/",
+          "why": "Judges whether a new layer actually fits the operating model or just adds another console for the team to watch.",
+          "ib": false,
+          "photo": "img/john-lyons-8a283831.jpg",
+          "headline": "Group Infrastructure and Operations Director"
+        },
+        {
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "Group Director, Marketing and Customer Experience",
+          "name": "David Erixon",
+          "title": "Group Director, Marketing & Customer Experience",
+          "company": "Aviva",
+          "linkedin": "https://www.linkedin.com/in/daviderixon/",
+          "why": "Owns the customer experience number. Every queue that breaks shows up in his measures first.",
+          "ib": false,
+          "photo": null,
+          "headline": "Group Director, Marketing & Customer Experience"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "UK Motor Claims Director",
+          "name": "James Armstrong",
+          "title": "UK Motor Claims Director",
+          "company": "Admiral",
+          "linkedin": "https://www.linkedin.com/in/james-armstrong-0a105823/",
+          "why": "Runs the motor claims queue where surges hit hardest, and has to sign off on anything that reschedules his people.",
+          "ib": false,
+          "photo": null
+        }
+      ],
+      "nn_named_accounts": [
+        "Aviva",
+        "Admiral"
+      ]
+    },
+    "banking_financial_services": {
+      "band": "200 - 10,000 agents",
+      "operation": "Service, disputes and fraud queues on multi-skill routing. No contractual penalty, so the cost sits in the buffer and in overtime.",
+      "triggers": [
+        "Overstaffing buffer above 8 percent",
+        "Overtime spend rising year over year",
+        "AI or automation rollout underway looking for a predictive layer",
+        "Queue moves still on spreadsheets"
+      ],
+      "not_a_fit": "No service level commitments. Single queue or simple routing.",
+      "named_accounts": [
+        "RBC",
+        "US Bank",
+        "Goldman Sachs"
+      ],
+      "note": "No penalty node in this sector. The champion seat is whoever owns buffer and overtime.",
+      "nodes": [
+        {
+          "id": "qo.banking_financial_services.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "Senior Director, Advice Centre",
+          "name": "Sally Bottone",
+          "title": "Senior Director, Advice Centre",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/sally-bottone-991818235",
+          "photo": "img/sally-bottone-991818235.jpg",
+          "why": "Owns the advice centre operation and its cost line.",
+          "ib": true,
+          "headline": "--"
+        },
+        {
+          "id": "qo.banking_financial_services.evaluator",
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Director, Role Strategy, Advice Centre",
+          "name": "Kristina Maxwell-Smith",
+          "title": "Director, Role Strategy, Advice Centre",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/kristina-maxwell-smith-zelek-6686b2264",
+          "photo": "img/kristina-maxwell-smith-zelek-6686b2264.jpg",
+          "why": "Owns how advice centre roles are designed and staffed, which is where reclaimed time gets allocated.",
+          "ib": true,
+          "headline": "Director at RBC"
+        },
+        {
+          "id": "qo.banking_financial_services.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Director, Client Care",
+          "name": "Brandon Molenaar",
+          "title": "Director, Client Care",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/brandon-molenaar-5613549",
+          "photo": null,
+          "why": "Runs the floor the buffer is paying for.",
+          "ib": true,
+          "headline": "Senior Director Client Care"
+        },
+        {
+          "id": "qo.banking_financial_services.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "Sr Director, Voice Platforms, Advice Centre and Branch Technology",
+          "name": "Gord M.",
+          "title": "Sr Director, Voice Platforms, Advice Centre and Branch Technology",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/gord-m-878151245",
+          "photo": null,
+          "why": "Owns the voice platform QO plugs into. Grab his full name off the profile.",
+          "ib": true,
+          "headline": "Fixer of problems, slinger of zings, long-suffering Flyers fan."
+        }
+      ],
+      "bench": [
+        {
+          "name": "Darren Hodges",
+          "title": "SVP and Chief Operations Officer, Wealth Management and Investment Services",
+          "company": "US Bank",
+          "linkedin": "https://www.linkedin.com/in/darren-hodges-4952195/"
+        },
+        {
+          "name": "Shannon Terry",
+          "title": "VP, Head of Workforce Management",
+          "company": "Goldman Sachs",
+          "linkedin": "https://www.linkedin.com/in/shannon-terry/"
+        },
+        {
+          "name": "Pauline Harrison",
+          "title": "Senior Director, Everyday Banking, Advice Centre",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/pauline-harrison-4627b3222"
+        },
+        {
+          "name": "Steven Loo",
+          "title": "Senior Director, Fraud Advice Centre",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/steven-loo-0bab49224"
+        },
+        {
+          "name": "Renee Taylor",
+          "title": "Senior Director, Credit Advice Centre",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/renee-taylor-825aa3143"
+        },
+        {
+          "name": "Kevin Doyle",
+          "title": "Director, GenAI Architect, Contact Center Technology",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/kevinjamesdoyle"
+        },
+        {
+          "name": "Kevin Freud",
+          "title": "Manager, Workforce Management",
+          "company": "RBC",
+          "linkedin": "https://www.linkedin.com/in/kevin-freud-62052118"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "Group Co-Chief Operating Officer",
+          "name": "Craig Bright",
+          "title": "Group Co-Chief Operating Officer",
+          "company": "Barclays UK",
+          "linkedin": "https://www.linkedin.com/in/craig-bright-7981154/",
+          "why": "Owns the operating cost base across the bank, which makes idle time in the advice centres his number.",
+          "ib": false,
+          "photo": "img/craig-bright-7981154.jpg",
+          "headline": "Group Co-Chief Operating Officer"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Director of Workforce Planning",
+          "name": "Rob Scratchley",
+          "title": "Director of Workforce Planning",
+          "company": "Monzo",
+          "linkedin": "https://www.linkedin.com/in/rob-scratchley-a4279219/",
+          "why": "Builds the plan the floor runs on. He is the first person who can prove or disprove a capacity claim.",
+          "ib": false,
+          "photo": null,
+          "headline": "Director of Resource Planning | Driving Operational Strategy, Excellence & Growth | Multi-Channel Contact Centre expert with experience working at C-Suite Level"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Managing Director, Customer Experience",
+          "name": "Darren Foulds",
+          "title": "Managing Director, Customer Experience, Barclays UK",
+          "company": "Barclays UK",
+          "linkedin": "https://www.linkedin.com/in/darren-foulds-3127393/",
+          "why": "Carries the service experience for the UK bank, so every abandoned call is his problem before it is anyone else's.",
+          "ib": false,
+          "photo": "img/darren-foulds-3127393.jpg",
+          "headline": "Transforming Customer Experience at Scale | MD, Barclays UK | Digital | Data | Customer Journeys | Consumer Duty"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "Customer Care Director, Premier and Investments",
+          "name": "Andrew Gallacher",
+          "title": "Customer Care Director Premier and Investments",
+          "company": "Barclays UK",
+          "linkedin": "https://www.linkedin.com/in/andrew-gallacher-b3883016/",
+          "why": "Owns the complaints and advocacy path, the queue where a service miss turns into a regulated outcome.",
+          "ib": false,
+          "photo": "img/andrew-gallacher-b3883016.jpg",
+          "headline": "Customer Care Director"
+        }
+      ],
+      "nn_named_accounts": [
+        "Barclays UK",
+        "Monzo"
+      ]
+    },
+    "telecom": {
+      "band": "200 - 20,000 agents",
+      "operation": "Care, billing and activation queues with regulatory service obligations, absorbing outage and promotion spikes.",
+      "triggers": [
+        "Regulatory service obligations",
+        "Outage or promotion driven spikes",
+        "Seasonal peak",
+        "RTA consumed by manual queue swaps"
+      ],
+      "not_a_fit": "Under 200 agents. Field and dispatch work, which is not queue based.",
+      "named_accounts": [
+        "Rogers",
+        "Cox",
+        "Comcast (net new)"
+      ],
+      "nodes": [
+        {
+          "id": "qo.telecom.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "VP, Customer Service Operations",
+          "name": "Scott Thomson",
+          "title": "VP, Customer Service Operations",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/swthomson1",
+          "photo": null,
+          "why": "Owns the service operation carrying the regulatory obligation.",
+          "ib": true,
+          "headline": "Vice President, Customer Service Operations at Rogers Communications"
+        },
+        {
+          "id": "qo.telecom.evaluator",
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Director, Workforce Strategy and Ops Analytics",
+          "name": "Matt Guingona",
+          "title": "Director, Workforce Strategy and Ops Analytics",
+          "company": "Cox Communications",
+          "linkedin": "https://www.linkedin.com/in/matt-guingona-87664012b/",
+          "photo": "img/matt-guingona-87664012b.jpg",
+          "why": "Runs the forecast and the analytics QO writes into.",
+          "ib": true,
+          "headline": "Director, Workforce Strategy & Analytics @ Cox Communications • Forecasting • Business Transformation • AI Integration"
+        },
+        {
+          "id": "qo.telecom.champion",
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "Director, Customer Care Ops",
+          "name": "Mirella Mastroianni",
+          "title": "Director, Customer Care Ops, Strategy and Work From Home Portfolio",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/mirella-mastroianni-12793a16",
+          "photo": "img/mirella-mastroianni-12793a16.jpg",
+          "why": "Feels the outage and promotion spikes on the day they land.",
+          "ib": true,
+          "headline": "Director, Customer Care Operations Transformation at Rogers Communications"
+        },
+        {
+          "id": "qo.telecom.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "VP, IT Operations",
+          "name": "Vikram Virk",
+          "title": "VP, IT Operations",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/vikram-virk-3b2b8b1/",
+          "photo": "img/vikram-virk-3b2b8b1.jpg",
+          "why": "Approves the platform integration.",
+          "ib": true
+        }
+      ],
+      "bench": [
+        {
+          "name": "Vincent Serra",
+          "title": "VP, Operations Service Delivery",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/vincent-serra-2484075b"
+        },
+        {
+          "name": "Jena Karstoff",
+          "title": "Sr Director, Operations Enablement and Readiness, Business Customer Service",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/jena-karstoff-gray-592ab66"
+        },
+        {
+          "name": "Scott Lewis",
+          "title": "Exec Director, National Workforce Management",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/scott-lewis-4b458114/"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "VP, Customer Service Strategy and Operations",
+          "name": "Amit Pushkarna",
+          "title": "Vice President, Customer Service Strategy & Ops",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/amitpushkarna",
+          "why": "Owns care strategy and the cost per contact, which is exactly where reclaimed idle time shows up.",
+          "ib": false,
+          "photo": "img/amitpushkarna.jpg",
+          "headline": "Vice President, Customer Service Strategy & Ops at Comcast"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Executive Director, National Workforce Management",
+          "name": "Scott Lewis",
+          "title": "Executive Director, National Workforce Management",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/scott-lewis-4b458114",
+          "why": "Runs WFM at national scale. If the forecast does not move, nothing else he is shown matters.",
+          "ib": false,
+          "photo": "img/scott-lewis-4b458114.jpg",
+          "headline": "Executive Director - National Workforce Management at Comcast Cable"
+        },
+        {
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "Director, Customer Care Operations",
+          "name": "Rachel Romero",
+          "title": "Director, Customer Care Operations",
+          "company": "T-Mobile",
+          "linkedin": "https://www.linkedin.com/in/rachel-romero-8b13653",
+          "why": "Lives the intraday reality, and is the one making the manual queue moves today.",
+          "ib": false,
+          "photo": null
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "VP, IT Business Operations and Transformation",
+          "name": "Chip Stovall",
+          "title": "VP IT Business Operations and Transformation",
+          "company": "T-Mobile",
+          "linkedin": "https://www.linkedin.com/in/chip-stovall-1314274",
+          "why": "Controls what gets integrated into the care stack and when.",
+          "ib": false,
+          "photo": "img/chip-stovall-1314274.jpg",
+          "headline": "Vice President at T-Mobile"
+        }
+      ],
+      "nn_named_accounts": [
+        "Comcast",
+        "T-Mobile"
+      ]
+    },
+    "bpo_shared_services": {
+      "band": "200 - 15,000+ seats",
+      "operation": "Client-contracted queues where a missed SLA is a credit off the invoice.",
+      "triggers": [
+        "Client SLA credits taken",
+        "New client ramp",
+        "Seasonal peak",
+        "Buffer above 8 percent"
+      ],
+      "not_a_fit": "Under 200 seats. Single-client operations with one queue.",
+      "named_accounts": [
+        "Foundever",
+        "Capita"
+      ],
+      "nodes": [
+        {
+          "id": "qo.bpo_shared_services.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "Chief Operations Officer, Americas",
+          "name": "Mike Corrigan",
+          "title": "Chief Operations Officer, Americas",
+          "company": "Foundever",
+          "linkedin": "https://www.linkedin.com/in/mike-corrigan-602b3421/",
+          "photo": "img/mike-corrigan-602b3421.jpg",
+          "why": "In BPO the penalty owner and the buyer are usually the same person.",
+          "ib": true,
+          "headline": "Chief Operations Officer - Americas @ Foundever. Experienced executive and innovation/AI leader with a proven track record of driving change, developing talent, capturing opportunities, and delivering results."
+        },
+        {
+          "id": "qo.bpo_shared_services.evaluator",
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Senior Director of Workforce Management",
+          "name": "Christopher Carter",
+          "title": "Senior Director of Workforce Management",
+          "company": "Foundever",
+          "linkedin": "https://www.linkedin.com/in/chriscarter-wfm/",
+          "photo": "img/chriscarter-wfm.jpg",
+          "why": "Owns forecast and schedule across client programs.",
+          "ib": true,
+          "headline": "Senior Workforce Management Leader | Expert in Forecasting, Planning & Staffing Strategy | $3M+ Cost Savings | Driving Scalable Customer Ops"
+        },
+        {
+          "id": "qo.bpo_shared_services.champion",
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "Managing Director, Claims Management",
+          "name": "Nick Stretton",
+          "title": "Managing Director, Teceris Claims Management",
+          "company": "Capita",
+          "linkedin": "https://www.linkedin.com/in/nickstretton/",
+          "photo": null,
+          "why": "Carries the client SLA on a named contract.",
+          "ib": true,
+          "headline": "Tribe - Insurance Management Heineken, Marston’s, Greene King Deliveroo, Serco, TIER, Superstruct, Pure Electric, S4 Capital — Founder, Exec Director, Angel Investor, Trustee, Freeman of The City of London, FBII"
+        },
+        {
+          "id": "qo.bpo_shared_services.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "Head of Technology Operations",
+          "name": "Ashutosh Dhamane",
+          "title": "Head of Technology Operations",
+          "company": "Capita",
+          "linkedin": "https://www.linkedin.com/in/ashutosh-dhamane-7a97a925/",
+          "photo": null,
+          "why": "Approves anything touching the delivery stack across clients.",
+          "ib": true,
+          "headline": "Head of Technology Operations (Professional Services India) at Capita"
+        }
+      ],
+      "retail_variant": {
+        "note": "No-penalty variant inside this tab. Home Depot runs on peak and buffer rather than breach avoidance.",
+        "named_accounts": [
+          "The Home Depot"
+        ],
+        "nodes": [
+          {
+            "id": "qo.bpo_shared_services.retail.economic_buyer",
+            "role": "Economic buyer",
+            "weight": 92,
+            "node_label": "Director of Online Contact Center",
+            "name": "Khalil Karim",
+            "title": "Director of Online Contact Center",
+            "company": "The Home Depot",
+            "linkedin": "https://www.linkedin.com/in/khalil-karim-29ab134",
+            "photo": null,
+            "why": "Owns the queues that absorb seasonal peak.",
+            "ib": true,
+            "headline": "Director, Customer Solutions Operations"
+          },
+          {
+            "id": "qo.bpo_shared_services.retail.evaluator",
+            "role": "Evaluator",
+            "weight": 88,
+            "node_label": "Manager, Workforce Management",
+            "name": "Dante Rios",
+            "title": "Manager, Workforce Management",
+            "company": "The Home Depot",
+            "linkedin": "https://www.linkedin.com/in/dante-rios-592710218",
+            "photo": "img/dante-rios-592710218.jpg",
+            "why": "Sets the buffer we're arguing against.",
+            "ib": true,
+            "headline": "Results-oriented workforce manager keen on building high-performing cross-functional teams designed to achieve all projected business goals"
+          },
+          {
+            "id": "qo.bpo_shared_services.retail.champion",
+            "role": "Champion",
+            "weight": 66,
+            "node_label": "Director, Contact Center Learning and Development",
+            "name": "Stacie Heim",
+            "title": "Director, Contact Center Learning and Development",
+            "company": "The Home Depot",
+            "linkedin": "https://www.linkedin.com/in/stacie-heim-6b357594",
+            "photo": null,
+            "why": "Carries the training cost of every seasonal ramp.",
+            "ib": true,
+            "headline": "Director Contact Center Learning & Development at The Home Depot"
+          }
+        ],
+        "nn_nodes": [
+          {
+            "role": "Economic buyer",
+            "weight": 92,
+            "node_label": "Sr Director, Contact Center Operations",
+            "name": "Renee Patton",
+            "title": "Senior Director Contact Center Operations",
+            "company": "Lowe's",
+            "linkedin": "https://www.linkedin.com/in/renee-patton-53412042",
+            "why": "Owns the contact centre through seasonal peaks, with no penalty clause but a hard cost ceiling.",
+            "ib": false,
+            "photo": "img/renee-patton-53412042.jpg",
+            "headline": "Regional Central Selling Manager at Lowe’s Companies, Inc."
+          },
+          {
+            "role": "Evaluator",
+            "weight": 88,
+            "node_label": "Senior Manager, Workforce Management",
+            "name": "Stuart Mack",
+            "title": "Senior Manager, Workforce Management",
+            "company": "Best Buy",
+            "linkedin": "https://www.linkedin.com/in/stuart-mack-3569a53b",
+            "why": "Builds the seasonal plan, and carries the risk when peak volume lands differently than forecast.",
+            "ib": false,
+            "photo": "img/stuart-mack-3569a53b.jpg",
+            "headline": "Senior Manager, Workforce Management at Best Buy"
+          },
+          {
+            "role": "Champion",
+            "weight": 66,
+            "node_label": "Director, Contact Center Training",
+            "name": "Maryanne Bell",
+            "title": "Director Contact Center Training",
+            "company": "Lowe's",
+            "linkedin": "https://www.linkedin.com/in/maryanne-bell-88a331150",
+            "why": "Owns training delivery, the first thing cancelled when volume spikes and the first thing automation gives back.",
+            "ib": false,
+            "photo": "img/maryanne-bell-88a331150.jpg",
+            "headline": "Director Contact Center Training"
+          }
+        ],
+        "nn_named_accounts": [
+          "Lowe's",
+          "Best Buy"
+        ]
+      },
+      "bench": [
+        {
+          "name": "Michelle Donnelly",
+          "title": "Manager, Workforce Management",
+          "company": "The Home Depot",
+          "linkedin": "https://www.linkedin.com/in/michelle-donnelly-996302aa"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 92,
+          "node_label": "CEO LatAm and COO Americas",
+          "name": "Andres Gutierrez",
+          "title": "CEO LatAm & COO Americas",
+          "company": "TP",
+          "linkedin": "https://www.linkedin.com/in/andres-bernal-guti%c3%a9rrez-347b7310",
+          "why": "Runs the Americas P&L where margin is made or lost on utilisation against contracted service levels.",
+          "ib": false,
+          "photo": "img/andres-bernal-gutiérrez-347b7310.jpg",
+          "headline": "CEO LatAm & COO Americas (US + CA)"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 88,
+          "node_label": "Senior Director, Workforce Management",
+          "name": "Cheryll Jacinto",
+          "title": "Senior Director, Workforce Management",
+          "company": "Alorica",
+          "linkedin": "https://www.linkedin.com/in/bogsjacinto",
+          "why": "Owns the staffing model across client programmes, so occupancy gains convert straight to margin.",
+          "ib": false,
+          "photo": "img/bogsjacinto.jpg",
+          "headline": "Sr. Director, Workforce Management at Alorica"
+        },
+        {
+          "role": "Champion",
+          "weight": 72,
+          "node_label": "VP, Operations",
+          "name": "Biju Pillai",
+          "title": "Vice President, Operations",
+          "company": "TTEC",
+          "linkedin": "https://www.linkedin.com/in/biju-pillai-1535936",
+          "why": "Accountable for hitting client SLAs with the headcount he already has.",
+          "ib": false,
+          "photo": null,
+          "headline": "Vice President, Operations at TTEC"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 58,
+          "node_label": "Director, IT Operations",
+          "name": "Bob Rubano",
+          "title": "Director Information Technology Operations",
+          "company": "Concentrix",
+          "linkedin": "https://www.linkedin.com/in/bobrubano",
+          "why": "Owns the delivery stack across sites, and any automation has to survive his integration review.",
+          "ib": false,
+          "photo": "img/bobrubano.jpg",
+          "headline": "Director - IT Operations at Concentrix"
+        }
+      ],
+      "nn_named_accounts": [
+        "TP",
+        "Alorica",
+        "TTEC",
+        "Concentrix"
+      ]
+    }
+  },
+  "boo": {
+    "healthcare_payers": {
+      "band": "200 - 15,000 agents",
+      "named_accounts": [
+        "Humana",
+        "Cigna",
+        "Aetna",
+        "Elevance"
+      ],
+      "nodes": [
+        {
+          "id": "boo.healthcare_payers.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "VP Claims Operations",
+          "name": "Tim Murray",
+          "title": "Head of Claims Administration and Payment Integrity",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/tim-murray-88b04211/",
+          "photo": null,
+          "why": "Claims administration and payment integrity in one seat.",
+          "ib": true,
+          "headline": "SVP - Head of Claims Administration & Payment Integrity"
+        },
+        {
+          "id": "boo.healthcare_payers.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "WFM Manager",
+          "name": "Diana Villanueva",
+          "title": "Managing Director, Enterprise Workforce Planning",
+          "company": "Cigna",
+          "linkedin": "https://www.linkedin.com/in/dianavillanueva1/",
+          "photo": null,
+          "why": "Enterprise workforce planning across back-office queues.",
+          "ib": true,
+          "headline": "Senior Operations Leader | Enabling Service Experience through Analytics, Technology and Execution"
+        },
+        {
+          "id": "boo.healthcare_payers.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Quality / Stars lead",
+          "name": "Kristen Dowd",
+          "title": "VP, Medicare Stars Program",
+          "company": "Point32Health",
+          "linkedin": "https://www.linkedin.com/in/kristen-dowd-14408222/",
+          "photo": null,
+          "why": "Owns the measure the backlog puts at risk.",
+          "ib": false,
+          "headline": "VP, Medicare Stars Program at Point32Health"
+        },
+        {
+          "id": "boo.healthcare_payers.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "Claims and Platform Technology",
+          "name": "Brett Hudspeth",
+          "title": "VP, Core Admin Platforms and Claims Technology, Segment CIO Medicare",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/brett-hudspeth-b7a01939/",
+          "photo": "img/brett-hudspeth-b7a01939.jpg",
+          "why": "Owns the core admin and claims platforms, and the security review with them.",
+          "ib": true,
+          "headline": "Vice President, Core Admin Platforms & Claims Technology & Segment CIO - Medicare at Humana"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Katerina Guerraz",
+          "title": "EVP and Chief Operating Officer",
+          "company": "Aetna",
+          "linkedin": "https://www.linkedin.com/in/katerinaguerraz/"
+        },
+        {
+          "name": "Brian Setzer",
+          "title": "Chief Operating Officer",
+          "company": "Cigna",
+          "linkedin": "https://www.linkedin.com/in/brian-setzer-55bba19/"
+        },
+        {
+          "name": "Stephanie Zevitas",
+          "title": "Director, Strategic Workforce Planning",
+          "company": "Humana",
+          "linkedin": "https://www.linkedin.com/in/stephanie-zevitas-09383122/"
+        },
+        {
+          "name": "Holly Huffman",
+          "title": "Sr Director, Claims Operations",
+          "company": "Elevance",
+          "linkedin": "https://www.linkedin.com/in/hollymcneely/"
+        },
+        {
+          "name": "Raoul Paver",
+          "title": "MD, Medicare Technology Operations",
+          "company": "Cigna",
+          "linkedin": "https://www.linkedin.com/in/raoulpaver/"
+        }
+      ],
+      "operation": "Claims, prior authorisation, appeals and enrollment. Statutory turnaround on every case, and service measures that feed the Stars bonus.",
+      "triggers": [
+        "CMS-0057-F compliance deadline",
+        "Stars slipping below 4.0",
+        "Annual enrollment peak",
+        "Audit or CMS finding"
+      ],
+      "not_a_fit": "Providers and small regional plans under 200 agents.",
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "VP, Claims Operations",
+          "name": "Tarsha Fletcher",
+          "title": "Vice President, Claims Operations",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/tarsha-fletcher-a072014",
+          "why": "Owns claims throughput and the backlog that drives rework and interest penalties.",
+          "ib": false,
+          "photo": null,
+          "headline": "Experienced Operations Executive| Client Success and Customer Engagement| Operational Excellence| CX Evangelist| Digital & Operations Transformation| Agile Service Delivery| DEI Champion| Global Talent Management"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Senior Manager, Workforce Management",
+          "name": "Stephen Mailloux",
+          "title": "Senior Manager, Workforce Management",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/stephen-mailloux-95b0a82",
+          "why": "Plans the back office the same way the contact centre is planned, with far less tooling to do it.",
+          "ib": false,
+          "photo": null
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Director, Quality",
+          "name": "Christine Hereford",
+          "title": "Director, Quality",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/christine-hereford",
+          "why": "Carries the quality outcome that a claims backlog quietly erodes.",
+          "ib": false,
+          "photo": "img/christine-hereford.jpg",
+          "headline": "Director, Quality at Centene Corporation"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "Director, Claims Configuration",
+          "name": "Sharon Hutchison",
+          "title": "Director Claims Configuration",
+          "company": "Centene",
+          "linkedin": "https://www.linkedin.com/in/sharon-hutchison-78a14632",
+          "why": "Owns claims platform configuration, so any workflow change lands on her desk.",
+          "ib": false,
+          "photo": "img/sharon-hutchison-78a14632.jpg",
+          "headline": "Director Claims Configuration at Centene Corporation"
+        }
+      ],
+      "nn_named_accounts": [
+        "Centene"
+      ]
+    },
+    "banking_financial_services": {
+      "band": "200 - 10,000 agents",
+      "champion_node_label": "Disputes and complaints lead",
+      "named_accounts": [
+        "US Bank",
+        "Goldman Sachs",
+        "Wells Fargo",
+        "JPMorgan Chase"
+      ],
+      "nodes": [
+        {
+          "id": "boo.banking_financial_services.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "SVP and COO, Wealth Management and Investment Services",
+          "name": "Darren Hodges",
+          "title": "SVP and Chief Operations Officer, Wealth Management and Investment Services",
+          "company": "US Bank",
+          "linkedin": "https://www.linkedin.com/in/darren-hodges-4952195/",
+          "photo": "img/darren-hodges-4952195.jpg",
+          "why": "Owns cost to serve and regulatory exposure for the division.",
+          "ib": true,
+          "headline": "Executive Vice President. Chief Operations Officer, Wealth Corporate Commercial and Institutional Banking (WCIB) Operations"
+        },
+        {
+          "id": "boo.banking_financial_services.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "VP, Head of Workforce Management",
+          "name": "Shannon Terry",
+          "title": "VP, Head of Workforce Management",
+          "company": "Goldman Sachs",
+          "linkedin": "https://www.linkedin.com/in/shannon-terry/",
+          "photo": "img/shannon-terry.jpg",
+          "why": "One of the few standalone WFM heads in banking.",
+          "ib": true,
+          "headline": "Vice President, Head of Workforce Management at Goldman Sachs"
+        },
+        {
+          "id": "boo.banking_financial_services.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "SVP, Claims, Disputes and Complaints",
+          "name": "Maura McGrath",
+          "title": "SVP, Claims, Disputes and Complaints",
+          "company": "US Bank / Elavon",
+          "linkedin": "https://www.linkedin.com/in/mauramcgrath101/",
+          "photo": "img/mauramcgrath101.jpg",
+          "why": "Disputes and chargebacks are the bank's version of claims.",
+          "ib": true,
+          "headline": "Senior Vice President, Claims, Disputes and Complaints at U.S. Bank | Elavon"
+        },
+        {
+          "id": "boo.banking_financial_services.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "Fraud and Claims Technology",
+          "name": "Zehra Venugopal",
+          "title": "EVP, CIO of Fraud and Claims Technology",
+          "company": "Wells Fargo",
+          "linkedin": "https://www.linkedin.com/in/zehra-venugopal-22bb8989/",
+          "photo": "img/zehra-venugopal-22bb8989.jpg",
+          "why": "There's a whole CIO for fraud and claims tech, so the gatekeeper is senior and named.",
+          "ib": true,
+          "headline": "Enterprise Chief Information Officer | Building Enterprise Capability Through Business Strategy, Technology, Enterprise Architecture and Leadership"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Ericka Leslie",
+          "title": "COO, Global Banking and Markets",
+          "company": "Goldman Sachs",
+          "linkedin": "https://www.linkedin.com/in/ericka-leslie-4796911/"
+        },
+        {
+          "name": "Jeff Becze",
+          "title": "Workforce Planning Director",
+          "company": "US Bank",
+          "linkedin": "https://www.linkedin.com/in/jeff-becze-b848a27/"
+        },
+        {
+          "name": "Kevin Taylor",
+          "title": "MD, Payment Operations",
+          "company": "JPMorgan Chase",
+          "linkedin": "https://www.linkedin.com/in/kevin-taylor-34797135/"
+        },
+        {
+          "name": "Kimberli Mollenkopf",
+          "title": "KYC Technology Operations Director",
+          "company": "US Bancorp",
+          "linkedin": "https://www.linkedin.com/in/kimberli-mollenkopf-cams-9793b9a/"
+        }
+      ],
+      "operation": "Loan and deposit ops, payments, servicing, collections, disputes, KYC and AML, document processing. SLA exposure lands as regulatory scrutiny rather than a contractual credit.",
+      "triggers": [
+        "Audit finding on handling times",
+        "Rising cost to serve in collections and disputes",
+        "Payments or servicing SLA breach",
+        "Manual re-skilling across product lines"
+      ],
+      "not_a_fit": "Under 200 agents. No case-based back office.",
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "COO, Key Wealth Management",
+          "name": "Joe Calabrese",
+          "title": "Chief Operating Officer at Key Wealth Management",
+          "company": "KeyBank",
+          "linkedin": "https://www.linkedin.com/in/calabresejoe",
+          "why": "Owns the wealth operating model, where processing delay turns directly into client attrition.",
+          "ib": false,
+          "photo": "img/calabresejoe.jpg",
+          "headline": "Chief Operating Officer, Key Wealth Management & Co-CEO/President, Key Investment Services LLC"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "SVP, Head of Workforce Management",
+          "name": "Lakesia Dickens",
+          "title": "Senior Vice President, Head of Workforce Management",
+          "company": "Truist",
+          "linkedin": "https://www.linkedin.com/in/lakesiadickens",
+          "why": "Runs workforce management at enterprise scale and owns the capacity model the back office runs on.",
+          "ib": false,
+          "photo": null,
+          "headline": "Senior Vice President, Head of Workforce Management - Enterprise Technology"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "VP, Fraud Operations and Authentication",
+          "name": "Patrick Platt",
+          "title": "Vice President Product, Technology, Data and Fraud Operations",
+          "company": "Truist",
+          "linkedin": "https://www.linkedin.com/in/patrickplatt",
+          "why": "Owns fraud and disputes operations, the queue where delay becomes a regulated complaint.",
+          "ib": false,
+          "photo": null,
+          "headline": "Global Payments | AI Coach | Card, Wallet & POS Platforms | FinTech & Innovation Product Delivery Leader"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "SVP, Core Banking, Operations and Fraud Technology",
+          "name": "Josh Takis",
+          "title": "Senior Vice President, Head of Core Banking, Operations and Fraud Technology",
+          "company": "Truist",
+          "linkedin": "https://www.linkedin.com/in/josh-takis-53bb807",
+          "why": "Controls the core operations and fraud stack. Nothing reaches the back office without his approval.",
+          "ib": false,
+          "photo": null,
+          "headline": "Senior Vice President, Head of Core Banking, Operations and Fraud Technology"
+        }
+      ],
+      "nn_named_accounts": [
+        "KeyBank",
+        "Truist"
+      ]
+    },
+    "insurance": {
+      "band": "200 - 6,000 agents",
+      "champion_node_label": "Claims operations lead",
+      "named_accounts": [
+        "Prudential",
+        "MetLife"
+      ],
+      "nodes": [
+        {
+          "id": "boo.insurance.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "SVP and Chief Operating Officer, Group Insurance",
+          "name": "Joseph M. Hayes",
+          "title": "SVP and Chief Operating Officer, Group Insurance",
+          "company": "Prudential",
+          "linkedin": "https://www.linkedin.com/in/jmh1766/",
+          "photo": "img/jmh1766.jpg",
+          "why": "Owns the group insurance operation end to end.",
+          "ib": true,
+          "headline": "Senior Vice President & Chief Operating Officer, Private Client Services ◈ Business Operations, Digital Strategies Stakeholder Relationships"
+        },
+        {
+          "id": "boo.insurance.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "EVP, Head of Regional Business and Workforce Engagement",
+          "name": "Bradd Chignoli",
+          "title": "EVP, Head of Regional Business and Workforce Engagement",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/bradd-chignoli-412750/",
+          "photo": null,
+          "why": "Workforce sits inside this seat rather than a standalone WFM team.",
+          "ib": true
+        },
+        {
+          "id": "boo.insurance.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Head of Claims Operations",
+          "name": "Marisol Andrea Sanchez García",
+          "title": "Head of Claims Operations",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/marisol-andrea-sanchez-garcía-52050840/",
+          "photo": "img/marisol-andrea-sanchez-garcía-52050840.jpg",
+          "why": "Runs the queue where backlog and adjuster load actually land.",
+          "ib": true,
+          "headline": "Facilitadora de espacios colaborativos de trabajo / Mejora continua de procesos y experiencia cliente / Ingeniero Comercial - Black Belt"
+        },
+        {
+          "id": "boo.insurance.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "COO, Group Insurance",
+          "name": "Greg Hafner",
+          "title": "Chief Operations Officer, Group Insurance",
+          "company": "Prudential",
+          "linkedin": "https://www.linkedin.com/in/greg-hafner",
+          "photo": "img/greg-hafner.jpg",
+          "why": "Owns group insurance operations end to end, including the processing tail behind every policy change.",
+          "ib": true,
+          "headline": "Chief Operations Officer, Prudential Group Insurance"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Christen White",
+          "title": "SVP Operations",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/christen-white-4b774a62/"
+        },
+        {
+          "name": "Leigh Foster",
+          "title": "Director of Claims Processing",
+          "company": "Prudential",
+          "linkedin": "https://www.linkedin.com/in/leigh-foster-60b99b13a/"
+        },
+        {
+          "name": "Scott Hall",
+          "title": "Director, Group Insurance Appeals, Litigation and Complaints",
+          "company": "Prudential",
+          "linkedin": "https://www.linkedin.com/in/scott-hall-670866a/"
+        },
+        {
+          "name": "Peter Jones",
+          "title": "VP, Data and Application Operations",
+          "company": "MetLife",
+          "linkedin": "https://www.linkedin.com/in/peterjohnjones/"
+        }
+      ],
+      "operation": "Claims processing, policy administration, underwriting support, appeals and correspondence. Backlog and adjuster load spike after events.",
+      "triggers": [
+        "Claims backlog after a surge event",
+        "SLA breaches visible to regulators and agents",
+        "Adjuster burnout and attrition",
+        "Leakage from delayed or misrouted work"
+      ],
+      "not_a_fit": "Under 200 agents. Front-office-only operations.",
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "EVP, COO Global Risk Solutions",
+          "name": "Susanne Cook",
+          "title": "EVP, Chief Operating Officer, Global Risk Solutions",
+          "company": "Liberty Mutual",
+          "linkedin": "https://www.linkedin.com/in/susanne-figueredo",
+          "why": "Owns the operating cost of the commercial book, including the claims processing tail.",
+          "ib": false,
+          "photo": "img/susanne-figueredo.jpg",
+          "headline": "EVP, Chief Operating Officer, Liberty Mutual Global Risk Solutions"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "AVP, Workforce Metrics and Analysis",
+          "name": "Susan Vautin",
+          "title": "AVP, Workforce Metrics, Reporting & Analysis",
+          "company": "Unum",
+          "linkedin": "https://www.linkedin.com/in/susan-vautin-0a11455",
+          "why": "Measures workforce productivity, so she is the one who can verify a capacity claim rather than accept it.",
+          "ib": false,
+          "photo": null,
+          "headline": "AVP, Workforce Metrics, Reporting & Analysis at Unum"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Director, Claims Operations",
+          "name": "Bobby Jones",
+          "title": "Director of Claims Operations",
+          "company": "USAA",
+          "linkedin": "https://www.linkedin.com/in/bobbyajones",
+          "why": "Runs the claims floor and absorbs every surge with the headcount already on shift.",
+          "ib": false,
+          "photo": "img/bobbyajones.jpg",
+          "headline": "Director of Claims Operations at USAA"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "AVP, IT Operations",
+          "name": "Debbie Thornbury",
+          "title": "AVP, IT Operations",
+          "company": "Unum",
+          "linkedin": "https://www.linkedin.com/in/debbiethornbury",
+          "why": "Owns the operations technology path that any back office automation has to travel.",
+          "ib": false,
+          "photo": "img/debbiethornbury.jpg",
+          "headline": "AVP, IT Operations"
+        }
+      ],
+      "nn_named_accounts": [
+        "Liberty Mutual",
+        "Unum",
+        "USAA"
+      ]
+    },
+    "bpo_shared_services": {
+      "band": "200 - 15,000+ seats",
+      "champion_node_label": "Client delivery lead",
+      "named_accounts": [
+        "Foundever",
+        "Capita"
+      ],
+      "nodes": [
+        {
+          "id": "boo.bpo_shared_services.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "Chief Operations Officer, Americas",
+          "name": "Mike Corrigan",
+          "title": "Chief Operations Officer, Americas",
+          "company": "Foundever",
+          "linkedin": "https://www.linkedin.com/in/mike-corrigan-602b3421/",
+          "photo": "img/mike-corrigan-602b3421.jpg",
+          "why": "Cost per transaction is the P&L in a BPO.",
+          "ib": true,
+          "headline": "Chief Operations Officer - Americas @ Foundever. Experienced executive and innovation/AI leader with a proven track record of driving change, developing talent, capturing opportunities, and delivering results."
+        },
+        {
+          "id": "boo.bpo_shared_services.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Senior Director of Workforce Management",
+          "name": "Christopher Carter",
+          "title": "Senior Director of Workforce Management",
+          "company": "Foundever",
+          "linkedin": "https://www.linkedin.com/in/chriscarter-wfm/",
+          "photo": "img/chriscarter-wfm.jpg",
+          "why": "Owns planning across every client program.",
+          "ib": true,
+          "headline": "Senior Workforce Management Leader | Expert in Forecasting, Planning & Staffing Strategy | $3M+ Cost Savings | Driving Scalable Customer Ops"
+        },
+        {
+          "id": "boo.bpo_shared_services.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Managing Director, Claims Management",
+          "name": "Nick Stretton",
+          "title": "Managing Director, Teceris Claims Management",
+          "company": "Capita",
+          "linkedin": "https://www.linkedin.com/in/nickstretton/",
+          "photo": null,
+          "why": "Runs back-office claims as a client-facing product.",
+          "ib": true,
+          "headline": "Tribe - Insurance Management Heineken, Marston’s, Greene King Deliveroo, Serco, TIER, Superstruct, Pure Electric, S4 Capital — Founder, Exec Director, Angel Investor, Trustee, Freeman of The City of London, FBII"
+        },
+        {
+          "id": "boo.bpo_shared_services.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "Technology Operations",
+          "name": "Ashutosh Dhamane",
+          "title": "Head of Technology Operations",
+          "company": "Capita",
+          "linkedin": "https://www.linkedin.com/in/ashutosh-dhamane-7a97a925/",
+          "photo": null,
+          "why": "Approves anything touching the shared delivery stack.",
+          "ib": true,
+          "headline": "Head of Technology Operations (Professional Services India) at Capita"
+        }
+      ],
+      "operation": "Back office run as a product for someone else. Cost per transaction is the P&L, and a missed client SLA is a credit off the invoice.",
+      "triggers": [
+        "Client SLA credits taken",
+        "New client ramp",
+        "Margin pressure on cost per transaction",
+        "Manual re-skilling across client programs"
+      ],
+      "not_a_fit": "Under 200 seats. Single-client operations with one queue.",
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "VP, Operations",
+          "name": "Tarsha Leherr",
+          "title": "Vice President, Operations",
+          "company": "TTEC",
+          "linkedin": "https://www.linkedin.com/in/tarshaleherr",
+          "why": "Owns delivery margin across client programmes, where back office utilisation is the lever.",
+          "ib": false,
+          "photo": "img/tarshaleherr.jpg",
+          "headline": "Vice President, Public Sector, Transportation and Tolling"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Senior Director, Workforce Management",
+          "name": "Dats Salikala",
+          "title": "Senior Director of Workforce Management",
+          "company": "TP",
+          "linkedin": "https://www.linkedin.com/in/dats-marfranse-salikala-ba6535115",
+          "why": "Owns the staffing model, and is the one who has to prove the capacity case internally.",
+          "ib": false,
+          "photo": "img/dats-marfranse-salikala-ba6535115.jpg",
+          "headline": "Senior Director of Workforce Management at Teleperformance"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "VP, Operations",
+          "name": "Sandeep Deshmukh",
+          "title": "Vice President Operations",
+          "company": "Concentrix",
+          "linkedin": "https://www.linkedin.com/in/sandeep-deshmukh-99b92375",
+          "why": "Accountable for processing SLAs on client back office work.",
+          "ib": false,
+          "photo": "img/sandeep-deshmukh-99b92375.jpg",
+          "headline": "CRM Operations Management & Delivery Leader"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "Executive Director, IT Operations",
+          "name": "Steve Hamilton",
+          "title": "Executive Director, IT Operations",
+          "company": "TTEC",
+          "linkedin": "https://www.linkedin.com/in/shamilton801",
+          "why": "Owns the technology operations review that gates deployment across sites.",
+          "ib": false,
+          "photo": "img/shamilton801.jpg",
+          "headline": "Executive Director, IT Operations at TTEC"
+        }
+      ],
+      "nn_named_accounts": [
+        "TTEC",
+        "TP",
+        "Concentrix"
+      ]
+    },
+    "telecom": {
+      "band": "200 - 20,000 agents",
+      "champion_node_label": "Back office operations lead",
+      "operation": "Order management, billing operations, revenue assurance, service activation and dispute handling. Errors leak revenue rather than trip a penalty clause.",
+      "triggers": [
+        "Revenue leakage from billing and order errors",
+        "Order-to-activate SLA breaches",
+        "Promotion or outage driven backlog",
+        "Manual re-skilling across product lines"
+      ],
+      "not_a_fit": "Under 200 agents. Field and dispatch work, which is not case based.",
+      "named_accounts": [
+        "Rogers",
+        "Cox",
+        "T-Mobile (net new)",
+        "Comcast (net new)",
+        "Lumen (net new)"
+      ],
+      "note": "Jessica Gallant’s title literally contains \"Back Office\". Cleanest proof on the whole deck that this buyer exists under that name.",
+      "nodes": [
+        {
+          "id": "boo.telecom.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "VP, Customer Service Operations",
+          "name": "Scott Thomson",
+          "title": "Vice President, Customer Service Operations",
+          "company": "Rogers",
+          "linkedin": "https://www.linkedin.com/in/swthomson1",
+          "photo": null,
+          "why": "Owns customer service operations across the front and back office at Rogers.",
+          "ib": true,
+          "headline": "Vice President, Customer Service Operations at Rogers Communications"
+        },
+        {
+          "id": "boo.telecom.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Director, Workforce Strategy",
+          "name": "Matt Guingona",
+          "title": "Director, Workforce Strategy and Ops Analytics",
+          "company": "Cox Communications",
+          "linkedin": "https://www.linkedin.com/in/matt-guingona-87664012b/",
+          "photo": "img/matt-guingona-87664012b.jpg",
+          "why": "Same person evaluates Queue Optimizer. One relationship, both products.",
+          "ib": true,
+          "headline": "Director, Workforce Strategy & Analytics @ Cox Communications • Forecasting • Business Transformation • AI Integration"
+        },
+        {
+          "id": "boo.telecom.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Sr Director, Tier 3 Back Office",
+          "name": "Jessica Gallant",
+          "title": "Senior Director, Tier 3 Back Office and CIRT Operations",
+          "company": "Rogers",
+          "linkedin": "https://www.linkedin.com/in/jessica-gallant-06a2591a/",
+          "photo": null,
+          "why": "Her title literally says back office. Lives the escalations.",
+          "ib": true,
+          "headline": "Rogers Communications"
+        },
+        {
+          "id": "boo.telecom.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "VP, IT Operations",
+          "name": "Vikram Virk",
+          "title": "VP, IT Operations",
+          "company": "Rogers Communications",
+          "linkedin": "https://www.linkedin.com/in/vikram-virk-3b2b8b1/",
+          "photo": "img/vikram-virk-3b2b8b1.jpg",
+          "why": "Approves anything touching OSS, BSS or billing.",
+          "ib": true
+        }
+      ],
+      "bench": [
+        {
+          "name": "Jon Freier",
+          "title": "Chief Operating Officer",
+          "company": "T-Mobile",
+          "linkedin": "https://www.linkedin.com/in/jon-freier-2b45951/"
+        },
+        {
+          "name": "Syed Ahmed",
+          "title": "Sr Director, Order Management and Recovery Services",
+          "company": "Cox Communications",
+          "linkedin": "https://www.linkedin.com/in/syed-ahmed-1b767b58/"
+        },
+        {
+          "name": "Barbara Smith",
+          "title": "Director, Enterprise Billing Operations",
+          "company": "Lumen",
+          "linkedin": "https://www.linkedin.com/in/barbarasmithdenvercolorado/"
+        },
+        {
+          "name": "Matthew Shorts",
+          "title": "AVP, AI, IT Operations and Cloud",
+          "company": "Cox Communications",
+          "linkedin": "https://www.linkedin.com/in/matthew-shorts-56135210/"
+        },
+        {
+          "name": "Scott Lewis",
+          "title": "Exec Director, National Workforce Management",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/scott-lewis-4b458114/"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "Sr Director, Customer Care",
+          "name": "Anne McCollum",
+          "title": "Sr. Director Customer Care",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/anne-mccollum-a9377b3",
+          "why": "Owns the care operation including the back office work that never reaches a live queue.",
+          "ib": false,
+          "photo": null,
+          "headline": "Senior Director Customer Care Comcast Cable"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Executive Director, Workforce Management",
+          "name": "Jason Farmer",
+          "title": "Executive Director, Workforce Management",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/jasonfarmerga",
+          "why": "Owns the plan across front and back office, and can see idle capacity nobody else can.",
+          "ib": false,
+          "photo": null,
+          "headline": "Executive Director | Workforce Management & Project Leadership | Enterprise Transformation"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Sr Director, Customer Care Repair Excellence",
+          "name": "Faye Washington",
+          "title": "Senior Director Customer Care, Repair Excellence",
+          "company": "Comcast",
+          "linkedin": "https://www.linkedin.com/in/faye-washington-b4922a1a",
+          "why": "Owns the repair and rework queue, the classic tier 3 back office backlog.",
+          "ib": false,
+          "photo": null,
+          "headline": "Senior Director Customer Care - Repair Excellence"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "VP, IT Infrastructure and Network Operations",
+          "name": "Jagan Rangarajan",
+          "title": "Vice President, IT Infrastructure, Cloud, Network Ops & Security",
+          "company": "Verizon",
+          "linkedin": "https://www.linkedin.com/in/jagan-rangarajan-6257b028",
+          "why": "Controls the infrastructure and security review that gates any new operational tooling.",
+          "ib": false,
+          "photo": null,
+          "headline": "Vice President - IT Infrastructure, Cloud, Network Ops & Security"
+        }
+      ],
+      "nn_named_accounts": [
+        "Comcast",
+        "Verizon"
+      ]
+    },
+    "utilities": {
+      "band": "200 - 12,000 agents",
+      "champion_node_label": "Billing and meter-to-cash lead",
+      "operation": "Billing and meter-to-cash, customer operations, work management, service delivery and regulatory reporting.",
+      "triggers": [
+        "Regulatory SLA targets on billing accuracy and complaint resolution",
+        "Storm or outage driven volume spikes",
+        "Cycle-driven billing peaks",
+        "Overstaffing buffers held to cover peaks"
+      ],
+      "not_a_fit": "Under 200 agents. Generation and field crews, which are not case based.",
+      "named_accounts": [
+        "Exelon",
+        "PG&E",
+        "Dominion",
+        "Xcel (net new)",
+        "National Grid (net new)"
+      ],
+      "note": "Search trap for reps: \"resource planning\" in a utility usually means power generation planning, not people. Search workforce planning and meter-to-cash titles instead.",
+      "nodes": [
+        {
+          "id": "boo.utilities.economic_buyer",
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "EVP and Chief Operating Officer",
+          "name": "Mike Innocenzo",
+          "title": "Executive Vice President and Chief Operating Officer",
+          "company": "Exelon",
+          "linkedin": "https://www.linkedin.com/in/mike-innocenzo-2aa64370",
+          "photo": null,
+          "why": "Owns the operating cost base across the utility, including the billing and service back office.",
+          "ib": true,
+          "headline": "Executive Vice President and COO, Exelon; President and CEO, PECO"
+        },
+        {
+          "id": "boo.utilities.evaluator",
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Director, WFM & Customer Service Offices",
+          "name": "Kristin Punter",
+          "title": "Director, Workforce Management and Customer Service Offices",
+          "company": "PG&E",
+          "linkedin": "https://www.linkedin.com/in/kristin-punter-1aab6a31",
+          "photo": "img/kristin-punter-1aab6a31.jpg",
+          "why": "One of the few utilities with workforce management named as its own seat.",
+          "ib": true,
+          "headline": "Sr. Director, Customer Service Outreach (CSO) & Strategic Workforce Management (WFM) at PG&E"
+        },
+        {
+          "id": "boo.utilities.champion",
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Director, Billing Operations",
+          "name": "Travis Browne",
+          "title": "Director, Billing Operations",
+          "company": "PG&E",
+          "linkedin": "https://www.linkedin.com/in/travis-browne-9002a085",
+          "photo": null,
+          "why": "Meter-to-cash is where the backlog and the regulatory exposure sit.",
+          "ib": true,
+          "headline": "Director, Billing Operations at Pacific Gas and Electric Company"
+        },
+        {
+          "id": "boo.utilities.gatekeeper",
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "VP IT, Customer and BGE CIO",
+          "name": "Liz O’Connor",
+          "title": "Vice President IT, Customer, and BGE CIO",
+          "company": "Exelon",
+          "linkedin": "https://www.linkedin.com/in/liz-oconnor",
+          "photo": null,
+          "why": "Owns billing, metering and work management integrations.",
+          "ib": true,
+          "headline": "CIO who simplifies the complex • Digital & AI Executive • Fortune 200 utility • Built for scale, wired for customers"
+        }
+      ],
+      "bench": [
+        {
+          "name": "Timothy O’Connor",
+          "title": "EVP and Chief Operating Officer",
+          "company": "Xcel Energy",
+          "linkedin": "https://www.linkedin.com/in/timothy-o-connor-1b5310a4"
+        },
+        {
+          "name": "James Macvicar",
+          "title": "Director of Workforce Management",
+          "company": "National Grid",
+          "linkedin": "https://www.linkedin.com/in/james-macvicar-3776b26"
+        },
+        {
+          "name": "Rob Estabrook",
+          "title": "Director, Customer Contact Operations",
+          "company": "Dominion",
+          "linkedin": "https://www.linkedin.com/in/robe10019"
+        },
+        {
+          "name": "Valerie Bell",
+          "title": "VP of IT Operations",
+          "company": "PG&E",
+          "linkedin": "https://www.linkedin.com/in/valerie-bell-30423270"
+        }
+      ],
+      "nn_nodes": [
+        {
+          "role": "Economic buyer",
+          "weight": 96,
+          "node_label": "EVP and Chief Operations Officer",
+          "name": "Timothy O'Connor",
+          "title": "Executive Vice President and Chief Operations Officer",
+          "company": "Xcel Energy",
+          "linkedin": "https://www.linkedin.com/in/timothy-o-connor-1b5310a4",
+          "why": "Owns the operating cost base, including the billing and collections work that sits behind the meter.",
+          "ib": false,
+          "photo": "img/timothy-o-connor-1b5310a4.jpg",
+          "headline": "Executive Vice President and Chief Operations Officer at Xcel Energy"
+        },
+        {
+          "role": "Evaluator",
+          "weight": 78,
+          "node_label": "Sr Manager, Analytics and Workforce Management",
+          "name": "Jason Perreira",
+          "title": "Sr Manager, Analytics & Workforce Management",
+          "company": "Xcel Energy",
+          "linkedin": "https://www.linkedin.com/in/jason-perreira-449a052a",
+          "why": "Runs workforce analytics, so he is the one who can test whether reclaimed time is real.",
+          "ib": false,
+          "photo": "img/jason-perreira-449a052a.jpg",
+          "headline": "Sr Manager, Analytics & Workforce Management at Xcel Energy"
+        },
+        {
+          "role": "Champion",
+          "weight": 66,
+          "node_label": "Manager, Billing Operations",
+          "name": "Gloria Sisneros",
+          "title": "Billing Operations Manager",
+          "company": "Xcel Energy",
+          "linkedin": "https://www.linkedin.com/in/gloria-sisneros-7a28619b",
+          "why": "Owns billing operations, where a backlog turns into customer complaints and regulator attention.",
+          "ib": false,
+          "photo": "img/gloria-sisneros-7a28619b.jpg",
+          "headline": "Manager, Billing Operations at Xcel Energy"
+        },
+        {
+          "role": "Gatekeeper",
+          "weight": 42,
+          "node_label": "VP, Customer IT Architecture and Cloud",
+          "name": "John Mitchell",
+          "title": "VP Customer IT Architecture and Cloud",
+          "company": "Duke Energy",
+          "linkedin": "https://www.linkedin.com/in/johnwilliammitchell",
+          "why": "Owns the customer technology architecture that any workflow automation must fit.",
+          "ib": false,
+          "photo": "img/johnwilliammitchell.jpg",
+          "headline": "Technologist and innovation leader with a passion for bringing emerging technologies to life in a human-center way"
+        }
+      ],
+      "nn_named_accounts": [
+        "Xcel Energy",
+        "Duke Energy"
+      ]
+    }
+  }
+}

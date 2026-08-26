@@ -1,0 +1,31 @@
+row,name,zerobounce_status,sub_status,note
+6,Erin Conway-Habes,MISSING_INPUT,,no email (not found)
+18,Keith Patterson,MISSING_INPUT,,no email (not found)
+22,Brian Dellinger,MISSING_INPUT,,no email (not found)
+26,Xiaoping Ding,invalid,mailbox_not_found,INVALID
+31,Ryan Barrett,MISSING_INPUT,,no email (not found)
+32,Lisa Pattison,invalid,mailbox_not_found,INVALID
+34,Thomas M.,invalid,mailbox_not_found,INVALID (email m@lacare.org truncated)
+37,Angela Martinez,invalid,mailbox_not_found,INVALID
+39,Adrienne Neaderhiser,MISSING_INPUT,,no email
+41,JJ Kirkpatrick,MISSING_INPUT,,no email
+42,Tricia L. Roberts,MISSING_INPUT,,no email
+43,Robert Friedrichs,invalid,mailbox_not_found,INVALID
+44,Dale Maxwell,MISSING_INPUT,,no email
+49,Dominic Turpin,invalid,mailbox_not_found,INVALID
+52,Afzal S.,invalid,mailbox_not_found,INVALID
+53,Rolande Sonya Odeniyi,invalid,mailbox_not_found,INVALID
+59,Ann Pentkowski,MISSING_INPUT,,no email
+61,Armen Akopyan,unknown,greylisted,UNKNOWN (temp defer)
+62,Christina B. Lomax,MISSING_INPUT,,no email
+65,Kyle Nyskohus,MISSING_INPUT,,no email
+69,Vincent McDermott,MISSING_INPUT,,no email
+76,Mark Riddlesworth,MISSING_INPUT,,no email (original, not found)
+77,Corey Taliaferro,MISSING_INPUT,,no email (original, enriching)
+78,Anthony Portela,MISSING_INPUT,,no email (original, enriching)
+79,Bob Wadsworth,MISSING_INPUT,,no email (original, enriching)
+83,Max Barry,unknown,greylisted,UNKNOWN (temp defer)
+92,Mary Cooper,unknown,greylisted,UNKNOWN (temp defer)
+21,Niyum Gandhi,valid,catch_all,valid (catch-all domain)
+56,Kassie Maroney,valid,catch_all,valid (catch-all domain)
+68,SarahKay Hermosillo,valid,catch_all,valid (catch-all domain)
