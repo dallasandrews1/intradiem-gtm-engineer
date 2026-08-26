@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Roadmap · Dallas · Eyes Only</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --mist:#F0F4ED; --mist-2:#E7EEE3; --line:#E2E7DD; --line-2:#D4DCCE;
+    --spark:#FE5000; --amber:#9a6313; --amber-bg:#FBF1E1;
+    --ff-head:'Playfair Display',serif; --ff-label:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:15px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+  .hero{background:var(--forest);color:#fff;padding:52px 0 40px;position:relative}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--lime),var(--green))}
+  .eyebrow{font-family:var(--ff-label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+  .hero h1{font-family:var(--ff-head);font-size:40px;font-weight:800;margin-bottom:12px}
+  .hero .spine{font-size:16.5px;color:var(--mist-2);max-width:860px}
+  .hero .spine b{color:#fff}
+
+  nav{position:sticky;top:0;background:rgba(250,251,247,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-2);z-index:50}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+  nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--ink-soft);text-decoration:none;padding:7px 13px;border-radius:8px}
+  nav a:hover{background:var(--mist-2);color:var(--forest)}
+
+  section{padding:44px 0 8px}
+  .kicker{font-family:var(--ff-label);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark);font-weight:700;margin-bottom:6px}
+  h2{font-family:var(--ff-head);font-size:26px;font-weight:800;color:var(--forest);margin-bottom:6px}
+  .sub{color:var(--ink-soft);margin-bottom:20px;max-width:820px}
+
+  .breath{background:var(--mist);border-left:4px solid var(--green);border-radius:0 14px 14px 0;padding:22px 26px}
+  .breath .tag{font-family:var(--ff-label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:700;display:block;margin-bottom:8px}
+  .breath p{font-size:16.5px}
+
+  /* HORIZON BAR */
+  .hbar{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  @media(max-width:860px){.hbar{grid-template-columns:1fr 1fr}}
+  .hz{background:#fff;border:1px solid var(--line);border-top:4px solid var(--line-2);border-radius:12px;padding:14px 16px}
+  .hz.now{border-top-color:var(--spark)}
+  .hz .hwhen{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green)}
+  .hz.now .hwhen{color:var(--spark)}
+  .hz h3{font-size:14px;color:var(--forest);margin:4px 0 5px}
+  .hz p{font-size:12.5px;color:var(--ink-soft)}
+
+  /* LAYERS */
+  .lcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin-bottom:16px;box-shadow:0 1px 2px rgba(20,40,25,.04)}
+  .lhead{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+  .lnum{font-family:var(--ff-head);font-size:30px;font-weight:800;color:var(--forest);line-height:1}
+  .lhead h3{font-family:var(--ff-head);font-size:19px;font-weight:800;color:var(--forest)}
+  .lwhen{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--amber);background:var(--amber-bg);padding:3px 10px;border-radius:999px;margin-left:auto}
+  .lrole{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px}
+  .lgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
+  @media(max-width:820px){.lgrid{grid-template-columns:1fr}}
+  .lbl{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:5px}
+  .lblock p,.lblock li{font-size:13px;color:var(--ink)}
+  .lblock ul{padding-left:16px}
+  .lblock li{margin-bottom:4px}
+  .chip{display:inline-block;font-family:var(--ff-label);font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:5px;vertical-align:1px;margin-left:5px}
+  .chip.exists{background:var(--mist-2);color:var(--green)}
+  .chip.port{background:var(--amber-bg);color:var(--amber)}
+  .chip.new{background:var(--forest);color:var(--lime)}
+  .execq{grid-column:1/-1;background:var(--mist);border-radius:12px;padding:14px 18px;margin-top:2px}
+  .execq .q{font-weight:700;color:var(--forest);font-size:13.5px;margin-bottom:4px}
+  .execq .a{font-size:13px;color:var(--ink);font-style:italic}
+
+  /* ALIGNMENT */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);font-size:13px}
+  th{background:var(--forest);color:#fff;text-align:left;padding:11px 14px;font-family:var(--ff-label);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+  td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:var(--mist)}
+  td b{color:var(--forest)}
+  td .to{color:var(--green);font-weight:700}
+
+  /* ANSWER BANK */
+  .bank{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin-bottom:13px}
+  .bank .q{font-weight:700;color:var(--forest);font-size:14.5px;margin-bottom:6px}
+  .bank .q::before{content:"Q · ";font-family:var(--ff-label);font-size:11px;color:var(--spark);font-weight:700}
+  .bank p{font-size:13.5px;color:var(--ink)}
+  .bank .anchor{font-family:var(--ff-label);font-size:10.5px;color:var(--dim);margin-top:7px;letter-spacing:.04em}
+  .bank .anchor b{color:var(--green);font-weight:700}
+
+  footer{background:var(--forest);color:var(--mist-2);padding:28px 0;margin-top:56px;font-size:12.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .limestripe{height:4px;background:var(--lime)}
+  @media print{nav{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Eyes only · Dallas Andrews · GTM Engineer · Intradiem</div>
+    <h1>The Function Roadmap</h1>
+    <p class="spine">The skill portfolio is the operating system of a function, and Q3 is only its first workload. Eight layers from acquisition to institution. <b>Every layer is fed by something already built, every layer answers an exec question before it gets asked, and every skill is pattern-first so Q4's mandates are config changes, not rebuilds.</b></p>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#breath">One breath</a>
+  <a href="Clay_Strategy_and_Build.html" style="color:#1F7340;font-weight:700">Clay engine ▸</a>
+  <a href="#horizons">Horizons</a>
+  <a href="#layers">The eight layers</a>
+  <a href="#alignment">Alignment map</a>
+  <a href="#bank">Exec answer bank</a>
+  <a href="#protocol">Living protocol</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="breath">
+  <div class="breath">
+    <span class="tag">The whole roadmap in one breath</span>
+    <p>Layers 1-2 make me valuable. Layers 3-7 make me the GTM engineering function. Layer 8 makes the function an institution I founded. The Q3 mandates live almost entirely in Layer 1; everything already in the portfolio is a down payment on a later layer. Staying ahead means when an exec asks about strategy, the answer is already built, instrumented, or on this page. The standing test for all three surfaces: if anyone could look at this role and honestly believe they could do it without me, the surfaces failed.</p>
+  </div>
+</section>
+
+<section id="horizons">
+  <div class="kicker">00 · Sequencing</div>
+  <h2>Horizons</h2>
+  <p class="sub">Visible wins first; they buy the freedom to build the rest. Every build is pattern plus config, never quarter-specific hardcoding. Same rule the engines already follow.</p>
+  <div class="hbar">
+    <div class="hz now"><div class="hwhen">Now · Wk 1-4</div><h3>Acquisition arsenal</h3><p>Wk 2 shipped: 7 shared Clay Functions (reuse layer, motions now cost hours), Cost-Mandate motion built end to end on a proof slice (H1 killed 4 of 5 first-pick accounts, re-sourcing next), 2 one-off strike rooms (Blue Shield of CA, Aflac), L2 signal layer live and wired. Wk 1: war room 5/5, committee sourced (137 contacts, 27/27 parents). Wave 1 sends still gated on mailbox warmup + baseline/attribution ratification, not on the build.</p></div>
+    <div class="hz"><div class="hwhen">Month 2</div><h3>Deal velocity</h3><p>Rebuild the AE suite on THEIR methodology, learned from their deal reviews.</p></div>
+    <div class="hz"><div class="hwhen">Q3 back half</div><h3>Expansion + launch kit</h3><p>Back-office motion scales; BOO Sept GA runs the first launch-kit cycle.</p></div>
+    <div class="hz"><div class="hwhen">Q4</div><h3>Measurement + demos</h3><p>Experiment discipline the team runs; custom demo per meeting becomes routine.</p></div>
+    <div class="hz"><div class="hwhen">6-12 mo</div><h3>Institution</h3><p>Skill factory org-wide, mandate compiler standard, brain = the company's GTM layer.</p></div>
+  </div>
+</section>
+
+<section id="layers">
+  <div class="kicker">01 · The operating system</div>
+  <h2>The eight layers</h2>
+  <p class="sub">Each layer: what to build, what already built feeds it, and the exec question it answers before it gets asked.</p>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">1</span><h3>Acquisition engine</h3><span class="lwhen">Now · Wk 1-4</span></div>
+    <p class="lrole">The Q3 slice. Net-new pipeline as a system output: Star Ratings motion plus back-office motion, running on Clay.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>intradiem-copy-sharpener <span class="chip port">PORTED ✓</span></li>
+        <li>intradiem-first-draft-engine <span class="chip port">PORTED ✓</span></li>
+        <li>intradiem-daily-war-room <span class="chip port">BUILT ✓</span></li>
+        <li>clay-credit-steward <span class="chip new">BUILT ✓</span></li>
+        <li>intradiem-backoffice-icp <span class="chip new">BUILT ✓</span></li>
+        <li>intradiem-outreach-roadmap <span class="chip port">PORT</span></li>
+        <li>signal-to-play, competitive-intel <span class="chip exists">EXIST</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>tam-outbound-engine (fit scoring, strike plans, trigger taxonomy)</li>
+        <li>Canonical Star Ratings set: 307 universe, 98 Tier A+B, RunConfig, earnings signals</li>
+        <li>Clay Day-1 Build Order + Build Pack + MessageGen v2.1 prompt</li>
+        <li>Message Variant Starter Pack, targeting flags</li>
+      </ul></div>
+      <div class="execq"><div class="q">"How are you going to hit 15 meetings?"</div><div class="a">"I don't chase meetings, I run a system that sources them: scored universe in, signal-triggered personalized outreach out, reps work the replies. Here's the funnel by stage, live."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">2</span><h3>Deal velocity suite</h3><span class="lwhen">Month 2</span></div>
+    <p class="lrole">Mid-funnel speed for Sales: transcript-to-brief, pre-call prep, objections, business cases, deal hygiene. How the AE team ends up running on my rails.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>intradiem-call-transcript <span class="chip port">PORT after their methodology is learned</span></li>
+        <li>intradiem-pre-call-planner <span class="chip port">PORT</span></li>
+        <li>intradiem-objection-handler <span class="chip port">BUILT ✓ early</span> (incl. We-Have-WFM + Wait-for-October)</li>
+        <li>intradiem-post-discovery <span class="chip port">PORT</span></li>
+        <li>deal-hygiene pass (their MEDDPICC or whatever they run) <span class="chip new">NEW</span></li>
+        <li>intradiem-roi-business-case <span class="chip exists">EXISTS</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>The entire League AE suite as proven blueprints (12 skills of prior art)</li>
+        <li>Hosted platform plugin: strike plans in sellers' Claude, zero IT dependency</li>
+        <li>AmeriHealth worked example + persona pain maps</li>
+      </ul></div>
+      <div class="execq"><div class="q">"How does this help deals already in flight?"</div><div class="a">"Same engine, second use: every call transcript becomes a brief, a gap report, and a follow-up in minutes. Pipeline creation was chapter one; velocity is chapter two."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">3</span><h3>Expansion and install base</h3><span class="lwhen">Q3 back half → Q4</span></div>
+    <p class="lrole">The 200 back-office contacts are v1 of a permanent motion: white space, expansion signals, QBR support, renewal defense.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>white-space mapper <span class="chip new">NEW</span></li>
+        <li>QBR / EBR generator <span class="chip new">NEW</span></li>
+        <li>renewal-risk brief <span class="chip new">NEW</span></li>
+        <li>cross-sell play compiler per product line <span class="chip new">NEW</span></li>
+        <li>intradiem-signal-to-play <span class="chip exists">EXISTS</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>intradiem-signal-engine: all six expansion/risk signals + AE/CSM routing</li>
+        <li>Control-plane dashboard concept, notifier + owners routing</li>
+        <li>Install-base MCP servers already queryable from Claude</li>
+      </ul></div>
+      <div class="execq"><div class="q">"What does this do for NRR?"</div><div class="a">"The same signal engine that flags risk flags expansion: seat utilization, rules adoption, coaching coverage. Expansion plays route to the CSM the morning the signal fires, and the back-office contacts we sourced become the whitespace campaign inside our own customers."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">4</span><h3>Marketing and content operations</h3><span class="lwhen">Rolling from Wk 3</span></div>
+    <p class="lrole">Volume and consistency for Sierra without headcount, plus the piece with compounding value: the Value Repository becomes a living system.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>intradiem-content-engine <span class="chip exists">EXISTS</span></li>
+        <li>campaign-brief compiler <span class="chip new">NEW</span></li>
+        <li>event / webinar engine <span class="chip new">NEW</span></li>
+        <li>case-study harvester → Value Repository intake <span class="chip new">NEW · the moat piece</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>intradiem-verified-metrics + VERIFICATION_AUDIT discipline</li>
+        <li>signal-to-play already emits the Marketing brief on every trigger</li>
+        <li>Brand kit + design prompts + claude-design-handoff package</li>
+      </ul></div>
+      <div class="execq"><div class="q">"How do we know what we're allowed to claim?"</div><div class="a">"One Repository, source-cited, harvested from every customer win automatically, enforced by a gate in every skill that writes prospect-facing copy. Whoever owns the source of truth for claims owns a load-bearing piece of GTM. That's us."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">5</span><h3>Product-launch GTM kit</h3><span class="lwhen">First run: BOO, Sept GA</span></div>
+    <p class="lrole">Readiness milestones in, full go-to-market package out: positioning brief, enablement one-pager, sequences, demo script, launch campaign. Runs at least four times in 18 months (BOO, QO, Engagement Hub, the 2027 GA wave). Date-language caution: the site shows beta windows Aug-Q4 2026 and GA waves through 2027, while BOO reads "target launch September 2026." Week 1, ask Chris which one September is; it changes what reps can commit to in sourced meetings.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>launch-kit compiler <span class="chip new">SKELETON BUILT ✓ · first compile Aug</span></li>
+        <li>intradiem-competitive-intel <span class="chip exists">EXISTS</span> (wedge briefs per launch)</li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>Content engine + copy skills supply every launch asset type</li>
+        <li>Back-office ICP work (Layer 1) IS the BOO launch targeting</li>
+        <li>Readiness stream owners mapped: Tom (market), Scott (business), Chris (product)</li>
+      </ul></div>
+      <div class="execq"><div class="q">"Is GTM ready for the BOO launch?"</div><div class="a">"The readiness streams end where execution begins, and that seam is mine: the day Chris calls GA, the kit ships the same week because the machinery that builds it already runs weekly. A product slip changes timing, never readiness."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">6</span><h3>Demo and artifact engineering</h3><span class="lwhen">Q4 routine · signature move</span></div>
+    <p class="lrole">Mandate 4's explicit scope: custom demo per meeting, ROI calculators, digital sales rooms, interactive artifacts instead of decks. The thing nobody else there can do.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>custom-demo builder (account data in, tailored interactive demo out) <span class="chip new">NEW</span></li>
+        <li>ROI-calculator maintainer <span class="chip new">NEW</span></li>
+        <li>digital-sales-room generator <span class="chip new">NEW</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>Strike Room, ROI calculator, Golden List, Control Plane artifacts live</li>
+        <li>Green-kit design system + reskin prompts, deploy-anywhere static pattern</li>
+        <li>Naveen already believes this (his onboarding site IS the standard)</li>
+      </ul></div>
+      <div class="execq"><div class="q">"Why interactive tools instead of decks?"</div><div class="a">"Nobody remembers slide 14; everyone remembers the calculator they moved with their own hands. Every artifact we ship is something the buyer can touch, and it updates from live data instead of rotting in a drive."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">7</span><h3>Measurement and experimentation</h3><span class="lwhen">Foundations Wk 1 · team-run by Q4</span></div>
+    <p class="lrole">Experiment design, variant analysis, funnel diagnostics. "Measurement before volume" becomes something the team runs, not something I police.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>experiment-designer (variant structure, kill criteria) <span class="chip new">NEW</span></li>
+        <li>funnel diagnostician (reads engine_state, names the leak) <span class="chip new">NEW</span></li>
+        <li>naveen-weekly-readout <span class="chip new">BUILT ✓ · Wk 2 readout shipped Jul 17</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>impact engine: surfaced vs realized, never blended</li>
+        <li>Conductor stages + variant tracker + deliverability monitor + attribution loop spec</li>
+        <li>engine_state.json as the single source every readout pulls from</li>
+      </ul></div>
+      <div class="execq"><div class="q">"How do we know any of this is working?"</div><div class="a">"One scorecard, two columns that never blend: what the engine surfaced, what actually landed. Source-tagged from the first send, so the answer is a query, not an anecdote."</div></div>
+    </div>
+  </div>
+
+  <div class="lcard">
+    <div class="lhead"><span class="lnum">8</span><h3>The meta-layer: the moat</h3><span class="lwhen">Seeds now · institution by mo 6-12</span></div>
+    <p class="lrole">What makes the function an institution: other teams build on the platform, any new mandate compiles into a motion, the engine survives me being on vacation.</p>
+    <div class="lgrid">
+      <div class="lblock"><div class="lbl">Skills</div><ul>
+        <li>intradiem-skill-factory (creator / editor / reviewer trio) <span class="chip port">PORT · League playbook repeated</span></li>
+        <li>mandate-compiler (directive in → scoped plays, premortem, instrumentation, readout hooks out) <span class="chip new">NEW · the quarter-proof skill</span></li>
+        <li>engine-onboarder (new seller or marketer productive in one session) <span class="chip new">NEW</span></li>
+      </ul></div>
+      <div class="lblock"><div class="lbl">Already built and feeding it</div><ul>
+        <li>Hosted platform: one brain, thin keyed surfaces, request log as adoption metric</li>
+        <li>GTM_Engine_Build_Spec (the conductor's hashed north star) = mandate-compiler prior art</li>
+        <li>RULES_OF_THE_ROAD + verify-before-send guardrails already ship with the plugin</li>
+        <li>Learner's Cafe July session = the org-wide launch venue</li>
+      </ul></div>
+      <div class="execq"><div class="q">"What happens to all this if you get hit by a bus?"</div><div class="a">"It's config, documented runbooks, and a skill factory other teams already use. The League proof: five departments ran on the platform I built there. The engine is an asset of the company, not a dependency on me. That's also why it compounds instead of capping at my hours."</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="alignment">
+  <div class="kicker">02 · Nothing is orphaned</div>
+  <h2>Alignment map: what's built → the layer it serves</h2>
+  <p class="sub">Every major asset in the portfolio is a down payment on a layer. When priorities shift, assets get re-aimed, never thrown away.</p>
+  <table>
+    <tr><th>Already built</th><th>Serves</th><th>How it compounds</th></tr>
+    <tr><td><b>tam-outbound-engine</b> + trigger taxonomy</td><td class="to">Layer 1 → 5</td><td>Net-new scoring today; re-aimed at each new product's TAM at every launch.</td></tr>
+    <tr><td><b>Canonical Star Ratings data layer</b></td><td class="to">Layer 1</td><td>First universe. The rebuild prompts make ANY vertical's universe repeatable (the pattern, not the dataset, is the asset).</td></tr>
+    <tr><td><b>intradiem-signal-engine</b> (6 signals, routing)</td><td class="to">Layer 3</td><td>Install-base expansion + risk; grows a signal per product line as the platform expands.</td></tr>
+    <tr><td><b>impact engine</b> (surfaced vs realized)</td><td class="to">Layer 7</td><td>The honesty architecture every exec readout stands on.</td></tr>
+    <tr><td><b>Cohesion layer / conductor</b> (gates, fail-closed, human approval)</td><td class="to">Layers 1, 7, 8</td><td>Weekly cadence now; the governance pattern every future motion inherits. Mandate-compiler is the conductor generalized.</td></tr>
+    <tr><td><b>Hosted platform</b> (brain + Slack + plugin)</td><td class="to">Layers 2, 8</td><td>Seller surfaces now; the company's GTM intelligence layer at month 6-12. Request log = adoption proof.</td></tr>
+    <tr><td><b>4 existing Intradiem skills</b></td><td class="to">Layers 1, 2, 4, 5</td><td>signal-to-play (1), roi-business-case (2), content-engine (4), competitive-intel (1+5).</td></tr>
+    <tr><td><b>2 new ports</b> (first-draft-engine, copy-sharpener)</td><td class="to">Layers 1, 4</td><td>Every word any motion ever sends passes through them, including Clay MessageGen updates.</td></tr>
+    <tr><td><b>League AE suite</b> (12 skills, untouched)</td><td class="to">Layer 2</td><td>Proven blueprints waiting for Intradiem's methodology. Prior art, not dead weight.</td></tr>
+    <tr><td><b>Live artifacts</b> (Strike Room, ROI calc, Golden List, Control Plane, dashboards)</td><td class="to">Layer 6</td><td>Proof the signature move works; templates for demo-per-meeting at scale.</td></tr>
+    <tr><td><b>Verified-metrics + VERIFICATION_AUDIT</b></td><td class="to">Layer 4 → everywhere</td><td>Becomes self-sustaining once the case-study harvester feeds it.</td></tr>
+    <tr><td><b>GTM_Engine_Build_Spec + runbooks + skill-factory trio</b></td><td class="to">Layer 8</td><td>The institution's constitution: spec-driven, hash-checked, transferable.</td></tr>
+  </table>
+</section>
+
+<section id="bank">
+  <div class="kicker">03 · Stay ahead of the question</div>
+  <h2>Exec answer bank</h2>
+  <p class="sub">Strategy questions I will get as visibility grows, answered before they're asked. Each anchored to something built, so the answer is a demo, not an opinion.</p>
+
+  <div class="bank"><div class="q">Why build our own engine instead of buying an outbound tool or an AI SDR?</div>
+    <p>Tools rent you tactics; the engine owns the judgment. Our moat is the trigger-to-persona taxonomy, the verified-claims discipline, and signals tuned to OUR buyers, none of which ships in a vendor box. We buy commodity layers (Clay for enrichment, sequencers for delivery) and keep the brain. AI SDRs specifically: they optimize for volume of conversations and torch domains and trust; we gate volume behind deliverability and human approval, because our market is six regulated verticals, not SMB spray.</p>
+    <div class="anchor">Anchored in: <b>config-over-code engines · conductor gates · brand of the whole build</b></div>
+  </div>
+
+  <div class="bank"><div class="q">Should we be worried AI outbound is getting saturated and reply rates will collapse?</div>
+    <p>Yes, volume-only outbound is decaying, which is exactly why ours is signal-triggered instead of calendar-triggered. A message that lands the week a forcing function fires competes with five emails, not five hundred. When channel yield drops, the engine shifts mix (voice, video, events, install-base motions) because the brain is channel-agnostic; only the last mile changes. And the measurement layer tells us the moment decay starts instead of two quarters later.</p>
+    <div class="anchor">Anchored in: <b>signal library tiers · variant tracker · deliverability monitor</b></div>
+  </div>
+
+  <div class="bank"><div class="q">How does GTM engineering relate to our own product story?</div>
+    <p>It IS the product story, applied to ourselves: real-time signals trigger the right action automatically while a human keeps judgment. We run pipeline the way Intradiem runs a workforce. That makes every internal demo a live proof point a prospect can be shown, and it means when we sell "orchestration," we can say we operate on it.</p>
+    <div class="anchor">Anchored in: <b>signal-to-play skill · the platform-pitch echo story</b></div>
+  </div>
+
+  <div class="bank"><div class="q">What's the plan when Q3's targets change or Q4 lands something new?</div>
+    <p>The mandates are workloads; the engine is the operating system. A new directive compiles the same way every time: define the measurable line, pick the universe, wire the signals, budget the credits, instrument before volume, readout weekly. That compile step is itself becoming a skill, so the answer to "can you do X next quarter" is always "yes, here's the scoped motion by Friday."</p>
+    <div class="anchor">Anchored in: <b>mandate-compiler (Layer 8) · pattern-first skill design</b></div>
+  </div>
+
+  <div class="bank"><div class="q">Where should the company invest next in GTM?</div>
+    <p>In order: (1) the data layer under the install base, because expansion signals are the cheapest pipeline we will ever source; (2) the launch-kit muscle before the 2027 GA wave, so every launch lands with a repeatable motion instead of a scramble; (3) demo engineering, because interactive artifacts are compressing our sales cycle at the exact stage decks stall. Each has a working seed already; investment scales what's proven, never funds a bet.</p>
+    <div class="anchor">Anchored in: <b>signal engine · launch-kit seam · live artifact suite</b></div>
+  </div>
+
+  <div class="bank"><div class="q">How do we know what the engine produced versus what Sales would have gotten anyway?</div>
+    <p>Source tags from the first send: three Salesforce fields, ratified with Naveen in writing, and one scorecard that never blends surfaced with realized. If the engine's column is empty, I'll say so first; the credibility of the number IS the product. That honesty is also the answer to any future attribution dispute before it starts.</p>
+    <div class="anchor">Anchored in: <b>attribution loop spec · impact engine · gate #1</b></div>
+  </div>
+</section>
+
+<section id="protocol">
+  <div class="kicker">04 · Keep it alive</div>
+  <h2>The living protocol</h2>
+  <p class="sub">This page is a working surface, not a snapshot. It moves on three triggers, and it answers to one test.</p>
+
+  <div class="lcard">
+    <div class="lhead"><h3>After every Friday readout</h3></div>
+    <p class="lrole">Chips and horizons update to what actually shipped. Anything that slipped gets a reason on the page, never a silent re-date. The readout's running log is the input; if this page and the readout log disagree, the log wins.</p>
+  </div>
+  <div class="lcard">
+    <div class="lhead"><h3>The moment a mandate changes</h3></div>
+    <p class="lrole">New directive → the mandate-compiler pattern: measurable line, universe, signals, credit budget, instrumentation, readout hooks. The layers absorb the workload; this page records the recompile. Q3's numbers changing should cost hours of reconfiguration, never weeks of rebuilding.</p>
+  </div>
+  <div class="lcard">
+    <div class="lhead"><h3>When a layer completes</h3></div>
+    <p class="lrole">Its skills retire into the Start Here index as operating assets, and this page replaces them with the next frontier. If a quarter ends with no new frontier on this page, I have stopped being ahead, and that is the earliest warning I will get.</p>
+  </div>
+  <div class="lcard">
+    <div class="lhead"><h3>The standing test</h3></div>
+    <p class="lrole">If ever someone can think of me, my impact, and this role, and believe they could accomplish it without me, all three surfaces have failed. The correction starts here, and the moat is velocity and vision, never opacity: everything documented and runnable by others, while I remain the only person who could have built this quarter's version of it. Hoarding knowledge makes me a bottleneck execs route around; compounding faster than anyone can follow makes me the person they route through.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="limestripe"></div>
+<footer><div class="wrap">
+  <span>Function Roadmap · private · pairs with the Grand Plan and the Start Here Index</span>
+  <span id="today"></span>
+</div></footer>
+
+<script>
+document.getElementById('today').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+</script>
+</body>
+</html>

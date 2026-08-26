@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Engine · Salesforce Dashboard Build Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--ink:#15231B;--ink-soft:#3E4D44;--dim:#7A877E;--paper:#FAFBF7;--card:#fff;--mist:#F0F4ED;--line:#E2E7DD;--orange:#FE5000;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;}
+  .wrap{max-width:900px;margin:0 auto;padding:56px 28px 100px;}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:12px;}
+  h1{font-family:'Playfair Display',serif;font-size:36px;color:var(--forest);line-height:1.15;}
+  h2{font-family:'Playfair Display',serif;font-size:23px;color:var(--forest);margin:44px 0 12px;}
+  h3{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin:22px 0 8px;}
+  p{margin:10px 0;color:var(--ink-soft);font-size:15.5px;}
+  p b{color:var(--ink);}
+  .lead{font-size:17px;margin-top:14px;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;}
+  th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:0 12px 8px 0;border-bottom:1px solid var(--line);font-weight:500;}
+  td{padding:8px 12px 8px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;}
+  td b, td code{color:var(--ink);}
+  code{font-family:'JetBrains Mono',monospace;font-size:12.5px;background:var(--mist);padding:1px 6px;border-radius:5px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:14px 0;}
+  .callout{background:var(--mist);border-left:3px solid var(--green-bright);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;font-size:14.5px;color:var(--ink-soft);}
+  .callout b{color:var(--forest);}
+  ol,ul{margin:8px 0 8px 22px;color:var(--ink-soft);font-size:15px;}
+  li{margin:6px 0;}
+  .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;background:var(--forest);color:var(--lime);padding:3px 10px;border-radius:100px;text-transform:uppercase;margin-right:6px;}
+  .tag.amber{background:#7A5A18;color:#F5DFA8;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="eyebrow">GTM Engine · Salesforce reporting layer · v1 · Jul 15 2026</div>
+<h1>The dashboard the room was promised, and exactly how to build it</h1>
+<p class="lead">One Salesforce dashboard, open any time, that answers John's question from the thread: what do we expect, and how do we measure it. Engine results only, sourced never blended, shaped for pipeline council and the H1/H2 reviews. This kit is sequenced so the parts that need nothing from anyone ship first, and the parts waiting on the Salesforce seat are a 60-minute build the day it lands.</p>
+
+<h2>1 · The metrics contract</h2>
+<p>Everything on the dashboard traces to a line the execs have already read or heard. Nothing else earns a component.</p>
+<table>
+<tr><th>Metric</th><th>Definition</th><th>Against</th></tr>
+<tr><td><b>Sends + deliverability</b></td><td>Sends and bounces by persona lane; plain text, no opens (by design, never promise them)</td><td>Warmup health</td></tr>
+<tr><td><b>Replies</b></td><td>Any human reply; auto-replies and polite declines stay here</td><td>Range 6&#8211;11 on the full 143</td></tr>
+<tr><td><b>Qualified conversations</b></td><td>A target persona engaging on the problem</td><td>Range 3&#8211;7</td></tr>
+<tr><td><b>Meetings to sales</b></td><td>Meeting booked and handed to the owning seller</td><td>Range 2&#8211;4</td></tr>
+<tr><td><b>Cost per qualified reply</b></td><td>Motion credits &#247; qualified conversations, shown in credits AND dollars (~7&#162;/credit)</td><td>Trend, no target</td></tr>
+<tr><td><b>Engine-sourced pipeline</b></td><td>Opportunities whose primary campaign source is an engine campaign; estimated never blends with realized</td><td>Sourced vs realized, separate</td></tr>
+</table>
+<div class="callout"><b>The never-blend rule is structural:</b> every report in this folder filters to engine campaigns or <code>Lead Source = Clay</code>. Engine numbers appear in council views as their own line, never summed into existing-motion totals.</div>
+
+<h2>2 · How data flows (system of action &#8594; system of record)</h2>
+<p>Clay runs the motion; Salesforce records what the business keeps: people touched, conversations, meetings, pipeline. The bridge is deliberately thin at Wave 1 scale (53 leads) and upgrades without rework.</p>
+<table>
+<tr><th>Phase</th><th>Bridge</th><th>Effort</th></tr>
+<tr><td><b>v1 · launch week</b></td><td>Weekly CSV from Clay Contacts (name, email, company, persona, reply_status, sourced date) &#8594; Campaign Member import with statuses. At 53 rows this is minutes, and it makes the dashboard live before any integration exists.</td><td>~15 min/wk</td></tr>
+<tr><td><b>v2 · post-launch</b></td><td>Clay HTTP/webhook column updates the Campaign Member status the moment reply_status changes in Contacts. One column, fires on status change only.</td><td>One build session</td></tr>
+<tr><td><b>v3 · with AI Enablement</b></td><td>The data hub that already feeds Salesforce data INTO the engine carries engine results back. Jason's team owns the pipe; the dashboard doesn't change, only its feed does.</td><td>Their roadmap</td></tr>
+</table>
+
+<h2>3 · Salesforce configuration (the Sierra list)</h2>
+<p>Everything here is standard objects, no packages, no code. Items marked <span class="tag">Sierra</span> are hers or need her admin hand; the rest is yours the day the seat lands.</p>
+<h3>Campaigns · 3 records</h3>
+<ul>
+<li><code>GTM Engine · Stars QBP Wave 1 · Persona 1 (Stars/Quality)</code></li>
+<li><code>GTM Engine · Stars QBP Wave 1 · Persona 2 (Finance)</code></li>
+<li><code>GTM Engine · Stars QBP Wave 1B · Longer-Horizon</code></li>
+</ul>
+<p>Type = Email, Status = In Progress on launch. The <code>GTM Engine · </code> prefix is the name-based filter every report keys on (the foundational template's rule: filter on names, never IDs, so nothing breaks across sandboxes).</p>
+<h3>Campaign Member statuses <span class="tag">Sierra</span></h3>
+<p><code>Staged</code> &#8594; <code>Sent</code> &#8594; <code>Replied</code> &#8594; <code>Qualified</code> &#8594; <code>Meeting Booked</code>, plus <code>Disqualified</code>. "Responded" flag on Replied and above. Statuses only move forward, mirroring reply_status in Clay.</p>
+<h3>Fields</h3>
+<ul>
+<li><code>Lead Source</code> picklist value <b>"Clay"</b> <span class="tag">Sierra</span> &#8212; her existing prep ticket; the one blocking dependency.</li>
+<li><code>GTM_Motion__c</code> picklist on Lead/Contact: <code>star_ratings</code>, <code>back_office</code>, <code>cost_mandate</code>, <code>install_base</code>, <code>competitive</code> &#8212; one field makes every future motion reportable with zero new build.</li>
+<li><code>Engine_Sourced_Date__c</code> date &#8212; mirrors the sourced_date stamp Clay sets at creation.</li>
+</ul>
+<h3>Cost feed (smallest thing that works)</h3>
+<p>A tiny custom object <code>GTM_Spend__c</code>: week, motion, credits used, dollar equivalent (credits &#215; $0.0694), qualified-to-date. One record per week from the credit ledger, two minutes to enter, and cost per qualified reply becomes a real report instead of a slide claim. If object creation is locked down, phase-2 it and carry cost as a dashboard rich-text component updated weekly from the ledger.</p>
+
+<h2>4 · The reports (folder: "GTM Engine")</h2>
+<table>
+<tr><th>#</th><th>Report</th><th>Type · shape</th><th>Feeds</th></tr>
+<tr><td>R1</td><td><b>Engine Funnel by Persona</b> &#8212; Campaign Members grouped by Campaign, then Member Status; filter Campaign Name starts with <code>GTM Engine</code></td><td>Campaigns with Campaign Members</td><td>Funnel bars + Sent/Replied/Qualified/Meeting tiles</td></tr>
+<tr><td>R2</td><td><b>Replies &amp; conversions over time</b> &#8212; members grouped by status-change week</td><td>Campaign Members</td><td>Trend line</td></tr>
+<tr><td>R3</td><td><b>Sourced contacts by motion</b> &#8212; <code>Lead Source = Clay</code>, grouped by <code>GTM_Motion__c</code></td><td>Leads &amp; Contacts</td><td>Coverage tile (143 / 32 parents)</td></tr>
+<tr><td>R4</td><td><b>Meetings handed to sales</b> &#8212; status = Meeting Booked, with account, owner, meeting date</td><td>Campaign Members</td><td>Table component</td></tr>
+<tr><td>R5</td><td><b>Engine-sourced pipeline</b> &#8212; Opportunities where Primary Campaign Source starts with <code>GTM Engine</code>, grouped by stage; estimated vs realized as separate columns, never one total</td><td>Opportunities</td><td>Pipeline component</td></tr>
+<tr><td>R6</td><td><b>Cost per qualified reply</b> &#8212; <code>GTM_Spend__c</code> by week, credits and dollars</td><td>Custom object</td><td>Cost tile + spend trend</td></tr>
+</table>
+<div class="callout"><b>Foundational-rules alignment:</b> before R5 goes live, run the template's first-week discovery (record types, stage list, owner scope) and lock which Opportunity record type counts &#8212; the template is at project root as <code>SALESFORCE_FOUNDATIONAL_TEMPLATE.pdf</code>, still bracketed; filling its Intradiem values IS the discovery deliverable, and this dashboard becomes its first consumer.</div>
+
+<h2>5 · Dashboard layout (see the mockup file)</h2>
+<p>Lightning dashboard <b>"GTM Engine · Star Ratings"</b>, 12-column layout, running user Dallas (dynamic later if council wants per-role visibility).</p>
+<ul>
+<li><b>Row 1 · five metric components:</b> Sends, Replies, Qualified, Meetings, Cost per qualified reply. Replies/Qualified/Meetings use gauge components with segment breakpoints set to the planning ranges (6&#8211;11 / 3&#8211;7 / 2&#8211;4), so "actuals against the ranges" is literally visible, not a caption.</li>
+<li><b>Row 2 · funnel by persona:</b> horizontal bar from R1, one color per lane, direct labels on.</li>
+<li><b>Row 3 · engine-sourced pipeline (R5) + meetings table (R4):</b> sourced sits alone; a text note names where existing-motion numbers live so no one asks why they aren't here.</li>
+<li><b>Row 4 · spend:</b> weekly credits line + cost per qualified reply, denominated in credits with the dollar equivalent beside it (~7&#162; a credit, the $5,000 / 72,000 plan math).</li>
+<li><b>Footer text component:</b> "Engine-sourced only, never blended with existing motion. Opens not tracked by design. Estimates labeled." Plus a data-as-of stamp.</li>
+</ul>
+<p><b>"Open any time," honestly stated:</b> the reports behind every component are always live; the dashboard surface refreshes on the Refresh click (Unlimited-edition auto-refresh subscriptions can be added, pointed at the council, not at inboxes).</p>
+
+<h2>6 · Build order, the day the seat lands (~60 min)</h2>
+<ol>
+<li>Confirm Sierra's <code>Lead Source = Clay</code> value exists (her ticket).</li>
+<li>Create the 3 campaigns + member statuses (10 min).</li>
+<li>Create <code>GTM_Motion__c</code> + <code>Engine_Sourced_Date__c</code> (10 min).</li>
+<li>First CSV import from Clay Contacts &#8594; campaign members with statuses (10 min).</li>
+<li>Build R1&#8211;R4 in the "GTM Engine" folder (15 min); R5 after the record-type discovery; R6 when <code>GTM_Spend__c</code> exists.</li>
+<li>Assemble the dashboard from the mockup, set gauge ranges, share folder + dashboard with John, Tom, Chris, Jenn, Naveen, council (15 min).</li>
+<li>Enter week-zero spend from the credit ledger; screenshot; done.</li>
+</ol>
+
+<h2>7 · Sierra touchbase agenda (Thu 2:30 CT)</h2>
+<ol>
+<li>The picklist value ticket &#8212; confirm shipped or ship it live on the call.</li>
+<li>Campaign member statuses above &#8212; hers to add or bless.</li>
+<li>Report folder + dashboard placement for pipeline council (where does council already look, and can this dashboard live there).</li>
+<li><code>GTM_Spend__c</code> &#8212; can Dallas create custom objects, or does she.</li>
+<li>Walk her through this kit and the mockup so the reporting shape is co-owned before the first number lands.</li>
+</ol>
+
+<p style="margin-top:36px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--dim);">Companion file: GTM_Engine_SF_Dashboard_Mockup.html (visual end-state, sample data) · Sources: Weekly_Readout_Template.md, Clay_Credit_Ledger.md, SALESFORCE_FOUNDATIONAL_TEMPLATE.pdf, the Jul 14 Norton thread</p>
+</div>
+</body>
+</html>

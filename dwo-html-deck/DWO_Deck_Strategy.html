@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DWO Story Deck · Strategy &amp; Build Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Palette + type lifted from the Intradiem Interactive Demo so this page and the deck read as one product */
+:root{
+  --green:#2DB56E; --green-600:#228752; --green-300:#7BD3A0; --green-100:#C4ECD4;
+  --forest:#014637; --orange:#F58220; --orange-600:#D96D12; --blue:#0F4C99;
+  --ink:#202020; --ink-2:#5A5A5A; --ink-3:#9A9A9A;
+  --bg:#FFFFFF; --sidebar:#F5F4F2; --zebra:#FAFAFA;
+  --tint:rgba(45,181,110,.12); --tint-soft:rgba(45,181,110,.08);
+  --line:#E0E0E0; --line-strong:#BDBDBD; --r:8px;
+  --ff:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --ff-mono:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--sidebar);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 30px}
+.sheet{max-width:1120px;margin:0 auto;background:var(--bg);}
+.eyebrow{font-family:var(--ff-mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+.logo{height:26px;width:auto;display:block}
+.hero .logo{height:64px;margin-bottom:22px}
+.hero .logo{color:#FFFFFF}
+.logo{color:#014637}
+.hero{background:var(--forest);color:#fff;padding:64px 0 56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.30),transparent 62%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .eyebrow{color:var(--green-300)}
+.hero h1{font-weight:900;font-size:44px;line-height:1.06;margin:14px 0 16px;letter-spacing:-.02em;max-width:22ch}
+.hero h1 .spark{color:var(--green-300)}
+.hero p{font-size:18px;max-width:66ch;color:#C7DAD1}
+.hero p b{color:#fff}
+.hero .meta{margin-top:24px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.05em;color:#7FA394}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+.sec-head{max-width:76ch;margin-bottom:26px}
+.sec-head .eyebrow{color:var(--green-600)}
+.sec-head h2{font-weight:900;font-size:30px;line-height:1.12;margin:10px 0 8px;letter-spacing:-.02em}
+.sec-head p{color:var(--ink-2);font-size:16px}
+p.body{font-size:15.5px;color:var(--ink-2);max-width:76ch;margin-bottom:14px}
+p.body b{color:var(--ink)}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 1px 2px rgba(20,30,25,.04)}
+.card .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:8px}
+.card h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.card p{font-size:14px;color:var(--ink-2)}
+.callout{background:var(--tint-soft);border:1px solid var(--tint);border-radius:var(--r);padding:16px 22px;margin-top:20px;font-size:15px;color:var(--ink)}
+.callout strong{color:var(--green-600);font-weight:700}
+table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px}
+th{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-600);text-align:left;padding:0 16px 10px 0;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:11px 16px 11px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+td:first-child{font-weight:500;color:var(--ink);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--zebra)}
+kbd{font-family:var(--ff-mono);font-size:12px;background:var(--zebra);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:2px 8px;color:var(--forest);font-weight:600}
+ol{margin:14px 0 0 20px;color:var(--ink-2);font-size:15.5px;max-width:72ch}
+li{margin-top:8px}
+li::marker{color:var(--green-600);font-weight:700}
+.statband{display:flex;gap:34px;background:var(--forest);border-radius:var(--r);padding:22px 32px;margin-top:24px;justify-content:space-between;flex-wrap:wrap}
+.statband .n{font-weight:900;font-size:30px;color:#fff;letter-spacing:-.01em}
+.statband .n em{font-style:normal;color:var(--green-300)}
+.statband .l{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:#9DBBAE;text-transform:uppercase;margin-top:5px;max-width:24ch;line-height:1.6}
+.lane{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 4px;border-bottom:1px solid var(--line)}
+.lane:first-of-type{border-top:1px solid var(--line);margin-top:14px}
+.lane .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;padding-top:3px}
+.lane .v{font-size:14.5px;color:var(--ink-2)}
+.lane .v b{color:var(--ink)}
+.gate{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.gate:last-child{border-bottom:none}
+.gate .badge{flex-shrink:0;font-family:var(--ff-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:5px 9px;border-radius:6px;background:var(--tint);color:var(--green-600)}
+.gate .badge.open{background:#FDECD9;color:var(--orange-600)}
+.gate p{font-size:14.5px;color:var(--ink-2)}
+.gate strong{color:var(--ink);font-weight:700}
+.foot{padding:26px 0 52px;text-align:center;color:var(--ink-3);font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;background:var(--bg)}
+.foot .logo{height:26px;display:inline-block;margin:0 auto 10px;opacity:.8}
+@media(max-width:860px){.hero h1{font-size:32px}.cols3{grid-template-columns:1fr}.lane{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+
+<!-- Intradiem logo, defined once. Wordmark uses currentColor and inherits from .logo. -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/>
+</symbol></svg>
+
+<div class="sheet">
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow">DWO Story Deck · Strategy &amp; Build Notes</div>
+    <h1>The DWO story, off PowerPoint and onto a <span class="spark">living HTML asset</span>.</h1>
+    <p>Tom kicked off the project of turning <b>Dynamic-Workforce-Orchestration-Story-V02.pptx</b> into an HTML deck. Three requirements shape everything here: the deck <b>evolves constantly</b> so updating has to be easy, reps need a <b>talk track the audience never sees</b>, and everything has to hold the <b>Intradiem brand</b> without drift. A working cut is built and ready to open; this page is the strategy behind it and the short list that finishes the job.</p>
+    <div class="meta">Prepared by Dallas Andrews, GTM Engineer · Kickoff from Tom Russell, Jul 30 2026</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The call</div>
+      <h2>Rebuild natively, don't export</h2>
+      <p>A PowerPoint-to-HTML export freezes pixels: every future edit means re-exporting, brand drift creeps in per-slide, and there's no place for a presenter layer. The stronger move is a native rebuild on three separated layers, so each requirement is solved structurally instead of patched.</p>
+    </div>
+    <div class="cols3">
+      <div class="card"><div class="k">Content layer</div><h3>One labeled block</h3><p>Every word on every slide lives in one block at the top of the file, in reading order. Changing the deck means changing text, nothing else. This is what makes "constantly evolving" cheap.</p></div>
+      <div class="card"><div class="k">Layout layer</div><h3>Brand-locked layouts</h3><p>The layouts render the content. Fonts, colors, spacing, and the logo mark are tokens from the current Intradiem kit, so an edit can't push a slide off-brand.</p></div>
+      <div class="card"><div class="k">Presenter layer</div><h3>Talk track, never shown</h3><p>The notes ride in the same file but only render in presenter surfaces. What a customer sees on a shared screen is always just the slide.</p></div>
+    </div>
+    <div class="callout"><strong>One more deliberate choice:</strong> the deck is a single self-contained file with the brand fonts embedded. No install, no internet required, no dependencies. It opens in any browser on any laptop, which is exactly the bar PowerPoint sets for reps presenting in a room with bad wifi.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The first cut</div>
+      <h2>What's in the deck today</h2>
+      <p>All 15 slides of Story-V02 rebuilt in the current brand system: the biggest-bet open, the structured-workforce map, the execution gap, the AI-pilot wave, the point-solution trap, the architectural distinction, See / Anticipate / Act, the Harmoniq platform, the why-now window, the 2X guarantee, and the close.</p>
+    </div>
+    <div class="statband">
+      <div><div class="n"><em>15</em></div><div class="l">Slides, faithful to Story-V02</div></div>
+      <div><div class="n"><em>1</em> file</div><div class="l">Self-contained, fonts embedded, works offline</div></div>
+      <div><div class="n"><em>0</em></div><div class="l">Licenses, installs, or PowerPoint dependencies</div></div>
+    </div>
+    <table>
+      <thead><tr><th>PowerPoint habit</th><th>In the HTML deck</th></tr></thead>
+      <tbody>
+      <tr><td>Advance slides</td><td>Arrow keys, spacebar, click, or swipe on a phone or tablet</td></tr>
+      <tr><td>Notes pane</td><td><kbd>N</kbd> slides a talk-track drawer up from the bottom, for rehearsal or a quick glance</td></tr>
+      <tr><td>Presenter view</td><td><kbd>P</kbd> opens a separate presenter window: current slide, full talk track, next slide, elapsed timer, clock. Share the deck window on the call; keep the presenter window on your side.</td></tr>
+      <tr><td>Slide sorter</td><td><kbd>G</kbd> shows the whole deck as a grid; click any slide to jump</td></tr>
+      <tr><td>Slideshow mode</td><td><kbd>F</kbd> for fullscreen</td></tr>
+      <tr><td>Print or PDF</td><td>Browser print gives one clean 16:9 page per slide, talk track excluded</td></tr>
+      <tr><td>Send a specific slide</td><td>The URL tracks the slide (#7 opens slide 7), so a link can land anywhere in the story</td></tr>
+      </tbody>
+    </table>
+    <p class="body" style="margin-top:16px;">On the talk-track privacy bar: this matches PowerPoint exactly. The notes live in the file but never render on the audience surface. If a version ever needs to be emailed to a prospect directly, the update lane below produces a notes-stripped copy in one ask.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The evolving-deck answer</div>
+      <h2>Three lanes to update it</h2>
+    </div>
+    <div class="lane"><div class="k">Lane 1 · Words</div><div class="v"><b>Anyone comfortable in a text editor, minutes.</b> The top of the file is a labeled content block with every slide's text in reading order. Change the words, save, refresh the browser. Layouts and brand styling are locked and can't break. If a stray quote mark ever breaks the block, the deck simply won't load until it's fixed, and SharePoint version history rolls it back.</div></div>
+    <div class="lane"><div class="k">Lane 2 · Slides</div><div class="v"><b>Claude, minutes.</b> New slide, reordered story, a different layout, a notes-stripped prospect copy: paste the file into Claude, describe the change, and ask for the brand skill to be applied. Because content and layout are separated, Claude edits reliably here, which is the adjustment lever for the brand drift the team has seen.</div></div>
+    <div class="lane"><div class="k">Lane 3 · Versions</div><div class="v"><b>The file is its own record.</b> A version log sits in the file header. Convention: track the PPT master's numbering, so the HTML for Story-V03 is v3.x. The file lives in the Design Asset Library beside the PPT and travels fine as an attachment; it works with no connection.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The QBR peek</div>
+      <h2>Ninety seconds at the Sales QBR</h2>
+      <p>Tom flagged a possible peek at the Sales QBR and it's ready now. The demo that lands:</p>
+    </div>
+    <ol>
+      <li>Open the file, <kbd>F</kbd> for fullscreen: the cover reads instantly as Intradiem, no PowerPoint anywhere.</li>
+      <li>Arrow through the biggest-bet open into the execution-gap slide, so the room sees real content, not a mockup.</li>
+      <li>Press <kbd>P</kbd>: the presenter window appears with the talk track, timer, and next-slide preview. This is the moment reps care about. Let a rep drive it.</li>
+      <li>Close with the update story: the words live in one block; marketing edits text or asks Claude, and the brand can't drift.</li>
+    </ol>
+  </div>
+</section>
+
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Finish line</div>
+      <h2>State of play before rep rollout</h2>
+    </div>
+    <div class="gate"><span class="badge">Done</span><p><strong>Talk track: the deck's own notes, verbatim.</strong> The presenter layer carries the speaker notes exactly as they read in Story-V02.pptx, including the production annotations marketing keeps in them (the structured-workforce definition, the slide 6 nuance note, the sales-training note on ROI measurement). The cover and closing slides carry no notes in the master, so they carry none here.</p></div>
+    <div class="gate"><span class="badge">Done</span><p><strong>Content readings verified against the master.</strong> Queue Optimizer sits in the Front Office Suite, and "41" is the B2B SaaS industry-average NPS that our 68 beats, so the comparative sits on the NPS stat and the 7X+ ROI stat stands on its own.</p></div>
+    <div class="gate"><span class="badge">Done</span><p><strong>Brand system: the current kit.</strong> The deck runs the same palette, type, and logo treatment as the live Intradiem Interactive Demo and the US Outbound standard (forest #014637, green #2DB56E, orange #F58220 as the action accent, Roboto with Roboto Mono labels, the official mark on every slide), so every asset reads as one product.</p></div>
+    <div class="gate"><span class="badge open">Open</span><p><strong>Customer logo wall.</strong> The trusted-by slide shows vertical markers today. Approved logo files from the brand library drop in whenever marketing supplies them.</p></div>
+    <div class="gate"><span class="badge open">Open</span><p><strong>Sync with Rachel's brand skill.</strong> Worth a side-by-side so her Claude skill and this token set always agree, and so her skill can reference this file as its rendered example.</p></div>
+  </div>
+</section>
+
+</div>
+
+<div class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg><br>
+  Intradiem · DWO Story Deck · Strategy &amp; Build Notes · Dallas Andrews
+</div>
+
+</body>
+</html>

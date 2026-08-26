@@ -1,0 +1,72 @@
+=== notesSlide1 ===
+(no notes)
+=== notesSlide2 ===
+Before we get into anything about Intradiem, we want to ask you one question: what is your biggest bet right now?
+Most executives answer with a technology investment -- their cloud transformation, their AI infrastructure, their ERP modernization. And those are real bets.
+But here is the one that rarely gets named that way: your people. It is almost certainly your largest operating cost. And it is probably the investment you are optimizing the least. That is what we are here to talk about today.
+=== notesSlide3 ===
+Every major initiative on your strategic agenda -- your AI investments, your digital transformation, your customer experience programs -- ultimately runs through the people in your structured workforce.
+If you have 1,000 agents / employees in your structured workforce, using a conservative hourly labor rate of $22.00 per hour, that workforce represents a $45 million annual investment
+If those people are operating reactively, if your management systems are built to respond after things go wrong rather than prevent them from going wrong, then every one of those bets is underperforming. The ROI you're expecting from your technology investments depends on a workforce that is firing on all cylinders.
+The question we are here to answer: are you getting what you paid for?
+=== notesSlide4 ===
+Here is what makes this problem harder than most organizations realize: it does not live only in the contact center. Most enterprises run multiple structured workforces -- agents taking calls, processors handling claims and disputes, fraud teams reviewing transactions, fulfillment teams managing orders. Each managed independently. Each with its own systems, its own blind spots, its own reactive patterns.
+There is no unified view. No coordinated response. And no way to shift resources when one team has capacity and another is overwhelmed.
+And the consequences do not stay internal. Every overloaded employee sending the wrong signal to a customer, every missed SLA, every degraded interaction -- those moments compound into something larger: brand damage. In a world where customers have more choices and less patience, your workforce's performance is your brand's performance. You cannot separate them.
+NOTE: A "structured workforce" is our term and may need to be defined.
+Structured workforce: shift-based teams, work arrives in a queue, not centrally managed, teams are siloed.
+=== notesSlide5 ===
+Let's talk about what is actually happening inside your structured workforces right now.
+Research across the industry consistently shows that only 45 to 65 percent of workforce time is spent doing the work you hired people to do. The rest is lost -- to idle time between interactions, to schedule inefficiencies, to unplanned absences and last-minute scrambles.
+Layer attrition on top of that. Thirty to 45 percent of customer-facing workers leave every year on average. In financial services and healthcare it can exceed 60 percent. Each departure costs roughly one to two times that person's annual salary in recruiting, onboarding, and lost productivity. It compounds every single quarter.
+And your workforce management team? They are spending 70 percent of their time reacting -- adjusting schedules after the service level has already slipped, firefighting instead of optimizing. The problem is not effort. It is structure. The tools in place were built for a different era.
+KEY PROOF POINTS / DATA FOR THIS SECTION
+45-65%  https://www.cxtoday.com/workforce-engagement-management/salesforce-contact-center-agents-spend-just-39-of-their-time-servicing-customers/
+35-55%  https://www.insigniaresource.com/research/call-center-turnover-rates/, https://gitnux.org/call-center-industry-statistics/
+OR 30-45% annual attrition rate industry average; 47-61% in financial services and healthcare [SOURCED -- Metrigy 2024, multiple industry surveys] METRICY IS LISTED ON THE SLIDE
+77% of contact centers NOT using optimized scheduling (Peopleware Benchmark Report 2025) https://www.peopleware.com/report/wfm-benchmark-2025
+=== notesSlide6 ===
+This slide needs to be quick
+You have almost certainly heard this pitch before: our AI will transform your workforce operations. The demos are impressive. The case studies are compelling. The potential is real.
+Here is what nobody tells you until after the contract is signed. Gartner published research in April 2026 showing that only 28 percent of AI projects fully deliver their expected ROI. That means 72 percent fall short. And 89 percent of AI agent pilots -- the agentic AI everyone is talking about right now -- never scale beyond proof of concept.
+The AI that works in a controlled demo does not perform the same way inside your live, complex, legacy-integrated operation. We have watched this pattern play out with chatbots, with RPA, with first-generation workforce analytics. Big promises. Thin enterprise track records. Expensive lessons.
+We are not saying AI does not matter. We are saying: ask harder questions before you buy.
+IMPORTANT NOTE HERE:
+We want to make it clear that we are not selling some "magic" AI solution that will inevitably fail. But, we WILL be selling AI solutions. So this needs to somehow draw that distinction while also not backing ourselves into an "anti-AI" corner. Being anti-AI in today's market means you are dead on arrival. I think the talk track here needs to be nuanced: We hear from our customers every day about their failed AI pilots and unmet promises. The reality is, AI IS transformative. And it can and does bring real value. But that value is buried under a lot of hype and a lot of noise, and it's hard to know what's real. We understand that this makes your job harder than ever.
+=== notesSlide7 ===
+There is a more fundamental problem with most AI solutions beyond the failure rate. Most AI produces insights. Predictions. Recommendations. It tells you what is happening, or what is likely to happen. But then what?
+Someone still has to read the alert, decide what to do, and act. At the scale of thousands of employees across multiple teams, that gap between knowing and doing is exactly where the value disappears.
+And if you are buying point solutions -- one for quality management, one for routing optimization, one for annotations -- you are right back to the silo problem. More tools, more dashboards, no coordinated response. You have not solved the structural problem, you have just added complexity.
+=== notesSlide8 ===
+A unified platform is architecturally different. It does not optimize one variable in isolation. It orchestrates across all of them, simultaneously, in real time, with automated action -- no human required to close the loop.
+=== notesSlide9 ===
+The newer AI-native vendors in this space are genuinely innovative. But they were built for greenfield environments -- not for the messy, integrated, high-stakes reality of a 10,000-seat contact center or a back office operation processing millions of transactions a day.
+Enterprise-native is not a marketing credential. It is a capability. It means our platform is designed for the complexity that only exists at real enterprise scale: the legacy integrations, the compliance requirements, the mission-critical uptime. When a major bank's operation has a problem, that is not an inconvenience -- it is a crisis. Our platform is built to run reliably inside that environment, every day.
+We have been doing this for  years. That is not something you build quickly. And our customers validate it: NPS of 68 against an industry average of 41. Net revenue retention above 114 percent. Those numbers only happen when the platform actually delivers what it promises.
+Ask any AI-native vendor for a reference customer at your scale. Then ask what their NPS is. The answers tell you everything.
+=== notesSlide10 ===
+So what does it look like when you close the gap between insight and action? When you stop managing the consequences of yesterday's problems and start acting before they happen?
+It looks like a new category of enterprise intelligence. We call it Dynamic Workforce Orchestration. This is not a product feature. It is a new way of operating.
+In the old model, workforce management meant forecasting, scheduling, and reacting. In the Dynamic Workforce Orchestration model, your structured workforce becomes a self-optimizing system -- one that sees what is happening across the entire enterprise, anticipates what is coming, and acts automatically without waiting for a human to make the call.
+DWO is the category. In a moment we will show you the platform that delivers it.
+=== notesSlide11 ===
+Most of our customers start in the contact center -- where service levels are most visible, customer impact is most direct, and ROI is fastest to measure.
+But Harmoniq is not a contact center tool. It is an enterprise workforce orchestration platform. The problems we just described exist in every structured workforce in your organization -- not just the front office.
+Let me walk you through how the platform expands -- and why each layer compounds the value of everything that came before it.
+=== notesSlide12 ===
+Before we talk about the guarantee, let's talk about timing. Because we think the window to act is more important than most organizations realize.
+Your competitors are currently distracted. The AI market is flooded with vendors making bold promises, and most organizations in your industry are spending the next 12 to 24 months evaluating, piloting, and ultimately being disappointed by solutions that cannot deliver at enterprise scale. We have watched this exact pattern with every previous technology wave.
+Every month you operate your structured workforce at current efficiency levels is a month of compounding cost disadvantage. Every attrition event that goes unaddressed, every missed SLA, every hour of idle time that does not get redirected -- that is real money and real competitive advantage that does not come back.
+The organizations that emerge from the current AI moment with a durable advantage will be the ones who moved on the operating model -- not the next demo. The question is whether you want to be the one who moved first, or the one explaining to the board why you waited.
+=== notesSlide13 ===
+Every vendor in this conversation will show you a demo and tell you what is possible. We do something different. We tell you what we will deliver -- and we put it in writing.
+We are guaranteeing a 2x ROI. Not a case study. Not a reference customer you can call. A contractual commitment, because we know what this platform delivers and we know how to structure the engagement to get you there.
+Here is why we are comfortable making that commitment: we are currently delivering more than 7x ROI for our customers. 2x is not a stretch goal. It is our floor.
+The track record: 30 years in business, 114 percent-plus net revenue retention, NPS of 68 against an industry average of 41. Customers who have validated real ROI do not leave. And they expand. That is what 114 percent NRR means.
+A note for sales training: Sellers MUST be able to speak with authority about HOW we measure ROI. Because a real VITO will immediately ask about that when we say we guarantee it. The sellers need to know the metrics and why they drive savings.
+=== notesSlide14 ===
+Let me leave you with how one of our customers -- a Chief Operating Officer in healthcare -- described it. "The Intradiem platform is one of the most crucial tools in our tech stack, because it brings visibility to what we couldn't see, and execution where we couldn't act fast enough ourselves."
+That is the Dynamic Workforce Orchestration promise in a single sentence. See what you could not see before. Act where you could not act fast enough on your own.
+We want to leave you with one question to take into your next internal conversation: what does it cost your business every year to operate your structured workforce at current efficiency levels -- and what would it be worth to close that gap by even ten percent? For most enterprises at your scale, that number is in the tens of millions. Let us work that out together.
+We are ready to start whenever you are.
+Our customers list speaks for itself.  We currently have 8 of the Top 10 US Healthcare companies and 7 of the 10 largest North American Banks in our portfolio of customers as just two examples.

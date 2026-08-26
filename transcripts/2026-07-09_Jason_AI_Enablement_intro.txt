@@ -1,0 +1,215 @@
+Speaker 1
+Connector, they pull in into Zuargos like all of our Salesforce data, all of our. I think they're pulling in Churn Zero. They're pulling in Six Sense. They're pulling in a whole bunch of other stuff now too. And basically, any time that we need like extra data, so basically they become our one-stop shop for all of our just data, right? Like it's harder to pull in things like Influence and SharePoint and stuff like that. Although they're working on doing SharePoint, and I'm working with them on how they're going to set up their like their rag databases and stuff like that. But realistically, like that's two steps out, and like I don't need that because we're going to set up a Microsoft Graph API MCP connections so that that way people can just log in directly. But even even then that doesn't help with SharePoint because then you see all of SharePoint. Our SharePoint's terrible because it's got like five terabytes of old ass data that's just garbage. Same with our Confluence. So when you do stuff like that, you'll have to like look for like one restriction you can put on there is like, hey, when you're looking at SharePoint or looking in Confluence, like only look at documentation from like the last six months or something like that. But yeah, so there is a Zuar MCP connection. It is a little, it's not like the most open, and like technically, it's only beta for us. Like I just told them, I'm like, yeah, just set this up for me, and it's whatever. The problem with like Salesforce, like their API and MCP and stuff like that, is like they like to restrict a lot of it. Yeah. Plus, like it hits like it hits a lot of our like API calls, whereas like Zuar just literally pulls everything into their database, and then I'm just pinging it off of them. So I really don't care. Yeah. But yeah. So like when it comes to like if you need to like pull stuff in from a data standpoint, yeah, just hit me up and go, hey, do we have a connection to this. Hey, do we have a connection to that? The fun and interesting thing is that I am so like you're familiar with Greenlight, probably. Been here for three days. I'm just gonna steal cowork, and so we're gonna eventually have cowork when I get some time to build that out, basically, basically my job is somebody in the company goes, "Hey, man, it'd be real cool if we could do what Claude does. And I go, "Yeah, it'd be real cool if I had another 999 engineers and you know a trillion dollars. So I'll get it when I when I get it right. But the nice thing about being able to like build cowork and other quad features internally is that I have infinitely more control over it. Like our document creation internally to greenlight is like well for branded temp stuff is just miles away from quad at the moment. Plus, like you know, reduces costs, but yeah. So I mean, when it comes to like when it comes to like you know data connections and anything like that, just just let me know. And if we don't have a connection to it, well, I mean, that's something we should probably have a connection to, and then we can figure it out and put it together. When it comes to hosting these, yeah, that'll go through me. Like we can host these in Azure apps if you, if it's if it's something easy and it doesn't require me to like host a container for like some sort of like backend node thing with like document like specific document creation. If it's just basically a browser, you just run it through me, and then I'll put it in Microsoft Power Apps. But like, if it's a little bit more involved, then we'll just set it up in Azure Apps. So
+
+Speaker 2
+a couple
+
+Speaker 1
+of yeah.
+
+Speaker 2
+Um. So and I can I can show you what my local like cowork environment looks like on my personal laptop. That's where I'm operating out of right now. But there's some of the things that I'm gonna need to do is just gonna be having access to cowork, like having an account to Claude itself for the enterprise. Yeah, I can just I can you know I can dump all my context memory folds into a gigantic zip and just kind of like you know obviously organize it and then dump it into enterprise for cowork. So it's not gonna take me long to re ramp up what I have here, but but it's it's definitely going to be beneficial as far as making it easier for me to then connect, not only be able to connect to things as you know, but to keep track of it and then not have to like transfer and move. Because right now I'm emailing things to my my work email for my personal email to get it over. Just a bunch of steps. Yeah,
+
+Speaker 1
+yeah, no, for sure. Yeah, and I would say too. One thing that I've ran into, and I mean, I'm I'm sure you you're aware. You sound you know pretty on par on point with things, but like a lot of people are building stuff like artifacts and dashboards and workflows that like rely on Quad, and then they're like, Hey, dog, can we like, can we host this somewhere? And I'm like, no,
+
+Speaker 2
+right,
+
+Speaker 1
+because you literally built it to utilize quad inside of like your dashboard. So, so no, you can't. So just yeah, do it, do it a different way. So yeah, I mean, and if there's like any projects or anything like that, and you're just like, hey, how feasible is it to like you know, host this somewhere that everybody can use it. Blah blah blah. Yeah, we can scope that out. Like I got a, I'm actually working on like an intake form that I've got so that I can get people to just like kind of use that and scope things out. You know, so that way I can track. Yeah, that way I can track like what I'm actually working on instead of just Naveen hitting me up like all the time, going, "Hey, brother, how can we do this? Hey, can you can we do this? Hey, I need like five quad code licenses, and I'm like, "Okay, do you use do you use VS Code for Quad at all?
+
+Speaker 2
+You know, when I set up like my little internal brain and my own little MCP for the interview actually did. Yeah, I have used it for that, but typically I just I just don't see the need. Like if I need to have something or create something to your point, or that I'm going to be connecting to a server, etc. then yes, I'll use code. But other than that, no.
+
+Speaker 1
+So I I have actually moved completely to VS Code, even for like just normal stuff. I have infinitely more control over skills, instruction sets, quad MDEs, everything like that, without having to deal with like the harness that like that quad desktop gives me. And I mean, it can do everything that cowork can do because they can make and do whatever you know. So I'm I'm just trying to preach the gospel of just doing it in in VS Code.
+
+Speaker 2
+Yeah, I've been flirting with the idea more and more, but I just you know.
+
+Speaker 1
+And the the nice thing too, right, is like if like desktop doesn't have a connector. You can just go, hey, VS Code. Like I need to connect to, like today. I'm pretty sure that CoWork doesn't have a connector to like Azure App CLI.
+
+Speaker 2
+Right, right.
+
+Speaker 1
+And I was just like, hey, I need to connect to this. And it's like, cool. Just download this CLI, and then I can connect to it. And I'm like, sick, dude. Yeah, that's a fair point. You know
+
+Speaker 2
+what? I'm I'm gonna start transferring over to that because you're totally right. Because I worked, it was way more efficient when I do all this stuff, and especially when you can auto mode half of it. Like, okay, all right.
+
+Speaker 1
+Yeah. Now I don't. I tell I don't tell people that I don't think can handle VS Code to do it. But like like I said, yeah, I've I've completely moved away from it. The other nice thing too about using VS Code is like when you where like Quad, if you're having like a three hour conversation, like even though it keeps a memory and you tell it to put things in memory, like it'll forget things a lot. But in VS Code, you can use like there's like a couple of extensions that you can use like Mem Zero and like you can literally just have it constantly update its own memory like after everything that it does, and then it just never forgets. Like I built out like a huge a huge memory architecture for mine, so now like it just is on point for everything. So yeah, and that's no matter if you open new
+
+Speaker 2
+terminals, as new like new windows, etc. It keeps the it just automatically pulls and keeps tracking the memory there like that.
+
+Speaker 1
+Uh, well, so
+
+Speaker 2
+are you keeping it open? It
+
+Speaker 1
+depends. Like I mean, I can close it and restart it, but it has to be like in the same. Well, technically, it doesn't have to be in the same project repo because it's all my memory and everything is stored in my coordinator folder.
+
+Speaker 2
+Okay, and then like
+
+Speaker 1
+you just open up like multiple workspaces in there, so like I can open up my coordinator and then open up another workspace on like whatever I'm working on.
+
+Speaker 2
+Yeah, and then
+
+Speaker 1
+it has its memory. Yeah, yeah, yeah.
+
+Speaker 2
+Loaded question. Yeah, just was curious. I'm like, I'm I'm thinking as you were explaining about the different things, but asked a specific question, so I'm off for that. But okay,
+
+Speaker 1
+yeah,
+
+Speaker 2
+that for sure. And I'm gonna look up the the downloadable things for the memory because I don't have that yet, and that would be huge for code. So, but yeah, awesome. Sounds like we're going to be besties, and I'm going to be bugging the shit out of you. So, hope you hope you like me so far. Yeah, no, that's fine. Knocking at your door, but it's it's great to meet you. I mean, I like
+
+Speaker 1
+anybody who I can yap about AI, and then like they pick up what I'm putting down, so
+
+Speaker 2
+for sure, yeah, definitely can. I love it. I mean, this is why I um I wanted to solely have this role versus doing you know three different things because this is what I'm passionate about and also good at. So learning from people that seem to be, um, you know, four five steps ahead of me is is people I want to spend a lot of time with. So like you can nerd out to me all day because I'm learning everything by the second. For sure,
+
+Speaker 3
+am I not doing a good job as a political leader? See, I made this connection happen. Oh, I thought
+
+Speaker 1
+that was like a. I thought that was a question. Like, am I just like I thought maybe somebody told you that you weren't doing a good job?
+
+Speaker 2
+Hey,
+
+Speaker 1
+you know, and that you had to like get reassurance that you were doing okay. So,
+
+Speaker 3
+yeah. If anything that comes from you is always always good, man. Yeah. Anyways, I have one question. Yeah. Around what you guys were talking about, is it actually possible to truly migrate between cloud accounts? This is an answer I've been searching for a question for. No, not really,
+
+Speaker 1
+because I mean, you're not going to be able to get like a full dump of like all of your conversations and everything like that from your quad account. Like you can get like instructions and you can get like context and you can probably have it write like a a bunch of like hey you know on board the next agent with all of the things that they should know about me, but like you're never truly going to be able to like just lift and shift a database.
+
+Speaker 3
+It's really like it's it's like really being in a relationship, and then to move to another account, it's like breaking up and getting into starting a brand new relationship all over again. Yeah, I've tried so many so many ways of importing, and Dallas like what were you planning to do? Though isn't that what you were planning to do? Something on clients of migrating maybe a few chats, but I think right now all the chats are connected. Like one chat knows it. I like to pull chats. I know I like to you know cross mingle my chats, and that I've developed a style of working itself where you know I want to pull something that was that was worked on three months back, which is why I've had trouble utilizing Cloud Enterprise and still have to do a lot of my heavy lifting on my Cloud Personal. But
+
+Speaker 2
+yeah, the answer is multifaceted. Really, it depends on how you work with it. Like with this, I'm using a project, so it's much more easy to compartmentalize what I want to output in and transfer over, not just a series of 1000 threads you've used in your co-work environment, right? But how I would do it if I were you, because everything sounds like it's just in threads. Is just pick something, pick something that's really important that you want to be shift to just doing in cloud enterprise work in your code environment, and have it compartmentalize a zip file of the memories, any artifacts, any documents that you have, and then create a markdown file, like Jason was saying. So it reads that when you transfer it over, and then in the thread, and I would create a project when you transfer all this over and say, "This is everything I've been working on, and most of the memory can find. I want to work from here moving forward. Is there anything missing that you think after reading this would be would be effective that you think we probably worked on? I didn't include over, etc. Is there anything missing? Blah blah blah, and just kind of go from there. You know, because creating files, Markdown files from Claude to get it to talk to a different thread or different project is simple. But just saying you could you could cut and paste, copy paste 17 threads you've used in the past six months into a new cloud. That just doesn't happen. I
+
+Speaker 3
+did create a couple of Markdown files, but I don't think I projectized it. I mean, can I can I take some help from you on that sometime?
+
+Speaker 2
+Yeah, yeah, for everyone. Yeah,
+
+Speaker 1
+you should definitely definitely start like organizing your stuff into projects, just because like basically projects are agents in general, and so that way you can get a little bit granular with like your instruction set. Like everything's in one place, right? So like, I mean, I have a project for Greenlight, so that even though that project technically can go look at other stuff, you know, it has, it's set in stone. Like, hey, we're we're in green light mode now. So let's talk about green light. Reference things that are about green light. Don't go look at you know other random stuff. So, oh, I mean that was how how I had it. But yeah,
+
+Speaker 2
+yep, exactly. Just like I told Nate in the conversation earlier today, Navin, about creating a project just for explicitly outbound execution, right? Everything lives there. It's it's helping you compartmentalize your own work, your own brain, and it doesn't have to think about the entirety of context of everything you've ever worked on to try to find an answer or put itself in your shoes. You just start working inside the project, and every thread is going to have that continuity inside of it,
+
+Speaker 3
+yeah, I think I think it's a great time to start building that structure. I mean, we're building this from scratch, so yeah,
+
+Speaker 2
+you can ask it too. You can ask your client, like, "Hey, I I messed up. I really want to push most of this stuff into my cloud enterprise thing. How how should I go about doing this? It could it could create you a folder of a subset folders and start dumping all the things like you could point it to. It's just different ways you can do it.
+
+Speaker 3
+I don't know, but see, Dallas, I am see. I've got these interactive decks that get that keep evolving every two weeks, which I deliver. Right? I don't know. I mean, I guess I'm going to try what you said, but the reason why I like keeping it in the chat is it. You know, it's just super accessible and I'm able to make that quick iteration. Yeah, I've not tried the project.
+
+Speaker 2
+Create a project. Not to mean to interrupt, but create the project and then click those threads and then click Add to Project. Once you create the project, you can add all these random threads into a project itself. That's exactly what's going to help you right now get that into one thing?
+
+Speaker 3
+Okay, beautiful. I'll I'll try that. Thanks for that. Awesome, man.
+
+Speaker 1
+Yeah, and in the future, Dallas. One thing that you know will probably help me too is like if there are certain features that we need to steal. I mean, borrow from Anthropic to put internal, you know. Just let me know because I usually ask people that, and they go, "Yeah, I'll let you know, and then I never hear about hear from them again. But the nice thing too about that is, like, once we get it internal, like we have infinite control over like every aspect of it, right? So, like that way, like we build the harness, we build the instruction sets, like document creation and green light blows clawed out of the water. Like JD had to write a skill for like I don't know six hours yesterday, and like you have to like you have to be super specific to have like to. You have to literally tell it like you have to use this skill and make sure that it's intradium branded, and then it still takes like 15 minutes to make like a four page Word doc. Yeah, and I'm just like, boom, done.
+
+Speaker 2
+Right. I've got so I've bunch of things that I've I've created kind of over time, even since starting the raw hearing skills. I don't know if you can see the screen, but like, yeah, yeah. Just referencing, and and because I've spent a lot of time the old company. When I was making skills, I just kept the record of all that created here, transferred over there. But I say that to say there's a couple of skills that I think would be effective just to have. I've seen the green lines like agents. You know, skills are. I mean, like skills. Skills depending on how you make them are basically agents themselves. Like if there's multi steps processes, which most of mine are, things like cognitive calibration. I spent like Jesus, I don't know, probably three weeks kind of aggregating data between the the different LLMs and integers that it was making fail safe models of stuff that I was working with in threads where it wasn't caching is like it did something perfect, and then 10 minutes later it acted like it never happened. I had it reference those failure instances, and so I start most of my threads with this cognitive calibration, so that it it recognizes, understands, and basically ingests all of the failures and things that other LLMs typically have been doing its own shortfalls before you start something. The premortem here, which is what I do whenever I'm about to ship out something to boss or etc. Just to make sure it, I'm sure you know premortem. So it basically assumes whatever I built sucks and it fails in six months, and it works its way back between and what what the what the most likely errors would have been the biggest ones, and then launches a team to show me what I should fix, and then obviously I fix it, and I can do that. I can do that two, three times, four times, whatever. But when you get to a point where it's actually finished, it'll tell you I'm not doing this anymore either. It's not just like like grind it out to oblivion, but things like that. Strike sequence for for sales, you know, outreach are things that I in my world can do really quickly at a high level and ship over to you. And so as we kind of go about this process, I know it's day three for me, but now I know that you exist. You guys have that. I can I can send over what I think would be good good ideas, and y'all could pick and choose what you want to add, if you if you willing if you if the goal is to make green light. Yeah, and
+
+Speaker 1
+well, the so yeah, the thing the thing thing with green light right is like I'm gonna put out like it's gonna be an iterative thing. Like I just rolled out document creation. Next is gonna be like skill attachment, and then one thing that I want to do is being able to assign like agents to like workflows,
+
+Speaker 2
+yeah.
+
+Speaker 1
+So that way, like you can create like an orchestrator agent and then pull in a bunch of different sub agents. So like you could pull in like the Salesforce sub agent that'll have specific instruction sets for how to handle like the MCP optimally and stuff like that, but I do have to drop because I have to go to Zuara leadership meetings. So yeah, dude, it was cool meeting you, Naveen. Go get him a license. If you have any VS Code questions, let me know. And just questions in general, cool. And Naveen, Alex will be emailing you here in a little bit to tell you that he can't make it tomorrow, and then we'll reschedule for next week. And I'll show you my sick. I mean, the the companies that I'm not supposed to talk about while I'm on the call on the clock's sick agentic platform. So yeah. yeah, it's it's cool. I've done so much work on it recently with Fable, but I'll talk to you guys later. I gotta go over there for two minutes late. Take your advice. Bye.
+
+Speaker 4
+See you.
+
+Speaker 3
+See you. Hey.
+
+Speaker 2
+Yeah, guys, awesome.
+
+Speaker 3
+Yeah, I thought I thought it was important you get to meet him as FF because you know he he is like truly an AI connoisseur,
+
+Speaker 2
+100%
+
+Speaker 3
+Yeah, I think that relationship is going to be very important. He's very nice guy, very easy to get along with, very very helpful for us, especially since GDM engineering again, right, is falling under this initiative called AI enablement coming from Jen and all the way from the board. It's it's very very difficult, and I think we've done about three different programs in product management. One is PM as a builder program, like no more writing PRDs. We're we're building prototypes and then shipping it. Another, I think there are four initiatives or something, and GTM engineering is one thing that I, you know, fought to get. Now it's it's become like the main piece of product management's AI enablement, which so far has gone really well. Yeah, so I thought you know this you you should get to know this guy as soon as you can because you very I'm I'm I'm very close to getting your license, buddy.
+
+Speaker 2
+Awesome. Not
+
+Speaker 3
+on me for that. Yeah.
+
+Speaker 2
+Yeah, I got you. I know you will. And it just we're just playing. It's a delay. We're playing catch up because you know I'm working a lot faster than I think anybody was really thinking would would be a thing. And I knew
+
+Speaker 3
+I was prepared for it. I was prepared. I kind of instinctively knew how you operate, but
+
+Speaker 2
+yeah, you can tell what we're working even before I started. Yeah, because and I think like John, like John is John knows is is like if I had to point my finger on it, three layers deeper than myself on as far as what he has had the time to do and the capacity to understand and things he's doing on his own. But I understand all of it, like, and that's why I want to pick his brain about, you know, the things that are necessary to speed things up or to to compile here. But for the most part, right now, like everything we're standing up doesn't even need to be that complex. But I'm really happy that that he's on the team and he is the one leading all this stuff because the last thing you want is someone leading that has no clue about what instances or what's possible because then they're going to be skeptical about everything. He knows everything, so if I bring something up, somebody's going to be like, "Yeah, sure, like go go do it, you know.
+
+Speaker 3
+And who are you talking about here?
+
+Speaker 2
+Jason,
+
+Speaker 3
+Jason, Jason for sure. Yeah, Jason is the worst.
+
+Speaker 2
+Yeah,
+
+Speaker 3
+I thought you were telling you were talking about John.
+
+Speaker 2
+No, no, no, no, no, no, no. Are you shifting gears to John? No, I'm, I'm done with the HTML. I just, I'm just having my my claw just double check it, make sure it's, it's um, it makes sense if it were a you know CRO etc.
+
+Speaker 3
+Take your time on that. Yeah, it's been it's been a pretty pretty long week long day for me. Yeah, meeting number eight.
+
+Speaker 2
+Jeez, yeah, this I've got a fire I needed to put out personally. Like for for my daughter, my daughter is autistic. She has an ABA therapy center, and switching between insurances between the old one and like we're pushing her through a Tricare, they have a special autism like thing that pays for everything for us. But that getting there's there's discrepancy between my oh I wanted to keep my old insurance going through Kroger while they were being authorized, but they haven't sent me the information for that, so they just cut her insurance off today, and I found out 10 o'clock that like she has to hold all her treatments until we get it figured out. So that's not it's not insane. Hey, do you want
+
+Speaker 3
+to do you want to take the rest of the day? I mean, feel free to take the day off if
+
+Speaker 2
+yeah.
+
+
+Transcribed by https://otter.ai

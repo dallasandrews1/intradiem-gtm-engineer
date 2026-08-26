@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GTM Engine Briefing · Exec Summary · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --line:#E2E7DD;
+    --orange:#FE5000;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{size:letter;margin:0;}
+  html,body{background:var(--paper);}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .page{width:8.5in;height:11in;margin:0 auto;padding:.62in .72in .5in;display:flex;flex-direction:column;background:var(--paper);}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;font-weight:500;}
+  h1{font-family:'Playfair Display',serif;font-weight:700;color:var(--forest);font-size:27px;line-height:1.16;margin:8px 0 6px;}
+  .byline{font-size:10.5px;color:var(--dim);margin-bottom:14px;}
+  .byline b{color:var(--ink-soft);font-weight:500;}
+  .rule{height:1px;background:var(--line);margin:0 0 14px;}
+  h2{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;color:var(--green);text-transform:uppercase;font-weight:500;margin:0 0 6px;}
+  p{font-size:11.4px;line-height:1.52;color:var(--ink-soft);}
+  p b{color:var(--ink);font-weight:700;}
+  .sect{margin-bottom:13px;}
+  .statband{display:flex;background:var(--forest);border-radius:10px;padding:11px 18px;margin:4px 0 14px;justify-content:space-between;}
+  .stat .n{font-family:'Playfair Display',serif;font-weight:700;font-size:19px;color:#fff;}
+  .stat .n em{font-style:normal;color:var(--lime);}
+  .stat .l{font-family:'JetBrains Mono',monospace;font-size:7.5px;letter-spacing:.1em;color:#B9CBBF;text-transform:uppercase;margin-top:2px;}
+  .beats{display:flex;gap:10px;margin-top:2px;}
+  .beat{flex:1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;}
+  .beat h3{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.14em;color:var(--green);text-transform:uppercase;font-weight:500;margin-bottom:5px;}
+  .beat p{font-size:10.3px;line-height:1.48;}
+  .mirror{background:var(--mist);border-left:3px solid var(--green-bright);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:13px;}
+  .mirror p{font-family:'Playfair Display',serif;font-size:14.5px;line-height:1.4;color:var(--forest);font-weight:700;}
+  .footer{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--line);padding-top:8px;}
+  .footer .tag{font-family:'JetBrains Mono',monospace;font-size:7.5px;letter-spacing:.12em;color:var(--dim);text-transform:uppercase;}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Prepared for John Norton · Tom Russell · Chris Busbee · Jenn East · July 2026</div>
+  <h1>A GTM engine is already running.<br>Thirty minutes to point it at your targets.</h1>
+  <div class="byline"><b>Dallas Andrews</b>, GTM Engineer · Product Strategy, with Naveen Thilagan</div>
+  <div class="rule"></div>
+
+  <div class="sect">
+    <h2>The job to be done</h2>
+    <p>The Star Ratings window is live and it moves weekly: CMS releases, filings language, quality leadership changes, hiring clusters. Working it properly means 32 parent organizations at committee depth, roughly five seats per parent with a distinct angle each, five touches per seat across channels. That is hundreds of researched, personal touches per full pass, at a pace signals set rather than calendars. It is a systems problem, and building the system that solves it is what GTM engineering is for.</p>
+  </div>
+
+  <div class="sect">
+    <h2>What runs today</h2>
+    <p>I run a live GTM engine in Clay. The 2026 CMS Star Ratings universe is scored and graded live on native formulas: <b>307 contracts, 98 Tier A and B, 32 parent organizations</b>. A three-persona buying-committee pull, Stars and Quality leaders, Medicare-segment finance including Chief Actuaries, and contact-center and member-services operations, filled the contacts table with <b>143 verified decision-makers across all 32 target parents</b>. Current customers are locked out of every send by the engine itself, the sync that feeds a campaign refuses any row at a customer parent, and those rows are held for the expansion lane instead. Every loaded lead carries a validated work email and sits behind a human-approval send gate. Two persona campaigns hold <b>Wave 1, 38 leads (23 Stars/Quality, 15 Finance)</b>, with a 15-lead longer-horizon lane staged behind them, in draft behind per-lead human review, a deliberately small calibration wave that turns planning ranges into our own numbers before volume ships. Nothing has gone out yet; that is the gates doing their job, not a delay.</p>
+  </div>
+
+  <div class="statband">
+    <div class="stat"><div class="n">307 <em>/ 98</em></div><div class="l">Contracts scored / Tier A+B</div></div>
+    <div class="stat"><div class="n">143 <em>/ 32</em></div><div class="l">Committee contacts / target parents</div></div>
+    <div class="stat"><div class="n">~820 <em>cr</em></div><div class="l">Build to date &#183; about $57</div></div>
+    <div class="stat"><div class="n">100<em>%</em></div><div class="l">Rows behind the send gate</div></div>
+  </div>
+
+  <div class="sect">
+    <h2>What it changes, seat by seat</h2>
+    <div class="beats">
+      <div class="beat"><h3>Revenue</h3><p>A full wave ships weekly without adding headcount, and every contact carries a provenance stamp, source motion and date, with surfaced pipeline never blended into realized.</p></div>
+      <div class="beat"><h3>Marketing</h3><p>Triggered campaigns fire on the same signals sales acts on, at the same moment, and a content engine turns one asset into a coordinated multi-channel drop.</p></div>
+      <div class="beat"><h3>Sales</h3><p>Meetings arrive pre-scored with buying-committee context, and a collision control guarantees no rep double-touches a contact the engine is working.</p></div>
+    </div>
+  </div>
+
+  <div class="mirror">
+    <p>We run GTM the way our product runs operations: real-time signals triggering automated action, with a human gate before anything irreversible.</p>
+  </div>
+
+  <div class="sect">
+    <h2>The meeting</h2>
+    <p>Thirty minutes, engine live on screen, with everything the engine needs already in place: Salesforce data flows through the data hub AI Enablement runs, reporting runs through the Greenlight Salesforce agents, and the tooling lives inside the approved stack. Results run on the ranges already in your inbox, 6 to 11 replies, 3 to 7 qualified conversations, 2 to 4 meetings on the full motion, with engine results feeding a Salesforce dashboard you can open any time, shaped for pipeline council, nothing new to log into. Spend follows the evidence: where replies show traction, the motion doubles down, and every lane is continuously audited. The one decision on the table is the start: approve Wave 1, and your read on which accounts go first shapes where it points. Total build cost to date (as of Jul 15) is about 820 Clay credits, roughly $57 of research (credits, not dollars: about 7 cents each), logged line by line in an append-only ledger you can audit. This is a head start on a build that compounds weekly; the continuous engineering is the role.</p>
+  </div>
+
+  <div class="footer">
+    <div class="tag">Intradiem · Internal · GTM Engine Briefing</div>
+    <div class="tag">Receipts: append-only credit ledger, available on request</div>
+  </div>
+</div>
+</body>
+</html>

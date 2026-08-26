@@ -4,7 +4,7 @@ This workspace is the Day-1 operating kit for the GTM Engineer role (start Jul 6
 Health check, one command: `python3 gtm-cohesion-layer/conductor.py --preflight` (currently NOT READY on the four expected people-gated blockers; anything else red is a regression).
 Day-1 build sequence lives in `Clay_Day1_Build_Order.md`. Audit history lives in `AUDIT_FINDINGS.md`.
 Canonical universe file: `StarRatings_Universe_2026_TimePhased.csv` (307 contracts, locked read-only).
-Git: repository on `main`, tests green (tam 21/21, signal 14/14), nothing pushed.
+Git: repository on `main`, tests green (tam 25/25, signal 14/14), nothing pushed.
 
 ## Master table
 
@@ -20,7 +20,7 @@ Git: repository on `main`, tests green (tam 21/21, signal 14/14), nothing pushed
 | `tam-outbound-engine/account_engine.py` | engine | Scores net-new accounts (fit 0-100 + trigger recency), builds full strike plans with committee, ROI, 4-touch sequences | `data/tam_accounts.csv`, `data/triggers.csv`, `data/sellers.csv`, all `config/*.json` | `account_plays.json`, `data/tam_plays.json`(+.min), MCP, notifier, impact, brain | live on sample data; wires on Apollo/Clay enrichment access (real CSVs) |
 | `tam-outbound-engine/tam_mcp_server.py` | engine | MCP wrapper: list_strike_accounts, get_strike_plan, accounts_for_seller | account_engine + its data | Claude Desktop / Cowork | live on sample data |
 | `tam-outbound-engine/tam_notifier.py` | engine | Each seller's morning ranked strike list | account_engine + `data/sellers.csv` | Slack/print (dry-run default) | seeded, wires on SLACK_BOT_TOKEN |
-| `tam-outbound-engine/test_account_engine.py` | config | Regression suite incl. trigger and copy checks | engine + sample data | pass/fail | live, 21/21 |
+| `tam-outbound-engine/test_account_engine.py` | config | Regression suite incl. trigger and copy checks | engine + sample data | pass/fail | live, 25/25 |
 | `tam-outbound-engine/config/` (icp_weights, triggers, personas, sequences, roi_model, proof, meta) | config | The tunable layer: fit weights, trigger taxonomy (the moat), personas, cadence, ROI math, proof lines | hand-tuned; triggers.json updated post-audit (call-center wording removed) | account_engine | live; proof.json and roi_model.json are self-labeled placeholders, verify before any send |
 | `tam-outbound-engine/data/` (tam_accounts, triggers, sellers CSVs; tam_plays.json generated; tam_seed.json) | config | Swap-in data layer | samples; tam_plays: the engine | engine and downstream | seeded, wires on enrichment access. FLAG: `tam_seed.json` has no live consumer anywhere in the tree (the dashboard seed is inlined in the page); reference only |
 | `tam-outbound-engine/AmeriHealth_Strike_Plan_example.md` | doc | Worked example of one full strike plan | account_engine output | reader | live (sample figures, placeholder ROI) |
@@ -64,7 +64,7 @@ Git: repository on `main`, tests green (tam 21/21, signal 14/14), nothing pushed
 | `VERIFICATION_AUDIT.md` | doc | Standing audit of every stat/claim vs the Value Repository | intradiem-verified-metrics skill (external) | verified-claims discipline everywhere | live, reread before touching outbound copy |
 | `AUDIT_FINDINGS.md` | doc | This audit: findings, fixes, resolutions, relocation addendum | the 10-step pre-Bitbucket audit | audit history | live record |
 | `CLAUDE.md` | doc | Guidance for future Claude Code instances in this repo | repo scan | Claude Code sessions | live |
-| `intradiem-brand-kit.md` | doc | Intradiem palette/type system (#FE5000 orange, ink, paper); two-mode rule vs personal brand | Intradiem site theme | every Intradiem-context deliverable | live |
+| `intradiem-brand-kit.md` | doc | SUPERSEDED Jul 30 2026 (old green/Playfair kit). Current kit is the Roboto system, forest #014637 + green #2DB56E + #F58220 accent; see `## Brand` in CLAUDE.md and `dwo-html-deck/` | Intradiem site theme | history only, do not use for new work | superseded |
 | `Fable_Prompt_Universe_Rebuild.md`, `Fable_Prompt_QBP_Rerun.md`, `Fable_Prompts_Portable_Deliverables.md`, `Fable_Context_Bridge_Prompt.md` | doc | Portable prompts to rebuild the universe, rerun QBP math, regenerate deliverables, bridge context | canonical column definitions | reproducibility of the data layer | live reference |
 | `ClaudeDesign_Intradiem_Reskin_Prompt.md` + `GTM_Engineer_ClaudeDesign_BuildPrompt.md` | doc | Design prompts for on-brand page builds | brand kit | page generation | live reference |
 | `claude-design-handoff/` (7 files) | doc | Packaged design handoff: build prompt, content, brand, verified metrics, IA reference | brand kit + verified metrics | external design build | live package |

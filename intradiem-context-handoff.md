@@ -85,7 +85,7 @@ Nice to have: ZoomInfo (as waterfall fallback if already owned)
 
 ## About the Role and Company
 
-**Intradiem** — 30-year-old Atlanta enterprise software company. Sells real-time workforce automation to contact centers (500+ agents). Core product: Dynamic Workforce Orchestration. Sits between ACD (Genesys, Five9, Avaya) and WFM (Verint, NICE, Calabrio), acts in the idle seconds between scheduled events.
+**Intradiem** — 30-year-old Atlanta enterprise software company. Sells Dynamic Workforce Orchestration (DWO) across contact centers AND back offices, six verticals (Healthcare, Financial Services, Insurance, Retail, Telecom, Utilities). Three pillars: Goal Advisor (protects targets), Decision Intelligence (recommends), Workforce Orchestration (delivers the action). Sits on top of ACD (Genesys, Five9, Avaya) and WFM (Verint, NICE, Calabrio), turning real-time state into automated action: idle-time recovery, training and coaching delivery, back-office task orchestration. Idle-seconds recovery is the entry wedge, never the whole story.
 
 **Key numbers to know cold:** 114% NRR, NPS 71, eNPS 79, <1% churn, 7x ROI/3-month payback, record net new bookings 2024 AND 2025, 250,000+ agents on platform.
 
@@ -93,7 +93,7 @@ Nice to have: ZoomInfo (as waterfall fallback if already owned)
 
 **WFM and ACD are prerequisites, not competitors.** Verint/NICE/Calabrio = WFM (scheduling layer). Genesys/Five9/Avaya = ACD (call routing layer). Intradiem acts in the gap between them. Never position them as competitive.
 
-**The moat in one sentence:** "WFM systems tell you what agents should be doing. Intradiem acts on agents in the idle seconds between scheduled events — the gap WFM never addresses."
+**The moat in one sentence:** "WFM systems tell you what agents should be doing. Intradiem acts in real time on the gap between that plan and the live day, and DWO extends the same action layer to coaching, training, and the back office. WFM never addresses either."
 
 ---
 

@@ -75,7 +75,33 @@ Salesforce (v2) ┘        auth (X-API-Key) + request log (brain/logs/requests.j
 
 ## Brand
 
-`intradiem-brand-kit.md` is the source of truth for anything representing Intradiem (decks, dashboards, customer-facing work): primary color `#FE5000` (Intradiem Orange, sparing use as the "spark of action"), Ink `#14181F` for authority/structure, Paper `#FAF8F6` background. Do not use the personal `dallas-brand` blurple/creme palette on Intradiem-context work - it reads as competitor-adjacent.
+**Current kit (Jul 30 2026). This SUPERSEDES `intradiem-brand-kit.md`, which is history.**
+Canonical spec: `~/coordinator/memory/intradiem-brandkit-current-jul30.md`. Reference
+implementations in this repo: `dwo-html-deck/` (all three files).
+
+- **Type:** Roboto (400/500/700/900) for body and display, headlines at weight 900 with
+  `letter-spacing: -.02em`. Roboto Mono (500/600) for eyebrows, labels and table headers,
+  uppercase. NOT Playfair Display, NOT DM Sans, NOT JetBrains.
+- **Core tokens:** `--forest:#014637` `--green:#2DB56E` `--green-600:#228752`
+  `--green-300:#7BD3A0` `--orange:#F58220` `--ink:#202020` `--sidebar:#F5F4F2`
+  `--line:#E0E0E0`, radius 8px.
+- **Signature moves:** forest hero surfaces with a radial green glow; eyebrows in green
+  (green-600 on light, green-300 on dark); **orange `#F58220` is the action/priority
+  accent only**, never a body color; forest statbands with green-300 numerals; `.gate`
+  (green left border) versus `.callout` (orange left border) carrying the safe-versus-caution
+  convention.
+- **Logo:** the official mark as an inline SVG `<symbol id="ilogo" viewBox="0 0 187 46">`.
+  Copy it verbatim from `dwo-html-deck/DWO_Deck_Update_Guide.html`. Wordmark paths use
+  `currentColor`, so set it to `#014637` on light and `#FFFFFF` on dark heroes. Never ship
+  an Intradiem deliverable with no logo.
+- **Anti-patterns that shipped once and must not repeat:** improvised ASCII glyphs standing
+  in for icons, hand-picked off-token greens, and a deliverable with no logo anywhere.
+
+`#FE5000` was the older kit's primary and is **retired**. If you find it in a file, that file
+predates Jul 30 2026 and should not be used as a style reference.
+
+Do not use the personal `dallas-brand` blurple/creme palette on Intradiem-context work; that
+kit is for Dallas's internal personal work only.
 
 ## Working conventions specific to this repo
 
@@ -83,3 +109,13 @@ Salesforce (v2) ┘        auth (X-API-Key) + request log (brain/logs/requests.j
 - **Dry-run by default.** Both notifiers (`notifier.py`, `tam_notifier.py`) and the conductor (`DRY_RUN = True`) default to preview-only. Never flip a script to actually send (`--send`, `DRY_RUN=False`) without the user explicitly asking for it - these hit Slack/email/prospects.
 - **Data swap points are documented per engine** (see each engine's README) - when asked to "go live" with real data, that means replacing the named CSVs, not changing engine logic.
 - **`_archive/` is historical** (old HTML mockups, a stray `.tmp`/lockfile) - don't treat it as current unless the user points there specifically.
+
+## Mem0 sync discipline (Cowork sessions especially)
+
+Dallas keeps a persistent memory system in a separate `coordinator` project (`~/coordinator/memory/*.md` + Mem0 cloud, `user_id=dallasandrews`, `app_id=coordinator`). This repo is where most of the actual GTM work happens, so it's also where memory sync most often gets missed.
+
+**If you are a Cowork session:** there is no automatic hook here — the Claude Code CLI plugin that auto-syncs to Mem0 does not run inside Cowork. You must proactively call the Mem0 connector tool (`add_memory`, `user_id=dallasandrews`, `app_id=coordinator`, `infer=false`) yourself, in the same turn as any material decision, build, status change, or piece of feedback from Dallas — don't wait to be asked. This already failed once (a full week, Jul 11-17 2026, went uncaptured because no session remembered to do this — see the `mem0-sync-gap-jul17` memory) so treat this as load-bearing, not optional.
+
+**If you are a Claude Code CLI/VS Code session:** the global Mem0 plugin hook covers you automatically; no action needed beyond normal use.
+
+A daily scheduled task also runs as a safety net in case a live session skips this (see `mem0-sync-gap-jul17` for why the net exists) — it is not a substitute for syncing live when you can.

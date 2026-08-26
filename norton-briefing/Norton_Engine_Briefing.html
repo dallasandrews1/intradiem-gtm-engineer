@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTM Engine · Leadership Briefing · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist2:#E7EEE3; --line:#E2E7DD;
+    --orange:#FE5000; --gold:#E0A23B;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;background:var(--paper);}
+  body{font-family:'DM Sans',sans-serif;color:var(--ink);overflow:hidden;}
+  .deck{height:100%;position:relative;}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:7vh 9vw;background:var(--paper);}
+  .slide.active{display:flex;}
+  .slide.dark{background:var(--forest);color:#fff;}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;font-weight:500;margin-bottom:18px;}
+  .dark .eyebrow{color:var(--lime);}
+  h1{font-family:'Playfair Display',serif;font-weight:700;color:var(--forest);font-size:clamp(30px,4.4vw,56px);line-height:1.12;max-width:20ch;}
+  .dark h1{color:#fff;}
+  .sub{font-size:clamp(15px,1.4vw,19px);color:var(--ink-soft);line-height:1.55;margin-top:20px;max-width:62ch;}
+  .dark .sub{color:#C8D6CC;}
+  .sub b{color:var(--ink);font-weight:700;}
+  .dark .sub b{color:#fff;}
+  .cards{display:grid;gap:16px;margin-top:34px;}
+  .cards.c2{grid-template-columns:1fr 1fr;}
+  .cards.c3{grid-template-columns:1fr 1fr 1fr;}
+  .cards.c4{grid-template-columns:repeat(4,1fr);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:0 1px 2px rgba(20,40,25,.04),0 12px 34px rgba(20,40,25,.07);}
+  .card h3{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--green);text-transform:uppercase;font-weight:500;margin-bottom:10px;}
+  .card p{font-size:15px;line-height:1.5;color:var(--ink-soft);}
+  .card p b{color:var(--ink);}
+  .card .big{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(26px,2.8vw,40px);color:var(--forest);line-height:1;margin-bottom:8px;}
+  .card .big em{font-style:normal;color:var(--green-bright);}
+  .statband{display:flex;gap:28px;background:var(--forest);border-radius:14px;padding:22px 34px;margin-top:34px;justify-content:space-between;align-items:center;}
+  .statband .stat{text-align:left;}
+  .statband .n{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(24px,2.6vw,38px);color:#fff;}
+  .statband .n em{font-style:normal;color:var(--lime);}
+  .statband .l{max-width:24ch;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;color:#B9CBBF;text-transform:uppercase;margin-top:4px;}
+  .flow{display:flex;align-items:stretch;gap:0;margin-top:36px;}
+  .fbox{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center;display:flex;flex-direction:column;justify-content:center;}
+  .fbox .t{font-weight:700;font-size:16px;color:var(--forest);margin-bottom:6px;}
+  .fbox .d{font-size:13px;color:var(--dim);line-height:1.45;}
+  .fbox.pinch{background:var(--mist);border-color:var(--line);flex:1.15;}
+  .arrow{display:flex;align-items:center;padding:0 14px;font-size:26px;color:var(--green-bright);font-weight:700;}
+  table.ledger{width:100%;border-collapse:collapse;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:12px;}
+  table.ledger th{text-align:left;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:0 14px 10px 0;border-bottom:1px solid var(--line);font-weight:500;}
+  table.ledger td{padding:5px 14px 5px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);vertical-align:top;}
+  table.ledger td.cr{color:var(--green);font-weight:500;white-space:nowrap;}
+  table.ledger td:first-child{color:var(--dim);white-space:nowrap;}
+  .cap{font-size:13px;color:var(--dim);margin-top:16px;font-family:'JetBrains Mono',monospace;letter-spacing:.04em;}
+  .mirrorline{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,52px);line-height:1.18;color:#fff;max-width:24ch;}
+  .mirrorline em{font-style:normal;color:var(--lime);}
+  .num{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(22px,2.4vw,32px);color:var(--green-bright);margin-bottom:6px;}
+  .hud{position:fixed;bottom:22px;right:28px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--dim);display:flex;gap:18px;align-items:center;z-index:10;}
+  .hud .cnt{color:var(--ink-soft);}
+  .hud .hint{opacity:.7;}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--green-bright);transition:width .25s ease;z-index:10;}
+  .brand{position:fixed;bottom:22px;left:28px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;z-index:10;}
+  body.on-title .brand{display:none!important;}
+  body.on-dark .brand svg path.wm{fill:#EAF2EC;}
+  body.on-dark .brand span{color:#B9CBBF;}
+  .mrow{display:grid;grid-template-columns:110px 1fr 1fr;gap:0;border-bottom:1px solid var(--line);}
+  .mrow .sec{padding:14px 10px 14px 0;}
+  .mrow .sec .sn{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;color:var(--forest);}
+  .mrow .sec .sg{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;margin-top:2px;}
+  .mcell{padding:12px 14px;background:var(--card);border-left:1px solid var(--line);}
+  .mcell.live{background:var(--forest);}
+  .pill{display:inline-block;font-size:11.5px;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);border-radius:100px;padding:3px 11px;margin:0 5px 6px 0;white-space:nowrap;}
+  .mcell.live .pill{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#DFEAE2;}
+  .livebadge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:var(--orange);color:#fff;border-radius:100px;padding:3px 11px;margin:0 5px 6px 0;}
+  .mcell.live .ld{font-size:11.5px;color:#C8D6CC;line-height:1.45;margin-top:2px;}
+  .mcell.live .ld b{color:var(--lime);}
+  .mhead{display:grid;grid-template-columns:110px 1fr 1fr;gap:0;margin-top:22px;}
+  .mhead div{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);padding:0 14px 8px;font-weight:500;}
+  .mhead .d{color:var(--dim);text-transform:none;letter-spacing:.02em;font-size:10.5px;font-weight:400;display:block;margin-top:1px;}
+  .demo-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;background:var(--forest);color:var(--lime);padding:5px 12px;border-radius:100px;margin-bottom:12px;text-transform:uppercase;}
+  @media (max-width:900px){.cards.c3,.cards.c4,.cards.c2{grid-template-columns:1fr;} .flow{flex-direction:column;} .arrow{transform:rotate(90deg);justify-content:center;} .statband{flex-wrap:wrap;gap:18px;}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="deck" id="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide active">
+    <div style="margin-bottom:30px;"><svg style="height:44px;width:auto;display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187 46" fill="none">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" class="wm" fill="#014637"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" class="wm" fill="#014637"/>
+</svg></div>
+    <div class="eyebrow">GTM Engine Briefing · John · Tom · Chris · Jenn · July 2026</div>
+    <h1>The Stars motion has a full-time engine behind it, built to run weekly.</h1>
+    <p class="sub">Where the build stands this week, the workbook itself, and where the engine goes after Star Ratings. One decision at the end: the green light to start.</p>
+    <p class="sub" style="margin-top:28px;font-size:14px;color:var(--dim);">Dallas Andrews · GTM Engineer · Product Strategy, with Naveen Thilagan</p>
+  </section>
+
+  <!-- 2 · THE JOB -->
+  <section class="slide">
+    <div class="eyebrow">01 · The job to be done</div>
+    <h1>The Stars window moves weekly. The motion has to match it.</h1>
+    <div class="flow">
+      <div class="fbox"><div class="t">Signals fire continuously</div><div class="d">CMS releases, filings and earnings language, quality leadership moves, hiring clusters</div></div>
+      <div class="arrow">&#8594;</div>
+      <div class="fbox pinch"><div class="t">Every seat needs researched, personal outreach</div><div class="d">Roughly five committee seats per parent, each with its own angle, never a template blast</div></div>
+      <div class="arrow">&#8594;</div>
+      <div class="fbox"><div class="t">At a pace no calendar sets alone</div><div class="d">The mechanical work runs at machine speed; judgment and conversations stay human</div></div>
+    </div>
+    <div class="statband">
+      <div class="stat"><div class="n">32</div><div class="l">Target parents, most bonus revenue at risk</div></div>
+      <div class="stat"><div class="n">143</div><div class="l">Committee contacts to work</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Touches per seat, multi-channel</div></div>
+      <div class="stat"><div class="n">~700</div><div class="l">Researched, personal touches per full pass</div></div>
+    </div>
+  </section>
+
+  <!-- 3 · STAKES -->
+  <section class="slide">
+    <div class="eyebrow">02 · The market it points at</div>
+    <h1>The accounts in that window carry nine-figure Stars money.</h1>
+    <p class="sub">Every parent in the target universe is scored against the 2026 CMS release, with forgone quality-bonus dollars estimated from public CMS data and enrollment. Estimates, clearly labeled; each plan knows its exact picture better than we do. Two examples already graded and staffed with committee contacts:</p>
+    <div class="cards c2">
+      <div class="card"><div class="big">$165.8M <em>est.</em></div><p><b>Centene</b> estimated forgone QBP, 21 cliff-edge contracts on the 2026 cycle. A confirmed non-customer, in scope for new logo.</p></div>
+      <div class="card"><div class="big">$61.2M <em>est.</em></div><p><b>Medica</b> estimated forgone QBP, 3 cliff-edge contracts on the 2026 cycle. Committee contacts already in the table.</p></div>
+    </div>
+    <p class="sub" style="margin-top:20px;font-size:15px;">The window in plain terms: what these plans do in the 2026 and 2027 measurement years is what the 2028 Star Ratings will grade, and the call-center measures we credibly move still count in that window before CMS retires them. Forgone bonus is forgone revenue, dollars that flow straight into the plan's top line when a contract clears 4.0.</p>
+    <p class="cap">Source: CMS Oct 2025 release + enrollment, KFF/MedPAC methodology. Estimate label travels with every number.</p>
+  </section>
+
+  <!-- 4 · THE ENGINE -->
+  <section class="slide">
+    <div class="eyebrow">03 · What runs now</div>
+    <h1>A live engine in Clay, already scored, staffed, and gated.</h1>
+    <div class="cards c4">
+      <div class="card"><h3>Contracts</h3><div class="big">307</div><p>2026 CMS Star Ratings contracts scored and graded live on native formulas</p></div>
+      <div class="card"><h3>Contracts</h3><div class="big">98 <em>/ 32</em></div><p>Tier A+B contracts across 32 parent organizations</p></div>
+      <div class="card"><h3>People</h3><div class="big">143 <em>/ 32</em></div><p>Verified quality and finance decision-makers across all 32 target parents, sourced, deduped, and validated; rows at customer parents held for the expansion lane</p></div>
+      <div class="card"><h3>People</h3><div class="big">3</div><p>Personas pulled: Stars/Quality leaders, Medicare-segment finance including Chief Actuaries, and contact-center and member-services operations</p></div>
+    </div>
+    <div class="cards c2" style="margin-top:16px;">
+      <div class="card"><h3>Locked out of every send</h3><p>Current customers are locked out of every send. The lock lives in the engine itself: the sync that feeds each campaign refuses any row at a customer parent, reconciled against the Salesforce active-customer report. Expansion runs its own lane through the account managers. The two motions cannot collide.</p></div>
+      <div class="card"><h3>Gated by default</h3><p>Wave 1 is staged: two persona campaigns holding 38 leads in draft, 23 Stars/Quality and 15 Finance, with a 15-lead longer-horizon lane staged behind them. Every lead is through the engine's approval gate and a per-lead human review before launch. Nothing has gone out, and nothing can, until a person turns the key. Zero sends is the gates working, not the engine waiting.</p></div>
+    </div>
+  </section>
+
+  <!-- 5 · PROVENANCE -->
+  <section class="slide">
+    <div class="eyebrow">04 · Where Wave 1 comes from</div>
+    <h1>From 307 contracts to 38 staged leads. Every cut on the record.</h1>
+    <div class="flow" style="margin-top:28px;">
+      <div class="fbox"><div class="num">307</div><div class="t">Sub-4.0 MA contracts</div><div class="d">CMS 2026 Star Ratings, public release</div></div>
+      <div class="arrow" style="padding:0 8px;">&#8594;</div>
+      <div class="fbox"><div class="num">98 / 32</div><div class="t">Tier A+B / parents</div><div class="d">Each contract's forgone bonus is cut to the dollars addressable through measures we move, then ranked on the 2028 window; A holds ~70% of every addressable dollar, A+B ~90%</div></div>
+      <div class="arrow" style="padding:0 8px;">&#8594;</div>
+      <div class="fbox"><div class="num">143</div><div class="t">Contacts sourced</div><div class="d">Quality and finance decision-makers, deduped and verified; rows at customer parents locked out of every send</div></div>
+      <div class="arrow" style="padding:0 8px;">&#8594;</div>
+      <div class="fbox pinch"><div class="num">38</div><div class="t">Wave 1 leads staged</div><div class="d">Non-customer &#183; winnable on call-center measures &#183; approved at the gate &#183; validated email</div></div>
+    </div>
+    <div class="cards c2" style="margin-top:16px;">
+      <div class="card"><h3>Lane one &#183; Stars and Quality</h3><p><b>23 leads in draft.</b> The people who own the rating itself, plus the operations leaders who run the phones, folded into the same lane. Each row carries the parent's cliff-edge contract count and its estimated forgone QBP, the prospect's own public CMS math.</p></div>
+      <div class="card"><h3>Lane two &#183; Medicare finance</h3><p><b>15 leads in draft.</b> The people who feel the bonus dollars, Chief Actuaries included. Each contact rides exactly one lane; parents whose gap sits in clinical measures are held out on purpose, and the 3.0-star parents a full star out run a separate 15-lead longer-horizon lane behind the same gates. Wave 1 is deliberately small: measurement before volume.</p></div>
+    </div>
+    <p class="cap">No Intradiem metric on any row. Every figure walks back to the CMS release or the Salesforce customer report, and every cut above is a filter you can audit.</p>
+  </section>
+
+  <!-- 6 · RECEIPTS -->
+  <section class="slide">
+    <div class="eyebrow">05 · Receipts</div>
+    <h1 style="font-size:clamp(24px,2.8vw,38px);max-width:44ch;">Total build to date: about 820 credits. Roughly $57 of research.</h1>
+    <table class="ledger">
+      <tr><th>Date</th><th>Action</th><th>Credits</th><th>Note</th></tr>
+      <tr><td>07-08</td><td>Full 98-row Tier A+B universe imported, formulas verified live</td><td class="cr">0</td><td>Imports and formulas are free by design</td></tr>
+      <tr><td>07-08</td><td>Accounts wired to Contacts; grades recompute live</td><td class="cr">0</td><td>Internal lookups, meter-verified at zero</td></tr>
+      <tr><td>07-08</td><td>Two-persona committee pull + work-email waterfall, 94 contacts</td><td class="cr">142.3</td><td>Estimated 94, actual 142.3, meter-verified</td></tr>
+      <tr><td>07-09</td><td>Email validation on the 78 emailed rows</td><td class="cr">7.8</td><td>Pre-estimated 6&#8211;10; 0.1/row; 67 deliverable</td></tr>
+      <tr><td>07-09</td><td>Ops-persona gap-fill: 43 contacts, all 27 parents now covered</td><td class="cr">~48</td><td>Import free; email waterfall pre-quoted ~48.4</td></tr>
+      <tr><td>07-09</td><td>Validation on the new rows</td><td class="cr">5.9</td><td>0.1/row; ~106 deliverable total</td></tr>
+      <tr><td>07-10</td><td>Salesforce active-customer file reconciled, 101 accounts; customer lock wired into the engine</td><td class="cr">0</td><td>The sync refuses every row at a customer parent</td></tr>
+      <tr><td>07-10</td><td>Wave 1 approvals: HOLD</td><td class="cr">0</td><td>Nothing sent; no approval box ever checked</td></tr>
+      <tr><td>07-11</td><td>Wave 1 campaigns built and loaded, sequences from the approved set</td><td class="cr">0</td><td>Native campaign build; holds in draft behind review</td></tr>
+      <tr><td>07-12</td><td>First live signal sweep + adversarial audit of the whole build</td><td class="cr">~139</td><td>Eligible-only, meter-verified; findings fixed same day</td></tr>
+      <tr><td>07-13</td><td>Both load lists rebuilt to full addressable width, 34 + 24 leads</td><td class="cr">0</td><td>Every cut on the record; campaigns hold in draft</td></tr>
+      <tr><td>07-13</td><td>Coverage gap-fill: 6 new committee seats sourced and validated</td><td class="cr">~35</td><td>Meter-verified; the table now holds 143 rows</td></tr>
+      <tr><td>07-14</td><td>Per-lead personalization layer + full audit-and-regen hardening waves, all 38 send-surface drafts</td><td class="cr">~324</td><td>Meter-verified 378 &#8594; 702; every draft re-audited before any sync</td></tr>
+      <tr><td>07-15</td><td>Wave 1 staged at full width, 23 + 15 leads in draft; longer-horizon lane built and staged, 15 more</td><td class="cr">~115</td><td>Meter-verified; one lane per contact, three draft campaigns</td></tr>
+    </table>
+    <div class="statband" style="margin-top:14px;padding:16px 30px;">
+      <div class="stat"><div class="n">~820 <em>cr</em></div><div class="l">Entire build to date &#183; about $57</div></div>
+      <div class="stat"><div class="n">+1,150<em>&#8211;1,500 cr</em></div><div class="l">Remaining committee expansion, pre-estimate</div></div>
+      <div class="stat"><div class="n">&#8804;2,300 <em>cr</em></div><div class="l">Full Stars motion &#183; about $160</div></div>
+      <div class="stat"><div class="n">Traction<em>-led</em></div><div class="l">Spend follows what replies &#183; motions audited continuously</div></div>
+    </div>
+    <p class="cap">Credits are Clay's research unit, not dollars: about 7 cents each. Append-only ledger, one line per action; nothing runs without a logged pre-estimate and an explicit go.</p>
+  </section>
+
+  <!-- 6b · WHAT WE EXPECT -->
+  <section class="slide">
+    <div class="eyebrow">06 · What we expect</div>
+    <h1>Planning ranges, replaced by our own numbers after Wave 1.</h1>
+    <div class="cards c2" style="margin-top:30px;">
+      <div class="card"><h3>Wave 1 &#183; 38 contacts &#183; the calibration wave</h3><p><b>No result targets on this wave, on purpose.</b> 38 contacts is deliberately too small to judge the motion; a single reply moves the rate by 3 points. Its job is real deliverability, reply, and persona data, so the ranges below become our numbers instead of industry assumptions before we put volume behind them.</p></div>
+      <div class="card"><h3>Traction sets the budget</h3><p>The ranges are planning assumptions, set conservative. As replies show which personas and messages earn attention, <b>the motion doubles down where the market answers</b>: every lane is continuously audited, spend follows the evidence, and if the results say push harder, pushing harder is the easy decision.</p></div>
+    </div>
+    <div class="statband">
+      <div class="stat"><div class="n">143</div><div class="l">Contacts worked</div></div>
+      <div class="stat"><div class="n">6&#8211;11</div><div class="l">Replies &#183; 4&#8211;8% rate</div></div>
+      <div class="stat"><div class="n"><em>3&#8211;7</em></div><div class="l">Qualified conversations</div></div>
+      <div class="stat"><div class="n">2&#8211;4</div><div class="l">Meetings to sales</div></div>
+      <div class="stat"><div class="n">1&#8211;2</div><div class="l">Opportunities sourced</div></div>
+    </div>
+  </section>
+
+  <!-- 6c · HOW WE MEASURE -->
+  <section class="slide">
+    <div class="eyebrow">07 · How we measure</div>
+    <h1>Attribution set on day one. Reported where you already look.</h1>
+    <div class="cards c2">
+      <div class="card"><h3>Reply &#8594; qualified &#8594; meeting</h3><p>Every contact is tracked from first send through reply, qualified conversation, and meeting booked. Qualified means a target persona engaging on the problem; auto-replies, referrals, and polite declines do not count. Attribution is set the day a contact enters the system, not reconstructed later.</p></div>
+      <div class="card"><h3>The activity layer</h3><p>Sends, deliverability, and reply rates by persona ride the same readout, so a quiet week reads as a targeting problem or a deliverability problem, never a mystery.</p></div>
+      <div class="card"><h3>Cost per qualified reply</h3><p>Every enrichment credit is logged against the motion that spent it, so spend ties directly to output. The unit economics of the engine, reviewable any week.</p></div>
+      <div class="card"><h3>Sourced vs. existing, never blended</h3><p>Engine-sourced replies, meetings, and pipeline report separately from anything already in motion, and estimated opportunity never blends with realized results. The engine only gets credit for what it actually created.</p></div>
+    </div>
+    <p class="sub" style="margin-top:26px;">Reporting lives where you already plan: engine results feed Salesforce directly, with actuals against these ranges in a dashboard you can open any time, shaped to how pipeline council and the H1 and H2 reviews already look at pipeline. <b>Nothing new to log into.</b></p>
+  </section>
+
+  <!-- 7 · SIGNALS -->
+  <section class="slide">
+    <div class="eyebrow">08 · Signals, priced before they run</div>
+    <h1>The list keeps itself alive. Half of that costs nothing.</h1>
+    <div class="cards c2">
+      <div class="card"><h3>Free &#183; computed from data already in the engine</h3><p><b>The cliff-edge signal.</b> Fires points when a contract sits just under 4.0 and self-cleans to zero the moment it clears the line, so an account that solves its problem drops off the list the same day. Intent rollup, fire dates, and the tier logic (Tier 1 fires outreach, Tier 2 raises priority) run the same way: native formulas, zero credits, the most important signal for the cliff play.</p></div>
+      <div class="card"><h3>Paid &#183; enrichments, pre-estimated per run</h3><p><b>The outside world.</b> Stars language in SEC filings, earnings-call mentions, new quality leadership, quality hiring clusters, backlog news. Each is an enrichment per parent, roughly 2.5 credits per signal, so a full five-signal sweep across all 32 parents runs about 400 credits, logged in the ledger before it fires like everything else.</p></div>
+    </div>
+    <div class="statband" style="margin-top:20px;padding:16px 30px;">
+      <div class="stat"><div class="n" style="font-size:clamp(15px,1.4vw,19px);">Monthly</div><div class="l">Full five-signal sweep, ~400 credits</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(15px,1.4vw,19px);">Weekly</div><div class="l">Top-tier delta on fast movers, ~100 credits</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(15px,1.4vw,19px);">Event-driven</div><div class="l">Full sweep on earnings weeks + the October CMS release</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(15px,1.4vw,19px);">~800 / mo</div><div class="l">Steady state today &#183; scales with traction</div></div>
+    </div>
+    <p class="cap">Per-provider costs confirmed against Clay's current pricing before anything fires. The cadence is a dial, not a commitment; moving it is a config change.</p>
+  </section>
+
+  <!-- 8 · DEMO -->
+  <section class="slide">
+    <div class="eyebrow">09 · Inside the workbook</div>
+    <h1>Three things to see in the system.</h1>
+    <div class="cards c3">
+      <div class="card"><span class="demo-tag">In the workbook</span><h3>The living list</h3><p>Scoring reacts to data: contacts land and the account's grade recomputes, and the cliff-edge signal zeroes itself the moment a contract clears 4.0, so a plan that solves its problem drops off the list the same day. Not a report, a living list.</p></div>
+      <div class="card"><span class="demo-tag">In the workbook</span><h3>The gate rail</h3><p>Every row carries its whole gate on one screen: the automated critic's verdict, the human approval, the send-ready state. The sync that feeds a campaign refuses any row missing one of them, and all three campaigns hold in draft until a person deliberately launches.</p></div>
+      <div class="card"><span class="demo-tag">In the workbook</span><h3>Collision control</h3><p>One checkbox: a rep claims a contact, the engine stands down on that person and their whole company, outranking any approval. A reply stops that contact's sequence on its own; the company-wide stand-down is one click behind it.</p></div>
+    </div>
+    <p class="sub" style="margin-top:26px;">The tables stay open the whole session, and anything you want to see is one click away. And whatever this room decides it wants eyes on becomes a standing readout that finds you; the engine's job is to bring you answers, not another tool to log into.</p>
+  </section>
+
+  <!-- 7 · REVENUE -->
+  <section class="slide">
+    <div class="eyebrow">10 · For the revenue org</div>
+    <h1>A wave a week without new headcount. Every number traces to its source.</h1>
+    <div class="cards c2">
+      <div class="card"><h3>A weekly motion, by default</h3><p>Templates, scoring, gates, and the ledger operate as one repeatable cycle: a full wave ships every week, and human judgment concentrates in the approval gate, where it decides what reaches a prospect instead of being spent on mechanical work. The wave itself spends nothing; sending is free, credits price research, and that research is already inside the steady state.</p></div>
+      <div class="card"><h3>Pipeline you can trace to its source</h3><p>Every contact is stamped with its source motion and sourced date at creation. Surfaced opportunity reports separately from realized, never blended, so when a number reaches your forecast you can walk it back to the row that produced it.</p></div>
+    </div>
+  </section>
+
+  <!-- 8 · MARKETING -->
+  <section class="slide">
+    <div class="eyebrow">11 · For marketing</div>
+    <h1>Marketing fires on the same signal, at the same moment.</h1>
+    <div class="cards c2">
+      <div class="card"><h3>Triggered campaigns</h3><p>One account signal produces three synchronized outputs: a campaign brief for marketing, an alert for the owning seller, and a gated outreach draft. Marketing and sales act on the same trigger at the same time instead of finding out from each other later.</p></div>
+      <div class="card"><h3>The content engine</h3><p>One source asset, a webinar, a customer story, a conference talk, becomes a coordinated drop: blog post, LinkedIn set, nurture sequence, sales one-pager, all consistent and on brand in one pass. Volume without the team growing.</p></div>
+    </div>
+    <p class="sub" style="margin-top:26px;">This engine is built as a technology partner to marketing, not a parallel motion, and the near-term prize is the story vault: <b>two decades of customers who stayed, with story after story still to tell.</b> Any one of them, run through the engine, becomes a full coordinated drop with every claim tied to a verified source, and the engine hands marketing more surface area on triggers no one could watch manually.</p>
+  </section>
+
+  <!-- 9 · SALES -->
+  <section class="slide">
+    <div class="eyebrow">12 · For sales</div>
+    <h1>Meetings arrive pre-scored. Reps never collide with the engine.</h1>
+    <div class="cards c2">
+      <div class="card"><h3>Committee context attached</h3><p>Before the first call, the seller has the account grade, tier, the estimated Stars dollars at stake, and which committee members are already engaged. The meeting starts at the second conversation, not the first.</p></div>
+      <div class="card"><h3>One contact, one owner</h3><p>A reply stops that contact's sequence on the spot, and one claim checkbox stands the engine down on that person and their whole company. From that moment the contact belongs to a human. No double-touches, ever, by construction.</p></div>
+    </div>
+  </section>
+
+  <!-- 12b · FLYWHEEL -->
+  <section class="slide dark">
+    <div class="eyebrow">13 · Built to run again</div>
+    <h1>October re-arms the engine. Stars is only its first motion.</h1>
+    <p class="sub">CMS re-rates every contract each October. I designed the engine for that moment: the release lands, the universe re-pulls, every grade recomputes, and the motion re-arms behind the same gates, with a fresh and urgent reason to be in every one of these rooms. That is why this is an engine and not a campaign; the flywheel turns every year. And the same machinery is already pointed at what comes next:</p>
+    <div class="cards c4" style="margin-top:28px;">
+      <div class="card"><span class="demo-tag">Built &#183; live in Clay</span><h3>Back office</h3><p>A 101-account target universe with 59 sourced contacts, built behind Stars. Ready as the quick follow-up whenever this room wants it.</p></div>
+      <div class="card"><span class="demo-tag">On the shelf</span><h3>The signal layer</h3><p>The daily scan across all 32 parents, priced earlier in this deck. Filings, leadership moves, and hiring clusters become triggers the day we turn the dial.</p></div>
+      <div class="card"><span class="demo-tag">On the shelf</span><h3>Install-base expansion</h3><p>The rows at customer parents are already sourced and held. The same engine runs the expansion lane through the account managers when we choose to arm it.</p></div>
+      <div class="card"><span class="demo-tag">On the shelf</span><h3>Competitive displacement</h3><p>The same universe, scored on a competitor trigger instead of a Stars trigger. A new motion is a config change, not a rebuild.</p></div>
+    </div>
+  </section>
+
+  <!-- 13b · MOTION MAP -->
+  <section class="slide" style="justify-content:flex-start;padding-top:5vh;">
+    <div class="eyebrow">14 · The motion map</div>
+    <h1 style="font-size:clamp(26px,3.2vw,42px);">Every sector splits into motions of its own.</h1>
+    <p class="sub" style="margin-top:10px;font-size:14px;max-width:100%;">Each pill is a runnable motion: its own target universe, signal set, persona lanes, and entry story, all behind the same gates. Star Ratings is one pill on this map, live today, proving the pattern for every other one.</p>
+    <div class="mhead">
+      <div style="color:var(--dim);padding-left:0;">Sector</div>
+      <div>Back Office Optimizer <span class="d">We replace spreadsheets, not an incumbent</span></div>
+      <div>Queue Optimizer <span class="d">Queue membership decisions, run on a cadence</span></div>
+    </div>
+    <div class="mrow" style="border-top:1px solid var(--line);">
+      <div class="sec"><div class="sn">Insurance</div><div class="sg">UK · US</div></div>
+      <div class="mcell"><span class="pill">Home &amp; property claims</span><span class="pill">Auto &amp; motor claims</span><span class="pill">Life &amp; pensions</span><span class="pill">Health / PMI</span><span class="pill">Pet</span><span class="pill">Travel</span><span class="pill">Commercial &amp; specialty</span></div>
+      <div class="mcell"><span class="pill">Home FNOL lines</span><span class="pill">Auto FNOL lines</span><span class="pill">Cat event surge</span><span class="pill">Renewals seasonality</span></div>
+    </div>
+    <div class="mrow">
+      <div class="sec"><div class="sn">Finance</div><div class="sg">UK · US</div></div>
+      <div class="mcell"><span class="pill">Mortgage servicing</span><span class="pill">Lending ops</span><span class="pill">Cards &amp; disputes</span><span class="pill">Retail banking ops</span><span class="pill">Wealth ops</span></div>
+      <div class="mcell"><span class="pill">Consent order banks</span><span class="pill">Collections</span><span class="pill">Card services</span><span class="pill">Consumer Duty complaints</span></div>
+    </div>
+    <div class="mrow">
+      <div class="sec"><div class="sn">Healthcare</div><div class="sg">US</div></div>
+      <div class="mcell"><span class="pill">Payer claims ops</span><span class="pill">Revenue cycle</span><span class="pill">Appeals &amp; grievances desks</span></div>
+      <div class="mcell live"><span class="livebadge">&#9679; Star Ratings &#183; LIVE</span><span class="pill">Member services lines</span><span class="pill">Provider lines</span><div class="ld">Sub-4.0 QBP parents, call-center measures, 2028 window. <b>32</b> parents &#183; <b>143</b> contacts &#183; Wave 1 staged.</div></div>
+    </div>
+    <div class="mrow">
+      <div class="sec"><div class="sn">Retail</div><div class="sg">UK · US</div></div>
+      <div class="mcell"><span class="pill">Order management</span><span class="pill">Returns</span><span class="pill">Fraud review</span></div>
+      <div class="mcell"><span class="pill">Peak season surge</span><span class="pill">Order &amp; delivery support</span></div>
+    </div>
+    <div class="mrow">
+      <div class="sec"><div class="sn">Utilities</div><div class="sg">UK · US</div></div>
+      <div class="mcell"><span class="pill">Energy billing</span><span class="pill">Water billing</span><span class="pill">Complaints handling</span></div>
+      <div class="mcell"><span class="pill">Outage surge</span><span class="pill">Storm &amp; event response</span><span class="pill">Billing lines</span></div>
+    </div>
+    <div class="statband" style="margin-top:16px;padding:14px 30px;">
+      <div class="stat"><div class="n" style="font-size:clamp(20px,2.2vw,30px);">37</div><div class="l">Motions on this map, two products</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(20px,2.2vw,30px);">1 <em>live</em></div><div class="l">Star Ratings, Wave 1 staged</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(20px,2.2vw,30px);">Same gates</div><div class="l">Scored, staffed, human approved</div></div>
+      <div class="stat"><div class="n" style="font-size:clamp(20px,2.2vw,30px);">UK &#183; US</div><div class="l">Same engine, both markets</div></div>
+    </div>
+  </section>
+
+  <!-- 10 · MIRROR -->
+  <section class="slide dark">
+    <div class="eyebrow">15 · The operating frame</div>
+    <p class="mirrorline">We run GTM the way our product runs operations: <em>real-time signals, automated action, a human gate before anything irreversible.</em></p>
+    <p class="sub" style="margin-top:28px;">I sit between the systems so one signal becomes synchronized action across marketing and sales at the same moment. The engine is the proof point of our own thesis, running inside our own walls.</p>
+  </section>
+
+  <!-- 11 · ASK -->
+  <section class="slide">
+    <div class="eyebrow">16 · The one ask</div>
+    <h1>The engine has everything it needs. One decision: the start.</h1>
+    <div class="cards c3">
+      <div class="card"><div class="num">01</div><h3>Data · already handled</h3><p>Salesforce data already flows into the company data hub AI Enablement runs, so the engine reads it there, exclusion lists and account owners included, without touching Salesforce's API limits. Ad-hoc reporting runs through the Greenlight Salesforce agents. No new integrations needed.</p></div>
+      <div class="card"><div class="num">02</div><h3>Tooling · already handled</h3><p>The judgment layer runs on Claude and the seller-facing skills are staged for Greenlight, all inside the stack AI Enablement already runs. Nothing in this meeting waits on infrastructure.</p></div>
+      <div class="card"><div class="num">03</div><h3>The green light</h3><p>Approve the start. Wave 1 is staged: 38 leads across two persona lanes, a longer-horizon lane behind them, every one through the approval gate and holding in draft. On the yes, the wave ships behind the deliverability gate and results feed a Salesforce dashboard you can open any time. Your read on which accounts go first is what shapes it.</p></div>
+    </div>
+    <p class="sub" style="margin-top:16px;font-size:15px;">This is a head start, not a finished product. The build compounds weekly, and the continuous engineering is the role. Everything upstream is done and gated; the first wave waits only on the judgment in this room.</p>
+  </section>
+
+</div>
+
+<div class="brand" style="display:flex;align-items:center;gap:10px;"><svg style="height:17px;width:auto;display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187 46" fill="none">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" class="wm" fill="#014637"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" class="wm" fill="#014637"/>
+</svg><span>· Internal</span></div>
+<div class="hud"><span class="hint">&#8592; &#8594; to navigate</span><span class="cnt" id="counter">1 / 16</span></div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  const counter=document.getElementById('counter'), bar=document.getElementById('progress');
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    document.body.classList.toggle('on-dark',slides[i].classList.contains('dark'));
+    document.body.classList.toggle('on-title',i===0);
+    counter.textContent=(i+1)+' / '+slides.length;
+    bar.style.width=(((i+1)/slides.length)*100)+'%';
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(i+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    if(e.key==='Home')show(0);
+    if(e.key==='End')show(slides.length-1);
+  });
+  document.addEventListener('click',e=>{ if(!e.target.closest('a')) show(i+1); });
+  show(0);
+</script>
+</body>
+</html>

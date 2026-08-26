@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Engine · Star Ratings — Salesforce Dashboard Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --p1:#1F7340; --p2:#4EC98A; --p3:#E0A23B;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --line:#E2E7DD; --orange:#FE5000;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);padding:40px 26px 80px;}
+  .board{max-width:1180px;margin:0 auto;}
+  .banner{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:#FFF3E8;border:1px dashed var(--orange);color:#B23800;border-radius:8px;padding:8px 14px;margin-bottom:18px;display:inline-block;}
+  header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:8px;flex-wrap:wrap;gap:10px;}
+  h1{font-family:'Playfair Display',serif;font-size:28px;color:var(--forest);}
+  .sub{font-size:13px;color:var(--dim);margin-top:4px;}
+  .pills{display:flex;gap:8px;margin:14px 0 20px;flex-wrap:wrap;}
+  .pill{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);border-radius:100px;padding:6px 14px;}
+  .pill.on{background:var(--forest);color:#fff;border-color:var(--forest);}
+  .row{display:grid;gap:14px;margin-bottom:14px;}
+  .r1{grid-template-columns:repeat(5,1fr);}
+  .r2{grid-template-columns:3fr 2fr;}
+  .r3{grid-template-columns:1fr 1fr;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:0 1px 2px rgba(20,40,25,.04);}
+  .card h3{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:8px;}
+  .big{font-family:'Playfair Display',serif;font-weight:700;font-size:34px;color:var(--forest);line-height:1;}
+  .big small{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--dim);font-weight:400;}
+  .range{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--dim);letter-spacing:.04em;}
+  .track{height:6px;border-radius:4px;background:var(--mist);margin-top:6px;position:relative;}
+  .track .band{position:absolute;top:0;height:6px;background:#DCE9DA;border-radius:4px;}
+  .track .val{position:absolute;top:-3px;width:12px;height:12px;border-radius:50%;background:var(--p1);border:2px solid #fff;box-shadow:0 0 0 1px var(--line);}
+  .lanes{margin-top:6px;}
+  .lane{margin:12px 0;}
+  .lane .name{font-size:12.5px;color:var(--ink);font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:7px;}
+  .dot{width:9px;height:9px;border-radius:3px;display:inline-block;}
+  .bars{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+  .seg{position:relative;height:26px;border-radius:4px;background:var(--mist);overflow:hidden;}
+  .seg .fill{position:absolute;left:0;top:0;bottom:0;border-radius:4px;}
+  .seg .lab{position:absolute;left:8px;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink);z-index:2;}
+  .stagehead{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:6px;}
+  .stagehead div{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px;}
+  th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:0 10px 7px 0;border-bottom:1px solid var(--line);font-weight:500;}
+  td{padding:8px 10px 8px 0;border-bottom:1px solid var(--line);color:var(--ink-soft);}
+  td b{color:var(--ink);}
+  .note{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.5;}
+  .legend{display:flex;gap:16px;margin-top:10px;font-size:11.5px;color:var(--ink-soft);}
+  .legend span{display:flex;align-items:center;gap:6px;}
+  footer{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:.05em;margin-top:16px;line-height:1.7;}
+  svg text{font-family:'JetBrains Mono',monospace;font-size:9.5px;fill:var(--dim);}
+</style>
+</head>
+<body data-palette="#1F7340,#4EC98A,#E0A23B">
+<div class="board">
+  <div class="banner">Mockup · sample data for layout review · build spec in GTM_Engine_SF_Dashboard_Kit.html</div>
+  <header>
+    <div>
+      <h1>GTM Engine · Star Ratings</h1>
+      <div class="sub">Engine-sourced only, never blended with existing motion · opens not tracked by design · data as of Fri Jul 31, 9:00 AM ET</div>
+    </div>
+  </header>
+  <div class="pills">
+    <span class="pill on">Motion: Star Ratings</span>
+    <span class="pill">Wave: All</span>
+    <span class="pill">Last 30 days</span>
+    <span class="pill">Persona: All</span>
+  </div>
+
+  <!-- ROW 1 · metric tiles vs ranges -->
+  <div class="row r1">
+    <div class="card">
+      <h3>Sends</h3>
+      <div class="big">53</div>
+      <div class="range">2 bounces &#183; deliverability 96%</div>
+    </div>
+    <div class="card">
+      <h3>Replies</h3>
+      <div class="big">3 <small>of 6&#8211;11 full-motion range</small></div>
+      <div class="track"><div class="band" style="left:40%;width:45%"></div><div class="val" style="left:19%"></div></div>
+      <div class="range">range band = plan &#183; dot = actual</div>
+    </div>
+    <div class="card">
+      <h3>Qualified</h3>
+      <div class="big">2 <small>of 3&#8211;7 range</small></div>
+      <div class="track"><div class="band" style="left:33%;width:47%"></div><div class="val" style="left:22%"></div></div>
+      <div class="range">persona engaging on the problem</div>
+    </div>
+    <div class="card">
+      <h3>Meetings to sales</h3>
+      <div class="big">1 <small>of 2&#8211;4 range</small></div>
+      <div class="track"><div class="band" style="left:38%;width:42%"></div><div class="val" style="left:18%"></div></div>
+      <div class="range">booked + handed to owner</div>
+    </div>
+    <div class="card">
+      <h3>Cost / qualified reply</h3>
+      <div class="big">426 <small>cr &#8776; $30</small></div>
+      <div class="range">credits are research units &#183; ~7&#162; each</div>
+    </div>
+  </div>
+
+  <!-- ROW 2 · funnel by persona + spend -->
+  <div class="row r2">
+    <div class="card">
+      <h3>Funnel by persona lane · direct-labeled</h3>
+      <div class="stagehead"><div>Sent</div><div>Replied</div><div>Qualified</div><div>Meeting</div></div>
+      <div class="lanes">
+        <div class="lane">
+          <div class="name"><span class="dot" style="background:var(--p1)"></span>Persona 1 · Stars/Quality</div>
+          <div class="bars">
+            <div class="seg"><div class="fill" style="width:100%;background:var(--p1);opacity:.9"></div><div class="lab" style="color:#fff">23</div></div>
+            <div class="seg"><div class="fill" style="width:9%;background:var(--p1)"></div><div class="lab">2</div></div>
+            <div class="seg"><div class="fill" style="width:5%;background:var(--p1)"></div><div class="lab">1</div></div>
+            <div class="seg"><div class="fill" style="width:5%;background:var(--p1)"></div><div class="lab">1</div></div>
+          </div>
+        </div>
+        <div class="lane">
+          <div class="name"><span class="dot" style="background:var(--p2)"></span>Persona 2 · Finance</div>
+          <div class="bars">
+            <div class="seg"><div class="fill" style="width:65%;background:var(--p2);opacity:.9"></div><div class="lab">15</div></div>
+            <div class="seg"><div class="fill" style="width:5%;background:var(--p2)"></div><div class="lab">1</div></div>
+            <div class="seg"><div class="fill" style="width:5%;background:var(--p2)"></div><div class="lab">1</div></div>
+            <div class="seg"><div class="lab">0</div></div>
+          </div>
+        </div>
+        <div class="lane">
+          <div class="name"><span class="dot" style="background:var(--p3)"></span>Wave 1B · Longer-Horizon</div>
+          <div class="bars">
+            <div class="seg"><div class="fill" style="width:65%;background:var(--p3);opacity:.9"></div><div class="lab">15</div></div>
+            <div class="seg"><div class="lab">0</div></div>
+            <div class="seg"><div class="lab">0</div></div>
+            <div class="seg"><div class="lab">0</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="note">Source report R1 · Campaign Members grouped by campaign and status · statuses only move forward</div>
+    </div>
+    <div class="card">
+      <h3>Credits spent by week · GTM Engine workbook</h3>
+      <svg viewBox="0 0 360 150" width="100%" height="170">
+        <line x1="34" y1="10" x2="34" y2="120" stroke="#E2E7DD"/>
+        <line x1="34" y1="120" x2="350" y2="120" stroke="#E2E7DD"/>
+        <text x="6" y="14">350</text><text x="6" y="68">175</text><text x="14" y="122">0</text>
+        <polyline points="60,73 130,52 200,110 270,13 340,82" fill="none" stroke="#1F7340" stroke-width="2" stroke-linejoin="round"/>
+        <circle cx="60" cy="73" r="4" fill="#1F7340"/><circle cx="130" cy="52" r="4" fill="#1F7340"/><circle cx="200" cy="110" r="4" fill="#1F7340"/><circle cx="270" cy="13" r="4" fill="#1F7340"/><circle cx="340" cy="82" r="4" fill="#1F7340"/>
+        <text x="50" y="63">143</text><text x="120" y="42">205</text><text x="192" y="103">30</text><text x="240" y="18">324</text><text x="330" y="72">115</text>
+        <text x="48" y="136">Jul 8</text><text x="256" y="136">Jul 14</text><text x="326" y="136">Jul 15</text>
+      </svg>
+      <div class="note">Source report R6 · one GTM_Spend__c record per week from the credit ledger · motion to date 820 cr &#8776; $57</div>
+    </div>
+  </div>
+
+  <!-- ROW 3 · sourced pipeline + meetings -->
+  <div class="row r3">
+    <div class="card">
+      <h3>Engine-sourced pipeline · estimated never blends with realized</h3>
+      <table>
+        <tr><th>Account</th><th>Stage</th><th>Sourced</th><th>Status</th></tr>
+        <tr><td><b>Devoted Health</b></td><td>Discovery</td><td>Jul 24</td><td>Estimated</td></tr>
+        <tr><td colspan="4" style="color:var(--dim);border-bottom:none;">Rows appear as meetings convert. Existing-motion pipeline lives in the standard council views; it never appears here, and these rows never sum into it.</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Meetings handed to sales</h3>
+      <table>
+        <tr><th>Contact</th><th>Account</th><th>Owner</th><th>Meeting</th></tr>
+        <tr><td><b>J. Rosenbaum</b> · VP Ops</td><td>Devoted Health</td><td>N. Belfield</td><td>Jul 29</td></tr>
+      </table>
+      <div class="note">Source report R4 · a claim or reply stands the engine down on the whole company automatically</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="dot" style="background:var(--p1)"></span>Persona 1 · Stars/Quality</span>
+    <span><span class="dot" style="background:var(--p2)"></span>Persona 2 · Finance</span>
+    <span><span class="dot" style="background:var(--p3)"></span>Wave 1B · Longer-Horizon</span>
+  </div>
+
+  <footer>
+    Lightning build: row 1 = metric + gauge components (gauge breakpoints = planning ranges) · row 2 = horizontal bar (R1) + line (R6) · row 3 = table components (R5, R4) · folder "GTM Engine" shared with John · Tom · Chris · Jenn · Naveen · pipeline council. Reports behind every tile are live; hover detail is native in Lightning.
+  </footer>
+</div>
+</body>
+</html>

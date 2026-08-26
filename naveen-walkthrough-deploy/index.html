@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Clay GTM Engine · Table-by-Table Walkthrough</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C; --lime-bright:#A4CE3A;
+  --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+  --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist-2:#E7EEE3; --line:#E2E7DD; --line-2:#D4DCCE;
+  --gold:#E0A23B; --orange:#FE5000;
+  --shadow:0 1px 2px rgba(20,40,25,.04), 0 12px 34px rgba(20,40,25,.07);
+  --shadow-lift:0 2px 4px rgba(20,40,25,.06), 0 22px 50px rgba(20,40,25,.11);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--forest);margin:0;line-height:1.12}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.kick{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:600}
+a{color:var(--green);text-decoration:none}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#16432C 0%,#123821 55%,#0E2C1A 100%);color:#fff;padding:58px 0 50px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(37,181,111,.20),transparent 68%)}
+.hero .kick{color:var(--lime-bright)}
+.hero h1{color:#fff;font-size:clamp(30px,4.6vw,50px);font-weight:800;margin:14px 0 16px;max-width:20ch}
+.hero p.lede{font-size:18px;color:#E4EFE6;max-width:64ch;margin:0}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:9px}
+.hero .meta span{font-family:"JetBrains Mono",monospace;font-size:12px;color:#DCEBDF;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:6px 12px;border-radius:999px}
+
+/* PRESENTER TOGGLE */
+.ptbar{position:sticky;top:0;z-index:40;background:rgba(250,251,247,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.ptbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:11px;padding-bottom:11px}
+.ptbar .navlinks{display:flex;gap:4px;flex-wrap:wrap}
+.ptbar .navlinks a{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.04em;color:var(--ink-soft);padding:5px 9px;border-radius:7px}
+.ptbar .navlinks a:hover{background:var(--mist);color:var(--forest)}
+.toggle{display:flex;align-items:center;gap:9px;font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--ink-soft);white-space:nowrap;cursor:pointer;user-select:none}
+.switch{width:40px;height:22px;border-radius:999px;background:var(--line-2);position:relative;transition:.2s}
+.switch:after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:.2s}
+body.presenter .switch{background:var(--green)}
+body.presenter .switch:after{transform:translateX(18px)}
+
+section{padding:46px 0}
+section.alt{background:var(--mist)}
+.eyebrow-row{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sec-title{font-size:clamp(23px,3vw,32px);font-weight:700;margin-bottom:14px}
+.sec-sub{color:var(--ink-soft);max-width:70ch;font-size:16.5px;margin:0 0 26px}
+
+/* SAY line */
+.say{border-left:3px solid var(--green-bright);background:#fff;border-radius:0 10px 10px 0;padding:13px 16px 13px 17px;margin-top:14px;box-shadow:var(--shadow)}
+.say .lbl{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:600;display:block;margin-bottom:5px}
+.say p{margin:0;font-size:15.5px;color:var(--ink);line-height:1.5}
+.say p+p{margin-top:9px}
+body:not(.presenter) .say{display:none}
+
+/* SNAPSHOT band */
+.snap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px}
+.snap .cell{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 16px;box-shadow:var(--shadow)}
+.snap .num{font-family:"Playfair Display",serif;font-size:30px;font-weight:800;color:var(--green);line-height:1}
+.snap .lab{font-size:13px;color:var(--ink-soft);margin-top:7px;line-height:1.35}
+.hold{margin-top:20px;display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:13px 16px;font-size:15px;color:var(--ink-soft)}
+.hold b{color:var(--forest)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;box-shadow:0 0 0 4px rgba(224,162,59,.16)}
+
+/* FUNNEL */
+.funnel{margin-top:8px}
+.frow{display:grid;grid-template-columns:64px 1fr;gap:16px;align-items:stretch;margin-bottom:10px}
+.frung{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:12px;color:#fff;background:var(--forest);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.fbar{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;transition:.15s;position:relative}
+.fbar:hover{box-shadow:var(--shadow-lift);transform:translateX(2px)}
+.fbar .ft{font-weight:700;color:var(--forest);font-size:15.5px}
+.fbar .fd{color:var(--ink-soft);font-size:13.5px}
+.fbar .fw{margin-left:auto;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--green);white-space:nowrap;padding-left:12px}
+/* taper the funnel */
+.frow:nth-child(1) .fbar{width:100%}
+.frow:nth-child(2) .fbar{width:97%}
+.frow:nth-child(3) .fbar{width:90%}
+.frow:nth-child(4) .fbar{width:80%}
+.frow:nth-child(5) .fbar{width:70%}
+.frow:nth-child(6) .fbar{width:60%}
+.frow:nth-child(7) .fbar{width:52%}
+.frow:nth-child(8) .fbar{width:46%}
+.frow:nth-child(9) .fbar{width:42%;border-color:var(--green-bright);border-width:1.5px}
+.frow:nth-child(9) .frung{background:var(--green)}
+
+/* LEGEND + GATE */
+.legend{display:flex;flex-wrap:wrap;gap:22px;margin:0 0 16px}
+.legend .lg{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink-soft);max-width:46ch}
+.gatebox{background:#fff;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:15px 18px;margin-bottom:26px;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+.gatebox b{color:var(--forest)}
+
+/* LAYER CARDS */
+.layer{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;margin-bottom:16px;box-shadow:var(--shadow);overflow:hidden}
+.lhead{display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:center;padding:19px 22px;cursor:pointer}
+.lhead:hover{background:var(--mist)}
+.lnum{font-family:"JetBrains Mono",monospace;font-weight:600;font-size:13px;color:var(--green);background:var(--mist-2);border:1px solid var(--line-2);border-radius:10px;height:44px;display:flex;align-items:center;justify-content:center}
+.ltitle{font-family:"Playfair Display",serif;font-size:20px;font-weight:700;color:var(--forest)}
+.ltag{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+.lstate{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.05em;padding:5px 10px;border-radius:999px;white-space:nowrap;font-weight:600}
+.st-live{background:#E6F4EC;color:var(--green);border:1px solid #BFE3CE}
+.st-next{background:#FBF1DE;color:#9A6B12;border:1px solid #EAD6A6}
+.chev{color:var(--dim);font-size:13px;transition:.2s;font-family:"JetBrains Mono",monospace}
+.layer.open .chev{transform:rotate(90deg)}
+.lbody{display:none;padding:2px 22px 22px;border-top:1px solid var(--line)}
+.layer.open .lbody{display:block}
+.lbody .why{font-size:15.5px;color:var(--ink);margin:16px 0 4px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 2px}
+.flow .pill{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--ink-soft);background:var(--mist);border:1px solid var(--line);border-radius:8px;padding:6px 11px}
+.flow .pill b{color:var(--forest)}
+.cols{font-size:13.5px;color:var(--ink-soft);margin-top:12px;font-family:"JetBrains Mono",monospace;line-height:1.7}
+.cols b{color:var(--green);font-weight:600}
+
+/* WIRING */
+.wire{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.wcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+.wcard .wt{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--green);font-weight:600;letter-spacing:.03em}
+.wcard h3{font-size:18px;margin:8px 0 9px}
+.wcard p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+/* GUARDRAIL / SF */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.panel.dark{background:linear-gradient(150deg,#16432C,#0F2E1B);color:#fff;border:none}
+.panel.dark h3,.panel.dark .kick{color:#fff}
+.panel.dark .kick{color:var(--lime-bright)}
+.panel h3{font-size:20px;margin:10px 0 12px}
+.panel ul{margin:0;padding-left:0;list-style:none}
+.panel li{position:relative;padding:8px 0 8px 24px;font-size:15px;border-top:1px solid var(--line)}
+.panel li:first-child{border-top:none}
+.panel li:before{content:"→";position:absolute;left:0;color:var(--green-bright);font-weight:700}
+.panel.dark li{border-top:1px solid rgba(255,255,255,.12);color:#E4EFE6}
+.panel.dark li:before{color:var(--lime-bright)}
+.bignum{font-family:"Playfair Display",serif;font-size:42px;font-weight:800;color:var(--lime-bright);line-height:1}
+
+/* READ-ON */
+.read{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.read .ri{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 24px;border-top:1px solid var(--line)}
+.read .ri:first-child{border-top:none}
+.read .rn{font-family:"JetBrains Mono",monospace;color:var(--green);font-weight:600;font-size:15px;padding-top:2px}
+.read .rt{font-weight:700;color:var(--forest);font-size:16.5px;margin-bottom:4px}
+.read .rd{color:var(--ink-soft);font-size:15px}
+
+footer{background:var(--forest);color:#CFE3D4;padding:34px 0;font-size:13.5px}
+footer .mono{color:var(--lime-bright)}
+
+@media(max-width:820px){
+  .snap{grid-template-columns:repeat(2,1fr)}
+  .wire{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .frow:nth-child(n) .fbar{width:100%}
+  .ptbar .navlinks{display:none}
+  .fbar .fw{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="kick">Clay GTM Engine · Table-by-Table · Walkthrough for Naveen</span>
+    <h1>One funnel, wired in Clay, that ends in a ready-set-go contact list.</h1>
+    <p class="lede">This is the map I built. It starts as a wide TAM funnel and narrows through a stack of tables that each filter harder than the last, so the last table isn't a guess. It's the people who own the motion, each behind a validation check and a human approval gate before anything sends.</p>
+    <div class="meta">
+      <span>6 tables live in the GTM Engine workbook</span>
+      <span>32 parent accounts scored</span>
+      <span>125 buying-committee contacts · ~106 validated emails</span>
+      <span>~204 of the 5,000-credit allocation used</span>
+      <span>Nothing sent · everything on HOLD</span>
+    </div>
+  </div>
+</header>
+
+<div class="ptbar">
+  <div class="wrap">
+    <nav class="navlinks">
+      <a href="#frame">The frame</a>
+      <a href="#today">What's live</a>
+      <a href="#funnel">The funnel</a>
+      <a href="#layers">Table by table</a>
+      <a href="#wiring">How they connect</a>
+      <a href="#split">Clay vs Claude</a>
+      <a href="#guardrails">Credits + Salesforce</a>
+      <a href="#read">Your read</a>
+    </nav>
+    <label class="toggle" id="ptoggle">
+      <span class="switch"></span> Presenter script
+    </label>
+  </div>
+</div>
+
+<!-- FRAME -->
+<section id="frame">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">00 · How to think about it</span></div>
+    <h2 class="sec-title">The whole thing is one funnel that filters itself</h2>
+    <p class="sec-sub">Before the individual tables, here's the shape. Clay's power isn't any single table. It's that each table takes the output of the one before it and narrows it, eight hops deep, until what's left is only the contacts that survived every filter. A person doesn't hand-build a list. The engine surfaces it and keeps it current.</p>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>The way to think about Clay is the tables feeding each other. You start with a big funnel, the whole TAM for a motion. I rate, tier, and grade every account on how ready it is for us to reach out. The A and B accounts flow into the next table, which filters them further. You take a column of results from that table, feed it into the next, and that happens hop after hop depending on the motion, until you get to the final contacts.</p>
+      <p>So when Nate opens that last list, the argument is about weights, not names. They've been filtered enough times that we know they own the Stars portion of the business at that account, they're in our TAM, and the send gate only passes rows with a validated email. That list is ready, set, go, instead of him searching LinkedIn, building a Sales Nav list, guessing at emails, and only then thinking about a message.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S LIVE -->
+<section id="today" class="alt">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">01 · Where it stands today</span></div>
+    <h2 class="sec-title">What's actually standing, stated plainly</h2>
+    <p class="sec-sub">This is a head start, not a finished product. The core of the engine is built and validated on the Star Ratings new-logo motion. The outer layers are designed and next to stand up. Nothing has touched a prospect.</p>
+    <div class="snap">
+      <div class="cell"><div class="num">6</div><div class="lab">tables live in the GTM Engine workbook</div></div>
+      <div class="cell"><div class="num">32</div><div class="lab">Tier A+B parent accounts scored and graded</div></div>
+      <div class="cell"><div class="num">125</div><div class="lab">buying-committee contacts at eligible parents, ~106 validated emails across the 137-row table</div></div>
+      <div class="cell"><div class="num">~204</div><div class="lab">of the 5,000-credit allocation used to get here</div></div>
+    </div>
+    <div class="hold"><span class="dot"></span><div><b>Everything sits behind the HOLD gate.</b> Every send-ready row is unchecked. Nothing goes out until a human approves it and until we've ratified scoring, ICP, and what "engine-sourced" means together.</div></div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>I want to be precise about the state. Six tables are live: Accounts, Contacts, the CMS source, and three reference tables. All 137 rows in the table have been through ZeroBounce; around 106 carry a deliverable email, and the rest stay visible but can't pass the send gate. The signal automation, the delivery sync, and the reply loop are designed and specced, next to stand up. And to get all of this to where it is cost just over 200 of the 5,000-credit allocation, because the guardrails stop it from spending on anything out of window.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section id="funnel">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">02 · The layer map</span></div>
+    <h2 class="sec-title">Sources to worklist, eight hops down</h2>
+    <p class="sec-sub">Each rung is a Clay table. Each arrow is a real column, a write or a lookup, that carries rows into the next table only if they pass that table's filter. The funnel narrows on purpose.</p>
+    <div class="funnel">
+      <div class="frow"><div class="frung">L0</div><div class="fbar"><span class="ft">Sources</span><span class="fd">CMS Stars file · install base · signal feeds</span><span class="fw">→ writes qualifying rows to Accounts</span></div></div>
+      <div class="frow"><div class="frung">L1</div><div class="fbar"><span class="ft">Accounts (Master)</span><span class="fd">scored · enriched · graded</span><span class="fw">→ pushes accounts above the grade line to Contacts</span></div></div>
+      <div class="frow"><div class="frung">L2</div><div class="fbar"><span class="ft">Signals</span><span class="fd">Stars + back-office intent triggers</span><span class="fw">→ writes intent + top signal back to Accounts</span></div></div>
+      <div class="frow"><div class="frung">L3</div><div class="fbar"><span class="ft">Contacts (Buying Committee)</span><span class="fd">right personas · verified email</span><span class="fw">→ feeds Message Gen + Send Queue</span></div></div>
+      <div class="frow"><div class="frung">L4</div><div class="fbar"><span class="ft">Message Gen + reference tables</span><span class="fd">personalized copy, on approved claims only</span><span class="fw">→ writes drafts to Send Queue</span></div></div>
+      <div class="frow"><div class="frung">L5</div><div class="fbar"><span class="ft">Send Queue</span><span class="fd">critic gate + human approval</span><span class="fw">→ approved rows only pass</span></div></div>
+      <div class="frow"><div class="frung">L6</div><div class="fbar"><span class="ft">Outreach Sync + Deliverability</span><span class="fd">hands off to sequencer + Salesforce</span><span class="fw">→ blocked unless inbox health is green</span></div></div>
+      <div class="frow"><div class="frung">L7</div><div class="fbar"><span class="ft">Reply + Attribution</span><span class="fd">replies and meetings written back</span><span class="fw">→ lights up the funnel dashboard</span></div></div>
+      <div class="frow"><div class="frung">L8</div><div class="fbar"><span class="ft">AE Worklist</span><span class="fd">who to work today, per rep</span><span class="fw">the human-facing end of the engine</span></div></div>
+    </div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>Eight hops, and every arrow is a column doing the carrying. A row only moves to the next table if it clears that table's filter. That's why the bottom is narrow and trustworthy instead of wide and noisy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LAYERS -->
+<section id="layers" class="alt">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">03 · Table by table</span></div>
+    <h2 class="sec-title">Why each table exists and what it hands off</h2>
+    <p class="sec-sub">Click any layer to open its detail: the purpose, what feeds it, what it writes to, and the columns that do the work. Turn on the presenter script above for the line I'd actually say on each.</p>
+    <div class="legend">
+      <div class="lg"><span class="lstate st-live">LIVE</span><span>Built, validated, running on the Star Ratings motion today.</span></div>
+      <div class="lg"><span class="lstate st-next">STAGED</span><span>Designed and specced, held behind a go-live gate on purpose. The gate is named on each card. This is measurement before volume, not unfinished work.</span></div>
+    </div>
+    <div class="gatebox"><b>Why not all live already:</b> the staged layers can't be flipped before we align. Salesforce attribution fields depend on the integration ticket this meeting exists to scope. The sender stays off until deliverability is warm, weeks of runway. Reply and attribution can't produce data until sends flow. Signal monitoring waits on the credit plan, contacts before monitoring spend. And scoring weights and the back-office ICP are gated on your read and Scott's, which is the point of the "Your read" section below. Turning them on before that would invert the engine's own rule.</div>
+
+    <!-- L0 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L0</div><div><div class="ltitle">Sources · CMS Import · Install-Base Import</div><div class="ltag">The raw material · kept separate from the live list</div></div><div style="text-align:right"><span class="lstate st-live">CMS LIVE · 307 rows</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">Source tables land the raw universe so a re-import never clobbers enrichment downstream. The CMS table is live: the public 2026 Star Ratings universe, all 307 contracts held raw and untouched, nothing filtered on this table by design. The window test (below 4.0 stars, still winnable) is applied one layer down at Accounts, where only in-window rows are graded and kept. The customer-exclusion column, customer_flag on Accounts, is wired next off your flagged customer file, so anyone already ours is dropped there before outreach. The Install-Base import is designed, not built; it waits on Salesforce access and will seed the back-office motion.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> CMS public file · Salesforce accounts (next)</span><span class="pill"><b>Writes to:</b> Accounts (only if in-window)</span></div>
+        <div class="cols">key columns → <b>contract_id · parent_org · marketing_name · overall_star_2026 · addressable_forgone_qbp_musd · primary_sources</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the top of the funnel. I keep the raw CMS file in its own table so re-importing October's release never wipes the work we did on the live accounts. Nothing's filtered on this table itself &mdash; the window test that decides whether a plan is genuinely a target runs one layer down, at Accounts. The piece I'm holding for your flagged customer file is the customer_flag wire on Accounts, so we also drop anyone who's already ours, and that's the same gate holding Wave 1.</p></div>
+      </div>
+    </div>
+
+    <!-- L1 -->
+    <div class="layer open">
+      <div class="lhead"><div class="lnum">L1</div><div><div class="ltitle">Accounts (Master) · the Golden List</div><div class="ltag">Scored, enriched, graded, signal-aware</div></div><div style="text-align:right"><span class="lstate st-live">LIVE · 32 parents</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">This is the hub. Every account gets a fit score, an intent score, and a letter grade from those two. Grade is the gate: only accounts above the grade line push down into Contacts, and where that line sits is one of the dials we set together. This is also where customers get locked out, via customer_flag off the Salesforce customer file. This is where "who's worth our breath" gets decided, and it's config-driven, not hardcoded in.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> L0 sources + write-back from Signals</span><span class="pill"><b>Writes to:</b> Contacts (only above the grade line)</span></div>
+        <div class="cols">key columns → <b>fit_star · intent_score · grade · customer_flag · tier · addressable_forgone_qbp_musd</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the funnel's first real narrowing. I rate and tier every account on how ready it is, and only the grades above the line earn a push to the contact layer. The scoring weights and where that line sits are the things I'd most want your read on, because that's the judgment call that shapes everything below it.</p></div>
+      </div>
+    </div>
+
+    <!-- L2 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L2</div><div><div class="ltitle">Signals · Stars &amp; Back Office</div><div class="ltag">Intent monitoring that writes back into Accounts · gated on the credit plan</div></div><div style="text-align:right"><span class="lstate st-next">DESIGNED · next to stand up</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">This is what keeps the list alive instead of a dead snapshot. Each signal is one column that fires a point value when a trigger hits: Stars language in an SEC filing, an earnings-call mention, a new quality leader, a claims backlog. Those points flow back into the Accounts intent score and can lift an account's grade or, for the strongest triggers, fire it straight toward outreach. It's also what removes accounts that fixed their own Stars and don't need us anymore.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Accounts list + live web/API columns</span><span class="pill"><b>Writes to:</b> Accounts (intent_score, top_signal)</span></div>
+        <div class="cols">key columns → <b>one point-valued column per signal · signal_fired_date · tier (1 fires / 2 raises priority)</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the "why now" engine. It's designed and specced, and it's the layer that mirrors what our own product does, real-time signals triggering action. It's also self-cleaning: when a plan gets itself to four stars, Clay sees it and drops them off the list, so we're never reaching out to someone who no longer has the problem.</p></div>
+      </div>
+    </div>
+
+    <!-- L3 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L3</div><div><div class="ltitle">Contacts (Buying Committee)</div><div class="ltag">People, linked to accounts, carrying the attribution tags</div></div><div style="text-align:right"><span class="lstate st-live">LIVE · 137 rows · validated</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">This is the payoff table and the one that's most complete. Accounts push in, then a people-find pulls the right personas by title, a persona-key formula classifies each into the buying committee, and an email waterfall finds an address that ZeroBounce then validates. Anything without a valid mailbox can't pass the send gate. Three tags get stamped at creation and never change: engine-sourced, source motion, and sourced date. Those three are how we'll prove the engine's contribution later. Honest state: all 137 rows have been through ZeroBounce on the canonical email field; around 106 carry a deliverable email, and the invalid or email-less rows stay visible but gated.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Accounts (graded push)</span><span class="pill"><b>Writes to:</b> Message Gen + Send Queue (valid email only)</span></div>
+        <div class="cols">key columns → <b>persona_key · email + email_status · gtm_engine_sourced · source_motion · sourced_date · reply_status</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the ready-set-go list. 125 buying-committee contacts across all 27 eligible Tier A and B parents, plus the install-base rows held for the expansion lane, personas matched, and around 106 with an email we validated through ZeroBounce for under fourteen credits total. Invalid ones stay visible but the gate won't let them send. And every row carries the tags that let us build a shared scoreboard on what the engine actually surfaced.</p></div>
+      </div>
+    </div>
+
+    <!-- L4 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L4</div><div><div class="ltitle">Message Gen + reference tables</div><div class="ltag">Personalized copy that can only cite approved claims</div></div><div style="text-align:right"><span class="lstate st-next">REFERENCE LIVE · gen next</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">Message Gen writes a personalized variant per contact from the account's why-now and the right product angle. It's fenced by small reference tables: a Verified Metrics library so the copy can only use approved numbers, a Product-Angle map that routes a title to Queue Optimizer or Back Office Optimizer, and the locked ICP rubric. Those three are built; a fourth, the variant library for testing, comes with the generation column. That column is the next to wire, and the deeper personalization I'd run through Claude, not templates in Clay.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Contacts + account why-now + angle</span><span class="pill"><b>Reads:</b> Verified Metrics · Product-Angle · ICP · Variants (next)</span><span class="pill"><b>Writes to:</b> Send Queue</span></div>
+        <div class="cols">key columns → <b>variant copy per persona · variant_id · tone/persona rubric · claims pulled by lookup</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>Clay's job here is to surface accurate people and the why-now. The tailored writing lives in Claude, and the reference tables are the guardrail that keeps an unapproved number from ever reaching a payer. I'll show the full split two sections down, it answers the messaging-logic question from our call.</p></div>
+      </div>
+    </div>
+
+    <!-- L5 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L5</div><div><div class="ltitle">Send Queue · the gate</div><div class="ltag">Critic checks + human approval · the single egress</div></div><div style="text-align:right"><span class="lstate st-live">LIVE · all rows HOLD</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">Nothing sends from Clay directly. Every row that reaches here runs a critic check first. Today the critic checks email validity; the scope, claims, and length checks land with Message Gen. Then it waits on a human checkbox. That gate is built and every single row is held. This is the "human before send" rule made physical.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Contacts + Message Gen</span><span class="pill"><b>Writes to:</b> Outreach Sync (approved only)</span></div>
+        <div class="cols">key columns → <b>critic_email_valid · critic_status · human_approved · send_ready (HOLD until checked)</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the safety layer, and it's live. The critic catches the mechanical stuff, and then it physically cannot move without a person checking the box. Every row is held right now. That's deliberate, measurement and approval before any volume.</p></div>
+      </div>
+    </div>
+
+    <!-- L6 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L6</div><div><div class="ltitle">Outreach Sync + Deliverability</div><div class="ltag">Hand-off to the sequencer and Salesforce · gated on inbox health</div></div><div style="text-align:right"><span class="lstate st-next">DESIGNED · sender OFF</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">On approval, this hands the verified email and approved copy to Nate's sequencer and writes the source tags onto the Salesforce record. A parallel deliverability monitor watches warmup, inbox rotation, and bounce rate, and it gates the whole thing: the sender stays off until inbox health is green. This is the layer that stops spray-and-burn.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Send Queue (approved)</span><span class="pill"><b>Writes to:</b> sequencer + Salesforce tags</span></div>
+        <div class="cols">key columns → <b>webhook to sequencer · SF write (engine_sourced, motion, date) · domain-health gate</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is the tie to the Salesforce conversation. When Nate approves, the contact and its source tags land in Salesforce automatically, so there's no gap between what he's working and what leadership sees. And the send webhook stays off until deliverability is green, so we protect the domain from day one.</p></div>
+      </div>
+    </div>
+
+    <!-- L7 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L7</div><div><div class="ltitle">Reply + Attribution</div><div class="ltag">Closes the loop · the shared scoreboard · gated on sends flowing</div></div><div style="text-align:right"><span class="lstate st-next">DESIGNED</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">A reverse webhook writes reply and meeting status back onto the contact row, and the attribution table reads those tags to compute the two-motion funnel: enriched, sent, opened, replied, qualified, met. Because the source tags were stamped at creation, we can see what the engine surfaced without arguing about it after the fact. I'd frame this as a shared scoreboard we define together, not a credit claim.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> sequencer / CRM reply data</span><span class="pill"><b>Writes to:</b> Contacts.reply_status + dashboards</span></div>
+        <div class="cols">key columns → <b>reply_status (none/reply/qualified/meeting) · funnel counts · engine-sourced credit line</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>This is how we measure ourselves honestly. Surfaced and realized stay separate, never blended. I'd want us to co-define what "engine-sourced" means so it's a shared scoreboard, not me claiming credit. The tagging is already in place to make that clean.</p></div>
+      </div>
+    </div>
+
+    <!-- L8 -->
+    <div class="layer">
+      <div class="lhead"><div class="lnum">L8</div><div><div class="ltitle">AE Worklist</div><div class="ltag">The human-facing end · who to work today · gated on live signals + territory rules</div></div><div style="text-align:right"><span class="lstate st-next">DESIGNED</span><div class="chev">▸</div></div></div>
+      <div class="lbody">
+        <p class="why">The last table turns everything above it into a daily view per rep: the A and B accounts with a fresh signal, their committee, the why-now line, and the suggested product angle, filtered to that rep's territory. This is what a seller opens each morning. It's the point of the whole engine, a human working a short, sharp list instead of researching from scratch.</p>
+        <div class="flow"><span class="pill"><b>Feeds from:</b> Contacts + Accounts + territory rules</span><span class="pill"><b>Writes to:</b> the rep's daily view</span></div>
+        <div class="cols">key columns → <b>account + committee · why_now · product_angle · owner/territory filter</b></div>
+        <div class="say"><span class="lbl">What I'd say</span><p>Everything upstream exists to make this one screen good. Nate opens it and works a filtered, current list with the why-now already written. The research part is done for him, and that's the time we're buying back.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WIRING -->
+<section id="wiring">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">04 · How they connect</span></div>
+    <h2 class="sec-title">Three column types do all the connective work</h2>
+    <p class="sec-sub">When I say a table "feeds" another, this is the actual mechanism. There's no magic, just three kinds of columns chained together, hop after hop, and that chaining is where the depth comes from.</p>
+    <div class="wire">
+      <div class="wcard"><div class="wt">SEND TABLE DATA</div><h3>The forward flow</h3><p>Sends rows from one table into the next, filtered first so only the right rows go, only Grade A accounts, only valid-email contacts. This is the arrow that narrows the funnel at each hop.</p></div>
+      <div class="wcard"><div class="wt">LOOKUP</div><h3>The write-back &amp; reference</h3><p>Reads a value from another table by a join key. It's how a signal writes intent back onto an account, and how Message Gen pulls only an approved stat from the Verified Metrics table.</p></div>
+      <div class="wcard"><div class="wt">CONDITIONAL RUN</div><h3>The credit brake</h3><p>Gates every enrichment: only-run-if-empty, only-if-in-window, only-if-in-ICP. This is what makes it cheap enough to run continuously instead of burning the budget in a week.</p></div>
+    </div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>Chain those three and you get the depth. Accounts writes into Contacts if the grade clears, Contacts writes into the Send Queue if the email's valid, the Queue writes to sync if a human approved, and the reply comes back through a lookup. Clay only flows one direction, so any true write-back to source data goes through Salesforce or a webhook, not a table pointing at itself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLAY VS CLAUDE -->
+<section id="split" class="alt">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">05 · Clay vs Claude</span></div>
+    <h2 class="sec-title">Facts run in Clay, words run in Claude</h2>
+    <p class="sec-sub">This is the design decision behind the whole messaging layer, and the answer to the question from our call. Clay never writes a sentence a prospect reads. Claude never touches a row of data directly. Everything they exchange passes through the Contacts table, where it stays visible, gated, and auditable.</p>
+    <div class="two">
+      <div class="panel">
+        <span class="kick">Clay · the data layer</span>
+        <h3>Finds, scores, and moves rows</h3>
+        <p style="margin:0 0 14px;color:var(--ink-soft);font-size:15px">Deterministic, per-row work that runs the same way every time and leaves a value in a column you can audit.</p>
+        <ul>
+          <li>Sourcing: the CMS universe, persona pulls, the email waterfall, ZeroBounce validation.</li>
+          <li>Scoring and grading: fit, intent, tier. Formulas with dials we set, not judgment made up per row.</li>
+          <li>The gates: send_ready, human_approved, bdr_claimed, run conditions.</li>
+          <li>Plumbing: sequencer sync and, once the ticket lands, the Salesforce tag writes.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="kick">Claude · the language layer</span>
+        <h3>Reads context, writes copy, weighs calls</h3>
+        <p style="margin:0 0 14px;color:var(--ink-soft);font-size:15px">Judgment work, packaged as skills that run the same for whoever invokes them. Nate runs the drafting himself; nothing routes through me. Each skill takes the row Clay assembled and turns it into something a person would actually send, fenced by the Value Repository so only approved claims appear.</p>
+        <ul>
+          <li>The outreach copy: first touches, follow-ups, breakups, per contact, in the rep's voice.</li>
+          <li>Reply and objection handling: reasoned responses, not templates.</li>
+          <li>Briefs and prep: strike plans, call prep, the messaging one-pagers.</li>
+          <li>The claims gate: every number is checked against the verified-claims file before it ships.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>The reason I split it this way instead of cramming the messaging into a Clay system prompt: an AI column in Clay is a black box that burns credits per row and can't be argued with. Keeping the writing in Claude means the copy logic is a document we can read, edit, and version together, the claims discipline is enforced in one place, and Clay stays cheap because it only does the deterministic work.</p>
+      <p>And the part I want to be unmissable: this is not a me-in-the-loop system. The skills are tools, and they write the same whether I invoke them or Nate does. He drafts, handles objections, and preps calls with the same tools I built them with. My job is keeping the tools sharp and the claims file current, not ghostwriting sends. If I'm out for a week, the engine doesn't slow down.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GUARDRAILS + SALESFORCE -->
+<section id="guardrails">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">06 · The parts leadership asked about</span></div>
+    <h2 class="sec-title">Credits under control, Salesforce in the loop</h2>
+    <p class="sec-sub">Two things from our call worth making concrete: the spend guardrails, and why connecting to Salesforce closes the gap between what Nate works and what leadership sees.</p>
+    <div class="two">
+      <div class="panel dark">
+        <span class="kick">Credit guardrails</span>
+        <h3>It warns before it spends</h3>
+        <div class="bignum">~204</div>
+        <p style="color:#CFE3D4;margin:6px 0 16px;font-size:14.5px">credits used of the 5,000-credit allocation to build and validate the whole Stars list.</p>
+        <ul>
+          <li>Every enrichment is set to run only on empty rows, so nothing double-spends.</li>
+          <li>Conditional runs stop it enriching anything out of window or out of ICP.</li>
+          <li>It flags the estimate before a run, "this will cost 300 to 400 credits, yes or no," and warns before it nears the cap.</li>
+          <li>An append-only ledger tracks every spend by motion, so renewal is a receipts story.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <span class="kick">Salesforce integration</span>
+        <h3>Why everything should talk</h3>
+        <p style="margin:0 0 14px;color:var(--ink-soft);font-size:15px">The point of wiring Clay to Salesforce is that once a contact is surfaced, it becomes an account and contact in Salesforce automatically, with source tags attached. No one re-creates it. No gap between Nate's work and what execs can see.</p>
+        <ul>
+          <li>Three attribution fields on the record: engine-sourced, source motion, sourced date.</li>
+          <li>They're stamped at creation and written to Salesforce on approval.</li>
+          <li>First build step is confirming those fields exist in Salesforce, that's the scoping ticket to nail down with the team.</li>
+          <li>Keeps the shared scoreboard honest without anyone doing manual data entry.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>On credits, the guardrails are the reason I could build this whole thing for just over 200 of the 5,000 allocated. It won't run away because it asks before it spends and refuses to enrich anything out of window. On Salesforce, the case for getting everything talking is exactly what Cheryl said, it makes it easier for everyone when leadership asks how things are going. The tags flow in on their own, so there's never a gap between what Nate's doing and what the execs can see.</p>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR READ -->
+<section id="read" class="alt">
+  <div class="wrap">
+    <div class="eyebrow-row"><span class="kick">07 · Threads to shape together</span></div>
+    <h2 class="sec-title">Where I'd want your read</h2>
+    <p class="sec-sub">Most of the dials here are mine to run. Two are worth a few minutes of your read, and neither one slows anything down.</p>
+    <div class="read">
+      <div class="ri"><div class="rn">01</div><div><div class="rt">The scoring weights on Accounts</div><div class="rd">Fit and intent are config, not hardcoded. What mix of Stars gap, contact-center scale, and persona presence should decide an A versus a B? That judgment shapes everything the funnel surfaces below it. I've set a working version; your read sharpens it whenever it's convenient.</div></div></div>
+      <div class="ri"><div class="rn">02</div><div><div class="rt">The customer exclusion, one finding</div><div class="rd">The exclusion wire now runs on Nate's active-customer report from Salesforce, all 101 accounts reconciled against the universe, and it confirmed your Tuesday list exactly, with one exception worth your eyes: HCSC shows as an active customer, so I've moved it out of the new-logo motion and its contacts to the expansion lane. If your read differs, it's a one-flag flip back.</div></div></div>
+    </div>
+    <div class="say">
+      <span class="lbl">What I'd say</span>
+      <p>Neither of these blocks progress, the Stars motion is pacing today. They're the two judgment calls I'd rather set with your read than guess at, because getting them right early is what keeps the whole thing pointed at the right people.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">CLAY GTM ENGINE</span> · Star Ratings new-logo motion, validated · back-office motion, designed<br>
+    Dallas Andrews · GTM Engineer · built as a head start, and still building.
+  </div>
+</footer>
+
+<script>
+document.getElementById('ptoggle').addEventListener('click',function(){
+  document.body.classList.toggle('presenter');
+});
+document.querySelectorAll('.lhead').forEach(function(h){
+  h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});
+});
+</script>
+</body>
+</html>

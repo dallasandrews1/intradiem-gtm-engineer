@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grand Plan · Dallas · Eyes Only</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  :root{
+    /* Intradiem system, matched to gtmstrategy.dallasandrews.dev */
+    --blurple-deep:#16432C; --blurple-text:#15231B; --blurple-mid:#1F7340;
+    --creme:#FAFBF7; --lilac:#E7EEE3; --lilac-2:#D4DCCE; --lilac-3:#BFD8C6;
+    --sea:#E7EEE3; --sea-2:#B6D94C; --sea-3:#1F7340;
+    --peri:#F0F4ED; --peri-2:#E7EEE3; --gray:#51605A;
+    --spark:#FE5000;
+    --amber:#9a6313; --amber-bg:#FBF1E1; --red:#9B2C2C; --red-bg:#F9EAEA; --green:#2f8f4e; --green-bg:#E7EEE3;
+    --ff-head:'Playfair Display',serif; --ff-label:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;background:var(--creme);color:var(--blurple-text);line-height:1.55;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* HERO */
+  .hero{background:var(--blurple-deep);color:#fff;padding:56px 0 44px;position:relative}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--sea-2),var(--blurple-mid))}
+  .eyebrow{font-family:var(--ff-label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sea-2);margin-bottom:14px}
+  .hero h1{font-family:var(--ff-head);font-size:42px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+  .hero .spine{font-size:17px;color:var(--peri-2);max-width:820px}
+  .hero .spine b{color:#fff}
+  .phasebar{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+  .phasepill{font-size:12px;padding:6px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:var(--lilac-2)}
+  .phasepill.now{background:var(--blurple-mid);border-color:var(--blurple-mid);color:#fff;font-weight:700}
+
+  /* NAV */
+  nav{position:sticky;top:0;background:rgba(249,247,246,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--lilac-2);z-index:50}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+  nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--gray);text-decoration:none;padding:7px 13px;border-radius:8px}
+  nav a:hover{background:var(--peri-2);color:var(--blurple-deep)}
+
+  section{padding:46px 0 8px}
+  h2{font-family:var(--ff-head);font-size:26px;font-weight:800;color:var(--blurple-deep);margin-bottom:6px}
+  .sub{color:var(--gray);margin-bottom:22px;max-width:760px}
+  h3{font-size:15px;font-weight:700;color:var(--blurple-deep);margin-bottom:8px}
+
+  /* ONE BREATH */
+  .breath{background:var(--peri);border-left:4px solid var(--blurple-mid);border-radius:0 14px 14px 0;padding:22px 26px;margin-bottom:8px}
+  .breath p{font-size:16.5px}
+  .breath .tag{font-family:var(--ff-label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blurple-mid);font-weight:700;display:block;margin-bottom:8px}
+
+  /* AUDIENCE SWITCHER */
+  .people{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+  .pbtn{font-size:13px;font-weight:700;padding:9px 16px;border-radius:999px;border:1.5px solid var(--lilac-2);background:#fff;color:var(--blurple-text);cursor:pointer}
+  .pbtn:hover{border-color:var(--blurple-mid)}
+  .pbtn.on{background:var(--blurple-deep);border-color:var(--blurple-deep);color:#fff}
+  .pcard{display:none;background:#fff;border:1px solid var(--lilac-2);border-radius:16px;overflow:hidden}
+  .pcard.on{display:block}
+  .phead{background:var(--blurple-deep);color:#fff;padding:18px 26px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px}
+  .phead .role{color:var(--sea-2);font-size:13px}
+  .pbody{padding:22px 26px;display:grid;grid-template-columns:1fr 1fr;gap:20px 30px}
+  @media(max-width:760px){.pbody{grid-template-columns:1fr}}
+  .pblock .lbl{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--blurple-mid);margin-bottom:5px}
+  .pblock p,.pblock li{font-size:13.5px;color:var(--blurple-text)}
+  .pblock ul{padding-left:17px}
+  .pblock li{margin-bottom:4px}
+  .say{background:var(--peri);border-radius:10px;padding:13px 15px;font-style:italic}
+  .dont{background:var(--red-bg);border-radius:10px;padding:13px 15px}
+  .dont .lbl{color:var(--red)}
+
+  /* MANDATES */
+  .mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:760px){.mgrid{grid-template-columns:1fr}}
+  .mcard{background:#fff;border:1px solid var(--lilac-2);border-radius:16px;padding:22px 24px;border-top:4px solid var(--blurple-mid)}
+  .mnum{font-family:var(--ff-head);font-size:32px;font-weight:800;color:var(--blurple-deep)}
+  .mtitle{font-weight:700;margin-bottom:8px}
+  .mrow{font-size:13px;margin-bottom:7px}
+  .mrow b{color:var(--blurple-mid)}
+  .coshape{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;background:var(--sea);color:var(--sea-3);padding:3px 10px;border-radius:999px;margin-bottom:10px}
+
+  /* TIMELINE */
+  .tl{border-left:3px solid var(--lilac-2);margin-left:8px;padding-left:26px}
+  .tstep{position:relative;padding-bottom:26px}
+  .tstep::before{content:"";position:absolute;left:-34.5px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--lilac-3);border:3px solid var(--creme)}
+  .tstep.done::before{background:var(--sea-3)}
+  .tstep.now::before{background:var(--blurple-mid);box-shadow:0 0 0 5px var(--peri-2)}
+  .twhen{font-family:var(--ff-label);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--blurple-mid)}
+  .tstep h3{margin:3px 0 6px}
+  .tstep p,.tstep li{font-size:13.5px;color:#3d3355}
+  .tstep ul{padding-left:17px;margin-top:4px}
+  .prot{color:var(--sea-3);font-weight:700}
+
+  /* ASSET MAP */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--lilac-2);font-size:13px}
+  th{background:var(--blurple-deep);color:#fff;text-align:left;padding:11px 14px;font-family:var(--ff-label);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  td{padding:11px 14px;border-top:1px solid var(--lilac);vertical-align:top}
+  tr:nth-child(even) td{background:var(--peri)}
+  .st{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+  .st.live{background:var(--green-bg);color:var(--green)}
+  .st.seed{background:var(--amber-bg);color:var(--amber)}
+  .st.hold{background:var(--red-bg);color:var(--red)}
+
+  /* GATES */
+  .ggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:760px){.ggrid{grid-template-columns:1fr}}
+  .gcard{background:#fff;border:1px solid var(--lilac-2);border-left:4px solid var(--amber);border-radius:12px;padding:16px 18px}
+  .gcard h3{font-size:14px}
+  .gcard p{font-size:13px;color:#3d3355}
+  .gdate{font-family:var(--ff-label);font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.06em;text-transform:uppercase}
+
+  /* RULES */
+  .rules li{background:#fff;border:1px solid var(--lilac-2);border-radius:12px;padding:13px 17px;margin-bottom:9px;list-style:none;font-size:13.5px}
+  .rules li b{color:var(--blurple-deep)}
+  .rules li::before{content:"◆";color:var(--blurple-mid);margin-right:10px;font-size:11px}
+
+  /* STORY BANK */
+  .story{background:#fff;border:1px solid var(--lilac-2);border-radius:14px;padding:20px 24px;margin-bottom:14px}
+  .story h3{color:var(--blurple-mid)}
+  .story p{font-size:13.5px;margin-bottom:6px}
+
+  footer{background:var(--blurple-deep);color:var(--lilac-2);padding:30px 0;margin-top:56px;font-size:12.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .seastripe{height:4px;background:var(--sea-2)}
+  @media print{nav{display:none}.pcard{display:block!important;page-break-inside:avoid;margin-bottom:16px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Eyes only · Dallas Andrews · GTM Engineer · Intradiem</div>
+    <h1>The Grand Plan</h1>
+    <p class="spine">Everything in one place: what I own, what I say to whom, the sequence, the gates, and the receipts. When it lives here, I never have to memorize it.</p>
+    <div class="phasebar" id="phasebar"></div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#breath">One breath</a>
+  <a href="#audience">Who am I talking to</a>
+  <a href="#mandates">Four mandates</a>
+  <a href="#plan">The spine</a>
+  <a href="#assets">Asset map</a>
+  <a href="#gates">Gates &amp; tripwires</a>
+  <a href="#rules">Rules I never break</a>
+  <a href="#show">How I show it</a>
+  <a href="#arc">6-12 month arc</a>
+  <a href="#stories">Story bank</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="breath">
+  <div class="breath">
+    <span class="tag">The whole plan in one breath</span>
+    <p>Pipeline stops being a sales activity and becomes a system output. I own the engine that does it: a live Golden List, waterfall enrichment, a tiered signal library, personalized messaging at scale, and instrumentation that makes every result provable. Q3 it delivers <b>15 vetted meetings, 10x messaging throughput, and 200+ back-office contacts</b>, all numbers we shape together, and the engine itself is the fourth deliverable. The team that pilots it becomes the blueprint for Intradiem globally. That team is us.</p>
+  </div>
+  <p class="sub" style="margin-top:14px">If a conversation goes deeper than this, jump to the person's card below. Every card is written so I can speak it, not recite it.</p>
+</section>
+
+<section id="audience">
+  <h2>Who am I talking to?</h2>
+  <p class="sub">Click a person. Each card: what they own, what they care about, my 30-second version, and the thing I do not say.</p>
+  <div class="people" id="people"></div>
+  <div id="cards"></div>
+</section>
+
+<section id="mandates">
+  <h2>The four mandates</h2>
+  <p class="sub">Naveen's words: a rough sketch, we shape them together. So every number below is a placeholder I help define, never a quota I defend.</p>
+  <div class="mgrid">
+    <div class="mcard">
+      <div class="mnum">15</div>
+      <div class="mtitle">Vetted new-logo meetings</div>
+      <span class="coshape">co-shape with Naveen</span>
+      <div class="mrow"><b>Who:</b> senior tech officers in WFM / Ops. Sourced two ways: Star Ratings motion (MA payers at the bonus cliff) + back-office motion via Clay.</div>
+      <div class="mrow"><b>Engine delivers:</b> Golden List → enrichment → signal-triggered sequences → reps work replies. I never personally chase meetings.</div>
+      <div class="mrow"><b>Pacing:</b> roughly 1.7 sourced/week from Week 3. Day-75 tripwire: under 10 by Sep 19, escalate and renegotiate, never discover it at QBR.</div>
+      <div class="mrow"><b>Risk:</b> the last mile lives in reps' reply handling. Defense: credit ratified at the qualified-reply / meeting-sourced line, source-tagged from day one.</div>
+    </div>
+    <div class="mcard">
+      <div class="mnum">10&times;</div>
+      <div class="mtitle">BDR messaging throughput</div>
+      <span class="coshape">co-shape with Naveen</span>
+      <div class="mrow"><b>What it really means:</b> one push becomes a motion that runs every week. Not raw volume.</div>
+      <div class="mrow"><b>My definition:</b> qualified replies per week, gated by a deliverability floor (open rate at or above baseline, spam below threshold). Scaling can never become spray-and-burn.</div>
+      <div class="mrow"><b>Engine delivers:</b> weekly conductor cadence, three variants per segment, kill losers, scale winners.</div>
+      <div class="mrow"><b>Risk:</b> vanity 10x poisons the 157 warm contacts. Defense: deliverability infra stands up before any scale.</div>
+    </div>
+    <div class="mcard">
+      <div class="mnum">200+</div>
+      <div class="mtitle">Back-office contacts</div>
+      <span class="coshape">co-shape with Naveen</span>
+      <div class="mrow"><b>Why:</b> front-office customers cannot hand us leads into their own back offices, so we source them ourselves through Clay, then run campaigns inside our install base.</div>
+      <div class="mrow"><b>Engine delivers:</b> ICP defined with Scott Kemme first, then sourcing. 200 qualified contacts, paced so they do not decay before BOO is sellable.</div>
+      <div class="mrow"><b>Key split:</b> the contacts are mine regardless of product timing. Only back-office meetings depend on BOO GA (Sept, Chris Busbee owns it). If GA slips, renegotiate meetings, never the contacts.</div>
+    </div>
+    <div class="mcard">
+      <div class="mnum">&infin;</div>
+      <div class="mtitle">Build + maintain the modern growth engine</div>
+      <span class="coshape">standing OKR</span>
+      <div class="mrow"><b>Scope (their words):</b> interactive pitches, pricing and ROI calculators, AI prospecting, custom demos per meeting, digital sales room, activation control plane, in-product messaging.</div>
+      <div class="mrow"><b>Framing:</b> a living system that stays current. The continuous engineering is the job. Head start is built; the build never ends.</div>
+      <div class="mrow"><b>Proof standard they chose:</b> Intercom ($1M pipeline in 30 days) and Rippling (2x cold email YoY, 60% open, 10% reply). The bar is "the blueprint the rest of the org copies."</div>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>The spine: their 8-week pilot, my protections layered in</h2>
+  <p class="sub">The onboarding site's own pilot sequence is the backbone. ◆ marks a premortem fix. Highlighted step is where I am right now.</p>
+  <div class="tl" id="timeline">
+    <div class="tstep" data-start="2026-06-01" data-end="2026-07-05">
+      <div class="twhen">Pre-start · now → Jul 6</div>
+      <h3>Get ahead of the ball (no system access needed)</h3>
+      <ul>
+        <li>Built: engine spec, Golden List schema, signal library, canonical 307-contract universe, message variant pack, Clay Day-1 build order, live artifact suite.</li>
+        <li>Posture: contributions to shape together, never a finished plan executed at anyone.</li>
+      </ul>
+    </div>
+    <div class="tstep" data-start="2026-07-06" data-end="2026-07-19">
+      <div class="twhen">Weeks 1–2 · Jul 6 → Jul 19</div>
+      <h3>Train &amp; build · the political week</h3>
+      <ul>
+        <li>Inherit the existing Clay build (80% done by Nate, Sierra, Naveen + consultant). Read before touching. Improve theirs, never stand a parallel one.</li>
+        <li><span class="prot">◆ Co-define measurement with Naveen:</span> engine credited at the qualified-reply / meeting-sourced line. Frame: "how I'd love for us to define what good looks like together." The single most important move of the quarter.</li>
+        <li><span class="prot">◆ Source tagging</span> in Clay / Salesforce before any volume. Three fields: gtm_engine_sourced, source_motion, sourced_date (via Genna).</li>
+        <li><span class="prot">◆ Back-office ICP with Scott Kemme</span> before sourcing a single contact.</li>
+        <li>Get real BOO GA confidence from Chris Busbee. Stand up Golden List v1 from the spec.</li>
+      </ul>
+    </div>
+    <div class="tstep" data-start="2026-07-20" data-end="2026-08-02">
+      <div class="twhen">Weeks 3–4 · Jul 20 → Aug 2</div>
+      <h3>Enrich &amp; launch small</h3>
+      <ul>
+        <li>Waterfall enrichment across the sources; Tier 1/2 signals live as Clay triggers.</li>
+        <li><span class="prot">◆ Deliverability infra first:</span> warmup, rotation, spam monitoring. Small instrumented sends only.</li>
+        <li>Three variants per segment, human approval on everything. <span class="prot">◆ Instrumentation dashboard</span> live: enriched → sent → open → reply → qualified → meeting, split by motion.</li>
+      </ul>
+    </div>
+    <div class="tstep" data-start="2026-08-03" data-end="2026-08-16">
+      <div class="twhen">Weeks 5–6 · Aug 3 → Aug 16</div>
+      <h3>Iterate · this shift IS the 10x</h3>
+      <ul>
+        <li>Kill underperformers, scale winners. Star Ratings moves from one push to weekly cadence.</li>
+        <li>First follow-up AI agent (the Automate capability). Back-office contacts flow into install-base campaigns.</li>
+      </ul>
+    </div>
+    <div class="tstep" data-start="2026-08-17" data-end="2026-08-30">
+      <div class="twhen">Weeks 7–8 · Aug 17 → Aug 30</div>
+      <h3>Review &amp; expand · the blueprint moment</h3>
+      <ul>
+        <li>Present pipeline + learnings from the dashboard: provable, source-tagged, never anecdotal.</li>
+        <li><span class="prot">◆ Mid-quarter recut with Naveen.</span> Contacts stay mine regardless of BOO timing.</li>
+        <li>Document the motion so another team can run it. That document is Goal 4.</li>
+      </ul>
+    </div>
+    <div class="tstep" data-start="2026-08-31" data-end="2026-09-30">
+      <div class="twhen">Days 57–90 · Sep</div>
+      <h3>Compound &amp; prove the repeat</h3>
+      <ul>
+        <li>Volume flows, reps handle replies, I enable them. <span class="prot">◆ Day-75 tripwire Sep 19:</span> under ~10 of 15, escalate early.</li>
+        <li>Package the whole motion as the repeatable engine and the QBR story.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="assets">
+  <h2>Asset map: what exists, who it serves, when it surfaces</h2>
+  <p class="sub">One rule above all: nothing here implies replacing what Nate and Sierra already built. Everything is framed as making their build stronger.</p>
+  <table>
+    <tr><th>Asset</th><th>What it is</th><th>Serves</th><th>Status / when to show</th></tr>
+    <tr><td><b>Strike Room</b></td><td>Per-account digital sales room: snapshot, ROI, why-now, committee, sequences</td><td>Nate + reps · Mandate 1</td><td><span class="st live">SHOW EARLY</span> His Section 07 line item, live</td></tr>
+    <tr><td><b>ROI Calculator</b></td><td>Live idle-time ROI with exposed math, loads real accounts</td><td>Reps, economic buyers · Mandate 4</td><td><span class="st live">SHOW EARLY</span> Placeholder labels stay visible until numbers are verified</td></tr>
+    <tr><td><b>Golden List</b></td><td>Live strike board: fit, ROI, triggers, monitored signals</td><td>Naveen, Nate · Mandates 1, 2</td><td><span class="st live">SHOW EARLY</span> The literal Section 05 foundation</td></tr>
+    <tr><td><b>Control Plane</b></td><td>Install-base activation: adoption gaps, white space, risk, routed plays</td><td>CS / AEs · Mandate 3</td><td><span class="st live">SHOW WEEK 2+</span> After install-base data access</td></tr>
+    <tr><td><b>Command Center</b></td><td>One front door: funnel, approvals, deliverability, attribution</td><td>Naveen · weekly readout</td><td><span class="st seed">SEEDED</span> Label every seeded number before he asks</td></tr>
+    <tr><td><b>Star Ratings Motion board</b></td><td>93 addressable contracts, tiered, measure gaps, data-lineage strip (his seed → vintage → 307 rebuild → the cut → October rule)</td><td>Naveen, squad · Mandate 1</td><td><span class="st live">SHOW EARLY</span> Bridge built + measure surface verified Jun 30; the lineage strip IS the universe-rebuild story, on screen</td></tr>
+    <tr><td><b>Day-1 Audit Console</b></td><td>Salesforce / Slack foundation audit</td><td>Genna partnership</td><td><span class="st hold">HOLD</span> Reframe as "the audit I run WITH Genna," wire after scoped access</td></tr>
+    <tr><td><b>Mission Control</b></td><td>My private tracker: mandates, gates, receipts, relationships</td><td>Me only</td><td><span class="st hold">PRIVATE</span> Never screen-shared</td></tr>
+    <tr><td><b>Signal engine + TAM engine + impact scorecard</b></td><td>Three Python engines: install-base signals, net-new scoring, ELT scorecard (surfaced vs realized, never blended)</td><td>Everything above</td><td><span class="st live">LIVE ON SAMPLES</span> Real CSVs swap in on access; logic never changes for go-live</td></tr>
+    <tr><td><b>Cohesion layer / conductor</b></td><td>Weekly 7-stage orchestrator: fail-closed, human gate, deliverability gate</td><td>Mandate 2 cadence</td><td><span class="st seed">DRY-RUN</span> Preflight must print READY before DRY_RUN flips</td></tr>
+    <tr><td><b>Hosted platform (brain + Slack + plugin)</b></td><td>One brain, thin seller surfaces, read-only, keyed per surface</td><td>Reps at scale · Month 2+</td><td><span class="st seed">AWAITING ACCESS</span> Lead with the Claude plugin, no IT dependency</td></tr>
+    <tr><td><b>Skills, wave 1 (signal-to-play, competitive-intel, content-engine, roi-business-case)</b></td><td>Repeatable workflows inside Claude</td><td>Sierra, Nate, Naveen</td><td><span class="st live">LIVE</span> Deploy on demand, each maps to a likely team ask</td></tr>
+    <tr><td><b>Skills, wave 2 (Jul 5 build-out: first-draft-engine, copy-sharpener, daily-war-room, clay-credit-steward, naveen-weekly-readout, objection-handler, backoffice-icp, launch-kit)</b></td><td>The daily motion as skills: copy gates with a verified-claims hard stop, morning signal sweep, credit ledger, Friday readout, reply reframes (incl. We-Have-WFM and Wait-for-October), the Scott straw man, the launch compiler</td><td>Me daily · Nate on replies · Naveen on Fridays</td><td><span class="st live">LIVE</span> War room + copy stack run from Day 1; launch kit compiles Aug off Chris's real confidence</td></tr>
+    <tr><td><b>Three-surface system (Start Here · this page · Function Roadmap)</b></td><td>Daily calibration / people-and-rules / staying-ahead strategy, all eyes-only, each with a distinct job</td><td>Me only</td><td><span class="st hold">PRIVATE</span> Never screen-shared; update cadence lives in the Roadmap's living protocol</td></tr>
+    <tr><td><b>Canonical Star Ratings data</b></td><td>307-contract time-phased universe, tiered targets, persona run-config, earnings signals</td><td>The Clay build · Day 1</td><td><span class="st live">LOCKED</span> Re-pull every October CMS release</td></tr>
+    <tr><td><b>Clay GTM Engine workbook (built Jul 7–9)</b></td><td>Live Accounts (98) + Contacts (137 across all 27 eligible parents, ~106 deliverable) + staged Wave 1 sequencer, everything behind the human-approval HOLD</td><td>New-logo Stars motion · Mandates 1, 2</td><td><span class="st seed">HOLD BY DESIGN</span> Sends wait on Naveen's flagged customer file + mailbox warmup, not on the build</td></tr>
+  </table>
+</section>
+
+<section id="gates">
+  <h2>Gates &amp; tripwires</h2>
+  <p class="sub">The four preflight blockers are people-gated and expected. Clearing them IS the go-live checklist.</p>
+  <div class="ggrid">
+    <div class="gcard"><div class="gdate">By end of Week 2 · Jul 19</div><h3>Attribution ratified, in writing</h3><p>Credit line agreed with Naveen + three Salesforce fields live via Genna. Nothing scales before this.</p></div>
+    <div class="gcard"><div class="gdate">Before any volume · Weeks 3–4</div><h3>Deliverability green</h3><p>Warmup, rotation, monitoring live. The 10x number is gated by this floor, permanently.</p></div>
+    <div class="gcard"><div class="gdate">Weeks 7–8 · late Aug</div><h3>Mid-quarter recut</h3><p>Re-negotiate the meeting number against real BOO GA confidence. Contacts stay untouched.</p></div>
+    <div class="gcard"><div class="gdate">Sep 19 · Day 75</div><h3>The tripwire</h3><p>Under ~10 of 15 sourced meetings: escalate that week. Renegotiate early, never explain late.</p></div>
+    <div class="gcard"><div class="gdate">Every send · always</div><h3>Human gate</h3><p>Human approval before anything leaves the building. Their guardrail, my design principle, never bypassed.</p></div>
+    <div class="gcard"><div class="gdate">Standing · weekly</div><h3>Clay credit ledger</h3><p>5,000 credits. Signals and intents burn fast. Track burn vs. remaining vs. planned motions; flag at 60% consumed. Budget clarified Jul 12 as a monthly reset, not a quarterly cap. As of Jul 17: ~864 consumed month-to-date (~17%), steady-state projection ~520/mo; every run pre-estimated and logged.</p></div>
+  </div>
+</section>
+
+<section id="rules">
+  <h2>Rules I never break</h2>
+  <ul class="rules">
+    <li><b>Verified claims only.</b> If it is not in the Value Repository with a source, it ships as [UNVERIFIED] or not at all. Regulated buyers, legal exposure, one bad stat kills the whole engine's credibility.</li>
+    <li><b>Inherit, never replace.</b> The squad is 80% through their Clay build. My job is to make their build great and make them faster, visibly. Any "my system vs. theirs" framing starts the credit war I planned against.</li>
+    <li><b>Co-shape, never defend.</b> The Q3 numbers are Naveen's rough sketch. I bring strong thinking to shape specifics with him, not a rigid plan executed at him.</li>
+    <li><b>Measurement before volume.</b> Instrumentation and source tagging exist before scale, so Weeks 5 through 8 are provable, not anecdotal.</li>
+    <li><b>Dry-run by default.</b> Notifiers and conductor preview-only until explicitly flipped, and preflight prints READY first.</li>
+    <li><b>Config over code.</b> Thresholds, weights, and copy live in config files. Behavior changes are config edits, reviewable and reversible.</li>
+    <li><b>Two-mode brand.</b> Intradiem green (Playfair / DM Sans / JetBrains Mono, per gtmstrategy.dallasandrews.dev) for anything Intradiem-context, and this page now runs on it too so the reflex stays consistent. Personal blurple stays for non-Intradiem work only.</li>
+    <li><b>Reps keep the judgment.</b> AI does the enrichment, people approve the sends, reps own the conversations. I make them faster, never replaceable.</li>
+    <li><b>WFM players are the layer we sit on, never competitors.</b> Verint, NICE, Calabrio plan the day; DWO orchestrates what happens inside it: idle-time actions, coaching and training delivery, back-office work. When their automation add-ons show up in a deal, wedge against the module and the contact-center-only scope, never the layer itself. Positioning against the layer is a category error that undermines our own integration story.</li>
+    <li><b>Contact center AND back office, six verticals.</b> Never frame Intradiem as a call-center tool.</li>
+  </ul>
+</section>
+
+<section id="show">
+  <h2>How I show it: the reveal order and the screenshare playbook</h2>
+  <p class="sub">The arsenal is only as good as its unveiling. One artifact per meeting, aimed at THEIR problem, and the meeting is about them, never a product tour of mine.</p>
+
+  <h3 style="margin-bottom:10px">The order of reveals</h3>
+  <ul class="rules">
+    <li><b>Day 1-2 (Naveen is OOO until Jul 7):</b> show nothing unsolicited. Work inside THEIR Clay, run the audit quietly, ask questions, take the access steps. Naveen never learns about my tools secondhand; he has seen starratings.dallasandrews.dev and the one-pager, and that stays the public high-water mark until the 1:1.</li>
+    <li><b>Jul 7+, the first 1:1 (the flagship reveal):</b> open with the measurement co-definition conversation, not a tool. Then ONE screenshare: the engine walkthrough page built for him, into the Golden List. Close on the ask list. Agenda and talk track already exist (Naveen_FirstOneOnOne_Agenda.md, Naveen_Walkthrough_Talk_Track.md).</li>
+    <li><b>After Naveen, in order:</b> Nate (a win, not a demo), Genna (the shared audit), Sierra (a demo on HER pick), Scott (paper, no screen), Chris (a question, no screen), Tom (an offer). Execs only through Naveen, and only once the realized column has rows.</li>
+    <li><b>Org-wide (Learner's Cafe, July):</b> the one public performance: build a small skill live on someone's real workflow. The platform sells itself; I never pitch it.</li>
+  </ul>
+
+  <h3 style="margin:22px 0 10px">Universal screenshare rules</h3>
+  <ul class="rules">
+    <li><b>A dedicated demo browser profile.</b> Bookmarks only to showable pages. The three eyes-only surfaces, Mission Control, and this page are never open in that profile, ever.</li>
+    <li><b>One artifact per meeting, maximum.</b> The tour instinct is the enemy; a person who touched one tool that solved their problem tells others. A person who watched ten tools remembers none.</li>
+    <li><b>Seeded numbers get labeled out loud before anyone asks.</b> "These are placeholder assumptions until the real export lands" said proudly is credibility; discovered silently it is a scandal.</li>
+    <li><b>Never trigger a live send in a demo.</b> Dry-run views only. The human gate is part of the show, not an obstacle to it.</li>
+    <li><b>Every meeting ends with a leave-behind link</b> they can open themselves later. Naveen's own standard: nobody remembers slide 14; everyone remembers the calculator they moved with their own hands.</li>
+    <li><b>Their data beats my demo data.</b> Any artifact that can load the audience's own account does so before the meeting.</li>
+  </ul>
+
+  <h3 style="margin:22px 0 10px">Per-audience flows</h3>
+  <table>
+    <tr><th>Audience</th><th>Open with (no screen)</th><th>Screenshare</th><th>Leave behind</th><th>Never show</th></tr>
+    <tr><td><b>Naveen · 1:1 #1</b></td><td>"How I'd love for us to define what good looks like together" + the credit-line sketch</td><td>GTM_Engine_for_Naveen_Review.html → Golden List. Point out his fingerprints: the earnings-call and QBP-filing signals he suggested, live</td><td>intradiem-handoff bundle + the one-pager</td><td>Eyes-only surfaces; the 30-60-90 (superseded); any unlabeled seeded number</td></tr>
+    <tr><td><b>Nate</b></td><td>His top account's morning ranked list, printed or pasted in Slack</td><td>Strike Room loaded on HIS account, then work inside THEIR Clay table together</td><td>The strike plan file for that account</td><td>Anything framed as a parallel system; his sequences without him driving</td></tr>
+    <tr><td><b>Genna</b></td><td>The three fields + one report, requested her way, read-only posture stated first</td><td>Day-1 Audit Console as OUR shared checklist, her pace</td><td>The field spec one-pager</td><td>Any write to SFDC; any mention of admin access</td></tr>
+    <tr><td><b>Sierra</b></td><td>"Pick any asset you're proud of"</td><td>Content engine run live on her pick; then the signal-to-play brief showing Marketing fires the same moment Sales does</td><td>The generated content set, hers to edit</td><td>Customer-facing claims that haven't passed verified-metrics</td></tr>
+    <tr><td><b>Scott</b></td><td>The ICP straw man on paper: "here's my hypothesis, tear it up"</td><td>None. This meeting is his expertise, not my tooling</td><td>BackOffice_ICP_v0 with his corrections logged</td><td>Sourced contacts (none exist before this meeting, by rule)</td></tr>
+    <tr><td><b>Chris</b></td><td>"Is September launch or GA? And who owns launch execution today?" His confidence in his words</td><td>None initially; launch-kit outline later if he leans in</td><td>Nothing needed; the follow-through is the impression</td><td>Anything implying his dates are my commitments</td></tr>
+    <tr><td><b>Tom</b></td><td>The offer: three variants per segment, real reply data weekly, his as market intelligence</td><td>Variant tracker, once it holds real data</td><td>The weekly variant readout, standing</td><td>Positioning opinions; I test messages, he owns narrative</td></tr>
+    <tr><td><b>Execs / skip-level</b></td><td>The 30-second verbal from the audience card. That's it</td><td>Command Center only via Naveen, only when realized rows exist</td><td>Nothing unsolicited</td><td>Unverified numbers, ever; anything Naveen hasn't seen first</td></tr>
+  </table>
+
+  <h3 style="margin:22px 0 10px">Where the showable things live</h3>
+  <ul class="rules">
+    <li><b>Deployed pages (shareable links):</b> gtmstrategy.dallasandrews.dev, starratings.dallasandrews.dev, plus the two host-anywhere deploy folders. Best for leave-behinds.</li>
+    <li><b>Local dashboards (open the HTML in the demo profile):</b> control tower, attribution, approval queue, deliverability, variant tracker, the Naveen review page, the audit console.</li>
+    <li><b>Live artifacts (Claude sidebar):</b> Golden List, Strike Room, ROI Calculator, Command Center, Control Plane. My working surfaces; for meetings prefer the browser-rendered equivalents unless the live-data pull IS the demo.</li>
+    <li><b>In their tools:</b> the Clay build itself is the most political surface. Improvements demoed inside THEIR table read as help; the same thing in my window reads as replacement.</li>
+  </ul>
+</section>
+
+<section id="arc">
+  <h2>The 6-12 month arc</h2>
+  <p class="sub">The system is built. The win is political, and it is won by making dependency owners feel like authors of the outcome.</p>
+  <div class="mgrid">
+    <div class="mcard">
+      <div class="mtitle">The sequencing logic</div>
+      <div class="mrow">Net-new outbound runs on external data I control on day one. Install-base expansion runs on internal data owned by other orgs and gated by governance. So: <b>net-new is the visible wedge, install-base is the parallel access-and-relationship campaign.</b> Never stake early credibility on data I do not yet control.</div>
+    </div>
+    <div class="mcard">
+      <div class="mtitle">The arc</div>
+      <div class="mrow"><b>0–30:</b> listen, map owners, pilot the wedge with one or two reps. <b>30–60:</b> one rep books one meeting off a strike plan; claim-approval path secured. <b>60–90:</b> scorecard to the exec sponsor in their language; install-base signals on cleared data. <b>4–6 mo:</b> both motions live across the team. <b>6–12 mo:</b> the brain becomes the company's GTM intelligence layer, owned by me, as the company scales toward exit.</div>
+    </div>
+    <div class="mcard">
+      <div class="mtitle">Dependency owners to recruit</div>
+      <div class="mrow">Product-usage data: CTO + Busbee/Naveen (allies). Salesforce: Genna + RevOps, read-only first. Slack install: IT, lead with the plugin instead. Procurement (Clay renewal): open the track early. Claims: Marketing + Legal approval workflow. Air cover: CRO John Norton, orient wins to his metric.</div>
+    </div>
+    <div class="mcard">
+      <div class="mtitle">Learning agenda (answer in weeks 1–3)</div>
+      <div class="mrow">What does the modernized platform expose at event level, and who controls it? Is the CRO's #1 gap net-new or expansion? What is the real claim-approval process? What is already in the stack? Who is my skeptic, who is my champion? How fast does procurement actually move?</div>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <h2>Story bank: the narratives I reach for</h2>
+  <div class="story">
+    <h3>The universe rebuild (my best moment, if told right)</h3>
+    <p>"Naveen's workbook seeded this. When I went to extend it, I found the public data vintage had rolled: 33 of the original plans had already climbed above 4.0 on the 2026 ratings. So I rebuilt the universe to the current cycle: 307 sub-4.0 contracts, time-phased by which measures drop when under CMS 4208. His 38 plans are still in there, now with a tier and a window on each. And it re-pulls every October, so it never goes stale again."</p>
+    <p style="color:var(--gray)">Told this way it honors his work and shows mine. Told wrong ("your data was old") it is an insult. Order matters: his seed → my finding → the rebuild → the standing refresh.</p>
+  </div>
+  <div class="story">
+    <h3>The Clay credits story (stewardship)</h3>
+    <p>"We have 5,000 credits and a mandate to prove results before further investment. So every motion has a credit budget, I track burn weekly, and signals only run at the tier that earns their cost. When we ask for renewal, we bring receipts: credits in, qualified replies out."</p>
+  </div>
+  <div class="story">
+    <h3>The League proof (when someone asks "have you done this before")</h3>
+    <p>"At League I built 12+ tools and agents and 30+ skills, and launched them in five parts of the org, all through Claude. The pattern that worked: one brain I own, thin surfaces the teams use, human approval on everything customer-facing. That is the same architecture I am running here, tuned to Intradiem's stack."</p>
+  </div>
+  <div class="story">
+    <h3>The platform pitch echo (when talking product)</h3>
+    <p>"We run GTM the way our product runs operations: real-time signals trigger the right action, automatically, with a human keeping judgment. The engine is a live demo of the company thesis."</p>
+  </div>
+  <div class="story">
+    <h3>The unclaimed seam (when launch execution comes up)</h3>
+    <p>"Tom's stream tells us the market is ready, Scott's that the business is ready, Chris's that the product is ready. My week-one question was: when the launch is declared, who owns the package that turns 'ready' into an executed motion, positioning locked, reps enabled, sequences live, instrumentation on? If the answer is nobody, that's Mandate 4 territory and I'd like to own the compile, starting with BOO in September. If someone owns it, my machinery is theirs."</p>
+    <p style="color:var(--gray)">Ask the question before claiming the seam. And watch the date language: the site shows beta windows Aug-Q4 2026 with GA waves in 2027, while BOO reads "target launch September 2026." Week 1, ask Chris which one September is; it changes what reps can commit to in sourced meetings.</p>
+  </div>
+  <div class="story">
+    <h3>Why interactive tools, not decks (Naveen already believes this)</h3>
+    <p>"The onboarding site you built me is the standard. Nobody remembers slide 14 of a deck; everyone remembers the calculator they moved with their own hands. Every artifact I ship is something the audience can touch."</p>
+  </div>
+</section>
+
+</main>
+
+<div class="seastripe"></div>
+<footer><div class="wrap">
+  <span>Grand Plan · private · maintained with Claude, updated as the quarter moves</span>
+  <span id="today"></span>
+</div></footer>
+
+<script>
+(function(){
+  // ---------- date logic ----------
+  var now = new Date();
+  var start = new Date('2026-07-06T00:00:00');
+  var qEnd = new Date('2026-09-30T00:00:00');
+  var d75 = new Date('2026-09-19T00:00:00');
+  document.getElementById('today').textContent = now.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+
+  // phase pills
+  var pb = document.getElementById('phasebar');
+  var phases = [
+    {label:'Pre-start', s:new Date('2026-06-01'), e:new Date('2026-07-05')},
+    {label:'Wk 1–2 · Train & build', s:new Date('2026-07-06'), e:new Date('2026-07-19')},
+    {label:'Wk 3–4 · Enrich & launch', s:new Date('2026-07-20'), e:new Date('2026-08-02')},
+    {label:'Wk 5–6 · Iterate', s:new Date('2026-08-03'), e:new Date('2026-08-16')},
+    {label:'Wk 7–8 · Review & expand', s:new Date('2026-08-17'), e:new Date('2026-08-30')},
+    {label:'Compound · to Day 90', s:new Date('2026-08-31'), e:qEnd}
+  ];
+  phases.forEach(function(p){
+    var el = document.createElement('span');
+    el.className = 'phasepill' + (now>=p.s && now<=p.e ? ' now' : '');
+    el.textContent = p.label;
+    pb.appendChild(el);
+  });
+  if (now < start){
+    var cd = document.createElement('span');
+    cd.className='phasepill now';
+    cd.textContent = Math.ceil((start-now)/86400000) + ' days to Day 1';
+    pb.appendChild(cd);
+  } else if (now <= qEnd){
+    var dd = document.createElement('span');
+    dd.className='phasepill';
+    dd.style.borderColor='#B6D94C'; dd.style.color='#B6D94C';
+    dd.textContent = 'Day ' + (Math.floor((now-start)/86400000)+1) + ' · ' + Math.ceil((d75-now)/86400000) + 'd to tripwire';
+    pb.appendChild(dd);
+  }
+
+  // timeline highlight
+  document.querySelectorAll('.tstep').forEach(function(st){
+    var s = new Date(st.dataset.start), e = new Date(st.dataset.end + 'T23:59:59');
+    if (now > e) st.classList.add('done');
+    else if (now >= s) st.classList.add('now');
+  });
+
+  // ---------- audience cards ----------
+  var PEOPLE = [
+    {id:'naveen', name:'Naveen Thilagan', role:'My manager · Director, Product Strategy · exec sponsor',
+     owns:'Product strategy, the Star Ratings motion, my mandate, Clay investment decision.',
+     cares:['Platform vision: DWO suite, not single-product pitches. His words: "Queue Optimizer might not be the only product we pitch."','Proving Clay ROI before further spend: exhaust credits, show results, then decide.','Moving fast with judgment intact. He hands partnership; match it.'],
+     say:'"The engine you sketched in Section 05 is what I am building, and the first thing I want from you is to define together how we count what it produces. Here is the sketch: engine credited at the qualified-reply line, reps own everything after. Then I take the Clay build the squad started and make it run weekly."',
+     emphasize:['Everything framed as shaping HIS sketch, using HIS workbook, extending HIS signal ideas.','Bring the weekly Friday readout: leading indicators I own on top, risks flagged early.','His two signal ideas (earnings calls, QBP lost-revenue filings) are built. Let him find his fingerprints on the engine.'],
+     dont:'Never present locked numbers or a finished system. Never say "done" or "nothing left to build." Never explain domain basics back to him; he defined the role. Never lead with League; he hired that already.'},
+    {id:'nate', name:'Nathan Belfield', role:'Pipeline Generation Lead · runs the current outbound · closest collaborator',
+     owns:'The existing Clay base table, the 157 enriched contacts, current sending.',
+     cares:['His pipeline number and his credit for it.','Not being replaced or audited by the new guy with the fancy stack.','Speed: things that make TODAY easier.'],
+     say:'"You built the table this whole motion runs on. My job is to make it heavier: more signals, sharper messages, a morning list ranked so your first hour is your best hour. You work replies, I keep the machine fed, and the source tags mean your wins stay yours in writing."',
+     emphasize:['Give him a visible win in week one (the morning ranked strike list, or the Strike Room for his top account).','Credit rules protect HIM too; sell them that way.','Ask about his sending setup before touching anything.'],
+     dont:'Never imply his 157-contact build was small or that I am standing up a parallel system. Never touch his sequences without him in the room. He is the single biggest credit-war risk.'},
+    {id:'genna', name:'Genna Barrett-Moeller', role:'Director, Sales Operations · Salesforce gatekeeper',
+     owns:'Salesforce config, admin rights, CRM hygiene, routing, reporting.',
+     cares:['CRM integrity: no rogue system corrupting her org.','Being consulted before, not after.','Clean, auditable changes.'],
+     say:'"I need three fields and a report, and I want to build them your way. Read-only for me until you say otherwise. In exchange the engine gives you cleaner data than you have today: source-tagged contacts, no duplicate junk, and an audit we run together on whatever schedule you want."',
+     emphasize:['Naveen already set this up: she agreed to work closely with me on anything needing admin. Honor that frame.','The Day-1 audit console becomes OUR checklist, run with her, not on her.','Ask her how Clay→SFDC sync should work before proposing it.'],
+     dont:'Never ask for admin access again (Naveen already said no for now). Never write to Salesforce without her sign-off. Never show up with schema changes already decided.'},
+    {id:'sierra', name:'Sierra Jones', role:'Marketing · squad member on the Star Ratings motion',
+     owns:'Marketing content, campaign execution, her half of the 157-contact enrichment.',
+     cares:['Content volume and consistency without more headcount.','Campaigns that fire on the same trigger Sales acts on.','Looking sharp to her own leadership.'],
+     say:'"One source asset in, a full coordinated set out: blog, LinkedIn, nurture, one-pager, quotes, all on-brand and all citing verified numbers. And when a signal fires on an account, you get the campaign brief the same moment Sales gets the alert, so Marketing is never the follow-up act."',
+     emphasize:['Demo the content engine on something SHE picks.','Signal-to-play makes her simultaneous with Sales, a status upgrade.'],
+     dont:'Never generate customer-facing claims without the verified-metrics check. Never position the engine as replacing her judgment on brand and voice.'},
+    {id:'scott', name:'Scott Kemme', role:'Business readiness owner · back-office ICP partner',
+     owns:'Business readiness stream for the product launches.',
+     cares:['A back-office motion grounded in a real ICP, not a spray list.','Business readiness dates holding.'],
+     say:'"Before I source a single one of the 200 contacts, I want your read on who actually buys back-office optimization: titles, org shapes, verticals. You define the target, I build the machine that fills it, and we review the first fifty together before anything scales."',
+     emphasize:['He is the gate on Mandate 3 quality. ICP session in week 1 or 2.','Bring my pre-built ICP hypothesis as a straw man for him to correct.'],
+     dont:'Never source contacts before this conversation. Never treat his readiness stream dates as mine to promise against.'},
+    {id:'chris', name:'Chris Busbee', role:'Product readiness owner · controls BOO GA',
+     owns:'Product readiness, Back Office Optimizer GA (Sept target), Queue Optimizer beta.',
+     cares:['Realistic launch confidence, not GTM pressure on his dates.','In-product messaging done with Product, not around it.'],
+     say:'"I am building demand for what you are shipping, and I pace it off your real confidence, not the slide date. Give me your honest GA read and I will make sure the market is warm exactly when you are ready, not before. And when you want in-product messaging for white space, that is my Mandate 4."',
+     emphasize:['A product slip changes the value of what I source, never my ability to hit contacts. Say that out loud; it removes pressure.','He also coordinates my laptop; he was helpful before day one.'],
+     dont:'Never promise customers or reps a GA date on his behalf. Never let my meeting mandate become his shipping pressure.'},
+    {id:'tom', name:'Tom Russell', role:'Market readiness owner',
+     owns:'Market readiness stream: positioning, market timing across the launches.',
+     cares:['Message-market fit for BOO and QO.','The Star Ratings window being worked while it is open.'],
+     say:'"The engine gives you a live read on message-market fit: three variants per segment, real reply data weekly. You get evidence for positioning calls instead of gut feel, and the market data flows back to you as a standing readout."',
+     emphasize:['Offer variant test results as market intelligence; it makes him a consumer of the engine.'],
+     dont:'Never step into positioning ownership; I test messages, he owns the narrative.'},
+    {id:'elt', name:'Exec / skip-level', role:'CRO John Norton · CFO · anyone senior in a hallway',
+     owns:'The number, the exit story, efficient growth.',
+     cares:['Pipeline per dollar. Repeatability. Whether the new GTM function compounds.','A company scaling toward exit wants systems, not heroes.'],
+     say:'"I am the GTM Engineer on Naveen\'s team. Short version: pipeline as a system output instead of a sales activity. One live engine sources, enriches, and personalizes outbound, humans keep judgment, and every result is source-tagged so we know exactly what the machine produced. Q3 it is aimed at the Medicare Stars window and our customers\' back offices."',
+     emphasize:['One scorecard: opportunity surfaced vs realized, never blended. That honesty IS the credibility.','Their language: efficient growth, NRR extension, repeatable motion.'],
+     dont:'Never claim revenue credit. Never quote unverified numbers to anyone senior, ever. Never go around Naveen; wins flow up through him.'},
+    {id:'anyone', name:'Anyone else', role:'IntraDuction cohort, other departments, Learner\'s Cafe',
+     owns:'Nothing I depend on today; all future allies.',
+     cares:['What a GTM Engineer even is.','What AI can do for THEIR work.'],
+     say:'"Sales teams spend most of their week researching instead of selling. I build the system that does the researching: finds the right accounts, learns what is happening to them, drafts the first message, and hands the human a running start. Same pattern works outside sales, happy to show you on your own workflow sometime."',
+     emphasize:['The Learner\'s Cafe AI July session is the org-wide stage; volunteer a demo.','Every curious colleague is a future co-owner of the platform.'],
+     dont:'Never be the person who makes AI sound like replacement. The line is always: machine does the grind, people keep the judgment.'}
+  ];
+
+  var pdiv = document.getElementById('people'), cdiv = document.getElementById('cards');
+  PEOPLE.forEach(function(p,i){
+    var b = document.createElement('button');
+    b.className = 'pbtn' + (i===0?' on':'');
+    b.textContent = p.name.split(' ')[0] === 'Exec' ? p.name : p.name.split(' ')[0];
+    if(p.id==='elt') b.textContent='Execs';
+    if(p.id==='anyone') b.textContent='Anyone else';
+    b.onclick = function(){
+      document.querySelectorAll('.pbtn').forEach(function(x){x.classList.remove('on')});
+      document.querySelectorAll('.pcard').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      document.getElementById('card-'+p.id).classList.add('on');
+    };
+    pdiv.appendChild(b);
+
+    var c = document.createElement('div');
+    c.className = 'pcard' + (i===0?' on':'');
+    c.id = 'card-'+p.id;
+    c.innerHTML =
+      '<div class="phead"><b>'+p.name+'</b><span class="role">'+p.role+'</span></div>'+
+      '<div class="pbody">'+
+        '<div class="pblock"><div class="lbl">Owns</div><p>'+p.owns+'</p>'+
+        '<div class="lbl" style="margin-top:12px">What they care about</div><ul>'+p.cares.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>'+
+        '<div class="pblock"><div class="lbl">My 30 seconds</div><div class="say">'+p.say+'</div></div>'+
+        '<div class="pblock"><div class="lbl">Emphasize</div><ul>'+p.emphasize.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div>'+
+        '<div class="pblock"><div class="dont"><div class="lbl">Do not</div><p>'+p.dont+'</p></div></div>'+
+      '</div>';
+    cdiv.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>

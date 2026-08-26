@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Outbound Motion · Operating Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Palette + type lifted from the Intradiem Interactive Demo so this page and the deck read as one product */
+:root{
+  --green:#2DB56E; --green-600:#228752; --green-300:#7BD3A0; --green-100:#C4ECD4;
+  --forest:#014637; --orange:#F58220; --orange-600:#D96D12; --blue:#0F4C99;
+  --ink:#202020; --ink-2:#5A5A5A; --ink-3:#9A9A9A;
+  --bg:#FFFFFF; --sidebar:#F5F4F2; --zebra:#FAFAFA;
+  --tint:rgba(45,181,110,.12); --tint-soft:rgba(45,181,110,.08);
+  --otint:rgba(245,130,32,.10); --otint-line:rgba(245,130,32,.28);
+  --line:#E0E0E0; --line-strong:#BDBDBD; --r:8px;
+  --ff:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --ff-mono:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --shadow:0 1px 2px rgba(20,30,25,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--sidebar);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.sheet{max-width:1120px;margin:0 auto;background:var(--bg)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 30px}
+.eyebrow{font-family:var(--ff-mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+.logo{height:26px;width:auto;display:block;color:#014637}
+
+/* HERO */
+.hero{background:var(--forest);color:#fff;padding:60px 0 54px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.30),transparent 62%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .logo{height:46px;margin-bottom:24px;color:#fff}
+.hero .eyebrow{color:var(--green-300)}
+.hero h1{font-weight:900;font-size:46px;line-height:1.06;margin:14px 0 16px;letter-spacing:-.02em;max-width:20ch}
+.hero h1 .spark{color:var(--green-300)}
+.hero p.sub{font-size:18px;max-width:68ch;color:#C7DAD1}
+.hero p.sub b{color:#fff;font-weight:700}
+.hero .meta{margin-top:34px;display:grid;grid-template-columns:repeat(4,auto);gap:14px 44px;justify-content:start}
+.hero .meta div{color:#fff;font-size:14.5px;font-weight:500}
+.hero .meta div span{display:block;font-family:var(--ff-mono);color:var(--green-300);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:5px}
+
+/* SECTIONS */
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+section > .wrap > .eyebrow{color:var(--green-600)}
+h2{font-weight:900;font-size:30px;line-height:1.12;margin:10px 0 10px;letter-spacing:-.02em}
+h2 + .lede{font-size:16px;color:var(--ink-2);margin-bottom:22px;max-width:78ch}
+h3{font-weight:700;font-size:20px;margin:28px 0 8px;letter-spacing:-.01em}
+p{color:var(--ink-2);max-width:78ch;margin-top:10px;font-size:15.5px}
+p b,li b,td b{color:var(--ink);font-weight:700}
+
+/* TL;DR */
+.tldr{background:var(--tint-soft);border:1px solid var(--tint);border-left:4px solid var(--green);border-radius:var(--r);padding:24px 30px}
+.tldr .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:10px}
+.tldr h3{margin:0 0 8px;font-size:19px}
+.tldr ul{list-style:none}
+.tldr li{padding:8px 0 8px 24px;position:relative;font-size:15.5px;color:var(--ink-2)}
+.tldr li::before{content:"";position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:2px;background:var(--green)}
+.tldr li b{color:var(--ink)}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:var(--shadow)}
+.card.full{grid-column:1/-1}
+.tag{display:inline-block;font-family:var(--ff-mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:12px}
+.tag.go{background:var(--tint);color:var(--green-600)}
+.tag.now{background:#FDECD9;color:var(--orange-600)}
+.tag.gem{background:var(--tint);color:var(--green-600)}
+.tag.hold{background:var(--zebra);color:var(--ink-3);border:1px solid var(--line)}
+.card h4{font-size:19px;font-weight:700;margin-bottom:7px;letter-spacing:-.01em}
+.card p{font-size:14.5px;margin-top:0;max-width:none}
+
+/* TABLES */
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:14.5px}
+th{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-600);text-align:left;padding:0 16px 10px 0;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:12px 16px 12px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--zebra)}
+.seat{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+
+/* PHASES */
+.phase{display:flex;gap:18px;margin-bottom:16px;align-items:flex-start}
+.phase-num{flex-shrink:0;width:52px;height:52px;border-radius:var(--r);background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;letter-spacing:-.02em}
+.phase.p1 .phase-num{background:var(--green-600)}
+.phase.p2 .phase-num{background:var(--green)}
+.phase.p3 .phase-num{background:var(--green-300);color:var(--forest)}
+.phase-body{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px 24px;box-shadow:var(--shadow)}
+.phase-body h4{font-size:19px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+.phase-body .when{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-bottom:12px}
+.phase-body ul{list-style:none}
+.phase-body li{padding:5px 0 5px 22px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.phase-body li::before{content:"→";position:absolute;left:0;color:var(--green-600);font-weight:700}
+
+/* CALLOUT (caution) + GATE (safe / verified) */
+.callout{background:var(--otint);border:1px solid var(--otint-line);border-left:4px solid var(--orange);border-radius:var(--r);padding:20px 26px;margin-top:20px}
+.callout h4{font-size:18px;font-weight:700;color:var(--orange-600);margin-bottom:6px;letter-spacing:-.01em}
+.callout p{font-size:14.5px;color:var(--ink-2);margin-top:0;max-width:none}
+.callout p b{color:var(--ink)}
+.gate{background:var(--tint-soft);border:1px solid var(--tint);border-left:4px solid var(--green);border-radius:var(--r);padding:20px 26px;margin-top:20px}
+.gate h4{font-size:18px;font-weight:700;color:var(--green-600);margin-bottom:6px;letter-spacing:-.01em}
+.gate p{font-size:14.5px;color:var(--ink-2);margin-top:0;max-width:none}
+.gate p b{color:var(--ink)}
+
+/* OPS */
+.ops{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px}
+.ops .o{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.ops .o .n{font-family:var(--ff-mono);font-weight:600;font-size:11px;letter-spacing:.1em;color:var(--green-600);background:var(--tint);width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.ops .o h4{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:7px}
+.ops .o p{font-size:13px;margin:0;max-width:none}
+
+/* STATBAND */
+.statband{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;background:var(--forest);border-radius:var(--r);padding:24px 32px;margin-top:8px;position:relative;overflow:hidden}
+.statband::after{content:"";position:absolute;right:-130px;top:-150px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.22),transparent 62%)}
+.statband > div{position:relative;z-index:1}
+.statband .n{font-weight:900;font-size:28px;color:var(--green-300);letter-spacing:-.01em;line-height:1.1}
+.statband .l{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:#9DBBAE;text-transform:uppercase;margin-top:9px;line-height:1.6}
+
+/* FOOT */
+.foot{padding:26px 0 46px;text-align:center;color:var(--ink-3);font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;background:var(--bg);text-transform:uppercase}
+.foot .logo{height:26px;display:inline-block;margin:0 auto 12px;opacity:.85}
+.foot span{display:block;margin-top:4px}
+
+@media(max-width:860px){
+  .hero h1{font-size:32px}
+  .hero .meta{grid-template-columns:1fr 1fr}
+  .grid,.ops,.statband{grid-template-columns:1fr}
+  .phase{flex-direction:column;gap:12px}
+}
+@media print{
+  body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:14mm}
+  .card,.phase,.ops .o,.statband,.gate,.callout,.tldr{break-inside:avoid}
+  section{break-inside:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- Intradiem logo, defined once. Wordmark uses currentColor and inherits from .logo. -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/>
+</symbol></svg>
+
+<div class="sheet">
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow">Internal Strategy · GTM Engineering</div>
+    <h1>The GTM <span class="spark">Outbound Motion</span>.<br>Operating Plan.</h1>
+    <p class="sub">One system behind every outbound lane we're running: <b>Dallas builds the strategy and the daily plays, the reps run them</b>, and every move is visible in Slack the moment it happens. Manual by design today, automated the moment the tooling lands, and built so leadership can watch pipeline get made in real time.</p>
+    <div class="meta">
+      <div><span>Prepared for</span>Naveen Thilagan</div>
+      <div><span>By</span>Dallas Andrews (GTM Engineer)</div>
+      <div><span>Date</span>July 31, 2026</div>
+      <div><span>Companion docs</span>Nate Back Office plan · Jack Europe plan</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">The short version</div>
+      <h3>The system, in five lines</h3>
+      <ul>
+        <li><b>The model:</b> instead of waiting on tool approvals, I'm quarterbacking daily blitz sequences by hand. Each rep gets a morning brief in a dedicated Slack channel: exactly who to touch today, on which channel, with what copy. About an hour of their day, fully prepped.</li>
+        <li><b>The unit of work is a 10-day strike sequence:</b> a full buying committee at one account hit across email, LinkedIn, and phone in a stacked cadence that's very hard to ignore politely. Two accounts in flight per rep at a time. Every sequence ends in a reply, a meeting, or a clean answer.</li>
+        <li><b>Four lanes are live or staged:</b> Nate's US front office, Nate's net-new back office, Jack's Europe motion, and the install-base back office lane that hands 313 validated contacts to the account managers.</li>
+        <li><b>Visibility is built in, not reported after:</b> the Slack channels are open. Anyone in leadership can scroll a channel and see that day's plays, sends, and replies without asking anyone for a status.</li>
+        <li><b>The manual phase is also the business case:</b> every meeting booked by hand proves exactly what a sequencing tool automates. When the tooling lands, the playbook is already written and tested.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The operating model</div>
+    <h2>Manual quarterback now, automated engine next</h2>
+    <p class="lede">The strategy layer already runs on the agent system I've built: account research, strike sequence construction, copy, call scripts, and reply handling. What's manual is the last mile, and that's deliberate.</p>
+    <p>Every morning, Nate and Jack each get that day's plays dropped into their channel: the contacts, the channel for each touch, and the exact copy or talking points. They execute and flag replies; I reroute the sequence the same day a reply lands. The rep spends their hour selling instead of deciding what to do, and nothing depends on anyone remembering a cadence.</p>
+    <p>Clay stays what it's best at: the enrichment and context engine that feeds every sequence with verified contacts and account intelligence. It was never built to run multi-channel outreach, and we don't ask it to.</p>
+    <div class="ops">
+      <div class="o"><div class="n">01</div><h4>Slack channel per rep</h4><p>All motion traffic in one open channel. Leadership can self-serve the current state any time.</p></div>
+      <div class="o"><div class="n">02</div><h4>The daily brief</h4><p>Who, what channel, exact copy. Copy, paste, send, call. About an hour a day per rep.</p></div>
+      <div class="o"><div class="n">03</div><h4>Reply routing</h4><p>Any reply stops that contact's sequence on the spot and comes back as a drafted response the same day.</p></div>
+      <div class="o"><div class="n">04</div><h4>Swipe file</h4><p>Every message that earns a reply is kept. The motion learns; winners never get reinvented.</p></div>
+    </div>
+    <div class="statband">
+      <div><div class="n">10 days</div><div class="l">One decisive sprint per account</div></div>
+      <div><div class="n">~1 hr/day</div><div class="l">Rep time, fully prepped</div></div>
+      <div><div class="n">4 lanes</div><div class="l">Live or staged today</div></div>
+      <div><div class="n">313</div><div class="l">Install-base contacts staged for the AMs</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Targeting philosophy</div>
+    <h2>Strategic outreach, not account-based blasting</h2>
+    <p class="lede">Not every account gets a sequence. An account earns one when there's a problem big enough to be unignorable and evidence the timing is right.</p>
+    <p>For each candidate account we look for the <b>forcing function</b>: something public and current (an initiative, a stumble, a leadership change, a mandate) that connects to a problem we solve at a high level. When that connection exists, the whole sequence is built around shedding light on that problem, in the language of each seat on the buying committee. When it doesn't exist, we don't touch the account. The heat map decides where the next sequence goes, not the alphabet.</p>
+    <p>That's also why the cadence is stacked: email, LinkedIn, and phone landing together over ten days. A relevant message plus that kind of presence forces the question either way. Tell us to buzz off or take the meeting; both beat being ignored, and both are data.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The portfolio</div>
+    <h2>Four lanes, one system</h2>
+    <table>
+      <thead><tr><th style="width:24%">Lane</th><th style="width:14%">Status</th><th>Where it stands</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>US front office</b><br><span class="seat">Nate</span></td>
+          <td><span class="tag go">Scaling</span></td>
+          <td>The proven lane and the priority. Nate's messaging already books meetings; the play is to absorb exactly what he does into the engine so what works across 10 accounts runs across 200. Seven strike rooms delivered so far, each a full packet of committee contacts, research, emails, LinkedIn touches, and call scripts: <b>Centene, Cardinal Health, Aflac, Blue Shield of California, Bell Canada, BMO, and TELUS</b>. The Stars Wave 1 send kit added 42 contacts with all five touches ready to send.</td>
+        </tr>
+        <tr>
+          <td><b>Net-new back office</b><br><span class="seat">Nate</span></td>
+          <td><span class="tag go">Staged</span></td>
+          <td>Full plan of action drafted and staging now (companion doc). A lane with real walls and no crowd in it, timed so meetings stack toward the Back Office Optimizer GA window in September. First sprint launches as soon as staging and the safety gates read green.</td>
+        </tr>
+        <tr>
+          <td><b>Install-base back office</b><br><span class="seat">Savannah + AMs · marketing-led</span></td>
+          <td><span class="tag now">Next week</span></td>
+          <td>313 contacts sourced across the 15 Tier-1 accounts, sample list already validated by the account team. Aligning with Mary Ann when she's back next week; with her nod the list goes to the AMs and the warm expansion campaign refreshes around it. Warm lane, never cold sequences.</td>
+        </tr>
+        <tr>
+          <td><b>Europe</b><br><span class="seat">Jack</span></td>
+          <td><span class="tag go">Staged</span></td>
+          <td>Same operating system, Jack's market (companion doc). Reviewing the plan together with Matt on Monday so his AE lane and this motion pull in the same direction.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="gate">
+      <h4>The safety rule under every lane</h4>
+      <p>A current customer never gets a cold touch. Every sequence account clears a customer-exclusion check against Salesforce plus an entity check on legal names and subsidiaries before anything sends, and the final check runs on real rows the morning of first send.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Star Ratings</div>
+    <h2>The straight answer, and iteration two</h2>
+    <p class="lede">Roughly 250 emails delivered against the Stars angle so far. The right conclusion isn't that the angle failed; it's that email-only can't prove or disprove an angle.</p>
+    <p>Delivered doesn't mean seen. A message that lands before 7 am is on page four of the inbox by the time the exec sits down, and nothing else in an email-only motion pulls them back to it. That's the ceiling of a single channel, not a verdict on Star Ratings.</p>
+    <p><b>Iteration two closes the loop instead of restarting it.</b> Everyone already emailed moves into the multi-channel follow-through: calls that point back at the email, LinkedIn touches, and reply-to-thread sends with subject lines like "just called" that make the original message get read. The groundwork is already in Nate's hands: the Wave 1 send kit (42 contacts, all five touches, numbers defended inline) plus the first batch of about 50 cell numbers pulled through a ZoomInfo contact. The remaining numbers are part of the 6sense dig below.</p>
+    <div class="callout">
+      <h4>Lesson carried forward</h4>
+      <p>Sequencing matters as much as messaging: pilot the engine on angles that already work, then point it at experimental ones. Stars was the reverse order, which makes it a bad benchmark for the system and a fine experiment to finish properly. The front office lanes now run on proven ground first.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Signals</div>
+    <h2>6sense: from a report we receive to a system that fires</h2>
+    <p class="lede">Two threads, one asset we already pay for, credits on the clock.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag now">This week</span>
+        <h4>Contacts and numbers</h4>
+        <p>Digging into the sales side of 6sense to see what it can contribute on direct dials and contact identification, starting with the Stars follow-through and the live sequences. The credits expire in about a month, so this happens now.</p>
+      </div>
+      <div class="card">
+        <span class="tag go">Head start</span>
+        <h4>Intent-triggered campaigns</h4>
+        <p>John's proposal (keyword intent fires a defined play for a defined persona) maps directly onto the signal-to-play engine already running in the war room. The build here is repointing that engine at our own 6sense feed rather than starting from zero. John gets an update next week on the plan and first output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Tooling</div>
+    <h2>The tool that automates what we're proving by hand</h2>
+    <p class="lede">The manual system works and is producing now. What it can't do by hand is scale past a handful of accounts per rep, and that's exactly the job a sequencing tool does.</p>
+    <p><b>Lemlist is the fit:</b> one campaign engine that runs the emails, the call steps, the LinkedIn touches, and the A/B tracking of what's working, the same multi-channel cadence we're proving manually. And it's absolutely an AI tool, which matters for how it gets positioned. Clay stays underneath it; Clay wasn't built to be an outreach engine, it's an enrichment engine, and the two don't overlap.</p>
+    <p>The path we're on: confirm trial capacity on Nate's side, run a small live campaign on the free tier, and let those results carry the case for paid seats. Proof first, ask second.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Visibility</div>
+    <h2>How the work stays visible</h2>
+    <div class="ops">
+      <div class="o"><div class="n">01</div><h4>Open Slack channels</h4><p>The daily plays, sends, and replies, visible to anyone curious, the day they happen.</p></div>
+      <div class="o"><div class="n">02</div><h4>Weekly 15Five</h4><p>The weekly check-in discipline starts this week and runs every week.</p></div>
+      <div class="o"><div class="n">03</div><h4>Friday recap</h4><p>A weekly recap of what shipped, what moved, and what's next, in Naveen's Slack DM every Friday.</p></div>
+      <div class="o"><div class="n">04</div><h4>Forwardable docs</h4><p>This plan and the two motion docs are built to travel. Send them as-is to whoever should see them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The sequence of moves</div>
+    <h2>Next steps, in order</h2>
+
+    <div class="phase p1">
+      <div class="phase-num">1</div>
+      <div class="phase-body">
+        <h4>Now through the weekend</h4>
+        <div class="when">Jul 31 · Aug 2</div>
+        <ul>
+          <li>Finish standing up both Slack channels and drop the first daily briefs.</li>
+          <li>Stage the net-new back office sprint; customer-exclusion and entity checks run before anything sends.</li>
+          <li>First sends go out in the Sunday evening window once the gates read green.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase p2">
+      <div class="phase-num">2</div>
+      <div class="phase-body">
+        <h4>Monday</h4>
+        <div class="when">Aug 3</div>
+        <ul>
+          <li>Keegan: walk the plan, get his read, map his lane to the motion.</li>
+          <li>Matt + Jack: review the Europe plan together, fold in Matt's feedback, align on the Lemlist trial path.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase p3">
+      <div class="phase-num">3</div>
+      <div class="phase-body">
+        <h4>Next week</h4>
+        <div class="when">Aug 3 · Aug 7</div>
+        <ul>
+          <li>Mary Ann alignment on the 313-contact install-base list; with her nod it goes to the AMs.</li>
+          <li>6sense dig: contacts and numbers for the Stars follow-through, plus the intent-play design. Update to John.</li>
+          <li>Stars iteration two begins: multi-channel follow-through on everyone already emailed.</li>
+          <li>Lemlist trial campaign live if trial capacity checks out; results become the case for seats.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Intradiem · GTM Engineering · Outbound Motion Operating Plan v1</span>
+  <span>Prepared by Dallas Andrews · July 31, 2026</span>
+</div>
+
+</body>
+</html>

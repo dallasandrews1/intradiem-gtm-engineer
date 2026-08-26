@@ -1,0 +1,718 @@
+[00:00] Which is basically everything without Molina, Tizer, Scan, Humana, UHG, CVS, Elements, maybe, maybe the sixth.
+[00:11] Okay, go over, run that back again in like 30 second synopsis of what's going to make us the heroes and getting meetings with and the accounts and just, and then also send you that.
+[00:26] So I have the list of who our current customers are.
+[00:30] I'll send you, I'll send you, I'll flag this between current customers who, but I think this is a file that I might have sent you.
+[00:37] Humana, we already do business with.
+[00:39] Oh, you did. You did. I just didn't, the other tab. Yeah, pay a snapshot. Okay. All right.
+[00:44] It's there and we should have gone through this. My apologies. Like, I think we've been moving so fast. So this is pay a snapshot, but that this is not the entire list, I think.
+[00:53] Yes, it's truly the list.
+[00:58] Okay. And all of our current customers that we are looking to focus on for back office expansion with the queue optimizer and other products that we're, we're getting really launched.
+[01:11] Um, so this sheet, right?
+[01:16] Let's separate the back office motion and the, and the start readings motion just for a brief minute.
+[01:26] We could, we could be selling back office products with them too.
+[01:29] Got it.
+[01:30] Yeah.
+[01:31] Let me, let me kind of walk you through all the thoughts that we've collected so that you get the full picture.
+[01:35] Please do.
+[01:36] So this, this is the, this, this is a data set that we put together that captures everything to do with star ratings. Now star ratings is sort of a, it's sort of a metric that contains 40 measures.
+[01:52] Yeah, you got that.
+[01:53] From the health chemistry. Remember, I know star ratings.
+[01:56] Oh, okay. Perfect. Yeah. Gotcha.
+[01:58] You got to save the time there. So that's amazing. Yeah. Yeah.
+[02:02] Awesome. Awesome.
+[02:04] And that's the motion that I use to like, so I already know how this like that world's trust, like more than you think so.
+[02:10] That is amazing. That is, I didn't even realize that. That is amazing that you told me that now this.
+[02:17] We're looking at positioning into DM as a whole, like the entire portfolio as something that can move star ratings for this list.
+[02:30] We're already our customers because we're like, we've got, I think internally the strategy is, is separate between like there's a new logo sales team and then there's an existing customer sales team.
+[02:41] Our first internal customers are new logo sales people are business in the existing customers.
+[02:46] Very good. Like we have someone called Mary Ann and Rachel.
+[02:49] They are like some of the account managers for all these big accounts.
+[02:52] They're very good at getting new businesses, new product comes out, they know how to go sell it very strong.
+[02:58] I mean, this season, I think we're seeing a lot of competition. So maybe we're having some struggles there.
+[03:02] But however, we're first going to service the new logo comes the new logo sales team, which so we want to avoid United healthcare,
+[03:14] which I'm an a CVS Kaiser elements.
+[03:17] Centine is not a customer, so Centine is a big one. We have to include them in the list. HPC is not a customer.
+[03:24] Scan it out, I believe is a customer. And everybody else is not a customer.
+[03:32] So this is the, this everybody, so I'll let me flag this for you.
+[03:37] you. That would be great. Yeah, just like a whatever on this on
+[03:43] this tab, like just different colors, something that lets me know
+[03:46] that they're current customers and so we can get actual CSE or
+[03:49] list of all of them. That'd be great because that's going to be
+[03:53] like, I remember it's good. It ain't that good. I wouldn't trust
+[03:57] it that far. Just off of one conversation. Yeah, I'm not a
+[04:03] bad at this. It's fine as not getting it, but I'll flag it
+[04:23] for you and I'll send it to you. So let's create. So this is
+[04:29] the customer list. So even with respect to contracts, right? So
+[04:36] if we're doing any messaging to if you manage to find like the
+[04:42] leader who's later on a particular contract and it's probably
+[04:45] something that we have to discuss, are we going contract
+[04:47] specific, want to avoid the companies who are existing
+[04:51] customers. So that this list also needs to be trimmed
+[04:55] based on, you know, a company full dream. Mm hmm. Yeah, and
+[04:59] that I mean, we've got this. That helps me when I've got some
+[05:04] sort of access to Salesforce because I could I can just look
+[05:08] that up and have it, you know, I can I can separate that on my
+[05:12] own, on my own. And once I've got a read, I'll read access so I can
+[05:15] figure out who so. Yeah, Salesforce, yeah, Salesforce data, I
+[05:20] think should, I think should give you a lot of contacts, whatever
+[05:24] we have in terms of our history with these companies, whatever
+[05:28] interactions we've had. But there could be a bunch of
+[05:32] companies that have where Salesforce is not going to be
+[05:36] helpful at all. Maybe that's where we come into play because
+[05:40] there's not a starting interrupt. So they're not going to be
+[05:43] helpful because there isn't like accurate information in Salesforce
+[05:46] or what do you mean by that? Maybe no information against these
+[05:51] companies. We've never even tried to target them. Well, no, no,
+[05:54] that's fine. I don't need anything for a new company. Just
+[05:56] the customers is what I'm saying. Like I can.
+[06:00] I can grab a list of who's already in Salesforce, if you guys keep up with current customers
+[06:06] in Salesforce that way, and that helps flag as I'm working, using Cloud, etc.
+[06:12] I'll have a source of proof list of who these customers are.
+[06:16] So there's never a situation where it's drifting or creating messaging for someone for an account
+[06:25] that you should be talking to, etc. That's what I mean.
+[06:28] No, no. Got it. Got it. Got it. I think that should be fine.
+[06:31] I did. I think set up some time with Nate and Jenna.
+[06:34] I don't know if this is it today or tomorrow.
+[06:36] Thursday, I think.
+[06:37] I don't know.
+[06:38] We actually might be tomorrow.
+[06:40] Let me see. It's on the calendar.
+[06:52] Tomorrow. Yeah. Yeah.
+[06:55] It's over o'clock for you.
+[06:57] We'll bring up Salesforce thing and find out.
+[07:00] You know, we can align on what access you need and sort that out.
+[07:06] Sounds good.
+[07:08] And it's not even like, honestly, because y'all just got.
+[07:12] I'm answering my own questions in my head as I'm talking. Sorry.
+[07:15] Go for it. Go for it.
+[07:17] Y'all just got enterprise access to cloud.
+[07:19] So I mean, it's just my question about whether y'all have a Salesforce MCB connect to creative.
+[07:24] I can create that. I can have that.
+[07:26] And then I won't even need a login anymore.
+[07:28] Like, I just need to be able to read what's there and what people are doing inside it.
+[07:35] I don't need to edit or add anything.
+[07:37] I just need to be able to see it.
+[07:38] So giving access enough for me to be able to have a login connected to cloud enterprise
+[07:46] when I get that access and then create them to key connector.
+[07:50] Then it's basically just going to be able to read and use what it needs to use to get done
+[07:55] or whatever it is I need to get done.
+[07:57] And the more things I can get connected in the cloud, the less I have to ask people to do stuff for me.
+[08:02] And not having to ask people to do stuff for me is how I'm able to create seven, eight layer clay tables in two hours.
+[08:09] We are not even working, right? Because it's already done.
+[08:12] I get the green light and all the context you have there, like half of the scheduled mandate
+[08:17] or like the things you guys want me to get done in Q3.
+[08:20] I did before I started working here.
+[08:22] Like that's like the level of like I can like completely change trajectory
+[08:28] and like if this stuff done in two weeks so that you guys can start iterating and using is real.
+[08:32] Like I could do that by Friday.
+[08:34] Make it have a whole like thing, the whole beating thing.
+[08:37] Whoever's working this stuff can have things that they can use.
+[08:40] That's what we want to be doing.
+[08:41] So I want to see it working or not, you know.
+[08:44] Yeah.
+[08:45] To stuff.
+[08:47] Yeah.
+[08:48] So it's a plot login that you need.
+[08:51] But you also in terms of you only need read access from Salesforce.
+[08:58] Yeah.
+[08:59] I just need to be able to see what you guys do there.
+[09:02] Like what things are named.
+[09:03] No, my glitches is when I pull CSVs from reports.
+[09:07] Like I can actually do that.
+[09:09] You know, pull things.
+[09:10] I don't need to create nothing.
+[09:12] I'm working on the cloud access video.
+[09:18] Greenlight however is an instance of cloud that the cloud that actually connects to Salesforce.
+[09:26] Greenlight is are you able to have you tried quitting the stuff that you want out of Greenlight?
+[09:31] No, I haven't because it's a AI assistant thing.
+[09:35] So it's Q&A answers.
+[09:37] It's way different than what I use.
+[09:39] I use the desktop co-work environment.
+[09:41] It used to be connectors do not work through chat functionality.
+[09:44] So make the co-work.
+[09:45] But I definitely are going to have co-work.
+[09:49] But I'm just, yeah.
+[09:51] Okay.
+[09:52] I think I get what you're saying.
+[09:53] Dean, I've seen the agents already.
+[09:55] Yes, I see that those exist.
+[09:57] But like, you know, I can try to do a work around that way, right?
+[10:00] Just kind of ask it to give me something and then take that back to what I'm actually working with.
+[10:04] But those are just two different things.
+[10:06] If that makes sense.
+[10:07] That makes sense.
+[10:09] But I'm just curious to see if to get all your field information, you know, just to get yourself educated.
+[10:16] I think, yeah, because Greenlight is connected to Salesforce.
+[10:21] I'm not sure if every, it's not a very impressive tool.
+[10:24] I'll agree with you.
+[10:26] But then every, I don't know if every object is still integrated with, every Salesforce object is integrated with Greenlight.
+[10:35] But just for now, at least for you to get educated on what's on Salesforce, maybe it's just a place to start with.
+[10:41] Sure.
+[10:42] But I completely gave you an cloud access is important needed.
+[10:48] Yeah, outside of Salesforce.
+[10:50] I mean, I mean, I'm going to be using cloud regardless.
+[10:54] Like I'm using it on my account just in the interim to otherwise it's a big stall.
+[11:00] You know, just by just waiting for someone to decide that it's important for me to get, like, I'm not.
+[11:06] So I'm doing it, I'm doing it on mine for now.
+[11:09] But I can create whatever you need to get people to understand it.
+[11:13] I think I'm probably one of the top three people that should have access if anybody has access to cloud.
+[11:18] And in our prize level, this is what we're going to do.
+[11:20] Like, it's literally the objective at hand.
+[11:23] It requires me to have access to this.
+[11:25] No, I mean, completely, completely, completely.
+[11:28] Give me, give me a couple of days on this.
+[11:31] I'll talk this out for you.
+[11:33] Yeah.
+[11:34] Let's pay three.
+[11:35] I'm not, I just don't want it to be a blocker because someone doesn't think that I should have access.
+[11:39] That's my job.
+[11:40] Literally.
+[11:41] That's like, you know.
+[11:42] Yeah, it's, yeah, I completely agree, man.
+[11:45] Like, it is, I was also running under the assumptions that you're going to get the product on once.
+[11:52] So I moved, assuming that I was pretty shocked to hear that we'll have to go through and improve there for this.
+[12:00] But believe me, I'm fighting for this, like it's going to happen.
+[12:05] I can send you whatever you need to do to help.
+[12:07] I mean, fight it.
+[12:08] I mean, I could set a one-on-one to Christopher Neeby, because I talked to Chris about it in
+[12:13] my interview too.
+[12:15] Chris, this is not the bottleneck.
+[12:18] I think there's a guy called Jason.
+[12:21] Jason Doudon is the VP of Technology, and an enablement guy, another guy called Jason
+[12:29] who I'm introducing you to on Friday.
+[12:32] He's like the AI engineer, maybe close to something that you did, sort of he runs on the internal
+[12:40] projects.
+[12:41] I'm introducing you to exactly, I think you did both, right?
+[12:45] You did both.
+[12:46] Yeah, that's a lot.
+[12:48] Yeah, I was doing that too.
+[12:50] I was on top of my job, like literally.
+[12:53] That's why I can go so fast.
+[12:56] What I did at Lee could be split into three.
+[12:59] Director of U.T. plus level like things.
+[13:01] That's just because I enjoy what I do.
+[13:03] But now that I'm doing this for real, yeah.
+[13:06] I mean, just to set the meetings up, we can talk about it.
+[13:08] I mean, in 30 seconds, I think they can figure out that, you know, I know what I'm doing.
+[13:11] I think that's most people's hesitation about giving you access to cloud, wasting credits,
+[13:16] or wasting your data and stuff's expensive.
+[13:19] But the basis behind my job, even down to the job description, as a reminder for them,
+[13:24] includes cloud usage in the job description itself.
+[13:28] So this should be a really quick approval.
+[13:31] Yeah.
+[13:32] Y'all approve the role, like then there should be no hesitation in improving the functionalities
+[13:38] of the job.
+[13:39] I'm not concerned.
+[13:40] I'm just talking out loud.
+[13:42] Absolutely.
+[13:43] I completely agree.
+[13:44] Yeah, let's start that out on priority.
+[13:47] I think with respect to this, right, I don't think I have any other, I don't think I need
+[13:53] to explain anything else around, you know, this data set.
+[13:58] But how about, let's, let's go to Clay, though.
+[14:01] Can you, can you sort of educate me on what you like sort of modified lawn?
+[14:07] I can show you.
+[14:08] It's real quick.
+[14:09] Just log in.
+[14:10] Hey, string it up.
+[14:42] There's a table.
+[14:43] Mm-hmm.
+[14:44] That's the, that's my world that I created, right?
+[14:48] All of those are the blue ones and blue are tables.
+[14:52] That was the CSV imports and the ones in green.
+[14:57] Beneath that are what we'll be more using.
+[15:02] Yeah, if you scroll down, like the stars can be a Q&P wave one.
+[15:06] That's an actual campaign.
+[15:08] Right.
+[15:09] So.
+[15:10] Right.
+[15:11] This looks good.
+[15:12] I guess we're removing.
+[15:14] Humana, CVS and Molina from here.
+[15:19] I'll send you that list.
+[15:22] My, so this is like, this is just one subset that you're going after.
+[15:28] I think this is maybe not the.
+[15:30] Yeah.
+[15:31] You just clicked the seed archive for what I had before I started.
+[15:35] There's accounts you should probably, if you're looking for everybody, you should go to the accounts master table.
+[15:41] Mm-hmm.
+[15:45] So.
+[15:46] Like GTM engine that I started with, the accounts master table.
+[15:56] All those in blue are tables.
+[15:57] There's like eight tables in that one.
+[15:59] How do I go to the table?
+[16:04] Double click it.
+[16:09] So those.
+[16:10] Yeah.
+[16:14] Aggregated data because the stars motion is about people that are up below four stars.
+[16:18] So this is all the ones that are verified public data that are on 3.5 stars or below.
+[16:25] Mm-hmm.
+[16:26] And those are updated daily.
+[16:28] So like as, as companies or contracts increase and they get hit that 4.4.0 threshold and they
+[16:35] get removed from this list.
+[16:36] So there's grading.
+[16:37] See the, the grades list here.
+[16:43] Okay.
+[16:44] Scroll back.
+[16:45] Scroll back over somewhere to just get to the grade.
+[16:48] Right there.
+[16:49] You see the grading thing?
+[16:50] Scroll up.
+[16:51] Oh, it's going.
+[16:53] Okay.
+[16:54] Right.
+[16:56] Like the people that are graded A's and that that references back to the clay engine.
+[17:03] Understood.
+[17:04] Yeah.
+[17:05] I got to see you.
+[17:06] So A's are.
+[17:07] Where's this at?
+[17:09] A's are.
+[17:11] Build.
+[17:12] Yeah.
+[17:22] Granny's are the work work like work it right now.
+[17:25] Mm-hmm.
+[17:26] That's like a strong fit.
+[17:28] So we should warm up the account and see if you keep on the list.
+[17:32] But we're dropping that's a D below and below.
+[17:35] And so that's, that's how it is.
+[17:37] So there's, but right now there are, there's three and seven contracts in the full like
+[17:43] scored universe where there's 98 of them that are tiered A or B.
+[17:47] And that's the 98 you're seeing.
+[17:49] Mm-hmm.
+[17:50] So, and that figures models from the public.
+[17:52] Seeing my star ratings data and strength on them.
+[17:55] It's all accurate stuff based on.
+[18:00] The things that they're looking at on their side, so yeah
+[18:07] So I might be a dumb question
+[18:11] Where we've created the contracts here scroll to the contracts. How does that translate into who we message?
+[18:17] Yeah, so that was a part of the other tables my tables are like my waterfall into other that's one you're looking at one table right now
+[18:26] so like
+[18:28] That's the account master list and then that feeds into
+[18:32] the
+[18:33] This should be a contact table or something like that that that list
+[18:37] Reason of that list
+[18:38] Be isn't the other one the ICP person or persona rubric. It's all they're all talking to each other and it all goes down
+[18:45] Yes, he contacts
+[18:46] And so I haven't run any of these tables yet because I haven't spent any credits
+[18:50] But those are the ones that we've got that that's where they'll be right
+[18:54] They're all it funnels all the way from extra all the way down into that table for the buying community members for each of the
+[19:03] accounts, that's what it'll look like
+[19:05] When you actually run all these things and then from that it go back again to the GCM engine. This is a like this is a
+[19:12] Mind map you see how it's all funneling down to the bottom
+[19:16] So that's how you should think about this
+[19:18] So scrolls if you look at the bottom, you'll see the stars give you P wave one the campaign
+[19:23] That's a bit of where the first campaign
+[19:25] Will be where they will drop into that with the actual messaging that would be sent out
+[19:30] And all this is templated right now because we don't have anything going I did this in like an hour and a half yesterday
+[19:42] And this oh by the way ours my current strategy only spends half the crap after half the monthly credits we're looking to a lot like
+[19:50] And it'll be it'll be done
+[19:52] We can run the whole motion that we're trying to do with the stars rating play have all the contacts all the messaging
+[19:57] In depth that sent out per 30 30 emails per
+[20:02] Per email inbox and so the only thing else that you'd want to spend money on
+[20:07] Would be to buy additional inboxes for the BDT to use because each email
+[20:12] After it's been warmed up can send 30 a day
+[20:16] And that's just one motion and that's about it was about I have I have clawed flagging
+[20:22] flagging me whenever it reaches
+[20:25] Like 3,500 credits before like it's just just letting it out in a way. We've reached this limit
+[20:31] So looking at stuff, but um, yeah, that's the whole thing. So no, we're not gonna put the other credits and yes
+[20:37] There's plenty of stuff to do and it looks like we've got 72,000 for the year
+[20:41] So it's 5k a month. That's more than enough like
+[20:44] To get what we want to get them
+[20:46] Why is K credits a month?
+[20:49] That's um
+[20:50] How many like with within the system that you build how many sort of like how do I measure 5k credits?
+[20:57] Is it to do with it? Is it a piece that I've never understood. Mm-hmm. It's that's a great question. So it depends
+[21:04] It depends right in certain actions
+[21:07] using their internal AI cost like
+[21:10] 0.2 credits per like pull or per like prompts and
+[21:14] pulling
+[21:16] Pulling uh enrichment water for enrichment on per contact depends on the level of enrichment that you use some
+[21:22] It just what I have it doing is
+[21:24] I pull the exhaustive like breakdown of credits and how it's spent on the back end of clay enough other than that
+[21:30] Also, it knows and then I also gave it the parameters of
+[21:35] What what we're looking to keep as far as a monthly spend and in and referencing that back to
+[21:41] what
+[21:43] like what we're looking to do and I'm just asking like this
+[21:46] Is this enough like will we be able to keep this um
+[21:50] Right I keep this up and yeah
+[21:52] Uh worst case scenario for q3 spent q3
+[21:55] Spans is is 3,000 credits right now
+[21:59] That's running. Oh, that's that's running the tier a and b committee expansion
+[22:03] from um
+[22:04] Uh the tier a and b committee expansion when I run it is going to be anywhere from 1150 to 1500 credits
+[22:10] That back office pull specifically 1000 of 1400
+[22:13] Um, that's 40 percent headroom before you were to touch any review flag
+[22:18] Um, so we're good. I mean seriously
+[22:20] It's and that's for this play which is the main motion you're looking to see if we can create a credible business opportunity strong
+[22:27] so
+[22:29] That's for the corner, right? I mean that's that's one motion
+[22:31] I said that faster the more you want to think and get creative the faster these credits go
+[22:35] But as far as to this campaign this motion that is uh, you know predicated towards like how we see success in this role
+[22:43] uh, 3000 credits
+[22:45] That's it. Oh, okay. That's good. Um
+[22:48] Um, yeah
+[22:49] I mean, I thought
+[22:50] $5,000 is like the minimum we could spend the gameplay just had to sell us like 80k words
+[22:58] And we were like and you're not as new how the credits work
+[23:01] of that we and um
+[23:04] I'm surprised that uh, you're saying this because um
+[23:07] We probably assumed that we'd have no two credits. Maybe it's to do with how efficiently you're building it
+[23:12] You know what you're doing correct. Um
+[23:15] Only thing that's causing this not to blow down to pieces right because I know exactly what I'm doing
+[23:19] Like I have it right being built. I built this whole thing without using a credit
+[23:23] And most people when they're building tables end up like trying
+[23:27] Clicking and running the enrichments when they're building your investment in yeah, and then you're like, oh my god
+[23:31] I just want a thousand credits. This bull isn't even right yet
+[23:34] So now nothing has been I have I spent a penny
+[23:38] Excellent. So let me do one thing. I'm um, I'm I'm gonna go through your turgles
+[23:44] And then maybe set up one more meeting with you just to come to you with specific pointed questions
+[23:49] Yeah, because the stuff is very um my my level of understanding of clay is very very, uh,
+[23:55] Mason's so let me it's a lot to look down on
+[23:58] Yeah
+[24:00] I mean, especially I don't think I need
+[24:03] to have to be able to sort of work with each other
+[24:05] or what you've done with the workflow and whatnot.
+[24:07] So let me spend some time in the website I built for you
+[24:11] because that explains it.
+[24:12] It explains exactly what these things do.
+[24:15] Promise you.
+[24:16] Your document got it.
+[24:18] The site that sent you.
+[24:21] Perfect.
+[24:23] Well, like, it's just go to the clay.
+[24:23] Yeah.
+[24:27] That's build.page is not a damn thing.
+[24:29] Read that whole thing, truly.
+[24:31] And then go to the bottom that says the big table.
+[24:34] By the table, click that button.
+[24:36] Read that whole page.
+[24:37] Then you will understand this.
+[24:39] I spent time building that so you
+[24:40] don't have to try to learn Japanese before you
+[24:43] can talk to me, right, and go read those two sites.
+[24:47] It's built for a reason.
+[24:48] It's not just something like sexy jargon thing.
+[24:51] I promise you'll understand it when you read it.
+[24:53] That's the purpose of it.
+[24:55] And I made it to where, as you understand it,
+[24:57] and other people understand it, you
+[24:59] can send this site to them too, right?
+[25:01] This is explaining everything for as far as the clay engine
+[25:06] in the gold and less aspect, right?
+[25:07] Now, quickly, the overarching plan here
+[25:14] is I've got a function road map.
+[25:15] And I'll actually make this site live
+[25:18] to so that you can see it right now.
+[25:20] It's just on my local laptop.
+[25:22] But the layers one and two that I've got
+[25:26] is what is incredible for the role
+[25:29] and the making valuable immediately, which I will be able to do.
+[25:32] I'll finish that before the end of this month,
+[25:34] as long as I've got what I get.
+[25:36] And then the layers three through seven
+[25:37] is what solidifies the GTM engineering function, right?
+[25:42] But the last one, after about six months to a year in,
+[25:47] is when all these things are working and back up.
+[25:50] Acquisition arsenal, right?
+[25:51] That's the first thing.
+[25:52] Give my ports live, all of the automated agents
+[25:55] I have created already.
+[25:58] I've already built the clay build.
+[26:00] And then I have a weekly Friday readout
+[26:02] that will update you on what's going, what's working,
+[26:05] and those are all agents already created.
+[26:07] Month two, I'm going to help rebuild.
+[26:10] Help rebuild slash build an A.E. suite
+[26:13] on their methodology around having talked to anybody
+[26:15] that's an A.E. I don't know what they need
+[26:16] or what they want right now.
+[26:17] But learning from their deal reviews,
+[26:19] what they're looking for, QBRs, et cetera,
+[26:21] that helps improve deal velocity.
+[26:24] The back half of Q3 is to expand and launch my kit.
+[26:28] So it's the back office motion scales
+[26:30] once we get that situated.
+[26:32] I forget the B.E. there's a B.E.
+[26:35] Oh, there's an acronym for something like that.
+[26:37] I forget what that sounds for.
+[26:38] But September runs in the first launch kit cycle
+[26:41] and then Q4 is measuring it in demos, right?
+[26:44] Experiment discipline.
+[26:46] Experiment discipline the team runs already.
+[26:48] And then I've got custom demos per meeting
+[26:50] become routine, right?
+[26:52] Because the way that sales works nowadays,
+[26:56] there's a lot about what can I see?
+[26:59] What can you do for me now?
+[27:00] The people in the field touch stuff
+[27:03] to be able for it to be real, for them
+[27:05] to have skin in the community.
+[27:06] Can you go out to the process?
+[27:07] So that is what the focus of Q4 is.
+[27:10] And then six months or 12 months out
+[27:12] is just increasing the skill factory that I've got now.
+[27:15] I've got 12 or 13 skills built for you guys right now.
+[27:18] But building that for the whole org,
+[27:20] incorporating what I'm building
+[27:21] back into green light, which then brings back
+[27:23] your points about what I'm using green light for.
+[27:26] Green light is for the company, not for me.
+[27:28] Green light is for our company's AI mandate,
+[27:31] getting them to be comfortable
+[27:32] with using things and using it day to day.
+[27:34] That's what green light's purpose is.
+[27:35] I'm building skills plus for green light,
+[27:38] not me working in green light.
+[27:39] It's a difference.
+[27:41] And then once I've created that as a standard
+[27:44] and have the mandate compiler or whatever are my brains
+[27:47] that I've got in my local terminal right now
+[27:49] putting that to work computer.
+[27:52] That's the entire company's GTM layer,
+[27:54] working autonomously, like wired back in the back end
+[27:58] and stuff.
+[27:59] So nothing is just sitting on my computer.
+[28:01] It's all running and things someone can log into
+[28:03] and reference.
+[28:04] That's by the year.
+[28:06] And then we're picking up that point.
+[28:08] You've obliterated all goals you've had in mind.
+[28:11] Sales is all really happy.
+[28:12] They're pressing through their numbers.
+[28:14] And that's how this works.
+[28:16] That's how it's gonna work.
+[28:17] So I've got that planned out all the way down
+[28:20] to an exact answer, a Q&A bank on this thing, like, seriously.
+[28:27] So I have a couple of questions.
+[28:29] I mean, that sounds mind-blowing to me.
+[28:34] In terms of all the relationships,
+[28:37] you want me to help you, that's the best.
+[28:41] The BDR function has, I think, two BDR people.
+[28:43] It has a suite of sales people,
+[28:44] maybe like 25 sales people.
+[28:48] This is how it's worked, right?
+[28:49] Like the go-to-market engine has been very archaic.
+[28:52] Marketing will give business talent
+[28:55] what they call as NQLs.
+[28:57] I know NQLs are dead.
+[28:58] Somebody has never done BDR right now.
+[28:59] The term NQLs stuff is dead.
+[29:01] That's how I'm gonna throw a company.
+[29:05] Along with some contacts they get at in person.
+[29:11] These couple of sales people go,
+[29:13] we sponsor NQLs and $5,000.
+[29:16] And they'll meet some folks.
+[29:18] And they'll come with a combination of MQLs
+[29:20] and the contacts they've got from events.
+[29:22] All that will come to Nate.
+[29:23] Nate will sit and take a look at product collateral
+[29:28] and then probably use Claude manually to type out a message.
+[29:32] And he's doing manual messages, Dan and D.R.,
+[29:35] that's the system Nate's been giving.
+[29:37] Nate's phenomenal, but he does.
+[29:39] And he's gonna just score these logo meetings.
+[29:43] The state of the system is that archaic.
+[29:46] And once Nate scores those meetings,
+[29:48] depending on who's good at what,
+[29:50] the meeting gets set up for the right salespeople.
+[29:52] And then that's how they go, right?
+[29:53] So the cycle's been very slow
+[29:56] because of this very archaic process.
+[30:00] If we put this in front of marketing, right, they're going to get like a shock, it's not going to make sense now, we sort of have to play this politically well.
+[30:09] The way I'm thinking about doing it is, find, come up with sort of a presentation. John Norton, the chief, the chief revenue officer, he's a little more technologically savvy than the CMO.
+[30:25] Okay, we still need to sort of get both their blessings.
+[30:29] And remember it like so.
+[30:31] Just really, just really new in me, just really new in me.
+[30:33] I got you. Remember, I spent my entire adult life in high level proficiency of sales. I need you to remember that because not come from product you didn't.
+[30:45] And so our brain together is going to be very helpful because I can sit in front of anybody and have a very intelligent conversation quickly and get them on board with whatever the hell we need to get on board because that's what I do.
+[30:54] At a high level. I'm just doing what I'm passionate about now, which is helping them build the system so that everybody, not just sales, can do what they need to do.
+[31:03] And this all works well.
+[31:05] So you're right. We need to go on a campaign.
+[31:08] Listen, I'm happy we're having a conversation because it's just about figuring out, like, you helping me figure out who do we need to.
+[31:16] I need to get interest to people more importantly, right, because they need to know this function is real now.
+[31:20] I'm here and talk about, let them ask the questions.
+[31:23] This is kind of what I have in mind and they'll get each piece of where I think is relevant as far as my goals to get me to get me to help them help themselves help us help you kind of think, right?
+[31:33] Intros in conversations, right?
+[31:36] I think my biggest asset as a manager for you would be to create those relationships for you.
+[31:43] I can that's why I've set up a few meetings this week.
+[31:46] But I'll continue to set up the meetings for you next week, which is between you and me.
+[31:50] I'll give you a little one more piece of history that I don't I don't think I told you.
+[31:55] Go to market as a function lived in marketing.
+[32:01] Mm hmm.
+[32:02] Before this, I was a product manager.
+[32:05] Yeah.
+[32:06] It was not it was not done well.
+[32:08] It got moved in a sense.
+[32:09] We saw off like snatched it from them.
+[32:11] Yeah.
+[32:12] That makes sense.
+[32:13] Yeah.
+[32:14] I caught a little window like it didn't work because I asked Chris.
+[32:17] When I got to Chris, Buzz the interview, I don't know if he ever deep refueled on like highway.
+[32:21] We have like a 16 minute conversation.
+[32:23] But I asked very direct questions.
+[32:25] Like I said, what's the like?
+[32:27] Like, why are we doing this in products?
+[32:29] Like, what happened?
+[32:30] This is the first thing I asked.
+[32:32] I was like, what happened?
+[32:33] And he went to tell me.
+[32:34] He hired somebody.
+[32:35] They hired somebody.
+[32:37] I'm like, a person.
+[32:38] I didn't work and now you're like, they're, you're taking it over or whatever.
+[32:41] I just heard that it didn't work before.
+[32:42] And I'm like, this is traditionally.
+[32:44] That's actually a different story.
+[32:47] I'll tell you what happened.
+[32:50] Go to market was lived in marketing and all that.
+[32:52] Product.
+[32:53] It was build on brilliant products and then we shipped it.
+[32:56] And then we all have the go to market team.
+[32:59] I don't think there was a go to market team.
+[33:02] There was a marketing team.
+[33:03] Right.
+[33:04] code market was not happening.
+[33:06] And then what I had been doing for the last two years
+[33:08] was basically push all these products
+[33:11] like growth ideas, and we ran a few.
+[33:14] They decided to decide to move code market
+[33:17] as a function into product management.
+[33:19] And then marketing to marketing,
+[33:21] which has managed to decide to do events,
+[33:23] code market comes to product.
+[33:26] We decided to hire a leader.
+[33:28] We decided to hire someone from Microsoft
+[33:30] and this guy was, he had like the perfect estimate.
+[33:33] I was like, I was sitting in the interview panel.
+[33:36] I was a little skeptical,
+[33:37] a few of us were skeptical, a few people
+[33:40] in the hiring panel sort of gotten
+[33:43] but swayed by the credentials.
+[33:46] Seven months back, nothing happened.
+[33:50] And eventually I had to like take all the heavy load.
+[33:52] It's not even, I was not even looking for this job.
+[33:54] I took the load on my hands and eventually
+[33:56] they decided this comes to me.
+[33:59] So that's sort of like the history made it.
+[34:02] But there's a history behind that history too.
+[34:06] This function lived in marketing.
+[34:08] It's come into product.
+[34:11] And we've sort of like the last quarter we delivered market
+[34:16] readiness and rocket speeds,
+[34:17] confidence right now at least
+[34:19] and go to market division, which lives in our team
+[34:22] is basically this you and me.
+[34:25] I've got these relationships with everybody in the company.
+[34:28] Like that's one thing I'm very good at.
+[34:30] People trust me.
+[34:32] So I'm going to set up all those relationships
+[34:34] but I just wanted to keep that in the back of the head.
+[34:36] The marketing is a little sore about it.
+[34:38] Yeah, something understandably so.
+[34:40] And I've got this one-on-one mentorship thing going on
+[34:42] with the CMO and last year I had a little conflict with them
+[34:46] but that's all getting sorted out and with friends now.
+[34:50] But I wanted to be like completely frank
+[34:54] with you around the history of the relationship
+[34:56] so that you don't get caught off guard.
+[35:00] Sure.
+[35:01] Yeah, well I can handle anything off guard dude.
+[35:02] But like.
+[35:03] I know, I know.
+[35:04] I'd rather not, you know, that's a great context to know.
+[35:07] And yeah, I mean I know how marketing works too.
+[35:10] And I know there was some issues.
+[35:12] I had like my own issues with marketing
+[35:15] even where I came from just because even like
+[35:17] they're still marketing.
+[35:19] I have a marketing.
+[35:20] Like I get marketing people.
+[35:21] I know like but y'all, they get so stuck
+[35:24] in whatever it is they want to do.
+[35:25] And they're like, no, this is what works.
+[35:26] This is what works.
+[35:27] And they don't want to listen to like new ideas
+[35:30] so basically how I need to come about.
+[35:32] Why is it that?
+[35:33] Why is it that?
+[35:34] Why is it that?
+[35:35] I call it ego marketing people, you know,
+[35:39] they, you know, it's ego and then anxiety
+[35:43] because they don't want, they want everyone to love them.
+[35:46] And they also are afraid to spend the time
+[35:50] and not work because if they don't, they don't produce
+[35:54] then it's like that's an issue.
+[35:55] It's like, it's kind of, it's parallel sales
+[35:58] but it's not sales but.
+[36:00] They carry the same type of liking zaggy, so that's that's as far as the way people think in the marketing world why that's an issue, you know
+[36:07] They might not tell you the truth or tell you what they they want to tell you what you want to hear versus what's really happening in the back end and
+[36:14] It can cause issues, but that's just that's not everybody in particular, but that is the that is the
+[36:22] marketing world as a whole
+[36:24] You know stereotype behind that, but
+[36:26] You you fix that by just
+[36:28] I mean, I connect with people really quickly and easily you know, I love just you know helping people out and that's what they need
+[36:35] They need to know that I'm here to help them look better
+[36:38] My job is to help them do their job better and then help them succeed quicker than they could by themselves
+[36:46] I have no problem getting people to understand that and when they know I'm here not to take over their job
+[36:51] But to help them do better faster
+[36:55] You know, make everybody happy then that goes a long way because that that's what this is like
+[37:01] You're absolutely right and that's how that's my that's what's in my heart too
+[37:06] What I really want this function to be is like the ultimate technology thought partner for marketing
+[37:11] That's what it is. We're monetizing the engine for them for the whole company. Yeah, but especially marketing too
+[37:16] And eventually eventually not be viewed as like we we be viewed as the ultimate partners
+[37:22] and I've been making heads
+[37:24] like I've got one on what's going on with everybody in marketing and
+[37:29] So that those relationships are being built very well
+[37:32] But eventually, yeah, I'm glad that you get this man. I really appreciate it. Of course
+[37:37] But we are in that stage where you know sort of have to still play it politically well
+[37:42] Yeah, but but we've got all the support this man. So you're good like he was like man
+[37:46] You always should have been a politician to sit down and do that. You're I mean, you're in great hands being you together are gonna
+[37:51] You're gonna be rock stars. So let's just set the meetings. We'll do them together
+[37:55] and then we'll start cultivating the relationships
+[37:57] I'll start planting the seeds in those meetings and then I can work with you on how hands-on you want to be as far as
+[38:03] Um, the meetings after that, but let's start there
+[38:05] Let's all let's just do this we'll meet and pause with with people I need to talk to them and then together
+[38:10] Look at this overarching idea
+[38:12] Sold and then we'll start working on executing from there, but I know you got a meeting coming up
+[38:17] So if you need time to prepare, let's let's uh
+[38:20] You know
+[38:21] Yeah, I I just yeah, which is one thing. So this
+[38:26] That sounds amazing to me. We can work through all of that. I agree with completely. I think we're gonna do amazing work
+[38:31] Um, I do want to kick start that one meeting with Tom Russell and john
+[38:36] Norton
+[38:37] Where what we do is explain to them what tvam engineering is what are we trying to do with clay?
+[38:42] How does clay look what what do what what the system does in their language?
+[38:47] Yeah, that it makes sense to them
+[38:49] Uh,
+[38:50] Show them what the messages look like, you know, show them a generate message. I did a little bit of it
+[38:55] Uh, I I did one time
+[38:57] Show them what an ai enriched message looks like that blew their minds
+[39:00] They were like wow, look at the intelligence for building this and that's me. You you clearly say that I don't know anything in play
+[39:05] But I built a table which enriched a bunch of data and then showed one message that it said blue
+[39:10] They might write that's why they're right. Uh, so if you can you know sort of like bring it to their level
+[39:15] They are extraordinary people like they they they
+[39:18] John Norton used to be the seer of calibrio or the biggest uh cks company's wolf, but this stuff is still new to them
+[39:26] um
+[39:28] I just want you to start thinking about that meeting where
+[39:31] We sort of put this in front of them in their level and their language. They say something and we walk we walk out of it
+[39:39] Amazing. We walk out of it with their blessing so that we can fly with an old publishing circuit. Yep. Yeah
+[39:44] What do you saw the exact summary of what matters the pertinent things is a one-pager that they can read before the meeting
+[39:51] I'll have a uh, and then I'll have a presentation like a simple like exactly like big words
+[39:56] Pictures nothing crazy. Uh, that kind of like sells the point on top of that and it wish to be good to go
+[40:03] I'd love for you to run that meeting and set it up and I'll give the floor to you
+[40:07] Okay
+[40:08] And I think that it winners a lot of points because they're sort of waiting on that they're actually they're sort of like, you know
+[40:12] We'd love to get they know all these motions going faster
+[40:16] Uh
+[40:18] Going very fast, but let's just put that together. So I'm gonna text John today
+[40:22] If you can send me what you're gonna send them we'll just review that so that we just
+[40:26] Yeah, you first understand that. I'm not I'm not overro. You'll see every before we
+[40:30] Before we get to it. So yeah, and I'll give you all, you know all the intuitive details that
+[40:37] That you know since you just like three days, I'll give you all the inputs
+[40:37] uh
+[40:41] But this is amazing work, man. Like this put on a couldn't have asked for more
+[40:45] Let me go through this clear table understand this a little bit
+[40:49] And I'm gonna set up something with you just to get myself a little more educated. That's okay. Yeah, I love it
+[40:54] I love to do it. Please. I'm here. All right, man. Thanks. I appreciate it. See you of course. See you

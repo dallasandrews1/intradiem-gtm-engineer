@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Here · Dallas · Eyes Only</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist-2:#E7EEE3; --line:#E2E7DD; --line-2:#D4DCCE;
+    --spark:#FE5000; --gold:#E0A23B;
+    --amber:#9a6313; --amber-bg:#FBF1E1; --red:#9B2C2C; --red-bg:#F9EAEA; --ok:#2f8f4e; --ok-bg:#E7EEE3;
+    --ff-head:'Playfair Display',serif; --ff-label:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:15px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+  /* HERO */
+  .hero{background:var(--forest);color:#fff;padding:52px 0 40px;position:relative}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--lime),var(--green))}
+  .eyebrow{font-family:var(--ff-label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+  .hero h1{font-family:var(--ff-head);font-size:40px;font-weight:800;letter-spacing:-.01em;margin-bottom:12px}
+  .hero .spine{font-size:16.5px;color:var(--mist-2);max-width:840px}
+  .hero .spine b{color:#fff}
+  .statrow{display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+  .stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 20px;min-width:130px}
+  .stat .n{font-family:var(--ff-head);font-size:26px;font-weight:800;color:var(--lime);line-height:1.1}
+  .stat .l{font-size:11.5px;color:var(--mist-2);margin-top:3px}
+
+  /* NAV */
+  nav{position:sticky;top:0;background:rgba(250,251,247,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line-2);z-index:50}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+  nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--ink-soft);text-decoration:none;padding:7px 13px;border-radius:8px}
+  nav a:hover{background:var(--mist-2);color:var(--forest)}
+
+  section{padding:44px 0 8px}
+  .kicker{font-family:var(--ff-label);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--spark);font-weight:700;margin-bottom:6px}
+  h2{font-family:var(--ff-head);font-size:26px;font-weight:800;color:var(--forest);margin-bottom:6px}
+  .sub{color:var(--ink-soft);margin-bottom:20px;max-width:800px}
+
+  /* HEALTH STRIP */
+  .health{background:var(--mist);border-left:4px solid var(--green);border-radius:0 14px 14px 0;padding:20px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 30px}
+  @media(max-width:760px){.health{grid-template-columns:1fr}}
+  .health .lbl{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:5px}
+  .health p{font-size:13.5px}
+  code{font-family:var(--ff-label);font-size:12px;background:var(--forest);color:var(--lime);padding:8px 12px;border-radius:8px;display:inline-block;margin-top:2px}
+  .inlinecode{background:var(--mist-2);color:var(--forest);padding:1px 6px;border-radius:5px;font-size:12px;display:inline}
+
+  /* FILTER BAR */
+  .filterbar{position:sticky;top:44px;z-index:40;background:rgba(250,251,247,.97);backdrop-filter:blur(6px);padding:12px 0 14px;border-bottom:1px solid var(--line)}
+  .fpills{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+  .fp{font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line-2);background:#fff;color:var(--ink);cursor:pointer}
+  .fp:hover{border-color:var(--green)}
+  .fp.on{background:var(--forest);border-color:var(--forest);color:#fff}
+  .frow2{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .fs{font-size:11.5px;font-weight:700;padding:5px 12px;border-radius:999px;border:1.5px solid var(--line-2);background:#fff;color:var(--ink-soft);cursor:pointer}
+  .fs.on{background:var(--green);border-color:var(--green);color:#fff}
+  #search{flex:1;min-width:200px;font-family:'DM Sans',sans-serif;font-size:13.5px;padding:8px 14px;border:1.5px solid var(--line-2);border-radius:10px;background:#fff;color:var(--ink);outline:none}
+  #search:focus{border-color:var(--green)}
+  .count{font-family:var(--ff-label);font-size:11px;color:var(--dim)}
+
+  /* ASSET CARDS */
+  .agrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:18px}
+  @media(max-width:820px){.agrid{grid-template-columns:1fr}}
+  .acard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 19px;box-shadow:0 1px 2px rgba(20,40,25,.04);transition:box-shadow .15s,transform .15s}
+  .acard:hover{box-shadow:0 1px 2px rgba(20,40,25,.04),0 12px 34px rgba(20,40,25,.07);transform:translateY(-1px)}
+  .atop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+  .aname{font-weight:700;color:var(--forest);font-size:14px}
+  .aname .cat{font-family:var(--ff-label);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:3px;font-weight:600}
+  .awhat{font-size:13px;color:var(--ink);margin-bottom:7px}
+  .awire{font-size:12px;color:var(--ink-soft)}
+  .awire b{color:var(--green);font-weight:700}
+  .anote{font-size:12px;color:var(--ink-soft);margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .anote.flag{color:#7a3d00}
+  .anote.flag::before{content:"FLAG";font-family:var(--ff-label);font-size:9px;letter-spacing:.12em;font-weight:700;color:#fff;background:var(--spark);border-radius:4px;padding:2px 6px;margin-right:7px;vertical-align:1px}
+  .st{font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;letter-spacing:.04em;flex-shrink:0}
+  .st.live{background:var(--ok-bg);color:var(--ok)}
+  .st.seed{background:var(--amber-bg);color:var(--amber)}
+  .st.wait{background:var(--red-bg);color:var(--red)}
+  .st.lock{background:var(--forest);color:var(--lime)}
+  .st.arch{background:var(--mist-2);color:var(--dim)}
+  .st.priv{background:var(--ink);color:#fff}
+
+  /* GATES */
+  .ggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:760px){.ggrid{grid-template-columns:1fr}}
+  .gcard{background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:12px;padding:16px 18px}
+  .gcard h3{font-size:14px;color:var(--forest);margin-bottom:4px}
+  .gcard p{font-size:13px;color:var(--ink-soft)}
+  .gkey{font-family:var(--ff-label);font-size:11px;font-weight:700;color:var(--amber);letter-spacing:.06em;text-transform:uppercase}
+  .closed{background:var(--ok-bg);border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:12px;padding:14px 18px;margin-top:14px;font-size:13px;color:var(--ink-soft)}
+  .closed b{color:var(--ok)}
+
+  /* TODAY */
+  .tgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}
+  @media(max-width:820px){.tgrid{grid-template-columns:1fr}}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;box-shadow:0 1px 2px rgba(20,40,25,.04)}
+  .tcard h3{font-family:var(--ff-head);font-size:16px;color:var(--forest);margin-bottom:8px}
+  .tcard li{font-size:13px;margin-bottom:6px;color:var(--ink)}
+  .tcard ul,.tcard ol{padding-left:18px}
+  .phasepill{display:inline-block;font-family:var(--ff-label);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--green);padding:4px 12px;border-radius:999px;margin-bottom:8px}
+  .surfrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+  @media(max-width:760px){.surfrow{grid-template-columns:1fr}}
+  .artrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  @media(max-width:980px){.artrow{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.artrow{grid-template-columns:1fr}}
+  .arthead{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green);margin:16px 0 0}
+  .arthead .spark{color:var(--spark)}
+  .surf{background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:12px;color:var(--ink-soft)}
+  .surf b{display:block;color:var(--forest);font-size:12.5px}
+
+  /* DAY ONE CHECKLIST */
+  .d1wrap{background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px 6px 6px;box-shadow:0 1px 2px rgba(20,40,25,.04)}
+  .d1bar{display:flex;align-items:center;gap:14px;padding:14px 18px 12px;flex-wrap:wrap}
+  .d1prog{flex:1;min-width:180px;height:9px;background:var(--mist-2);border-radius:999px;overflow:hidden}
+  .d1prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--green-bright));border-radius:999px;transition:width .35s ease}
+  .d1pct{font-family:var(--ff-label);font-size:12px;font-weight:700;color:var(--green);white-space:nowrap}
+  .d1reset{font-family:var(--ff-label);font-size:11px;font-weight:600;color:var(--dim);background:none;border:1px solid var(--line-2);border-radius:999px;padding:5px 12px;cursor:pointer}
+  .d1reset:hover{border-color:var(--green);color:var(--green)}
+  .d1grouphd{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--green);padding:14px 18px 4px}
+  .d1grouphd .spark{color:var(--spark)}
+  .d1item{display:flex;gap:13px;align-items:flex-start;padding:11px 18px;border-top:1px solid var(--line);cursor:pointer;transition:background .12s}
+  .d1item:hover{background:var(--mist)}
+  .d1box{flex-shrink:0;width:21px;height:21px;border:2px solid var(--line-2);border-radius:6px;margin-top:1px;position:relative;transition:all .15s;background:#fff}
+  .d1item.done .d1box{background:var(--green);border-color:var(--green)}
+  .d1item.done .d1box::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+  .d1txt{font-size:13.5px;color:var(--ink)}
+  .d1txt b{color:var(--forest);font-weight:700}
+  .d1item.done .d1txt{color:var(--dim)}
+  .d1item.done .d1txt b{color:var(--dim)}
+  .d1n{font-family:var(--ff-label);font-size:11px;font-weight:700;color:var(--green);flex-shrink:0;margin-top:2px;width:14px}
+  .d1item.done .d1n{color:var(--dim)}
+  .d1guard{margin:14px 18px 6px;background:var(--amber-bg);border-left:4px solid var(--gold);border-radius:0 10px 10px 0;padding:12px 16px;font-size:13px;color:#7a3d00}
+  .d1guard b{color:#7a3d00}
+  .d1guard .tag{font-family:var(--ff-label);font-size:9px;letter-spacing:.12em;font-weight:700;color:#fff;background:var(--gold);border-radius:4px;padding:2px 7px;margin-right:8px;vertical-align:1px}
+  .d1files{margin:6px 18px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:680px){.d1files{grid-template-columns:1fr}}
+  .d1file{background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:11px 14px}
+  .d1file .fn{font-family:var(--ff-label);font-size:11.5px;font-weight:700;color:var(--forest)}
+  .d1file .fd{font-size:12px;color:var(--ink-soft);margin-top:3px}
+  .clframe{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:4px;font-style:italic}
+  .d1item.done .clframe{color:var(--dim)}
+  .clyes{display:block;font-size:11.5px;color:var(--green);margin-top:4px}
+  .clyes b{color:var(--green)}
+  .d1item.done .clyes,.d1item.done .clyes b{color:var(--dim)}
+  .clweek{font-family:var(--ff-label);font-size:9.5px;letter-spacing:.12em;font-weight:700;color:#fff;background:var(--green);border-radius:4px;padding:2px 7px;margin-right:8px;vertical-align:1px}
+  .clweek.w2{background:var(--ink-soft)}
+  .clcaveat{margin:12px 18px 4px;background:var(--mist);border:1px dashed var(--line-2);border-radius:10px;padding:11px 15px;font-size:12.5px;color:var(--ink-soft)}
+  .clcaveat b{color:var(--forest)}
+  /* WAR ROOM auto-updated tile */
+  .warroom{background:var(--forest);color:#fff;border-radius:14px;padding:16px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+  .warroom::after{content:"";position:absolute;top:0;left:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--lime),var(--green-bright))}
+  .wrhd{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .wrhd .t{font-family:var(--ff-label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--lime)}
+  .wrhd .u{font-family:var(--ff-label);font-size:11px;color:var(--mist-2)}
+  .writem{font-size:13px;color:#fff;padding:5px 0;border-top:1px solid rgba(255,255,255,.12)}
+  .writem:first-of-type{border-top:none}
+  .writem .p{font-family:var(--ff-label);font-size:9.5px;font-weight:700;color:var(--forest);background:var(--lime);border-radius:4px;padding:2px 6px;margin-right:8px;vertical-align:1px}
+  .wrempty{font-size:12.5px;color:var(--mist-2);font-style:italic}
+  footer{background:var(--forest);color:var(--mist-2);padding:28px 0;margin-top:56px;font-size:12.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .limestripe{height:4px;background:var(--lime)}
+  @media print{nav,.filterbar{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Eyes only · Dallas Andrews · GTM Engineer · Intradiem · Day-1 operating kit</div>
+    <h1>Start Here: The Portfolio Index</h1>
+    <p class="spine">The daily calibration surface: today's phase and focus, the operating loop, then every asset in the workspace: three Python engines, a cohesion layer, a hosted platform, twelve skills, and the canonical Star Ratings data. <b>Open this first, every day.</b></p>
+    <div class="statrow">
+      <div class="stat"><div class="n">3</div><div class="l">engines, tests green<br>25/25 · 14/14</div></div>
+      <div class="stat"><div class="n">307</div><div class="l">contracts in the locked<br>canonical universe</div></div>
+      <div class="stat"><div class="n">98</div><div class="l">Tier A+B contracts<br>32 parents · $2,511M</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">preflight blockers,<br>all people-gated</div></div>
+      <div class="stat"><div class="n" id="assetcount">·</div><div class="l">assets indexed<br>below</div></div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#today">Today</a>
+  <a href="Clay_Strategy_and_Build.html" style="color:#1F7340;font-weight:700">Clay engine ▸</a>
+  <a href="#dayone">Day One</a>
+  <a href="#week12">Weeks 1-2</a>
+  <a href="#health">Health check</a>
+  <a href="#map">Asset map</a>
+  <a href="#gates">The four blockers</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="today">
+  <div class="kicker">Calibrate</div>
+  <h2>Today</h2>
+  <p class="sub">The phase sets the focus; the loop is the same every day.</p>
+  <!--WARROOM:START-->
+  <div class="warroom">
+    <div class="wrhd"><span class="t">War Room · what fired overnight</span><span class="u">updated jul 17, 7:59am</span></div>
+    <div class="writem"><span class="p">P1</span>No fresh P1 — 9th straight cycle; litigation wave (Elevance/SCAN/Alignment, ~$290M) and Humana thread carried, nothing to send today.</div><div class="writem"><span class="p">P2</span>UnitedHealth Q2 beat (Jul 16): MA trend below plan, guidance raised — a PROUD print; tune earnings angles account-specific, drop &#x27;MA collapse&#x27; premise.</div><div class="writem"><span class="p">P2</span>Elevance (reports Jul 22) is the sharper DEFENSIVE lead — its own $115M Stars filing; stage the earnings-reaction touch for Nate then.</div><div class="writem"><span class="p">P3</span>Molina reaffirmed guidance, reports Jul 22-23 (apply MAPD-exit suppression); Capita redundancy is install-base → signal engine, not outbound.</div>
+  </div>
+  <!--WARROOM:END-->
+  <div class="tgrid">
+    <div class="tcard">
+      <span class="phasepill" id="phasepill">·</span>
+      <h3 id="phasetitle">·</h3>
+      <ul id="phasefocus"></ul>
+    </div>
+    <div class="tcard">
+      <h3>The daily loop</h3>
+      <ol>
+        <li><b>War room sweep</b> first: what fired overnight, which plays trigger.</li>
+        <li><b>Credit pre-check</b> before any Clay run touches the ledger.</li>
+        <li><b>Push the phase focus</b> (left card), one gate at a time.</li>
+        <li><b>Log everything:</b> outcomes.csv rows, ledger lines, receipts.</li>
+        <li><b>Friday:</b> the readout compiles itself from what was logged.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="arthead">Live artifacts · open from the Claude sidebar <span class="spark">· ramp reminders</span></div>
+  <div class="artrow">
+    <div class="surf"><b>Mission Control</b>Daily, private, never screen-shared. Report progress in chat and it updates itself.</div>
+    <div class="surf"><b>Command Center</b>Fridays + any "how's it going" from Naveen: funnel, approvals, deliverability. Label every seeded number before he asks.</div>
+    <div class="surf"><b>Golden List</b>Week-1 demo to Naveen and Nate: the literal Section 05 foundation. Becomes the working surface once Clay is live.</div>
+    <div class="surf"><b>Strike Room</b>Nate's first visible win. Open before any strike-plan conversation.</div>
+    <div class="surf"><b>ROI Calculator</b>Before any economic-buyer meeting. Placeholder labels stay visible until numbers are verified.</div>
+    <div class="surf"><b>Day-1 Audit Console</b>Week 1, WITH Genna: our shared audit checklist, never an audit run on her. Wires on SF + Slack access.</div>
+    <div class="surf"><b>Star Ratings Motion</b>Squad conversations. Add the 157/38 → 307 reconciliation strip before showing it.</div>
+    <div class="surf"><b>Control Plane</b>Week 2+, after install-base data access: adoption gaps, white space, routed plays.</div>
+  </div>
+  <div class="surfrow">
+    <div class="surf"><b>This page</b>Daily calibration: today's focus, the loop, the asset map, the gates.</div>
+    <div class="surf"><b>Grand Plan</b>People, mandates, rules, stories: what I say to whom and what I never break.</div>
+    <div class="surf"><b>Function Roadmap</b>Staying ahead: the eight layers, exec answers, the living protocol, what gets built next.</div>
+  </div>
+</section>
+
+<section id="dayone">
+  <div class="kicker">00b · The turn-on order</div>
+  <h2>Day One checklist</h2>
+  <p class="sub">The signal engine reads two files. Swap them for real data, validate, then turn things on <b>in this order</b>. Do not skip validation. Checks save in this browser and survive a reload.</p>
+
+  <div class="d1wrap">
+    <div class="d1bar">
+      <span class="d1pct" id="d1pct">0 of 10</span>
+      <span class="d1prog"><i id="d1fill"></i></span>
+      <button class="d1reset" id="d1reset">Reset</button>
+    </div>
+
+    <div class="d1files">
+      <div class="d1file"><div class="fn">data/accounts.csv</div><div class="fd">Usage data the engine scores. Swap for a nightly export; map their column names to the engine's. That mapping is the only integration work.</div></div>
+      <div class="d1file"><div class="fn">data/owners.csv</div><div class="fd">Who owns each account, so a signal routes to a person. AE + CSM name, email, Slack per domain.</div></div>
+    </div>
+
+    <div class="d1grouphd">Turn things on, in order <span class="spark">· one at a time</span></div>
+    <div id="d1list"></div>
+
+    <div class="d1guard"><span class="tag">DO NOT</span><b>Do not auto-DM real reps before the signals are validated.</b> One wrong blast and they mute it for good.</div>
+
+    <div class="d1grouphd">Three questions to ask early</div>
+    <div id="d1qlist"></div>
+  </div>
+</section>
+
+<section id="week12">
+  <div class="kicker">00c · The political fortnight</div>
+  <h2>Weeks 1-2 plan</h2>
+  <p class="sub">The first two weeks are political, not technical. Four outcomes: orient the roadmap to the top GTM number, recruit one real co-owner, fill the dependency map with real timelines, start the one motion that needs nobody's permission. <b>Ask for input and partnership, not access.</b></p>
+
+  <div class="d1wrap">
+    <div class="d1bar">
+      <span class="d1pct" id="w12pct">0 of 0</span>
+      <span class="d1prog"><i id="w12fill"></i></span>
+      <button class="d1reset" id="w12reset">Reset</button>
+    </div>
+
+    <div class="d1grouphd">Stakeholder meetings <span class="spark">· recruit co-owners</span></div>
+    <div id="w12meet"></div>
+
+    <div class="d1grouphd">First 1:1 with Naveen · agenda</div>
+    <div id="w12nav"></div>
+
+    <div class="d1grouphd">End-of-two-weeks checkpoint <span class="spark">· you should be able to say all of these</span></div>
+    <div id="w12chk"></div>
+  </div>
+</section>
+
+<section id="health">
+  <div class="kicker">00 · One command</div>
+  <h2>Health check</h2>
+  <div class="health">
+    <div>
+      <div class="lbl">Run this first, any day</div>
+      <code>python3 gtm-cohesion-layer/conductor.py --preflight</code>
+      <p style="margin-top:8px">Currently NOT READY on the four expected people-gated blockers. Anything <i>else</i> red is a regression.</p>
+    </div>
+    <div>
+      <div class="lbl">Ground truth</div>
+      <p>Git on <span class="inlinecode">main</span>, history scrubbed, nothing pushed yet. Day-1 build sequence: <span class="inlinecode">Clay_Day1_Build_Order.md</span>. Audit history: <span class="inlinecode">AUDIT_FINDINGS.md</span>. Canonical universe: <span class="inlinecode">StarRatings_Universe_2026_TimePhased.csv</span> (locked read-only).</p>
+    </div>
+  </div>
+</section>
+
+<section id="map">
+  <div class="kicker">01 · Everything, one map</div>
+  <h2>Asset map</h2>
+  <p class="sub">Click a category, narrow by status, or type to search. Each card: what it does, the wiring, and what it waits on.</p>
+  <div class="filterbar">
+    <div class="fpills" id="catpills"></div>
+    <div class="frow2">
+      <span id="statpills"></span>
+      <input id="search" type="text" placeholder="Search assets, wiring, notes...">
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+  <div class="agrid" id="grid"></div>
+</section>
+
+<section id="gates">
+  <div class="kicker">02 · Go-live checklist</div>
+  <h2>The four preflight blockers</h2>
+  <p class="sub">All four still open as of the Jul 17 readout: attribution and baseline wait on the next Naveen working session (attribution now also depends on the Salesforce custom fields routing through Eric's team two-week sprints, per the Jul 16 Clay/SF call, so partly outside my control), deliverability waits on mailbox OAuth + warmup, security pass waits on full company access. Clearing them IS the go-live checklist.</p>
+  <div class="ggrid">
+    <div class="gcard"><div class="gkey">attribution_ratified</div><h3>Credit line in writing</h3><p>Ratify the credit line with Naveen plus three Salesforce fields live. Needs Salesforce access, via Genna.</p></div>
+    <div class="gcard"><div class="gkey">baseline_set</div><h3>1x baseline, 10x target</h3><p>Numeric baseline and target in engine_state.json, agreed with Naveen in week 1.</p></div>
+    <div class="gcard"><div class="gkey">deliverability_green</div><h3>Domain warmed before volume</h3><p>Sending-domain warmup to green before anything scales. Needs sending-domain access.</p></div>
+    <div class="gcard"><div class="gkey">security_audit_current</div><h3>First security pass</h3><p>Permission audit, log sanitization, least-privilege review. Run by me on Day 1 with company access.</p></div>
+  </div>
+  <div class="closed"><b>Residual: CLOSED.</b> Personal filenames scrubbed from all git history Jul 1 2026 (owner-approved rewrite, see AUDIT_FINDINGS.md addendum). History is clean for the Bitbucket import.</div>
+</section>
+
+</main>
+
+<div class="limestripe"></div>
+<footer><div class="wrap">
+  <span>Start Here Index · private · daily calibration surface</span>
+  <span id="todaydate"></span>
+</div></footer>
+
+<script>
+(function(){
+  document.getElementById('todaydate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+
+  var CATS = {
+    signal:'Signal engine', tam:'TAM engine', impact:'Impact', cohesion:'Cohesion layer',
+    platform:'Hosted platform', skills:'Skills', stars:'Star Ratings data', clay:'Clay build',
+    docs:'Docs & playbooks', pages:'Live pages', archive:'Archive'
+  };
+  var STATUSES = { live:'LIVE', seed:'SEEDED', wait:'AWAITING ACCESS', lock:'LOCKED CANONICAL', arch:'ARCHIVED', priv:'PRIVATE' };
+
+  // status meanings: live = works now · seed = works on samples, wires on access · wait = blocked on access · lock = canonical data, read-only
+  var A = [
+    // SIGNAL ENGINE
+    {c:'signal', n:'signal_processor.py', w:'Computes 6 expansion/risk signals per install-base account and routes AE / CSM / HOLD.', wire:'<b>Fed by</b> data/accounts.csv + config/thresholds.json · <b>feeds</b> signals.json, MCP, notifier, impact engine, hosted brain.', s:'seed', note:'Live on sample data. Wires on reporting-export access (real accounts.csv).'},
+    {c:'signal', n:'intradiem_mcp_server.py', w:'MCP wrapper: query signals inside Claude (get_expansion_signals, score_all, list_monitored_accounts).', wire:'<b>Fed by</b> same engine + data · <b>feeds</b> Claude Desktop / Cowork.', s:'seed', note:'Live on sample data.'},
+    {c:'signal', n:'notifier.py', w:'Routes each firing signal to its AE/CSM owner via Slack or email. Dry-run by default.', wire:'<b>Fed by</b> signal results + data/owners.csv · <b>feeds</b> Slack DMs / email.', s:'seed', note:'Wires on SLACK_BOT_TOKEN plus real owners.csv (Salesforce owner export).'},
+    {c:'signal', n:'build_dashboard.py', w:'Injects signals.json into a deployed dashboard page.', wire:'<b>Fed by</b> data/signals.json.', s:'live', flag:true, note:'Injects ~/Desktop/outputs/intradiem-deploy/index.html, OUTSIDE this workspace. The in-tree "GTM Engine - deploy/" page is a static showcase with no injection marker; do not expect it to refresh.'},
+    {c:'signal', n:'run_daily.sh + launchd plist', w:'Daily 7am loop: score signals, refresh Desktop dashboard, TAM plays, impact, dry-run digests.', wire:'<b>Fed by</b> all three engines · <b>feeds</b> logs/ digests, Desktop deploy copies.', s:'live', note:'Dry-run by design. Hardcodes ~/.venvs/intradiem/bin/python.'},
+    {c:'signal', n:'test_signal_processor.py', w:'Regression suite for signal routing.', wire:'<b>Feeds</b> pass/fail.', s:'live', note:'14/14 green.'},
+    {c:'signal', n:'data/ + config/thresholds.json', w:'Swap-in data layer (accounts, owners) and threshold governance. signals.json is generated output.', wire:'<b>Feeds</b> engine, MCP, notifier, dashboard.', s:'seed', note:'Wires on reporting-export + Salesforce owner access. Going live = swapping CSVs, never changing engine logic.'},
+
+    // TAM ENGINE
+    {c:'tam', n:'account_engine.py', w:'Scores net-new accounts (fit 0-100 + trigger recency) and builds full strike plans: committee, ROI, 4-touch sequences.', wire:'<b>Fed by</b> tam_accounts, triggers, sellers CSVs + all config · <b>feeds</b> tam_plays.json, MCP, notifier, impact, brain.', s:'seed', note:'Live on sample data. Wires on Apollo / Clay enrichment access.'},
+    {c:'tam', n:'tam_mcp_server.py', w:'MCP wrapper: list_strike_accounts, get_strike_plan, accounts_for_seller.', wire:'<b>Feeds</b> Claude Desktop / Cowork.', s:'seed', note:'Live on sample data.'},
+    {c:'tam', n:'tam_notifier.py', w:'Each seller’s morning ranked strike list. Dry-run by default.', wire:'<b>Fed by</b> account_engine + data/sellers.csv · <b>feeds</b> Slack / print.', s:'seed', note:'Wires on SLACK_BOT_TOKEN.'},
+    {c:'tam', n:'test_account_engine.py', w:'Regression suite including trigger and copy checks.', wire:'<b>Feeds</b> pass/fail.', s:'live', note:'25/25 green.'},
+    {c:'tam', n:'config/ (icp_weights, triggers, personas, sequences, roi_model, proof, meta)', w:'The tunable layer: fit weights, the trigger-to-persona taxonomy (the moat), personas, cadence, ROI math, proof lines.', wire:'<b>Feeds</b> account_engine. Behavior changes are config edits, never code edits.', s:'live', flag:true, note:'proof.json and roi_model.json are self-labeled placeholders. Verify against the Value Repository before ANY send.'},
+    {c:'tam', n:'data/ (tam_accounts, triggers, sellers + tam_seed.json)', w:'Swap-in data layer. tam_plays.json is generated output.', wire:'<b>Feeds</b> engine and downstream.', s:'seed', flag:true, note:'tam_seed.json has no live consumer anywhere in the tree (the dashboard seed is inlined). Reference only.'},
+    {c:'tam', n:'AmeriHealth_Strike_Plan_example.md', w:'Worked example of one full strike plan.', wire:'<b>Fed by</b> account_engine output.', s:'live', note:'Sample figures, placeholder ROI.'},
+
+    // IMPACT
+    {c:'impact', n:'impact_engine.py', w:'One ELT scorecard: opportunity surfaced vs realized. The two are never blended.', wire:'<b>Fed by</b> signals.json + tam_plays.json + outcomes.csv · <b>feeds</b> impact.json, conductor stage 7, brain, dashboard Impact tab.', s:'seed', note:'Live on seeded inputs. Realized side wires as outcomes.csv gets real rows.'},
+    {c:'impact', n:'outcomes.csv + impact.json', w:'Realized-results ledger (append-only: date, account, type, value, note) and the generated scorecard.', wire:'<b>Feeds</b> impact_engine, dashboards.', s:'seed', note:'Wires on real meetings and pipeline.'},
+
+    // COHESION
+    {c:'cohesion', n:'conductor.py', w:'Weekly 7-stage orchestrator: Refresh, Re-score, Scan, Draft, Approve (HUMAN), Send (gated), Instrument. Fail-closed, human gate, deliverability gate, critic, preflight.', wire:'<b>Fed by</b> engine_state.json + hashed Build Spec + the three engines read-only · <b>writes</b> engine_state.json.', s:'seed', note:'DRY_RUN=True. Preflight must print READY before the flag ever flips. Wires Jul 6 via TODO(live) hooks to Clay, sender, Salesforce.'},
+    {c:'cohesion', n:'engine_state.json', w:'Single source of truth every dashboard reads and the conductor writes. No dashboard holds its own duplicate state.', wire:'<b>Feeds</b> all five cohesion dashboards.', s:'seed', note:'Wires on access: attribution flags, baseline, deliverability, security block. Star Ratings counts current (98 Tier A+B / 307).'},
+    {c:'cohesion', n:'5 dashboards (control_tower, attribution, approval_queue, deliverability_monitor, variant_tracker)', w:'The visible engine: headline numbers, funnel + credit line, human approve/reject, domain health, variant winners.', wire:'<b>Fed by</b> fetch(engine_state.json), placeholder banner on failure · <b>serves</b> me and Naveen.', s:'live', note:'Live front-ends on seeded state.'},
+    {c:'cohesion', n:'Clay_Build_Pack.md', w:'Click-by-click Clay table build, column-level UI mechanics.', wire:'<b>Feeds</b> the Day-1 Clay build, via the Build Order.', s:'live', note:'Reference. Build Order deltas OVERRIDE its stale assumptions.'},
+    {c:'cohesion', n:'Attribution_Loop_Spec.md', w:'Reply-sync agent spec: reply, classify, funnel, source-scoped.', wire:'<b>Feeds</b> the Jul 6 wiring of stage 7.', s:'wait', note:'Needs Salesforce + sequencer webhook.'},
+    {c:'cohesion', n:'Weekly_Conductor_Runbook.md + README', w:'The 7-stage motion, gates, live-wire checklist, go-live gate.', wire:'<b>Serves</b> the operator (me).', s:'live'},
+
+    // PLATFORM
+    {c:'platform', n:'brain/app.py (+ Dockerfile)', w:'FastAPI brain: /v1/strike, /v1/signals, /v1/impact behind X-API-Key, one key per surface, request log as the adoption metric.', wire:'<b>Imports</b> all three engines directly · <b>feeds</b> Slack app, Claude plugin, logs/requests.jsonl.', s:'wait', note:'Needs hosting deploy + GTM_API_KEYS (plugin.json expects intradiem-gtm-system.onrender.com).'},
+    {c:'platform', n:'slack/slack_app.py', w:'Socket Mode /strikeplan command for sellers.', wire:'<b>Fed by</b> brain URL + BRAIN_API_KEY · <b>feeds</b> seller DMs.', s:'wait', note:'Needs Slack app creation, bot + app tokens.'},
+    {c:'platform', n:'plugin/intradiem-gtm/', w:'Install-free seller surface: plain-language strike plans via the brain. Ships RULES_OF_THE_ROAD + the verify-before-send skill.', wire:'<b>Fed by</b> brain MCP endpoint (placeholder key) · <b>feeds</b> sellers’ Claude.', s:'wait', note:'Needs brain deployed + key set.'},
+
+    // SKILLS
+    {c:'skills', n:'intradiem-signal-to-play', w:'One account signal, three synchronized outputs: Marketing brief, Sales alert, outreach draft.', wire:'<b>Fed by</b> intradiem-signals + intradiem-tam MCPs when live-pulling.', s:'live', note:'Loads in Claude; MCP pulls need servers configured.'},
+    {c:'skills', n:'intradiem-competitive-intel', w:'Competitor mention to wedge brief: Verint, NICE, Calabrio, in-house RPA, status quo.', wire:'<b>Fed by</b> call / email / RFP input · <b>feeds</b> Sales counter-narrative.', s:'live'},
+    {c:'skills', n:'intradiem-content-engine', w:'One source asset to a full multi-channel content set.', wire:'<b>Fed by</b> source asset + intradiem-verified-metrics for every claim · <b>feeds</b> Marketing.', s:'live'},
+    {c:'skills', n:'intradiem-roi-business-case', w:'Economic-buyer 1-page business case from call transcripts.', wire:'<b>Fed by</b> transcript metrics · <b>feeds</b> CFO / COO case.', s:'live'},
+    {c:'skills', n:'intradiem-first-draft-engine', w:'Five-gate pre-production thinking for ALL outreach: prospect’s chair, one idea, write-like-speech, prospect test, light rule check. Also the thinking layer for Clay MessageGen edits.', wire:'<b>Feeds</b> every message any motion sends · <b>pairs with</b> the Sharpener.', s:'live', note:'Built + installed Jul 5. Rep-voice (Nathan default), Stars humility clause, verified-claims gate.'},
+    {c:'skills', n:'intradiem-copy-sharpener', w:'9-rule post-production quality gate + 22-point send-ready test + hard verified-claims stop.', wire:'<b>Fed by</b> first-draft-engine output · <b>feeds</b> sends, sequences, Clay variants, the approval queue.', s:'live', note:'Built + installed Jul 5. Placeholder ROI figures can never reach prospect copy.'},
+    {c:'skills', n:'intradiem-daily-war-room', w:'Morning signal sweep: 32 Tier A+B Stars parents + back-office list + named accounts. Priority 1-4, play mapping, trigger logging to the TAM engine.', wire:'<b>Feeds</b> same-day plays, triggers.csv, Slack alerts via signal-to-play.', s:'live', note:'Runs from Day 1; sharpens as universes go live in Clay.'},
+    {c:'skills', n:'clay-credit-steward', w:'5,000-credit ledger: pre-check every run, burn by motion, 60% flag, renewal receipts.', wire:'<b>Feeds</b> the Friday readout + the renewal packet.', s:'live', note:'Ledger active: 204.0 of 5,000 consumed through Jul 9, every run pre-estimated (clay_credit_ledger.csv).'},
+    {c:'skills', n:'naveen-weekly-readout', w:'Friday readout from engine_state + impact + ledger + war-room logs. Surfaced vs realized never blended; co-shape posture enforced.', wire:'<b>Feeds</b> the manager relationship + the QBR narrative log.', s:'live', note:'Week 2 readout shipped Jul 17 (Readout_2026-07-17.md); Readout_Log.md running.'},
+    {c:'skills', n:'intradiem-objection-handler', w:'Reframe framework (Acknowledge, Insight Pivot, Soft CTA) incl. We-Have-WFM and Wait-for-October categories. Rep voice.', wire:'<b>Fed by</b> prospect replies · <b>feeds</b> Nate’s reply handling, competitive-intel handoffs.', s:'live'},
+    {c:'skills', n:'intradiem-backoffice-icp', w:'The Scott Kemme straw man: two-universe split (install-base 200 vs net-new BOO logos), persona pain maps, dedup + suppression rules, Clay pull spec.', wire:'<b>Feeds</b> Mandate 3 sourcing + the BOO launch-kit universe.', s:'live', note:'Hard rule: nothing sourced before the Scott session; first fifty reviewed together.'},
+    {c:'skills', n:'intradiem-launch-kit', w:'Launch execution compiler: positioning draft for Tom, enablement one-pager, sequences, demo spec, campaign brief for Sierra, signals, instrumentation.', wire:'<b>Fed by</b> the three readiness streams · <b>feeds</b> every launch, BOO first.', s:'seed', note:'Skeleton built Jul 5. First compile Aug, paced off Chris’s stated confidence. Week 1: confirm the seam is actually unowned.'},
+
+    // STARS DATA
+    {c:'stars', n:'StarRatings_Universe_2026_TimePhased.csv', w:'THE canonical universe: 307 sub-4.0 contracts, 17 columns, time-phased addressability (addr_2028_musd, wavg_2026).', wire:'<b>Fed by</b> CMS 2026 Stars data via the Fable rebuild prompts · <b>feeds</b> Tiered csv, Clay CMS import, MessageGen lookups.', s:'lock', note:'Locked read-only. Re-pull every October CMS release.'},
+    {c:'stars', n:'StarRatings_Targets_2026_Tiered.csv', w:'Tiering on addr_2028: A = 34, A+B = 98 contracts, 32 parents, $2,511M.', wire:'<b>Feeds</b> Clay Accounts table, RunConfig, first-week target order.', s:'lock'},
+    {c:'stars', n:'StarRatings_PersonaPull_RunConfig_TierAB.csv', w:'Per-parent persona-pull run parameters: caps, segments, 32 parents.', wire:'<b>Feeds</b> Day-1 persona pull into Clay Contacts.', s:'lock'},
+    {c:'stars', n:'StarRatings_PersonaPull_Runbook.md', w:'Filters, dedup vs the 157, caps, persona_key rules, Molina step-0 product-line check.', wire:'<b>Feeds</b> Day-1 contact sourcing.', s:'live', note:'Executes on Clay access.'},
+    {c:'stars', n:'StarRatings_Earnings_Signals_2026.csv', w:'Verified earnings / press quotes + angle lines per parent, batch 2 complete.', wire:'<b>Feeds</b> Clay why_now, qbp_earnings_pressure and quality_identity_gap fits.', s:'lock', note:'UHC line time-stamped in audit.'},
+    {c:'stars', n:'StarRatings_Targeting_Flags_2026.md', w:'Suppression / routing rules: Molina MAPD, Cigna-to-HCSC, UHC proof line, market exits.', wire:'<b>Feeds</b> Clay motion_exclude, persona-pull step 0, messaging rules.', s:'live', note:'The rule lives in Clay, not the engines (corrected in audit).'},
+    {c:'stars', n:'StarRatings_CSuite_OnePager.html', w:'C-suite one-page Star Ratings thesis (also in intradiem-handoff/).', wire:'<b>Feeds</b> exec conversations.', s:'live'},
+    {c:'stars', n:'Predecessor set (Canonical.csv, Rollup, BuyingCommittee x2, CliffEdge xlsx)', w:'Pre-TimePhased era universe, rollups, committee pulls, cliff-edge list.', wire:'<b>Feeds</b> nothing current; referenced only by the historical context bridge.', s:'arch', note:'Superseded by the canonical set. Locked in place.'},
+
+    // CLAY BUILD
+    {c:'clay', n:'Clay_Day1_Build_Order.md', w:'THE Day-1 sequence: which file seeds which table, deltas overriding the Build Pack, gates.', wire:'<b>Fed by</b> all canonical files + Build Pack · <b>feeds</b> the Jul 6 build.', s:'live', note:'Executed Jul 7-9: workbook live, Contacts at 137 rows across all 27 eligible parents (~106 deliverable), Wave 1 sequencer staged in draft, everything HOLD behind the approval gate.'},
+    {c:'clay', n:'Clay_MessageGen_SystemPrompt_v2.md', w:'v2.1 system prompt for the Clay Message Gen AI column: window beat, payment-year clause, time-stamped UHC line.', wire:'<b>Fed by</b> verified-claims rules + TimePhased columns · <b>feeds</b> Clay L4 Message Gen table.', s:'lock'},
+    {c:'clay', n:'Clay_Engine_Full_Architecture.md', w:'End-to-end Clay engine architecture narrative.', wire:'<b>Serves</b> reader context.', s:'live'},
+
+    // DOCS
+    {c:'docs', n:'Q3_Bulletproof_Operating_Plan.md', w:'THE operating plan: 4 directives, Golden List, 8-week pilot spine, premortems, cadence. What I am measured on.', wire:'<b>Feeds</b> everything I do this quarter.', s:'live'},
+    {c:'docs', n:'Grand_Plan_Master.html', w:'Eyes-only master plan: audience cards, mandates, gates, rules, story bank, 6-12 month arc.', wire:'<b>Serves</b> me only. Never screen-shared.', s:'priv'},
+    {c:'docs', n:'GTM_Function_Roadmap.html', w:'Eyes-only strategy surface: the eight layers, horizons, alignment map, exec answer bank, living protocol.', wire:'<b>Serves</b> me only. Updated after every readout, mandate change, and layer completion.', s:'priv'},
+    {c:'docs', n:'GTM_Engine_Build_Spec.md', w:'The standing spec the conductor rereads and hashes every run (north_star anti-drift).', wire:'<b>Feeds</b> conductor stage 0.', s:'live', flag:true, note:'Load-bearing. Do not move or rename without updating the conductor.'},
+    {c:'docs', n:'VERIFICATION_AUDIT.md', w:'Standing audit of every stat / claim vs the Value Repository.', wire:'<b>Feeds</b> verified-claims discipline everywhere.', s:'live', note:'Reread before touching ANY outbound copy.'},
+    {c:'docs', n:'AUDIT_FINDINGS.md', w:'The 10-step pre-Bitbucket audit: findings, fixes, resolutions, relocation addendum.', wire:'<b>Serves</b> audit history.', s:'live'},
+    {c:'docs', n:'Day_One_Checklist.md + day1-prerequisites + First_Two_Weeks_Meeting_Plan.md', w:'Access order, SF / Slack prerequisites, meeting plan.', wire:'<b>Feeds</b> Jul 6 execution.', s:'live', note:'Executes on start.'},
+    {c:'docs', n:'Naveen collateral (agenda, send notes, leave-behind, talk track)', w:'First 1:1 agenda, send notes, walkthrough talk track.', wire:'<b>Feeds</b> the manager relationship.', s:'live'},
+    {c:'docs', n:'Grand_Strategy_6_12_Month.md + Production_Rollout_Plan.md + Arsenal_and_Rollout_Playbook.md', w:'6-12 month strategy, production rollout, tool-by-tool arsenal.', wire:'<b>Feeds</b> the roadmap.', s:'live', note:'Week-2 material, not Day 1.'},
+    {c:'docs', n:'GTM_Engineer_Operating_System (.md + html / pdf / docx exports)', w:'The operating-system narrative: how all the tools compose into one motion.', wire:'<b>Feeds</b> onboarding + exec framing.', s:'live'},
+    {c:'docs', n:'Message_Variant_Starter_Pack.md + Nathan_Pilot_One_Pager.md + Devoted_WholeParent_StrikePlan.md', w:'Variant seeds, AE pilot one-pager, whole-parent strike plan example.', wire:'<b>Feeds</b> first sends, the Nate pilot, the Devoted play.', s:'live', note:'Devoted UHC line time-stamped in audit.'},
+    {c:'docs', n:'Fable prompts (Universe_Rebuild, QBP_Rerun, Portable_Deliverables, Context_Bridge)', w:'Portable prompts to rebuild the universe, rerun QBP math, regenerate deliverables, bridge context.', wire:'<b>Feeds</b> reproducibility of the data layer.', s:'live'},
+    {c:'docs', n:'intradiem-brand-kit.md', w:'The official green / Playfair + DM Sans + JetBrains palette and type system for Intradiem-context deliverables (orange is the secondary spark).', wire:'<b>Feeds</b> every Intradiem-context deliverable.', s:'live'},
+    {c:'docs', n:'Design prompts + claude-design-handoff/ + intradiem-handoff/', w:'On-brand page-build prompts, packaged design handoff (7 files), shareable Naveen review bundle.', wire:'<b>Feeds</b> external design builds + Naveen review.', s:'live'},
+    {c:'docs', n:'Dallas_Andrews_30-60-90 (6 files)', w:'The 30-60-90 plan in three treatments, docx + pdf.', wire:'<b>Feeds</b> onboarding conversations.', s:'live', note:'Pre-start drafts. The Q3 plan supersedes them for operation.'},
+    {c:'docs', n:'SALESFORCE_FOUNDATIONAL_TEMPLATE.pdf + Bitbucket_Access_Request.md + misc guides', w:'SF foundational reference, access request draft, momentum architecture, call-recording bridge pattern, portfolio addendum, context handoff.', wire:'<b>Feeds</b> Day-1 SF audit + reference.', s:'live'},
+    {c:'docs', n:'CLAUDE.md', w:'Guidance for future Claude sessions in this repo.', wire:'<b>Feeds</b> every Claude session here.', s:'live'},
+
+    // PAGES
+    {c:'pages', n:'Day1_Audit_Console_LIVE.html', w:'Salesforce / Slack foundation-audit console, sample data behind a MODE flag.', wire:'<b>Fed by</b> CONFIG.tools connectors when MODE=’live’ · <b>feeds</b> the Day-1 org audit.', s:'seed', note:'Wires on Salesforce + Slack connector access. Frame as the audit run WITH Genna.'},
+    {c:'pages', n:'GTM Engine - deploy/ + Star Ratings Play - deploy/', w:'Self-contained static showcase pages with host-anywhere READMEs.', wire:'<b>Feeds</b> shareable links (Netlify / Vercel / Pages).', s:'live', flag:true, note:'Static, baked content. NOT refreshed by run_daily.sh (that feeds the Desktop copy).'},
+    {c:'pages', n:'GTM_Engine_for_Naveen_Review.html', w:'Single-file engine walkthrough built for Naveen’s review.', wire:'<b>Feeds</b> Naveen.', s:'live'},
+
+    // ARCHIVE
+    {c:'archive', n:'_archive/', w:'Superseded seeds (incl. two audit-archived Clay CSVs), old dashboards, mockups, early node build.', wire:'<b>Feeds</b> nothing current.', s:'arch', note:'One collapsed unit. Only relevant if I point there specifically.'},
+    {c:'archive', n:'Gitignored working files', w:'Three root .zip bundles, _wtest.txt, .DS_Store, office lock file.', wire:'Excluded from git.', s:'arch'}
+  ];
+
+  document.getElementById('assetcount').textContent = A.length;
+
+  var curCat = 'all', curStat = 'all', curQ = '';
+  var grid = document.getElementById('grid'), count = document.getElementById('count');
+
+  function render(){
+    var q = curQ.toLowerCase();
+    var shown = A.filter(function(a){
+      if (curCat !== 'all' && a.c !== curCat) return false;
+      if (curStat !== 'all' && a.s !== curStat) return false;
+      if (q && (a.n + ' ' + a.w + ' ' + (a.wire||'') + ' ' + (a.note||'')).toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+    grid.innerHTML = shown.map(function(a){
+      return '<div class="acard">' +
+        '<div class="atop"><div class="aname"><span class="cat">' + CATS[a.c] + '</span>' + a.n + '</div>' +
+        '<span class="st ' + a.s + '">' + STATUSES[a.s] + '</span></div>' +
+        '<div class="awhat">' + a.w + '</div>' +
+        (a.wire ? '<div class="awire">' + a.wire + '</div>' : '') +
+        (a.note ? '<div class="anote' + (a.flag ? ' flag' : '') + '">' + a.note + '</div>' : '') +
+        '</div>';
+    }).join('');
+    count.textContent = shown.length + ' / ' + A.length;
+  }
+
+  var cp = document.getElementById('catpills');
+  function pill(txt, val, cls, parent, cb){
+    var b = document.createElement('button');
+    b.className = cls + (val === 'all' ? ' on' : '');
+    b.textContent = txt;
+    b.onclick = function(){
+      Array.prototype.forEach.call(parent.children, function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      cb(val); render();
+    };
+    parent.appendChild(b);
+  }
+  pill('All', 'all', 'fp', cp, function(v){ curCat = v; });
+  Object.keys(CATS).forEach(function(k){ pill(CATS[k], k, 'fp', cp, function(v){ curCat = v; }); });
+
+  var sp = document.getElementById('statpills');
+  pill('All statuses', 'all', 'fs', sp, function(v){ curStat = v; });
+  Object.keys(STATUSES).forEach(function(k){ pill(STATUSES[k].toLowerCase(), k, 'fs', sp, function(v){ curStat = v; }); });
+
+  document.getElementById('search').addEventListener('input', function(e){ curQ = e.target.value; render(); });
+
+  render();
+
+  // ---------- today calibration ----------
+  var PHASES = [
+    {s:'2026-07-06', e:'2026-07-19', pill:'Week 1-2 · Jul 6-19', title:'Access, audit, the political week', focus:[
+      'Access asks in <a href="#dayone" style="color:var(--green-bright);font-weight:600;text-decoration:underline">Day_One_Checklist order</a>; Day-1 security pass (gate 4)',
+      'Attribution co-defined with Naveen, in writing, 3 SF fields via Genna (gate 1); baseline set (gate 2)',
+      'Inherit the squad’s Clay build: read before touching, improve theirs, never parallel it',
+      'ICP session with Scott (bring the straw man) · GA-vs-launch question to Chris · "who owns launch execution" to all three stream owners',
+      'War room runs every morning starting Day 1',
+      'Naveen is OOO until Jul 7: Day 1 = team + access + audit; the first 1:1 and every Naveen-gated ask land Jul 7+. His who-does-what doc has NOT arrived yet; assume no org-ownership facts beyond his emails'
+    ]},
+    {s:'2026-07-20', e:'2026-08-02', pill:'Week 3-4 · Jul 20-Aug 2', title:'Enrich and launch small', focus:[
+      'Deliverability infra BEFORE any volume (gate 3): warmup, rotation, monitoring',
+      'Tier 1/2 signals live as Clay triggers; waterfall enrichment with credit pre-checks',
+      'Three variants per segment, human approval on everything',
+      'Instrumentation dashboard live: enriched → sent → reply → qualified → meeting, by motion'
+    ]},
+    {s:'2026-08-03', e:'2026-08-16', pill:'Week 5-6 · Aug 3-16', title:'Iterate: this shift IS the 10x', focus:[
+      'Kill underperformers, scale winners; Star Ratings moves to weekly cadence',
+      'First follow-up agent live; back-office contacts flow into install-base campaigns',
+      'Start the BOO launch-kit compile off Chris’s stated confidence'
+    ]},
+    {s:'2026-08-17', e:'2026-08-30', pill:'Week 7-8 · Aug 17-30', title:'Review, expand, recut', focus:[
+      'Present pipeline + learnings from the dashboard: provable, source-tagged, never anecdotal',
+      'Mid-quarter recut with Naveen; contacts stay mine regardless of BOO timing',
+      'Finish the BOO kit; document the motion so another team can run it (that document is Goal 4)'
+    ]},
+    {s:'2026-08-31', e:'2026-09-30', pill:'Sep · Day 57-90', title:'Compound and prove the repeat', focus:[
+      'Volume flows, reps handle replies, I enable them',
+      'Day-75 tripwire Sep 19: under ~10 of 15 sourced, escalate THAT week',
+      'Package the whole motion as the repeatable engine and the QBR story'
+    ]}
+  ];
+  var tnow = new Date(), ph = null;
+  for (var i=0;i<PHASES.length;i++){
+    if (tnow >= new Date(PHASES[i].s) && tnow <= new Date(PHASES[i].e + 'T23:59:59')) { ph = PHASES[i]; break; }
+  }
+  if (!ph && tnow < new Date(PHASES[0].s)) ph = {pill:'T-minus '+Math.ceil((new Date(PHASES[0].s)-tnow)/86400000)+'d', title:'Staged and ready', focus:['Arsenal built: 12 skills, 3 engines, the three surfaces','Reread Q3 plan Part 0 (posture) and the Day One checklist','Install any remaining skills via Settings > Capabilities']};
+  if (!ph) ph = {pill:'Q4 · new mandates', title:'Same OS, next workload', focus:['Run the mandate-compiler pattern on whatever landed','Recut the Function Roadmap: new frontier on the page or I’ve stopped being ahead','October CMS release: re-pull the Stars universe before ANY outreach']};
+  document.getElementById('phasepill').textContent = ph.pill;
+  document.getElementById('phasetitle').textContent = ph.title;
+  document.getElementById('phasefocus').innerHTML = ph.focus.map(function(f){return '<li>'+f+'</li>'}).join('');
+})();
+
+// ---------- Day One checklist (persistent) ----------
+(function(){
+  var STEPS = [
+    {t:'<b>Get read access and a sample export.</b> Find who owns the product-usage data. Ask for one export with the engine’s columns, even if partial. Map their names to the engine’s. That mapping is the only integration work.'},
+    {t:'<b>Validate the signals against reality.</b> Real export into accounts.csv, run the processor, sit with a CSM or AE. Do the numbers match what they already know? Tune config/thresholds.json until the signals are right.'},
+    {t:'<b>Work one signal by hand.</b> One rep opens the queue and acts on one signal. Confirm it led to a real conversation. Proof before any automation.'},
+    {t:'<b>Point the team’s MCP and the page at the shared data.</b> Put them where the team can reach them; confirm list_monitored_accounts returns the real set.'},
+    {t:'<b>Run the notifier in dry-run on the schedule.</b> Install the daily job. Review digests for about a week. Confirm the right owner would get the right signal, nothing noisy.'},
+    {t:'<b>Get Sales Ops sign-off, then flip one rep to live.</b> With ops approval, switch the notifier to --send for a single rep and a single signal type. Watch how they react.'},
+    {t:'<b>Expand gradually.</b> Add more signals and reps as trust builds. Salesforce write-back (auto-created tasks) only after ops explicitly approves the schema.'}
+  ];
+  var QS = [
+    {t:'The platform modernization Busbee and Naveen referenced — what does it now expose at the event level that the GTM motion is not using yet?'},
+    {t:'Who owns the customer product-usage schema, and what is the approval path to surface a derived signal to a rep?'},
+    {t:'What is your bar for putting a signal-routing layer like this in front of a customer, on data that touches their usage?'}
+  ];
+  var KEY = 'd1checks_v1';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ state = {}; }
+  var TOTAL = STEPS.length + QS.length;
+
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+  function prog(){
+    var done = Object.keys(state).filter(function(k){return state[k];}).length;
+    document.getElementById('d1pct').textContent = done + ' of ' + TOTAL;
+    document.getElementById('d1fill').style.width = Math.round(done/TOTAL*100) + '%';
+  }
+  function row(id, numLabel, html){
+    var d = document.createElement('div');
+    d.className = 'd1item' + (state[id] ? ' done' : '');
+    d.innerHTML = (numLabel ? '<span class="d1n">'+numLabel+'</span>' : '<span class="d1n"></span>') +
+      '<span class="d1box"></span><span class="d1txt">'+html+'</span>';
+    d.addEventListener('click', function(){
+      state[id] = !state[id];
+      d.classList.toggle('done', state[id]);
+      save(); prog();
+    });
+    return d;
+  }
+  var list = document.getElementById('d1list');
+  STEPS.forEach(function(s,i){ list.appendChild(row('s'+i, (i+1), s.t)); });
+  var ql = document.getElementById('d1qlist');
+  QS.forEach(function(q,i){ ql.appendChild(row('q'+i, '→', q.t)); });
+
+  document.getElementById('d1reset').addEventListener('click', function(){
+    state = {}; save(); prog();
+    Array.prototype.forEach.call(document.querySelectorAll('#d1list .d1item, #d1qlist .d1item'), function(el){ el.classList.remove('done'); });
+  });
+  prog();
+})();
+
+// ---------- Weeks 1-2 plan (persistent, one bar over three lists) ----------
+(function(){
+  var MEET = [
+    {w:'W1', h:'<b>Naveen (sponsor) — Day 1.</b> Ask: the org map and where he sees the biggest gap.<span class="clframe">"You hired this role to build a motion from scratch. Walk me through the gap you most want closed and who owns the pieces I\'ll need, so I build with the org instead of around it."</span><span class="clyes"><b>Yes:</b> he gives the real owner list and warm intros.</span>'},
+    {w:'W1', h:'<b>John Norton, CRO — via Naveen (confirmed on the Jul 8 call; he wants the engine presented to Norton first, marketing routed politically after).</b> The most important meeting of the fortnight. Ask: their #1 GTM priority.<span class="clframe">"Before I build anything, I want my roadmap pointed at your number. In two quarters, which moves the needle more: net-new pipeline or systematizing expansion?"</span><span class="clyes"><b>Yes:</b> they name the priority and become air cover. <b>Watch-out:</b> don\'t pitch — ask and listen.</span>'},
+    {w:'W1', h:'<b>Chris Busbee (Product; controls BOO GA) — wk1.</b> Ask: a partnership on the product data the platform modernization exposed.<span class="clframe">"The new platform exposes event data that could power expansion signals. I want to use it responsibly, behind your controls. Can we co-design what\'s safe to access and how?"</span><span class="clyes"><b>Yes:</b> he opens the product-data door and co-owns governance.</span>'},
+    {w:'W1', h:'<b>Genna (Sales; owns the Salesforce relationship) — wk1.</b> Ask: co-ownership of anything touching Salesforce.<span class="clframe">"Your ops backbone makes any of this real. I won\'t put anything near Salesforce without you shaping it. Will you co-own the data model with me, read-only first?"</span><span class="clyes"><b>Yes:</b> co-owner instead of gatekeeper. Lean on existing rapport.</span>'},
+    {w:'W2', h:'<b>Nate Belfield (Sales, Pipeline Gen) — start wk2.</b> Ask: be your first pilot rep.<span class="clframe">"You know which signals are real and which are noise better than I will. Your calibration, my infrastructure. Will you be rep number one?"</span><span class="clyes"><b>Yes:</b> pilot is live and the biggest scope-overlap becomes a partner, not a rival.</span>'},
+    {w:'W2', h:'<b>Sierra Jones (Marketing) + Legal/Compliance — wk2.</b> Ask: build the claim-approval workflow and verified proof points with you.<span class="clframe">"Before any AI-drafted outreach reaches a prospect, I need your guardrails. Help me build the approval path and the verified numbers."</span><span class="clyes"><b>Yes:</b> marketing co-owns messaging governance — neutralizes compliance risk, no bypass resentment.</span>'},
+    {w:'W2', h:'<b>Data &amp; engineering owner — wk2.</b> Ask: a safe, governed way to read product-usage data.<span class="clframe">"I need a governed way to read usage data that never leaves your controls. Help me design it so it\'s safe by construction."</span><span class="clyes"><b>Yes:</b> governance review starts with them as partner, not blocker.</span>'},
+    {w:'W2', h:'<b>IT / Slack admin — wk2.</b> Ask: plan the future Slack review now.<span class="clframe">"The Claude plugin needs nothing from you. When we want Slack, here\'s exactly what it would need. Let\'s plan the review now so it\'s never a surprise."</span><span class="clyes"><b>Yes:</b> no shadow-IT reaction later.</span>'},
+    {w:'W2', h:'<b>Procurement / InfoSec — wk2 (start the long pole).</b> Ask: begin the vendor review for Clay and Apollo.<span class="clframe">"I want to start the security and procurement review for Clay and Apollo now, because it takes time. What do you need from me to begin?"</span><span class="clyes"><b>Yes:</b> the longest-lead clock is already running.</span>'}
+  ];
+  var NAV = [
+    {h:'<b>Sequencer decision.</b> Run motion one on Clay\'s native sequencer (already set up); graduate to a dedicated tool when volume nears warmed-account capacity or we need blacklist monitoring. Want his call on the graduation trigger before it\'s urgent.'},
+    {h:'<b>Co-shaping the Q3 targets.</b> He called 15 / 10x / 200 a rough sketch. Baseline math + instrumentation are a starting point, not a position. Keep the numbers provisional 30 days, then set targets off real throughput.'},
+    {h:'<b>Attribution — what good looks like.</b> My motion and Nate\'s Star Ratings outbound overlap. Before either sends at volume, the three of us agree how reply/meeting/opp get credited — defined so Nate\'s results get <i>more</i> visible, not less. Draft reply-sync loop to react to.'},
+    {h:'<b>Squad hours.</b> Three motions in parallel (Star Ratings, back-office build, BDR throughput). Want a rough weekly split for Nate, Genna, and Sierra so I plan asks against real capacity.'},
+    {h:'<b>Star Ratings idea: the addressability cut.</b> Score each sub-4.0 contract by the slice of its star gap in customer-service/admin measures (the ones we move), target the biggest addressable dollar. Changes target order; hands Persona 2 a number an actuary won\'t reject. Re-runs every October release.'},
+    {h:'<b>Clay ownership handoff.</b> To take it properly: current state from the consultant (built vs stubbed), the messaging system prompt (v2 drafted), and where intent signals stand. Day-1 goal: audit against the mapped architecture, then a build list we sequence together.'},
+    {h:'<b>Rule-text check (joint, not a correction).</b> Call Center measures come out for 2028 Stars; the broader cuts push the addressable service gap <i>up</i> over time as CMS concentrates weight into the CAHPS core by 2029. Near-term urgency: complaints/appeals/CS measures price 2028 bonus dollars only through this December. Want his read on the exact measure list so copy is precise.'}
+  ];
+  var CHK = [
+    {h:'You know who owns the top GTM number and have their air cover.'},
+    {h:'At least one named co-owner has committed (most likely Genna, Nathan, or Busbee).'},
+    {h:'The dependency map is filled in with real owners and honest timelines.'},
+    {h:'The net-new pilot is underway with Nathan on external data.'},
+    {h:'The procurement and data-governance reviews are both in motion.'},
+    {h:'The claim-approval workflow conversation has started with Cheryl and legal.'}
+  ];
+
+  var KEY='w12checks_v1', state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY))||{}; }catch(e){ state={}; }
+  var TOTAL=MEET.length+NAV.length+CHK.length;
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+  function prog(){
+    var done=Object.keys(state).filter(function(k){return state[k];}).length;
+    document.getElementById('w12pct').textContent=done+' of '+TOTAL;
+    document.getElementById('w12fill').style.width=Math.round(done/TOTAL*100)+'%';
+  }
+  function mount(listId, items, pfx, numbered){
+    var el=document.getElementById(listId);
+    items.forEach(function(it,i){
+      var id=pfx+i;
+      var d=document.createElement('div');
+      d.className='d1item'+(state[id]?' done':'');
+      var lead = it.w ? '<span class="clweek'+(it.w==='W2'?' w2':'')+'">'+it.w+'</span>' : (numbered?'<span class="d1n">'+(i+1)+'</span>':'<span class="d1n"></span>');
+      d.innerHTML=lead+'<span class="d1box"></span><span class="d1txt">'+it.h+'</span>';
+      d.addEventListener('click',function(){ state[id]=!state[id]; d.classList.toggle('done',state[id]); save(); prog(); });
+      el.appendChild(d);
+    });
+  }
+  mount('w12meet',MEET,'m',false);
+  mount('w12nav',NAV,'n',true);
+  mount('w12chk',CHK,'c',false);
+  document.getElementById('w12reset').addEventListener('click',function(){
+    state={}; save(); prog();
+    Array.prototype.forEach.call(document.querySelectorAll('#w12meet .d1item,#w12nav .d1item,#w12chk .d1item'),function(el){ el.classList.remove('done'); });
+  });
+  prog();
+})();
+</script>
+</body>
+</html>
