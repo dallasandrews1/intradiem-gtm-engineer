@@ -8,9 +8,9 @@ Every command block below is single physical lines, no backslash continuations, 
 
 ---
 
-## Step 0, personal Mac: publish (staged, not run)
+## Step 0, personal Mac: publish (DONE Aug 26 2026)
 
-Everything is committed on `main`; nothing is pushed and no remote is set. Pick one target and run it here:
+Pushed to the private repo `https://github.com/dallasandrews1/intradiem-gtm-engineer` (`main` plus both `agents/*` branches, `origin` set). Option B below stays available if Intradiem Bitbucket access lands; Option A is what ran.
 
 **A. Private GitHub repo under the same account the context bus uses (fastest, works today):**
 
