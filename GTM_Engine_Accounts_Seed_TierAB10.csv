@@ -1,0 +1,11 @@
+contract_id,parent_org,marketing_name,members,overall_star_2026,cs_star,clin_star,addressable_forgone_qbp_musd,addr_2028_musd,addr_2029plus_musd,tier,new_faller,structural_exclude,decision_maker_found,confidence
+H5216,Humana Inc.,Humana,2405635,3.5,3.7,3.2,340.2,456.7,521.2,A,FALSE,FALSE,FALSE,medium
+H5619,Humana Inc.,Humana,487278,3,3.1,3.1,244.5,277.0,307.2,A,FALSE,FALSE,FALSE,medium
+H0028,Humana Inc.,Humana,332419,3.5,3.4,3.6,91.5,105.2,117.6,A,FALSE,FALSE,FALSE,medium
+H3312,CVS Health Corporation,Aetna Medicare,103808,3,3.0,3.2,59.6,64.7,74.9,A,FALSE,FALSE,FALSE,medium
+H1468,Humana Inc.,Humana,136925,3.5,3.5,3.6,34.7,39.3,45.4,A,TRUE,FALSE,FALSE,medium
+H2775,Centene Corporation,Wellcare,60651,3,2.8,2.7,30.1,33.7,37.5,A,FALSE,FALSE,FALSE,medium
+H0354,Health Care Service Corporation,Cigna HealthCare,75201,3.5,3.6,3.6,18.3,21.2,27.5,A,TRUE,FALSE,FALSE,medium
+H8889,Medica Holding Company,Medica,112248,3.5,3.8,3.6,19.9,22.2,35.8,A,FALSE,FALSE,FALSE,medium
+H4471,"Elevance Health, Inc.",Anthem Blue Cross,104863,3,4.1,2.6,0.0,15.1,,B,FALSE,FALSE,FALSE,medium
+H3038,"Molina Healthcare, Inc.",Molina Healthcare of California,29863,3,3.5,2.9,9.2,12.2,16.8,B,FALSE,TRUE,FALSE,medium

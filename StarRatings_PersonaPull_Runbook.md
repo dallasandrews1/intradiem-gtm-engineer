@@ -16,7 +16,7 @@ Persona 1 (VP Stars/Quality):
 - Provider-owned parents (Presbyterian, Intermountain, Lumeris, IEHP, L.A. Care, CalOptima): filter to the health-plan entity, not the delivery system.
 
 Persona 2 (Finance/Actuary):
-- Include: CFO, Chief Actuary, VP Actuarial, VP Finance, SVP Finance, Head of Medicare Finance, Medicare Segment CFO, VP Financial Planning (plan entity), Treasurer only at parents under 50k members.
+- Include: CFO, Chief Actuary, VP Actuarial, VP Finance, SVP Finance, Head of Medicare Finance, Medicare Segment CFO, VP Finance Government Programs, FP&A leadership (VP+), VP Financial Planning (plan entity), Treasurer only at parents under 50k members.
 - Exclude: Controller, Accounting, Audit, Tax, Investor Relations, Procurement, Revenue Cycle, analyst/manager below Director.
 - Seniority: VP+ default; Director+ only for Director-Medicare-Finance / Director-Actuarial at parents under 100k members.
 - Large-parent segment rule (the `persona2_segment_rule` column): target the Medicare-segment finance lead or Chief Actuary, never the corporate CFO. Explicit for Humana, UnitedHealth, Centene, CVS/Aetna, Elevance, HCSC.
@@ -40,6 +40,12 @@ First Name,Last Name,Full Name,Job Title,Company,Company Domain,LinkedIn URL,Ema
 - `Why Now` = earnings_angle_line or quality-pride wedge from `StarRatings_Earnings_Signals_2026.csv`, blank if neither.
 - `Email Status` = Apollo's raw value (verified / likely / unavailable), untouched. The deliverability monitor keys off it; don't let Clay overwrite it during enrichment.
 - `Source Motion` = `star_ratings`; `GTM Engine Sourced` = `TRUE` (attribution).
+
+## Provenance and wave-2 personas (Naveen's own spec, email to Clay consultant Jun 9 2026)
+Personas 1 and 2 above deliberately mirror the persona spec Naveen wrote for the Clay build ("for the first go on the motion, I think we should target Persona 1 (Stars) and Persona 2 (Finance)"). His spec also defines the expansion wave, to be used verbatim when we widen:
+- **Persona 3, Ops / Contact Center leadership** (Director+, bias VP+): Contact Center, Member Services, Customer Service, Customer Care, Service Operations, Member Engagement, Operations Medicare. His disambiguation rule: bio references AHT / call volume / telephony / NPS = Ops persona; bio references CAHPS / specific Star measures = Stars persona. VP Member Experience can sit on either side; read the bio.
+- **Persona 4, Economic buyer (CEO / COO)** (C-suite or President only): President Medicare / Medicare Advantage / Government Programs, Market President, COO Medicare, GM Government Programs. Large parents (e.g. Centene): target the MA-segment president, never the corporate CEO; smaller plans, the corporate CEO is right.
+His intent-signal library drives which signal triggers outreach to which persona.
 
 ## Note
 This is the dry-run of the enrichment waterfall Naveen wants proven before wider Clay spend. Run it on Tier A+B first (32 parents), measure hit rate and email-verification rate, then decide on volume.

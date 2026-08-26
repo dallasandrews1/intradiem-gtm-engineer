@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Clay Engine &amp; the Golden List · GTM Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C; --lime-bright:#A4CE3A;
+  --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+  --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist2:#E7EEE3;
+  --line:#E2E7DD; --line2:#D4DCCE; --gold:#E0A23B; --orange:#FE5000;
+  --rail:248px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+
+/* rail */
+.rail{position:fixed;top:0;left:0;bottom:0;width:var(--rail);background:var(--forest);color:#fff;padding:22px 16px;overflow-y:auto;z-index:20;}
+.brandcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);border-radius:12px;padding:13px 14px;margin-bottom:18px;}
+.brandcard .k{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.16em;color:var(--lime);text-transform:uppercase;}
+.brandcard .t{font-family:"Playfair Display",serif;font-weight:700;font-size:17px;line-height:1.15;margin-top:4px;color:#fff;}
+.brandcard .s{font-size:11px;color:#B9CDBE;margin-top:5px;}
+.nav a{display:block;text-decoration:none;padding:9px 11px;border-radius:9px;margin-bottom:2px;border-left:3px solid transparent;transition:background .15s;}
+.nav a .n{font-family:"JetBrains Mono",monospace;font-size:10px;color:#8FB89C;margin-right:7px;}
+.nav a .l{font-size:13px;font-weight:600;color:#EAF2EC;}
+.nav a .sub{display:block;font-size:10.5px;color:#8FB89C;margin-top:1px;margin-left:26px;}
+.nav a:hover{background:rgba(255,255,255,.05);}
+.nav a.active{background:rgba(255,255,255,.10);border-left-color:var(--lime);}
+.nav a.active .n{color:var(--lime);}
+.railfoot{margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.10);font-family:"JetBrains Mono",monospace;font-size:9.5px;line-height:1.8;color:#8FB89C;}
+.railfoot b{color:#fff;font-weight:600;}
+
+/* content */
+.wrap{margin-left:var(--rail);}
+.section{max-width:900px;margin:0 auto;padding:64px 40px;border-bottom:1px solid var(--line);}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+h1{font-family:"Playfair Display",serif;font-weight:800;color:var(--forest);font-size:44px;line-height:1.05;letter-spacing:-.015em;margin:0 0 14px;}
+h2{font-family:"Playfair Display",serif;font-weight:700;color:var(--forest);font-size:30px;line-height:1.12;margin:0 0 10px;}
+h3{font-weight:700;color:var(--forest);font-size:17px;margin:22px 0 8px;}
+p{margin:0 0 14px;}
+.lede{font-size:19px;color:var(--ink-soft);line-height:1.5;}
+strong{color:var(--forest);font-weight:700;}
+em{color:var(--ink-soft);}
+.mono{font-family:"JetBrains Mono",monospace;}
+
+/* hero */
+.hero{background:var(--forest);color:#fff;border-bottom:none;max-width:none;padding:88px 40px;}
+.hero .inner{max-width:900px;margin:0 auto;}
+.hero .eyebrow{color:var(--lime);}
+.hero h1{color:#fff;font-size:58px;}
+.hero .rule{height:3px;width:70px;background:var(--lime);border-radius:2px;margin:22px 0;}
+.hero .lede{color:#DCE8DF;font-size:21px;max-width:660px;}
+.hero .breath{margin-top:26px;background:rgba(255,255,255,.06);border-left:3px solid var(--lime);border-radius:0 10px 10px 0;padding:18px 20px;max-width:680px;}
+.hero .breath p{margin:0;color:#EAF2EC;font-size:16px;}
+.hero .meta{margin-top:30px;font-family:"JetBrains Mono",monospace;font-size:12px;color:#B9CDBE;line-height:2;}
+.hero .meta b{color:#fff;}
+
+/* tiles + grids */
+.grid{display:grid;gap:14px;margin:18px 0;}
+.g2{grid-template-columns:1fr 1fr;}
+.g3{grid-template-columns:1fr 1fr 1fr;}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 2px rgba(20,40,25,.04);transition:transform .16s, box-shadow .16s;}
+.tile:hover{transform:translateY(-3px);box-shadow:0 12px 34px rgba(20,40,25,.09);}
+.tile .k{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--green);text-transform:uppercase;margin-bottom:6px;}
+.tile .k.o{color:var(--orange);}
+.tile h3{margin:0 0 6px;font-size:15.5px;}
+.tile p{margin:0;font-size:14px;color:var(--ink-soft);}
+.mist{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0;}
+.mist.leaf{border-left:3px solid var(--green-bright);}
+.mist.spark{border-left:3px solid var(--orange);}
+.mist h3{margin-top:0;}
+
+/* stat band */
+.band{background:var(--forest);border-radius:16px;padding:26px 18px;margin:22px 0;color:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;}
+.band .n{font-family:"Playfair Display",serif;font-weight:800;font-size:38px;color:var(--lime);line-height:1;}
+.band .l{font-size:12.5px;color:#CFE0D4;margin-top:9px;line-height:1.4;}
+.note{font-size:12.5px;color:var(--dim);font-style:italic;margin-top:8px;}
+
+/* clean list */
+ul.clean{list-style:none;padding:0;margin:10px 0 16px;}
+ul.clean li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;color:var(--ink-soft);}
+ul.clean li:before{content:"▸";position:absolute;left:0;color:var(--green-bright);}
+ul.clean li b{color:var(--forest);}
+
+/* before/after table */
+.cmp{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+.cmp th{background:var(--forest);color:#fff;text-align:left;padding:11px 14px;font-weight:600;font-size:13px;}
+.cmp td{border-bottom:1px solid var(--line);padding:11px 14px;vertical-align:top;color:var(--ink-soft);}
+.cmp td b{color:var(--forest);}
+.cmp tr:nth-child(even) td{background:var(--mist);}
+.cmp td:first-child{width:38%;}
+
+/* interactive station flow */
+.flowwrap{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;margin:22px 0;align-items:start;}
+.stations{display:flex;flex-direction:column;gap:0;}
+.st{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:10px;padding:11px 14px;cursor:pointer;transition:.15s;position:relative;}
+.st:hover{background:var(--mist);}
+.st.on{background:var(--forest);border-left-color:var(--lime);}
+.st.on .stn,.st.on .stt{color:#fff;}
+.st.on .stn{color:var(--lime);}
+.stn{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--orange);letter-spacing:.05em;}
+.stt{font-weight:700;color:var(--forest);font-size:14.5px;margin-top:1px;}
+.stdown{text-align:center;color:var(--green-bright);font-size:12px;line-height:1;margin:3px 0;}
+.detail{background:var(--mist);border:1px solid var(--line);border-radius:14px;padding:22px 24px;position:sticky;top:24px;min-height:220px;}
+.detail .dk{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;color:var(--orange);text-transform:uppercase;}
+.detail h3{margin:6px 0 10px;font-size:21px;font-family:"Playfair Display",serif;}
+.detail p{font-size:15px;color:var(--ink-soft);margin:0;}
+
+/* pill tabs */
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px;}
+.pill{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:600;padding:8px 16px;border-radius:22px;border:1px solid var(--line2);background:var(--card);color:var(--green);cursor:pointer;transition:.15s;}
+.pill:hover{background:var(--mist);}
+.pill.on{background:var(--forest);color:#fff;border-color:var(--forest);}
+.panel{display:none;}
+.panel.on{display:block;animation:fade .25s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* message card */
+.msg{background:var(--mist2);border:1px solid var(--line2);border-radius:12px;padding:16px 20px;margin:12px 0;font-size:14.5px;color:var(--ink-soft);}
+.msg .s{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--green);font-weight:600;margin-bottom:8px;}
+.msg p{margin:0 0 8px;}
+.angles{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 2px;}
+.tag{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;color:var(--green);background:var(--mist);border:1px solid var(--line2);border-radius:20px;padding:4px 12px;}
+.tag.o{color:var(--orange);}
+
+/* ask */
+.ask{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 18px;margin:12px 0;box-shadow:0 1px 2px rgba(20,40,25,.04);}
+.ask .q{font-weight:700;color:var(--forest);font-size:15.5px;}
+.ask .why{color:var(--ink-soft);font-size:14px;margin-top:4px;}
+.closer{background:var(--forest);color:#fff;border-radius:16px;padding:26px 28px;margin-top:24px;}
+.closer p{margin:0;color:#EAF2EC;font-size:16px;}
+.closer b{color:#fff;}
+.railcta{display:block;text-align:center;text-decoration:none;background:var(--lime);color:var(--forest);font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.03em;padding:11px 12px;border-radius:10px;margin:14px 0 2px;transition:background .15s;}
+.railcta:hover{background:var(--lime-bright);}
+.nextcta{display:block;text-decoration:none;background:var(--forest);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px;margin-top:22px;transition:transform .16s, box-shadow .16s;}
+.nextcta:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(20,40,25,.16);}
+.nextcta .k{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:9px;}
+.nextcta .t{font-family:"Playfair Display",serif;font-weight:800;font-size:24px;margin-bottom:7px;color:#fff;line-height:1.1;}
+.nextcta .d{color:#DCE8DF;font-size:15px;line-height:1.5;}
+.nextcta .go{color:var(--lime);font-weight:700;white-space:nowrap;}
+
+/* mobile */
+.menubtn{display:none;}
+@media(max-width:880px){
+  :root{--rail:0px;}
+  .rail{transform:translateX(-100%);transition:transform .2s;width:240px;}
+  .rail.open{transform:none;}
+  .wrap{margin-left:0;}
+  .menubtn{display:flex;position:fixed;top:14px;left:14px;z-index:30;background:var(--forest);color:#fff;border:none;border-radius:10px;width:44px;height:44px;font-size:20px;align-items:center;justify-content:center;cursor:pointer;}
+  .g2,.g3,.flowwrap{grid-template-columns:1fr;}
+  .band{grid-template-columns:1fr;gap:20px;}
+  .hero h1{font-size:40px;} h1{font-size:32px;} h2{font-size:24px;}
+  .section,.hero{padding:48px 22px;} .detail{position:static;}
+}
+</style>
+</head>
+<body>
+
+<button class="menubtn" onclick="document.querySelector('.rail').classList.toggle('open')">☰</button>
+
+<aside class="rail">
+  <div class="brandcard">
+    <div class="k">Intradiem · GTM Engineering</div>
+    <div class="t">The Clay Engine &amp; the Golden List</div>
+    <div class="s">The growth engine, by click</div>
+  </div>
+  <nav class="nav" id="nav">
+    <a href="#overview"><span class="n">00</span><span class="l">Overview</span><span class="sub">The engine in one breath</span></a>
+    <a href="#golden"><span class="n">01</span><span class="l">The Golden List</span><span class="sub">Live account intelligence</span></a>
+    <a href="#ranking"><span class="n">02</span><span class="l">Ranking &amp; tiers</span><span class="sub">Fit, intent, the dollar cut</span></a>
+    <a href="#messaging"><span class="n">03</span><span class="l">The message engine</span><span class="sub">3 variants per segment</span></a>
+    <a href="#clay"><span class="n">04</span><span class="l">The Clay engine</span><span class="sub">Eight stations deep</span></a>
+    <a href="#credits"><span class="n">05</span><span class="l">The 5,000 credits</span><span class="sub">How we protect the spend</span></a>
+    <a href="#backoffice"><span class="n">06</span><span class="l">Back-office quick win</span><span class="sub">Inside our own base</span></a>
+    <a href="#linkedin"><span class="n">07</span><span class="l">Sales Navigator</span><span class="sub">Where LinkedIn plugs in</span></a>
+    <a href="#asks"><span class="n">08</span><span class="l">Where I'd value your read</span><span class="sub">Threads to shape together</span></a>
+  </nav>
+  <a class="railcta" href="clay-build.html">The build, table by table &rsaquo;</a>
+  <div class="railfoot">
+    Author <b>Dallas Andrews</b><br>GTM Engineer<br>
+    For <b>Naveen Thilagan</b><br>July 2026 · Internal
+  </div>
+</aside>
+
+<div class="wrap">
+
+<!-- HERO / OVERVIEW -->
+<section class="hero" id="overview">
+  <div class="inner">
+    <div class="eyebrow">Intradiem · GTM Engineering</div>
+    <h1>Pipeline, engineered.</h1>
+    <div class="rule"></div>
+    <p class="lede">One machine that finds the right accounts, finds the right people, writes the right message, and hands a rep a ready-to-work list every morning. This page is how it works, and where I want your read.</p>
+    <div class="breath">
+      <p><b>The idea in one breath.</b> Clay is an always-on production line for pipeline. The Golden List is the intelligence layer it runs off. Together they turn 5,000 credits into a motion that repeats. The machine does the manual work. People keep the judgment.</p>
+    </div>
+    <div class="meta">
+      Prepared for <b>Naveen Thilagan</b> · Director, Product Strategy<br>
+      Author <b>Dallas Andrews</b> · GTM Engineer · July 2026
+    </div>
+  </div>
+</section>
+
+<!-- GOLDEN LIST -->
+<section class="section" id="golden">
+  <div class="eyebrow">01 · The foundation</div>
+  <h2>The Golden List</h2>
+  <p class="lede">Not a spreadsheet. A live account intelligence layer that every campaign, sequence, and agent runs off, and that updates as the market moves.</p>
+  <p>A record does not just sit there. It gets re-scored when a new signal fires and re-enriched when it goes stale. Six things live on every record, which is what makes one list enough to run the whole motion.</p>
+  <div class="grid g3">
+    <div class="tile"><div class="k">01</div><h3>Account scoring</h3><p>Which companies to prioritize, by fit and intent.</p></div>
+    <div class="tile"><div class="k">02</div><h3>Contact enrichment</h3><p>The right people and verified emails, already attached.</p></div>
+    <div class="tile"><div class="k">03</div><h3>Intent signals</h3><p>Why now, layered in from hiring, tech stack, news, filings.</p></div>
+    <div class="tile"><div class="k">04</div><h3>Outreach sequences</h3><p>Each account flows straight into a message set.</p></div>
+    <div class="tile"><div class="k">05</div><h3>Rep prioritization</h3><p>Effort lands on the accounts most likely to convert.</p></div>
+    <div class="tile"><div class="k">06</div><h3>Pipeline reporting</h3><p>Every reply and meeting traces back to the list.</p></div>
+  </div>
+
+  <h3>Why it creates impact the first morning a rep opens it</h3>
+  <table class="cmp">
+    <tr><th>Before the list</th><th>With the Golden List</th></tr>
+    <tr><td>Rep researches accounts one at a time, by hand.</td><td><b>Every account arrives pre-scored and graded.</b> Effort goes to A and B accounts, not guesswork.</td></tr>
+    <tr><td>Each email written from scratch.</td><td><b>Messages are pre-drafted and on-message.</b> A BDR sends and edits instead of writing cold. This is the throughput lever.</td></tr>
+    <tr><td>Sales and marketing work off different lists.</td><td><b>One list for both motions and both teams.</b> Everyone acts on the same trigger at the same time.</td></tr>
+    <tr><td>A good account goes cold before anyone notices.</td><td><b>Signals re-rank the list as news breaks,</b> so timing is built in, not chased.</td></tr>
+  </table>
+  <p>Everything that follows, the scoring, the messaging, the Clay machine, runs on this one list.</p>
+</section>
+
+<!-- RANKING -->
+<section class="section" id="ranking">
+  <div class="eyebrow">02 · The scoring</div>
+  <h2>How it ranks and tiers accounts</h2>
+  <p>Every account carries two scores. <strong>Fit</strong> is how well the company matches who we win. <strong>Intent</strong> is how ready they look right now, read from live signals. The two combine into a single letter grade.</p>
+  <div class="mist"><p style="margin:0"><strong>Fit + Intent → Grade.</strong> &nbsp; A = work now &nbsp;·&nbsp; B = strong fit, warm it up &nbsp;·&nbsp; C = keep on the list &nbsp;·&nbsp; D = drop. A rep never has to decide where to start; the grade already did.</p></div>
+
+  <h3>The ranking has a point of view</h3>
+  <p>We do not chase every plan sitting under 4.0 stars. We rank on the bonus dollars we can actually influence inside the window that is still open, not the whole theoretical number. That cut is what keeps the list credible and the effort aimed.</p>
+  <div class="band">
+    <div><div class="n">307</div><div class="l">contracts in the full<br>scored universe</div></div>
+    <div><div class="n">98</div><div class="l">Tier A+B contracts across<br>32 parent organizations</div></div>
+    <div><div class="n">~$2.5B</div><div class="l">addressable bonus dollars<br>in the live window (Tier A+B)</div></div>
+  </div>
+  <p class="note">Figures modeled from public CMS Star Ratings data, ranked on the influenceable 2028 measurement window. First target inside Tier A+B is Humana at roughly $1.08B of that window. These are analytical estimates, not Intradiem-verified customer results.</p>
+
+  <h3>Signals set the timing</h3>
+  <p>On top of fit and intent, a tiered signal library decides how loud an account gets. This is what turns the list from a ranking into a clock.</p>
+  <div class="grid g3">
+    <div class="tile"><div class="k o">Tier 1 · act now</div><h3>Market events</h3><p>October CMS release · Stars language in SEC filings · earnings-call mentions. Fires outreach immediately with a fresh angle.</p></div>
+    <div class="tile"><div class="k">Tier 2 · this week</div><h3>Plan-level signals</h3><p>New quality leadership · quality hiring clusters · a contract just under 4.0. Raises priority and refreshes the angle.</p></div>
+    <div class="tile"><div class="k">Tier 3 · context</div><h3>Supporting detail</h3><p>Lifts priority but does not fire outreach on its own.</p></div>
+  </div>
+</section>
+
+<!-- MESSAGING -->
+<section class="section" id="messaging">
+  <div class="eyebrow">03 · From ranking to words</div>
+  <h2>The list does not just rank. It writes.</h2>
+  <p>For each contact, the engine picks the angle by role and drafts a short, specific message. We write three variants per segment so we test into the winner instead of guessing which line lands. The quality bar is the approved sample already in use.</p>
+
+  <div class="pills" id="segpills">
+    <button class="pill on" data-seg="stars">Stars / Quality leader</button>
+    <button class="pill" data-seg="finance">Finance leader</button>
+    <button class="pill" data-seg="backoffice">Back-office ops</button>
+  </div>
+
+  <div class="panel on" data-seg="stars">
+    <div class="angles"><span class="tag">1A · the cliff number</span><span class="tag">1B · the 2028 window</span><span class="tag o">1C · new-leader signal</span></div>
+    <div class="msg">
+      <div class="s">APPROVED SAMPLE · Stars / Quality leader (1A) · updated Jul 9</div>
+      <p>Subject: the last stretch to 4.0</p>
+      <p>Hi Kristen, your weighted average looks to be right around 3.91, though you'll know the exact picture far better than I do. What caught my eye is how close that is. For a book sitting there, the last few points usually come from the customer-service measures, and they're being set right now, in this measurement year, not on the October release.</p>
+      <p>Thought it might be worth finding time to talk through which of your contracts sit closest to the line and which measures still move them this cycle. Have 15 minutes in the next few weeks?</p>
+    </div>
+  </div>
+  <div class="panel" data-seg="finance">
+    <div class="angles"><span class="tag">2A · bonus dollars</span><span class="tag">2B · cost of inaction</span><span class="tag o">2C · filing signal</span></div>
+    <div class="msg">
+      <div class="s">SAMPLE · Finance leader · cost-of-inaction (2B)</div>
+      <p>Subject: one cycle of margin</p>
+      <p>Hi {{first_name}}, missing 4.0 by a fraction is the same financial outcome as missing it by a lot: one cycle of bonus either way. For contracts this close, the last few points usually come from the call center measures.</p>
+      <p>Worth 15 minutes to pressure-test the numbers together?</p>
+    </div>
+  </div>
+  <div class="panel" data-seg="backoffice">
+    <div class="angles"><span class="tag">3A · off the phones</span><span class="tag">3B · backlog vs. capacity</span><span class="tag o">3C · automation signal</span></div>
+    <div class="msg">
+      <div class="s">SAMPLE · Back-office ops · off-the-phones (3A)</div>
+      <p>Subject: the work off the phones</p>
+      <p>Hi {{first_name}}, we already work with {{company}} on the front office; what we don't see yet is how the back office ({{function}}) is handling its volume. Most teams have real-time orchestration on the phones and almost none of it behind them.</p>
+      <p>Worth 15 minutes to hear how you're running it today?</p>
+    </div>
+  </div>
+
+  <div class="mist leaf">
+    <h3>The experiment loop</h3>
+    <p style="margin:0">Launch all three variants to matched samples. Measure to <strong>qualified reply</strong>, not opens. Kill the lowest, scale the winner, and fold the winning angle into the follow-up. The list gets sharper every week because every send teaches it something.</p>
+  </div>
+  <p class="note">{{fields}} fill per contact from the Golden List. No fabricated stats; any Intradiem metric is pulled from the verified repository before a message can send.</p>
+</section>
+
+<!-- CLAY ENGINE -->
+<section class="section" id="clay">
+  <div class="eyebrow">04 · The machine</div>
+  <h2>The Clay engine, explained simply</h2>
+  <p>Clay is built from tables that feed other tables, like stations on an assembly line. A record only moves to the next station if it passes a check at the current one. Nothing is manual once it is wired, and the whole line refreshes itself. It runs eight stations deep. <em>Click a station.</em></p>
+
+  <div class="flowwrap">
+    <div class="stations" id="stations">
+      <div class="st on" data-i="0"><div class="stn">STATION 1 · SOURCES</div><div class="stt">Where records come in</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="1"><div class="stn">STATION 2 · ACCOUNTS</div><div class="stt">The Golden List</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="2"><div class="stn">STATION 3 · SIGNALS</div><div class="stt">Why now</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="3"><div class="stn">STATION 4 · CONTACTS</div><div class="stt">The buying committee</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="4"><div class="stn">STATION 5 · MESSAGE</div><div class="stt">The draft</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="5"><div class="stn">STATION 6 · APPROVAL</div><div class="stt">The human gate</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="6"><div class="stn">STATION 7 · SEND &amp; TRACK</div><div class="stt">Out the door, measured</div></div>
+      <div class="stdown">▼</div>
+      <div class="st" data-i="7"><div class="stn">STATION 8 · REP WORKLIST</div><div class="stt">Who to work today</div></div>
+    </div>
+    <div class="detail" id="stdetail">
+      <div class="dk" id="dk">Station 1 · Sources</div>
+      <h3 id="dt">Where records come in</h3>
+      <p id="dp">Public CMS Star Ratings data for new-logo targets, and our own customer list from Salesforce for the back office. A record only enters if it qualifies, for example a plan sitting under 4.0 stars that is not already a customer.</p>
+    </div>
+  </div>
+  <p class="note">Every arrow is an automatic Clay action, not a copy-paste. Reference tables (approved claims, the persona rulebook, the message library) sit alongside the line and are read by the stations that need them.</p>
+</section>
+
+<!-- CREDITS -->
+<section class="section" id="credits">
+  <div class="eyebrow">05 · The spend</div>
+  <h2>How we protect the 5,000 credits</h2>
+  <p>Clay runs on a fixed budget of credits we spend on enrichment. The plan is built to spend them on the right rows only, show the results, and use that record to renew. Three guardrails keep the spend honest.</p>
+  <div class="grid g3">
+    <div class="tile"><div class="k">Guardrail 1</div><h3>Never pay twice</h3><p>A row is only enriched if that field is still empty. Once we have someone's email, we never spend a credit re-finding it.</p></div>
+    <div class="tile"><div class="k">Guardrail 2</div><h3>Only enrich what qualifies</h3><p>Out-of-window and out-of-profile rows are dropped before any enrichment runs. We never pay to research a company we would not pursue.</p></div>
+    <div class="tile"><div class="k">Guardrail 3</div><h3>Cheap data first</h3><p>Low-cost company details first; premium data (intent, hard-to-find emails) only on rows already worth it.</p></div>
+  </div>
+  <p>On top of that, a running ledger tracks every batch: credits in, contacts produced, messages sent, qualified replies, meetings. That ledger is the renewal case, told in receipts rather than promises. A checkpoint at 60% of the budget forces a review before we spend the back half.</p>
+  <div class="band">
+    <div><div class="n">5,000</div><div class="l">Clay credits purchased, team<br>trained, security review done</div></div>
+    <div><div class="n">40+</div><div class="l">data sources feeding<br>enrichment per record</div></div>
+    <div><div class="n">60%</div><div class="l">spend checkpoint before<br>the back half is released</div></div>
+  </div>
+  <p class="note">The first three figures are confirmed on the onboarding site. Every dollar and ROI figure the engine generates is labeled as a modeled estimate until an Intradiem-verified number replaces it.</p>
+</section>
+
+<!-- BACK OFFICE -->
+<section class="section" id="backoffice">
+  <div class="eyebrow">06 · The quick win</div>
+  <h2>The back office inside our own customers</h2>
+  <p class="lede">The fastest place to show impact, and it is Mandate 3: 200-plus back-office contacts.</p>
+  <p>Our front-office customers cannot hand us leads into their own back offices, so we source those contacts ourselves through the same engine, then run campaigns inside accounts where we are already trusted.</p>
+  <div class="grid g3">
+    <div class="tile"><div class="k">Why it's fast</div><h3>Warm logos</h3><p>We are already in the building on the front office. The back office is white space next door, not a cold start.</p></div>
+    <div class="tile"><div class="k">Why it's fast</div><h3>A defined universe</h3><p>The target functions are known: claims, enrollment, billing, payments, document processing. We point the machine at a list, not the open market.</p></div>
+    <div class="tile"><div class="k o">Why it's fast</div><h3>A message that writes itself</h3><p>"We run your phones, we don't yet see the work behind them" is a clean, honest opener only we can send.</p></div>
+  </div>
+  <div class="mist spark">
+    <h3>The one gate before we source</h3>
+    <p style="margin:0">The back-office target profile gets ratified with Scott Kemme first. His edits <em>are</em> the profile. We review the first fifty contacts together, then the list-build runs against the agreed definition and paces to the Back Office Optimizer launch, not a dump. This keeps the 200 contacts credible instead of a raw count.</p>
+  </div>
+</section>
+
+<!-- LINKEDIN -->
+<section class="section" id="linkedin">
+  <div class="eyebrow">07 · The channel question</div>
+  <h2>Where LinkedIn Sales Navigator plugs in</h2>
+  <p>Sales Navigator fits the engine best as a feed into the machine we already have, not as a separate tool a rep works by hand. It plugs in at three points.</p>
+  <div class="grid g3">
+    <div class="tile"><div class="k">Plug-in 1</div><h3>A people source</h3><p>Its filters (title, seniority, function, geography) feed the Contacts station directly. It is the cleanest way to find the exact buying committee, and it is especially strong for the back-office personas, where public CMS data gives us the account but not the people.</p></div>
+    <div class="tile"><div class="k">Plug-in 2</div><h3>A signal source</h3><p>It surfaces job changes, new-in-role moves, and hiring, which are exactly our priority triggers. A new quality leader or a claims-ops hire fires a fresh, timely angle instead of a generic touch.</p></div>
+    <div class="tile"><div class="k o">Plug-in 3</div><h3>A channel</h3><p>LinkedIn is already the second touch in every sequence. A light automation layer runs the connection, follow, and message steps in step with the email, so the same contact gets one coordinated push.</p></div>
+  </div>
+  <div class="mist leaf">
+    <h3>My recommendation</h3>
+    <p>Bring it in as a <strong>data and signal source first</strong>. That upgrade needs no new behavior from reps and immediately makes the engine's contact and timing quality better. Layer the <strong>outreach automation second</strong>, once deliverability is green and the profile is ratified, so we stay coordinated rather than spraying.</p>
+    <p><strong>One guardrail to plan for.</strong> LinkedIn automation has account-safety limits, so we pace it under daily caps and keep the same human-approval gate we use on email. Same discipline, one more channel.</p>
+    <p style="margin:0">This is the path I'd take. I'll scope the specific tool and its cost so we're deciding on a real number, not a maybe.</p>
+  </div>
+</section>
+
+<!-- ASKS -->
+<section class="section" id="asks">
+  <div class="eyebrow">08 · The open threads</div>
+  <h2>Where I'd value your read</h2>
+  <p>The engine is built and the messaging is drafted. A handful of things sit with you rather than with the build, and I'd rather shape them with you than assume. Here is where your read moves this forward.</p>
+  <div class="ask"><div class="q">1 · What "engine-sourced" means, defined together.</div><div class="why">A shared definition (and the three Salesforce tracking fields behind it) keeps the ledger and the credit story a common scoreboard rather than something to debate later.</div></div>
+  <div class="ask"><div class="q">2 · The back-office profile, shaped with Scott Kemme.</div><div class="why">His edits become the sourcing spec, and I'd build the 200 contacts from there. Whenever that conversation makes sense on your side, I'm ready to run with the outcome.</div></div>
+  <div class="ask"><div class="q">3 · The deliverability bar before we scale.</div><div class="why">I'll prove on a small slice and watch inbox health first. Setting the threshold together is what keeps a fast start from costing us the domain.</div></div>
+
+  <div class="closer">
+    <p><b>Where this is heading.</b> Every one of the new DWO products, Back Office Optimizer and Queue Optimizer first, needs pipeline aimed at the right buyer at the right moment. This engine is that front end. It's built and aimed at the Star Ratings play first, with the back-office motion the next thing we point it at. It's designed to get sharper with every campaign rather than needing a rebuild. That compounding is the point, and it is the part that keeps paying off as the product line grows.</p>
+  </div>
+
+  <a class="nextcta" href="clay-build.html">
+    <div class="k">Next · the engineer's view</div>
+    <div class="t">See exactly how the engine is built</div>
+    <div class="d">The nine-layer stack, every table and what it does, the day-one build order, and a live account you can score to watch the engine decide. <span class="go">Open the build &rsaquo;</span></div>
+  </a>
+</section>
+
+</div>
+
+<script>
+// station detail
+var STAT=[
+ ["Station 1 · Sources","Where records come in","Public CMS Star Ratings data for new-logo targets, and our own customer list from Salesforce for the back office. A record only enters if it qualifies, for example a plan sitting under 4.0 stars that is not already a customer."],
+ ["Station 2 · Accounts","The Golden List","Every qualifying company, enriched and scored for fit, then graded A / B / C / D. This is the hub the whole engine runs off, and the subject of section 01."],
+ ["Station 3 · Signals","Why now","Live triggers watched per account: an earnings mention of Stars, a new quality leader, a hiring cluster. When one fires, it raises the account's priority and refreshes the outreach angle."],
+ ["Station 4 · Contacts","The buying committee","The right people inside each graded account, found by title and function, with a verified email. Every contact is stamped at creation so we can prove later that the engine sourced it."],
+ ["Station 5 · Message","The draft","A short, personalized message written for each contact, with the angle chosen by their role. It only uses approved facts, pulled from a locked claims library, so no unverified number ever reaches a prospect."],
+ ["Station 6 · Approval","The human gate","The single exit. A quality check runs first (valid email, in-scope, approved claims), then a person approves before anything leaves the building. Nothing sends from Clay on its own."],
+ ["Station 7 · Send & track","Out the door, measured","Approved messages hand off to the sequencer, and every record is tagged in Salesforce so replies and meetings trace back to the engine. Sending stays off until deliverability is healthy."],
+ ["Station 8 · Rep worklist","Who to work today","The human-facing end. Each rep opens one list of graded, signal-fresh accounts with the reason to reach out and the product angle already attached."]
+];
+var stations=document.getElementById('stations');
+stations.addEventListener('click',function(e){
+  var el=e.target.closest('.st'); if(!el)return;
+  stations.querySelectorAll('.st').forEach(function(s){s.classList.remove('on');});
+  el.classList.add('on');
+  var d=STAT[+el.dataset.i];
+  document.getElementById('dk').textContent=d[0];
+  document.getElementById('dt').textContent=d[1];
+  document.getElementById('dp').textContent=d[2];
+});
+
+// segment pills
+var pills=document.getElementById('segpills');
+pills.addEventListener('click',function(e){
+  var b=e.target.closest('.pill'); if(!b)return;
+  pills.querySelectorAll('.pill').forEach(function(p){p.classList.remove('on');});
+  b.classList.add('on');
+  document.querySelectorAll('.panel').forEach(function(p){
+    p.classList.toggle('on', p.dataset.seg===b.dataset.seg);
+  });
+});
+
+// scrollspy
+var links=[].slice.call(document.querySelectorAll('#nav a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+function spy(){
+  var y=window.scrollY+120, cur=0;
+  secs.forEach(function(s,i){ if(s && s.offsetTop<=y) cur=i; });
+  links.forEach(function(a,i){a.classList.toggle('active',i===cur);});
+}
+window.addEventListener('scroll',spy); spy();
+document.getElementById('nav').addEventListener('click',function(){
+  if(window.innerWidth<=880) document.querySelector('.rail').classList.remove('open');
+});
+</script>
+</body>
+</html>

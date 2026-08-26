@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clay Strategy &amp; Build · Dallas · Intradiem GTM Engineer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+  :root{
+    --blurple-deep:#16432C; --blurple-text:#15231B; --blurple-mid:#1F7340;
+    --creme:#FAFBF7; --lilac:#E7EEE3; --lilac-2:#D4DCCE; --lilac-3:#BFD8C6;
+    --sea:#E7EEE3; --sea-2:#B6D94C; --sea-3:#1F7340;
+    --peri:#F0F4ED; --peri-2:#E7EEE3; --gray:#51605A;
+    --spark:#FE5000;
+    --amber:#9a6313; --amber-bg:#FBF1E1; --red:#9B2C2C; --red-bg:#F9EAEA; --green:#2f8f4e; --green-bg:#E7EEE3;
+    --ff-head:'Playfair Display',serif; --ff-label:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans','Segoe UI',system-ui,sans-serif;background:var(--creme);color:var(--blurple-text);line-height:1.55;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  .hero{background:var(--blurple-deep);color:#fff;padding:56px 0 44px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--sea-2),var(--blurple-mid))}
+  .hero .wrap{position:relative;z-index:2}
+  .eyebrow{font-family:var(--ff-label);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sea-2);margin-bottom:14px}
+  .hero h1{font-family:var(--ff-head);font-size:42px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px}
+  .hero .spine{font-size:17px;color:var(--peri-2);max-width:840px}
+  .hero .spine b{color:#fff}
+  .herostrip{margin-top:16px;font-size:13px;color:var(--lilac-2);max-width:820px;border-left:2px solid var(--sea-2);padding-left:14px}
+  .statbar{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+  .stat .n{font-family:var(--ff-head);font-size:28px;font-weight:800;color:var(--sea-2);line-height:1}
+  .stat .l{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--lilac-2);margin-top:6px}
+
+  nav{position:sticky;top:0;background:rgba(249,247,246,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--lilac-2);z-index:50}
+  nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+  nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--gray);text-decoration:none;padding:7px 13px;border-radius:8px}
+  nav a:hover{background:var(--peri-2);color:var(--blurple-deep)}
+  nav a.home{color:var(--blurple-mid)}
+
+  section{padding:46px 0 8px}
+  h2{font-family:var(--ff-head);font-size:26px;font-weight:800;color:var(--blurple-deep);margin-bottom:6px}
+  .sub{color:var(--gray);margin-bottom:22px;max-width:800px}
+  h3{font-size:15px;font-weight:700;color:var(--blurple-deep);margin-bottom:8px}
+
+  .breath{background:var(--peri);border-left:4px solid var(--blurple-mid);border-radius:0 14px 14px 0;padding:22px 26px}
+  .breath p{font-size:16.5px}
+  .breath .tag{font-family:var(--ff-label);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blurple-mid);font-weight:700;display:block;margin-bottom:8px}
+
+  .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:760px){.trio{grid-template-columns:1fr}}
+  .tcard{background:#fff;border:1px solid var(--lilac-2);border-radius:16px;padding:20px 22px;border-top:4px solid var(--blurple-mid)}
+  .tcard .role{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--blurple-mid);margin-bottom:6px}
+  .tcard h3{font-size:17px;margin-bottom:6px}
+  .tcard p{font-size:13.5px;color:var(--gray)}
+
+  .tl{border-left:3px solid var(--lilac-2);margin-left:8px;padding-left:26px}
+  .tstep{position:relative;padding-bottom:24px}
+  .tstep::before{content:"";position:absolute;left:-34.5px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--lilac-3);border:3px solid var(--creme)}
+  .tstep.done::before{background:var(--sea-3)}
+  .tstep.now::before{background:var(--blurple-mid);box-shadow:0 0 0 5px var(--peri-2)}
+  .twhen{font-family:var(--ff-label);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--blurple-mid)}
+  .tstep h3{margin:3px 0 6px}
+  .tstep p,.tstep li{font-size:13.5px;color:#3d4b40}
+  .tstep ul{padding-left:17px;margin-top:4px}
+  .stepstatus{font-size:10px;font-weight:700;padding:2px 9px;border-radius:999px;margin-left:8px;vertical-align:middle}
+  .s-built{background:var(--green-bg);color:var(--green)}
+  .s-now{background:var(--amber-bg);color:var(--amber)}
+  .s-gated{background:var(--red-bg);color:var(--red)}
+
+  .ggrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:760px){.ggrid{grid-template-columns:1fr}}
+  .gcard{background:#fff;border:1px solid var(--lilac-2);border-left:4px solid var(--amber);border-radius:12px;padding:16px 18px}
+  .gcard h3{font-size:14px}
+  .gcard p{font-size:13px;color:#3d4b40}
+
+  /* table catalog */
+  .catbar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+  .catchip{font-family:var(--ff-label);font-size:11.5px;font-weight:600;letter-spacing:.02em;padding:7px 12px;border-radius:999px;border:1px solid var(--lilac-2);background:#fff;color:var(--gray);cursor:pointer;transition:all .15s}
+  .catchip:hover{border-color:var(--blurple-mid);color:var(--blurple-deep)}
+  .catchip.on{background:var(--blurple-deep);border-color:var(--blurple-deep);color:#fff}
+  .catgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(max-width:760px){.catgrid{grid-template-columns:1fr}}
+  .tcat{background:#fff;border:1px solid var(--lilac-2);border-radius:14px;padding:15px 17px;border-left:4px solid var(--blurple-mid)}
+  .tcat.ref{border-left-color:var(--sea-2)}
+  .tcat.core{border-left-color:var(--spark)}
+  .tcat .th{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .tcat .tid{font-family:var(--ff-label);font-size:11px;font-weight:700;color:var(--blurple-mid)}
+  .tcat .tnm{font-size:14.5px;font-weight:700;color:var(--blurple-deep)}
+  .tcat .ttag{font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-left:auto}
+  .ttag.core{background:#FCE3D6;color:#b0410c}
+  .ttag.ref{background:var(--green-bg);color:var(--green)}
+  .ttag.layer{background:var(--peri-2);color:var(--blurple-mid)}
+  .tcat .tp{font-size:12.8px;color:#3d4b40;margin-bottom:10px}
+  .tcat .tmeta{font-family:var(--ff-label);font-size:10.8px;color:var(--gray);line-height:1.7;border-top:1px dashed var(--lilac-2);padding-top:9px}
+  .tcat .tmeta b{color:var(--blurple-mid);font-weight:600}
+  .tcat .tmeta .ar{color:var(--spark);font-weight:700}
+
+  footer{background:var(--blurple-deep);color:var(--lilac-2);padding:30px 0;margin-top:56px;font-size:12.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* ============ INTERACTIVE ENGINE ============ */
+  .engine{background:var(--blurple-deep);border-radius:22px;padding:30px 28px 34px;color:#fff;margin-top:6px;position:relative;overflow:hidden}
+  .engine .ehead h3{color:#fff;font-family:var(--ff-head);font-size:22px;font-weight:800}
+  .engine .ehead p{color:var(--peri-2);font-size:13.5px;max-width:640px;margin-top:6px}
+  .coflag{display:inline-block;font-family:var(--ff-label);font-size:10.5px;letter-spacing:.06em;background:rgba(182,217,76,.16);color:var(--sea-2);border:1px solid rgba(182,217,76,.4);padding:4px 11px;border-radius:999px;margin-top:14px}
+
+  /* simulator */
+  .sim{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  @media(max-width:820px){.sim{grid-template-columns:1fr}}
+  .panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px 20px}
+  .panel .plabel{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--sea-2);font-weight:700;margin-bottom:12px}
+  .presets{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}
+  .chip{font-size:11.5px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04);color:var(--peri-2);cursor:pointer;transition:all .15s}
+  .chip:hover{border-color:var(--sea-2);color:#fff}
+  .chip.on{background:var(--sea-2);color:var(--blurple-deep);border-color:var(--sea-2);font-weight:700}
+  .ctrl{margin-bottom:15px}
+  .ctrl .cl{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--peri-2);margin-bottom:5px}
+  .ctrl .cl b{font-family:var(--ff-label);color:var(--sea-2);font-size:13px}
+  input[type=range]{width:100%;accent-color:var(--sea-2);height:5px;cursor:pointer}
+  select{width:100%;background:rgba(0,0,0,.25);color:#fff;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:8px 10px;font-family:inherit;font-size:13px;cursor:pointer}
+  .toggles{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .tgl{flex:1;min-width:130px;display:flex;align-items:center;gap:9px;background:rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:9px 11px;cursor:pointer;font-size:12px;color:var(--peri-2);transition:all .15s;user-select:none}
+  .tgl:hover{border-color:rgba(182,217,76,.5)}
+  .tgl .sw{width:34px;height:19px;border-radius:999px;background:rgba(255,255,255,.18);position:relative;flex-shrink:0;transition:background .2s}
+  .tgl .sw::after{content:"";position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:#fff;transition:left .2s}
+  .tgl.on .sw{background:var(--sea-2)}
+  .tgl.on .sw::after{left:17px}
+  .tgl.on{color:#fff;border-color:rgba(182,217,76,.5)}
+
+  /* readout */
+  .readout{display:flex;flex-direction:column;gap:14px}
+  .scorewrap{display:flex;align-items:center;gap:16px}
+  .scoreno{font-family:var(--ff-head);font-weight:800;font-size:46px;line-height:1;color:#fff;min-width:76px}
+  .scoreno small{font-size:16px;color:var(--lilac-2);font-weight:400}
+  .gradebadge{font-family:var(--ff-head);font-weight:800;font-size:20px;padding:6px 16px;border-radius:12px;letter-spacing:.02em}
+  .gr-A{background:var(--sea-2);color:var(--blurple-deep)}
+  .gr-B{background:#8fb84a;color:var(--blurple-deep)}
+  .gr-C{background:rgba(224,179,77,.9);color:var(--blurple-deep)}
+  .gr-X{background:var(--spark);color:#fff}
+  .verdict{font-size:13px;color:var(--peri-2);flex:1}
+  .comp{margin-top:2px}
+  .comprow{display:flex;align-items:center;gap:10px;margin-bottom:7px;font-size:11.5px;color:var(--lilac-2)}
+  .comprow .cn{width:150px;flex-shrink:0}
+  @media(max-width:520px){.comprow .cn{width:110px}}
+  .comprow .cbar{flex:1;height:9px;background:rgba(0,0,0,.25);border-radius:5px;overflow:hidden}
+  .comprow .cfill{height:100%;width:0;background:linear-gradient(90deg,var(--blurple-mid),var(--sea-2));border-radius:5px;transition:width .4s}
+  .comprow .cv{width:34px;text-align:right;font-family:var(--ff-label);color:var(--sea-2);font-weight:600}
+  .routebox{background:rgba(0,0,0,.2);border-radius:11px;padding:12px 14px;font-size:12.5px}
+  .routebox .rr{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px dashed rgba(255,255,255,.1)}
+  .routebox .rr:last-child{border-bottom:none}
+  .routebox .rr .k{color:var(--lilac-2)}
+  .routebox .rr .v{color:#fff;font-weight:600;text-align:right}
+  .routebox .rr .v.spark{color:#ffb388}
+  .whynow{background:rgba(182,217,76,.1);border:1px solid rgba(182,217,76,.28);border-radius:11px;padding:12px 14px;font-size:13px;color:#eaf3d8;font-style:italic}
+  .whynow b{font-style:normal;font-family:var(--ff-label);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--sea-2);display:block;margin-bottom:5px}
+
+  .runrow{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+  .runbtn{font-family:var(--ff-label);font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--sea-2);color:var(--blurple-deep);border:none;border-radius:999px;padding:12px 22px;cursor:pointer;white-space:nowrap;transition:transform .1s,box-shadow .2s}
+  .runbtn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(182,217,76,.3)}
+  .runbtn.busy{background:var(--lilac-3);cursor:default}
+  .runhint{font-size:12px;color:var(--lilac-2)}
+
+  .pipe{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;position:relative;margin-top:18px}
+  @media(max-width:900px){.pipe{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){.pipe{grid-template-columns:repeat(2,1fr)}}
+  .node{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:11px 9px;cursor:pointer;transition:all .25s;position:relative;min-height:112px;display:flex;flex-direction:column}
+  .node:hover{border-color:var(--sea-2);background:rgba(255,255,255,.11)}
+  .node.lit{border-color:var(--sea-2);background:rgba(182,217,76,.16);box-shadow:0 0 0 2px rgba(182,217,76,.35),0 10px 26px rgba(0,0,0,.28);transform:translateY(-3px)}
+  .node.blocked{border-color:var(--spark);background:rgba(254,80,0,.14);box-shadow:0 0 0 2px rgba(254,80,0,.4)}
+  .node.dim{opacity:.32}
+  .node.sel{border-color:#fff}
+  .node .ly{font-family:var(--ff-label);font-size:10px;letter-spacing:.1em;color:var(--sea-2);font-weight:700}
+  .node .nm{font-size:12px;font-weight:700;margin-top:5px;line-height:1.25}
+  .node .role2{font-size:10px;color:var(--lilac-2);margin-top:auto;padding-top:8px}
+  .node .dot{position:absolute;top:9px;right:9px;width:8px;height:8px;border-radius:50%}
+  .dot.built{background:var(--sea-2)} .dot.now{background:var(--spark)} .dot.gated{background:#e0b34d}
+  .token{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--spark);box-shadow:0 0 14px 3px rgba(254,80,0,.8);opacity:0;z-index:10;transition:left .5s cubic-bezier(.5,0,.5,1),top .5s cubic-bezier(.5,0,.5,1),opacity .3s;pointer-events:none}
+
+  .runbanner{margin-top:14px;border-radius:12px;padding:13px 16px;font-size:13px;display:none}
+  .runbanner.pass{display:block;background:rgba(47,143,78,.18);border:1px solid rgba(182,217,76,.4);color:#eaf3d8}
+  .runbanner.stop{display:block;background:rgba(254,80,0,.15);border:1px solid rgba(254,80,0,.45);color:#ffd4bd}
+  .runbanner b{color:#fff}
+
+  .detail{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 18px;margin-top:14px;min-height:74px}
+  .detail .dhead{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .detail .dl{font-family:var(--ff-label);font-size:10.5px;letter-spacing:.1em;color:var(--sea-2);font-weight:700}
+  .detail h4{font-size:15px;font-weight:700;color:#fff}
+  .detail .badge{font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+  .badge.built{background:rgba(182,217,76,.22);color:var(--sea-2)}
+  .badge.now{background:rgba(254,80,0,.2);color:#ffb388}
+  .badge.gated{background:rgba(224,179,77,.2);color:#ecc879}
+  .detail p{font-size:13px;color:var(--peri-2)}
+  .detail .mech{font-family:var(--ff-label);font-size:11px;color:var(--lilac-2);margin-top:7px;background:rgba(0,0,0,.18);border-radius:8px;padding:7px 10px;display:inline-block}
+
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:11.5px;color:var(--lilac-2)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{width:9px;height:9px;border-radius:50%;display:inline-block}
+
+  .funnel{margin-top:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px 22px 22px}
+  .funnel .fh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+  .funnel h4{font-size:15px;color:#fff;font-weight:700}
+  .funnel .fstamp{font-family:var(--ff-label);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#ecc879;border:1px solid rgba(236,200,121,.5);border-radius:999px;padding:3px 10px}
+  .funnel .fnote{font-size:11.5px;color:var(--lilac-2);margin:4px 0 16px}
+  .frow{display:flex;align-items:center;gap:14px;margin-bottom:9px}
+  .frow .flab{width:170px;font-size:12.5px;color:var(--peri-2);flex-shrink:0}
+  @media(max-width:560px){.frow .flab{width:112px;font-size:11px}}
+  .fbar-wrap{flex:1;background:rgba(0,0,0,.22);border-radius:7px;overflow:hidden;height:25px;position:relative}
+  .fbar{height:100%;width:0;border-radius:7px;background:linear-gradient(90deg,var(--blurple-mid),var(--sea-2));transition:width 1s cubic-bezier(.3,.8,.4,1);display:flex;align-items:center;justify-content:flex-end;padding-right:10px}
+  .fbar b{font-size:12px;font-weight:700;color:var(--blurple-deep);opacity:0;transition:opacity .4s .45s}
+  .fbar.grown b{opacity:1}
+  .fbar.terminal{background:linear-gradient(90deg,#d24608,var(--spark))}
+  .fbar.terminal b{color:#fff}
+  .disclaim{font-size:11px;color:var(--lilac-3);margin-top:14px;font-style:italic}
+  .outcome{margin-top:16px;background:linear-gradient(90deg,rgba(31,115,64,.4),rgba(182,217,76,.2));border:1px solid rgba(182,217,76,.5);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .outcome .arrowin{font-family:var(--ff-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sea-2);font-weight:700}
+  .outcome .obig{font-family:var(--ff-head);font-weight:800;font-size:54px;line-height:.9;color:var(--sea-2)}
+  .outcome .otext{flex:1;min-width:240px}
+  .outcome .otext .ot1{font-size:15.5px;font-weight:700;color:#fff}
+  .outcome .otext .ot2{font-size:12.5px;color:var(--peri-2);margin-top:4px}
+
+  .coshape{background:rgba(0,0,0,.22);border:1px solid rgba(182,217,76,.3);border-radius:14px;padding:18px 20px;margin-top:22px}
+  .coshape h4{color:var(--sea-2);font-family:var(--ff-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+  .coshape p{font-size:13.5px;color:var(--peri-2)}
+  .coshape ul{margin:9px 0 0 0;padding-left:18px}
+  .coshape li{font-size:13px;color:#eaf3d8;margin-bottom:4px}
+  @media print{nav{display:none}.node{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">GTM Engineer · Intradiem · Clay build strategy for Naveen</div>
+    <h1>The Clay Engine</h1>
+    <p class="spine">Pipeline stops being a sales activity and becomes a <b>system output</b>. This is the strategy, the build order, and a working model of the logic that decides who gets worked and who does not.</p>
+    <p class="herostrip">This page is the build plan and a hands-on model of how the engine decides. The design, the seed data, the scoring formula, and the persona-pull runbooks are ready to stand up in the Intradiem Clay account, standing them up is the near-term work, not a finished system. The scoring weights are mine to tune on evidence and show you working; the calls we make together are the business ones, what counts as a winnable account, how we credit the engine, and the back-office ICP.</p>
+    <div class="statbar">
+      <div class="stat"><div class="n">9</div><div class="l">Layers designed, source to rep</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Motions: Star Ratings + back office</div></div>
+      <div class="stat"><div class="n">32</div><div class="l">Tier A+B parents in scope</div></div>
+      <div class="stat"><div class="n">$2.5B*</div><div class="l">Addressable QBP, 2028 window</div></div>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="Start_Here_Index.html" class="home">◂ Start Here</a>
+  <a href="#thesis">The thesis</a>
+  <a href="#model">Operating model</a>
+  <a href="#stack">The 9-layer stack</a>
+  <a href="#tables">Every table</a>
+  <a href="#order">Build order</a>
+  <a href="#gates">Gates</a>
+  <a href="#engine">Score an account</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="thesis">
+  <div class="breath">
+    <span class="tag">The strategy in one breath</span>
+    <p>Build the tables once, wire them, let them run. Native Clay tables are the engine, tables writing into tables, conditional runs, scheduled refreshes, so the account list stays alive instead of dying the moment the market moves. Depth is the point: <b>Sources → Accounts → Contacts → Message → Approval → Sync → Reply → Attribution → Worklist</b> is the full chain of real wiring, and every hop is gated so credits only spend on rows that are in-window, in-ICP, and not already filled. Measurement before volume, ICP before sourcing, human before send.</p>
+  </div>
+  <p class="sub" style="margin-top:16px">Two plain-English one-pagers go alongside this for a first read: <b>The Clay Engine Plan</b> and <b>The Golden List</b>. Those explain the motion in exec terms and group the flow into eight stations; this page is the detailed, interactive version with all nineteen tables broken out. Same engine, same numbers.</p>
+</section>
+
+<section id="model">
+  <h2>Operating model</h2>
+  <p class="sub">The most common question is "CSV every time, or the MCP?" Neither is the primary way of working. Here is how the three pieces divide up.</p>
+  <div class="trio">
+    <div class="tcard">
+      <div class="role">The engine</div>
+      <h3>Native Clay tables</h3>
+      <p>The living, auto-updating motion. Tables write into tables on conditional runs and scheduled refreshes. This is where the work happens day to day, and the only place the layered architecture actually runs.</p>
+    </div>
+    <div class="tcard">
+      <div class="role">The complement</div>
+      <h3>MCP in Claude</h3>
+      <p>Ad-hoc research, one-off pulls, feeding data into dashboards and briefs. It finds, enriches, and reads. It does not build or run the layered architecture. Use it to answer a question fast, not to run the motion.</p>
+    </div>
+    <div class="tcard">
+      <div class="role">The bridge</div>
+      <h3>CSV import</h3>
+      <p>A one-time seed from an external file. After the seed, the native table owns the data and keeps it fresh. Re-exporting CSVs to work from produces snapshots that die when the market moves, the exact thing the engine exists to beat.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <h2>The nine-layer stack</h2>
+  <p class="sub">Every layer is a real set of Clay tables wired to the next by a <b>Send Table Data</b> action, a <b>Lookup</b> column, or a <b>conditional run</b>. The hands-on version is at the bottom of the page. Here is the map.</p>
+  <div class="tl">
+    <div class="tstep done"><span class="twhen">L0 · Sources</span><h3>CMS import · install-base import · signal feeds</h3><p>Land the CMS Star Ratings file and the Salesforce install base. A conditional filter pushes only in-window, non-customer rows forward into Accounts.</p></div>
+    <div class="tstep done"><span class="twhen">L1 · Accounts</span><h3>The Golden List hub</h3><p>Scored, enriched, graded, signal-aware. Firmographic and technographic waterfall, a fit score, an intent score, a grade, and the top signal. Enrichment runs only-if-empty; stale rows refresh on a schedule.</p></div>
+    <div class="tstep done"><span class="twhen">L2 · Signals</span><h3>Star Ratings + back office, writing back into Accounts</h3><p>Per-account intent monitoring. Tier-1 triggers fire outreach; Tier-2 raise priority. Signals write intent and the why-now line back onto the account.</p></div>
+    <div class="tstep done"><span class="twhen">L3 · Contacts</span><h3>Buying committee</h3><p>People linked to accounts, ICP-filtered, persona-matched, carrying the read-only attribution tags. Email waterfall runs only-if-empty; invalid emails reject before they cost a send.</p></div>
+    <div class="tstep now"><span class="twhen">L4 · Messaging</span><h3>Message Gen, reading the reference tables</h3><p>Personalized variant copy per contact, keyed to the account why-now and product angle. It looks up approved stats, the product-angle map, and the ICP rubric so claims stay inside what is verified.</p></div>
+    <div class="tstep now"><span class="twhen">L5 · Approval</span><h3>Send Queue: critic gate + human approval</h3><p>The single egress. Nothing sends from Clay directly. A critic checks email validity, in-scope motion, verified claims, and length; a human approves before anything leaves.</p></div>
+    <div class="tstep"><span class="twhen">L6 · Delivery</span><h3>Outreach Sync + deliverability gate</h3><p>Approved copy and verified email hand off to the sequencer, and source-tags write to Salesforce. The sender webhook stays off until domain health is green.</p></div>
+    <div class="tstep"><span class="twhen">L7 · Closed loop</span><h3>Reply sync + attribution</h3><p>Replies and meetings write back onto contacts, then attribution computes the two-motion funnel and engine-sourced credit at the qualified-reply line.</p></div>
+    <div class="tstep"><span class="twhen">L8 · Rep handoff</span><h3>AE territory + worklist</h3><p>The human-facing end. Each rep opens a daily worklist: graded, signal-fresh accounts and their committee, with the why-now line and the suggested product angle, filtered to their territory.</p></div>
+  </div>
+</section>
+
+<section id="tables">
+  <h2>Every table, and what it does</h2>
+  <p class="sub">The nine layers are made of nineteen real Clay tables. This is each one: what it is, what feeds it, what it writes to, and when it runs. The five marked <b>Core five</b> are the first build and prove the whole motion on a slice; the reference tables are small and static; the rest layer on after. Filter by layer to focus.</p>
+  <div class="catbar" id="catbar">
+    <button class="catchip on" data-f="all">All 19</button>
+    <button class="catchip" data-f="core">Core five</button>
+    <button class="catchip" data-f="L0">L0 Sources</button>
+    <button class="catchip" data-f="L1">L1 Accounts</button>
+    <button class="catchip" data-f="L2">L2 Signals</button>
+    <button class="catchip" data-f="L3">L3 Contacts</button>
+    <button class="catchip" data-f="L4">L4 Messaging</button>
+    <button class="catchip" data-f="L5">L5 Approval</button>
+    <button class="catchip" data-f="L6">L6 Delivery</button>
+    <button class="catchip" data-f="L7">L7 Closed loop</button>
+    <button class="catchip" data-f="L8">L8 Rep handoff</button>
+    <button class="catchip" data-f="ref">Reference</button>
+  </div>
+  <div class="catgrid" id="catgrid"></div>
+</section>
+
+<section id="order">
+  <h2>Day-one build order</h2>
+  <p class="sub">Do not skip. Prove each stage on a ten-row Tier A+B slice before widening. Status reflects what is designed and data-ready versus what still stands up inside the Intradiem Clay account. The head start is the design and the data; standing the tables up is the near-term work.</p>
+  <div class="tl">
+    <div class="tstep done"><span class="twhen">Step 1</span><h3>Confirm Salesforce attribution fields<span class="stepstatus s-built">Designed · data ready</span></h3><p>gtm_engine_sourced, source_motion, sourced_date. If missing, flag to Naveen as a build so credit is provable from day one.</p></div>
+    <div class="tstep done"><span class="twhen">Step 2</span><h3>Seed the universe and the dedup baseline<span class="stepstatus s-built">Designed · data ready</span></h3><p>Load the 307-row canonical universe (Tier A+B first) into CMS Import; load the 157 existing contacts into the dedup path. Intersect against the install base so current customers route to the back-office motion, not new-logo.</p></div>
+    <div class="tstep done"><span class="twhen">Step 3-4</span><h3>Accounts identity, then the enrichment waterfall<span class="stepstatus s-built">Designed · data ready</span></h3><p>Add the refreshed data model (cs_star, clin_star, the addressable-forgone columns, the time-phased 2028/2029 columns, tier, new_faller). Enrichment runs only-if-empty on conditional runs so credits are protected.</p></div>
+    <div class="tstep done"><span class="twhen">Step 5</span><h3>Scoring: fit, exclusions, grade<span class="stepstatus s-built">Designed · data ready</span></h3><p>Rank on addr_2028_musd, the influenceable window. Add motion_exclude so clinical-only gaps never source. Run on a ten-row slice (Humana H5216, H5619, H0028) and confirm grade computes and excluded rows drop. Weights and bands are tunable in config and pending ratification.</p></div>
+    <div class="tstep done"><span class="twhen">Step 6</span><h3>Contacts: persona pull + attribution lock<span class="stepstatus s-built">Designed · data ready</span></h3><p>Run the persona pull from the runbook: ICP filters, dedup against the 157, caps, and the persona_key column. Verify the three attribution tags lock and never overwrite.</p></div>
+    <div class="tstep now"><span class="twhen">Step 7</span><h3>Message Gen: paste v2.1, generate two rows<span class="stepstatus s-now">Next to stand up</span></h3><p>Wire the v2.1 system prompt (window beat, payment-year clause, time-stamped UHC line, addr_2028 lead for Persona 2). Generate one Persona 1 and one Persona 2 row and eyeball against the worked examples before going wider.</p></div>
+    <div class="tstep now"><span class="twhen">Step 8</span><h3>Send Queue + three webhooks<span class="stepstatus s-now">Next to stand up</span></h3><p>Point webhook #1 at the approval queue. Leave webhook #3 (sender) off until deliverability is green.</p></div>
+    <div class="tstep"><span class="twhen">Step 9</span><h3>Align with Naveen and Scott<span class="stepstatus s-gated">Gated</span></h3><p>Before lifting the test-slice cap we align on the business calls: the ranking basis (addr_2028 as the influenceable window), how we credit the engine, the back-office ICP with Scott, and the call-center rule-text check. The Clay weights are mine to tune and show. This gate is a decision, not a build.</p></div>
+    <div class="tstep"><span class="twhen">Step 10-11</span><h3>Turn on Tier-1 signals, then first real run<span class="stepstatus s-gated">Gated</span></h3><p>Schedule the October CMS re-import and the earnings sweep. First live run is three variants on a Tier A+B segment, small, human-approved, deliverability watched. Humana leads, then UnitedHealth, CVS/Aetna, Centene, Elevance, HCSC.</p></div>
+  </div>
+</section>
+
+<section id="gates">
+  <h2>Gates that stay closed until they pass</h2>
+  <p class="sub">The engine is built to fail closed. A stage error stops the run; it never silently sends. Three gates stand between a built table and a live motion.</p>
+  <div class="ggrid">
+    <div class="gcard"><h3>Attribution ratified</h3><p>Scoring weights, the addressability ranking basis, and the credit definition agreed with Naveen and Scott before the test-slice cap lifts.</p></div>
+    <div class="gcard"><h3>Baseline set</h3><p>A measured starting point so surfaced opportunity and realized results never blend into one number.</p></div>
+    <div class="gcard"><h3>Deliverability green</h3><p>Warmup, inbox rotation, and bounce rate healthy. The sender webhook stays off until this reads green. This is the tripwire that stops spray-and-burn.</p></div>
+    <div class="gcard"><h3>Human before send</h3><p>Every message clears the critic checks and a human approval before it can leave Clay. No exceptions, no direct send.</p></div>
+  </div>
+</section>
+
+<section id="engine">
+  <h2>Score an account, watch the engine decide</h2>
+  <p class="sub">This is the part worth touching. Load a real account or move the inputs yourself, and the engine computes its fit score, checks the exclusion rules, picks the product angle, and drafts the why-now line, live, using the actual formula from the build. Then run it through the pipeline and watch it either flow to a rep or get stopped at the gate with zero credits spent.</p>
+
+  <div class="engine">
+    <div class="ehead">
+      <h3>The decision logic, in your hands</h3>
+      <p>Every number here is computed from the inputs by the same logic these Clay tables are built to run. The weights and grade bands are mine to tune and prove on live accounts.</p>
+      <span class="coflag">◇ Weights &amp; bands are my dials · set on evidence, shown as they prove out</span>
+    </div>
+
+    <div class="sim">
+      <div class="panel">
+        <div class="plabel">Inputs · load a real account or dial your own</div>
+        <div class="presets" id="presets"></div>
+
+        <div class="ctrl">
+          <div class="cl"><span>Addressable forgone QBP, 2028 window</span><b id="addrV">$24M</b></div>
+          <input type="range" id="addr" min="0" max="40" step="1" value="24">
+        </div>
+        <div class="ctrl">
+          <div class="cl"><span>Clinical Star (non-call-center measures)</span><b id="clinV">4.0</b></div>
+          <input type="range" id="clin" min="2.5" max="5" step="0.5" value="4.0">
+        </div>
+        <div class="ctrl">
+          <div class="cl"><span>Buying-committee persona found</span></div>
+          <select id="persona">
+            <option value="cc">VP Member Services / Customer Care → Queue Optimizer</option>
+            <option value="bo">VP Claims / Appeals / UM Ops → Back Office Optimizer</option>
+            <option value="coo">COO / Core Operations → both products</option>
+            <option value="out">VP IT / Security → outside ICP</option>
+          </select>
+        </div>
+        <div class="toggles">
+          <div class="tgl on" id="tFaller"><span class="sw"></span><span>New faller (fresh sub-4.0 drop)</span></div>
+          <div class="tgl on" id="tDM"><span class="sw"></span><span>Director+ Stars or finance contact found</span></div>
+          <div class="tgl" id="tLater"><span class="sw"></span><span>Addressable in a later window (2029+)</span></div>
+          <div class="tgl" id="tStruct"><span class="sw"></span><span>Structural exclude (Molina MAPD / Horizon)</span></div>
+        </div>
+      </div>
+
+      <div class="panel readout">
+        <div class="plabel">Engine output · computed live</div>
+        <div class="scorewrap">
+          <div class="scoreno" id="scoreno">100<small>/100</small></div>
+          <div class="gradebadge gr-A" id="grade">Grade A</div>
+          <div class="verdict" id="verdict">Top-priority. Sources the full committee.</div>
+        </div>
+        <div class="comp" id="comp"></div>
+        <div class="routebox" id="routebox"></div>
+        <div class="whynow" id="whynow"></div>
+      </div>
+    </div>
+
+    <div class="runrow">
+      <button class="runbtn" id="runBtn">▶ Run this account through the engine</button>
+      <span class="runhint">Watch it flow all nine layers, or get stopped at the gate.</span>
+    </div>
+
+    <div class="pipe" id="pipe"></div>
+    <div class="token" id="token"></div>
+    <div class="runbanner" id="runbanner"></div>
+
+    <div class="detail" id="detail">
+      <div class="dhead"><span class="dl">Tap a layer</span><h4>Each layer is a live set of Clay tables</h4></div>
+      <p>Select one to see its job and the exact Clay mechanic that carries the row to the next layer, or run the account above to watch the flow.</p>
+    </div>
+
+    <div class="legend">
+      <span><i style="background:var(--sea-2)"></i> Designed · data ready</span>
+      <span><i style="background:var(--spark)"></i> Next to stand up</span>
+      <span><i style="background:#e0b34d"></i> Gated on ratification / deliverability</span>
+    </div>
+
+    <div class="funnel">
+      <div class="fh">
+        <h4>At segment scale: how the wired engine lands more deals</h4>
+        <span class="fstamp">Illustrative model · not a forecast</span>
+      </div>
+      <p class="fnote">One Tier A+B segment, roughly 98 accounts and their committees. The point is not the counts, it is that every drop-off becomes a gate you can see and tune, instead of a mystery. Run an account above to fill it.</p>
+      <div id="funnelRows"></div>
+      <div class="outcome">
+        <div style="text-align:center"><div class="arrowin">resolves to</div><div class="obig" id="omeet">—</div></div>
+        <div class="otext">
+          <div class="ot1">vetted meetings booked, from one Tier A+B segment</div>
+          <div class="ot2">The engine turns roughly 360 sourced contacts into sales-ready conversations with no manual list-building, and it repeats on every segment in the universe. That is the point: the goal is the output of the system, not the effort of a person.</div>
+        </div>
+      </div>
+      <p class="disclaim">*The $2.5B and the segment figures are Dallas's own analysis of the 2026 CMS Star Ratings universe (addressable forgone Quality Bonus in the influenceable 2028 window), used to size and rank the motion. They are not Intradiem customer results or company-verified ROI. The funnel is an illustrative throughput model for shaping the conversation, not a promised outcome or a target.</p>
+    </div>
+
+    <div class="coshape">
+      <h4>◇ Questions for tomorrow</h4>
+      <p>The engine and the messaging are built and ready to stand up in our workspace. A handful of calls sit with you and Scott rather than with the build, and I'd rather shape them together than assume. Here is where your read moves this forward:</p>
+      <ul>
+        <li>What counts as a <b>winnable account</b> in Intradiem's terms. My recommendation is to rank on the influenceable 2028 window (addr_2028), and I will show you why on live accounts.</li>
+        <li>How we <b>credit the engine</b>, tagging at the qualified-reply line, so surfaced and realized never blur.</li>
+        <li>The <b>back-office ICP</b>, Scott's domain to define, mine to source against.</li>
+        <li>The <b>call-center rule-text check</b> for the 2028 measures, a joint verification so the copy never inherits a claim that has shifted.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <span>Clay Engine strategy &amp; build · Dallas Andrews · GTM Engineer, Intradiem</span>
+  <span>Measurement before volume · ICP before sourcing · Human before send</span>
+</div></footer>
+
+<script>
+const LAYERS = [
+  {id:"L0", nm:"Sources", role:"CMS + install base", status:"built", title:"Sources",
+   body:"Land the CMS Star Ratings file and the Salesforce install base. A conditional filter pushes only in-window, non-customer rows forward.",
+   mech:"Conditional run → Send Table Data into Accounts"},
+  {id:"L1", nm:"Accounts", role:"the Golden List", status:"built", title:"Accounts (Master)",
+   body:"Scored, enriched, graded, signal-aware. This is where fit_score, motion_exclude and grade compute. Enrichment runs only-if-empty so credits are protected.",
+   mech:"Enrichment only-run-if-empty · 30-day scheduled refresh"},
+  {id:"L2", nm:"Signals", role:"write back to Accounts", status:"built", title:"Account Signals",
+   body:"Per-account intent monitoring for both motions. Tier-1 triggers fire outreach; Tier-2 raise priority. Writes intent and the why-now line back onto the account.",
+   mech:"Lookup + write-back: intent_score, top_signal, why_now"},
+  {id:"L3", nm:"Contacts", role:"buying committee", status:"built", title:"Contacts (Buying Committee)",
+   body:"People linked to accounts, ICP-filtered and persona-matched, carrying read-only attribution tags. Invalid emails reject before they cost a send.",
+   mech:"Grade-gated push · email waterfall only-run-if-empty"},
+  {id:"L4", nm:"Message Gen", role:"personalized copy", status:"now", title:"Message Generation",
+   body:"Personalized variant copy per contact, keyed to the account why-now and product angle. Looks up approved stats and the product-angle map so claims stay verified.",
+   mech:"AI column reads Verified Metrics + Product-Angle + ICP tables"},
+  {id:"L5", nm:"Approval", role:"critic + human gate", status:"now", title:"Send Queue",
+   body:"The single egress. Nothing sends from Clay directly. A critic checks email validity, in-scope motion, verified claims, and length; a human approves before anything leaves.",
+   mech:"Critic status → human approval_status → release"},
+  {id:"L6", nm:"Delivery", role:"sequencer + Salesforce", status:"gated", title:"Outreach Sync",
+   body:"Approved copy and verified email hand off to the sequencer, and source-tags write to Salesforce. The sender webhook stays off until domain health is green.",
+   mech:"Webhook egress · gated by Deliverability monitor"},
+  {id:"L7", nm:"Closed loop", role:"reply + attribution", status:"gated", title:"Reply Sync + Attribution",
+   body:"Replies and meetings write back onto contacts. Attribution computes the two-motion funnel and engine-sourced credit at the qualified-reply line.",
+   mech:"Reverse webhook → reply_status → Attribution funnel"},
+  {id:"L8", nm:"Rep handoff", role:"AE worklist", status:"gated", title:"AE Territory + Worklist",
+   body:"The human-facing end. Each rep opens a daily worklist: graded, signal-fresh accounts and their committee, with the why-now line and suggested angle, filtered to territory.",
+   mech:"Assignment rules → per-rep live view"}
+];
+
+const PRESETS = [
+  {key:"humana", label:"Humana H5216", addr:24, clin:4.0, faller:true, dm:true, later:true, struct:false, persona:"cc", play:"qbp_earnings_pressure"},
+  {key:"anthem", label:"Anthem H4471 (zero now, later yes)", addr:0, clin:4.5, faller:false, dm:false, later:true, struct:false, persona:"bo", play:"quality_identity_gap"},
+  {key:"devoted", label:"Devoted (identity gap)", addr:6, clin:4.0, faller:false, dm:true, later:true, struct:false, persona:"cc", play:"quality_identity_gap"},
+  {key:"clinical", label:"Clinical-only gap", addr:0, clin:3.5, faller:false, dm:false, later:false, struct:false, persona:"cc", play:"none"},
+  {key:"molina", label:"Molina straight-MAPD", addr:9, clin:4.0, faller:true, dm:true, later:true, struct:true, persona:"coo", play:"none"}
+];
+
+const ANGLE = {cc:"Queue Optimizer", bo:"Back Office Optimizer", coo:"Queue Optimizer + Back Office Optimizer", out:"— (outside ICP)"};
+const PERSONA_LABEL = {cc:"Customer Care / Member Services", bo:"Claims / Appeals / UM Ops", coo:"COO / Core Operations", out:"IT / Security"};
+
+// ---- state ----
+const S = {addr:24, clin:4.0, faller:true, dm:true, later:false, struct:false, persona:"cc", play:"qbp_earnings_pressure"};
+
+const $ = id => document.getElementById(id);
+const addr=$('addr'), clin=$('clin'), persona=$('persona');
+const tFaller=$('tFaller'), tDM=$('tDM'), tLater=$('tLater'), tStruct=$('tStruct');
+
+// presets
+const presetsEl = $('presets');
+PRESETS.forEach(p=>{
+  const c=document.createElement('button'); c.className='chip'; c.textContent=p.label; c.dataset.k=p.key;
+  c.addEventListener('click',()=>loadPreset(p));
+  presetsEl.appendChild(c);
+});
+function loadPreset(p){
+  S.addr=p.addr; S.clin=p.clin; S.faller=p.faller; S.dm=p.dm; S.later=p.later; S.struct=p.struct; S.persona=p.persona; S.play=p.play;
+  addr.value=p.addr; clin.value=p.clin; persona.value=p.persona;
+  setTgl(tFaller,p.faller); setTgl(tDM,p.dm); setTgl(tLater,p.later); setTgl(tStruct,p.struct);
+  [...presetsEl.children].forEach(c=>c.classList.toggle('on',c.dataset.k===p.key));
+  compute();
+}
+function setTgl(el,on){ el.classList.toggle('on',on); }
+
+addr.addEventListener('input',()=>{S.addr=+addr.value; clearPreset(); compute();});
+clin.addEventListener('input',()=>{S.clin=+clin.value; clearPreset(); compute();});
+persona.addEventListener('change',()=>{S.persona=persona.value; clearPreset(); compute();});
+[['tFaller','faller'],['tDM','dm'],['tLater','later'],['tStruct','struct']].forEach(([id,k])=>{
+  $(id).addEventListener('click',()=>{ S[k]=!S[k]; setTgl($(id),S[k]); clearPreset(); compute(); });
+});
+function clearPreset(){ [...presetsEl.children].forEach(c=>c.classList.remove('on')); if(S.play==='none') S.play='qbp_earnings_pressure'; }
+
+// ---- the engine logic (mirrors the Clay fit_star + motion_exclude) ----
+function evaluate(){
+  const addrPts = S.addr>=20?40 : S.addr>=5?25 : S.addr>0?10 : 0;
+  const clinPts = S.clin>=4.0?20:0;
+  const fallPts = S.faller?15:0;
+  const dmPts   = S.dm?25:0;
+  const score = addrPts+clinPts+fallPts+dmPts;
+
+  // motion_exclude: clinical across every influenceable window, OR structural, OR outside ICP
+  const clinicalOnly = (S.addr===0 && !S.later);
+  const outICP = (S.persona==='out');
+  const excluded = clinicalOnly || S.struct || outICP;
+  let exReason = '';
+  if(outICP) exReason='Persona is outside the ICP (IT/Security). The contact never sources.';
+  else if(S.struct) exReason='Structural exclude (Molina straight-MAPD or Horizon) per the targeting flags.';
+  else if(clinicalOnly) exReason='Gap is clinical across every window we can influence. Queue Optimizer touches call-center measures, not this.';
+
+  let grade='D';
+  if(!excluded){ grade = score>=70?'A' : score>=45?'B' : score>=20?'C' : 'D'; }
+
+  return {addrPts,clinPts,fallPts,dmPts,score,excluded,exReason,grade,clinicalOnly};
+}
+
+function whyNow(ev){
+  if(ev.excluded) return "No outreach. The engine holds this account out of the motion and spends nothing on it.";
+  const dollar = S.addr>0 ? `$${S.addr}M in forgone Quality Bonus sitting in the 2028 window` : `no 2028-window dollars yet, but the measures shift in its favor for 2029+`;
+  const fresh = S.faller ? "This is a fresh sub-4.0 fall, so the pain is current and uncontested. " : "";
+  const clean = S.clin>=4.0 ? "Clinical scores are clean, so the whole gap is a call-center execution gap, exactly what we move. " : "Clinical scores carry part of the gap, so we lead only on the call-center-addressable slice. ";
+  const play = S.play==='quality_identity_gap'
+    ? "Signal: their public quality brand contradicts a sub-4.0 CS score (quality_identity_gap)."
+    : "Signal: Stars/quality-bonus pressure surfacing in filings and earnings (qbp_earnings_pressure).";
+  return `${fresh}${clean}There is ${dollar}. ${play}`;
+}
+
+function compute(){
+  $('addrV').textContent = '$'+S.addr+'M';
+  $('clinV').textContent = S.clin.toFixed(1);
+  const ev = evaluate();
+
+  $('scoreno').innerHTML = (ev.excluded?'—':ev.score)+'<small>/100</small>';
+  const gb=$('grade');
+  const gmap={A:'gr-A',B:'gr-B',C:'gr-C',D:'gr-X'};
+  gb.className='gradebadge '+(ev.excluded?'gr-X':gmap[ev.grade]);
+  gb.textContent = ev.excluded?'Excluded' : 'Grade '+ev.grade;
+  const vmap={A:'Work now. Sources the full committee.',B:'Strong fit, warm it up.',C:'Keep on the list; revisit on a fresh signal.',D:'Drop. Below the fit cut.'};
+  $('verdict').textContent = ev.excluded ? 'Held out of the motion. Zero credits spent.' : vmap[ev.grade];
+
+  const rows=[
+    ['Addressable QBP (2028)', ev.addrPts, 40],
+    ['Clinical-clean bonus', ev.clinPts, 20],
+    ['New-faller bonus', ev.fallPts, 15],
+    ['Decision-maker found', ev.dmPts, 25]
+  ];
+  $('comp').innerHTML = rows.map(([n,v,mx])=>
+    `<div class="comprow"><span class="cn">${n}</span><span class="cbar"><span class="cfill" style="width:${ev.excluded?0:(v/mx*100)}%"></span></span><span class="cv">+${v}</span></div>`
+  ).join('');
+
+  $('routebox').innerHTML =
+    `<div class="rr"><span class="k">Grade</span><span class="v">${ev.excluded?'Excluded':ev.grade}</span></div>`+
+    `<div class="rr"><span class="k">Persona</span><span class="v">${PERSONA_LABEL[S.persona]}</span></div>`+
+    `<div class="rr"><span class="k">Product angle</span><span class="v">${ANGLE[S.persona]}</span></div>`+
+    `<div class="rr"><span class="k">motion_exclude</span><span class="v ${ev.excluded?'spark':''}">${ev.excluded?'TRUE · '+ev.exReason:'false'}</span></div>`;
+
+  $('whynow').innerHTML = `<b>Draft why-now line</b>${whyNow(ev)}`;
+  window.__ev = ev;
+}
+
+// ---- pipeline ----
+const pipe=$('pipe'), detail=$('detail'), token=$('token'), runBtn=$('runBtn'), banner=$('runbanner');
+LAYERS.forEach((L,i)=>{
+  const n=document.createElement('div'); n.className='node'; n.dataset.i=i;
+  n.innerHTML=`<span class="dot ${L.status}"></span><div class="ly">${L.id}</div><div class="nm">${L.nm}</div><div class="role2">${L.role}</div>`;
+  n.addEventListener('click',()=>select(i));
+  pipe.appendChild(n);
+});
+const nodes=[...pipe.querySelectorAll('.node')];
+function select(i){
+  const L=LAYERS[i];
+  nodes.forEach(n=>n.classList.remove('sel')); nodes[i].classList.add('sel');
+  const bl=L.status==='built'?'Designed':L.status==='now'?'Next up':'Gated';
+  detail.innerHTML=`<div class="dhead"><span class="dl">${L.id}</span><h4>${L.title}</h4><span class="badge ${L.status}">${bl}</span></div><p>${L.body}</p><div class="mech">⚙ ${L.mech}</div>`;
+}
+
+// ---- funnel ----
+const funnelRows=$('funnelRows');
+// one consistent unit: contacts/touches, monotonic decrease. Grade-A illustrative base counts.
+const FBASE=[
+  {lab:"Contacts sourced", n:360},
+  {lab:"Messages generated", n:360},
+  {lab:"Approved to send", n:299},
+  {lab:"Delivered", n:288},
+  {lab:"Replies", n:47},
+  {lab:"Qualified replies", n:18}
+];
+const MEET_BASE=9;
+const FMAX=Math.max(...FBASE.map(f=>f.n));
+funnelRows.innerHTML = FBASE.map((f,i)=>
+  `<div class="frow"><div class="flab">${f.lab}</div><div class="fbar-wrap"><div class="fbar ${f.terminal?'terminal':''}" data-i="${i}"><b></b></div></div></div>`
+).join('');
+const bars=[...funnelRows.querySelectorAll('.fbar')];
+const GRADE_MULT={A:1.0,B:0.72,C:0.4,D:0.15};
+function fillFunnel(grade){
+  const mult=GRADE_MULT[grade]||0.6;
+  FBASE.forEach((f,i)=>{
+    bars[i].style.width=(f.n/FMAX*100)+'%';
+    bars[i].querySelector('b').textContent=Math.round(f.n*mult);
+    bars[i].classList.add('grown');
+  });
+  document.getElementById('omeet').textContent=Math.max(Math.round(MEET_BASE*mult),1);
+}
+function clearFunnel(){ bars.forEach(b=>{b.style.width='0';b.classList.remove('grown');b.querySelector('b').textContent='';}); document.getElementById('omeet').textContent='—'; }
+
+// ---- run ----
+function centerOf(el){const p=pipe.getBoundingClientRect(),r=el.getBoundingClientRect();return{x:r.left-p.left+r.width/2-7.5,y:r.top-p.top+r.height/2-7.5};}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function run(){
+  if(runBtn.classList.contains('busy'))return;
+  const ev=window.__ev||evaluate();
+  runBtn.classList.add('busy'); runBtn.textContent='Running…';
+  banner.className='runbanner'; banner.innerHTML='';
+  nodes.forEach(n=>n.classList.remove('lit','sel','blocked','dim'));
+  clearFunnel(); token.style.opacity='0';
+
+  // excluded rows stop at L1 (Accounts, where motion_exclude computes)
+  const stopAt = ev.excluded ? 1 : nodes.length-1;
+
+  const start=centerOf(nodes[0]); token.style.left=start.x+'px'; token.style.top=start.y+'px';
+  await sleep(60); token.style.opacity='1';
+
+  for(let i=0;i<=stopAt;i++){
+    const c=centerOf(nodes[i]); token.style.left=c.x+'px'; token.style.top=c.y+'px';
+    await sleep(230);
+    select(i);
+    if(ev.excluded && i===stopAt){ nodes[i].classList.add('blocked'); for(let j=i+1;j<nodes.length;j++) nodes[j].classList.add('dim'); }
+    else nodes[i].classList.add('lit');
+    await sleep(340);
+  }
+  token.style.opacity='0';
+
+  if(ev.excluded){
+    banner.className='runbanner stop';
+    banner.innerHTML=`<b>Gate closed at L1.</b> ${ev.exReason} The row is held: <b>no contacts sourced, no messages generated, zero credits spent.</b> This is the discipline that separates the engine from spray-and-burn.`;
+  }else{
+    banner.className='runbanner pass';
+    banner.innerHTML=`<b>Grade ${ev.grade}, cleared the gates.</b> It carries the why-now line and the ${ANGLE[S.persona]} angle, every touch tagged for attribution. A and B accounts land on a rep's worklist now; lower grades stay on the list until a signal lifts them. The funnel below shows this grade at segment scale.`;
+    await sleep(200); fillFunnel(ev.grade);
+  }
+  runBtn.classList.remove('busy'); runBtn.textContent='▶ Run this account through the engine';
+}
+runBtn.addEventListener('click',run);
+
+// ---- table catalog ----
+const CATALOG=[
+ {id:'T0.1',layer:'L0',kind:'core',name:'CMS Star Ratings Import',purpose:'Lands the CMS file, filters to in-window sub-4.0 rows, and pushes the qualifiers into Accounts.',feeds:'CSV / scheduled CMS pull',writes:'Accounts (conditional)',runs:'Manual on load + re-import at each October CMS release'},
+ {id:'T0.2',layer:'L0',kind:'core',name:'Install-Base Import',purpose:'Seeds current Intradiem customers from Salesforce as the back-office universe.',feeds:'Salesforce accounts',writes:'Accounts (is_current_customer=true, motion=Back Office)',runs:'Scheduled Salesforce sync'},
+ {id:'T0.3',layer:'L0',kind:'layer',name:'Signal Feeds (raw landing)',purpose:'Optional landing pad for scheduled scrapes (EDGAR, earnings, jobs, news) before they are matched to accounts.',feeds:'HTTP / API columns',writes:'L2 Signals (matched by company)',runs:'Scheduled (daily / weekly)'},
+ {id:'T1.1',layer:'L1',kind:'core',name:'Accounts (Master)',purpose:'The Golden List hub. Enriched, scored, graded, signal-aware. Where fit_star, motion_exclude and grade compute.',feeds:'T0.1, T0.2, write-back from L2',writes:'Contacts (grade-gated push)',runs:'Enrich new rows only-if-empty; refresh rows older than 30 days'},
+ {id:'T2.1',layer:'L2',kind:'layer',name:'Account Signals — Star Ratings',purpose:'Per-account intent for the new-logo motion. Tier-1 triggers fire outreach, Tier-2 raise priority.',feeds:'Accounts + T0.3 / live API columns',writes:'Accounts (intent_score, top_signal, why_now)',runs:'Scheduled; Tier-1 can fire a row into Send Queue'},
+ {id:'T2.2',layer:'L2',kind:'layer',name:'Account Signals — Back Office',purpose:'Same pattern, back-office triggers: BPO moves, claims backlog, ops-leadership change, RPA initiatives, efficiency mandates.',feeds:'Install-base Accounts',writes:'Accounts',runs:'Scheduled'},
+ {id:'T3.1',layer:'L3',kind:'core',name:'Contacts (Buying Committee)',purpose:'People linked to accounts, ICP-filtered and persona-matched, carrying the read-only attribution tags. Invalid emails reject before they cost a send.',feeds:'Accounts (grade A/B/C push)',writes:'Message Gen + Send Queue (conditional)',runs:'Created by Accounts push; email waterfall only-if-empty'},
+ {id:'T4.1',layer:'L4',kind:'layer',name:'Message Generation',purpose:'Generates personalized variant copy per contact, keyed to the account why-now and the product angle.',feeds:'Contacts + account why-now + product angle',writes:'Contacts (draft, variant_id) + Send Queue',runs:'On each new eligible contact'},
+ {id:'T-R1',layer:'L4',kind:'ref',name:'Verified Metrics / Claims Library',purpose:'The approved stats the AI copy may cite. The guardrail that keeps unapproved numbers away from a payer.',feeds:'Manually maintained',writes:'Read-only lookup for Message Gen',runs:'Reference table'},
+ {id:'T-R2',layer:'L4',kind:'ref',name:'Product-Angle Map',purpose:'Maps title/function to Queue Optimizer, Back Office Optimizer, or both. Picks the angle the copy leads with.',feeds:'Manually maintained',writes:'Read-only lookup for Message Gen',runs:'Reference table'},
+ {id:'T-R3',layer:'L3',kind:'ref',name:'ICP Filter / Persona Rubric',purpose:'The locked people-find config: include care/claims ops, member services, WFM; exclude IT, clinical, legal, sales.',feeds:'Manually maintained',writes:'Used by Contacts find-people + persona_match',runs:'Reference table'},
+ {id:'T-R4',layer:'L4',kind:'ref',name:'Message Variant Library',purpose:'The starter variants per segment. variant_id links each send back for win-rate analysis.',feeds:'Manually maintained',writes:'Source for Message Gen variants',runs:'Reference table'},
+ {id:'T5.1',layer:'L5',kind:'core',name:'Send Queue',purpose:'The single egress. Nothing sends from Clay directly. Critic checks (email valid, in-scope, verified claims, length) then a human approves.',feeds:'Contacts + Message Gen',writes:'Outreach Sync (approved rows only)',runs:'Conditional write from Contacts; human approval before egress'},
+ {id:'T6.1',layer:'L6',kind:'layer',name:'Outreach Sync',purpose:'Hands approved copy + verified email to the sequencer and writes source-tags to Salesforce.',feeds:'Send Queue (approved)',writes:'External sequencer + Salesforce (attribution tags)',runs:'On approval. Sender webhook OFF until deliverability green'},
+ {id:'T6.2',layer:'L6',kind:'layer',name:'Deliverability / Domain Health',purpose:'Warmup, inbox rotation, spam/blacklist, bounce rate. The gate that stops spray-and-burn.',feeds:'Sender / monitoring API',writes:'Gates Outreach Sync (send blocked unless green)',runs:'Scheduled'},
+ {id:'T7.1',layer:'L7',kind:'layer',name:'Reply & Meeting Sync',purpose:'Writes reply_status (none / reply / qualified reply / meeting) back onto contacts.',feeds:'Sequencer / CRM reply data',writes:'Contacts (the credit line) + Attribution',runs:'Scheduled / reverse-webhook'},
+ {id:'T7.2',layer:'L7',kind:'layer',name:'Attribution / Funnel Reporting',purpose:'Computes the two-motion funnel and engine-sourced credit at the qualified-reply line.',feeds:'Contacts (tagged) + Reply Sync',writes:'Dashboards (command center, attribution board)',runs:'Scheduled'},
+ {id:'T8.1',layer:'L8',kind:'layer',name:'AE Territory / Assignment',purpose:'Maps accounts to the right owner so contacts route to the right rep.',feeds:'Accounts + territory rules',writes:'Contacts (owner) + AE Worklist',runs:'On account create / update'},
+ {id:'T8.2',layer:'L8',kind:'layer',name:'AE Worklist',purpose:'The daily "who to work today" per rep: A/B accounts, fresh signal, committee, why-now line and suggested angle. The human-facing end of the engine.',feeds:'Contacts + Accounts + Assignment',writes:'Per-rep live view',runs:'Live view / scheduled refresh'}
+];
+const catgrid=document.getElementById('catgrid'), catbar=document.getElementById('catbar');
+const KIND_TAG={core:'Core five',ref:'Reference',layer:'Layered'};
+function renderCat(f){
+  catgrid.innerHTML=CATALOG.filter(t=> f==='all' || (f==='core'&&t.kind==='core') || (f==='ref'&&t.kind==='ref') || t.layer===f)
+   .map(t=>`<div class="tcat ${t.kind}"><div class="th"><span class="tid">${t.id}</span><span class="tnm">${t.name}</span><span class="ttag ${t.kind}">${KIND_TAG[t.kind]}</span></div><div class="tp">${t.purpose}</div><div class="tmeta"><b>Feeds from</b> ${t.feeds} <span class="ar">→</span> <b>writes to</b> ${t.writes}<br><b>Runs</b> ${t.runs}</div></div>`).join('');
+}
+catbar.addEventListener('click',e=>{ if(!e.target.classList.contains('catchip'))return; [...catbar.children].forEach(c=>c.classList.remove('on')); e.target.classList.add('on'); renderCat(e.target.dataset.f); });
+renderCat('all');
+
+// init
+compute(); select(0); nodes[0].classList.remove('sel');
+</script>
+</body>
+</html>
