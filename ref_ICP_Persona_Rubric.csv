@@ -1,0 +1,11 @@
+rule_type,persona_group,title_signals,persona_key,seniority_target
+INCLUDE,Contact Center Ops,"VP/Director Contact Center, Member Services, Customer Care, Customer Contact",cc_ops,Director+
+INCLUDE,Workforce Management,"Manager/Director WFM, Capacity Planning, Intraday",wfm,Manager+
+INCLUDE,Customer Experience,"VP CX, Member Experience, CSAT",cx,Director+
+INCLUDE,Claims / Appeals / UM Ops,"VP/Director Claims, Appeals, Grievances, Utilization Management",bo_claims,Director+
+INCLUDE,Payment / Document / Shared Services,"VP/Director Payment Ops, Document Processing, Shared Services, Enrollment",bo_shared,Director+
+INCLUDE,Core Operations / Finance owner,"COO, SVP/VP Operations, CFO, VP Finance (cost owner)",coo_finance,VP+
+EXCLUDE,IT / Security,"CIO, CTO, VP IT, Security, Infrastructure",—,n/a
+EXCLUDE,Clinical,"CMO, Chief Medical Officer, Clinical, Nursing",—,n/a
+EXCLUDE,Legal / Compliance,"General Counsel, Legal, Compliance",—,n/a
+EXCLUDE,Sales / Marketing / HR,"Sales, Marketing, Growth, HR, People",—,n/a

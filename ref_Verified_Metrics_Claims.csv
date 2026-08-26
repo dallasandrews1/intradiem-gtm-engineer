@@ -1,0 +1,12 @@
+claim,tier,source,send_rule
+'12 to 18% of paid agent time is idle',DO-NOT-SEND,proof.json (self-labeled placeholder),Blocked until verified in Intradiem Value Repository
+Any peer/customer outcome (e.g. 'recovered ~40 agents of capacity'),DO-NOT-SEND,proof.json (placeholder peer outcomes),Blocked until a verified customer proof w/ reference approval exists
+Any Intradiem ROI / NRR / customer result not in the Value Repository,DO-NOT-SEND,n/a,Value Repository not yet connected; never cite from memory
+Any $ surfaced / qualified-reply % / funnel count / grade distribution,DRY-RUN,Engine seeded output,Show only with amber 'illustrative-seeded' chip; never as a real result
+15 vetted meetings / 10x messaging throughput / 200+ back-office contacts,TARGET,Naveen Q3 rough sketch,Provisional target to co-shape; never a commitment to defend
+"5,000 Clay credits allocated; 40+ enrichment data sources",VERIFIED,Internal program fact,Internal process fact only; not a payer-facing outcome claim
+A customer's own Greenlight/Zuar CTO / realized-value figure,CV-INTERNAL,Greenlight portal (pull Jul 17 2026); Customer_Value_Registry.md,Targeting/prioritization only; never in prospect copy until promoted to CV-1:1
+Any Greenlight CTO figure phrased with a unit ($ / hours / %),DO-NOT-SEND,Greenlight CTO measure unit UNCONFIRMED; does not reconcile to $529.6M,Blocked until the measure definition is confirmed in Greenlight
+Any Greenlight CTO figure cited to a third party or blended across accounts,DO-NOT-SEND,1:1-locked customer data,Customer-data breach; a CV-1:1 number goes ONLY back to that same customer's buyers
+A customer's own CTO figure in outreach to that same customer's buyers,CV-1:1,Customer_Value_Registry.md (promoted; unit confirmed),Install-base personalization lane only; same-account use; still no fabricated unit
+Humana named-customer outcomes (7X ROI / 2.7M actions / etc.),VERIFIED 1:many,Public SWPP/Intradiem webinar (Jul 11 2026),Only customer story cleared for third-party/public use; the CV-1:many bar

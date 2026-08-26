@@ -1,0 +1,9 @@
+function_pattern,title_keywords,product_angle,rationale
+Contact Center / Member Services,contact center;member services;customer care;customer contact;member experience,Queue Optimizer,Real-time agent execution on call-center Stars measures (CAHPS; calls; appeals TAT)
+Workforce Management,workforce management;wfm;capacity planning;intraday,Queue Optimizer,Automates intraday exception work on top of existing WFM
+Claims Operations,claims;claims operations;claims ops,Back Office Optimizer,Automates claims processing and backlog reduction in the back office
+Appeals & Grievances / UM,appeals;grievance;utilization management;um ops,Back Office Optimizer,Back-office case throughput and turnaround-time compliance
+Payment / Document Operations,payment operations;payment ops;document processing;shared services;enrollment ops,Back Office Optimizer,Structured back-office transaction automation
+Core Operations / COO,chief operating officer;coo;core operations;svp operations;vp operations,Queue Optimizer + Back Office Optimizer,Owns both contact-center and back-office workforces
+Quality / Stars,quality;star ratings;stars;medicare quality,Queue Optimizer,Leads on the call-center-addressable slice of the Stars gap
+Outside ICP,information technology;it;security;clinical;legal;sales;marketing,(outside ICP),Not a workforce-execution buyer; do not source

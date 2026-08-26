@@ -72,7 +72,10 @@ the wedge without revealing strategy. E.g.:
 2-3 sentences positioning Intradiem against this competitor's specific weakness —
 real-time, automated action across the whole workforce (contact center AND back
 office: claims, lending, billing, underwriting, fulfillment), guaranteed measurable
-results, augmenting the WFM they already own rather than replacing it. The structural
+results, augmenting the WFM they already own rather than replacing it. The platform
+frame (Naveen's words): a suite of products moving various metrics that delivers
+what pure human investments and pure AI investments have both failed to deliver on
+these goals; DWO is the third path, not a bigger version of either. The structural
 wedge against contact-center-only WFM tools (Verint, NICE, Calabrio, Assembled,
 Playvox) is scope: Intradiem orchestrates front and back office; they don't. Route any
 stat through `intradiem-verified-metrics`.
@@ -122,6 +125,7 @@ Deal Stage: [Current Stage]
 
 ## Constraints
 - Wedge is operational, never feature-trivia or ad hominem.
+- **The module, never the layer.** When Verint/NICE/Calabrio appear in a deal, the wedge targets their automation add-on module or their contact-center-only scope, never the WFM layer itself. Intradiem sits on and acts within that layer; disparaging it undermines our own integration story and the DWO positioning (we orchestrate the whole workforce on top of the stack they already own).
 - Acknowledge real competitor strengths — credibility first.
 - Every stat verified via `intradiem-verified-metrics` or flagged `[VERIFY]`.
 - Apply Intradiem brand voice. Tone: clinical, peer-level, no mockery.
