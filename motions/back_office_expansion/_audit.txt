@@ -1,0 +1,37 @@
+
+Assurant: 30 leads, 0 issues
+
+Cleveland Clinic: 20 leads, 1 issues
+  - director with no VP/AVP above: Scott Dwyer (Senior Director Supply Chain Management ) -> Stephen Downey
+
+Cox Communications: 16 leads, 0 issues
+
+DIRECTV: 25 leads, 0 issues
+
+Goldman Sachs: 30 leads, 0 issues
+
+Guardian Life: 30 leads, 1 issues
+  - floating card (no manager, no reports): Darren Braithwaite (VP, Head of Procurement and Accounts Pay)
+  ~ same level, broad remit: Garlande Patz, MBA, CLMS under Sandra McKenna (inferred, confirm)
+  ~ same level, broad remit: Gokcin Walch under Sandra McKenna (inferred, confirm)
+  ~ same level, broad remit: Melanie Wiltrout under Sandra McKenna (inferred, confirm)
+  ~ same level, broad remit: Meredith Heibert under Sandra McKenna (inferred, confirm)
+  ~ same level, broad remit: Micah Pace under Sandra McKenna (inferred, confirm)
+  ~ same level, broad remit: Nora Bargfrede under Sandra McKenna (inferred, confirm)
+
+McKesson: 30 leads, 0 issues
+
+MetLife: 30 leads, 1 issues
+  - floating card (no manager, no reports): Linda Broderick (SVP, SVP Head of Global Procurement and V)
+
+Prudential Financial: 30 leads, 1 issues
+  - director with no VP/AVP above: Scott Hall (Director - Group Insurance Appeals, Liti) -> Michael Estep
+
+Rogers Communications: 15 leads, 0 issues
+
+Travelers: 30 leads, 1 issues
+  - 6 top cards, several below EVP; missing an executive above them
+
+Zurich North America: 30 leads, 0 issues
+
+TOTAL issues: 5

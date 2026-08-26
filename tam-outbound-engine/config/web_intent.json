@@ -1,0 +1,89 @@
+{
+  "_comment": "Page-class map for the signal-marketing loop (motions/signal_marketing_loop/). Each session's pages are matched against these patterns (case-insensitive regex on the URL path, first match per class wins). Paths verified against intradiem.com's page sitemap on 2026-08-25. Tune here, never in heat_list_scorer.py.",
+  "classes": {
+    "web_product": [
+      "^/platform/back-office-automation",
+      "^/platform/customer-service-automation",
+      "^/platform/reduce-burnout-and-attrition",
+      "^/platform/sales-back-office",
+      "^/platform/?$",
+      "^/solutions/",
+      "^/solutions/?$",
+      "^/what-we-do",
+      "^/workforcemanagement",
+      "^/operations/?$",
+      "^/intraday-performance-analysis",
+      "^/staffing-solution",
+      "^/attrition-indicator",
+      "^/try-it-now",
+      "^/personalized-call",
+      "^/services/?$",
+      "^/faqs"
+    ],
+    "web_proof": [
+      "^/success-stories",
+      "^/resources/library",
+      "^/workforce-automation-guide",
+      "^/back-office-efficiency-guide",
+      "^/agent-burnout-attrition-guide",
+      "^/lp-",
+      "^/events/",
+      "^/webinar",
+      "^/resources/?$"
+    ],
+    "web_content": [
+      "^/blog",
+      "^/resources/news",
+      "^/news",
+      "^/glossary",
+      "^/[a-z0-9-]+/?$"
+    ]
+  },
+  "ignore_paths": [
+    "^/careers",
+    "^/contact",
+    "^/customer-support",
+    "^/privacy-policy",
+    "^/about-us",
+    "^/culture-of-service",
+    "^/partner-lead-registration",
+    "^/lp-partner-solution-contract",
+    "^/lp-support-services-agreement",
+    "^/lp-all-hands",
+    "^/wp-",
+    "^/team",
+    "^/author"
+  ],
+  "from_us": {
+    "utm_source_any": ["lemlist", "linkedin", "li", "gtmeng"],
+    "utm_campaign_prefix": ["GTMENG", "GTM Eng", "gtmeng"],
+    "utm_medium_any": ["email", "paid-social", "paid_social", "cpc", "sequence"],
+    "referrer_contains": ["lemlist", "lnkd.in", "linkedin.com"]
+  },
+  "web_return": {"window_days": 7, "cap": 3},
+  "product_page_hint": {
+    "^/platform/back-office-automation": "back-office automation",
+    "^/platform/sales-back-office": "back-office automation",
+    "^/back-office-efficiency-guide": "back-office efficiency",
+    "^/platform/customer-service-automation": "customer service automation",
+    "^/platform/reduce-burnout-and-attrition": "burnout and attrition",
+    "^/agent-burnout-attrition-guide": "burnout and attrition",
+    "^/workforcemanagement": "workforce management",
+    "^/solutions/workforce-management": "workforce management",
+    "^/solutions/operations-management": "operations management",
+    "^/intraday-performance-analysis": "intraday performance",
+    "^/staffing-solution": "staffing",
+    "^/success-stories": "customer outcomes"
+  },
+  "persona_hint": {
+    "back-office automation": ["bo_shared", "bo_claims", "coo_finance"],
+    "back-office efficiency": ["bo_shared", "bo_claims", "coo_finance"],
+    "customer service automation": ["cc_ops", "cx"],
+    "burnout and attrition": ["cc_ops", "wfm"],
+    "workforce management": ["wfm", "cc_ops"],
+    "operations management": ["cc_ops", "coo_finance"],
+    "intraday performance": ["wfm"],
+    "staffing": ["wfm", "cc_ops"],
+    "customer outcomes": ["cc_ops", "finance"]
+  }
+}
