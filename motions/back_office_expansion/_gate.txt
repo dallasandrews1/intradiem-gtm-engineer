@@ -1,0 +1,28 @@
+leads 301 | TOTAL issues: 6 | built maps changed: True
+  warn: sibling density 4: Assurant under Patricia Quint (AVP, Claims)
+# Changes to maps already built in Sales Nav
+
+
+## Assurant: no change
+
+
+## Cleveland Clinic
+
+- ADD Emily Monteleone (Director of Strategic Workforce Planning) under Janice Murphy
+
+## Cox Communications
+
+- ADD Tim Cotter (Vice President Operations) under Montie Pace
+- ADD Brad Pfaff (Assistant Vice President, Operations & Technology ) under Tim Cotter
+- ADD Dorin Mandachi (Senior Director, Technology Operations) under Brad Pfaff
+- ADD Scott Bradshaw (Director, Technology Operations) under Brad Pfaff
+- ADD Lynn Hall (Director Of Operations) under Tim Cotter
+
+## DIRECTV
+
+- ADD Erin Hurley (Vice President Strategic Sourcing) under Michael W.
+- ADD Cecilia Comeaux (Associate Vice President, DIRECTV Technology & Ope) under Mark Morrison
+- ADD Carl Barber (Senior Director HR Technology and Workforce Analyt) under Cecilia Comeaux
+
+ANY CHANGE: True
+

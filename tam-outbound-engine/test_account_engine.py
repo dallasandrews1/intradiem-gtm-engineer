@@ -60,6 +60,36 @@ def run():
     check("Fresh-trigger accounts sort above stale ones",
           all(plays[i]["fresh"] >= plays[i + 1]["fresh"] for i in range(len(plays) - 1)) or True)
 
+    # Signal-marketing loop families (Aug 25 2026): exist, route somewhere, and decay on their own clock.
+    trg = cfg["trig"]["triggers"]
+    loop_families = ["web_product", "web_proof", "web_return", "web_from_us", "web_content",
+                     "lemlist_click", "lemlist_reply", "webinar_registered", "webinar_attended"]
+    check("Loop trigger families present", all(f in trg for f in loop_families))
+    check("Loop families route to at least one persona", all(trg[f]["route_personas"] for f in loop_families))
+    web_rec = {**cfg["trig"]["recency"], **trg["web_product"]["recency"]}
+    check("Web intent decays faster than market triggers (fresh 14d)",
+          web_rec["fresh_days"] == 14 and web_rec["stale_days"] == 45)
+    check("Web intent factor at 30 days sits between floor and full",
+          0.3 < eng.recency_factor(date(2026, 5, 14), web_rec, date(2026, 6, 13)) < 1.0)
+    check("Market trigger at 30 days is still full weight",
+          eng.recency_factor(date(2026, 5, 14), cfg["trig"]["recency"], date(2026, 6, 13)) == 1.0)
+
+    # Signals 1/3/4 (Aug 25 2026): LinkedIn engagement (person-level) and Salesforce activity (company-level).
+    check("li_engaged and sf_activity families present", "li_engaged" in trg and "sf_activity" in trg)
+    check("New families route to at least one persona", all(trg[f]["route_personas"] for f in ("li_engaged", "sf_activity")))
+    check("li_engaged scores below a product-page read and above content-only",
+          trg["web_content"]["weight"] < trg["li_engaged"]["weight"] < trg["web_product"]["weight"])
+    li_rec = {**cfg["trig"]["recency"], **trg["li_engaged"]["recency"]}
+    check("li_engaged decays on the engagement clock (fresh 14d, stale 45d)",
+          li_rec["fresh_days"] == 14 and li_rec["stale_days"] == 45)
+    sf_rec = {**cfg["trig"]["recency"], **trg["sf_activity"]["recency"]}
+    check("sf_activity decays on the CRM clock (fresh 30d, stale 90d)",
+          sf_rec["fresh_days"] == 30 and sf_rec["stale_days"] == 90)
+    check("sf_activity names its four subtypes",
+          set(trg["sf_activity"]["detail_subtypes"]) == {"closed_lost_aged", "open_deal_moved", "renewal_120d", "customer_quiet_90d"})
+    check("Every trigger family has a source and a stakes line",
+          all(trg[f].get("source") and trg[f].get("stakes") for f in trg))
+
     passed = sum(1 for _, c in checks if c)
     for name, cond in checks:
         print(f"  {'PASS' if cond else 'FAIL'}  {name}")

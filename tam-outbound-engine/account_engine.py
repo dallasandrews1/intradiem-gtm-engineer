@@ -95,8 +95,9 @@ def score_account(acct, trigs, cfg, today):
         if not meta:
             continue
         d = datetime.strptime(t["date"], "%Y-%m-%d").date()
-        rf = recency_factor(d, trg["recency"], today)
-        if (today - d).days <= trg["recency"]["fresh_days"]:
+        rec = {**trg["recency"], **meta.get("recency", {})}  # per-trigger decay override (web/engagement families)
+        rf = recency_factor(d, rec, today)
+        if (today - d).days <= rec["fresh_days"]:
             fresh = True
         contribution = meta["weight"] * rf
         why_now_raw += contribution
