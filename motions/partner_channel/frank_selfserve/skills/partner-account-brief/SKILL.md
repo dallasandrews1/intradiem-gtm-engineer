@@ -45,5 +45,13 @@ The fastest registered-to-meeting conversion on record: agents called a sick-lin
 - Briefs and prep material only. No outreach sends, no prospect-facing email copy for sending, no pricing.
 - Before an account is worked cold: confirm it is not a current Intradiem customer and not registered by another partner in the pre-pipeline. Unsure means hold.
 
-## Output style
-Plain language, short lines, contractions. No em dashes. End with the offer: "Want the follow-up one-pager for this account?" For a Slack canvas version: Why now (3 bullets), Who to reach (table), Questions (5), Watch-outs (2), sources kept in parentheses.
+## Output format: a branded HTML page, not markdown
+The finished brief is delivered as one complete HTML file named `<Account>_Brief.html`, built on `brief_template.html` (shipped with this skill; `example_ally_brief.html` is the approved worked example, study it before writing). Rules:
+- Copy the template verbatim from `<!DOCTYPE html>` through the end, filling `{{ACCOUNT}}`, `{{ANGLE}}` (a short second half of the headline, lowercase start, the account's why-now in a phrase), `{{SUBHEAD}}` (two sentences: who they are, why now), `{{DATE}}`, and `{{BODY}}`. Never edit the CSS, the band structure, or the footer.
+- `{{BODY}}` is assembled ONLY from the template's block patterns, in this order: In one screen (3-4 plain `<li>`); one section per research area, each `<section><p class="label">Title</p><ul>` of items shaped `<li>finding<span class="flag est|inf">FLAG</span><span class="src"><a href="URL">short-url</a> · date</span></li>` (flag and src spans only when applicable); Who to reach as the 5-column table (`td.nm` with the LinkedIn link when there is one, `span.role` for the likely committee role); Timing as `.trig` rows (date, bolded what, `.so` so-what line); First conversation as `ol.q` with a `<small>from: ...</small>` per question; Confidence chips (`class="h"` High, `class="l"` Low) plus the gaps `.callout`; Sources as `.srcs` divs.
+- Every finding keeps its source and flag exactly as the research rules require; the page IS the brief, nothing verbal on the side.
+- After delivering the file, offer: "Want the follow-up one-pager for this account?"
+- A Slack canvas version (Why now 3 bullets, Who to reach table, Questions 5, Watch-outs 2, sources in parentheses) or a plain-text version is produced only when asked.
+
+## Voice
+Plain language, short lines, contractions. No em dashes anywhere.
