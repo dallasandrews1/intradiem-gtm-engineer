@@ -357,3 +357,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-08-31
 - [QO Sales Kit + PMO Rules Aug31](qo-sales-kit-and-pmo-rules-aug31.md) — Aug 31 2026 evening: QO sales kit page from the 13-slide beta deck (no ROI/discovery/objections/beta/targets in the deck, page says so) live at qo-sales-kit.pages.dev; pmo-action-extractor tightened with time-phrase due-date, confidence and dedup rules after the first grading pass (19/20)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [Feedback Links Land On The Thing](feedback-links-land-on-the-thing.md) — Aug 31 2026: a link sent to Naveen or leadership must open the working artifact itself (prototype, live register, usable page), never an explainer page about it; explanation is secondary
