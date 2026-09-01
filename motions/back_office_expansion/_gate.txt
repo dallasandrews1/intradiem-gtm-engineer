@@ -1,4 +1,4 @@
-leads 301 | TOTAL issues: 6 | built maps changed: True
+leads 280 | TOTAL issues: 5 | built maps changed: True
   warn: sibling density 4: Assurant under Patricia Quint (AVP, Claims)
 # Changes to maps already built in Sales Nav
 

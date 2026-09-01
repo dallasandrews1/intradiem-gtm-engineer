@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 """Diff the current build sheet against the snapshot Dallas built from, for maps already created in Sales Nav."""
 import csv,os,sys,json
+from bo_set import load_set
 HERE=os.path.dirname(os.path.abspath(__file__))
-BUILT=["Assurant","Cleveland Clinic","Cox Communications","DIRECTV"]
-SNAP=os.path.join(HERE,"_built_snapshot.csv")
-cur=[r for r in csv.DictReader(open(os.path.join(HERE,"BO_Map_Build_Sheets_Inger.csv"))) if r["account"] in BUILT]
-if len(sys.argv)>1 and sys.argv[1]=="snapshot":
+CFG=load_set(); P=CFG["_paths"]
+BUILT=CFG.get("built",[])
+SNAP=P["snapshot_csv"]
+cur=[r for r in csv.DictReader(open(P["build_sheets_csv"])) if r["account"] in BUILT]
+if not BUILT or (not os.path.exists(SNAP) and "snapshot" not in CFG["_args"]):
+    open(P["changes_md"],"w").write("# Changes to maps already built in Sales Nav\n\nNo maps built in Sales Navigator yet for this set.\n")
+    print("no built maps for set",CFG["_name"]); print("\nANY CHANGE: False"); sys.exit()
+if "snapshot" in CFG["_args"]:
     with open(SNAP,"w",newline="") as fh:
         w=csv.DictWriter(fh,fieldnames=list(cur[0].keys())); w.writeheader(); w.writerows(cur)
     print("snapshot taken:",len(cur),"rows"); sys.exit()
@@ -21,5 +26,5 @@ for a in BUILT:
     for k in adds: out.append(f"- ADD {k[1]} ({c[k]['title'][:50]}) under {c[k]['reports_up_to']}")
     for k in rems: out.append(f"- REMOVE {k[1]} ({o[k]['title'][:50]})")
     for k in moves: out.append(f"- MOVE {k[1]}: {o[k]['reports_up_to']} -> {c[k]['reports_up_to']}")
-open(os.path.join(HERE,"BO_Map_Changes_Built.md"),"w").write("\n".join(out)+"\n")
+open(P["changes_md"],"w").write("\n".join(out)+"\n")
 print("\n".join(out)); print("\nANY CHANGE:",any_change)

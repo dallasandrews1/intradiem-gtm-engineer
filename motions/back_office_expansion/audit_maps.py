@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Structural audit of BO_Map_Build_Sheets_Inger.csv: prints, per account, the defects Dallas keeps finding."""
-import csv,sys
+"""Structural audit of a set's build sheet (--set <name>): prints, per account, the defects Dallas keeps finding."""
+import csv,sys,os
 from collections import defaultdict
-rows=list(csv.DictReader(open("BO_Map_Build_Sheets_Inger.csv")))
+from bo_set import load_set
+CFG=load_set()
+rows=list(csv.DictReader(open(CFG["_paths"]["build_sheets_csv"])))
 LVL={"C":0,"EVP":1,"SVP":2,"VP":3,"AVP":4,"Director":5}
 by=defaultdict(list)
 for r in rows: by[r["account"]].append(r)

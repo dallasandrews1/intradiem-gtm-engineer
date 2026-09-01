@@ -4,20 +4,35 @@
 ## Assurant: no change
 
 
-## Cleveland Clinic
+## Cleveland Clinic: no change
 
-- ADD Emily Monteleone (Director of Strategic Workforce Planning) under Janice Murphy
 
-## Cox Communications
+## Cox Communications: no change
 
-- ADD Tim Cotter (Vice President Operations) under Montie Pace
-- ADD Brad Pfaff (Assistant Vice President, Operations & Technology ) under Tim Cotter
-- ADD Dorin Mandachi (Senior Director, Technology Operations) under Brad Pfaff
-- ADD Scott Bradshaw (Director, Technology Operations) under Brad Pfaff
-- ADD Lynn Hall (Director Of Operations) under Tim Cotter
 
-## DIRECTV
+## DIRECTV: no change
 
-- ADD Erin Hurley (Vice President Strategic Sourcing) under Michael W.
-- ADD Cecilia Comeaux (Associate Vice President, DIRECTV Technology & Ope) under Mark Morrison
-- ADD Carl Barber (Senior Director HR Technology and Workforce Analyt) under Cecilia Comeaux
+
+## Goldman Sachs: no change
+
+
+## Guardian Life: no change
+
+
+## McKesson: no change
+
+
+## MetLife: no change
+
+
+## Prudential Financial: no change
+
+
+## Rogers Communications: no change
+
+
+## Travelers: no change
+
+
+## Zurich North America: no change
+

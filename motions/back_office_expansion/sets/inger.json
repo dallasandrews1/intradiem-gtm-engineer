@@ -1,0 +1,403 @@
+{
+ "set": "inger",
+ "rep": "Inger Escamilla",
+ "rep_short": "Inger",
+ "rep_label": "Account manager",
+ "date": "August 27, 2026",
+ "title": "Back Office Maps, Inger's Twelve",
+ "headline_html": "Twelve <span class=\"spark\">back-office maps</span>.",
+ "sub": "One new Sales Navigator map per account. Nobody from the existing relationship maps; every name checked against Salesforce.",
+ "md_title": "# Back-office map build sheets, Inger's twelve\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: senior executive, then the SVP/VP who leads each function, then the directors under them. Reporting lines are inferred from titles and functions until Inger confirms.\n",
+ "files": {
+  "roster": "BO_AccountMap_Roster_Inger.csv",
+  "candidates": "inger_backoffice_candidates.csv",
+  "sf_check": "inger_sf_check.csv",
+  "known_companies": "inger_known_layer_companies.csv",
+  "build_sheets_csv": "BO_Map_Build_Sheets_Inger.csv",
+  "build_sheets_md": "BO_Map_Build_Sheets_Inger.md",
+  "bench_csv": "BO_Map_Bench_Inger.csv",
+  "snapshot_csv": "_built_snapshot.csv",
+  "changes_md": "BO_Map_Changes_Built.md",
+  "page_out": "account_maps/inger_backoffice_maps.html"
+ },
+ "built": [
+  "Assurant",
+  "Cleveland Clinic",
+  "Cox Communications",
+  "DIRECTV",
+  "Goldman Sachs",
+  "Guardian Life",
+  "McKesson",
+  "MetLife",
+  "Prudential Financial",
+  "Rogers Communications",
+  "Travelers",
+  "Zurich North America"
+ ],
+ "select": "gap",
+ "sweep_sources": [
+  "Aug 25 VP sweep"
+ ],
+ "candidate_default_source": "Aug 25 search",
+ "roster_source_label": "Jul 26 pull",
+ "drop": [
+  "Adam Girard",
+  "Albert Leong",
+  "Anam K.",
+  "Artsiom Basaraba",
+  "Ashish K Srivastava",
+  "Bill Bannon",
+  "Bradd Chignoli",
+  "Brooke Schwerdt",
+  "Corey Bayless",
+  "Dana Cruz",
+  "David Burns",
+  "Deepak Mathur",
+  "Edward Nolan",
+  "Elaina Becker",
+  "Florencia Berazategui Conselo",
+  "Gizelle George-Joseph",
+  "Jake Frost",
+  "Jason Sellitti",
+  "Javier Martin Almohalla",
+  "Jianuo (Summer) He",
+  "John Rider",
+  "Jolanta McClintock",
+  "Jose Mello",
+  "Ken Solon",
+  "Maj Anoop Bhatt",
+  "Manoj D.",
+  "Marisol Andrea Sanchez García",
+  "Mariya Khan",
+  "Michael White",
+  "Mitch Krzyzek",
+  "Nicolas Lance",
+  "Niranjan Tumkur",
+  "Olivia Sarah-Le Lacheur",
+  "Paul Parseghian",
+  "Pilar López-Aranguren Velarde",
+  "Priyanka Jain",
+  "Rachna Singhal",
+  "Raymond Bonachea",
+  "Ritesh Sharma",
+  "Rosaly Macaulay",
+  "Stephan Lambert-Melton",
+  "Tamara Jeffries",
+  "Umesh Kulkarni",
+  "Usman Quddoos",
+  "William Plesnarski"
+ ],
+ "priority": [
+  [
+   "Travelers",
+   "Brian Brinkman"
+  ],
+  [
+   "Travelers",
+   "Dave French"
+  ],
+  [
+   "Zurich North America",
+   "Japhet Boutin"
+  ],
+  [
+   "Zurich North America",
+   "Kenneth Nigro"
+  ]
+ ],
+ "manual_under": [
+  [
+   "Zurich North America",
+   "Ewa Peczkowicz, MBA",
+   "Doug Meyers"
+  ],
+  [
+   "Zurich North America",
+   "Laura Boehm",
+   "Terry-Dawn Thomas"
+  ],
+  [
+   "Zurich North America",
+   "Kenneth Nigro",
+   "Doug Meyers"
+  ],
+  [
+   "Zurich North America",
+   "Diana Wirkus",
+   "Doug Meyers"
+  ],
+  [
+   "Zurich North America",
+   "Rajiv Rao",
+   "Chavonne Hudson, ARM"
+  ],
+  [
+   "Zurich North America",
+   "Brian Parotto",
+   "Thomas Markun"
+  ],
+  [
+   "Zurich North America",
+   "Chad Fry",
+   "Doug Meyers"
+  ],
+  [
+   "Zurich North America",
+   "Jim Cherry",
+   "Doug Meyers"
+  ],
+  [
+   "Zurich North America",
+   "Karen Anderson",
+   "Thomas Markun"
+  ],
+  [
+   "Zurich North America",
+   "Catherine Marciniak",
+   "Keith Daly"
+  ],
+  [
+   "Zurich North America",
+   "Delpha DiGiacomo",
+   "Catherine Marciniak"
+  ],
+  [
+   "Zurich North America",
+   "Kandace (Mason) Spotts, PMP, CSM",
+   "Rajiv Rao"
+  ],
+  [
+   "Zurich North America",
+   "Doug Meyers",
+   "Keith Daly"
+  ],
+  [
+   "Zurich North America",
+   "Neil DeBlock",
+   "Catherine Marciniak"
+  ],
+  [
+   "Zurich North America",
+   "Japhet Boutin",
+   "Catherine Marciniak"
+  ],
+  [
+   "Travelers",
+   "Joe Balog",
+   "Brian Harton"
+  ],
+  [
+   "Travelers",
+   "Tim Jones",
+   "Brian Harton"
+  ],
+  [
+   "Travelers",
+   "Amy White, AFSB",
+   "Tracey Cournoyer"
+  ],
+  [
+   "Travelers",
+   "Everton Chin, MBA",
+   "Vincent Seaver"
+  ],
+  [
+   "Travelers",
+   "Valarie Best",
+   "Elaine Baisden"
+  ],
+  [
+   "Travelers",
+   "Esther M.",
+   "Brian Harton"
+  ],
+  [
+   "Travelers",
+   "Dave French",
+   "Andy Bessette"
+  ],
+  [
+   "Travelers",
+   "Brian Brinkman",
+   "Elena Gervino"
+  ],
+  [
+   "Travelers",
+   "Terence Harris",
+   "Elena Gervino"
+  ],
+  [
+   "Travelers",
+   "Suzanne South",
+   "Jacque Flusche"
+  ],
+  [
+   "Prudential Financial",
+   "Gerry Freitas",
+   "Michael Estep"
+  ],
+  [
+   "Prudential Financial",
+   "Kellie Tattersall",
+   "Michael Estep"
+  ],
+  [
+   "Prudential Financial",
+   "Scott Hall",
+   "Michael Estep"
+  ],
+  [
+   "Prudential Financial",
+   "Carrie Hildebrand",
+   "Michael Estep"
+  ],
+  [
+   "Prudential Financial",
+   "David Baker",
+   "Michael Estep"
+  ],
+  [
+   "Prudential Financial",
+   "Leigh Foster",
+   "Carrie Hildebrand"
+  ],
+  [
+   "Prudential Financial",
+   "Jennifer Wheeler",
+   "Kellie Tattersall"
+  ],
+  [
+   "Prudential Financial",
+   "Walter Clarke",
+   "Cynthia Benjamin"
+  ],
+  [
+   "Prudential Financial",
+   "James Walden",
+   "Cynthia Benjamin"
+  ],
+  [
+   "Prudential Financial",
+   "Janine Faulls",
+   "Cynthia Benjamin"
+  ],
+  [
+   "Prudential Financial",
+   "David Wexler",
+   "Scott Haggerty"
+  ],
+  [
+   "Prudential Financial",
+   "David Joshua Wildman",
+   "Scott Haggerty"
+  ],
+  [
+   "Prudential Financial",
+   "Karen Coley",
+   "Cynthia Benjamin"
+  ],
+  [
+   "Prudential Financial",
+   "Brendan Cavanaugh",
+   "Michael Estep"
+  ],
+  [
+   "MetLife",
+   "Sharon Kupiec",
+   "Heather Bertellotti Phelps"
+  ],
+  [
+   "MetLife",
+   "Dianne Donovan-Colin",
+   "Heather Bertellotti Phelps"
+  ],
+  [
+   "MetLife",
+   "Karin Peña Fitzgerald",
+   "Heather Bertellotti Phelps"
+  ],
+  [
+   "MetLife",
+   "Donna Fisher",
+   "Sharon Kupiec"
+  ],
+  [
+   "MetLife",
+   "Ashley Smith",
+   "Sharon Kupiec"
+  ]
+ ],
+ "title_override": [
+  [
+   "Goldman Sachs",
+   "Ericka Leslie",
+   "Chief Administrative Officer"
+  ],
+  [
+   "Prudential Financial",
+   "Cynthia Benjamin",
+   "VP, Enterprise Finance Operations Shared Services"
+  ],
+  [
+   "Prudential Financial",
+   "Scott Hall",
+   "Vice President, Appeals, Litigation & Complaints"
+  ],
+  [
+   "Prudential Financial",
+   "Leigh Foster",
+   "Director, Process Management"
+  ]
+ ],
+ "dual": [
+  [
+   "Assurant",
+   "Gary Turner"
+  ],
+  [
+   "Travelers",
+   "Vincent Armentano"
+  ]
+ ],
+ "verify": [
+  [
+   "Goldman Sachs",
+   "John L. Bertrand"
+  ],
+  [
+   "Goldman Sachs",
+   "Przemek Myslecki"
+  ],
+  [
+   "MetLife",
+   "Zeid Khamash"
+  ],
+  [
+   "Prudential Financial",
+   "Joseph M. Hayes"
+  ],
+  [
+   "Prudential Financial",
+   "Priya K.C. Bhatt"
+  ],
+  [
+   "Prudential Financial",
+   "Todd Shriber"
+  ]
+ ],
+ "phrases": [
+  "transaction banking",
+  "group insurance",
+  "group benefits",
+  "residential",
+  "regional hospitals",
+  "long term care",
+  "rogers bank",
+  "claims",
+  "disability"
+ ],
+ "topics_extra": {},
+ "func_extra": [],
+ "collision": {}
+}

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Pre-publish gate for the back-office maps. Exit 1 on any failure. Run after every rebuild, before any publish."""
 import csv,re,subprocess,sys,os
+from bo_set import load_set
 HERE=os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
-rows=list(csv.DictReader(open("BO_Map_Build_Sheets_Inger.csv")))
+CFG=load_set(); P=CFG["_paths"]; SET=["--set",CFG["_name"]]
+rows=list(csv.DictReader(open(P["build_sheets_csv"])))
 fail=[]; warn=[]
 # 1 every lead has a LinkedIn URL and a title
 for r in rows:
@@ -32,26 +34,31 @@ for r in rows:
     if re.match(r"^(vice president|vp|senior vice president|svp|managing director)\s*[-,|]?\s*(platform solutions)?$",t,re.I): fail.append(f"generic title on map: {r['account']} | {r['full_name']} | {t}")
 # 5 excluded people must not be on a map
 SUBST=re.compile(r"retired|no longer|left |spectrum|stale|not found|does not match|profile url|sold to|title_excluded|off_target|clay record",re.I)
-cand=list(csv.DictReader(open("inger_backoffice_candidates.csv")))
+cand=list(csv.DictReader(open(P["candidates"])))
 kept={(r["account"],r["full_name"]) for r in cand if not r["excluded_reason"].strip()}
 ex={(r["account"],r["full_name"]) for r in cand if SUBST.search(r["excluded_reason"]) and (r["account"],r["full_name"]) not in kept}
 for r in rows:
     if (r["account"],r["full_name"]) in ex: fail.append(f"excluded person on map: {r['account']} | {r['full_name']}")
 # 6 AM-map people must not be on a map
-am={(r["account"],r["full_name"]) for r in csv.DictReader(open("BO_AccountMap_Roster_Inger.csv")) if r["source"].startswith("am_map")}
+am={(r["account"],r["full_name"]) for r in csv.DictReader(open(P["roster"])) if r["source"].startswith("am_map")} if P["roster"] and os.path.exists(P["roster"]) else set()
 for r in rows:
     if (r["account"],r["full_name"]) in am: fail.append(f"AM-map person on a back-office map: {r['account']} | {r['full_name']}")
+# 6a people in another live sequence at the account never land on a map
+for r in rows:
+    if (r["account"],r["full_name"]) in CFG["_collision"]: fail.append(f"sequence collision on map: {r['account']} | {r['full_name']} ({CFG['_collision'][(r['account'],r['full_name'])]})")
 # 6b nothing lost: every kept candidate with a URL is on a map or on the bench
-bench={(r["account"],r["full_name"]) for r in csv.DictReader(open("BO_Map_Bench_Inger.csv"))}
+bench={(r["account"],r["full_name"]) for r in csv.DictReader(open(P["bench_csv"]))} if os.path.exists(P["bench_csv"]) else set()
 onmap={(r["account"],r["full_name"]) for r in rows}
 for r in cand:
-    if not r["excluded_reason"].strip() and r["linkedin_url"] and (r["account"],r["full_name"]) not in onmap and (r["account"],r["full_name"]) not in bench:
+    if not r["excluded_reason"].strip() and r["linkedin_url"] and r["full_name"] not in CFG["_drop"] and (r["account"],r["full_name"]) not in onmap and (r["account"],r["full_name"]) not in bench:
         fail.append(f"kept candidate lost (not on map, not benched): {r['account']} | {r['full_name']}")
 # 7 built-map regression gate
-out=subprocess.run([sys.executable,"diff_built_maps.py"],capture_output=True,text=True).stdout
+out=subprocess.run([sys.executable,"diff_built_maps.py"]+SET,capture_output=True,text=True).stdout
 changed="ANY CHANGE: True" in out
+for line in out.splitlines():
+    if line.startswith("- REMOVE") or line.startswith("- MOVE"): fail.append("built map altered: "+line[2:])
 # 8 audit
-aud=subprocess.run([sys.executable,"audit_maps.py"],capture_output=True,text=True).stdout.strip().splitlines()[-1]
+aud=subprocess.run([sys.executable,"audit_maps.py"]+SET,capture_output=True,text=True).stdout.strip().splitlines()[-1]
 print(f"leads {len(rows)} | {aud} | built maps changed: {changed}")
 for w in warn: print("  warn:",w)
 for f in fail: print("  FAIL:",f)
