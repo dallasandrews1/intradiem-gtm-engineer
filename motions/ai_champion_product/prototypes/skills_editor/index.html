@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harmoniq Skills Editor</title>
+<style>
+  :root {
+    --id-green: #5AB274;
+    --id-dark-green: #158235;
+    --id-radius: 5px;
+    --id-radius-sm: 4px;
+    --id-radius-dialog: 2px;
+    --id-bg: #F8F8F8;
+    --id-border: #E5E5E5;
+    --id-text: #212121;
+    --id-text2: #757575;
+    --id-input-border: rgba(0,0,0,0.23);
+    --id-card-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    --id-dialog-shadow: 0 19px 38px rgba(0,0,0,0.3);
+    --font-body: 'Open Sans', Roboto, -apple-system, Helvetica, Arial, sans-serif;
+    --font-label: Roboto, 'Open Sans', -apple-system, Helvetica, Arial, sans-serif;
+    --met-bg: #E8F5EE;   --met-fg: #158235;
+    --below-bg: #FEF3E2; --below-fg: #B26A00;
+    --missing-bg: #FEF0ED; --missing-fg: #C62828;
+    --extra-bg: #F4F6F8; --extra-fg: #757575;
+    --health-green: #5AB274;
+    --health-amber: #F0A030;
+    --health-red: #D9534F;
+    --health-none: #D6D6D6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--id-text);
+    background: var(--id-bg);
+    overflow-x: hidden;
+  }
+  button, input, select { font-family: inherit; }
+
+  /* Shell */
+  .app { display: flex; min-height: 100vh; }
+  .sidebar {
+    width: 256px; flex: 0 0 256px;
+    background: var(--id-bg);
+    border-right: 1px solid var(--id-border);
+    position: sticky; top: 0; height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  .brand {
+    height: 64px; display: flex; align-items: center; gap: 10px;
+    padding: 0 20px; border-bottom: 1px solid var(--id-border);
+  }
+  .brand-mark {
+    width: 28px; height: 28px; border-radius: 6px; background: var(--id-green);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .brand-mark svg { width: 18px; height: 18px; fill: #fff; }
+  .brand-name { font-weight: 700; font-size: 15px; letter-spacing: .01em; }
+  .brand-sub { font-size: 11px; color: var(--id-text2); display: block; font-weight: 400; }
+  .nav { padding: 12px 0; flex: 1; }
+  .nav-label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--id-text2); padding: 8px 20px; font-family: var(--font-label); }
+  .nav-item {
+    display: flex; align-items: center; gap: 12px;
+    height: 40px; padding: 0 20px 0 17px;
+    border-left: 3px solid transparent;
+    color: var(--id-text); text-decoration: none; font-size: 14px; cursor: pointer;
+  }
+  .nav-item svg { width: 24px; height: 24px; fill: var(--id-text2); flex: 0 0 24px; }
+  .nav-item:hover { background: rgba(0,0,0,0.04); }
+  .nav-item.active { background: rgba(90,178,116,0.12); border-left-color: var(--id-green); color: var(--id-dark-green); font-weight: 600; }
+  .nav-item.active svg { fill: var(--id-dark-green); }
+  .sidebar-foot { padding: 12px 20px; border-top: 1px solid var(--id-border); font-size: 12px; color: var(--id-text2); display: flex; align-items: center; gap: 10px; }
+  .sidebar-foot .avatar { width: 28px; height: 28px; }
+
+  .main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+  .topbar {
+    height: 64px; background: #fff; border-bottom: 1px solid var(--id-border);
+    display: flex; align-items: center; gap: 16px; padding: 0 24px;
+    position: sticky; top: 0; z-index: 5;
+  }
+  .page-title { font-size: 18px; font-weight: 600; margin: 0; }
+  .topbar-agent { font-size: 13px; color: var(--id-text2); }
+  .template-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-label); font-size: 12px; color: var(--id-text2);
+    border: 1px solid var(--id-border); border-radius: var(--id-radius-sm);
+    padding: 0 10px; height: 28px; background: var(--id-bg); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis; max-width: 380px;
+  }
+  .template-chip b { color: var(--id-text); font-weight: 600; }
+  .template-chip.none b { color: var(--id-text2); font-weight: 400; font-style: italic; }
+  .spacer { flex: 1; }
+  .unsaved {
+    font-family: var(--font-label); font-size: 12px; color: var(--below-fg);
+    display: none; align-items: center; gap: 6px;
+  }
+  .unsaved.show { display: inline-flex; }
+  .unsaved i { width: 8px; height: 8px; border-radius: 50%; background: var(--below-fg); display: inline-block; }
+
+  /* Buttons */
+  .btn {
+    height: 36px; border-radius: var(--id-radius-sm); background: var(--id-green);
+    color: #fff; font-family: var(--font-body); font-weight: 700; font-size: 14px; letter-spacing: .03em;
+    border: 0; padding: 0 20px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+    position: relative; white-space: nowrap;
+  }
+  .btn:hover { background: var(--id-dark-green); }
+  .btn:disabled { opacity: .55; cursor: default; }
+  .btn:disabled:hover { background: var(--id-green); }
+  .btn .dirty-dot { width: 8px; height: 8px; border-radius: 50%; background: #FFD166; display: none; }
+  .btn.dirty .dirty-dot { display: inline-block; }
+  .btn-ghost { background: #fff; color: var(--id-dark-green); border: 1px solid var(--id-green); }
+  .btn-ghost:hover { background: var(--met-bg); }
+  .btn-icon {
+    width: 28px; height: 28px; border-radius: var(--id-radius-sm); border: 0; background: transparent; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center; color: var(--id-text2);
+  }
+  .btn-icon svg { width: 18px; height: 18px; fill: currentColor; }
+  .btn-icon:hover { background: rgba(0,0,0,0.06); color: var(--id-text); }
+
+  /* Inputs */
+  .input, .select {
+    height: 36px; border-radius: var(--id-radius-sm); border: 1px solid var(--id-input-border);
+    font-family: var(--font-label); font-size: 14px; padding: 0 10px; background: #fff; color: var(--id-text);
+    width: 100%;
+  }
+  .input:focus, .select:focus { outline: none; border-color: var(--id-green); box-shadow: 0 0 0 2px rgba(90,178,116,0.2); }
+  .select { appearance: none; -webkit-appearance: none; padding-right: 28px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23757575'><path d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/></svg>");
+    background-repeat: no-repeat; background-position: right 6px center; background-size: 18px; }
+  .select-sm { height: 30px; font-size: 13px; width: auto; min-width: 128px; }
+  .select-xs { height: 28px; font-size: 11px; }
+  .search-wrap { position: relative; }
+  .search-wrap svg { position: absolute; left: 8px; top: 9px; width: 18px; height: 18px; fill: var(--id-text2); pointer-events: none; }
+  .search-wrap .input { padding-left: 32px; }
+
+  /* Workspace grid */
+  .workspace {
+    padding: 20px; display: grid; gap: 16px;
+    grid-template-columns: 252px minmax(0,1fr) 268px;
+    align-items: start;
+  }
+  .card { background: #fff; border-radius: var(--id-radius); box-shadow: var(--id-card-shadow); min-width: 0; }
+  .panel-head { padding: 14px 16px; border-bottom: 1px solid var(--id-border); display: flex; align-items: center; gap: 10px; }
+  .panel-title { font-size: 14px; font-weight: 600; margin: 0; }
+  .panel-sub { font-size: 12px; color: var(--id-text2); }
+
+  /* Left: roster */
+  .roster-controls { padding: 12px 12px 8px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--id-border); }
+  .roster-filters { display: flex; gap: 6px; }
+  .roster-filters .select { font-size: 11px; height: 28px; padding: 0 24px 0 8px; background-size: 16px; }
+  .roster-list { max-height: calc(100vh - 260px); overflow-y: auto; }
+  .roster-row {
+    height: 40px; display: flex; align-items: center; gap: 10px; padding: 0 10px 0 9px;
+    border-left: 3px solid transparent; cursor: pointer; border-bottom: 1px solid transparent;
+  }
+  .roster-row:hover { background: rgba(0,0,0,0.03); }
+  .roster-row.active { background: rgba(90,178,116,0.12); border-left-color: var(--id-green); }
+  .avatar {
+    width: 26px; height: 26px; border-radius: 50%; background: var(--met-bg); color: var(--id-dark-green);
+    font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 26px;
+    font-family: var(--font-label);
+  }
+  .roster-text { flex: 1; min-width: 0; line-height: 1.15; }
+  .roster-name { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .roster-role { display: block; font-size: 11px; color: var(--id-text2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .health { display: flex; gap: 2px; flex: 0 0 auto; }
+  .health i { display: block; width: 14px; height: 5px; border-radius: 2px; background: var(--health-none); }
+  .health i.green { background: var(--health-green); }
+  .health i.amber { background: var(--health-amber); }
+  .health i.red { background: var(--health-red); }
+  .roster-empty { padding: 24px 12px; font-size: 12px; color: var(--id-text2); text-align: center; }
+  .roster-foot { padding: 8px 12px; font-size: 11px; color: var(--id-text2); border-top: 1px solid var(--id-border); display: flex; gap: 10px; flex-wrap: wrap; }
+  .roster-foot span { display: inline-flex; align-items: center; gap: 4px; }
+  .roster-foot i { width: 10px; height: 5px; border-radius: 2px; display: inline-block; }
+
+  /* Centre */
+  .agent-head { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+  .agent-head .avatar { width: 40px; height: 40px; flex-basis: 40px; font-size: 14px; }
+  .agent-name { font-size: 16px; font-weight: 600; }
+  .agent-meta { font-size: 12px; color: var(--id-text2); }
+  .tabs { display: flex; border-bottom: 1px solid var(--id-border); padding: 0 8px; }
+  .tab {
+    padding: 0 14px; height: 44px; display: inline-flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--id-text2); background: none; border: 0;
+    border-bottom: 3px solid transparent; cursor: pointer; margin-bottom: -1px;
+  }
+  .tab:hover { color: var(--id-text); }
+  .tab.active { color: var(--id-dark-green); border-bottom-color: var(--id-green); }
+  .tab .count { font-family: var(--font-label); font-size: 11px; font-weight: 500; background: var(--id-bg); border: 1px solid var(--id-border); border-radius: 10px; padding: 1px 7px; color: var(--id-text2); }
+  .tab.active .count { background: var(--met-bg); border-color: var(--met-bg); color: var(--id-dark-green); }
+  .tab-body { padding: 16px; }
+
+  table.ds { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.ds th { background: var(--id-bg); height: 48px; text-align: left; padding: 0 12px; font-family: var(--font-label); font-size: 12px; font-weight: 500; color: var(--id-text2); border-bottom: 1px solid var(--id-border); }
+  table.ds td { height: 48px; padding: 0 12px; border-bottom: 1px solid var(--id-border); vertical-align: middle; }
+  table.ds tr.group td { background: var(--id-bg); font-family: var(--font-label); font-size: 12px; font-weight: 500; color: var(--id-text2); height: 40px; }
+  table.ds tr.group td b { color: var(--id-text); font-weight: 600; }
+  table.ds td.act-cell { font-weight: 600; }
+  .muted { color: var(--id-text2); font-size: 12px; }
+  .cell-sub { display: block; font-size: 11px; color: var(--id-text2); font-weight: 400; margin-top: 1px; }
+  .empty { padding: 28px 16px; text-align: center; color: var(--id-text2); font-size: 13px; }
+
+  /* Process tab */
+  .proc-layout { display: grid; grid-template-columns: 184px minmax(0,1fr); gap: 16px; }
+  .process-table td.act-cell { min-width: 150px; }
+  .process-table td.lvl-cell { white-space: nowrap; width: 1%; }
+  .proc-left { min-width: 0; }
+  .quick-add { position: relative; margin-bottom: 12px; }
+  .quick-add label { display: block; font-family: var(--font-label); font-size: 12px; color: var(--id-text2); margin-bottom: 6px; }
+  .qa-list {
+    position: absolute; left: 0; right: 0; top: 100%; margin-top: 4px; background: #fff;
+    border-radius: var(--id-radius-sm); box-shadow: var(--id-card-shadow); border: 1px solid var(--id-border);
+    z-index: 20; max-height: 260px; overflow-y: auto; display: none;
+  }
+  .qa-list.open { display: block; }
+  .qa-item { padding: 8px 10px; cursor: pointer; font-size: 13px; border-bottom: 1px solid var(--id-border); }
+  .qa-item:last-child { border-bottom: 0; }
+  .qa-item:hover, .qa-item.hl { background: rgba(90,178,116,0.12); }
+  .qa-item .path { display: block; font-size: 11px; color: var(--id-text2); }
+  .qa-item.none { color: var(--id-text2); cursor: default; }
+  .tree { border: 1px solid var(--id-border); border-radius: var(--id-radius-sm); overflow: hidden; }
+  .tree-head { background: var(--id-bg); font-family: var(--font-label); font-size: 12px; color: var(--id-text2); padding: 8px 10px; border-bottom: 1px solid var(--id-border); }
+  .tnode { display: flex; align-items: center; gap: 6px; padding: 6px 10px; font-size: 13px; cursor: pointer; border-left: 3px solid transparent; }
+  .tnode:hover { background: rgba(0,0,0,0.03); }
+  .tnode.sel { background: rgba(90,178,116,0.12); border-left-color: var(--id-green); }
+  .tnode.lob { font-weight: 700; }
+  .tnode.svc { padding-left: 22px; font-weight: 600; font-size: 12.5px; }
+  .tnode.proc { padding-left: 34px; font-size: 12.5px; }
+  .tnode .n { margin-left: auto; font-family: var(--font-label); font-size: 11px; color: var(--id-text2); }
+  .tnode.all { font-weight: 600; }
+  .proc-right { min-width: 0; }
+  .proc-right .table-wrap { overflow-x: auto; }
+
+  .dots { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #C8C8C8; background: #fff; padding: 0; cursor: pointer; }
+  .dot.on { background: var(--id-green); border-color: var(--id-green); }
+  .dot:hover { border-color: var(--id-dark-green); }
+  .dots .lvl { font-family: var(--font-label); font-size: 11px; color: var(--id-text2); margin-left: 6px; min-width: 62px; }
+
+  /* BO tab */
+  .bo-layout { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 16px; }
+  .class-panel { border: 1px solid var(--id-border); border-radius: var(--id-radius-sm); overflow: hidden; align-self: start; }
+  .class-panel .tree-head { border-bottom: 1px solid var(--id-border); }
+  .class-item { display: flex; align-items: center; gap: 8px; padding: 10px 10px; cursor: pointer; border-left: 3px solid transparent; font-size: 13px; font-weight: 600; }
+  .class-item small { display: block; font-weight: 400; font-size: 11px; color: var(--id-text2); }
+  .class-item.sel { background: rgba(90,178,116,0.12); border-left-color: var(--id-green); }
+  .class-item:hover { background: rgba(0,0,0,0.03); }
+  .bo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+  .bo-card { border: 1px solid var(--id-border); border-radius: var(--id-radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .bo-card .bo-name { font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 8px; }
+  .bo-card .bo-desc { font-size: 11px; color: var(--id-text2); flex: 1; }
+  .mono-icon { width: 26px; height: 26px; border-radius: 4px; background: var(--id-bg); border: 1px solid var(--id-border); font-family: var(--font-label); font-size: 10px; font-weight: 700; color: var(--id-text2); display: inline-flex; align-items: center; justify-content: center; flex: 0 0 26px; }
+  .ins-class { border: 1px solid var(--id-border); border-radius: var(--id-radius-sm); margin-bottom: 10px; overflow: hidden; }
+  .ins-head { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--id-bg); cursor: pointer; min-height: 48px; }
+  .ins-head .name { font-weight: 600; font-size: 13px; flex: 1; }
+  .ins-head .name small { display: block; font-weight: 400; font-size: 11px; color: var(--id-text2); }
+  .ins-head .chev { width: 20px; height: 20px; fill: var(--id-text2); transition: transform .15s; }
+  .ins-class.open .chev { transform: rotate(180deg); }
+  .ins-body { display: none; }
+  .ins-class.open .ins-body { display: block; }
+  .ins-row { display: flex; align-items: center; gap: 10px; padding: 0 12px 0 40px; height: 48px; border-top: 1px solid var(--id-border); font-size: 13px; }
+  .ins-row .name { flex: 1; }
+  .ins-row .name small { display: block; font-size: 11px; color: var(--id-text2); font-weight: 400; }
+
+  /* Right: compare */
+  .compare-body { padding: 12px 16px 16px; }
+  .diff-group { margin-bottom: 14px; }
+  .diff-group h4 { margin: 0 0 6px; font-family: var(--font-label); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--id-text2); display: flex; align-items: center; gap: 6px; }
+  .diff-group h4 .n { margin-left: auto; font-weight: 600; }
+  .diff-item { border: 1px solid; border-radius: var(--id-radius-sm); padding: 6px 10px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; font-size: 12px; }
+  .diff-item .nm { flex: 1; font-weight: 600; min-width: 0; }
+  .diff-item .nm small { display: block; font-weight: 400; font-size: 10px; opacity: .85; }
+  .diff-item .lv { font-family: var(--font-label); font-size: 11px; white-space: nowrap; }
+  .diff-item.met { border-color: var(--met-bg); background: var(--met-bg); color: var(--met-fg); }
+  .diff-item.below { border-color: var(--below-bg); background: var(--below-bg); color: var(--below-fg); }
+  .diff-item.missing { border-color: var(--missing-bg); background: var(--missing-bg); color: var(--missing-fg); }
+  .diff-item.extra { border-color: var(--extra-bg); background: var(--extra-bg); color: var(--extra-fg); }
+  .diff-none { font-size: 12px; color: var(--id-text2); padding: 4px 0 2px; }
+  .compare-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 12px 16px 0; }
+  .sum { border-radius: var(--id-radius-sm); padding: 6px 4px; text-align: center; font-family: var(--font-label); }
+  .sum b { display: block; font-size: 16px; font-weight: 700; }
+  .sum span { font-size: 10px; text-transform: uppercase; letter-spacing: .04em; }
+  .sum.met { background: var(--met-bg); color: var(--met-fg); }
+  .sum.below { background: var(--below-bg); color: var(--below-fg); }
+  .sum.missing { background: var(--missing-bg); color: var(--missing-fg); }
+  .sum.extra { background: var(--extra-bg); color: var(--extra-fg); }
+
+  /* Toast */
+  .toast {
+    position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%) translateY(10px);
+    background: #333; color: #fff; padding: 10px 16px; border-radius: var(--id-radius-sm);
+    font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 50;
+    box-shadow: var(--id-card-shadow);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* Badge */
+  .proto-badge {
+    position: fixed; right: 12px; bottom: 12px; font-size: 11px; color: var(--id-text2);
+    background: #fff; border: 1px solid var(--id-border); border-radius: var(--id-radius-sm);
+    padding: 4px 8px; z-index: 40; font-family: var(--font-label);
+  }
+
+  /* AC panel (dialog spec) */
+  .ac-panel {
+    position: fixed; top: 76px; right: 24px; width: 440px; max-width: calc(100vw - 48px); max-height: calc(100vh - 100px);
+    overflow-y: auto; background: #fff; border-radius: var(--id-radius-dialog); box-shadow: var(--id-dialog-shadow);
+    z-index: 60; display: none;
+  }
+  .ac-panel.open { display: block; }
+  .ac-head { padding: 14px 16px; border-bottom: 1px solid var(--id-border); display: flex; align-items: center; gap: 10px; }
+  .ac-head h3 { margin: 0; font-size: 14px; }
+  .ac-head .muted { flex: 1; }
+  .ac-list { list-style: none; margin: 0; padding: 8px 0; }
+  .ac-item { padding: 10px 16px; border-bottom: 1px solid var(--id-border); display: grid; grid-template-columns: 58px 1fr; gap: 10px; font-size: 12px; }
+  .ac-item:last-child { border-bottom: 0; }
+  .pill { font-family: var(--font-label); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; border-radius: 10px; padding: 3px 0; text-align: center; height: 20px; align-self: start; }
+  .pill.pass { background: var(--met-bg); color: var(--met-fg); }
+  .pill.fail { background: var(--missing-bg); color: var(--missing-fg); }
+  .pill.manual { background: var(--extra-bg); color: var(--extra-fg); }
+  .ac-item b { display: block; font-size: 12px; margin-bottom: 2px; }
+  .ac-item .how { color: var(--id-text2); font-size: 11px; line-height: 1.4; }
+  .ac-item .detail { font-size: 11px; margin-top: 3px; }
+  .ac-foot { padding: 10px 16px; border-top: 1px solid var(--id-border); font-size: 11px; color: var(--id-text2); display: flex; gap: 10px; align-items: center; }
+
+  /* Responsive */
+  @media (max-width: 1279px) {
+    .workspace { grid-template-columns: 252px minmax(0,1fr); }
+    .panel-right { grid-column: 2; }
+    .template-chip { max-width: 240px; }
+  }
+  @media (max-width: 1180px) {
+    .proc-layout { grid-template-columns: 1fr; }
+    .bo-layout { grid-template-columns: 1fr; }
+    .class-panel { display: flex; }
+    .class-panel .tree-head { display: none; }
+    .class-item { flex: 1; border-left: 0; border-bottom: 3px solid transparent; }
+    .class-item.sel { border-bottom-color: var(--id-green); }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 9.2h3V19H5V9.2zM10.6 5h2.8v14h-2.8V5zm5.6 8H19v6h-2.8v-6z"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></symbol>
+  </defs>
+</svg>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <span class="brand-mark"><svg><use href="#i-layers"/></svg></span>
+      <span class="brand-name">Harmoniq<span class="brand-sub">Intradiem</span></span>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="nav-label">Workforce</div>
+      <a class="nav-item"><svg><use href="#i-dashboard"/></svg>Dashboard</a>
+      <a class="nav-item"><svg><use href="#i-people"/></svg>Agents</a>
+      <a class="nav-item active"><svg><use href="#i-edit"/></svg>Skills Editor</a>
+      <a class="nav-item"><svg><use href="#i-list"/></svg>Role Templates</a>
+      <div class="nav-label">Insight</div>
+      <a class="nav-item"><svg><use href="#i-chart"/></svg>Reports</a>
+      <a class="nav-item"><svg><use href="#i-settings"/></svg>Settings</a>
+    </nav>
+    <div class="sidebar-foot"><span class="avatar">MG</span><span>Maria Gomez<br>Claims Manager</span></div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar" id="topbar">
+      <h1 class="page-title">Skills Editor</h1>
+      <span class="topbar-agent" id="topbarAgent"></span>
+      <span class="template-chip" id="templateChip"><svg width="16" height="16" fill="#757575"><use href="#i-list"/></svg><span>Template</span><b id="templateName"></b></span>
+      <span class="spacer"></span>
+      <span class="unsaved" id="unsaved"><i></i>Unsaved changes</span>
+      <button class="btn" id="saveBtn" type="button"><span class="dirty-dot"></span>Save</button>
+    </header>
+
+    <main class="workspace" id="workspace">
+      <section class="card panel-left" id="panelLeft">
+        <div class="panel-head"><h2 class="panel-title">Agents</h2><span class="panel-sub" id="rosterCount"></span></div>
+        <div class="roster-controls">
+          <div class="search-wrap">
+            <svg><use href="#i-search"/></svg>
+            <input class="input" id="rosterSearch" type="search" placeholder="Search agents" autocomplete="off">
+          </div>
+          <div class="roster-filters">
+            <select class="select" id="lobFilter" aria-label="Filter by line of business"></select>
+            <select class="select" id="roleFilter" aria-label="Filter by role"></select>
+          </div>
+        </div>
+        <div class="roster-list" id="rosterList"></div>
+        <div class="roster-foot">
+          <span>Process / Case / BO</span>
+          <span><i style="background:var(--health-green)"></i>0 gaps</span>
+          <span><i style="background:var(--health-amber)"></i>1 to 2</span>
+          <span><i style="background:var(--health-red)"></i>3+</span>
+        </div>
+      </section>
+
+      <section class="card panel-centre" id="panelCentre">
+        <div class="agent-head" id="agentHead"></div>
+        <div class="tabs" id="tabs">
+          <button class="tab active" type="button" data-tab="process">Process <span class="count" id="cntProcess">0</span></button>
+          <button class="tab" type="button" data-tab="case">Case <span class="count" id="cntCase">0</span></button>
+          <button class="tab" type="button" data-tab="bo">Business Object <span class="count" id="cntBo">0</span></button>
+        </div>
+        <div class="tab-body" id="tabBody"></div>
+      </section>
+
+      <section class="card panel-right" id="panelRight">
+        <div class="panel-head"><h2 class="panel-title">Compare to Template</h2></div>
+        <div id="compareBody"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="proto-badge" title="Press ? to open the acceptance criteria check">Prototype built from PRD-ICC-S2-001 v2.0</div>
+
+<div class="ac-panel" id="acPanel" role="dialog" aria-label="Acceptance criteria self-check">
+  <div class="ac-head">
+    <h3>Acceptance criteria</h3>
+    <span class="muted">PRD section 10, computed live</span>
+    <button class="btn-icon" id="acClose" type="button" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+  </div>
+  <ul class="ac-list" id="acList"></ul>
+  <div class="ac-foot"><span id="acSummary"></span><span class="spacer"></span><button class="btn btn-ghost" id="acRerun" type="button" style="height:30px;padding:0 12px;font-size:12px">Re-run</button></div>
+</div>
+
+<script>
+/* =========================================================
+   Mock data (PRD section 9 data model)
+   ========================================================= */
+const LEVEL_NAMES = { 1: 'Awareness', 2: 'Basic', 3: 'Proficient', 4: 'Advanced', 5: 'Expert' };
+
+function S(id, act, lob, svc, proc) { return { id, act, lob, svc, proc, level: 1 }; }
+const ALL_SKILLS_FLAT = [
+  S('p-clm-intake-receive',     'Receive Claim',                'Claims', 'Claims Processing', 'Claims Intake'),
+  S('p-clm-intake-eligibility', 'Validate Member Eligibility',  'Claims', 'Claims Processing', 'Claims Intake'),
+  S('p-clm-intake-provider',    'Verify Provider Credentials',  'Claims', 'Claims Processing', 'Claims Intake'),
+  S('p-clm-intake-attach',      'Index Supporting Documents',   'Claims', 'Claims Processing', 'Claims Intake'),
+  S('p-clm-adj-benefit',        'Apply Benefit Rules',          'Claims', 'Claims Processing', 'Claims Adjudication'),
+  S('p-clm-adj-price',          'Price Claim',                  'Claims', 'Claims Processing', 'Claims Adjudication'),
+  S('p-clm-adj-cob',            'Coordinate Benefits',          'Claims', 'Claims Processing', 'Claims Adjudication'),
+  S('p-clm-adj-approve',        'Approve Payment',              'Claims', 'Claims Processing', 'Claims Adjudication'),
+  S('p-clm-app-log',            'Log Appeal',                   'Claims', 'Claims Review',     'Appeals'),
+  S('p-clm-app-review',         'Review Clinical Notes',        'Claims', 'Claims Review',     'Appeals'),
+  S('p-clm-app-determine',      'Issue Determination',          'Claims', 'Claims Review',     'Appeals'),
+  S('p-clm-audit-sample',       'Sample Paid Claims',           'Claims', 'Claims Review',     'Audit'),
+  S('p-clm-audit-flag',         'Flag Overpayment',             'Claims', 'Claims Review',     'Audit'),
+  S('p-clm-audit-report',       'Report Audit Findings',        'Claims', 'Claims Review',     'Audit'),
+  S('p-ms-inq-verify',          'Verify Caller Identity',       'Member Services', 'Member Support', 'Inquiry Handling'),
+  S('p-ms-inq-benefits',        'Explain Benefits',             'Member Services', 'Member Support', 'Inquiry Handling'),
+  S('p-ms-inq-demographics',    'Update Demographics',          'Member Services', 'Member Support', 'Inquiry Handling'),
+  S('p-ms-inq-callback',        'Schedule Callback',            'Member Services', 'Member Support', 'Inquiry Handling'),
+  S('p-ms-esc-grievance',       'Log Grievance',                'Member Services', 'Member Support', 'Escalations'),
+  S('p-ms-esc-route',           'Route to Supervisor',          'Member Services', 'Member Support', 'Escalations'),
+  S('p-ms-esc-resolve',         'Resolve Complaint',            'Member Services', 'Member Support', 'Escalations'),
+  S('p-ms-enr-application',     'Process Application',          'Member Services', 'Enrollment', 'Onboarding'),
+  S('p-ms-enr-idcard',          'Issue ID Card',                'Member Services', 'Enrollment', 'Onboarding'),
+  S('p-ms-enr-pcp',             'Assign Primary Care Provider', 'Member Services', 'Enrollment', 'Onboarding'),
+  S('p-ms-chg-switch',          'Process Plan Switch',          'Member Services', 'Enrollment', 'Plan Changes'),
+  S('p-ms-chg-terminate',       'Terminate Coverage',           'Member Services', 'Enrollment', 'Plan Changes'),
+  S('p-ms-chg-reinstate',       'Reinstate Coverage',           'Member Services', 'Enrollment', 'Plan Changes')
+];
+
+const CASE_SKILLS = [
+  { id: 'cs-cardiology',        name: 'Cardiology',              icon: 'CA', group: 'Medical',    cert: 'CERT-MED-01', desc: 'Cardiac procedures, device claims, and cardiology prior auth' },
+  { id: 'cs-oncology',          name: 'Oncology',                icon: 'ON', group: 'Medical',    cert: 'CERT-MED-02', desc: 'Chemotherapy, radiation, and infusion claims' },
+  { id: 'cs-orthopedics',       name: 'Orthopedics',             icon: 'OR', group: 'Surgical',   cert: 'CERT-SUR-01', desc: 'Joint replacement, spine, and implant claims' },
+  { id: 'cs-general-surgery',   name: 'General Surgery',         icon: 'GS', group: 'Surgical',   cert: 'CERT-SUR-02', desc: 'Inpatient and ambulatory surgical episodes' },
+  { id: 'cs-behavioral-health', name: 'Behavioral Health',       icon: 'BH', group: 'Behavioral', cert: 'CERT-BEH-01', desc: 'Outpatient therapy, inpatient psychiatric, parity rules' },
+  { id: 'cs-substance-use',     name: 'Substance Use Disorder',  icon: 'SU', group: 'Behavioral', cert: 'CERT-BEH-02', desc: 'Detox, residential, and medication-assisted treatment' },
+  { id: 'cs-pediatrics',        name: 'Pediatrics',              icon: 'PE', group: 'Pediatric',  cert: 'CERT-PED-01', desc: 'Well-child, immunization, and pediatric specialty claims' },
+  { id: 'cs-neonatal',          name: 'Neonatal Care',           icon: 'NE', group: 'Pediatric',  cert: 'CERT-PED-02', desc: 'NICU stays and newborn enrollment coordination' },
+  { id: 'cs-radiology',         name: 'Radiology',               icon: 'RA', group: 'Diagnostic', cert: 'CERT-DIA-01', desc: 'Imaging authorizations and technical/professional splits' },
+  { id: 'cs-lab',               name: 'Laboratory Services',     icon: 'LA', group: 'Diagnostic', cert: 'CERT-DIA-02', desc: 'Lab panels, genetic testing, and reference lab claims' }
+];
+const CASE_GROUPS = ['Medical', 'Surgical', 'Behavioral', 'Pediatric', 'Diagnostic'];
+
+const BIZOBJ_SKILLS = [
+  { id: 'bo-claim-record',    name: 'Claim Record',    icon: 'CL', cat: 'sys', desc: 'Header, lines, status history, and adjustments' },
+  { id: 'bo-auth-record',     name: 'Auth Record',     icon: 'AU', cat: 'sys', desc: 'Prior authorization requests and decisions' },
+  { id: 'bo-eob',             name: 'EOB',             icon: 'EO', cat: 'sys', desc: 'Explanation of Benefits, member facing' },
+  { id: 'bo-era',             name: 'ERA',             icon: 'ER', cat: 'sys', desc: 'Electronic Remittance Advice, provider facing' },
+  { id: 'bo-member-record',   name: 'Member Record',   icon: 'ME', cat: 'sys', desc: 'Demographics, coverage spans, and dependents' },
+  { id: 'bo-provider-record', name: 'Provider Record', icon: 'PR', cat: 'sys', desc: 'Credentialing, contracts, and fee schedules' },
+  { id: 'bo-appeal-record',   name: 'Appeal Record',   icon: 'AP', cat: 'sys', desc: 'Appeal case, clinical attachments, determination' },
+  { id: 'bo-payment-record',  name: 'Payment Record',  icon: 'PA', cat: 'sys', desc: 'Check and EFT batches, voids, and reissues' }
+];
+
+const PRODUCT_CATALOG = [
+  { id: 'po-cat:medicare',          category: 'Medicare',          icon: 'MC', products: [
+    { id: 'po:part-a',  name: 'Part-A',   desc: 'Hospital insurance' },
+    { id: 'po:part-b',  name: 'Part-B',   desc: 'Medical insurance' },
+    { id: 'po:part-c',  name: 'Part-C',   desc: 'Medicare Advantage' },
+    { id: 'po:part-d',  name: 'Part-D',   desc: 'Prescription drug coverage' },
+    { id: 'po:medigap', name: 'Medigap',  desc: 'Supplemental plans' }
+  ]},
+  { id: 'po-cat:medicaid',          category: 'Medicaid',          icon: 'MD', products: [
+    { id: 'po:managed-medicaid', name: 'Managed Medicaid', desc: 'State managed care contracts' },
+    { id: 'po:chip',             name: 'CHIP',             desc: 'Children\'s Health Insurance Program' },
+    { id: 'po:dual-eligible',    name: 'Dual Eligible',    desc: 'Medicare and Medicaid coordination' }
+  ]},
+  { id: 'po-cat:commercial',        category: 'Commercial',        icon: 'CO', products: [
+    { id: 'po:ppo',  name: 'PPO',  desc: 'Preferred provider organization' },
+    { id: 'po:hmo',  name: 'HMO',  desc: 'Health maintenance organization' },
+    { id: 'po:hdhp', name: 'HDHP', desc: 'High deductible with HSA' },
+    { id: 'po:epo',  name: 'EPO',  desc: 'Exclusive provider organization' }
+  ]},
+  { id: 'po-cat:behavioral-health', category: 'Behavioral Health', icon: 'BH', products: [
+    { id: 'po:bh-outpatient', name: 'Outpatient BH', desc: 'Therapy and psychiatry visits' },
+    { id: 'po:bh-inpatient',  name: 'Inpatient BH',  desc: 'Psychiatric admissions' },
+    { id: 'po:eap',           name: 'EAP',           desc: 'Employee assistance program' }
+  ]},
+  { id: 'po-cat:pharmacy',          category: 'Pharmacy',          icon: 'RX', products: [
+    { id: 'po:retail-rx',    name: 'Retail Rx',    desc: 'Point of sale pharmacy' },
+    { id: 'po:mail-order-rx', name: 'Mail Order Rx', desc: '90 day mail fulfilment' },
+    { id: 'po:specialty-rx', name: 'Specialty Rx', desc: 'High cost and limited distribution drugs' }
+  ]}
+];
+
+const GRADED_TEMPLATES = {
+  'claims-specialist-g2': {
+    id: 'claims-specialist-g2', label: 'Senior Claims Specialist, Grade 2', grade: 2, family: 'Claims',
+    description: 'Adjudicates complex claims end to end and handles first level appeals.',
+    skills: {
+      'p-clm-intake-receive': 3, 'p-clm-intake-eligibility': 4, 'p-clm-intake-provider': 3,
+      'p-clm-adj-benefit': 4, 'p-clm-adj-price': 4, 'p-clm-adj-cob': 3, 'p-clm-adj-approve': 4,
+      'p-clm-app-log': 2, 'p-clm-app-review': 3, 'p-clm-app-determine': 3,
+      'cs-cardiology': 2, 'cs-oncology': 2, 'cs-orthopedics': 2,
+      'bo-claim-record': 5, 'bo-auth-record': 3, 'bo-eob': 4, 'bo-era': 4, 'bo-member-record': 3, 'bo-provider-record': 3,
+      'po-cat:medicare': 3, 'po:part-c': 3, 'po:part-d': 3, 'po-cat:medicaid': 2, 'po-cat:commercial': 3, 'po:ppo': 3, 'po:hmo': 3
+    }
+  },
+  'claims-associate-g1': {
+    id: 'claims-associate-g1', label: 'Claims Associate, Grade 1', grade: 1, family: 'Claims',
+    description: 'Processes clean claims and routes exceptions.',
+    skills: {
+      'p-clm-intake-receive': 2, 'p-clm-intake-eligibility': 2, 'p-clm-intake-provider': 2, 'p-clm-intake-attach': 2,
+      'p-clm-adj-benefit': 2, 'p-clm-adj-price': 2, 'p-clm-app-log': 1,
+      'cs-cardiology': 1,
+      'bo-claim-record': 3, 'bo-eob': 2, 'bo-member-record': 2,
+      'po-cat:commercial': 2, 'po:ppo': 2, 'po:hmo': 1
+    }
+  },
+  'member-advocate-g2': {
+    id: 'member-advocate-g2', label: 'Member Advocate, Grade 2', grade: 2, family: 'Member Services',
+    description: 'Owns member inquiries through resolution across government and commercial products.',
+    skills: {
+      'p-ms-inq-verify': 3, 'p-ms-inq-benefits': 4, 'p-ms-inq-demographics': 3, 'p-ms-inq-callback': 2,
+      'p-ms-esc-grievance': 3, 'p-ms-esc-route': 2, 'p-ms-esc-resolve': 3,
+      'p-ms-enr-application': 2, 'p-ms-enr-idcard': 2,
+      'cs-behavioral-health': 2, 'cs-pediatrics': 1,
+      'bo-member-record': 4, 'bo-eob': 3, 'bo-provider-record': 2, 'bo-appeal-record': 2,
+      'po-cat:medicare': 3, 'po:part-d': 2, 'po-cat:medicaid': 3, 'po:managed-medicaid': 2, 'po-cat:pharmacy': 2, 'po:retail-rx': 2
+    }
+  }
+};
+
+const AGENTS = [
+  { id: 'a-001', name: 'Sarah Chen',       lob: 'Claims',          role: 'Senior Claims Specialist', roleId: 'claims-specialist-g2', template: 'Senior Claims Specialist, Grade 2',
+    skills: {
+      'p-clm-intake-receive': 4, 'p-clm-intake-eligibility': 4, 'p-clm-intake-provider': 3,
+      'p-clm-adj-benefit': 4, 'p-clm-adj-price': 3, 'p-clm-adj-cob': 3, 'p-clm-adj-approve': 4,
+      'p-clm-app-log': 2, 'p-clm-app-review': 3, 'p-clm-app-determine': 2, 'p-clm-audit-sample': 2,
+      'cs-cardiology': 3, 'cs-oncology': 2, 'cs-orthopedics': 1, 'cs-pediatrics': 2,
+      'bo-claim-record': 5, 'bo-auth-record': 3, 'bo-eob': 4, 'bo-era': 3, 'bo-member-record': 3, 'bo-provider-record': 3, 'bo-appeal-record': 2,
+      'po-cat:medicare': 3, 'po:part-b': 2, 'po:part-c': 3, 'po-cat:commercial': 3, 'po:ppo': 3, 'po:hmo': 3
+    } },
+  { id: 'a-002', name: 'Diego Alvarez',    lob: 'Claims',          role: 'Senior Claims Specialist', roleId: 'claims-specialist-g2', template: 'Senior Claims Specialist, Grade 2',
+    skills: {
+      'p-clm-intake-receive': 4, 'p-clm-intake-eligibility': 4, 'p-clm-intake-provider': 4,
+      'p-clm-adj-benefit': 5, 'p-clm-adj-price': 4, 'p-clm-adj-cob': 4, 'p-clm-adj-approve': 4,
+      'p-clm-app-log': 3, 'p-clm-app-review': 3, 'p-clm-app-determine': 3,
+      'cs-cardiology': 2, 'cs-oncology': 3, 'cs-orthopedics': 2,
+      'bo-claim-record': 5, 'bo-auth-record': 4, 'bo-eob': 4, 'bo-era': 4, 'bo-member-record': 3, 'bo-provider-record': 4,
+      'po-cat:medicare': 4, 'po:part-c': 3, 'po:part-d': 3, 'po-cat:medicaid': 2, 'po-cat:commercial': 3, 'po:ppo': 3, 'po:hmo': 3
+    } },
+  { id: 'a-003', name: 'Marcus Reed',      lob: 'Claims',          role: 'Claims Associate', roleId: 'claims-associate-g1', template: 'Claims Associate, Grade 1',
+    skills: {
+      'p-clm-intake-receive': 2, 'p-clm-intake-eligibility': 2, 'p-clm-intake-provider': 1, 'p-clm-intake-attach': 2,
+      'p-clm-adj-benefit': 2, 'p-clm-adj-price': 1, 'p-clm-app-log': 1,
+      'cs-cardiology': 1,
+      'bo-claim-record': 3, 'bo-eob': 2, 'bo-member-record': 1,
+      'po-cat:commercial': 2, 'po:ppo': 2, 'po:hmo': 1
+    } },
+  { id: 'a-004', name: 'Priya Natarajan',  lob: 'Claims',          role: 'Claims Associate', roleId: 'claims-associate-g1', template: 'Claims Associate, Grade 1',
+    skills: {
+      'p-clm-intake-receive': 3, 'p-clm-intake-eligibility': 2, 'p-clm-intake-provider': 2, 'p-clm-intake-attach': 2,
+      'p-clm-adj-benefit': 2, 'p-clm-adj-price': 2, 'p-clm-app-log': 2,
+      'cs-cardiology': 1, 'cs-radiology': 1,
+      'bo-claim-record': 3, 'bo-eob': 2, 'bo-member-record': 2, 'bo-payment-record': 1,
+      'po-cat:commercial': 2, 'po:ppo': 2, 'po:hmo': 2
+    } },
+  { id: 'a-005', name: 'Lena Schulz',      lob: 'Claims',          role: 'Claims Associate', roleId: 'claims-associate-g1', template: 'Claims Associate, Grade 1',
+    skills: {
+      'p-clm-intake-receive': 1, 'p-clm-intake-eligibility': 1,
+      'p-clm-adj-benefit': 1,
+      'bo-claim-record': 2, 'bo-eob': 1,
+      'po-cat:commercial': 1
+    } },
+  { id: 'a-006', name: 'Emily Foster',     lob: 'Member Services', role: 'Member Advocate', roleId: 'member-advocate-g2', template: 'Member Advocate, Grade 2',
+    skills: {
+      'p-ms-inq-verify': 3, 'p-ms-inq-benefits': 4, 'p-ms-inq-demographics': 3, 'p-ms-inq-callback': 2,
+      'p-ms-esc-grievance': 3, 'p-ms-esc-route': 2, 'p-ms-esc-resolve': 3,
+      'p-ms-enr-application': 2, 'p-ms-enr-idcard': 2,
+      'cs-behavioral-health': 2, 'cs-pediatrics': 1,
+      'bo-member-record': 4, 'bo-eob': 3, 'bo-provider-record': 2, 'bo-appeal-record': 2,
+      'po-cat:medicare': 3, 'po:part-d': 2, 'po-cat:medicaid': 3, 'po:managed-medicaid': 2, 'po-cat:pharmacy': 2, 'po:retail-rx': 2
+    } },
+  { id: 'a-007', name: 'Jamal Washington', lob: 'Member Services', role: 'Member Advocate', roleId: 'member-advocate-g2', template: 'Member Advocate, Grade 2',
+    skills: {
+      'p-ms-inq-verify': 3, 'p-ms-inq-benefits': 3, 'p-ms-inq-demographics': 3,
+      'p-ms-esc-grievance': 2, 'p-ms-esc-route': 2, 'p-ms-esc-resolve': 2,
+      'p-ms-enr-application': 2, 'p-ms-enr-idcard': 2, 'p-ms-chg-switch': 2,
+      'cs-behavioral-health': 2, 'cs-substance-use': 1,
+      'bo-member-record': 4, 'bo-eob': 3, 'bo-provider-record': 2, 'bo-appeal-record': 1,
+      'po-cat:medicare': 3, 'po:part-d': 2, 'po-cat:medicaid': 2, 'po:managed-medicaid': 2, 'po-cat:pharmacy': 2, 'po:retail-rx': 2
+    } },
+  { id: 'a-008', name: 'Hannah Kim',       lob: 'Member Services', role: 'Member Advocate', roleId: 'member-advocate-g2', template: 'Member Advocate, Grade 2',
+    skills: {
+      'p-ms-inq-verify': 2, 'p-ms-inq-benefits': 2, 'p-ms-inq-demographics': 2,
+      'p-ms-esc-grievance': 1, 'p-ms-esc-route': 1,
+      'p-ms-enr-application': 2, 'p-ms-enr-idcard': 3, 'p-ms-enr-pcp': 2,
+      'cs-neonatal': 1,
+      'bo-member-record': 3, 'bo-eob': 2,
+      'po-cat:commercial': 2, 'po:hdhp': 1, 'po-cat:medicaid': 1
+    } },
+  { id: 'a-009', name: 'Tom Okafor',       lob: 'Claims',          role: 'Claims Trainee', roleId: 'claims-trainee', template: null,
+    skills: {
+      'p-clm-intake-receive': 1, 'p-clm-intake-attach': 1,
+      'bo-claim-record': 1, 'bo-member-record': 1,
+      'po-cat:commercial': 1
+    } },
+  { id: 'a-010', name: 'Olivia Brandt',    lob: 'Member Services', role: 'Member Advocate', roleId: 'member-advocate-g2', template: 'Member Advocate, Grade 2',
+    skills: {
+      'p-ms-inq-verify': 4, 'p-ms-inq-benefits': 4, 'p-ms-inq-demographics': 3, 'p-ms-inq-callback': 3,
+      'p-ms-esc-grievance': 3, 'p-ms-esc-route': 3, 'p-ms-esc-resolve': 4,
+      'p-ms-enr-application': 3, 'p-ms-enr-idcard': 2, 'p-ms-chg-terminate': 2, 'p-ms-chg-reinstate': 2,
+      'cs-behavioral-health': 3, 'cs-pediatrics': 2, 'cs-lab': 1,
+      'bo-member-record': 5, 'bo-eob': 3, 'bo-provider-record': 3, 'bo-appeal-record': 3, 'bo-era': 1,
+      'po-cat:medicare': 3, 'po:part-d': 3, 'po:part-b': 2, 'po-cat:medicaid': 3, 'po:managed-medicaid': 2, 'po:chip': 2, 'po-cat:pharmacy': 3, 'po:retail-rx': 2, 'po:mail-order-rx': 2
+    } }
+];
+
+/* =========================================================
+   Lookups
+   ========================================================= */
+const PROC_BY_ID = Object.fromEntries(ALL_SKILLS_FLAT.map(s => [s.id, s]));
+const CASE_BY_ID = Object.fromEntries(CASE_SKILLS.map(s => [s.id, s]));
+const BO_BY_ID = Object.fromEntries(BIZOBJ_SKILLS.map(s => [s.id, s]));
+const PO_BY_ID = {};
+PRODUCT_CATALOG.forEach(c => {
+  PO_BY_ID[c.id] = { id: c.id, name: c.category, path: 'Insurance Products' };
+  c.products.forEach(p => { PO_BY_ID[p.id] = { id: p.id, name: p.name, path: c.category }; });
+});
+
+function skillName(id) {
+  if (PROC_BY_ID[id]) return PROC_BY_ID[id].act;
+  if (CASE_BY_ID[id]) return CASE_BY_ID[id].name;
+  if (BO_BY_ID[id]) return BO_BY_ID[id].name;
+  if (PO_BY_ID[id]) return PO_BY_ID[id].name;
+  return id;
+}
+function skillPath(id) {
+  if (PROC_BY_ID[id]) { const s = PROC_BY_ID[id]; return s.lob + ' / ' + s.svc + ' / ' + s.proc; }
+  if (CASE_BY_ID[id]) return 'Case / ' + CASE_BY_ID[id].group;
+  if (BO_BY_ID[id]) return 'System Objects';
+  if (PO_BY_ID[id]) return PO_BY_ID[id].path;
+  return '';
+}
+function skillDim(id) {
+  if (id.startsWith('p-')) return 'process';
+  if (id.startsWith('cs-')) return 'case';
+  return 'bo';
+}
+function levelLabel(n) { return n ? 'L' + n + ' ' + LEVEL_NAMES[n] : 'None'; }
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function initials(name) { return name.split(' ').map(p => p[0]).join('').slice(0, 2).toUpperCase(); }
+
+/* =========================================================
+   Store (PRD section 7): AGENTS is the store, currentAgentSkills the working copy
+   ========================================================= */
+function agentById(id) { return AGENTS.find(a => a.id === id); }
+function storeLoad(agentId) { return clone(agentById(agentId).skills); }
+function storeSave(agentId, skills) { agentById(agentId).skills = clone(skills); }
+function templateFor(agent) { return GRADED_TEMPLATES[agent.roleId] || null; }
+
+/* Diff (PRD section 6) */
+function computeDiff(skills, template) {
+  const out = { met: [], below: [], missing: [], extra: [] };
+  if (!template) return out;
+  Object.keys(template.skills).forEach(id => {
+    const req = template.skills[id];
+    const have = skills[id] || 0;
+    const item = { id, name: skillName(id), path: skillPath(id), agent: have, req, dim: skillDim(id) };
+    if (!have) out.missing.push(item);
+    else if (have >= req) out.met.push(item);
+    else out.below.push(item);
+  });
+  Object.keys(skills).forEach(id => {
+    if (!(id in template.skills)) out.extra.push({ id, name: skillName(id), path: skillPath(id), agent: skills[id], req: 0, dim: skillDim(id) });
+  });
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  Object.values(out).forEach(list => list.sort(byName));
+  return out;
+}
+function healthFor(agent) {
+  const t = templateFor(agent);
+  if (!t) return { process: 'none', case: 'none', bo: 'none', gaps: null };
+  const d = computeDiff(agent.skills, t);
+  const gaps = { process: 0, case: 0, bo: 0 };
+  d.below.concat(d.missing).forEach(i => gaps[i.dim]++);
+  const col = n => n === 0 ? 'green' : (n <= 2 ? 'amber' : 'red');
+  return { process: col(gaps.process), case: col(gaps.case), bo: col(gaps.bo), gaps };
+}
+
+/* =========================================================
+   State
+   ========================================================= */
+const state = {
+  selectedId: null,
+  currentAgentSkills: {},
+  dirty: false,
+  tab: 'process',
+  procNode: 'all',
+  boClass: 'sys',
+  openClasses: new Set(['po-cat:medicare']),
+  search: '',
+  lob: '',
+  role: '',
+  qaIndex: -1
+};
+
+/* =========================================================
+   Roster
+   ========================================================= */
+function filteredAgents() {
+  const q = state.search.trim().toLowerCase();
+  return AGENTS.filter(a =>
+    (!q || a.name.toLowerCase().includes(q)) &&
+    (!state.lob || a.lob === state.lob) &&
+    (!state.role || a.roleId === state.role)
+  );
+}
+function renderFilters() {
+  const lobs = [...new Set(AGENTS.map(a => a.lob))];
+  const roles = [...new Map(AGENTS.map(a => [a.roleId, a.role])).entries()];
+  document.getElementById('lobFilter').innerHTML = '<option value="">All LOBs</option>' + lobs.map(l => `<option value="${esc(l)}">${esc(l)}</option>`).join('');
+  document.getElementById('roleFilter').innerHTML = '<option value="">All roles</option>' + roles.map(([id, r]) => `<option value="${esc(id)}">${esc(r)}</option>`).join('');
+}
+function renderRoster() {
+  const list = filteredAgents();
+  document.getElementById('rosterCount').textContent = list.length + ' of ' + AGENTS.length;
+  const el = document.getElementById('rosterList');
+  if (!list.length) { el.innerHTML = '<div class="roster-empty">No agents match the current filters.</div>'; return; }
+  el.innerHTML = list.map(a => {
+    const h = healthFor(a);
+    const tip = h.gaps ? `Gaps vs template. Process ${h.gaps.process}, Case ${h.gaps.case}, BO ${h.gaps.bo}` : 'No template assigned';
+    return `<div class="roster-row${a.id === state.selectedId ? ' active' : ''}" data-id="${a.id}" title="${esc(tip)}">
+      <span class="avatar">${initials(a.name)}</span>
+      <span class="roster-text"><span class="roster-name">${esc(a.name)}</span><span class="roster-role">${esc(a.role)}</span></span>
+      <span class="health" aria-label="${esc(tip)}"><i class="${h.process}"></i><i class="${h.case}"></i><i class="${h.bo}"></i></span>
+    </div>`;
+  }).join('');
+}
+
+/* =========================================================
+   Selection, save, discard
+   ========================================================= */
+function selectAgent(id) {
+  if (id === state.selectedId) return;
+  if (state.dirty) toast('Unsaved changes discarded');
+  state.selectedId = id;
+  state.currentAgentSkills = storeLoad(id);
+  state.dirty = false;
+  state.procNode = 'all';
+  renderAll();
+}
+function setDirty(v) {
+  state.dirty = v;
+  document.getElementById('saveBtn').classList.toggle('dirty', v);
+  document.getElementById('unsaved').classList.toggle('show', v);
+}
+function setLevel(id, level) {
+  level = Number(level) || 0;
+  if (level <= 0) delete state.currentAgentSkills[id];
+  else state.currentAgentSkills[id] = Math.min(5, level);
+  setDirty(true);
+  renderCentre();
+  renderCompare();
+}
+function save(opts) {
+  opts = opts || {};
+  if (!state.selectedId) return;
+  storeSave(state.selectedId, state.currentAgentSkills);
+  setDirty(false);
+  renderRoster();
+  if (!opts.silent) toast('Skills saved for ' + agentById(state.selectedId).name);
+}
+
+/* =========================================================
+   Topbar and centre
+   ========================================================= */
+function renderTopbar() {
+  const a = agentById(state.selectedId);
+  const t = templateFor(a);
+  document.getElementById('topbarAgent').textContent = a.name;
+  const chip = document.getElementById('templateChip');
+  chip.classList.toggle('none', !t);
+  document.getElementById('templateName').textContent = t ? t.label : 'no template assigned';
+  setDirty(state.dirty);
+}
+function counts() {
+  const ids = Object.keys(state.currentAgentSkills);
+  return {
+    process: ids.filter(i => skillDim(i) === 'process').length,
+    case: ids.filter(i => skillDim(i) === 'case').length,
+    bo: ids.filter(i => skillDim(i) === 'bo').length
+  };
+}
+function renderCentre() {
+  const a = agentById(state.selectedId);
+  const t = templateFor(a);
+  document.getElementById('agentHead').innerHTML = `
+    <span class="avatar">${initials(a.name)}</span>
+    <div><div class="agent-name">${esc(a.name)}</div>
+    <div class="agent-meta">${esc(a.role)}, ${esc(a.lob)}${t ? ' / ' + esc(t.label) : ' / no template assigned'}</div></div>`;
+  const c = counts();
+  document.getElementById('cntProcess').textContent = c.process;
+  document.getElementById('cntCase').textContent = c.case;
+  document.getElementById('cntBo').textContent = c.bo;
+  document.querySelectorAll('#tabs .tab').forEach(b => b.classList.toggle('active', b.dataset.tab === state.tab));
+  const body = document.getElementById('tabBody');
+  if (state.tab === 'process') body.innerHTML = renderProcessHtml(state.currentAgentSkills, state.procNode);
+  else if (state.tab === 'case') body.innerHTML = renderCaseHtml(state.currentAgentSkills);
+  else body.innerHTML = renderBOHtml(state.currentAgentSkills, state.boClass, state.openClasses);
+}
+
+/* Process tab */
+function dotsHtml(id, level) {
+  let s = `<span class="dots" data-id="${esc(id)}">`;
+  for (let i = 1; i <= 5; i++) s += `<button type="button" class="dot${i <= level ? ' on' : ''}" data-level="${i}" title="${esc(levelLabel(i))}" aria-label="${esc(levelLabel(i))}"></button>`;
+  s += `<span class="lvl">${esc(levelLabel(level))}</span></span>`;
+  return s;
+}
+function processTree(skills) {
+  const tree = {};
+  Object.keys(skills).filter(id => skillDim(id) === 'process').forEach(id => {
+    const s = PROC_BY_ID[id];
+    if (!s) return;
+    tree[s.lob] = tree[s.lob] || {};
+    tree[s.lob][s.svc] = tree[s.lob][s.svc] || {};
+    tree[s.lob][s.svc][s.proc] = tree[s.lob][s.svc][s.proc] || [];
+    tree[s.lob][s.svc][s.proc].push({ id, level: skills[id], skill: s });
+  });
+  return tree;
+}
+function renderProcessHtml(skills, node) {
+  const tree = processTree(skills);
+  const total = Object.keys(skills).filter(i => skillDim(i) === 'process').length;
+  let left = `<div class="quick-add">
+      <label for="qaInput">Quick Add activity</label>
+      <input class="input" id="qaInput" type="text" placeholder="Type an activity, process, or service" autocomplete="off">
+      <div class="qa-list" id="qaList"></div>
+    </div>
+    <div class="tree"><div class="tree-head">Skill tree, LOB / Service / Process</div>
+    <div class="tnode all${node === 'all' ? ' sel' : ''}" data-node="all">All activities<span class="n">${total}</span></div>`;
+  Object.keys(tree).sort().forEach(lob => {
+    const lobN = Object.values(tree[lob]).reduce((n, svc) => n + Object.values(svc).reduce((m, p) => m + p.length, 0), 0);
+    left += `<div class="tnode lob${node === 'lob:' + lob ? ' sel' : ''}" data-node="lob:${esc(lob)}">${esc(lob)}<span class="n">${lobN}</span></div>`;
+    Object.keys(tree[lob]).sort().forEach(svc => {
+      const svcN = Object.values(tree[lob][svc]).reduce((m, p) => m + p.length, 0);
+      left += `<div class="tnode svc${node === 'svc:' + lob + '|' + svc ? ' sel' : ''}" data-node="svc:${esc(lob)}|${esc(svc)}">${esc(svc)}<span class="n">${svcN}</span></div>`;
+      Object.keys(tree[lob][svc]).sort().forEach(proc => {
+        const key = 'proc:' + lob + '|' + svc + '|' + proc;
+        left += `<div class="tnode proc${node === key ? ' sel' : ''}" data-node="${esc(key)}">${esc(proc)}<span class="n">${tree[lob][svc][proc].length}</span></div>`;
+      });
+    });
+  });
+  left += '</div>';
+
+  const rows = [];
+  Object.keys(tree).sort().forEach(lob => {
+    if (node.startsWith('lob:') && node !== 'lob:' + lob) return;
+    Object.keys(tree[lob]).sort().forEach(svc => {
+      if (node.startsWith('svc:') && node !== 'svc:' + lob + '|' + svc) return;
+      Object.keys(tree[lob][svc]).sort().forEach(proc => {
+        if (node.startsWith('proc:') && node !== 'proc:' + lob + '|' + svc + '|' + proc) return;
+        rows.push(`<tr class="group"><td colspan="3"><b>${esc(lob)}</b> / ${esc(svc)} / ${esc(proc)}</td></tr>`);
+        tree[lob][svc][proc].sort((a, b) => a.skill.act.localeCompare(b.skill.act)).forEach(r => {
+          rows.push(`<tr data-id="${esc(r.id)}"><td class="act-cell" title="${esc(r.id)}">${esc(r.skill.act)}</td>
+            <td class="lvl-cell">${dotsHtml(r.id, r.level)}</td>
+            <td style="width:40px;text-align:right"><button type="button" class="btn-icon remove-skill" data-id="${esc(r.id)}" title="Remove activity" aria-label="Remove ${esc(r.skill.act)}"><svg><use href="#i-close"/></svg></button></td></tr>`);
+        });
+      });
+    });
+  });
+  const table = rows.length
+    ? `<div class="table-wrap"><table class="ds process-table"><thead><tr><th>Activity</th><th>Level (1 Awareness to 5 Expert)</th><th></th></tr></thead><tbody>${rows.join('')}</tbody></table></div>`
+    : `<div class="empty">No process activities yet. Use Quick Add to give this agent a first activity at level 1.</div>`;
+  return `<div class="proc-layout"><div class="proc-left">${left}</div><div class="proc-right">${table}</div></div>`;
+}
+function quickAddMatches(q, skills) {
+  q = q.trim().toLowerCase();
+  if (!q) return [];
+  return ALL_SKILLS_FLAT.filter(s => !(s.id in skills) &&
+    (s.act.toLowerCase().includes(q) || s.proc.toLowerCase().includes(q) || s.svc.toLowerCase().includes(q) || s.lob.toLowerCase().includes(q))).slice(0, 8);
+}
+function renderQuickAdd() {
+  const input = document.getElementById('qaInput');
+  const list = document.getElementById('qaList');
+  if (!input || !list) return;
+  const m = quickAddMatches(input.value, state.currentAgentSkills);
+  if (!input.value.trim()) { list.classList.remove('open'); list.innerHTML = ''; return; }
+  list.classList.add('open');
+  if (!m.length) { list.innerHTML = '<div class="qa-item none">No matching activities, or already on this profile</div>'; return; }
+  if (state.qaIndex >= m.length) state.qaIndex = m.length - 1;
+  list.innerHTML = m.map((s, i) => `<div class="qa-item${i === state.qaIndex ? ' hl' : ''}" data-id="${esc(s.id)}">${esc(s.act)}<span class="path">${esc(s.lob)} / ${esc(s.svc)} / ${esc(s.proc)}</span></div>`).join('');
+}
+function quickAdd(id) {
+  const s = PROC_BY_ID[id];
+  if (!s || state.currentAgentSkills[id]) return;
+  state.currentAgentSkills[id] = s.level || 1;
+  setDirty(true);
+  state.procNode = 'all';
+  renderCentre();
+  renderCompare();
+  toast('Added ' + s.act + ' at L1 Awareness');
+  const input = document.getElementById('qaInput');
+  if (input) input.focus();
+}
+
+/* Case tab */
+function levelSelectHtml(id, level, cls) {
+  let s = `<select class="select select-sm ${cls || ''} level-select" data-id="${esc(id)}" aria-label="Level for ${esc(skillName(id))}"><option value="0"${!level ? ' selected' : ''}>None</option>`;
+  for (let i = 1; i <= 5; i++) s += `<option value="${i}"${level === i ? ' selected' : ''}>${esc(levelLabel(i))}</option>`;
+  return s + '</select>';
+}
+function renderCaseHtml(skills) {
+  const rows = [];
+  CASE_GROUPS.forEach(g => {
+    const items = CASE_SKILLS.filter(c => c.group === g);
+    const have = items.filter(c => skills[c.id]).length;
+    rows.push(`<tr class="group"><td colspan="3"><b>${esc(g)}</b> <span class="muted">${have} of ${items.length} held</span></td></tr>`);
+    items.forEach(c => {
+      rows.push(`<tr data-id="${esc(c.id)}"><td><span style="display:flex;align-items:center;gap:10px"><span class="mono-icon">${esc(c.icon)}</span><span><b>${esc(c.name)}</b><span class="cell-sub">${esc(c.cert)}</span></span></span></td>
+        <td class="muted">${esc(c.desc)}</td>
+        <td style="width:170px">${levelSelectHtml(c.id, skills[c.id] || 0)}</td></tr>`);
+    });
+  });
+  return `<div class="table-wrap" style="overflow-x:auto"><table class="ds case-table"><thead><tr><th>Certification</th><th>Scope</th><th>Level</th></tr></thead><tbody>${rows.join('')}</tbody></table></div>`;
+}
+
+/* Business Object tab */
+function renderBOHtml(skills, boClass, openClasses) {
+  const sysHave = BIZOBJ_SKILLS.filter(b => skills[b.id]).length;
+  const insHave = Object.keys(skills).filter(i => i.startsWith('po')).length;
+  const panel = `<div class="class-panel"><div class="tree-head">Class</div>
+    <div class="class-item${boClass === 'sys' ? ' sel' : ''}" data-class="sys">System Objects<small>${sysHave} of ${BIZOBJ_SKILLS.length} held</small></div>
+    <div class="class-item${boClass === 'ins' ? ' sel' : ''}" data-class="ins">Insurance Products<small>${insHave} held across ${PRODUCT_CATALOG.length} classes</small></div></div>`;
+  let right;
+  if (boClass === 'sys') {
+    right = `<div class="bo-grid">` + BIZOBJ_SKILLS.map(b => `<div class="bo-card" data-id="${esc(b.id)}">
+        <div class="bo-name"><span class="mono-icon">${esc(b.icon)}</span>${esc(b.name)}</div>
+        <div class="bo-desc">${esc(b.desc)}</div>
+        ${levelSelectHtml(b.id, skills[b.id] || 0)}</div>`).join('') + `</div>`;
+  } else {
+    right = PRODUCT_CATALOG.map(c => {
+      const held = c.products.filter(p => skills[p.id]).length;
+      return `<div class="ins-class${openClasses.has(c.id) ? ' open' : ''}" data-id="${esc(c.id)}">
+        <div class="ins-head" data-toggle="${esc(c.id)}"><span class="mono-icon">${esc(c.icon)}</span>
+          <span class="name">${esc(c.category)}<small>${esc(c.id)}, ${held} of ${c.products.length} product types held</small></span>
+          <span onclick="event.stopPropagation()">${levelSelectHtml(c.id, skills[c.id] || 0)}</span>
+          <svg class="chev"><use href="#i-chevron"/></svg></div>
+        <div class="ins-body">` + c.products.map(p => `<div class="ins-row" data-id="${esc(p.id)}"><span class="name">${esc(p.name)}<small>${esc(p.id)}, ${esc(p.desc)}</small></span>${levelSelectHtml(p.id, skills[p.id] || 0)}</div>`).join('') + `</div></div>`;
+    }).join('');
+  }
+  return `<div class="bo-layout">${panel}<div class="bo-right">${right}</div></div>`;
+}
+
+/* =========================================================
+   Compare panel
+   ========================================================= */
+function renderCompare() {
+  const a = agentById(state.selectedId);
+  const t = templateFor(a);
+  const body = document.getElementById('compareBody');
+  if (!t) {
+    body.innerHTML = `<div class="compare-body"><div class="panel-sub" style="margin-bottom:8px">Role: ${esc(a.role)} (${esc(a.roleId)})</div><div class="empty" style="padding:24px 8px">no template assigned</div></div>`;
+    return;
+  }
+  const d = computeDiff(state.currentAgentSkills, t);
+  const group = (key, label) => {
+    const items = d[key];
+    return `<div class="diff-group diff-${key}"><h4>${label}<span class="n">${items.length}</span></h4>` +
+      (items.length ? items.map(i => `<div class="diff-item ${key}" data-id="${esc(i.id)}"><span class="nm">${esc(i.name)}<small>${esc(i.path)}</small></span><span class="lv">${key === 'extra' ? 'L' + i.agent : (key === 'missing' ? 'none, req L' + i.req : 'L' + i.agent + ' / req L' + i.req)}</span></div>`).join('')
+        : '<div class="diff-none">None</div>') + '</div>';
+  };
+  body.innerHTML = `
+    <div class="compare-summary">
+      <div class="sum met"><b>${d.met.length}</b><span>Met</span></div>
+      <div class="sum below"><b>${d.below.length}</b><span>Below</span></div>
+      <div class="sum missing"><b>${d.missing.length}</b><span>Missing</span></div>
+      <div class="sum extra"><b>${d.extra.length}</b><span>Extra</span></div>
+    </div>
+    <div class="compare-body">
+      <div class="panel-sub" style="margin-bottom:12px"><b style="color:var(--id-text)">${esc(t.label)}</b><br>${esc(t.description)}${state.dirty ? '<br><span style="color:var(--below-fg)">Reflects unsaved edits</span>' : ''}</div>
+      ${group('met', 'Met')}${group('below', 'Below target')}${group('missing', 'Missing')}${group('extra', 'Extra')}
+    </div>`;
+}
+
+function renderAll() { renderTopbar(); renderRoster(); renderCentre(); renderCompare(); }
+
+/* =========================================================
+   Toast
+   ========================================================= */
+let toastTimer = null;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+}
+
+/* =========================================================
+   Events
+   ========================================================= */
+document.getElementById('rosterSearch').addEventListener('input', e => { state.search = e.target.value; renderRoster(); });
+document.getElementById('lobFilter').addEventListener('change', e => { state.lob = e.target.value; renderRoster(); });
+document.getElementById('roleFilter').addEventListener('change', e => { state.role = e.target.value; renderRoster(); });
+document.getElementById('rosterList').addEventListener('click', e => {
+  const row = e.target.closest('.roster-row');
+  if (row) selectAgent(row.dataset.id);
+});
+document.getElementById('saveBtn').addEventListener('click', () => save());
+document.getElementById('tabs').addEventListener('click', e => {
+  const b = e.target.closest('.tab');
+  if (!b) return;
+  state.tab = b.dataset.tab;
+  renderCentre();
+});
+
+const tabBody = document.getElementById('tabBody');
+tabBody.addEventListener('click', e => {
+  const dot = e.target.closest('.dot');
+  if (dot) { setLevel(dot.closest('.dots').dataset.id, dot.dataset.level); return; }
+  const rm = e.target.closest('.remove-skill');
+  if (rm) { setLevel(rm.dataset.id, 0); return; }
+  const tn = e.target.closest('.tnode');
+  if (tn) { state.procNode = tn.dataset.node; renderCentre(); return; }
+  const qa = e.target.closest('.qa-item');
+  if (qa && qa.dataset.id) { quickAdd(qa.dataset.id); return; }
+  const ci = e.target.closest('.class-item');
+  if (ci) { state.boClass = ci.dataset.class; renderCentre(); return; }
+  const ih = e.target.closest('.ins-head');
+  if (ih) {
+    const id = ih.dataset.toggle;
+    if (state.openClasses.has(id)) state.openClasses.delete(id); else state.openClasses.add(id);
+    ih.closest('.ins-class').classList.toggle('open');
+  }
+});
+tabBody.addEventListener('change', e => {
+  const sel = e.target.closest('.level-select');
+  if (sel) setLevel(sel.dataset.id, sel.value);
+});
+tabBody.addEventListener('input', e => {
+  if (e.target.id === 'qaInput') { state.qaIndex = 0; renderQuickAdd(); }
+});
+tabBody.addEventListener('keydown', e => {
+  if (e.target.id !== 'qaInput') return;
+  const m = quickAddMatches(e.target.value, state.currentAgentSkills);
+  if (e.key === 'ArrowDown') { e.preventDefault(); state.qaIndex = Math.min(m.length - 1, state.qaIndex + 1); renderQuickAdd(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); state.qaIndex = Math.max(0, state.qaIndex - 1); renderQuickAdd(); }
+  else if (e.key === 'Enter') { e.preventDefault(); if (m[state.qaIndex]) quickAdd(m[state.qaIndex].id); }
+  else if (e.key === 'Escape') { e.target.value = ''; renderQuickAdd(); }
+});
+document.addEventListener('click', e => {
+  if (!e.target.closest('.quick-add')) { const l = document.getElementById('qaList'); if (l) l.classList.remove('open'); }
+});
+
+/* AC panel toggle */
+document.addEventListener('keydown', e => {
+  if (e.key !== '?') return;
+  const t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'SELECT' || t.tagName === 'TEXTAREA')) return;
+  e.preventDefault();
+  toggleAcPanel();
+});
+document.getElementById('acClose').addEventListener('click', () => toggleAcPanel(false));
+document.getElementById('acRerun').addEventListener('click', runAcChecks);
+function toggleAcPanel(force) {
+  const p = document.getElementById('acPanel');
+  const open = force === undefined ? !p.classList.contains('open') : force;
+  p.classList.toggle('open', open);
+  if (open) runAcChecks();
+}
+
+/* =========================================================
+   Acceptance criteria self-check (PRD section 10)
+   ========================================================= */
+const FORBIDDEN = { 'rgb(1, 70, 55)': '#014637', 'rgb(45, 181, 110)': '#2DB56E' };
+const EMOJI_RE = /[\u{1F300}-\u{1FAFF}\u{1F000}-\u{1F2FF}\u{2600}-\u{27BF}\u{FE0F}]/u;
+
+function chromeElements() {
+  const roots = ['#sidebar', '#topbar', '#tabs', '#panelLeft .panel-head', '#panelLeft .roster-controls', '#panelRight .panel-head', '#agentHead'];
+  const out = [];
+  roots.forEach(sel => document.querySelectorAll(sel).forEach(r => { out.push(r); r.querySelectorAll('*').forEach(c => out.push(c)); }));
+  return out;
+}
+function acChecks() {
+  const results = [];
+  const css = el => getComputedStyle(el);
+
+  // AC-01
+  (() => {
+    const hits = [];
+    chromeElements().forEach(el => {
+      const s = css(el);
+      ['color', 'backgroundColor', 'borderTopColor', 'borderBottomColor', 'borderLeftColor', 'borderRightColor', 'fill'].forEach(p => {
+        if (FORBIDDEN[s[p]]) hits.push((el.id || el.className || el.tagName) + ' ' + p + ' ' + FORBIDDEN[s[p]]);
+      });
+    });
+    const sidebarBg = css(document.getElementById('sidebar')).backgroundColor;
+    const btnBg = css(document.getElementById('saveBtn')).backgroundColor;
+    const tab = document.querySelector('#tabs .tab.active');
+    const tabUnderline = tab ? css(tab).borderBottomColor : '';
+    const ok = !hits.length && sidebarBg === 'rgb(248, 248, 248)' && btnBg === 'rgb(90, 178, 116)' && tabUnderline === 'rgb(90, 178, 116)';
+    results.push({ id: 'AC-01', title: 'DS colours', status: ok ? 'pass' : 'fail',
+      how: 'Computed styles of every element inside the sidebar, topbar, tabs, panel headers, and agent header are scanned for #014637 or #2DB56E on color, background, border, and fill. Sidebar background, Save button fill, and active tab underline are asserted directly.',
+      detail: `sidebar ${sidebarBg}, button ${btnBg}, tab underline ${tabUnderline}, forbidden hits ${hits.length}${hits.length ? ': ' + hits.slice(0, 3).join('; ') : ''}` });
+  })();
+
+  // AC-02
+  (() => {
+    const items = [...document.querySelectorAll('#nav .nav-item')];
+    const svgOk = items.length > 0 && items.every(i => i.querySelector('svg'));
+    const chromeText = ['#sidebar', '#topbar', '#tabs', '#panelLeft .panel-head', '#panelRight .panel-head'].map(s => document.querySelector(s)?.textContent || '').join(' ');
+    const imgs = document.querySelectorAll('#nav img').length;
+    const emoji = EMOJI_RE.test(chromeText);
+    const ok = svgOk && !emoji && imgs === 0;
+    results.push({ id: 'AC-02', title: 'No emoji in chrome', status: ok ? 'pass' : 'fail',
+      how: 'Every nav item must contain an inline SVG and no img; sidebar, topbar, tabs, and panel header text is tested against an emoji code point range.',
+      detail: `${items.length} nav items with SVG: ${svgOk}, emoji found: ${emoji}` });
+  })();
+
+  // AC-03
+  (() => {
+    const scratch = document.createElement('div');
+    let minSys = Infinity, minCls = Infinity, agentsHoldingBo = 0;
+    AGENTS.forEach(a => {
+      scratch.innerHTML = renderBOHtml(a.skills, 'sys', new Set());
+      minSys = Math.min(minSys, scratch.querySelectorAll('.bo-card').length);
+      scratch.innerHTML = renderBOHtml(a.skills, 'ins', new Set());
+      minCls = Math.min(minCls, scratch.querySelectorAll('.ins-class').length);
+      if (Object.keys(a.skills).some(i => skillDim(i) === 'bo')) agentsHoldingBo++;
+    });
+    const ok = minSys > 0 && minCls > 0 && agentsHoldingBo === AGENTS.length;
+    results.push({ id: 'AC-03', title: 'BO tab renders', status: ok ? 'pass' : 'fail',
+      how: 'The BO tab is rendered off screen for every agent in both class views; System Object cards and insurance classes are counted, and each agent is checked for at least one bo-* or po* skill.',
+      detail: `${AGENTS.length} agents, min ${minSys} system objects, min ${minCls} insurance classes, ${agentsHoldingBo} agents hold a BO skill` });
+  })();
+
+  // AC-04
+  (() => {
+    const sarah = AGENTS.find(a => a.name === 'Sarah Chen');
+    const t = sarah && templateFor(sarah);
+    const d = sarah ? computeDiff(sarah.skills, t) : null;
+    const missing = d ? d.missing.map(i => i.name).sort() : [];
+    const allFour = d && d.met.length && d.below.length && d.missing.length && d.extra.length;
+    const ok = !!(sarah && sarah.roleId === 'claims-specialist-g2' && allFour && missing.join('|') === 'Medicaid|Part-D');
+    results.push({ id: 'AC-04', title: 'Compare to Template works', status: ok ? 'pass' : 'fail',
+      how: 'computeDiff runs on Sarah Chen\'s stored skills against GRADED_TEMPLATES[claims-specialist-g2]; all four groups must be non-empty and the Missing names must be exactly Part-D and Medicaid.',
+      detail: d ? `met ${d.met.length}, below ${d.below.length}, missing ${d.missing.length} (${missing.join(', ')}), extra ${d.extra.length}` : 'Sarah Chen not found' });
+  })();
+
+  // AC-05
+  (() => {
+    const scratch = document.createElement('div');
+    let cells = 0, bad = 0, unresolved = [];
+    AGENTS.forEach(a => {
+      Object.keys(a.skills).filter(i => skillDim(i) === 'process').forEach(i => { if (!PROC_BY_ID[i]) unresolved.push(i); });
+      scratch.innerHTML = renderProcessHtml(a.skills, 'all');
+      scratch.querySelectorAll('td.act-cell').forEach(td => { cells++; if (/undefined|\[object/.test(td.textContent)) bad++; });
+    });
+    const ok = cells > 0 && bad === 0 && unresolved.length === 0;
+    results.push({ id: 'AC-05', title: 'Process skills named', status: ok ? 'pass' : 'fail',
+      how: 'The Process table is rendered off screen for every agent; each Activity cell is checked for the text "undefined", and every p-* id on an agent must resolve in ALL_SKILLS_FLAT.',
+      detail: `${cells} activity cells across ${AGENTS.length} agents, ${bad} bad, ${unresolved.length} unresolved ids` });
+  })();
+
+  // AC-06
+  (() => {
+    const target = AGENTS.find(a => a.id !== state.selectedId) || AGENTS[0];
+    const snapshot = storeLoad(target.id);
+    const skillId = Object.keys(snapshot).find(i => skillDim(i) === 'process') || 'p-clm-intake-receive';
+    const newLevel = snapshot[skillId] === 5 ? 4 : 5;
+    const working = storeLoad(target.id);
+    working[skillId] = newLevel;
+    storeSave(target.id, working);
+    const reloaded = storeLoad(target.id);
+    const ok = reloaded[skillId] === newLevel && agentById(target.id).skills[skillId] === newLevel;
+    storeSave(target.id, snapshot);
+    results.push({ id: 'AC-06', title: 'Save persists', status: ok ? 'pass' : 'fail',
+      how: 'Simulated round trip through the same store functions the Save button uses: load a working copy for a non-selected agent, change one activity level, storeSave, storeLoad again, compare, then restore the original values.',
+      detail: `${target.name}, ${skillName(skillId)} set to L${newLevel}, reloaded L${reloaded[skillId]}` });
+  })();
+
+  // AC-07
+  (() => {
+    const w = window.innerWidth;
+    const sw = document.documentElement.scrollWidth;
+    const overflow = sw > w;
+    const right = document.getElementById('panelRight');
+    const cols = css(document.getElementById('workspace')).gridTemplateColumns.split(' ').length;
+    const reflowExpected = w <= 1279;
+    const reflowOk = reflowExpected ? cols === 2 : cols === 3;
+    const ok = !overflow && reflowOk;
+    results.push({ id: 'AC-07', title: 'Responsive', status: ok ? 'pass' : 'fail',
+      how: 'document scrollWidth is compared to the viewport width, and the workspace grid is asserted to have 3 columns at 1280px and above or 2 below. Computed for the current viewport only; resize to 1080px and re-run to cover the lower bound.',
+      detail: `viewport ${w}px, scrollWidth ${sw}px, grid columns ${cols}, right panel column ${css(right).gridColumnStart}` });
+  })();
+
+  // AC-08
+  (() => {
+    const b = document.getElementById('saveBtn');
+    const s = css(b);
+    const h = Math.round(b.getBoundingClientRect().height);
+    const checks = {
+      height: h === 36,
+      radius: s.borderTopLeftRadius === '4px',
+      weight: s.fontWeight === '700' || s.fontWeight === 'bold',
+      size: s.fontSize === '14px',
+      spacing: Math.abs(parseFloat(s.letterSpacing) - 0.42) < 0.02,
+      family: /Open Sans/.test(s.fontFamily),
+      fill: s.backgroundColor === 'rgb(90, 178, 116)'
+    };
+    const failed = Object.keys(checks).filter(k => !checks[k]);
+    results.push({ id: 'AC-08', title: 'Button DS spec', status: failed.length ? 'fail' : 'pass',
+      how: 'Computed style of the Save button: 36px height, 4px radius, weight 700, 14px, letter-spacing 0.42px (0.03em of 14px), Open Sans first in the font stack, #5AB274 fill.',
+      detail: `height ${h}px, radius ${s.borderTopLeftRadius}, weight ${s.fontWeight}, size ${s.fontSize}, spacing ${s.letterSpacing}, fill ${s.backgroundColor}${failed.length ? ', failed: ' + failed.join(', ') : ''}` });
+  })();
+
+  return results;
+}
+function runAcChecks() {
+  let results;
+  try { results = acChecks(); }
+  catch (err) { results = [{ id: 'AC-00', title: 'Check runner error', status: 'fail', how: String(err), detail: '' }]; }
+  document.getElementById('acList').innerHTML = results.map(r => `<li class="ac-item"><span class="pill ${r.status}">${r.status}</span><div><b>${r.id} ${esc(r.title)}</b><div class="how">${esc(r.how)}</div><div class="detail">${esc(r.detail)}</div></div></li>`).join('');
+  const pass = results.filter(r => r.status === 'pass').length;
+  document.getElementById('acSummary').textContent = `${pass} of ${results.length} pass, ${results.filter(r => r.status === 'manual').length} manual. Press ? to close.`;
+  renderRoster();
+  return results;
+}
+window.__acChecks = runAcChecks;
+window.__state = state;
+
+/* =========================================================
+   Init
+   ========================================================= */
+renderFilters();
+state.selectedId = AGENTS[0].id;
+state.currentAgentSkills = storeLoad(state.selectedId);
+renderAll();
+if (location.hash === '#ac') toggleAcPanel(true);
+</script>
+</body>
+</html>

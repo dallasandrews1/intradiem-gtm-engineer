@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PM as a Builder</title>
+<!--FONTS-->
+<style>
+.before{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;max-width:900px}
+.before > div{border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;background:var(--bg);box-shadow:var(--shadow)}
+.before > div.now{background:var(--forest);color:#fff;border-color:var(--forest)}
+.before .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--ink-3);margin-bottom:8px}
+.before .now .k{color:var(--green-300)}
+.before ul{list-style:none}
+.before li{padding:5px 0 5px 20px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.before li::before{content:"\00d7";position:absolute;left:0;color:var(--ink-3);font-weight:700}
+.before .now li{color:#C7DAD1}
+.before .now li::before{content:"\2192";color:var(--green-300)}
+.kit .card code{font-family:var(--ff-mono);font-size:12px;color:var(--forest);background:var(--zebra);padding:2px 6px;border-radius:4px;border:1px solid var(--line)}
+.checks{list-style:none;margin-top:12px;border-top:1px solid var(--line)}
+.checks li{display:grid;grid-template-columns:70px 1fr 110px;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink-2);align-items:baseline}
+.checks .id{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600}
+.checks .how{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:right}
+.checks li.manual .how{color:var(--orange-600)}
+.shot{margin-top:18px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--zebra);box-shadow:var(--shadow)}
+.shot img{display:block;width:100%;height:auto}
+.shot .cap{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 14px;border-top:1px solid var(--line);background:var(--bg)}
+@media(max-width:860px){.before{grid-template-columns:1fr}.checks li{grid-template-columns:70px 1fr}.checks .how{grid-column:2;text-align:left}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">Product &middot; AI champion &middot; PM as a builder</div>
+    <h1 data-h="2">The prototype <span class="spark">is the spec</span>.</h1>
+    <p class="sub" data-h="3">A one-page brief, a skill that turns it into a working prototype, and one PRD from SharePoint rendered as the proof.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="1">0</span> page</b><span>brief replaces the written spec</span></div>
+      <div><b><span class="hc" data-to="1">0</span> skill</b><span>brief or PRD to working prototype</span></div>
+      <div><b><span class="hc" data-to="6">0</span> pages</b><span>Skills Editor PRD, one working screen</span></div>
+      <div><b><span class="hc" data-to="8">0</span> checks</b><span>acceptance criteria the prototype tests on itself</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>Product managers</div>
+      <div><span>Status</span>Kit built. First PM: Product to name.</div>
+      <div><span>By</span>Dallas Andrews, AI champion, Product</div>
+      <div><span>Worked example</span>Skills Editor PRD v2.0, May 2026</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>What changes.</b> A review decides on something people click, not something they read. The brief records the decision; the prototype is the argument.</li>
+        <li><b>What exists today.</b> The brief template, the <b>pm-prototype</b> skill, and the Harmoniq Skills Editor PRD rebuilt as a working three-panel editor with its eight acceptance criteria tested inside the file.</li>
+        <li><b>Open with Product.</b> The first PM and the first live feature, Claude access for that PM, and a home for prototypes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What changes</div>
+    <h2>Six pages to read, or one screen to click.</h2>
+    <div class="before">
+      <div>
+        <div class="k">Written spec as the decision artifact</div>
+        <ul>
+          <li>Read by each reviewer separately, interpreted differently</li>
+          <li>Layout questions argued in words ("three panels at 1280px?")</li>
+          <li>Acceptance criteria checked after engineering builds</li>
+          <li>The decision lives in meeting notes</li>
+        </ul>
+      </div>
+      <div class="now">
+        <div class="k">Prototype plus one-page brief</div>
+        <ul>
+          <li>Clicked by everyone in the same review</li>
+          <li>Layout questions answered by resizing the window</li>
+          <li>Acceptance criteria run by the prototype on itself before the review</li>
+          <li>The decision is written into the brief, section 8</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How a PM ships one</div>
+    <h2>Five steps, one owner each.</h2>
+    <ul class="steps">
+      <li><span class="n">1</span><span class="t">Write the brief</span><span class="o">PM</span><span class="r">One page: the decision the prototype settles, who uses it, what it does, five to eight acceptance checks.</span></li>
+      <li><span class="n">2</span><span class="t">Run pm-prototype</span><span class="o">PM, in Claude</span><span class="r">The skill takes the brief (or an existing PRD) and returns a single working HTML file on the Intradiem design system.</span></li>
+      <li><span class="n">3</span><span class="t">Self-check</span><span class="o">PM</span><span class="r">Press ? in the prototype. Computable checks show pass or fail; the rest are marked manual.</span></li>
+      <li><span class="n">4</span><span class="t">Review on the prototype</span><span class="o">PM, design, engineering</span><span class="r">The room clicks through. Answers to the brief's open questions go into the decision record.</span></li>
+      <li><span class="n">5</span><span class="t">Hand off</span><span class="o">PM to engineering</span><span class="r">Prototype plus brief. A PRD is written afterwards only where a compliance or contract record requires one.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="kit">
+  <div class="wrap">
+    <div class="eyebrow">The kit</div>
+    <h2>Three pieces, all in the repo.</h2>
+    <div class="grid c3">
+      <div class="card"><div class="tag go">Template</div><h4>Prototype brief</h4><p>Nine sections on one page. Section 1 is the decision the prototype settles; section 6 the checks; section 8 the decision record.</p><p><code>motions/ai_champion_product/Prototype_Brief_Template.md</code></p></div>
+      <div class="card"><div class="tag go">Skill</div><h4>pm-prototype</h4><p>Brief or PRD in, working single-file prototype out, with the self-check panel and the source saved beside it. Uses the DS v1 tokens from the Skills Editor PRD unless a PM points at another reference.</p><p><code>~/.claude/skills/pm-prototype/SKILL.md</code></p></div>
+      <div class="card"><div class="tag go">Worked example</div><h4>Skills Editor</h4><p>PRD-ICC-S2-001 v2.0 (SharePoint, engineering Aldus documents, May 2026) rendered as the three-panel editor it describes.</p><p><code>motions/ai_champion_product/prototypes/skills_editor/</code></p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Worked example</div>
+    <h2>One PRD, rendered as it reads.</h2>
+    <p class="lede">The Skills Editor PRD specifies a 256px sidebar, a three-panel editor (roster, dimension tabs, Compare to Template), a save-confirm workflow, and eight acceptance criteria. The prototype implements all of it in one file with no external requests, and tests the criteria on itself.</p>
+    <ul class="checks">
+      <li><span class="id">AC-01</span><span>DS colours: sidebar #F8F8F8, primary buttons #5AB274, active tab underline, no #014637 or #2DB56E in chrome</span><span class="how">computed</span></li>
+      <li><span class="id">AC-02</span><span>No emoji in chrome; nav icons are inline SVG</span><span class="how">computed</span></li>
+      <li><span class="id">AC-03</span><span>Business Object tab renders System Objects and insurance classes with counts above zero</span><span class="how">computed</span></li>
+      <li><span class="id">AC-04</span><span>Compare to Template shows all four categories for Sarah Chen; Missing includes Part-D and Medicaid</span><span class="how">computed</span></li>
+      <li><span class="id">AC-05</span><span>Process activity column never shows "undefined"</span><span class="how">computed</span></li>
+      <li><span class="id">AC-06</span><span>Save persists: reselecting the agent shows the updated levels</span><span class="how">computed</span></li>
+      <li><span class="id">AC-07</span><span>Three panels reflow at 1280px; no horizontal overflow at 1080px and above</span><span class="how">computed</span></li>
+      <li><span class="id">AC-08</span><span>Primary buttons 36px, 4px radius, 700 14px, letter-spacing .03em</span><span class="how">computed</span></li>
+    </ul>
+    <p>Result on Aug 31 2026: one file of 78 KB, no external requests, all eight checks computed by the prototype and passing at 1440px and 1080px. Sarah Chen's Compare to Template shows 20 met, 4 below, 2 missing (Medicaid, Part-D), 4 extra. Build time from PRD to passing checks: about seven minutes of agent run, plus the brief. Open Sans and Roboto are declared but not embedded, so a machine without them shows the system font.</p>
+    <div class="gate">
+      <h4>What a review on this prototype would settle</h4>
+      <p>The PRD leaves three questions open, and they are the ones a room answers by clicking: whether Compare to Template belongs beside the editor or as a step before Save; whether the right panel dropping under the centre at 1280px is acceptable on laptops; whether Quick Add inserts at level 1 or asks for a level. No review has been held; the example brief records them as open.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Open with Product</div>
+    <ul class="threads">
+      <li><b>First PM, first feature.</b> The kit is proven on an existing PRD. The program starts when one PM runs a live feature through it. Product names the PM and the feature.</li>
+      <li><b>Claude access.</b> AI champions hold licenses; whether each PM does is Product's call and the intake form's.</li>
+      <li><b>Where prototypes live.</b> A file works from SharePoint or a noindex Pages link. Product picks one so reviews open the same link.</li>
+      <li><b>When the PRD still gets written.</b> Only where a compliance or contract record requires it; Product confirms which features those are.</li>
+    </ul>
+    <div class="line">Next: walk the kit with the first PM Product names, and run one live feature through steps 1 to 5.</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. Product &middot; AI champion</span>
+  <span>Monday.com AI Initiatives &middot; Product (Dallas) &middot; AI enabled prototyping, PM as a builder program &middot; Aug 31 2026</span>
+</footer>
+</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">Product &middot; PM as a builder</div>
+  <h1 data-a="3">The prototype <span class="spark">is the spec</span>.</h1>
+  <p class="pl" data-a="4">A one-page brief, a skill that turns it into a working prototype, and one PRD rendered as the proof.</p>
+</section>
+<section class="pslide" data-title="What changes">
+  <div class="pe" data-a="1">What changes</div>
+  <h2 data-a="2">A review decides on something people <span class="spark">click</span>, not something they read.</h2>
+  <div class="pgrid c2">
+    <div data-a="3"><b>Written spec</b><span>Read separately, interpreted differently. Layout argued in words. Criteria checked after the build. Decision in meeting notes.</span></div>
+    <div data-a="4"><b>Prototype plus brief</b><span>Clicked in the same review. Layout answered by resizing. Criteria run before the review. Decision written into the brief.</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="How">
+  <div class="pe" data-a="1">How a PM ships one</div>
+  <h2 data-a="2">Five steps, <span class="spark">one owner each</span>.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">1 &middot; PM</span><span class="r"><b>Write the brief.</b> The decision to settle, who uses it, what it does, five to eight checks.</span></li>
+    <li data-a="4"><span class="d">2 &middot; PM in Claude</span><span class="r"><b>Run pm-prototype.</b> Brief in, one working HTML file out.</span></li>
+    <li data-a="5"><span class="d">3 &middot; PM</span><span class="r"><b>Self-check.</b> Press ?; pass, fail, or manual per check.</span></li>
+    <li data-a="6"><span class="d">4 &middot; PM, design, eng</span><span class="r"><b>Review on the prototype.</b> Answers go into the decision record.</span></li>
+    <li data-a="7"><span class="d">5 &middot; PM to eng</span><span class="r"><b>Hand off.</b> Prototype plus brief. A PRD only where a record is required.</span></li>
+  </ul>
+</section>
+<section class="pslide" data-title="Worked example">
+  <div class="pe" data-a="1">Worked example</div>
+  <h2 data-a="2">Skills Editor PRD, <span class="spark">six pages to one screen</span>.</h2>
+  <div class="pgrid c3">
+    <div data-a="3"><span class="big">8</span><span>acceptance criteria in the PRD, tested inside the prototype</span></div>
+    <div data-a="4"><span class="big">3</span><span>panels: roster, dimension editor, Compare to Template</span></div>
+    <div data-a="5"><span class="big">1</span><span>file, no external requests, opens from SharePoint or a link</span></div>
+  </div>
+  <p class="pl" data-a="6">Three questions the PRD leaves open are the ones a room answers by clicking.</p>
+</section>
+<section class="pslide" data-title="Open">
+  <div class="pe" data-a="1">Open with Product</div>
+  <h2 data-a="2">It starts with <span class="spark">one PM and one live feature</span>.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">Product names</span><span class="r">The first PM and the feature</span></li>
+    <li data-a="4"><span class="d">Product confirms</span><span class="r">Claude access for that PM</span></li>
+    <li data-a="5"><span class="d">Product picks</span><span class="r">Where prototypes live: SharePoint or a noindex link</span></li>
+    <li data-a="6"><span class="d">Product decides</span><span class="r">Which features still need a PRD as a record</span></li>
+  </ul>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; PM as a builder</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 5</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<!--PRESENT-->
+</body>
+</html>
