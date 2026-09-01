@@ -20,12 +20,12 @@ Register columns (exact order, quote every field):
 - `action`: one imperative sentence, the reader's words, no rubric terms
 - `owner`: a person's name as it appears in the source; `Dallas` for Dallas; `unassigned` when the source names nobody
 - `due`: ISO date, or `none stated`
-- `due_basis`: `explicit` (a date or day named), `inferred` (e.g. "before Friday's standup" resolved to a date; say how in the log), `none`
+- `due_basis`: `explicit` (a date or day named), `inferred` (a time phrase in the evidence quote or the same message resolved to a date; the log quotes the phrase next to the resolved date), `none` (no time phrase anywhere in the message; `due` is then `none stated`). See the due-date rule below.
 - `source_type`: `otter` | `email` | `calendar` | `monday`
 - `source_ref`: meeting title + Otter id, email subject + sender, event subject, or Monday item name + id
 - `source_date`: ISO date of the source
 - `evidence`: verbatim quote under 200 characters that carries the commitment
-- `confidence`: `high` (explicit commitment with owner), `medium` (owner or date inferred), `low` (implied task, weak wording)
+- `confidence`: `high` (explicit commitment with owner), `medium` (owner or date inferred, not both), `low` (implied task, weak wording, or both the owner and the date inferred)
 - `status`: `new` | `carried` (same action already in the register; cite the earlier id in the log, do not append again)
 
 ## What to do each run
@@ -35,10 +35,15 @@ Register columns (exact order, quote every field):
    - Email: `outlook_email_search` over the window (Inbox and Sent Items). Skip newsletters, vendor marketing, automated notifications, and anything personal. Extract requests made of Dallas, commitments Dallas made, and commitments others made to Dallas. Read the body with `read_resource` when the preview is not enough.
    - Calendar: `outlook_calendar_search` for events in the window and the next 7 days. A calendar event is not an action item by itself; extract only prep commitments in the body ("bring X", "send before the call") and deadlines stated in the invite.
    - Monday: `get_board_items_page` on board 18418380280 (AI Initiatives), items where Champion is Dallas Andrews, plus `get_updates` on each. Extract commitments written in Status Notes or updates.
-3. Dedup: before appending, compare each candidate against the register (same owner and the same action in substance, not string-equal). Matches are `carried`, listed in the log with the earlier id, not appended.
+3. Dedup: before appending, compare each candidate against the whole register on owner plus action substance (what is being done, for whom, by when), not string equality. A match is `carried`: list it in the log with the earlier id and the new source, do not append a register row. A commitment made in a meeting and repeated in the follow-up email is one commitment; the later sighting is `carried` against the earlier id. See the dedup rule below.
 4. Write the log, append the register rows, append the validation rows.
 5. Accuracy: read `validation_queue.csv`. Over rows where `verdict` is not blank, compute precision = correct / graded, and the breakdown of wrong_owner, wrong_date, not_an_action, duplicate. Report it in the log every run, with the graded count. If nothing is graded yet, say "0 graded, accuracy not yet measurable".
 6. Update the state file to the window end.
+
+## Due dates, confidence and dedup (rules added after the first grading pass, Aug 31 2026: 20 graded, 19 correct, one wrong_date on an email row where a date was inferred with no date phrase in the source)
+- Due-date rule. A due date may be `inferred` only when the evidence quote or the same message contains an explicit time phrase: a weekday ("Friday"), a date ("Sep 4", "the 15th"), a relative period ("end of week", "by end of month", "next Tuesday"), or an event with a known date ("before the standup on Friday"). Resolve the phrase from the source date, and in the log write the phrase verbatim next to the resolved date, for example `due 2026-09-04 (inferred from "before Friday's standup", source dated 2026-09-01)`. With no such phrase, the row is `due` = `none stated` and `due_basis` = `none`. Urgency words ("soon", "asap", "when you get a chance"), the sender's habits, and the cadence of a meeting series are not time phrases. Never derive a date from the source's own timestamp alone.
+- Confidence rule. Confidence drops to `low` whenever the owner AND the date are both inferred. One inferred field is `medium`; neither inferred is `high` (provided the commitment is explicit).
+- Dedup rule. Before appending, compare each candidate against the register on owner plus action substance. A re-mention of an item already in the register is `carried`, citing the earlier id in the log. Never append two rows for the same commitment seen in a meeting and again in its follow-up email, in a Monday update, or in a calendar invite; the first sighting owns the id, later sightings are `carried`. When the re-mention changes the due date or owner, still do not append; note the change under Carried in the log with the new evidence quote so Dallas can decide.
 
 ## Log format
 ```

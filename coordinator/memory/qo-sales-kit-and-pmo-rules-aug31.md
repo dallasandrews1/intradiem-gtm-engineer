@@ -1,0 +1,17 @@
+---
+name: qo-sales-kit-and-pmo-rules-aug31
+description: "Aug 31 2026 evening: Queue Optimizer sales kit page built from the 13-slide Product beta deck (no ROI, discovery, objections, beta terms or targets in the deck, page says so) and live at qo-sales-kit.pages.dev; pmo-action-extractor tightened with due-date phrase, confidence and dedup rules after the first grading pass (19/20)"
+metadata: 
+  node_type: memory
+  type: project
+  originSessionId: 668983a5-7484-4600-a415-50462160f055
+  modified: 2026-09-01T04:44:08.944Z
+---
+
+**Queue Optimizer sales kit (Aug 31 2026).** Source: SharePoint "Queue Optimizer deck (beta) sales kit.pptx", productmanagement/GTM/Sales Enablement/Queue Optimizer/Customer Facing Assets, modified Jun 12 2026, 13 slides. The deck carries the problem (six WFM pain points), the two-days comparison, the orchestration gap (WFM forecasts, ACD routes, QO decides), the four-stage how-it-works (ACD capture, forecast, recommend, adjust), four screenshot slides (9 to 12), and a summary with five capabilities. Its only figure is "60 to 100% of SLA management remains manual", uncited. It has NO ROI example, discovery questions, objection talk tracks, beta terms, pricing, target accounts or deployment table, so the page has no calculator and a "Not in this deck" section instead. Page: `motions/ai_champion_product/QO_Sales_Kit.src.html` (build with `build_pages.py --check`), deploy folder `~/Desktop/Intradiem Deliverables/deploy-qo-sales-kit/`, Cloudflare Pages project `qo-sales-kit`, live at https://qo-sales-kit.pages.dev/ (noindex). Same treatment as [[product-ai-goals-build-aug31]] BOO kit.
+
+**pmo-action-extractor rules (Aug 31 2026).** First grading pass: 20 rows, 19 correct, one wrong_date (pmo-2026-08-31-007, email row, date inferred with no date phrase). Agent file now says: a due date is `inferred` only when the evidence quote or the same message has an explicit time phrase (weekday, date, "end of week", "before the standup on Friday"), the log quotes the phrase next to the resolved date, otherwise `none stated` / `none`; confidence is `low` when owner AND date are both inferred; dedup on owner plus action substance, re-mentions are `carried` citing the earlier id, never two rows for a meeting commitment and its follow-up email. Registry row unchanged (still accurate).
+
+**Why:** Product goal pages must transcribe the deck only; the QO deck is thin, and filling gaps from the BOO deck would have been fabrication. The extractor's precision proof depends on not inventing dates.
+
+**How to apply:** when Product supplies the missing QO sections, extend the page in the BOO shape. Next extractor grading pass should show wrong_date at zero and check the Carried section for meeting-plus-email pairs.

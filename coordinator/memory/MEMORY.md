@@ -355,5 +355,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-08-31
 - [Two-Machine Sync Loop Aug31](two-machine-sync-loop-aug31.md) — Aug 31 2026: sync is automatic; sync_publish.sh on every SessionEnd here + nightly 21:30 (export, commit coordinator/, push, log unpushed work as rundown source 13); sync_work_mac.sh start/end hooks on the work Mac; canonical registry is ~/coordinator/AGENT_REGISTRY.md
 
-## Swept from Dallass-MacBook-Pro on 2026-08-31
-- [Context-Bus Ingest Verified Aug6](context-bus-ingest-verified-aug6.md) — first cross-laptop drop ingested clean on work Mac; sync docs/skills for parity, do NOT load automation plists here, coordinator CLAUDE.md brand rule was stale
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-08-31
+- [QO Sales Kit + PMO Rules Aug31](qo-sales-kit-and-pmo-rules-aug31.md) — Aug 31 2026 evening: QO sales kit page from the 13-slide beta deck (no ROI/discovery/objections/beta/targets in the deck, page says so) live at qo-sales-kit.pages.dev; pmo-action-extractor tightened with time-phrase due-date, confidence and dedup rules after the first grading pass (19/20)
