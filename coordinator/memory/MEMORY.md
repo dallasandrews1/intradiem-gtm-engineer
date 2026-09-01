@@ -364,3 +364,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Feedback Titles Lead Somewhere](feedback-titles-lead-somewhere.md) — Sep 1 2026: h2s and slide titles read top to bottom as one progression ending on the reader's point; never count-fronted "Ten rows. Seven steps." lines
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [PM Kit Greenlight Cold Run Sep1](pm-kit-greenlight-coldrun-sep1.md) — Sep 1 2026: PM as a builder kit repackaged for Greenlight in motions/ai_champion_product/pm_kit/, cold-run proven on the Scheduling Service PRD Screen 7 (7 pass, 1 manual after one fix loop), second worked example in prototypes/holiday_calendar/; two PRDs name two different design systems
