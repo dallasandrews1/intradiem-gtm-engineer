@@ -124,3 +124,6 @@ The Clay MCP plugin tools `mcp__plugin_clay_clay__table` / `__read` / `__surface
 `pipeline-receipts-tracker` may read Salesforce deals via `clay audiences records --entity-type deals` as a CANDIDATE surfaced-pipeline source only; counted receipts still come only from `credit_pipeline_receipts.md` and `impact/outcomes.csv`.
 
 Guardrail unchanged on all four: read-only, never `clay update`, never touch the plugin install, never spend.
+
+## partner-briefs-loop (scheduled, hourly :20 weekdays)
+Watches #gtm-partner-briefs for account-name requests from the partner team (Frank Ciccone first), runs the briefing engine per request (gate from local SF/pre-pipeline/denylist files, signal-researcher fan-out, Clay free path 0 credits, build_briefs.py, partner-safe deploy only), replies in thread with links. DRY RUN until "live": true in automation/config/partner_briefs.json. Wrapper: automation/run_partner_briefs.sh. Log: automation/logs/partner-briefs-<date>.md (rundown source). Inherits governing rules 1-5: never DMs Dallas, logs with evt anchors, no sends, no credit spend beyond the free path, internal pages never deployed. Added Sep 1 2026.
