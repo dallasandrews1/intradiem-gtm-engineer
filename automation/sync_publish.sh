@@ -84,10 +84,10 @@ fi
 unpushed=0
 report_tree() {  # $1 path $2 label
   local n paths
-  n=$(git -C "$1" status --porcelain 2>/dev/null | grep -v -E '^\?\? (\.wrangler/|_archive/)' | wc -l | tr -d ' ')
+  n=$(git -C "$1" status --porcelain 2>/dev/null | grep -v -E '^\?\? (\.wrangler/|_archive/)|(automation/config/rundown_thread_state.json|control_tower_state.json)$' | wc -l | tr -d ' ')
   if [ "$n" -gt 0 ]; then
     unpushed=$((unpushed + n))
-    paths=$(git -C "$1" status --porcelain 2>/dev/null | grep -v -E '^\?\? (\.wrangler/|_archive/)' | awk '{print $2}' | cut -d/ -f1-2 | sort | uniq -c | sort -rn | head -6 | awk '{printf "%s(%s) ", $2, $1}')
+    paths=$(git -C "$1" status --porcelain 2>/dev/null | grep -v -E '^\?\? (\.wrangler/|_archive/)|(automation/config/rundown_thread_state.json|control_tower_state.json)$' | awk '{print $2}' | cut -d/ -f1-2 | sort | uniq -c | sort -rn | head -6 | awk '{printf "%s(%s) ", $2, $1}')
     say "  - $2: $n uncommitted: $paths"
   fi
   local ah; ah=$(git -C "$1" rev-list --count "origin/$(git -C "$1" branch --show-current 2>/dev/null)..HEAD" 2>/dev/null || echo 0)
@@ -95,10 +95,11 @@ report_tree() {  # $1 path $2 label
 }
 say "$NOW  uncommitted or unpushed work:"
 report_tree "$ENGINE" "main checkout"
-git worktree list --porcelain | awk '/^worktree /{print substr($0,10)}' | while IFS= read -r wt; do
+while IFS= read -r wt; do   # process substitution, not a pipe, so $unpushed survives the loop
+  [ -z "$wt" ] && continue
   [ "$wt" = "$ENGINE" ] && continue
   report_tree "$wt" "worktree $(basename "$wt") [$(git -C "$wt" branch --show-current 2>/dev/null)]"
-done
+done < <(git worktree list --porcelain | awk '/^worktree /{print substr($0,10)}')
 if [ "$unpushed" -eq 0 ]; then say "  - none"; else say "evt: sync-publish-$TODAY#unpushed-work"; fi
 say ""
 exit 0
