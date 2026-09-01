@@ -370,6 +370,3 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Greenlight Agent Pack Sep1](greenlight-agent-pack-sep1.md) — Sep 1 2026: eight GTM skills packaged as shared Greenlight agents in motions/ai_champion_product/greenlight_agents/ (register, create order, neighbour notes vs the 41 existing agents, Value Repository caveat); Dallas wants shared agents everywhere, Jason pushes Greenlight adoption
-
-## Swept from Dallass-MacBook-Pro on 2026-09-01
-- [Context-Bus Ingest Verified Aug6](context-bus-ingest-verified-aug6.md) — first cross-laptop drop ingested clean on work Mac; sync docs/skills for parity, do NOT load automation plists here, coordinator CLAUDE.md brand rule was stale
