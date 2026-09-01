@@ -85,7 +85,9 @@ JSON
 
 rewrite_paths() {  # $1 dir : replace the publishing home with this machine's home, text files only
   [ "$HOME" = "$SRC_HOME" ] && return 0
-  grep -rlI "$SRC_HOME" "$1" 2>/dev/null | while IFS= read -r f; do LC_ALL=C sed -i '' "s#$SRC_HOME#$HOME#g" "$f"; done
+  # grep exits 1 when a target holds no publishing-home path; under pipefail that would abort the whole install
+  # (seen on the work Mac 2026-08-31: install stopped after the index merge, before the symlink). Tolerate it.
+  { grep -rlI "$SRC_HOME" "$1" 2>/dev/null || true; } | while IFS= read -r f; do LC_ALL=C sed -i '' "s#$SRC_HOME#$HOME#g" "$f"; done
 }
 
 do_install() {
