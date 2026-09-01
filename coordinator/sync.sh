@@ -9,6 +9,9 @@
 #                     ~/coordinator, rewrite /Users/dallasandrews to this home, and point the
 #                     harness memory dir for this repo at ~/coordinator/memory.
 #   sync.sh status    show what differs between the live machine and the snapshot.
+#   sync.sh export-memory   work Mac (any non-publishing machine). Copy memory files written here that are
+#                     newer than the snapshot's into coordinator/memory with this home rewritten back to
+#                     the publishing home, and merge the index. The reverse lane; never touches skills/agents.
 #
 # Personal material never enters the snapshot (see EXCLUDE_* below). No secrets live in any
 # of these folders; settings.json (which may carry keys) is deliberately not carried.
@@ -129,6 +132,25 @@ do_install() {
   echo "installed: $(ls -d "$HOME"/.claude/skills/*/ | wc -l | tr -d ' ') skills, $(ls "$HOME"/.claude/agents/*.md | wc -l | tr -d ' ') agents, $(ls "$COORD"/memory/*.md | wc -l | tr -d ' ') memory files"
 }
 
+do_export_memory() {  # reverse lane for the work Mac: memory only, paths rewritten back to SRC_HOME
+  [ -d "$COORD/memory" ] || { echo "no $COORD/memory here"; exit 1; }
+  mkdir -p "$HERE/memory"
+  n=0
+  for f in "$COORD/memory"/*.md; do
+    b="$(basename "$f")"; [ "$b" = "MEMORY.md" ] && continue; excluded_mem "$b" && continue
+    if [ ! -e "$HERE/memory/$b" ] || [ "$f" -nt "$HERE/memory/$b" ]; then
+      if [ "$HOME" != "$SRC_HOME" ]; then LC_ALL=C sed "s#$HOME#$SRC_HOME#g" "$f" > "$HERE/memory/$b"; else cp -p "$f" "$HERE/memory/$b"; fi
+      n=$((n+1))
+    fi
+  done
+  if [ $n -gt 0 ] && [ -f "$COORD/memory/MEMORY.md" ]; then
+    merge_idx "$HERE/memory/MEMORY.md" "$COORD/memory/MEMORY.md" --out "$HERE/memory/MEMORY.md.new" --exclude $EXCLUDE_MEMORY --label "Swept from $(hostname -s) on $(date +%Y-%m-%d)" >/dev/null
+    mv "$HERE/memory/MEMORY.md.new" "$HERE/memory/MEMORY.md"
+    if [ "$HOME" != "$SRC_HOME" ]; then LC_ALL=C sed -i '' "s#$HOME#$SRC_HOME#g" "$HERE/memory/MEMORY.md"; fi
+  fi
+  echo "export-memory: $n memory file(s) swept into the snapshot"
+}
+
 do_status() {
   echo "== snapshot vs this machine"
   [ -f "$HERE/manifest.json" ] && cat "$HERE/manifest.json"
@@ -139,6 +161,6 @@ do_status() {
 }
 
 case "${1:-}" in
-  export) do_export;; install) do_install;; status) do_status;;
+  export) do_export;; install) do_install;; status) do_status;; export-memory) do_export_memory;;
   *) sed -n 2,15p "$0"; exit 1;;
 esac
