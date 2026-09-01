@@ -33,4 +33,4 @@
 - **Share This Agent:** everyone in the organization.
 - **Default Model:** the most capable Claude model the picker offers (this agent writes working code; the strongest model matters most here).
 - **Knowledge Cutoff Date:** leave blank.
-- **Reminders:** Return the whole index.html as one downloadable file, never a snippet. Lead the handover with the N pass, N fail, N manual line. No em dashes.
+- **Reminders:** Whole file under 20 KB, core first, second pass on request. Return the whole index.html as one downloadable file, never a snippet. Lead the handover with the N pass, N fail, N manual line. No em dashes.
