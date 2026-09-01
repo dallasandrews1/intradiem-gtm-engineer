@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holiday Calendar prototype, Scheduling Service Screen 7</title>
+<style>
+:root{color-scheme:light;--primary:#5AB274;--primary-dark:#158235;--tint:rgba(90,178,116,0.12);--bg:#F8F8F8;--surface:#FFFFFF;--border:#E5E5E5;--input:rgba(0,0,0,0.23);--text:#202020;--text2:#757575;--green:#5AB274;--amber:#F5A623;--red:#D0021B;--body:"Open Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--label:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font:14px/1.45 var(--body);color:var(--text);background:var(--bg)}
+[hidden]{display:none!important}
+svg{fill:currentColor}
+h1{font:600 20px/1.3 var(--body);margin:0}
+h2{font:600 16px/1.3 var(--body);margin:0 0 12px}
+p{margin:0 0 8px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.lbl{font:500 12px var(--label);color:var(--text2);text-transform:uppercase;letter-spacing:.04em}
+.hint{font:12px/1.4 var(--body);color:var(--text2)}
+button{font-family:var(--body)}
+input,select,button{color:var(--text)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--primary-dark);outline-offset:2px}
+.btn{height:36px;padding:0 16px;border-radius:4px;font:700 14px var(--body);letter-spacing:.03em;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;white-space:nowrap}
+.btn-primary{background:var(--primary);color:#FFFFFF;border-color:var(--primary)}
+.btn-primary:hover{background:var(--primary-dark);border-color:var(--primary-dark)}
+.btn-secondary{background:#FFFFFF;color:var(--text);border-color:var(--input)}
+.btn-secondary:hover{background:var(--bg)}
+.btn-icon{width:36px;padding:0}
+.btn-sm{padding:0 12px}
+input[type=text],input[type=date],input[type=search],select{height:36px;border-radius:4px;border:1px solid var(--input);font:14px var(--label);color:var(--text);background:#FFFFFF;padding:0 10px}
+input[type=checkbox]{width:16px;height:16px;margin:0 6px 0 0;accent-color:var(--primary);vertical-align:-3px}
+label.chk{font:13px var(--label);display:inline-flex;align-items:center;cursor:pointer}
+.card{background:var(--surface);border-radius:5px;box-shadow:0 4px 10px rgba(0,0,0,.1);padding:16px}
+#app{display:flex;min-height:100vh}
+#sidebar{width:256px;flex:0 0 256px;background:var(--bg);border-right:1px solid var(--border);display:flex;flex-direction:column;padding:16px 0}
+.brand{padding:4px 20px 20px;display:flex;flex-direction:column}
+.b1{font:700 18px var(--body);color:var(--primary-dark)}
+.b2{font:500 12px var(--label);color:var(--text2);text-transform:uppercase;letter-spacing:.06em}
+.nav{display:flex;align-items:center;gap:12px;width:100%;height:44px;padding:0 20px;border:0;border-left:3px solid transparent;background:none;color:var(--text);font:14px var(--body);text-align:left;cursor:pointer}
+.nav:hover{background:var(--border)}
+.nav.active{background:var(--tint);border-left-color:var(--primary);font-weight:600}
+.who{margin-top:auto;padding:16px 20px 0;border-top:1px solid var(--border)}
+.who .n{font-weight:600}
+#main{flex:1;min-width:0;display:flex;flex-direction:column}
+.topbar{height:56px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:16px;padding:0 24px}
+.topbar select{min-width:280px}
+.tz{display:flex;align-items:center;gap:8px;color:var(--text2);font:13px var(--label)}
+#notif-wrap{margin-left:auto;position:relative}
+.count{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;border-radius:9px;background:var(--red);color:#FFFFFF;font:700 11px/18px var(--label);text-align:center;padding:0 4px}
+.pop{position:absolute;right:0;top:44px;width:380px;background:var(--surface);border-radius:5px;box-shadow:0 4px 10px rgba(0,0,0,.1);padding:12px 16px;z-index:30}
+.pop h2{font-size:14px;margin-bottom:8px}
+.pop li{list-style:none;padding:8px 0;border-top:1px solid var(--border)}
+.pop ul{margin:0;padding:0}
+.pop .when{display:block;font:11px var(--label);color:var(--text2);text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+.content{padding:24px;display:flex;flex-direction:column;gap:16px;flex:1}
+.pagehead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.crumb{margin-top:4px}
+.stats{text-align:right}
+.toolbar .lbl,.b2,#sidebar .hint{color:var(--text)}
+.toolbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.toolbar .group{display:flex;align-items:center;gap:8px}
+.tabs{display:flex;border-bottom:1px solid var(--border)}
+.tab{height:36px;padding:0 14px;border:0;border-bottom:2px solid transparent;background:none;font:500 13px var(--label);text-transform:uppercase;letter-spacing:.04em;color:var(--text);cursor:pointer;margin-bottom:-1px}
+.tab:hover{background:var(--border)}
+.tab.active{font-weight:700;border-bottom-color:var(--primary)}
+.tiers{border:0;padding:0;margin:0;display:flex;gap:14px}
+.toolbar .btn-primary{margin-left:auto}
+.cols{display:flex;gap:24px;align-items:flex-start}
+.scope{width:280px;flex:0 0 280px}
+.view{flex:1;min-width:0}
+.node{display:flex;align-items:center;gap:8px;width:100%;height:36px;border:0;border-left:3px solid transparent;background:none;padding:0 12px;font:14px var(--body);color:var(--text);text-align:left;cursor:pointer;border-radius:0 4px 4px 0}
+.node:hover{background:var(--bg)}
+.node.active{background:var(--tint);border-left-color:var(--primary);font-weight:600}
+.node.active .ntier,.node.active .cnt{color:var(--text)}
+.nname{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ntier{font:500 11px var(--label);color:var(--text2);text-transform:uppercase;letter-spacing:.04em}
+.cnt{font:12px var(--label);color:var(--text2);min-width:44px;text-align:right}
+.calhead{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.calhead h2{margin:0;min-width:170px}
+#legend{display:flex;gap:8px;align-items:center;margin-left:auto;flex-wrap:wrap}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.dow{background:var(--bg);font:500 11px var(--label);text-transform:uppercase;letter-spacing:.04em;color:var(--text);padding:8px 8px}
+.day{min-height:96px;background:#FFFFFF;border:0;padding:6px;text-align:left;font:13px var(--body);color:var(--text);display:flex;flex-direction:column;gap:4px;align-items:stretch;cursor:pointer;min-width:0}
+.day:hover{background:var(--tint)}
+.day.out{background:var(--bg)}
+.dnum{font:500 12px var(--label);margin-bottom:2px}
+.chip{display:block;font:500 12px/16px var(--label);padding:2px 6px;border-radius:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text);max-width:100%}
+.chip.country{background:var(--tint);border-left:3px solid var(--primary)}
+.chip.region{background:var(--primary-dark);color:#FFFFFF}
+.chip.site{background:#FFFFFF;border:1px solid var(--text2)}
+.chip.worked{background:#FFFFFF;border:1px dashed var(--text2);color:var(--text2);text-decoration:line-through}
+.tag{display:inline-block;font:500 11px/16px var(--label);text-transform:uppercase;letter-spacing:.04em;padding:1px 6px;border-radius:4px;margin-right:6px;color:var(--text)}
+.tag.country{background:var(--tint);border-left:3px solid var(--primary)}
+.tag.region{background:var(--primary-dark);color:#FFFFFF}
+.tag.site{background:#FFFFFF;border:1px solid var(--text2)}
+#list-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:var(--bg);font:500 12px var(--label);text-transform:uppercase;letter-spacing:.04em;color:var(--text);text-align:left;padding:0 12px;height:40px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:0 12px;border-bottom:1px solid var(--border);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:middle}
+#list tbody tr{height:48px}
+.sortbtn{background:none;border:0;padding:0;font:inherit;color:inherit;text-transform:inherit;letter-spacing:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.sortbtn svg{width:14px;height:14px}
+.sub{display:block;font:11px/1.2 var(--label);color:var(--text2)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:5px;margin-right:6px;vertical-align:-1px}
+.dot.green{background:var(--green)}.dot.amber{background:var(--amber)}.dot.red{background:var(--red)}
+.empty{padding:24px;color:var(--text2);text-align:center}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:none;align-items:center;justify-content:center;z-index:50}
+.scrim.open{display:flex}
+.dialog{background:var(--surface);border-radius:2px;box-shadow:0 19px 38px rgba(0,0,0,.3);width:600px;max-width:calc(100vw - 32px);max-height:calc(100vh - 32px);overflow:auto;padding:24px}
+.field{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+.field label{font:500 12px var(--label);color:var(--text2);text-transform:uppercase;letter-spacing:.04em}
+.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}
+.err{color:var(--red);min-height:18px;font-size:13px}
+.impact-line strong{font-size:16px}
+#impact-table tbody tr{height:40px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--text);color:#FFFFFF;padding:10px 16px;border-radius:4px;display:none;z-index:60;max-width:70vw}
+#badge{position:fixed;left:16px;bottom:16px;background:var(--text);color:#FFFFFF;font:500 12px var(--label);padding:6px 10px;border-radius:4px;z-index:40}
+#sc-toggle{position:fixed;right:16px;bottom:16px;z-index:70}
+#sc-panel{position:fixed;right:16px;bottom:64px;width:720px;max-width:calc(100vw - 32px);max-height:70vh;overflow:auto;background:var(--surface);border-radius:5px;box-shadow:0 4px 10px rgba(0,0,0,.1);z-index:70;padding:16px}
+#sc-summary{font:600 16px var(--body);margin:0 0 4px}
+#sc-panel table{table-layout:auto}
+#sc-panel td{white-space:normal;padding:8px 10px;vertical-align:top;font-size:13px}
+#sc-panel th{padding:0 10px}
+.sc-id{font:500 12px var(--label);white-space:nowrap}
+.sc-status{white-space:nowrap;text-transform:capitalize}
+.sc-detail{color:var(--text2)}
+</style>
+</head>
+<body>
+<div id="app">
+<nav id="sidebar" aria-label="Main navigation">
+  <div class="brand"><span class="b1">Intradiem</span><span class="b2">Scheduling Service</span></div>
+  <button class="nav" data-action="nav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill-rule="evenodd" d="M3 4h18v17H3zm2 5v10h14V9z"/><rect x="7" y="2" width="2" height="4"/><rect x="15" y="2" width="2" height="4"/></svg>Schedules</button>
+  <button class="nav" data-action="nav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>Shift patterns</button>
+  <button class="nav active" data-action="nav" aria-current="page"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill-rule="evenodd" d="M3 4h18v17H3zm2 5v10h14V9z"/><circle cx="12" cy="14" r="2.5"/></svg>Holiday calendars</button>
+  <button class="nav" data-action="nav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg>Leave</button>
+  <button class="nav" data-action="nav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 6a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>Settings</button>
+  <div class="who"><div class="n">Priya Natarajan</div><div class="hint">WFM Systems Admin</div></div>
+</nav>
+<div id="main">
+  <header class="topbar">
+    <label class="lbl" for="site-select">Site or team</label>
+    <select id="site-select" data-action="site-select" aria-label="Site or team selector"></select>
+    <div class="tz" id="tz"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16z"/><path d="M11 6h2v6.5l4 2.4-1 1.7-5-3z"/></svg><span id="tz-text"></span></div>
+    <div id="notif-wrap">
+      <button class="btn btn-secondary btn-icon" data-action="notif" aria-label="Notifications" aria-expanded="false" aria-controls="notif-pop"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2a6 6 0 0 0-6 6v4l-2 4h16l-2-4V8a6 6 0 0 0-6-6zm-2 16a2 2 0 0 0 4 0z"/></svg><span class="count" id="notif-count">2</span></button>
+      <div class="pop" id="notif-pop" hidden role="region" aria-label="Notifications"><h2>Notifications</h2><ul id="notif-list"></ul></div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="pagehead">
+      <div><h1>Holiday calendar</h1><div class="crumb" id="crumb"></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="toolbar">
+      <div class="group"><label class="lbl" for="year">Year</label><select id="year" data-action="year"><option value="2026">2026</option><option value="2027">2027</option></select></div>
+      <div class="tabs" role="tablist" aria-label="View"><button class="tab active" role="tab" aria-selected="true" data-action="view" data-view="calendar">Calendar</button><button class="tab" role="tab" aria-selected="false" data-action="view" data-view="list">List</button></div>
+      <div class="group"><label class="vh" for="search">Search holidays by name</label><input id="search" type="search" placeholder="Search by name" data-action="search" style="width:240px"></div>
+      <fieldset class="tiers"><legend class="vh">Show tiers</legend>
+        <label class="chk"><input type="checkbox" checked value="country" data-action="tier">Country</label>
+        <label class="chk"><input type="checkbox" checked value="region" data-action="tier">Region</label>
+        <label class="chk"><input type="checkbox" checked value="site" data-action="tier">Site</label>
+      </fieldset>
+      <button class="btn btn-primary" data-action="open-add">Add non-working day</button>
+    </div>
+    <div class="cols">
+      <section class="card scope" aria-label="Scope"><h2>Scope</h2><div id="tree"></div></section>
+      <section class="card view" aria-label="Holidays">
+        <div id="view-calendar">
+          <div class="calhead">
+            <button class="btn btn-secondary btn-icon" data-action="month" data-dir="-1" aria-label="Previous month"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 4l2 2-6 6 6 6-2 2-8-8z"/></svg></button>
+            <h2 id="month-label"></h2>
+            <button class="btn btn-secondary btn-icon" data-action="month" data-dir="1" aria-label="Next month"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 4l-2 2 6 6-6 6 2 2 8-8z"/></svg></button>
+            <div id="legend" aria-label="Legend"><span class="chip country">Country</span><span class="chip region">Region</span><span class="chip site">Site</span><span class="chip worked">Worked (overridden)</span></div>
+          </div>
+          <div class="cal" id="cal"></div>
+          <p class="hint" style="margin-top:8px">Select a day to add a non-working day on that date.</p>
+        </div>
+        <div id="view-list" hidden>
+          <div id="list-wrap"><table id="list">
+            <colgroup><col style="width:13%"><col style="width:26%"><col style="width:14%"><col style="width:19%"><col style="width:12%"><col style="width:16%"></colgroup>
+            <thead><tr>
+              <th scope="col"><button class="sortbtn" data-action="sort" data-key="date">Date <svg viewBox="0 0 24 24" aria-hidden="true" id="si-date"></svg></button></th>
+              <th scope="col"><button class="sortbtn" data-action="sort" data-key="name">Name <svg viewBox="0 0 24 24" aria-hidden="true" id="si-name"></svg></button></th>
+              <th scope="col">Type</th>
+              <th scope="col"><button class="sortbtn" data-action="sort" data-key="tier">Tier and scope <svg viewBox="0 0 24 24" aria-hidden="true" id="si-tier"></svg></button></th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr></thead>
+            <tbody id="list-body"></tbody>
+          </table></div>
+          <div class="empty" id="list-empty" hidden>No days match the current filters.</div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="scrim" id="dlg"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-title">
+  <h2 id="dlg-title">Add non-working day</h2>
+  <form id="add-form" data-action="add-review" novalidate>
+    <div id="step-form">
+      <p class="hint" id="dlg-scope"></p>
+      <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" maxlength="60" autocomplete="off"></div>
+      <div class="field"><label for="f-date">Date</label><input id="f-date" type="date" min="2026-01-01" max="2027-12-31"></div>
+      <div class="field"><label for="f-kind">Type</label><select id="f-kind"><option value="closure">Company closure</option><option value="training">Training day</option><option value="public">Public holiday</option></select></div>
+      <label class="chk"><input id="f-recur" type="checkbox">Repeats every year on this date</label>
+      <p class="err" id="f-err" role="alert"></p>
+      <div class="actions"><button type="button" class="btn btn-secondary" data-action="close-dialog">Cancel</button><button type="submit" class="btn btn-primary">Review impact</button></div>
+    </div>
+    <div id="step-impact" hidden>
+      <div id="impact-summary"></div>
+      <table id="impact-table"><thead><tr><th scope="col">Site</th><th scope="col">Region</th><th scope="col" style="text-align:right">Agents</th></tr></thead><tbody id="impact-body"></tbody></table>
+      <p class="hint" style="margin-top:10px">Recalculation runs as a background task. The PRD allows up to 60 seconds at 100,000 agents.</p>
+      <div class="actions"><button type="button" class="btn btn-secondary" id="impact-back" data-action="impact-back">Back</button><button type="button" class="btn btn-primary" id="impact-confirm" data-action="impact-confirm">Add and recalculate</button></div>
+    </div>
+  </form>
+</div></div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="badge">Prototype built from PRD-Intradiem-Scheduling-Service v1.0 (March 2026), Screen 7</div>
+<button id="sc-toggle" class="btn btn-secondary" data-action="toggle-checks" aria-expanded="false" aria-controls="sc-panel">Checks</button>
+<section id="sc-panel" hidden aria-label="Self-check">
+  <h2 style="margin-bottom:4px">Self-check</h2>
+  <p id="sc-summary"></p>
+  <p class="hint">Re-runs each time the panel opens. Press ? to open or close it.</p>
+  <table><thead><tr><th scope="col">Id</th><th scope="col">Check</th><th scope="col">Result</th><th scope="col">Detail</th></tr></thead><tbody id="sc-body"></tbody></table>
+</section>
+
+<script>
+(function(){
+'use strict';
+const INTERVALS_PER_DAY=32;
+const TIER={country:'Country',region:'Region',site:'Site'};
+const KIND={public:'Public holiday',closure:'Company closure',training:'Training day'};
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MON3=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const DOW=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+const NODES=[
+{id:'us',tier:'country',name:'United States',parent:null,tz:'Multiple: ET, CT, MT, MST'},
+{id:'us-east',tier:'region',name:'US East',parent:'us',tz:'ET, America/New_York'},
+{id:'atl',tier:'site',name:'Atlanta, GA',parent:'us-east',agents:1240,tz:'ET, America/New_York'},
+{id:'tpa',tier:'site',name:'Tampa, FL',parent:'us-east',agents:860,tz:'ET, America/New_York'},
+{id:'ric',tier:'site',name:'Richmond, VA',parent:'us-east',agents:540,tz:'ET, America/New_York'},
+{id:'us-central',tier:'region',name:'US Central',parent:'us',tz:'CT, America/Chicago'},
+{id:'dal',tier:'site',name:'Dallas, TX',parent:'us-central',agents:1120,tz:'CT, America/Chicago'},
+{id:'oma',tier:'site',name:'Omaha, NE',parent:'us-central',agents:430,tz:'CT, America/Chicago'},
+{id:'us-west',tier:'region',name:'US West',parent:'us',tz:'Multiple: MT, MST'},
+{id:'phx',tier:'site',name:'Phoenix, AZ',parent:'us-west',agents:760,tz:'MST, America/Phoenix'},
+{id:'slc',tier:'site',name:'Salt Lake City, UT',parent:'us-west',agents:390,tz:'MT, America/Denver'},
+{id:'gb',tier:'country',name:'United Kingdom',parent:null,tz:'GMT/BST, Europe/London'},
+{id:'gb-eng',tier:'region',name:'England',parent:'gb',tz:'GMT/BST, Europe/London'},
+{id:'lds',tier:'site',name:'Leeds',parent:'gb-eng',agents:520,tz:'GMT/BST, Europe/London'},
+{id:'man',tier:'site',name:'Manchester',parent:'gb-eng',agents:310,tz:'GMT/BST, Europe/London'},
+{id:'gb-sct',tier:'region',name:'Scotland',parent:'gb',tz:'GMT/BST, Europe/London'},
+{id:'gla',tier:'site',name:'Glasgow',parent:'gb-sct',agents:280,tz:'GMT/BST, Europe/London'},
+{id:'ca',tier:'country',name:'Canada',parent:null,tz:'ET, America/Toronto'},
+{id:'ca-on',tier:'region',name:'Ontario',parent:'ca',tz:'ET, America/Toronto'},
+{id:'tor',tier:'site',name:'Toronto, ON',parent:'ca-on',agents:450,tz:'ET, America/Toronto'},
+{id:'ca-qc',tier:'region',name:'Quebec',parent:'ca',tz:'ET, America/Toronto'},
+{id:'mtl',tier:'site',name:'Montreal, QC',parent:'ca-qc',agents:260,tz:'ET, America/Toronto'},
+{id:'ph',tier:'country',name:'Philippines',parent:null,tz:'PHT, Asia/Manila'},
+{id:'ph-ncr',tier:'region',name:'Metro Manila',parent:'ph',tz:'PHT, Asia/Manila'},
+{id:'qzn',tier:'site',name:'Quezon City',parent:'ph-ncr',agents:1480,tz:'PHT, Asia/Manila'},
+{id:'tag',tier:'site',name:'Taguig',parent:'ph-ncr',agents:920,tz:'PHT, Asia/Manila'},
+{id:'in',tier:'country',name:'India',parent:null,tz:'IST, Asia/Kolkata'},
+{id:'in-ka',tier:'region',name:'Karnataka',parent:'in',tz:'IST, Asia/Kolkata'},
+{id:'blr',tier:'site',name:'Bengaluru',parent:'in-ka',agents:1150,tz:'IST, Asia/Kolkata'},
+{id:'in-tg',tier:'region',name:'Telangana',parent:'in',tz:'IST, Asia/Kolkata'},
+{id:'hyd',tier:'site',name:'Hyderabad',parent:'in-tg',agents:890,tz:'IST, Asia/Kolkata'}
+];
+
+function r(id,scope,name,kind,rule,obs,src){return {id:id,scope:scope,name:name,kind:kind,rule:rule,obs:obs||null,src:src||'provider'};}
+const RULES=[
+r('us-newyear','us',"New Year's Day",'public',{t:'fixed',m:1,d:1},'us'),
+r('us-mlk','us','Martin Luther King Jr. Day','public',{t:'nth',m:1,w:1,n:3},'us'),
+r('us-presidents','us',"Presidents' Day",'public',{t:'nth',m:2,w:1,n:3},'us'),
+r('us-memorial','us','Memorial Day','public',{t:'nth',m:5,w:1,n:-1},'us'),
+r('us-juneteenth','us','Juneteenth','public',{t:'fixed',m:6,d:19},'us'),
+r('us-july4','us','Independence Day','public',{t:'fixed',m:7,d:4},'us'),
+r('us-labor','us','Labor Day','public',{t:'nth',m:9,w:1,n:1},'us'),
+r('us-columbus','us','Columbus Day','public',{t:'nth',m:10,w:1,n:2},'us'),
+r('us-veterans','us','Veterans Day','public',{t:'fixed',m:11,d:11},'us'),
+r('us-thanks','us','Thanksgiving Day','public',{t:'nth',m:11,w:4,n:4},'us'),
+r('us-christmas','us','Christmas Day','public',{t:'fixed',m:12,d:25},'us'),
+r('us-dayafter','us','Day after Thanksgiving, company closure','closure',{t:'nth',m:11,w:5,n:4},null,'admin'),
+r('usw-training','us-west','Regional training day','training',{t:'nth',m:2,w:5,n:4},null,'admin'),
+r('dal-training','dal','Site training day','training',{t:'once',date:'2026-03-13'},null,'admin'),
+r('phx-allhands','phx','Site all-hands day','training',{t:'nth',m:10,w:5,n:3},null,'admin'),
+r('gb-newyear','gb',"New Year's Day",'public',{t:'fixed',m:1,d:1},'sub'),
+r('gb-goodfri','gb','Good Friday','public',{t:'easter',off:-2},null),
+r('gb-earlymay','gb','Early May bank holiday','public',{t:'nth',m:5,w:1,n:1},null),
+r('gb-spring','gb','Spring bank holiday','public',{t:'nth',m:5,w:1,n:-1},null),
+r('gb-christmas','gb','Christmas Day','public',{t:'fixed',m:12,d:25},'sub'),
+r('gb-boxing','gb','Boxing Day','public',{t:'fixed',m:12,d:26},'sub'),
+r('eng-eastermon','gb-eng','Easter Monday','public',{t:'easter',off:1},null),
+r('eng-summer','gb-eng','Summer bank holiday','public',{t:'nth',m:8,w:1,n:-1},null),
+r('sct-jan2','gb-sct','2 January','public',{t:'fixed',m:1,d:2},'sub'),
+r('sct-summer','gb-sct','Summer bank holiday','public',{t:'nth',m:8,w:1,n:1},null),
+r('sct-standrew','gb-sct',"St Andrew's Day",'public',{t:'fixed',m:11,d:30},'sub'),
+r('lds-closure','lds','Office move, site closed','closure',{t:'once',date:'2026-06-05'},null,'admin'),
+r('ca-newyear','ca',"New Year's Day",'public',{t:'fixed',m:1,d:1},'sub'),
+r('ca-goodfri','ca','Good Friday','public',{t:'easter',off:-2},null),
+r('ca-victoria','ca','Victoria Day','public',{t:'onOrBefore',m:5,d:24,w:1},null),
+r('ca-canada','ca','Canada Day','public',{t:'fixed',m:7,d:1},'sub'),
+r('ca-labour','ca','Labour Day','public',{t:'nth',m:9,w:1,n:1},null),
+r('ca-truth','ca','National Day for Truth and Reconciliation','public',{t:'fixed',m:9,d:30},null),
+r('ca-thanks','ca','Thanksgiving','public',{t:'nth',m:10,w:1,n:2},null),
+r('ca-christmas','ca','Christmas Day','public',{t:'fixed',m:12,d:25},'sub'),
+r('ca-boxing','ca','Boxing Day','public',{t:'fixed',m:12,d:26},'sub'),
+r('on-family','ca-on','Family Day','public',{t:'nth',m:2,w:1,n:3},null),
+r('on-civic','ca-on','Civic Holiday','public',{t:'nth',m:8,w:1,n:1},null),
+r('qc-stjean','ca-qc','Saint-Jean-Baptiste Day','public',{t:'fixed',m:6,d:24},null),
+r('ph-newyear','ph',"New Year's Day",'public',{t:'fixed',m:1,d:1},null),
+r('ph-maundy','ph','Maundy Thursday','public',{t:'easter',off:-3},null),
+r('ph-goodfri','ph','Good Friday','public',{t:'easter',off:-2},null),
+r('ph-kagitingan','ph','Araw ng Kagitingan','public',{t:'fixed',m:4,d:9},null),
+r('ph-labor','ph','Labor Day','public',{t:'fixed',m:5,d:1},null),
+r('ph-independence','ph','Independence Day','public',{t:'fixed',m:6,d:12},null),
+r('ph-heroes','ph','National Heroes Day','public',{t:'nth',m:8,w:1,n:-1},null),
+r('ph-bonifacio','ph','Bonifacio Day','public',{t:'fixed',m:11,d:30},null),
+r('ph-christmas','ph','Christmas Day','public',{t:'fixed',m:12,d:25},null),
+r('ph-rizal','ph','Rizal Day','public',{t:'fixed',m:12,d:30},null),
+r('qzn-maint','qzn','Building maintenance, site closed','closure',{t:'once',date:'2026-09-04'},null,'admin'),
+r('in-republic','in','Republic Day','public',{t:'fixed',m:1,d:26},null),
+r('in-independence','in','Independence Day','public',{t:'fixed',m:8,d:15},null),
+r('in-gandhi','in','Gandhi Jayanti','public',{t:'fixed',m:10,d:2},null),
+r('in-holi26','in','Holi (2026 date from provider)','public',{t:'once',date:'2026-03-04'},null),
+r('in-diwali26','in','Diwali (2026 date from provider)','public',{t:'once',date:'2026-11-08'},null),
+r('ka-rajyotsava','in-ka','Kannada Rajyotsava','public',{t:'fixed',m:11,d:1},null),
+r('tg-formation','in-tg','Telangana Formation Day','public',{t:'fixed',m:6,d:2},null),
+r('blr-training','blr','Quarterly training day','training',{t:'once',date:'2026-04-10'},null,'admin')
+];
+
+const state={scope:'phx',year:2026,month:0,view:'calendar',search:'',tiers:{country:true,region:true,site:true},sort:{key:'date',dir:1},custom:[],overrides:[{ruleId:'us-columbus',scope:'us-west'}],notifs:[
+ {text:'Holiday data provider sync complete: 5 countries loaded for 2026 and 2027',when:'Today 06:10'},
+ {text:'Recalculation complete: US West works Columbus Day, 1,150 agents, 36,800 intervals across 2 sites',when:'Yesterday 17:42'}
+],unread:2,pending:null,opener:null,seq:1};
+
+const byId={};NODES.forEach(function(n){byId[n.id]=n;});
+const $=function(id){return document.getElementById(id);};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function fmt(n){return Number(n).toLocaleString('en-US');}
+function pad(n){return (n<10?'0':'')+n;}
+function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function fromIso(s){const p=s.split('-').map(Number);return new Date(p[0],p[1]-1,p[2]);}
+function addDays(d,n){return new Date(d.getFullYear(),d.getMonth(),d.getDate()+n);}
+function fmtDate(s){const d=fromIso(s);return DOW[d.getDay()]+', '+MON3[d.getMonth()]+' '+d.getDate();}
+function fmtLong(d){return DOW[d.getDay()]+' '+MON3[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();}
+function chain(id){const out=[];let n=byId[id];while(n){out.unshift(n);n=n.parent?byId[n.parent]:null;}return out;}
+function depth(id){return chain(id).length-1;}
+function sitesUnder(id){return NODES.filter(function(n){return n.tier==='site'&&chain(n.id).some(function(c){return c.id===id;});});}
+function agentsUnder(id){return sitesUnder(id).reduce(function(s,n){return s+n.agents;},0);}
+
+function easter(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),month=Math.floor((h+l-7*m+114)/31),day=((h+l-7*m+114)%31)+1;return new Date(y,month-1,day);}
+function ruleDate(rule,y){const q=rule.rule;
+ if(q.t==='fixed')return new Date(y,q.m-1,q.d);
+ if(q.t==='nth'){if(q.n>0){const first=new Date(y,q.m-1,1).getDay();return new Date(y,q.m-1,1+((q.w-first+7)%7)+7*(q.n-1));}const last=new Date(y,q.m,0);return new Date(y,q.m-1,last.getDate()-((last.getDay()-q.w+7)%7));}
+ if(q.t==='easter')return addDays(easter(y),q.off);
+ if(q.t==='onOrBefore'){const d=new Date(y,q.m-1,q.d);return addDays(d,-((d.getDay()-q.w+7)%7));}
+ if(q.t==='once'){const d=fromIso(q.date);return d.getFullYear()===y?d:null;}
+ return null;}
+function isWeekend(d){const w=d.getDay();return w===0||w===6;}
+function allRules(){return RULES.concat(state.custom);}
+function compose(scopeId,year){
+ const ch=chain(scopeId),ids=ch.map(function(n){return n.id;});
+ const list=[];
+ allRules().forEach(function(rule){
+  if(ids.indexOf(rule.scope)<0)return;
+  const d=ruleDate(rule,year);if(!d)return;
+  const node=byId[rule.scope];
+  list.push({ruleId:rule.id,name:rule.name,kind:rule.kind,rawDate:iso(d),date:iso(d),observed:false,tier:node.tier,scopeId:node.id,scopeName:node.name,custom:!!rule.custom,recurring:rule.rule.t!=='once',obs:rule.obs,src:rule.src,excluded:false,excludedBy:'',excludedAt:''});
+ });
+ list.sort(function(a,b){return a.rawDate<b.rawDate?-1:a.rawDate>b.rawDate?1:0;});
+ const occupied={};
+ list.forEach(function(e){if(!(e.obs&&isWeekend(fromIso(e.rawDate))))occupied[e.rawDate]=true;});
+ list.forEach(function(e){
+  if(!e.obs)return;const d=fromIso(e.rawDate);if(!isWeekend(d))return;
+  let nd;
+  if(e.obs==='us'){nd=addDays(d,d.getDay()===6?-1:1);}
+  else{nd=addDays(d,d.getDay()===6?2:1);while(occupied[iso(nd)]||isWeekend(nd))nd=addDays(nd,1);}
+  e.date=iso(nd);e.observed=true;occupied[e.date]=true;
+ });
+ list.forEach(function(e){
+  const ov=state.overrides.find(function(o){return o.ruleId===e.ruleId&&ids.indexOf(o.scope)>=0&&depth(o.scope)>=depth(e.scopeId);});
+  if(ov){e.excluded=true;e.excludedBy=byId[ov.scope].name;e.excludedAt=ov.scope;}
+ });
+ list.sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:a.name.localeCompare(b.name);});
+ return list;
+}
+function activeSiteIds(ruleId,year){return NODES.filter(function(n){return n.tier==='site';}).filter(function(s){const e=compose(s.id,year).find(function(x){return x.ruleId===ruleId;});return !!e&&!e.excluded;}).map(function(s){return s.id;});}
+function applyAction(op,p){
+ if(op==='add')state.custom.push(p.rule);
+ else if(op==='remove')state.custom=state.custom.filter(function(x){return x.id!==p.ruleId;});
+ else if(op==='exclude')state.overrides.push({ruleId:p.ruleId,scope:p.scope});
+ else if(op==='restore')state.overrides=state.overrides.filter(function(o){return !(o.ruleId===p.ruleId&&o.scope===p.scope);});
+}
+function previewImpact(op,p,year){
+ const rid=op==='add'?p.rule.id:p.ruleId;
+ const snap={custom:state.custom.slice(),overrides:state.overrides.slice()};
+ const before=activeSiteIds(rid,year);
+ applyAction(op,p);
+ const after=activeSiteIds(rid,year);
+ state.custom=snap.custom;state.overrides=snap.overrides;
+ const changed=NODES.filter(function(n){return n.tier==='site'&&((before.indexOf(n.id)>=0)!==(after.indexOf(n.id)>=0));});
+ const agents=changed.reduce(function(a,s){return a+s.agents;},0);
+ return {rows:changed.map(function(s){return {name:s.name,region:byId[s.parent].name,agents:s.agents};}),sites:changed.length,agents:agents,intervals:agents*INTERVALS_PER_DAY};
+}
+
+const viewCal=$('view-calendar'),viewList=$('view-list'),dlg=$('dlg'),stepForm=$('step-form'),stepImpact=$('step-impact'),scPanel=$('sc-panel'),scToggle=$('sc-toggle');
+const fName=$('f-name'),fDate=$('f-date'),fKind=$('f-kind'),fRecur=$('f-recur'),fErr=$('f-err');
+let toastTimer=null;
+function toast(msg){const t=$('toast');t.textContent=msg;t.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.style.display='none';},3000);}
+
+function visibleEntries(){const q=state.search;return compose(state.scope,state.year).filter(function(e){return state.tiers[e.tier]&&(!q||e.name.toLowerCase().indexOf(q)>=0);});}
+function sortEntries(list){const key=state.sort.key,dir=state.sort.dir,to={country:0,region:1,site:2};
+ return list.slice().sort(function(a,b){let c=0;
+  if(key==='date')c=a.date<b.date?-1:a.date>b.date?1:0;
+  else if(key==='name')c=a.name.localeCompare(b.name);
+  else c=(to[a.tier]-to[b.tier])||(a.date<b.date?-1:a.date>b.date?1:0);
+  return c*dir;});}
+
+function renderShell(){
+ const sel=$('site-select');
+ sel.innerHTML=NODES.map(function(n){return '<option value="'+n.id+'">'+'   '.repeat(depth(n.id)).split('').map(function(){return String.fromCharCode(160)||' ';}).join('').replace(/ /g,' ')+esc(n.name)+' ('+TIER[n.tier]+')</option>';}).join('');
+ sel.value=state.scope;
+ $('tz-text').textContent=byId[state.scope].tz;
+ const c=$('notif-count');c.textContent=String(state.unread);c.hidden=state.unread===0;
+ $('notif-list').innerHTML=state.notifs.map(function(n){return '<li>'+esc(n.text)+'<span class="when">'+esc(n.when)+'</span></li>';}).join('');
+}
+function renderTree(){
+ $('tree').innerHTML=NODES.map(function(n){const d=depth(n.id);const agents=n.tier==='site'?n.agents:agentsUnder(n.id);const on=n.id===state.scope;
+  return '<button class="node'+(on?' active':'')+'" data-action="scope" data-id="'+n.id+'" aria-pressed="'+on+'" style="padding-left:'+(12+d*18)+'px"><span class="nname">'+esc(n.name)+'</span><span class="ntier">'+TIER[n.tier]+'</span><span class="cnt">'+fmt(agents)+'</span></button>';}).join('');
+}
+function renderHeader(){
+ const node=byId[state.scope];
+ $('crumb').innerHTML=chain(state.scope).map(function(n){return esc(n.name);}).join(' &gt; ')+' <span class="hint">('+TIER[node.tier]+')</span>';
+ const all=compose(state.scope,state.year);const active=all.filter(function(e){return !e.excluded;}).length;const sites=sitesUnder(state.scope);
+ $('stats').textContent=fmt(active)+' non-working days in '+state.year+', '+fmt(agentsUnder(state.scope))+' agents at '+sites.length+(sites.length===1?' site':' sites');
+ $('year').value=String(state.year);
+}
+function chip(e){return '<span class="chip '+(e.excluded?'worked':e.tier)+'" title="'+esc(e.name+', '+TIER[e.tier]+': '+e.scopeName+(e.excluded?', worked, set at '+e.excludedBy:''))+'">'+esc(e.name)+'</span>';}
+function renderCalendar(){
+ const y=state.year,m=state.month;const byDate={};
+ visibleEntries().forEach(function(e){(byDate[e.date]=byDate[e.date]||[]).push(e);});
+ const lead=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),total=Math.ceil((lead+days)/7)*7;
+ let html=DOW.map(function(d){return '<div class="dow">'+d+'</div>';}).join('');
+ for(let i=0;i<total;i++){const d=new Date(y,m,i-lead+1),k=iso(d),out=d.getMonth()!==m,items=byDate[k]||[];
+  html+='<button class="day'+(out?' out':'')+'" data-action="day" data-date="'+k+'" aria-label="'+fmtLong(d)+(items.length?', '+items.length+(items.length===1?' entry':' entries'):'')+'. Add a non-working day"><span class="dnum">'+d.getDate()+'</span>'+items.map(chip).join('')+'</button>';}
+ $('cal').innerHTML=html;
+ $('month-label').textContent=MONTHS[m]+' '+y;
+}
+function actionHtml(e){
+ if(e.excluded){if(e.excludedAt===state.scope)return '<button class="btn btn-secondary btn-sm" data-action="row-action" data-op="restore" data-rule="'+e.ruleId+'">Restore</button>';return '<span class="hint">Set at '+esc(e.excludedBy)+'</span>';}
+ if(e.custom&&e.scopeId===state.scope)return '<button class="btn btn-secondary btn-sm" data-action="row-action" data-op="remove" data-rule="'+e.ruleId+'">Remove</button>';
+ return '<button class="btn btn-secondary btn-sm" data-action="row-action" data-op="exclude" data-rule="'+e.ruleId+'">Work this day</button>';
+}
+function renderList(){
+ const rows=sortEntries(visibleEntries());
+ $('list-body').innerHTML=rows.map(function(e){return '<tr data-date="'+e.date+'" data-name="'+esc(e.name)+'" data-tier="'+e.tier+'"><td>'+fmtDate(e.date)+(e.observed?'<span class="sub">moved from '+fmtDate(e.rawDate)+'</span>':'')+'</td><td title="'+esc(e.name)+'">'+esc(e.name)+(e.recurring?'':'<span class="sub">this year only</span>')+'</td><td>'+KIND[e.kind]+'</td><td><span class="tag '+e.tier+'">'+TIER[e.tier]+'</span>'+esc(e.scopeName)+'</td><td><span class="dot '+(e.excluded?'amber':'green')+'"></span>'+(e.excluded?'Worked':'Non-working')+'</td><td>'+actionHtml(e)+'</td></tr>';}).join('');
+ $('list-empty').hidden=rows.length>0;
+ ['date','name','tier'].forEach(function(k){const s=$('si-'+k);if(state.sort.key===k){s.innerHTML=state.sort.dir===1?'<path d="M12 6l5 6H7z"/>':'<path d="M12 18l-5-6h10z"/>';}else s.innerHTML='';});
+}
+function renderViews(){renderHeader();renderCalendar();renderList();}
+function render(){renderShell();renderTree();renderViews();}
+function selectScope(id){if(!byId[id])return;state.scope=id;render();}
+function setView(v){state.view=v;document.querySelectorAll('.tab').forEach(function(t){const on=t.dataset.view===v;t.classList.toggle('active',on);t.setAttribute('aria-selected',String(on));});viewCal.hidden=v!=='calendar';viewList.hidden=v!=='list';}
+function moveMonth(dir){let m=state.month+dir;
+ if(m<0){if(state.year>2026){state.year--;m=11;}else{toast('2026 is the earliest year loaded');return;}}
+ if(m>11){if(state.year<2027){state.year++;m=0;}else{toast('2027 is the latest year loaded');return;}}
+ state.month=m;renderViews();}
+function resetFilters(){state.search='';$('search').value='';state.tiers={country:true,region:true,site:true};document.querySelectorAll('input[data-action="tier"]').forEach(function(c){c.checked=true;});state.year=2026;state.month=0;state.sort={key:'date',dir:1};setView('calendar');render();}
+
+function toggleNotif(force){const pop=$('notif-pop'),btn=document.querySelector('[data-action="notif"]');const open=force===undefined?pop.hidden:force;
+ if(open){state.unread=0;renderShell();pop.hidden=false;btn.setAttribute('aria-expanded','true');}else{pop.hidden=true;btn.setAttribute('aria-expanded','false');}}
+function closeNotif(){if(!$('notif-pop').hidden)toggleNotif(false);}
+function addNotif(text){state.notifs.unshift({text:text,when:'Just now'});state.unread++;renderShell();}
+
+function openDialog(step,opener){state.opener=opener||document.activeElement;dlg.classList.add('open');showStep(step);}
+function showStep(s){stepForm.hidden=s!=='form';stepImpact.hidden=s!=='impact';
+ $('dlg-title').textContent=s==='form'?'Add non-working day':'Review impact: '+(state.pending?state.pending.label:'');
+ const first=s==='form'?fName:$('impact-confirm');setTimeout(function(){first.focus();},0);}
+function closeDialog(){dlg.classList.remove('open');state.pending=null;if(state.opener&&state.opener.focus)state.opener.focus();state.opener=null;}
+function openAdd(date,opener){const node=byId[state.scope],sites=sitesUnder(state.scope);
+ fName.value='';fDate.value=date||'';fKind.value='closure';fRecur.checked=false;fErr.textContent='';
+ $('dlg-scope').textContent='Added at '+node.name+' ('+TIER[node.tier]+'). Applies to '+fmt(agentsUnder(state.scope))+' agents at '+sites.length+(sites.length===1?' site.':' sites.');
+ openDialog('form',opener);}
+function reviewAdd(){
+ const name=fName.value.trim(),date=fDate.value;
+ if(!name){fErr.textContent='Enter a name for the day.';fName.focus();return;}
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)){fErr.textContent='Choose a date.';fDate.focus();return;}
+ const d=fromIso(date);
+ if(isNaN(d.getTime())||d.getFullYear()<2026||d.getFullYear()>2027){fErr.textContent='Choose a date in 2026 or 2027.';fDate.focus();return;}
+ fErr.textContent='';
+ const rule={id:'c'+(state.seq++),scope:state.scope,name:name,kind:fKind.value,rule:fRecur.checked?{t:'fixed',m:d.getMonth()+1,d:d.getDate()}:{t:'once',date:date},obs:null,src:'admin',custom:true};
+ const year=d.getFullYear();
+ state.pending={type:'add',rule:rule,year:year,label:name,dateText:fmtDate(date)+', '+year+(fRecur.checked?' and every year':''),from:'form',impact:previewImpact('add',{rule:rule},year)};
+ renderImpact();showStep('impact');}
+function startAction(op,ruleId,opener){
+ const e=compose(state.scope,state.year).find(function(x){return x.ruleId===ruleId;});if(!e)return;
+ state.pending={type:op,ruleId:ruleId,scope:state.scope,year:state.year,label:e.name,dateText:fmtDate(e.date)+', '+state.year,from:'list',impact:previewImpact(op,{ruleId:ruleId,scope:state.scope},state.year)};
+ renderImpact();openDialog('impact',opener);}
+function renderImpact(){
+ const p=state.pending,i=p.impact;
+ const verb={add:'Adding',remove:'Removing',exclude:'Marking as a working day:',restore:'Restoring'}[p.type];
+ $('impact-summary').innerHTML='<p>'+verb+' <strong>'+esc(p.label)+'</strong> ('+esc(p.dateText)+') at <strong>'+esc(byId[state.scope].name)+'</strong>.</p><p class="impact-line"><strong>'+fmt(i.agents)+'</strong> agents and <strong>'+fmt(i.intervals)+'</strong> intervals across '+i.sites+(i.sites===1?' site':' sites')+' will be recalculated when you confirm. Nothing changes until then.</p>';
+ $('impact-body').innerHTML=i.rows.length?i.rows.map(function(s){return '<tr><td>'+esc(s.name)+'</td><td>'+esc(s.region)+'</td><td style="text-align:right">'+fmt(s.agents)+'</td></tr>';}).join(''):'<tr><td colspan="3">No schedules change.</td></tr>';
+ $('impact-back').textContent=p.from==='form'?'Back':'Cancel';
+ $('impact-confirm').textContent={add:'Add and recalculate',remove:'Remove and recalculate',exclude:'Work this day and recalculate',restore:'Restore and recalculate'}[p.type];}
+function commitPending(){
+ const p=state.pending;if(!p)return;
+ if(p.type==='add'){applyAction('add',{rule:p.rule});const q=p.rule.rule;const d=q.t==='once'?fromIso(q.date):new Date(p.year,q.m-1,q.d);state.year=d.getFullYear();state.month=d.getMonth();}
+ else applyAction(p.type,{ruleId:p.ruleId,scope:p.scope});
+ const i=p.impact,label=p.label;
+ closeDialog();render();
+ if(i.agents>0){toast('Saved. Recalculating '+fmt(i.agents)+' agent schedules in the background.');
+  setTimeout(function(){const msg='Recalculation complete: '+label+', '+fmt(i.agents)+' agents, '+fmt(i.intervals)+' intervals across '+i.sites+(i.sites===1?' site':' sites');addNotif(msg);toast(msg);},1500);}
+ else toast('Saved. No schedules were affected.');}
+
+const ACTIONS={
+ 'nav':function(b){if(b.classList.contains('active')){resetFilters();toast('Holiday calendars reset to defaults.');}else toast(b.textContent.trim()+' is outside this prototype. Screen 7, Holiday Calendar, only.');},
+ 'site-select':function(t){selectScope(t.value);},
+ 'notif':function(){toggleNotif();},
+ 'year':function(t){state.year=Number(t.value);renderViews();},
+ 'view':function(b){setView(b.dataset.view);},
+ 'search':function(t){state.search=t.value.trim().toLowerCase();renderViews();},
+ 'tier':function(t){state.tiers[t.value]=t.checked;renderViews();},
+ 'open-add':function(b){openAdd(null,b);},
+ 'day':function(b){openAdd(b.dataset.date,b);},
+ 'month':function(b){moveMonth(Number(b.dataset.dir));},
+ 'scope':function(b){selectScope(b.dataset.id);},
+ 'sort':function(b){const k=b.dataset.key;if(state.sort.key===k)state.sort.dir=-state.sort.dir;else state.sort={key:k,dir:1};renderList();},
+ 'row-action':function(b){startAction(b.dataset.op,b.dataset.rule,b);},
+ 'close-dialog':function(){closeDialog();},
+ 'impact-back':function(){if(state.pending&&state.pending.from==='form')showStep('form');else closeDialog();},
+ 'impact-confirm':function(){commitPending();},
+ 'toggle-checks':function(){toggleChecks();},
+ 'add-review':function(){reviewAdd();}
+};
+document.addEventListener('click',function(e){const b=e.target.closest('button[data-action]');
+ if(b){ACTIONS[b.dataset.action](b,e);if(b.dataset.action!=='notif'&&!b.closest('#notif-wrap'))closeNotif();return;}
+ if(!e.target.closest('#notif-wrap'))closeNotif();});
+document.addEventListener('change',function(e){const t=e.target;if(t.matches('select[data-action], input[type=checkbox][data-action]'))ACTIONS[t.dataset.action](t,e);});
+document.addEventListener('input',function(e){const t=e.target;if(t.matches('input[type=search][data-action]'))ACTIONS[t.dataset.action](t,e);});
+$('add-form').addEventListener('submit',function(e){e.preventDefault();ACTIONS['add-review']();});
+document.addEventListener('keydown',function(e){const t=e.target,typing=t&&(t.tagName==='INPUT'||t.tagName==='SELECT'||t.tagName==='TEXTAREA');
+ if(e.key==='?'&&!typing){e.preventDefault();toggleChecks();}
+ else if(e.key==='Escape'){if(dlg.classList.contains('open'))closeDialog();else if(!scPanel.hidden)toggleChecks(false);closeNotif();}});
+
+function hexKey(h){return [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16),1].join(',');}
+function colKey(s){const m=/rgba?\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*(?:,\s*([\d.]+)\s*)?\)/.exec(s||'');if(!m)return String(s);const a=m[4]===undefined?1:Math.round(parseFloat(m[4])*100)/100;return [Math.round(m[1]),Math.round(m[2]),Math.round(m[3]),a].join(',');}
+const ALLOWED={};['#5AB274','#158235','#F8F8F8','#FFFFFF','#E5E5E5','#202020','#757575','#F5A623','#D0021B'].forEach(function(h){ALLOWED[hexKey(h)]=true;});['90,178,116,0.12','0,0,0,0.23','0,0,0,0.4','0,0,0,0','none'].forEach(function(k){ALLOWED[k]=true;});
+function colourViolations(){const out=[],seen={};let scanned=0;
+ document.querySelectorAll('body *').forEach(function(el){const tag=el.tagName;if(tag==='SCRIPT'||tag==='STYLE'||tag==='OPTION')return;const cs=getComputedStyle(el);scanned++;
+  const props=[['background',cs.backgroundColor],['text',cs.color]];
+  ['Top','Right','Bottom','Left'].forEach(function(s){if(cs['border'+s+'Style']!=='none'&&parseFloat(cs['border'+s+'Width'])>0)props.push(['border',cs['border'+s+'Color']]);});
+  if(cs.outlineStyle!=='none'&&parseFloat(cs.outlineWidth)>0)props.push(['outline',cs.outlineColor]);
+  if(el instanceof SVGElement)props.push(['fill',cs.fill]);
+  props.forEach(function(pv){const k=colKey(pv[1]);if(!ALLOWED[k]){const key=pv[0]+' '+pv[1];if(!seen[key]){seen[key]=true;const cls=typeof el.className==='string'&&el.className?'.'+el.className.split(' ')[0]:'';out.push(el.tagName.toLowerCase()+cls+' '+pv[0]+' '+pv[1]);}}});
+ });
+ out.scanned=scanned;return out;}
+function withListVisible(fn){const wasList=!viewList.hidden;if(!wasList){viewList.hidden=false;viewCal.hidden=true;}try{return fn();}finally{if(!wasList){viewList.hidden=true;viewCal.hidden=false;}}}
+
+const CHECKS=[
+{id:'AC-1',check:'Selecting a site shows its own days plus the days inherited from its region and country, each labelled with the tier it comes from; a day overridden at a region is worked at every site under it while the country still observes it (FR-HC-001).',run:function(){
+ const fails=[],y=state.year,phx=compose('phx',y),n={country:0,region:0,site:0};
+ phx.forEach(function(e){n[e.tier]++;});
+ if(!(n.country>0&&n.region>0&&n.site>0))fails.push('Phoenix, AZ is missing a tier: '+n.country+' country, '+n.region+' region, '+n.site+' site');
+ if(!phx.every(function(e){return TIER[e.tier]&&e.scopeName;}))fails.push('an entry has no tier label');
+ const ov={ruleId:'us-columbus',scope:'us-central'};state.overrides.push(ov);
+ const f=function(id){return compose(id,y).find(function(e){return e.ruleId==='us-columbus';});};
+ const dal=f('dal'),oma=f('oma'),us=f('us'),atl=f('atl');
+ state.overrides=state.overrides.filter(function(o){return o!==ov;});
+ if(!(dal&&dal.excluded&&dal.excludedBy==='US Central'))fails.push('Dallas, TX did not inherit the US Central override');
+ if(!(oma&&oma.excluded))fails.push('Omaha, NE did not inherit the US Central override');
+ if(!(us&&!us.excluded))fails.push('United States lost Columbus Day');
+ if(!(atl&&!atl.excluded))fails.push('Atlanta, GA (US East) was affected by a US Central override');
+ return {status:fails.length?'fail':'pass',detail:fails.length?fails.join('; '):'Phoenix, AZ '+y+': '+n.country+' country, '+n.region+' region, '+n.site+' site entries, all labelled. Scratch override of Columbus Day at US Central: Dallas, TX and Omaha, NE worked; United States and Atlanta, GA still observe it.'};}},
+{id:'AC-2',check:'Public holidays for 2026 are pre-loaded for every configured country, and recurring days regenerate on their correct 2027 dates, including floating dates and observed substitutes (FR-HC-002, FR-HC-003).',run:function(){
+ const wrong=[];
+ const exp=[['us','us-mlk',2026,'2026-01-19'],['us','us-mlk',2027,'2027-01-18'],['gb','gb-goodfri',2026,'2026-04-03'],['gb','gb-goodfri',2027,'2027-03-26'],['us','us-thanks',2026,'2026-11-26'],['us','us-thanks',2027,'2027-11-25'],['ca','ca-victoria',2026,'2026-05-18'],['ca','ca-victoria',2027,'2027-05-24'],['gb','gb-boxing',2026,'2026-12-28'],['gb','gb-boxing',2027,'2027-12-28'],['us','us-july4',2026,'2026-07-03'],['ph','ph-heroes',2026,'2026-08-31']];
+ exp.forEach(function(x){const e=compose(x[0],x[2]).find(function(q){return q.ruleId===x[1];});const got=e?e.date:'missing';if(got!==x[3])wrong.push(x[1]+' '+x[2]+': got '+got+', expected '+x[3]);});
+ const counts=NODES.filter(function(n){return n.tier==='country';}).map(function(c){const cnt=function(y){return compose(c.id,y).filter(function(e){return e.src==='provider'&&e.kind==='public';}).length;};const a=cnt(2026),b=cnt(2027);if(a<3||b<3)wrong.push(c.name+' has fewer than 3 preloaded public holidays');return c.name+' '+a+'/'+b;});
+ return {status:wrong.length?'fail':'pass',detail:wrong.length?wrong.join('; '):exp.length+' known dates match across 2026 and 2027 (MLK Day, Good Friday, Thanksgiving, Victoria Day, UK Boxing Day substitute, Independence Day observed, National Heroes Day). Preloaded public holidays 2026/2027: '+counts.join(', ')+'.'};}},
+{id:'AC-3',check:'A non-working day added at any tier is saved and is still there after switching to another scope and back (FR-HC-004).',run:function(){
+ const prevScope=state.scope,y=state.year;
+ const rule={id:'sc-'+Date.now(),scope:prevScope,name:'Self-check entry',kind:'training',rule:{t:'once',date:y+'-'+pad(state.month+1)+'-15'},obs:null,src:'admin',custom:true};
+ applyAction('add',{rule:rule});
+ const other=chain(prevScope)[0].id==='gb'?'us':'gb';
+ selectScope(other);
+ const notThere=!compose(other,y).some(function(e){return e.ruleId===rule.id;});
+ selectScope(prevScope);
+ const there=compose(prevScope,y).some(function(e){return e.ruleId===rule.id;});
+ const inDom=$('list-body').textContent.indexOf('Self-check entry')>=0;
+ applyAction('remove',{ruleId:rule.id});render();
+ const fails=[];if(!there)fails.push('entry was lost after re-selecting '+byId[prevScope].name);if(!notThere)fails.push('entry leaked into '+byId[other].name);
+ return {status:fails.length?'fail':'pass',detail:fails.length?fails.join('; '):'Added a test entry at '+byId[prevScope].name+', switched to '+byId[other].name+' and back: still saved'+(inDom?' and rendered in the list':'')+'; test entry removed afterwards.'};}},
+{id:'AC-4',check:'The calendar view colour-codes days by tier, and the list view sorts by date, name and tier (FR-HC-005).',run:function(){
+ const fails=[];
+ const sig=function(t){const el=document.querySelector('#legend .chip.'+t);if(!el)return 'missing '+t;const cs=getComputedStyle(el);return [cs.backgroundColor,cs.borderLeftColor,cs.borderLeftStyle,cs.borderLeftWidth,cs.color].join('|');};
+ const sigs=['country','region','site'].map(sig);
+ if(new Set(sigs).size!==3)fails.push('tier chips are not three distinct styles');
+ const prevSort={key:state.sort.key,dir:state.sort.dir},to={country:0,region:1,site:2};let rowCount=0;
+ ['date','name','tier'].forEach(function(k){state.sort={key:k,dir:1};renderList();const rows=Array.prototype.slice.call($('list-body').querySelectorAll('tr'));rowCount=rows.length;
+  for(let i=1;i<rows.length;i++){const a=rows[i-1].dataset,b=rows[i].dataset;let ok;
+   if(k==='date')ok=a.date<=b.date;else if(k==='name')ok=a.name.localeCompare(b.name)<=0;else ok=to[a.tier]<=to[b.tier];
+   if(!ok){fails.push('list not sorted by '+k+' at row '+(i+1));break;}}});
+ state.sort=prevSort;renderList();
+ const chips=$('cal').querySelectorAll('.chip').length;
+ return {status:fails.length?'fail':'pass',detail:fails.length?fails.join('; '):'Three distinct tier styles in the legend; '+chips+' chips drawn for '+MONTHS[state.month]+' '+state.year+'; list order verified for date, name and tier on '+rowCount+' rows.'};}},
+{id:'AC-5',check:'Before a day is added or removed, the impact shows the number of agents and intervals affected, and nothing changes until it is confirmed (FR-HC-006).',run:function(){
+ const fails=[],before=state.custom.length,date=state.year+'-06-17';
+ const rule={id:'sc-impact',scope:state.scope,name:'Self-check impact',kind:'closure',rule:{t:'once',date:date},obs:null,src:'admin',custom:true};
+ const imp=previewImpact('add',{rule:rule},state.year);
+ if(!(isFinite(imp.agents)&&imp.agents>0))fails.push('agents not computed');
+ if(imp.intervals!==imp.agents*INTERVALS_PER_DAY)fails.push('intervals are not agents x '+INTERVALS_PER_DAY);
+ if(state.custom.length!==before)fails.push('preview changed saved data');
+ openAdd(date,null);fName.value='Self-check impact';fKind.value='closure';reviewAdd();
+ const shown=!stepImpact.hidden&&$('impact-summary').textContent.indexOf(fmt(imp.agents))>=0&&$('impact-summary').textContent.indexOf(fmt(imp.intervals))>=0;
+ if(!shown)fails.push('impact step did not show the agent and interval counts');
+ if(state.custom.length!==before)fails.push('data changed before confirm');
+ closeDialog();
+ return {status:fails.length?'fail':'pass',detail:fails.length?fails.join('; '):'Add at '+byId[state.scope].name+': '+fmt(imp.agents)+' agents, '+fmt(imp.intervals)+' intervals at '+imp.sites+' sites shown in the dialog; saved data stayed at '+before+' custom entries until confirm.'};}},
+{id:'AC-6',check:'Chrome follows the attached DS tokens: buttons 36px tall with 4px radius, sidebar 256px, list rows 48px, and only token colours appear on screen.',run:function(){
+ const fails=[];
+ const btns=Array.prototype.slice.call(document.querySelectorAll('button.btn')).filter(function(b){return b.getBoundingClientRect().height>0;});
+ let badH=0,badR=0;btns.forEach(function(b){if(Math.abs(b.getBoundingClientRect().height-36)>0.5)badH++;if(getComputedStyle(b).borderTopLeftRadius!=='4px')badR++;});
+ if(badH)fails.push(badH+' of '+btns.length+' buttons are not 36px tall');if(badR)fails.push(badR+' buttons are not 4px radius');
+ const sw=$('sidebar').getBoundingClientRect().width;if(Math.abs(sw-256)>0.5)fails.push('sidebar is '+sw+'px');
+ const rowInfo=withListVisible(function(){const rows=Array.prototype.slice.call($('list-body').querySelectorAll('tr'));let bad=0;rows.forEach(function(tr){if(Math.abs(tr.getBoundingClientRect().height-48)>1)bad++;});return {n:rows.length,bad:bad};});
+ if(rowInfo.bad)fails.push(rowInfo.bad+' of '+rowInfo.n+' list rows are not 48px');
+ const viol=colourViolations();if(viol.length)fails.push('non-token colours: '+viol.slice(0,5).join(', '));
+ return {status:fails.length?'fail':'pass',detail:fails.length?fails.join('; '):btns.length+' visible buttons at 36px with 4px radius, sidebar '+sw+'px, '+rowInfo.n+' list rows at 48px, '+viol.scanned+' elements use token colours only.'};}},
+{id:'AC-7',check:'The screen works at 1440 and 1920 wide: no horizontal scrollbar, no broken value text on screen, and every control has a handler.',run:function(){
+ const fails=[],de=document.documentElement,w=window.innerWidth;
+ if(de.scrollWidth>de.clientWidth)fails.push('page scrolls horizontally at '+w+'px ('+de.scrollWidth+' wider than '+de.clientWidth+')');
+ const main=$('main');if(main.scrollWidth>main.clientWidth+1)fails.push('main content overflows its width');
+ const lw=withListVisible(function(){const el=$('list-wrap');return el.scrollWidth-el.clientWidth;});if(lw>1)fails.push('list table wider than its card by '+lw+'px');
+ const text=$('app').innerText+' '+(dlg.classList.contains('open')?dlg.innerText:'')+' '+$('toast').textContent+' '+$('badge').textContent;
+ const m=text.match(/\bundefined\b|\bNaN\b/g);if(m)fails.push('broken value text found '+m.length+(m.length===1?' time':' times'));
+ const ctrls=Array.prototype.slice.call(document.querySelectorAll('button, select, input'));
+ const unbound=ctrls.filter(function(c){const a=c.getAttribute('data-action');if(a&&ACTIONS[a])return false;const f=c.closest('form[data-action]');return !(f&&ACTIONS[f.getAttribute('data-action')]);}).map(function(c){return c.tagName.toLowerCase()+(c.id?'#'+c.id:'');});
+ if(unbound.length)fails.push('controls without a handler: '+unbound.slice(0,6).join(', '));
+ const named=(w===1440||w===1920)?'':' Named widths are 1440 and 1920; resize the window to the other width and reopen the panel.';
+ return {status:fails.length?'fail':'pass',detail:(fails.length?fails.join('; '):'Window '+w+'px: no horizontal overflow on the page, main area or list; '+fmt(text.length)+' characters of visible text scanned; '+ctrls.length+' controls all bound.')+named};}},
+{id:'AC-8',check:'The add flow can be completed with the keyboard only (assumed from the source, NFR-U-004).',run:function(){
+ return {status:'manual',detail:'Tab to "Add non-working day" and press Enter, type a name and a date, Tab to "Review impact" and press Enter, then Tab to "Add and recalculate" and press Enter. Under a minute.'};}}
+];
+function runChecks(){return CHECKS.map(function(c){try{const res=c.run();return {id:c.id,check:c.check,status:res.status,detail:res.detail};}catch(err){return {id:c.id,check:c.check,status:'fail',detail:'Check threw: '+(err&&err.message?err.message:String(err))};}});}
+window.__selfcheck=runChecks;
+function renderChecks(){const res=runChecks(),n={pass:0,fail:0,manual:0};res.forEach(function(x){n[x.status]++;});
+ $('sc-summary').textContent=n.pass+' pass, '+n.fail+' fail, '+n.manual+' manual';
+ $('sc-body').innerHTML=res.map(function(x){return '<tr><td class="sc-id">'+x.id+'</td><td>'+esc(x.check)+'</td><td class="sc-status"><span class="dot '+(x.status==='pass'?'green':x.status==='fail'?'red':'amber')+'"></span>'+x.status+'</td><td class="sc-detail">'+esc(x.detail)+'</td></tr>';}).join('');}
+function toggleChecks(force){const open=force===undefined?scPanel.hidden:force;
+ if(open){renderChecks();scPanel.hidden=false;scToggle.setAttribute('aria-expanded','true');}
+ else{scPanel.hidden=true;scToggle.setAttribute('aria-expanded','false');}}
+
+render();
+})();
+</script>
+</body>
+</html>
