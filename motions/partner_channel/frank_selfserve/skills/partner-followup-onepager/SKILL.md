@@ -24,7 +24,7 @@ A finished account brief in the conversation (run partner-account-brief first if
 - Dynamic Workforce Orchestration: continuously sensing demand, reallocating work, and supporting employees as conditions shift through the day, in the idle seconds between scheduled activities.
 - Net retention above 114% in 2025; record net new bookings in 2025; customer savings at an all-time high for full-year 2025. (BusinessWire, Feb 18 2026)
 - About 350,000 contact center professionals on platform.
-- NOTHING else: no dollar savings for this account, no named or blinded customer savings figures, no ROI multiples, no claims from memory. A stronger number needs Dallas to check the Value Repository first.
+- NOTHING else: no dollar savings for this account, no named or blinded customer savings figures, no ROI multiples, no claims from memory. A stronger claim goes on the page only after it's confirmed in the Intradiem Value Repository (check the copy in this project's knowledge; if it isn't confirmed there, it stays off the page).
 
 ## Format
 Produce a single HTML file (artifact) sized to print as one page. Intradiem brand: Roboto (Google Fonts, weights 400/500/700/900, headlines 900 with letter-spacing -.02em), Roboto Mono for labels (uppercase, letterspaced), ink #202020 on white, deep forest #014637 for the header band, green #2DB56E and green-600 #228752 for accents and section labels, orange #F58220 ONLY for the single next-step accent, light rule lines #E0E0E0, radius 8px. Include the Intradiem logo using the SVG symbol in this skill's logo_symbol.html asset (copy it verbatim, set color #FFFFFF on the forest header). No other colors, no emoji, no em dashes. Body copy stays under 90 words per section; the page must breathe.

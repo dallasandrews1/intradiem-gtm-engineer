@@ -1,14 +1,14 @@
 # 3xG Pilot, account tracker (paste into a Slack canvas)
 
 ## How this works
-Drop an account name under Requested and the brief comes back as a link within a day. Move rows right as they progress. Briefs marked partner-safe can go to Jeremy; internal versions stay inside Intradiem.
+Drop an account name under Requested and the brief comes back as a link within a day. Move rows right as they progress. Briefs marked partner-safe can go to Jeremy; internal versions stay inside Intradiem and come back through the request channel.
 
 ## Requested
 - (account name, who asked, date)
 
 ## Brief ready
-- Ally Financial: partner-safe https://gtm-partner-pilot.pages.dev/briefs/ally.html (internal: ask Dallas)
-- Maximus: partner-safe https://gtm-partner-pilot.pages.dev/briefs/maximus.html (internal: ask Dallas)
+- Ally Financial: partner-safe https://gtm-partner-pilot.pages.dev/briefs/ally.html (internal version on request)
+- Maximus: partner-safe https://gtm-partner-pilot.pages.dev/briefs/maximus.html (internal version on request)
 
 ## In sequence
 - (account, wave date, sender)
