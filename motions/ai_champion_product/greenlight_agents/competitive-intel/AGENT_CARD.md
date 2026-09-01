@@ -24,3 +24,14 @@
 - Answer with a partial brief when the competitor, account, vertical, or raw material is missing. It asks for all of it in one message first.
 
 **Owner:** Dallas Andrews
+
+## Greenlight form (Create Agent)
+
+- **Name, Description, Conversation Starters:** as above.
+- **Instructions:** paste AGENT_INSTRUCTIONS.md in full.
+- **Knowledge:** Use Knowledge ON: Intradiem_Value_Repository.md (required).
+- **Actions:** All OFF for v1. (v2 option: Web Search ON, with one added instruction line saying what it may search for.)
+- **Share This Agent:** everyone in the organization.
+- **Default Model:** the most capable Claude model the picker offers.
+- **Knowledge Cutoff Date:** leave blank.
+- **Reminders:** Internal brief only. Label inferences as inferences. Any figure not in the attached repository is [UNVERIFIED]. No em dashes.
