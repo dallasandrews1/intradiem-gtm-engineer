@@ -8,7 +8,7 @@ Greenlight is powered by Claude. Agents there carry an instructions field, attac
 
 | # | Agent | Folder | For | Nearest existing Greenlight agent | Knowledge files |
 |---|---|---|---|---|---|
-| 1 | Prototype builder | `prototype-builder/` (instructions in `../pm_kit/PROJECT_INSTRUCTIONS.md`) | Product managers | MikeG_PRD_HelperAgent answers questions about a PRD; this one builds the screen from it. Complementary. | `pm_kit/DS_Tokens.md`, `pm_kit/Prototype_Brief_Template.docx` |
+| 1 | Prototype builder | `prototype-builder/` (instructions in `../pm_kit/PROJECT_INSTRUCTIONS.md`) | Product managers | MikeG_PRD_HelperAgent answers questions about a PRD; this one builds the screen from it. Complementary. **Primary surface is a shared Claude enterprise project** (Greenlight's Sonnet-only model and reply limit cannot hold a full screen; the Greenlight agent, with `pm_kit/GREENLIGHT_ADDENDUM.md`, is for single-panel screens only). | `pm_kit/DS_Tokens.md`, `pm_kit/Prototype_Brief_Template.docx` |
 | 2 | Reply handler | `reply-handler/` | Sales reps, BDRs | Roleplay Agent is practice; this drafts the reply to a real objection. No overlap. | Value Repository (required), Customer Value Registry (optional) |
 | 3 | Competitive Intel | `competitive-intel/` | AEs, AMs, SEs, product marketing | None. | Value Repository (required) |
 | 4 | Business Case Builder | `business-case/` | AEs, SCs, CS leads before an Economic Buyer meeting | Customer Call Insights Assistant and ConvoIQ summarize a call; this turns the numbers in it into the one-page economic case. Complementary: paste their summary in. | Value Repository (required), Customer Value Registry (optional) |
@@ -23,7 +23,7 @@ Name, Description (optional), Instructions (optional), Conversation Starters (on
 
 ## Create order
 
-1. Prototype builder (Product goal, first PM pairing depends on it).
+1. Prototype builder as a shared Claude project (Product goal, first PM pairing depends on it); the Greenlight agent optional, with the addendum.
 2. Pre-Mortem (no knowledge file, no gate dependency, useful to everyone, safe to publish today).
 3. Competitive Intel and Reply handler (highest seller pull; internal-only or draft-only output).
 4. Business Case Builder and Signal to Play.
