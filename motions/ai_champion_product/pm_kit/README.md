@@ -16,7 +16,7 @@ Turn a one-page brief (or an existing PRD) into a working prototype you can clic
 2. Open `PROJECT_INSTRUCTIONS.md`, copy everything, and paste it into the Project's instructions.
 3. Upload `DS_Tokens.md` to the Project's files.
 
-If your Greenlight does not show Projects, do this instead: start a new chat, paste the whole of `PROJECT_INSTRUCTIONS.md` as your first message, attach `DS_Tokens.md`, and carry on from step 2 below in the same chat.
+If a shared **Prototype builder** agent already exists in your Greenlight, skip the set-up: open that agent, attach your brief or PRD, and carry on from step 2 below. (The agent carries the same instructions and token sheet; one person sets it up once for everyone.)
 
 ## Build a prototype
 
