@@ -24,6 +24,7 @@ def build(src: pathlib.Path) -> pathlib.Path:
     html = html.replace("<!--FONTS-->", "<style>\n" + fonts + "\n" + base_css + "</style>")
     html = html.replace("<!--LOGO-->", logo)
     html = html.replace("<!--PRESENT-->", "<script>\n" + present + "</script>")
+    html = re.sub(r"<!--/?S(?::[A-Z]+)?-->", "", html)  # live-stat markers (pmo_rows.py) never ship
     out = src.with_name(src.name.replace(".src.html", ".html"))
     out.write_text(html)
     return out
