@@ -373,3 +373,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Strike Room Cowork Connector Gap Sep1](strike-room-cowork-connector-gap-sep1.md) — work-Mac Cowork strike room "could not load accounts"; artifact owned by Enterprise account, intradiem-gtm connector not enabled there; Render brain verified alive, key not in git
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [Operating Map Sep3 Refresh](operating-map-sep3-refresh.md) — Sep 1 2026: map rebuilt for the Sep 3 John meeting with Naveen's internal-customer/status/consulted rows, fresh partner-lane statuses, recomputed totals 4,600/950/24; live at gtm-operating-map.pages.dev; Naveen's -3.html never reached this Mac
+- [Feedback Best Model Every Account](feedback-best-model-every-account.md) — Sep 1 2026: account research always on the strongest model, never tier by assumed importance; name skills explicitly in shared-project prompts
