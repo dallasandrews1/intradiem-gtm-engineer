@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Queue Optimizer Sales Kit</title>
+<!--FONTS-->
+<style>
+/* page-specific */
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.pain div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow);font-size:15px;color:var(--ink);font-weight:700;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.pain div .n{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600;padding-top:3px}
+/* two days */
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:20px;background:var(--bg)}
+.seg button{background:none;border:none;padding:10px 18px;font-family:var(--ff);font-weight:700;font-size:14.5px;color:var(--ink-2);cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--forest);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--green-300);outline-offset:-2px}
+.day{display:none;margin-top:16px}
+.day.on{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.day div{border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;background:var(--bg);box-shadow:var(--shadow);font-size:14.5px;color:var(--ink-2)}
+.day div b{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}
+.day.today div{border-top:4px solid var(--orange)}
+.day.qo div{border-top:4px solid var(--green)}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.flow div{border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;background:var(--bg);box-shadow:var(--shadow);position:relative}
+.flow div .who{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.flow div .does{font-weight:900;font-size:20px;color:var(--forest);letter-spacing:-.01em;margin-top:6px}
+.flow div.qo{background:var(--forest);border-color:var(--forest)}
+.flow div.qo .who{color:var(--green-300)}
+.flow div.qo .does{color:#fff}
+.flow div + div::before{content:"\2192";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--green-600);font-weight:700;font-size:16px;background:var(--bg);line-height:1}
+/* stages (click to reveal) */
+.qs{list-style:none;margin-top:16px;max-width:900px}
+.qs li{border-bottom:1px solid var(--line)}
+.qs button{width:100%;text-align:left;background:none;border:none;padding:14px 0;font-family:var(--ff);font-size:17px;font-weight:700;color:var(--ink);cursor:pointer;display:grid;grid-template-columns:44px 1fr 24px;gap:12px;align-items:center}
+.qs button .q{width:34px;height:34px;border-radius:6px;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.qs button .ar{color:var(--ink-3);transition:transform .25s;font-size:18px;line-height:1.2}
+.qs button[aria-expanded="true"] .ar{transform:rotate(90deg);color:var(--green-600)}
+.qs .lf{display:none;padding:0 0 16px 56px;font-size:15px;color:var(--ink-2);max-width:760px}
+.qs .lf b{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;display:block;margin-bottom:4px}
+.qs li.open .lf{display:block}
+/* screens */
+.screens{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.screens div{border:1px dashed var(--line);border-radius:var(--r);padding:14px 16px;background:var(--zebra);font-size:13.5px;color:var(--ink-3)}
+.screens div .n{font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+.screens div .t{font-weight:700;color:var(--ink);font-size:15px;margin:3px 0 4px}
+/* capabilities */
+.caps{list-style:none;margin-top:16px;border-top:1px solid var(--line);max-width:820px}
+.caps li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;font-weight:700;color:var(--ink);align-items:center}
+.caps li span{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600}
+.missing{list-style:none;margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.missing li{padding:6px 0 6px 20px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.missing li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;border-radius:2px;background:var(--orange)}
+.missing li b{color:var(--ink)}
+/* present extras */
+.pslide .days{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px;max-width:1150px}
+.pslide .days > div{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:20px 24px;background:rgba(255,255,255,.04)}
+.pslide .days .h{font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.pslide .days .today .h{color:#FFB877}
+.pslide .days .qo .h{color:var(--green-300)}
+.pslide .days ul{list-style:none}
+.pslide .days li{padding:9px 0;border-top:1px solid rgba(255,255,255,.14);font-size:clamp(13.5px,1.15vw,16px);color:#C7DAD1}
+.pslide .days li b{display:block;color:#fff;font-size:clamp(15px,1.4vw,19px);margin-bottom:2px}
+.pslide .stat{margin-top:26px}
+.pslide .stat .big{font-weight:900;font-size:clamp(56px,8vw,120px);color:var(--green-300);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.pslide .stat span{display:block;color:#C7DAD1;margin-top:14px;font-size:clamp(16px,1.5vw,22px);max-width:40ch}
+@media(max-width:900px){.pain,.day.on,.flow,.screens{grid-template-columns:1fr 1fr}.flow div + div::before{display:none}.pslide .days{grid-template-columns:1fr}}
+@media(max-width:600px){.pain,.day.on,.flow,.screens,.missing{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">Sales enablement &middot; Queue Optimizer (beta)</div>
+    <h1 data-h="2">Queue Optimizer <span class="spark">sales kit</span>.</h1>
+    <p class="sub" data-h="3">From firefighting to service agility. The Product deck (beta) as one working page: the problem, the two days, the orchestration gap, how it works, the summary. <b>No ROI example, discovery set, objection tracks or beta terms exist in this deck yet</b>; the page says so where they would sit.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="60">0</span> to 100%</b><span>of SLA management still manual (deck figure)</span></div>
+      <div><b><span class="hc" data-to="4">0</span></b><span>stages: capture, forecast, recommend, adjust</span></div>
+      <div><b><span class="hc" data-to="6">0</span></b><span>WFM pain points the deck names</span></div>
+      <div><b><span class="hc" data-to="13">0</span></b><span>slides in the source deck</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>Sales and account management</div>
+      <div><span>Source</span>Queue Optimizer deck (beta) sales kit, Product, modified Jun 12, 2026</div>
+      <div><span>Built by</span>Dallas Andrews, GTM Engineering</div>
+      <div><span>Use</span>Internal. Press P to present.</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>The pitch:</b> your WFM forecasts, your ACD routes, your dashboards visualize. None of them decide. Queue Optimizer is the layer that takes the signal from those tools and acts on it, across every commitment simultaneously.</li>
+        <li><b>The two days:</b> the same demand spike. Today, risks show up late, decisions are firefighting, time goes to dashboard watching. With Queue Optimizer, early risk detection, approval controls, action recommendations.</li>
+        <li><b>How it works:</b> ACD data capture, forecast and predict, recommend, adjust. The business objective is a service level or ASA for each queue in the ACD, with its constraints.</li>
+        <li><b>Not in this deck:</b> no ROI example, no discovery questions, no objection talk tracks, no beta terms, no pricing, no target accounts. Product supplies those before sellers need them; nothing here is filled in from another deck or from memory.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="eyebrow">01 &middot; The reputation risk</div>
+    <h2>Overstaffing, burnout and constant firefighting force WFM teams into survival mode.</h2>
+    <p class="lede">Leaving little time for strategy or scale. Six pain points, in the deck's words.</p>
+    <div class="pain">
+      <div><span class="n">01</span>Too much time spent reacting</div>
+      <div><span class="n">02</span>Manual queue moves eat up WFM bandwidth</div>
+      <div><span class="n">03</span>Overstaffing "just in case" is costly</div>
+      <div><span class="n">04</span>Burnout is a hidden variable</div>
+      <div><span class="n">05</span>Last-minute coverage drives costly overtime spend</div>
+      <div><span class="n">06</span>No room for strategic work</div>
+    </div>
+    <div class="grid" style="margin-top:16px">
+      <div class="card dark full"><div class="tag go">The result</div><h4>Inadequate workforce planning creates cascading operational failures that undermine service delivery.</h4></div>
+    </div>
+    <h3>When performance issues arise, the complexity multiplies</h3>
+    <div class="grid c4">
+      <div class="card"><div class="tag hold">Competing priorities</div><p>Managing multiple different queues simultaneously.</p></div>
+      <div class="card"><div class="tag hold">Manual calculations</div><p>Re-forecasting each affected queue.</p></div>
+      <div class="card"><div class="tag hold">System updates</div><p>Attendance, scheduling and capacity adjustments.</p></div>
+      <div class="card"><div class="tag now">Time pressure</div><p>By the time decisions are made, it's too late.</p></div>
+    </div>
+    <div class="line">No one person can handle simultaneous re-forecasts in real time. You need a team, or a better solution.</div>
+  </div>
+</section>
+
+<section id="days">
+  <div class="wrap">
+    <div class="eyebrow">02 &middot; Two days</div>
+    <h2>The same demand spike can create two very different days.</h2>
+    <p class="lede">Switch between the two. The deck shows this slide twice; it is the comparison sellers should hold in their head on a call.</p>
+    <div class="seg" role="tablist" aria-label="Today or with Queue Optimizer">
+      <button role="tab" aria-selected="true" aria-controls="day-today" id="t-today">Today (manual + reactive)</button>
+      <button role="tab" aria-selected="false" aria-controls="day-qo" id="t-qo">With Queue Optimizer (guided + controlled)</button>
+    </div>
+    <div class="day today on" id="day-today" role="tabpanel" aria-labelledby="t-today">
+      <div><b>Risks show up late</b>Issues become visible only after performance starts degrading.</div>
+      <div><b>Firefighting decisions</b>Teams scramble to recover; costly moves under pressure.</div>
+      <div><b>Dashboard watching</b>Time goes to monitoring, not preventing the slip.</div>
+    </div>
+    <div class="day qo" id="day-qo" role="tabpanel" aria-labelledby="t-qo">
+      <div><b>Early risk detection</b>Risk is flagged before queues drift past target.</div>
+      <div><b>Approval controls</b>Queues are stabilized using configurable approval.</div>
+      <div><b>Action recommendations</b>Clear guidance on what to change, when, and why.</div>
+    </div>
+  </div>
+</section>
+
+<section id="gap">
+  <div class="wrap">
+    <div class="eyebrow">03 &middot; The orchestration gap</div>
+    <h2>You already have forecasting. You already have routing. What you don't have is orchestration.</h2>
+    <p class="lede">Your WFM forecasts. Your ACD routes. Your dashboards visualize. None of them decide. None of them orchestrate. They surface the problem and hand it back to a human, which is why 60 to 100% of SLA management remains manual even in well-resourced organizations.</p>
+    <div class="flow">
+      <div><div class="who">WFM tools</div><div class="does">Forecast</div></div>
+      <div><div class="who">ACD / routing</div><div class="does">Route</div></div>
+      <div class="qo"><div class="who">Queue Optimizer</div><div class="does">Decide and orchestrate</div></div>
+      <div class="qo"><div class="who">Queue Optimizer</div><div class="does">Recalculate run rate</div></div>
+    </div>
+    <div class="gate">
+      <h4>The missing layer</h4>
+      <p>The gap isn't visibility. It's the layer that decides what to do with what it sees, automatically, across every commitment, simultaneously. Queue Optimizer is the missing layer: the one that takes the signal from your existing tools and acts on it, autonomously, across every commitment simultaneously.</p>
+    </div>
+    <div class="line">The 60 to 100% figure is as stated in the Product deck, with no source cited there. Customer-facing use of any figure goes through the Value Repository.</div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">04 &middot; How it works</div>
+    <h2>Four stages. Click each for the deck's description.</h2>
+    <ul class="qs">
+      <li><button aria-expanded="false"><span class="q">1</span><span>ACD data capture</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Additional ACD provider services capture call data (like number of calls offered and answered, SL / ASA, and average handle time) and store it to track queue performance and trends over time.</div></li>
+      <li><button aria-expanded="false"><span class="q">2</span><span>Forecast and predict</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>ACD data tracks intraday service levels and ASA, helping forecast staffing needs for each queue.</div></li>
+      <li><button aria-expanded="false"><span class="q">3</span><span>Recommend</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>The Recommendation Engine analyzes inputs from business goals, forecasts, and ACD/WFM systems to optimize queue assignments, deciding which agents to add or remove from each queue.</div></li>
+      <li><button aria-expanded="false"><span class="q">4</span><span>Adjust</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>User-to-queue assignments update automatically, either with supervisor approval or through full automation.</div></li>
+    </ul>
+    <div class="gate">
+      <h4>Business objective (SLA / ASA)</h4>
+      <p>A service level or ASA for each queue in the ACD, along with the associated constraints.</p>
+    </div>
+    <h3>Product screens in the deck</h3>
+    <p class="lede">Four slides are product screenshots. They are not reproduced on this page; open the deck for the screens. Their caption, verbatim: "Evolve from reactive firefighting to proactive workforce optimization that delivers consistent performance."</p>
+    <div class="screens">
+      <div><div class="n">Slide 9</div><div class="t">Setting queue targets</div>Screenshot in the deck</div>
+      <div><div class="n">Slide 10</div><div class="t">Configuring constraints</div>Screenshot in the deck</div>
+      <div><div class="n">Slide 11</div><div class="t">Turning business objectives into measurable results</div>Screenshot in the deck</div>
+      <div><div class="n">Slide 12</div><div class="t">Queue recommendations</div>Screenshot in the deck</div>
+    </div>
+  </div>
+</section>
+
+<section id="summary">
+  <div class="wrap">
+    <div class="eyebrow">05 &middot; The summary</div>
+    <h2>Live performance data, staffing forecasts, configurable constraints.</h2>
+    <p class="lede">Intradiem's Queue Optimizer uses live performance data, staffing forecasts, and configurable constraints to dynamically recommend and make real-time adjustments to queue assignments, helping teams hit SLAs, reduce penalties, protect brand reputation, and cut manual work.</p>
+    <div class="statband">
+      <div><div class="n">Hit SLAs</div><div class="l">Outcome one</div></div>
+      <div><div class="n">Reduce penalties</div><div class="l">Outcome two</div></div>
+      <div><div class="n">Protect brand reputation</div><div class="l">Outcome three</div></div>
+      <div><div class="n">Cut manual work</div><div class="l">Outcome four</div></div>
+    </div>
+    <h3>Through, by integrating with existing ACD systems</h3>
+    <ul class="caps">
+      <li><span>01</span>Queue target alignment</li>
+      <li><span>02</span>Data-driven staffing predictions</li>
+      <li><span>03</span>Automated workforce adjustments</li>
+      <li><span>04</span>Penalty risk mitigation</li>
+      <li><span>05</span>Comprehensive prioritization and optimization</li>
+    </ul>
+    <div class="line">Predictive analytics and strategic workforce recommendations, as the deck puts it. Outcomes are the deck's claims, not measured results.</div>
+  </div>
+</section>
+
+<section id="missing">
+  <div class="wrap">
+    <div class="eyebrow">06 &middot; Not in this deck</div>
+    <h2>What the Back Office Optimizer kit has and this one does not, yet.</h2>
+    <div class="callout">
+      <h4>No ROI example in the deck, so no calculator on this page</h4>
+      <p>The Queue Optimizer deck carries no worked example, no customer profile, no benefit lines and no payback claim. A calculator would have to invent its inputs and its formula, so there is none. When Product publishes an ROI example, it is rebuilt here the way the Back Office Optimizer calculator was: the deck's numbers reproduced first, interpretation stated.</p>
+    </div>
+    <ul class="missing">
+      <li><b>Discovery questions</b> and listen-fors</li>
+      <li><b>Objection talk tracks</b></li>
+      <li><b>Beta program</b> terms, eligibility, dates, obligations</li>
+      <li><b>Pricing and ACV</b> ranges</li>
+      <li><b>Target accounts</b> and ICP definition</li>
+      <li><b>Deployment</b> prerequisites, connectors, out of scope, dependencies</li>
+      <li><b>Business impact</b> ranges beyond the 60 to 100% manual figure</li>
+      <li><b>Who buys and why</b> by persona</li>
+    </ul>
+    <div class="line">Deck figures are internal enablement material. Customer-facing use of any number still goes through the Value Repository.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Open with Product</div>
+    <ul class="threads">
+      <li><b>Currency.</b> The source deck is marked beta, "confidential and proprietary, do not distribute", and was modified Jun 12, 2026 in SharePoint (productmanagement / GTM / Sales Enablement / Queue Optimizer / Customer Facing Assets). Product confirms it is still the current beta narrative before sellers use this page on a call.</li>
+      <li><b>The one figure.</b> "60 to 100% of SLA management remains manual even in well-resourced organizations" has no source in the deck. Product names the source, or the page marks it as an internal estimate.</li>
+      <li><b>The missing sections.</b> ROI example, discovery, objections, beta terms, pricing, targets, deployment. Product supplies each in any form (slides, a doc, a spreadsheet) and the page picks them up in the same shape as the Back Office Optimizer kit.</li>
+      <li><b>The screens.</b> Slides 9 to 12 are screenshots. If Product wants them on the page, they export as PNG and embed as is, captioned with the deck's caption.</li>
+      <li><b>Where it lives.</b> This page is a file. It can sit on the Product SharePoint site or on a noindex Pages link like the Back Office Optimizer kit; Product's call.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. Confidential and proprietary. Do not distribute.</span>
+  <span>Source: Queue Optimizer deck (beta) sales kit, Product, modified Jun 12 2026 &middot; Page: GTM Engineering, Aug 31 2026</span>
+</footer>
+</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">Queue Optimizer &middot; Sales kit (beta)</div>
+  <h1 data-a="3">From firefighting to <span class="spark">service agility</span>.</h1>
+  <p class="pl" data-a="4">Your tools forecast, route and visualize. <b>None of them decide.</b> Queue Optimizer is the layer that does.</p>
+</section>
+<section class="pslide" data-title="Reputation risk">
+  <div class="pe" data-a="1">The reputation risk</div>
+  <h2 data-a="2">Overstaffing, burnout and constant firefighting force WFM teams into <span class="spark">survival mode</span>.</h2>
+  <div class="pgrid c3">
+    <div data-a="3"><b>Too much time spent reacting</b></div>
+    <div data-a="4"><b>Manual queue moves eat up WFM bandwidth</b></div>
+    <div data-a="5"><b>Overstaffing "just in case" is costly</b></div>
+    <div data-a="6"><b>Burnout is a hidden variable</b></div>
+    <div data-a="7"><b>Last-minute coverage drives costly overtime spend</b></div>
+    <div data-a="8"><b>No room for strategic work</b></div>
+  </div>
+</section>
+<section class="pslide" data-title="The result">
+  <div class="pe" data-a="1">The result</div>
+  <h2 data-a="2">Inadequate workforce planning creates <span class="spark">cascading operational failures</span> that undermine service delivery.</h2>
+  <p class="pl" data-a="3">No one person can handle simultaneous re-forecasts in real time. <b>You need a team, or a better solution.</b></p>
+</section>
+<section class="pslide" data-title="Two days">
+  <div class="pe" data-a="1">Two days</div>
+  <h2 data-a="2">The same demand spike can create <span class="spark">two very different days</span>.</h2>
+  <div class="days">
+    <div class="today" data-a="3"><div class="h">Today (manual + reactive)</div><ul>
+      <li><b>Risks show up late</b>Issues become visible only after performance starts degrading</li>
+      <li><b>Firefighting decisions</b>Teams scramble to recover; costly moves under pressure</li>
+      <li><b>Dashboard watching</b>Time goes to monitoring, not preventing the slip</li>
+    </ul></div>
+    <div class="qo" data-a="4"><div class="h">With Queue Optimizer (guided + controlled)</div><ul>
+      <li><b>Early risk detection</b>Risk is flagged before queues drift past target</li>
+      <li><b>Approval controls</b>Queues are stabilized using configurable approval</li>
+      <li><b>Action recommendations</b>Clear guidance on what to change, when, and why</li>
+    </ul></div>
+  </div>
+</section>
+<section class="pslide" data-title="Orchestration gap">
+  <div class="pe" data-a="1">The orchestration gap</div>
+  <h2 data-a="2">You already have forecasting. You already have routing. <span class="spark">What you don't have is orchestration.</span></h2>
+  <div class="pgrid">
+    <div data-a="3"><b>WFM tools</b><span>Forecast</span></div>
+    <div data-a="4"><b>ACD / routing</b><span>Route</span></div>
+    <div data-a="5"><b>Queue Optimizer</b><span>Decide and orchestrate</span></div>
+    <div data-a="6"><b>Queue Optimizer</b><span>Recalculate run rate</span></div>
+  </div>
+  <p class="pl" data-a="7">The gap isn't visibility. It's the layer that decides what to do with what it sees, <b>automatically, across every commitment, simultaneously.</b></p>
+</section>
+<section class="pslide" data-title="Manual today">
+  <div class="pe" data-a="1">Why the layer is missing</div>
+  <div class="stat" data-a="2"><div class="big"><span class="cnt" data-to="60">0</span> to 100%</div><span>of SLA management remains manual even in well-resourced organizations. Tools surface the problem and hand it back to a human.</span></div>
+</section>
+<section class="pslide" data-title="Complexity">
+  <div class="pe" data-a="1">When performance issues arise</div>
+  <h2 data-a="2">The complexity <span class="spark">multiplies</span>.</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Competing priorities</b><span>Managing multiple different queues simultaneously</span></div>
+    <div data-a="4"><b>Manual calculations</b><span>Re-forecasting each affected queue</span></div>
+    <div data-a="5"><b>System updates</b><span>Attendance, scheduling and capacity adjustments</span></div>
+    <div data-a="6"><b>Time pressure</b><span>By the time decisions are made, it's too late</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="How it works">
+  <div class="pe" data-a="1">How it works</div>
+  <h2 data-a="2">Capture. Forecast. Recommend. <span class="spark">Adjust.</span></h2>
+  <div class="pgrid">
+    <div data-a="3"><b>ACD data capture</b><span>Calls offered and answered, SL / ASA, average handle time, stored to track queue performance and trends</span></div>
+    <div data-a="4"><b>Forecast and predict</b><span>Intraday service levels and ASA forecast staffing needs for each queue</span></div>
+    <div data-a="5"><b>Recommend</b><span>Business goals, forecasts and ACD/WFM inputs decide which agents to add or remove from each queue</span></div>
+    <div data-a="6"><b>Adjust</b><span>User-to-queue assignments update automatically, with supervisor approval or through full automation</span></div>
+  </div>
+  <p class="pl" data-a="7">Business objective: <b>a service level or ASA for each queue in the ACD</b>, with its constraints.</p>
+</section>
+<section class="pslide" data-title="Capabilities">
+  <div class="pe" data-a="1">Integrating with existing ACD systems</div>
+  <h2 data-a="2">Predictive analytics and strategic workforce recommendations, <span class="spark">through</span>:</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">01</span><span class="r"><b>Queue target alignment</b></span></li>
+    <li data-a="4"><span class="d">02</span><span class="r"><b>Data-driven staffing predictions</b></span></li>
+    <li data-a="5"><span class="d">03</span><span class="r"><b>Automated workforce adjustments</b></span></li>
+    <li data-a="6"><span class="d">04</span><span class="r"><b>Penalty risk mitigation</b></span></li>
+    <li data-a="7"><span class="d">05</span><span class="r"><b>Comprehensive prioritization and optimization</b></span></li>
+  </ul>
+</section>
+<section class="pslide" data-title="Outcomes">
+  <div class="pe" data-a="1">The summary</div>
+  <h2 data-a="2">Real-time adjustments to queue assignments, <span class="spark">so teams</span>:</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Hit SLAs</b></div>
+    <div data-a="4"><b>Reduce penalties</b></div>
+    <div data-a="5"><b>Protect brand reputation</b></div>
+    <div data-a="6"><b>Cut manual work</b></div>
+  </div>
+  <p class="pl" data-a="7">Live performance data, staffing forecasts, configurable constraints. <b>Deck claims; customer-facing numbers go through the Value Repository.</b></p>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; Queue Optimizer</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 10</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<!--PRESENT-->
+<script>
+(function(){
+  // two-days toggle
+  var tabs=[].slice.call(document.querySelectorAll('.seg [role=tab]'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-selected','false');document.getElementById(x.getAttribute('aria-controls')).classList.remove('on');});
+    t.setAttribute('aria-selected','true');document.getElementById(t.getAttribute('aria-controls')).classList.add('on');
+  });});
+  // stage reveal
+  [].forEach.call(document.querySelectorAll('.qs button'),function(b){b.addEventListener('click',function(){
+    var li=b.parentNode, open=!li.classList.contains('open'); li.classList.toggle('open',open); b.setAttribute('aria-expanded',open?'true':'false');
+  });});
+})();
+</script>
+</body>
+</html>
