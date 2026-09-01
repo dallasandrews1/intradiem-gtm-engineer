@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>3xG List Review</title>
+<!--FONTS-->
+<style>
+.bk{display:inline-block;font-family:var(--ff-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;white-space:nowrap}
+.bk.operational_visualizer{background:#FDECD9;color:var(--orange-600)}
+.bk.backoffice_deployment{background:var(--tint);color:var(--green-600)}
+.bk.dpa_deployed{background:var(--tint-soft);color:var(--green-600)}
+.bk.verint_no_dpa{background:var(--zebra);color:var(--ink-3);border:1px solid var(--line)}
+.who small{display:block;font-weight:400;color:var(--ink-3);font-size:12px;margin-top:2px}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right;padding-right:14px !important}
+th.num{text-align:right;padding-right:14px}
+#cands{font-size:13.5px;table-layout:fixed;width:100%}
+#cands th:nth-child(1){width:30px}#cands th:nth-child(2){width:auto}#cands th:nth-child(3){width:196px}#cands th:nth-child(4){width:126px}#cands th:nth-child(5){width:70px}#cands th:nth-child(6){width:62px}#cands th:nth-child(7){width:44px}#cands th:nth-child(8){width:42px}#cands th:nth-child(9){width:120px}
+#cands td{padding:10px 10px 10px 0}
+td.rs{font-size:12px;color:var(--ink-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+td.who .nt{margin-top:4px} td.who .nt .pill{margin:0 4px 3px 0}
+td.fl .pill{margin:0 4px 4px 0}
+td.pick{white-space:nowrap}
+td.pick button{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:5px 8px;border-radius:5px;border:1px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;margin-right:3px}
+td.pick button:hover{border-color:var(--green-600);color:var(--green-600)}
+tr.cand.cohort td{background:var(--tint-soft)}
+tr.cand.holdout td{background:#FDECD9}
+tr.cand.skip td{opacity:.45}
+tr.cand.cohort button[data-p=cohort],tr.cand.holdout button[data-p=holdout]{background:var(--forest);color:#fff;border-color:var(--forest)}
+tr.cand.skip button[data-p=skip]{background:var(--ink-3);color:#fff;border-color:var(--ink-3)}
+tr.cand.hidden{display:none}
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
+.bar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.bar .f{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:7px 12px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer}
+.bar .f.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.bar .sp{flex:1}
+.bar .cnt{font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.bar .cnt b{color:var(--green-600);font-size:14px}
+.bar .cnt b.h{color:var(--orange-600)}
+.bar .btn{padding:8px 14px;font-size:12px}
+.bar .btn.ghost{margin-left:4px}
+.q{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+.q li{display:grid;grid-template-columns:34px 1fr 1.2fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.q li .n{width:30px;height:30px;border-radius:6px;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
+.q li .t{font-weight:700;color:var(--ink);font-size:15.5px}
+.q li .t small{display:block;font-weight:400;color:var(--ink-2);font-size:13.5px;margin-top:3px;line-height:1.45}
+.q textarea{width:100%;min-height:52px;font-family:var(--ff);font-size:14px;color:var(--ink);padding:8px 10px;border:1px solid rgba(0,0,0,.18);border-radius:6px;background:#fff;resize:vertical}
+.q textarea:focus{outline:2px solid var(--green-300);outline-offset:1px;border-color:var(--green)}
+details{margin-top:16px}
+summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:15px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--forest);color:#fff;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:12px 18px;border-radius:8px;opacity:0;transition:all .3s;z-index:90;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:900px){.q li{grid-template-columns:34px 1fr}.q li textarea{grid-column:2}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">GTM Engineering &middot; Partner channel &middot; 3xG list review</div>
+    <h1 data-h="2">Jeremy's list, read once. <span class="spark">Pick the cohort.</span></h1>
+    <p class="sub" data-h="3">The whitespace workbook from 3xG, bucketed the way you described it, with current Intradiem customers and partners held out. Mark five to ten accounts as the cohort and a matched set as the holdout; the picks copy out at the end.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="83">0</span></b><span>accounts on the partner sheet</span></div>
+      <div><b><span class="hc" data-to="76">0</span></b><span>workable after the customer and partner gate</span></div>
+      <div><b><span class="hc" data-to="5">0</span></b><span>with a Verint back-office deployment</span></div>
+      <div><b><span class="hc" data-to="7">0</span></b><span>held for the account manager</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>Frank Ciccone</div>
+      <div><span>Source</span>3xG workbook, forwarded Aug 31</div>
+      <div><span>By</span>Dallas Andrews, GTM Engineering</div>
+      <div><span>Today</span>Cohort, holdout, four questions</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">How the list was read</div>
+      <ul>
+        <li><b>Two sheets.</b> The partner-only sheet (74 accounts sold through a Verint reseller, plus 9 Verint-direct back-office deployments) is the universe. The 1,297-row matrix was used only to see whether WFM is in the footprint.</li>
+        <li><b>What was stripped.</b> Every dollar column, list price, total and per-module license count stayed in the intake. Only account, bucket, seats, desktop-analytics seats, model, WFM yes/no and the reseller of record are on this screen.</li>
+        <li><b>The gate.</b> Every account was checked against Salesforce (Customer or Partner) and the customer lists. Matches are held, listed at the bottom, and go through the account manager if anyone wants them worked.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Buckets</div>
+    <h2>Four kinds of account on the list.</h2>
+    <div class="grid c4">
+      <div class="card rv" style="--i:0"><span class="tag now">4 accounts</span><h4>Operational visualizer</h4><p>A first Verint back-office deployment, then nothing. Frank's priority.</p></div>
+<div class="card rv" style="--i:1"><span class="tag go">1 account</span><h4>Back-office deployment</h4><p>Verint Work Manager in place.</p></div>
+<div class="card rv" style="--i:2"><span class="tag go">37 accounts</span><h4>Desktop analytics deployed</h4><p>DPA seats in place; the rest of the seat count is the whitespace.</p></div>
+<div class="card rv" style="--i:3"><span class="tag hold">34 accounts</span><h4>Verint, no desktop analytics</h4><p>Front-office footprint only.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="bar" id="bar">
+  <div class="wrap">
+    <button class="f on" data-f="all">All</button>
+    <button class="f" data-f="operational_visualizer">Op. visualizer</button>
+    <button class="f" data-f="backoffice_deployment">Back office</button>
+    <button class="f" data-f="dpa_deployed">Desktop analytics</button>
+    <button class="f" data-f="verint_no_dpa">No DPA</button>
+    <span class="sp"></span>
+    <span class="cnt">Cohort <b id="nC">0</b> &nbsp; Holdout <b class="h" id="nH">0</b> &nbsp; Skip <b style="color:var(--ink-3)" id="nS">0</b></span>
+    <button class="btn" id="copyBtn" type="button">Copy picks</button>
+    <button class="btn ghost" id="clearBtn" type="button">Clear</button>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Candidates</div>
+    <h2>76 accounts, ranked. Pick on the row.</h2>
+    <p class="lede">Rank is bucket first, then seats, then the vertical alignment as Jeremy scored it, then WFM in the footprint. Seats are Verint's max license count; the desktop-analytics column is seats with DPA today.</p>
+    <div class="tablewrap">
+      <table id="cands">
+        <thead><tr><th>#</th><th>Account</th><th>Pick</th><th>Bucket</th><th class="num">Seats</th><th class="num">DPA</th><th>WFM</th><th>Vert</th><th>Reseller</th></tr></thead>
+        <tbody>
+<tr class="cand" data-b="operational_visualizer" data-id="r1" data-name="Ally Financial Inc."><td class="st">1</td><td class="who">Ally Financial Inc.<small>Verint Operations Visualizer (AAMT) - SaaS</small><div class="nt"><span class="pill go">Priority</span> <span class="pill hold">Verint direct</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk operational_visualizer">Op. visualizer</span></td><td class="num">2306</td><td class="num"></td><td class="st">n/a</td><td class="st"></td><td class="rs">Direct</td></tr>
+<tr class="cand" data-b="operational_visualizer" data-id="r2" data-name="Maximus, Inc."><td class="st">2</td><td class="who">Maximus, Inc.<small>Verint Operations Productivity - SaaS</small><div class="nt"><span class="pill go">Priority</span> <span class="pill hold">Verint direct</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk operational_visualizer">Op. visualizer</span></td><td class="num">1510</td><td class="num"></td><td class="st">n/a</td><td class="st"></td><td class="rs">Direct</td></tr>
+<tr class="cand" data-b="operational_visualizer" data-id="r3" data-name="AIG Global Operations"><td class="st">3</td><td class="who">AIG Global Operations<small>Verint Strategic Operations Visualizer</small><div class="nt"><span class="pill go">Priority</span> <span class="pill hold">Verint direct</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk operational_visualizer">Op. visualizer</span></td><td class="num">850</td><td class="num"></td><td class="st">n/a</td><td class="st"></td><td class="rs">Direct</td></tr>
+<tr class="cand" data-b="operational_visualizer" data-id="r4" data-name="Intuit Inc."><td class="st">4</td><td class="who">Intuit Inc.<small>Verint Operations Productivity - SaaS</small><div class="nt"><span class="pill go">Priority</span> <span class="pill hold">Verint direct</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk operational_visualizer">Op. visualizer</span></td><td class="num">300</td><td class="num"></td><td class="st">n/a</td><td class="st"></td><td class="rs">Direct</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r5" data-name="AmeriHealth Caritas Health Plan"><td class="st">5</td><td class="who">AmeriHealth Caritas Health Plan<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">6246</td><td class="num">3533</td><td class="st">yes</td><td class="st">1</td><td class="rs">ConvergeOne, Inc</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r6" data-name="Mercury Insurance Services, LLC"><td class="st">6</td><td class="who">Mercury Insurance Services, LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">5863</td><td class="num">2742</td><td class="st">yes</td><td class="st">1</td><td class="rs">ConvergeOne, Inc</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r7" data-name="Ford Motor Credit"><td class="st">7</td><td class="who">Ford Motor Credit</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">3850</td><td class="num">3850</td><td class="st">yes</td><td class="st">1</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r8" data-name="Christus Health Data Center"><td class="st">8</td><td class="who">Christus Health Data Center<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2732</td><td class="num">149</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r9" data-name="Manulife Financial"><td class="st">9</td><td class="who">Manulife Financial<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2542</td><td class="num">10</td><td class="st">yes</td><td class="st">1</td><td class="rs">Connex Telecommunications Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r10" data-name="Allina Health"><td class="st">10</td><td class="who">Allina Health<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2259</td><td class="num">358</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r11" data-name="First Republic Bank"><td class="st">11</td><td class="who">First Republic Bank<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1400</td><td class="num">301</td><td class="st">yes</td><td class="st">1</td><td class="rs">Amazon Web Services, Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r12" data-name="Genworth North America Corporation"><td class="st">12</td><td class="who">Genworth North America Corporation</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1201</td><td class="num">500</td><td class="st">yes</td><td class="st">1</td><td class="rs">BT AXA Group</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r13" data-name="Independence Blue Cross"><td class="st">13</td><td class="who">Independence Blue Cross<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1201</td><td class="num">1</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r14" data-name="American Family Life Assurance Company of Columbus (AFLAC)"><td class="st">14</td><td class="who">American Family Life Assurance Company of Columbus (AFLAC)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">952</td><td class="num">952</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r15" data-name="Medavie, Inc."><td class="st">15</td><td class="who">Medavie, Inc.</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">851</td><td class="num">600</td><td class="st">yes</td><td class="st">1</td><td class="rs">Bell Canada</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r16" data-name="Texas Health and Human Services Commission (HHSC)"><td class="st">16</td><td class="who">Texas Health and Human Services Commission (HHSC)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">6604</td><td class="num">72</td><td class="st">yes</td><td class="st">2</td><td class="rs">ConvergeOne, Inc</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r17" data-name="Nationwide Mutual Insurance Co."><td class="st">17</td><td class="who">Nationwide Mutual Insurance Co.<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">6400</td><td class="num">6400</td><td class="st">no</td><td class="st">1</td><td class="rs">Amazon Web Services, Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r18" data-name="Bank of Montreal (BMO)"><td class="st">18</td><td class="who">Bank of Montreal (BMO)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">5394</td><td class="num">118</td><td class="st">no</td><td class="st">1</td><td class="rs">Connex Telecommunications Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r19" data-name="Xcel Energy"><td class="st">19</td><td class="who">Xcel Energy<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1724</td><td class="num">1724</td><td class="st">yes</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r20" data-name="Sun Life Assurance Company of Canada"><td class="st">20</td><td class="who">Sun Life Assurance Company of Canada<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">3761</td><td class="num">85</td><td class="st">no</td><td class="st">1</td><td class="rs">Connex Telecommunications Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r21" data-name="Horizon Healthcare Services, Inc. d/b/a Horizon BCBS of New Jersey"><td class="st">21</td><td class="who">Horizon Healthcare Services, Inc. d/b/a Horizon BCBS of New Jersey<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">3240</td><td class="num">1230</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r22" data-name="HCA National Patient Account SVC KY"><td class="st">22</td><td class="who">HCA National Patient Account SVC KY<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">3228</td><td class="num">3180</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r23" data-name="TSYS"><td class="st">23</td><td class="who">TSYS<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2838</td><td class="num">2838</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r24" data-name="Cognizant Healthcare Services, LLC"><td class="st">24</td><td class="who">Cognizant Healthcare Services, LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1920</td><td class="num">1920</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r25" data-name="DTE Energy Inc. dba DTE Energy Corporate Services, LLC"><td class="st">25</td><td class="who">DTE Energy Inc. dba DTE Energy Corporate Services, LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1668</td><td class="num">1020</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="backoffice_deployment" data-id="r26" data-name="VW Credit, Inc."><td class="st">26</td><td class="who">VW Credit, Inc.<small>Verint eg Work Manager</small><div class="nt"><span class="pill hold">Verint direct</span> <span class="pill hold">Also on partner sheet</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk backoffice_deployment">Back office</span></td><td class="num">350</td><td class="num">825</td><td class="st">no</td><td class="st"></td><td class="rs">TTEC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r27" data-name="Penn State Health"><td class="st">27</td><td class="who">Penn State Health<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1320</td><td class="num">60</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r28" data-name="Allstate Insurance Co. of Canada Ltd."><td class="st">28</td><td class="who">Allstate Insurance Co. of Canada Ltd.<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">827</td><td class="num">827</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r29" data-name="VW Credit, Inc."><td class="st">29</td><td class="who">VW Credit, Inc.</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">825</td><td class="num">825</td><td class="st">no</td><td class="st">1</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r30" data-name="Northwell Health (fka North Shore LI Jewish Hospital)"><td class="st">30</td><td class="who">Northwell Health (fka North Shore LI Jewish Hospital)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">800</td><td class="num">800</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r31" data-name="Wawanesa Insurance"><td class="st">31</td><td class="who">Wawanesa Insurance<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">731</td><td class="num">731</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r32" data-name="Nordstrom Bank"><td class="st">32</td><td class="who">Nordstrom Bank<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">651</td><td class="num">495</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r33" data-name="Entergy Services Inc"><td class="st">33</td><td class="who">Entergy Services Inc</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2200</td><td class="num">1100</td><td class="st">no</td><td class="st">2</td><td class="rs">Presidio Networked Solutions, LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r34" data-name="Southern Company"><td class="st">34</td><td class="who">Southern Company<div class="nt"><span class="pill check">Near-name to confirm: Southern California Edison Company</span> <span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1863</td><td class="num">690</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r35" data-name="Yale New Haven Hospital"><td class="st">35</td><td class="who">Yale New Haven Hospital</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">899</td><td class="num">525</td><td class="st">yes</td><td class="st">3</td><td class="rs">BEI Holdings, Inc. (DBA: Business Electronics)</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r36" data-name="CGI"><td class="st">36</td><td class="who">CGI</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">750</td><td class="num">379</td><td class="st">yes</td><td class="st">3</td><td class="rs">Bell Canada</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r37" data-name="TransUnion LLC"><td class="st">37</td><td class="who">TransUnion LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">940</td><td class="num">940</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r38" data-name="Avista Corporation"><td class="st">38</td><td class="who">Avista Corporation</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">501</td><td class="num">183</td><td class="st">yes</td><td class="st"></td><td class="rs">Cerium Networks</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r39" data-name="State of Washington - Department of Social and Health Services (DSHS)"><td class="st">39</td><td class="who">State of Washington - Department of Social and Health Services (DSHS)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">2100</td><td class="num">2100</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r40" data-name="VA Medical Cntr Chief Supply Svc"><td class="st">40</td><td class="who">VA Medical Cntr Chief Supply Svc<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">1014</td><td class="num">1014</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r41" data-name="USDA"><td class="st">41</td><td class="who">USDA</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">873</td><td class="num">143</td><td class="st">no</td><td class="st">3</td><td class="rs">Alliance Technology Group, LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r42" data-name="Corewell Health"><td class="st">42</td><td class="who">Corewell Health</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">2960</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">CBTS Technology Solutions LLC</td></tr>
+<tr class="cand" data-b="dpa_deployed" data-id="r43" data-name="Charlton Memorial Hospital"><td class="st">43</td><td class="who">Charlton Memorial Hospital<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk dpa_deployed">DPA deployed</span></td><td class="num">600</td><td class="num">300</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r44" data-name="GE Healthcare (APCS CC Global Hub)"><td class="st">44</td><td class="who">GE Healthcare (APCS CC Global Hub)<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">2179</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r45" data-name="Regions Bank"><td class="st">45</td><td class="who">Regions Bank<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">2143</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Amazon Web Services, Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r46" data-name="United States Pharmaceutical Group LLC dba Convey Health Solutions LLC"><td class="st">46</td><td class="who">United States Pharmaceutical Group LLC dba Convey Health Solutions LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1078</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r47" data-name="Propharma Group LLC"><td class="st">47</td><td class="who">Propharma Group LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">950</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Servion Global Solutions Inc</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r48" data-name="Boeing Employees Credit Union"><td class="st">48</td><td class="who">Boeing Employees Credit Union</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">745</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Cerium Networks</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r49" data-name="Mount Sinai Medical Center"><td class="st">49</td><td class="who">Mount Sinai Medical Center<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">730</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Servion Global Solutions Inc</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r50" data-name="University of Washington Medicine"><td class="st">50</td><td class="who">University of Washington Medicine<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">580</td><td class="num">0</td><td class="st">yes</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r51" data-name="T-Mobile USA, Inc."><td class="st">51</td><td class="who">T-Mobile USA, Inc.</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">3117</td><td class="num">0</td><td class="st">yes</td><td class="st">2</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r52" data-name="The National Bank of Canada"><td class="st">52</td><td class="who">The National Bank of Canada<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">7620</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Group Elite Communications Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r53" data-name="Terminix Consumer Services, LLC"><td class="st">53</td><td class="who">Terminix Consumer Services, LLC</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1500</td><td class="num">0</td><td class="st">yes</td><td class="st">2</td><td class="rs">ServiceMaster Consumer Services Limited Partnership</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r54" data-name="MSC Industrial Direct CO., Inc."><td class="st">54</td><td class="who">MSC Industrial Direct CO., Inc.<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">801</td><td class="num">0</td><td class="st">yes</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r55" data-name="US Navysparwarsyscen"><td class="st">55</td><td class="who">US Navysparwarsyscen</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">695</td><td class="num">0</td><td class="st">yes</td><td class="st">2</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r56" data-name="Trinity Health"><td class="st">56</td><td class="who">Trinity Health<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1500</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Group Elite Communications Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r57" data-name="Map Communications"><td class="st">57</td><td class="who">Map Communications<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1080</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r58" data-name="Reliance Insurance"><td class="st">58</td><td class="who">Reliance Insurance<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1008</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r59" data-name="Industrielle Alliance, Assurances et Services Financier Inc."><td class="st">59</td><td class="who">Industrielle Alliance, Assurances et Services Financier Inc.</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">965</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Bell Canada</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r60" data-name="Cognizant Technical Solutions"><td class="st">60</td><td class="who">Cognizant Technical Solutions</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">5175</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">SimComm Pte Ltd</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r61" data-name="Hinge Health, Inc."><td class="st">61</td><td class="who">Hinge Health, Inc.<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">610</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Servion Global Solutions Inc</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r62" data-name="Alere Health, Inc"><td class="st">62</td><td class="who">Alere Health, Inc<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">600</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r63" data-name="North Middlesex Savings Bank Inc."><td class="st">63</td><td class="who">North Middlesex Savings Bank Inc.<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">600</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Carousel Industries of North America</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r64" data-name="Idaho Department of Health and Welfare"><td class="st">64</td><td class="who">Idaho Department of Health and Welfare</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">564</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">SHI International Corp</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r65" data-name="B2B Bank"><td class="st">65</td><td class="who">B2B Bank<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">513</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r66" data-name="Sentara"><td class="st">66</td><td class="who">Sentara<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">506</td><td class="num">0</td><td class="st">no</td><td class="st">1</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r67" data-name="The Results Company"><td class="st">67</td><td class="who">The Results Company<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">2000</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r68" data-name="HD Supply"><td class="st">68</td><td class="who">HD Supply<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1722</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r69" data-name="Bureau of Fiscal Service fka Bureau of Public Debt"><td class="st">69</td><td class="who">Bureau of Fiscal Service fka Bureau of Public Debt</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">780</td><td class="num">0</td><td class="st">yes</td><td class="st">3</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r70" data-name="Banner Health dba North Colorado Medical Center"><td class="st">70</td><td class="who">Banner Health dba North Colorado Medical Center</td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">558</td><td class="num">0</td><td class="st">yes</td><td class="st">3</td><td class="rs">Cisco Systems, Inc.</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r71" data-name="Medical University Hospital Authority"><td class="st">71</td><td class="who">Medical University Hospital Authority<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">720</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r72" data-name="Beth Israel Deaconess Medical Center"><td class="st">72</td><td class="who">Beth Israel Deaconess Medical Center<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">661</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r73" data-name="Parkview Corporate Health"><td class="st">73</td><td class="who">Parkview Corporate Health<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">650</td><td class="num">0</td><td class="st">no</td><td class="st">2</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r74" data-name="Norton Lifelock Capex"><td class="st">74</td><td class="who">Norton Lifelock Capex<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">1020</td><td class="num">0</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r75" data-name="The University of Texas M.D. Anderson Cancer Center"><td class="st">75</td><td class="who">The University of Texas M.D. Anderson Cancer Center<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">760</td><td class="num">0</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+<tr class="cand" data-b="verint_no_dpa" data-id="r76" data-name="TB Consulting LLC"><td class="st">76</td><td class="who">TB Consulting LLC<div class="nt"><span class="pill now">Reseller is an Intradiem partner</span></div></td><td class="pick"><button data-p="cohort">Cohort</button><button data-p="holdout">Holdout</button><button data-p="skip">Skip</button></td><td><span class="bk verint_no_dpa">No DPA</span></td><td class="num">670</td><td class="num">0</td><td class="st">no</td><td class="st">3</td><td class="rs">Avaya LLC</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <h4>Reseller of record is not 3xG</h4>
+      <p>The reseller column is who sold Verint (Avaya, ConvergeOne, Cisco, AWS and others, several of them Intradiem partners too). 3xG is the consulting partner. Outreach names 3xG only where Jeremy agrees; the reseller is never named.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Held</div>
+    <h2>7 held for the account manager, 1 to confirm.</h2>
+    <p class="lede">Held accounts matched Salesforce as a customer or a partner. Brand matches (Farmers Group to Farmers Insurance, PNC Bank to PNC Financial) are held until the account manager says otherwise. Near-names stay ranked but carry a note.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Account</th><th>Bucket</th><th class="num">Seats</th><th>Why</th></tr></thead>
+        <tbody>
+<tr><td class="who">Progressive Casualty Insurance Company</td><td><span class="bk verint_no_dpa">Verint, no desktop analytics</span></td><td class="num">20700</td><td>SF Customer (Clay segment 2026-09-01), brand match on &#x27;Progressive Leasing&#x27;, AM confirms it is the same company</td></tr>
+<tr><td class="who">Citibank N.A</td><td><span class="bk backoffice_deployment">Back-office deployment</span></td><td class="num">10000</td><td>SF Customer (Jul 10 export), brand match on &#x27;Citicorp Credit Services&#x27;, AM confirms it is the same company</td></tr>
+<tr><td class="who">Farmers Group, Inc.</td><td><span class="bk dpa_deployed">Desktop analytics deployed</span></td><td class="num">9554</td><td>SF Customer (Jul 10 export), brand match on &#x27;Farmers Insurance&#x27;, AM confirms it is the same company</td></tr>
+<tr><td class="who">Five9, Inc</td><td><span class="bk backoffice_deployment">Back-office deployment</span></td><td class="num">6000</td><td>SF Partner (Clay segment 2026-09-01), &#x27;Five9&#x27;</td></tr>
+<tr><td class="who">Cigna Corporation</td><td><span class="bk operational_visualizer">Operational visualizer</span></td><td class="num">5100</td><td>SF Customer (Jul 10 export), &#x27;CIGNA&#x27;</td></tr>
+<tr><td class="who">The Cleveland Clinic Foundation</td><td><span class="bk verint_no_dpa">Verint, no desktop analytics</span></td><td class="num">3577</td><td>SF Customer (Clay segment 2026-09-01), brand match on &#x27;Cleveland Clinic&#x27;, AM confirms it is the same company</td></tr>
+<tr><td class="who">PNC Bank, National Association</td><td><span class="bk operational_visualizer">Operational visualizer</span></td><td class="num">970</td><td>SF Customer (Clay segment 2026-09-01), brand match on &#x27;PNC Financial&#x27;, AM confirms it is the same company</td></tr>
+<tr><td class="who">Southern Company</td><td><span class="bk dpa_deployed">Desktop analytics deployed</span></td><td class="num">1863</td><td>SF Customer (Clay segment 2026-09-01), &#x27;Southern California Edison Company&#x27;, confirm not related before outreach</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">To settle today</div>
+    <h2>Four questions, then it's build.</h2>
+    <ul class="q">
+      <li><span class="n">1</span><div class="t">Vertical alignment scale<small>Jeremy scored accounts 1, 2, 3. If 1 means strongest fit to our six verticals, the ranking keeps it; if not, it comes out.</small></div><textarea data-q="q1" placeholder="Answer"></textarea></li>
+      <li><span class="n">2</span><div class="t">Verint-direct accounts<small>Ally, Maximus, AIG, Intuit, Citibank were sold direct or through TTEC, not partner-registered. In play for a 3xG motion, and who makes the intro?</small></div><textarea data-q="q2" placeholder="Answer"></textarea></li>
+      <li><span class="n">3</span><div class="t">Naming 3xG<small>Which accounts can carry 3xG's name in the first touch, and who at 3xG is the sponsor we can reference.</small></div><textarea data-q="q3" placeholder="Answer"></textarea></li>
+      <li><span class="n">4</span><div class="t">Salesforce access<small>Read access to the pre-pipeline report and the Automated Health Systems record, so the day-45 read comes from the stage fields.</small></div><textarea data-q="q4" placeholder="Answer"></textarea></li>
+    </ul>
+    <div class="gate">
+      <h4>After the call</h4>
+      <p>Sep 2 to 4: buying committees sourced and briefings written for the cohort, customer-exclusion gate on every name, sequences drafted for Frank's review the week of Sep 7. The holdout stays on the current process for the same 45 days.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">If the cohort needs more choice</div>
+    <h2>Extended pool from the matrix sheet.</h2>
+    <p class="lede">Accounts with 500+ Verint seats and WFM or desktop analytics in place that are not on the partner sheet. 62 in total; the first 25 not held are below. Not partner-registered, so each needs a path in.</p>
+    <details>
+      <summary>Show the extended pool</summary>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Account</th><th class="num">Seats</th><th class="num">DPA seats</th><th>WFM</th><th>Bill-to</th><th>Notes</th></tr></thead>
+          <tbody>
+<tr><td class="who">Interinsurance Exchange of the Automobile Club</td><td class="num">13270</td><td class="num">6659</td><td class="st">yes</td><td class="rs">Carousel Industries of North America</td><td class="fl"></td></tr>
+<tr><td class="who">CWT Global B.V.</td><td class="num">9050</td><td class="num">9050</td><td class="st">yes</td><td class="rs">CWT US, LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Costco Wholesale Corporation</td><td class="num">5401</td><td class="num">5400</td><td class="st">yes</td><td class="rs">Cisco Systems, Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Intermountain Healthcare (IHC)</td><td class="num">3999</td><td class="num">1036</td><td class="st">yes</td><td class="rs">Group Elite Communications Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Department of Veterans Affairs</td><td class="num">3579</td><td class="num">3579</td><td class="st">no</td><td class="rs">Avaya LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Ministere de l&#x27;Emploi et de la Solidarite sociale</td><td class="num">3434</td><td class="num">0</td><td class="st">yes</td><td class="rs">Connex Quebec Inc</td><td class="fl"></td></tr>
+<tr><td class="who">Duke Energy Corporation</td><td class="num">3301</td><td class="num">3300</td><td class="st">yes</td><td class="rs">Sound Communications Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Baptist Health South Florida, Inc.</td><td class="num">2521</td><td class="num">1133</td><td class="st">yes</td><td class="rs">Group Elite Communications Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Human Services Agency - City and County of San Francisco (CCSF)</td><td class="num">2511</td><td class="num">0</td><td class="st">yes</td><td class="rs">Eaton and Associates</td><td class="fl"></td></tr>
+<tr><td class="who">Avis Budget Car Rental, LLC (ABCR)</td><td class="num">2450</td><td class="num">2350</td><td class="st">yes</td><td class="rs">Amazon Web Services, Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">NYUMC Langone</td><td class="num">2134</td><td class="num">1115</td><td class="st">yes</td><td class="rs">Presidio Networked Solutions, LLC</td><td class="fl"></td></tr>
+<tr><td class="who">NRG Energy Inc</td><td class="num">2120</td><td class="num">2110</td><td class="st">yes</td><td class="rs">Reliant Energy Retail Services, LLC.</td><td class="fl"></td></tr>
+<tr><td class="who">Mastercard Technologies, LLC</td><td class="num">2095</td><td class="num">2093</td><td class="st">yes</td><td class="rs">Avaya LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Geisinger Health Systems</td><td class="num">1868</td><td class="num">441</td><td class="st">yes</td><td class="rs">Presidio Networked Solutions, LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Nordstrom, Inc.</td><td class="num">1649</td><td class="num">1649</td><td class="st">no</td><td class="rs">Avaya LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Bank of Nova Scotia</td><td class="num">1512</td><td class="num">0</td><td class="st">yes</td><td class="rs">Connex Telecommunications Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Emory University</td><td class="num">1462</td><td class="num">0</td><td class="st">yes</td><td class="rs">WTI Holdings LLC dba Waterfield Technologies</td><td class="fl"></td></tr>
+<tr><td class="who">Baltimore County Communications Center</td><td class="num">1416</td><td class="num">0</td><td class="st">yes</td><td class="rs">Motorola Solutions, Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">AGA Service Company fka Allianz Global Assistance</td><td class="num">1400</td><td class="num">413</td><td class="st">yes</td><td class="rs">ConvergeOne, Inc</td><td class="fl"></td></tr>
+<tr><td class="who">Amtrak</td><td class="num">1294</td><td class="num">1294</td><td class="st">yes</td><td class="rs">Avaya LLC</td><td class="fl"></td></tr>
+<tr><td class="who">DoITT</td><td class="num">1210</td><td class="num">0</td><td class="st">yes</td><td class="rs">Cisco Systems, Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Global Payments</td><td class="num">1200</td><td class="num">1200</td><td class="st">yes</td><td class="rs">ConvergeOne, Inc</td><td class="fl"></td></tr>
+<tr><td class="who">Clayton Homes</td><td class="num">1155</td><td class="num">36</td><td class="st">no</td><td class="rs">Sound Communications Inc.</td><td class="fl"></td></tr>
+<tr><td class="who">Baptist Health System, Inc</td><td class="num">1130</td><td class="num">800</td><td class="st">yes</td><td class="rs">ISI Telemanagement Solutions, LLC</td><td class="fl"></td></tr>
+<tr><td class="who">Goosehead Insurance</td><td class="num">1118</td><td class="num">0</td><td class="st">yes</td><td class="rs">Vonage Business Limited</td><td class="fl"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. GTM Engineering &middot; Partner channel &middot; 3xG list review</span>
+  <span>Built Sep 1 2026 from the intake run &middot; local file, not published &middot; 3xG data, do not forward</span>
+</footer>
+</div>
+
+<div class="toast" id="toast">Copied</div>
+<!--PRESENT-->
+<script>
+(function(){
+  var KEY='3xg-list-review-sep1';
+  var state={};
+  try{ state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ state={}; }
+  var rows=[].slice.call(document.querySelectorAll('tr.cand'));
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+  function paint(){
+    var c=0,h=0,s=0;
+    rows.forEach(function(tr){
+      var p=state[tr.dataset.id]||'';
+      tr.classList.remove('cohort','holdout','skip');
+      if(p){ tr.classList.add(p); }
+      if(p==='cohort')c++; else if(p==='holdout')h++; else if(p==='skip')s++;
+    });
+    document.getElementById('nC').textContent=c; document.getElementById('nH').textContent=h; document.getElementById('nS').textContent=s;
+  }
+  rows.forEach(function(tr){
+    tr.querySelectorAll('td.pick button').forEach(function(b){
+      b.addEventListener('click',function(){
+        var id=tr.dataset.id, p=b.dataset.p;
+        state[id]=(state[id]===p)?'':p; save(); paint();
+      });
+    });
+  });
+  document.querySelectorAll('.bar .f').forEach(function(f){
+    f.addEventListener('click',function(){
+      document.querySelectorAll('.bar .f').forEach(function(x){x.classList.remove('on');}); f.classList.add('on');
+      var v=f.dataset.f; rows.forEach(function(tr){ tr.classList.toggle('hidden', v!=='all' && tr.dataset.b!==v); });
+    });
+  });
+  document.querySelectorAll('.q textarea').forEach(function(t){
+    t.value=state['_'+t.dataset.q]||'';
+    t.addEventListener('input',function(){ state['_'+t.dataset.q]=t.value; save(); });
+  });
+  function toast(m){ var t=document.getElementById('toast'); t.textContent=m; t.classList.add('on'); setTimeout(function(){t.classList.remove('on');},1600); }
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var out=['3xG list review, '+new Date().toLocaleDateString(),''];
+    ['cohort','holdout','skip'].forEach(function(p){
+      var names=rows.filter(function(tr){return state[tr.dataset.id]===p;}).map(function(tr){return '- '+tr.dataset.name;});
+      if(names.length){ out.push(p.charAt(0).toUpperCase()+p.slice(1)+' ('+names.length+')'); out=out.concat(names); out.push(''); }
+    });
+    var qs=[['q1','Vertical alignment'],['q2','Verint-direct accounts'],['q3','Naming 3xG'],['q4','Salesforce access']];
+    qs.forEach(function(q){ var v=state['_'+q[0]]; if(v){ out.push(q[1]+': '+v); } });
+    var txt=out.join('\n');
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(function(){toast('Copied');},function(){prompt('Copy:',txt);}); } else { prompt('Copy:',txt); }
+  });
+  document.getElementById('clearBtn').addEventListener('click',function(){ if(confirm('Clear all picks and answers?')){ state={}; save(); paint(); document.querySelectorAll('.q textarea').forEach(function(t){t.value='';}); } });
+  paint();
+})();
+</script>
+</body>
+</html>

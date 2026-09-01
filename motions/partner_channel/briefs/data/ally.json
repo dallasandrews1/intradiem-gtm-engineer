@@ -1,0 +1,647 @@
+{
+ "account": "Ally Financial Inc.",
+ "short": "Ally",
+ "slug": "ally",
+ "domain": "ally.com",
+ "partner_line": "3xG whitespace list; Verint sold direct, no reseller of record",
+ "basis": "Public sources read Sep 1 2026, Clay free-path contacts (0 credits), 3xG sheet for the seat count",
+ "sub": "Digital bank and auto finance, Detroit and Charlotte. Two new owners of the functions Intradiem orchestrates, servicing operations and enterprise technology, took their seats in July 2026 while expense growth is held near 1% and revenue grows double digits.",
+ "angle": {
+  "internal": "two new owners in July, a 2,300-seat visibility layer with nothing acting on it",
+  "partner": "new servicing and technology leaders, expenses held to 1% while revenue grows double digits"
+ },
+ "stats": [
+  {
+   "n": "2,306",
+   "l": "Verint Operations Visualizer seats, 3xG sheet 2024",
+   "internal_only": true
+  },
+  {
+   "n": "~10,300",
+   "l": "employees, FY2025 10-K"
+  },
+  {
+   "n": "+1%",
+   "l": "2026 expense growth guidance, Q1 2026 call"
+  },
+  {
+   "n": "Jul 2026",
+   "l": "new CIDO and new head of consumer servicing operations"
+  },
+  {
+   "n": "+10%",
+   "l": "adjusted revenue growth, Q2 2026"
+  }
+ ],
+ "tldr": {
+  "internal": [
+   "<b>Why now.</b> Sean Leary took a new seat over Consumer Servicing Operations for Auto Finance on Jul 23 2026 and Mark Mathewson became Chief Information and Data Officer on Jul 20. Both own the exact ground the back-office conversation sits on, and both are inside their first 90 days.",
+   "<b>The gap.</b> Ally.ai is enterprise-wide (10,000+ employees, call summaries cut post-call effort by a claimed 30%), and a Director is being hired to build process optimization and automation. The Verint Operations Visualizer footprint (2,306 seats, 3xG sheet) is a tracking layer; nothing public shows real-time reallocation of work or people behind it.",
+   "<b>The pressure.</b> Two reduction rounds in 2025 (under 5% in January, ~2% in November, mostly manager level), a $31M reduction-in-force charge in Q4 2025, and 2026 expense growth guided to about 1% while adjusted revenue grew 6% then 10%. Do more with fewer managers is the operating posture.",
+   "<b>Gate.</b> Not a current Intradiem customer or partner (Salesforce segment Sep 1 2026), not registered by any partner in the pre-pipeline. Clear to work."
+  ],
+  "partner": [
+   "<b>Why now.</b> Sean Leary took a new seat over Consumer Servicing Operations for Auto Finance on Jul 23 2026 and Mark Mathewson became Chief Information and Data Officer on Jul 20. Both are inside their first 90 days.",
+   "<b>Where the conversation sits.</b> Ally.ai is enterprise-wide and a Director is being hired to build process optimization and automation. Real-time orchestration of back-office work and people is the layer that sits beside the desktop analytics Ally already runs.",
+   "<b>The pressure.</b> 2026 expense growth guided to about 1% while adjusted revenue grew 6% in Q1 and 10% in Q2, after the Focused. Forward. simplification (Ally Lending, credit card and mortgage origination exits)."
+  ]
+ },
+ "h2_findings": "A bank that cut managers, held expenses to 1%, and put two new people over servicing and technology.",
+ "sections": [
+  {
+   "eyebrow": "1",
+   "title": "Back-office footprint",
+   "items": [
+    {
+     "t": "About 10,300 employees at FY2025 year end, down from roughly 10,700 in FY2024.",
+     "s": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+     "d": "FY2025 10-K, Feb 2026"
+    },
+    {
+     "t": "Named operating units on the record: Consumer Servicing Operations, Auto Finance (Sean Leary); Auto Consumer Acquisition Operations (Bill Dombrowski); Shared Services (Cathy Cassell); Business Operations Support and Strategy (Lea Woodward); Consumer Credit Operations (Tom Elkins, SVP).",
+     "s": "https://media.ally.com/leadership",
+     "d": "Sep 1 2026"
+    },
+    {
+     "t": "Verint Operations Visualizer, 2,306 seats, sold direct. Desktop activity tracking on the back office. Not confirmed in any public source; treat as internal.",
+     "s": "",
+     "d": "3xG licensing sheet 2024, internal",
+     "f": "INFERRED",
+     "internal_only": true
+    },
+    {
+     "t": "Back-office population: if the Verint seats are a floor for desktop-tracked roles (servicing, collections, deposit ops, fraud and AML, title and lien), about 22% of the workforce sits in those functions. A floor, not a count.",
+     "s": "",
+     "d": "derived from the two lines above",
+     "f": "ESTIMATED",
+     "internal_only": true
+    },
+    {
+     "t": "Sites: Detroit (HQ) and Charlotte (543,000 sq ft corporate center) are the principal offices; Jacksonville FL and Little Rock AR listed; a Lewisville TX collections site shows in postings and a Dallas-Fort Worth Senior Director of Operations profile.",
+     "s": "https://www.ally.com/about/locations/",
+     "d": "Sep 1 2026"
+    },
+    {
+     "t": "No public evidence of an offshore or BPO servicing arrangement. One employee review mentions outsourced jobs with no function or vendor.",
+     "s": "https://www.glassdoor.com/Reviews/Ally-Financial-Reviews-E7222.htm",
+     "d": "Dec 2025",
+     "f": "EMPLOYEE SENTIMENT"
+    }
+   ]
+  },
+  {
+   "eyebrow": "2",
+   "title": "Segments and restructuring, last 24 months",
+   "items": [
+    {
+     "t": "Four segments by president: Dealer Financial Services (Doug Timmerman), Consumer Banking (Lindsay Sacknoff), Corporate Finance (Bill Hall Jr.), Ally Insurance (Russ Walsh).",
+     "s": "https://media.ally.com/leadership",
+     "d": "Sep 1 2026"
+    },
+    {
+     "t": "Ally Lending (point-of-sale financing) sold to Synchrony; announced Jan 19 2024, closed Mar 1 2024.",
+     "s": "https://media.ally.com/2024-01-19-Synchrony-and-Ally-Financial-Reach-Agreement-on-Sale-of-Allys-Point-of-Sale-Financing-Business",
+     "d": "Jan 19 2024"
+    },
+    {
+     "t": "Credit card business sold to CardWorks, 1.3M cardholders; announced Jan 22 2025, closed Apr 1 2025.",
+     "s": "https://media.ally.com/2025-01-22-Ally-and-CardWorks-Reach-Agreement-on-Sale-of-Allys-Credit-Card-Business",
+     "d": "Jan 22 2025"
+    },
+    {
+     "t": "Mortgage origination stopped taking new applications after Jan 31 (year read as 2025 from the surrounding coverage).",
+     "s": "https://finance.yahoo.com/news/ally-financial-q4-earnings-call-162727335.html",
+     "d": "Jan 2026",
+     "f": "UNVERIFIED"
+    },
+    {
+     "t": "Reduction rounds: under 5% of ~11,000 in Jan 2025; about 2% (~200, mostly manager level and above) on Nov 6 2025.",
+     "s": "https://www.bankingdive.com/news/ally-2-percent-workforce-cut-manager-wells-headcount-scharf-dimon-bofa-ai/804850/",
+     "d": "Nov 6 2025",
+     "internal_only": true
+    },
+    {
+     "t": "Shared Services and Business Operations Support and Strategy exist as named units; which functions report into each is not public.",
+     "s": "https://www.linkedin.com/in/cathy-cassell-2352124a/",
+     "d": "Sep 1 2026",
+     "f": "INFERRED"
+    }
+   ]
+  },
+  {
+   "eyebrow": "3",
+   "title": "Cost pressure",
+   "items": [
+    {
+     "t": "Q1 2026: adjusted noninterest expense down $85M year on year; full-year 2026 expense growth guided to about 1%; core ROTCE 11.1%.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/04/17/ally-financial-ally-q1-2026-earnings-transcript/",
+     "d": "Apr 17 2026"
+    },
+    {
+     "t": "Q2 2026: adjusted revenue up 10%, adjusted EPS up 22% to $1.21, adjusted noninterest expense up 5% and described as in line with expectations.",
+     "s": "https://www.benzinga.com/news/26/07/60580442/full-transcript-ally-financial-q2-2026-earnings-call",
+     "d": "Jul 2026"
+    },
+    {
+     "t": "Q1 2026 expense line: adjusted noninterest expense down year on year with 2026 growth guided to about 1%; Q2 2026 adjusted revenue up 10% with expense up 5%, in line with expectations.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/04/17/ally-financial-ally-q1-2026-earnings-transcript/",
+     "d": "Apr and Jul 2026",
+     "partner_only": true
+    },
+    {
+     "t": "Q4 2025: a $31M restructuring charge tied to a reduction in force, excluded from adjusted expense.",
+     "s": "https://www.investing.com/news/transcripts/earnings-call-transcript-ally-financial-q4-2025-beats-expectations-stock-dips-93CH-4458225",
+     "d": "Jan 2026"
+    },
+    {
+     "t": "FY2025: adjusted EPS $3.81 (+62%), core ROTCE 10.4% (+300 bps); Focused. Forward. framed as redirecting capital into Dealer Financial Services and Corporate Finance.",
+     "s": "https://www.sec.gov/Archives/edgar/data/40729/000119312526113880/ally_2025_ars_-_v2.pdf",
+     "d": "2025 annual report"
+    },
+    {
+     "t": "Revenue per employee about $768,000 (FY2025 net revenue $7.914B over ~10,300 employees).",
+     "s": "",
+     "d": "derived",
+     "f": "ESTIMATED",
+     "internal_only": true
+    }
+   ]
+  },
+  {
+   "eyebrow": "4",
+   "title": "Pain and CX signals",
+   "items": [
+    {
+     "t": "Consumer complaint themes in 2025: post-repossession collections documentation, deposit crediting delays (a Mar 12 deposit credited Mar 18), Auto Pay failures causing fees, hold times well past the quoted wait.",
+     "s": "https://www.bbb.org/us/mi/auburn-hills/profile/consumer-finance-companies/ally-financial-inc-0372-5001937/complaints",
+     "d": "2025"
+    },
+    {
+     "t": "Open Director posting, BL Testing, Process Optimization and Automation: lead organizational change through delivery of new processes, tools, and automation solutions. Automation capacity is still being built, not run.",
+     "s": "https://www.theladders.com/job/director-bl-testing-process-optimization-and-automation-allyfinancial-mechanicsburg-pa_86803822",
+     "d": "Sep 1 2026"
+    },
+    {
+     "t": "CFPB and DOJ auto-lending pricing order ($80M restitution, $18M penalty) is legacy (2011 to 2013 loans). No new consent order in 2025 or 2026; CFPB Regulation B amendments (Apr 22 2026) removed disparate-impact liability under ECOA.",
+     "s": "https://www.consumerfinance.gov/enforcement/actions/ally-financial-ally-bank/",
+     "d": "Apr 22 2026",
+     "internal_only": true
+    },
+    {
+     "t": "No posting with explicit manual-processing or backlog language found; the live careers site returned a 404 on direct fetch.",
+     "s": "",
+     "d": "Sep 1 2026",
+     "f": "UNVERIFIED",
+     "internal_only": true
+    }
+   ]
+  },
+  {
+   "eyebrow": "5",
+   "title": "Employee sentiment",
+   "items": [
+    {
+     "t": "Post-layoff morale, understaffing and insane workloads under Focused. Forward. are recurring Glassdoor themes; 3.7 of 5 across 2,376 reviews, 70% would recommend.",
+     "s": "https://www.glassdoor.com/Reviews/Ally-Financial-Reviews-E7222.htm",
+     "d": "2025 to 2026",
+     "f": "EMPLOYEE SENTIMENT",
+     "internal_only": true
+    },
+    {
+     "t": "DevOps and engineering described as understaffed and a bottleneck.",
+     "s": "https://www.glassdoor.com/Reviews/Ally-Financial-Reviews-E7222.htm",
+     "d": "2025",
+     "f": "EMPLOYEE SENTIMENT",
+     "internal_only": true
+    }
+   ]
+  },
+  {
+   "eyebrow": "6",
+   "title": "Technology and vendors",
+   "items": [
+    {
+     "t": "Ally.ai: proprietary platform on Azure OpenAI, built with Microsoft, enterprise-wide since Jul 23 2025 (10,000+ employees). Disclosed use case is call summaries for customer service associates, a claimed 30% cut in post-call effort. Company-published evidence.",
+     "s": "https://media.ally.com/2025-07-23-Ally-Financial-rolls-out-proprietary-AI-platform-enterprise-wide",
+     "d": "Jul 23 2025"
+    },
+    {
+     "t": "Technology leadership from LinkedIn (Clay free path): Nans Sivaram, CTO (Jan 2026); Carrie Sumlin, CIO Dealer Financial Services (Jan 2026); Pat Rinaldo, CIO Banking and Corporate Finance (Dec 2025); Dan Lemont, CIO Strategy, Data, Analytics and AI (Oct 2024); Angela Ramsammy, Head of Technology Operations for Digital, Bank, Contact Center and Corporate Technologies.",
+     "s": "https://www.linkedin.com/in/ramsammy/",
+     "d": "index dates, confirm live",
+     "f": "INFERRED"
+    },
+    {
+     "t": "Contact center platform, WFM vendor, RPA vendor and BPO partner: none named in public sources this pass.",
+     "s": "",
+     "d": "Sep 1 2026"
+    },
+    {
+     "t": "AWS referenced for application resiliency (vendor social post), Azure via Ally.ai.",
+     "s": "https://www.linkedin.com/posts/aws-for-financial-services_ally-financial-strengthens-digital-banking-activity-7325519814339301377-9Jcc",
+     "d": "2025"
+    },
+    {
+     "t": "Maturity read: mid. A real enterprise AI program on the judgment side, an automation build-out still hiring its Director, and a desktop tracking layer on the back office with no orchestration behind it.",
+     "s": "",
+     "d": "Sep 1 2026",
+     "f": "INFERRED"
+    }
+   ]
+  }
+ ],
+ "h2_leaders": "Start with the two July appointments; the operations layer under them is findable.",
+ "leaders_note": "Titles for the executive layer come from media.ally.com. LinkedIn URLs come from the Clay free path (index dates, not a live check); anything that goes into a sequence gets a live look first. Emails are not on this brief; the waterfall runs on the picked cohort after Frank's go.",
+ "leaders": [
+  {
+   "name": "Sean Leary",
+   "title": "Head of Consumer Servicing Operations, Auto Finance",
+   "linkedin": "",
+   "role": "Champion (owns the function)",
+   "status": "Confirmed, media.ally.com",
+   "fresh": "new Jul 23 2026",
+   "note": "Reports to Doug Timmerman. First 90 days; the servicing back office is his."
+  },
+  {
+   "name": "Mark Mathewson",
+   "title": "Chief Information and Data Officer",
+   "linkedin": "",
+   "role": "VITO (technology and data)",
+   "status": "Confirmed, media.ally.com",
+   "fresh": "new Jul 20 2026",
+   "note": "From Capital One. Owns technology and data across every function and business line."
+  },
+  {
+   "name": "Doug Timmerman",
+   "title": "President, Dealer Financial Services",
+   "linkedin": "https://www.linkedin.com/in/doug-timmerman-545a2030/",
+   "role": "VITO (auto finance)",
+   "status": "Confirmed",
+   "fresh": "",
+   "note": "Acquisition operations and servicing operations both roll up here."
+  },
+  {
+   "name": "Russ Hutchinson",
+   "title": "Chief Financial Officer",
+   "linkedin": "https://www.linkedin.com/in/russ-hutchinson-25607a5b/",
+   "role": "VITO (finance)",
+   "status": "Confirmed",
+   "fresh": "since Jul 2023",
+   "note": "Owns the 1% expense guide."
+  },
+  {
+   "name": "Lindsay Sacknoff",
+   "title": "President, Consumer Banking",
+   "linkedin": "",
+   "role": "VITO (deposits and customer care)",
+   "status": "Confirmed, media.ally.com",
+   "fresh": "",
+   "note": "Deposit operations and Customer Care sit under her."
+  },
+  {
+   "name": "Bill Dombrowski",
+   "title": "SVP, Head of Auto Consumer Acquisition Operations",
+   "linkedin": "",
+   "role": "Champion candidate",
+   "status": "Confirmed, media.ally.com",
+   "fresh": "",
+   "note": "Front-end underwriting and processing volume."
+  },
+  {
+   "name": "Tom Elkins",
+   "title": "Senior Vice President, Consumer Credit Operations",
+   "linkedin": "https://www.linkedin.com/in/tom-elkins-97a04313/",
+   "role": "Champion candidate",
+   "status": "Clay index",
+   "fresh": "since Mar 2022",
+   "note": "Large back-office operation; not in the 3xG brief."
+  },
+  {
+   "name": "Cathy Cassell",
+   "title": "Sr. Director, Shared Services",
+   "linkedin": "https://www.linkedin.com/in/cathy-cassell-2352124a/",
+   "role": "Evaluator",
+   "status": "Title confirmed, scope inferred",
+   "fresh": "",
+   "note": "Shared services is where consolidated back-office work usually lands."
+  },
+  {
+   "name": "Lea Woodward",
+   "title": "Sr. Director, Business Operations Support and Strategy",
+   "linkedin": "https://www.linkedin.com/in/lea-woodward-66861b51/",
+   "role": "Evaluator",
+   "status": "Title confirmed, scope inferred",
+   "fresh": "",
+   "note": ""
+  },
+  {
+   "name": "Paul Pennanen",
+   "title": "Sr. Director, Process Optimization, Automation and Innovation",
+   "linkedin": "https://www.linkedin.com/in/paul-pennanen-b33a9510/",
+   "role": "Evaluator (automation)",
+   "status": "Clay index",
+   "fresh": "since Jul 2023",
+   "note": "The automation build-out reports somewhere near here; James Heike joined as Director in Jul 2026."
+  },
+  {
+   "name": "Peter Suhmann",
+   "title": "Sr. Director, Operational Excellence",
+   "linkedin": "https://www.linkedin.com/in/peter-suhmann/",
+   "role": "Evaluator (op-ex)",
+   "status": "Clay index",
+   "fresh": "since Mar 2022",
+   "note": "Vee Vu-McKean holds the same title since Feb 2026; Kristina Awalt is Director since Nov 2025."
+  },
+  {
+   "name": "Angela Ramsammy",
+   "title": "Head of Technology Operations, Digital, Bank, Contact Center and Corporate Technologies",
+   "linkedin": "https://www.linkedin.com/in/ramsammy/",
+   "role": "Gatekeeper (technology operations)",
+   "status": "Clay index",
+   "fresh": "since May 2024",
+   "note": "Contact center technology owner on the ops side."
+  },
+  {
+   "name": "Nans Sivaram",
+   "title": "Chief Technology Officer",
+   "linkedin": "https://www.linkedin.com/in/nans-sivaram-86b6a711/",
+   "role": "Gatekeeper (technology)",
+   "status": "Clay index and TheOrg",
+   "fresh": "since Jan 2026",
+   "note": ""
+  },
+  {
+   "name": "Carrie Sumlin",
+   "title": "CIO, Dealer Financial Services",
+   "linkedin": "https://www.linkedin.com/in/carrie-sumlin-27a9371/",
+   "role": "Gatekeeper (DFS technology)",
+   "status": "Clay index",
+   "fresh": "since Jan 2026",
+   "note": "Integration path for anything in auto servicing."
+  },
+  {
+   "name": "Stephanie Richard",
+   "title": "Chief Risk Officer",
+   "linkedin": "",
+   "role": "Gatekeeper (risk and compliance)",
+   "status": "Confirmed, media.ally.com",
+   "fresh": "since Nov 2024",
+   "note": "Fraud and AML workflows are compliance-sensitive.",
+   "internal_only": true
+  },
+  {
+   "name": "Head of Workforce Management",
+   "title": "Role identified, individual not confirmed",
+   "linkedin": "",
+   "role": "Champion candidate",
+   "status": "Not found",
+   "fresh": "",
+   "note": "Workforce Analytics titles found (Rafael Sanchez, Sukumaran Mariappan) read as HR analytics, not WFM. Sales Nav layer fill needed."
+  }
+ ],
+ "h2_triggers": "The window opened in July.",
+ "triggers": [
+  {
+   "when": "Jul 23 2026",
+   "what": "Sean Leary named Head of Consumer Servicing Operations, Auto Finance.",
+   "so": "A named executive just took ownership of the function the conversation is about.",
+   "s": "https://media.ally.com/2026-07-23-Ally-Financial-Announces-Investor-Relations-and-Consumer-Servicing-Operations-Leadership-Transitions"
+  },
+  {
+   "when": "Jul 13 2026",
+   "what": "Mark Mathewson named Chief Information and Data Officer, effective Jul 20.",
+   "so": "New technology owner across all functions; early-mandate window.",
+   "s": "https://media.ally.com/2026-07-13-Ally-Financial-Names-Mark-Mathewson-Chief-Information-and-Data-Officer"
+  },
+  {
+   "when": "Jul 2026",
+   "what": "Q2 2026 call: adjusted revenue up 10%, expense up 5%, in line with expectations.",
+   "so": "Grow without growing headcount is the stated posture.",
+   "s": "https://www.benzinga.com/news/26/07/60580442/full-transcript-ally-financial-q2-2026-earnings-call"
+  },
+  {
+   "when": "Apr 17 2026",
+   "what": "Q1 2026 call: 2026 expense growth guided to about 1%.",
+   "so": "Any new spend has to pay for itself inside the year.",
+   "s": "https://www.fool.com/earnings/call-transcripts/2026/04/17/ally-financial-ally-q1-2026-earnings-transcript/"
+  },
+  {
+   "when": "Jan 2026",
+   "what": "New CTO (Nans Sivaram) and new CIO for Dealer Financial Services (Carrie Sumlin) per LinkedIn start dates.",
+   "so": "The technology layer under Mathewson is also new.",
+   "f": "INFERRED",
+   "s": "https://www.linkedin.com/in/carrie-sumlin-27a9371/"
+  },
+  {
+   "when": "Nov 6 2025",
+   "what": "Second 2025 reduction round, about 2%, mostly manager level and above; $31M charge in Q4.",
+   "so": "Fewer managers watching the same volume.",
+   "s": "https://www.bankingdive.com/news/ally-2-percent-workforce-cut-manager-wells-headcount-scharf-dimon-bofa-ai/804850/",
+   "internal_only": true
+  }
+ ],
+ "h2_say": "What we can put in writing.",
+ "we_can_say": [
+  {
+   "t": "Intradiem sits between the ACD and WFM. It is not a WFM replacement; Verint, NICE and Calabrio are the layer it acts on top of.",
+   "s": "Value Repository, section 4",
+   "tier": "1:many"
+  },
+  {
+   "t": "Dynamic Workforce Orchestration: continuously sensing demand, reallocating work, and supporting employees as conditions shift through the day, in the idle seconds between scheduled activities.",
+   "s": "Value Repository, sections 1 and 4",
+   "tier": "1:many"
+  },
+  {
+   "t": "Net retention above 114% in 2025; record net new bookings in 2025; customer savings at an all-time high for full-year 2025.",
+   "s": "Value Repository, BusinessWire Feb 18 2026",
+   "tier": "1:many"
+  },
+  {
+   "t": "About 350,000 contact center professionals on platform.",
+   "s": "Value Repository, intradiem.com",
+   "tier": "1:many"
+  },
+  {
+   "t": "A financial services customer ran a successful pilot that expanded to additional use cases.",
+   "s": "Value Repository, intradiem.com, blinded",
+   "tier": "1:1"
+  },
+  {
+   "t": "A healthcare customer reported 4.5X annualized ROI in the first quarter of operations.",
+   "s": "Value Repository, intradiem.com, blinded unless logo-approved",
+   "tier": "1:1"
+  }
+ ],
+ "scenario_note": "The 3xG brief models $16.1M to $48.3M in annual savings from a $70,000 fully loaded FTE cost times 10, 20 or 30% of the 2,300 Verint seats. Seats on a 2024 licensing sheet are not back-office FTEs, the lift percentages are assumptions, and none of it is in the Value Repository. It stays out of anything a partner seller or Ally sees. The business case for Ally comes from discovery data through the ROI skill after the 40-minute meeting.",
+ "h2_questions": "Five questions that come from the record, not the pitch.",
+ "questions": [
+  {
+   "q": "Sean Leary just took over Consumer Servicing Operations. As he stands the org up, where's the biggest gap between where volume lands and where capacity sits during the day?",
+   "from": "Jul 23 2026 appointment"
+  },
+  {
+   "q": "Mark Mathewson came in from Capital One to run technology and data across every function. Is matching real-time work volume to available people part of his early mandate, or does it still live inside each business line?",
+   "from": "Jul 13 2026 appointment"
+  },
+  {
+   "q": "Ally.ai reached 10,000 employees for things like call summaries. Has anything been paired with it that moves staff or work in real time across servicing, collections and deposit ops, or is it assistive today?",
+   "from": "Ally.ai rollout, Jul 23 2025"
+  },
+  {
+   "q": "With expense growth held to about 1% while adjusted revenue is up double digits, where does the stretch show first: collections, deposit operations, or somewhere else in the back office?",
+   "from": "Q1 and Q2 2026 calls"
+  },
+  {
+   "q": "After two reduction rounds that landed mostly at manager level, how is remaining capacity planned and watched across Charlotte, Jacksonville and the DFW area? One real-time view, or per site?",
+   "from": "Nov 2025 reduction, site footprint"
+  }
+ ],
+ "h2_conf": "Where this brief is solid and where it isn't.",
+ "confidence": [
+  {
+   "section": "Footprint",
+   "level": "Medium"
+  },
+  {
+   "section": "Segments and restructuring",
+   "level": "High"
+  },
+  {
+   "section": "Leaders",
+   "level": "High"
+  },
+  {
+   "section": "Cost pressure",
+   "level": "High"
+  },
+  {
+   "section": "Pain and CX",
+   "level": "Medium"
+  },
+  {
+   "section": "Technology and vendors",
+   "level": "Low"
+  },
+  {
+   "section": "Timing",
+   "level": "High"
+  }
+ ],
+ "gaps": [
+  {
+   "t": "Verint at Ally is not corroborated by any public source; the seat count rests on the 3xG sheet alone. Whether the contract covers Operations Visualizer only or extends into WFM and QM is the single fact that most changes the angle. Ask through 3xG.",
+   "internal_only": true
+  },
+  {
+   "t": "No named head of workforce management or workforce planning. Sales Navigator layer fill on the operations org under Leary and Elkins."
+  },
+  {
+   "t": "LinkedIn URLs for Leary, Mathewson, Sacknoff and Dombrowski, plus a live check on every Clay-indexed row before any sequence."
+  },
+  {
+   "t": "CFPB complaint database count for Ally auto loans, trailing 12 months, for a trend rather than themes."
+  },
+  {
+   "t": "Live careers-site sweep for manual-processing or backlog language (direct fetch failed this pass)."
+  }
+ ],
+ "deck": {
+  "footprint": "Ten thousand people, four segments, <span class=\"spark\">one expense line held to 1%</span>.",
+  "people": "Two July appointments own the ground. <span class=\"spark\">The layer under them is findable.</span>",
+  "timing": "The window <span class=\"spark\">opened in July</span>.",
+  "questions": "Questions that come <span class=\"spark\">from the record</span>."
+ },
+ "sources": [
+  {
+   "t": "Ally FY2025 Form 10-K",
+   "u": "https://www.sec.gov/Archives/edgar/data/40729/000004072926000005/ally-20251231.htm",
+   "d": "Feb 2026"
+  },
+  {
+   "t": "Ally 2025 annual report",
+   "u": "https://www.sec.gov/Archives/edgar/data/40729/000119312526113880/ally_2025_ars_-_v2.pdf",
+   "d": "2026"
+  },
+  {
+   "t": "Ally executive leadership",
+   "u": "https://media.ally.com/leadership",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Mathewson named CIDO",
+   "u": "https://media.ally.com/2026-07-13-Ally-Financial-Names-Mark-Mathewson-Chief-Information-and-Data-Officer",
+   "d": "Jul 13 2026"
+  },
+  {
+   "t": "Leary, consumer servicing operations leadership transition",
+   "u": "https://media.ally.com/2026-07-23-Ally-Financial-Announces-Investor-Relations-and-Consumer-Servicing-Operations-Leadership-Transitions",
+   "d": "Jul 23 2026"
+  },
+  {
+   "t": "Q1 2026 earnings call transcript",
+   "u": "https://www.fool.com/earnings/call-transcripts/2026/04/17/ally-financial-ally-q1-2026-earnings-transcript/",
+   "d": "Apr 17 2026"
+  },
+  {
+   "t": "Q2 2026 earnings call transcript",
+   "u": "https://www.benzinga.com/news/26/07/60580442/full-transcript-ally-financial-q2-2026-earnings-call",
+   "d": "Jul 2026"
+  },
+  {
+   "t": "Q4 2025 earnings call transcript",
+   "u": "https://www.investing.com/news/transcripts/earnings-call-transcript-ally-financial-q4-2025-beats-expectations-stock-dips-93CH-4458225",
+   "d": "Jan 2026"
+  },
+  {
+   "t": "Nov 2025 workforce reduction",
+   "u": "https://www.bankingdive.com/news/ally-2-percent-workforce-cut-manager-wells-headcount-scharf-dimon-bofa-ai/804850/",
+   "d": "Nov 6 2025"
+  },
+  {
+   "t": "Jan 2025 workforce reduction",
+   "u": "https://www.fintechfutures.com/job-cuts-new-hires/ally-financial-lays-off-less-than-5-of-total-workforce",
+   "d": "Jan 2025"
+  },
+  {
+   "t": "CardWorks credit card sale",
+   "u": "https://media.ally.com/2025-01-22-Ally-and-CardWorks-Reach-Agreement-on-Sale-of-Allys-Credit-Card-Business",
+   "d": "Jan 22 2025"
+  },
+  {
+   "t": "Synchrony Ally Lending sale",
+   "u": "https://media.ally.com/2024-01-19-Synchrony-and-Ally-Financial-Reach-Agreement-on-Sale-of-Allys-Point-of-Sale-Financing-Business",
+   "d": "Jan 19 2024"
+  },
+  {
+   "t": "Ally.ai enterprise rollout",
+   "u": "https://media.ally.com/2025-07-23-Ally-Financial-rolls-out-proprietary-AI-platform-enterprise-wide",
+   "d": "Jul 23 2025"
+  },
+  {
+   "t": "CFPB enforcement page, Ally",
+   "u": "https://www.consumerfinance.gov/enforcement/actions/ally-financial-ally-bank/",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "BBB complaints, Ally Financial",
+   "u": "https://www.bbb.org/us/mi/auburn-hills/profile/consumer-finance-companies/ally-financial-inc-0372-5001937/complaints",
+   "d": "2025"
+  },
+  {
+   "t": "Director, BL Testing, Process Optimization and Automation posting",
+   "u": "https://www.theladders.com/job/director-bl-testing-process-optimization-and-automation-allyfinancial-mechanicsburg-pa_86803822",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Glassdoor, Ally Financial reviews",
+   "u": "https://www.glassdoor.com/Reviews/Ally-Financial-Reviews-E7222.htm",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Clay free-path contact pull (two searches, 0 credits)",
+   "u": "briefs/contacts/ally_clay_free_2026-09-01.csv",
+   "d": "Sep 1 2026"
+  }
+ ]
+}

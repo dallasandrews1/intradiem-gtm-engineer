@@ -1,0 +1,97 @@
+{
+ "title": "Briefs side by side",
+ "h1": "Same two accounts, same day: the 3xG brief and the engine brief.",
+ "sub": "Jeremy Roderick's Gemini deep-research pass on Ally Financial and Maximus (Aug 31, forwarded by Frank Sep 1) next to the GTM Engineering briefing engine run on the same two accounts Sep 1. Both used the same eight-section spec. The difference is what comes out the other end and what it costs to do it eighty more times.",
+ "stats": [
+  {
+   "n": "2",
+   "l": "accounts, same spec, same day"
+  },
+  {
+   "n": "0",
+   "l": "Clay credits spent on contacts"
+  },
+  {
+   "n": "~6 min",
+   "l": "research per account, run in parallel"
+  },
+  {
+   "n": "2",
+   "l": "versions per account: internal and partner-safe"
+  }
+ ],
+ "tldr": [
+  "<b>Same spec, different output.</b> Jeremy's prompt is a good section list and the engine keeps it. The engine returns structured fields with a source and a flag on every line, a named buying committee with LinkedIn URLs, and two versions per account so the partner-safe copy never carries an estimate.",
+  "<b>The savings table stays home.</b> The first pass modeled dollar savings from seat counts and assumed productivity lifts. Useful sizing to think with, but seats are not FTEs and none of it is in the Value Repository, so the engine keeps scenario math in an internal note and out of anything a partner seller or prospect sees.",
+  "<b>Eighty accounts is a day, not three weeks.</b> Jeremy's process is five accounts per session, sixteen sessions, a Word document each. The engine runs one researcher per account in parallel and writes pages that can be opened on a call."
+ ],
+ "h2": "Where the two briefs agree, and where the engine adds what the sequence needs.",
+ "rows": [
+  {
+   "a": "Time and process",
+   "j": "One 90-minute working session with Frank, then batches of five accounts per Gemini session; 80 accounts estimated at 16 sessions over two to three weeks. QA by hand between batches.",
+   "e": "Two researchers ran in parallel for about six minutes each; contacts pulled on the free Clay path in four calls; pages generated from one JSON per account. The same run covers the 76 ranked accounts in a day, with the gate and the checks in code."
+  },
+  {
+   "a": "Sources and recency",
+   "j": "Sourced, with numbered citations. Recency is uneven in places, which is what the between-batch QA pass existed to catch, and confidence is rated per brief.",
+   "e": "2025 and 2026 sources first with a date on every line: FY2025 10-Ks, Q1 to Q3 2026 calls, July 2026 appointments, the Aug 13 2026 Maximus call. Confidence stated per section, not per brief."
+  },
+  {
+   "a": "People",
+   "j": "Executive names with titles, no LinkedIn URLs, no emails. Head of WFM and head of shared services both marked <i>recommend LinkedIn search</i>.",
+   "e": "16 named people per account with likely committee role, status and freshness; LinkedIn URLs on most. The Maximus WFM owner (Marc Hillman, Sr Director of Workforce Management) and the AI executives who arrived in April and May 2026 are named. Emails run on the picked cohort after Frank's go."
+  },
+  {
+   "a": "Timing",
+   "j": "No dated trigger list; Ally's July 2026 leadership changes appear in passing and the Aug 13 2026 Maximus call is not yet reflected.",
+   "e": "A dated trigger list per account with the so-what: Leary Jul 23, Mathewson Jul 13, Q1 and Q2 2026 expense posture; Maximus Aug 13 call (productivity margin, 75 to 80% AI bids), VA incentive pause Jul 1, new AI executives."
+  },
+  {
+   "a": "Verified-claims posture",
+   "j": "Savings scenarios from a fully loaded FTE cost times 10, 20 or 30% of Verint seats, with the totals carried into the account narrative.",
+   "e": "No dollar estimate on either page. A What Intradiem can say block carries only Value Repository lines with their approval tier; the scenario table is discussed in an internal note and never rendered. The partner-safe build fails if a dollar figure or an unverified flag survives."
+  },
+  {
+   "a": "Verint framing",
+   "j": "Written as an upgrade from passive tracking, which reads as replacement in places.",
+   "e": "Written as the layer beside it: Intradiem sits between the ACD and WFM and is not a WFM replacement (Value Repository). The safer frame on the 74 reseller-registered rows, where the reseller of record is Avaya, ConvergeOne, Cisco or AWS."
+  },
+  {
+   "a": "Discovery questions",
+   "j": "Four per account, good ones; a couple lean on the seat data directly.",
+   "e": "Five per account, each tagged with the record it comes from; the seat-data question is framed as understanding their environment, never as citing it."
+  },
+  {
+   "a": "Output form",
+   "j": "A 4 MB Word document per batch, prose with tables.",
+   "e": "One page per account per version on the Intradiem kit with present mode, plus the raw research, the contact CSVs, and the JSON the pages are built from. Same folder pattern as the Inger maps."
+  },
+  {
+   "a": "Gaps",
+   "j": "Two lines per account: confirm the shared-services head, confirm Verint renewal terms.",
+   "e": "Five to six per account with how to close each: which fact to ask 3xG for, which layer to fill in Sales Navigator, which document returned 403 and needs a direct pull."
+  }
+ ],
+ "h2_next": "What changes for Frank and Jeremy from here.",
+ "cards": [
+  {
+   "tag": "Frank",
+   "tag_cls": "go",
+   "title": "Picks the cohort, gets the pages",
+   "p": "Every account on the cohort and the holdout gets the same two pages inside a day of the pick. Frank reviews the partner-safe version before anything travels to 3xG; the internal version is what the sequence copy is drafted from."
+  },
+  {
+   "tag": "Jeremy",
+   "tag_cls": "now",
+   "title": "Contributes what only 3xG knows",
+   "p": "Per account, 3xG contributes what only they know: whether the Verint deployment still runs and on which programs, and whether 3xG can be named in outreach. The engine takes the research load off his calendar."
+  },
+  {
+   "tag": "The gate",
+   "tag_cls": "",
+   "title": "Same rules as every other motion",
+   "p": "Customer and partner exclusion on every account, verified claims on every line, human review before any send. Ally and Maximus cleared both gates on Sep 1: not customers, not partners, not registered by another partner in the pre-pipeline."
+  }
+ ]
+}

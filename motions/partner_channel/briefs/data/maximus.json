@@ -1,0 +1,624 @@
+{
+ "account": "Maximus, Inc.",
+ "short": "Maximus",
+ "slug": "maximus",
+ "domain": "maximus.com",
+ "partner_line": "3xG whitespace list; Verint sold direct, no reseller of record",
+ "basis": "Public sources read Sep 1 2026, Clay free-path contacts (0 credits), 3xG sheet for the seat count",
+ "sub": "Government business process management, Tysons VA: Medicaid and CHIP eligibility, claims and appeals, clinical assessments, 1-800-MEDICARE and other federal contact centers. Productivity is now the margin story on earnings calls, and 75 to 80% of new bids carry AI criteria.",
+ "angle": {
+  "internal": "a 1,500-seat visibility layer under a business that just told the Street productivity is the margin story",
+  "partner": "productivity is the margin story, and three AI executives arrived this spring"
+ },
+ "stats": [
+  {
+   "n": "1,510",
+   "l": "Verint Operations Visualizer and Productivity seats, 3xG sheet 2024",
+   "internal_only": true
+  },
+  {
+   "n": "37,200",
+   "l": "employees plus 9,300 contingent, FY2025 10-K"
+  },
+  {
+   "n": "15.0%",
+   "l": "adjusted EBITDA margin, Q3 FY2026, credited to productivity gains"
+  },
+  {
+   "n": "75 to 80%",
+   "l": "of new bids and rebids carry AI requirements"
+  },
+  {
+   "n": "Jul 1 2026",
+   "l": "VA paused MDE incentives; EPS guide cut about $0.35"
+  }
+ ],
+ "tldr": {
+  "internal": [
+   "<b>Why now.</b> On the Aug 13 2026 call Maximus credited a 15.0% adjusted EBITDA margin to productivity gains across core programs and put a number on front-office AI (IVR, chatbot, proactive engagement): a 3.5% operating-margin lift on five contracts. No back-office figure was given. Three AI executives arrived in April and May 2026.",
+   "<b>The gap.</b> Verint Operations Visualizer and Operations Productivity, 1,510 seats (3xG sheet), is a monitoring layer on case-processing work. Nothing public shows rules-based reallocation of people or work behind it, while the business runs on contract-driven volume swings (Medicaid unwinding, VA exam volume, UI backlogs).",
+   "<b>The pressure.</b> The VA paused Medical Disability Exam incentives on Jul 1 2026 while it rebuilds invoice validation; that alone cut FY2026 EPS guidance about $0.35 and pushed revenue guidance to the low end. Timeliness and accuracy reporting on a flagship program is under the customer's microscope.",
+   "<b>Gate.</b> Not a current Intradiem customer or partner (Salesforce segment Sep 1 2026), not registered by any partner in the pre-pipeline. Clear to work. The enterprise WFM owner Jeremy's brief could not confirm is Marc Hillman, Senior Director of Workforce Management, found on the free Clay path."
+  ],
+  "partner": [
+   "<b>Why now.</b> On the Aug 13 2026 call Maximus credited its margin to productivity gains across core programs and quantified front-office AI work on five contracts. Back-office case processing was not part of that story. Three AI executives arrived in April and May 2026.",
+   "<b>Where the conversation sits.</b> Case-processing work (eligibility, claims, appeals, clinical exam administration) swings with contract volume. Real-time orchestration of that work and the people doing it is the layer that sits beside the desktop analytics Maximus already runs.",
+   "<b>The pressure.</b> The VA paused Medical Disability Exam incentives on Jul 1 2026 while it rebuilds invoice validation; FY2026 guidance moved to the low end. Timeliness and accuracy reporting on a flagship program is under the customer's microscope."
+  ]
+ },
+ "h2_findings": "A services business whose margin now depends on productivity, with the back office left out of its own automation story.",
+ "sections": [
+  {
+   "eyebrow": "1",
+   "title": "Back-office footprint",
+   "items": [
+    {
+     "t": "About 37,200 employees plus 9,300 contingent workers at Sep 30 2025: 15,000 U.S. Federal Services, 13,600 U.S. Services, 6,900 Outside the U.S., 1,700 corporate. Segment split read through search extraction of the 10-K; re-check against the filing before external use.",
+     "s": "https://investor.maximus.com/sec-filings/all-sec-filings/content/0001032220-25-000053/0001032220-25-000053.pdf",
+     "d": "10-K, Nov 20 2025",
+     "f": "INFERRED"
+    },
+    {
+     "t": "Case-processing functions on the record: Medicaid and CHIP eligibility and enrollment, unemployment insurance claims and appeals (California EDD backlog engagement), clinical and functional disability assessments (VA MDE, UK DWP), federal student loan servicing (Aidvantage).",
+     "s": "https://maximus.com/case-studies/ui-backlog-liquidation",
+     "d": "undated"
+    },
+    {
+     "t": "Contact-center side: 1-800-MEDICARE and Federal Marketplace under the CMS Contact Center Operations contract (base plus nine option years, $6.6B ceiling), CDC-INFO, IRS citizen services (70,000+ calls a day cited).",
+     "s": "https://investor.maximus.com/news-events/press-releases/detail/555/maximus-will-continue-to-perform-contact-center-operations",
+     "d": "Nov 26 2024"
+    },
+    {
+     "t": "Verint Operations Visualizer and Operations Productivity, 1,510 seats, sold direct. Desktop activity tracking on case-processing work. Not confirmed in any public source; treat as internal.",
+     "s": "",
+     "d": "3xG licensing sheet 2024, internal",
+     "f": "INFERRED",
+     "internal_only": true
+    },
+    {
+     "t": "Back-office population: a planning band of 20,000 to 25,000 FTEs touching case-processing work, from the segment split above (U.S. Services and the UK assessment business skew to processing; Federal mixes live-queue and exam administration). Our math, not a company figure.",
+     "s": "",
+     "d": "derived",
+     "f": "ESTIMATED",
+     "internal_only": true
+    },
+    {
+     "t": "Delivery footprint: Tysons VA headquarters; Victoria BC, Bengaluru, Riyadh, the Emirates, London listed. No published site count or onshore-offshore split for processing work.",
+     "s": "https://maximus.com/locations",
+     "d": "Sep 1 2026"
+    }
+   ]
+  },
+  {
+   "eyebrow": "2",
+   "title": "Segments, contracts and restructuring, last 24 months",
+   "items": [
+    {
+     "t": "FY2025 revenue $5.43B: U.S. Federal Services $3.07B (+12.1%), U.S. Services $1.76B (-7.7%, Medicaid unwinding volume rolling off), Outside the U.S. $600M (-8.7%).",
+     "s": "https://investor.maximus.com/news-events/press-releases/detail/577/maximus-reports-fourth-quarter-and-full-year-results-for",
+     "d": "Nov 20 2025"
+    },
+    {
+     "t": "Australia and South Korea employment-services businesses sold in Q1 FY2025 (about $38M in divestiture charges), framed as margin-accretive.",
+     "s": "https://www.silicon.co.uk/press-release/maximus-reports-fiscal-year-2025-first-quarter-results",
+     "d": "Feb 2025"
+    },
+    {
+     "t": "CMS CCO contract: the 2024 re-procurement was protested, GAO partially sustained on Sep 16 2024, CMS cancelled the solicitation and Maximus continues under the existing contract into its option years.",
+     "s": "https://investor.maximus.com/news-events/press-releases/detail/554/u-s-department-of-health-and-human-services-centers-for",
+     "d": "late 2024"
+    },
+    {
+     "t": "VA Medical Disability Exam program: the VA paused performance incentives and disincentives effective Jul 1 2026 while it revamps invoice review and validation.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 13 2026"
+    },
+    {
+     "t": "A new Medicaid redetermination wave is expected in 2026 under the work-requirement provisions of the 2025 reconciliation law; Maximus has not quantified its own volume from it.",
+     "s": "https://www.kff.org/medicaid/medicaid-enrollment-spending-growth-fy-2025-2026/",
+     "d": "2026",
+     "f": "INFERRED"
+    },
+    {
+     "t": "Over 60% of H1 FY2025 revenue on performance-based or fixed-price federal contracts; analysts framed Maximus as relatively insulated from 2025 stop-work orders.",
+     "s": "https://tbri.com/blog/doge-federal-it-vendor-impact-maximus/",
+     "d": "2025",
+     "f": "UNVERIFIED",
+     "internal_only": true
+    }
+   ]
+  },
+  {
+   "eyebrow": "3",
+   "title": "Cost pressure and the productivity story",
+   "items": [
+    {
+     "t": "Q3 FY2026 (Aug 13 2026): revenue $1.28B, adjusted EPS $2.22, adjusted EBITDA margin 15.0% (from 14.7%), attributed to productivity gains across core program areas. FY2026 revenue guidance $5.2B to $5.35B, leaning to the low end; adjusted EPS guidance cut about $0.35 for the VA incentive pause.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 13 2026"
+    },
+    {
+     "t": "Same call: 75 to 80% of new bids and rebids now carry explicit AI requirements or evaluation criteria; AI work on five contracts (IVR optimization, chatbot enhancement, proactive engagement) produced a cited 3.5% operating-margin improvement. Front-office examples only.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 13 2026"
+    },
+    {
+     "t": "Q3 FY2026: adjusted EBITDA margin 15.0%, up from 14.7%, credited to productivity gains; full-year guidance leaning to the low end after the VA incentive pause.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 13 2026",
+     "partner_only": true
+    },
+    {
+     "t": "FY2025: operating margin 9.7%, adjusted EBITDA margin 12.9%, free cash flow $366M. FY2026 initial guide: adjusted EBITDA margin about 13.7%.",
+     "s": "https://investor.maximus.com/news-events/press-releases/detail/577/maximus-reports-fourth-quarter-and-full-year-results-for",
+     "d": "Nov 20 2025"
+    },
+    {
+     "t": "Revenue per employee about $146,000 on 37,200 employees, or about $117,000 including contingent workers.",
+     "s": "",
+     "d": "derived",
+     "f": "ESTIMATED",
+     "internal_only": true
+    },
+    {
+     "t": "Maximus Ventures invested in Spectro Cloud (AI infrastructure for secure government deployment) in the Q3 FY2026 window.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 2026"
+    }
+   ]
+  },
+  {
+   "eyebrow": "4",
+   "title": "Pain and oversight signals",
+   "items": [
+    {
+     "t": "The VA's incentive pause is a customer rebuilding how it validates timeliness and accuracy on a flagship program; the reporting behind exam throughput is under scrutiny now.",
+     "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+     "d": "Aug 13 2026"
+    },
+    {
+     "t": "Maximus markets backlog clearing as a strength: a 5.7 million-task UI backlog, 3.6 million claims in eight months, a 3,000-person workforce stood up in six months. Large, spiky processing queues that need fast reallocation are the business.",
+     "s": "https://maximus.com/case-studies/ui-backlog-liquidation",
+     "d": "undated"
+    },
+    {
+     "t": "Prior state corrective actions on call abandonment, answer times, backlogs and missed 60-day application timeframes (a state DHS engagement, the Kansas Clearinghouse contract), all pre-2025. Pattern evidence, not current.",
+     "s": "",
+     "d": "pre-2025",
+     "f": "UNVERIFIED",
+     "internal_only": true
+    },
+    {
+     "t": "Texas HHS OIG audit of Maximus as Medicaid and CHIP enrollment broker exists; the PDF returned 403 on fetch and is unread.",
+     "s": "https://oig.hhs.texas.gov/sites/default/files/documents/enrollment_broker_maximus.pdf",
+     "d": "unread",
+     "f": "UNVERIFIED",
+     "internal_only": true
+    },
+    {
+     "t": "Open eligibility roles ask for accurate and timely benefit determinations in complex eligibility operations; standard requisition language, not distress.",
+     "s": "https://maximus.avature.net/careers/FolderDetail/United-States-CA-SNAP-Sr-Counselor-Pipeline-06-26/40390",
+     "d": "Sep 2026"
+    }
+   ]
+  },
+  {
+   "eyebrow": "5",
+   "title": "Employee sentiment",
+   "items": [
+    {
+     "t": "Glassdoor 3.2 of 5 across 6,100+ reviews; recurring themes are understaffed projects, tight deadlines, refusal to backfill, and contract-cycle staffing swings (one review cites a 75% workforce cut on a contract at year end).",
+     "s": "https://www.glassdoor.com/Reviews/Maximus-Reviews-E6725.htm",
+     "d": "Sep 1 2026",
+     "f": "EMPLOYEE SENTIMENT",
+     "internal_only": true
+    }
+   ]
+  },
+  {
+   "eyebrow": "6",
+   "title": "Technology and vendors",
+   "items": [
+    {
+     "t": "Amazon Connect in active use: a UK Amazon Connect Developer posting asks for migration experience from Five9 and Liberty Netcall, which reads as a platform move in progress in at least the UK operation.",
+     "s": "https://maximus.avature.net/careers/FolderDetail/United-Kingdom-of-Great-Britain-and-Northern-Ireland-Amazon-Connect-Developer-UK/33405",
+     "d": "Sep 2026"
+    },
+    {
+     "t": "AI leadership from LinkedIn (Clay free path): Kathleen Featheringham, SVP AI (Apr 2026); Daniel Biernacki, SVP AI Transformation and Experience (May 2026); Lauren Donovan, Senior Director AI Transformation and Experience (May 2026). Derrick Pledger has been Chief Digital and Information Officer since Jan 2024.",
+     "s": "https://www.linkedin.com/in/kathleen-featheringham-3132701/",
+     "d": "index dates, confirm live",
+     "f": "INFERRED"
+    },
+    {
+     "t": "Workforce management layer from LinkedIn (Clay free path): Marc Hillman, Senior Director of Workforce Management (Feb 2022); Drex Fitzwater, VP Strategic Workforce Planning; Dave Harkess, VP Contact Center Operations; Michael Koodin, Project Manager Strategic Workforce Analytics (Mar 2026).",
+     "s": "https://www.linkedin.com/in/marc-hillman-6280502/",
+     "d": "index dates, confirm live",
+     "f": "INFERRED"
+    },
+    {
+     "t": "RPA vendor, CRM or case-management platform, and cloud provider: none named in public sources this pass. A VP Cloud Technology (Chris Ray, 100+ staff) confirms a cloud practice.",
+     "s": "https://www.linkedin.com/in/thechrisray/",
+     "d": "Sep 2026"
+    },
+    {
+     "t": "Maturity read: front-office automation is real and quantified by the company; back-office automation is undocumented in public and the only concrete back-office technology signal is a monitoring layer. Visibility without orchestration.",
+     "s": "",
+     "d": "Sep 1 2026",
+     "f": "INFERRED"
+    }
+   ]
+  }
+ ],
+ "h2_leaders": "The segment owners are known; the workforce management owner is now named.",
+ "leaders_note": "Executive titles come from maximus.com and investor.maximus.com. LinkedIn URLs come from the Clay free path (index dates, not a live check); anything that goes into a sequence gets a live look first. Emails are not on this brief; the waterfall runs on the picked cohort after Frank's go.",
+ "leaders": [
+  {
+   "name": "Ilene Baylinson",
+   "title": "General Manager, U.S. Services",
+   "linkedin": "https://www.linkedin.com/in/ilene-baylinson/",
+   "role": "VITO (Medicaid and CHIP back office)",
+   "status": "Confirmed",
+   "fresh": "",
+   "note": "Owns the segment where eligibility and appeals processing lives."
+  },
+  {
+   "name": "Teresa Weipert",
+   "title": "General Manager, U.S. Federal Services",
+   "linkedin": "https://theorg.com/org/maximus/org-chart/teresa-weipert",
+   "role": "VITO (federal contact centers and VA MDE)",
+   "status": "Confirmed",
+   "fresh": "since 2021",
+   "note": "1-800-MEDICARE, CDC-INFO, IRS, VA exams: contact center and clinical back office in one P and L."
+  },
+  {
+   "name": "Derrick Pledger",
+   "title": "Chief Digital and Information Officer",
+   "linkedin": "https://www.linkedin.com/in/derrick-pledger-mba-pmp-cissp-15b98382/",
+   "role": "VITO (digital and AI transformation)",
+   "status": "Confirmed",
+   "fresh": "since Jan 2024",
+   "note": "Owns the AI-enabled transformation mandate the CEO talks about on calls."
+  },
+  {
+   "name": "Daniel Biernacki",
+   "title": "SVP, AI Transformation and Experience",
+   "linkedin": "https://www.linkedin.com/in/daniel-biernacki-46b7a94a/",
+   "role": "Champion candidate (AI in operations)",
+   "status": "Clay index",
+   "fresh": "new May 2026",
+   "note": "Experience in the title means operations, not just models. Not in the 3xG brief."
+  },
+  {
+   "name": "Kathleen Featheringham",
+   "title": "SVP, AI",
+   "linkedin": "https://www.linkedin.com/in/kathleen-featheringham-3132701/",
+   "role": "Evaluator (AI)",
+   "status": "Clay index",
+   "fresh": "new Apr 2026",
+   "note": ""
+  },
+  {
+   "name": "Marc Hillman",
+   "title": "Senior Director of Workforce Management",
+   "linkedin": "https://www.linkedin.com/in/marc-hillman-6280502/",
+   "role": "Champion (enterprise WFM)",
+   "status": "Clay index",
+   "fresh": "since Feb 2022",
+   "note": "The WFM owner the 3xG brief marked as not confirmed."
+  },
+  {
+   "name": "Drex Fitzwater",
+   "title": "VP, Strategic Workforce Planning",
+   "linkedin": "https://www.linkedin.com/in/drex-fitzwater-9898252/",
+   "role": "Champion candidate (workforce planning)",
+   "status": "Clay index",
+   "fresh": "long tenure",
+   "note": ""
+  },
+  {
+   "name": "Dave Harkess",
+   "title": "Vice President, Contact Center Operations",
+   "linkedin": "https://www.linkedin.com/in/dave-harkess-0480751/",
+   "role": "Champion candidate (contact center ops)",
+   "status": "Clay index",
+   "fresh": "since Sep 2017",
+   "note": "The front-office half of the story."
+  },
+  {
+   "name": "Doug Howard",
+   "title": "Senior Vice President, U.S. Services",
+   "linkedin": "https://www.linkedin.com/in/doug-howard-6a4b32b/",
+   "role": "Evaluator (U.S. Services operations)",
+   "status": "Clay index",
+   "fresh": "since 2013",
+   "note": ""
+  },
+  {
+   "name": "Cindy French",
+   "title": "Managing Director, Federal Program Operations Support Services",
+   "linkedin": "https://www.linkedin.com/in/cindyjfrench/",
+   "role": "Evaluator (federal ops support)",
+   "status": "Clay index",
+   "fresh": "since Aug 2020",
+   "note": ""
+  },
+  {
+   "name": "David Mutryn",
+   "title": "Chief Financial Officer and Treasurer",
+   "linkedin": "",
+   "role": "VITO (finance)",
+   "status": "Confirmed, maximus.com",
+   "fresh": "since 2021",
+   "note": "Owns the margin guide."
+  },
+  {
+   "name": "Bruce Caswell",
+   "title": "President and Chief Executive Officer",
+   "linkedin": "https://www.linkedin.com/in/bruce-caswell/",
+   "role": "VITO",
+   "status": "Confirmed",
+   "fresh": "",
+   "note": "Selective deployment of technology is his phrase."
+  },
+  {
+   "name": "Mike Raker",
+   "title": "Chief Technology Officer",
+   "linkedin": "https://www.linkedin.com/in/mikeraker/",
+   "role": "Gatekeeper (technology)",
+   "status": "Clay index",
+   "fresh": "since Apr 2024",
+   "note": ""
+  },
+  {
+   "name": "Chris Ray",
+   "title": "VP, Cloud Technology",
+   "linkedin": "https://www.linkedin.com/in/thechrisray/",
+   "role": "Gatekeeper (infrastructure)",
+   "status": "Confirmed",
+   "fresh": "",
+   "note": ""
+  },
+  {
+   "name": "Michelle Link",
+   "title": "Chief Human Resources Officer",
+   "linkedin": "https://www.linkedin.com/in/michellelink/",
+   "role": "Evaluator (workforce policy)",
+   "status": "Confirmed",
+   "fresh": "since 2020",
+   "note": ""
+  },
+  {
+   "name": "General Manager, Outside the U.S.",
+   "title": "Role identified, individual not confirmed",
+   "linkedin": "",
+   "role": "VITO (UK assessments)",
+   "status": "Not found",
+   "fresh": "",
+   "note": "Owns UK DWP assessment volume."
+  }
+ ],
+ "h2_triggers": "The story changed on the August call.",
+ "triggers": [
+  {
+   "when": "Aug 13 2026",
+   "what": "Q3 FY2026 call: margin credited to productivity; 75 to 80% of bids carry AI criteria; front-office AI lift quantified at 3.5% on five contracts.",
+   "so": "Every renewal now asks about automation; the back office has no answer on the record yet.",
+   "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/"
+  },
+  {
+   "when": "Jul 1 2026",
+   "what": "VA paused Medical Disability Exam incentives while it rebuilds invoice validation; full-year guidance moved to the low end.",
+   "so": "Timeliness and accuracy reporting on exam work is under the customer's microscope.",
+   "s": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/"
+  },
+  {
+   "when": "Apr to May 2026",
+   "what": "SVP AI (Featheringham), SVP AI Transformation and Experience (Biernacki) and a Senior Director under him arrived, per LinkedIn start dates.",
+   "so": "New owners with a mandate and no incumbent back-office program.",
+   "f": "INFERRED",
+   "s": "https://www.linkedin.com/in/daniel-biernacki-46b7a94a/"
+  },
+  {
+   "when": "2026",
+   "what": "Amazon Connect migration away from Five9 and Liberty Netcall visible in UK postings.",
+   "so": "Contact-center platform in motion; integration conversations are open.",
+   "s": "https://maximus.avature.net/careers/FolderDetail/United-Kingdom-of-Great-Britain-and-Northern-Ireland-Amazon-Connect-Developer-UK/33405"
+  },
+  {
+   "when": "2026",
+   "what": "New Medicaid redetermination wave expected under the 2025 work-requirement provisions.",
+   "so": "Eligibility volume swings again in U.S. Services.",
+   "f": "INFERRED",
+   "s": "https://www.kff.org/medicaid/medicaid-enrollment-spending-growth-fy-2025-2026/"
+  }
+ ],
+ "h2_say": "What we can put in writing.",
+ "we_can_say": [
+  {
+   "t": "Intradiem sits between the ACD and WFM. It is not a WFM replacement; Verint, NICE and Calabrio are the layer it acts on top of.",
+   "s": "Value Repository, section 4",
+   "tier": "1:many"
+  },
+  {
+   "t": "Dynamic Workforce Orchestration: continuously sensing demand, reallocating work, and supporting employees as conditions shift through the day, in the idle seconds between scheduled activities.",
+   "s": "Value Repository, sections 1 and 4",
+   "tier": "1:many"
+  },
+  {
+   "t": "Net retention above 114% in 2025; record net new bookings in 2025; customer savings at an all-time high for full-year 2025.",
+   "s": "Value Repository, BusinessWire Feb 18 2026",
+   "tier": "1:many"
+  },
+  {
+   "t": "About 350,000 contact center professionals on platform.",
+   "s": "Value Repository, intradiem.com",
+   "tier": "1:many"
+  },
+  {
+   "t": "A healthcare customer reported 4.5X annualized ROI in the first quarter of operations; another saved 1,700 hours of agent off-phone time.",
+   "s": "Value Repository, intradiem.com, blinded unless logo-approved",
+   "tier": "1:1"
+  }
+ ],
+ "scenario_note": "The 3xG brief models $9.75M to $29.25M in annual savings from a $65,000 fully loaded FTE cost times 10, 20 or 30% of the 1,500 Verint seats. Seats on a 2024 licensing sheet are not back-office FTEs, the lift percentages are assumptions, and none of it is in the Value Repository. It stays out of anything a partner seller or Maximus sees. The business case comes from discovery data through the ROI skill after the 40-minute meeting.",
+ "h2_questions": "Five questions that come from the record, not the pitch.",
+ "questions": [
+  {
+   "q": "The Q3 call put a 3.5% margin lift on AI work across five contracts. Is that measured on the contact-center side only, or does it reach the eligibility, claims and appeals queues behind the same contracts?",
+   "from": "Aug 13 2026 call"
+  },
+  {
+   "q": "With the VA pausing exam incentives while it rebuilds invoice validation, how much of your throughput and timeliness reporting comes from real-time operational data versus after-the-fact reconciliation?",
+   "from": "VA MDE pause, Jul 1 2026"
+  },
+  {
+   "q": "As unwinding volume normalizes and a new redetermination wave phases in, how do you move people across eligibility, appeals and 1-800-MEDICARE queues when volume shifts week to week?",
+   "from": "U.S. Services volume, KFF 2026"
+  },
+  {
+   "q": "You've got a desktop analytics layer on a large part of the processing workforce. Is that data driving any rules-based reallocation of idle or surge capacity today, or is it a monitoring and reporting layer?",
+   "from": "3xG seat data; ask as understanding their environment, never as citing it"
+  },
+  {
+   "q": "With 75 to 80% of new federal bids carrying AI criteria, how are you positioning the back-office side of proposals, eligibility and document review, next to the contact-center automation story on the calls?",
+   "from": "Aug 13 2026 call"
+  }
+ ],
+ "h2_conf": "Where this brief is solid and where it isn't.",
+ "confidence": [
+  {
+   "section": "Footprint",
+   "level": "Medium"
+  },
+  {
+   "section": "Segments and contracts",
+   "level": "High"
+  },
+  {
+   "section": "Leaders",
+   "level": "High"
+  },
+  {
+   "section": "Cost pressure",
+   "level": "High"
+  },
+  {
+   "section": "Pain and oversight",
+   "level": "Medium"
+  },
+  {
+   "section": "Technology and vendors",
+   "level": "Medium"
+  },
+  {
+   "section": "Timing",
+   "level": "High"
+  }
+ ],
+ "gaps": [
+  {
+   "t": "Verint at Maximus is not corroborated by any public source; the seat count rests on the 3xG sheet alone. Whether the deployment still runs, and on which programs, is the fact to get through 3xG.",
+   "internal_only": true
+  },
+  {
+   "t": "Headcount by segment came through search extraction of the 10-K; lock the table from the filing text before it goes external."
+  },
+  {
+   "t": "General Manager, Outside the U.S., not named. LinkedIn URL for David Mutryn."
+  },
+  {
+   "t": "Texas HHS OIG enrollment-broker audit unread (403); pull it directly.",
+   "internal_only": true
+  },
+  {
+   "t": "Job-posting sweep on maximus.avature.net for Salesforce, Pega, UiPath and Automation Anywhere to settle the RPA and case-management stack."
+  },
+  {
+   "t": "Live check on every Clay-indexed row (Hillman, Fitzwater, Harkess, Biernacki, Featheringham) before any sequence."
+  }
+ ],
+ "deck": {
+  "footprint": "Forty-six thousand people on contract volume. <span class=\"spark\">Margin now rides on productivity.</span>",
+  "people": "Segment owners are known. <span class=\"spark\">The WFM owner is now named.</span>",
+  "timing": "The story changed <span class=\"spark\">on the August call</span>.",
+  "questions": "Questions that come <span class=\"spark\">from the record</span>."
+ },
+ "sources": [
+  {
+   "t": "Maximus FY2025 Form 10-K",
+   "u": "https://investor.maximus.com/sec-filings/all-sec-filings/content/0001032220-25-000053/0001032220-25-000053.pdf",
+   "d": "Nov 20 2025"
+  },
+  {
+   "t": "Q4 and FY2025 results press release",
+   "u": "https://investor.maximus.com/news-events/press-releases/detail/577/maximus-reports-fourth-quarter-and-full-year-results-for",
+   "d": "Nov 20 2025"
+  },
+  {
+   "t": "Q3 FY2026 earnings call transcript",
+   "u": "https://www.fool.com/earnings/call-transcripts/2026/08/13/maximus-mms-q3-2026-earnings-call-transcript/",
+   "d": "Aug 13 2026"
+  },
+  {
+   "t": "Q2 FY2026 earnings call transcript",
+   "u": "https://seekingalpha.com/article/4901087-maximus-inc-mms-q2-2026-earnings-call-transcript",
+   "d": "May 7 2026"
+  },
+  {
+   "t": "UI Backlog Liquidation case study",
+   "u": "https://maximus.com/case-studies/ui-backlog-liquidation",
+   "d": "undated"
+  },
+  {
+   "t": "CMS CCO re-procurement cancelled",
+   "u": "https://investor.maximus.com/news-events/press-releases/detail/554/u-s-department-of-health-and-human-services-centers-for",
+   "d": "late 2024"
+  },
+  {
+   "t": "Maximus continues CCO contract",
+   "u": "https://investor.maximus.com/news-events/press-releases/detail/555/maximus-will-continue-to-perform-contact-center-operations",
+   "d": "Nov 26 2024"
+  },
+  {
+   "t": "VA MDE contract wins",
+   "u": "https://investor.maximus.com/news-events/press-releases/detail/559/maximus-wins-contracts-to-continue-medical-disability-exam",
+   "d": "Jan 6 2025"
+  },
+  {
+   "t": "KFF, Medicaid enrollment and spending growth FY2025 and 2026",
+   "u": "https://www.kff.org/medicaid/medicaid-enrollment-spending-growth-fy-2025-2026/",
+   "d": "2026"
+  },
+  {
+   "t": "TBR, federal vendor impact series, Maximus",
+   "u": "https://tbri.com/blog/doge-federal-it-vendor-impact-maximus/",
+   "d": "2025"
+  },
+  {
+   "t": "Maximus locations",
+   "u": "https://maximus.com/locations",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Maximus leadership pages",
+   "u": "https://maximus.com/leadership/derrick-pledger",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Amazon Connect Developer posting, UK",
+   "u": "https://maximus.avature.net/careers/FolderDetail/United-Kingdom-of-Great-Britain-and-Northern-Ireland-Amazon-Connect-Developer-UK/33405",
+   "d": "Sep 2026"
+  },
+  {
+   "t": "Glassdoor, Maximus reviews",
+   "u": "https://www.glassdoor.com/Reviews/Maximus-Reviews-E6725.htm",
+   "d": "Sep 1 2026"
+  },
+  {
+   "t": "Clay free-path contact pull (two searches, 0 credits)",
+   "u": "briefs/contacts/maximus_clay_free_2026-09-01.csv",
+   "d": "Sep 1 2026"
+  }
+ ]
+}
