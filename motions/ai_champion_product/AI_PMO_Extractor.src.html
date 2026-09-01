@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AI-enabled PMO</title>
+<!--FONTS-->
+<style>
+.flow{display:grid;grid-template-columns:repeat(4,1fr) 40px 1.4fr;gap:12px;margin-top:20px;align-items:stretch}
+.flow .src{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--zebra);font-size:14px;color:var(--ink-2)}
+.flow .src b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:3px}
+.flow .src .n{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-top:8px;display:block}
+.flow .arrow{display:flex;align-items:center;justify-content:center;color:var(--green-600);font-size:22px;font-weight:700}
+.flow .core{background:var(--forest);color:#fff;border-radius:var(--r);padding:16px 18px;position:relative;overflow:hidden}
+.flow .core::after{content:"";position:absolute;right:-110px;top:-120px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.28),transparent 62%)}
+.flow .core > *{position:relative;z-index:1}
+.flow .core b{display:block;font-size:16px;margin-bottom:6px}
+.flow .core p{color:#C7DAD1;font-size:13.5px;margin:0;max-width:none}
+.flow .core .out{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-300);font-weight:600;margin-top:10px;display:block}
+.cols{font-family:var(--ff-mono);font-size:12px;color:var(--forest);background:var(--zebra);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;margin-top:14px;overflow-x:auto;white-space:nowrap}
+.verd{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}
+.verd div{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;background:var(--bg);font-size:13.5px;color:var(--ink-2);box-shadow:var(--shadow)}
+.verd div b{display:block;font-family:var(--ff-mono);font-size:11px;letter-spacing:.06em;color:var(--green-600);margin-bottom:4px}
+.verd div.ok b{color:var(--green-600)}
+.sample td{font-size:13.5px}
+.sample td.ev{font-style:italic;color:var(--ink-2)}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.flow .arrow{display:none}.flow .core{grid-column:1/-1}.verd{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">Product &middot; AI champion &middot; AI-enabled PMO</div>
+    <h1 data-h="2">Action items, <span class="spark">extracted and graded</span>.</h1>
+    <p class="sub" data-h="3">A read-only agent reads meeting notes, email, calendar and the Monday board, writes every commitment it finds with owner, date and the line that carries it, and asks a person to grade each one. Accuracy is measured before anything is automated.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="85">0</span></b><span>commitments found, first run</span></div>
+      <div><b><span class="hc" data-to="4">0</span></b><span>sources read: Otter, Outlook mail, calendar, Monday</span></div>
+      <div><b><span class="hc" data-to="14">0</span> days</b><span>window, Aug 17 to Aug 31</span></div>
+      <div><b><span class="hc" data-to="95">0</span>%</b><span>precision on the first 20 graded rows</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>Status</span>Read-only. Running weekdays 7:25.</div>
+      <div><span>Proof data</span>Dallas's own records</div>
+      <div><span>By</span>Dallas Andrews, AI champion, Product</div>
+      <div><span>Grades so far</span>20 graded, precision 95%</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>What runs.</b> Every weekday morning the agent reads the four sources for the last window and appends what it finds to a register: one row per commitment, with owner, due date, and a verbatim quote as evidence.</li>
+        <li><b>How accuracy is proven.</b> Each new row also lands in a validation queue with a blank verdict. A person marks it correct, wrong owner, wrong date, not an action, or duplicate. The next run reports precision from the graded rows.</li>
+        <li><b>What it does not do.</b> Send, remind, create tasks, or edit any source. Follow-up automation is a separate decision, taken after the precision number is known.</li>
+        <li><b>Open with Product.</b> Which project records and whose notes count as "the PMO's". The first run proves extraction on Dallas's own records only.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Mechanism</div>
+    <h2>Four sources in, two files out.</h2>
+    <div class="flow">
+      <div class="src"><b>Meeting notes</b>Otter transcripts and action items<span class="n">67 found</span></div>
+      <div class="src"><b>Email</b>Outlook inbox and sent, requests and commitments<span class="n">13 found</span></div>
+      <div class="src"><b>Calendar</b>Prep commitments and deadlines in invites<span class="n">2 found</span></div>
+      <div class="src"><b>Project records</b>Monday.com AI Initiatives board, Status Notes and updates<span class="n">3 found</span></div>
+      <div class="arrow">&rarr;</div>
+      <div class="core"><b>pmo-action-extractor</b><p>Extract, attach evidence, assign confidence, dedup against the register, mint an id.</p><span class="out">register &middot; validation queue &middot; daily log</span></div>
+    </div>
+    <div class="cols">id, run_date, action, owner, due, due_basis, source_type, source_ref, source_date, evidence, confidence, status &nbsp;(+ verdict, verdict_note in the queue)</div>
+    <h3>Grading, five verdicts</h3>
+    <div class="verd">
+      <div class="ok"><b>correct</b>Right action, owner and date</div>
+      <div><b>wrong_owner</b>Action real, owner misread</div>
+      <div><b>wrong_date</b>Action real, date misread or invented</div>
+      <div><b>not_an_action</b>Not a commitment</div>
+      <div><b>duplicate</b>Already in the register</div>
+    </div>
+    <p>Precision = correct / graded. Reported in every daily log with the graded count, so the number is always the current one.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">First run, Aug 31 2026</div>
+    <h2>85 commitments from four sources.</h2>
+    <p class="lede">Window Aug 17 to Aug 31. Read: 19 Otter meetings (17 transcripts fetched for the verbatim line), 185 inbox and 82 sent messages listed with 13 bodies read, 34 calendar events, the 68-item Monday board. 5 items have no named owner and 48 carry no stated date; the log names the 14 of those that read as near-term commitments. Requests completed inside the window were left out on purpose and listed in the log.</p>
+    <div class="tablewrap"><table class="sample">
+      <thead><tr><th>Action</th><th>Owner</th><th>Due</th><th>Source</th><th>Evidence</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td>Launch multi-channel sequences to the roughly 300 identified back-office contacts by the all hands.</td><td class="who">Dallas</td><td class="st">2026-09-16</td><td>otter: Back Office Lead Expansion Strategy</td><td class="ev">"Is it unreasonable to target at least launching a multi-channel sequence for these 300 contacts we have identified by the all hands?"</td><td class="st">medium</td></tr>
+        <tr><td>Bring the campaign framework and lead the new-campaign build-out discussion at the Sep 3 GTM Campaign Alignment meeting.</td><td class="who">Dallas</td><td class="st">2026-09-03</td><td>calendar: GTM Campaign Alignment Meeting</td><td class="ev">"If anyone has a campaign framework you are currently working with, please provide to this team so we can be consistent as we bring new campa"</td><td class="st">medium</td></tr>
+        <tr><td>Develop the read-only action extraction agent for the AI enabled PMO goal.</td><td class="who">Dallas</td><td class="st">2026-12-31</td><td>monday: AI enabled PMO 12664120782</td><td class="ev">"Develop an agent that ingests notes, email, calendar, and project records to extract action items with owners and dates, starting read only "</td><td class="st">medium</td></tr>
+        <tr><td>Update the product team&#x27;s percent complete on the Monday AI Initiatives board at least once a month.</td><td class="who">Dallas</td><td class="st">none stated</td><td>otter: AI Champion Role Transition Overview</td><td class="ev">"at the end of the month, just kind of moving the percent complete on the goals because those are rolling up to the company scorecard."</td><td class="st">high</td></tr>
+        <tr><td>Build pre-approved outreach templates with marketing so campaigns can go out without per-piece approval.</td><td class="who">Dallas</td><td class="st">none stated</td><td>otter: AI Projects and Clay Integration Discussion</td><td class="ev">"I&#x27;m just going to create templates for different situations, and once I get approval for the way those look like, then it&#x27;s just going to be"</td><td class="st">medium</td></tr>
+        <tr><td>Build the AI adoption tracking dashboards and technical deliverables for the side quest before year end.</td><td class="who">Dallas</td><td class="st">2026-12-31</td><td>otter: AI Change Management Side Quest Kickoff</td><td class="ev">"Dallas is going to be really our guru on the technical side to build some dashboards and tracking that we can use to then fire or trigger so"</td><td class="st">high</td></tr>
+      </tbody>
+    </table></div>
+    <div class="line">Six of the 85 rows, all owned by Dallas, verbatim from automation/pmo/action_register.csv. Otter speaker labels are generic in several meetings; where a name was inferred the row is medium confidence and the log says so.</div>
+    <div class="callout">
+      <h4>Where the number comes from</h4>
+      <p>20 of 85 rows graded on Aug 31 by Dallas: 19 correct, 1 wrong date, 0 wrong owner, 0 not an action, 0 duplicates. All 14 graded meeting-note rows and all 10 high-confidence rows were correct; the miss was a medium-confidence email row with no date stated. The figure moves as more rows in <b>automation/pmo/validation_queue.csv</b> carry verdicts; the daily log reports it each run.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Open with Product</div>
+    <ul class="threads">
+      <li><b>Scope.</b> The goal says notes, email, calendar and project records. Whose, and which boards, is Product's definition of the PMO; the agent reads one person's records today.</li>
+      <li><b>Grading.</b> 20 rows sit at 95%. How many more before the number is trusted, and who grades beyond Dallas, is the decision that gates automation.</li>
+      <li><b>Follow-up.</b> Reminders or task creation stay off until the precision figure is known and agreed.</li>
+    </ul>
+    <div class="line">Next: grade the remaining 65, carry the precision line to the AI champions standup.</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. Product &middot; AI champion</span>
+  <span>Monday.com AI Initiatives &middot; Product (Dallas) &middot; AI enabled PMO &middot; Aug 31 2026</span>
+</footer>
+</div>
+<!--PRESENT-->
+</body>
+</html>
