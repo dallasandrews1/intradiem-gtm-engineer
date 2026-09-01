@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Campaign Framework</title>
+<!--FONTS-->
+<style>
+/* brief form */
+.brief{margin-top:20px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);box-shadow:var(--shadow);overflow:hidden}
+.brief .top{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line);background:var(--zebra)}
+.brief .top label{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:600;display:block;margin-bottom:6px}
+.brief .top input{width:100%;font-family:var(--ff);font-size:18px;font-weight:700;color:var(--ink);border:none;border-bottom:2px solid var(--line);background:none;padding:6px 0;letter-spacing:-.01em}
+.brief .top input:focus{outline:none;border-bottom-color:var(--green)}
+.brief .acts{display:flex;gap:8px;flex-wrap:wrap}
+.brief .acts button{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:9px 14px;border-radius:6px;cursor:pointer;border:1px solid var(--line);background:var(--bg);color:var(--ink-2)}
+.brief .acts button:hover{border-color:var(--green-600);color:var(--green-600)}
+.brief .acts button.pri{background:var(--forest);color:#fff;border-color:var(--forest)}
+.brief .acts button.pri:hover{background:var(--green-600);border-color:var(--green-600);color:#fff}
+.brief .row{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:14px 22px;border-bottom:1px solid var(--line);align-items:start}
+.brief .row:last-child{border-bottom:none}
+.brief .row.house{background:var(--tint-soft)}
+.brief .row .k{padding-top:8px}
+.brief .row .k b{display:block;font-size:15.5px;color:var(--ink);letter-spacing:-.01em}
+.brief .row .k span{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-top:4px}
+.brief .row .k small{display:block;font-size:12.5px;color:var(--ink-3);margin-top:4px;line-height:1.45}
+.brief textarea{width:100%;min-height:58px;font-family:var(--ff);font-size:14.5px;color:var(--ink);line-height:1.5;padding:9px 12px;border:1px solid rgba(0,0,0,.18);border-radius:6px;background:#fff;resize:vertical}
+.brief textarea:focus{outline:2px solid var(--green-300);outline-offset:1px;border-color:var(--green)}
+.brief textarea::placeholder{color:var(--ink-3)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--forest);color:#fff;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:11px 18px;border-radius:8px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none;z-index:70}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+/* steps */
+.steps li.signoff .n{background:var(--orange)}
+.steps li.signoff .t{color:var(--orange-600)}
+.owners{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+.owners div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow);font-size:13.5px;color:var(--ink-2)}
+.owners .who{font-weight:700;color:var(--ink);font-size:15.5px;margin-bottom:4px}
+/* counted */
+.count3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+/* present extras */
+.pslide .rows{list-style:none;margin-top:26px;max-width:1150px;columns:2;column-gap:36px}
+.pslide .rows li{break-inside:avoid;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:clamp(14px,1.25vw,17px);color:#C7DAD1;display:grid;grid-template-columns:34px 1fr;gap:10px}
+.pslide .rows li b{color:#fff}
+.pslide .rows li span{font-family:var(--ff-mono);color:var(--green-300);font-size:12px;font-weight:600;padding-top:3px}
+.pslide .rows li.house b{color:var(--green-300)}
+@media(max-width:900px){.owners{grid-template-columns:1fr 1fr 1fr}.count3{grid-template-columns:1fr}.brief .row{grid-template-columns:1fr}.brief .top{grid-template-columns:1fr}.pslide .rows{columns:1}}
+@media(max-width:600px){.owners{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">GTM Engineering &middot; Campaign framework</div>
+    <h1 data-h="2">One page per campaign, <span class="spark">the same fields every time</span>.</h1>
+    <p class="sub" data-h="3">The framework from the Sep 3 invite. Ten rows in the agenda's order, the seven steps every campaign runs, and who owns each. <b>Fill the rows in below and copy the brief</b>, or bring the idea in a sentence and GTM Engineering writes it up with you.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="10">0</span></b><span>rows per brief</span></div>
+      <div><b><span class="hc" data-to="7">0</span></b><span>steps per campaign</span></div>
+      <div><b><span class="hc" data-to="30">0</span> to 50</b><span>contacts per wave</span></div>
+      <div><b><span class="hc" data-to="2">0</span> wks</b><span>one wave, one read, per meeting</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>GTM Campaign Alignment: Sales, SDRs, Marketing, GTM</div>
+      <div><span>By</span>Dallas Andrews, GTM Engineering</div>
+      <div><span>Date</span>September 3, 2026</div>
+      <div><span>Use</span>Fill in, copy, bring to the meeting</div>
+    </div>
+  </div>
+</header>
+
+<section id="brief">
+  <div class="wrap">
+    <div class="eyebrow">The brief</div>
+    <h2>Ten rows. The first seven are the agenda; the last three make it countable.</h2>
+    <p class="lede">Type into any row. The draft stays in this browser. "Load the Stars example" shows a finished one; "Copy brief" puts the text on the clipboard for email, Slack, or the Zoom agenda doc.</p>
+    <div class="brief">
+      <div class="top">
+        <div><label for="b-name">Campaign name</label><input id="b-name" type="text" placeholder="Working title" autocomplete="off"></div>
+        <div class="acts">
+          <button type="button" id="b-load">Load the Stars example</button>
+          <button type="button" id="b-clear">Clear</button>
+          <button type="button" class="pri" id="b-copy">Copy brief</button>
+        </div>
+      </div>
+      <div class="row"><div class="k"><b>Target market</b><span>01</span><small>Vertical, segment, size, and the list it comes from. Customers in or out, and who clears them.</small></div><textarea data-k="Target market" placeholder="Vertical, segment, size, list, customers in or out"></textarea></div>
+      <div class="row"><div class="k"><b>Roles and titles</b><span>02</span><small>The VITO for this market, and the champion thread beneath them. Proposed per vertical, the AE confirms.</small></div><textarea data-k="Roles and titles" placeholder="VITO and champion, per vertical"></textarea></div>
+      <div class="row"><div class="k"><b>Data collected</b><span>03</span><small>The fields every contact carries before it enters a sequence: fit, trigger, verified email, LinkedIn, reports-to, Salesforce owner.</small></div><textarea data-k="Data collected" placeholder="What each contact carries before a sequence"></textarea></div>
+      <div class="row"><div class="k"><b>Key signals</b><span>04</span><small>What makes an account fire now, with a freshness window. Signals are config, so they change without a rebuild.</small></div><textarea data-k="Key signals" placeholder="What fires an account now, and for how long"></textarea></div>
+      <div class="row"><div class="k"><b>Tooling</b><span>05</span><small>Where the list lives, where it sends, where it's counted.</small></div><textarea data-k="Tooling" placeholder="List, send, count"></textarea></div>
+      <div class="row"><div class="k"><b>Marketing support</b><span>06</span><small>Content, ad audience, landing page, and who owns budget and creative.</small></div><textarea data-k="Marketing support" placeholder="Content, ads, landing page, owner"></textarea></div>
+      <div class="row"><div class="k"><b>Execution</b><span>07</span><small>How the SDR sees leads, the cadence (touches, channels, days), and what we expect: spend, meetings, conversion, opps, against the Cold baseline.</small></div><textarea data-k="Execution" placeholder="SDR view, cadence, expectations against the baseline"></textarea></div>
+      <div class="row house"><div class="k"><b>Gates</b><span>08 &middot; same for every campaign</span><small>Customer exclusion, verified claims only, a person approves the first sends.</small></div><textarea data-k="Gates" placeholder="Customer exclusion, verified claims, a person approves the first sends"></textarea></div>
+      <div class="row house"><div class="k"><b>Tracking</b><span>09 &middot; same for every campaign</span><small>Lead Source value proposed as GTM Engineering, one Salesforce campaign per sequence, meetings logged monthly in Sales Ops' schema.</small></div><textarea data-k="Tracking" placeholder="Lead Source, Salesforce campaign, monthly meetings"></textarea></div>
+      <div class="row house"><div class="k"><b>Owner and next read</b><span>10</span><small>One name, and the date the results come back to this group.</small></div><textarea data-k="Owner and next read" placeholder="Name, and the meeting the read comes back to"></textarea></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How a campaign runs</div>
+    <h2>Seven steps, one wave per meeting.</h2>
+    <p class="lede">A wave is 30 to 50 contacts and takes about nine business days, so each campaign comes back to this meeting with a read and a decision.</p>
+    <ul class="steps">
+      <li><div class="n">1</div><div class="t">Brief</div><div class="o">Anyone proposes &middot; GTM Eng writes</div><div class="r">The ten rows above, reviewed here. Output: a brief with an owner and a read date.</div></li>
+      <li><div class="n">2</div><div class="t">Source and gate</div><div class="o">GTM Eng</div><div class="r">The list, customers out, verified email, one Salesforce campaign name. Output: a count.</div></li>
+      <li class="signoff"><div class="n">3</div><div class="t">Confirm the targets</div><div class="o">AEs &middot; AMs</div><div class="r">AEs confirm the VITO per account; AMs clear or hold names inside customer accounts. Output: cleared names.</div></li>
+      <li><div class="n">4</div><div class="t">Messaging options</div><div class="o">Marketing &middot; GTM Eng</div><div class="r">Marketing supplies options per role and vertical; GTM Eng compiles the sequence through the claims check. Output: a draft sequence.</div></li>
+      <li><div class="n">5</div><div class="t">Launch a wave</div><div class="o">SDR</div><div class="r">30 to 50 contacts, a person approves the first sends, the SDR sends, calls, and logs. Output: a wave live.</div></li>
+      <li><div class="n">6</div><div class="t">Read</div><div class="o">GTM Eng &middot; Sales Ops</div><div class="r">Replies, meetings, cost per meeting, in the council's schema and on its row. Output: a scorecard.</div></li>
+      <li><div class="n">7</div><div class="t">Adjust or retire</div><div class="o">This meeting</div><div class="r">Change the lane, the copy, or the list, then the next wave. Or stop. Output: a decision.</div></li>
+    </ul>
+    <div class="line">Step 7 feeds step 1. Two weeks, one wave, one read, every campaign.</div>
+    <div class="owners">
+      <div><div class="who">Sales</div>VITO per account, account maps</div>
+      <div><div class="who">SDRs</div>Send, call, log the reply</div>
+      <div><div class="who">Marketing</div>Messaging options, ads, landing page</div>
+      <div><div class="who">Sales Ops</div>Lead Source, the dashboard row</div>
+      <div><div class="who">GTM Engineering</div>List, gates, sequences, scorecard, the brief</div>
+    </div>
+  </div>
+</section>
+
+<section id="counted">
+  <div class="wrap">
+    <div class="eyebrow">Counted, every time</div>
+    <h2>Judged on the Pipeline Council's numbers.</h2>
+    <div class="count3">
+      <div class="card"><div class="tag go">Baseline</div><h4>$3,402 per meeting</h4><p>Cold's cost per meeting in the council workbook, with 19% meeting to opp. Every campaign reports against it; targets are set after two waves, not before the first.</p></div>
+      <div class="card"><div class="tag go">Row</div><h4>One row on the dashboard</h4><p>One Salesforce campaign per sequence, meetings logged monthly in Sales Ops' schema, so each campaign is its own line at the council.</p></div>
+      <div class="card"><div class="tag go">Read</div><h4>Back here in two weeks</h4><p>Replies, meetings, cost per meeting. The group adjusts the lane, the copy, or the list, or retires the campaign.</p></div>
+    </div>
+    <div class="line">Any idea, in the ten rows or in a sentence. GTM Engineering writes it up with the owner before the next meeting.</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal.</span>
+  <span>Dallas Andrews &middot; GTM Engineering &middot; September 3, 2026</span>
+</footer>
+</div>
+<div class="toast" id="toast">Copied</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">GTM Engineering &middot; Campaign framework</div>
+  <h1 data-a="3">One page per campaign, <span class="spark">the same fields every time</span>.</h1>
+  <p class="pl" data-a="4">Ten rows in the agenda's order. Seven steps every campaign runs. <b>One wave, one read, per meeting.</b></p>
+</section>
+<section class="pslide" data-title="The brief">
+  <div class="pe" data-a="1">The brief</div>
+  <h2 data-a="2">Ten rows. Seven are the agenda, <span class="spark">three make it countable</span>.</h2>
+  <ul class="rows">
+    <li data-a="3"><span>01</span><b>Target market</b></li>
+    <li data-a="3"><span>02</span><b>Roles and titles</b></li>
+    <li data-a="4"><span>03</span><b>Data collected</b></li>
+    <li data-a="4"><span>04</span><b>Key signals</b></li>
+    <li data-a="5"><span>05</span><b>Tooling</b></li>
+    <li data-a="5"><span>06</span><b>Marketing support</b></li>
+    <li data-a="6"><span>07</span><b>Execution</b></li>
+    <li class="house" data-a="7"><span>08</span><b>Gates</b></li>
+    <li class="house" data-a="7"><span>09</span><b>Tracking</b></li>
+    <li class="house" data-a="7"><span>10</span><b>Owner and next read</b></li>
+  </ul>
+</section>
+<section class="pslide" data-title="How it runs">
+  <div class="pe" data-a="1">How a campaign runs</div>
+  <h2 data-a="2">Seven steps, <span class="spark">one wave per meeting</span>.</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>1 &middot; Brief</b><span>Anyone proposes, GTM Eng writes</span></div>
+    <div data-a="4"><b>2 &middot; Source and gate</b><span>GTM Eng. Output: a count</span></div>
+    <div data-a="5"><b>3 &middot; Confirm the targets</b><span>AEs confirm the VITO, AMs clear names</span></div>
+    <div data-a="6"><b>4 &middot; Messaging options</b><span>Marketing supplies, GTM Eng compiles</span></div>
+    <div data-a="7"><b>5 &middot; Launch a wave</b><span>30 to 50 contacts, a person approves first sends</span></div>
+    <div data-a="8"><b>6 &middot; Read</b><span>Replies, meetings, cost per meeting</span></div>
+    <div data-a="9"><b>7 &middot; Adjust or retire</b><span>This meeting decides</span></div>
+    <div data-a="10"><b>Then step 1</b><span>Two weeks, one wave, one read</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="Owners">
+  <div class="pe" data-a="1">Who owns what</div>
+  <h2 data-a="2">Five owners, <span class="spark">one framework</span>.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">Sales</span><span class="r"><b>VITO per account</b>, account maps</span></li>
+    <li data-a="4"><span class="d">SDRs</span><span class="r"><b>Send, call, log</b> the reply</span></li>
+    <li data-a="5"><span class="d">Marketing</span><span class="r"><b>Messaging options</b>, ads, landing page</span></li>
+    <li data-a="6"><span class="d">Sales Ops</span><span class="r"><b>Lead Source</b>, the dashboard row</span></li>
+    <li data-a="7"><span class="d">GTM Engineering</span><span class="r"><b>List, gates, sequences, scorecard</b>, the brief</span></li>
+  </ul>
+</section>
+<section class="pslide" data-title="Counted">
+  <div class="pe" data-a="1">Counted, every time</div>
+  <h2 data-a="2">Judged on the council's numbers.</h2>
+  <div class="pgrid c3">
+    <div data-a="3"><span class="big">$3,402</span><span>Cold's cost per meeting, the baseline every campaign reports against</span></div>
+    <div data-a="4"><span class="big">19%</span><span>Meeting to opp, council workbook</span></div>
+    <div data-a="5"><span class="big">1</span><span>Salesforce campaign per sequence, one row on the dashboard</span></div>
+  </div>
+  <p class="pl" data-a="6">Any idea, in the ten rows or in a sentence. <b>GTM Engineering writes it up with the owner before the next meeting.</b></p>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; Campaign framework</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 5</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<!--PRESENT-->
+<script>
+(function(){
+  var KEY='gtm-campaign-brief-draft';
+  var name=document.getElementById('b-name');
+  var areas=[].slice.call(document.querySelectorAll('.brief textarea'));
+  var toast=document.getElementById('toast');
+  var stars={
+    name:'Star Ratings, 2027 cycle',
+    'Target market':'MA plans under 4.0 whose gap sits in the customer-service measures Queue Optimizer moves. Current customers excluded at the list.',
+    'Roles and titles':'VITO: the CFO or COO who owns the quality bonus (crossing 4.0 turns on a 5% payment lift, CMS rule). Champion: VP Medicare Stars or Director of Quality. Both threads enter at once.',
+    'Data collected':'Contract-level rating gap and modeled bonus at stake, parent, plan product line, verified email, LinkedIn, earnings language on Stars.',
+    'Key signals':'Bonus math per contract, Stars language in earnings and filings, quality leadership changes, and the October release itself.',
+    'Tooling':'Our engine for the universe, scoring, and message generation with a claims check (runs on Clay); Lemlist for the sequence (Nate, three lanes); Salesforce for the count.',
+    'Marketing support':'Healthcare webinar recording as the landing asset; Stars one-pager for the finance thread; LinkedIn audience from the same list when the cohort clock starts.',
+    'Execution':'Email day 1, LinkedIn day 2, call plus LinkedIn note day 4, email day 6, close day 9. Nate works replies and calls from his channel. Expect: replies, meetings, and cost per meeting reported against Cold\'s $3,402; targets set after two waves.',
+    'Gates':'Current customers excluded at the list. Every claim through the verified-claims check. A person approves the first sends.',
+    'Tracking':'Lead Source GTM Engineering (proposed), one Salesforce campaign per sequence, meetings logged monthly in Sales Ops\' schema.',
+    'Owner and next read':'Dallas builds, Nate sends. Wave 1 launches the day the Lemlist contract clears; first read at the Sep 17 meeting.'
+  };
+  function say(t){toast.textContent=t;toast.classList.add('on');setTimeout(function(){toast.classList.remove('on');},1600);}
+  function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||'null');if(!d)return;name.value=d.name||'';areas.forEach(function(a){a.value=d[a.getAttribute('data-k')]||'';});}catch(e){}}
+  function save(){try{var d={name:name.value};areas.forEach(function(a){d[a.getAttribute('data-k')]=a.value;});localStorage.setItem(KEY,JSON.stringify(d));}catch(e){}}
+  function text(){var out=['Campaign brief: '+(name.value||'(untitled)'),''];areas.forEach(function(a){out.push(a.getAttribute('data-k')+': '+(a.value.trim()||'(blank)'));});return out.join('\n');}
+  function copy(){var t=text();
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){say('Copied');},function(){fallback(t);});}else{fallback(t);}
+  }
+  function fallback(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');say('Copied');}catch(e){say('Select and copy by hand');}document.body.removeChild(ta);}
+  document.getElementById('b-load').addEventListener('click',function(){name.value=stars.name;areas.forEach(function(a){a.value=stars[a.getAttribute('data-k')]||'';});save();say('Stars example loaded');});
+  document.getElementById('b-clear').addEventListener('click',function(){name.value='';areas.forEach(function(a){a.value='';});save();say('Cleared');});
+  document.getElementById('b-copy').addEventListener('click',copy);
+  areas.concat([name]).forEach(function(a){a.addEventListener('input',save);});
+  load();
+})();
+</script>
+</body>
+</html>
