@@ -139,7 +139,7 @@ Map name in Sales Nav: `DIRECTV - Back Office`
 Paste list for the map search box: Michael W.; GW Shaw; Anna Volfson; Nick Zubkoff; Ann Whalen; Erin Hurley; Ingrid Burnett; Mark Morrison; Cecilia Comeaux; Carl Barber; Kailey Matthews; Alemseged Starling; Bert Cabello Jr; Donja Wehrfritz; Kara Johnson; Amiena Murad; Christopher Brady; Jeff Bollaro; Tom McGeorge; Ray C.; Nilah Staskus; Dan O'Rourke; Greg Nagrosst; Mary Beth Woodall; SARA GUNTHER, MBA
 
 
-## Goldman Sachs: back office map (25 leads)
+## Goldman Sachs: back office map (23 leads)
 
 Map name in Sales Nav: `Goldman Sachs - Back Office`
 
@@ -159,19 +159,17 @@ Map name in Sales Nav: `Goldman Sachs - Back Office`
 | 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mark Alexander** (confirm CRM badge) | VP, Head of Disputes Operations | VP | Fraud, credit & disputes | Rajiv Khiani | https://www.linkedin.com/in/mark-alexander-48ab71/ |
 | 13 | **Ericka Leslie** | Chief Administrative Officer | C | Administration & supply chain | Top of the map | https://www.linkedin.com/in/ericka-leslie-4796911/ |
 | 14 | &nbsp;&nbsp;&nbsp;**Adolfo Levano** | Vice President | AWM | US Deposits | Back Office Operations | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/adolfo-levano-58894145/ |
-| 15 | &nbsp;&nbsp;&nbsp;**Chelsey Jurgielewicz** | Vice President, Strategy, Finance & Operations, Platform Solutions | VP | Finance & shared services | Ericka Leslie | https://www.linkedin.com/in/chelsey-jurgielewicz-04100042/ |
-| 16 | &nbsp;&nbsp;&nbsp;**Chetan Saini** | Vice President – Client Services & Technology Operations | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/chetan-saini-289b56b/ |
-| 17 | &nbsp;&nbsp;&nbsp;**Micah Heavener** (in Salesforce) | Head of Operations | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/micah-heavener-064ba55/ |
-| 18 | &nbsp;&nbsp;&nbsp;**Tia Adams** | Managing Director, Corporate Treasury Payment Operations | VP | Billing, payments & revenue | Ericka Leslie | https://www.linkedin.com/in/tia-adams-cpa/ |
-| 19 | **John L. Bertrand** | Chief Operating Officer, CF&O Shared Services | C | Finance & shared services | Top of the map | https://www.linkedin.com/in/jbertrand/ |
-| 20 | &nbsp;&nbsp;&nbsp;**Cathy Obradovich** | Global Head of People Analytics and Workforce Planning | VP | Operations | John L. Bertrand | https://www.linkedin.com/in/cathy-obradovich-86084a4b/ |
-| 21 | &nbsp;&nbsp;&nbsp;**Mohit Prakash** | VP - Product Owner & Reporting | VP | Operations | John L. Bertrand | https://www.linkedin.com/in/mohit-prakash-0b99a772/ |
-| 22 | &nbsp;&nbsp;&nbsp;**Przemek Myslecki** | Global Head - Asset Servicing Claim, Product Owner | VP | Claims | John L. Bertrand | https://www.linkedin.com/in/przemek-myslecki-b24921120/ |
-| 23 | &nbsp;&nbsp;&nbsp;**Steve Repasky** | VP   |   Product Owner Global Listed Clearing Engineering | VP | Operations | John L. Bertrand | https://www.linkedin.com/in/steve-repasky-855474a5/ |
-| 24 | **Kristen Manno** | CFO and Head of People Strategy for the Platform Solutions Segment | C | Operations | Top of the map | https://www.linkedin.com/in/kristen-manno-94b2954/ |
-| 25 | &nbsp;&nbsp;&nbsp;**John Owenhouse** | Vice President, Platform Solutions Finance | VP | Finance & shared services | Kristen Manno | https://www.linkedin.com/in/john-owenhouse-272a7a66/ |
+| 15 | &nbsp;&nbsp;&nbsp;**Cathy Obradovich** | Global Head of People Analytics and Workforce Planning | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/cathy-obradovich-86084a4b/ |
+| 16 | &nbsp;&nbsp;&nbsp;**Chelsey Jurgielewicz** | Vice President, Strategy, Finance & Operations, Platform Solutions | VP | Finance & shared services | Ericka Leslie | https://www.linkedin.com/in/chelsey-jurgielewicz-04100042/ |
+| 17 | &nbsp;&nbsp;&nbsp;**Chetan Saini** | Vice President – Client Services & Technology Operations | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/chetan-saini-289b56b/ |
+| 18 | &nbsp;&nbsp;&nbsp;**Micah Heavener** (in Salesforce) | Head of Operations | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/micah-heavener-064ba55/ |
+| 19 | &nbsp;&nbsp;&nbsp;**Mohit Prakash** | VP - Product Owner & Reporting | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/mohit-prakash-0b99a772/ |
+| 20 | &nbsp;&nbsp;&nbsp;**Steve Repasky** | VP   |   Product Owner Global Listed Clearing Engineering | VP | Operations | Ericka Leslie | https://www.linkedin.com/in/steve-repasky-855474a5/ |
+| 21 | &nbsp;&nbsp;&nbsp;**Tia Adams** | Managing Director, Corporate Treasury Payment Operations | VP | Billing, payments & revenue | Ericka Leslie | https://www.linkedin.com/in/tia-adams-cpa/ |
+| 22 | **Kristen Manno** | CFO and Head of People Strategy for the Platform Solutions Segment | C | Operations | Top of the map | https://www.linkedin.com/in/kristen-manno-94b2954/ |
+| 23 | &nbsp;&nbsp;&nbsp;**John Owenhouse** | Vice President, Platform Solutions Finance | VP | Finance & shared services | Kristen Manno | https://www.linkedin.com/in/john-owenhouse-272a7a66/ |
 
-Paste list for the map search box: Christopher Formica; Mohamed Ouaaddi; Austin Rogers; Judy Li; Mike Jaipersaud; Natalie Gandy; Orly Kagan; Rajiv Khiani; Amanda Hanekamp; Ambika Prasad; Chelsea Anderson, CAMS; Mark Alexander; Ericka Leslie; Adolfo Levano; Chelsey Jurgielewicz; Chetan Saini; Micah Heavener; Tia Adams; John L. Bertrand; Cathy Obradovich; Mohit Prakash; Przemek Myslecki; Steve Repasky; Kristen Manno; John Owenhouse
+Paste list for the map search box: Christopher Formica; Mohamed Ouaaddi; Austin Rogers; Judy Li; Mike Jaipersaud; Natalie Gandy; Orly Kagan; Rajiv Khiani; Amanda Hanekamp; Ambika Prasad; Chelsea Anderson, CAMS; Mark Alexander; Ericka Leslie; Adolfo Levano; Cathy Obradovich; Chelsey Jurgielewicz; Chetan Saini; Micah Heavener; Mohit Prakash; Steve Repasky; Tia Adams; Kristen Manno; John Owenhouse
 
 
 ## Guardian Life: back office map (21 leads)
@@ -182,27 +180,27 @@ Map name in Sales Nav: `Guardian Life - Back Office`
 |---|---|---|---|---|---|---|
 | 1 | **Maria Milazzo** | CFO, Group Insurance | C | Operations | Top of the map | https://www.linkedin.com/in/maria-milazzo/ |
 | 2 | &nbsp;&nbsp;&nbsp;**Jonathan Mayhew** | Executive Vice President, Group Benefits | EVP | Operations | Maria Milazzo | https://www.linkedin.com/in/jonathan-mayhew-97894ba8/ |
-| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jane M Elliott, MSF** | Head of Group Benefits Underwriting Process & Technology | VP | Underwriting operations | Jonathan Mayhew | https://www.linkedin.com/in/jane-m-elliott-mba-b397b3a/ |
-| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Lori Fanning** | Head of Operations, Group Benefits | VP | Operations | Jonathan Mayhew | https://www.linkedin.com/in/lori-fanning-35381b5/ |
-| 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Manavjeet Singh** | Head of Group Benefits Operations Technology | VP | Operations | Jonathan Mayhew | https://www.linkedin.com/in/manavjeet/ |
-| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Patrick Ouellette** | Head of Group Benefits Claims Technology | VP | Claims | Jonathan Mayhew | https://www.linkedin.com/in/patrick-ouellette/ |
-| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sandra McKenna** | Head of Operations, Service, Claims and Transformation, Shared Services, Group Benefits | VP | Claims | Jonathan Mayhew | https://www.linkedin.com/in/sandra-mckenna-562b79a/ |
-| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Garlande Patz, MBA, CLMS** | Head of Business Transformation, Group Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/garlande-patz-mba-clms-69100452/ |
-| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Gregory Horvath** | Head of Business Administration and Transformation | VP | Administration & supply chain | Sandra McKenna | https://www.linkedin.com/in/gregory-horvath-29a6714/ |
-| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kristin Hoffman** | Head of Annuity Operations - Distributor Relationships and Inforce Administration | VP | Administration & supply chain | Sandra McKenna | https://www.linkedin.com/in/kristin-hoffman-27b492168/ |
-| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Melanie Wiltrout** | Head of Best Practices, Group Claims & Service | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/melanie-wiltrout/ |
-| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Meredith Heibert** | Head of Life & Annuity Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/meredith-heibert-140102116/ |
-| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Micah Pace** | Head of Underwriting Operations | VP | Underwriting operations | Sandra McKenna | https://www.linkedin.com/in/micah-pace-36b1b721/ |
-| 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nora Bargfrede** | Head of Disability Clinical, Group Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/nora-bargfrede-9a89b277/ |
-| 15 | &nbsp;&nbsp;&nbsp;**Brad Nowers** | Head of FP&A for Underwriting & Operations, Group Benefits | VP | Finance & shared services | Maria Milazzo | https://www.linkedin.com/in/brad-nowers-90638690/ |
-| 16 | &nbsp;&nbsp;&nbsp;**Casey Schetter** | Head of Group Operations Billing | VP | Billing, payments & revenue | Maria Milazzo | https://www.linkedin.com/in/casey-schetter-20115b8a/ |
+| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Casey Schetter** | Head of Group Operations Billing | VP | Billing, payments & revenue | Jonathan Mayhew | https://www.linkedin.com/in/casey-schetter-20115b8a/ |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jane M Elliott, MSF** | Head of Group Benefits Underwriting Process & Technology | VP | Underwriting operations | Jonathan Mayhew | https://www.linkedin.com/in/jane-m-elliott-mba-b397b3a/ |
+| 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Lori Fanning** | Head of Operations, Group Benefits | VP | Operations | Jonathan Mayhew | https://www.linkedin.com/in/lori-fanning-35381b5/ |
+| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Manavjeet Singh** | Head of Group Benefits Operations Technology | VP | Operations | Jonathan Mayhew | https://www.linkedin.com/in/manavjeet/ |
+| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Patrick Ouellette** | Head of Group Benefits Claims Technology | VP | Claims | Jonathan Mayhew | https://www.linkedin.com/in/patrick-ouellette/ |
+| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sandra McKenna** | Head of Operations, Service, Claims and Transformation, Shared Services, Group Benefits | VP | Claims | Jonathan Mayhew | https://www.linkedin.com/in/sandra-mckenna-562b79a/ |
+| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Garlande Patz, MBA, CLMS** | Head of Business Transformation, Group Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/garlande-patz-mba-clms-69100452/ |
+| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Gregory Horvath** | Head of Business Administration and Transformation | VP | Administration & supply chain | Sandra McKenna | https://www.linkedin.com/in/gregory-horvath-29a6714/ |
+| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kristin Hoffman** | Head of Annuity Operations - Distributor Relationships and Inforce Administration | VP | Administration & supply chain | Sandra McKenna | https://www.linkedin.com/in/kristin-hoffman-27b492168/ |
+| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Melanie Wiltrout** | Head of Best Practices, Group Claims & Service | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/melanie-wiltrout/ |
+| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Meredith Heibert** | Head of Life & Annuity Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/meredith-heibert-140102116/ |
+| 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Micah Pace** | Head of Underwriting Operations | VP | Underwriting operations | Sandra McKenna | https://www.linkedin.com/in/micah-pace-36b1b721/ |
+| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nora Bargfrede** | Head of Disability Clinical, Group Claims | VP | Claims | Sandra McKenna | https://www.linkedin.com/in/nora-bargfrede-9a89b277/ |
+| 16 | &nbsp;&nbsp;&nbsp;**Brad Nowers** | Head of FP&A for Underwriting & Operations, Group Benefits | VP | Finance & shared services | Maria Milazzo | https://www.linkedin.com/in/brad-nowers-90638690/ |
 | 17 | &nbsp;&nbsp;&nbsp;**Christian Mele** | Life and Disability New Business / Head of Annuity Operations | VP | Operations | Maria Milazzo | https://www.linkedin.com/in/christian-mele-aa7140a/ |
 | 18 | &nbsp;&nbsp;&nbsp;**Kathy Earle** | Head of Claims & Service Finance | VP | Claims | Maria Milazzo | https://www.linkedin.com/in/kathleen-earle-b771189/ |
 | 19 | &nbsp;&nbsp;&nbsp;**Matthew Darula** | Head of Business Operations and Experience, Financial Protection and Retirement Solutions | VP | Finance & shared services | Maria Milazzo | https://www.linkedin.com/in/matthewdarula/ |
 | 20 | &nbsp;&nbsp;&nbsp;**Sania Rahman** | Head of Finance Transformation, Strategy and Operations | VP | Finance & shared services | Maria Milazzo | https://www.linkedin.com/in/saniarahman1/ |
 | 21 | **Darren Braithwaite** | Head of Procurement and Accounts Payables – Source to Pay Services | VP | Administration & supply chain | Top of the map | https://www.linkedin.com/in/darren-braithwaite-0466b26/ |
 
-Paste list for the map search box: Maria Milazzo; Jonathan Mayhew; Jane M Elliott, MSF; Lori Fanning; Manavjeet Singh; Patrick Ouellette; Sandra McKenna; Garlande Patz, MBA, CLMS; Gregory Horvath; Kristin Hoffman; Melanie Wiltrout; Meredith Heibert; Micah Pace; Nora Bargfrede; Brad Nowers; Casey Schetter; Christian Mele; Kathy Earle; Matthew Darula; Sania Rahman; Darren Braithwaite
+Paste list for the map search box: Maria Milazzo; Jonathan Mayhew; Casey Schetter; Jane M Elliott, MSF; Lori Fanning; Manavjeet Singh; Patrick Ouellette; Sandra McKenna; Garlande Patz, MBA, CLMS; Gregory Horvath; Kristin Hoffman; Melanie Wiltrout; Meredith Heibert; Micah Pace; Nora Bargfrede; Brad Nowers; Christian Mele; Kathy Earle; Matthew Darula; Sania Rahman; Darren Braithwaite
 
 
 ## McKesson: back office map (26 leads)
@@ -230,95 +228,78 @@ Map name in Sales Nav: `McKesson - Back Office`
 | 17 | &nbsp;&nbsp;&nbsp;**Katara Borrero** | Regional Senior Vice President, Operations | SVP | Operations | JA Reynolds RMC | https://www.linkedin.com/in/katara-borrero-188b09334/ |
 | 18 | &nbsp;&nbsp;&nbsp;**Amber Perry** | Director, Skills Strategy & Strategic Workforce Planning | Director | Operations | JA Reynolds RMC | https://www.linkedin.com/in/amber-perry-b8530514b/ |
 | 19 | **Napoleon Rutledge** | Chief Accounting Officer (CAO) | C | Finance & shared services | Top of the map | https://www.linkedin.com/in/napoleon-rutledge-0688558/ |
-| 20 | &nbsp;&nbsp;&nbsp;**Erick Olsen, EMBA, CPA, CGMA** | SVP, Corporate Controller | SVP | Finance & shared services | Napoleon Rutledge | https://www.linkedin.com/in/erick-olsen-emba-cpa-cgma-a413a5162/ |
-| 21 | &nbsp;&nbsp;&nbsp;**Justin Bowers** | Senior Vice President & General Manager, Finance Shared Services | SVP | Finance & shared services | Napoleon Rutledge | https://www.linkedin.com/in/jjbowers/ |
-| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Stuart Staggs** | Vice President, Transformation & Shared Services | VP | Finance & shared services | Justin Bowers | https://www.linkedin.com/in/stuart-staggs-5b7a877/ |
-| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Carla McKinnie** | Senior Director Shared Services Accounting | Director | Finance & shared services | Stuart Staggs | https://www.linkedin.com/in/carla-mckinnie-7b40b428/ |
-| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Elyse Baksh Lowe, CPA** | Director of Internal Controls - Financial Shared Services | Director | Finance & shared services | Stuart Staggs | https://www.linkedin.com/in/elyse-baksh/ |
-| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Julie Welch, CSM** (in Salesforce) | Senior Director, Shared Services | Director | Finance & shared services | Stuart Staggs | https://www.linkedin.com/in/julie-welch-csm-39962622/ |
+| 20 | &nbsp;&nbsp;&nbsp;**Justin Bowers** | Senior Vice President & General Manager, Finance Shared Services | SVP | Finance & shared services | Napoleon Rutledge | https://www.linkedin.com/in/jjbowers/ |
+| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Stuart Staggs** | Vice President, Transformation & Shared Services | VP | Finance & shared services | Justin Bowers | https://www.linkedin.com/in/stuart-staggs-5b7a877/ |
+| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Julie Welch, CSM** (in Salesforce) | Senior Director, Shared Services | Director | Finance & shared services | Stuart Staggs | https://www.linkedin.com/in/julie-welch-csm-39962622/ |
+| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Carla McKinnie** | Senior Director Shared Services Accounting | Director | Finance & shared services | Justin Bowers | https://www.linkedin.com/in/carla-mckinnie-7b40b428/ |
+| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Elyse Baksh Lowe, CPA** | Director of Internal Controls - Financial Shared Services | Director | Finance & shared services | Justin Bowers | https://www.linkedin.com/in/elyse-baksh/ |
+| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Francisco Fernandez** | Director, FP&A – Financial Shared Services | Director | Finance & shared services | Justin Bowers | https://www.linkedin.com/in/francisco-fernandez-055766a/ |
 | 26 | &nbsp;&nbsp;&nbsp;**Claudio Chiorazzi** | Vice President, Treasury Operations & Assistant Treasurer | VP | Billing, payments & revenue | Napoleon Rutledge | https://www.linkedin.com/in/claudio-chiorazzi-5099638/ |
 
-Paste list for the map search box: Ananda K.; Gajanan Kulkarni; Keith McIntyre; David Evangelista; Christopher Van Norman; David Hovan; Faith VanLesser; JA Reynolds RMC; Ashley Brady; Brittany Ulrich, PharmD, CSP, BCBBS; Greg Dye; Humeyra Etik; Franklin Childress; Traci Shaw; Chelsea Cooper; Jim Hodges; Katara Borrero; Amber Perry; Napoleon Rutledge; Erick Olsen, EMBA, CPA, CGMA; Justin Bowers; Stuart Staggs; Carla McKinnie; Elyse Baksh Lowe, CPA; Julie Welch, CSM; Claudio Chiorazzi
+Paste list for the map search box: Ananda K.; Gajanan Kulkarni; Keith McIntyre; David Evangelista; Christopher Van Norman; David Hovan; Faith VanLesser; JA Reynolds RMC; Ashley Brady; Brittany Ulrich, PharmD, CSP, BCBBS; Greg Dye; Humeyra Etik; Franklin Childress; Traci Shaw; Chelsea Cooper; Jim Hodges; Katara Borrero; Amber Perry; Napoleon Rutledge; Justin Bowers; Stuart Staggs; Julie Welch, CSM; Carla McKinnie; Elyse Baksh Lowe, CPA; Francisco Fernandez; Claudio Chiorazzi
 
 
-## MetLife: back office map (30 leads)
+## MetLife: back office map (21 leads)
 
 Map name in Sales Nav: `MetLife - Back Office`
 
 | # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |
 |---|---|---|---|---|---|---|
-| 1 | **Judith Gulotta** | Managing Director & Private Securities Chief Credit Officer | C | Fraud, credit & disputes | Top of the map | https://www.linkedin.com/in/judith-gulotta-5749158/ |
-| 2 | &nbsp;&nbsp;&nbsp;**George Soterakis** | Global Head of Investigations | VP | Operations | Judith Gulotta | https://www.linkedin.com/in/george-soterakis-44645319/ |
-| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**James Johnson** (confirm CRM badge) | AVP Fraud and Insider Risk Management | AVP | Fraud, credit & disputes | George Soterakis | https://www.linkedin.com/in/james-johnson-0145137a/ |
-| 4 | **Adrienne O'Neill, FCPA, FCA, CFA** | Executive Vice President and Chief Accounting Officer | EVP | Finance & shared services | Top of the map | https://www.linkedin.com/in/adrienne-o-neill-cpa-ca-cfa-2aab5920/ |
-| 5 | &nbsp;&nbsp;&nbsp;**Damien Cranwell** | Senior Vice President - Financial Operations & Applications at MetLife | SVP | Finance & shared services | Adrienne O'Neill, FCPA, FCA, CFA | https://www.linkedin.com/in/damien-cranwell-a01ba9a/ |
-| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Curtis Bloom** | Head of Financial Operations | VP | Finance & shared services | Damien Cranwell | https://www.linkedin.com/in/curtis-bloom-72711750/ |
-| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jeffrey Archer** | Assistant Vice President - Human Resources Shared Services | AVP | Finance & shared services | Curtis Bloom | https://www.linkedin.com/in/jeffrey-archer-858ba24/ |
-| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Niranjan Tumkur** | Director of Software Development Shared services | Director | Finance & shared services | Jeffrey Archer | https://www.linkedin.com/in/niranjan-tumkur-70434866/ |
-| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Georgios Dimitriou** | VP, Global Head of Reinsurance Operations & Administration | VP | Administration & supply chain | Damien Cranwell | https://www.linkedin.com/in/georgiosdimitriou/ |
-| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fred Onesto** | Assistant Vice President Group Benefits Operations | AVP | Operations | Georgios Dimitriou | https://www.linkedin.com/in/fred-onesto-86785078/ |
-| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karin Peña Fitzgerald** | Assistant Vice President, Long-Term Care Claims and Operations | AVP | Claims | Georgios Dimitriou | https://www.linkedin.com/in/karin-peña-fitzgerald-ba847832/ |
-| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ashley Smith** (confirm CRM badge) | Director, A&H, IDI, LTD Claims & Policy Administration | Director | Claims | Karin Peña Fitzgerald | https://www.linkedin.com/in/ashley-smith-10327a16/ |
-| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Lisa Lee** | Vice President - Global Tax Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/lisa-lee-7210004/ |
-| 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Lori Allen** | Vice President, Global Event Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/lori-h-allen/ |
-| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Nicole Boucher** | Vice President- Global Talent Acquisition, Operations, Programs and Enablement | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/nicole-boucher-01a7b3/ |
-| 16 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Peter Jones** | VP Data & Application  Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/peterjohnjones/ |
-| 17 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ken Brown** | Assistant Vice President, Global Customer Solutions & Operations Technology | AVP | Operations | Peter Jones | https://www.linkedin.com/in/kbrown1/ |
-| 18 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Imdad S.** | Sr Director, Global Technology & Operations (GTO) | Director | Operations | Ken Brown | https://www.linkedin.com/in/imdads/ |
-| 19 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roderick Mikus** | Vice President - Head of Group Life & Dental Service and Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/roderick-w-mikus-7ab36118/ |
-| 20 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sophia Andonisio** | Vice President; Billing, Eligibility & Group Operations | VP | Billing, payments & revenue | Damien Cranwell | https://www.linkedin.com/in/sophia-andonisio/ |
-| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tim McKnight** | VP, Head of Customer Solutions & Strategic Operations - Retirement & Income Solutions | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/tim-mcknight-8a817a2/ |
-| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Zeid Khamash** | Head of Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/zeid-khamash-acs-almi-87998726/ |
-| 23 | &nbsp;&nbsp;&nbsp;**Heather Bertellotti Phelps** | Senior Vice President, CFO Group Insurance | SVP | Operations | Adrienne O'Neill, FCPA, FCA, CFA | https://www.linkedin.com/in/heather-bertellotti-phelps-7717539a/ |
-| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ann Marie Leary** | Vice President, Absence & Short Term Disability | VP | Operations | Heather Bertellotti Phelps | https://www.linkedin.com/in/ann-marie-leary/ |
-| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Dianne Donovan-Colin** | AVP, US Claims Return to Health/Clinical Operations | AVP | Claims | Ann Marie Leary | https://www.linkedin.com/in/dianne-donovan-colin/ |
-| 26 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sharon Kupiec** | Assistant Vice President, Disability / Absence Claims | AVP | Claims | Ann Marie Leary | https://www.linkedin.com/in/sharon-kupiec-b78832208/ |
-| 27 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Donna Fisher** (confirm CRM badge) | Director - Disability, Absence & ADA | Director | Operations | Ann Marie Leary | https://www.linkedin.com/in/donna-fisher-a97a41100/ |
-| 28 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Heather Jannarone** | Vice President- Group Benefits Controller | VP | Finance & shared services | Heather Bertellotti Phelps | https://www.linkedin.com/in/heather-jannarone-611901a4/ |
-| 29 | **Bradd Chignoli** | Executive Vice President, Head of Regional Business & Workforce Engagement | EVP | Operations | Top of the map | https://www.linkedin.com/in/bradd-chignoli-412750/ |
-| 30 | &nbsp;&nbsp;&nbsp;**Aima E.** | Director, People Analytics & Workforce Planning | Director | Operations | Bradd Chignoli | https://www.linkedin.com/in/aima-e-757506159/ |
+| 1 | **Adrienne O'Neill, FCPA, FCA, CFA** | Executive Vice President and Chief Accounting Officer | EVP | Finance & shared services | Top of the map | https://www.linkedin.com/in/adrienne-o-neill-cpa-ca-cfa-2aab5920/ |
+| 2 | &nbsp;&nbsp;&nbsp;**Damien Cranwell** | Senior Vice President - Financial Operations & Applications at MetLife | SVP | Finance & shared services | Adrienne O'Neill, FCPA, FCA, CFA | https://www.linkedin.com/in/damien-cranwell-a01ba9a/ |
+| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Curtis Bloom** | Head of Financial Operations | VP | Finance & shared services | Damien Cranwell | https://www.linkedin.com/in/curtis-bloom-72711750/ |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jeffrey Archer** | Assistant Vice President - Human Resources Shared Services | AVP | Finance & shared services | Curtis Bloom | https://www.linkedin.com/in/jeffrey-archer-858ba24/ |
+| 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Georgios Dimitriou** | VP, Global Head of Reinsurance Operations & Administration | VP | Administration & supply chain | Damien Cranwell | https://www.linkedin.com/in/georgiosdimitriou/ |
+| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Peter Jones** | VP Data & Application  Operations | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/peterjohnjones/ |
+| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ken Brown** | Assistant Vice President, Global Customer Solutions & Operations Technology | AVP | Operations | Peter Jones | https://www.linkedin.com/in/kbrown1/ |
+| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Imdad S.** | Sr Director, Global Technology & Operations (GTO) | Director | Operations | Ken Brown | https://www.linkedin.com/in/imdads/ |
+| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tim McKnight** | VP, Head of Customer Solutions & Strategic Operations - Retirement & Income Solutions | VP | Operations | Damien Cranwell | https://www.linkedin.com/in/tim-mcknight-8a817a2/ |
+| 10 | &nbsp;&nbsp;&nbsp;**Heather Bertellotti Phelps** | Senior Vice President, CFO Group Insurance | SVP | Operations | Adrienne O'Neill, FCPA, FCA, CFA | https://www.linkedin.com/in/heather-bertellotti-phelps-7717539a/ |
+| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**George Soterakis** | Global Head of Investigations | VP | Operations | Heather Bertellotti Phelps | https://www.linkedin.com/in/george-soterakis-44645319/ |
+| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roderick Mikus** | Vice President - Head of Group Life & Dental Service and Operations | VP | Operations | Heather Bertellotti Phelps | https://www.linkedin.com/in/roderick-w-mikus-7ab36118/ |
+| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Fred Onesto** | Assistant Vice President Group Benefits Operations | AVP | Operations | Roderick Mikus | https://www.linkedin.com/in/fred-onesto-86785078/ |
+| 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Aima E.** | Director, People Analytics & Workforce Planning | Director | Operations | Fred Onesto | https://www.linkedin.com/in/aima-e-757506159/ |
+| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sophia Andonisio** | Vice President; Billing, Eligibility & Group Operations | VP | Billing, payments & revenue | Heather Bertellotti Phelps | https://www.linkedin.com/in/sophia-andonisio/ |
+| 16 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Dianne Donovan-Colin** | AVP, US Claims Return to Health/Clinical Operations | AVP | Claims | Heather Bertellotti Phelps | https://www.linkedin.com/in/dianne-donovan-colin/ |
+| 17 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karin Peña Fitzgerald** | Assistant Vice President, Long-Term Care Claims and Operations | AVP | Claims | Heather Bertellotti Phelps | https://www.linkedin.com/in/karin-peña-fitzgerald-ba847832/ |
+| 18 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Sharon Kupiec** | Assistant Vice President, Disability / Absence Claims | AVP | Claims | Heather Bertellotti Phelps | https://www.linkedin.com/in/sharon-kupiec-b78832208/ |
+| 19 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ashley Smith** (confirm CRM badge) | Director, A&H, IDI, LTD Claims & Policy Administration | Director | Claims | Sharon Kupiec | https://www.linkedin.com/in/ashley-smith-10327a16/ |
+| 20 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Donna Fisher** (confirm CRM badge) | Director - Disability, Absence & ADA | Director | Operations | Sharon Kupiec | https://www.linkedin.com/in/donna-fisher-a97a41100/ |
+| 21 | **Linda Broderick** | SVP Head of Global Procurement and Vendor Management | SVP | Administration & supply chain | Top of the map | https://www.linkedin.com/in/linda-broderick-bab1421/ |
 
-Paste list for the map search box: Judith Gulotta; George Soterakis; James Johnson; Adrienne O'Neill, FCPA, FCA, CFA; Damien Cranwell; Curtis Bloom; Jeffrey Archer; Niranjan Tumkur; Georgios Dimitriou; Fred Onesto; Karin Peña Fitzgerald; Ashley Smith; Lisa Lee; Lori Allen; Nicole Boucher; Peter Jones; Ken Brown; Imdad S.; Roderick Mikus; Sophia Andonisio; Tim McKnight; Zeid Khamash; Heather Bertellotti Phelps; Ann Marie Leary; Dianne Donovan-Colin; Sharon Kupiec; Donna Fisher; Heather Jannarone; Bradd Chignoli; Aima E.
+Paste list for the map search box: Adrienne O'Neill, FCPA, FCA, CFA; Damien Cranwell; Curtis Bloom; Jeffrey Archer; Georgios Dimitriou; Peter Jones; Ken Brown; Imdad S.; Tim McKnight; Heather Bertellotti Phelps; George Soterakis; Roderick Mikus; Fred Onesto; Aima E.; Sophia Andonisio; Dianne Donovan-Colin; Karin Peña Fitzgerald; Sharon Kupiec; Ashley Smith; Donna Fisher; Linda Broderick
 
 
-## Prudential Financial: back office map (30 leads)
+## Prudential Financial: back office map (22 leads)
 
 Map name in Sales Nav: `Prudential Financial - Back Office`
 
 | # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |
 |---|---|---|---|---|---|---|
-| 1 | **Anthony Fontano** (in Salesforce) | Chief Operating Officer, Prudential Advisors | C | Operations | Top of the map | https://www.linkedin.com/in/anthony-fontano-6b28431b/ |
-| 2 | &nbsp;&nbsp;&nbsp;**Cynthia Benjamin** | VP, Enterprise Finance Operations Shared Services | VP | Finance & shared services | Anthony Fontano | https://www.linkedin.com/in/cynthia-benjamin-87934072/ |
-| 3 | &nbsp;&nbsp;&nbsp;**David Baker** (in Salesforce) | Vice President of Operations, Office Of Servicemembers Group Life Insurance at Prudential Financial | VP | Finance & shared services | Anthony Fontano | https://www.linkedin.com/in/david-baker-222520a/ |
-| 4 | &nbsp;&nbsp;&nbsp;**David Wexler** | Vice President, New Business Operations | VP | Operations | Anthony Fontano | https://www.linkedin.com/in/david-wexler-47978554/ |
-| 5 | &nbsp;&nbsp;&nbsp;**Greg Surdel** (in Salesforce) | Head of HR Operations for Prudential Financial | VP | Finance & shared services | Anthony Fontano | https://www.linkedin.com/in/greg-surdel-b928542/ |
-| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Alicia Terascavage** | Director, HR Operations | Director | Administration & supply chain | Greg Surdel | https://www.linkedin.com/in/alicia-terascavage-b6250919/ |
-| 7 | &nbsp;&nbsp;&nbsp;**Kellie Tattersall** | Vice President, Disability Claims | VP | Claims | Anthony Fontano | https://www.linkedin.com/in/kellie-tattersall-7647a4b3/ |
-| 8 | &nbsp;&nbsp;&nbsp;**Priya K.C. Bhatt** | Head of Financial Strategy & Analysis, Global Technology & Operations | VP | Finance & shared services | Anthony Fontano | https://www.linkedin.com/in/priya-k-c-bhatt-cfa/ |
-| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jose Mello** | Emerging Markets Partnerships Operations & Technology Director | Director | Operations | Priya K.C. Bhatt | https://www.linkedin.com/in/jose-mello-5bb0972/ |
-| 10 | &nbsp;&nbsp;&nbsp;**Scott Hall** (confirm CRM badge) | Vice President, Appeals, Litigation & Complaints | VP | Operations | Anthony Fontano | https://www.linkedin.com/in/scott-hall-670866a/ |
-| 11 | &nbsp;&nbsp;&nbsp;**Leigh Foster** | Director, Process Management | Director | Operations | Anthony Fontano | https://www.linkedin.com/in/leigh-foster-60b99b13a/ |
-| 12 | **Brendan Cavanaugh** | CFO, Group Insurance | C | Operations | Top of the map | https://www.linkedin.com/in/brendan-cavanaugh-7487a835/ |
-| 13 | &nbsp;&nbsp;&nbsp;**Darlene Rodgers** | Vice President & Controller Group Insurance | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/darlene-rodgers-39392b1b5/ |
-| 14 | &nbsp;&nbsp;&nbsp;**Michael White** (confirm CRM badge) | Non-Financial Risk Management Shared Services Vice President | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/michael-white-b7494377/ |
-| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Walter Clarke** | Finance Shared Services Director | Director | Finance & shared services | Michael White | https://www.linkedin.com/in/walter-clarke-b671a562/ |
-| 16 | &nbsp;&nbsp;&nbsp;**Natalie Speranza** | Vice President, Financial Reporting, Finance Shared Services | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/natalie-speranza-68912159/ |
-| 17 | **David Joshua Wildman** | Chief Product Owner (CPO), Retirement Strategies Individual Product Platform | C | Operations | Top of the map | https://www.linkedin.com/in/david-joshua-wildman-009b072/ |
-| 18 | &nbsp;&nbsp;&nbsp;**Artsiom Basaraba** | Vice President, Chief Product Owner (Digital Experience) | VP | Operations | David Joshua Wildman | https://www.linkedin.com/in/artsiom-basaraba-11056046/ |
-| 19 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Raymond Bonachea** | Director, Product Owner at Prudential | Director | Operations | Artsiom Basaraba | https://www.linkedin.com/in/raymondbonachea/ |
-| 20 | &nbsp;&nbsp;&nbsp;**Bryan Giordano** | Vice President - Chief Product Owner Platform Services | VP | Operations | David Joshua Wildman | https://www.linkedin.com/in/bryangiordano/ |
-| 21 | &nbsp;&nbsp;&nbsp;**Rosaly Macaulay** | VP, Corporate Technology Product Owner | VP | Operations | David Joshua Wildman | https://www.linkedin.com/in/rosaly-chaderjian-macaulay-0813446/ |
-| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karen Coley** | Director, Business Systems Effectiveness | Director | Operations | Rosaly Macaulay | https://www.linkedin.com/in/karen-coley-a44a4634/ |
-| 23 | **Greg Hafner** (in Salesforce) | Chief Operations Officer, Group Insurance | C | Operations | Top of the map | https://www.linkedin.com/in/greg-hafner/ |
-| 24 | &nbsp;&nbsp;&nbsp;**Joseph M. Hayes** | Senior Vice President & Chief Operating Officer : Group Insurance | SVP | Operations | Greg Hafner | https://www.linkedin.com/in/jmh1766/ |
-| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Carrie Hildebrand** | Vice President, Group Insurance Billing Operations & Account Service | VP | Billing, payments & revenue | Joseph M. Hayes | https://www.linkedin.com/in/carrie-hildebrand/ |
-| 26 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jason Van Tassel** (in Salesforce) | Vice President, Head of Operational Risk Management, Prudential Group Insurance | VP | Operations | Joseph M. Hayes | https://www.linkedin.com/in/jason-michael-van-tassel/ |
-| 27 | **John Sieb** | Business Head and COO - Long Term Care | C | Operations | Top of the map | https://www.linkedin.com/in/john-sieb-0a124815/ |
-| 28 | **Manoj D.** | Global Chief Product Owner, End User Experience | C | Operations | Top of the map | https://www.linkedin.com/in/manoj-doshi-81a1313/ |
-| 29 | **Scott Haggerty** (in Salesforce) | VP & Chief Operating Officer, Prudential Annuities | C | Operations | Top of the map | https://www.linkedin.com/in/scottphaggerty/ |
-| 30 | **Todd Shriber** | Chief Operating Officer & Head of Strategy - Global Retirement & Insurance | C | Operations | Top of the map | https://www.linkedin.com/in/todd-shriber-cfa-a239156/ |
+| 1 | **John Sieb** | Business Head and COO - Long Term Care | C | Operations | Top of the map | https://www.linkedin.com/in/john-sieb-0a124815/ |
+| 2 | **Michael Estep** | President, Group Insurance | C | Operations | Top of the map | https://www.linkedin.com/in/michael-estep-294a4a11/ |
+| 3 | &nbsp;&nbsp;&nbsp;**Brendan Cavanaugh** | CFO, Group Insurance | C | Operations | Michael Estep | https://www.linkedin.com/in/brendan-cavanaugh-7487a835/ |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Cynthia Benjamin** | VP, Enterprise Finance Operations Shared Services | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/cynthia-benjamin-87934072/ |
+| 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**James Walden** | Director Treasury Operations | Director | Billing, payments & revenue | Cynthia Benjamin | https://www.linkedin.com/in/james-walden-579363135/ |
+| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Janine Faulls** | Director of US Business, Financial Operations | Director | Finance & shared services | Cynthia Benjamin | https://www.linkedin.com/in/janine-faulls-1a8715168/ |
+| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karen Coley** | Director, Business Systems Effectiveness | Director | Operations | Cynthia Benjamin | https://www.linkedin.com/in/karen-coley-a44a4634/ |
+| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Walter Clarke** | Finance Shared Services Director | Director | Finance & shared services | Cynthia Benjamin | https://www.linkedin.com/in/walter-clarke-b671a562/ |
+| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Darlene Rodgers** | Vice President & Controller Group Insurance | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/darlene-rodgers-39392b1b5/ |
+| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Greg Surdel** (in Salesforce) | Head of HR Operations for Prudential Financial | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/greg-surdel-b928542/ |
+| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Alicia Terascavage** | Director, HR Operations | Director | Administration & supply chain | Greg Surdel | https://www.linkedin.com/in/alicia-terascavage-b6250919/ |
+| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Natalie Speranza** | Vice President, Financial Reporting, Finance Shared Services | VP | Finance & shared services | Brendan Cavanaugh | https://www.linkedin.com/in/natalie-speranza-68912159/ |
+| 13 | &nbsp;&nbsp;&nbsp;**Carrie Hildebrand** | Vice President, Group Insurance Billing Operations & Account Service | VP | Billing, payments & revenue | Michael Estep | https://www.linkedin.com/in/carrie-hildebrand/ |
+| 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Leigh Foster** | Director, Process Management | Director | Operations | Carrie Hildebrand | https://www.linkedin.com/in/leigh-foster-60b99b13a/ |
+| 15 | &nbsp;&nbsp;&nbsp;**David Baker** (in Salesforce) | Vice President of Operations, Office Of Servicemembers Group Life Insurance at Prudential Financial | VP | Finance & shared services | Michael Estep | https://www.linkedin.com/in/david-baker-222520a/ |
+| 16 | &nbsp;&nbsp;&nbsp;**Gerry Freitas** | Vice President Sourcing | VP | Operations | Michael Estep | https://www.linkedin.com/in/gerryfreitas/ |
+| 17 | &nbsp;&nbsp;&nbsp;**Kellie Tattersall** | Vice President, Disability Claims | VP | Claims | Michael Estep | https://www.linkedin.com/in/kellie-tattersall-7647a4b3/ |
+| 18 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jennifer Wheeler** (in Salesforce) | Director, Disability Claims, Group Insurance | Director | Claims | Kellie Tattersall | https://www.linkedin.com/in/jennifer-wheeler-b69692119/ |
+| 19 | &nbsp;&nbsp;&nbsp;**Scott Hall** (confirm CRM badge) | Vice President, Appeals, Litigation & Complaints | VP | Operations | Michael Estep | https://www.linkedin.com/in/scott-hall-670866a/ |
+| 20 | **Scott Haggerty** (in Salesforce) | VP & Chief Operating Officer, Prudential Annuities | C | Operations | Top of the map | https://www.linkedin.com/in/scottphaggerty/ |
+| 21 | &nbsp;&nbsp;&nbsp;**David Joshua Wildman** | Chief Product Owner (CPO), Retirement Strategies Individual Product Platform | VP | Operations | Scott Haggerty | https://www.linkedin.com/in/david-joshua-wildman-009b072/ |
+| 22 | &nbsp;&nbsp;&nbsp;**David Wexler** | Vice President, New Business Operations | VP | Operations | Scott Haggerty | https://www.linkedin.com/in/david-wexler-47978554/ |
 
-Paste list for the map search box: Anthony Fontano; Cynthia Benjamin; David Baker; David Wexler; Greg Surdel; Alicia Terascavage; Kellie Tattersall; Priya K.C. Bhatt; Jose Mello; Scott Hall; Leigh Foster; Brendan Cavanaugh; Darlene Rodgers; Michael White; Walter Clarke; Natalie Speranza; David Joshua Wildman; Artsiom Basaraba; Raymond Bonachea; Bryan Giordano; Rosaly Macaulay; Karen Coley; Greg Hafner; Joseph M. Hayes; Carrie Hildebrand; Jason Van Tassel; John Sieb; Manoj D.; Scott Haggerty; Todd Shriber
+Paste list for the map search box: John Sieb; Michael Estep; Brendan Cavanaugh; Cynthia Benjamin; James Walden; Janine Faulls; Karen Coley; Walter Clarke; Darlene Rodgers; Greg Surdel; Alicia Terascavage; Natalie Speranza; Carrie Hildebrand; Leigh Foster; David Baker; Gerry Freitas; Kellie Tattersall; Jennifer Wheeler; Scott Hall; Scott Haggerty; David Joshua Wildman; David Wexler
 
 
 ## Rogers Communications: back office map (14 leads)
@@ -345,104 +326,98 @@ Map name in Sales Nav: `Rogers Communications - Back Office`
 Paste list for the map search box: Dave Difelice, MBA, CMA; Michael Doyle; Mike Mroczkowski; Andrew Masson; Jason Giff; Jessica Gallant; Glenn Brandt; Akbar Hussein; Aaron Conlin; Andrew N.; Haris Alukic; Kim Charles, PMP; Andy Bonanno; Fredrik Nystrom
 
 
-## Travelers: back office map (29 leads)
+## Travelers: back office map (30 leads)
 
 Map name in Sales Nav: `Travelers - Back Office`
 
 | # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |
 |---|---|---|---|---|---|---|
 | 1 | **Andy Bessette** | Executive Vice President and Chief Administrative Officer | EVP | Administration & supply chain | Top of the map | https://www.linkedin.com/in/andy-bessette-499923121/ |
-| 2 | &nbsp;&nbsp;&nbsp;**Elaine Baisden** | Senior Vice President Operations, Personal Insurance | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/elaine-baisden-a095575/ |
-| 3 | &nbsp;&nbsp;&nbsp;**Tracey Cournoyer** (in Salesforce) | SVP - CIO/COO Bond & Specialty | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/tracey-cournoyer-9441425/ |
-| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ruki Mazumdar** | Vice President - Bond & Specialty Insurance Operations | VP | Operations | Tracey Cournoyer | https://www.linkedin.com/in/ruki-mazumdar-5354922/ |
-| 5 | &nbsp;&nbsp;&nbsp;**Vincent Armentano** | SVP Operations | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/vincent-armentano-0a3067135/ |
-| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mario Saraceno** | Vice President - Technology & Operations | VP | Operations | Vincent Armentano | https://www.linkedin.com/in/mariosaraceno/ |
-| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jacque Flusche** | AVP Business Insights - Workforce Planning | AVP | Operations | Mario Saraceno | https://www.linkedin.com/in/jacque-flusche-7664856/ |
-| 8 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Everton Chin, MBA** | Senior Director, Business Process Management | Director | Operations | Jacque Flusche | https://www.linkedin.com/in/everton-chin-mba-15783718/ |
-| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jon H.** | Sr. Director, Workforce Planning & Financial Analytics | Director | Finance & shared services | Jacque Flusche | https://www.linkedin.com/in/jonhabert/ |
-| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kimberly Garth, MBA,CPCU, CRIS** | Director, Business Process Management | Director | Operations | Jacque Flusche | https://www.linkedin.com/in/kimberly-garth/ |
-| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Philip J. Purciello III** | Sr. Dir., Agile Product Owner - Workforce Engagement Management | Director | Operations | Jacque Flusche | https://www.linkedin.com/in/philip-j-purciello-iii-40aab277/ |
-| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Scott Lucas** | AVP Omni Product Lead | AVP | Operations | Mario Saraceno | https://www.linkedin.com/in/scott-lucas-955b804/ |
-| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Henry Bocanegra** | Director, Business Systems Analysis | Director | Operations | Mario Saraceno | https://www.linkedin.com/in/henry-bocanegra-7785b711/ |
+| 2 | &nbsp;&nbsp;&nbsp;**Dave French** | SVP Administrative Services | SVP | Administration & supply chain | Andy Bessette | https://www.linkedin.com/in/dave-french-b55316162/ |
+| 3 | &nbsp;&nbsp;&nbsp;**Elaine Baisden** | Senior Vice President Operations, Personal Insurance | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/elaine-baisden-a095575/ |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Valarie Best** (in Salesforce) | Assistant Vice President, Personal Insurance Operations | AVP | Operations | Elaine Baisden | https://www.linkedin.com/in/valarie-best-068039139/ |
+| 5 | &nbsp;&nbsp;&nbsp;**Tracey Cournoyer** (in Salesforce) | SVP - CIO/COO Bond & Specialty | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/tracey-cournoyer-9441425/ |
+| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Amy White, AFSB** | Managing Director - Bond & Specialty Insurance Claim | VP | Claims | Tracey Cournoyer | https://www.linkedin.com/in/amy-white-afsb-9845776/ |
+| 7 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ruki Mazumdar** | Vice President - Bond & Specialty Insurance Operations | VP | Operations | Tracey Cournoyer | https://www.linkedin.com/in/ruki-mazumdar-5354922/ |
+| 8 | &nbsp;&nbsp;&nbsp;**Vincent Armentano** | SVP Operations | SVP | Operations | Andy Bessette | https://www.linkedin.com/in/vincent-armentano-0a3067135/ |
+| 9 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Mario Saraceno** | Vice President - Technology & Operations | VP | Operations | Vincent Armentano | https://www.linkedin.com/in/mariosaraceno/ |
+| 10 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jacque Flusche** | AVP Business Insights - Workforce Planning | AVP | Operations | Mario Saraceno | https://www.linkedin.com/in/jacque-flusche-7664856/ |
+| 11 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jon H.** | Sr. Director, Workforce Planning & Financial Analytics | Director | Finance & shared services | Jacque Flusche | https://www.linkedin.com/in/jonhabert/ |
+| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Philip J. Purciello III** | Sr. Dir., Agile Product Owner - Workforce Engagement Management | Director | Operations | Jacque Flusche | https://www.linkedin.com/in/philip-j-purciello-iii-40aab277/ |
+| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Suzanne South** | Director Workforce Analytics | Director | Operations | Jacque Flusche | https://www.linkedin.com/in/suzanne-south-94aa9a161/ |
 | 14 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Randy Hirth** | Senior Director - Business Systems Analysis | Director | Operations | Mario Saraceno | https://www.linkedin.com/in/randy-hirth-5b1903a/ |
-| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ray Perez** | Director of Business Systems | Director | Operations | Mario Saraceno | https://www.linkedin.com/in/ray-perez-193768a/ |
-| 16 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Vincent Seaver** | Vice President, Business Insurance Operations | VP | Operations | Vincent Armentano | https://www.linkedin.com/in/vincent-seaver/ |
+| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Vincent Seaver** | Vice President, Business Insurance Operations | VP | Operations | Vincent Armentano | https://www.linkedin.com/in/vincent-seaver/ |
+| 16 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Everton Chin, MBA** | Senior Director, Business Process Management | Director | Operations | Vincent Seaver | https://www.linkedin.com/in/everton-chin-mba-15783718/ |
 | 17 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Gary Pedvin** | Senior Director, Operational Effectiveness/Business Insurance Operations Quality Lead | Director | Operations | Vincent Seaver | https://www.linkedin.com/in/garypedvin/ |
 | 18 | **Elena Gervino** | Senior Vice President-Claim | SVP | Claims | Top of the map | https://www.linkedin.com/in/elena-gervino-610b5035/ |
-| 19 | &nbsp;&nbsp;&nbsp;**Brian Harton** | 2nd Vice President, Operations & Analytics, Claim Division | VP | Claims | Elena Gervino | https://www.linkedin.com/in/brian-harton/ |
-| 20 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Joe Balog** | Assistant Vice President Claim Workforce & Analytics | AVP | Claims | Brian Harton | https://www.linkedin.com/in/joe-balog-742a71116/ |
-| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Esther M.** | Director Property Claims Management | Director | Claims | Joe Balog | https://www.linkedin.com/in/esther-m-9b4567106/ |
-| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tim Jones** | Senior Director - Agile Product Owner (Claim Business Delivery, Analytics & Technology) | Director | Claims | Joe Balog | https://www.linkedin.com/in/tim-jones-91745816/ |
-| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Valarie Best** (in Salesforce) | Assistant Vice President, Personal Insurance Operations | AVP | Operations | Brian Harton | https://www.linkedin.com/in/valarie-best-068039139/ |
-| 24 | &nbsp;&nbsp;&nbsp;**Bryan Ott, MBA** | Managing Director, Claim Shared Services Operations | VP | Claims | Elena Gervino | https://www.linkedin.com/in/ott-mba/ |
-| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tom Ignaffo, Jr. MBA** | AVP Claim Shared Services Operations | AVP | Claims | Bryan Ott, MBA | https://www.linkedin.com/in/tom-ignaffo-jr-mba-01984112/ |
-| 26 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**David Lanciano, CCLA** | Director, Business Delivery - Claim Shared Services | Director | Claims | Tom Ignaffo, Jr. MBA | https://www.linkedin.com/in/david-lanciano-ccla-85057b49/ |
-| 27 | **Lisa Cameron** | Vice President of Billing & Receivables Management | VP | Billing, payments & revenue | Top of the map | https://www.linkedin.com/in/lisa-cameron-8184725/ |
-| 28 | &nbsp;&nbsp;&nbsp;**Amy Millen** | AVP, Billing Operations | AVP | Billing, payments & revenue | Lisa Cameron | https://www.linkedin.com/in/amy-millen-26a75b15b/ |
-| 29 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Cynthia Finley** (in Salesforce) | Senior Director Billing Operations | Director | Billing, payments & revenue | Amy Millen | https://www.linkedin.com/in/cynthia-finley-30b7482b/ |
+| 19 | &nbsp;&nbsp;&nbsp;**Bryan Ott, MBA** | Managing Director, Claim Shared Services Operations | VP | Claims | Elena Gervino | https://www.linkedin.com/in/ott-mba/ |
+| 20 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Brian Harton** | 2nd Vice President, Operations & Analytics, Claim Division | AVP | Claims | Bryan Ott, MBA | https://www.linkedin.com/in/brian-harton/ |
+| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Joe Balog** | Assistant Vice President Claim Workforce & Analytics | AVP | Claims | Brian Harton | https://www.linkedin.com/in/joe-balog-742a71116/ |
+| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Esther M.** | Director Property Claims Management | Director | Claims | Brian Harton | https://www.linkedin.com/in/esther-m-9b4567106/ |
+| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tim Jones** | Senior Director - Agile Product Owner (Claim Business Delivery, Analytics & Technology) | Director | Claims | Brian Harton | https://www.linkedin.com/in/tim-jones-91745816/ |
+| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tom Ignaffo, Jr. MBA** | AVP Claim Shared Services Operations | AVP | Claims | Bryan Ott, MBA | https://www.linkedin.com/in/tom-ignaffo-jr-mba-01984112/ |
+| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**David Lanciano, CCLA** | Director, Business Delivery - Claim Shared Services | Director | Claims | Tom Ignaffo, Jr. MBA | https://www.linkedin.com/in/david-lanciano-ccla-85057b49/ |
+| 26 | &nbsp;&nbsp;&nbsp;**Terence Harris** | Vice President - Specialty Claim | VP | Claims | Elena Gervino | https://www.linkedin.com/in/terence-harris-b5122484/ |
+| 27 | &nbsp;&nbsp;&nbsp;**Brian Brinkman** | 2VP Claim Business Delivery | AVP | Claims | Elena Gervino | https://www.linkedin.com/in/brian-brinkman-404a1b23/ |
+| 28 | **Lisa Cameron** | Vice President of Billing & Receivables Management | VP | Billing, payments & revenue | Top of the map | https://www.linkedin.com/in/lisa-cameron-8184725/ |
+| 29 | &nbsp;&nbsp;&nbsp;**Amy Millen** | AVP, Billing Operations | AVP | Billing, payments & revenue | Lisa Cameron | https://www.linkedin.com/in/amy-millen-26a75b15b/ |
+| 30 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Cynthia Finley** (in Salesforce) | Senior Director Billing Operations | Director | Billing, payments & revenue | Amy Millen | https://www.linkedin.com/in/cynthia-finley-30b7482b/ |
 
-Paste list for the map search box: Andy Bessette; Elaine Baisden; Tracey Cournoyer; Ruki Mazumdar; Vincent Armentano; Mario Saraceno; Jacque Flusche; Everton Chin, MBA; Jon H.; Kimberly Garth, MBA,CPCU, CRIS; Philip J. Purciello III; Scott Lucas; Henry Bocanegra; Randy Hirth; Ray Perez; Vincent Seaver; Gary Pedvin; Elena Gervino; Brian Harton; Joe Balog; Esther M.; Tim Jones; Valarie Best; Bryan Ott, MBA; Tom Ignaffo, Jr. MBA; David Lanciano, CCLA; Lisa Cameron; Amy Millen; Cynthia Finley
+Paste list for the map search box: Andy Bessette; Dave French; Elaine Baisden; Valarie Best; Tracey Cournoyer; Amy White, AFSB; Ruki Mazumdar; Vincent Armentano; Mario Saraceno; Jacque Flusche; Jon H.; Philip J. Purciello III; Suzanne South; Randy Hirth; Vincent Seaver; Everton Chin, MBA; Gary Pedvin; Elena Gervino; Bryan Ott, MBA; Brian Harton; Joe Balog; Esther M.; Tim Jones; Tom Ignaffo, Jr. MBA; David Lanciano, CCLA; Terence Harris; Brian Brinkman; Lisa Cameron; Amy Millen; Cynthia Finley
 
 
-## Zurich North America: back office map (30 leads)
+## Zurich North America: back office map (27 leads)
 
 Map name in Sales Nav: `Zurich North America - Back Office`
 
 | # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |
 |---|---|---|---|---|---|---|
 | 1 | **Barry Perkins** (in Salesforce) | Chief Operating Officer ZNA | C | Operations | Top of the map | https://www.linkedin.com/in/barry-perkins-1a922b14/ |
-| 2 | &nbsp;&nbsp;&nbsp;**Brad Craner, MBA** | Global Head of Underwriting Transformation, Global Specialties | VP | Underwriting operations | Barry Perkins | https://www.linkedin.com/in/brad-craner-mba-b47ab863/ |
-| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Laura Boehm** | Director of Underwriting Services | Director | Underwriting operations | Brad Craner, MBA | https://www.linkedin.com/in/laura-boehm-3538a693/ |
-| 4 | &nbsp;&nbsp;&nbsp;**Chavonne Hudson, ARM** | Head of Operational Performance & Domestic Servicing | VP | Operations | Barry Perkins | https://www.linkedin.com/in/chavonnehudson/ |
-| 5 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Rajiv Rao** | AVP - Operations Management | AVP | Operations | Chavonne Hudson, ARM | https://www.linkedin.com/in/rajiv-rao-9023a61/ |
-| 6 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kandace (Mason) Spotts, PMP, CSM** | Director of Operations & Technology, Direct Markets | Director | Operations | Rajiv Rao | https://www.linkedin.com/in/kandacespotts/ |
-| 7 | &nbsp;&nbsp;&nbsp;**Cody Bonham** | VP, Multinational Casualty Servicing Leader | VP | Operations | Barry Perkins | https://www.linkedin.com/in/codybonham/ |
-| 8 | &nbsp;&nbsp;&nbsp;**Cristi Cude** | VP, Head of Life & A&H Operations | VP | Operations | Barry Perkins | https://www.linkedin.com/in/cristi-cude/ |
-| 9 | &nbsp;&nbsp;&nbsp;**Elijah A.** | VP, Multinational Servicing Leader - Large Property | VP | Operations | Barry Perkins | https://www.linkedin.com/in/eadedire/ |
-| 10 | &nbsp;&nbsp;&nbsp;**Kelly Perkins, MBA, CPCU, ARM** | Vice President, Operations - Large Property | VP | Operations | Barry Perkins | https://www.linkedin.com/in/perkinskelly/ |
-| 11 | &nbsp;&nbsp;&nbsp;**Luke Maciejewski** | Head of Energy Operations / Head of Client Operations, Specialties | VP | Operations | Barry Perkins | https://www.linkedin.com/in/luke-maciejewski-726b5631/ |
-| 12 | &nbsp;&nbsp;&nbsp;**Matt Hisey** | VP - Head of Accounting Operations | VP | Finance & shared services | Barry Perkins | https://www.linkedin.com/in/mhisey/ |
-| 13 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karen Anderson** | AVP Finance Operations | AVP | Finance & shared services | Matt Hisey | https://www.linkedin.com/in/karen-anderson-15266182/ |
-| 14 | &nbsp;&nbsp;&nbsp;**Mike LeCrone** | Head of Corporate Investigations and Security Services | VP | Operations | Barry Perkins | https://www.linkedin.com/in/mike-lecrone-02a05356/ |
-| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Brian Parotto** | AVP, Billing & Collections | AVP | Fraud, credit & disputes | Mike LeCrone | https://www.linkedin.com/in/brian-parotto-aa85576/ |
-| 16 | &nbsp;&nbsp;&nbsp;**Terry-Dawn Thomas** | Head of Technical Underwriting Operations & Sustainability | VP | Underwriting operations | Barry Perkins | https://www.linkedin.com/in/terry-dawn-thomas-1259161b6/ |
-| 17 | &nbsp;&nbsp;&nbsp;**Tessa Studebaker** | Vice President, Head of Operations, National Accounts | VP | Operations | Barry Perkins | https://www.linkedin.com/in/tessa-studebaker-9a70684/ |
-| 18 | &nbsp;&nbsp;&nbsp;**Thomas Markun** | Vice President, Finance Operations | VP | Finance & shared services | Barry Perkins | https://www.linkedin.com/in/thomas-markun-955ba18/ |
-| 19 | **Keith Daly** (in Salesforce) | Chief Claims Officer | C | Claims | Top of the map | https://www.linkedin.com/in/kgdalyzna/ |
-| 20 | &nbsp;&nbsp;&nbsp;**Allen Kirsh** | SVP, Head of Claims Judicial and Legislative Affairs | SVP | Claims | Keith Daly | https://www.linkedin.com/in/allen-kirsh/ |
-| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Delpha DiGiacomo** | Vice President, Head of Claims Investigative Services | VP | Claims | Allen Kirsh | https://www.linkedin.com/in/delpha-digiacomo-97155a12/ |
-| 22 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ewa Peczkowicz, MBA** | Head of Claims Shared Services | VP | Claims | Allen Kirsh | https://www.linkedin.com/in/ewa-peczkowicz/ |
-| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Neil DeBlock** | Vice President - Head of Workers Compensation Claims | VP | Claims | Allen Kirsh | https://www.linkedin.com/in/neil-deblock-03126713/ |
-| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Paul Majchrowski, FCAS** | Head of Claims Finance | VP | Claims | Allen Kirsh | https://www.linkedin.com/in/paulmajchrowski/ |
-| 25 | &nbsp;&nbsp;&nbsp;**Catherine Marciniak** | Senior Vice President, Head of US Property and Casualty Claims | SVP | Claims | Keith Daly | https://www.linkedin.com/in/catherine-marciniak-254a1b6a/ |
-| 26 | &nbsp;&nbsp;&nbsp;**Doug Meyers** (in Salesforce) | SVP, Claims Chief Operations Officer | SVP | Claims | Keith Daly | https://www.linkedin.com/in/doug-meyers-8584628/ |
-| 27 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chad Fry** | Head of Claims Regulatory Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/chad-fry-152757a/ |
-| 28 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Diana Wirkus** | Head of Claims Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/dianawirkus/ |
-| 29 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jim Cherry** | Vice President and Head of F&I Claim and CAT Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/jim-cherry-49340b72/ |
-| 30 | &nbsp;&nbsp;&nbsp;**Wesley Shiplett** | SVP, Claims, Customer Services | SVP | Claims | Keith Daly | https://www.linkedin.com/in/wesley-shiplett-7439919/ |
+| 2 | &nbsp;&nbsp;&nbsp;**Chavonne Hudson, ARM** | Head of Operational Performance & Domestic Servicing | VP | Operations | Barry Perkins | https://www.linkedin.com/in/chavonnehudson/ |
+| 3 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Rajiv Rao** | AVP - Operations Management | AVP | Operations | Chavonne Hudson, ARM | https://www.linkedin.com/in/rajiv-rao-9023a61/ |
+| 4 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kandace (Mason) Spotts, PMP, CSM** | Director of Operations & Technology, Direct Markets | Director | Operations | Rajiv Rao | https://www.linkedin.com/in/kandacespotts/ |
+| 5 | &nbsp;&nbsp;&nbsp;**Cody Bonham** | VP, Multinational Casualty Servicing Leader | VP | Operations | Barry Perkins | https://www.linkedin.com/in/codybonham/ |
+| 6 | &nbsp;&nbsp;&nbsp;**Cristi Cude** | VP, Head of Life & A&H Operations | VP | Operations | Barry Perkins | https://www.linkedin.com/in/cristi-cude/ |
+| 7 | &nbsp;&nbsp;&nbsp;**Elijah A.** | VP, Multinational Servicing Leader - Large Property | VP | Operations | Barry Perkins | https://www.linkedin.com/in/eadedire/ |
+| 8 | &nbsp;&nbsp;&nbsp;**Kelly Perkins, MBA, CPCU, ARM** | Vice President, Operations - Large Property | VP | Operations | Barry Perkins | https://www.linkedin.com/in/perkinskelly/ |
+| 9 | &nbsp;&nbsp;&nbsp;**Luke Maciejewski** | Head of Energy Operations / Head of Client Operations, Specialties | VP | Operations | Barry Perkins | https://www.linkedin.com/in/luke-maciejewski-726b5631/ |
+| 10 | &nbsp;&nbsp;&nbsp;**Matt Hisey** | VP - Head of Accounting Operations | VP | Finance & shared services | Barry Perkins | https://www.linkedin.com/in/mhisey/ |
+| 11 | &nbsp;&nbsp;&nbsp;**Terry-Dawn Thomas** | Head of Technical Underwriting Operations & Sustainability | VP | Underwriting operations | Barry Perkins | https://www.linkedin.com/in/terry-dawn-thomas-1259161b6/ |
+| 12 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Laura Boehm** | Director of Underwriting Services | Director | Underwriting operations | Terry-Dawn Thomas | https://www.linkedin.com/in/laura-boehm-3538a693/ |
+| 13 | &nbsp;&nbsp;&nbsp;**Tessa Studebaker** | Vice President, Head of Operations, National Accounts | VP | Operations | Barry Perkins | https://www.linkedin.com/in/tessa-studebaker-9a70684/ |
+| 14 | &nbsp;&nbsp;&nbsp;**Thomas Markun** | Vice President, Finance Operations | VP | Finance & shared services | Barry Perkins | https://www.linkedin.com/in/thomas-markun-955ba18/ |
+| 15 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Brian Parotto** | AVP, Billing & Collections | AVP | Fraud, credit & disputes | Thomas Markun | https://www.linkedin.com/in/brian-parotto-aa85576/ |
+| 16 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Karen Anderson** | AVP Finance Operations | AVP | Finance & shared services | Thomas Markun | https://www.linkedin.com/in/karen-anderson-15266182/ |
+| 17 | **Keith Daly** (in Salesforce) | Chief Claims Officer | C | Claims | Top of the map | https://www.linkedin.com/in/kgdalyzna/ |
+| 18 | &nbsp;&nbsp;&nbsp;**Catherine Marciniak** | Senior Vice President, Head of US Property and Casualty Claims | SVP | Claims | Keith Daly | https://www.linkedin.com/in/catherine-marciniak-254a1b6a/ |
+| 19 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Delpha DiGiacomo** | Vice President, Head of Claims Investigative Services | VP | Claims | Catherine Marciniak | https://www.linkedin.com/in/delpha-digiacomo-97155a12/ |
+| 20 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Japhet Boutin** | Head of Technical Claims | VP | Claims | Catherine Marciniak | https://www.linkedin.com/in/japhet-boutin-596539117/ |
+| 21 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Neil DeBlock** | Vice President - Head of Workers Compensation Claims | VP | Claims | Catherine Marciniak | https://www.linkedin.com/in/neil-deblock-03126713/ |
+| 22 | &nbsp;&nbsp;&nbsp;**Doug Meyers** (in Salesforce) | SVP, Claims Chief Operations Officer | SVP | Claims | Keith Daly | https://www.linkedin.com/in/doug-meyers-8584628/ |
+| 23 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Chad Fry** | Head of Claims Regulatory Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/chad-fry-152757a/ |
+| 24 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Diana Wirkus** | Head of Claims Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/dianawirkus/ |
+| 25 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Ewa Peczkowicz, MBA** | Head of Claims Shared Services | VP | Claims | Doug Meyers | https://www.linkedin.com/in/ewa-peczkowicz/ |
+| 26 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Jim Cherry** | Vice President and Head of F&I Claim and CAT Operations | VP | Claims | Doug Meyers | https://www.linkedin.com/in/jim-cherry-49340b72/ |
+| 27 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Kenneth Nigro** | VP, Head of Claims Quality | VP | Claims | Doug Meyers | https://www.linkedin.com/in/kenneth-nigro-97965a72/ |
 
-Paste list for the map search box: Barry Perkins; Brad Craner, MBA; Laura Boehm; Chavonne Hudson, ARM; Rajiv Rao; Kandace (Mason) Spotts, PMP, CSM; Cody Bonham; Cristi Cude; Elijah A.; Kelly Perkins, MBA, CPCU, ARM; Luke Maciejewski; Matt Hisey; Karen Anderson; Mike LeCrone; Brian Parotto; Terry-Dawn Thomas; Tessa Studebaker; Thomas Markun; Keith Daly; Allen Kirsh; Delpha DiGiacomo; Ewa Peczkowicz, MBA; Neil DeBlock; Paul Majchrowski, FCAS; Catherine Marciniak; Doug Meyers; Chad Fry; Diana Wirkus; Jim Cherry; Wesley Shiplett
+Paste list for the map search box: Barry Perkins; Chavonne Hudson, ARM; Rajiv Rao; Kandace (Mason) Spotts, PMP, CSM; Cody Bonham; Cristi Cude; Elijah A.; Kelly Perkins, MBA, CPCU, ARM; Luke Maciejewski; Matt Hisey; Terry-Dawn Thomas; Laura Boehm; Tessa Studebaker; Thomas Markun; Brian Parotto; Karen Anderson; Keith Daly; Catherine Marciniak; Delpha DiGiacomo; Japhet Boutin; Neil DeBlock; Doug Meyers; Chad Fry; Diana Wirkus; Ewa Peczkowicz, MBA; Jim Cherry; Kenneth Nigro
 
 
 ## Bench: sourced but not on a map (30-lead cap)
 
 
-**Assurant** (11): Tariq Khan (Asst. Vice President, Operations Technol); Nancy Durbin (AVP, Workforce Strategy & Planning); Melissa de la Rosa (AVP, Finance Transformation & Business S); Jodi Kempf (Director - HR Technology Operations | As); Devaka Balasuriya (Director Of Technology Operations); Marcia A. McCarty (Director, Operations Technology); Rita Falco (VP, Controller - Global Housing); Archana Cunningham, CPA (VP, Connected Living Controller); Tim Brown (Vice President Global Sourcing and Procu); David V. (Head of Responsible Sourcing); Michael Gulbranson (V.P. of Operations)
+**Assurant** (9): Tariq Khan (Asst. Vice President, Operations Technol); Nancy Durbin (AVP, Workforce Strategy & Planning); Melissa de la Rosa (AVP, Finance Transformation & Business S); Jodi Kempf (Director - HR Technology Operations | As); Devaka Balasuriya (Director Of Technology Operations); Marcia A. McCarty (Director, Operations Technology); Tim Brown (Vice President Global Sourcing and Procu); David V. (Head of Responsible Sourcing); Michael Gulbranson (V.P. of Operations)
 
 **Cleveland Clinic** (1): Diane Costa (Director-Patient Financial Services)
 
 **DIRECTV** (3): Shane Rutledge (Director of Business Operations); Tom Lockwood (Director of Business Operations); Shereen Small (Director, Business Operations)
 
-**Goldman Sachs** (8): Chris Fischer, CPA (Vice President, Platform Solutions); Hao Lam (Vice President - Platform Solutions); Sandeep D. (Managing Director, Platform Solutions); Brady Mortensen, MBA (Vice President - Platform Solutions); Henry Brown (Vice President in Platform Solutions); Christina Baldwin (Vice President, Platform Solutions); Dmitri Kouzmine (VP Platform Solutions); Veronica L. Murphy, MBA (VP - Platform Solutions)
+**Goldman Sachs** (10): Chris Fischer, CPA (Vice President, Platform Solutions); Hao Lam (Vice President - Platform Solutions); Sandeep D. (Managing Director, Platform Solutions); Brady Mortensen, MBA (Vice President - Platform Solutions); Henry Brown (Vice President in Platform Solutions); Christina Baldwin (Vice President, Platform Solutions); Dmitri Kouzmine (VP Platform Solutions); Veronica L. Murphy, MBA (VP - Platform Solutions); John L. Bertrand (Chief Operating Officer, CF&O Shared Ser); Przemek Myslecki (Global Head - Asset Servicing Claim, Pro)
 
-**McKesson** (3): Suzanne Feeney, PharmD (Senior Director, Pharmacy Solutions); Francisco Fernandez (Director, FP&A – Financial Shared Servic); Tim Davis (Director, Accounting Shared Services)
+**McKesson** (2): Suzanne Feeney, PharmD (Senior Director, Pharmacy Solutions); Tim Davis (Director, Accounting Shared Services)
 
-**MetLife** (7): Don Collins (Vice President); Penelope Jones (Head of Global Employee Relations Invest); Linda Broderick (SVP Head of Global Procurement and Vendo); Nick Manna (Vice-President - Separate Account Contro); Derik Cavignano (Vice President, Head of Accounting Polic); Daphne Arenas (Vice President & Controller - Latin Amer); Charles Connery (VP - Treasury - Global Head of Cash Mana)
+**MetLife** (2): Don Collins (Vice President); Zeid Khamash (Head of Operations  [unverified: confirm)
 
-**Prudential Financial** (21): Ruth Hiatt (VP, Administration, Office of the Chairm); Janine Faulls (Director of US Business, Financial Opera); Jennifer Wheeler (Director, Disability Claims, Group Insur); Glenn Veneziano (Director - Financial Management); James Walden (Director Treasury Operations); Michael Estep (President, Group Insurance); Rakhi Badlani (Vice President of Tax Operations and Ent); Sean Cottrell (Vice President Operations); Rob Kutyla, CPA (Vice President, Corporate Accounting Pol); Chris Cima (Vice President, International Operations); Stephen Magelinski (Vice President- Treasury Oversight and R); Greg Julich (Vice President, Accounting); Joseph Silva (VP Operations); Louise Sheppard (VP, EO Operations); Eugenia Uskova, CPA (Vice President, Accounting Policy); Brian Barnard (Vice President Treasury); Warren Hoffman (VP, Operations); Tj Frabizio (Vice President - Accounting); Karan Sood (Vice President  Group Insurance); Natalie Schneidereit (Vice President, Claims); Gerry Freitas (Vice President Sourcing)
+**Prudential Financial** (3): Todd Shriber (Chief Operating Officer & Head of Strate); Joseph M. Hayes (Senior Vice President & Chief Operating ); Priya K.C. Bhatt (Head of Financial Strategy & Analysis, G)
 
 **Rogers Communications** (1): Cory Chemerys (Director of Operations)
-
-**Travelers** (16): Phyllis K. Peck (2nd VP, Business Insurance Line Lead, Cl); Beth Kelley (Vice President, Corporate Finance, ERP A); Heather Carson (Managing Director & Counsel, Financial I); Brian Grant (Vice President and Controller – Claim); Stan Prushinski (Managing Director Claim Strategy); Mindy Frana (Vice President Operations); Andrew Simon (Vice President Operations); Marc Margolis (2nd Vice President Claim Customer Servic); Terence Harris (Vice President - Specialty Claim); Amy White, AFSB (Managing Director - Bond & Specialty Ins); Marcella Federico-Manning, CPA (Vice President, Controller - Business In); Paul Munson (SVP and Corporate Controller at Traveler); Tara Burket (Vice President Finance and Controller at); Dave French (SVP Administrative Services); Brian Brinkman (2VP Claim Business Delivery); Suzanne South (Director Workforce Analytics)
-
-**Zurich North America** (4): Scott Polcyn (Head of Claims Strategy and Innovation); Japhet Boutin (Head of Technical Claims); Joseph Ragonese (Head of Claims Governance & Assurance); Kenneth Nigro (VP, Head of Claims Quality)

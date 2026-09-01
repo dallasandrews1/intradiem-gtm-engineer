@@ -1,0 +1,1217 @@
+{
+ "set": "nate",
+ "rep": "Nathan Belfield",
+ "rep_short": "Nate",
+ "rep_label": "Prepared for",
+ "date": "September 1, 2026",
+ "title": "Back Office Maps, Nate's Six",
+ "headline_html": "Six <span class=\"spark\">back-office maps</span>.",
+ "sub": "One new Sales Navigator map per account, built from scratch: the people who run the back office at six prospects. Every name checked against Salesforce and the live sequences.",
+ "legend_html": "<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run the back office. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.",
+ "md_title": "# Back-office map build sheets, Nate's six\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: senior executive, then the SVP/VP who leads each function, then the directors under them. Reporting lines are inferred from titles and functions; confirm each card in Sales Navigator as it is added.\n",
+ "files": {
+  "roster": "",
+  "candidates": "nate_backoffice_candidates.csv",
+  "sf_check": "nate_sf_check.csv",
+  "known_companies": "nate_known_layer_companies.csv",
+  "build_sheets_csv": "BO_Map_Build_Sheets_Nate.csv",
+  "build_sheets_md": "BO_Map_Build_Sheets_Nate.md",
+  "bench_csv": "BO_Map_Bench_Nate.csv",
+  "snapshot_csv": "_built_snapshot_nate.csv",
+  "changes_md": "BO_Map_Changes_Built_Nate.md",
+  "page_out": "account_maps/nate_backoffice_maps.html"
+ },
+ "built": [],
+ "select": "balanced",
+ "sweep_sources": [],
+ "candidate_default_source": "Aug 31 search",
+ "accounts": {
+  "Centene": {
+   "sweep": "sweeps/nate/centene.csv",
+   "domains": [
+    "centene.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bHjVIAU"
+   ],
+   "vertical": "healthcare payer",
+   "aliases": [
+    "centene",
+    "sunshine health",
+    "ambetter",
+    "wellcare",
+    "coordinated care",
+    "silver summit",
+    "magnolia health",
+    "sunflower health",
+    "meridian",
+    "peach state",
+    "superior healthplan",
+    "buckeye health",
+    "fidelis care",
+    "health net",
+    "absolute total care",
+    "carolina complete health",
+    "western sky",
+    "managed health services",
+    "nh healthy families",
+    "home state health",
+    "louisiana healthcare connections",
+    "iowa total care",
+    "arkansas total care",
+    "nebraska total care",
+    "trillium",
+    "centene dental",
+    "envolve",
+    "celtic",
+    "pennsylvania health & wellness",
+    "mhs indiana",
+    "hawaii"
+   ]
+  },
+  "Fidelity Investments": {
+   "sweep": "sweeps/nate/fidelity.csv",
+   "domains": [
+    "fidelity.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9JlIAI",
+    "001V5000006bCxAIAU"
+   ],
+   "vertical": "financial services",
+   "aliases": [
+    "fidelity",
+    "fmr",
+    "national financial"
+   ]
+  },
+  "National Grid": {
+   "sweep": "sweeps/nate/national_grid.csv",
+   "domains": [
+    "nationalgridus.com",
+    "nationalgrid.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bDbdIAE",
+    "001V50000090dFjIAI"
+   ],
+   "vertical": "utility",
+   "us_only": true,
+   "require_specific_topic": true,
+   "aliases": [
+    "national grid"
+   ],
+   "lob_cfo_ok": true
+  },
+  "Truist": {
+   "sweep": "sweeps/nate/truist.csv",
+   "domains": [
+    "truist.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9K6IAI"
+   ],
+   "vertical": "banking",
+   "aliases": [
+    "truist",
+    "suntrust",
+    "bb&t"
+   ]
+  },
+  "Paychex": {
+   "sweep": "sweeps/nate/paychex.csv",
+   "domains": [
+    "paychex.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b7jbIAA"
+   ],
+   "vertical": "payroll and HR outsourcing",
+   "aliases": [
+    "paychex",
+    "surepayroll"
+   ],
+   "front_line_ok_with_ops": true
+  },
+  "Regions Financial": {
+   "sweep": "sweeps/nate/regions.csv",
+   "domains": [
+    "regions.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bHUwIAM"
+   ],
+   "vertical": "banking",
+   "aliases": [
+    "regions"
+   ]
+  }
+ },
+ "drop": [
+  "Jonathan Fisher",
+  "Kelly Buchanan",
+  "Kevin Barry",
+  "Matthew Barnett",
+  "Michael Maguire",
+  "Michael Slain",
+  "Pankaj Shetye",
+  "Steve Anderson"
+ ],
+ "priority": [
+  [
+   "Fidelity Investments",
+   "Mary Relihan"
+  ],
+  [
+   "National Grid",
+   "Douglas Stein"
+  ],
+  [
+   "National Grid",
+   "Charles McLeod"
+  ],
+  [
+   "Fidelity Investments",
+   "Jessica Henck"
+  ],
+  [
+   "Centene",
+   "Amy Falk"
+  ],
+  [
+   "National Grid",
+   "Howard Kamensky"
+  ],
+  [
+   "National Grid",
+   "Joe Weber"
+  ],
+  [
+   "Regions Financial",
+   "Matt Snow"
+  ],
+  [
+   "Fidelity Investments",
+   "Emris Varghese"
+  ],
+  [
+   "Fidelity Investments",
+   "Clint Brandner"
+  ],
+  [
+   "Truist",
+   "Jennifer Cline, GPHR"
+  ],
+  [
+   "Truist",
+   "Chad Campbell"
+  ]
+ ],
+ "manual_under": [
+  [
+   "Truist",
+   "Anne Clark",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Allen Shealey",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Mary Grose Honaker",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Nick Isbrandtsen",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Shayna Rendenna",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Brian Kurlander",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Karen Weich",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Shannon Aycock",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Alison Lyewski",
+   "Chris Ward"
+  ],
+  [
+   "Truist",
+   "Shea S.",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Prabhu Krishnadas",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Marc Lyons",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Kris Socie",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Ruthanna Birchfield",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Tim Bicha",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Shefali Patel",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Kevin Cranford",
+   "Jon Ambler"
+  ],
+  [
+   "Truist",
+   "Chris Ward",
+   "Steve Hagerman"
+  ],
+  [
+   "Truist",
+   "Jennifer Buck",
+   "Mike Maguire"
+  ],
+  [
+   "Truist",
+   "Mike Harpole",
+   "Chris Ward"
+  ],
+  [
+   "Paychex",
+   "Greg Magee",
+   "Elizabeth Roaldsen"
+  ],
+  [
+   "Paychex",
+   "Tamara L. Hall",
+   "Elizabeth Roaldsen"
+  ],
+  [
+   "Paychex",
+   "Glynn Frechette",
+   "Chad Parodi"
+  ],
+  [
+   "National Grid",
+   "Erik Molinaro",
+   "Bill Malee"
+  ],
+  [
+   "National Grid",
+   "Christina Bostic",
+   "Bill Malee"
+  ],
+  [
+   "National Grid",
+   "James MacVicar",
+   "Bill Malee"
+  ],
+  [
+   "National Grid",
+   "Bill Malee",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Shri Madhusudhan",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Kevin Knapp",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Lisa Wieland",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Celeste Schneider",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Charles McLeod",
+   "Sally Librera"
+  ],
+  [
+   "National Grid",
+   "Douglas Stein",
+   "Lisa Wieland"
+  ],
+  [
+   "National Grid",
+   "Kaitlin Taylor",
+   "Douglas Stein"
+  ],
+  [
+   "National Grid",
+   "Tom LaVeck",
+   "Celeste Schneider"
+  ],
+  [
+   "Centene",
+   "Tarsha Fletcher",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Joe King",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Lisa Cattani",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Mika Runyan",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Brandi Bond",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Suresh Nagarajan",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Christopher Salvatore",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Mary Beth Maginn",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Elliot Wachter",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Eric Wilson",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Jodi Comunale",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Linda Gallina",
+   "Shannon Bagley"
+  ],
+  [
+   "National Grid",
+   "Jeffrey Koenig",
+   "Christina Bostic"
+  ],
+  [
+   "Paychex",
+   "Elizabeth Roaldsen, CFA",
+   ""
+  ],
+  [
+   "Paychex",
+   "Chad Parodi",
+   ""
+  ],
+  [
+   "Centene",
+   "Candice McGee",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Daniel R.",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Beth P.",
+   "Susan Smith"
+  ],
+  [
+   "Truist",
+   "Sandra Ivette Báez",
+   "Steve Hagerman"
+  ],
+  [
+   "National Grid",
+   "Kaitlin Taylor",
+   "Douglas Stein"
+  ],
+  [
+   "Centene",
+   "Lauren Westerberg",
+   "Susan Smith"
+  ],
+  [
+   "Centene",
+   "Laurin Dixon",
+   "Susan Smith"
+  ],
+  [
+   "Paychex",
+   "Dawn Ehrhart - CPP, SHRM-CP",
+   "Chad Parodi"
+  ],
+  [
+   "Paychex",
+   "Jerry Rook",
+   "Chad Parodi"
+  ],
+  [
+   "National Grid",
+   "Howard Kamensky",
+   "Kaitlin Taylor"
+  ]
+ ],
+ "title_override": [
+  [
+   "Paychex",
+   "Scott Buffington",
+   "President, Paychex Retirement"
+  ],
+  [
+   "Regions Financial",
+   "Dave Keenan",
+   "Chief Administrative Officer (retiring end of 2026; Kate Danella named successor)"
+  ],
+  [
+   "Regions Financial",
+   "Franklin Danley",
+   "EVP, Head of Payment Operations, Strategic Execution and Business Transformation"
+  ],
+  [
+   "Centene",
+   "Colleen Askvig",
+   "Chief Operating Officer (plan level; corporate COO is Susan Smith)"
+  ],
+  [
+   "Truist",
+   "Chris Ward",
+   "Head of Enterprise Payments (Operating Council)"
+  ]
+ ],
+ "dual": [
+  [
+   "Centene",
+   "Carmin Pruitt"
+  ],
+  [
+   "Centene",
+   "Peter P."
+  ],
+  [
+   "Centene",
+   "Susan Smith"
+  ],
+  [
+   "Fidelity Investments",
+   "Daria Brazile"
+  ],
+  [
+   "Fidelity Investments",
+   "Daria Siegelman Brazile"
+  ],
+  [
+   "Fidelity Investments",
+   "Duc Nguyen"
+  ],
+  [
+   "Fidelity Investments",
+   "Jason Elliott"
+  ],
+  [
+   "Fidelity Investments",
+   "Kevin Barry"
+  ],
+  [
+   "Fidelity Investments",
+   "Lauren M."
+  ],
+  [
+   "Fidelity Investments",
+   "Lynne Driscoll"
+  ],
+  [
+   "Fidelity Investments",
+   "Ryan Hanley"
+  ],
+  [
+   "Fidelity Investments",
+   "Tom MacVeigh"
+  ],
+  [
+   "Paychex",
+   "Tamara L. Hall"
+  ],
+  [
+   "Regions Financial",
+   "Jane Sebeck"
+  ],
+  [
+   "Regions Financial",
+   "Matt Snow"
+  ],
+  [
+   "Regions Financial",
+   "Montinike Hobbs"
+  ],
+  [
+   "Regions Financial",
+   "Roslyn Blunt"
+  ],
+  [
+   "Truist",
+   "Eddie Rodriguez"
+  ],
+  [
+   "Truist",
+   "Joel Davis, MBA"
+  ],
+  [
+   "Truist",
+   "Justin T. Brown"
+  ],
+  [
+   "Truist",
+   "Shefali Patel"
+  ]
+ ],
+ "verify": [],
+ "phrases": [
+  "claims",
+  "disability",
+  "mortgage",
+  "deposit",
+  "payroll",
+  "peo",
+  "retirement",
+  "workplace investing",
+  "meter",
+  "provider",
+  "enrollment"
+ ],
+ "topics_extra": {
+  "loan": [
+   "loan servicing",
+   "loan operations",
+   "lending operations",
+   "servicing",
+   "escrow",
+   "asset based lending",
+   "default",
+   "loan administration",
+   "loan closing",
+   "loan processing"
+  ],
+  "deposit": [
+   "deposit operations",
+   "deposit"
+  ],
+  "mortgage": [
+   "mortgage"
+  ],
+  "payments": [
+   "payments",
+   "wire",
+   "ach ",
+   "card operations",
+   "treasury management operations",
+   "merchant operations",
+   "money movement"
+  ],
+  "onboarding": [
+   "onboarding",
+   "kyc",
+   "account opening",
+   "client onboarding"
+  ],
+  "payroll": [
+   "payroll"
+  ],
+  "client_service": [
+   "client service",
+   "customer service operations",
+   "service operations",
+   "service delivery",
+   "dedicated service",
+   "service center operations",
+   "centralized service",
+   "enterprise service",
+   "head of service"
+  ],
+  "implementation": [
+   "implementation"
+  ],
+  "tax": [
+   "tax service",
+   "tax operations",
+   "tax filing",
+   "tax pay"
+  ],
+  "benefits": [
+   "benefits administration",
+   "benefit operations",
+   "401(k)",
+   "retirement services",
+   "401k",
+   "s125",
+   "section 125"
+  ],
+  "peo": [
+   "peo"
+  ],
+  "meter": [
+   "meter",
+   "meter to cash",
+   "meter-to-cash"
+  ],
+  "customer_ops": [
+   "customer operations",
+   "customer fulfillment",
+   "customer contracts",
+   "customer billing"
+  ],
+  "enrollment": [
+   "enrollment",
+   "eligibility"
+  ],
+  "provider": [
+   "provider data",
+   "provider operations",
+   "provider services",
+   "provider network operations",
+   "credentialing",
+   "provider relations operations"
+  ],
+  "appeals": [
+   "appeals",
+   "grievance"
+  ],
+  "um": [
+   "utilization management",
+   "medical management operations",
+   "care management operations",
+   "clinical operations"
+  ],
+  "member": [
+   "member operations",
+   "member services operations"
+  ],
+  "payment_integrity": [
+   "payment integrity",
+   "cost containment",
+   "subrogation",
+   "coordination of benefits",
+   "overpayment"
+  ],
+  "fund_ops": [
+   "fund operations",
+   "fund accounting",
+   "transfer agent",
+   "brokerage operations",
+   "trading operations",
+   "settlement",
+   "reconciliation",
+   "asset servicing",
+   "custody",
+   "workplace investing",
+   "defined benefit",
+   "defined contribution",
+   "retirement operations"
+  ],
+  "quality": [
+   "quality assurance",
+   "quality control",
+   "quality operations"
+  ],
+  "vendor": [
+   "vendor management",
+   "third party",
+   "outsourcing",
+   "bpo"
+  ],
+  "process": [
+   "process optimization",
+   "process excellence",
+   "process improvement",
+   "operational excellence"
+  ]
+ },
+ "func_extra": [
+  [
+   "Finance & shared services",
+   "\\bcfo\\b|chief financial|controller|fp&a|shared services"
+  ],
+  [
+   "Member, provider & enrollment operations",
+   "enrollment|eligibility|provider data|provider operations|provider services|provider network|credentialing|appeals|grievance|utilization management|member operations|payment integrity|subrogation|coordination of benefits|medical management operations"
+  ],
+  [
+   "Loan & mortgage operations",
+   "loan servicing|loan operations|lending operations|loan administration|escrow|mortgage|default operations|default"
+  ],
+  [
+   "Payment & deposit operations",
+   "deposit operations|deposit|card operations|payments operations|payment operations|payments|wire|\\bach\\b|treasury management operations|merchant|money movement|onboarding|kyc|account opening|money transfer"
+  ],
+  [
+   "Customer operations & meter-to-cash",
+   "meter|customer operations|customer fulfillment|customer contracts|customer billing"
+  ],
+  [
+   "Payroll & client service operations",
+   "payroll|\\bpeo\\b|tax service|tax operations|tax filing|benefits administration|implementation|client service|service operations|service delivery|dedicated service"
+  ],
+  [
+   "Retirement, investment & fund operations",
+   "fund operations|fund accounting|transfer agent|brokerage operations|trading operations|settlement|reconciliation|asset servicing|custody|workplace investing|defined benefit|defined contribution|retirement operations|retirement services|401\\(k\\)"
+  ]
+ ],
+ "collision": {
+  "Centene": {
+   "Cyrus Hoseini": "in Star Ratings wave 1 (Lemlist)",
+   "Matt Hiltibidal": "in Star Ratings wave 1 (Lemlist)",
+   "Dominic Turpin": "in Star Ratings wave 1 (Lemlist)",
+   "Jesse Lewis": "held in Star Ratings wave 1"
+  }
+ },
+ "root_prefs_generic": [
+  "operating",
+  "administrative"
+ ],
+ "bridge_results": [
+  "nate_bridge_results_a.csv",
+  "nate_bridge_results_b.csv",
+  "nate_bridge_results_c.csv",
+  "nate_bridge_results_d.csv",
+  "nate_bridge_results_e.csv",
+  "nate_bridge_results_f.csv"
+ ],
+ "require_url": true,
+ "finance_rollup": false,
+ "root_prefs_finance": [
+  "shared services",
+  "operating",
+  "administrative",
+  "enterprise operations"
+ ],
+ "specific_overlap_for_vp": true,
+ "manual_add": [
+  {
+   "account": "Truist",
+   "full_name": "Steve Hagerman",
+   "title": "Chief Technology & Operations Officer",
+   "linkedin_url": "https://www.linkedin.com/in/hagermansteve/",
+   "note": "Truist Operating Council page, Aug 31 2026"
+  },
+  {
+   "account": "Truist",
+   "full_name": "Mike Maguire",
+   "title": "Senior Executive Vice President and Chief Financial Officer",
+   "linkedin_url": "https://www.linkedin.com/in/mike-maguire/",
+   "note": "media.truist.com/mike_maguire; absorbed COO duties Jan 2025"
+  },
+  {
+   "account": "Truist",
+   "full_name": "Chris Ward",
+   "title": "Head of Enterprise Payments",
+   "linkedin_url": "",
+   "note": "Truist Operating Council page, Aug 31 2026"
+  },
+  {
+   "account": "Paychex",
+   "full_name": "Elizabeth Roaldsen",
+   "title": "Senior Vice President, Operations and Customer Experience",
+   "linkedin_url": "",
+   "note": "paychex.com executive bio, Aug 31 2026; Executive Committee, ~6,000 people incl. client service"
+  },
+  {
+   "account": "Paychex",
+   "full_name": "Chad Parodi",
+   "title": "Senior Vice President, HR & Benefits Services",
+   "linkedin_url": "",
+   "note": "paychex.com executive bio; oversees HR Solutions, PEO, Insurance"
+  },
+  {
+   "account": "Paychex",
+   "full_name": "Bob Schrader",
+   "title": "Chief Financial Officer",
+   "linkedin_url": "",
+   "note": "paychex.com executive bio, CFO since Oct 2023; the Financial Institutions board seat is additional",
+   "force": true
+  },
+  {
+   "account": "National Grid",
+   "full_name": "Sally Librera",
+   "title": "Interim President, US (effective Sept 1 2026); President, New York",
+   "linkedin_url": "",
+   "note": "National Grid 6-K Aug 2026 reorg; nationalgridus.com leadership page"
+  },
+  {
+   "account": "National Grid",
+   "full_name": "Lisa Wieland",
+   "title": "President, New England",
+   "linkedin_url": "",
+   "note": "nationalgridus.com leadership page, Aug 31 2026"
+  },
+  {
+   "account": "Centene",
+   "full_name": "Susan Smith",
+   "title": "Executive Vice President and Chief Operating Officer",
+   "linkedin_url": "",
+   "note": "Centene press release Nov 15 2023; reports to President Ken Fasola",
+   "force": true
+  },
+  {
+   "account": "Centene",
+   "full_name": "Shannon Bagley",
+   "title": "Executive Vice President and Chief Administrative Officer",
+   "linkedin_url": "",
+   "note": "Centene executive bios (HR, real estate, workplace resources, security)"
+  },
+  {
+   "account": "Paychex",
+   "full_name": "Robert Abresch",
+   "title": "Senior Director, Payroll Operations",
+   "linkedin_url": "",
+   "note": "ZoomInfo/RocketReach Aug 31; RocketReach cache still reads Oasis Outsourcing, verify current"
+  },
+  {
+   "account": "Paychex",
+   "full_name": "William Ueland",
+   "title": "Tax Director",
+   "linkedin_url": "https://www.linkedin.com/in/william-ueland-cpa-mba/",
+   "note": "LinkedIn Aug 31; runs payroll tax at Rochester"
+  },
+  {
+   "account": "Regions Financial",
+   "full_name": "Michael Craig",
+   "title": "Sr Manager, Workforce Management and Analytics VP",
+   "linkedin_url": "",
+   "note": "only VP-band workforce-management title at Regions in the index; lane 3 of the Jul 26 ICP"
+  }
+ ],
+ "account_notes": {
+  "Truist": "No Chief Operating Officer since January 2025 (role not refilled; the CFO absorbed it). Operations runs under the Chief Technology & Operations Officer; the SVP layer below him is placed by function and needs confirming in Sales Navigator.",
+  "Regions Financial": "Above the CAO sits C. Dandridge Massey, Chief Enterprise Operations and Technology Officer (since 2022); no LinkedIn profile found by Clay, search him in Sales Navigator. Dave Keenan retires end of 2026; Kate Danella is the named successor.",
+  "National Grid": "Reorganizing September 1, 2026: US business units merge under one US President (Sally Librera, interim). Dan Davies, Chief Transformation Officer, has no findable LinkedIn profile. Re-check placements after September 1.",
+  "Paychex": "Operations and client service (about 6,000 people) sit under the SVP, Operations and Customer Experience. Clay's index holds few Director-and-above operations titles at Paychex; the map is the full set it has. Robert Abresch (Senior Director, Payroll Operations per ZoomInfo) has no findable LinkedIn profile; search him in Sales Navigator. No workforce-planning leadership appears in the index at Director level or above.",
+  "Centene": "Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator.",
+  "Fidelity Investments": "Fidelity is private, so titles come from LinkedIn only. Barbara March (EVP Operations) and Kevin Barry (now Chief Privacy Officer) were removed after live checks; confirm the scope of the Chief Operations Officer card in Sales Navigator."
+ },
+ "band_override": [
+  [
+   "Truist",
+   "Chris Ward",
+   "EVP"
+  ],
+  [
+   "Centene",
+   "Susan Smith",
+   "C"
+  ],
+  [
+   "Centene",
+   "Shannon Bagley",
+   "C"
+  ],
+  [
+   "Truist",
+   "Mike Maguire",
+   "C"
+  ]
+ ],
+ "root_exclude": [
+  [
+   "Fidelity Investments",
+   "Mike Pegnato"
+  ],
+  [
+   "Centene",
+   "Curtis Elwood"
+  ],
+  [
+   "Centene",
+   "Jimmy C."
+  ],
+  [
+   "Centene",
+   "Colleen Askvig"
+  ],
+  [
+   "Centene",
+   "Dan Clark"
+  ],
+  [
+   "Centene",
+   "Rayshawn Clay"
+  ]
+ ],
+ "confirm": [
+  [
+   "Fidelity Investments",
+   "Emily Hawthorne",
+   "confirm the scope of this COO role in Sales Navigator"
+  ],
+  [
+   "National Grid",
+   "Christina Bostic",
+   "another source lists her as VP, US Treasurer; confirm title"
+  ],
+  [
+   "Centene",
+   "Colleen Askvig",
+   "plan-level COO per research; confirm which plan"
+  ],
+  [
+   "Centene",
+   "Shannon Bagley",
+   "her LinkedIn headline still reads VP Internal Audit; EVP & CAO since March 2021 per Centene and SEC officer filings"
+  ],
+  [
+   "Paychex",
+   "Robert Abresch",
+   "title from ZoomInfo; RocketReach cache reads Oasis Outsourcing, confirm in Sales Nav"
+  ],
+  [
+   "Regions Financial",
+   "Michael Craig",
+   "only workforce-management leader the index holds at Regions; confirm scope in Sales Nav"
+  ]
+ ],
+ "exec_cap": 6,
+ "peer_head_rule": false,
+ "exec_cap_by_account": {
+  "Centene": 4
+ },
+ "trim": [
+  [
+   "Centene",
+   "Jimmy C.",
+   "fourth plan-COO seat; initial-only profile"
+  ],
+  [
+   "Centene",
+   "Daniel R.",
+   "strategy role, initial-only profile"
+  ],
+  [
+   "Centene",
+   "Beth P.",
+   "clinical oversight (second line); UM lane already covered"
+  ],
+  [
+   "Centene",
+   "Amy Rocha, PMP, LSSGB",
+   "fourth same-title Business Operations director under one manager"
+  ],
+  [
+   "Fidelity Investments",
+   "Mike Pegnato",
+   "COO of a small trust subsidiary, no reports on the map"
+  ],
+  [
+   "Truist",
+   "John W Feldmann",
+   "MSR quantitative modeling, not operations"
+  ],
+  [
+   "Truist",
+   "Chris Moore",
+   "technical service delivery (IT)"
+  ],
+  [
+   "Truist",
+   "Karla Campbell",
+   "change-integration program role"
+  ],
+  [
+   "Regions Financial",
+   "Angela Wiegert",
+   "finance business partner to ops, not an ops leader"
+  ],
+  [
+   "Regions Financial",
+   "Jami Myers",
+   "governance (second line)"
+  ],
+  [
+   "Regions Financial",
+   "David Quiroz",
+   "mixed database-reporting remit"
+  ],
+  [
+   "Regions Financial",
+   "Jeff Keyseear",
+   "duplicate loan-operations seat (sibling cap)"
+  ],
+  [
+   "Centene",
+   "Kim Newton",
+   "clinical/UM lane already covered on the map"
+  ],
+  [
+   "Centene",
+   "Kristine (Krissy) Ziegler",
+   "clinical/UM lane already covered on the map"
+  ],
+  [
+   "Regions Financial",
+   "Molly Davis",
+   "process modeler, individual contributor"
+  ],
+  [
+   "Regions Financial",
+   "Ron Richardson",
+   "collections MIS reporting, not operations leadership"
+  ],
+  [
+   "Centene",
+   "Laura Sulak Futo MA, LPC",
+   "clinical counselor role; UM/clinical lane already covered"
+  ],
+  [
+   "Fidelity Investments",
+   "Christine Selmi",
+   "title names no specific function; the workforce-optimization seat is stronger"
+  ],
+  [
+   "Paychex",
+   "Scott Buffington",
+   "segment president (401k business P&L), not an operations leader"
+  ],
+  [
+   "Paychex",
+   "Glynn Frechette",
+   "GM of the PEO business; the ops directors beneath him are the ICP"
+  ],
+  [
+   "Truist",
+   "Jon Ambler",
+   "product P&L head (Deposits); deposit operations leaders are already mapped"
+  ],
+  [
+   "Paychex",
+   "James Besio",
+   "FP&A (planning), not work-processing operations"
+  ],
+  [
+   "Paychex",
+   "Jerry Rook",
+   "FP&A (planning), not work-processing operations"
+  ],
+  [
+   "Paychex",
+   "Kris Giardino",
+   "FP&A (planning), not work-processing operations"
+  ],
+  [
+   "Paychex",
+   "Mark Bellavia",
+   "FP&A (planning), not work-processing operations"
+  ],
+  [
+   "Centene",
+   "Lauren Westerberg",
+   "strategy-flavored business operations; configuration operations seat is stronger"
+  ],
+  [
+   "National Grid",
+   "Efy Knoell",
+   "FP&A (planning), not work-processing operations"
+  ],
+  [
+   "National Grid",
+   "Andrew Harju",
+   "finance transformation (planning); finance operations seat is stronger"
+  ],
+  [
+   "Regions Financial",
+   "Candace Clark",
+   "fraud risk manager (second line); fraud operations already mapped"
+  ],
+  [
+   "Fidelity Investments",
+   "Michelle Finamore",
+   "ambiguous remit (Operational Excellence & Creative); shared-services seat is stronger"
+  ],
+  [
+   "Fidelity Investments",
+   "Michelle Delamere",
+   "second HR-operations seat; brokerage operations seat is stronger"
+  ],
+  [
+   "Truist",
+   "Eric Volpe",
+   "generic service-delivery title; workforce-planning seat is stronger"
+  ],
+  [
+   "Truist",
+   "Shea S.",
+   "initial-only profile; fraud operations already covered twice"
+  ],
+  [
+   "Regions Financial",
+   "Lee Parr",
+   "third accounting seat; workforce-management seat is stronger"
+  ],
+  [
+   "National Grid",
+   "James (Jim) Reynolds  MBA",
+   "group finance (planning), not operations"
+  ],
+  [
+   "National Grid",
+   "James Brennan",
+   "finance data and reporting (MIS), not operations"
+  ]
+ ],
+ "pad_to_cap": true
+}

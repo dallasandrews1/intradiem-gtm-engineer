@@ -1,0 +1,6 @@
+account,full_name,input_title,linkedin_url,fresh_title,fresh_company,latest_start,status,note
+Paychex,"Alexander Mechling, JD","Director, Customer Success & Operations",https://www.linkedin.com/in/alexander-f-m/,"Director, Customer Success & Operations",Paychex,2025-10,current,title matches input
+Paychex,Jordan L. Wilkinson,"Director of Service Excellence, Customer Experience & Transformation",https://www.linkedin.com/in/jordanleighwilkinson/,"Director of Service Excellence, Customer Experience & Transformation",Paychex,2026-02,current,title matches input
+Paychex,Laurie Maffett,Director - 401k/S125,https://www.linkedin.com/in/laurie-maffett-52960314/,Director - 401k/S125,Paychex,,current,title matches input; no start date returned
+Paychex,Robert Abresch,"Senior Director, Payroll Operations",,,,,not_found,no match at paychex.com (batch + solo) or Oasis Outsourcing (oasisadvantage.com + LinkedIn company URLs)
+Regions Financial,Michael Craig,"Sr Manager, Workforce Management and Analytics, VP",https://www.linkedin.com/in/michaelcraig1915/,"Sr Manager, Workforce Management and Analytics VP",Regions Bank,2022-11,current,single match at regions.com; title matches input (punctuation only)
