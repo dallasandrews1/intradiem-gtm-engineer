@@ -48,18 +48,18 @@
     <svg class="logo"><use href="#ilogo"/></svg>
     <div class="eyebrow" data-h="1">Product &middot; AI champion &middot; PM as a builder</div>
     <h1 data-h="2">The prototype <span class="spark">is the spec</span>.</h1>
-    <p class="sub" data-h="3">A one-page brief, a skill that turns it into a working prototype, and one PRD from SharePoint rendered as the proof.</p>
+    <p class="sub" data-h="3">A one-page brief, a Greenlight project that turns it into a working prototype, and two PRDs from SharePoint rendered as the proof.</p>
     <div class="hstats" data-h="4">
       <div><b><span class="hc" data-to="1">0</span> page</b><span>brief replaces the written spec</span></div>
-      <div><b><span class="hc" data-to="1">0</span> skill</b><span>brief or PRD to working prototype</span></div>
-      <div><b><span class="hc" data-to="6">0</span> pages</b><span>Skills Editor PRD, one working screen</span></div>
-      <div><b><span class="hc" data-to="8">0</span> checks</b><span>acceptance criteria the prototype tests on itself</span></div>
+      <div><b><span class="hc" data-to="1">0</span> project</b><span>in Greenlight, brief or PRD to working prototype</span></div>
+      <div><b><span class="hc" data-to="2">0</span> PRDs</b><span>from SharePoint, each rendered as a working screen</span></div>
+      <div><b><span class="hc" data-to="16">0</span> checks</b><span>acceptance criteria the prototypes test on themselves</span></div>
     </div>
     <div class="meta" data-h="5">
       <div><span>For</span>Product managers</div>
-      <div><span>Status</span>Kit built. First PM: Product to name.</div>
+      <div><span>Status</span>Kit built for Greenlight. First PM: Product to name.</div>
       <div><span>By</span>Dallas Andrews, AI champion, Product</div>
-      <div><span>Worked example</span>Skills Editor PRD v2.0, May 2026</div>
+      <div><span>Worked examples</span>Skills Editor PRD v2.0; Scheduling Service PRD v1.0</div>
     </div>
     <a class="cta" id="protoCta" href="prototype/" data-h="5">Open the Skills Editor prototype <small>working screen, self-checks under ?</small></a>
   </div>
@@ -71,8 +71,8 @@
       <div class="k">In one screen</div>
       <ul>
         <li><b>What changes.</b> A review decides on something people click, not something they read. The brief records the decision; the prototype is the argument.</li>
-        <li><b>What exists today.</b> The brief template, the <b>pm-prototype</b> skill, and the Harmoniq Skills Editor PRD rebuilt as a working three-panel editor with its eight acceptance criteria tested inside the file.</li>
-        <li><b>Open with Product.</b> The first PM and the first live feature, Claude access for that PM, and a home for prototypes.</li>
+        <li><b>What exists today.</b> The brief template, a Greenlight project any PM sets up in five minutes (instructions, token sheet, README; no repo, no install), and two SharePoint PRDs rebuilt as working screens with their acceptance checks tested inside the file.</li>
+        <li><b>Open with Product.</b> The first PM and the first live feature, a home for prototypes, and which design system sheet is current: two PRDs in the same folder name two different ones.</li>
       </ul>
     </div>
   </div>
@@ -111,8 +111,8 @@
     <h2>Five steps, one owner each.</h2>
     <ul class="steps">
       <li><span class="n">1</span><span class="t">Write the brief</span><span class="o">PM</span><span class="r">One page: the decision the prototype settles, who uses it, what it does, five to eight acceptance checks.</span></li>
-      <li><span class="n">2</span><span class="t">Run pm-prototype</span><span class="o">PM, in Claude</span><span class="r">The skill takes the brief (or an existing PRD) and returns a single working HTML file on the Intradiem design system.</span></li>
-      <li><span class="n">3</span><span class="t">Self-check</span><span class="o">PM</span><span class="r">Press ? in the prototype. Computable checks show pass or fail; the rest are marked manual.</span></li>
+      <li><span class="n">2</span><span class="t">Run the Prototypes project in Greenlight</span><span class="o">PM, in Greenlight</span><span class="r">Attach the brief (or an existing PRD) and type "Build the prototype". Greenlight returns one working HTML file on the Intradiem design system; save it as index.html.</span></li>
+      <li><span class="n">3</span><span class="t">Self-check</span><span class="o">PM</span><span class="r">Press Checks (or ?) in the prototype. Computable checks show pass or fail; the rest are marked manual. A fail goes back to Greenlight in one sentence and the whole file comes back fixed.</span></li>
       <li><span class="n">4</span><span class="t">Review on the prototype</span><span class="o">PM, design, engineering</span><span class="r">The room clicks through. Answers to the brief's open questions go into the decision record.</span></li>
       <li><span class="n">5</span><span class="t">Hand off</span><span class="o">PM to engineering</span><span class="r">Prototype plus brief. A PRD is written afterwards only where a compliance or contract record requires one.</span></li>
     </ul>
@@ -122,11 +122,12 @@
 <section class="kit">
   <div class="wrap">
     <div class="eyebrow">The kit</div>
-    <h2>Three pieces, all in the repo.</h2>
-    <div class="grid c3">
-      <div class="card"><div class="tag go">Template</div><h4>Prototype brief</h4><p>Nine sections on one page. Section 1 is the decision the prototype settles; section 6 the checks; section 8 the decision record.</p><p><code>motions/ai_champion_product/Prototype_Brief_Template.md</code></p></div>
-      <div class="card"><div class="tag go">Skill</div><h4>pm-prototype</h4><p>Brief or PRD in, working single-file prototype out, with the self-check panel and the source saved beside it. Uses the DS v1 tokens from the Skills Editor PRD unless a PM points at another reference.</p><p><code>~/.claude/skills/pm-prototype/SKILL.md</code></p></div>
-      <div class="card"><div class="tag go">Worked example</div><h4>Skills Editor</h4><p>PRD-ICC-S2-001 v2.0 (SharePoint, engineering Aldus documents, May 2026) rendered as the three-panel editor it describes.</p><p><code>motions/ai_champion_product/prototypes/skills_editor/</code></p><p><a class="plink" href="prototype/">Open the prototype &rarr;</a></p></div>
+    <h2>Four pieces, one folder.</h2>
+    <div class="grid c4">
+      <div class="card"><div class="tag go">Template</div><h4>Prototype brief</h4><p>Nine sections on one page, as a Word file. Section 1 is the decision the prototype settles; section 6 the checks; section 8 the decision record.</p><p><code>pm_kit/Prototype_Brief_Template.docx</code></p></div>
+      <div class="card"><div class="tag go">Greenlight project</div><h4>Prototypes</h4><p>Paste the instructions once, upload the token sheet, done. Brief or PRD in, working single-file prototype out, with the self-check panel built in. The README walks a PM through set-up, the build, and what to do when a check fails.</p><p><code>pm_kit/README.md</code></p></div>
+      <div class="card"><div class="tag go">Worked example</div><h4>Skills Editor</h4><p>PRD-ICC-S2-001 v2.0 (SharePoint, engineering Aldus documents, May 2026) rendered as the three-panel editor it describes. Eight checks, all computed.</p><p><code>prototypes/skills_editor/</code></p><p><a class="plink" href="prototype/">Open the prototype &rarr;</a></p></div>
+      <div class="card"><div class="tag go">Worked example</div><h4>Holiday Calendar</h4><p>Scheduling Service PRD v1.0 (SharePoint, Mar 2026), Screen 7, built from the project instructions and the PRD alone. Seven checks computed and passing, one manual.</p><p><code>prototypes/holiday_calendar/</code></p><p><a class="plink" id="protoLink2" href="prototype-2/">Open the prototype &rarr;</a></p></div>
     </div>
   </div>
 </section>
@@ -160,21 +161,49 @@
 
 <section>
   <div class="wrap">
+    <div class="eyebrow">Worked example, second PRD</div>
+    <h2>One screen of a 37-page PRD, built from the project alone.</h2>
+    <p class="lede">The Scheduling Service PRD covers 22 screens and 158 requirements. Screen 7, the holiday calendar, was built with nothing but the Greenlight project instructions, the token sheet and the PRD: a three-tier country, region, site hierarchy with inheritance and overrides, pre-loaded 2026 public holidays for five countries, floating-date recurrence into 2027, calendar and list views, and an impact preview before any change commits.</p>
+    <div class="embed">
+      <iframe id="protoFrame2" src="prototype-2/" title="Holiday Calendar prototype" loading="lazy"></iframe>
+      <div class="cap"><span>Live prototype. Pick a site in the scope tree, switch Calendar and List, add a non-working day, press Checks for the panel.</span><a id="protoOpen2" href="prototype-2/">Open full screen &rarr;</a></div>
+    </div>
+    <ul class="checks">
+      <li><span class="id">AC-1</span><span>A site shows its own days plus those inherited from region and country, each labelled; a region override is worked at every site under it</span><span class="how">computed</span></li>
+      <li><span class="id">AC-2</span><span>2026 public holidays pre-loaded for every country; recurring days regenerate on the correct 2027 dates, floating and observed</span><span class="how">computed</span></li>
+      <li><span class="id">AC-3</span><span>A day added at any tier is still there after switching scope and back</span><span class="how">computed</span></li>
+      <li><span class="id">AC-4</span><span>Calendar colour-codes by tier; list sorts by date, name and tier</span><span class="how">computed</span></li>
+      <li><span class="id">AC-5</span><span>Impact (agents, intervals) shows before add or remove; nothing changes until confirmed</span><span class="how">computed</span></li>
+      <li><span class="id">AC-6</span><span>Chrome follows the token sheet: 36px buttons, 4px radius, 256px sidebar, 48px rows, token colours only</span><span class="how">computed</span></li>
+      <li><span class="id">AC-7</span><span>No horizontal overflow at 1440 and 1920, no broken value text, every control bound</span><span class="how">computed</span></li>
+      <li><span class="id">AC-8</span><span>The add flow completes with the keyboard only</span><span class="how">manual</span></li>
+    </ul>
+    <p>Result on Sep 1 2026: one file of 59 KB, no external requests. The self-check caught one token deviation on the first pass (checkbox text falling back to browser black); one sentence back to Greenlight in the PM's words returned the whole file with a one-line fix. Seven checks computed and passing at 1920 and 1440, one manual. The brief was drafted from the PRD in the same run, with the PRD's eight unsettled questions listed for the review.</p>
+    <div class="gate">
+      <h4>What a review on this prototype would settle</h4>
+      <p>Whether a site can restore a day its region marked as worked, or only the tier that set the override; whether "intervals affected" counts rostered agents or headcount; and which design system Screen 7 belongs to, since the PRD names one and the token sheet another. No review has been held; the brief records them as open.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <div class="eyebrow">Open with Product</div>
     <ul class="threads">
       <li><b>First PM, first feature.</b> The kit is proven on an existing PRD. The program starts when one PM runs a live feature through it. Product names the PM and the feature.</li>
-      <li><b>Claude access.</b> AI champions hold licenses; whether each PM does is Product's call and the intake form's.</li>
+      <li><b>Greenlight access.</b> A PM with Greenlight can run the project today; Product confirms who has it.</li>
+      <li><b>Which design system is current.</b> The Skills Editor PRD specifies DS v1 (Open Sans, #5AB274); the Scheduling Service PRD specifies Harmoniq Scheduler (Inter, #1B3A5C). The project builds on whichever sheet the PM attaches, so design names the current one and every PM attaches that.</li>
       <li><b>Where prototypes live.</b> A file works from SharePoint or a noindex Pages link. Product picks one so reviews open the same link.</li>
       <li><b>When the PRD still gets written.</b> Only where a compliance or contract record requires it; Product confirms which features those are.</li>
     </ul>
-    <div class="line">Next: walk the kit with the first PM Product names, and run one live feature through steps 1 to 5.</div>
+    <div class="line">Next: set up the Prototypes project in Greenlight with the first PM Product names, and run one live feature through steps 1 to 5.</div>
   </div>
 </section>
 
 <footer class="foot">
   <svg class="logo"><use href="#ilogo"/></svg>
   <span>Internal. Product &middot; AI champion</span>
-  <span>Monday.com AI Initiatives &middot; Product (Dallas) &middot; AI enabled prototyping, PM as a builder program &middot; Aug 31 2026</span>
+  <span>Monday.com AI Initiatives &middot; Product (Dallas) &middot; AI enabled prototyping, PM as a builder program &middot; Sep 1 2026</span>
 </footer>
 </div>
 
@@ -198,7 +227,7 @@
   <h2 data-a="2">Five steps, <span class="spark">one owner each</span>.</h2>
   <ul class="plist">
     <li data-a="3"><span class="d">1 &middot; PM</span><span class="r"><b>Write the brief.</b> The decision to settle, who uses it, what it does, five to eight checks.</span></li>
-    <li data-a="4"><span class="d">2 &middot; PM in Claude</span><span class="r"><b>Run pm-prototype.</b> Brief in, one working HTML file out.</span></li>
+    <li data-a="4"><span class="d">2 &middot; PM in Greenlight</span><span class="r"><b>Run the Prototypes project.</b> Brief in, one working HTML file out.</span></li>
     <li data-a="5"><span class="d">3 &middot; PM</span><span class="r"><b>Self-check.</b> Press ?; pass, fail, or manual per check.</span></li>
     <li data-a="6"><span class="d">4 &middot; PM, design, eng</span><span class="r"><b>Review on the prototype.</b> Answers go into the decision record.</span></li>
     <li data-a="7"><span class="d">5 &middot; PM to eng</span><span class="r"><b>Hand off.</b> Prototype plus brief. A PRD only where a record is required.</span></li>
@@ -206,22 +235,23 @@
 </section>
 <section class="pslide" data-title="Worked example">
   <div class="pe" data-a="1">Worked example</div>
-  <h2 data-a="2">Skills Editor PRD, <span class="spark">six pages to one screen</span>.</h2>
+  <h2 data-a="2">Two PRDs, <span class="spark">two working screens</span>.</h2>
   <div class="pgrid c3">
-    <div data-a="3"><span class="big">8</span><span>acceptance criteria in the PRD, tested inside the prototype</span></div>
-    <div data-a="4"><span class="big">3</span><span>panels: roster, dimension editor, Compare to Template</span></div>
-    <div data-a="5"><span class="big">1</span><span>file, no external requests, opens from SharePoint or a link</span></div>
+    <div data-a="3"><span class="big">16</span><span>acceptance checks, tested inside the prototypes</span></div>
+    <div data-a="4"><span class="big">2</span><span>SharePoint PRDs: Skills Editor, and one screen of the Scheduling Service</span></div>
+    <div data-a="5"><span class="big">1</span><span>file each, no external requests, opens from SharePoint or a link</span></div>
   </div>
-  <p class="pl" data-a="6">Three questions the PRD leaves open are the ones a room answers by clicking.</p>
+  <p class="pl" data-a="6">The questions each PRD leaves open are the ones a room answers by clicking.</p>
 </section>
 <section class="pslide" data-title="Open">
   <div class="pe" data-a="1">Open with Product</div>
   <h2 data-a="2">It starts with <span class="spark">one PM and one live feature</span>.</h2>
   <ul class="plist">
     <li data-a="3"><span class="d">Product names</span><span class="r">The first PM and the feature</span></li>
-    <li data-a="4"><span class="d">Product confirms</span><span class="r">Claude access for that PM</span></li>
-    <li data-a="5"><span class="d">Product picks</span><span class="r">Where prototypes live: SharePoint or a noindex link</span></li>
-    <li data-a="6"><span class="d">Product decides</span><span class="r">Which features still need a PRD as a record</span></li>
+    <li data-a="4"><span class="d">Product confirms</span><span class="r">Greenlight access for that PM</span></li>
+    <li data-a="5"><span class="d">Design names</span><span class="r">The current token sheet; two PRDs name two systems</span></li>
+    <li data-a="6"><span class="d">Product picks</span><span class="r">Where prototypes live: SharePoint or a noindex link</span></li>
+    <li data-a="7"><span class="d">Product decides</span><span class="r">Which features still need a PRD as a record</span></li>
   </ul>
 </section>
 </div>
@@ -239,7 +269,7 @@
 
 <!--PRESENT-->
 <script>
-(function(){ if(location.protocol==='file:'){ var u='../prototypes/skills_editor/index.html'; ['protoCta','protoOpen'].forEach(function(i){var a=document.getElementById(i); if(a) a.href=u;}); var f=document.getElementById('protoFrame'); if(f) f.src=u; } })();
+(function(){ if(location.protocol==='file:'){ var u='../prototypes/skills_editor/index.html'; ['protoCta','protoOpen'].forEach(function(i){var a=document.getElementById(i); if(a) a.href=u;}); var f=document.getElementById('protoFrame'); if(f) f.src=u; var u2='../prototypes/holiday_calendar/index.html'; ['protoLink2','protoOpen2'].forEach(function(i){var a=document.getElementById(i); if(a) a.href=u2;}); var f2=document.getElementById('protoFrame2'); if(f2) f2.src=u2; } })();
 </script>
 </body>
 </html>
