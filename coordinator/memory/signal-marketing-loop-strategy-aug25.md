@@ -27,3 +27,5 @@ Still Dallas's hands: Clay Settings -> Website tracking -> Add connection (water
 **Why:** Melissa asked for ads on the lemlist list on the record, Naveen asked for the inbound/outbound bridge, John wants more C-suite meetings; the loop answers all three without a new engine.
 
 **How to apply:** follow the build order in section 12 of the doc; nothing on step 3+ until the pixel has sessions. Related: [[pipeline-council-aug24-meeting-takeaways]], [[pipeline-council-context-aug24]], [[bo-expansion-council-aug24]], [[feedback-warn-before-large-credit-spend]], [[positioning-automation-first-aug17]].
+
+**Aug 27 decision:** the 50/50 account holdout is dropped. Dallas: "what does that even mean, half held out? and why would we even do that." At LinkedIn's 300-matchable floor a cohort is ~50 accounts, 25 per arm, too small to read; the comparison is the sequences that run without ads (Stars, Blitz, UK) vs the intent cohorts that run with ads. Removed from the operating map; `cohort_cutter.py` holdout assignment should be switched off before the first cut.

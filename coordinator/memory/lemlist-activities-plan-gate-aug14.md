@@ -1,15 +1,17 @@
 ---
 name: lemlist-activities-plan-gate-aug14
-description: "Lemlist /api/activities route started returning HTTP 402 (emailPro-plan-only) on 2026-08-14, breaking the hourly lemlist-to-Slack relay job at step 1"
+description: "Lemlist /api/activities plan-gate (402, emailPro-only) from 2026-08-14 was CLEARED by 2026-08-30 — REST activities and campaigns routes are open again; the relay is now MCP-primary with REST as a working fallback"
 metadata: 
   node_type: memory
   type: project
   originSessionId: 896ac857-2e46-4c92-ad41-a83545bdb792
-  modified: 2026-08-14T23:38:35.631Z
+  modified: 2026-08-30T20:21:35.792Z
 ---
 
-As of the 2026-08-14 16:37 PDT hourly run, `GET https://api.lemlist.com/api/activities?limit=100` (workspace key `tea_h82tSpLDH9vt59tkJ`) returns HTTP 402 with body `"route is available starting emailPro plan"` instead of the normal activity-array payload. `automation/config/lemlist.env` had already flagged this key as a trial "ending ~Aug 13 2026" — the 402 lines up with that trial lapsing/downgrading a day later. The sibling call, `GET /api/tasks?filters=%5B%5D`, still returns HTTP 200 normally — only the Activities route is gated, not the whole API.
+As of the 2026-08-14 16:37 PDT hourly run, `GET https://api.lemlist.com/api/activities?limit=100` (workspace key `tea_h82tSpLDH9vt59tkJ`) returned HTTP 402 with body `"route is available starting emailPro plan"`. This was the trigger for redesigning the hourly lemlist-to-Slack relay job as MCP-primary (get_inbox_conversations, get_campaigns_stats) with REST as a legacy fallback.
 
-**Why:** the relay job (`automation/config/lemlist_channels.json` + the unattended hourly prompt) depends entirely on the Activities feed for steps 2-6 (diff against `seen_activity_ids`, detect actionable events, compose/post to Slack, append new ids). With Activities gated, every hourly run will keep failing at step 1 and produce a "BLOCKED, needs Dallas" log entry (see `automation/logs/lemlist-relay-2026-08-14.md`) instead of a normal quiet or active run, until the plan is upgraded or the trial renewed.
+**UPDATE 2026-08-30:** the gate is gone. On the 15:20 CDT run, the lemlist MCP connector itself was unauthenticated/unavailable (a separate, connector-level outage, not a plan gate), so the job fell back to REST per protocol — and both `/api/activities?limit=100` and `/api/campaigns` returned real 200 data, not the 402 string. So the underlying Lemlist plan restriction from Aug 14 has cleared at some point in the last two weeks (upgrade or trial renewal happened without a note here). Caveat: `/api/campaigns/{id}/stats` (the only REST stats sub-route found) returns sent/delivered/opened/clicked/replied counts only — not the bounced/unsubscribed/meetingBooked/linkedinInvitationAccepted shape the MCP campaign-stats step and `.lemlist-relay-stats.json` track, so that specific comparison still can't be done over REST; the activities feed diff covers all actionable types on its own, so this doesn't lose event coverage, just the redundant stats-count cross-check.
 
-**How to apply:** don't read a "no new events"-style log entry from this job on/after 2026-08-14 as a genuine quiet period — check whether it's actually the 402 plan-gate first. This needs Dallas to fix on the Lemlist billing side (upgrade to emailPro or renew trial); no code/config change in this repo resolves it. Once fixed, verify by re-running the activities curl and confirming HTTP 200 before trusting the relay's output again. Related but distinct from [[lemlist-relay-campaign-map-gap-aug7]] (a routing-config gap, not an API outage).
+**Why:** matters for two separate things going forward — (1) don't assume a future 402 log entry means the same Aug 14 trial-lapse cause; check current billing state fresh, and (2) if the lemlist MCP connector (claude.ai lemlist) goes unauthenticated again, REST is now confirmed as a genuine working fallback for activities/tasks/campaigns, not just a theoretical one.
+
+**How to apply:** if a relay log entry says REST fallback was used, that's normal degraded-but-working operation now, not a "Dallas must fix billing" flag — check the lemlist MCP connector's auth state (claude.ai connector settings) first, since that's what's actually breaking, not the Lemlist plan. Related but distinct from [[lemlist-relay-campaign-map-gap-aug7]] (a routing-config gap, not an API outage).
