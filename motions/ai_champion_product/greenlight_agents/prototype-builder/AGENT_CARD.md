@@ -6,7 +6,9 @@
 
 **For:** Product managers. Also design and engineering when they want to see a screen before it is built.
 
-**Instructions:** paste `motions/ai_champion_product/pm_kit/PROJECT_INSTRUCTIONS.md` in full.
+**Where it runs:** primary surface is the shared Claude enterprise project `Prototypes` (instructions = `pm_kit/PROJECT_INSTRUCTIONS.md`, knowledge = the two files below). In Greenlight, the agent handles single-panel screens only: paste `PROJECT_INSTRUCTIONS.md` plus `pm_kit/GREENLIGHT_ADDENDUM.md` (the 20 KB budget), Code Interpreter OFF.
+
+**Instructions:** paste `motions/ai_champion_product/pm_kit/PROJECT_INSTRUCTIONS.md` in full (plus the addendum in Greenlight).
 
 **Knowledge files to attach:**
 - `pm_kit/DS_Tokens.md` (DS v1 per the Skills Editor PRD; replace with design's current sheet when they send one)
