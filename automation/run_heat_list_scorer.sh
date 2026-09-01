@@ -4,7 +4,7 @@
 # DRY RUN until automation/config/heat_loop.json says otherwise. Never DMs anyone; the daily rundown reads the log.
 set -uo pipefail
 cd "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer"
-export PATH="$HOME/.claude/plugins/cache/clay-plugins/clay/2.6.0/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+export PATH="$(ls -td $HOME/.claude/plugins/cache/clay-plugins/clay/*/bin | head -1):/opt/homebrew/bin:/usr/local/bin:$PATH"
 # Until the vs-code-agents-window-usage branch merges, engine config (web_* families, web_intent.json) lives in the worktree:
 WT="/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer.worktrees/vs-code-agents-window-usage"
 [ -f "$WT/tam-outbound-engine/config/web_intent.json" ] && [ ! -f tam-outbound-engine/config/web_intent.json ] && export HEAT_ROOT="$WT"

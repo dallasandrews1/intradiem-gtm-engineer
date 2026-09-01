@@ -1,4 +1,15 @@
 {
-  "processed_reply_ts": ["1787322535.416329", "1787668909.651749", "1787756177.997149"],
-  "pending_confirms": []
+  "processed_reply_ts": ["1787668909.651749", "1787756177.997149", "1788189127.544269"],
+  "pending_confirms": [
+    {
+      "tag": "widen-interval",
+      "plan": "Bump StartInterval in com.dallasandrews.gtm.rundownthreads.plist from 600s to 1800s, copy to ~/Library/LaunchAgents, launchctl unload/load to apply.",
+      "created_ts": "1788189383.746389"
+    },
+    {
+      "tag": "reload-heatloop",
+      "plan": "Copy com.dallasandrews.gtm.heatlist.plist and com.dallasandrews.gtm.cohortcutter.plist from automation/ to ~/Library/LaunchAgents, launchctl load both. Pure Python, 0 credits, dry-run until heat_loop.json flips, no sends.",
+      "created_ts": "1788189383.746389"
+    }
+  ]
 }
