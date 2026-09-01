@@ -232,9 +232,17 @@ body.present #prog{display:block}
 .verd div{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;background:var(--bg);font-size:13.5px;color:var(--ink-2);box-shadow:var(--shadow)}
 .verd div b{display:block;font-family:var(--ff-mono);font-size:11px;letter-spacing:.06em;color:var(--green-600);margin-bottom:4px}
 .verd div.ok b{color:var(--green-600)}
+.reg td{font-size:13px;vertical-align:top}
+.reg td.id{font-family:var(--ff-mono);color:var(--ink-3);font-size:11px}
+.reg td.v{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.reg td.v.ok{color:var(--green-600)}.reg td.v.bad{color:var(--orange-600)}.reg td.v.na{color:var(--ink-3)}
+.runs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.runs div{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;background:var(--bg);box-shadow:var(--shadow);font-size:13.5px;color:var(--ink-2)}
+.runs div b{display:block;font-weight:900;font-size:22px;color:var(--forest);letter-spacing:-.01em}
+.runs div span{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-top:4px}
 .sample td{font-size:13.5px}
 .sample td.ev{font-style:italic;color:var(--ink-2)}
-@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.flow .arrow{display:none}.flow .core{grid-column:1/-1}.verd{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.runs{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.flow .arrow{display:none}.flow .core{grid-column:1/-1}.verd{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -255,10 +263,10 @@ body.present #prog{display:block}
     <h1 data-h="2">Action items, <span class="spark">extracted and graded</span>.</h1>
     <p class="sub" data-h="3">A read-only agent reads meeting notes, email, calendar and the Monday board, writes every commitment it finds with owner, date and the line that carries it, and asks a person to grade each one. Accuracy is measured before anything is automated.</p>
     <div class="hstats" data-h="4">
-      <div><b><span class="hc" data-to="85">0</span></b><span>commitments found, first run</span></div>
+      <div><b><span class="hc" data-to="85">0</span></b><span>commitments in the register</span></div>
       <div><b><span class="hc" data-to="4">0</span></b><span>sources read: Otter, Outlook mail, calendar, Monday</span></div>
       <div><b><span class="hc" data-to="14">0</span> days</b><span>window, Aug 17 to Aug 31</span></div>
-      <div><b><span class="hc" data-to="95">0</span>%</b><span>precision on the first 20 graded rows</span></div>
+      <div><b><span class="hc" data-to="95">0</span>%</b><span>precision on 20 graded rows</span></div>
     </div>
     <div class="meta" data-h="5">
       <div><span>Status</span>Read-only. Running weekdays 7:25.</div>
@@ -310,24 +318,42 @@ body.present #prog{display:block}
 
 <section>
   <div class="wrap">
-    <div class="eyebrow">First run, Aug 31 2026</div>
-    <h2>85 commitments from four sources.</h2>
-    <p class="lede">Window Aug 17 to Aug 31. Read: 19 Otter meetings (17 transcripts fetched for the verbatim line), 185 inbox and 82 sent messages listed with 13 bodies read, 34 calendar events, the 68-item Monday board. 5 items have no named owner and 48 carry no stated date; the log names the 14 of those that read as near-term commitments. Requests completed inside the window were left out on purpose and listed in the log.</p>
-    <div class="tablewrap"><table class="sample">
-      <thead><tr><th>Action</th><th>Owner</th><th>Due</th><th>Source</th><th>Evidence</th><th>Confidence</th></tr></thead>
+    <div class="eyebrow">The register, live</div>
+    <h2>What the agent has written so far.</h2>
+    <p class="lede">These are the rows in <b>automation/pmo/action_register.csv</b> as of the last run, with the verdict from the validation queue beside each. Shown here: Dallas's own commitments (16 of his 31), nothing past due and nothing that names another person. The full register holds 85 rows across every owner.</p>
+    <div class="runs">
+      <div><b>Weekdays 7:25</b><span>schedule, read-only</span></div>
+      <div><b>2026-08-31 23:59</b><span>window end, last run</span></div>
+      <div><b>67 / 13 / 2 / 3</b><span>rows from notes / email / calendar / Monday</span></div>
+      <div><b>19 of 20</b><span>graded correct, precision 95%</span></div>
+    </div>
+    <div class="tablewrap"><table class="reg">
+      <thead><tr><th>#</th><th>Action</th><th>Due</th><th>Source</th><th>Evidence</th><th>Confidence</th><th>Verdict</th></tr></thead>
       <tbody>
-        <tr><td>Launch multi-channel sequences to the roughly 300 identified back-office contacts by the all hands.</td><td class="who">Dallas</td><td class="st">2026-09-16</td><td>otter: Back Office Lead Expansion Strategy</td><td class="ev">"Is it unreasonable to target at least launching a multi-channel sequence for these 300 contacts we have identified by the all hands?"</td><td class="st">medium</td></tr>
-        <tr><td>Bring the campaign framework and lead the new-campaign build-out discussion at the Sep 3 GTM Campaign Alignment meeting.</td><td class="who">Dallas</td><td class="st">2026-09-03</td><td>calendar: GTM Campaign Alignment Meeting</td><td class="ev">"If anyone has a campaign framework you are currently working with, please provide to this team so we can be consistent as we bring new campa"</td><td class="st">medium</td></tr>
-        <tr><td>Develop the read-only action extraction agent for the AI enabled PMO goal.</td><td class="who">Dallas</td><td class="st">2026-12-31</td><td>monday: AI enabled PMO 12664120782</td><td class="ev">"Develop an agent that ingests notes, email, calendar, and project records to extract action items with owners and dates, starting read only "</td><td class="st">medium</td></tr>
-        <tr><td>Update the product team&#x27;s percent complete on the Monday AI Initiatives board at least once a month.</td><td class="who">Dallas</td><td class="st">none stated</td><td>otter: AI Champion Role Transition Overview</td><td class="ev">"at the end of the month, just kind of moving the percent complete on the goals because those are rolling up to the company scorecard."</td><td class="st">high</td></tr>
-        <tr><td>Build pre-approved outreach templates with marketing so campaigns can go out without per-piece approval.</td><td class="who">Dallas</td><td class="st">none stated</td><td>otter: AI Projects and Clay Integration Discussion</td><td class="ev">"I&#x27;m just going to create templates for different situations, and once I get approval for the way those look like, then it&#x27;s just going to be"</td><td class="st">medium</td></tr>
-        <tr><td>Build the AI adoption tracking dashboards and technical deliverables for the side quest before year end.</td><td class="who">Dallas</td><td class="st">2026-12-31</td><td>otter: AI Change Management Side Quest Kickoff</td><td class="ev">"Dallas is going to be really our guru on the technical side to build some dashboards and tracking that we can use to then fire or trigger so"</td><td class="st">high</td></tr>
+<!--PMO_ROWS-->
+<tr><td class="id">002</td><td>Update the product team&#x27;s percent complete on the Monday AI Initiatives board at least once a month.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;at the end of the month, just kind of moving the percent complete on the goals because those are rolling up to the company scorecard.&rdquo;</td><td class="st">high</td><td class="v ok">correct</td></tr>
+<tr><td class="id">003</td><td>Prepare the Clay demo Naveen put forward for the all hands.</td><td class="st">2026-09-16 (inferred)</td><td>otter</td><td class="ev">&ldquo;Naveen&#x27;s already raised you guys for a clay demo at all hands.&rdquo;</td><td class="st">medium</td><td class="v ok">correct</td></tr>
+<tr><td class="id">006</td><td>Build pre-approved outreach templates with marketing so campaigns can go out without per-piece approval.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;I&#x27;m just going to create templates for different situations, and once I get approval for the way those look like, then it&#x27;s just going to be quick.&rdquo;</td><td class="st">medium</td><td class="v ok">correct</td></tr>
+<tr><td class="id">013</td><td>Build the AI adoption tracking dashboards and technical deliverables for the side quest before year end.</td><td class="st">2026-12-31</td><td>otter</td><td class="ev">&ldquo;Dallas is going to be really our guru on the technical side to build some dashboards and tracking that we can use to then fire or trigger some of our interventi&rdquo;</td><td class="st">high</td><td class="v ok">correct</td></tr>
+<tr><td class="id">020</td><td>Send every new AI tool request, with the terms of service link and intended use, to Intradiem Contracts for review before finalizing.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;one of y&#x27;all will just send over to Intradium contracts at Intradium the link to it and what we&#x27;re using it for.&rdquo;</td><td class="st">high</td><td class="v ok">correct</td></tr>
+<tr><td class="id">031</td><td>Test the Greenlight desktop app and enhancements and post feedback in the champions channel before the all hands.</td><td class="st">2026-09-16 (inferred)</td><td>otter</td><td class="ev">&ldquo;just start utilizing it and use the our champions chat room to let him know what issues you&#x27;re having, what problems you&#x27;re running into&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">041</td><td>Launch multi-channel sequences to the roughly 300 identified back-office contacts by the all hands.</td><td class="st">2026-09-16 (inferred)</td><td>otter</td><td class="ev">&ldquo;Is it unreasonable to target at least launching a multi-channel sequence for these 300 contacts we have identified by the all hands?&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">043</td><td>Confirm with Naveen how the roughly 2,000 Clay webinar contacts should sync into Salesforce, then run the sync.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;It&#x27;s like 2000 something new people to add and in sync in Salesforce. So I&#x27;m just waiting on my one-on-one with Naveen to see how she how he wants me to do that&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">062</td><td>Review the Parloa materials and help define how the platform integrates with AI agents.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;If you can help us answer this question, that would be great.&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">070</td><td>Have the nine campaigns, including two partner campaigns, running in Lemlist by the all hands.</td><td class="st">2026-09-14 (inferred)</td><td>otter</td><td class="ev">&ldquo;the engine is running in the next two weeks with Leblist for all of these strategies.&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">076</td><td>Run a pilot campaign on 5 to 10 partner pre-pipeline accounts and measure conversion against the 45-day and 25% benchmarks.</td><td class="st">none stated</td><td>otter</td><td class="ev">&ldquo;Let&#x27;s do a prototype, a pilot with them, and to see what we can get as far as numbers and speed perspective.&rdquo;</td><td class="st">high</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">080</td><td>Bring the campaign framework and lead the new-campaign build-out discussion at the Sep 3 GTM Campaign Alignment meeting.</td><td class="st">2026-09-03</td><td>calendar</td><td class="ev">&ldquo;If anyone has a campaign framework you are currently working with, please provide to this team so we can be consistent as we bring new campaign ideas to the tab&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">082</td><td>Complete the overdue required 5Mins courses by the reset due date.</td><td class="st">2026-09-30</td><td>email</td><td class="ev">&ldquo;The due dates have been reset to 9/30.&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">083</td><td>Develop the read-only action extraction agent for the AI enabled PMO goal.</td><td class="st">2026-12-31 (inferred)</td><td>monday</td><td class="ev">&ldquo;Develop an agent that ingests notes, email, calendar, and project records to extract action items with owners and dates, starting read only to prove extraction &rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">084</td><td>Stand up the PM as a builder prototyping program for the product managers this quarter.</td><td class="st">2026-09-30 (inferred)</td><td>monday</td><td class="ev">&ldquo;Establish a program equipping product managers to ship working prototypes with AI assisted development, replacing the written spec as the primary decision artif&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<tr><td class="id">085</td><td>Move sales enablement content from static PPT to interactive HTML this quarter.</td><td class="st">2026-09-30 (inferred)</td><td>monday</td><td class="ev">&ldquo;Transition Intradiem HTML interactive content for Sales enablement from Static PPT content&rdquo;</td><td class="st">medium</td><td class="v na">not yet graded</td></tr>
+<!--/PMO_ROWS-->
       </tbody>
     </table></div>
-    <div class="line">Six of the 85 rows, all owned by Dallas, verbatim from automation/pmo/action_register.csv. Otter speaker labels are generic in several meetings; where a name was inferred the row is medium confidence and the log says so.</div>
+    <div class="line">Verbatim from the register. Page refreshed Aug 31 2026; the daily log carries the same precision line each run.</div>
     <div class="callout">
       <h4>Where the number comes from</h4>
-      <p>20 of 85 rows graded on Aug 31 by Dallas: 19 correct, 1 wrong date, 0 wrong owner, 0 not an action, 0 duplicates. All 14 graded meeting-note rows and all 10 high-confidence rows were correct; the miss was a medium-confidence email row with no date stated. The figure moves as more rows in <b>automation/pmo/validation_queue.csv</b> carry verdicts; the daily log reports it each run.</p>
+      <p>20 rows graded by Dallas: 19 correct, 1 wrong date, 0 wrong owner, 0 not an action, 0 duplicates. Every meeting-note row and every high-confidence row graded so far was correct. The figure moves as more rows in <b>automation/pmo/validation_queue.csv</b> carry verdicts.</p>
     </div>
   </div>
 </section>
@@ -340,7 +366,7 @@ body.present #prog{display:block}
       <li><b>Grading.</b> 20 rows sit at 95%. How many more before the number is trusted, and who grades beyond Dallas, is the decision that gates automation.</li>
       <li><b>Follow-up.</b> Reminders or task creation stay off until the precision figure is known and agreed.</li>
     </ul>
-    <div class="line">Next: grade the remaining 65, carry the precision line to the AI champions standup.</div>
+    <div class="line">Next: grade the remaining rows, carry the precision line to the AI champions standup.</div>
   </div>
 </section>
 

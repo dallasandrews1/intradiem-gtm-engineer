@@ -23,6 +23,14 @@
 .checks .id{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600}
 .checks .how{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;text-align:right}
 .checks li.manual .how{color:var(--orange-600)}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--orange);color:#fff;font-family:var(--ff);font-weight:700;font-size:15px;padding:12px 20px;border-radius:8px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.cta:hover{filter:brightness(1.06)}
+.cta small{font-family:var(--ff-mono);font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.embed{margin-top:18px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--zebra);box-shadow:var(--shadow)}
+.embed iframe{display:block;width:100%;height:720px;border:0;background:#F8F8F8}
+.embed .cap{display:flex;justify-content:space-between;gap:12px;align-items:center;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 14px;border-top:1px solid var(--line)}
+.embed .cap a{color:var(--green-600);font-weight:600}
+.plink{color:var(--green-600);font-weight:700;text-decoration:none}.plink:hover{text-decoration:underline}
 .shot{margin-top:18px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--zebra);box-shadow:var(--shadow)}
 .shot img{display:block;width:100%;height:auto}
 .shot .cap{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding:10px 14px;border-top:1px solid var(--line);background:var(--bg)}
@@ -53,6 +61,7 @@
       <div><span>By</span>Dallas Andrews, AI champion, Product</div>
       <div><span>Worked example</span>Skills Editor PRD v2.0, May 2026</div>
     </div>
+    <a class="cta" id="protoCta" href="prototype/" data-h="5">Open the Skills Editor prototype <small>working screen, self-checks under ?</small></a>
   </div>
 </header>
 
@@ -117,7 +126,7 @@
     <div class="grid c3">
       <div class="card"><div class="tag go">Template</div><h4>Prototype brief</h4><p>Nine sections on one page. Section 1 is the decision the prototype settles; section 6 the checks; section 8 the decision record.</p><p><code>motions/ai_champion_product/Prototype_Brief_Template.md</code></p></div>
       <div class="card"><div class="tag go">Skill</div><h4>pm-prototype</h4><p>Brief or PRD in, working single-file prototype out, with the self-check panel and the source saved beside it. Uses the DS v1 tokens from the Skills Editor PRD unless a PM points at another reference.</p><p><code>~/.claude/skills/pm-prototype/SKILL.md</code></p></div>
-      <div class="card"><div class="tag go">Worked example</div><h4>Skills Editor</h4><p>PRD-ICC-S2-001 v2.0 (SharePoint, engineering Aldus documents, May 2026) rendered as the three-panel editor it describes.</p><p><code>motions/ai_champion_product/prototypes/skills_editor/</code></p></div>
+      <div class="card"><div class="tag go">Worked example</div><h4>Skills Editor</h4><p>PRD-ICC-S2-001 v2.0 (SharePoint, engineering Aldus documents, May 2026) rendered as the three-panel editor it describes.</p><p><code>motions/ai_champion_product/prototypes/skills_editor/</code></p><p><a class="plink" href="prototype/">Open the prototype &rarr;</a></p></div>
     </div>
   </div>
 </section>
@@ -127,6 +136,10 @@
     <div class="eyebrow">Worked example</div>
     <h2>One PRD, rendered as it reads.</h2>
     <p class="lede">The Skills Editor PRD specifies a 256px sidebar, a three-panel editor (roster, dimension tabs, Compare to Template), a save-confirm workflow, and eight acceptance criteria. The prototype implements all of it in one file with no external requests, and tests the criteria on itself.</p>
+    <div class="embed">
+      <iframe id="protoFrame" src="prototype/" title="Skills Editor prototype" loading="lazy"></iframe>
+      <div class="cap"><span>Live prototype. Click an agent, switch the Process / Case / Business Object tabs, press ? for the checks.</span><a id="protoOpen" href="prototype/">Open full screen &rarr;</a></div>
+    </div>
     <ul class="checks">
       <li><span class="id">AC-01</span><span>DS colours: sidebar #F8F8F8, primary buttons #5AB274, active tab underline, no #014637 or #2DB56E in chrome</span><span class="how">computed</span></li>
       <li><span class="id">AC-02</span><span>No emoji in chrome; nav icons are inline SVG</span><span class="how">computed</span></li>
@@ -225,5 +238,8 @@
 </div>
 
 <!--PRESENT-->
+<script>
+(function(){ if(location.protocol==='file:'){ var u='../prototypes/skills_editor/index.html'; ['protoCta','protoOpen'].forEach(function(i){var a=document.getElementById(i); if(a) a.href=u;}); var f=document.getElementById('protoFrame'); if(f) f.src=u; } })();
+</script>
 </body>
 </html>

@@ -74,6 +74,7 @@
   .nav-item.active svg { fill: var(--id-dark-green); }
   .sidebar-foot { padding: 12px 20px; border-top: 1px solid var(--id-border); font-size: 12px; color: var(--id-text2); display: flex; align-items: center; gap: 10px; }
   .sidebar-foot .avatar { width: 28px; height: 28px; }
+  .sidebar-foot.scope { font-size: 11px; line-height: 1.4; color: var(--id-text2); }
 
   .main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
   .topbar {
@@ -378,6 +379,7 @@
       <a class="nav-item"><svg><use href="#i-settings"/></svg>Settings</a>
     </nav>
     <div class="sidebar-foot"><span class="avatar">MG</span><span>Maria Gomez<br>Claims Manager</span></div>
+    <div class="sidebar-foot scope">Prototype scope: the Skills Editor screen only. Other sections are layout from the PRD.</div>
   </aside>
 
   <div class="main">
@@ -1053,6 +1055,10 @@ document.getElementById('rosterList').addEventListener('click', e => {
   if (row) selectAgent(row.dataset.id);
 });
 document.getElementById('saveBtn').addEventListener('click', () => save());
+document.getElementById('nav').addEventListener('click', e => {
+  const a = e.target.closest('.nav-item');
+  if (a && !a.classList.contains('active')) { e.preventDefault(); toast(a.textContent.trim() + ' is not part of this prototype. Scope: the Skills Editor screen.'); }
+});
 document.getElementById('tabs').addEventListener('click', e => {
   const b = e.target.closest('.tab');
   if (!b) return;
