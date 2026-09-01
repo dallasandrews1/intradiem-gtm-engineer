@@ -360,3 +360,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Feedback Links Land On The Thing](feedback-links-land-on-the-thing.md) — Aug 31 2026: a link sent to Naveen or leadership must open the working artifact itself (prototype, live register, usable page), never an explainer page about it; explanation is secondary
+- [Partner Pilot Haresh Frank Aug31](partner-pilot-haresh-frank-aug31.md) — Aug 31 2026: Haresh/Frank asked for a 5-10 account pilot on the $101M SF pre-pipeline (25%+ to 12-min meeting inside 45 days); 3xG Verint whitespace xlsx in inbox; Frank walkthrough Sep 1 13:30 CT; package built Sep 1 (design page live at gtm-partner-pilot.pages.dev, intake run: 76 ranked / 7 held, reply staged)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [Feedback Titles Lead Somewhere](feedback-titles-lead-somewhere.md) — Sep 1 2026: h2s and slide titles read top to bottom as one progression ending on the reader's point; never count-fronted "Ten rows. Seven steps." lines
