@@ -19,7 +19,7 @@ TODAY=$(date +%Y-%m-%d); NOW=$(date +%H:%M)
 LOG="$LOGDIR/sync-work-mac-$TODAY.md"
 STAMP="$LOGDIR/.sync-work-mac-$MODE-last"
 FORCE=0; for a in "$@"; do [ "$a" = "--force" ] && FORCE=1; done
-cat >/dev/null 2>&1 <&0 || true
+# stdin (hook JSON) is intentionally not read: reading it blocks when stdin is a terminal
 
 mkdir -p "$LOGDIR"
 [ -f "$LOG" ] || printf '# sync-work-mac %s\n\n' "$TODAY" > "$LOG"

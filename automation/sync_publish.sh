@@ -24,7 +24,7 @@ NOW=$(date +%H:%M)
 LOG="$LOGDIR/sync-publish-$TODAY.md"
 FORCE=0; HOOK=0
 for a in "$@"; do case "$a" in --force) FORCE=1;; --hook) HOOK=1;; esac; done
-cat >/dev/null 2>&1 <&0 || true   # a hook pipes JSON on stdin; we do not need it
+# stdin (hook JSON) is intentionally not read: reading it blocks when stdin is a terminal
 
 mkdir -p "$LOGDIR"
 [ -f "$LOG" ] || printf '# sync-publish %s\n\n' "$TODAY" > "$LOG"
