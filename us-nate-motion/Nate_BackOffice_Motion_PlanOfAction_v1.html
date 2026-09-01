@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nate × Back Office GTM Motion · Plan of Action v1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blurple-deep:#250D53;
+    --blurple-text:#19063A;
+    --blurple-mid:#501CD2;
+    --creme:#F9F7F6;
+    --lilac-1:#ECEAF1;
+    --lilac-2:#D9D6E5;
+    --lilac-3:#B4ADCA;
+    --seafoam-1:#DBEAEB;
+    --seafoam-2:#B8D6D8;
+    --seafoam-3:#4E6B6D;
+    --peri-1:#F3F5FF;
+    --peri-2:#E1E7FE;
+    --gray:#666666;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Lato',sans-serif;color:var(--blurple-text);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,.eyebrow,.phase-num,.metric-val{font-family:'Outfit',sans-serif;}
+  .wrap{max-width:960px;margin:0 auto;}
+
+  /* COVER */
+  .cover{background:var(--blurple-deep);color:#fff;padding:96px 64px 80px;position:relative;overflow:hidden;}
+  .cover::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--seafoam-2),var(--blurple-mid));}
+  .cover .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--seafoam-2);font-weight:600;margin-bottom:24px;}
+  .cover h1{font-size:52px;font-weight:800;line-height:1.05;letter-spacing:-1px;margin-bottom:20px;}
+  .cover h1 .accent{color:var(--seafoam-2);}
+  .cover .sub{font-size:19px;color:var(--lilac-3);max-width:640px;font-weight:300;}
+  .cover .meta{margin-top:48px;display:flex;gap:40px;flex-wrap:wrap;font-family:'Outfit';font-size:14px;}
+  .cover .meta div span{display:block;color:var(--seafoam-2);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+  .cover .meta div{color:#fff;font-weight:500;}
+
+  /* SECTIONS */
+  section{padding:56px 64px;}
+  .eyebrow{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blurple-mid);font-weight:700;margin-bottom:12px;}
+  h2{font-size:30px;font-weight:700;color:var(--blurple-deep);letter-spacing:-0.5px;margin-bottom:8px;}
+  h2 + .lede{font-size:17px;color:var(--gray);margin-bottom:28px;max-width:720px;}
+  h3{font-size:20px;font-weight:600;color:var(--blurple-deep);margin:28px 0 12px;}
+  p{margin-bottom:14px;}
+  .divider{height:1px;background:var(--lilac-2);margin:0 64px;}
+
+  /* TL;DR CARD */
+  .tldr{background:var(--peri-1);border-left:5px solid var(--blurple-mid);border-radius:0 12px 12px 0;padding:28px 32px;margin-bottom:8px;}
+  .tldr h3{margin-top:0;}
+  .tldr ul{list-style:none;}
+  .tldr li{padding:8px 0 8px 28px;position:relative;font-size:15.5px;}
+  .tldr li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;border-radius:2px;background:var(--blurple-mid);}
+  .tldr li b{color:var(--blurple-deep);}
+
+  /* CARDS GRID */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px;}
+  .card{background:#fff;border:1px solid var(--lilac-2);border-radius:12px;padding:24px;}
+  .card.full{grid-column:1/-1;}
+  .card .tag{display:inline-block;font-family:'Outfit';font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:12px;}
+  .tag.go{background:var(--seafoam-1);color:var(--seafoam-3);}
+  .tag.now{background:#FDECEC;color:#B23B3B;}
+  .tag.gem{background:var(--peri-2);color:var(--blurple-mid);}
+  .tag.hold{background:var(--lilac-1);color:var(--lilac-3);}
+  .card h4{font-size:18px;font-weight:700;color:var(--blurple-deep);margin-bottom:8px;}
+  .card p{font-size:14.5px;color:var(--gray);margin-bottom:0;}
+  .card p b{color:var(--blurple-text);}
+
+  /* TABLES */
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;border-radius:10px;overflow:hidden;}
+  th{background:var(--blurple-deep);color:#fff;font-family:'Outfit';font-weight:600;text-align:left;padding:13px 16px;font-size:13px;letter-spacing:0.5px;}
+  td{padding:13px 16px;vertical-align:top;border-bottom:1px solid var(--lilac-1);}
+  tr:nth-child(even) td{background:var(--peri-1);}
+  tr:nth-child(odd) td{background:#fff;}
+  td b{color:var(--blurple-deep);}
+  .seat{color:var(--blurple-mid);font-weight:700;}
+
+  /* PHASES */
+  .phase{display:flex;gap:24px;margin-bottom:22px;align-items:flex-start;}
+  .phase-num{flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--blurple-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;}
+  .phase.p1 .phase-num{background:var(--blurple-mid);}
+  .phase.p2 .phase-num{background:var(--seafoam-3);}
+  .phase.p3 .phase-num{background:var(--lilac-3);}
+  .phase-body{flex:1;background:#fff;border:1px solid var(--lilac-2);border-radius:12px;padding:22px 26px;}
+  .phase-body h4{font-size:18px;font-weight:700;color:var(--blurple-deep);margin-bottom:2px;}
+  .phase-body .when{font-family:'Outfit';font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--seafoam-3);font-weight:600;margin-bottom:12px;}
+  .phase-body ul{list-style:none;}
+  .phase-body li{padding:5px 0 5px 22px;position:relative;font-size:14.5px;}
+  .phase-body li::before{content:"→";position:absolute;left:0;color:var(--blurple-mid);font-weight:700;}
+  .owner{display:inline-block;font-size:11px;font-family:'Outfit';font-weight:700;padding:2px 8px;border-radius:4px;margin-left:6px;vertical-align:middle;}
+  .owner.d{background:var(--blurple-deep);color:#fff;}
+  .owner.n{background:var(--seafoam-2);color:var(--seafoam-3);}
+  .owner.both{background:var(--blurple-mid);color:#fff;}
+
+  /* SPRINT */
+  .sprint{background:var(--blurple-deep);color:#fff;border-radius:14px;padding:32px;margin-top:8px;}
+  .sprint h3{color:#fff;margin-top:0;}
+  .sprint-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px;}
+  .day{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:14px 12px;}
+  .day .d{font-family:'Outfit';font-size:12px;letter-spacing:1px;color:var(--seafoam-2);font-weight:700;margin-bottom:8px;}
+  .day .a{font-size:12.5px;color:var(--lilac-2);line-height:1.5;}
+  .day .a b{color:#fff;font-weight:600;}
+  .sprint .note{margin-top:18px;font-size:13.5px;color:var(--lilac-3);border-top:1px solid rgba(255,255,255,0.12);padding-top:16px;}
+  .sprint .note b{color:var(--seafoam-2);}
+
+  /* CALLOUT */
+  .callout{background:#FFF9F0;border:1px solid #F0D9A8;border-left:5px solid #D99B2B;border-radius:0 12px 12px 0;padding:24px 28px;margin:8px 0;}
+  .callout h4{color:#8A5A12;font-size:17px;margin-bottom:8px;font-family:'Outfit';font-weight:700;}
+  .callout p{font-size:14.5px;color:#6B4A18;margin-bottom:0;}
+  .callout p b{color:#8A5A12;}
+
+  .gate{background:var(--seafoam-1);border-left:5px solid var(--seafoam-3);border-radius:0 12px 12px 0;padding:24px 28px;margin:16px 0;}
+  .gate h4{color:var(--seafoam-3);font-family:'Outfit';font-weight:700;font-size:17px;margin-bottom:8px;}
+  .gate p{font-size:14.5px;color:#2F4445;margin-bottom:0;}
+  .gate p b{color:var(--seafoam-3);}
+
+  /* OPS row */
+  .ops{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px;}
+  .ops .o{background:#fff;border:1px solid var(--lilac-2);border-radius:12px;padding:20px;text-align:left;}
+  .ops .o .icon{font-family:'Outfit';font-weight:800;font-size:15px;color:#fff;background:var(--blurple-mid);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+  .ops .o h4{font-size:15px;color:var(--blurple-deep);margin-bottom:6px;}
+  .ops .o p{font-size:13px;color:var(--gray);margin:0;}
+
+  /* QUOTE */
+  .quote{background:#fff;border:1px solid var(--lilac-2);border-radius:12px;padding:24px 28px;margin:14px 0;font-size:15.5px;}
+  .quote .who{font-family:'Outfit';font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--blurple-mid);font-weight:700;margin-top:10px;}
+
+  /* FOOTER */
+  footer{background:var(--blurple-deep);color:var(--lilac-3);text-align:center;padding:40px;font-family:'Outfit';font-size:13px;}
+  footer .accent{color:var(--seafoam-2);}
+  footer b{color:#fff;}
+
+  .metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:12px;overflow:hidden;margin:8px 0 4px;}
+  .metric-row .m{padding:22px 20px;text-align:center;}
+  .metric-row .m:nth-child(1){background:var(--blurple-deep);}
+  .metric-row .m:nth-child(2){background:#2E1560;}
+  .metric-row .m:nth-child(3){background:#37196E;}
+  .metric-row .m:nth-child(4){background:#401E7C;}
+  .metric-row .m .metric-val{font-size:30px;font-weight:800;color:#fff;line-height:1;}
+  .metric-row .m .metric-lbl{font-size:12px;color:var(--seafoam-2);margin-top:8px;letter-spacing:0.5px;}
+  em.flag{color:#B23B3B;font-style:normal;font-weight:700;font-size:12px;background:#FDECEC;padding:1px 6px;border-radius:4px;}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="wrap">
+    <div class="eyebrow">Internal Operating Plan · Dallas × Nate · GTM Engine</div>
+    <h1>The <span class="accent">Back Office</span> Motion.<br>Plan of Action.</h1>
+    <p class="sub">The hardest pitch in the bag, turned into a lane nobody else is running. Two lanes split cleanly, one wedge built from what Nate already knows, and a 10-day blitz that makes the prospect actually consider the ask. Dallas runs the strings; Nate presses send.</p>
+    <div class="meta">
+      <div><span>Prepared for</span>Nathan Belfield (US BDR)</div>
+      <div><span>By</span>Dallas Andrews (GTM Engineer)</div>
+      <div><span>Date</span>July 30, 2026</div>
+      <div><span>Sibling of</span>Stars US motion · Jack Europe motion</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="tldr">
+    <h3>The play, in five lines</h3>
+    <ul>
+      <li><b>Split first, send second.</b> The back-office master list gets split into current customers and true prospects before anything moves. Customers route to Savannah and the AM lane. Prospects are Nate's blitz lane. A current customer never gets a cold touch.</li>
+      <li><b>The wedge is Nate's own read:</b> homegrown trackers only know what the agent tells them, and the WFM throw-ins alert after the fact. We sell the interval: the back office runs on yesterday's report, and the cost lives in what happens between reports.</li>
+      <li><b>One motion shape:</b> the full buying committee (4 seats, 4 to 8 people per account), worked in a 10-day multi-channel blitz. Email, LinkedIn, and a call land on day one. Value drop on day 6. A lighthearted never-breakup at the end.</li>
+      <li><b>Claims discipline:</b> no Intradiem back-office number exists in approved form, and that's fine. Humana's contact-center story (on the record) plus the prospect's own numbers carry the copy.</li>
+      <li><b>Live fast:</b> staged Thursday, first sends in the Sunday-evening window. Keegan's two accounts run as their own separate sprints on whatever problem fits those companies best; this motion feeds its own accounts.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The situation, read straight</div>
+  <h2>What this actually is</h2>
+  <p class="lede">Back office is the pitch Nate called the hardest to land. That's the reason to run it, not the reason to skip it: a lane this hard to open is a lane with no crowd in it.</p>
+  <p>Nate named the two walls on today's call. First, most target companies track back-office productivity with a <b>homegrown system they built themselves</b>, so it's cheap, it's theirs, and they're content with it. Second, the big front-office WFM vendors now <b>throw in a back-office module for free</b>, so "we already get that with Verint" ends the conversation before it starts. Both walls are real. Both have the same crack in them, and Nate handed us the chisel: those systems are either fed by the agent or they report after the fact. Neither one acts while the work is happening.</p>
+  <p>That crack is exactly where the product lives. Intradiem watches live queues and acts in the moment. So the motion's job is not to argue we're better, which they already assume and don't care about. The job is to make the <b>cost of the gap</b> feel real enough that a meeting becomes the prospect's own idea. Meetings landed now also stack toward the Back Office Optimizer GA window in September, so this lane pays twice.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The fork</div>
+  <h2>Two lanes, split before anything sends</h2>
+  <p class="lede">Everything built so far in Clay for back office lives in one workbook: the 101-account universe, the top-15 tier-one slice, the four persona pillars from Mary Ann's guidance, and the master contact list that includes Savannah's maintained set. Step one is splitting it into the two lanes it actually contains.</p>
+  <table>
+    <thead><tr><th style="width:22%">Lane</th><th>Who runs it</th><th>How it works</th></tr></thead>
+    <tbody>
+      <tr><td><b>Install base</b><br>(current customers)</td><td>Savannah + the AMs, marketing-led. Nate joins only if they pull him in.</td><td>Warm expansion inside accounts whose front office already runs Intradiem. Savannah's contact list is customer accounts by definition. Every send here clears the account owner first. No cold sequences, ever.</td></tr>
+      <tr><td><b>Prospect blitz</b><br>(non-customers)</td><td><b>Nate</b>, on the daily brief from Dallas.</td><td>The non-customer slice of the master list plus net-new back-office-heavy accounts sourced in Clay. Full-committee 10-day blitzes, two accounts per sprint. This is the lane this document is about.</td></tr>
+    </tbody>
+  </table>
+  <div class="gate">
+    <h4>Gate: no cold touch until the split is verified on real rows</h4>
+    <p>The master list mixes sources, and Dallas couldn't say from memory today which rows are customers. That's the exact trap the Stars motion caught when a naive pull nearly leaked current customers into a cold campaign, and the Clay gate column stores its flag as text, not a true boolean, so only a <b>real-row check on the morning of first send</b> counts as proof. Dallas runs the split and the check; Nate holds fire until the brief says go.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The message</div>
+  <h2>The wedge, built from what Nate already knows</h2>
+  <p class="lede">Three incumbent shapes, one thesis. We never argue "we're better." We name the gap their current setup can't close and let the cost of it do the selling.</p>
+  <div class="grid">
+    <div class="card">
+      <span class="tag now">Wall one</span>
+      <h4>The homegrown tracker</h4>
+      <p><b>Their system knows only what the agent tells it.</b> Log in, the clock starts. Log out, it stops. Twenty-four tasks that should take thirty minutes stretch to sixty or ninety, and the tracker faithfully records whatever pace the agent set. KPIs get calibrated with a stopwatch and a clipboard. The wedge: they built a system that measures effort as reported, not work as it happens, and the difference between those two is paid for every single day.</p>
+    </div>
+    <div class="card">
+      <span class="tag now">Wall two</span>
+      <h4>The WFM throw-in</h4>
+      <p><b>Free, and it costs them the interval.</b> Verint and NICE bundle back-office modules with front-office WFM, so the price objection writes itself. But those tools alert after the fact: fifteen minutes, thirty minutes, end of day, sometimes the next day. The wedge: a report about a backlog is not the same as an action taken while the backlog is forming. The free tool tells you what went wrong yesterday. Nothing in it acts today.</p>
+    </div>
+    <div class="card full">
+      <span class="tag gem">The thesis every message serves</span>
+      <h4>The back office runs on yesterday's report. The cost lives in what happens between reports.</h4>
+      <p>Every email, voicemail, and LinkedIn note in this motion is a variation of that one idea, told in the language of the seat reading it. The claims VP hears it as the backlog that regrows every Monday. The workforce owner hears it as utilization they can't prove. The COO hears it as capacity they're already paying for and can't reach. One idea, four dialects. And when the "big brother" worry surfaces, it surfaces in discovery, not on the phone, so the scripts don't defend against it cold; the meeting deck does, by framing everything as capacity and queue health, never surveillance.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">Who we work</div>
+  <h2>The buying committee, four seats deep</h2>
+  <p class="lede">Mary Ann's verdict on the first back-office pull reshaped this: "right operations people, not the right people making the decisions on the tools." So every account gets all four seats, from the people strategizing about the problem to the people in the fire, 4 to 8 people total.</p>
+  <table>
+    <thead><tr><th style="width:26%">Seat</th><th>Who they are</th><th style="width:34%">What they hear from us</th></tr></thead>
+    <tbody>
+      <tr><td><span class="seat">In the fire</span><br><b>Ops leader</b></td><td>VP/Director Claims, Claims Operations, Appeals &amp; Grievances, Payment Ops, Shared Services. Director and above, hard gate.</td><td>The Monday backlog, aging queues, overtime plugging surges, rework loops. Their daily reality, named specifically.</td></tr>
+      <tr><td><span class="seat">Tool owner</span><br><b>Workforce / product seat</b></td><td>Director+ Workforce Management, Workforce Planning, Real-Time Operations, Back Office Workforce.</td><td>Utilization they can't prove, the real-time discipline the front office has that the back office doesn't.</td></tr>
+      <tr><td><span class="seat">Tool decision</span><br><b>Claims technology</b></td><td>Director+ Claims Technology, Claims Systems, Operations Technology. Distinct from generic IT.</td><td>Sits alongside what's deployed, touches nothing in core systems, not RPA and doesn't replace the work.</td></tr>
+      <tr><td><span class="seat">Strategizing at the top</span><br><b>Exec / COO tier</b></td><td>COO, SVP/EVP Operations. Enters day 2, after the floor seats are already warm.</td><td>Capacity without headcount. The idle time already on the payroll. What the contact center proved that the back office never got.</td></tr>
+    </tbody>
+  </table>
+  <p>Committee size flexes 4 to 8: a big payer might carry two ops leaders (claims plus payment ops) and two tech seats. Every added seat earns its place by owning something; nobody gets added to hit a number.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">How every account gets worked</div>
+  <h2>The 10-day blitz</h2>
+  <p class="lede">Exactly the forcing function laid out on today's call: everywhere at once, calculated, impossible to ignore politely. Any reply stops that person's sequence on the spot and routes to reply handling. By the end of a sprint we have a meeting or an answer; if a whole account produces zero contact, either we picked the wrong problem or deliverability is broken, and we'll know which.</p>
+  <div class="sprint">
+    <h3>Anatomy of a sprint (per contact, from their entry day)</h3>
+    <div class="sprint-grid">
+      <div class="day"><div class="d">DAY 1</div><div class="a"><b>Email 1</b> + <b>LinkedIn connect</b> the same moment + <b>call</b> → voicemail: "no need to call back, the email has it."</div></div>
+      <div class="day"><div class="d">DAY 2</div><div class="a"><b>LinkedIn note:</b> "shot you a note on email, maybe LinkedIn's better" + one sentence + worth 15 min? Execs enter today.</div></div>
+      <div class="day"><div class="d">DAY 3</div><div class="a"><b>Email 2.</b> A genuinely new angle, never a "just bumping this."</div></div>
+      <div class="day"><div class="d">DAY 4</div><div class="a"><b>Call 2</b> → shorter voicemail. Add value, get out.</div></div>
+      <div class="day"><div class="d">DAY 5</div><div class="a"><b>Email 3.</b> Short, direct, "like the subject says." <b>Expect replies by now.</b></div></div>
+      <div class="day"><div class="d">DAY 6</div><div class="a"><b>Value drop.</b> One-pager relevant to their problem. "Saw this, thought it'd be useful." No ask.</div></div>
+      <div class="day"><div class="d">DAY 7</div><div class="a"><b>Call 3.</b> Reference the one-pager if it was opened.</div></div>
+      <div class="day"><div class="d">DAY 8</div><div class="a"><b>Call 4.</b> Last live-voice attempt of the sprint.</div></div>
+      <div class="day"><div class="d">DAY 9</div><div class="a"><b>Breathing room.</b> Catch-up day for late entrants and replies in flight.</div></div>
+      <div class="day"><div class="d">DAY 10</div><div class="a"><b>The never-breakup.</b> Lighthearted: "maybe wrong time. Here's what we do at a high level, and who for. I'll back off for now."</div></div>
+    </div>
+    <p class="note"><b>Be everywhere at once.</b> Nobody remembers touch one by touch two; the sequence works because it stacks. Until they're a customer we never actually break up, we just get lighthearted about backing off. <b>Calls are bullets, not scripts.</b> Nate said it himself: give him the talking points and it turns into a conversation. That's the design.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">Channels and the guardrails</div>
+  <h2>Multi-channel, deliverability-safe</h2>
+  <p class="lede">Blitz sends go manually from Nate's own inbox, so the Clay campaign cap stays untouched. Timing is a weapon: C-suite inboxes are read on the phone, off-hours.</p>
+  <table>
+    <thead><tr><th style="width:20%">Channel</th><th>Role</th><th style="width:32%">Guardrail</th></tr></thead>
+    <tbody>
+      <tr><td><b>Email</b></td><td>The spine of the record. Short enough to read on a phone without scrolling. Every message account-specific and seat-specific.</td><td>Manual from Nate's inbox. Keep total cold sends near 15 a day while the mailbox finishes warming; the Clay 20/day cap stays with the four running campaigns.</td></tr>
+      <tr><td><b>LinkedIn</b></td><td>Connect on day 1, message on day 2. Execs surprisingly accept, and an accepted connect changes the play: a DM to a connection is a different message than an email.</td><td>The moment anyone connects back, flag it in the channel; Dallas reroutes that contact's next touch same day.</td></tr>
+      <tr><td><b>Phone</b></td><td>Core, four attempts per sprint. Voicemail 1 points at the email: "no need to call back, the email has it."</td><td>Bullets, not verbatim. Record calls (Otter free tier works) so transcripts feed the account brain and sharpen the next brief.</td></tr>
+      <tr><td><b>Off-hours sends</b></td><td>Sunday 8:30 pm is a first-class send window, not a fallback. Execs read from the couch what they'd never see at 10 am Tuesday.</td><td>Day-1 emails for a new sprint can launch Sunday evening; the brief marks which sends are timed.</td></tr>
+    </tbody>
+  </table>
+  <div class="callout">
+    <h4>Subjects and send hours vary on purpose</h4>
+    <p>Four to eight similar emails hitting one corporate domain in a day looks like a blast to a spam filter and to an IT team. So no two contacts at an account ever get the same subject line, send hours stagger through the day, and the exec tier enters on day 2 after the floor seats are already in motion. Same story inside the account, never the same email.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The operating system</div>
+  <h2>How we stay organized from day one</h2>
+  <p class="lede">Mirrors the Jack setup exactly, so the two motions stay comparable and everything has one home.</p>
+  <div class="ops">
+    <div class="o"><div class="icon">#</div><h4>Slack channel</h4><p>Dedicated Dallas × Nate channel. All motion talk funnels here so anyone curious can self-serve the context.</p></div>
+    <div class="o"><div class="icon">☀</div><h4>The daily brief</h4><p>Every morning: who, what channel, exact copy. Up on screen, copy, paste, send. About an hour, 90 minutes max.</p></div>
+    <div class="o"><div class="icon">▦</div><h4>Account brain</h4><p>One Google Doc per account: the why, the committee, every insight from calls. Otter transcripts land here.</p></div>
+    <div class="o"><div class="icon">★</div><h4>Swipe file</h4><p>Every message that gets a reply, kept. The motion learns; nothing that works gets reinvented.</p></div>
+  </div>
+  <h3>The feedback loop is the point</h3>
+  <p>Nate is the knowledge expert in this lane; Dallas is guessing at industry language until corrected. Call scripts especially: beat them up, say what's off, and the fix is in the next morning's brief. When a prospect replies with pushback, the objection goes into the channel and comes back as a drafted response the same day. Every daily report Nate reacts to makes the next one sharper.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The sequence of moves</div>
+  <h2>Plan of action</h2>
+  <p class="lede">Ordered so nothing lands before its prerequisite. Owners marked: <span class="owner d">D</span> Dallas, <span class="owner n">N</span> Nate, <span class="owner both">B</span> both.</p>
+
+  <div class="phase">
+    <div class="phase-num">0</div>
+    <div class="phase-body">
+      <h4>Split &amp; stage</h4>
+      <div class="when">Today and Thursday · nothing sends until this is done</div>
+      <ul>
+        <li>Split the back-office master list into current customers vs. true prospects in Clay; route the customer slice to Savannah and the AM lane. <span class="owner d">D</span></li>
+        <li>Pick the first two blitz accounts from the prospect slice and map their four-seat committees. <span class="owner d">D</span></li>
+        <li>Run the messaging Q&amp;A: Dallas sends the question list, Nate marks up what's off in the industry language. <span class="owner both">B</span></li>
+        <li>Stand up the Slack channel, the account-brain docs, and the scoreboard. <span class="owner d">D</span></li>
+        <li>Set up call recording (Otter free tier is enough for transcripts). <span class="owner n">N</span></li>
+        <li>Get Keegan's top two accounts and tell him it's a Dallas-engineered play on his book; those sprints run separately from this motion. <span class="owner n">N</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="phase p1">
+    <div class="phase-num">1</div>
+    <div class="phase-body">
+      <h4>First blitz</h4>
+      <div class="when">Sunday evening launch · sprint runs two weeks</div>
+      <ul>
+        <li>Morning-of real-row customer-exclusion check on the sprint contacts. Green or nothing sends. <span class="owner d">D</span></li>
+        <li>Day-1 emails go out in the Sunday 8:30 pm window; LinkedIn connects and first calls Monday morning off the brief. <span class="owner n">N</span></li>
+        <li>Daily brief lands every morning; every touch logged the day it happens; every reply routed before the next scheduled touch. <span class="owner both">B</span></li>
+        <li>Day-6 value drop: the homegrown-tracker one-pager, built and cleared through the claims gate before the sprint starts. <span class="owner d">D</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="phase p2">
+    <div class="phase-num">2</div>
+    <div class="phase-body">
+      <h4>Learn and reload</h4>
+      <div class="when">End of each sprint</div>
+      <ul>
+        <li>Sprint retro in the channel: what got replies, what got silence, which seat moved first. Winners into the swipe file. <span class="owner both">B</span></li>
+        <li>Two new accounts enter as each sprint closes; Clay sources net-new back-office-heavy prospects to keep the lane fed. <span class="owner d">D</span></li>
+        <li>First meetings become content: one-pagers, a quotable from the room, nurture material that turns outbound into inbound. <span class="owner d">D</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="phase p3">
+    <div class="phase-num">3</div>
+    <div class="phase-body">
+      <h4>Scale &amp; automate</h4>
+      <div class="when">As tooling lands</div>
+      <ul>
+        <li>Move the proven blitz into Lemlist once the enterprise seats land; the manual proof is the business case for the buy. <span class="owner d">D</span></li>
+        <li>Stamp back-office as a reusable motion so the next vertical launches in minutes, not weeks. <span class="owner d">D</span></li>
+        <li>September: Back Office Optimizer GA. The pipeline this motion builds is the launch's running start. <span class="owner both">B</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The claims line</div>
+  <h2>What we can and cannot say</h2>
+  <div class="gate">
+    <h4>The hard law of this motion: no Intradiem back-office number exists in approved form</h4>
+    <p>The public-site figures (returns per dollar, payback windows, productivity lifts) are <b>do-not-send</b> until they clear the Value Repository. What ships: <b>Humana, named and on the record</b> (7X ROI five years in, 2.7M automated actions in 2025, roughly 2 hours of capacity per agent per month), always framed as what the contact-center side proved, never as a back-office result, healthcare targets only. Plus the prospect's <b>own</b> public numbers, attributed and dated. When neither exists, the qualitative frame carries the message, and it's strong enough to.</p>
+  </div>
+  <div class="callout">
+    <h4>One entity trap to check before sprint one</h4>
+    <p>Books of business change hands. An account that reads as a clean prospect at the parent level can carry an acquired unit with an existing vendor relationship, and the reverse. Every sprint account gets an entity check (parent, subsidiaries, recent acquisitions) alongside the customer-exclusion check, same as the Canadian-parent lesson from the BMO work.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">What good looks like</div>
+  <h2>Success, measured honestly</h2>
+  <div class="metric-row">
+    <div class="m"><div class="metric-val">Replies</div><div class="metric-lbl">The leading signal. A sharp "not now" counts.</div></div>
+    <div class="m"><div class="metric-val">Meetings</div><div class="metric-lbl">A meeting or a clear answer per contact, per sprint</div></div>
+    <div class="m"><div class="metric-val">The brain</div><div class="metric-lbl">Every sprint leaves the account doc smarter</div></div>
+    <div class="m"><div class="metric-val">Sept GA</div><div class="metric-lbl">Pipeline waiting when Back Office Optimizer ships</div></div>
+  </div>
+  <p style="margin-top:20px;">The sprint structure means we never wonder if it's working. Ten days in, every contact has either replied, met, or gone silent through eleven touches, and silence at that density is data: wrong problem, or broken deliverability, and we check deliverability first. Meanwhile every call transcript, every objection, and every reply makes the messaging sharper, which is how a manual motion earns the right to become an automated one.</p>
+</section>
+
+</div>
+
+<footer>
+  <b>Nate × Back Office GTM Motion</b> &nbsp;·&nbsp; Plan of Action v1 &nbsp;·&nbsp; <span class="accent">Dallas runs the strings, Nate presses send</span><br>
+  Internal operating document &nbsp;·&nbsp; July 30, 2026
+</footer>
+
+</body>
+</html>

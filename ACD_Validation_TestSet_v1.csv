@@ -1,0 +1,40 @@
+account_name,known_acd_canonical,known_acd_raw,industry
+Royal Bank of Canada (RBC),Genesys,Genesys Pure Engage,Banking
+The Travelers Companies,Genesys,Genesys,Insurance
+SCAN Health Plan,Genesys,Genesys Cloud,Insurance
+Amica Mutual,Genesys,Genesys Cloud,Home & Auto Insurance
+Baylor Scott & White Health,Genesys,Genesys Cloud,Healthcare Provider
+Kaiser Permanente (KPIT),Genesys,Genesys PAPI,Healthcare Provider
+Kaiser NCal,Genesys,Genesys PAPI,Healthcare Provider
+Kaiser MAS Clinical,Genesys,Genesys PAPI,Healthcare Provider
+Kaiser NW Clinical,Genesys,Genesys PAPI,Healthcare Provider
+Kaiser CO Clinical,Genesys,Genesys PAPI,Healthcare Provider
+Kaiser SCal Clinical,Genesys,Genesys PAPI,Healthcare Provider
+Kaiser MSCC,Genesys,Genesys PAPI,Healthcare Provider
+Auto & General Insurance Company,Avaya,Avaya PAPI,Insurance
+Foundever (Sitel),Avaya,Avaya PAPI,Outsourcer
+The Home Depot,Avaya,Avaya PAPI,Retail
+Aetna Provider Services,Avaya,Avaya PAPI,Healthcare Insurance
+CVS Health,Avaya,Avaya PAPI,Healthcare Insurance
+UnitedHealth Group (UHG),Avaya,Avaya,Healthcare Insurance
+ADT,Avaya,Avaya PAPI,Other
+Commonwealth Edison Company,Avaya,Avaya PAPI,Utilities
+British Gas,Amazon Connect,Amazon Connect ACD,Utilities
+Virgin Media O2 (UK),Amazon Connect,Amazon Connect ACD,Telco/Cable
+Capita,Amazon Connect,Amazon Connect ACD,Technology
+Goldman Sachs,Amazon Connect,Amazon Connect ACD,Fin Services
+US Bancorp,Amazon Connect,Amazon Connect ACD,Banking
+The Northwestern Mutual Life Insurance Company,Five9,Five9s,Fin Services
+Wells Fargo (Five9),Five9,Five9s,Div Financial Services
+CVS Health Retail,Five9,Five9s,Healthcare Insurance
+Amazon,Five9,Five9s,Retail
+Illumifin,Five9,Five9,Div Financial Services
+Health Care Service Corporation,Cisco,Cisco PAPI,Healthcare Insurance
+McKesson Medical Surgical,Cisco,Cisco PAPI,Healthcare Provider
+McKesson,Cisco,Cisco PAPI,Healthcare Provider
+Cleveland Clinic,Cisco,Cisco PAPI,Healthcare Provider
+Farmers Insurance,Cisco,Cisco PAPI,Insurance
+Snap Finance LLC,NICE (inContact),InContact,Fin Services
+AccorHotels,NICE (inContact),InContact,Travel
+VitalityHealth,Aspect,Aspect Via,Healthcare Insurance
+Wells Fargo (Alvaria),Aspect,Aspect UIP PAPI,Div Financial Services

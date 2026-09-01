@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Ratings Campaign — Live Beta (Jul 21, 2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist2:#E7EEE3;
+    --line:#E2E7DD; --line2:#D4DCCE; --gold:#E0A23B; --orange:#FE5000;
+    --ok:#1F7340; --warn:#B5751A; --neutral:#7A877E;
+    --shadow:0 1px 2px rgba(20,40,25,.04), 0 12px 34px rgba(20,40,25,.07);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"DM Sans",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:48px 40px 64px;}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 10px;}
+  h1{font-family:"Playfair Display",serif;font-weight:800;color:var(--forest);
+    font-size:34px;line-height:1.12;margin:0 0 10px;}
+  .sub{font-size:16px;color:var(--ink-soft);max-width:660px;margin:0 0 6px;}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--dim);margin:14px 0 0;}
+  h2{font-family:"Playfair Display",serif;font-weight:700;color:var(--forest);
+    font-size:21px;margin:0;}
+  .sec{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);}
+  .sechead{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+  .chip{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:6px;
+    border:1px solid transparent;white-space:nowrap;}
+  .chip.ok{color:#fff;background:var(--ok);}
+  .chip.live{color:#fff;background:var(--orange);}
+  .chip.wait{color:var(--ink-soft);background:var(--mist2);border-color:var(--line2);}
+  .lead{font-size:14.5px;color:var(--ink-soft);margin:8px 0 16px;}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;box-shadow:var(--shadow);}
+  .stat .k{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:0 0 8px;}
+  .stat .v{font-family:"Playfair Display",serif;font-weight:800;color:var(--forest);
+    font-size:30px;line-height:1;}
+  .stat .d{font-size:12.5px;color:var(--ink-soft);margin-top:7px;}
+  .stat.spark{border-left:4px solid var(--orange);}
+  .stat.spark .v{color:var(--orange);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;box-shadow:var(--shadow);margin-bottom:14px;}
+  .card.hero{border-color:var(--green-bright);border-left:4px solid var(--green-bright);}
+  .card h3{margin:0 0 4px;font-size:16px;color:var(--forest);font-weight:700;}
+  .card .src{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);margin:2px 0 12px;}
+  ul{margin:8px 0 0;padding-left:18px;}
+  li{margin:5px 0;font-size:14px;}
+  li b{color:var(--ink);}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .owner{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--green);
+    font-weight:600;margin-top:10px;display:block;}
+  .note{background:var(--mist);border:1px solid var(--line2);border-radius:12px;
+    padding:16px 20px;font-size:13.5px;color:var(--ink-soft);margin-top:14px;}
+  .note b{color:var(--forest);}
+  .foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--dim);}
+  @media(max-width:680px){.stats,.grid{grid-template-columns:1fr;}.wrap{padding:32px 22px;}}
+  .brandbar{display:flex;align-items:center;justify-content:space-between;
+    margin:0 0 30px;padding-bottom:22px;border-bottom:2px solid var(--forest);}
+  .brandbar .logo{height:32px;width:auto;display:block;}
+  .brandbar .kicker{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--dim);}
+  @media print{body{background:#fff;}.card,.stat,.note{box-shadow:none;}.wrap{padding:8px 0;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brandbar">
+    <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="187" height="46" viewBox="0 0 187 46" fill="none" role="img" aria-label="Intradiem">
+      <path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+      <path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+      <path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+      <path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+      <path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="#014637"/>
+      <path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="#014637"/>
+    </svg>
+    <span class="kicker">GTM Engineering</span>
+  </div>
+
+  <p class="eyebrow">Star Ratings Campaign · Live Beta</p>
+  <h1>The Star Ratings outbound engine is live and in-market</h1>
+  <p class="sub">Dallas built the full outbound motion in Clay in two days. The first waves are sending now. Here is the early read on volume, the first replies, and how it scales.</p>
+  <p class="meta">Prepared by Dallas Andrews · GTM Engineering · Jul 21, 2026 · Star Ratings beta, first week in-market</p>
+
+  <!-- SNAPSHOT -->
+  <div class="sec">
+    <div class="sechead"><span class="chip live">Live beta</span><h2>Where it stands</h2></div>
+    <p class="lead">Everything below is live-tool data from Clay as of today. Realized outcomes (meetings, pipeline) start logging as these first threads convert.</p>
+    <div class="stats">
+      <div class="stat spark">
+        <p class="k">Build time</p>
+        <div class="v">2 days</div>
+        <div class="d">Built end to end in Clay</div>
+      </div>
+      <div class="stat">
+        <p class="k">Campaigns live</p>
+        <div class="v">3</div>
+        <div class="d">Persona waves sending</div>
+      </div>
+      <div class="stat">
+        <p class="k">Leads in flight</p>
+        <div class="v">41</div>
+        <div class="d">Across the three campaigns</div>
+      </div>
+      <div class="stat">
+        <p class="k">Replies</p>
+        <div class="v">4</div>
+        <div class="d">One a referral, three out-of-office</div>
+      </div>
+      <div class="stat">
+        <p class="k">Meetings booked</p>
+        <div class="v">0</div>
+        <div class="d">Small sample, reading it as directional</div>
+      </div>
+      <div class="stat">
+        <p class="k">Clay spend</p>
+        <div class="v">~$59</div>
+        <div class="d">About 1% of the trial budget</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EARLY READ -->
+  <div class="sec">
+    <div class="sechead"><span class="chip ok">Early signal</span><h2>The first replies</h2></div>
+    <p class="lead">Four replies so far. Three were out-of-office auto-replies. The fourth is the one that matters.</p>
+    <div class="card hero">
+      <h3>A referral straight to the buyer we want</h3>
+      <p class="src">Star Ratings motion · inbound reply, first week</p>
+      <ul>
+        <li>One reply is a <b>referral into a plan's Stars &amp; CAHPS manager</b>, which is exactly the persona this motion is built to reach.</li>
+        <li>The other three are out-of-office auto-replies, with warm follow-ups queued for when the contacts return.</li>
+        <li>No meetings booked yet. At 41 sends this is a small sample, so the read is <b>directional, not a conversion rate</b>.</li>
+      </ul>
+      <span class="owner">Nathan is working the referral thread now.</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="sec">
+    <div class="sechead"><span class="chip wait">Under the hood</span><h2>How the engine works, and where it scales</h2></div>
+    <p class="lead">The point of the beta is not one campaign. It is a repeatable machine that a rep can run.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>How each email is built</h3>
+        <ul>
+          <li>Sources the buying committee and scores account fit.</li>
+          <li>Drafts each email off <b>the plan's own CMS Stars math</b>, with no unverified claims.</li>
+          <li>Routes every batch to <b>Nathan for review before anything sends</b>. People judge, the engine drafts.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Scale path</h3>
+        <ul>
+          <li>The same build covers the full <b>32 sub-4.0 Star Ratings parents</b>.</li>
+          <li>Each new wave is hours of work, not weeks, because the shared enrichment layer is already built.</li>
+          <li>The model extends to the next motions on the same rails.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Net:</b> the engine is built and in-market, deliverability is clean, and the first genuine reply put us in front of the right buyer. The next few weeks are about warming into higher volume and turning these first threads into meetings.
+  </div>
+
+  <p class="foot">Intradiem · GTM Engineering · Star Ratings beta, early read as of Jul 21, 2026. Live-tool figures from Clay. Realized outcomes begin logging as the first threads convert to meetings and pipeline.</p>
+
+</div>
+</body>
+</html>

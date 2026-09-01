@@ -1,0 +1,117 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Clay to Salesforce Write-Back Spec</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+:root{--forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--ink:#15231B;--ink-soft:#3E4D44;--dim:#7A877E;--paper:#FAFBF7;--card:#FFFFFF;--mist:#F0F4ED;--mist2:#E7EEE3;--line:#E2E7DD;--line2:#D4DCCE;--spark:#FE5000;--gold:#E0A23B;}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:Letter;margin:0}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:9.6pt;line-height:1.5}
+.hero{background:linear-gradient(160deg,#0F3322 0%,#16432C 55%,#1B5236 100%);color:#fff;padding:26pt 44pt 22pt;position:relative;overflow:hidden}
+.hero:before{content:'';position:absolute;right:-90pt;top:-90pt;width:260pt;height:260pt;border-radius:50%;background:radial-gradient(circle,rgba(182,217,76,.14),transparent 65%)}
+.logochip{display:inline-block;background:#fff;border-radius:5pt;padding:7pt 11pt;margin-bottom:16pt}
+.logochip img{height:18pt;display:block}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:7pt;letter-spacing:.26em;text-transform:uppercase;color:var(--lime);font-weight:600;margin-bottom:9pt}
+.eyebrow .sp{color:var(--spark)}
+.hero h1{font-family:'Playfair Display',serif;font-size:25pt;font-weight:900;line-height:1.08;margin-bottom:9pt;max-width:440pt}
+.meta{font-family:'JetBrains Mono',monospace;font-size:7pt;letter-spacing:.04em;color:#C9D8CD;line-height:1.7}
+.meta b{color:#fff;font-weight:600}
+.wrap{padding:20pt 44pt 30pt}
+.lead{font-size:10pt;color:var(--ink-soft);margin-bottom:16pt;max-width:520pt}
+.lead b{color:var(--ink)}
+h2{font-family:'Playfair Display',serif;font-size:13pt;font-weight:800;color:var(--forest);margin:16pt 0 8pt}
+.two{display:flex;gap:16pt;margin:4pt 0}
+.col{flex:1}
+.card{background:var(--card);border:.8pt solid var(--line2);border-radius:6pt;padding:11pt 13pt;height:100%}
+.card h3{font-family:'JetBrains Mono',monospace;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:7pt}
+.card.write h3{color:var(--green)}
+.card.never h3{color:var(--dim)}
+.card ul{list-style:none}
+.card li{padding:4pt 0 4pt 13pt;position:relative;color:var(--ink-soft);font-size:9pt;border-bottom:.5pt solid var(--line)}
+.card li:last-child{border-bottom:none}
+.card li:before{content:'';position:absolute;left:0;top:9pt;width:5pt;height:5pt;border-radius:1.5pt}
+.card.write li:before{background:var(--green-bright)}
+.card.never li:before{background:var(--line2)}
+.card li b{color:var(--ink)}
+ol.guard{counter-reset:g;list-style:none;margin-top:4pt}
+ol.guard li{counter-increment:g;position:relative;padding:6pt 0 6pt 26pt;font-size:9.2pt;color:var(--ink-soft);border-bottom:.5pt solid var(--line)}
+ol.guard li:last-child{border-bottom:none}
+ol.guard li:before{content:counter(g);position:absolute;left:0;top:6pt;width:17pt;height:17pt;background:var(--mist2);color:var(--forest);border-radius:50%;font-family:'JetBrains Mono',monospace;font-size:8pt;font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.guard li b{color:var(--ink)}
+.spark-box{background:var(--forest);border-left:3pt solid var(--spark);border-radius:0 5pt 5pt 0;padding:10pt 14pt;margin:12pt 0;color:#E8F0E9;font-size:9.2pt}
+.spark-box b{color:#fff}
+.spark-box .kick{font-family:'JetBrains Mono',monospace;font-size:6.6pt;letter-spacing:.18em;text-transform:uppercase;color:var(--spark);font-weight:700;display:block;margin-bottom:4pt}
+ol.dec, ol.roll{margin-left:16pt;font-size:9.2pt;color:var(--ink-soft)}
+ol.dec li, ol.roll li{padding:3.5pt 0 3.5pt 4pt}
+ol.dec li b, ol.roll li b{color:var(--ink)}
+.foot{margin-top:20pt;padding-top:10pt;border-top:1pt solid var(--line2);display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:6.8pt;letter-spacing:.06em;color:var(--dim)}
+.uv{color:var(--gold)}
+</style></head><body>
+<div class="hero">
+  <span class="logochip"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODciIGhlaWdodD0iNDYiIHZpZXdCb3g9IjAgMCAxODcgNDYiIGZpbGw9Im5vbmUiPgo8cGF0aCBkPSJNMCAyMi44MTgxVjBMMTEuNDQyNiAxMS40MTU3VjM0LjIzMzhMMCAyMi44MTgxWiIgZmlsbD0iI0ZEQkY0MCIvPgo8cGF0aCBkPSJNMjIuODg1MyAwSDBMMTEuNDQyNiAxMS40MTU3SDM0LjMyNzlMMjIuODg1MyAwWiIgZmlsbD0iI0Y1ODIyMCIvPgo8cGF0aCBkPSJNNDUuNzcwOCAyMi44MzE5VjQ1LjY0OThMMzQuMzI4MSAzNC4yMzQxVjExLjQxNkw0NS43NzA4IDIyLjgzMTlaIiBmaWxsPSIjQTVDRTNBIi8+CjxwYXRoIGQ9Ik0yMi44ODYgNDUuNjUwM0g0NS43NzEzTDM0LjMyODYgMzQuMjQ4SDExLjQ0MzRMMjIuODg2IDQ1LjY1MDNaIiBmaWxsPSIjMkNCNTZFIi8+CjxwYXRoIGQ9Ik0xNDMuMjc2IDMwLjk0OTJDMTQ1Ljg3NCAzMC45NDkyIDE0Ny4yNDcgMzMuMDM1OSAxNDcuNDg5IDM1Ljk0MzdIMTM4LjY1OUMxMzkuMTAzIDMyLjgzNCAxNDAuNzQ1IDMwLjk0OTIgMTQzLjI3NiAzMC45NDkyWk0xNDMuNzIgNDQuMDM0M0MxNDAuNDYyIDQ0LjAzNDMgMTM4LjYxOCA0MS42Nzg0IDEzOC41NTEgMzcuNzIwNkgxNDkuODE4VjM3LjIzNkMxNDkuODE4IDMyLjc2NjYgMTQ3LjY5MSAyOS4xNDU0IDE0My4yNzYgMjkuMTQ1NEMxMzkuMzA1IDI5LjE0NTQgMTM2LjI4OSAzMi4zNjI4IDEzNi4yODkgMzcuNTQ1NkMxMzYuMjg5IDQzLjExODggMTM5LjM0NSA0NS45ODYzIDE0My41ODUgNDUuOTg2M0MxNDUuODc0IDQ1Ljk4NjMgMTQ3Ljg0IDQ1LjE3ODYgMTQ5LjM4OCA0My45OTM5VjQxLjc4NjFDMTQ3Ljc3MiA0My4wNTE2IDE0NS42OTkgNDQuMDM0MyAxNDMuNzM0IDQ0LjAzNDNNMTA3Ljg1OCA0MS42NjVDMTA2LjI4MyA0My4xMzI0IDEwNC4zNTcgNDQuMTAxNiAxMDIuNjA3IDQ0LjEwMTZDMTAwLjg1NyA0NC4xMDE2IDk5LjY4NjEgNDMuMjEzMSA5OS42ODYxIDQxLjQ2MzFDOTkuNjg2MSAzOS4yNjg4IDEwMS40NzcgMzcuNzM0MSAxMDcuODU4IDM3LjA3NDVWNDEuNjY1Wk0xMDQuNjI3IDI5LjEzMTlDMTAyLjc0MiAyOS4xMzE5IDEwMS4xNTQgMjkuNTIyMyA5OS42MDU0IDMwLjExNDZWMzIuMjI4MkMxMDEuMTggMzEuNTU1MSAxMDIuODIzIDMxLjExMDggMTA0LjQ5MiAzMS4xMTA4QzEwNi41NTIgMzEuMTEwOCAxMDcuODU4IDMyLjAzOTcgMTA3Ljg1OCAzNC4yMjA2VjM1LjI4NDFDMTAwLjUwNyAzNS45OTc2IDk3LjQyNDYgMzcuNzg3OSA5Ny40MjQ2IDQxLjU4NDJDOTcuNDI0NiA0NC40NjUgOTkuNDU3MyA0NS45OTk3IDEwMi4yNzEgNDUuOTk5N0MxMDQuNiA0NS45OTk3IDEwNi40OTggNDQuOTA5MyAxMDguMDA2IDQzLjQ5NThWNDUuNjQ5N0gxMTAuMDkyVjM0LjExMjhDMTEwLjA5MiAzMC43ODc3IDEwOC4yMzUgMjkuMTE4NCAxMDQuNjQgMjkuMTE4NE05Ni4yMjY1IDI5LjExODRDOTQuMDcyNiAyOS4xMTg0IDkyLjI1NTIgMzAuMjQ5MiA5MC41MDUyIDMxLjc4MzlWMjkuNDU1SDg4LjM3ODFWNDUuNjA5M0g5MC42Mzk3VjM0LjIwNzFDOTIuMzg5OCAzMi40OTc0IDk0LjA5OTQgMzEuMTI0MiA5NS43ODIxIDMxLjEyNDJDOTUuOTcwNiAzMS4xMjQyIDk2LjE0NTYgMzEuMTM3NyA5Ni4zMDcyIDMxLjE2NDdWMjkuMTE4NEM5Ni4zMDcyIDI5LjExODQgOTYuMjUzNCAyOS4xMTg0IDk2LjIyNjUgMjkuMTE4NFpNODMuODAxMSA0My45MTMxQzgyLjA1MTEgNDMuOTEzMSA4MS40MDQ5IDQzLjE5OTYgODEuNDA0OSA0MS41NTcyVjMxLjM4MDFIODQuNjA4OFYyOS40Njg0SDgxLjQwNDlWMjUuMTIwM0g3OS4xODM2VjI5LjQ2ODRINzYuNjc5N1YzMS4zODAxSDc5LjE4MzZWNDEuOTM0MkM3OS4xODM2IDQ0LjkwOTMgODAuODY2NCA0NS44OTE5IDgzLjM5NzIgNDUuODkxOUM4My44NDE1IDQ1Ljg5MTkgODQuMjQ1MyA0NS44NjUxIDg0LjYwODggNDUuODExM1Y0My44NTkzQzg0LjMxMjcgNDMuODg2MyA4NC4wMyA0My44OTk2IDgzLjgxNDYgNDMuODk5Nk0xMzMuMTY2IDIyLjg3MjFIMTMwLjkzMVYyNS4xMDY4SDEzMy4xNjZWMjIuODcyMVpNMTMwLjkzMSAyOS40NTVIMTMzLjE1MlY0NS42MDkzSDEzMC45MzFWMjkuNDU1Wk0xNzMuMzc3IDQ1LjYwOTNWMzQuNDc2MkMxNzMuMzc3IDMyLjM4OTYgMTcyLjUxNSAzMS4xMjQyIDE3MC40MjkgMzEuMTI0MkMxNjguNzQ2IDMxLjEyNDIgMTY3LjA3NyAzMi4xNDc0IDE2NS4yODYgMzMuODk3NVY0NS42MDkzSDE2My4wNjVWMzQuNDc2MkMxNjMuMDY1IDMyLjM4OTYgMTYyLjIwMyAzMS4xMjQyIDE2MC4xMTcgMzEuMTI0MkMxNTguNDM0IDMxLjEyNDIgMTU2LjcyNCAzMi40OTc0IDE1NC45NzQgMzQuMjA3MVY0NS42MDkzSDE1Mi43MTNWMjkuNDU1SDE1NC44NFYzMS43ODM5QzE1Ni41NzYgMzAuMjQ5MiAxNTguMzk0IDI5LjExODQgMTYwLjU0OCAyOS4xMTg0QzE2My4wNTIgMjkuMTE4NCAxNjQuNDI1IDMwLjE0MTYgMTY1LjAwMyAzMS45MTg2QzE2Ni43OCAzMC4zMTY2IDE2OC42NjUgMjkuMTE4NCAxNzAuOSAyOS4xMTg0QzE3NC4xMTcgMjkuMTE4NCAxNzUuNjI1IDMwLjk2MjcgMTc1LjYyNSAzNC4wMzIxVjQ1LjYwOTNIMTczLjM2M0gxNzMuMzc3Wk0xMjQuNTM3IDMyLjEyMDRDMTIzLjI3MiAzMS40NzQyIDEyMi4wNzMgMzEuMTY0NyAxMjAuMzkxIDMxLjE2NDdDMTE3LjQ4MyAzMS4xNjQ3IDExNS4yMjEgMzMuMzQ1NSAxMTUuMjIxIDM3Ljg5NTZDMTE1LjIyMSA0MS44MjY1IDExNy4xMDYgNDMuOTQgMTE5LjY3NyA0My45NEMxMjEuNTg5IDQzLjk0IDEyMy4wOTcgNDIuNzgyMyAxMjQuNTM3IDQxLjAzMjJWMzIuMTIwNFpNMTI0LjY3MiA0NS42MDkzVjQzLjI1MzVDMTIzLjQzMyA0NC43MjA4IDEyMS44MzEgNDUuOTQ1OCAxMTkuNDYyIDQ1Ljk0NThDMTE1Ljg5NCA0NS45NDU4IDExMi45MTkgNDMuNDE1IDExMi45MTkgMzcuOTg5OEMxMTIuOTE5IDMyLjA4IDExNi4zNzkgMjkuMjEyOCAxMjAuMzIzIDI5LjIxMjhDMTIxLjk2NiAyOS4yMTI4IDEyMy40MDYgMjkuNTIyNCAxMjQuNTM3IDMwLjAzMzlWMjIuODcyMUgxMjYuNzk4VjQ1LjYwOTNIMTI0LjY3MlpNNzIuMDQ4NyA0NS42MDkzVjM0LjQ3NjJDNzIuMDQ4NyAzMi4zODk2IDcxLjA5MjkgMzEuMTI0MiA2OS4wMzMzIDMxLjEyNDJDNjcuMzIzNiAzMS4xMjQyIDY1LjU3MzcgMzIuNTI0NCA2My43OTY3IDM0LjI3NDVWNDUuNjA5M0g2MS41MzVWMjkuNDU1SDYzLjc4MzJWMzEuODI0M0M2NS40MzkxIDMwLjI3NjIgNjcuMjk2OCAyOS4xMDUgNjkuNDkxMSAyOS4xMDVDNzIuNzA4NSAyOS4xMDUgNzQuMzIzOSAzMC45NDkzIDc0LjMyMzkgMzQuMDU5VjQ1LjYwOTNINzIuMDYyMkg3Mi4wNDg3Wk01NC44ODQ4IDIyLjg3MjFINTcuMjU0MVY0NS42MDkzSDU0Ljg4NDhWMjIuODcyMVoiIGZpbGw9IiMwMTQ2MzciLz4KPHBhdGggZD0iTTE4Mi41NTYgMjYuMTQyN0gxODIuOTQ3QzE4My40MDQgMjYuMTQyNyAxODMuNzgxIDI1Ljk5NDYgMTgzLjc4MSAyNS42MTc3QzE4My43ODEgMjUuMjk0NiAxODMuNTM5IDI1LjA3OTIgMTgzLjAxNCAyNS4wNzkyQzE4Mi43OTkgMjUuMDc5MiAxODIuNjM3IDI1LjEwNjEgMTgyLjU1NiAyNS4xMTk2VjI2LjE0MjdaTTE4Mi41MyAyOC4xNjJIMTgxLjY5NVYyNC41OTQ2QzE4Mi4wMTggMjQuNTI3MyAxODIuNDc2IDI0LjQ4NjkgMTgzLjA2OCAyNC40ODY5QzE4My43NDEgMjQuNDg2OSAxODQuMDUxIDI0LjU5NDYgMTg0LjMwNiAyNC43NDI2QzE4NC41MDggMjQuODkwNyAxODQuNjU2IDI1LjE3MzUgMTg0LjY1NiAyNS41MjM1QzE4NC42NTYgMjUuOTEzOSAxODQuMzQ3IDI2LjIyMzUgMTgzLjkxNiAyNi4zNTgyVjI2LjM5ODRDMTg0LjI2NiAyNi41MzMgMTg0LjQ2OCAyNi43ODg5IDE4NC41NzYgMjcuMjczNUMxODQuNjgzIDI3LjgxMiAxODQuNzUxIDI4LjA0MDkgMTg0Ljg0NSAyOC4xNjJIMTgzLjk1NkMxODMuODQ5IDI4LjAyNzQgMTgzLjc4MSAyNy43MDQzIDE4My42NzQgMjcuMjg3QzE4My42MDYgMjYuODk2NiAxODMuMzkxIDI2LjcyMTUgMTgyLjkzMyAyNi43MjE1SDE4Mi41NDNWMjguMTYySDE4Mi41M1pNMTgwLjMyMiAyNi4yOTA4QzE4MC4zMjIgMjcuODc5MyAxODEuNTA2IDI5LjE0NDcgMTgzLjEwOCAyOS4xNDQ3QzE4NC43MSAyOS4xNDQ3IDE4NS44NDEgMjcuODc5MyAxODUuODQxIDI2LjMxNzdDMTg1Ljg0MSAyNC43NTYyIDE4NC42ODMgMjMuNDUwMyAxODMuMDk1IDIzLjQ1MDNDMTgxLjUwNiAyMy40NTAzIDE4MC4zMjIgMjQuNzI5MiAxODAuMzIyIDI2LjMwNDNNMTg2Ljc1NyAyNi4zMDQzQzE4Ni43NTcgMjguMzIzNiAxODUuMTY4IDI5LjkxMiAxODMuMDk1IDI5LjkxMkMxODEuMDIyIDI5LjkxMiAxNzkuNDA2IDI4LjMyMzYgMTc5LjQwNiAyNi4zMDQzQzE3OS40MDYgMjQuMjg1IDE4MS4wNDkgMjIuNzM2OCAxODMuMDk1IDIyLjczNjhDMTg1LjE0MSAyMi43MzY4IDE4Ni43NTcgMjQuMzI1NCAxODYuNzU3IDI2LjMwNDNaIiBmaWxsPSIjMDE0NjM3Ii8+Cjwvc3ZnPgo=" alt="Intradiem"></span>
+  <div class="eyebrow">Clay <span class="sp">&#8594;</span> Salesforce &nbsp;&#183;&nbsp; Write-Back Spec &nbsp;&#183;&nbsp; v1</div>
+  <h1>Clay to Salesforce Write-Back</h1>
+  <div class="meta">
+    <b>For:</b> Genna (Salesforce request / RevOps process owner) &nbsp;&#8226;&nbsp; implementation by Eric Ebeling once approved<br>
+    <b>From:</b> Dallas Andrews &nbsp;&#8226;&nbsp; <b>Date:</b> July 23, 2026
+  </div>
+</div>
+<div class="wrap">
+  <p class="lead">Defines exactly what Clay Audiences will and will not write into Salesforce before any export is turned on. Today the integration is <b>import-only (read-only), all exports off</b>. Nothing writes back until this is signed off. Sharing with RevOps first because write-back creates CRM records and touches AE-owned accounts and campaign reporting, which is a process decision, not just a technical one.</p>
+
+  <h2>The goal</h2>
+  <p class="lead">Close the loop so outbound motions run in Clay feed Salesforce and attribution tracks. A person engaged in a Clay motion appears in SF, tied to a Salesforce Campaign that mirrors the Clay motion 1:1, with status that updates as they move through the touches. Sends go through Clay's own sequencer on our Outlook mailbox, so Clay is the only system that knows send-and-reply state; that is why Clay owns campaign tracking.</p>
+
+  <div class="two">
+    <div class="col"><div class="card write">
+      <h3>&#9679; What Clay will write (scoped)</h3>
+      <ul>
+        <li><b>Contacts</b> &#8212; create net-new Contacts linked to the matched Account (by domain). On create only: Name, Email, Title, LinkedIn, Account link, Lead Source = "Clay [motion]".</li>
+        <li><b>Existing Contacts</b> &#8212; nothing written to their fields; only add campaign membership.</li>
+        <li><b>Campaign / Campaign Member</b> &#8212; one SF Campaign per Clay motion; Clay adds the member and updates status (Sent, Replied, Bounced).</li>
+      </ul>
+    </div></div>
+    <div class="col"><div class="card never">
+      <h3>&#9679; What Clay will never touch</h3>
+      <ul>
+        <li><b>Accounts</b> &#8212; never created or edited. Read-only.</li>
+        <li><b>Leads</b> &#8212; imported for dedup and suppression only; never created or edited.</li>
+        <li><b>Opportunities</b> &#8212; read-only.</li>
+        <li><b>Any AE-owned field</b> on an existing Contact &#8212; never overwritten.</li>
+      </ul>
+    </div></div>
+  </div>
+
+  <h2>Guardrails &#8212; all must hold before creation is enabled</h2>
+  <ol class="guard">
+    <li><b>Customer-exclusion at the Account level.</b> Clay never creates Contacts under an account flagged as a current customer (Type = Customer, or has a won Opportunity). This gates record creation, not just sending.</li>
+    <li><b>Dedup across Contacts and Leads.</b> Match on email so Clay never creates a duplicate for someone who already exists as either object.</li>
+    <li><b>Real-row validation first.</b> Run exclusion + dedup against real synced rows and confirm by eye before creation is turned on. Not a synthetic test.</li>
+  </ol>
+
+  <div class="spark-box">
+    <span class="kick">&#9888; Why this is gated hard</span>
+    <b>Clay write-back to Salesforce is permanent.</b> Once Clay creates or updates a record, the action cannot be undone. There is no dry-run once live. Combined with guardrail 1, that means the customer-exclusion has to be validated on real rows <b>before</b> creation is ever enabled, so a current customer can never be created as a cold Contact.
+  </div>
+
+  <h2>Decisions needed from RevOps</h2>
+  <ol class="dec">
+    <li><b>Contact ownership on create.</b> Contacts under an existing Account normally inherit the account's AE, giving visibility but putting cold-sourced contacts on named accounts. Confirm the desired owner and socialize with Sales before enabling.</li>
+    <li><b>Campaign records:</b> who owns the SF Campaign objects and the naming convention, so Marketing reporting lines up.</li>
+    <li><b>Activity logging:</b> does the sending Outlook mailbox already have Einstein Activity Capture? If yes, per-email activity is already handled and Clay will not duplicate it. If no, per-email Task logging stays out of v1.</li>
+  </ol>
+
+  <h2>Rollout order</h2>
+  <ol class="roll">
+    <li>Sign off on this spec.</li>
+    <li>Enable the scoped export fields only (Contacts create + campaign membership). Everything else stays "Never write."</li>
+    <li>Validate exclusion + dedup on real rows.</li>
+    <li>Turn on creation for one motion (Star Ratings); watch the first batch, confirm no duplicates and no customer records created.</li>
+    <li>Expand to other motions once proven.</li>
+  </ol>
+
+  <div class="foot">
+    <span>Intradiem &#183; GTM Engineering</span>
+    <span class="uv">Open item: confirm Clay plan tier + Audiences record ceiling (~152K imported) &#183; UNVERIFIED</span>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,40 @@
+idx,account_name,known_acd_canonical,industry,domain,detected_hg,detected_bc,hit_hg,hit_bc,runId
+1,Royal Bank of Canada (RBC),Genesys,Banking,rbc.com,Cisco Unified Contact Center Enterprise,,False,False,wfr_0tijmfbsh2fbrJDax5z
+2,The Travelers Companies,Genesys,Insurance,travelers.com,"Amazon Connect, Five9 (Unspecified Product), Genesys Cloud CX, Genesys PureEngage",,True,False,wfr_0tijmh9sVQK9sPZjtzZ
+3,SCAN Health Plan,Genesys,Insurance,scanhealthplan.com,"Five9 (Unspecified Product), Genesys Cloud CX",,True,False,wfr_0tijmha8Wiq5CCYcVsU
+4,Amica Mutual,Genesys,Home & Auto Insurance,amica.com,,,False,False,wfr_0tijmhaMSeK6tkuz7Dn
+5,Baylor Scott & White Health,Genesys,Healthcare Provider,bswhealth.com,"Amazon Connect, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Genesys Cloud CX",,True,False,wfr_0tijmhbKDTqbZrw8kgm
+6,Kaiser Permanente (KPIT),Genesys,Healthcare Provider,kaiserpermanentejobs.org,,,False,False,wfr_0tijmhcYeBb3YRE487R
+7,Kaiser NCal,Genesys,Healthcare Provider,kaiserpermanente.org,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmhcsFSa4SrWqs89
+8,Kaiser MAS Clinical,Genesys,Healthcare Provider,kaiserpermanente.org,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmhdnDv6XroYMWBh
+9,Kaiser NW Clinical,Genesys,Healthcare Provider,kaiserpermanente.org,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmhex7CyZyjx6pPq
+10,Kaiser CO Clinical,Genesys,Healthcare Provider,kaiserpermanente.org,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmheegEst6aMnwGV
+11,Kaiser SCal Clinical,Genesys,Healthcare Provider,kp-scalresearch.org,,,False,False,wfr_0tijmhfXyamuQxcRgaG
+12,Kaiser MSCC,Genesys,Healthcare Provider,kaiserpermanente.org,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmhggPnVCt4heqmu
+13,Auto & General Insurance Company,Avaya,Insurance,thegeneral.com,"NICE CXone, Nice inContact",,False,False,wfr_0tijmhgcUFPFPsk2FhQ
+14,Foundever (Sitel),Avaya,Outsourcer,foundever.com,,,False,False,wfr_0tijmhhty5atB8c7xH8
+15,The Home Depot,Avaya,Retail,homedepot.com,"Amazon Connect, NICE CXone, Nice inContact",,False,False,wfr_0tijmhiwbDfdU5yM3fr
+16,Aetna Provider Services,Avaya,Healthcare Insurance,aetna.com,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), Nice inContact",,False,False,wfr_0tijmhi77YRtkw5MJU5
+17,CVS Health,Avaya,Healthcare Insurance,cvshealth.com,"Amazon Connect, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,True,False,wfr_0tijmhj2habPKzPZV6A
+18,UnitedHealth Group (UHG),Avaya,Healthcare Insurance,unitedhealthgroup.com,"Amazon Connect, Aspect Unified IP, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), Genesys Cloud CX, Genesys PureEngage, NICE CXone, Nice inContact",,False,False,wfr_0tijmhkMC5s5sdwuof2
+19,ADT,Avaya,Other,adt.com,"Five9 (Unspecified Product), NICE CXone, Nice inContact",,False,False,wfr_0tijmhlwWctgwXz8K9h
+20,Commonwealth Edison Company,Avaya,Utilities,comed.com,"Genesys Cloud CX, Genesys PureEngage, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Five9, Amazon Connect, NICE CXone, NICE inContact, Aspect Unified IP",,True,False,wfr_0tijmhlw4hUgVbHpetD
+21,British Gas,Amazon Connect,Utilities,britishgas.co.uk,Amazon Connect,,True,False,wfr_0tijmhmk6wYiQ53Nt64
+22,Virgin Media O2 (UK),Amazon Connect,Telco/Cable,virginmediao2.co.uk,,,False,False,wfr_0tijmhnpyFcr4g7qdk9
+23,Capita,Amazon Connect,Technology,capita.com,,,False,False,wfr_0tijmhn2UCwzJoHRBTs
+24,Goldman Sachs,Amazon Connect,Fin Services,goldmansachs.com,,,False,False,wfr_0tijmhomypZTWTr4c6j
+25,US Bancorp,Amazon Connect,Banking,usbank.com,"Amazon Connect, Five9 (Unspecified Product)",,True,False,wfr_0tijmhpjU3mVfXEv2KJ
+26,The Northwestern Mutual Life Insurance Company,Five9,Fin Services,northwesternmutual.com,Five9 (Unspecified Product),,True,False,wfr_0tijmhpzadH2qvsHFs6
+27,Wells Fargo (Five9),Five9,Div Financial Services,cxtoday.com,,,False,False,wfr_0tijmhqT2f8xnW9DGke
+28,CVS Health Retail,Five9,Healthcare Insurance,cvshealth.com,"Amazon Connect, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,True,False,wfr_0tijmhrPv7HRdfXYFKN
+29,Amazon,Five9,Retail,aboutamazon.com,"Genesys Cloud CX, Genesys PureEngage, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Five9, Amazon Connect, NICE CXone, NICE inContact, Aspect Unified IP",,True,False,wfr_0tijmhr3gG3JSYGd93A
+30,Illumifin,Five9,Div Financial Services,illumifin.com,"Genesys Cloud CX, Genesys PureEngage, Avaya Aura Contact Center, Cisco Unified Contact Center Enterprise, Five9, Amazon Connect, NICE CXone, NICE inContact, Aspect Unified IP",,True,False,wfr_0tijmhst5d5wjcAxokr
+31,Health Care Service Corporation,Cisco,Healthcare Insurance,hcsc.com,Cisco Unified Contact Center Enterprise,,True,False,wfr_0tijmhvhAfGTYr8U3HH
+32,McKesson Medical Surgical,Cisco,Healthcare Provider,mckesson.com,"Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product)",,True,False,wfr_0tijmhwUnuEtgNpDtNP
+33,McKesson,Cisco,Healthcare Provider,mckesson.com,"Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product)",,True,False,wfr_0tijmhwswnQwWzUF3Qb
+34,Cleveland Clinic,Cisco,Healthcare Provider,clevelandclinic.org,Cisco Unified Contact Center Enterprise,,True,False,wfr_0tijmhxKgEqG6tbaXaa
+35,Farmers Insurance,Cisco,Insurance,farmers.com,"Amazon Connect, Cisco Unified Contact Center Enterprise, Five9 (Unspecified Product), NICE CXone, Nice inContact",,True,False,wfr_0tijmhyTk5njKYCZUvu
+36,Snap Finance LLC,NICE (inContact),Fin Services,snapfinance.com,,,False,False,wfr_0tijmhycUtG8GqKezPy
+37,AccorHotels,NICE (inContact),Travel,accor.com,Amazon Connect,,False,False,wfr_0tijmhzkdNTJ9pQZT3z
+38,VitalityHealth,Aspect,Healthcare Insurance,vitalitygroup.com,Aspect Unified IP,,True,False,wfr_0tijmi0gzPFWfKDd4za
+39,Wells Fargo (Alvaria),Aspect,Div Financial Services,alvaria.com,,,False,False,wfr_0tijmi1ESkosjkzGtkq

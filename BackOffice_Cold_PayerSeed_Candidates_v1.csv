@@ -1,0 +1,17 @@
+candidate_account,parent_or_brands,vertical,eligibility_status,dedup_basis,entity_flag,bo_fit_note
+Centene,WellCare / Fidelis Care / Ambetter / Health Net,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101; non-customer across Stars work,"Owns WellCare/Fidelis/Ambetter/Health Net - confirm none separately flagged",Massive sub-4.0 Medicare claims back office; already Stars cold flagship - coordinate to avoid double-touch
+GuideWell / Florida Blue,Florida Blue / GuideWell Health,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee (FL) - separate from BCBS NC/HCSC,Large FL claims + appeals back office
+Blue Shield of California,,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101; non-customer per Stars,Independent BCBS licensee (CA) - NOT Anthem/Elevance,Large CA claims/UM back office
+Highmark Health,Highmark BCBS (PA/DE/WV/NY) / Allegheny Health,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee - separate entity,Integrated payer-provider; claims + RCM back office
+Independence Blue Cross,IBX,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee (Philadelphia),Regional payer claims back office
+Horizon Blue Cross Blue Shield of NJ,Horizon BCBSNJ,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee (NJ),Regional payer claims/appeals back office
+CareFirst BlueCross BlueShield,CareFirst (MD/DC/N.VA),Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee,Regional payer claims back office
+Blue Cross Blue Shield of Michigan,BCBSM,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee (MI),Large state payer claims back office
+Point32Health,Harvard Pilgrim / Tufts Health Plan,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Merged entity (HPHC + Tufts),New England payer claims + enrollment back office
+Cambia Health Solutions,Regence BCBS (OR/WA/ID/UT),Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101; Cambia surfaced in Stars,Independent BCBS licensee cluster,Multi-state claims back office
+Blue Cross Blue Shield of Massachusetts,BCBSMA,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Independent BCBS licensee (MA),State payer claims back office
+Medica,,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101; non-customer per Stars,Upper-Midwest payer,Claims + enrollment back office
+UPMC Health Plan,UPMC Insurance Services,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,Integrated payer-provider (PA),Claims + RCM back office
+EmblemHealth,EmblemHealth / ConnectiCare,Healthcare Payer,ELIGIBLE (verify full-SF),Not in install-base 101,NY regional payer,Claims + appeals back office
+DO-NOT-TARGET: Health Care Service Corp,BCBS IL/TX/NM/OK/MT,Healthcare Payer,CUSTOMER - EXCLUDE,install_base=TRUE since 7/24/2023 (5500 licenses),HCSC is the BCBS licensee for 5 states + acquired Cigna Medicare book,Route to install-base/AM lane (Savannah)
+DO-NOT-TARGET: Anthem/Elevance BCBS plans,Elevance Health (14 states),Healthcare Payer,CUSTOMER - EXCLUDE,Elevance install_base=TRUE,Anthem BCBS plans are Elevance-owned,Customer-side; never cold-target an Anthem/Elevance-branded plan

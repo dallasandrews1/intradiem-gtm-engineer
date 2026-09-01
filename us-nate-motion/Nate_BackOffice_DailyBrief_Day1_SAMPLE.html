@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Action Brief · Back Office Motion · Sprint 1, Day 1 (Sample)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blurple-deep:#250D53;
+    --blurple-text:#19063A;
+    --blurple-mid:#501CD2;
+    --creme:#F9F7F6;
+    --lilac-1:#ECEAF1;
+    --lilac-2:#D9D6E5;
+    --lilac-3:#B4ADCA;
+    --seafoam-1:#DBEAEB;
+    --seafoam-2:#B8D6D8;
+    --seafoam-3:#4E6B6D;
+    --peri-1:#F3F5FF;
+    --peri-2:#E1E7FE;
+    --gray:#666666;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Lato',sans-serif;color:var(--blurple-text);background:var(--creme);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,.eyebrow{font-family:'Outfit',sans-serif;}
+  .wrap{max-width:900px;margin:0 auto;}
+
+  .cover{background:var(--blurple-deep);color:#fff;padding:52px 56px 44px;position:relative;}
+  .cover::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--seafoam-2),var(--blurple-mid));}
+  .cover .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--seafoam-2);font-weight:600;margin-bottom:14px;}
+  .cover h1{font-size:36px;font-weight:800;line-height:1.1;letter-spacing:-0.5px;}
+  .cover h1 .accent{color:var(--seafoam-2);}
+  .cover .meta{margin-top:22px;display:flex;gap:34px;flex-wrap:wrap;font-family:'Outfit';font-size:13.5px;}
+  .cover .meta div span{display:block;color:var(--seafoam-2);font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;}
+  .cover .meta div{color:#fff;font-weight:500;}
+  .sample-stamp{position:absolute;top:26px;right:56px;border:2px solid var(--seafoam-2);color:var(--seafoam-2);font-family:'Outfit';font-weight:800;letter-spacing:2px;font-size:12px;padding:6px 14px;border-radius:8px;transform:rotate(3deg);}
+
+  section{padding:40px 56px;}
+  .eyebrow{font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blurple-mid);font-weight:700;margin-bottom:10px;}
+  h2{font-size:25px;font-weight:700;color:var(--blurple-deep);letter-spacing:-0.4px;margin-bottom:6px;}
+  h2 + .lede{font-size:15.5px;color:var(--gray);margin-bottom:20px;max-width:700px;}
+  p{margin-bottom:12px;}
+  .divider{height:1px;background:var(--lilac-2);margin:0 56px;}
+
+  .gatebar{background:#FFF9F0;border:1px solid #F0D9A8;border-left:5px solid #D99B2B;border-radius:0 12px 12px 0;padding:18px 24px;margin:0 56px;margin-top:28px;}
+  .gatebar h4{color:#8A5A12;font-family:'Outfit';font-weight:700;font-size:15px;margin-bottom:6px;}
+  .gatebar ul{list-style:none;font-size:14px;color:#6B4A18;}
+  .gatebar li{padding:3px 0 3px 20px;position:relative;}
+  .gatebar li::before{content:"■";position:absolute;left:0;font-size:9px;top:7px;color:#D99B2B;}
+  .gatebar b{color:#8A5A12;}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;border-radius:10px;overflow:hidden;}
+  th{background:var(--blurple-deep);color:#fff;font-family:'Outfit';font-weight:600;text-align:left;padding:11px 14px;font-size:12.5px;letter-spacing:0.5px;}
+  td{padding:11px 14px;vertical-align:top;border-bottom:1px solid var(--lilac-1);}
+  tr:nth-child(even) td{background:var(--peri-1);}
+  tr:nth-child(odd) td{background:#fff;}
+  td b{color:var(--blurple-deep);}
+
+  .chip{display:inline-block;font-family:'Outfit';font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;vertical-align:middle;}
+  .chip.seat{background:var(--peri-2);color:var(--blurple-mid);}
+  .chip.pending{background:#FDECEC;color:#B23B3B;}
+  .chip.verified{background:var(--seafoam-1);color:var(--seafoam-3);}
+  .chip.ch{background:var(--lilac-1);color:var(--blurple-deep);}
+
+  .contact{background:#fff;border:1px solid var(--lilac-2);border-radius:14px;margin:22px 0;overflow:hidden;}
+  .contact .head{background:var(--peri-1);padding:18px 24px;border-bottom:1px solid var(--lilac-2);}
+  .contact .head h3{font-size:19px;font-weight:700;color:var(--blurple-deep);margin:4px 0 2px;}
+  .contact .head .why{font-size:13.5px;color:var(--gray);margin-top:6px;}
+  .contact .body{padding:8px 24px 20px;}
+
+  .block{margin-top:18px;}
+  .block .label{font-family:'Outfit';font-size:11.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--blurple-mid);margin-bottom:8px;}
+  .copybox{background:var(--creme);border:1px solid var(--lilac-2);border-left:4px solid var(--blurple-mid);border-radius:0 10px 10px 0;padding:16px 20px;font-size:14.5px;}
+  .copybox .subj{font-weight:700;color:var(--blurple-deep);margin-bottom:10px;font-family:'Outfit';font-size:13.5px;}
+  .copybox p{margin-bottom:10px;}
+  .copybox p:last-child{margin-bottom:0;}
+  .bullets{background:var(--creme);border:1px solid var(--lilac-2);border-left:4px solid var(--seafoam-3);border-radius:0 10px 10px 0;padding:14px 20px;font-size:14.5px;}
+  .bullets ul{list-style:none;}
+  .bullets li{padding:4px 0 4px 20px;position:relative;}
+  .bullets li::before{content:"→";position:absolute;left:0;color:var(--seafoam-3);font-weight:700;}
+  .bullets b{color:var(--blurple-deep);}
+
+  .context{background:#fff;border:1px solid var(--lilac-2);border-radius:14px;padding:22px 26px;}
+  .context ul{list-style:none;}
+  .context li{padding:6px 0 6px 24px;position:relative;font-size:14.5px;}
+  .context li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;border-radius:2px;background:var(--blurple-mid);}
+  .context b{color:var(--blurple-deep);}
+  .src{color:var(--lilac-3);font-size:12px;}
+
+  .saydont{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;}
+  .saydont .col{border-radius:12px;padding:18px 22px;font-size:14px;}
+  .saydont .say{background:var(--seafoam-1);border:1px solid var(--seafoam-2);}
+  .saydont .dont{background:#FDECEC;border:1px solid #F3C2C2;}
+  .saydont h4{font-family:'Outfit';font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;}
+  .saydont .say h4{color:var(--seafoam-3);}
+  .saydont .dont h4{color:#B23B3B;}
+  .saydont ul{list-style:none;}
+  .saydont li{padding:3px 0 3px 18px;position:relative;}
+  .saydont .say li::before{content:"✓";position:absolute;left:0;color:var(--seafoam-3);font-weight:700;}
+  .saydont .dont li::before{content:"✕";position:absolute;left:0;color:#B23B3B;font-weight:700;}
+
+  .rules{background:var(--blurple-deep);color:#fff;border-radius:14px;padding:26px 30px;margin-top:8px;}
+  .rules h3{color:#fff;font-size:18px;margin-bottom:12px;}
+  .rules ul{list-style:none;}
+  .rules li{padding:5px 0 5px 24px;position:relative;font-size:14px;color:var(--lilac-2);}
+  .rules li::before{content:"→";position:absolute;left:0;color:var(--seafoam-2);font-weight:700;}
+  .rules b{color:#fff;}
+
+  footer{background:var(--blurple-deep);color:var(--lilac-3);text-align:center;padding:32px;font-family:'Outfit';font-size:12.5px;}
+  footer .accent{color:var(--seafoam-2);}
+  footer b{color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="sample-stamp">FORMAT SAMPLE</div>
+  <div class="wrap">
+    <div class="eyebrow">Daily Action Brief · Dallas × Nate · Back Office Motion</div>
+    <h1>Sprint 1 · <span class="accent">Day 1</span></h1>
+    <div class="meta">
+      <div><span>Sender</span>Nathan Belfield</div>
+      <div><span>Account in play</span>HCSC (Health Care Service Corp)</div>
+      <div><span>Today's load</span>3 emails · 3 connects · 3 calls · ~60 to 75 min</div>
+      <div><span>Built by</span>Dallas, the evening before</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<div class="gatebar">
+  <h4>Gate status (a live brief never ships with an open gate)</h4>
+  <ul>
+    <li><b>Customer-exclusion check: PENDING.</b> Runs on real rows the morning of first send. Nothing goes out until this line reads green.</li>
+    <li><b>Contact names: 3 of 4 pending the Clay pull.</b> Seat-level copy below is final; salutations and personal hooks lock when names land. Never send to a guessed name.</li>
+    <li><b>Copy claims gate: PASSED.</b> Every number below is HCSC's own public record (dated) or the cleared Humana story. No Intradiem back-office figures exist in approved form, so none appear.</li>
+  </ul>
+</div>
+
+<section>
+  <div class="eyebrow">Read this first · 90 seconds</div>
+  <h2>Why HCSC, why today</h2>
+  <p class="lede">Everything you say today hangs off this cluster. Skim it once and the calls turn into conversations.</p>
+  <div class="context">
+    <ul>
+      <li><b>They bought Cigna's Medicare business</b> (closed March 2025): Medicare membership quadrupled to 4.3M+, about 6,000 employees came over, and the claims and UM load came with them. <span class="src">PRNewswire, Mar 19 2025</span></li>
+      <li><b>Moody's downgraded them over integration risk</b> and flagged that the roughly $1B HCSC committed to two years of systems work "may prove insufficient." A rating agency publicly questioning whether the money is enough is the sharpest why-now in this file. <span class="src">Moody's rating action, 2025</span></li>
+      <li><b>They posted a $1.9B net loss for 2025</b> against $66.8B revenue, which they attribute to elevated utilization plus integration cost exposure. Pressure to find admin savings is real; so is the risk of a spending freeze. Discovery question, not an assumption. <span class="src">Becker's, Apr 29 2026</span></li>
+      <li><b>CMS put a clock on their claims house January 1:</b> standard prior auth decisions in 7 calendar days, expedited in 72 hours. A federal turnaround mandate landing mid-integration. <span class="src">CMS-0057-F, effective Jan 1 2026</span></li>
+      <li><b>They're hiring for exactly our problem:</b> a live Richardson, TX posting for a Resource Management Analyst covering "real-time/intraday workforce management" across back office AND call center. They've named the gap; they're trying to staff it with one analyst. <span class="src">careers.hcsc.com, updated Apr 10 2026</span></li>
+    </ul>
+  </div>
+  <div class="saydont">
+    <div class="col say">
+      <h4>You can say</h4>
+      <ul>
+        <li>Any bullet above, with its date, as their own public record</li>
+        <li>Humana, by name: 7X ROI five years in, 2.7M automated actions in 2025, contact-center side</li>
+        <li>"Not RPA, doesn't replace people, touches nothing in core systems"</li>
+      </ul>
+    </div>
+    <div class="col dont">
+      <h4>You cannot say</h4>
+      <ul>
+        <li>Any Intradiem back-office ROI, payback, or productivity number. None are cleared. Zero exceptions.</li>
+        <li>Any customer name except Humana</li>
+        <li>Anything implying someone inside HCSC asked us to reach out</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The board</div>
+  <h2>Today at a glance</h2>
+  <table>
+    <thead><tr><th style="width:12%">When</th><th style="width:30%">Contact</th><th style="width:20%">Channel</th><th>Action</th></tr></thead>
+    <tbody>
+      <tr><td><b>8:40a</b></td><td>Claims Ops seat · HCSC</td><td>Email 1</td><td>Send block 1A, then the LinkedIn connect the same moment</td></tr>
+      <tr><td><b>9:15a</b></td><td>Workforce/RTO seat · HCSC</td><td>Email 1</td><td>Send block 2A, then the LinkedIn connect the same moment</td></tr>
+      <tr><td><b>9:50a</b></td><td>Claims Tech seat · HCSC</td><td>Email 1</td><td>Send block 3A, then the LinkedIn connect the same moment</td></tr>
+      <tr><td><b>10:30a</b></td><td>All three, in order</td><td>Call → voicemail</td><td>Bullets in each card. They won't answer; the voicemail points at the email</td></tr>
+      <tr><td><b>Anytime</b></td><td>Mike Frank, EVP COO</td><td>Prep only</td><td>He enters tomorrow (Day 2). His block is staged at the bottom; read it once today</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13.5px;color:var(--gray);">Subjects and send times are deliberately different per contact. Same story inside the account, never the same email. Log each touch in the scoreboard as you go.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">Contact 1 of 3</div>
+  <div class="contact">
+    <div class="head">
+      <span class="chip seat">In the fire · Claims Operations</span> <span class="chip pending">Name pending Clay pull</span>
+      <h3>VP / Sr Director, Claims Operations</h3>
+      <div class="why"><b>Their world today:</b> the 7-day CMS clock, pended claims from the Cigna book, queues plugged with overtime. Your hook is the regulation plus the integration, nothing about us until the second half.</div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <div class="label">1A · Email 1 · copy, personalize the salutation, send</div>
+        <div class="copybox">
+          <div class="subj">Subject: the 7 day claims clock</div>
+          <p>{{First name}}, since January, CMS has put a 7 day clock on standard prior auth decisions and 72 hours on expedited ones, and it landed right as the Cigna Medicare book quadrupled HCSC's Medicare membership. Queues under that kind of load have a rhythm: cleared by Friday, regrown by Monday, plugged with overtime in between. Most tracking tools report that gap after the fact. Intradiem acts inside it, rebalancing work and filling idle windows the moment a queue moves, without touching your core systems. I can send the read on where pended claims capacity usually hides in an integration year, or 15 minutes and I'll walk you through it. Worth it?</p>
+          <p>Nathan Belfield</p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">1B · LinkedIn connect note · send the moment the email goes</div>
+        <div class="copybox"><p>{{First name}}, I work the operations side of claims, the gap between the 7 day clock CMS set in January and what floors actually absorb mid-integration. Sent you a note on email too.</p></div>
+      </div>
+      <div class="block">
+        <div class="label">1C · Call, 10:30 block · bullets, not a script</div>
+        <div class="bullets">
+          <ul>
+            <li><b>If they answer:</b> "The reason I'm calling: the 7 day prior auth clock hit while you're absorbing the Cigna Medicare book, and I work on the gap between what your tracking shows and what the floor actually absorbs." Then stop talking and let them react.</li>
+            <li>If it's live: their trackers record what agents log; nothing in that stack acts when a queue jumps at 2pm. We act in the moment. Not RPA, nothing replaced.</li>
+            <li>Close: "Worth 15 minutes with a calendar in front of us?" Book it on the call.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">1D · Voicemail · they didn't answer</div>
+        <div class="copybox"><p>Hi {{first name}}, Nathan Belfield with Intradiem. I sent you an email this morning about the 7 day prior auth clock and where pended claims capacity hides while the Cigna Medicare book folds in. No need to call back, the email has the whole thing. If it lands, just reply there. Thanks {{first name}}.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="eyebrow">Contact 2 of 3</div>
+  <div class="contact">
+    <div class="head">
+      <span class="chip seat">Tool owner · Workforce / Real-Time Ops</span> <span class="chip pending">Name pending Clay pull</span>
+      <h3>Director+, Workforce Management / Workforce Planning</h3>
+      <div class="why"><b>Their world today:</b> they're literally hiring an analyst to do intraday real-time management for back office and call center. They've named our problem. The hook is their own job posting.</div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <div class="label">2A · Email 1 · copy, personalize the salutation, send</div>
+        <div class="copybox">
+          <div class="subj">Subject: your intraday role in Richardson</div>
+          <p>{{First name}}, the Resource Management Analyst role open in Richardson names the problem better than most vendors do: real time, intraday management across back office and call center work. That's the right instinct. The hard part is that an analyst watching dashboards can flag what's slipping, but acting on it across 27 million members' worth of queues is a systems job, not a staffing one. Intradiem does the acting: live conditions trigger the rebalance, the training push, the idle window fill, in the moment. Want the one pager on what a real time layer catches that an intraday desk can't, or 15 minutes to go through it?</p>
+          <p>Nathan Belfield</p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">2B · LinkedIn connect note · send the moment the email goes</div>
+        <div class="copybox"><p>Saw the intraday resource management role HCSC has open in Richardson. That problem, real time across back office and call center, is my whole world. Shot you an email as well.</p></div>
+      </div>
+      <div class="block">
+        <div class="label">2C · Call, 10:30 block · bullets</div>
+        <div class="bullets">
+          <ul>
+            <li><b>If they answer:</b> "Calling because of the Richardson intraday role you have open. I work on exactly that problem, and I've got a strong opinion on where an analyst desk stops and a real time layer has to take over." Let them react.</li>
+            <li>If it's live: WFM built the real time discipline on the phones side years ago. The back office never got it. The posting says they know.</li>
+            <li>Close: "15 minutes and I'll show you what the layer catches that the desk can't. Fair?"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">2D · Voicemail · they didn't answer</div>
+        <div class="copybox"><p>Hi {{first name}}, Nathan Belfield with Intradiem. I emailed you this morning about the intraday resource management role you have open in Richardson, and where that job stops being a staffing problem and becomes a systems one. No need to call back, it's all in the email. Thanks {{first name}}.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="eyebrow">Contact 3 of 3</div>
+  <div class="contact">
+    <div class="head">
+      <span class="chip seat">Tool decision · Claims Technology</span> <span class="chip pending">Name pending Clay pull</span>
+      <h3>Director+, Claims Technology / Claims Systems</h3>
+      <div class="why"><b>Their world today:</b> a two-year, billion-dollar systems program mid-flight. Every vendor wants to get inside it. Your entire pitch is that we don't.</div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <div class="label">3A · Email 1 · copy, personalize the salutation, send</div>
+        <div class="copybox">
+          <div class="subj">Subject: alongside the migration, not inside it</div>
+          <p>{{First name}}, the billion dollar systems commitment HCSC disclosed for the Medicare integration means the last thing you need is another vendor asking to touch core platforms. So the useful fact first: Intradiem doesn't. It sits alongside what's deployed, reads live queue and desktop conditions, and acts on them, rebalancing work and filling idle windows with no core system surgery. It's not RPA and it doesn't replace the work or the people doing it. Integration years are when idle and surge whiplash peaks, which is why the timing runs opposite to the instinct. Want the breakdown of where it sits in the stack, or 15 minutes to walk it?</p>
+          <p>Nathan Belfield</p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">3B · LinkedIn connect note · send the moment the email goes</div>
+        <div class="copybox"><p>Sent you a note on email about running real time workload action alongside a migration, without touching core platforms. Figured LinkedIn might be quicker.</p></div>
+      </div>
+      <div class="block">
+        <div class="label">3C · Call, 10:30 block · bullets</div>
+        <div class="bullets">
+          <ul>
+            <li><b>If they answer:</b> "Calling with one useful fact: we run real time workload action alongside your claims platforms, not inside them. Mid-migration, that's the whole conversation." Let them react.</li>
+            <li>If it's live: no core system surgery, not RPA, nothing replaced. Reads conditions, acts on queues.</li>
+            <li>Close: "15 minutes with whoever owns claims platforms day to day, and I'll show where it sits. Worth setting up?"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">3D · Voicemail · they didn't answer</div>
+        <div class="copybox"><p>Hi {{first name}}, Nathan Belfield with Intradiem. Emailed you this morning with one useful fact: real time workload action that sits alongside your claims platforms, not inside them, which matters mid-migration. No need to call back, the email has it. Thanks {{first name}}.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">Staged for tomorrow · Day 2 entry</div>
+  <div class="contact">
+    <div class="head">
+      <span class="chip seat">Strategizing at the top · Exec tier</span> <span class="chip verified">Verified · hcsc.com leadership page, Jul 2026</span>
+      <h3>Mike Frank · EVP, Chief Operating Officer</h3>
+      <div class="why"><b>His world today:</b> he owns Operations end to end (IT, customer service, ops enablement) through an integration a rating agency publicly doubts. He enters Day 2, after the floor seats are already in motion. Read today, send tomorrow 8:40a.</div>
+    </div>
+    <div class="body">
+      <div class="block">
+        <div class="label">4A · Email 1 · sends tomorrow morning</div>
+        <div class="copybox">
+          <div class="subj">Subject: the flag in the Moody's note</div>
+          <p>Mike, when Moody's moved HCSC's rating this year, the note flagged that the billion dollars committed to integration systems work may prove insufficient. Where that number bends is knowable: how much of the merged back office's manual load gets absorbed by capacity you already pay for, versus overtime and new headcount. The customer service side of the industry solved this with real time automation years ago. Humana's on record with 7X ROI five years in on that side of the house. The back office is the half still running on yesterday's report. Worth 15 minutes on what that gap costs in an integration year?</p>
+          <p>Nathan Belfield</p>
+        </div>
+      </div>
+      <div class="block">
+        <div class="label">4B · LinkedIn connect note · sends with the email</div>
+        <div class="copybox"><p>Mike, sent you a note on the integration's back office math. Connecting here in case email's buried, yours can't be a quiet inbox this year.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">When they push back</div>
+  <h2>Objection quick-handles</h2>
+  <table>
+    <thead><tr><th style="width:30%">They say</th><th>You say</th></tr></thead>
+    <tbody>
+      <tr><td><b>"We built our own tracker."</b></td><td>"And it's yours, so it's never getting ripped out. Different question though: it records what your people log. What acts when a queue jumps at 2pm? That gap is the whole conversation."</td></tr>
+      <tr><td><b>"We get back office free with Verint / NICE."</b></td><td>"Keep it. It reports; it doesn't act. The question is what the interval between the alert and the reaction costs at your volume. That interval is what we close."</td></tr>
+      <tr><td><b>"Bad timing, we're mid-integration."</b></td><td>"That's the reason to look, not the reason to wait. Integration years are when surge and idle whiplash peaks. 15 minutes tells you if it's real for you."</td></tr>
+      <tr><td><b>"Just send me information."</b></td><td>"I'll send the one pager today. If it lands, 15 minutes next week and I'll put it against your queues specifically instead of in the abstract."</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:13.5px;color:var(--gray);">The "big brother" worry doesn't show up on calls, it shows up in discovery. Don't defend against it cold; when a meeting books, the deck frames everything as capacity and queue health.</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="eyebrow">The standing rules</div>
+  <div class="rules">
+    <h3>Rules of the road</h3>
+    <ul>
+      <li><b>Any reply stops that person's sequence</b> on the spot. Drop it in the channel; the response comes back drafted the same day.</li>
+      <li><b>A LinkedIn accept is an event.</b> Flag it the moment it happens; a DM to a connection is a different message than an email, and tomorrow's brief reroutes for it.</li>
+      <li><b>Log every touch the day it happens.</b> An untracked send is an invisible one.</li>
+      <li><b>Record your calls</b> (Otter free tier works). The transcript feeds the account brain and sharpens tomorrow's brief.</li>
+      <li><b>Beat up the scripts.</b> Anything that sounds off in your world, say so in the channel. The fix ships in the next morning's brief.</li>
+    </ul>
+  </div>
+  <p style="margin-top:18px;font-size:13.5px;color:var(--gray);"><b>Tomorrow (Day 2):</b> LinkedIn notes to all three floor seats ("shot you a note on email, maybe LinkedIn's better"), Mike Frank's email and connect go out, and account 2 enters with its own three floor seats once tonight's prospect-slice split confirms it. Keegan's two accounts get their own sprint cards in this same brief the day after he sends them.</p>
+</section>
+
+</div>
+
+<footer>
+  <b>Daily Action Brief · Back Office Motion</b> &nbsp;·&nbsp; Sprint 1, Day 1 &nbsp;·&nbsp; <span class="accent">open it, work top to bottom, done in ~75 minutes</span><br>
+  Format sample for review · July 30, 2026 · a live brief ships only with every gate green
+</footer>
+
+</body>
+</html>

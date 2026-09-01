@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow">
+<title>Star Ratings Outreach · Messaging Samples · Internal Review · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#16432C;--green:#1F7340;--green-bright:#25B56F;--lime:#B6D94C;--ink:#15231B;--ink-soft:#3E4D44;--neu:#3E4D44;--dim:#7A877E;--gray:#51605A;--paper:#FAFBF7;--card:#FFFFFF;--mist:#F0F4ED;--mist2:#E7EEE3;--line:#E2E7DD;--line2:#D4DCCE;--spark:#FE5000;--gold:#E0A23B;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;padding:46px 24px;}
+.sheet{max-width:880px;margin:0 auto;}
+.internal{display:flex;align-items:center;gap:12px;background:var(--forest);border-radius:10px;padding:10px 16px;margin-bottom:26px;}
+.internal .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);flex:none;}
+.internal .t{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#DFEAE2;}
+.internal .t b{color:#fff;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--spark);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--spark);}
+h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,4.2vw,40px);line-height:1.12;letter-spacing:-.02em;color:var(--forest);max-width:26ch;}
+.byline{font-size:12.5px;color:var(--dim);margin-top:14px;font-family:'JetBrains Mono',monospace;letter-spacing:.02em;}
+.byline b{color:var(--ink-soft);font-weight:600;}
+.lead{font-size:16px;color:var(--neu);line-height:1.6;max-width:82ch;margin-top:22px;}
+.lead b{color:var(--ink);font-weight:600;}
+.spine{background:var(--mist);border-left:4px solid var(--green-bright);border-radius:0 13px 13px 0;padding:16px 20px;margin-top:18px;}
+.spine .tk{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.spine p{font-size:13.5px;color:var(--neu);line-height:1.55;max-width:84ch;}
+.spine p b{color:var(--forest);font-weight:600;}
+.statband{display:flex;gap:56px;background:var(--forest);border-radius:14px;padding:20px 34px;margin:22px 0 6px;justify-content:flex-start;flex-wrap:wrap;}
+.statband .n{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(22px,2.4vw,30px);color:#fff;line-height:1;}
+.statband .n em{font-style:normal;color:var(--lime);}
+.statband .l{max-width:22ch;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:#B9CBBF;text-transform:uppercase;margin-top:7px;line-height:1.4;}
+.rule{height:1px;background:var(--line);margin:28px 0 22px;}
+.sechead{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--green);text-transform:uppercase;font-weight:700;margin:0 0 16px;}
+.ecard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:15px;box-shadow:0 1px 2px rgba(20,40,25,.04),0 10px 30px rgba(20,40,25,.06);}
+.ecard .ix{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--dim);display:flex;align-items:center;gap:9px;margin-bottom:10px;flex-wrap:wrap;}
+.ecard .ix span{color:var(--line2);}
+.badge{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
+.badge.p1{color:#fff;background:var(--green);}
+.badge.p2{color:var(--forest);background:var(--mist2);border:1px solid var(--line2);}
+.rnote{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.06em;color:var(--spark);text-transform:none;}
+.ecard .who{font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:var(--forest);line-height:1.15;}
+.ecard .meta{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.03em;color:var(--dim);margin-top:4px;text-transform:uppercase;}
+.ecard .subj{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--green);margin:15px 0 12px;padding-bottom:12px;border-bottom:1px dashed var(--line2);}
+.ecard .ebody p{font-size:14px;line-height:1.62;color:var(--neu);}
+.ecard .ebody p + p{margin-top:10px;}
+.ecard .sig{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.05em;color:var(--dim);margin-top:16px;padding-top:12px;border-top:1px solid var(--line);text-transform:uppercase;}
+footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray);}
+footer b{color:var(--ink);}
+@media print{@page{margin:12mm;}body{padding:0;}*{-webkit-print-color-adjust:exact;print-color-adjust:exact;}.ecard,.statband,.spine{break-inside:avoid;}}
+</style></head><body><div class="sheet">
+  <div class="internal"><span class="dot"></span><span class="t"><b>Internal</b> · For review · Not yet sent · July 2026</span></div>
+  <div class="eyebrow">Star Ratings Outreach · Messaging Samples</div>
+  <h1>Star Ratings outreach, 8 samples across the range</h1>
+  <div class="byline">Prepared by <b>Dallas Andrews</b> · GTM Engineering · v2.4.1 messaging · 2026-07-22</div>
+  <p class="lead">Eight samples from the Stars engine, chosen to show the range rather than volume: both personas, full-star and half-star gaps, single and multi-contract books, and the clinical-clears-4.0 case. Each email is generated from the plan's <b>own public CMS Star Ratings data</b>.</p>
+  <div class="spine"><div class="tk">What's shared vs what's personalized</div>
+  <p>Every email runs on the same deliberate spine, one service-measure insight, the <b>Dynamic Workforce Orchestration platform</b> line, and a single verified Humana proof framed operationally, so we never overclaim. What changes per plan is the CMS star position, the addressable dollar, the persona angle, and the clinical-vs-service read. The consistency is the guardrail; the plan-specific math is the personalization.</p></div>
+  <div class="statband">
+    <div class="stat"><div class="n">8</div><div class="l">Samples</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">Payers</div></div>
+  </div>
+  <div class="rule"></div>
+  <div class="sechead">The samples</div>
+  
+    <article class="ecard p1">
+      <div class="ix">01<span>·</span><span class="badge p1">Persona 1 · Stars / Quality</span><span class="rnote">Persona 1 · service star behind, clinical fine · 11 contracts</span></div>
+      <div class="who">Melissa (Mel) Chapman</div>
+      <div class="meta">Senior Director of Member Experience &nbsp;·&nbsp; Devoted Health</div>
+      <div class="subj">Subject: the service side of Devoted's gap</div>
+      <div class="ebody"><p>Hi Mel,</p><p>For plans sitting half a star under the 4.0 line, the last few points almost always come from the service side, the customer-service and CAHPS experience scores. Those track how the operation runs day to day, so they're the movable part, and the piece still in play this cycle.</p><p>On the public data, the customer-service star across Devoted Health's contracts is sitting at 2.7 right now. That's roughly $31M a year in addressable bonus across the 11 contracts, though you'll have a far sharper read on that than I will. The clinical side looks to be in decent shape by comparison, so the service measures are the lever your team can still pull this cycle.</p><p>That's what our Dynamic Workforce Orchestration platform does: it shifts work across your queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">02<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Largest book · 21 contracts</span></div>
+      <div class="who">Matt Hiltibidal</div>
+      <div class="meta">Senior Director, Finance &amp; Planning &nbsp;·&nbsp; Centene Corporation</div>
+      <div class="subj">Subject: the service side of Centene's gap</div>
+      <div class="ebody"><p>Hi Matt,</p><p>There's an est. $52.5M a year in quality-bonus dollars across Centene's contracts riding on the service measures alone, and missing the 4.0 line by half a star costs the same as missing it by a lot, it's a full cycle of bonus either way. On the public data those 21 contracts are sitting at 3.5 right now, though your read on the exact number will be sharper than mine.</p><p>The piece still movable this cycle is operational, the customer-service and CAHPS measures, since those track how the service side runs day to day rather than the clinical side.</p><p>That's where our Dynamic Workforce Orchestration platform fits: it reprioritizes work across queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p1">
+      <div class="ix">03<span>·</span><span class="badge p1">Persona 1 · Stars / Quality</span><span class="rnote">Persona 1 · service star above clinical, still the movable side</span></div>
+      <div class="who">Shawn Larsen</div>
+      <div class="meta">Vice President, Quality &amp; Stars &nbsp;·&nbsp; Medica HealthCare Plans</div>
+      <div class="subj">Subject: where Medica's last points sit</div>
+      <div class="ebody"><p>Hi Shawn,</p><p>For plans sitting half a star under the 4.0 line, the last few points almost always come from the service side, the customer-service and CAHPS experience scores. Those track how the operation runs day to day, so they're the movable part, and the piece still in play this cycle.</p><p>On the public data your Medicare Advantage contracts sit right around 3.5, with the customer-service star at 3.8 and still the more movable side of the two. That's roughly $23.7M a year in addressable bonus across your three contracts, though you'll have a far sharper read than I will.</p><p>That's what our Dynamic Workforce Orchestration platform does: it shifts work across your queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">04<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Full star under 4.0 · finance framing · pressure-test CTA</span></div>
+      <div class="who">Jeff Ingram</div>
+      <div class="meta">Deputy Chief Financial Officer &nbsp;·&nbsp; L.A. Care Health Plan</div>
+      <div class="subj">Subject: bonus dollars riding on 4.0</div>
+      <div class="ebody"><p>Hi Jeff,</p><p>There's roughly $13.4M a year in quality-bonus dollars addressable through the service side of L.A. Care's Medicare Advantage book, and missing 4.0 by a fraction costs the same as missing it by a lot, it's a full cycle of bonus either way. The book is sitting at 3.0 right now, a full star under the line, though your read on the exact figure will be sharper than mine.</p><p>The points still in play this cycle sit in the customer-service and CAHPS measures, which come down to how the service operation runs day to day, so that's the part with room to move before the clinical side even enters the picture.</p><p>That's where our Dynamic Workforce Orchestration platform fits: it reprioritizes work across queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>If it helps, I can pressure-test that math against how you're framing the gap. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">05<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Clinical already clears 4.0 · gap is purely service-side</span></div>
+      <div class="who">W. Bradley Yale</div>
+      <div class="meta">Chief Financial Officer &nbsp;·&nbsp; Devoted Health</div>
+      <div class="subj">Subject: where Devoted's bonus dollars concentrate</div>
+      <div class="ebody"><p>Hi Bradley,</p><p>There's roughly $31M a year in quality-bonus dollars addressable across Devoted Health's Medicare Advantage contracts, and missing the 4.0 line by half a star costs the same as missing it by a lot, it's a full cycle of bonus either way. Your clinical star is already north of 4, so the piece holding the book under the line is the customer-service side, which is also the part still in play this cycle.</p><p>That's the operational lever, how the service operation runs day to day on complaints, appeals, and access, and it's what actually moves before December.</p><p>Our Dynamic Workforce Orchestration platform fits there: it reprioritizes work across queues in real time so service levels hold on the days that usually slip. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where those dollars concentrate might be useful before the window closes. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">06<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Full star under · single contract · mid-size book</span></div>
+      <div class="who">Nancy Huang</div>
+      <div class="meta">Chief Financial Officer &nbsp;·&nbsp; CalOptima</div>
+      <div class="subj">Subject: bonus riding on the 4.0 line</div>
+      <div class="ebody"><p>Hi Nancy,</p><p>There's roughly $9.6M a year in quality-bonus dollars addressable across CalOptima's Medicare Advantage book once you get the contract over the 4.0 line, and missing by a fraction costs the same as missing by a lot, it's a full cycle of bonus either way. The contract is sitting at 3.0 right now, a full star under the line, though your read on the exact figure will be sharper than mine.</p><p>The points still in play this cycle are the operational ones, the customer-service measures, since those track how the service side runs day to day rather than anything clinical.</p><p>That's where our Dynamic Workforce Orchestration platform fits: it shifts work across queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">07<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Shows the addressable slice vs the gross figure</span></div>
+      <div class="who">Christopher Phillips</div>
+      <div class="meta">Interim CFO and VP of Finance &nbsp;·&nbsp; CareFirst BlueCross BlueShield</div>
+      <div class="subj">Subject: where CareFirst's movable dollars sit</div>
+      <div class="ebody"><p>Hi Christopher,</p><p>There's roughly $5.9M a year in quality-bonus dollars sitting in CareFirst's customer-service measures, part of an estimated $22.6M across your Medicare Advantage book, and missing the 4.0 line by half a star costs the same as missing by a lot, it's a full cycle of bonus either way. Your read on the exact figure will be sharper than mine.</p><p>The piece still movable this cycle is operational, how the service side runs day to day, since that's what the customer-service and CAHPS measures track.</p><p>That's where our Dynamic Workforce Orchestration platform fits: it shifts and reprioritizes work across queues in real time so service levels hold on the days that usually slip. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+
+    <article class="ecard p2">
+      <div class="ix">08<span>·</span><span class="badge p2">Persona 2 · Finance</span><span class="rnote">Smallest book · no number inflation</span></div>
+      <div class="who">Niyum Gandhi</div>
+      <div class="meta">Chief Financial Officer &amp; Treasurer &nbsp;·&nbsp; Mass General Brigham</div>
+      <div class="subj">Subject: service-measure dollars before December</div>
+      <div class="ebody"><p>Hi Niyum,</p><p>There's an est. $5.5M a year in quality-bonus dollars across Mass General Brigham's Medicare Advantage contracts sitting in measures tied to service operations, and missing the 4.0 line by half a star costs the same as missing by a lot, it's a full cycle of bonus either way. The two contracts are at 3.5 right now, though your read on the exact figure will be sharper than mine.</p><p>The points still in play this cycle sit in the customer-service and CAHPS measures, which come down to how the service operation runs day to day.</p><p>That's where our Dynamic Workforce Orchestration platform fits: it shifts work across queues in real time so service levels hold when volume spikes. Humana cut average handle time by 45 seconds working with us, operationally, and I'm careful not to read that as a Stars number.</p><p>A quick read on where your movable points actually sit might be useful before the December window. Worth 15 minutes in the next couple weeks?</p></div>
+      <div class="sig">Nathan Belfield &nbsp;·&nbsp; Pipeline Generation Lead &nbsp;·&nbsp; Intradiem</div>
+    </article>
+  <footer><span>&nbsp;<b>Intradiem</b> · Dynamic Workforce Orchestration</span><span>Internal review · Star Ratings motion</span></footer>
+</div></body></html>

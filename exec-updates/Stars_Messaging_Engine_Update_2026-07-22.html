@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Stars Outreach Messaging Engine: Update &amp; Honest Read · Internal · July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --neu:#3E4D44; --dim:#7A877E; --gray:#51605A;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist2:#E7EEE3;
+    --line:#E2E7DD; --line2:#D4DCCE; --spark:#FE5000; --gold:#E0A23B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;padding:46px 24px;}
+  .sheet{max-width:880px;margin:0 auto;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  .internal{display:flex;align-items:center;gap:12px;background:var(--forest);
+    border-radius:10px;padding:10px 16px;margin-bottom:26px;}
+  .internal .dot{width:8px;height:8px;border-radius:50%;background:var(--lime);flex:none;}
+  .internal .t{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;
+    letter-spacing:.13em;text-transform:uppercase;color:#DFEAE2;}
+  .internal .t b{color:#fff;}
+
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--spark);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--spark);}
+  h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(28px,4.2vw,40px);
+    line-height:1.12;letter-spacing:-.02em;color:var(--forest);max-width:24ch;}
+  .byline{font-size:12.5px;color:var(--dim);margin-top:14px;font-family:'JetBrains Mono',monospace;letter-spacing:.02em;}
+  .byline b{color:var(--ink-soft);font-weight:600;}
+  .lead{font-size:16.5px;color:var(--neu);line-height:1.6;max-width:78ch;margin-top:22px;}
+  .lead b{color:var(--ink);font-weight:600;}
+
+  .rule{height:1px;background:var(--line);margin:30px 0 26px;}
+
+  h2{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.15em;color:var(--green);
+    text-transform:uppercase;font-weight:700;margin:0 0 12px;display:flex;align-items:center;gap:10px;}
+  h2 .ix{color:var(--dim);font-weight:600;}
+  section.blk{margin-bottom:26px;}
+  p.body{font-size:14.5px;line-height:1.6;color:var(--neu);max-width:82ch;}
+  p.body b{color:var(--ink);font-weight:600;}
+  p.body + p.body{margin-top:11px;}
+
+  .statband{display:flex;gap:22px;background:var(--forest);border-radius:14px;padding:20px 28px;
+    margin:6px 0 4px;justify-content:space-between;flex-wrap:wrap;}
+  .statband .stat{min-width:0;}
+  .statband .n{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(22px,2.4vw,30px);color:#fff;line-height:1;}
+  .statband .n em{font-style:normal;color:var(--lime);}
+  .statband .l{max-width:20ch;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;
+    color:#B9CBBF;text-transform:uppercase;margin-top:7px;line-height:1.4;}
+
+  .cards2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+    box-shadow:0 1px 2px rgba(20,40,25,.04),0 12px 34px rgba(20,40,25,.07);}
+  .card h3{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:var(--green);
+    text-transform:uppercase;font-weight:700;margin-bottom:9px;}
+  .card p{font-size:13.5px;line-height:1.5;color:var(--neu);}
+  .card p b{color:var(--ink);}
+
+  /* change map: was -> now */
+  .maprow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;}
+  .mapcol{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:16px 20px;}
+  .mapcol.now{border-color:var(--green-bright);background:linear-gradient(180deg,#fff 0%,#F6FBF7 100%);}
+  .mapcol .k{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;margin-bottom:11px;}
+  .mapcol.was .k{color:var(--dim);}
+  .mapcol.now .k{color:var(--green);}
+  .mapcol ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .mapcol li{font-size:13px;line-height:1.45;color:var(--neu);padding-left:16px;position:relative;}
+  .mapcol li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;}
+  .mapcol.was li::before{background:var(--line2);}
+  .mapcol.now li::before{background:var(--green-bright);}
+  .mapcol li b{color:var(--ink);font-weight:600;}
+
+  /* gate chips */
+  .gates{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+  .gate{display:flex;gap:15px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+    border-radius:13px;padding:15px 20px;}
+  .gate .num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--green-bright);
+    flex:none;width:26px;padding-top:2px;}
+  .gate p{font-size:13.5px;color:var(--neu);line-height:1.5;}
+  .gate p b{color:var(--ink);font-weight:600;}
+
+  .band{margin-top:4px;background:linear-gradient(120deg,var(--green) 0%,var(--forest) 100%);color:#fff;
+    border-radius:14px;padding:24px 30px;}
+  .band .bk{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:#CDE6D5;margin-bottom:11px;}
+  .band p{font-size:15.5px;line-height:1.55;color:#EAF3EC;max-width:84ch;}
+  .band p b{color:#fff;}
+  .band p + p{margin-top:11px;}
+
+  .nuance{display:flex;flex-direction:column;gap:12px;margin-top:14px;}
+  .ncut{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+    border-radius:13px;padding:16px 20px;}
+  .ncut .k{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--spark);flex:none;width:104px;padding-top:2px;line-height:1.4;}
+  .ncut p{font-size:13.5px;color:var(--neu);line-height:1.55;}
+  .ncut p b{color:var(--ink);font-weight:600;}
+
+  .threads{background:var(--mist);border-left:4px solid var(--green-bright);border-radius:0 13px 13px 0;padding:20px 24px;}
+  .threads .tk{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--green);margin-bottom:11px;}
+  .threads p{font-size:14px;color:var(--neu);line-height:1.6;max-width:82ch;}
+  .threads p b{color:var(--forest);font-weight:600;}
+  .threads p + p{margin-top:10px;}
+
+  footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--line2);
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--gray);}
+  footer .lo{display:flex;align-items:center;gap:11px;}
+  footer b{color:var(--ink);}
+
+  @media (max-width:760px){
+    .cards2,.maprow{grid-template-columns:1fr;}
+    .statband{gap:16px;}
+  }
+  @media print{
+    @page{margin:13mm;}
+    body{padding:0;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .card,.ncut,.band,.threads,.statband,.mapcol,.gate{break-inside:avoid;}
+    section.blk{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="internal">
+    <span class="dot"></span>
+    <span class="t"><b>Internal only.</b> Describes the outbound engine and names prospect examples. Not for external or prospect-facing use.</span>
+  </div>
+
+  <div class="eyebrow">Messaging engine update &middot; GTM Engineering</div>
+  <h1>The Stars Outreach Engine: What Changed, and What Earns a Reply</h1>
+  <div class="byline">Prepared for <b>Naveen Thilagan</b> and <b>Nathan Belfield</b> &middot; GTM Engineering &middot; July 22 2026</div>
+
+  <p class="lead">Nate's notes and everything from the 1:1 are folded into the copy engine. This is what the messaging does now, why every email clears the bar before it sends, and an honest read on what actually earns the replies, so we judge it the right way.</p>
+
+  <div class="rule"></div>
+
+  <section class="blk">
+    <h2><span class="ix">01</span> What you flagged, and what the engine does now</h2>
+    <div class="maprow">
+      <div class="mapcol was">
+        <div class="k">Before</div>
+        <ul>
+          <li>Opened by restating the reader's own star number</li>
+          <li>Named specific <b>contract IDs</b> we couldn't be sure they owned</li>
+          <li>Canned lines like <b>"let me make this concrete"</b> on every lead</li>
+          <li>Read dense and a little AI</li>
+          <li>Said little about what Intradiem actually does</li>
+        </ul>
+      </div>
+      <div class="mapcol now">
+        <div class="k">Now</div>
+        <ul>
+          <li>Opens with an <b>insight</b>; their number lands as support</li>
+          <li><b>No contract IDs.</b> Everything is payer-level</li>
+          <li>Canned openers banned; each email is built from that contact</li>
+          <li>Warm, plain, short paragraphs, in Nate's register</li>
+          <li>One plain product line, framed as our <b>Dynamic Workforce Orchestration</b> platform, plus one verified proof</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="statband">
+    <div class="stat"><div class="n">5 <em>touches</em></div><div class="l">Judge the sequence, not one email</div></div>
+    <div class="stat"><div class="n">3 <em>+ human</em></div><div class="l">Automated critics, then a person, before any send</div></div>
+    <div class="stat"><div class="n">1 <em>proof</em></div><div class="l">Humana, verified &amp; cleared for prospect use</div></div>
+    <div class="stat"><div class="n">0 <em>IDs</em></div><div class="l">Contract IDs in copy, payer-level only</div></div>
+    <div class="stat"><div class="n">46 <em>leads</em></div><div class="l">Regenerating on the new version</div></div>
+  </div>
+
+  <section class="blk" style="margin-top:26px;">
+    <h2><span class="ix">02</span> How the copy reads now</h2>
+    <p class="body">Every email opens with a point of view, not the prospect's own score, because a Stars or Finance leader knows their gap cold and being told it reads as homework not done. The story is one clear chain, stated as upside: <b>Intradiem improves the customer-service and operational metrics, and the service Star measures rise as a result.</b> We never claim to move a measure directly, and we never touch clinical. One plain line names what our Dynamic Workforce Orchestration platform does (shift and reprioritize work across queues in real time to hold service levels), and one verified customer result carries it (Humana's handle-time improvement), framed operationally, never as a Stars claim. The close gives the reader a specific reason worth 15 minutes, not a generic "let's connect."</p>
+    <p class="body">The five touches are written as one building story to someone who hasn't replied, not four sales pitches: a first note that earns attention, a softer second angle, the stakes, the one-page breakdown, then a gracious close. Each is the next natural note from a sharp peer.</p>
+  </section>
+
+  <section class="blk">
+    <h2><span class="ix">03</span> Why you can trust what goes out</h2>
+    <p class="body">Nothing sends on the model's say-so. Each email clears a stack of automatic checks and then a human:</p>
+    <div class="gates">
+      <div class="gate"><span class="num">01</span><p><b>Figures check.</b> Every number must trace to public CMS data or our one cleared proof point. Anything else fails.</p></div>
+      <div class="gate"><span class="num">02</span><p><b>Voice check.</b> Fails cold or robotic copy, canned openers, and any line that reads as AI-written.</p></div>
+      <div class="gate"><span class="num">03</span><p><b>Full five-email pre-send audit.</b> Reads the whole sequence together before any of it can send.</p></div>
+      <div class="gate"><span class="num">04</span><p><b>Claims gate.</b> Only Humana and public CMS math are quotable. No other customer, no clinical claim, no contract ID.</p></div>
+      <div class="gate"><span class="num">05</span><p><b>Human approval.</b> Nathan reads and sends from his own mailbox. Campaigns are paused now on purpose while we regenerate all 46 on the new version.</p></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <h2><span class="ix">04</span> The honest read, kept straight</h2>
+    <div class="band">
+      <div class="bk">What I'd actually tell you</div>
+      <p><b>Would I send these? Yes.</b> They're well above typical cold outbound: they open with a point of view instead of the prospect's own number, they're specific, they concede the clinical side (which buys credibility), the proof is real and carefully framed, and the CTA gives a reason worth 15 minutes. I stand behind the craft.</p>
+      <p><b>Would I promise replies? No, and I'd be suspicious of anyone who did.</b> Cold reply rates sit in the low single digits even for excellent copy. What actually earns the replies is three things working together, and only one of them is the writing.</p>
+    </div>
+    <div class="nuance">
+      <div class="ncut">
+        <div class="k">Number accuracy</div>
+        <p>The real make-or-break for these readers. A VP of Stars knows her weighted average cold. If a figure is off, the email doesn't just miss, it burns trust and files us as "didn't do the homework." <b>Every number is verified against the CMS data in the table before send.</b> That single discipline moves reply odds more than any wording tweak.</p>
+      </div>
+      <div class="ncut">
+        <div class="k">Deliverability</div>
+        <p>Replies require landing in the primary inbox from a warmed mailbox. Great copy in the spam folder gets zero. <b>That gate is separate from the writing</b> and we treat it as its own thing.</p>
+      </div>
+      <div class="ncut">
+        <div class="k">Sequence + phone</div>
+        <p>It takes eight to ten touches for most people to reply, and rarely a single email. These first notes are strong openers, but the full five-email arc and Nate's calls off the sourced numbers are what convert. <b>Judge the sequence, not the single send.</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <h2><span class="ix">05</span> What's next, threads to shape together</h2>
+    <div class="threads">
+      <div class="tk">Provisional &middot; for us to decide</div>
+      <p>Nate's own best-performing emails get loaded as the engine's voice anchor, so it aligns to what already works rather than guessing. Then we grade a fresh batch together, keep the ones that land, and the next seven-company wave runs on this same version so the comparison is clean.</p>
+      <p>One call worth making together: confirming the enriched data points we lead with are the ones worth trusting, so the personalization stays credible as we scale. Maya is the right person to pressure-test the data side with.</p>
+      <p><b>Nothing sends until the numbers are verified against the table and you and Nate sign off on a batch.</b> Then we regenerate all 46 and turn the sequence back on.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="lo">
+      <svg style="height:16px;width:auto;display:block;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187 46" fill="none">
+        <path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+        <path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+        <path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+        <path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+        <path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="#014637"/>
+        <path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="#014637"/>
+      </svg>
+      <span>Intradiem &middot; Internal &middot; GTM Engineering</span>
+    </span>
+    <span><b>Dallas Andrews</b> &middot; GTM Engineer, with Naveen Thilagan &amp; Nathan Belfield</span>
+  </footer>
+
+</div>
+</body>
+</html>

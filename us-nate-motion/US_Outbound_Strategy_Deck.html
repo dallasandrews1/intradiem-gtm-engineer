@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Outbound Motion · Strategy &amp; Proof Plan · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* Palette + type lifted from the Intradiem Interactive Demo so this deck and the demo read as one product */
+  :root{
+    --green:#2DB56E; --green-600:#228752; --green-300:#7BD3A0; --green-100:#C4ECD4;
+    --forest:#014637; --orange:#F58220; --orange-600:#D96D12; --blue:#0F4C99;
+    --ink:#202020; --ink-2:#5A5A5A; --ink-3:#9A9A9A;
+    --bg:#FFFFFF; --sidebar:#F5F4F2; --zebra:#FAFAFA;
+    --tint:rgba(45,181,110,.12); --tint-soft:rgba(45,181,110,.08);
+    --line:#E0E0E0; --line-strong:#BDBDBD; --r:8px;
+    --ff:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+    --ff-mono:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;background:var(--sidebar);}
+  body{font-family:var(--ff);color:var(--ink);overflow:hidden;-webkit-font-smoothing:antialiased;}
+  .deck{height:100%;position:relative;}
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:7vh 9vw;background:var(--bg);}
+  .slide.active{display:flex;}
+  .slide.dark{background:var(--forest);color:#fff;}
+  .eyebrow{font-family:var(--ff-mono);font-size:12px;letter-spacing:.16em;color:var(--green-600);text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+  .dark .eyebrow{color:var(--green-300);}
+  h1{font-weight:900;color:var(--ink);font-size:clamp(28px,4.2vw,52px);line-height:1.1;letter-spacing:-.02em;max-width:23ch;}
+  .dark h1{color:#fff;}
+  .sub{font-size:clamp(15px,1.35vw,19px);color:var(--ink-2);line-height:1.55;margin-top:18px;max-width:64ch;}
+  .dark .sub{color:#C7DAD1;}
+  .sub b{color:var(--ink);font-weight:700;} .dark .sub b{color:#fff;}
+  .cards{display:grid;gap:16px;margin-top:30px;}
+  .cards.c2{grid-template-columns:1fr 1fr;} .cards.c3{grid-template-columns:1fr 1fr 1fr;}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;box-shadow:0 1px 2px rgba(20,30,25,.05),0 8px 24px rgba(20,30,25,.05);}
+  .card h3{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .card .k{font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;color:var(--green-600);text-transform:uppercase;font-weight:600;margin-bottom:9px;}
+  .card p{font-size:14.5px;line-height:1.5;color:var(--ink-2);} .card p b{color:var(--ink);font-weight:700;}
+  .card .num{font-weight:900;font-size:26px;color:var(--green);margin-bottom:6px;letter-spacing:-.01em;}
+  .callout{background:var(--tint-soft);border:1px solid var(--tint);border-radius:var(--r);padding:16px 22px;font-size:15.5px;color:var(--ink);margin-top:20px;line-height:1.5;}
+  .callout strong{color:var(--green-600);font-weight:700;}
+  .statband{display:flex;gap:26px;background:var(--forest);border-radius:var(--r);padding:20px 32px;margin-top:26px;justify-content:space-between;align-items:center;}
+  .statband .stat{text-align:left;}
+  .statband .n{font-weight:900;font-size:clamp(22px,2.5vw,34px);color:#fff;letter-spacing:-.01em;}
+  .statband .n em{font-style:normal;color:var(--green-300);}
+  .statband .l{max-width:22ch;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:#9DBBAE;text-transform:uppercase;margin-top:5px;}
+  .flow{display:flex;align-items:stretch;gap:0;margin-top:30px;}
+  .fbox{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 8px 24px rgba(20,30,25,.06);display:flex;flex-direction:column;}
+  .fbox.now{border:2px solid var(--orange);}
+  .fbox .n{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase;} .fbox.now .n{color:var(--orange);}
+  .fbox .t{font-weight:700;font-size:19px;color:var(--ink);margin:6px 0 6px;}
+  .fbox .d{font-size:13px;color:var(--ink-2);line-height:1.45;}
+  .fbox .own{margin-top:auto;padding-top:10px;font-family:var(--ff-mono);font-size:10px;letter-spacing:.04em;color:var(--green-600);} .fbox.now .own{color:var(--orange);}
+  .arrow{display:flex;align-items:center;padding:0 12px;font-size:22px;color:var(--green);font-weight:700;}
+  table.ledger{width:100%;border-collapse:collapse;margin-top:12px;font-size:15px;}
+  table.ledger th{text-align:left;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);padding:0 16px 11px 0;border-bottom:1px solid var(--line);font-weight:600;}
+  table.ledger td{padding:10px 16px 10px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top;}
+  table.ledger td.q{font-family:var(--ff-mono);color:var(--ink);font-weight:600;white-space:nowrap;}
+  table.ledger tr:last-child td{border-bottom:none;}
+  .gate{display:flex;gap:16px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:15px 20px;margin-bottom:12px;box-shadow:0 4px 16px rgba(20,30,25,.05);}
+  .gate .badge{flex-shrink:0;font-family:var(--ff-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:6px 11px;border-radius:6px;background:var(--tint);color:var(--green-600);}
+  .gate p{font-size:14.5px;color:var(--ink-2);line-height:1.45;} .gate strong{color:var(--ink);font-weight:700;}
+  .ask{background:var(--zebra);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:0 var(--r) var(--r) 0;padding:16px 24px;margin-bottom:13px;}
+  .ask.tool{border-left-color:var(--orange);}
+  .ask h3{font-size:19px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+  .ask p{font-size:14.5px;color:var(--ink-2);line-height:1.45;}
+  .mirrorline{font-weight:900;font-size:clamp(28px,3.8vw,48px);line-height:1.15;color:#fff;letter-spacing:-.02em;max-width:26ch;}
+  .mirrorline em{font-style:normal;color:var(--green-300);}
+  .cap{font-size:12.5px;color:var(--ink-3);margin-top:14px;font-family:var(--ff-mono);letter-spacing:.03em;}
+  .presenter{margin-top:26px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.05em;color:var(--ink-3);}
+  /* logo */
+  .logo-hero{height:46px;width:auto;display:block;margin-bottom:26px;}
+  .slidelogo{position:absolute;bottom:3.2vh;left:9vw;height:16px;width:auto;opacity:.9;}
+  .dark .slidelogo{opacity:1;}
+  .pagenum{position:absolute;bottom:3.2vh;right:9vw;font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;color:var(--ink-3);}
+  .dark .pagenum{color:#7FA394;}
+  /* interactive chrome */
+  .hud{position:fixed;bottom:18px;right:24px;font-family:var(--ff-mono);font-size:11px;letter-spacing:.12em;color:var(--ink-3);display:flex;gap:16px;align-items:center;z-index:10;}
+  .hud .hint{opacity:.7;}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--green);transition:width .25s ease;z-index:10;}
+  .wm{fill:#014637;}
+  @media print{
+    @page{size:13.333in 7.5in;margin:0;}
+    html,body{height:auto!important;overflow:visible!important;background:#fff!important;}
+    .hud,.progress{display:none!important;}
+    .deck{height:auto!important;position:static!important;}
+    .slide{display:flex!important;position:relative!important;inset:auto!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;width:13.333in!important;height:7.5in!important;overflow:hidden!important;page-break-after:always!important;page-break-inside:avoid!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+    .slide:last-child{page-break-after:avoid!important;}
+    .card,.fbox,.gate{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Intradiem logo, defined once -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" class="wm"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" class="wm"/>
+</symbol></svg>
+
+<div class="progress" id="progress"></div>
+<div class="deck" id="deck">
+
+<!-- 1 · TITLE -->
+<section class="slide active">
+  <svg class="logo-hero"><use href="#ilogo"/></svg>
+  <div class="eyebrow">US Outbound Motion · Strategy &amp; Proof Plan</div>
+  <h1>Make outbound a funded function, and prove the ROI that scales it.</h1>
+  <p class="sub">A deliberate, multichannel motion, proven by hand now so the investment to scale it is a decision we make with the numbers already in hand, not a bet.</p>
+  <p class="presenter">Dallas Andrews · GTM Engineer · US motion with Nate (Nathan Belfield) · Star Ratings cliff accounts</p>
+</section>
+
+<!-- 2 · WHERE THIS STARTED -->
+<section class="slide">
+  <div class="eyebrow">00 · Where this started</div>
+  <h1>We ran the full motion first, then saw its ceiling.</h1>
+  <p class="sub">This plan isn't theory. We already took a complete motion to market through Clay, and running it end to end is what made the limit obvious.</p>
+  <div class="cards c3">
+    <div class="card"><div class="k">What we ran</div><h3>A complete motion, live</h3><p>Sourced, enriched, gated, written, and delivered through the Clay sequencer. A real motion, end to end, not a pilot.</p></div>
+    <div class="card"><div class="k">What it showed</div><h3>Single-channel delivery</h3><p>The sequencer sends one channel, email. Into VP and C-suite, email alone stalls; it rarely earns the reply or the meeting by itself.</p></div>
+    <div class="card"><div class="k">Where it points</div><h3>Outbound is multichannel</h3><p>Single-channel isn't how outbound works. That's not an opinion now, it's what running the motion showed, and it's the foundation for everything that follows.</p></div>
+  </div>
+  <div class="callout"><strong>The takeaway:</strong> we keep what Clay and Claude already do well, the sourcing, enrichment, gating, and copy, and we fix the one thing the first motion exposed, delivery stuck in a single channel.</div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">02 / 11</div>
+</section>
+
+<!-- 3 · PRINCIPLES -->
+<section class="slide">
+  <div class="eyebrow">01 · Operating principles</div>
+  <h1>The principles this motion runs on.</h1>
+  <p class="sub">Three principles separate a motion that generates net-new pipeline from one that just sends email.</p>
+  <div class="cards c3">
+    <div class="card"><div class="k">Principle 01</div><h3>Behavior, not tools</h3><p>Multichannel is a behavior, not a tool. We run it by hand now to prove the ROI, so buying Lemlist to scale it is a de-risked decision, not a bet.</p></div>
+    <div class="card"><div class="k">Principle 02</div><h3>Email is not the motion</h3><p>Email alone doesn't generate net-new pipeline into VP and C-suite. LinkedIn, voice, and calls are where net-new is won.</p></div>
+    <div class="card"><div class="k">Principle 03</div><h3>Driven, not handed off</h3><p>A sequence handed over and checked on occasionally stalls. We drive one motion daily as the rep's pit crew, with a live scoreboard.</p></div>
+  </div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">03 / 11</div>
+</section>
+
+<!-- 3 · OPERATING MODEL -->
+<section class="slide">
+  <div class="eyebrow">02 · Operating model</div>
+  <h1>Who builds it, who runs it, in what order.</h1>
+  <p class="sub">Dallas engineers the motion; the BDRs execute it. Every channel is built to be as easy to run as an email.</p>
+  <div class="cards c2">
+    <div class="card"><div class="k">Track 1 · Priority now</div><h3>US · Nate</h3><p>Star Ratings cliff accounts. US-only CMS trigger, the cleanest signal in the book. The lowest-risk proof and the priority are the same motion.</p></div>
+    <div class="card"><div class="k">Track 2 · After US proof</div><h3>UK · Jack</h3><p>A separate design: no Star Ratings trigger, and cold outbound carries GDPR/PECR weight, so the mix leans LinkedIn and WhatsApp. Built once US produces.</p></div>
+  </div>
+  <div class="callout"><strong>The engine's real product</strong> is a frictionless multichannel package, written and ready per contact per day. Nate is a known, trusted operator, so the only variable this proof tests is the motion itself.</div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">04 / 11</div>
+</section>
+
+<!-- 4 · STACK -->
+<section class="slide">
+  <div class="eyebrow">03 · The stack, sequenced by proof</div>
+  <h1>Own it now, add tools as they earn their place.</h1>
+  <div class="flow">
+    <div class="fbox now"><div class="n">Today</div><div class="t">Clay + Claude</div><div class="d">Sources, enriches, gates, and writes the personalized multichannel copy.</div><div class="own">We own this now</div></div>
+    <div class="arrow">&#43;</div>
+    <div class="fbox now"><div class="n">Today</div><div class="t">Salesforce + Slack</div><div class="d">System of record, the 6sense feed, and the living deal surface.</div><div class="own">We own this now</div></div>
+    <div class="arrow">&#8594;</div>
+    <div class="fbox"><div class="n">Fund now</div><div class="t">Lemlist</div><div class="d">Removes the manual ceiling across both BDRs. The hand-run proof is what makes it a confident buy.</div><div class="own">Ask #1 · pursuing now</div></div>
+    <div class="arrow">&#8594;</div>
+    <div class="fbox"><div class="n">Next</div><div class="t">n8n</div><div class="d">The feedback layer: behavior triggers the next move; the meeting-handoff chain.</div><div class="own">Ask #2</div></div>
+  </div>
+  <div class="callout">n8n owns the seams between tools only. Logic inside a tool stays native to it. That discipline keeps the stack from becoming fragile tech for its own sake.</div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">05 / 11</div>
+</section>
+
+<!-- 5 · PROOF ACCOUNTS -->
+<section class="slide">
+  <div class="eyebrow">04 · The proof motion</div>
+  <h1 style="font-size:clamp(26px,3.4vw,44px);">Nate · Star Ratings · a small, high-stakes, account-based slice.</h1>
+  <table class="ledger">
+    <tr><th>Account</th><th>Forgone QBP (est.)</th><th>Seats worked</th><th>Wave</th></tr>
+    <tr><td>Centene</td><td class="q">$75.5M</td><td>5 · Ops, Member Experience, Medicare Ops</td><td>A / B / C</td></tr>
+    <tr><td>Clover Health</td><td class="q">$74.6M</td><td>2 · MA Member Experience, CFO</td><td>D</td></tr>
+    <tr><td>Devoted Health</td><td class="q">$44.0M</td><td>2 · Member Experience, Chief Actuary</td><td>D</td></tr>
+    <tr><td>Medica</td><td class="q">$37.1M</td><td>2 · Core Ops, SVP Ops</td><td>A / C</td></tr>
+    <tr><td>GuideWell</td><td class="q">$33.4M</td><td>2 · EVP &amp; CFO, CFO Government</td><td>D</td></tr>
+    <tr><td>Blue Shield of California</td><td class="q">$33.3M</td><td>2 · Member Experience, Chief Actuary</td><td>D</td></tr>
+  </table>
+  <div class="statband" style="margin-top:18px;padding:16px 30px;">
+    <div class="stat"><div class="n">6</div><div class="l">Target accounts, all cold-eligible</div></div>
+    <div class="stat"><div class="n">15</div><div class="l">Committee contacts, multithreaded</div></div>
+    <div class="stat"><div class="n">~$298M <em>est.</em></div><div class="l">Forgone QBP across the slice</div></div>
+    <div class="stat"><div class="n">Not volume<em>, proof</em></div><div class="l">Two seats per account</div></div>
+  </div>
+  <p class="cap">Forgone QBP estimated from public CMS data; each plan knows its exact figure better than we do. Not an Intradiem claim.</p>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">06 / 11</div>
+</section>
+
+<!-- 6 · PROOF HOW -->
+<section class="slide">
+  <div class="eyebrow">05 · The proof motion · how it runs</div>
+  <h1>Multichannel, two message tracks, staggered.</h1>
+  <div class="cards c3">
+    <div class="card"><div class="k">Channels</div><h3>LinkedIn-first</h3><p>Connect, note, voice note, then a call. Email is the supporting channel, kept within an inbox-safe cap.</p></div>
+    <div class="card"><div class="k">Message</div><h3>Two tracks</h3><p>Ops and Member Experience hear the in-the-moment capacity lever. Finance hears the QBP-recovery and payback math.</p></div>
+    <div class="card"><div class="k">Cadence</div><h3>Four touches</h3><p>Day 1 email, Day 2 connect, Day 4 voice note, Day 6 call. Waves staggered so no day is bursty.</p></div>
+  </div>
+  <div class="callout"><strong>Success is defined up front:</strong> replies and live conversations, not just booked meetings, over a real window. A sharp reply in week two is proof the motion works even if the invite lands in week four.</div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">07 / 11</div>
+</section>
+
+<!-- 7 · GUARDRAILS -->
+<section class="slide">
+  <div class="eyebrow">06 · Built-in guardrails</div>
+  <h1>The guardrails protecting every send.</h1>
+  <p class="sub">The motion runs inside standing guardrails, so it moves fast without ever putting the brand or the install base at risk.</p>
+  <div style="margin-top:22px;">
+    <div class="gate"><span class="badge">In place</span><p><strong>Customer exclusion.</strong> Current customers are automatically held out of every campaign, so the install base is never at risk of a cold touch, confirmed on live rows before every send.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Verified claims.</strong> The only proof used is Humana's public figures: about two hours of capacity per agent per month, and seven times ROI five years in. No unverified numbers reach a prospect.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Deliverability.</strong> Sending health is monitored: LinkedIn-first, email kept within a verified inbox-safe volume, so domain reputation stays protected.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Copy quality.</strong> Every message clears an adversarial quality gate before it ships, so what reaches a prospect is already pressure-tested.</p></div>
+  </div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">08 / 11</div>
+</section>
+
+<!-- 8 · ASKS -->
+<section class="slide">
+  <div class="eyebrow">07 · The asks</div>
+  <h1>What proof earns, and in what order.</h1>
+  <p class="sub">Nothing is bought on theory. Each ask is backed by the result of the step before it.</p>
+  <div style="margin-top:22px;">
+    <div class="ask"><h3>Authority · to shape together</h3><p>Once the proof is in, worth deciding together whether this becomes the standard play for both BDRs. Bottom-up proof first, then we shape the mandate.</p></div>
+    <div class="ask tool"><h3>Tool · Ask #1 · Lemlist · pursuing now</h3><p>The manual proof shows the ROI and that the motion scales. Lemlist turns a proven motion into daily capacity across both BDRs and lets a hand-run motion 10x without adding people. The sooner it's funded, the sooner the motion that works runs every day.</p></div>
+    <div class="ask tool"><h3>Tool · Ask #2 · n8n</h3><p>Once the base motion produces: no-open triggers a call, a booked meeting auto-builds the brief and agenda, the post-call transcript drafts the follow-up.</p></div>
+  </div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">09 / 11</div>
+</section>
+
+<!-- 9 · ROADMAP -->
+<section class="slide">
+  <div class="eyebrow">08 · Sequence</div>
+  <h1>The roadmap.</h1>
+  <div class="cards c3">
+    <div class="card"><div class="num">Now</div><h3>Prove it</h3><p><b>Nate runs the motion, LinkedIn-first.</b> 15 contacts, 6 accounts, multithreaded. Daily package and live scoreboard. The Lemlist ROI case is built in parallel off that scoreboard.</p></div>
+    <div class="card"><div class="num">Fund</div><h3>Scale it with Lemlist</h3><p><b>Purchase approved on the proven ROI.</b> Lemlist removes the manual ceiling, both BDRs run it daily at volume, and the UK motion with Jack launches.</p></div>
+    <div class="card"><div class="num">Then</div><h3>Close the loop</h3><p><b>n8n adds behavior-driven triggers.</b> Meeting handoff automated end to end, every outcome documented and fed back, outbound a funded, instrumented function.</p></div>
+  </div>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">10 / 11</div>
+</section>
+
+<!-- 10 · CLOSER -->
+<section class="slide dark">
+  <div class="eyebrow">09 · Why this is the right bet</div>
+  <p class="mirrorline">We run GTM the way our product runs operations: <em>real-time signals, automated action, a human gate before anything irreversible.</em></p>
+  <p class="sub" style="margin-top:26px;">We prove it by hand first, then let the tools scale what already works, so we become the first live proof of what we sell. This is a head start, not a finished product; the build compounds weekly.</p>
+  <svg class="slidelogo"><use href="#ilogo"/></svg><div class="pagenum">11 / 11</div>
+</section>
+
+</div>
+
+<div class="hud"><span class="hint">&#8592; &#8594; to navigate</span><span id="counter">1 / 11</span></div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  const counter=document.getElementById('counter'), bar=document.getElementById('progress');
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+    counter.textContent=(i+1)+' / '+slides.length;
+    bar.style.width=(((i+1)/slides.length)*100)+'%';
+  }
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown')show(i+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp')show(i-1);
+    if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
+  });
+  document.addEventListener('click',e=>{ if(!e.target.closest('a')) show(i+1); });
+  show(0);
+</script>
+</body>
+</html>

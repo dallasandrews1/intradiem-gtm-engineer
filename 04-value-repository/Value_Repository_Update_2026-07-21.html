@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intradiem Verified Value — Current State (Jul 21, 2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#16432C; --green:#1F7340; --green-bright:#25B56F; --lime:#B6D94C;
+    --ink:#15231B; --ink-soft:#3E4D44; --dim:#7A877E;
+    --paper:#FAFBF7; --card:#FFFFFF; --mist:#F0F4ED; --mist2:#E7EEE3;
+    --line:#E2E7DD; --line2:#D4DCCE; --gold:#E0A23B; --orange:#FE5000;
+    --ok:#1F7340; --warn:#B5751A; --neutral:#7A877E;
+    --shadow:0 1px 2px rgba(20,40,25,.04), 0 12px 34px rgba(20,40,25,.07);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"DM Sans",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:48px 40px 64px;}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin:0 0 10px;}
+  h1{font-family:"Playfair Display",serif;font-weight:800;color:var(--forest);
+    font-size:34px;line-height:1.12;margin:0 0 10px;}
+  .sub{font-size:16px;color:var(--ink-soft);max-width:640px;margin:0 0 6px;}
+  .meta{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--dim);margin:14px 0 0;}
+  h2{font-family:"Playfair Display",serif;font-weight:700;color:var(--forest);
+    font-size:21px;margin:0;}
+  .sec{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);}
+  .sechead{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+  .chip{font-family:"JetBrains Mono",monospace;font-size:10.5px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:6px;
+    border:1px solid transparent;white-space:nowrap;}
+  .chip.ok{color:#fff;background:var(--ok);}
+  .chip.warn{color:var(--warn);background:#FBF1DC;border-color:#EAD6A6;}
+  .chip.wait{color:var(--ink-soft);background:var(--mist2);border-color:var(--line2);}
+  .lead{font-size:14.5px;color:var(--ink-soft);margin:8px 0 16px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;box-shadow:var(--shadow);margin-bottom:14px;}
+  .card.hero{border-color:var(--green-bright);border-left:4px solid var(--green-bright);}
+  .card h3{margin:0 0 4px;font-size:16px;color:var(--forest);font-weight:700;}
+  .card .src{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--dim);margin:2px 0 12px;}
+  ul{margin:8px 0 0;padding-left:18px;}
+  li{margin:5px 0;font-size:14px;}
+  li b{color:var(--ink);}
+  .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:10px;
+    font-weight:600;letter-spacing:.06em;color:var(--green);background:var(--mist);
+    border:1px solid var(--line2);border-radius:5px;padding:2px 7px;margin-left:6px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .owner{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--green);
+    font-weight:600;margin-top:10px;display:block;}
+  .note{background:var(--mist);border:1px solid var(--line2);border-radius:12px;
+    padding:16px 20px;font-size:13.5px;color:var(--ink-soft);margin-top:14px;}
+  .note b{color:var(--forest);}
+  .foot{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
+    font-size:12px;color:var(--dim);}
+  @media(max-width:680px){.grid{grid-template-columns:1fr;}.wrap{padding:32px 22px;}}
+  @media print{body{background:#fff;}.card,.note{box-shadow:none;}.wrap{padding:0;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Verified Value · Current State</p>
+  <h1>What we can say in outbound today — and what we're building toward</h1>
+  <p class="sub">An update to the value repository set I shared this morning, tightened after the CSM session with Matt Graves. The short version: the discipline holds, the approved list is deliberately narrow right now, and here's exactly what unlocks a bigger one.</p>
+  <p class="meta">Owner: Dallas Andrews · Updated Jul 21, 2026 · Supersedes the raw repository files shared at 10:10–10:23 today</p>
+
+  <!-- CLEARED -->
+  <div class="sec">
+    <div class="sechead"><span class="chip ok">Cleared to use now</span><h2>The list a rep can pull from today</h2></div>
+    <p class="lead">Everything below is either a public, customer-told claim or public data. Nothing here needs a further sign-off to appear in outbound.</p>
+
+    <div class="card hero">
+      <h3>Humana <span class="tag">named · 1:1 &amp; 1:many</span></h3>
+      <p class="src">Source: public SWPP / Intradiem webinar (on-demand at intradiem.com), already used in Nathan's outreach</p>
+      <ul>
+        <li>Partnership since <b>2020</b>; first-year in-year return; <b>7X ROI</b> five years in.</li>
+        <li><b>2.7M</b> automated contact-center actions in 2025.</li>
+        <li><b>~2 hours</b> of capacity unlocked per agent per month (16,000 dynamic work hours, 45,000 automated sessions).</li>
+        <li>AHT reduced <b>45 seconds</b>; occupancy up <b>4%</b>; <b>12,000</b> voluntary time-off hours generated.</li>
+        <li>On-the-record quote available (Melinda Dippolito, Humana): automation is "table stakes."</li>
+      </ul>
+      <span class="owner">This is our marquee proof point. Lead with it.</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Public CMS Star Ratings math</h3>
+        <p class="src">CMS Oct 2025 release + public methodology</p>
+        <ul>
+          <li>Star levels, forgone-bonus estimates, cliff-edge counts.</li>
+          <li>Always labeled <b>"estimate from public CMS data,"</b> with the humility line that the prospect knows their own picture better than we do.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How we position the company</h3>
+        <p class="src">Company positioning</p>
+        <ul>
+          <li>Dynamic Workforce Orchestration across <b>contact centers AND back offices</b>, six verticals.</li>
+          <li>Never framed as a call-center-only tool.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAUSED -->
+  <div class="sec">
+    <div class="sechead"><span class="chip warn">Paused · internal only</span><h2>Real data, but not customer-facing yet</h2></div>
+    <p class="lead">This is the change coming out of the Matt Graves session. These numbers are true internally and stay useful for targeting and prioritization — they just don't belong in a prospect's inbox in their current form.</p>
+    <div class="card">
+      <ul>
+        <li><b>Per-account Zuar / Greenlight savings, "Cost Taken Out," whitespace and maturity scores</b> — internal targeting only. The savings model is an internal average (assumed salary, assumed time, blended across accounts). Matt's read: customers "will call us on it," and financial-services buyers reject projected value almost every time.</li>
+        <li><b>Any dollar / percent / hours figure derived from that model</b> — do not send. We state what objectively happened and let the customer apply their own value; we don't tell them what their value will be.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- WAITING -->
+  <div class="sec">
+    <div class="sechead"><span class="chip wait">What we're waiting on</span><h2>What turns this into a comprehensive list</h2></div>
+    <p class="lead">Four unlocks, each with a clear owner. As these land, the approved list grows past Humana.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1 · Quotable-customer list</h3>
+        <ul>
+          <li>The list of who we <b>can</b> name — and, more practically, the exclusion list of who we <b>can't</b> (JPMorgan already confirmed never).</li>
+          <li>Until it lands: <b>category-level framing only</b> ("a top-5 health plan"), Humana the sole named exception.</li>
+        </ul>
+        <span class="owner">Owner: Sierra + Genna + Marketing (already requested in this thread)</span>
+      </div>
+      <div class="card">
+        <h3>2 · Activity-count value set</h3>
+        <ul>
+          <li>The customer-safe replacement for the savings model: objective counts — actions per agent per day, coaching sessions, adherence and handle-time alerts — with the customer applying their own value.</li>
+          <li>Being rebuilt with corrected denominators; sector-aware (healthcare leans on SLA/Stars, financial services on volume and time saved).</li>
+        </ul>
+        <span class="owner">Owner: Josh + Matt Graves · I'll co-shape</span>
+      </div>
+      <div class="card">
+        <h3>3 · Industry benchmark data</h3>
+        <ul>
+          <li>Matt's adoption reporting, with an industry filter added, so we can say "here's what this industry looks like on average" — live, not a static pull.</li>
+          <li>Also unlocks peer-benchmark framing ("here's where you land vs peers").</li>
+        </ul>
+        <span class="owner">Owner: Matt Graves (build in progress)</span>
+      </div>
+      <div class="card">
+        <h3>4 · Named-use clearance beyond Humana</h3>
+        <ul>
+          <li>Contracts confirmation before any customer other than Humana is named, even in email. Spirit of the agreement, not just the letter.</li>
+        </ul>
+        <span class="owner">Owner: Contracts / Marketing, via the list in #1</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Net:</b> the repository isn't shrinking in ambition — it's being rebuilt on ground customers can't dispute. Humana carries us today; the four unlocks above turn one proof point into a sector-by-sector library we can all pull from with confidence.
+    </div>
+  </div>
+
+  <p class="foot">Intradiem · GTM Engineering · This replaces the prospect-facing use of the earlier repository files until the items above land. Internal targeting use of the underlying data is unchanged.</p>
+
+</div>
+</body>
+</html>

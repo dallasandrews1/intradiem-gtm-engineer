@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Outbound Motion · Strategy &amp; Proof Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* Palette + type lifted from the Intradiem Interactive Demo so this one-pager and the demo read as one product */
+:root{
+  --green:#2DB56E; --green-600:#228752; --green-300:#7BD3A0; --green-100:#C4ECD4;
+  --forest:#014637; --orange:#F58220; --orange-600:#D96D12; --blue:#0F4C99;
+  --ink:#202020; --ink-2:#5A5A5A; --ink-3:#9A9A9A;
+  --bg:#FFFFFF; --sidebar:#F5F4F2; --zebra:#FAFAFA;
+  --tint:rgba(45,181,110,.12); --tint-soft:rgba(45,181,110,.08);
+  --line:#E0E0E0; --line-strong:#BDBDBD; --r:8px;
+  --ff:'Roboto',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --ff-mono:'Roboto Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);background:var(--sidebar);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 30px}
+.sheet{max-width:1120px;margin:0 auto;background:var(--bg);}
+.eyebrow{font-family:var(--ff-mono);text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:600}
+
+/* logo */
+.logo{height:40px;width:auto;display:block}
+.hero .logo{height:44px;margin-bottom:22px}
+.hero .logo .wm{fill:#FFFFFF}
+
+.hero{background:var(--forest);color:#fff;padding:64px 0 56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-160px;top:-120px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.30),transparent 62%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .eyebrow{color:var(--green-300)}
+.hero h1{font-weight:900;font-size:46px;line-height:1.06;margin:14px 0 16px;letter-spacing:-.02em;max-width:20ch}
+.hero h1 .spark{color:var(--green-300)}
+.hero p{font-size:18px;max-width:64ch;color:#C7DAD1}
+.hero .meta{margin-top:24px;font-family:var(--ff-mono);font-size:12px;letter-spacing:.05em;color:#7FA394}
+
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+.sec-head{max-width:74ch;margin-bottom:28px}
+.sec-head .eyebrow{color:var(--green-600)}
+.sec-head h2{font-weight:900;font-size:30px;line-height:1.12;margin:10px 0 8px;letter-spacing:-.02em}
+.sec-head p{color:var(--ink-2);font-size:16.5px}
+p.body{font-size:16px;color:var(--ink-2);max-width:74ch;margin-bottom:14px}
+.lead{font-size:17px;color:var(--ink)}
+
+.pill{display:inline-block;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--tint);color:var(--green-600);font-weight:600}
+.pill.spark{background:var(--orange);color:#fff}
+
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px;box-shadow:0 1px 2px rgba(20,30,25,.04)}
+.card h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.card .k{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--ink-2)}
+.card.dark{background:var(--forest);color:#fff}
+.card.dark h3{color:#fff}.card.dark p{color:#C7DAD1}.card.dark .k{color:var(--green-300)}
+
+.reframe{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:10px}
+.reframe .old,.reframe .new{padding:20px 22px}
+.reframe .old{background:var(--zebra);border-right:1px solid var(--line)}
+.reframe .lbl{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.reframe .old .lbl{color:var(--ink-3)}.reframe .new .lbl{color:var(--green-600)}
+.reframe .old p{color:var(--ink-3);font-size:14.5px}.reframe .new p{color:var(--ink);font-size:14.5px}
+.reframe-row + .reframe-row{border-top:1px solid var(--line)}
+.reframe-row{display:contents}
+
+.stageflow{display:flex;gap:0;align-items:stretch;margin-top:10px;flex-wrap:wrap}
+.stage{flex:1;min-width:150px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:18px 16px;position:relative}
+.stage:not(:last-child){margin-right:22px}
+.stage:not(:last-child)::after{content:"\2192";position:absolute;right:-20px;top:50%;transform:translateY(-50%);color:var(--green);font-weight:700;font-size:18px}
+.stage .n{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3)}
+.stage h4{font-size:17px;font-weight:700;margin:4px 0 6px}
+.stage p{font-size:13px;color:var(--ink-2)}
+.stage .own{margin-top:8px;font-family:var(--ff-mono);font-size:10px;letter-spacing:.04em;color:var(--green-600)}
+.stage.now{border-color:var(--orange);border-width:2px}
+.stage.now .own{color:var(--orange)}
+
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+td{color:var(--ink-2)}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:var(--zebra)}
+.num{font-family:var(--ff-mono);color:var(--ink);font-weight:600}
+
+.gate{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.gate:last-child{border-bottom:none}
+.gate .badge{flex-shrink:0;font-family:var(--ff-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:5px 9px;border-radius:6px;background:var(--tint);color:var(--green-600)}
+.gate .badge.caught{background:#FDECD9;color:var(--orange-600)}
+.gate p{font-size:14.5px;color:var(--ink-2)}
+.gate strong{color:var(--ink);font-weight:700}
+
+.ask{background:var(--zebra);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:0 var(--r) var(--r) 0;padding:20px 24px;margin-top:14px}
+.ask.tool{border-left-color:var(--orange)}
+.ask h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.ask p{font-size:15px;color:var(--ink-2)}
+
+.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+.phase{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--bg)}
+.phase .tag{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:999px;display:inline-block;margin-bottom:12px}
+.phase.p1 .tag{background:var(--orange);color:#fff}.phase.p2 .tag,.phase.p3 .tag{background:var(--tint);color:var(--green-600)}
+.phase h3{font-size:19px;font-weight:700;margin-bottom:8px}
+.phase ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.phase li{font-size:13.5px;color:var(--ink-2);padding-left:16px;position:relative}
+.phase li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+
+.closer{background:linear-gradient(135deg,var(--forest),var(--green-600));color:#fff;border-radius:12px;padding:48px 44px;position:relative;overflow:hidden;margin-top:36px}
+.closer::after{content:"";position:absolute;right:-80px;bottom:-100px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(123,211,160,.28),transparent 60%)}
+.closer .inner{position:relative;z-index:1}
+.closer .eyebrow{color:var(--green-300)}
+.closer h2{font-weight:900;font-size:27px;line-height:1.18;margin:12px 0 12px;max-width:28ch;letter-spacing:-.02em}
+.closer .spark{color:var(--green-300)}
+.closer p{font-size:16px;color:#DCEAE1;max-width:64ch}
+
+.foot{padding:26px 0 52px;text-align:center;color:var(--ink-3);font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;background:var(--bg)}
+.foot .logo{height:15px;display:inline-block;margin:0 auto 10px;opacity:.8}
+.callout{background:var(--tint-soft);border:1px solid var(--tint);border-radius:var(--r);padding:16px 20px;margin-top:14px;font-size:15px;color:var(--ink)}
+.callout strong{color:var(--green-600);font-weight:700}
+@media(max-width:860px){.hero h1{font-size:34px}.cols2,.cols3,.reframe,.roadmap{grid-template-columns:1fr}.reframe .old{border-right:none;border-bottom:1px solid var(--line)}.stage:not(:last-child){margin-right:0;margin-bottom:22px}.stage:not(:last-child)::after{display:none}}
+</style>
+</head>
+<body>
+
+<!-- Intradiem logo, defined once. .wm inherits fill via CSS (white on forest hero, forest elsewhere) -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" class="wm"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" class="wm"/>
+</symbol></svg>
+
+<div class="sheet">
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow">US Outbound Motion · Strategy &amp; Proof Plan</div>
+    <h1>Make outbound a <span class="spark">funded function</span>, and prove the ROI that scales it.</h1>
+    <p>This is the plan for a deliberate, multichannel outbound motion: proven by hand now so the investment to scale it, Lemlist and the mandate, is a decision we can make with the numbers already in hand rather than a bet. It starts with one motion, one rep, and a number we can point to.</p>
+    <div class="meta">Prepared by Dallas Andrews, GTM Engineer · US motion with Nate (Nathan Belfield) · Star Ratings cliff accounts</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Operating principles</div>
+      <h2>The principles this motion runs on</h2>
+      <p>Three principles separate a motion that generates net-new pipeline from one that just sends email. Everything below is built on them.</p>
+    </div>
+    <div class="reframe">
+      <div class="reframe-row">
+        <div class="old"><div class="lbl">The trap most teams fall into</div><p>Wait for the tools before we can run a real multichannel motion.</p></div>
+        <div class="new"><div class="lbl">How we run it</div><p>Multichannel is a behavior, not a tool. Run it by hand now to prove the ROI, so buying Lemlist to scale it is a de-risked decision, not a bet on an unproven idea.</p></div>
+      </div>
+      <div class="reframe-row">
+        <div class="old"><div class="lbl">The trap most teams fall into</div><p>Email alone is treated as the motion.</p></div>
+        <div class="new"><div class="lbl">How we run it</div><p>Email-only doesn't generate net-new pipeline into VP and C-suite. LinkedIn, voice, and calls are where net-new is won.</p></div>
+      </div>
+      <div class="reframe-row">
+        <div class="old"><div class="lbl">The trap most teams fall into</div><p>Hand a rep a sequence and check in occasionally.</p></div>
+        <div class="new"><div class="lbl">How we run it</div><p>Handoff plus check-in is why it stalls. Drive one motion daily as the BDR's pit crew, with a live scoreboard.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Operating model</div>
+      <h2>Who builds it, who runs it, in what order</h2>
+      <p>Dallas engineers the motion; the BDRs execute it. The design strips friction out of LinkedIn, voice, and calls so every channel is as easy to run as an email, and the motion scales cleanly as we add reps and volume.</p>
+    </div>
+    <div class="cols2">
+      <div class="card"><div class="k">Track 1 · Priority now</div><h3>US · Nate</h3><p>Star Ratings cliff accounts. US-only CMS trigger, the motion Dallas inherited, the cleanest signal in the book. Lowest-risk proof and the priority, the same motion.</p></div>
+      <div class="card"><div class="k">Track 2 · After US proof</div><h3>UK · Jack</h3><p>A separate design: no Star Ratings trigger, and cold outbound carries GDPR/PECR weight, so the mix leans LinkedIn and WhatsApp. Built once US has produced its first meeting, not in parallel.</p></div>
+    </div>
+    <div class="callout"><strong>The engine's real product</strong> is a frictionless multichannel package: per contact, per day, the email, the LinkedIn note, the voice-note script, the call opener, written and ready so the rep just runs it. Nate is a known, trusted operator, so the only variable this proof tests is the motion itself, not whether it gets executed.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The stack, sequenced by proof</div>
+      <h2>Own it now, add tools as they earn their place</h2>
+      <p>Each layer has one job and no two overlap. The two new tools are sequenced so the provable win lands first and the most complex piece never carries the launch.</p>
+    </div>
+    <div class="stageflow">
+      <div class="stage now"><div class="n">TODAY</div><h4>Clay + Claude</h4><p>Sources, enriches, gates, and writes the personalized multichannel copy per contact.</p><div class="own">We own this now</div></div>
+      <div class="stage now"><div class="n">TODAY</div><h4>Salesforce + Slack</h4><p>System of record and the 6sense feed; the living deal surface. Already ours.</p><div class="own">We own this now</div></div>
+      <div class="stage"><div class="n">FUND NOW · SCALES THE PROOF</div><h4>Lemlist</h4><p>Removes the manual ceiling: sequencing, LinkedIn, dialer, inbox rotation across both BDRs. The hand-run proof is exactly what makes it a confident buy.</p><div class="own">Ask #1 · pursuing now</div></div>
+      <div class="stage"><div class="n">NEXT</div><h4>n8n</h4><p>The feedback layer: behavior triggers the next move, and the meeting-handoff chain. Added once the base motion produces.</p><div class="own">Ask #2</div></div>
+    </div>
+    <div class="callout">n8n owns the seams between tools only, cross-tool triggers and feedback loops. Logic inside a tool stays native to that tool. That discipline is what keeps the stack from becoming fragile tech-for-its-own-sake.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The proof motion</div>
+      <h2>Nate · Star Ratings · 15 contacts, 6 accounts, multithreaded</h2>
+      <p>A small, high-stakes, account-based slice. Not volume, proof. Every contact gated cold-eligible, every account multithreaded across an operations seat and a finance or member-experience seat.</p>
+    </div>
+    <table>
+      <thead><tr><th>Account</th><th>Forgone QBP</th><th>Seats worked</th><th>Wave</th></tr></thead>
+      <tbody>
+      <tr><td>Centene</td><td class="num">$75.5M</td><td>5 (Ops, Member Experience, Medicare Ops)</td><td>A / B / C</td></tr>
+      <tr><td>Medica</td><td class="num">$37.1M</td><td>2 (Core Ops, SVP Ops)</td><td>A / C</td></tr>
+      <tr><td>Clover Health</td><td class="num">$74.6M</td><td>2 (MA Member Experience, CFO)</td><td>D</td></tr>
+      <tr><td>Devoted Health</td><td class="num">$44.0M</td><td>2 (Member Experience, Chief Actuary)</td><td>D</td></tr>
+      <tr><td>GuideWell</td><td class="num">$33.4M</td><td>2 (EVP &amp; CFO, CFO Gov Business)</td><td>D</td></tr>
+      <tr><td>Blue Shield of California</td><td class="num">$33.3M</td><td>2 (Member Experience, Chief Actuary)</td><td>D</td></tr>
+      </tbody>
+    </table>
+    <div class="cols3" style="margin-top:22px">
+      <div class="card"><div class="k">Channels</div><h3>LinkedIn-first</h3><p>Connect, note, voice note, then a call. Email is the supporting channel, kept within an inbox-safe cap and sent early.</p></div>
+      <div class="card"><div class="k">Message</div><h3>Two persona tracks</h3><p>Ops and Member Experience hear the in-the-moment capacity lever. Finance hears the QBP-recovery and payback math. One thesis per account, distinct per seat.</p></div>
+      <div class="card"><div class="k">Cadence</div><h3>4 touches, staggered</h3><p>Day 1 email, Day 2 connect, Day 4 voice note, Day 6 call. Waves staggered so no day is bursty and the mailbox stays inbox-safe.</p></div>
+    </div>
+    <div class="callout"><strong>Success is defined up front:</strong> replies and live conversations, not just booked meetings, measured over a real window. Enterprise exec response runs on its own clock; a sharp reply in week two is proof the motion works even if the invite lands in week four.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Built-in guardrails</div>
+      <h2>The guardrails protecting every send</h2>
+      <p>The motion runs inside standing guardrails, so it moves fast without ever putting the brand or the install base at risk.</p>
+    </div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Customer exclusion.</strong> Current customers are automatically held out of every campaign, so the install base is never at risk of a cold touch, and a live-row check confirms it before every send.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Verified claims.</strong> The only Intradiem proof used is Humana's public figures: about two hours of capacity per agent per month, and seven times ROI five years in. No unverified numbers reach a prospect.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Deliverability.</strong> Sending health is monitored and protected: the motion runs LinkedIn-first and keeps email within a verified, inbox-safe volume, so domain reputation stays protected.</p></div>
+    <div class="gate"><span class="badge">In place</span><p><strong>Copy quality.</strong> Every message clears an adversarial quality gate and the verified-claims check before it ships, so what reaches a prospect is already pressure-tested.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The asks</div>
+      <h2>What proof earns, and in what order</h2>
+      <p>Nothing is bought on theory. Each ask is backed by the result of the step before it.</p>
+    </div>
+    <div class="ask"><h3>Authority · to shape together</h3><p>Once the proof is in, worth deciding together whether this becomes the standard play for both BDRs rather than an optional add-on. Bottom-up proof first, then we shape what the mandate should look like.</p></div>
+    <div class="ask tool"><h3>Tool · Ask #1 · Lemlist · pursuing now</h3><p>The manual proof shows the ROI and that the motion scales. Lemlist is the investment that turns a proven, working motion into daily capacity across both BDRs, and it's what lets a hand-run motion 10x without adding people. We pursue the purchase now: the proof is what makes it a low-risk yes instead of a speculative buy. Running it by hand doesn't sustain across two BDRs with targets, so the sooner it's funded, the sooner the motion that works becomes the motion that runs every day.</p></div>
+    <div class="ask tool"><h3>Tool · Ask #2 · n8n</h3><p>Once the base motion produces, add the feedback layer: no-open triggers a call, a booked meeting auto-builds the research brief and agenda, the post-call transcript drafts the follow-up.</p></div>
+  </div>
+</section>
+
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Sequence</div>
+      <h2>The roadmap</h2>
+    </div>
+    <div class="roadmap">
+      <div class="phase p1"><span class="tag">Now</span><h3>Prove it (and build the buy-case)</h3><ul><li>Nate runs the Star Ratings motion, LinkedIn-first</li><li>15 contacts, 6 accounts, multithreaded</li><li>Daily package + live scoreboard</li><li>Lemlist ROI case built in parallel off the scoreboard</li><li>Pre-framed with Naveen before launch</li></ul></div>
+      <div class="phase p2"><span class="tag">Fund &amp; scale</span><h3>Scale it with Lemlist</h3><ul><li>Purchase approved on the proven ROI</li><li>Lemlist removes the manual ceiling</li><li>Both BDRs run it daily at volume</li><li>UK / Jack motion designed and launched</li></ul></div>
+      <div class="phase p3"><span class="tag">Then</span><h3>Close the loop</h3><ul><li>n8n adds behavior-driven triggers</li><li>Meeting handoff automated end to end</li><li>Every outcome documented and fed back</li><li>Outbound is a funded, instrumented function</li></ul></div>
+    </div>
+    <div class="closer">
+      <div class="inner">
+        <div class="eyebrow">Why this is the right bet</div>
+        <h2>We run our GTM the way our <span class="spark">product</span> runs operations.</h2>
+        <p>Real-time signals trigger automated action, and the system learns every cycle. That is Intradiem's own thesis, run on our own pipeline. We prove it by hand first, then let the tools scale what already works, so we become the first live proof of what we sell.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg><br>
+  Intradiem · US Outbound Motion · Strategy &amp; Proof Plan · Dallas Andrews
+</div>
+
+</div>
+
+</body>
+</html>
