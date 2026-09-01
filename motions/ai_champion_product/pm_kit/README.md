@@ -1,27 +1,28 @@
 # Prototype kit for product managers
 
-Turn a one-page brief (or an existing PRD) into a working prototype you can click through in a review. Runs in Greenlight. No install, no repo, no engineering time.
+Turn a one-page brief (or an existing PRD) into a working prototype you can click through in a review. Runs in Claude (enterprise), in the shared Prototypes project. No install, no repo, no engineering time.
 
 ## What is in this folder
 
 | File | What it is | What you do with it |
 |---|---|---|
-| `PROJECT_INSTRUCTIONS.md` | The builder's instructions: build rules, design tokens, the self-check panel, what it hands back | Paste as the Project instructions |
+| `PROJECT_INSTRUCTIONS.md` | The builder's instructions: build rules, design tokens, the self-check panel, what it hands back | Already in the shared Prototypes project; paste only if you make your own |
+| `GREENLIGHT_ADDENDUM.md` | A size budget for the Greenlight version only | Ignore unless you are setting the agent up in Greenlight |
 | `Prototype_Brief_Template.docx` | The one-page brief, nine sections | Fill in sections 1 to 7 before you build; 8 after the review |
 | `DS_Tokens.md` | Design system tokens the prototype must use | Upload to the Project; swap for design's current sheet when they send one |
 
-## Set up once (about five minutes)
+## Where to run it
 
-1. In Greenlight, create a new Project and name it `Prototypes`.
-2. Open `PROJECT_INSTRUCTIONS.md`, copy everything, and paste it into the Project's instructions.
-3. Upload `DS_Tokens.md` to the Project's files.
+In Claude (claude.ai, your Intradiem enterprise account), open the shared project **Prototypes**. It already carries the instructions and the token sheet; you set up nothing. The prototype renders in the chat as you build it, and you download it from there.
 
-If a shared **Prototype builder** agent already exists in your Greenlight, skip the set-up: open that agent, attach your brief or PRD, and carry on from step 2 below. (The agent carries the same instructions and token sheet; one person sets it up once for everyone.)
+If the Prototypes project is not shared with you yet: create your own Project, paste `PROJECT_INSTRUCTIONS.md` as its instructions, upload `DS_Tokens.md` to its knowledge, and carry on.
+
+Greenlight also has a Prototype Builder agent for small screens. It runs a smaller model with a short reply limit, so use it only for a single panel or a form; anything with more than one view belongs in Claude.
 
 ## Build a prototype
 
 1. Fill in the brief. Section 1 (the decision the prototype settles) and section 6 (five to eight acceptance checks) matter most. If all you have is a PRD, skip the brief; the builder drafts one from the PRD and shows it to you first.
-2. Start a chat in the Project, attach the brief or the PRD, and type:
+2. Start a chat in the Prototypes project, attach the brief or the PRD, and type:
 
    > Build the prototype from the attached brief.
 
@@ -30,7 +31,7 @@ If a shared **Prototype builder** agent already exists in your Greenlight, skip 
    > Build the prototype for Screen [number or name] from the attached PRD. Draft the brief first and show it to me before building.
 
 3. Read the draft brief if it drafted one. Correct anything in your words, then say `Build it`.
-4. Download the HTML artifact. Save it as `index.html`. Double-click to open.
+4. The prototype appears as an artifact beside the chat and already works there. Download it (the artifact's download option), save it as `index.html`, double-click to open.
 5. Click the **Checks** button in the bottom-right corner (or press `?`). The panel lists your acceptance checks with pass, fail, or manual. Do each manual check yourself; each one takes under a minute.
 6. Save `index.html` and the brief in the feature's SharePoint folder so the review opens the same link.
 
