@@ -370,3 +370,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Greenlight Agent Pack Sep1](greenlight-agent-pack-sep1.md) — Sep 1 2026: eight GTM skills packaged as shared Greenlight agents in motions/ai_champion_product/greenlight_agents/ (register, create order, neighbour notes vs the 41 existing agents, Value Repository caveat); Dallas wants shared agents everywhere, Jason pushes Greenlight adoption
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [Strike Room Cowork Connector Gap Sep1](strike-room-cowork-connector-gap-sep1.md) — work-Mac Cowork strike room "could not load accounts"; artifact owned by Enterprise account, intradiem-gtm connector not enabled there; Render brain verified alive, key not in git
