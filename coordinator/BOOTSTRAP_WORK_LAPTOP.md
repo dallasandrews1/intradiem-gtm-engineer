@@ -72,7 +72,13 @@ Expect no skill or agent diffs, and the harness memory dir reported as a symlink
 
 ## Step 3b, work Mac: hooks that pull on session start and push on session end (added Aug 31 2026)
 
-`automation/sync_work_mac.sh` is the work Mac's half of the two-machine loop: `start` fast-forwards `main` and installs the coordinator; `end` sweeps memory written here back into the snapshot (paths rewritten to the publishing home), commits what this machine changed, rebases if origin moved, pushes. Pure git, no Claude call, no launchd. Add to `~/.claude/settings.json` on the work Mac (merge into an existing `hooks` object if one exists):
+`automation/sync_work_mac.sh` is the work Mac's half of the two-machine loop: `start` fast-forwards `main` and installs the coordinator; `end` sweeps memory written here back into the snapshot (paths rewritten to the publishing home), commits what this machine changed, rebases if origin moved, pushes. Pure git, no Claude call, no launchd. One line installs the hooks (backs up settings.json, merges, never duplicates):
+
+```
+git -C "$HOME/Claude/Projects/Intradiem GTM Engineer" pull --ff-only origin main && bash "$HOME/Claude/Projects/Intradiem GTM Engineer/automation/install_work_mac_hooks.sh"
+```
+
+What it merges into `~/.claude/settings.json`, for reference:
 
 ```
 "hooks": {
