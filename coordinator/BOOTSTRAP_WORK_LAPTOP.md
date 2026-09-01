@@ -70,6 +70,19 @@ What it does: writes `~/.claude/CLAUDE.md`, `~/.claude/skills/`, `~/.claude/agen
 
 Expect no skill or agent diffs, and the harness memory dir reported as a symlink.
 
+## Step 3b, work Mac: hooks that pull on session start and push on session end (added Aug 31 2026)
+
+`automation/sync_work_mac.sh` is the work Mac's half of the two-machine loop: `start` fast-forwards `main` and installs the coordinator; `end` sweeps memory written here back into the snapshot (paths rewritten to the publishing home), commits what this machine changed, rebases if origin moved, pushes. Pure git, no Claude call, no launchd. Add to `~/.claude/settings.json` on the work Mac (merge into an existing `hooks` object if one exists):
+
+```
+"hooks": {
+  "SessionStart": [{"hooks": [{"type": "command", "command": "\"$HOME/Claude/Projects/Intradiem GTM Engineer/automation/sync_work_mac.sh\" start >/dev/null 2>&1 || true", "timeout": 120, "statusMessage": "Syncing from GitHub"}]}],
+  "SessionEnd": [{"hooks": [{"type": "command", "command": "\"$HOME/Claude/Projects/Intradiem GTM Engineer/automation/sync_work_mac.sh\" end >/dev/null 2>&1 || true", "timeout": 180, "async": true}]}]
+}
+```
+
+Check with `jq -e '.hooks.SessionStart[0].hooks[0].command' ~/.claude/settings.json`. Runs land in `automation/logs/sync-work-mac-<date>.md` (gitignored). A line saying "needs a human" means a conflict or a non-main branch; run the git step by hand.
+
 ## Step 4, work Mac: Claude Code settings
 
 Open `~/.claude/settings.json` and confirm, without copying the personal Mac's file:

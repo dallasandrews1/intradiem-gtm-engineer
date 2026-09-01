@@ -11,7 +11,7 @@ Any log item another job might later act on (a signal, a finding, a flag, a prop
 evt: <log-family>-<YYYY-MM-DD>#<slug>
 ```
 
-- `<log-family>` matches the log filename family: `war-room`, `meeting-capture`, `competitor-displacement`, `gate-integrity`, `deliverability-watch`, `credit-check`, `swarm-health`, `agent-architect`, `stars-refresh-watch`, `action-brief`, `daily-rundown`, `pmo-actions`.
+- `<log-family>` matches the log filename family: `war-room`, `meeting-capture`, `competitor-displacement`, `gate-integrity`, `deliverability-watch`, `credit-check`, `swarm-health`, `agent-architect`, `stars-refresh-watch`, `action-brief`, `daily-rundown`, `pmo-actions`, `sync-publish`.
 - `<slug>` is 2-4 kebab-case words, stable for the account or topic: `#elevance-cms-litigation`, `#centene-q2-earnings`, `#customer-exclude-text-bool`.
 - The id is minted ONCE, at first surfacing. A signal carried forward on later days keeps its original id; the later mention cites it with `chain:` instead of minting a new one.
 
