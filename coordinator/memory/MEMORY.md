@@ -367,3 +367,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [PM Kit Greenlight Cold Run Sep1](pm-kit-greenlight-coldrun-sep1.md) — Sep 1 2026: PM as a builder kit repackaged for Greenlight in motions/ai_champion_product/pm_kit/, cold-run proven on the Scheduling Service PRD Screen 7 (7 pass, 1 manual after one fix loop), second worked example in prototypes/holiday_calendar/; two PRDs name two different design systems
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
+- [Greenlight Agent Pack Sep1](greenlight-agent-pack-sep1.md) — Sep 1 2026: eight GTM skills packaged as shared Greenlight agents in motions/ai_champion_product/greenlight_agents/ (register, create order, neighbour notes vs the 41 existing agents, Value Repository caveat); Dallas wants shared agents everywhere, Jason pushes Greenlight adoption
