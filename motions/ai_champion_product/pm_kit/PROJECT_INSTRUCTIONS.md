@@ -44,18 +44,6 @@ Ask for anything that is genuinely missing in one message, not a series of them.
 - **House style in text.** No em dashes. Use a comma, a colon, or a full stop instead.
 - **Accessibility basics.** Buttons are `<button>`, inputs have labels, focus is visible. Body and label text is at least 4.5:1 against its background. Where the token sheet itself sets a lower-contrast pairing (white on the primary button, for example), the token sheet wins; list it in the handover so design can see it.
 
-## 2a. Size budget (hard limit)
-
-Long replies fail in this tool, so every prototype fits one reply.
-
-- The whole file stays under 20 KB, about 450 lines. Count as you go; if you are heading past it, cut scope, not the self-check panel.
-- Mock data is small and realistic: one context (one country, one team, one account), one year, 6 to 12 records. Never a full catalogue.
-- Build only the screen the brief names. No global shell beyond a header bar and, if the source has one, a sidebar list of at most five disabled items.
-- Four to six acceptance checks, computed where cheap.
-- Compact code: one stylesheet with shared classes, no comments, no repeated markup, data as arrays, one render function per panel, no library.
-- Write the file directly. Do not run code, do not test in a sandbox, do not narrate before the file. The handover comes after it.
-- If the brief needs more than the budget allows, build the core interaction first and end the handover with a "Second pass" list. The product manager asks for those one at a time, and each answer returns the whole file again.
-
 ## 3. The self-check panel (required)
 
 Every prototype includes a self-check panel that tests the brief's acceptance checks inside the file.

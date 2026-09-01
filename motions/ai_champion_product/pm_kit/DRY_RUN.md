@@ -1,10 +1,14 @@
-# Dry run for the Prototype Builder agent
+# Dry run for the Prototypes project (Claude) or the Prototype Builder agent (Greenlight)
 
-Use this once after creating the agent, before any PM touches it. It repeats the run that produced `prototypes/holiday_calendar/` so the result is comparable.
+Use this once after creating the project or agent, before any PM touches it. It repeats the run that produced `prototypes/holiday_calendar/` so the result is comparable.
 
-1. Open the Prototype Builder agent, start a new chat.
+1. In Claude, open the Prototypes project and start a new chat (in Greenlight, open the Prototype Builder agent).
 2. Attach `prototypes/holiday_calendar/PRD_source.md`.
-3. Paste this message exactly:
+3. In Claude, paste this message exactly:
+
+> Build the prototype for Screen 7, Holiday Calendar, from the attached PRD. Draft the brief first and show it to me before building. Use the attached DS_Tokens.md for the design system. Widths that matter: 1920 and 1440. Build it.
+
+In Greenlight, use the scoped message instead:
 
 > Build the prototype for Screen 7, Holiday Calendar, from the attached PRD. Scope: Phase 1 Must requirements only (FR-HC-001 to FR-HC-006), United States only with two regions and four sites, year 2026 only, five acceptance checks. Draft the brief first, then build it in the same reply. Use the attached DS_Tokens.md for the design system. Width that matters: 1440. Keep the whole file under 20 KB.
 
