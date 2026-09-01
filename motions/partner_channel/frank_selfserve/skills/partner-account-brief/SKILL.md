@@ -43,7 +43,7 @@ The fastest registered-to-meeting conversion on record: agents called a sick-lin
 
 ## Boundaries
 - Briefs and prep material only. No outreach sends, no prospect-facing email copy for sending, no pricing.
-- Before an account is worked cold: confirm it is not a current Intradiem customer and not registered by another partner in the pre-pipeline. Unsure means hold.
+- Registration is context, not a stop. An account already in the partner pre-pipeline is a live registered lead that exists to be worked; the brief should say to loop in the Intradiem AE on that record rather than to hold. The one caution: outreach on an account registered by one partner never names a different partner. Current Intradiem customers are the exception that does stop cold new-logo outreach; they route to the account manager for expansion instead. Post the account name in the partner-briefs channel for the live registration and customer check, which reads the Salesforce records directly.
 
 ## Output format: a branded HTML page, not markdown
 The finished brief is delivered as one complete HTML file named `<Account>_Brief.html`, built on `brief_template.html` (shipped with this skill; `example_ally_brief.html` is the approved worked example, study it before writing). Rules:
