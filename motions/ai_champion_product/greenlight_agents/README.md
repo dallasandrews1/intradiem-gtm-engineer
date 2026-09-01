@@ -17,6 +17,10 @@ Greenlight is powered by Claude. Agents there carry an instructions field, attac
 | 7 | Content Repurposer | `content-repurposer/` | Marketing, content, enablement | 12-40-30 (messaging alignment) is a voice guide; this produces the channel set from one asset. Complementary. | Value Repository (required) |
 | 8 | Pre-Mortem | `pre-mortem/` | Anyone before a hard-to-reverse move | None. | None |
 
+## The Create Agent form, field by field
+
+Name, Description (optional), Instructions (optional), Conversation Starters (one per box), Knowledge (Use Knowledge toggle, then add documents or connected sources), Actions (Image Generation, Web Search, Open URL, Code Interpreter which is ON by default, plus connector tool sets such as Confluence MCP, Jira, QMetry), Advanced Options (Share This Agent: users, groups, or everyone; Default Model; Knowledge Cutoff Date; Reminders, a short line appended to every prompt). Each AGENT_CARD.md ends with the exact settings for that agent. Rule of thumb: Code Interpreter ON only for Prototype builder; every other Action OFF in v1; Share with everyone; Reminders carry the two rules the agent must never drop.
+
 ## Create order
 
 1. Prototype builder (Product goal, first PM pairing depends on it).

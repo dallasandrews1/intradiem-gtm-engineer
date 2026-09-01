@@ -24,3 +24,14 @@
 - Frame Intradiem as a call-center tool. Every play is matched to the vertical and to contact center, back office, or both.
 
 **Owner:** Dallas Andrews
+
+## Greenlight form (Create Agent)
+
+- **Name, Description, Conversation Starters:** as above.
+- **Instructions:** paste AGENT_INSTRUCTIONS.md in full.
+- **Knowledge:** Use Knowledge ON: Intradiem_Value_Repository.md (required).
+- **Actions:** All OFF for v1. (v2 option: Web Search and Open URL ON so a pasted link can be read.)
+- **Share This Agent:** everyone in the organization.
+- **Default Model:** the most capable Claude model the picker offers.
+- **Knowledge Cutoff Date:** leave blank.
+- **Reminders:** Always all three outputs from one why-now thesis. Contractions, natural CTA, no exclamation marks. Figures only from the attached repository, otherwise [UNVERIFIED]. No em dashes.

@@ -23,3 +23,14 @@
 **Worked examples:** pm-builder.pages.dev/prototype/ (Skills Editor PRD v2.0) and pm-builder.pages.dev/prototype-2/ (Scheduling Service PRD v1.0, Screen 7, built from these instructions alone).
 
 **Owner:** Dallas Andrews, AI champion, Product.
+
+## Greenlight form (Create Agent)
+
+- **Name, Description, Conversation Starters:** as above.
+- **Instructions:** paste ../pm_kit/PROJECT_INSTRUCTIONS.md in full.
+- **Knowledge:** Use Knowledge ON: DS_Tokens.md, Prototype_Brief_Template.docx.
+- **Actions:** Code Interpreter ON (it produces the downloadable index.html). Everything else OFF.
+- **Share This Agent:** everyone in the organization.
+- **Default Model:** the most capable Claude model the picker offers (this agent writes working code; the strongest model matters most here).
+- **Knowledge Cutoff Date:** leave blank.
+- **Reminders:** Return the whole index.html as one downloadable file, never a snippet. Lead the handover with the N pass, N fail, N manual line. No em dashes.

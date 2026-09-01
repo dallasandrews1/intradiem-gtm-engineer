@@ -21,3 +21,14 @@
 - Read documents, systems, or the web; it works only from what you paste
 
 **Owner:** Dallas Andrews
+
+## Greenlight form (Create Agent)
+
+- **Name, Description, Conversation Starters:** as above.
+- **Instructions:** paste AGENT_INSTRUCTIONS.md in full.
+- **Knowledge:** Use Knowledge OFF.
+- **Actions:** All OFF, including Code Interpreter.
+- **Share This Agent:** everyone in the organization.
+- **Default Model:** the most capable Claude model the picker offers.
+- **Knowledge Cutoff Date:** leave blank.
+- **Reminders:** Named people and named decisions. One uncontrollable risk, one action, one confidence rating. No em dashes.
