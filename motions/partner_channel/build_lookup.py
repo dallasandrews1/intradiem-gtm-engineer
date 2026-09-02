@@ -69,14 +69,15 @@ body = ['    <section>\n      <p class="label">How to read this</p>\n      <ul>'
         '        <li><strong>Current customers are the exception.</strong> Those route to the account manager for expansion instead of a cold sequence, and they are flagged in orange below.</li>',
         f'        <li><strong>Snapshot, not a live feed.</strong> {len(rows)} records as exported {run.name.replace("run_","")}. Stages move; re-export from Salesforce when it matters.</li>',
         "      </ul>\n    </section>"]
-body.append('    <section>\n      <p class="label">Find an account</p>\n      <input id="q" type="search" placeholder="Type an account name, partner, or AE" autocomplete="off">\n      <div id="count"></div>\n      <div id="list">')
+body.append('    <section>\n      <p class="label">Find an account</p>\n      <input id="q" type="search" placeholder="Type an account name, partner, or AE" autocomplete="off">\n      <div id="count"></div>\n      <div id="none" hidden></div>\n      <div id="list">')
 for c in cards:
     tags = f'<span class="pill {c["cls"]}">{H.escape(c["status"])}</span>'
     if c["cust"] == "Customer":
         tags += '<span class="pill cust">Current customer</span>'
     if c["stale"]:
         tags += f'<span class="pill old">{c["age"]} days</span>'
-    hay = H.escape(" ".join([c["acct"], c["partner"], c["people"], c["record"]]).lower())
+    raw = " ".join([c["acct"], c["partner"], c["people"], c["record"], c["cat"]])
+    hay = H.escape(" ".join(t for t in re.sub(r"[^a-z0-9]+", " ", raw.lower()).split() if len(t) > 1))
     body.append(f'        <div class="rec" data-h="{hay}">'
                 f'<div class="rh"><b>{H.escape(c["acct"])}</b>{tags}</div>'
                 f'<div class="rm">{H.escape(c["partner"])} &middot; registered {c["created"]} &middot; {c["people"]}'
@@ -88,6 +89,9 @@ extra = """
   #q{width:100%;padding:12px 14px;font-family:inherit;font-size:15px;border:1px solid var(--rule);border-radius:8px;color:var(--ink);background:#fff}
   #q:focus{outline:2px solid var(--green);outline-offset:1px}
   #count{font-family:'Roboto Mono',monospace;font-size:11px;color:var(--mut);margin:10px 0 4px;letter-spacing:.06em;text-transform:uppercase}
+  #list{display:flex;flex-direction:column}
+  #none{margin-top:14px;padding:14px 16px;border-left:4px solid var(--green);border-radius:0 8px 8px 0;background:rgba(45,181,110,.10);font-size:14px;color:var(--ink)}
+  #none b{color:var(--forest)}
   .rec{padding:12px 0;border-top:1px solid var(--rule)}
   .rh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
   .rh b{color:var(--forest);font-size:15px}
@@ -104,11 +108,39 @@ extra = """
 script = """
 <script>
 (function(){
-  var q=document.getElementById('q'),recs=[].slice.call(document.querySelectorAll('.rec')),c=document.getElementById('count');
-  function run(){var v=q.value.trim().toLowerCase(),n=0;
-    recs.forEach(function(r){var hit=!v||r.getAttribute('data-h').indexOf(v)>-1;r.hidden=!hit;if(hit)n++;});
-    c.textContent=v?(n+' of '+recs.length+' records'):(recs.length+' records');}
-  q.addEventListener('input',run);run();
+  var GENERIC={inc:1,llc:1,llp:1,corp:1,corporation:1,company:1,co:1,the:1,and:1,of:1,group:1,holdings:1,holding:1,
+    ltd:1,limited:1,plc:1,na:1,national:1,association:1,insurance:1,financial:1,services:1,service:1,health:1,plan:1,
+    plans:1,systems:1,system:1,solutions:1,bank:1,banking:1,us:1,usa:1,america:1,american:1,international:1,global:1,
+    technologies:1,technology:1,enterprise:1,enterprises:1};
+  function toks(s){return (s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().split(/\\s+/)
+    .filter(function(t){return t.length>1;});}
+  function hit(q,rt){return rt.some(function(r){return r.indexOf(q)===0 || (q.length>=4 && r.length>=4 && q.indexOf(r)===0);});}
+  function score(qt,rt){
+    var strong=qt.filter(function(t){return !GENERIC[t];}); if(!strong.length) strong=qt;
+    if(!strong.some(function(q){return hit(q,rt);})) return 0;
+    var s=0; qt.forEach(function(q){ if(hit(q,rt)) s += GENERIC[q]?0.25:1; }); return s;
+  }
+  var q=document.getElementById('q'), c=document.getElementById('count'), none=document.getElementById('none');
+  var recs=[].slice.call(document.querySelectorAll('.rec')).map(function(el){
+    return {el:el, t:el.getAttribute('data-h').split(' ')};
+  });
+  function run(){
+    var v=q.value.trim(), qt=toks(v), n=0;
+    recs.forEach(function(r){
+      var sc = qt.length ? score(qt,r.t) : 1;
+      r.el.hidden = sc<=0;
+      r.el.style.order = qt.length ? String(Math.round(-sc*4)) : '0';
+      if(sc>0) n++;
+    });
+    c.textContent = qt.length ? (n+' of '+recs.length+' records') : (recs.length+' records, snapshot');
+    if(qt.length && n===0){
+      none.hidden=false;
+      none.innerHTML='<b>No record for that search.</b> Nothing in this snapshot of the partner pre-pipeline matches, '+
+        'which means no partner has registered it here. Treat it as unregistered, and check Salesforce directly if the '+
+        'account matters, since this page is a point-in-time export and stages move.';
+    } else { none.hidden=true; }
+  }
+  q.addEventListener('input',run); run();
 })();
 </script>
 """
