@@ -377,3 +377,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-01
 - [Operating Map Sep3 Refresh](operating-map-sep3-refresh.md) — Sep 1 2026: map rebuilt for the Sep 3 John meeting with Naveen's internal-customer/status/consulted rows, fresh partner-lane statuses, recomputed totals 4,600/950/24; live at gtm-operating-map.pages.dev; Naveen's -3.html never reached this Mac
 - [Feedback Best Model Every Account](feedback-best-model-every-account.md) — Sep 1 2026: account research always on the strongest model, never tier by assumed importance; name skills explicitly in shared-project prompts
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-02
+- [Naveen Call Sep2 Demo Three Acts](naveen-call-sep2-demo-three-acts.md) — Sep 2 2026: all-hands demo rebuilt as three acts (strike rooms, back office inside customers with maps and the State Farm committee, lemlist), Naveen writes the set-up, video due Tue Sep 8, OKRs next week under his 15-meetings line, Matt McConnell reacted to buying committees
+- [Feedback OKRs In His Control](feedback-okrs-in-his-control.md) — Sep 2 2026: personal targets are shipped artifacts or disciplines, end at the handoff, never outcomes owned by others; meetings and adoption are reported, not promised
+- [BO Lemlist Shells Built Sep2](bo-lemlist-shells-built-sep2.md) — Sep 2 2026: five BO campaign shells live in lemlist as drafts (4 customer verticals + net-new, IDs saved); sender/label are Dallas UI steps; step API = POST /api/sequences/{sid}/steps, call tasks type "phone"
