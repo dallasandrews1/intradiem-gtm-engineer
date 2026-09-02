@@ -51,13 +51,13 @@ types_present = [t for t in TYPE_LABEL if any(p["partner_type"] == t for p in pa
 B = []
 A = B.append
 
-A('<section><p class="label">In one screen</p><ul>')
+A('<section><p class="label">What to know</p><ul>')
 for t in d["tldr"]:
     A(f"<li>{t}</li>")
 A("</ul></section>")
 
 # market share
-A('<section><p class="label">Market share, what is actually published</p>')
+A('<section><p class="label">Market share</p>')
 A(f'<h2>{d["share_h2"]}</h2>')
 A(f'<p>{d["share_intro"]}</p>')
 A('<div class="splist">')
@@ -73,11 +73,11 @@ if d.get("share_note"):
 A("</section>")
 
 # vendor cards
-A('<section><p class="label">The seven platforms in EMEA</p>')
+A('<section><p class="label">The platforms</p>')
 A(f'<h2>{d["vendors_h2"]}</h2><div class="vgrid">')
 for v in d["vendors"]:
     n = sum(1 for p in partners if v["slug"] in p["carries"])
-    A(f'<div class="vc" id="v-{v["slug"]}"><div class="vh"><b>{E(v["name"])}</b><span class="cnt">{n} partners mapped</span></div>')
+    A(f'<div class="vc" id="v-{v["slug"]}"><div class="vh"><b>{E(v["name"])}</b><span class="cnt">{n} partners</span></div>')
     A(f'<p>{v["context"]}</p>')
     if v.get("program"):
         A(f'<p class="prog"><span>Program</span>{v["program"]}</p>')
@@ -87,7 +87,7 @@ for v in d["vendors"]:
 A("</div></section>")
 
 # the map
-A('<section><p class="label">The map</p>')
+A('<section><p class="label">The partners</p>')
 A(f'<h2>{d["map_h2"]}</h2><p>{d["map_intro"]}</p>')
 A('<div class="filters">')
 A('<div class="fg"><span class="fl">Platform</span>' + "".join(f'<button type="button" class="chip" data-f="v" data-v="{s}">{E(VN[s])}</button>' for s in VENDORS) + '</div>')
@@ -126,7 +126,7 @@ for p in partners:
 A("</div></section>")
 
 # where to start
-A('<section><p class="label">Where to start</p>')
+A('<section><p class="label">Next moves</p>')
 A(f'<h2>{d["start_h2"]}</h2>')
 A('<div class="start">')
 for i, s in enumerate(d["start"], 1):
@@ -134,9 +134,9 @@ for i, s in enumerate(d["start"], 1):
 A("</div></section>")
 
 # how this was built
-A('<section><p class="label">How this map was built</p>')
+A('<section><p class="label">Sources</p>')
 A(f'<h2>{d["method_h2"]}</h2><p>{d["method_intro"]}</p>')
-A('<table class="meth"><thead><tr><th>Platform</th><th>Read in full</th><th>Plus</th><th>EMEA partners on the map</th></tr></thead><tbody>')
+A('<table class="meth"><thead><tr><th>Platform</th><th>Directory read</th><th>Also used</th><th>Partners</th></tr></thead><tbody>')
 for v in d["vendors"]:
     n = sum(1 for p in partners if v["slug"] in p["carries"])
     A(f'<tr><td class="nm">{E(v["name"])}</td><td>{v.get("method_read", "")}</td><td>{v.get("method_plus", "")}</td><td><b>{n}</b></td></tr>')
@@ -231,8 +231,8 @@ page = (TPL.read_text()
         .replace("</style>", extra + "</style>")
         .replace("</body>", script + "</body>")
         .replace(f"<title>{d['title']} | Account brief</title>", f"<title>{d['title']}</title>")
-        .replace('<p class="eyebrow">Partner channel &middot; Account brief</p>', '<p class="eyebrow">Partner channel &middot; Channel landscape</p>')
-        .replace("<span>Internal working document &middot; sources and flags as marked</span>", "<span>Internal working document &middot; public sources, confidence as marked &middot; not a vendor-endorsed list</span>"))
+        .replace('<p class="eyebrow">Partner channel &middot; Account brief</p>', '<p class="eyebrow">Partner channel &middot; EMEA</p>')
+        .replace("<span>Internal working document &middot; sources and flags as marked</span>", "<span>Internal &middot; public sources only</span>"))
 assert "—" not in page and "{{" not in page, "placeholder or em dash left"
 out = HERE / "landscape" / f"{region.upper()}_Channel_Partner_Map.html"
 out.write_text(page)
@@ -257,7 +257,7 @@ tpl = (TPL.read_text()
        .replace("</body>", script + "</body>")
        .replace("<title>{{ACCOUNT}} | Account brief</title>", "<title>{{TITLE}}</title>")
        .replace("<h1>{{ACCOUNT}}: {{ANGLE}}</h1>", "<h1>{{TITLE}}: {{ANGLE}}</h1>")
-       .replace('<p class="eyebrow">Partner channel &middot; Account brief</p>', '<p class="eyebrow">Partner channel &middot; Channel landscape</p>')
-       .replace("<span>Internal working document &middot; sources and flags as marked</span>", "<span>Internal working document &middot; public sources, confidence as marked &middot; not a vendor-endorsed list</span>"))
+       .replace('<p class="eyebrow">Partner channel &middot; Account brief</p>', '<p class="eyebrow">Partner channel &middot; Channel map</p>')
+       .replace("<span>Internal working document &middot; sources and flags as marked</span>", "<span>Internal &middot; public sources only</span>"))
 (HERE / "frank_selfserve/skills/partner-channel-landscape/landscape_template.html").write_text(tpl)
 print(f"{out.name}: {len(page):,} bytes, {len(partners)} partners ({len(multi)} multi-platform), {len(d['share_points'])} share points; {csv_path.name}")
