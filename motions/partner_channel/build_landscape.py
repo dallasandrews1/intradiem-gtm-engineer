@@ -21,7 +21,7 @@ VENDORS = d["vendor_order"]                     # slugs in display order
 VN = {v["slug"]: v["name"] for v in d["vendors"]}
 TYPE_LABEL = {"distributor": "Distributor", "reseller": "Reseller", "systems_integrator": "Systems integrator",
               "msp": "Managed service provider", "carrier": "Carrier / telco", "bpo_cx_outsourcer": "BPO / CX outsourcer",
-              "consultancy": "Consultancy"}
+              "consultancy": "Consultancy", "referral": "Referral agent"}
 E = lambda s: H.escape(str(s if s is not None else ""), quote=True)
 
 
@@ -111,7 +111,8 @@ for p in partners:
         if s in p["carries"]:
             c = p["carries"][s]
             conf = c.get("confidence", "").upper()
-            A(f'<div class="vt c-{conf.lower()}"><span class="vn">{E(VN[s])}</span><span class="rel">{E(c.get("relationship", ""))}</span>'
+            rel = c.get("relationship", ""); rel = rel if len(rel) <= 170 else rel[:167].rsplit(" ", 1)[0] + "..."
+            A(f'<div class="vt c-{conf.lower()}"><span class="vn">{E(VN[s])}</span><span class="rel">{E(rel)}</span>'
               f'<span class="ev">{E(c.get("evidence", ""))}</span><span class="sr">{src_html(c.get("sources", []), 2)}'
               + (f' &middot; <i>{conf.lower()} confidence</i>' if conf else "") + '</span></div>')
     A("</div>")
@@ -132,11 +133,16 @@ for i, s in enumerate(d["start"], 1):
     A(f'<div class="st"><span class="n">{i}</span><div><b>{s["title"]}</b><p>{s["body"]}</p></div></div>')
 A("</div></section>")
 
-# confidence & gaps
-A('<section><p class="label">Confidence and gaps</p>')
-A('<div class="conf">' + "".join(f'<span class="{ {"High":"h","Low":"l"}.get(c["level"],"") }">{E(c["area"])}: {E(c["level"])}</span>' for c in d["confidence"]) + "</div>")
-A('<div class="callout"><ul>' + "".join(f"<li>{g}</li>" for g in d["gaps"]) + "</ul></div>")
-A('<p style="margin-top:14px;font-size:12.5px;color:var(--mut)">Method: one research pass per platform plus one for published share data and multi-vendor distributors, public sources only, 2024 to 2026, every partner row carries its sources and a confidence grade. Partner-level revenue share by vendor is not published anywhere we could find; where a partner is the named largest or primary for a vendor in a country, that statement is quoted with its source.</p>')
+# how this was built
+A('<section><p class="label">How this map was built</p>')
+A(f'<h2>{d["method_h2"]}</h2><p>{d["method_intro"]}</p>')
+A('<table class="meth"><thead><tr><th>Platform</th><th>Read in full</th><th>Plus</th><th>EMEA partners on the map</th></tr></thead><tbody>')
+for v in d["vendors"]:
+    n = sum(1 for p in partners if v["slug"] in p["carries"])
+    A(f'<tr><td class="nm">{E(v["name"])}</td><td>{v.get("method_read", "")}</td><td>{v.get("method_plus", "")}</td><td><b>{n}</b></td></tr>')
+A('</tbody></table>')
+if d.get("method_notes"):
+    A('<ul style="margin-top:14px">' + "".join(f"<li>{n}</li>" for n in d["method_notes"]) + "</ul>")
 A("</section>")
 
 extra = """
@@ -186,6 +192,8 @@ extra = """
   .vt .ev{display:block;color:var(--ink2);margin-top:2px}
   .vt .sr{display:block;font-size:11px;color:var(--mut);margin-top:2px}
   .vt .sr a{color:var(--deep);text-decoration:none}
+  table.meth td{font-size:13px}
+  table.meth td.nm{white-space:nowrap}
   .start .st{display:grid;grid-template-columns:34px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--rule)}
   .start .st:first-child{border-top:none;padding-top:0}
   .start .n{width:28px;height:28px;border-radius:50%;background:var(--forest);color:#fff;font-family:'Roboto Mono',monospace;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center}

@@ -6,21 +6,126 @@ Headline: no analyst has published a vendor-by-vendor EMEA share table in the op
 
 ```json
 [
-  {"metric":"CCaaS revenue share, top 3","region":"GLOBAL","vendor":"NICE / Genesys / Five9","value":"NICE 22.3%, Genesys 20.0%, Five9 12.7% (CY2025)","measured_as":"revenue","source_url":"https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/","source_date":"2026-03-30","note":"Other leading providers listed without percentages: AWS, Talkdesk, Cisco, Content Guru, 8x8, Twilio, Dialpad, Vonage."},
-  {"metric":"CCaaS market size and growth","region":"GLOBAL","vendor":"all","value":"$8.4B in 2025, up 16.4%; $13.3B by 2030","measured_as":"revenue","source_url":"https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/","source_date":"2026-03-30","note":"North America $6.0B of the $8.4B; the remainder is rest of world, not EMEA."},
-  {"metric":"Europe share of global CCaaS revenue","region":"Europe","vendor":"all","value":"27 to 29 percent","measured_as":"revenue","source_url":"https://www.inflectioncx.com/intelligence/guides/ccaas-market-guide-2026","source_date":"2026-03","note":"Secondary source; underlying analyst not named. The only Europe-level revenue share figure found."},
-  {"metric":"On-premises platform share","region":"GLOBAL","vendor":"Avaya / Genesys / Cisco","value":"Avaya 36.3%, Genesys 12.9%, Cisco 10.0% (CY2025)","measured_as":"revenue","source_url":"https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/","source_date":"2026-03-30","note":"On-prem platform market shrinking about 20% a year; more than two-thirds of agent seats still sit on customer-owned platforms (global)."},
-  {"metric":"CCaaS vendor ranking by seats","region":"GLOBAL","vendor":"NICE, Genesys, Amazon Connect, Five9, Content Guru, RingCentral, Odigo, 8x8, Dialpad, Cisco","value":"rank order 1 to 10, Dec 31 2024","measured_as":"seats","source_url":"https://www.cmswire.com/contact-center/ai-powered-contact-center-as-a-service-vendors-battle-for-market-share-in-2025/","source_date":"2025-07-14","note":"DMG Consulting 2025 CCaaS Worldwide Market Share Report. It contains an Americas / EMEA / Asia-Pacific split, paywalled."},
-  {"metric":"CCaaS MetriRank 2026","region":"GLOBAL","vendor":"NICE, Genesys, Cisco, Five9, AWS, 8x8 (Leaders)","value":"share order stated: NICE largest, Genesys second, Five9 third, AWS fourth","measured_as":"composite ranking","source_url":"https://www.metrigy.com/nice-genesys-cisco-five9-aws-8x8-metrigys-2026-ccaas-metrirank-leaders/","source_date":"2026-06-30","note":"No regional split."},
-  {"metric":"European contact center software, top 3","region":"Europe","vendor":"Genesys, Avaya, Zendesk","value":"named top 3 providers in Europe, 2024","measured_as":"revenue (IDC methodology)","source_url":"https://my.idc.com/getdoc.jsp?containerId=EUR153039425","source_date":"2025","note":"From the IDC abstract summary; percentages paywalled. Cisco, Five9 and Amazon Connect are outside the European top three by this cut."},
-  {"metric":"IDC MarketScape European CCaaS 2025, Leaders","region":"Europe","vendor":"NICE, Content Guru, Five9, Zoom","value":"positioned as Leaders","measured_as":"positioning","source_url":"https://www.five9.com/blog/five9-named-leader-idc-marketscape-european-ccaas","source_date":"2026-01-12","note":"European CCaaS $1.5B (2024) to $3.7B (2029), 20% CAGR. Full vendor list not public; Genesys and AWS placement unknown."},
-  {"metric":"European CCaaS market and leaders","region":"Europe","vendor":"Genesys, NICE, Five9 (top); Odigo (France), Puzzel (Nordics)","value":"$1.4B (2022), $1.6B projected (2023); 100+ CCaaS vendors in Europe","measured_as":"revenue","source_url":"https://www.cxtoday.com/contact-center/the-frost-radar-for-the-european-ccaas-market-2023-top-takeaways/","source_date":"2023-07-05","note":"Most recent Europe-specific Frost CCaaS Radar found; Genesys named #1 growth leader in it."},
-  {"metric":"Gartner Magic Quadrant CCaaS 2025","region":"GLOBAL","vendor":"Leaders: NICE, Genesys, AWS, Five9, Talkdesk; Challenger: Content Guru; Niche: Cisco, Zoom, Vonage","value":"positions","measured_as":"positioning","source_url":"https://www.cxtoday.com/contact-center/gartner-magic-quadrant-for-contact-center-as-a-service-ccaas-2025-the-rundown/","source_date":"2025-09-10","note":"Cisco moved Challenger to Niche; no regional data."},
-  {"metric":"Vendor revenue mix, EMEA","region":"EMEA (vendor mix, not market share)","vendor":"Verint","value":"Americas 72%, EMEA 18%, APAC 10% (FY to Jan 31 2025)","measured_as":"company revenue","source_url":"https://www.sec.gov/Archives/edgar/data/1166388/000116638825000014/vrnt-20250131.htm","source_date":"2025-03-26","note":"Last public 10-K before the Thoma Bravo take-private."},
-  {"metric":"Vendor revenue mix, international","region":"International (not EMEA-specific)","vendor":"Five9","value":"International 11.5% of revenue FY2025 ($131.7M of $1,149.1M)","measured_as":"company revenue","source_url":"https://www.sec.gov/Archives/edgar/data/1288847/000128884726000023/fivn-20251231.htm","source_date":"2026-02","note":"International blends EMEA, LATAM and APAC. 10-K names British Telecom as a reseller and Accenture, Deloitte, EY, IBM, Kyndryl, PwC as global SIs."},
-  {"metric":"Vendor revenue mix, EMEA","region":"EMEA (vendor mix, not market share)","vendor":"Cisco","value":"EMEA $14.8B of $56.7B (26%) FY2025; Collaboration segment $4.2B","measured_as":"company revenue","source_url":"https://investor.cisco.com/news/news-details/2025/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2025-EARNINGS/default.aspx","source_date":"2025-08-13","note":"Cisco does not disclose contact center revenue separately."},
-  {"metric":"Genesys Cloud scale","region":"GLOBAL","vendor":"Genesys","value":"Genesys Cloud ARR nearly $2.9B, up 30%+; nearly 45% of Genesys Cloud revenue outside North America","measured_as":"ARR","source_url":"https://www.intelligentcio.com/eu/2026/06/05/genesys-cloud-reaches-us2-8-billion-arr-as-enterprise-ai-adoption-accelerates/","source_date":"2026-06-05","note":"Non-North America is EMEA plus APAC plus LATAM, not EMEA alone. Genesys has 1,600+ EMEA employees, about a quarter of headcount."},
-  {"metric":"Amazon Connect scale","region":"GLOBAL","vendor":"Amazon Connect","value":"$1B annualized revenue run rate; 12 billion interaction minutes in the prior year","measured_as":"revenue run rate","source_url":"https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/","source_date":"2025-10-30","note":"AWS does not disclose Connect revenue by region."}
+ {
+  "metric": "CCaaS revenue share, top 3",
+  "region": "GLOBAL",
+  "vendor": "NICE / Genesys / Five9",
+  "value": "NICE 22.3%, Genesys 20.0%, Five9 12.7% (CY2025)",
+  "measured_as": "revenue",
+  "source_url": "https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/",
+  "source_date": "2026-03-30",
+  "note": "Other leading providers listed without percentages: AWS, Talkdesk, Cisco, Content Guru, 8x8, Twilio, Dialpad, Vonage."
+ },
+ {
+  "metric": "Europe share of global CCaaS revenue",
+  "region": "Europe",
+  "vendor": "all",
+  "value": "27 to 29 percent",
+  "measured_as": "revenue",
+  "source_url": "https://www.inflectioncx.com/intelligence/guides/ccaas-market-guide-2026",
+  "source_date": "2026-03",
+  "note": "Secondary source; underlying analyst not named. The only Europe-level revenue share figure found."
+ },
+ {
+  "metric": "On-premises platform share",
+  "region": "GLOBAL",
+  "vendor": "Avaya / Genesys / Cisco",
+  "value": "Avaya 36.3%, Genesys 12.9%, Cisco 10.0% (CY2025)",
+  "measured_as": "revenue",
+  "source_url": "https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/",
+  "source_date": "2026-03-30",
+  "note": "On-prem platform market shrinking about 20% a year; more than two-thirds of agent seats still sit on customer-owned platforms (global)."
+ },
+ {
+  "metric": "CCaaS vendor ranking by seats",
+  "region": "GLOBAL",
+  "vendor": "NICE, Genesys, Amazon Connect, Five9, Content Guru, RingCentral, Odigo, 8x8, Dialpad, Cisco",
+  "value": "rank order 1 to 10, Dec 31 2024",
+  "measured_as": "seats",
+  "source_url": "https://www.cmswire.com/contact-center/ai-powered-contact-center-as-a-service-vendors-battle-for-market-share-in-2025/",
+  "source_date": "2025-07-14",
+  "note": "DMG Consulting 2025 CCaaS Worldwide Market Share Report. It contains an Americas / EMEA / Asia-Pacific split, paywalled."
+ },
+ {
+  "metric": "European contact center software, top 3",
+  "region": "Europe",
+  "vendor": "Genesys, Avaya, Zendesk",
+  "value": "named top 3 providers in Europe, 2024",
+  "measured_as": "revenue (IDC methodology)",
+  "source_url": "https://my.idc.com/getdoc.jsp?containerId=EUR153039425",
+  "source_date": "2025",
+  "note": "From the IDC abstract summary; percentages paywalled. Cisco, Five9 and Amazon Connect are outside the European top three by this cut."
+ },
+ {
+  "metric": "IDC MarketScape European CCaaS 2025, Leaders",
+  "region": "Europe",
+  "vendor": "NICE, Content Guru, Five9, Zoom",
+  "value": "positioned as Leaders",
+  "measured_as": "positioning",
+  "source_url": "https://www.five9.com/blog/five9-named-leader-idc-marketscape-european-ccaas",
+  "source_date": "2026-01-12",
+  "note": "European CCaaS $1.5B (2024) to $3.7B (2029), 20% CAGR. Full vendor list not public; Genesys and AWS placement unknown."
+ },
+ {
+  "metric": "European CCaaS market and leaders",
+  "region": "Europe",
+  "vendor": "Genesys, NICE, Five9 (top); Odigo (France), Puzzel (Nordics)",
+  "value": "$1.4B (2022), $1.6B projected (2023); 100+ CCaaS vendors in Europe",
+  "measured_as": "revenue",
+  "source_url": "https://www.cxtoday.com/contact-center/the-frost-radar-for-the-european-ccaas-market-2023-top-takeaways/",
+  "source_date": "2023-07-05",
+  "note": "Most recent Europe-specific Frost CCaaS Radar found; Genesys named #1 growth leader in it."
+ },
+ {
+  "metric": "Vendor revenue mix, EMEA",
+  "region": "EMEA (vendor mix, not market share)",
+  "vendor": "Verint",
+  "value": "Americas 72%, EMEA 18%, APAC 10% (FY to Jan 31 2025)",
+  "measured_as": "company revenue",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1166388/000116638825000014/vrnt-20250131.htm",
+  "source_date": "2025-03-26",
+  "note": "Last public 10-K before the Thoma Bravo take-private."
+ },
+ {
+  "metric": "Vendor revenue mix, international",
+  "region": "International (not EMEA-specific)",
+  "vendor": "Five9",
+  "value": "International 11.5% of revenue FY2025 ($131.7M of $1,149.1M)",
+  "measured_as": "company revenue",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1288847/000128884726000023/fivn-20251231.htm",
+  "source_date": "2026-02",
+  "note": "International blends EMEA, LATAM and APAC. 10-K names British Telecom as a reseller and Accenture, Deloitte, EY, IBM, Kyndryl, PwC as global SIs."
+ },
+ {
+  "metric": "Vendor revenue mix, EMEA",
+  "region": "EMEA (vendor mix, not market share)",
+  "vendor": "Cisco",
+  "value": "EMEA $14.8B of $56.7B (26%) FY2025; Collaboration segment $4.2B",
+  "measured_as": "company revenue",
+  "source_url": "https://investor.cisco.com/news/news-details/2025/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2025-EARNINGS/default.aspx",
+  "source_date": "2025-08-13",
+  "note": "Cisco does not disclose contact center revenue separately."
+ },
+ {
+  "metric": "Genesys Cloud scale",
+  "region": "GLOBAL",
+  "vendor": "Genesys",
+  "value": "Genesys Cloud ARR nearly $2.9B, up 30%+; nearly 45% of Genesys Cloud revenue outside North America",
+  "measured_as": "ARR",
+  "source_url": "https://www.intelligentcio.com/eu/2026/06/05/genesys-cloud-reaches-us2-8-billion-arr-as-enterprise-ai-adoption-accelerates/",
+  "source_date": "2026-06-05",
+  "note": "Non-North America is EMEA plus APAC plus LATAM, not EMEA alone. Genesys has 1,600+ EMEA employees, about a quarter of headcount."
+ },
+ {
+  "metric": "Amazon Connect scale",
+  "region": "GLOBAL",
+  "vendor": "Amazon Connect",
+  "value": "$1B annualized revenue run rate; 12 billion interaction minutes in the prior year",
+  "measured_as": "revenue run rate",
+  "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/",
+  "source_date": "2025-10-30",
+  "note": "AWS does not disclose Connect revenue by region."
+ }
 ]
 ```
 

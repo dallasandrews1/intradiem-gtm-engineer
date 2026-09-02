@@ -98,7 +98,8 @@ def rec(name):
     return partners[c]
 
 
-COV_MAP = {"united kingdom": "UK", "uk and ireland": "UK, Ireland", "united arab emirates": "UAE", "uae": "UAE"}
+COV_MAP = {"united kingdom": "UK", "uk and ireland": "UK, Ireland", "united arab emirates": "UAE", "uae": "UAE", "dach": "DACH", "cee": "CEE", "emea": "EMEA"}
+COV_BAD = re.compile(r"global|pan-|via |claim|scope|footprint|generic|not |unverified|\(|per |countries|delivery|reseller|managed|offices|multi-country|region named|as stated|itemised", re.I)
 
 
 def merge_cov(r, cov):
@@ -106,15 +107,16 @@ def merge_cov(r, cov):
         c = str(c).strip()
         c = COV_MAP.get(c.lower(), c)
         for part in ([c] if "," not in c or len(c) > 40 else [x.strip() for x in c.split(",")]):
-            if part and part.lower() not in {x.lower() for x in r["emea_coverage"]}:
+            part = COV_MAP.get(part.lower(), part)
+            if part and len(part) <= 28 and not COV_BAD.search(part) and part.lower() not in {x.lower() for x in r["emea_coverage"]}:
                 r["emea_coverage"].append(part)
 
 
 share_points = []
-for slug in VENDORS:
-    f = RES / f"{slug}.md"
+for slug, f in [(slug, f) for slug in VENDORS for f in (RES / f"{slug}.md", RES / f"{slug}_directory.md")]:
     if not f.exists():
-        print(f"missing research: {f.name}")
+        if not f.name.endswith("_directory.md"):
+            print(f"missing research: {f.name}")
         continue
     t = f.read_text()
     arr = extract_json(t, "PARTNERS", "array") or []
@@ -129,9 +131,20 @@ for slug in VENDORS:
         ss = p.get("scale_signal", "")
         if ss and ss.lower() not in ("none found", "none") and len(ss) > len(r["scale_signal"]):
             r["scale_signal"] = ss
-        r["carries"][slug] = {"relationship": p.get(rel_key, "listed partner") if rel_key else "listed partner",
-                              "evidence": p.get("evidence", ""), "confidence": conf(p.get("confidence")),
-                              "sources": norm_sources(p.get("sources"))}
+        link = {"relationship": p.get(rel_key, "listed partner") if rel_key else "listed partner",
+                "evidence": p.get("evidence", ""), "confidence": conf(p.get("confidence")),
+                "sources": norm_sources(p.get("sources"))}
+        cur = r["carries"].get(slug)
+        if cur and f.name.endswith("_directory.md"):
+            # directory confirms the link: keep the richer research wording, lift confidence, add the directory source
+            cur["confidence"] = "HIGH"
+            cur["relationship"] = cur["relationship"] if len(cur["relationship"]) >= len(link["relationship"]) else link["relationship"]
+            cur["sources"] = link["sources"] + cur["sources"]
+            cur["evidence"] = cur["evidence"] + " Confirmed in the vendor's own partner directory (Sep 2 2026)."
+        elif cur:
+            cur["sources"] += link["sources"]
+        else:
+            r["carries"][slug] = link
         for ac in p.get("also_carries") or []:
             label = ac if isinstance(ac, str) else (ac.get("vendor") or ac.get("name") or "")
             if label and label not in r["also_carries"]:
@@ -188,8 +201,11 @@ out_partners = []
 for r in partners.values():
     for slug in DROP_LINKS.get(r["name"], ()):
         r["carries"].pop(slug, None)
+    for slug in [k for k, v in r["carries"].items() if v["confidence"] == "LOW"]:
+        r["carries"].pop(slug)
     if not r["carries"]:
         continue
+    r["emea_coverage"] = r["emea_coverage"][:8]
     seen, srcs = set(), []
     for s in r["sources"]:
         if s["url"] not in seen:
@@ -206,9 +222,9 @@ for r in partners.values():
     out_partners.append(r)
 
 data = {k: meta[k] for k in ("title", "angle", "subhead", "tldr", "share_h2", "share_intro", "share_note", "vendors_h2",
-                             "map_h2", "map_intro", "start_h2", "start", "confidence", "gaps")}
+                             "map_h2", "map_intro", "start_h2", "start", "method_h2", "method_intro", "method_notes")}
 data["vendor_order"] = VENDORS
-data["vendors"] = [{k: v[k] for k in ("slug", "name", "context", "program", "share") if k in v} for v in meta["vendors"]]
+data["vendors"] = [{k: v[k] for k in ("slug", "name", "context", "program", "share", "method_read", "method_plus") if k in v} for v in meta["vendors"]]
 data["share_points"] = share_points + meta.get("extra_share_points", [])
 data["partners"] = out_partners
 (HERE / "landscape/data" / f"{region}.json").write_text(json.dumps(data, indent=1, ensure_ascii=False))
