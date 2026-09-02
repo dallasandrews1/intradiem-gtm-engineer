@@ -385,3 +385,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-02
 - [Feedback Slack Voice Short Casual](feedback-slack-voice-short-casual.md) — Sep 2 2026: Slack drafts in Dallas's voice are four or five short casual lines, link first, no method narration; the page carries the detail
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-02
+- [Feedback Deliver HTML Not MD](feedback-deliver-html-not-md.md) — Sep 2 2026: every deliverable to Dallas is a branded HTML page on the Desktop with a path in chat; markdown is source only, never the handoff
