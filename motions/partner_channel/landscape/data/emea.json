@@ -1,0 +1,5392 @@
+{
+ "title": "EMEA channel partner map",
+ "angle": "who carries what, and who carries more than one",
+ "subhead": "The channel partners bringing Five9, Cisco, Avaya, Genesys, Aspect (Alvaria), Verint and Amazon Connect to market across Europe, the Middle East and Africa, with what each one resells and the share data that is actually published. Public sources as of Sep 2 2026; every row carries its sources and a confidence grade.",
+ "tldr": [
+  "<strong>Ten partners carry three or more of the seven platforms.</strong> BT Business, TTEC Digital, Sabio, Connect Managed Services, Deloitte Digital, NTT DATA, Orange Business, Damovo, Deutsche Telekom and IP Integration. Their sellers already sit between an ACD and a WFM layer, which is where Intradiem lives.",
+  "<strong>Partner-level market share is not published anywhere.</strong> No analyst publishes who resells how much of any vendor in EMEA. What exists is global vendor share (Metrigy), one Europe top-three ranking (IDC: Genesys, Avaya, Zendesk), positional radars, and vendor filings. Where a partner is the named largest or primary for a vendor, that statement is quoted with its source, never turned into a percentage.",
+  "<strong>The UK is where the channel is deepest for all seven.</strong> DACH has Avaya and Cisco depth (WTG, Damovo, Bucher + Suter, Deutsche Telekom). Benelux and the Nordics are carrier-led for Genesys (KPN, Telia, Proximus) and specialist-led for Verint (Axcess Nordic, 1GLOBAL, Luware). Iberia, Italy, CEE and the Gulf are thin and mostly single-platform.",
+  "<strong>Distribution is a Cisco and Avaya story.</strong> Westcon-Comstor is the only distributor verified on two of the seven in EMEA (Comstor for Cisco, Westcon as Avaya's EMEA master agent, AWS added in 2024). Genesys sells direct to partners in EMEA with no distributor tier; Five9, Verint and Amazon Connect run through partners, platform OEMs and marketplaces."
+ ],
+ "share_h2": "What is published is global, positional, or a vendor's own revenue mix.",
+ "share_intro": "Nothing below is a partner-level EMEA share. Read the region column before quoting a number; GLOBAL means exactly that.",
+ "share_note": [
+  "IDC's European Contact Center Market Shares 2024 (doc EUR153039425) holds the only vendor-by-vendor Europe table. It is paywalled; only its top three (Genesys, Avaya, Zendesk) surfaced.",
+  "DMG's 2024 WEM Market Share Report carries a Europe cut and a direct-versus-partner cut for Verint, NICE, Genesys and Calabrio ($4,500). It is the closest paid product if a defensible EMEA WFM share is ever needed.",
+  "Omdia's CCaaS tracker (CY24) covers EMEA for 25 to 30 vendors including AWS, Avaya, Five9, Genesys and NICE, behind a paywall.",
+  "No analyst has published a European on-premises installed-base count for Avaya, Cisco, Genesys Engage or Aspect. The global proxy is Metrigy's on-prem share, with Avaya at roughly a third of a market shrinking about 20% a year."
+ ],
+ "vendors_h2": "Seven platforms, four different channel shapes.",
+ "map_h2": "Every partner found, sorted by how many of the seven it carries.",
+ "map_intro": "Filter by platform to see who resells it; pick two platforms to see who carries both. Dark green tiles are HIGH confidence (a vendor or partner page states it), pale green MEDIUM, orange LOW (a single old source, a directory listing, or an inference). Tiers are quoted as the vendor or partner states them.",
+ "start_h2": "Where a partner motion starts.",
+ "start": [
+  {
+   "title": "Open with the multi-platform integrators.",
+   "body": "Sabio (Genesys Elite, Avaya Diamond, Verint Partner of the Year 2025, Amazon Connect), Damovo (Avaya Diamond, Cisco 360, Genesys Silver, DACH and Benelux), Kerv (Genesys Elite, Verint Elite), IP Integration, Connect Managed Services and TTEC Digital. Their practice leads already sell an ACD and a WFM layer together, so an orchestration layer between the two fits a motion they already run."
+  },
+  {
+   "title": "Use the carriers for installed-base reach.",
+   "body": "BT Business (Five9 Gold, Genesys, Webex, a Verint-powered managed service), Orange Business (Genesys Elite, Cisco, three Verint awards), KPN (Genesys Elite), Deutsche Telekom (Webex, Amazon Connect). Carriers hold the largest homogeneous installed bases and already run managed contact centre services; the fit is a managed-service add-on, not a resale line."
+  },
+  {
+   "title": "Treat Westcon-Comstor as the one distributor that matters.",
+   "body": "Cisco through Comstor and Avaya as EMEA master agent, with AWS added in Nov 2024. TD SYNNEX and Ingram Micro are award-level only on Cisco and AWS and unverified on Five9 or Genesys in EMEA; ScanSource has no EMEA operation."
+  },
+  {
+   "title": "Follow Verint's own award list for the WFM side.",
+   "body": "Sabio, Kerv, Orange Business, BT, Axcess Nordic (Nordics), Luware (Switzerland), Tele-Train (DACH), Evcoms (Ireland) and 1GLOBAL (Netherlands) are the EMEA partners Verint decorated between 2022 and 2025. After the Calabrio combination the same partners carry the combined WFM estate; the 2026 EMEA award list has not been published."
+  },
+  {
+   "title": "Close three directory gaps before any country plan.",
+   "body": "Aspect's partner directory pages 2 to 4 (its EMEA resellers D to Z), Verint's directory with the EMEA region filter, and the Five9 partner locator filtered to EMEA. Each is a browser session rather than research, and each could double its platform's list."
+  }
+ ],
+ "confidence": [
+  {
+   "area": "Five9",
+   "level": "High"
+  },
+  {
+   "area": "Cisco",
+   "level": "High"
+  },
+  {
+   "area": "Avaya",
+   "level": "Medium"
+  },
+  {
+   "area": "Genesys",
+   "level": "High"
+  },
+  {
+   "area": "Aspect / Alvaria",
+   "level": "Low"
+  },
+  {
+   "area": "Verint",
+   "level": "High"
+  },
+  {
+   "area": "Amazon Connect",
+   "level": "Medium"
+  },
+  {
+   "area": "Market share",
+   "level": "Low"
+  }
+ ],
+ "gaps": [
+  "Three vendor directories are JavaScript-rendered and were only partly read: Aspect (15 of 88 partners), Verint (first 18 entries), and the Five9 and AWS partner finders (not readable). A browser pass on each is the fastest way to extend the map.",
+  "Iberia, Italy, CEE, Turkey and the Gulf have one or two named partners per platform at most; the Nordics beyond Telia, Axcess Nordic and Awiant are thin.",
+  "Not verified either way, despite being obvious candidates: TD SYNNEX and Ingram Micro on Five9 or Genesys in EMEA; Vodafone Business, Telefonica Tech, Atos (Eviden), Capgemini and NTT DATA on Verint; Capita, Econocom, Axians and Proximus on Genesys.",
+  "Tier words are vendor-specific and partly self-described: Verint publishes no tier ladder, Avaya's partner page was unreachable, and Cisco retired Gold, Premier and Select in Jan 2026 while older sources still cite them.",
+  "Partner scale (revenue, headcount) is missing for most UK specialists (Natilik, Cisilion, IP Integration, FourNet, Babble, Opus, Onecom).",
+  "Aspect and Alvaria have no named EMEA leader and no Alvaria CX partner directory; their EMEA channel is effectively Avaya's channel plus direct offices.",
+  "Aptiva (Aspect's EMEA implementation partner since Sep 2025) and MakwaIT (Verint EMEA Partner of the Year CX 2024) could not be identified beyond the announcements; both need a name, a country and a website before they are worked."
+ ],
+ "vendor_order": [
+  "five9",
+  "cisco",
+  "avaya",
+  "genesys",
+  "alvaria",
+  "verint",
+  "connect"
+ ],
+ "vendors": [
+  {
+   "slug": "five9",
+   "name": "Five9",
+   "context": "Sells EMEA through a UK-headquartered team with offices in Porto, Munich, Dublin, Amsterdam, Barcelona, Stockholm and Johannesburg. States that DACH and Benelux are sold primarily through partners and that partner-influenced business was over 80% of new bookings globally (Feb 2025). The EMEA channel is concentrated in UK managed service providers (Babble, Onecom, Opus, Exponential-e) plus BT as the strategic carrier and WTG for DACH.",
+   "program": "Gold, Silver, Authorized levels; types Reseller, Service Provider, Technology Solution Broker, SI, Referral. EMEA Partner of the Year: Onecom (2022), Opus (2024), Exponential-e (2025); DACH: WTG (2024 and 2025).",
+   "share": "No EMEA figure. International is 11.5% of revenue (FY2025 10-K); 12.7% of global CCaaS revenue (Metrigy 2025); Leader in the IDC European CCaaS MarketScape 2025."
+  },
+  {
+   "slug": "cisco",
+   "name": "Cisco",
+   "context": "Contact center goes to market almost entirely through partners; EMEA is about 26% of Cisco revenue. The CX channel is recognised through the WebexOne awards (EMEA Customer Experience winners BrightCloud 2023, Cisilion 2024, Natilik 2025) and distributed by Comstor and TD SYNNEX. Carriers (BT, Orange, Deutsche Telekom, Virgin Media O2, Vodafone) resell Webex Contact Center inside broader Webex bundles.",
+   "program": "Cisco 360 (Jan 2026) replaced Gold, Premier and Select with Preferred and Portfolio Partner per architecture, plus Cisco Powered Services accreditations including Webex Contact Center. Older sources still cite Gold and Master Collaboration.",
+   "share": "No EMEA figure. Outside IDC's European top three; eighth globally by CCaaS share yet the fastest growing (Metrigy 2025); Niche Player in the 2025 Gartner CCaaS MQ; 10.0% of the global on-prem platform market."
+  },
+  {
+   "slug": "avaya",
+   "name": "Avaya",
+   "context": "After Chapter 11 (May 2023) Avaya narrowed to its top roughly 1,500 customers, and in 2025 pushed sub-200-seat cloud customers to partners, naming BT, Maintel and Sabio as certified carrier options. Westcon-Comstor is the EMEA master agent and distributor. The channel is deepest in the UK (Sabio, Maintel, FourNet, IPI, Connect) and DACH (WTG, Damovo, T&N, CCT), with a Gulf tier of self-described largest partners (CGC, Syscom, BCS).",
+   "program": "Avaya Edge with Diamond, Sapphire and Emerald tiers as partners describe them; Avaya's own partner page was unreachable, so tiers are partner statements.",
+   "share": "No EMEA figure. 36.3% of the global on-prem platform market (Metrigy 2025) inside a market shrinking about 20% a year; IDC ranks Avaya second in Europe for 2024 behind Genesys."
+  },
+  {
+   "slug": "genesys",
+   "name": "Genesys",
+   "context": "EMEA is a first-class region (1,600+ staff, 17 countries) run direct to partners with no distributor tier. Elite sits above Platinum and has gone to Sabio (Apr 2026), Kerv (May 2025), Orange Business and KPN. Carriers hold the largest homogeneous installed bases (Orange has 48,550 licences under management; BT, KPN, Telia, Telefonica), and the four named global SIs are Accenture, Capgemini, Deloitte Digital and IBM.",
+   "program": "Ascend: Bronze, Silver, Gold, Platinum, Elite; types Solution Provider, Referral, Services, and Technology Solutions Distributor (North America only).",
+   "share": "No EMEA figure. 20.0% of global CCaaS revenue, second to NICE (Metrigy 2025); nearly 45% of Genesys Cloud revenue is outside North America; IDC's top European provider for 2024; Frost's number one growth leader in Europe (2023)."
+  },
+  {
+   "slug": "alvaria",
+   "name": "Aspect / Alvaria",
+   "context": "One holding company, two brands since Sep 2024: Aspect (WFM and WEM) and Alvaria CX (outbound and compliance), majority-owned by Nut Tree Capital since Oct 2025 with a new Aspect board and CEO in 2026. EMEA offices in London, Madrid, Cologne, Geneva, Rotterdam, Rome and Claregalway, but no named EMEA leader and no Alvaria CX partner directory. The route to market in EMEA is Avaya (Aspect's only Alliance partner and the resale route for Alvaria CX) plus a short list of Aspect Diamond resellers.",
+   "program": "Aspect: Alliance, Reseller and Referral tracks with a Diamond tier and an 88-partner directory (15 readable). Alvaria CX: a channel program with a Partner Hub still under development.",
+   "share": "No EMEA figure and no global one. Covered in DMG's 2025 and 2026 WFM reports alongside NICE, Verint, Calabrio and Intradiem, without percentages."
+  },
+  {
+   "slug": "verint",
+   "name": "Verint",
+   "context": "Private since Nov 2025 under Thoma Bravo and combined with Calabrio; EMEA was about 18% of revenue and a third of headcount in the last public 10-K. Verint co-sells through platform partners (Avaya OEM, Five9 hosts and resells WFO, Cisco via Calabrio, 8x8, Odigo) and decorates its EMEA channel at an annual summit (2025: 90 partners). The UK holds the deepest bench (Sabio, Kerv, BSL, IPI, FourNet, BT), with Nordic, Swiss, Dutch and DACH specialists on recording and compliance.",
+   "program": "Four types published (Technology, Channel, Consultancy, Global Alliance) and no tier ladder; Gold, Platinum, Elite and Premier are partner self-descriptions. Award tracks CX, FC (financial compliance), WFE and Cloud.",
+   "share": "No EMEA figure. EMEA is 18% of Verint revenue (FY2025 10-K); DMG holds the Europe WEM cut behind a paywall; a press estimate puts Verint plus Calabrio at about 40% of WFM globally (unattributed, unverified)."
+  },
+  {
+   "slug": "connect",
+   "name": "Amazon Connect",
+   "context": "Sold through the AWS Partner Network. The Amazon Connect Service Delivery designation (2019) is being replaced by the Amazon Connect Customer Services Competency (Jun 2026), and Westcon-Comstor, TD SYNNEX, Ingram Micro and Arrow distribute AWS across EMEA without Connect-specific programmes. The EMEA delivery bench is UK specialists (CloudInteract, Connect, Route 101, SVL, Acceleraate), tecRacer and LionGate in Germany, Awiant in Sweden, Storm Reply in Italy, plus the global SIs (Accenture, Deloitte, PwC, NTT DATA, TTEC Digital).",
+   "program": "APN tiers Select, Advanced, Premier; Amazon Connect Service Delivery (deprecated Jun 2027) and the Amazon Connect Customer Services Competency (two categories). The only Connect-specific EMEA award on record: TTEC Digital (VoiceFoundry), UKI 2021.",
+   "share": "No EMEA figure. Third globally by seats (DMG, Dec 2024 data); $1B annualized run rate (Amazon, Oct 2025); Frost Radar EMEA 2024 Leader; not among the named Leaders in IDC's 2025 European CCaaS MarketScape."
+  }
+ ],
+ "share_points": [
+  {
+   "metric": "CCaaS revenue share, top 3",
+   "region": "GLOBAL",
+   "vendor": "NICE / Genesys / Five9",
+   "value": "NICE 22.3%, Genesys 20.0%, Five9 12.7% (CY2025)",
+   "measured_as": "revenue",
+   "source_url": "https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/",
+   "source_date": "2026-03-30",
+   "note": "Other leading providers listed without percentages: AWS, Talkdesk, Cisco, Content Guru, 8x8, Twilio, Dialpad, Vonage."
+  },
+  {
+   "metric": "CCaaS market size and growth",
+   "region": "GLOBAL",
+   "vendor": "all",
+   "value": "$8.4B in 2025, up 16.4%; $13.3B by 2030",
+   "measured_as": "revenue",
+   "source_url": "https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/",
+   "source_date": "2026-03-30",
+   "note": "North America $6.0B of the $8.4B; the remainder is rest of world, not EMEA."
+  },
+  {
+   "metric": "Europe share of global CCaaS revenue",
+   "region": "Europe",
+   "vendor": "all",
+   "value": "27 to 29 percent",
+   "measured_as": "revenue",
+   "source_url": "https://www.inflectioncx.com/intelligence/guides/ccaas-market-guide-2026",
+   "source_date": "2026-03",
+   "note": "Secondary source; underlying analyst not named. The only Europe-level revenue share figure found."
+  },
+  {
+   "metric": "On-premises platform share",
+   "region": "GLOBAL",
+   "vendor": "Avaya / Genesys / Cisco",
+   "value": "Avaya 36.3%, Genesys 12.9%, Cisco 10.0% (CY2025)",
+   "measured_as": "revenue",
+   "source_url": "https://www.metrigy.com/product/ccaas-contact-center-platforms-quarterly-market-share-forecast-report-2025-4q25/",
+   "source_date": "2026-03-30",
+   "note": "On-prem platform market shrinking about 20% a year; more than two-thirds of agent seats still sit on customer-owned platforms (global)."
+  },
+  {
+   "metric": "CCaaS vendor ranking by seats",
+   "region": "GLOBAL",
+   "vendor": "NICE, Genesys, Amazon Connect, Five9, Content Guru, RingCentral, Odigo, 8x8, Dialpad, Cisco",
+   "value": "rank order 1 to 10, Dec 31 2024",
+   "measured_as": "seats",
+   "source_url": "https://www.cmswire.com/contact-center/ai-powered-contact-center-as-a-service-vendors-battle-for-market-share-in-2025/",
+   "source_date": "2025-07-14",
+   "note": "DMG Consulting 2025 CCaaS Worldwide Market Share Report. It contains an Americas / EMEA / Asia-Pacific split, paywalled."
+  },
+  {
+   "metric": "CCaaS MetriRank 2026",
+   "region": "GLOBAL",
+   "vendor": "NICE, Genesys, Cisco, Five9, AWS, 8x8 (Leaders)",
+   "value": "share order stated: NICE largest, Genesys second, Five9 third, AWS fourth",
+   "measured_as": "composite ranking",
+   "source_url": "https://www.metrigy.com/nice-genesys-cisco-five9-aws-8x8-metrigys-2026-ccaas-metrirank-leaders/",
+   "source_date": "2026-06-30",
+   "note": "No regional split."
+  },
+  {
+   "metric": "European contact center software, top 3",
+   "region": "Europe",
+   "vendor": "Genesys, Avaya, Zendesk",
+   "value": "named top 3 providers in Europe, 2024",
+   "measured_as": "revenue (IDC methodology)",
+   "source_url": "https://my.idc.com/getdoc.jsp?containerId=EUR153039425",
+   "source_date": "2025",
+   "note": "From the IDC abstract summary; percentages paywalled. Cisco, Five9 and Amazon Connect are outside the European top three by this cut."
+  },
+  {
+   "metric": "IDC MarketScape European CCaaS 2025, Leaders",
+   "region": "Europe",
+   "vendor": "NICE, Content Guru, Five9, Zoom",
+   "value": "positioned as Leaders",
+   "measured_as": "positioning",
+   "source_url": "https://www.five9.com/blog/five9-named-leader-idc-marketscape-european-ccaas",
+   "source_date": "2026-01-12",
+   "note": "European CCaaS $1.5B (2024) to $3.7B (2029), 20% CAGR. Full vendor list not public; Genesys and AWS placement unknown."
+  },
+  {
+   "metric": "European CCaaS market and leaders",
+   "region": "Europe",
+   "vendor": "Genesys, NICE, Five9 (top); Odigo (France), Puzzel (Nordics)",
+   "value": "$1.4B (2022), $1.6B projected (2023); 100+ CCaaS vendors in Europe",
+   "measured_as": "revenue",
+   "source_url": "https://www.cxtoday.com/contact-center/the-frost-radar-for-the-european-ccaas-market-2023-top-takeaways/",
+   "source_date": "2023-07-05",
+   "note": "Most recent Europe-specific Frost CCaaS Radar found; Genesys named #1 growth leader in it."
+  },
+  {
+   "metric": "Gartner Magic Quadrant CCaaS 2025",
+   "region": "GLOBAL",
+   "vendor": "Leaders: NICE, Genesys, AWS, Five9, Talkdesk; Challenger: Content Guru; Niche: Cisco, Zoom, Vonage",
+   "value": "positions",
+   "measured_as": "positioning",
+   "source_url": "https://www.cxtoday.com/contact-center/gartner-magic-quadrant-for-contact-center-as-a-service-ccaas-2025-the-rundown/",
+   "source_date": "2025-09-10",
+   "note": "Cisco moved Challenger to Niche; no regional data."
+  },
+  {
+   "metric": "Vendor revenue mix, EMEA",
+   "region": "EMEA (vendor mix, not market share)",
+   "vendor": "Verint",
+   "value": "Americas 72%, EMEA 18%, APAC 10% (FY to Jan 31 2025)",
+   "measured_as": "company revenue",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1166388/000116638825000014/vrnt-20250131.htm",
+   "source_date": "2025-03-26",
+   "note": "Last public 10-K before the Thoma Bravo take-private."
+  },
+  {
+   "metric": "Vendor revenue mix, international",
+   "region": "International (not EMEA-specific)",
+   "vendor": "Five9",
+   "value": "International 11.5% of revenue FY2025 ($131.7M of $1,149.1M)",
+   "measured_as": "company revenue",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1288847/000128884726000023/fivn-20251231.htm",
+   "source_date": "2026-02",
+   "note": "International blends EMEA, LATAM and APAC. 10-K names British Telecom as a reseller and Accenture, Deloitte, EY, IBM, Kyndryl, PwC as global SIs."
+  },
+  {
+   "metric": "Vendor revenue mix, EMEA",
+   "region": "EMEA (vendor mix, not market share)",
+   "vendor": "Cisco",
+   "value": "EMEA $14.8B of $56.7B (26%) FY2025; Collaboration segment $4.2B",
+   "measured_as": "company revenue",
+   "source_url": "https://investor.cisco.com/news/news-details/2025/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2025-EARNINGS/default.aspx",
+   "source_date": "2025-08-13",
+   "note": "Cisco does not disclose contact center revenue separately."
+  },
+  {
+   "metric": "Genesys Cloud scale",
+   "region": "GLOBAL",
+   "vendor": "Genesys",
+   "value": "Genesys Cloud ARR nearly $2.9B, up 30%+; nearly 45% of Genesys Cloud revenue outside North America",
+   "measured_as": "ARR",
+   "source_url": "https://www.intelligentcio.com/eu/2026/06/05/genesys-cloud-reaches-us2-8-billion-arr-as-enterprise-ai-adoption-accelerates/",
+   "source_date": "2026-06-05",
+   "note": "Non-North America is EMEA plus APAC plus LATAM, not EMEA alone. Genesys has 1,600+ EMEA employees, about a quarter of headcount."
+  },
+  {
+   "metric": "Amazon Connect scale",
+   "region": "GLOBAL",
+   "vendor": "Amazon Connect",
+   "value": "$1B annualized revenue run rate; 12 billion interaction minutes in the prior year",
+   "measured_as": "revenue run rate",
+   "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/",
+   "source_date": "2025-10-30",
+   "note": "AWS does not disclose Connect revenue by region."
+  }
+ ],
+ "partners": [
+  {
+   "name": "BT Business",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Ireland",
+    "global managed service with access nodes in 45+ countries",
+    "pan-EMEA via BT Global",
+    "pan-European via BT Global",
+    "global reseller scope",
+    "Europe",
+    "Middle East",
+    "Africa",
+    "global services footprint (120 countries claim)"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "five9": {
+     "relationship": "Gold Partner (Five9 partner profile); 2025 awards: Best CX Partner Platform Innovator; 2024 awards: Transformational Partner of the Year; Five9's strategic global carrier since Nov 2022",
+     "evidence": "BT expanded its Five9 partnership on May 4 2023 to offer the Five9 platform globally as a managed service and to migrate thousands of legacy Inbound Contact customers to Five9.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://newsroom.bt.com/bt-and-five9-expand-partnership-to-accelerate-cloud-adoption-for-contact-centres-globally/",
+       "date": "2023-05-04",
+       "note": "expansion release"
+      },
+      {
+       "url": "https://www.five9.com/partners/bt",
+       "date": "2026-09-02",
+       "note": "Five9 partner profile, Gold, EMEA, 80,000 agents"
+      },
+      {
+       "url": "https://business.bt.com/digital-workplace/customer-contact/optimise-cloud-contact/",
+       "date": "2026-09-02",
+       "note": "BT Business page listing Genesys Cloud, Webex Contact Centre, Verint-powered Optimise"
+      },
+      {
+       "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+       "date": "2026-02-11",
+       "note": "2025 award winners incl. BT Business"
+      },
+      {
+       "url": "https://business.bt.com/digital-workplace/customer-contact/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "cisco": {
+     "relationship": "Cisco Preferred Partner (Cisco 360); Global and EMEA Networking Partner of the Year 2025; Webex Contact Centre product page live",
+     "evidence": "BT Business sells a Webex Contact Centre product page alongside its other CC platforms.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://business.bt.com/calling-messaging-tools/contact-centres/webex-contact-centre/",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC product page"
+      },
+      {
+       "url": "https://business.bt.com/calling-messaging-tools/contact-centres/",
+       "date": "fetched 2026-09-02",
+       "note": "Five9, Verint, RingCX line-up"
+      },
+      {
+       "url": "https://business.bt.com/about-us/partnerships/bt-cisco/",
+       "date": "cites 2025 awards",
+       "note": "Preferred Partner, awards"
+      },
+      {
+       "url": "https://business.bt.com/digital-workplace/customer-contact/optimise-cloud-contact/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "Certified BYOC-Standard carrier for Avaya Experience Platform (tier not published)",
+     "evidence": "Avaya's Feb 2025 customer notice recommends BT as a certified Bring-Your-Own-Carrier option for AXP customers losing Avaya SIP trunking.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+       "date": "2025-02-17",
+       "note": "BT named certified BYOC option"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Global reseller of Genesys Cloud and Genesys Multicloud CX (expanded from Gold, Oct 2020); current Ascend tier not public",
+     "evidence": "BT was Platinum sponsor at Genesys Xperience UKI 2024 and cites 20+ years with Genesys, including migrating the UK Home Office's contact centres to Genesys Cloud.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.genesys.com/en-gb/company/newsroom/announcements/genesys-extends-global-cloud-customer-experience-relationship-with-bt",
+       "date": "2020-09-30",
+       "note": "Global reseller agreement, prior Gold status"
+      },
+      {
+       "url": "https://business.bt.com/insights/genesys-xperience-2024/",
+       "date": "2024-07-19",
+       "note": "Platinum sponsor, Home Office migration"
+      },
+      {
+       "url": "https://business.bt.com/digital-workplace/customer-contact/optimise-cloud-contact/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "Resells Verint Cloud as 'Optimise Cloud Contact'; EMEA Breakthrough Cloud Solution Award (CX) 2025; Rising Star (Verint SaaS) 2024",
+     "evidence": "BT product page: Optimise Cloud Contact is 'powered by Verint' with WFM and analytics, sold across UK, Europe, Middle East, Africa and Americas; BT is also a Verint customer scaling bots from 450 to 4,500 agents (Jun 11 2025).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://business.bt.com/calling-messaging-tools/contact-centres/optimise-cloud-contact/",
+       "date": "2026-09-02",
+       "note": "Verint-powered offer and coverage"
+      },
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "Breakthrough Cloud Solution 2025"
+      },
+      {
+       "url": "https://finance.yahoo.com/news/bt-group-elevates-customer-experience-122400142.html",
+       "date": "2025-06-11",
+       "note": "450 to 4,500 agents"
+      },
+      {
+       "url": "https://business.bt.com/digital-workplace/customer-contact/optimise-cloud-contact/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "RingCentral RingCX",
+    "Anywhere365"
+   ],
+   "scale_signal": "Five9 profile: 80,000+ agents supported, 10bn+ inbound minutes a year; BT release May 2023: 55,000+ Inbound Contact customers, 16bn minutes, 65,000+ agents; BT Business page: 4,000+ contact centres, 120 countries",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://newsroom.bt.com/bt-and-five9-expand-partnership-to-accelerate-cloud-adoption-for-contact-centres-globally/",
+     "date": "2023-05-04",
+     "note": "expansion release"
+    },
+    {
+     "url": "https://www.five9.com/partners/bt",
+     "date": "2026-09-02",
+     "note": "Five9 partner profile, Gold, EMEA, 80,000 agents"
+    },
+    {
+     "url": "https://business.bt.com/digital-workplace/customer-contact/optimise-cloud-contact/",
+     "date": "2026-09-02",
+     "note": "BT Business page listing Genesys Cloud, Webex Contact Centre, Verint-powered Optimise"
+    },
+    {
+     "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+     "date": "2026-02-11",
+     "note": "2025 award winners incl. BT Business"
+    },
+    {
+     "url": "https://business.bt.com/calling-messaging-tools/contact-centres/webex-contact-centre/",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC product page"
+    },
+    {
+     "url": "https://business.bt.com/calling-messaging-tools/contact-centres/",
+     "date": "fetched 2026-09-02",
+     "note": "Five9, Verint, RingCX line-up"
+    },
+    {
+     "url": "https://business.bt.com/about-us/partnerships/bt-cisco/",
+     "date": "cites 2025 awards",
+     "note": "Preferred Partner, awards"
+    },
+    {
+     "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+     "date": "2025-02-17",
+     "note": "BT named certified BYOC option"
+    },
+    {
+     "url": "https://www.genesys.com/en-gb/company/newsroom/announcements/genesys-extends-global-cloud-customer-experience-relationship-with-bt",
+     "date": "2020-09-30",
+     "note": "Global reseller agreement, prior Gold status"
+    },
+    {
+     "url": "https://business.bt.com/insights/genesys-xperience-2024/",
+     "date": "2024-07-19",
+     "note": "Platinum sponsor, Home Office migration"
+    },
+    {
+     "url": "https://business.bt.com/calling-messaging-tools/contact-centres/optimise-cloud-contact/",
+     "date": "2026-09-02",
+     "note": "Verint-powered offer and coverage"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "Breakthrough Cloud Solution 2025"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/bt-group-elevates-customer-experience-122400142.html",
+     "date": "2025-06-11",
+     "note": "450 to 4,500 agents"
+    },
+    {
+     "url": "https://business.bt.com/digital-workplace/customer-contact/",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "BT Business"
+   ]
+  },
+  {
+   "name": "Exponential-e",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "five9": {
+     "relationship": "Silver Partner (Five9 partner profile); EMEA Partner of the Year, 2025 Five9 Global Partner Awards",
+     "evidence": "Named EMEA Partner of the Year in the 2025 Five9 Global Partner Awards (Five9 release, Feb 2026) and listed as a Silver Partner with CCaaS, CRM and Five9 WFO/Verint expertise.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.five9.com/news/news-releases/five9-honors-global-partner-award-winners-recognizing-excellence-cx-innovation",
+       "date": "2026-02",
+       "note": "2025 Global Partner Awards, EMEA Partner of the Year"
+      },
+      {
+       "url": "https://www.five9.com/partners/exponential-e",
+       "date": "2026-09-02",
+       "note": "Silver Partner, EMEA, scale figures"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Verint"
+   ],
+   "scale_signal": "700+ employees, 3,000+ customers, 18+ years (Five9 partner profile, fetched Sep 2 2026)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.five9.com/news/news-releases/five9-honors-global-partner-award-winners-recognizing-excellence-cx-innovation",
+     "date": "2026-02",
+     "note": "2025 Global Partner Awards, EMEA Partner of the Year"
+    },
+    {
+     "url": "https://www.five9.com/partners/exponential-e",
+     "date": "2026-09-02",
+     "note": "Silver Partner, EMEA, scale figures"
+    }
+   ],
+   "_names": [
+    "Exponential-e"
+   ]
+  },
+  {
+   "name": "Opus Technology",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "five9": {
+     "relationship": "Silver Partner on the Five9 profile; Opus's own site claims 'Gold standard Five9 partner' (conflict, both noted); EMEA Partner of the Year and Partner Marketing Excellence in the 2024 awards (Feb 4 2025); High-Performance CX Partner of the Year in the 2025 awards",
+     "evidence": "Five9 named Opus EMEA Partner of the Year on Feb 4 2025; Opus describes the award as recognising the top revenue-generating partner in EMEA and calls itself the number one Five9 and 8x8 partner in EMEA (self-claim).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.five9.com/news/news-releases/five9-honors-outstanding-partner-performance-global-partner-awards",
+       "date": "2025-02-04",
+       "note": "2024 awards, EMEA Partner of the Year"
+      },
+      {
+       "url": "https://www.five9.com/partners/opus-technology",
+       "date": "2026-09-02",
+       "note": "Silver Partner, EMEA, founded 1992"
+      },
+      {
+       "url": "https://www.opustech.co.uk/partners/five-9/",
+       "date": "2026-09-02",
+       "note": "Opus claims Gold standard; lists 8x8, Mitel, Cirrus, Gamma"
+      },
+      {
+       "url": "https://www.opustech.co.uk/contact-centre/contact-centre-solutions/",
+       "date": "2026-09-02",
+       "note": "Calabrio and other integration partners"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Calabrio",
+    "8x8",
+    "Mitel"
+   ],
+   "scale_signal": "Self-described 'largest independent managed service provider in the UK'; founded 1992; no revenue or headcount published",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.five9.com/news/news-releases/five9-honors-outstanding-partner-performance-global-partner-awards",
+     "date": "2025-02-04",
+     "note": "2024 awards, EMEA Partner of the Year"
+    },
+    {
+     "url": "https://www.five9.com/partners/opus-technology",
+     "date": "2026-09-02",
+     "note": "Silver Partner, EMEA, founded 1992"
+    },
+    {
+     "url": "https://www.opustech.co.uk/partners/five-9/",
+     "date": "2026-09-02",
+     "note": "Opus claims Gold standard; lists 8x8, Mitel, Cirrus, Gamma"
+    },
+    {
+     "url": "https://www.opustech.co.uk/contact-centre/contact-centre-solutions/",
+     "date": "2026-09-02",
+     "note": "Calabrio and other integration partners"
+    }
+   ],
+   "_names": [
+    "Opus Technology"
+   ]
+  },
+  {
+   "name": "Onecom",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "five9": {
+     "relationship": "Gold Partner (Five9 partner profile); EMEA Partner of the Year in the 2022 awards (announced Jan 31 2023); EMEA Innovation Partner of the Year 2021; High Performance Partner of the Year in the 2024 awards",
+     "evidence": "Onecom announced its Five9 partnership on Apr 27 2021 and was named EMEA Partner of the Year on Jan 31 2023, claiming the highest number of Five9 sales accreditations across EMEA.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.onecom.co.uk/news/onecom-awarded-five9-emea-partner-of-the-year",
+       "date": "2023-01-31",
+       "note": "EMEA Partner of the Year"
+      },
+      {
+       "url": "https://www.five9.com/partners/onecom",
+       "date": "2026-09-02",
+       "note": "Gold Partner, EMEA"
+      },
+      {
+       "url": "https://www.five9.com/news/news-releases/five9-honors-outstanding-partner-performance-global-partner-awards",
+       "date": "2025-02-04",
+       "note": "High Performance Partner of the Year"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Zoom Contact Centre"
+   ],
+   "scale_signal": "Supports over 50,000 cloud users worldwide (onecom.co.uk/five9, fetched Sep 2 2026)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.onecom.co.uk/news/onecom-awarded-five9-emea-partner-of-the-year",
+     "date": "2023-01-31",
+     "note": "EMEA Partner of the Year"
+    },
+    {
+     "url": "https://www.five9.com/partners/onecom",
+     "date": "2026-09-02",
+     "note": "Gold Partner, EMEA"
+    },
+    {
+     "url": "https://www.five9.com/news/news-releases/five9-honors-outstanding-partner-performance-global-partner-awards",
+     "date": "2025-02-04",
+     "note": "High Performance Partner of the Year"
+    }
+   ],
+   "_names": [
+    "Onecom"
+   ]
+  },
+  {
+   "name": "Babble",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "five9": {
+     "relationship": "Gold Partner, Certified Implementation Partner, Certified Integration Network Partner (Five9 profile); Partner Excellence 2022; Partner Success Partner of the Year in the 2024 awards; CX Partner Excellence in the 2025 awards; EMEA Partner of the Year (year not confirmed)",
+     "evidence": "Five9 partner since 2019 and named on the five9.com partners page as an EMEA partner with numerous implementations across EMEA; the EMEA Partner of the Year blog post is now a 404 so the year is unconfirmed.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.five9.com/partners/babble",
+       "date": "2026-09-02",
+       "note": "Gold Partner and certifications"
+      },
+      {
+       "url": "https://www.babble.cloud/resources/news/babble-wins-five9-partner-excellence-award",
+       "date": "2023-01-31",
+       "note": "Partner Excellence Award 2022"
+      },
+      {
+       "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+       "date": "2026-02-11",
+       "note": "CX Partner Excellence, Babble Cloud Limited"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "none found on fetched pages",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.five9.com/partners/babble",
+     "date": "2026-09-02",
+     "note": "Gold Partner and certifications"
+    },
+    {
+     "url": "https://www.babble.cloud/resources/news/babble-wins-five9-partner-excellence-award",
+     "date": "2023-01-31",
+     "note": "Partner Excellence Award 2022"
+    },
+    {
+     "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+     "date": "2026-02-11",
+     "note": "CX Partner Excellence, Babble Cloud Limited"
+    }
+   ],
+   "_names": [
+    "Babble"
+   ]
+  },
+  {
+   "name": "Connect Managed Services",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "South Africa"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "five9": {
+     "relationship": "Gold Partner (Five9 profile, regions Canada, EMEA, United States); Five9 Global Partner of the Year 2022; Partner Excellence Award in the 2024 awards",
+     "evidence": "Connect extended its Five9 partnership to South Africa on Aug 24 2023 with local onboarding and support, and holds Gold status with Five9 IVA (Inference) expertise.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.weconnect.tech/insights/press-releases/connect-extends-five9-partnership-to-south-africa-to-enhance-the-choice-of-ccaas-contact-centre-solutions-offered/",
+       "date": "2023-08-24",
+       "note": "South Africa extension, Global Partner of the Year 2022"
+      },
+      {
+       "url": "https://www.five9.com/partners/connect-managed-services",
+       "date": "2026-09-02",
+       "note": "Gold Partner"
+      },
+      {
+       "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/",
+       "date": "2026-09-02",
+       "note": "vendor portfolio"
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "Avaya Diamond Partner and co-delivery partner; self-described leading Avaya partner in South Africa",
+     "evidence": "Connect's Avaya page claims Diamond status, co-delivery partner status, Avaya practice since 2007 and leadership in South Africa; Feb 2025 article positions Connect for Avaya legacy on-prem estates.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/avaya-diamond-partner/",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond, co-delivery, SA leadership claim, other CCaaS vendors"
+      },
+      {
+       "url": "https://www.weconnect.tech/insights/articles/2025/02/navigate-the-avaya-landscape-flexibly-with-an-experienced-partner/",
+       "date": "2025-02",
+       "note": "Avaya landscape positioning"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery accreditation (2019 launch partner), AWS Advanced tier since Jul 2022",
+     "evidence": "One of the 15 original Amazon Connect Service Delivery launch partners (May 2019) and self-described as one of five Nuance-replacement strategic partners selected by Amazon.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/building-a-cloud-based-contact-center-with-amazon-connect-service-delivery-partners",
+       "date": "2019-05-15",
+       "note": "launch partner list"
+      },
+      {
+       "url": "https://www.weconnect.tech/insights/press-releases/connect-attains-aws-advanced-partner-status/",
+       "date": "2022-07-26",
+       "note": "Advanced tier, Connect SDP"
+      },
+      {
+       "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/amazon-connect-contact-centre-partner/",
+       "date": "2026",
+       "note": "vendor list, regions"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Genesys",
+    "Verint",
+    "NICE",
+    "Salesforce Service Cloud Voice (listed)",
+    "Zendesk (listed)",
+    "Salesforce Service Cloud Voice",
+    "Zendesk",
+    "Verint (for regulated environments)"
+   ],
+   "scale_signal": "Founded 1990; offices in UK, South Africa, India and USA; no headcount or revenue published",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.weconnect.tech/insights/press-releases/connect-extends-five9-partnership-to-south-africa-to-enhance-the-choice-of-ccaas-contact-centre-solutions-offered/",
+     "date": "2023-08-24",
+     "note": "South Africa extension, Global Partner of the Year 2022"
+    },
+    {
+     "url": "https://www.five9.com/partners/connect-managed-services",
+     "date": "2026-09-02",
+     "note": "Gold Partner"
+    },
+    {
+     "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/",
+     "date": "2026-09-02",
+     "note": "vendor portfolio"
+    },
+    {
+     "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/avaya-diamond-partner/",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond, co-delivery, SA leadership claim, other CCaaS vendors"
+    },
+    {
+     "url": "https://www.weconnect.tech/insights/articles/2025/02/navigate-the-avaya-landscape-flexibly-with-an-experienced-partner/",
+     "date": "2025-02",
+     "note": "Avaya landscape positioning"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/building-a-cloud-based-contact-center-with-amazon-connect-service-delivery-partners",
+     "date": "2019-05-15",
+     "note": "launch partner list"
+    },
+    {
+     "url": "https://www.weconnect.tech/insights/press-releases/connect-attains-aws-advanced-partner-status/",
+     "date": "2022-07-26",
+     "note": "Advanced tier, Connect SDP"
+    },
+    {
+     "url": "https://www.weconnect.tech/how-we-do-it/cx-technology-partners/amazon-connect-contact-centre-partner/",
+     "date": "2026",
+     "note": "vendor list, regions"
+    }
+   ],
+   "_names": [
+    "Connect Managed Services"
+   ]
+  },
+  {
+   "name": "Britannic Technologies",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "five9": {
+     "relationship": "Authorized Partner (Five9 profile); Britannic's own badge reads 'Certified Global Implementation Partner'; specialisms include Five9 IVA, Workflow Automation and WFO/Verint",
+     "evidence": "Partnership covered by UC Today on Nov 4 2021 and re-announced as a strategic partnership in April 2023.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.five9.com/partners/britannic-technologies",
+       "date": "2026-09-02",
+       "note": "Authorized Partner"
+      },
+      {
+       "url": "https://www.btlnet.co.uk/partners/five9",
+       "date": "2026-09-02",
+       "note": "Certified Global Implementation Partner badge"
+      },
+      {
+       "url": "https://www.btlnet.co.uk/partners",
+       "date": "2026-09-02",
+       "note": "vendor list"
+      },
+      {
+       "url": "https://www.uctoday.com/unified-communications/inside-five9s-partnership-with-britannic-technologies/",
+       "date": "2021-11-04",
+       "note": "partnership coverage"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Verint",
+    "8x8",
+    "Mitel",
+    "Puzzel",
+    "Calabrio (partner since 2020)",
+    "Zoom",
+    "Microsoft"
+   ],
+   "scale_signal": "Founded 1984, Surrey-based; no headcount or revenue published",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.five9.com/partners/britannic-technologies",
+     "date": "2026-09-02",
+     "note": "Authorized Partner"
+    },
+    {
+     "url": "https://www.btlnet.co.uk/partners/five9",
+     "date": "2026-09-02",
+     "note": "Certified Global Implementation Partner badge"
+    },
+    {
+     "url": "https://www.btlnet.co.uk/partners",
+     "date": "2026-09-02",
+     "note": "vendor list"
+    },
+    {
+     "url": "https://www.uctoday.com/unified-communications/inside-five9s-partnership-with-britannic-technologies/",
+     "date": "2021-11-04",
+     "note": "partnership coverage"
+    },
+    {
+     "url": "https://www.btlnet.co.uk/partners/verint",
+     "date": "2026-09-02",
+     "note": "page content is Calabrio"
+    }
+   ],
+   "_names": [
+    "Britannic Technologies"
+   ]
+  },
+  {
+   "name": "WTG",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "Poland",
+    "Spain"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "five9": {
+     "relationship": "Listed partner, tier not found; DACH Partner of the Year in both the 2024 awards (Feb 4 2025) and the 2025 awards (Feb 2026)",
+     "evidence": "Strategic partnership announced May 10 2023 at Five9 CX Summit EMEA in Porto with Roland Lunck, Senior Director Channels DACH at Five9, quoted; DACH Partner of the Year two cycles running.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.wtg.com/en/news/wtg-and-five9-partnership",
+       "date": "2023-05-10",
+       "note": "partnership announcement, Roland Lunck quote"
+      },
+      {
+       "url": "https://www.itiko.de/artikel/2151601/wtg-wird-von-five9-zum-dach-partner-of-the-year-2024-gek-rt.html",
+       "date": "2025-02-11",
+       "note": "DACH Partner of the Year 2024"
+      },
+      {
+       "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+       "date": "2026-02-11",
+       "note": "DACH Partner of the Year 2025"
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "Avaya Edge Diamond Partner; self-claimed largest Avaya service partner in Germany; Avaya Biggest Partner of the Year 2024",
+     "evidence": "WTG's Avaya pages state Edge Diamond status, the 2024 Biggest Partner of the Year award, 3,000+ Avaya customers and 1.5 million ports; T&N AG and BrainConsult (Switzerland/Austria) are group companies.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.wtg.com/avaya-partner-edge-diamond-spezialist-fuer-avaya/tenovis-telefonanlagen",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond, Biggest Partner of the Year 2024, largest in Germany claim"
+      },
+      {
+       "url": "https://www.wtg.com/avaya",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond since 2006, 3,000 customers, 1.5M ports"
+      },
+      {
+       "url": "https://www.wtg.com/unternehmen",
+       "date": "fetched 2026-09-02",
+       "note": "Headcount, locations, group companies"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Claims 105 vendor partners and manufacturer independence but names none on the corporate page; no Genesys, Cisco, Five9 or NICE evidence found"
+   ],
+   "scale_signal": "500+ employees, 22 locations across DE/CH/AT/PL/ES, 3,000+ Avaya customers, 1.5M ports, 700+ projects a year (wtg.com, fetched Sep 2 2026)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.wtg.com/en/news/wtg-and-five9-partnership",
+     "date": "2023-05-10",
+     "note": "partnership announcement, Roland Lunck quote"
+    },
+    {
+     "url": "https://www.itiko.de/artikel/2151601/wtg-wird-von-five9-zum-dach-partner-of-the-year-2024-gek-rt.html",
+     "date": "2025-02-11",
+     "note": "DACH Partner of the Year 2024"
+    },
+    {
+     "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+     "date": "2026-02-11",
+     "note": "DACH Partner of the Year 2025"
+    },
+    {
+     "url": "https://www.wtg.com/avaya-partner-edge-diamond-spezialist-fuer-avaya/tenovis-telefonanlagen",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond, Biggest Partner of the Year 2024, largest in Germany claim"
+    },
+    {
+     "url": "https://www.wtg.com/avaya",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond since 2006, 3,000 customers, 1.5M ports"
+    },
+    {
+     "url": "https://www.wtg.com/unternehmen",
+     "date": "fetched 2026-09-02",
+     "note": "Headcount, locations, group companies"
+    }
+   ],
+   "_names": [
+    "WTG"
+   ]
+  },
+  {
+   "name": "Assist Digital",
+   "hq_country": "Italy",
+   "emea_coverage": [
+    "Italy",
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "Netherlands",
+    "Belgium",
+    "Luxembourg"
+   ],
+   "partner_type": "bpo_cx_outsourcer",
+   "carries": {
+    "five9": {
+     "relationship": "Silver Partner (Five9 profile, BPO plus CCaaS, CRM, IVA/WFA/WFO, managed services); joined the Five9 European partner ecosystem Dec 7 2023 with a DACH and Benelux focus",
+     "evidence": "Five9 release of Dec 7 2023 welcomed Assist Digital as a European partner and stated Five9 sells in DACH and Benelux primarily through partners; the Five9 profile contact is the Leipzig sales office.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.businesswire.com/news/home/20231207243257/en/Five9-Expands-Partner-Network-and-Welcomes-Assist-Digital-in-the-Partner-Ecosystem-in-the-European-Market",
+       "date": "2023-12-07",
+       "note": "release"
+      },
+      {
+       "url": "https://www.five9.com/partners/assist-digital",
+       "date": "2026-09-02",
+       "note": "Silver Partner, BPO, 6,000 agents"
+      },
+      {
+       "url": "https://www.assistdigital.com/en/",
+       "date": "2026-09-02",
+       "note": "scale and technology partners"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Genesys",
+    "Vocalcom"
+   ],
+   "scale_signal": "Five9 profile: 6,000+ agents, 25 contact centres across EMEA; company site: 4,500+ professionals, 12 countries, 26 locations",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.businesswire.com/news/home/20231207243257/en/Five9-Expands-Partner-Network-and-Welcomes-Assist-Digital-in-the-Partner-Ecosystem-in-the-European-Market",
+     "date": "2023-12-07",
+     "note": "release"
+    },
+    {
+     "url": "https://www.five9.com/partners/assist-digital",
+     "date": "2026-09-02",
+     "note": "Silver Partner, BPO, 6,000 agents"
+    },
+    {
+     "url": "https://www.assistdigital.com/en/",
+     "date": "2026-09-02",
+     "note": "scale and technology partners"
+    }
+   ],
+   "_names": [
+    "Assist Digital"
+   ]
+  },
+  {
+   "name": "Deloitte Digital",
+   "hq_country": "United Kingdom (global network)",
+   "emea_coverage": [
+    "EMEA per Five9 profile",
+    "Belgium (event sponsor)",
+    "pan-EMEA member firms",
+    "Benelux",
+    "Germany",
+    "Sub-Saharan Africa",
+    "EMEA-wide"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "five9": {
+     "relationship": "Gold Partner (Five9 profile, regions APAC, Canada, EMEA, LATAM, US); Global Partner of the Year in the 2024 awards; SI Partner of the Year in the 2025 awards",
+     "evidence": "Five9 profile flags EMEA as a served region, but no EMEA-specific Five9 deal, case study or announcement was found, so EMEA activity is inferred from the region flag.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.five9.com/partners/deloitte-digital",
+       "date": "2026-09-02",
+       "note": "Gold, EMEA flagged"
+      },
+      {
+       "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+       "date": "2026-02-11",
+       "note": "SI Partner of the Year"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "GSI Partner of the Year 2024 and Global Influence Partner of the Year 2024; named GSI on genesys.com; strategic alliance Feb 2025",
+     "evidence": "Genesys CSO Larry Shurtz announced Deloitte Digital as 2024 GSI Partner of the Year; Deloitte sponsored Genesys Future of CX Belgium Oct 2025.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-digital-named-global-systems-integrator-partner-of-the-year.html",
+       "date": "2025-03-06",
+       "note": "Two 2024 awards"
+      },
+      {
+       "url": "https://www.genesys.com/partners/global-system-integrators",
+       "date": "fetched 2026-09-02",
+       "note": "Named GSI"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "Amazon Connect Customer Services Competency (Contact Center Transformation), named Jun 16 2026; 2019 Service Delivery launch partner",
+     "evidence": "Deloitte's global AWS alliance page carries a 'Tailored Customer Experiences via Amazon Connect' offer, and Deloitte won 2025 Consulting Partner of the Year in Benelux, Germany and Sub-Saharan Africa.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.deloitte.com/global/en/alliances/aws.html",
+       "date": "2026",
+       "note": "Connect offer, Premier tier"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+       "date": "2025-12-02",
+       "note": "regional awards"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "470,000 people, 150+ countries (firm level); no Genesys practice size public",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.five9.com/partners/deloitte-digital",
+     "date": "2026-09-02",
+     "note": "Gold, EMEA flagged"
+    },
+    {
+     "url": "https://www.callcentrehelper.com/five9-winners-2025-global-partner-awards-271542.htm",
+     "date": "2026-02-11",
+     "note": "SI Partner of the Year"
+    },
+    {
+     "url": "https://www.deloitte.com/us/en/about/press-room/deloitte-digital-named-global-systems-integrator-partner-of-the-year.html",
+     "date": "2025-03-06",
+     "note": "Two 2024 awards"
+    },
+    {
+     "url": "https://www.genesys.com/partners/global-system-integrators",
+     "date": "fetched 2026-09-02",
+     "note": "Named GSI"
+    },
+    {
+     "url": "https://www.deloitte.com/global/en/alliances/aws.html",
+     "date": "2026",
+     "note": "Connect offer, Premier tier"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+     "date": "2025-12-02",
+     "note": "regional awards"
+    }
+   ],
+   "_names": [
+    "Deloitte Digital"
+   ]
+  },
+  {
+   "name": "TTEC Digital",
+   "hq_country": "United States",
+   "emea_coverage": [
+    "Europe (region named on TTEC Digital site, countries not specified)",
+    "UK",
+    "Ireland",
+    "Bulgaria",
+    "Europe (delivery)",
+    "Europe (offices stated, countries not itemised)",
+    "Europe (offices stated",
+    "not itemised)",
+    "North America, Europe, Asia Pacific (page claim; countries not listed)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "five9": {
+     "relationship": "Authorized Partner (Five9 profile); Delivery Partner of the Year and Most Trusted Expert Partner of the Year in the 2025 awards",
+     "evidence": "TTEC Digital's Five9 page states operations across North America, Europe and Asia Pacific; no EMEA-specific Five9 evidence found, so EMEA relevance is inferred.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://ttecdigital.com/partners/five9",
+       "date": "2026-09-02",
+       "note": "regions and scale"
+      },
+      {
+       "url": "https://www.five9.com/partners/ttec-digital",
+       "date": "2026-09-02",
+       "note": "Authorized Partner"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Platinum; CX Evolution Partner of the Year 2024; 15x Genesys Partner of the Year",
+     "evidence": "TTEC Digital cites 170+ Genesys Cloud certifications, 300+ Genesys resources and 1,000+ clients across North America, Europe and APAC; VoiceFoundry won the inaugural AWS Amazon Connect Partner of the Year (UKI) 2021.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.ttecdigital.com/partners/genesys",
+       "date": "fetched 2026-09-02",
+       "note": "Platinum, awards, certification counts"
+      },
+      {
+       "url": "https://www.ttec.com/emea/about-us",
+       "date": "fetched 2026-09-02",
+       "note": "EMEA sites, AWS/Cisco/Microsoft awards"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "Amazon Connect Customer Services Competency (Contact Center Transformation), named Jun 16 2026; 2019 Service Delivery launch partner; AWS 2021 Amazon Connect Partner of the Year UKI",
+     "evidence": "Only partner on record with a Connect-specific EMEA AWS award (inaugural UKI Connect Partner of the Year, Dec 9 2021), and a named launch partner of the 2026 Connect Customer competency.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.ttec.com/newsroom/press-release/voicefoundry-ttec-digital-business-wins-inaugural-aws-2021-amazon-connect",
+       "date": "2021-12-09",
+       "note": "UKI Connect Partner of the Year"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+       "date": "2026-06-16",
+       "note": "competency launch partner"
+      },
+      {
+       "url": "https://ttecdigital.com/partners",
+       "date": "2026",
+       "note": "other vendors carried"
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "CX Platform Leaders list",
+     "evidence": "Verint listed under 'CX Platform Leaders' on the TTEC Digital partners page (global page; EMEA delivery not evidenced)",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.ttecdigital.com/partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Cisco (Cloud Contact Center Partner of the Year, TTEC EMEA page)",
+    "Microsoft (Digital Contact Center Platform launch partner)",
+    "Salesforce, Pega",
+    "Cisco",
+    "NICE",
+    "Alvaria and Aspect",
+    "Calabrio",
+    "Talkdesk, Zoom, Salesforce, Pega, ServiceNow, Zendesk"
+   ],
+   "scale_signal": "Six of the seven carried on the global page (all but Avaya); '2,000 technologists', '1,000+ clients'",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://ttecdigital.com/partners/five9",
+     "date": "2026-09-02",
+     "note": "regions and scale"
+    },
+    {
+     "url": "https://www.five9.com/partners/ttec-digital",
+     "date": "2026-09-02",
+     "note": "Authorized Partner"
+    },
+    {
+     "url": "https://www.ttecdigital.com/partners/genesys",
+     "date": "fetched 2026-09-02",
+     "note": "Platinum, awards, certification counts"
+    },
+    {
+     "url": "https://www.ttec.com/emea/about-us",
+     "date": "fetched 2026-09-02",
+     "note": "EMEA sites, AWS/Cisco/Microsoft awards"
+    },
+    {
+     "url": "https://www.ttecdigital.com/partners",
+     "date": "2026-09-02",
+     "note": "Alvaria and Aspect listed"
+    },
+    {
+     "url": "https://www.ttec.com/newsroom/press-release/voicefoundry-ttec-digital-business-wins-inaugural-aws-2021-amazon-connect",
+     "date": "2021-12-09",
+     "note": "UKI Connect Partner of the Year"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+     "date": "2026-06-16",
+     "note": "competency launch partner"
+    },
+    {
+     "url": "https://ttecdigital.com/partners",
+     "date": "2026",
+     "note": "other vendors carried"
+    }
+   ],
+   "_names": [
+    "TTEC Digital"
+   ]
+  },
+  {
+   "name": "Westcon-Comstor",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "global agreement covering 150+ countries per 2016 release; EMEA activity today inferred",
+    "UK",
+    "Ireland",
+    "DACH",
+    "Benelux",
+    "France",
+    "Iberia",
+    "Italy",
+    "Nordics",
+    "CEE",
+    "Gulf",
+    "South Africa",
+    "Middle East",
+    "Africa",
+    "EEA (30+ countries)",
+    "Switzerland",
+    "Europe"
+   ],
+   "partner_type": "distributor",
+   "carries": {
+    "cisco": {
+     "relationship": "Comstor: self-described '#1 Cisco distributor' and only Cisco-dedicated value-add distributor; Comstor Webex team supports partners on Webex Contact Centre",
+     "evidence": "Comstor Middle East Webex page names Webex Contact Centre enablement services for partners.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.westconcomstor.com/me/en/vendors/cisco/collaboration/webex.html",
+       "date": "surfaced 2026-09-02",
+       "note": "Webex CC support services"
+      },
+      {
+       "url": "https://www.westconcomstor.com/se/en/comstor.html",
+       "date": "fetched 2026-09-02",
+       "note": "#1 Cisco distributor claim"
+      },
+      {
+       "url": "https://www.westconcomstor.com/uk/en/vendors/cisco.html",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "Master Agent/Distributor EMEA (2021 award); Avaya Diamond Partner and Authorised Avaya Learning Partner",
+     "evidence": "Named Avaya Master Agent/Distributor for EMEA in 2021, master agent for Avaya CCaaS across Europe after a UK pilot, and its UK vendor page still lists AXP, Avaya Cloud Office, Spaces and devices with Diamond status; sponsored PCC EMEA 2024 in Brussels.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.westconcomstor.com/global/en/news/announcements/westcon-named-avaya-s-master-agent-distributor-for-emea-2021.html",
+       "date": "2021",
+       "note": "Master Agent/Distributor EMEA award, regions EMEA and APAC"
+      },
+      {
+       "url": "https://www.westconcomstor.com/uk/en/vendors/avaya.html",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond, Learning Partner, AXP/ACO/Spaces, stock holding claim"
+      },
+      {
+       "url": "https://iteuropa.com/news/westcon-secures-european-master-agent-deal-avaya-ccaas",
+       "date": "2021",
+       "note": "CCaaS master agent extended from UK to all Europe"
+      },
+      {
+       "url": "https://partners.avaya.com/ev-emea-pcc24-brussels",
+       "date": "2024-04-14",
+       "note": "Sponsor of PCC EMEA Spring Conference 2024"
+      },
+      {
+       "url": "https://www.westconcomstor.com/uk/en/vendors/avaya.html",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "AWS (Europe distribution agreement, Westcon announcement 2024)"
+   ],
+   "scale_signal": "Claims one of the largest Avaya stock holdings in distribution (Westcon UK Avaya page, fetched Sep 2 2026); no Avaya-specific revenue disclosed",
+   "share_statement": "'Comstor is the #1 Cisco distributor' (Westcon UK Cisco page, checked 2026-09-02); Genesys and Five9 are NOT on Westcon's EMEA vendor lists",
+   "sources": [
+    {
+     "url": "https://www.five9.com/news/news-releases/pr-five9-partners-with-westcon-comstor-for-global-distribution-of-award-winning-solution",
+     "date": "2016-06",
+     "note": "global distribution, 150+ countries"
+    },
+    {
+     "url": "https://www.westconcomstor.com/me/en/vendors/cisco/collaboration/webex.html",
+     "date": "surfaced 2026-09-02",
+     "note": "Webex CC support services"
+    },
+    {
+     "url": "https://www.westconcomstor.com/se/en/comstor.html",
+     "date": "fetched 2026-09-02",
+     "note": "#1 Cisco distributor claim"
+    },
+    {
+     "url": "https://www.westconcomstor.com/global/en/news/announcements/westcon-named-avaya-s-master-agent-distributor-for-emea-2021.html",
+     "date": "2021",
+     "note": "Master Agent/Distributor EMEA award, regions EMEA and APAC"
+    },
+    {
+     "url": "https://www.westconcomstor.com/uk/en/vendors/avaya.html",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond, Learning Partner, AXP/ACO/Spaces, stock holding claim"
+    },
+    {
+     "url": "https://iteuropa.com/news/westcon-secures-european-master-agent-deal-avaya-ccaas",
+     "date": "2021",
+     "note": "CCaaS master agent extended from UK to all Europe"
+    },
+    {
+     "url": "https://partners.avaya.com/ev-emea-pcc24-brussels",
+     "date": "2024-04-14",
+     "note": "Sponsor of PCC EMEA Spring Conference 2024"
+    },
+    {
+     "url": "https://www.westconcomstor.com/global/en/news/announcements/2024/westcon-comstor-to-distribute-aws-solutions-across-europe.html",
+     "date": "2024-11-28",
+     "note": "AWS Europe distribution"
+    },
+    {
+     "url": "https://www.westconcomstor.com/global/en/vendors.html",
+     "date": "",
+     "note": ""
+    },
+    {
+     "url": "https://www.westconcomstor.com/uk/en/vendors.html",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Westcon-Comstor"
+   ]
+  },
+  {
+   "name": "Jasco",
+   "hq_country": "South Africa",
+   "emea_coverage": [
+    "South Africa"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "five9": {
+     "relationship": "Listed partner (third-party directory only)",
+     "evidence": "Appears as the sole Five9 partner for South Africa on the elioplus directory; Jasco's own site did not resolve on fetch, so the relationship is inferred from a directory listing.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://elioplus.com/africa/south-africa/channel-partners/five9",
+       "date": "2026-09-02",
+       "note": "directory listing, Johannesburg"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Avaya",
+    "Cisco",
+    "Verint"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://elioplus.com/africa/south-africa/channel-partners/five9",
+     "date": "2026-09-02",
+     "note": "directory listing, Johannesburg"
+    }
+   ],
+   "_names": [
+    "Jasco"
+   ]
+  },
+  {
+   "name": "Natilik",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Ireland"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Gold Partner (legacy), Quad Master, Customer Experience Specialised, Webex Contact Centre authorised; WebexOne 2025 Customer Experience Partner of the Year EMEA and Global",
+     "evidence": "Named EMEA and Global Customer Experience Partner of the Year at WebexOne 2025 for Webex Contact Center bookings and enablement.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/collaboration/announcing-the-2025-webex-partner-award-winners/",
+       "date": "2025-10-02",
+       "note": "EMEA CX Partner of the Year"
+      },
+      {
+       "url": "https://www.natilik.com/news/natilik-is-named-global-customer-experience-partner-of-the-year-at-webexone/",
+       "date": "2025-10-03",
+       "note": "Global CX award"
+      },
+      {
+       "url": "https://www.natilik.com/partners/cisco/",
+       "date": "fetched 2026-09-02",
+       "note": "tiers and Webex CC authorisation"
+      },
+      {
+       "url": "https://www.natilik.com/partners/",
+       "date": "fetched 2026-09-02",
+       "note": "Cisco, NICE, Verint, Calabrio listed"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NiCE (Gold Partner; NICE Disruptor Partner of the Year 2025 per Natilik awards page)",
+    "Verint (listed partner)",
+    "Calabrio (listed partner)",
+    "Microsoft (Solutions Partner Modern Work)"
+   ],
+   "scale_signal": "Offices London, New York, Sydney; Webex blog says it supports 'tens of thousands of agents'; no revenue or headcount found",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/collaboration/announcing-the-2025-webex-partner-award-winners/",
+     "date": "2025-10-02",
+     "note": "EMEA CX Partner of the Year"
+    },
+    {
+     "url": "https://www.natilik.com/news/natilik-is-named-global-customer-experience-partner-of-the-year-at-webexone/",
+     "date": "2025-10-03",
+     "note": "Global CX award"
+    },
+    {
+     "url": "https://www.natilik.com/partners/cisco/",
+     "date": "fetched 2026-09-02",
+     "note": "tiers and Webex CC authorisation"
+    },
+    {
+     "url": "https://www.natilik.com/partners/",
+     "date": "fetched 2026-09-02",
+     "note": "Cisco, NICE, Verint, Calabrio listed"
+    }
+   ],
+   "_names": [
+    "Natilik"
+   ]
+  },
+  {
+   "name": "NTT DATA",
+   "hq_country": "Japan",
+   "emea_coverage": [
+    "UK",
+    "Ireland",
+    "DACH",
+    "Benelux",
+    "France",
+    "Iberia",
+    "Italy",
+    "Nordics",
+    "CEE",
+    "Gulf",
+    "South Africa",
+    "Germany",
+    "Belgium",
+    "Netherlands",
+    "pan-EMEA",
+    "Europe (generic)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Global Gold (legacy); Cisco Powered Services specialisation in Webex Contact Center; Global Sustainability Partner of the Year 2025",
+     "evidence": "NTT DATA blog states it holds the Cisco Powered Services specialisation for Webex Contact Center and sells it inside its CX Managed Services; Cisco blog confirms Webex Calling plus Webex Contact Center delivery worldwide.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://services.global.ntt/en-us/insights/blog/ntt-data-and-cisco-an-innovative-future-proof-partnership",
+       "date": "undated, surfaced 2026-09-02",
+       "note": "Webex CC Cisco Powered Services claim"
+      },
+      {
+       "url": "https://blogs.cisco.com/partner/answering-the-need-for-cloud-calling-and-collaboration-with-cisco-webex-and-ntt",
+       "date": "2023-04-18",
+       "note": "Global Gold, Webex CC, 2M users"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Global Elite Partner (nttdata.com global page)",
+     "evidence": "NTT DATA claims 150,000+ Genesys seats deployed and the largest Genesys customer base, with EMEA case studies for SIXT, ORES (Belgium) and DynaGroup; sponsor of Genesys Future of CX Belgium Oct 2025.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.nttdata.com/global/en/about-us/partners/genesys",
+       "date": "fetched 2026-09-02",
+       "note": "Global Elite, 150,000 seats, EMEA case studies"
+      },
+      {
+       "url": "https://www.nttdata.com/global/en/about-us/partners",
+       "date": "fetched 2026-09-02",
+       "note": "Partner roster incl. Cisco"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "Amazon Connect Customer Services Competency (Contact Center Transformation), named Jun 16 2026; NTT Communications was a 2019 Service Delivery launch partner; AWS strategic collaboration agreement for AI contact center Oct 2025",
+     "evidence": "Named launch partner of the 2026 Connect Customer competency; signed a strategic collaboration agreement with AWS to deliver AI-powered contact center solutions (Oct 6 2025).",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+       "date": "2026-06-16",
+       "note": "competency partner"
+      },
+      {
+       "url": "https://de.tradingview.com/news/reuters.com,2025-10-06:newsml_Zaw7KwDvw:0-pressr-ntt-data-signs-strategic-collaboration-agreement-with-aws-to-deliver-ai-powered-contact-center-solutions",
+       "date": "2025-10-06",
+       "note": "AWS SCA for AI contact center"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "AWS, Microsoft, Salesforce, ServiceNow (listed partners)"
+   ],
+   "scale_signal": "Up to 2 million joint-customer users expected to migrate to cloud voice over 36 months (Cisco blog, Apr 18 2023)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://services.global.ntt/en-us/insights/blog/ntt-data-and-cisco-an-innovative-future-proof-partnership",
+     "date": "undated, surfaced 2026-09-02",
+     "note": "Webex CC Cisco Powered Services claim"
+    },
+    {
+     "url": "https://blogs.cisco.com/partner/answering-the-need-for-cloud-calling-and-collaboration-with-cisco-webex-and-ntt",
+     "date": "2023-04-18",
+     "note": "Global Gold, Webex CC, 2M users"
+    },
+    {
+     "url": "https://www.nttdata.com/global/en/about-us/partners/genesys",
+     "date": "fetched 2026-09-02",
+     "note": "Global Elite, 150,000 seats, EMEA case studies"
+    },
+    {
+     "url": "https://www.nttdata.com/global/en/about-us/partners",
+     "date": "fetched 2026-09-02",
+     "note": "Partner roster incl. Cisco"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+     "date": "2026-06-16",
+     "note": "competency partner"
+    },
+    {
+     "url": "https://de.tradingview.com/news/reuters.com,2025-10-06:newsml_Zaw7KwDvw:0-pressr-ntt-data-signs-strategic-collaboration-agreement-with-aws-to-deliver-ai-powered-contact-center-solutions",
+     "date": "2025-10-06",
+     "note": "AWS SCA for AI contact center"
+    }
+   ],
+   "_names": [
+    "NTT DATA"
+   ]
+  },
+  {
+   "name": "Orange Business",
+   "hq_country": "France",
+   "emea_coverage": [
+    "France",
+    "UK",
+    "DACH",
+    "Benelux",
+    "Iberia",
+    "Italy",
+    "Nordics",
+    "CEE",
+    "Gulf",
+    "Africa",
+    "Belgium",
+    "multi-country EMEA",
+    "global (65 countries)",
+    "Europe",
+    "Middle East"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Global Partner; Global Gold Integrator (UC); Preferred Collaboration Partner in 10+ countries under Cisco 360; Webex Contact Center in the 'Workplace Together' bundle",
+     "evidence": "Orange's 'Workplace Together [Webex]' bundle includes Webex Contact Center; Webex customer story (Aug 1 2025) says 100+ customers on Workplace Together Essentials.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/customer-stories/how-orange-business-moved-seamlessly-from-on-premise-to-the-cloud-with-webex/",
+       "date": "2025-08-01",
+       "note": "Webex CC in portfolio, 100+ customers"
+      },
+      {
+       "url": "https://www.orange-business.com/en/about-us/partners/cisco",
+       "date": "fetched 2026-09-02",
+       "note": "tiers, Genesys suite, licence counts"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Elite (Orange partner page; Belgian page also says Platinum)",
+     "evidence": "Orange reports 25+ years with Genesys, 120+ joint customers, 48,550 Genesys licences under management and 170+ certifications; sponsor of Genesys Future of CX Belgium Oct 2025.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.orange-business.com/en/partners/genesys",
+       "date": "fetched 2026-09-02",
+       "note": "Elite, 25+ years, licence and customer counts"
+      },
+      {
+       "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+       "date": "2025-10-02",
+       "note": "Event sponsor list"
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "EMEA Marketing Partner of the Year and Support Partner of the Year 2025; Cloud Partner of the Year 2023",
+     "evidence": "Three Verint EMEA awards across 2023 and 2025 on Verint's own sources; Orange's public partner page does not list Verint, so the resale mechanics are not visible publicly.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "two 2025 awards"
+      },
+      {
+       "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+       "date": "2023-05-15",
+       "note": "Cloud Partner of the Year 2023"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft",
+    "AWS (Advanced Partner)"
+   ],
+   "scale_signal": "48,550 Genesys licences managed; 120+ joint customers; Orange Business 30,000+ B2B customers in 65 countries",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/customer-stories/how-orange-business-moved-seamlessly-from-on-premise-to-the-cloud-with-webex/",
+     "date": "2025-08-01",
+     "note": "Webex CC in portfolio, 100+ customers"
+    },
+    {
+     "url": "https://www.orange-business.com/en/about-us/partners/cisco",
+     "date": "fetched 2026-09-02",
+     "note": "tiers, Genesys suite, licence counts"
+    },
+    {
+     "url": "https://www.orange-business.com/en/partners/genesys",
+     "date": "fetched 2026-09-02",
+     "note": "Elite, 25+ years, licence and customer counts"
+    },
+    {
+     "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+     "date": "2025-10-02",
+     "note": "Event sponsor list"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "two 2025 awards"
+    },
+    {
+     "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+     "date": "2023-05-15",
+     "note": "Cloud Partner of the Year 2023"
+    }
+   ],
+   "_names": [
+    "Orange Business"
+   ]
+  },
+  {
+   "name": "Logicalis",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Ireland",
+    "Channel Islands",
+    "Portugal",
+    "Spain",
+    "Germany",
+    "Netherlands",
+    "Nordics",
+    "CEE"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Preferred Partner across all five architectures (UK&I and Ireland, Cisco 360); Logicalis Portugal 'Cisco Webex Contact Center Specialized Partner' (May 24 2021)",
+     "evidence": "Logicalis UK&I delivered Webex Contact Centre plus managed service to Birmingham City University; Portugal unit holds the Webex CC specialisation.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.uki.logicalis.com/cisco",
+       "date": "fetched 2026-09-02",
+       "note": "Preferred Partner, BCU Webex CC case"
+      },
+      {
+       "url": "https://www.pt.logicalis.com/pt-pt/artigo/news/cisco-webex-contact-center-specialized-partner",
+       "date": "2021-05-24",
+       "note": "Portugal Webex CC specialised"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Services in 30+ territories",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.uki.logicalis.com/cisco",
+     "date": "fetched 2026-09-02",
+     "note": "Preferred Partner, BCU Webex CC case"
+    },
+    {
+     "url": "https://www.pt.logicalis.com/pt-pt/artigo/news/cisco-webex-contact-center-specialized-partner",
+     "date": "2021-05-24",
+     "note": "Portugal Webex CC specialised"
+    }
+   ],
+   "_names": [
+    "Logicalis"
+   ]
+  },
+  {
+   "name": "Damovo",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "Belgium",
+    "Netherlands",
+    "Luxembourg",
+    "Poland",
+    "Ireland",
+    "Sweden",
+    "Finland",
+    "UK",
+    "Czech Republic",
+    "Italy",
+    "14 countries direct",
+    "multi-country Europe"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco 360 Partner; Global Partner Network and Multinational Europe certifications; 200+ Cisco certifications in Germany; Growth Partner of the Year Germany 2025",
+     "evidence": "Dedicated Cisco Webex Contact Centre product page plus contact centre consulting practice.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.damovo.com/products/cisco-webex-contact-centre/",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC offer, scale"
+      },
+      {
+       "url": "https://www.damovo.com/partners/",
+       "date": "fetched 2026-09-02",
+       "note": "all vendor tiers"
+      },
+      {
+       "url": "https://www.damovo.com/en/partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "Avaya Diamond Partner (since Feb 2017) with Multi-Country Co-Delivery status",
+     "evidence": "Damovo's Avaya page lists Diamond plus Multi-Country Co-Delivery and awards: Partner of the Year Damovo Switzerland 2024, DACH Partner Excellence Award 2024, Technical Excellence Germany 2024, Customer Champion Germany and Ireland 2024, Biggest Value Partner 2023, Swiss AXP Partner of the Year 2023; supports Aura Elite, Aura Contact Center and AXP.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.damovo.com/en/about-us/partners/avaya-diamond",
+       "date": "fetched 2026-09-02",
+       "note": "Tier, co-delivery, 2023-2024 awards"
+      },
+      {
+       "url": "https://www.damovo.com/partners/",
+       "date": "fetched 2026-09-02",
+       "note": "Full vendor list incl. Genesys Silver, NICE CXone, Cisco"
+      },
+      {
+       "url": "https://www.damovo.com/en/about-us/",
+       "date": "fetched 2026-09-02",
+       "note": "Scale figures"
+      },
+      {
+       "url": "https://www.uctoday.com/unified-communications/damovo-first-bring-avaya-cloud-solutions-ireland/",
+       "date": "2017-06-27",
+       "note": "Diamond granted Feb 2017; Ireland cloud launch"
+      },
+      {
+       "url": "https://www.damovo.com/en/partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Silver (US, Ireland, Germany, Poland)",
+     "evidence": "Damovo implemented Genesys Cloud for Deutsche Glasfaser (340 agents, three months) and BarmeniaGothaer, and holds Genesys Silver in four countries.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.damovo.com/partners/",
+       "date": "fetched 2026-09-02",
+       "note": "Genesys Silver countries, full vendor roster, scale"
+      },
+      {
+       "url": "https://www.genesys.com/customer-stories/deutsche-glasfaser",
+       "date": "fetched 2026-09-02",
+       "note": "340 agents, Damovo named"
+      },
+      {
+       "url": "https://www.damovo.com/en/partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Mitel (Platinum)",
+    "NICE CXone / Cognigy",
+    "Zoom (Gold)",
+    "Microsoft Teams",
+    "NICE CXone (listed with WFO)",
+    "Mitel (listed)",
+    "Microsoft, Zoom, Cognigy, Pexip (listed)",
+    "Mitel (Platinum Integrator Partner)",
+    "NICE CXone and NiCE Cognigy",
+    "Zoom (Gold, Zoom CX named)"
+   ],
+   "scale_signal": "About 600 employees, 160+ million euro turnover, 2,600+ customers, direct presence in 14 countries (damovo.com about page, fetched Sep 2 2026)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.damovo.com/products/cisco-webex-contact-centre/",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC offer, scale"
+    },
+    {
+     "url": "https://www.damovo.com/partners/",
+     "date": "fetched 2026-09-02",
+     "note": "all vendor tiers"
+    },
+    {
+     "url": "https://www.damovo.com/en/about-us/partners/avaya-diamond",
+     "date": "fetched 2026-09-02",
+     "note": "Tier, co-delivery, 2023-2024 awards"
+    },
+    {
+     "url": "https://www.damovo.com/en/about-us/",
+     "date": "fetched 2026-09-02",
+     "note": "Scale figures"
+    },
+    {
+     "url": "https://www.uctoday.com/unified-communications/damovo-first-bring-avaya-cloud-solutions-ireland/",
+     "date": "2017-06-27",
+     "note": "Diamond granted Feb 2017; Ireland cloud launch"
+    },
+    {
+     "url": "https://www.genesys.com/customer-stories/deutsche-glasfaser",
+     "date": "fetched 2026-09-02",
+     "note": "340 agents, Damovo named"
+    },
+    {
+     "url": "https://www.damovo.com/en/partners",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Damovo"
+   ]
+  },
+  {
+   "name": "Cisilion",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco 360 Preferred/Portfolio Partner across Collaboration, Networking, Security, Cloud and AI, Services; Webex Contact Centre accreditation; WebexOne 2024 Reimagine Customer Experiences Partner of the Year EMEA",
+     "evidence": "Webex blog names Cisilion the 2024 EMEA CX partner of the year for contact center revenue growth; Cisilion lists Webex Contact Centre accreditation.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/collaboration/2024-webex-partner-award-winners/",
+       "date": "2024-10-30",
+       "note": "EMEA CX award"
+      },
+      {
+       "url": "https://www.cisilion.com/news-blog/cisco-360-partner-statuses-cisilion/",
+       "date": "2026-01-25",
+       "note": "360 statuses, Webex CC accreditation"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft (licensing, Teams)"
+   ],
+   "scale_signal": "Two UK offices; no revenue or headcount found",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/collaboration/2024-webex-partner-award-winners/",
+     "date": "2024-10-30",
+     "note": "EMEA CX award"
+    },
+    {
+     "url": "https://www.cisilion.com/news-blog/cisco-360-partner-statuses-cisilion/",
+     "date": "2026-01-25",
+     "note": "360 statuses, Webex CC accreditation"
+    }
+   ],
+   "_names": [
+    "Cisilion"
+   ]
+  },
+  {
+   "name": "BrightCloud Group",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "WebexOne 2023 Reimagine Customer Experiences Partner of the Year EMEA; described by Webex as a UK contact center specialist",
+     "evidence": "Webex blog credits BrightCloud with large Webex Contact Center wins fuelling triple-digit growth in 2023.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/hybrid-work/2023-webex-partner-award-winners",
+       "date": "2023-10-27",
+       "note": "EMEA CX award"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Triple-digit growth claim (Webex, 2023); no absolute figures",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/hybrid-work/2023-webex-partner-award-winners",
+     "date": "2023-10-27",
+     "note": "EMEA CX award"
+    }
+   ],
+   "_names": [
+    "BrightCloud Group"
+   ]
+  },
+  {
+   "name": "Bucher + Suter",
+   "hq_country": "Switzerland",
+   "emea_coverage": [
+    "Switzerland",
+    "Germany",
+    "DACH"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Preferred Partner (Cisco 360); Webex CX partner spotlight Nov 2025; installed the first Cisco IPCC in 2000; 20+ years Cisco contact center",
+     "evidence": "Webex blog lists Bucher + Suter among top Cisco CX partners with 600% YoY growth and deep Salesforce integration; company pages sell Webex Contact Center.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/customer-experience/shining-a-spotlight-on-our-top-cisco-partners-driving-webex-cx-transformation/",
+       "date": "2025-11-14",
+       "note": "only EMEA partner in Cisco's top CX list"
+      },
+      {
+       "url": "https://www.bucher-suter.com/",
+       "date": "fetched 2026-09-02",
+       "note": "Preferred Partner, Webex CC"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Salesforce (Service Cloud Voice, Agentforce; partner since 2012)",
+    "ServiceNow, Microsoft Dynamics (CRM integration)"
+   ],
+   "scale_signal": "120+ specialists, 400+ projects, offices in Switzerland, Germany, USA; 600% YoY growth (Webex, Nov 2025)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/customer-experience/shining-a-spotlight-on-our-top-cisco-partners-driving-webex-cx-transformation/",
+     "date": "2025-11-14",
+     "note": "only EMEA partner in Cisco's top CX list"
+    },
+    {
+     "url": "https://www.bucher-suter.com/",
+     "date": "fetched 2026-09-02",
+     "note": "Preferred Partner, Webex CC"
+    }
+   ],
+   "_names": [
+    "Bucher + Suter"
+   ]
+  },
+  {
+   "name": "Deutsche Telekom (T-Systems)",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Netherlands",
+    "CEE",
+    "pan-Europe via T-Systems",
+    "DACH",
+    "European footprint"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Preferred Collaboration Partner (Telekom Germany page); T-Systems Gold Integrator and Master Collaboration (legacy); WebexOne 2025 Employee Experience Partner of the Year EMEA (1,500+ Webex Suite deals in FY25)",
+     "evidence": "Telekom's business site sells Webex Contact Center for customer service; Telekom also runs Webex Contact Center internally (3,500 agents, Webex Luminary award Oct 7 2025).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://geschaeftskunden.telekom.de/business/loesungen/digitalisierung/zusammenarbeit-produktivitaet/cisco-webex",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC offer, Preferred Collaboration Partner"
+      },
+      {
+       "url": "https://blog.webex.com/collaboration/announcing-the-2025-webex-partner-award-winners/",
+       "date": "2025-10-02",
+       "note": "EMEA Employee Experience award"
+      },
+      {
+       "url": "https://www.t-systems.com/de/en/partners/cisco",
+       "date": "fetched 2026-09-02",
+       "note": "T-Systems tiers"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "listed partner (Genesys-based Telekom Contact Center Suite, cloud pay-per-use since 2012); current Ascend tier not public",
+     "evidence": "Telekom Deutschland built its SMB cloud contact center suite on Genesys in 2012; group affiliate Magenta Telekom is a Genesys Cloud customer.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.destinationcrm.com/Articles/CRM-News/CRM-Featured-Articles/Genesys-and-Telekom-Deutschland-Announce-New-Cloud-Based-Contact-Center-Solution---84937.aspx",
+       "date": "2012-09-12",
+       "note": "Original Genesys-based cloud suite"
+      },
+      {
+       "url": "https://www.genesys.com/customer-stories/magenta-telekom",
+       "date": "search result",
+       "note": "Magenta Telekom Genesys Cloud customer"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "AWS Managed Services, Amazon Connect listed",
+     "evidence": "'AWS Amazon Connect' listed under AWS Managed Services on the T-Systems Digital Workplace page",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.t-systems.com/de/en/digital/digital-workplace",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Avaya (T-Systems and Avaya cloud contact center partnership per telekom.com, page not fetched)"
+   ],
+   "scale_signal": "1,500+ Webex Suite deals FY25; internal Webex CC 3,500 agents",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://geschaeftskunden.telekom.de/business/loesungen/digitalisierung/zusammenarbeit-produktivitaet/cisco-webex",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC offer, Preferred Collaboration Partner"
+    },
+    {
+     "url": "https://blog.webex.com/collaboration/announcing-the-2025-webex-partner-award-winners/",
+     "date": "2025-10-02",
+     "note": "EMEA Employee Experience award"
+    },
+    {
+     "url": "https://www.t-systems.com/de/en/partners/cisco",
+     "date": "fetched 2026-09-02",
+     "note": "T-Systems tiers"
+    },
+    {
+     "url": "https://www.destinationcrm.com/Articles/CRM-News/CRM-Featured-Articles/Genesys-and-Telekom-Deutschland-Announce-New-Cloud-Based-Contact-Center-Solution---84937.aspx",
+     "date": "2012-09-12",
+     "note": "Original Genesys-based cloud suite"
+    },
+    {
+     "url": "https://www.genesys.com/customer-stories/magenta-telekom",
+     "date": "search result",
+     "note": "Magenta Telekom Genesys Cloud customer"
+    },
+    {
+     "url": "https://www.t-systems.com/de/en/digital/digital-workplace",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Deutsche Telekom (T-Systems)"
+   ]
+  },
+  {
+   "name": "TD SYNNEX",
+   "hq_country": "United States",
+   "emea_coverage": [
+    "UK",
+    "Germany",
+    "Norway",
+    "Nordics",
+    "Benelux",
+    "France",
+    "Iberia",
+    "Italy",
+    "CEE",
+    "EMEA-wide"
+   ],
+   "partner_type": "distributor",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco Global Distributor of the Year 2025; EMEA Distributor of the Year 2025; Distributor of the Year Germany and Norway 2025",
+     "evidence": "TD SYNNEX IR release lists the 2025 Cisco distributor awards; collaboration hub covers Webex but no Webex CC-specific programme found.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://ir.tdsynnex.com/news/news-details/2025/TD-SYNNEX-Wins-Global-and-Regional-Distributor-of-the-Year-Honors-at-Cisco-Partner-Summit-2025/default.aspx",
+       "date": "2025-11-10",
+       "note": "EMEA Distributor of the Year"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Award-level only; no Cisco EMEA revenue split public",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://ir.tdsynnex.com/news/news-details/2025/TD-SYNNEX-Wins-Global-and-Regional-Distributor-of-the-Year-Honors-at-Cisco-Partner-Summit-2025/default.aspx",
+     "date": "2025-11-10",
+     "note": "EMEA Distributor of the Year"
+    },
+    {
+     "url": "https://uk.tdsynnex.com/Intouch/MVC/Microsite/PressReleases?categorypageid=1200&msmenuid=2584&corpregionid=14&culture=en-GB&pressreleaseid=636&pressreleasetype=0",
+     "date": "undated",
+     "note": "Azlan Avaya appointment; body not retrievable"
+    },
+    {
+     "url": "https://www.barchart.com/story/news/36413753/td-synnex-awarded-2025-aws-partner-awards",
+     "date": "2025-12",
+     "note": "2025 AWS awards"
+    }
+   ],
+   "_names": [
+    "TD SYNNEX"
+   ]
+  },
+  {
+   "name": "Virgin Media O2 Business",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "cisco": {
+     "relationship": "listed partner (Cisco Webex Contact Centre product page, no tier stated)",
+     "evidence": "VMO2 Business sells a Cisco Webex Contact Centre product page (voice, chat, email, social, text).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.virginmediao2business.co.uk/voice-solutions/cisco-webex-contact-centre/",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC product page"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.virginmediao2business.co.uk/voice-solutions/cisco-webex-contact-centre/",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC product page"
+    }
+   ],
+   "_names": [
+    "Virgin Media O2 Business"
+   ]
+  },
+  {
+   "name": "Vodafone Business",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Germany",
+    "Italy",
+    "Spain",
+    "Ireland",
+    "Portugal",
+    "Greece",
+    "CEE"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "cisco": {
+     "relationship": "listed partner; 'Vodafone Business Contact Center - Webex Service' described in contract terms as a SaaS omnichannel CC integrated with Cisco IP telephony (inferred from contract document)",
+     "evidence": "Vodafone service terms document describes a Webex-based contact center service; product marketing page not located.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://manuals.plus/m/223a62f531a434e2ca7d7f661192fb7e3b723a853043b2396648e6bd3ea61a41_pdf",
+       "date": "surfaced 2026-09-02",
+       "note": "contract text naming Contact Center - Webex Service"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "RingCentral RingCX (current page)",
+    "Vodafone storm (own CCaaS)"
+   ],
+   "scale_signal": "none Avaya-specific",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://manuals.plus/m/223a62f531a434e2ca7d7f661192fb7e3b723a853043b2396648e6bd3ea61a41_pdf",
+     "date": "surfaced 2026-09-02",
+     "note": "contract text naming Contact Center - Webex Service"
+    },
+    {
+     "url": "https://www.vodafone.co.uk/business/unified-communications/contact-centre-solutions/avaya-contact-centre",
+     "date": "fetched 2026-09-02",
+     "note": "No Avaya content on Avaya-named URL"
+    },
+    {
+     "url": "https://www.ringcentral.com/whyringcentral/company/pressreleases/vodafone-business-and-ringcentral-announce-strategic-partnership-to-deliver-new-cloud-based-communications-services.html",
+     "date": "2020-12-02",
+     "note": "RingCentral CCaaS partnership"
+    }
+   ],
+   "_names": [
+    "Vodafone Business"
+   ]
+  },
+  {
+   "name": "Axians (VINCI Energies)",
+   "hq_country": "France",
+   "emea_coverage": [
+    "France",
+    "Germany",
+    "Netherlands",
+    "Belgium",
+    "Portugal",
+    "Spain",
+    "Italy",
+    "Switzerland",
+    "Austria",
+    "CEE"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "listed Cisco partner; published a Webex Contact Center CCaaS positioning article; Webex Calling partner microsite (NL)",
+     "evidence": "Axians news article 'Webex Contact Center: Redefining Intelligent CCaaS' describes Webex as a strategic CX partner.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.axians.com/news/redefining-intelligent-contact-centers-with-webex/",
+       "date": "undated",
+       "note": "Webex CC article"
+      }
+     ]
+    },
+    "avaya": {
+     "relationship": "listed partner (managed services provider for Avaya UC and contact centre; tier not published)",
+     "evidence": "VodafoneZiggo extended its Axians contract for Avaya UC and contact centre managed services (Omnia platform, UCaaS/CCaaS) for four more years, a relationship running since 2018.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.telecompaper.com/news/vodafoneziggo-extends-axians-contract-for-avaya-managed-services--1567822",
+       "date": "2026-04-10",
+       "note": "Four-year extension, Avaya UC and CC managed services"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "ServiceNow partner (servicenow.com partner finder)"
+   ],
+   "scale_signal": "Part of VINCI Energies; no Avaya-specific figures",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.axians.com/news/redefining-intelligent-contact-centers-with-webex/",
+     "date": "undated",
+     "note": "Webex CC article"
+    },
+    {
+     "url": "https://www.telecompaper.com/news/vodafoneziggo-extends-axians-contract-for-avaya-managed-services--1567822",
+     "date": "2026-04-10",
+     "note": "Four-year extension, Avaya UC and CC managed services"
+    }
+   ],
+   "_names": [
+    "Axians (VINCI Energies)"
+   ]
+  },
+  {
+   "name": "CANCOM (incl. Kapsch BusinessCom)",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "CEE"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco 360 partner (tier not stated); long-standing collaboration partner; Webex Contact Center listed on CANCOM's Cisco UCC page",
+     "evidence": "CANCOM's Cisco UCC page lists Webex Contact Center among supported Webex products.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://cisco.cancom.de/ucc/",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC listed"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Kapsch BusinessCom pre-acquisition: 1,300+ employees, EUR 300M+ revenue",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://cisco.cancom.de/ucc/",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC listed"
+    }
+   ],
+   "_names": [
+    "CANCOM (incl. CANCOM Austria, ex Kapsch BusinessCom)"
+   ]
+  },
+  {
+   "name": "IST Networks",
+   "hq_country": "Egypt (Saudi Arabia operations)",
+   "emea_coverage": [
+    "Saudi Arabia",
+    "Egypt",
+    "UAE",
+    "Gulf"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "listed partner selling Cisco Webex Cloud Contact Center (tier not stated)",
+     "evidence": "Dedicated Webex Cloud Contact Center page targeting Saudi Arabia.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.istnetworks.com/webex-cloud-contact-center/",
+       "date": "fetched 2026-09-02",
+       "note": "Webex CC page, Genesys and Verint lines"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Genesys (Cloud CX, Connect, DX, IWD)",
+    "Verint (WFO, QM, performance management)"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.istnetworks.com/webex-cloud-contact-center/",
+     "date": "fetched 2026-09-02",
+     "note": "Webex CC page, Genesys and Verint lines"
+    }
+   ],
+   "_names": [
+    "IST Networks"
+   ]
+  },
+  {
+   "name": "solutions by stc",
+   "hq_country": "Saudi Arabia",
+   "emea_coverage": [
+    "Saudi Arabia",
+    "UAE",
+    "Bahrain",
+    "Kuwait",
+    "Jordan",
+    "Qatar",
+    "Oman",
+    "Iraq"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "WebexOne 2024 Webex Managed Services Award EMEA; stc was first Cisco WebEx authorised partner in Middle East (2009)",
+     "evidence": "Webex blog names Solutions by STC the 2024 EMEA managed services winner; contact center specificity not confirmed.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://blog.webex.com/collaboration/2024-webex-partner-award-winners/",
+       "date": "2024-10-30",
+       "note": "EMEA managed services award"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Network across 9 Gulf and Levant countries",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blog.webex.com/collaboration/2024-webex-partner-award-winners/",
+     "date": "2024-10-30",
+     "note": "EMEA managed services award"
+    }
+   ],
+   "_names": [
+    "solutions by stc"
+   ]
+  },
+  {
+   "name": "Emircom",
+   "hq_country": "United Arab Emirates",
+   "emea_coverage": [
+    "UAE",
+    "Saudi Arabia",
+    "Egypt"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "cisco": {
+     "relationship": "Cisco EMEA Partner of the Year 2025 (Partner Summit)",
+     "evidence": "Cisco names Emircom EMEA Partner of the Year 2025; Emircom site lists Contact Center under Collaboration and a managed CCaaS ('PowerEngage'), platform vendor not stated.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://blogs.cisco.com/partner/celebrating-excellence-our-2025-global-award-winners",
+       "date": "2025-11-06",
+       "note": "EMEA Partner of the Year"
+      },
+      {
+       "url": "https://www.emircom.com/",
+       "date": "fetched 2026-09-02",
+       "note": "CC offering, offices"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "6 offices, 4 countries, founded 1984",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blogs.cisco.com/partner/celebrating-excellence-our-2025-global-award-winners",
+     "date": "2025-11-06",
+     "note": "EMEA Partner of the Year"
+    },
+    {
+     "url": "https://www.emircom.com/",
+     "date": "fetched 2026-09-02",
+     "note": "CC offering, offices"
+    }
+   ],
+   "_names": [
+    "Emircom"
+   ]
+  },
+  {
+   "name": "Pure IP",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "pan-EMEA PSTN"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "cisco": {
+     "relationship": "Certified Calling Provider, Cloud Connect for Webex Calling; supports high-volume Webex Contact Center deployments",
+     "evidence": "Pure IP release states its Cloud Connect service supports demanding high-volume Webex Contact Center deployments.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.prnewswire.com/news-releases/pure-ip-launches-webex-calling-solution-for-pstn-connectivity-301691723.html",
+       "date": "2022-12",
+       "note": "Webex CC deployment support"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft Teams (Operator Connect / Direct Routing)",
+    "Zoom Phone"
+   ],
+   "scale_signal": "Voice coverage 137 countries",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.prnewswire.com/news-releases/pure-ip-launches-webex-calling-solution-for-pstn-connectivity-301691723.html",
+     "date": "2022-12",
+     "note": "Webex CC deployment support"
+    }
+   ],
+   "_names": [
+    "Pure IP"
+   ]
+  },
+  {
+   "name": "Telefonica Tech",
+   "hq_country": "Spain",
+   "emea_coverage": [
+    "Spain",
+    "UK (via VMO2)",
+    "Germany"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "genesys": {
+     "relationship": "Gold Partner (Oct 2018, Spain: PureCloud, PureConnect, PureEngage); current tier not public",
+     "evidence": "Telefonica Espana took Gold status to distribute, sell and support Genesys in Spain; Telefonica Tech's current partner page still names a strategic agreement with Genesys (page returned 403 in this run).",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://noticiasbancarias.com/general/18/10/2018/telefonica-ofrecera-en-espana-las-soluciones-omnicanal-de-la-multinacional-genesys/166927.html",
+       "date": "2018-10-18",
+       "note": "Gold Partner, scope"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "none pulled",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://blogs.cisco.com/partner/celebrating-excellence-our-2025-global-award-winners",
+     "date": "2025-11-06",
+     "note": "SP Partner of the Year"
+    },
+    {
+     "url": "https://noticiasbancarias.com/general/18/10/2018/telefonica-ofrecera-en-espana-las-soluciones-omnicanal-de-la-multinacional-genesys/166927.html",
+     "date": "2018-10-18",
+     "note": "Gold Partner, scope"
+    }
+   ],
+   "_names": [
+    "Telefonica Tech"
+   ]
+  },
+  {
+   "name": "Proximus NXT",
+   "hq_country": "Belgium",
+   "emea_coverage": [
+    "Belgium",
+    "Luxembourg",
+    "Netherlands"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "genesys": {
+     "relationship": "listed partner (Genesys Cloud implementer); tier not public",
+     "evidence": "Proximus NXT delivered Genesys Cloud for OCTA+ in six weeks and sponsored Genesys Future of CX Belgium Oct 2025.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.proximus.be/en/id_b_cl_octa_plus/companies-and-public-sector/news/news-blog/customer-talks/contact-center-software.html",
+       "date": "search result, fetch failed",
+       "note": "OCTA+ Genesys Cloud case"
+      },
+      {
+       "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+       "date": "2025-10-02",
+       "note": "Sponsor list"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "250+ cloud specialists, 500+ enterprise customers (search summary of Proximus page, unfetched)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.telindus.lu/en/products/cisco-webex-teams",
+     "date": "undated",
+     "note": "Webex resale"
+    },
+    {
+     "url": "https://www.proximus.be/en/id_b_cl_octa_plus/companies-and-public-sector/news/news-blog/customer-talks/contact-center-software.html",
+     "date": "search result, fetch failed",
+     "note": "OCTA+ Genesys Cloud case"
+    },
+    {
+     "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+     "date": "2025-10-02",
+     "note": "Sponsor list"
+    }
+   ],
+   "_names": [
+    "Proximus NXT"
+   ]
+  },
+  {
+   "name": "Sabio Group",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Spain",
+    "France",
+    "Netherlands",
+    "Denmark",
+    "South Africa",
+    "Ireland",
+    "Nordics"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Diamond Edge Partner (self-described, nearly 30 years); Avaya Enterprise Cloud Partner of the Year (year not stated)",
+     "evidence": "Sabio's Avaya page claims Diamond Edge status and Enterprise Cloud Partner of the Year, cites a 2,500-user de Volksbank private-cloud migration, and Avaya named Sabio a certified BYOC option for AXP customers in Feb 2025.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.sabiogroup.com/partners/avaya",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond Edge, Enterprise Cloud Partner of the Year, de Volksbank"
+      },
+      {
+       "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+       "date": "2025-02-17",
+       "note": "Sabio named certified BYOC option"
+      },
+      {
+       "url": "https://www.sabiogroup.com/partners",
+       "date": "fetched 2026-09-02",
+       "note": "Partner list incl. Genesys Elite Apr 2026"
+      },
+      {
+       "url": "https://www.contactcenterworld.com/company/sabio.aspx",
+       "date": "undated",
+       "note": "Verint Premier, country list"
+      },
+      {
+       "url": "https://www.sabiogroup.com/partners/avaya",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "Elite (Ascend, highest tier), awarded Apr 2026; EMEA Partner of the Year 2021",
+     "evidence": "Genesys VP Channel Sales EMEA Gabriel Frasconi quoted on Sabio reaching Elite after nearly 30 years and hundreds of Genesys deployments.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://sabiogroup.com/news/sabio-group-achieves-genesys-elite-partner-status/",
+       "date": "2026-04-15",
+       "note": "Elite status, Frasconi quote, vendor list"
+      },
+      {
+       "url": "https://www.callcentrehelper.com/sabio-genesys-partner-of-year-201996.htm",
+       "date": "2021-12-02",
+       "note": "EMEA Partner of the Year, country practices"
+      },
+      {
+       "url": "https://sabiogroup.com/partners/genesys/",
+       "date": "fetched 2026-09-02",
+       "note": "25+ years, Elite wording, partner roster"
+      },
+      {
+       "url": "https://www.sabiogroup.com/partners/genesys",
+       "date": "2026-04-15",
+       "note": ""
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "EMEA Partner of the Year (CX) 2025; self-described 'Verint WFO Partner for 25+ years' and 'Premier Partner' (tier not published by Verint)",
+     "evidence": "Won Verint EMEA Partner of the Year (CX) 2025, Support Partner of the Year 2023 and 2024, Breakthrough Cloud Solution 2024; delivered Verint WFM, Speech and Ops Manager at BGL Group and DHL Express across its European contact centres.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "Partner of the Year (CX) 2025"
+      },
+      {
+       "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+       "date": "2024-05-13",
+       "note": "Support Partner 2024, Breakthrough Cloud 2024"
+      },
+      {
+       "url": "https://sabiogroup.com/partners/verint/",
+       "date": "2026-09-02",
+       "note": "WFO partner 25+ years, awards, DHL and Verisure deployments"
+      },
+      {
+       "url": "https://www.sabiogroup.com/partners/verint",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "listed partner (self-described 'Amazon Certified Specialist and Service Provider Partner' for Amazon Connect; no APN designation string verified)",
+     "evidence": "Sabio lists Amazon Connect as one of seven core CX vendors and sponsored the UK Independent User Group for Amazon Connect on May 22, 2025.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://sabiogroup.com/event/3rd-independent-user-group-for-amazon-connect/",
+       "date": "2025-05-22",
+       "note": "Sabio sponsor of UK Amazon Connect user group"
+      },
+      {
+       "url": "https://sabiogroup.com/partners/amazon-connect/",
+       "date": "2025",
+       "note": "Connect partner page, vendor list"
+      },
+      {
+       "url": "https://www.prnewswire.co.uk/news-releases/sabio-group-expands-into-the-nordic-region-and-strengthens-genesys-capability-301717976.html",
+       "date": "2023-01-12",
+       "note": "650+ customers, Nordic Genesys unit from Sopra Steria"
+      },
+      {
+       "url": "https://www.sabiogroup.com/partners/amazon-connect",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Google Cloud, Salesforce, Twilio, Cognigy, Microsoft (listed partners)",
+    "Twilio",
+    "Google Cloud",
+    "Salesforce"
+   ],
+   "scale_signal": "Practices in UK, France, Netherlands and Spain (Dec 2021); 'dominant provider of Genesys solutions in EMEA' self-claim (Dec 2021); no public headcount or revenue found",
+   "share_statement": "none found on pages fetched",
+   "sources": [
+    {
+     "url": "https://www.sabiogroup.com/partners/avaya",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond Edge, Enterprise Cloud Partner of the Year, de Volksbank"
+    },
+    {
+     "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+     "date": "2025-02-17",
+     "note": "Sabio named certified BYOC option"
+    },
+    {
+     "url": "https://www.sabiogroup.com/partners",
+     "date": "fetched 2026-09-02",
+     "note": "Partner list incl. Genesys Elite Apr 2026"
+    },
+    {
+     "url": "https://www.contactcenterworld.com/company/sabio.aspx",
+     "date": "undated",
+     "note": "Verint Premier, country list"
+    },
+    {
+     "url": "https://sabiogroup.com/news/sabio-group-achieves-genesys-elite-partner-status/",
+     "date": "2026-04-15",
+     "note": "Elite status, Frasconi quote, vendor list"
+    },
+    {
+     "url": "https://www.callcentrehelper.com/sabio-genesys-partner-of-year-201996.htm",
+     "date": "2021-12-02",
+     "note": "EMEA Partner of the Year, country practices"
+    },
+    {
+     "url": "https://sabiogroup.com/partners/genesys/",
+     "date": "fetched 2026-09-02",
+     "note": "25+ years, Elite wording, partner roster"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "Partner of the Year (CX) 2025"
+    },
+    {
+     "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+     "date": "2024-05-13",
+     "note": "Support Partner 2024, Breakthrough Cloud 2024"
+    },
+    {
+     "url": "https://sabiogroup.com/partners/verint/",
+     "date": "2026-09-02",
+     "note": "WFO partner 25+ years, awards, DHL and Verisure deployments"
+    },
+    {
+     "url": "https://sabiogroup.com/event/3rd-independent-user-group-for-amazon-connect/",
+     "date": "2025-05-22",
+     "note": "Sabio sponsor of UK Amazon Connect user group"
+    },
+    {
+     "url": "https://sabiogroup.com/partners/amazon-connect/",
+     "date": "2025",
+     "note": "Connect partner page, vendor list"
+    },
+    {
+     "url": "https://www.prnewswire.co.uk/news-releases/sabio-group-expands-into-the-nordic-region-and-strengthens-genesys-capability-301717976.html",
+     "date": "2023-01-12",
+     "note": "650+ customers, Nordic Genesys unit from Sopra Steria"
+    }
+   ],
+   "_names": [
+    "Sabio Group"
+   ]
+  },
+  {
+   "name": "T&N AG (WTG group)",
+   "hq_country": "Switzerland",
+   "emea_coverage": [
+    "Switzerland",
+    "Austria"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Diamond partner (self-described)",
+     "evidence": "T&N states Diamond status, 20+ years with Avaya and Avaya systems implemented at 500+ companies in Switzerland and Austria, covering Aura, Aura Contact Center and IP Office.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.tn-ict.com/en/about-us/partners/avaya-integrator",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond, 500 companies, products"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "500+ Avaya installations in CH/AT (tn-ict.com, fetched Sep 2 2026)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.tn-ict.com/en/about-us/partners/avaya-integrator",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond, 500 companies, products"
+    }
+   ],
+   "_names": [
+    "T&N AG (WTG group)"
+   ]
+  },
+  {
+   "name": "Maintel",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Diamond Edge Partner and DevConnect member",
+     "evidence": "Maintel's partner page lists Avaya Diamond Edge in both CX and UC, and Avaya named Maintel a certified BYOC option for AXP customers in Feb 2025.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://maintel.co.uk/about-us/technology-partners/",
+       "date": "fetched 2026-09-02",
+       "note": "Tier statements for all vendors"
+      },
+      {
+       "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+       "date": "2025-02-17",
+       "note": "Certified BYOC option"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Genesys (Premier accredited, AppFoundry partner)",
+    "Mitel (Platinum)",
+    "Cisco (Diamond, Master MSP)",
+    "RingCentral (UK wholesale partner)",
+    "Zoom (Platinum, contact centre)",
+    "Gamma (CCaaS), AWS, Twilio, Sycurio (listed)"
+   ],
+   "scale_signal": "LSE-listed since 2004 (maintel.co.uk); revenue and headcount not captured",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://maintel.co.uk/about-us/technology-partners/",
+     "date": "fetched 2026-09-02",
+     "note": "Tier statements for all vendors"
+    },
+    {
+     "url": "https://www.cxtoday.com/contact-center/avaya-to-stop-supporting-public-cloud-contact-centers-with-fewer-than-200-seats/",
+     "date": "2025-02-17",
+     "note": "Certified BYOC option"
+    }
+   ],
+   "_names": [
+    "Maintel"
+   ]
+  },
+  {
+   "name": "FourNet",
+   "hq_country": "United Kingdom (Manchester)",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Edge Diamond Cloud Integrator; Avaya Cloud Partner of the Year two years running (years not stated)",
+     "evidence": "FourNet's Avaya page claims Edge Diamond Cloud Integrator status, 15-year partnership and Avaya EMEA/Engage awards, with public-sector references (HMCTS, WMAS, SWAST, Lancashire Police).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://fournet.co.uk/about-us/partnership/avaya/",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond Cloud Integrator, awards"
+      },
+      {
+       "url": "https://fournet.co.uk/about-us/",
+       "date": "fetched 2026-09-02",
+       "note": "Ownership, NICE 2024 award, Cisco"
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "listed partner",
+     "evidence": "Verint directory page describes FourNet as a UK cloud, collaboration and contact-centre provider serving 30+ UK Government departments and emergency services.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/fournet/",
+       "date": "2026-09-02",
+       "note": "directory page"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE (NICE UK Partner of the Year 2024)",
+    "Cisco (Gold, Master Collaboration/Security via Nowcomm acquisition)",
+    "Microsoft Teams Voice (deployments cited)"
+   ],
+   "scale_signal": "Palatine Private Equity majority owner since Jun 2021; five merged businesses; no headcount or revenue found",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://fournet.co.uk/about-us/partnership/avaya/",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond Cloud Integrator, awards"
+    },
+    {
+     "url": "https://fournet.co.uk/about-us/",
+     "date": "fetched 2026-09-02",
+     "note": "Ownership, NICE 2024 award, Cisco"
+    },
+    {
+     "url": "https://www.verint.com/partner/fournet/",
+     "date": "2026-09-02",
+     "note": "directory page"
+    }
+   ],
+   "_names": [
+    "FourNet"
+   ]
+  },
+  {
+   "name": "IP Integration (IPI)",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Diamond Partner (20+ years top tier, self-described)",
+     "evidence": "IPI's Avaya page states Diamond status and carries a quote from Avaya UK&I MD Steve Joyner on 20+ years of partnership; references include Securitas and The Caravan and Motorhome Club.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://ipintegration.com/avaya-partner/",
+       "date": "fetched 2026-09-02",
+       "note": "Diamond, Avaya UK&I MD quote, Genesys"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "listed partner; Silver Sponsor at Genesys Xperience UKI 2026; three own applications for Genesys Cloud",
+     "evidence": "IPI markets Genesys Cloud delivery (Co-op Group cited) and premium add-on applications for Genesys Cloud.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.ipintegration.com/",
+       "date": "fetched 2026-09-02",
+       "note": "Genesys Cloud focus, Xperience 2026 sponsor"
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "listed partner; Rising Star Award 2023",
+     "evidence": "Verint directory page for IPI (Reading, UK, 20+ years) and 2023 EMEA Rising Star; IPI's marketplace page lists Verint among its vendors.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/ipi/",
+       "date": "2026-09-02",
+       "note": "directory page"
+      },
+      {
+       "url": "https://ipintegration.com/partners/technology-partners/",
+       "date": "2026-09-02",
+       "note": "vendor list"
+      },
+      {
+       "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+       "date": "2023-05-15",
+       "note": "Rising Star 2023"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Calabrio",
+    "Microsoft",
+    "Google",
+    "Gamma"
+   ],
+   "scale_signal": "none quantified",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://ipintegration.com/avaya-partner/",
+     "date": "fetched 2026-09-02",
+     "note": "Diamond, Avaya UK&I MD quote, Genesys"
+    },
+    {
+     "url": "https://www.ipintegration.com/",
+     "date": "fetched 2026-09-02",
+     "note": "Genesys Cloud focus, Xperience 2026 sponsor"
+    },
+    {
+     "url": "https://www.verint.com/partner/ipi/",
+     "date": "2026-09-02",
+     "note": "directory page"
+    },
+    {
+     "url": "https://ipintegration.com/partners/technology-partners/",
+     "date": "2026-09-02",
+     "note": "vendor list"
+    },
+    {
+     "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+     "date": "2023-05-15",
+     "note": "Rising Star 2023"
+    }
+   ],
+   "_names": [
+    "IP Integration (IPI)"
+   ]
+  },
+  {
+   "name": "CGC (Converged Generation Communications)",
+   "hq_country": "Saudi Arabia (Riyadh)",
+   "emea_coverage": [
+    "Saudi Arabia"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Self-described one of the largest Avaya partners in Saudi Arabia; Avaya CCaaS distribution rights; Avaya Contact Centre Partner award (Central region) Aug 2023",
+     "evidence": "CGC's Nov 2024 post says it holds CCaaS distribution rights and is among the largest Avaya partners in KSA; Avaya's Aug 2023 Saudi awards named CGC Contact Centre Partner, describing it as a platinum partner managing enterprise call centres.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://cgc-sa.com/2024/11/12/cgc-largest-avaya-partner-in-saudi-arabia/",
+       "date": "2024-11-12",
+       "note": "Largest-partner claim, CCaaS rights"
+      },
+      {
+       "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+       "date": "2023-08-08",
+       "note": "Contact Centre Partner award"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Freshworks (partnership Dec 4 2023)"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://cgc-sa.com/2024/11/12/cgc-largest-avaya-partner-in-saudi-arabia/",
+     "date": "2024-11-12",
+     "note": "Largest-partner claim, CCaaS rights"
+    },
+    {
+     "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+     "date": "2023-08-08",
+     "note": "Contact Centre Partner award"
+    }
+   ],
+   "_names": [
+    "CGC (Converged Generation Communications)"
+   ]
+  },
+  {
+   "name": "United Technologies (KSA)",
+   "hq_country": "Saudi Arabia",
+   "emea_coverage": [
+    "Saudi Arabia"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Best Mid-Market Partner, Western region (Aug 2023)",
+     "evidence": "Avaya's Aug 2023 Saudi awards said United Technologies doubled growth and captured 15% of the mid-market segment.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+       "date": "2023-08-08",
+       "note": "Award and 15% claim"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "15% of Avaya KSA mid-market segment per Avaya award write-up (Aug 2023)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+     "date": "2023-08-08",
+     "note": "Award and 15% claim"
+    }
+   ],
+   "_names": [
+    "United Technologies (KSA)"
+   ]
+  },
+  {
+   "name": "Aflak Solutions",
+   "hq_country": "Saudi Arabia",
+   "emea_coverage": [
+    "Saudi Arabia"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Public Sector Partner, Central region (Aug 2023); newly onboarded partner at that time",
+     "evidence": "Named in Avaya's Aug 2023 Saudi partner awards for government ICT projects.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+       "date": "2023-08-08",
+       "note": "Award"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.dayofdubai.com/news/avaya-highlights-commitment-saudi-arabia-market-awards-kingdoms-top-performing-partners",
+     "date": "2023-08-08",
+     "note": "Award"
+    }
+   ],
+   "_names": [
+    "Aflak Solutions"
+   ]
+  },
+  {
+   "name": "Concentrix",
+   "hq_country": "United States (large EMEA delivery footprint)",
+   "emea_coverage": [
+    "UK",
+    "Ireland",
+    "Iberia",
+    "France",
+    "CEE",
+    "South Africa",
+    "Egypt",
+    "Spain",
+    "Germany",
+    "Nordics (Webhelp footprint)",
+    "Europe (generic BPO footprint)",
+    "EMEA via Webhelp footprint"
+   ],
+   "partner_type": "bpo_cx_outsourcer",
+   "carries": {
+    "avaya": {
+     "relationship": "listed partner (Avaya cloud contact center design, build, run and managed services; tier not published)",
+     "evidence": "Concentrix maintains an Avaya partner page offering cloud migration and managed services on Avaya; EMEA delivery coverage is inferred from its global BPO footprint, not from the Avaya page.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.concentrix.com/partners/avaya/",
+       "date": "fetched 2026-09-02",
+       "note": "Avaya partner page"
+      }
+     ]
+    },
+    "genesys": {
+     "relationship": "listed partner (self-described GSI partner for Genesys Cloud); tier not public",
+     "evidence": "Concentrix markets Genesys Cloud CCaaS implementation and managed services plus a Salesforce-and-Genesys Next Generation Customer Care offer, and exhibited at Genesys Xperience 2025.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.concentrix.com/partners/genesys/",
+       "date": "fetched 2026-09-02",
+       "note": "Genesys services page"
+      },
+      {
+       "url": "https://www.concentrix.com/events/genesys-xperience-2025/",
+       "date": "2025-09-08",
+       "note": "Xperience 2025 participation"
+      },
+      {
+       "url": "https://www.concentrix.com/partners/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Salesforce (NGCC offer)",
+    "NICE",
+    "Salesforce, Microsoft, Google"
+   ],
+   "scale_signal": "14 named tech partners incl. NICE, Salesforce, Microsoft, Google, OpenAI",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.concentrix.com/partners/avaya/",
+     "date": "fetched 2026-09-02",
+     "note": "Avaya partner page"
+    },
+    {
+     "url": "https://www.concentrix.com/partners/genesys/",
+     "date": "fetched 2026-09-02",
+     "note": "Genesys services page"
+    },
+    {
+     "url": "https://www.concentrix.com/events/genesys-xperience-2025/",
+     "date": "2025-09-08",
+     "note": "Xperience 2025 participation"
+    },
+    {
+     "url": "https://www.concentrix.com/partners/",
+     "date": "2026",
+     "note": "vendor list"
+    }
+   ],
+   "_names": [
+    "Concentrix"
+   ]
+  },
+  {
+   "name": "CCT Solutions",
+   "hq_country": "Germany (Frankfurt)",
+   "emea_coverage": [
+    "Germany",
+    "Switzerland"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya reseller since 2012, Selected Product Partner, DevConnect compliance tested",
+     "evidence": "CCT's site states a worldwide Avaya reseller contract since 2012, ACIS/ACSS certifications and Avaya Aura, Contact Center and IPO-CC specialisation.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://cct-solutions.com/index.php/en/product-overview-en/solutions/uc-und-ucc-en",
+       "date": "fetched 2026-09-02",
+       "note": "Avaya status and NICE CXone"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE CXone (listed)",
+    "Microsoft Teams contact center integration",
+    "Nuance and Lumenvox speech"
+   ],
+   "scale_signal": "Offices Frankfurt, Augsburg, Langenfeld, Sulzbach, Steinhausen (CH), North Miami (US)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://cct-solutions.com/index.php/en/product-overview-en/solutions/uc-und-ucc-en",
+     "date": "fetched 2026-09-02",
+     "note": "Avaya status and NICE CXone"
+    }
+   ],
+   "_names": [
+    "CCT Solutions"
+   ]
+  },
+  {
+   "name": "LIPINSKI TELEKOM",
+   "hq_country": "Germany (Berlin)",
+   "emea_coverage": [
+    "Germany"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "avaya": {
+     "relationship": "Certified Avaya Business Partner since 1990; Diamond Enterprise status appears in a search snippet but the fetched page states no tier",
+     "evidence": "Lipinski's site describes a long-certified, award-winning Avaya partner for IP Office and Aura Communication Manager with nationwide German coverage.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.lipinski-telekom.de/header/ueber-uns/avaya-business-partner-in-berlin-hamburg-kassel.html",
+       "date": "fetched 2026-09-02",
+       "note": "Partner status and locations"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft Teams"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.lipinski-telekom.de/header/ueber-uns/avaya-business-partner-in-berlin-hamburg-kassel.html",
+     "date": "fetched 2026-09-02",
+     "note": "Partner status and locations"
+    }
+   ],
+   "_names": [
+    "LIPINSKI TELEKOM"
+   ]
+  },
+  {
+   "name": "Syscom",
+   "hq_country": "United Arab Emirates",
+   "emea_coverage": [
+    "UAE",
+    "Saudi Arabia",
+    "Qatar"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "avaya": {
+     "relationship": "Avaya Diamond Partner in UAE per search snippet (site returned 403 on fetch); listed on Elioplus Avaya partner directory",
+     "evidence": "Search result summary of sysllc.com stated Syscom is an Avaya Diamond Partner in UAE; Elioplus lists syscom distribution (UAE) as an Avaya channel partner.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.sysllc.com/avaya-partner-in-uae/",
+       "date": "fetched 2026-09-02 (403)",
+       "note": "Diamond claim from search snippet only"
+      },
+      {
+       "url": "https://elioplus.com/profile/channel-partners/avaya",
+       "date": "fetched 2026-09-02",
+       "note": "Directory listing"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.sysllc.com/avaya-partner-in-uae/",
+     "date": "fetched 2026-09-02 (403)",
+     "note": "Diamond claim from search snippet only"
+    },
+    {
+     "url": "https://elioplus.com/profile/channel-partners/avaya",
+     "date": "fetched 2026-09-02",
+     "note": "Directory listing"
+    }
+   ],
+   "_names": [
+    "Syscom"
+   ]
+  },
+  {
+   "name": "BCS (Business Continuity Solutions)",
+   "hq_country": "United Arab Emirates (Dubai)",
+   "emea_coverage": [
+    "UAE",
+    "Saudi Arabia",
+    "Qatar",
+    "Oman",
+    "Kuwait"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "avaya": {
+     "relationship": "Self-described Avaya distributor and partner, positioned on IP Office and cloud phones (SMB weighted)",
+     "evidence": "BCS vendor page claims number-one Avaya partner status for IP Office, cloud phones and collaboration in the UAE and references Avaya CCaaS.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://bcs-me.com/ourvendor/avaya",
+       "date": "fetched 2026-09-02",
+       "note": "Self-claims, countries"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://bcs-me.com/ourvendor/avaya",
+     "date": "fetched 2026-09-02",
+     "note": "Self-claims, countries"
+    }
+   ],
+   "_names": [
+    "BCS (Business Continuity Solutions)"
+   ]
+  },
+  {
+   "name": "Kerv Experience",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK",
+    "Ireland",
+    "EMEA deployments",
+    "EMEA"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "genesys": {
+     "relationship": "Elite (May 2025); UKI Partner of the Year 2024; EMEA Cloud Partner of the Year 2020 (as Foehn)",
+     "evidence": "Kerv states 100+ Genesys Cloud deployments in EMEA and claims to be the longest-standing Genesys Cloud partner in EMEA with the most deployments.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://kerv.com/company-news/kerv-experience/kerv-is-genesys-elite-partner/",
+       "date": "2025-05-20",
+       "note": "Elite, 100+ EMEA deployments"
+      },
+      {
+       "url": "https://kerv.com/company-news/kerv-experience/kerv-experience-named-uki-genesys-partner-of-the-year-2024/",
+       "date": "2024-07-04",
+       "note": "UKI Partner of the Year 2024"
+      },
+      {
+       "url": "https://kerv.com/about-kerv/",
+       "date": "fetched 2026-09-02",
+       "note": "750+ employees, Microsoft focus"
+      },
+      {
+       "url": "https://kerv.com/about-kerv/our-partners/",
+       "date": "fetched 2026-09-02",
+       "note": "Genesys Elite, Verint Elite, Microsoft"
+      },
+      {
+       "url": "https://kerv.com/about-kerv/our-partners/genesys-partner/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "verint": {
+     "relationship": "Self-described 'Verint Elite Partner'; EMEA Partner of the Year (FC) 2024 and 2025; Partner FC Deal of the Year 2025",
+     "evidence": "Verint blog names Kerv Partner of the Year (FC) 2024 and 2025; Kerv site describes a Verint Financial Compliance practice and its Compliance Cloud managed service.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://kerv.com/about-kerv/our-partners/our-partners-verint/",
+       "date": "2026-09-02",
+       "note": "Elite partner wording, VFC focus"
+      },
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "FC Partner of the Year and FC Deal of the Year 2025"
+      },
+      {
+       "url": "https://kerv.com/about-kerv/our-partners/our-partners-verint/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft (Teams, Dynamics 365; no second CCaaS platform named, Kerv Experience is Genesys-only)",
+    "Microsoft (Solutions Partner)"
+   ],
+   "scale_signal": "Kerv group 750+ employees; 100+ Genesys Cloud deployments in EMEA (May 2025); 50,000 Genesys agents across 80+ customers (CCMA directory)",
+   "share_statement": "Kerv self-claim: 'the longest-standing Genesys Cloud partner in EMEA, with the most Genesys Cloud deployments' (kerv.com, checked 2026-09-02); vendor-confirmed via the Genesys UKI Volume Partner of the Year 2026 award",
+   "sources": [
+    {
+     "url": "https://kerv.com/company-news/kerv-experience/kerv-is-genesys-elite-partner/",
+     "date": "2025-05-20",
+     "note": "Elite, 100+ EMEA deployments"
+    },
+    {
+     "url": "https://kerv.com/company-news/kerv-experience/kerv-experience-named-uki-genesys-partner-of-the-year-2024/",
+     "date": "2024-07-04",
+     "note": "UKI Partner of the Year 2024"
+    },
+    {
+     "url": "https://kerv.com/about-kerv/",
+     "date": "fetched 2026-09-02",
+     "note": "750+ employees, Microsoft focus"
+    },
+    {
+     "url": "https://kerv.com/about-kerv/our-partners/",
+     "date": "fetched 2026-09-02",
+     "note": "Genesys Elite, Verint Elite, Microsoft"
+    },
+    {
+     "url": "https://kerv.com/about-kerv/our-partners/our-partners-verint/",
+     "date": "2026-09-02",
+     "note": "Elite partner wording, VFC focus"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "FC Partner of the Year and FC Deal of the Year 2025"
+    },
+    {
+     "url": "https://kerv.com/about-kerv/our-partners/genesys-partner/",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Kerv Experience (formerly Foehn)"
+   ]
+  },
+  {
+   "name": "Teleperformance (TP Infinity)",
+   "hq_country": "France",
+   "emea_coverage": [
+    "France",
+    "Benelux",
+    "Spain",
+    "Germany",
+    "UK",
+    "pan-EMEA BPO footprint",
+    "pan-EMEA delivery"
+   ],
+   "partner_type": "bpo_cx_outsourcer",
+   "carries": {
+    "genesys": {
+     "relationship": "Global Platinum Partner and reseller (Dec 2023); TP Infinity page says 'global Genesys Gold Elite Partner' (undated)",
+     "evidence": "Teleperformance SVP Paul Joustra said TP invested to reach Global Platinum status to consult, deliver, integrate and customise Genesys; Majorel X folded in after the Majorel acquisition.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://customerfirst.nl/nieuws/2023/12/teleperformance-maakt-debuut-op-g-summit/index.xml",
+       "date": "2023-12-20",
+       "note": "Global Platinum, reseller, Majorel X"
+      },
+      {
+       "url": "https://www.tpinfinity.com/technology/tech-solutions/cx-management/genesys-cloud-cx/",
+       "date": "fetched 2026-09-02",
+       "note": "Gold Elite wording, other platforms"
+      },
+      {
+       "url": "https://www.tp.com/en-us/why-tp/innovative-partners/",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Amazon Connect (TP Infinity technology page)",
+    "Talkdesk (TP Infinity technology page)",
+    "Sprinklr, Cognigy, Kore.ai, CallMiner"
+   ],
+   "scale_signal": "22 named tech partners incl. Sprinklr, Twilio, Kore.ai, Uniphore, Parloa; NICE Nexidia and CallMiner rather than Verint",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://customerfirst.nl/nieuws/2023/12/teleperformance-maakt-debuut-op-g-summit/index.xml",
+     "date": "2023-12-20",
+     "note": "Global Platinum, reseller, Majorel X"
+    },
+    {
+     "url": "https://www.tpinfinity.com/technology/tech-solutions/cx-management/genesys-cloud-cx/",
+     "date": "fetched 2026-09-02",
+     "note": "Gold Elite wording, other platforms"
+    },
+    {
+     "url": "https://www.tp.com/en-us/why-tp/innovative-partners/",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Teleperformance (TP Infinity, incl. Majorel X)"
+   ]
+  },
+  {
+   "name": "Konecta",
+   "hq_country": "Spain",
+   "emea_coverage": [
+    "Spain",
+    "Portugal",
+    "France",
+    "Italy",
+    "Germany",
+    "UK",
+    "Europe (28 countries group-wide incl. LATAM)"
+   ],
+   "partner_type": "bpo_cx_outsourcer",
+   "carries": {
+    "genesys": {
+     "relationship": "listed partner (Genesys Cloud CX delivery and resale inside BPO or standalone); tier not public",
+     "evidence": "Konecta has implemented Genesys Cloud CX at 30+ large companies with 6,000+ concurrent agents across EMEA and the Americas and named France, Italy, Germany and the UK as expansion markets.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://konecta.com/news-insights/konecta-and-genesys-partner-to-help-companies-transform-customer-management-operations-with-generative-ai",
+       "date": "2023-10-26",
+       "note": "Partnership, scale figures"
+      },
+      {
+       "url": "https://konecta.com/about-us/our-partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    },
+    "five9": {
+     "relationship": "listed partner",
+     "evidence": "Five9 listed on Konecta partners page",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://konecta.com/about-us/our-partners",
+       "date": "2026-09-02",
+       "note": ""
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "AWS (AWS generative AI case study; Amazon Connect not specifically named)"
+   ],
+   "scale_signal": "109,000 employees; EUR 2B revenue; 28 countries; 500+ clients; 6,000+ concurrent Genesys agents",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://konecta.com/news-insights/konecta-and-genesys-partner-to-help-companies-transform-customer-management-operations-with-generative-ai",
+     "date": "2023-10-26",
+     "note": "Partnership, scale figures"
+    },
+    {
+     "url": "https://konecta.com/about-us/our-partners",
+     "date": "",
+     "note": ""
+    }
+   ],
+   "_names": [
+    "Konecta"
+   ]
+  },
+  {
+   "name": "KPN",
+   "hq_country": "Netherlands",
+   "emea_coverage": [
+    "Netherlands"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "genesys": {
+     "relationship": "Elite ('KPN is Elite Partner van Genesys', kpn.com)",
+     "evidence": "KPN sells Genesys Cloud in three packaged tiers to large enterprises; Budget Thuis moved 200+ agents onto Genesys Cloud via KPN in Jun 2024, alongside Greenchoice and Continuum.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.kpn.com/zakelijk/grootzakelijk/customer-experience/genesys-cloud",
+       "date": "fetched 2026-09-02",
+       "note": "Elite wording, packages, Anywhere365"
+      },
+      {
+       "url": "https://www.ziptone.nl/nieuws/budget-thuis-kiest-voor-kpn-en-genesys-cloud/",
+       "date": "2024-06-24",
+       "note": "200+ agents"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Anywhere365 (Microsoft Teams dialogue platform, KPN CX portfolio)"
+   ],
+   "scale_signal": "Named enterprise CX clients only (WoningNet, Continuum, Yource, Stater, Budget Thuis, Eneco, Greenchoice); no seat total public",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.kpn.com/zakelijk/grootzakelijk/customer-experience/genesys-cloud",
+     "date": "fetched 2026-09-02",
+     "note": "Elite wording, packages, Anywhere365"
+    },
+    {
+     "url": "https://www.ziptone.nl/nieuws/budget-thuis-kiest-voor-kpn-en-genesys-cloud/",
+     "date": "2024-06-24",
+     "note": "200+ agents"
+    }
+   ],
+   "_names": [
+    "KPN"
+   ]
+  },
+  {
+   "name": "Telia",
+   "hq_country": "Sweden",
+   "emea_coverage": [
+    "Sweden",
+    "Nordics"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "genesys": {
+     "relationship": "Gold Certified Partner in the Nordics (contactcenter.telia.se, unfetched); Genesys Cloud listed on telia.se",
+     "evidence": "Telia's business site lists two contact center offers, its own Telia ACE and Genesys Cloud; the Telia Genesys page describes 10+ years implementing Genesys.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.telia.se/foretag/losningar/kontaktcenter",
+       "date": "fetched 2026-09-02",
+       "note": "Telia ACE plus Genesys Cloud"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Telia ACE (Telia's own contact center platform)"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.telia.se/foretag/losningar/kontaktcenter",
+     "date": "fetched 2026-09-02",
+     "note": "Telia ACE plus Genesys Cloud"
+    }
+   ],
+   "_names": [
+    "Telia"
+   ]
+  },
+  {
+   "name": "Capgemini",
+   "hq_country": "France",
+   "emea_coverage": [
+    "France",
+    "pan-EMEA"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "genesys": {
+     "relationship": "Named GSI on genesys.com; named in Genesys Jul 2026 ecosystem release; tier not public",
+     "evidence": "Genesys lists Capgemini as one of four Global System Integrators (340,000 staff, 50+ countries).",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.genesys.com/partners/global-system-integrators",
+       "date": "fetched 2026-09-02",
+       "note": "Named GSI"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "340,000 team members, 50+ countries (firm level)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.genesys.com/partners/global-system-integrators",
+     "date": "fetched 2026-09-02",
+     "note": "Named GSI"
+    }
+   ],
+   "_names": [
+    "Capgemini"
+   ]
+  },
+  {
+   "name": "Accenture",
+   "hq_country": "Ireland",
+   "emea_coverage": [
+    "pan-EMEA",
+    "UK",
+    "Ireland",
+    "Austria",
+    "Switzerland",
+    "EMEA-wide"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "genesys": {
+     "relationship": "Named GSI on genesys.com; named in Genesys Jul 2026 ecosystem release; tier not public",
+     "evidence": "Genesys lists Accenture as a Global System Integrator delivering Genesys Cloud with its own accelerators.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.genesys.com/partners/global-system-integrators",
+       "date": "fetched 2026-09-02",
+       "note": "Named GSI"
+      }
+     ]
+    },
+    "connect": {
+     "relationship": "Amazon Connect Customer Services Competency (Contact Center Transformation), named Jun 16 2026; 2019 Service Delivery launch partner",
+     "evidence": "2025 AWS Consulting Partner of the Year for UK and Ireland and for Alps, and a named launch partner of the Connect Customer competency; no EMEA-specific Connect case study surfaced in this run.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+       "date": "2025-12-02",
+       "note": "UKI and Alps awards"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+       "date": "2026-06-16",
+       "note": "competency partner"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "AWS Consulting Partner of the Year UKI and Alps, Dec 2 2025",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.genesys.com/partners/global-system-integrators",
+     "date": "fetched 2026-09-02",
+     "note": "Named GSI"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+     "date": "2025-12-02",
+     "note": "UKI and Alps awards"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+     "date": "2026-06-16",
+     "note": "competency partner"
+    }
+   ],
+   "_names": [
+    "Accenture"
+   ]
+  },
+  {
+   "name": "IBM Consulting",
+   "hq_country": "United States",
+   "emea_coverage": [
+    "pan-EMEA"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "genesys": {
+     "relationship": "Named GSI on genesys.com ('one of the most experienced Genesys system integrators'); tier not public",
+     "evidence": "Genesys GSI page credits IBM with many large Genesys implementations end to end.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.genesys.com/partners/global-system-integrators",
+       "date": "fetched 2026-09-02",
+       "note": "Named GSI"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.genesys.com/partners/global-system-integrators",
+     "date": "fetched 2026-09-02",
+     "note": "Named GSI"
+    }
+   ],
+   "_names": [
+    "IBM Consulting"
+   ]
+  },
+  {
+   "name": "Telenet Business",
+   "hq_country": "Belgium",
+   "emea_coverage": [
+    "Belgium"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "genesys": {
+     "relationship": "listed sponsor only (Genesys Future of CX Belgium Oct 2025); partnership terms not public",
+     "evidence": "Telenet appears alongside Proximus, Orange, NTT Data, Deloitte and DDM Consulting as a sponsor of the Genesys Belgium event.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+       "date": "2025-10-02",
+       "note": "Sponsor list"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.genesys.com/en-gb/events/genesys-future-of-cx-belgium-2025",
+     "date": "2025-10-02",
+     "note": "Sponsor list"
+    }
+   ],
+   "_names": [
+    "Telenet Business"
+   ]
+  },
+  {
+   "name": "ComSys CX",
+   "hq_country": "Greece",
+   "emea_coverage": [
+    "Greece",
+    "CEE",
+    "Gulf (22 countries claimed)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "alvaria": {
+     "relationship": "Aspect WFM Reseller, Diamond Partner (Aspect directory); site names both Alvaria and Aspect, legacy Unified IP delivery likely",
+     "evidence": "Listed as Reseller, Diamond Partner with an Athens number on the Aspect directory; comsyscx.com names Cisco, Alvaria, Aspect, NICE and Microsoft as its technologies.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.aspect.com/company/partners",
+       "date": "2026-09-02",
+       "note": "ComSys CX, Reseller, Diamond, Greece"
+      },
+      {
+       "url": "https://comsyscx.com/about-us",
+       "date": "2026-09-02",
+       "note": "vendors and scale"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Cisco (Contact Center UCCE/UCCX, ATP, per LinkedIn and site)",
+    "NICE (named on comsyscx.com)",
+    "Microsoft"
+   ],
+   "scale_signal": "Founded 1989, contact center focus since 2004; 375+ systems supported across 22 countries; 38,000 contact center licences supported; about 100 employees",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.aspect.com/company/partners",
+     "date": "2026-09-02",
+     "note": "ComSys CX, Reseller, Diamond, Greece"
+    },
+    {
+     "url": "https://comsyscx.com/about-us",
+     "date": "2026-09-02",
+     "note": "vendors and scale"
+    }
+   ],
+   "_names": [
+    "ComSys CX"
+   ]
+  },
+  {
+   "name": "Al Moammar Information Systems (MIS)",
+   "hq_country": "Saudi Arabia",
+   "emea_coverage": [
+    "Saudi Arabia"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "alvaria": {
+     "relationship": "Aspect WFM Reseller, Diamond Partner (Aspect directory)",
+     "evidence": "Listed as Reseller, Diamond Partner on the Aspect partner directory, region Middle East.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.aspect.com/company/partners",
+       "date": "2026-09-02",
+       "note": "directory entry"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.aspect.com/company/partners",
+     "date": "2026-09-02",
+     "note": "directory entry"
+    }
+   ],
+   "_names": [
+    "Al Moammar Information Systems (MIS)"
+   ]
+  },
+  {
+   "name": "Al Yousuf Computer & Telecommunications",
+   "hq_country": "United Arab Emirates",
+   "emea_coverage": [
+    "UAE"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "alvaria": {
+     "relationship": "Aspect WFM Reseller, Diamond Partner (Aspect directory)",
+     "evidence": "Listed as Reseller, Diamond Partner on the Aspect partner directory, region Middle East.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.aspect.com/company/partners",
+       "date": "2026-09-02",
+       "note": "directory entry"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Parent Al Yousuf Group established 1953",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.aspect.com/company/partners",
+     "date": "2026-09-02",
+     "note": "directory entry"
+    }
+   ],
+   "_names": [
+    "Al Yousuf Computer & Telecommunications"
+   ]
+  },
+  {
+   "name": "Aptiva",
+   "hq_country": "not verified",
+   "emea_coverage": [
+    "EMEA (as stated in the announcement; countries not itemised)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "alvaria": {
+     "relationship": "Aspect WFM/WEM EMEA implementation and ongoing customer support partner (Sep 2025)",
+     "evidence": "Call Centre Helper Sep 18 2025: Aptiva will deliver and support Aspect's platform with responsibility for regional implementation and ongoing support across EMEA; also on Aspect's own press hub.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.callcentrehelper.com/aspect-and-aptiva-join-forces-263975.htm",
+       "date": "2025-09-18",
+       "note": "EMEA implementation and support partner"
+      },
+      {
+       "url": "https://www.aspect.com/company/press",
+       "date": "2026-09-02",
+       "note": "release listed on Aspect's press hub"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "none found; the partner's identity (website, country) could not be resolved",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.callcentrehelper.com/aspect-and-aptiva-join-forces-263975.htm",
+     "date": "2025-09-18",
+     "note": "EMEA implementation and support partner"
+    },
+    {
+     "url": "https://www.aspect.com/company/press",
+     "date": "2026-09-02",
+     "note": "release listed on Aspect's press hub"
+    }
+   ],
+   "_names": [
+    "Aptiva"
+   ]
+  },
+  {
+   "name": "BSL Group",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "listed partner; EMEA Rising Star Award 2023",
+     "evidence": "Verint 2023 EMEA summit release names Business Systems a Rising Star; BSL partner page says it partners with Verint for compliance and call recording.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+       "date": "2023-05-15",
+       "note": "Rising Star 2023"
+      },
+      {
+       "url": "https://bslgroup.com/about/partners/",
+       "date": "2026-09-02",
+       "note": "vendor list"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE (30+ year partnership, recording and WEM)",
+    "Calabrio (WFM)",
+    "Genesys (contact centre)"
+   ],
+   "scale_signal": "30+ years trading; London HQ; named clients Experian, Hastings Direct, Leeds Building Society",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+     "date": "2023-05-15",
+     "note": "Rising Star 2023"
+    },
+    {
+     "url": "https://bslgroup.com/about/partners/",
+     "date": "2026-09-02",
+     "note": "vendor list"
+    }
+   ],
+   "_names": [
+    "BSL Group (Business Systems UK)"
+   ]
+  },
+  {
+   "name": "Evcoms",
+   "hq_country": "Ireland",
+   "emea_coverage": [
+    "Ireland",
+    "UK"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "Self-described 'Verint Platinum Partner'; Verint directory listing; Partner Deal of the Year 2023; Rising Star 2022",
+     "evidence": "Verint partner page calls Evcoms 'a Verint Partner with decades of experience' across recording, WFO and WFM; 2023 and 2022 award wins on Verint sources.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/evcoms/",
+       "date": "2026-09-02",
+       "note": "directory listing"
+      },
+      {
+       "url": "https://evcoms.com/",
+       "date": "2026-09-02",
+       "note": "Platinum wording, vendor list, HQ"
+      },
+      {
+       "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+       "date": "2023-05-15",
+       "note": "Partner Deal of the Year 2023"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE",
+    "Five9",
+    "Calabrio",
+    "Avaya",
+    "Alcatel-Lucent Enterprise"
+   ],
+   "scale_signal": "100+ clients globally; Dublin HQ with UK number",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/evcoms/",
+     "date": "2026-09-02",
+     "note": "directory listing"
+    },
+    {
+     "url": "https://evcoms.com/",
+     "date": "2026-09-02",
+     "note": "Platinum wording, vendor list, HQ"
+    },
+    {
+     "url": "https://www.verint.com/press-room/2023-press-releases/verint-partners-recognised-for-excellence-at-the-2023-emea-partners-summit/",
+     "date": "2023-05-15",
+     "note": "Partner Deal of the Year 2023"
+    }
+   ],
+   "_names": [
+    "Evcoms"
+   ]
+  },
+  {
+   "name": "Axcess Nordic",
+   "hq_country": "Denmark",
+   "emea_coverage": [
+    "Denmark",
+    "Norway",
+    "Sweden"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "Verint 'Nordic partner' (own wording); Most Innovative AI Partner (CX) 2025; Marketing Partner of the Year 2022 and 2024",
+     "evidence": "Three Verint EMEA awards 2022 to 2025; site positions Verint and Calabrio as its Nordic WEM platforms (recording, speech analytics, QM, WFM).",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.axcessnordic.com/en/",
+       "date": "2026-09-02",
+       "note": "Verint and Calabrio, DK/NO/SE"
+      },
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "AI partner award"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Calabrio (Nordic partner)",
+    "Puzzel (implemented platform)"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.axcessnordic.com/en/",
+     "date": "2026-09-02",
+     "note": "Verint and Calabrio, DK/NO/SE"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "AI partner award"
+    }
+   ],
+   "_names": [
+    "Axcess Nordic"
+   ]
+  },
+  {
+   "name": "Luware",
+   "hq_country": "Switzerland",
+   "emea_coverage": [
+    "Switzerland",
+    "Germany",
+    "UK",
+    "Poland",
+    "Belgium"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "verint": {
+     "relationship": "Managed-service partner: Luware Recording is Verint compliance recording delivered as SaaS; Verint Compliance Partner of the Year 2022 and 2023, FC Hosting Partner 2024, Technical Excellence (FC) 2025",
+     "evidence": "Verint partner page: Luware Recording combines Verint's quality monitoring and compliance software with Luware's SaaS expertise, 25,000+ users.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/luware/",
+       "date": "2026-09-02",
+       "note": "Verint-based recording, user count"
+      },
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "Technical Excellence FC 2025"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Microsoft Teams (primary platform)"
+   ],
+   "scale_signal": "25,000+ recorded users; offices in CH, US, UK, DE, PL; customers SIX, Swiss Re, KBC",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/luware/",
+     "date": "2026-09-02",
+     "note": "Verint-based recording, user count"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "Technical Excellence FC 2025"
+    }
+   ],
+   "_names": [
+    "Luware"
+   ]
+  },
+  {
+   "name": "1GLOBAL",
+   "hq_country": "Netherlands",
+   "emea_coverage": [
+    "Netherlands",
+    "UK",
+    "Europe (licensed telecom in 40+ countries)"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "verint": {
+     "relationship": "Hosting Partner of the Year (FC) 2025; Partner FC Deal of the Year 2024; listed partner",
+     "evidence": "1GLOBAL launched 'Verint Communications Analytics' for mobile voice and SMS compliance capture; two consecutive Verint EMEA FC awards.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.1global.com/",
+       "date": "2026-09-02",
+       "note": "Verint Communications Analytics, scale"
+      },
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "Hosting Partner FC 2025"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "1,500+ corporate clients, 450+ employees, 15 offices",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.1global.com/",
+     "date": "2026-09-02",
+     "note": "Verint Communications Analytics, scale"
+    },
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "Hosting Partner FC 2025"
+    }
+   ],
+   "_names": [
+    "1GLOBAL"
+   ]
+  },
+  {
+   "name": "Tele-Train Software",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Switzerland"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "Self-described 'Verint Gold Partner' since 2003 (DACH); Partner CX Deal of the Year 2024",
+     "evidence": "Verint partner page: 'Gold Partner with clear focus on WFO-solutions and on Avaya OEM-WFO-products', partner since 2003, German-language support.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/tele-train/",
+       "date": "2026-09-02",
+       "note": "Gold Partner since 2003"
+      },
+      {
+       "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+       "date": "2024-05-13",
+       "note": "CX Deal of the Year 2024"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Avaya (services Avaya OEM WFO products)"
+   ],
+   "scale_signal": "20 years trading, 'over 50 firms' served",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/tele-train/",
+     "date": "2026-09-02",
+     "note": "Gold Partner since 2003"
+    },
+    {
+     "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+     "date": "2024-05-13",
+     "note": "CX Deal of the Year 2024"
+    }
+   ],
+   "_names": [
+    "Tele-Train Software"
+   ]
+  },
+  {
+   "name": "Harbers ICT",
+   "hq_country": "Netherlands",
+   "emea_coverage": [
+    "Netherlands"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "Rising Star Award (WFE) 2024",
+     "evidence": "Verint 2024 EMEA blog names Harbers ICT WFE Rising Star; harbersgroup.nl lists 'Verint Solutions' alongside its TriniCo omnichannel software.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+       "date": "2024-05-13",
+       "note": "WFE Rising Star"
+      },
+      {
+       "url": "https://www.harbersgroup.nl/",
+       "date": "2026-09-02",
+       "note": "Verint Solutions, scale"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "300+ client organisations, 25+ years",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+     "date": "2024-05-13",
+     "note": "WFE Rising Star"
+    },
+    {
+     "url": "https://www.harbersgroup.nl/",
+     "date": "2026-09-02",
+     "note": "Verint Solutions, scale"
+    }
+   ],
+   "_names": [
+    "Harbers ICT"
+   ]
+  },
+  {
+   "name": "MakwaIT",
+   "hq_country": "not verified",
+   "emea_coverage": [
+    "not verified"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "verint": {
+     "relationship": "EMEA Partner of the Year (CX) 2024; Term Conversions Award 2023",
+     "evidence": "Named on Verint's 2024 and 2023 EMEA award lists; no reachable company site confirmed.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+       "date": "2024-05-13",
+       "note": "Partner of the Year CX 2024"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/blog/verint-partner-summit-celebrates-partner-successes-across-emea/",
+     "date": "2024-05-13",
+     "note": "Partner of the Year CX 2024"
+    }
+   ],
+   "_names": [
+    "MakwaIT"
+   ]
+  },
+  {
+   "name": "TDC Erhverv",
+   "hq_country": "Denmark",
+   "emea_coverage": [
+    "Denmark"
+   ],
+   "partner_type": "carrier",
+   "carries": {
+    "verint": {
+     "relationship": "Rising Star Award (FC) 2025",
+     "evidence": "Named FC Rising Star at the 2025 EMEA summit; no TDC page fetched confirming the Verint offer.",
+     "confidence": "LOW",
+     "sources": [
+      {
+       "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+       "date": "2025-05",
+       "note": "Rising Star FC 2025"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/blog/2025-verint-emea-partner-summit-largest-yet-with-90-partners-present/",
+     "date": "2025-05",
+     "note": "Rising Star FC 2025"
+    }
+   ],
+   "_names": [
+    "TDC Erhverv"
+   ]
+  },
+  {
+   "name": "Group Elite",
+   "hq_country": "United States",
+   "emea_coverage": [
+    "Europe",
+    "Middle East",
+    "Africa (self-described services footprint)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "verint": {
+     "relationship": "'Verint Strategic Partner' (services and migration specialist); featured Verint partner case study",
+     "evidence": "Verint directory page and Group Elite site: 80+ Verint certified professionals, 250+ WFO integrations, 300+ WFM migrations, partnerships with 20+ Verint reseller partners.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/group-elite/",
+       "date": "2026-09-02",
+       "note": "strategic partner, EMEA scope"
+      },
+      {
+       "url": "https://www.groupelite.com/verint-strategic-partner",
+       "date": "2026-09-02",
+       "note": "scale claims and integrations"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Amazon Connect, Avaya, Cisco, Genesys, Microsoft Teams (integration targets)"
+   ],
+   "scale_signal": "80+ Verint certified professionals; 300+ WFM migrations",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/group-elite/",
+     "date": "2026-09-02",
+     "note": "strategic partner, EMEA scope"
+    },
+    {
+     "url": "https://www.groupelite.com/verint-strategic-partner",
+     "date": "2026-09-02",
+     "note": "scale claims and integrations"
+    }
+   ],
+   "_names": [
+    "Group Elite"
+   ]
+  },
+  {
+   "name": "Servion Global Solutions",
+   "hq_country": "United States (India origin)",
+   "emea_coverage": [
+    "EMEA and MEA (self-described; specific countries not published)"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "verint": {
+     "relationship": "Self-described 'Verint Gold Partner', 'Verint Master Reseller', 'Verint Cloud Partner'; certified WFO/WFM implementation and support",
+     "evidence": "Verint directory page: approved Verint Gold Partner certified to resell, design, implement, train and support the Verint WFO Suite; Servion claims 15,000+ Verint licenses implemented.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/servion/",
+       "date": "2026-09-02",
+       "note": "Gold Partner wording"
+      },
+      {
+       "url": "https://servion.com/verint/",
+       "date": "2026-09-02",
+       "note": "Master Reseller, license count"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Genesys",
+    "Cisco UCCE",
+    "NICE",
+    "Five9",
+    "Salesforce"
+   ],
+   "scale_signal": "1,000+ employees, 600+ deployments, 15,000+ Verint licenses",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/servion/",
+     "date": "2026-09-02",
+     "note": "Gold Partner wording"
+    },
+    {
+     "url": "https://servion.com/verint/",
+     "date": "2026-09-02",
+     "note": "Master Reseller, license count"
+    }
+   ],
+   "_names": [
+    "Servion Global Solutions"
+   ]
+  },
+  {
+   "name": "Activeo",
+   "hq_country": "France",
+   "emea_coverage": [
+    "France",
+    "Switzerland",
+    "UK",
+    "Mauritius"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "verint": {
+     "relationship": "listed partner",
+     "evidence": "Verint directory page describes Activeo (since 1993) as a customer-contact technology consultancy with offices in France, UK, Switzerland, Mauritius, Singapore, India and Canada.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partner/activeo/",
+       "date": "2026-09-02",
+       "note": "directory page"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "none quantified",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partner/activeo/",
+     "date": "2026-09-02",
+     "note": "directory page"
+    }
+   ],
+   "_names": [
+    "Activeo"
+   ]
+  },
+  {
+   "name": "Algotech Polska",
+   "hq_country": "Poland",
+   "emea_coverage": [
+    "Poland",
+    "Czech Republic",
+    "Slovakia",
+    "Hungary",
+    "Serbia"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "verint": {
+     "relationship": "listed partner",
+     "evidence": "Appears in Verint's partner directory; Algotech site lists contact-centre, RPA and digital-queue solutions across five CEE countries.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.verint.com/partners/",
+       "date": "2026-09-02",
+       "note": "directory listing"
+      },
+      {
+       "url": "https://algotech.pl/",
+       "date": "2026-09-02",
+       "note": "CEE coverage"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "none quantified",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.verint.com/partners/",
+     "date": "2026-09-02",
+     "note": "directory listing"
+    },
+    {
+     "url": "https://algotech.pl/",
+     "date": "2026-09-02",
+     "note": "CEE coverage"
+    }
+   ],
+   "_names": [
+    "Algotech Polska"
+   ]
+  },
+  {
+   "name": "CloudInteract",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery designation, AWS Advanced tier",
+     "evidence": "Advanced Consulting tier with Amazon Connect Service Delivery designation, 7 Amazon Connect Ambassadors, 50+ enterprise deployments, joint Pega/Connect agentic voice partnership with Red Kite June 2026.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.cloudinteract.io/why-cloudinteract",
+       "date": "2026",
+       "note": "tier, designation, Ambassadors"
+      },
+      {
+       "url": "https://itchanneloxygen.com/meet-the-uk-amazon-connect-partner-causing-a-stir-in-the-us/",
+       "date": "2025-01-29",
+       "note": "revenue and headcount plans"
+      },
+      {
+       "url": "https://www.businesswire.com/news/home/20260604645983/en/CloudInteract-and-Red-Kite-Launch-Joint-Delivery-Partnership-for-Agentic-AI-Voice-on-Amazon-Connect-and-Pega",
+       "date": "2026-06-04",
+       "note": "Red Kite partnership"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Pega (joint delivery with Red Kite, Jun 4 2026)"
+   ],
+   "scale_signal": "Revenue passing GBP 3M for FY to Mar 2025, GBP 5M target FY26 (IT Channel Oxygen, Jan 29 2025); one early customer at 6,000 agents",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.cloudinteract.io/why-cloudinteract",
+     "date": "2026",
+     "note": "tier, designation, Ambassadors"
+    },
+    {
+     "url": "https://itchanneloxygen.com/meet-the-uk-amazon-connect-partner-causing-a-stir-in-the-us/",
+     "date": "2025-01-29",
+     "note": "revenue and headcount plans"
+    },
+    {
+     "url": "https://www.businesswire.com/news/home/20260604645983/en/CloudInteract-and-Red-Kite-Launch-Joint-Delivery-Partnership-for-Agentic-AI-Voice-on-Amazon-Connect-and-Pega",
+     "date": "2026-06-04",
+     "note": "Red Kite partnership"
+    }
+   ],
+   "_names": [
+    "CloudInteract"
+   ]
+  },
+  {
+   "name": "tecRacer",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "Portugal"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery Partner (2019 launch partner), AWS Premier Tier Services Partner, MSP, Reseller",
+     "evidence": "Amazon Connect is among tecRacer's AWS Service Delivery validations and it was a 2019 launch partner; it has marketed a Connect practice in DACH since 2018.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://www.tecracer.com/consulting/aws-consulting/",
+       "date": "2026",
+       "note": "Premier tier, Connect validation, offices"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/building-a-cloud-based-contact-center-with-amazon-connect-service-delivery-partners",
+       "date": "2019-05-15",
+       "note": "launch partner"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "About 150 employees, offices Hannover, Berlin, Duisburg, Frankfurt, Hamburg, Vienna, Zurich, Lisbon",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.tecracer.com/consulting/aws-consulting/",
+     "date": "2026",
+     "note": "Premier tier, Connect validation, offices"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/building-a-cloud-based-contact-center-with-amazon-connect-service-delivery-partners",
+     "date": "2019-05-15",
+     "note": "launch partner"
+    }
+   ],
+   "_names": [
+    "tecRacer"
+   ]
+  },
+  {
+   "name": "Route 101",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery (added Jan 2025, APN post Feb 13 2025)",
+     "evidence": "Named as an EMEA Amazon Connect Service Delivery partner in the APN January 2025 additions post and lists Amazon Connect alongside NICE and Zendesk as its CCaaS lines.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/say-hello-to-201-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-january/",
+       "date": "2025-02-13",
+       "note": "Route 101 Ltd, EMEA, Connect SDP"
+      },
+      {
+       "url": "https://www.route101.com/partners",
+       "date": "2026",
+       "note": "vendor list"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE CXone",
+    "Zendesk",
+    "Calabrio (WEM partner)",
+    "PolyAI, Omilia, Ada"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://aws.amazon.com/blogs/apn/say-hello-to-201-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-january/",
+     "date": "2025-02-13",
+     "note": "Route 101 Ltd, EMEA, Connect SDP"
+    },
+    {
+     "url": "https://www.route101.com/partners",
+     "date": "2026",
+     "note": "vendor list"
+    }
+   ],
+   "_names": [
+    "Route 101"
+   ]
+  },
+  {
+   "name": "SVL Business Solutions",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "reseller",
+   "carries": {
+    "connect": {
+     "relationship": "listed partner (Amazon Connect/AWS practice; no APN designation string verified)",
+     "evidence": "SVL markets Amazon Connect design, deployment and managed services and states accreditation on Amazon Connect, NICE CXone and Calabrio.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.svlbusinesssolutions.com/",
+       "date": "2026",
+       "note": "vendors, clients"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "NICE CXone, NICE WFM, Cognigy",
+    "Calabrio (WEM)"
+   ],
+   "scale_signal": "25+ Blue Light (emergency services) organisations; 55 years trading",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.svlbusinesssolutions.com/",
+     "date": "2026",
+     "note": "vendors, clients"
+    }
+   ],
+   "_names": [
+    "SVL Business Solutions"
+   ]
+  },
+  {
+   "name": "Acceleraate",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "msp",
+   "carries": {
+    "connect": {
+     "relationship": "listed partner (AWS Partner Network member, AWS Marketplace seller, G-Cloud listing for Amazon Connect managed services)",
+     "evidence": "Manchester-based Connect specialist working with Amazon Connect since its 2017 launch, with a UK G-Cloud managed-services listing.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://acceleraate.com/platforms/aws/amazon-connect",
+       "date": "2026",
+       "note": "Connect since 2017, Zoom lines"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Zoom Contact Center, Zoom Virtual Agent, Zoom Phone"
+   ],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://acceleraate.com/platforms/aws/amazon-connect",
+     "date": "2026",
+     "note": "Connect since 2017, Zoom lines"
+    }
+   ],
+   "_names": [
+    "Acceleraate"
+   ]
+  },
+  {
+   "name": "Ventrica",
+   "hq_country": "United Kingdom",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "bpo_cx_outsourcer",
+   "carries": {
+    "connect": {
+     "relationship": "listed partner (offers Amazon Connect licences; no APN designation verified)",
+     "evidence": "Ventrica sells flexible CX licences for Zendesk and Amazon Connect (AWS) with rapid setup as part of its outsourced contact centre offer.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.ventrica.co.uk/",
+       "date": "2026",
+       "note": "Connect and Zendesk licences"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Zendesk (Premier Partner)",
+    "Twilio"
+   ],
+   "scale_signal": "16+ years trading",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.ventrica.co.uk/",
+     "date": "2026",
+     "note": "Connect and Zendesk licences"
+    }
+   ],
+   "_names": [
+    "Ventrica"
+   ]
+  },
+  {
+   "name": "PwC",
+   "hq_country": "United Kingdom (PwC UK)",
+   "emea_coverage": [
+    "UK"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Customer Services Competency (Contact Center Transformation), named Jun 16 2026",
+     "evidence": "PwC UK runs Execution Managed Services on Amazon Connect and PwC is a named launch partner of the 2026 Connect Customer competency.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+       "date": "2026-06-16",
+       "note": "competency partner"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://aws.amazon.com/blogs/apn/from-legacy-to-ai-powered-transform-your-customer-experience-with-amazon-connect-customer-competency-partners/",
+     "date": "2026-06-16",
+     "note": "competency partner"
+    }
+   ],
+   "_names": [
+    "PwC"
+   ]
+  },
+  {
+   "name": "Reply (Storm Reply)",
+   "hq_country": "Italy",
+   "emea_coverage": [
+    "Italy",
+    "Germany",
+    "UK",
+    "France"
+   ],
+   "partner_type": "systems_integrator",
+   "carries": {
+    "connect": {
+     "relationship": "listed partner (Storm Reply markets 'Boost your CX with Amazon Connect'; AWS Premier; no Connect designation verified)",
+     "evidence": "Storm Reply publishes an Amazon Connect offering and Reply cites an AWS-based contact center for Generali Country Italia; Reply was 2025 AWS Consulting Partner of the Year Italy.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.reply.com/storm-reply/en/",
+       "date": "2026",
+       "note": "Connect offering, offices"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+       "date": "2025-12-02",
+       "note": "Italy award"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "1,000+ AWS certifications, 16 competencies; Storm Reply offices in 5 German, 3 Italian, 7 UK cities plus Paris",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.reply.com/storm-reply/en/",
+     "date": "2026",
+     "note": "Connect offering, offices"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+     "date": "2025-12-02",
+     "note": "Italy award"
+    }
+   ],
+   "_names": [
+    "Reply (Storm Reply)"
+   ]
+  },
+  {
+   "name": "LionGate AG",
+   "hq_country": "Germany",
+   "emea_coverage": [
+    "Germany"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery (added Jan 2025, APN post Feb 13 2025)",
+     "evidence": "Named as an EMEA Amazon Connect Service Delivery partner in the APN January 2025 additions; site positions Salesforce Agentforce Contact Center alongside.",
+     "confidence": "HIGH",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/say-hello-to-201-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-january/",
+       "date": "2025-02-13",
+       "note": "LionGate AG, EMEA, Connect SDP"
+      },
+      {
+       "url": "https://www.liongate.de/",
+       "date": "2026",
+       "note": "scale, Salesforce focus"
+      }
+     ]
+    }
+   },
+   "also_carries": [
+    "Salesforce Agentforce Contact Center"
+   ],
+   "scale_signal": "50+ employees, 300+ large projects (own claims)",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://aws.amazon.com/blogs/apn/say-hello-to-201-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-january/",
+     "date": "2025-02-13",
+     "note": "LionGate AG, EMEA, Connect SDP"
+    },
+    {
+     "url": "https://www.liongate.de/",
+     "date": "2026",
+     "note": "scale, Salesforce focus"
+    }
+   ],
+   "_names": [
+    "LionGate AG"
+   ]
+  },
+  {
+   "name": "Awiant",
+   "hq_country": "Sweden",
+   "emea_coverage": [
+    "Sweden",
+    "Nordics"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "Amazon Connect Service Delivery (added Oct 2025 under Elastic Move AB / Buzzcloud AB, APN post Nov 3 2025); AWS Advanced Consulting Partner",
+     "evidence": "Elastic Move/Buzzcloud were tagged as an EMEA Connect Service Delivery partner in Nov 2025; both domains now redirect to Awiant, whose site does not mention Connect.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://aws.amazon.com/blogs/apn/say-hello-to-322-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-october/",
+       "date": "2025-11-03",
+       "note": "Elastic Move AB / Buzzcloud AB, EMEA, Connect SDP"
+      },
+      {
+       "url": "https://awiant.com/",
+       "date": "2026",
+       "note": "rebrand, Advanced tier"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Offices Stockholm, Malmö, Karlstad; customers named include Scania, Thule, Volkswagen Financial Services",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://aws.amazon.com/blogs/apn/say-hello-to-322-new-aws-competency-service-delivery-service-ready-and-msp-partners-added-in-october/",
+     "date": "2025-11-03",
+     "note": "Elastic Move AB / Buzzcloud AB, EMEA, Connect SDP"
+    },
+    {
+     "url": "https://awiant.com/",
+     "date": "2026",
+     "note": "rebrand, Advanced tier"
+    }
+   ],
+   "_names": [
+    "Awiant (formerly Elastic Move / Buzzcloud)"
+   ]
+  },
+  {
+   "name": "Synthesis Software Technologies",
+   "hq_country": "South Africa",
+   "emea_coverage": [
+    "South Africa"
+   ],
+   "partner_type": "consultancy",
+   "carries": {
+    "connect": {
+     "relationship": "listed partner (Amazon Connect services and Contact Center Intelligence referenced; AWS Advanced Consulting Partner; no Connect designation verified)",
+     "evidence": "Synthesis lists Amazon Connect and CCI services and was 2025 AWS Rising Star Consulting Partner for Sub-Saharan Africa.",
+     "confidence": "MEDIUM",
+     "sources": [
+      {
+       "url": "https://www.synthesis.co.za/",
+       "date": "2026",
+       "note": "Connect and CCI services, clients"
+      },
+      {
+       "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+       "date": "2025-12-02",
+       "note": "SSA Rising Star"
+      }
+     ]
+    }
+   },
+   "also_carries": [],
+   "scale_signal": "Client roster includes Absa, Standard Bank, Nedbank, FNB, Capitec, Vodacom, Pick n Pay",
+   "share_statement": "",
+   "sources": [
+    {
+     "url": "https://www.synthesis.co.za/",
+     "date": "2026",
+     "note": "Connect and CCI services, clients"
+    },
+    {
+     "url": "https://aws.amazon.com/blogs/apn/announcing-the-regional-2025-aws-partners-of-the-year-for-europe-middle-east-and-africa/",
+     "date": "2025-12-02",
+     "note": "SSA Rising Star"
+    }
+   ],
+   "_names": [
+    "Synthesis Software Technologies"
+   ]
+  }
+ ]
+}
