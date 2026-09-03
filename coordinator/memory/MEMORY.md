@@ -429,3 +429,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback Account List Crosscheck Before Load](feedback-account-list-crosscheck-before-load.md) — Sep 3 2026: before any campaign load, match each lead's current company to the motion's account table in the Clay workbook (Stars = Accounts (Master) t_0thuumoUcu6wAAhovti); unmatched rows bench, never load on the search domain
 - [Lemlist Enrichment Credits Zero Sep3](lemlist-enrichment-credits-zero-sep3.md) — Sep 3 2026: lemlist team credits read 0, so verifyEmail/findEmail/findPhone on lead adds silently do nothing; check /api/team/credits first, verify via Clay ZeroBounce instead
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback Enrich In Clay Never Lemlist](feedback-enrich-in-clay-never-lemlist.md) — Sep 3 2026: never enrich on lemlist (no findEmail/verifyEmail/findPhone/linkedinEnrichment/enrich_lead); Clay does all enrichment and verification, lemlist receives finished rows

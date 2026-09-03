@@ -10,3 +10,5 @@ Sep 3 2026, JPMorgan re-source for the BO Financial Services campaign. Clay `Wor
 **Why:** JPMorgan-class banks are hard domains for Clay's providers; blind batches burn credits for nothing.
 
 **How to apply:** on any new large-bank or unusual domain, probe 2 rows through the Work Email routine first; if both come back empty, go straight to Apollo people match (LinkedIn URL input, ~1 Apollo credit per hit) and keep Clay for freshness only. Related: [[bo-netnew-package-sep2]], [[feedback-warn-before-large-credit-spend]], [[clay-free-sourcing-path]].
+
+**Sep 3 evening, second Apollo pass (18 rows, 13 credits):** 13 matched, but only 5 were verified AND US-located; 4 verified addresses sat in India and 1 in the UK (JPMorgan's ops leadership titles are global), 2 had moved. Apollo returns `country`, so check it before adopting an address for a US motion.
