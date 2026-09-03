@@ -1,0 +1,12 @@
+---
+name: lemlist-us-lists-sep3
+description: Sep 3 2026 evening: six US-market lemlist Contacts lists pushed at 0 credits (Stars 147, Blitz 15, WFM-Adjacency 206, Cost-Mandate 5, BO Leaders Dir+ 1,147, Sep 2 Webinar WFM Dir+ 964) with exclusion union, US filter, dedupe and motion stamps; T2 webinar segment (17,462) held for the go; scripts in motions/lemlist_contacts/
+metadata:
+  type: project
+---
+
+Built Sep 3 2026 evening on Dallas's ask ("lemlist Contacts for the US market, one list per motion"). Scripts in `motions/lemlist_contacts/`: `build_us_lists.py <scratch> [--cache]` pulls every source (Clay tables by CLI, Audiences segments by CLI, lemlist campaign leads by API), applies the customer-exclusion union (SF segment `audseg_0tk324emMVGAwsna7g4` + install-base table `t_0ti4jj1hfZyEWcfirfU` + denylist + customer-lane domain map + `exclusion_extra_domains.json`), keeps US people (country, else email TLD), dedupes, resolves Audiences company names through SF Account ID -> Audiences company (the person-level Company field is lead-only); `push_us_lists.py <cands> <has_motion_keys> --go` upserts and adds to lists (`--fix-lists` re-adds saved ids); `retry_missing.py` re-upserts by email the rows lemlist rejected. List ids: Stars `clt_cFTdy7x5S7kwFWGEH`, Blitz `clt_meQSGjaeYbQx4R4iT`, WFM-Adjacency `clt_sf7n3Rz92KubMaqNL`, Cost-Mandate `clt_5i33LD244QYcjmLCL`, BO Leaders Dir+ `clt_wgDkc4GbiL929XthY`, Webinar WFM Dir+ `clt_ddYJ2PYTPGTfJXw7D`. All eight motions now sit in `lemlist_bridge_config.json` lists; the bridge workflow node still routes only bo_netnew/bo_customer until `build_lemlist_bridge.py` is re-run.
+
+lemlist API lessons: `POST /api/contacts/lists` returns `{"list":{"id":...}}` not `_id`; Salesforce LinkedIn URLs in `/pub/` form fail `INVALID_LINKEDIN_URL` (drop the URL, upsert by email); `GET /api/contacts?listId=` pages at 500; the contacts list endpoint hides custom fields (single GET shows them); upsert on an existing contact overwrites `motion`, so the push keeps the first motion for contacts already on another list.
+
+**How to apply:** new motion = add the list to `us_lists_config.json` and `lemlist_bridge_config.json`, add the source block to the builder, push with the same three scripts; never enrich from lemlist (Clay resolves addresses). Open: T2 webinar Dir+ segment `audseg_0tk4ivr8riXSR3RA4Vh` (17,462 raw) waits for Dallas's go on volume. Related: [[lemlist-bridge-sep3]], [[bo-netnew-package-sep2]], [[gtm-campaign-alignment-meeting-sep3]].

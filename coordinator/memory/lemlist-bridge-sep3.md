@@ -12,3 +12,5 @@ Clay workflow CLI lessons (cost a dozen rebuild loops): node create takes the FL
 **How to apply:** any new motion = add the list to `lemlist_bridge_config.json`, rebuild, queue people by stamping Push Motion. Reuse the lessons block for every Clay workflow build. Related: [[bo-netnew-package-sep2]], [[carter-webinar-lead-engine-aug20]], [[clay-cli-upgraded-aug26]].
 
 **Sep 3, later:** Dallas created the custom contact fields in the lemlist UI; lemlist camel-cased them (`motion`, `motionStatus`, `parentAccount`). Seeder re-run stamped all 435 contacts; bridge v2 published, pushes now carry `motion` and `motionStatus=staged`. Custom field values are visible only on `GET /api/contacts/{email}` under `fields`, not on the list endpoint.
+
+**Sep 3 evening:** six US-market lists added beside the two BO lists (ids and rules in [[lemlist-us-lists-sep3]]); `lemlist_bridge_config.json` lists map covers all eight motions, node rebuild still pending.

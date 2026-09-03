@@ -422,3 +422,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Quality Fresh Pull Sep3](quality-fresh-pull-sep3.md) — Sep 3 2026: Quality campaign rebuilt 2 to 22 leads (20 new verified) from a free Clay search over 26 Stars parents, 67 credits on email, sender attached; per-step sender + launch are Dallas; 7 greylisted staged
 - [Lemlist Tag Convention Sep3](lemlist-tag-convention-sep3.md) — two hyphenated tags per campaign (gtm-engineering + motion tag); tags are UI-only, automation keys on campaign ids in the relay map
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Lemlist US Lists Sep3](lemlist-us-lists-sep3.md) — Sep 3 2026: six US-market lemlist Contacts lists at 0 credits (Stars 147, Blitz 15, WFM 206, Cost-Mandate 5, BO Leaders Dir+ 1,147, Webinar WFM Dir+ 964); T2 webinar 17K held; scripts in motions/lemlist_contacts/
