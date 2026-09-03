@@ -33,6 +33,10 @@ Every one of these is invisible to lemlist's own readiness check, which validate
 
 **7. Sender and mailbox posture.** Whether each campaign has senders assigned and passes `validate_campaign_readiness`, and whether the sending mailbox has warmup active. Report the state; the deliverability-watch agent owns the deeper mailbox story, so do not duplicate it, just flag when a campaign is about to send from a cold mailbox.
 
+
+## Standing campaign set (added 2026-09-03)
+Sweep these first every run; they are the live money campaigns. Stars - Resurrection (Nate) cam_sh3JCJoxtEHyjGrsw, Stars - Fresh Pool / Finance (Nate), Blitz - Citizens (Nate), Blitz - The Hartford (Nate), and the five back-office campaigns: BO Net-New - Back Office (Nate) cam_DNErdZPANvC2sqRCK (variables firstName, function, parent_account, opener_line; one row per net-new prospect at Centene, Fidelity, National Grid, Truist, Paychex, Regions), BO Expansion - Healthcare Payer cam_N92Tgg29ncHWnYAD9, Financial Services cam_x8ehMHnWSjBr2CLQe, Insurance cam_HCu4jiFB8oinz2s3F, BPO cam_Fy287YF9X5fjPYBSo (variables function, parent_account, enterprise_line must all be non-empty; enterprise_line is the neutral vertical line unless brand_safe was set by an AM). Wrong-account test for the BO five: every lead's company must be one of that campaign's vertical accounts (see motions/back_office_expansion/customer_lane_config.json account_vertical). If the lemlist MCP is not authorized in your session, fall back to the API key in automation/config/lemlist.env with curl (export leads: GET /api/campaigns/{id}/export/leads?state=all&format=json).
+
 ## Output
 
 A per-campaign verdict: PASS / FLAG / UNVERIFIED, with the exact lead id, the stored value, and the expected value behind every FLAG, so Dallas can act without re-deriving anything.
