@@ -1,6 +1,6 @@
 ---
 name: nate-campaign-rewrite-sep3
-description: "Sep 3 2026 - Nate's four running lemlist campaigns PAUSED and every email, LinkedIn message and call script rewritten under the Sep 3 doctrine and applied in lemlist; restart is Dallas's call after Nate reads the page; one UI fix open on Resurrection variant B"
+description: "Sep 3 2026 - Nate four lemlist campaigns paused, every step rewritten under the Sep 3 doctrine, previews checked and campaigns restarted the same evening; Quality stays draft until leads load"
 metadata: 
   node_type: memory
   type: project
@@ -21,3 +21,7 @@ Sep 3 2026, Dallas: "we need to pause and improve all of the messaging for Nate'
 **Applied in lemlist Sep 3:** all steps in all five campaigns, both A/B variants on the four Email 1s. **Open:** lemlist refused the variant B edit on Resurrection "just tried you" (stp_afdYJbTbPXLZkvxkC) with SEQUENCE_AB_CAMPAIGN_RUNNING despite the pause; variant B still carries the old body. UI fix: pick variant A as winner or paste the new B text. Restart (set_campaign_state start) is Dallas's call after Nate reads the page. Related: [[messaging-doctrine-sep3]], [[feedback-bdrs-are-the-experts]], [[naveen-product-materials-index-sep3]].
 
 **Third pass (Sep 3, after Dallas's read):** every email rewritten in plain spoken language. Dallas flagged "the scoring window has kept closing since, which is the only reason I'm back" and "In one line, in case the first note didn't land" as filler no person would say, and that paragraphs were bunched. Fix: lemlist stores paragraph breaks as `<p>text</p><p><br></p><p>text</p>`; bare `<p>` tags render with no spacing. All 59 steps re-pushed; Resurrection variant B still refused by lemlist (UI fix stands).
+
+**Resolved Sep 3 evening:** Dallas picked variant A as the winner on the Resurrection "just tried you" step in the lemlist UI, so the old variant B no longer sends. Remaining: restart the four paused campaigns (Dallas's call), Quality stays draft until leads are loaded.
+
+**Restarted Sep 3 2026 (evening):** after a four-lead preview spot-check passed (variables resolved, blank-line paragraphs, no old copy), Stars - Fresh Pool / Finance, Blitz - The Hartford, Blitz - Citizens and Stars - Resurrection set back to running. Stars - Fresh Pool / Quality still a draft, no leads loaded.
