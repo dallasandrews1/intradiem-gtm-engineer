@@ -406,3 +406,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Nate Campaign Rewrite Sep3](nate-campaign-rewrite-sep3.md) — Sep 3 2026: Nate four campaigns PAUSED, all copy rewritten under the doctrine and applied in lemlist; restart is Dallas call; Resurrection variant B needs a UI fix
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback AM Gate Removed, Nate Reviews Sep2](feedback-am-gate-removed-nate-reviews-sep2.md) — Sep 2 2026: AM-clearance filter removed on the BO customer lane; rows load into the vertical campaigns and Nate reviews in lemlist; freshness + two-source email checks stay
