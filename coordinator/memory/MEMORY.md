@@ -412,3 +412,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback Plain Spoken + Lemlist Spacing](feedback-plain-spoken-lemlist-spacing.md) — Sep 3 2026: every outreach line must survive being said aloud, no writerly filler; lemlist paragraphs need <p><br></p> blank lines or they bunch
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Lemlist Bridge Sep3](lemlist-bridge-sep3.md) — Sep 3 2026: Audiences-to-lemlist Contacts bridge live (queue segment + workflow, stamp workflow), two lists seeded (150 + 285); hard-won Clay workflow CLI lessons (flat schemas, rule edges on target, HTTP auth in URL, scalar-only code outputs)
