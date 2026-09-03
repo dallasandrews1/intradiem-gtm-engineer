@@ -418,3 +418,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [JPMorgan Email Waterfall Stop Sep3](jpmorgan-email-waterfall-stop-sep3.md) — Clay Work Email waterfall is empty AND billed on JPMorgan domains (115 cr for 18 rows); Apollo people match by LinkedIn URL is the path for hard bank domains (6 of 7 verified, 6 Apollo credits)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Quality Fresh Pull Sep3](quality-fresh-pull-sep3.md) — Sep 3 2026: Quality campaign rebuilt 2 to 22 leads (20 new verified) from a free Clay search over 26 Stars parents, 67 credits on email, sender attached; per-step sender + launch are Dallas; 7 greylisted staged
+- [Lemlist Tag Convention Sep3](lemlist-tag-convention-sep3.md) — two hyphenated tags per campaign (gtm-engineering + motion tag); tags are UI-only, automation keys on campaign ids in the relay map

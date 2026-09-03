@@ -1,0 +1,16 @@
+---
+name: quality-fresh-pull-sep3
+description: "Sep 3 2026: Stars Fresh Pool / Quality (cam_viEbB6HkYsCPtxKbi) rebuilt from 2 leads to 22 loaded (20 new, verified) plus 7 greylisted staged; 26 non-customer Stars parents searched free, 67 Clay credits on email; sender attached; launch and step-sender still Dallas"
+metadata:
+  type: project
+---
+
+Dallas, Sep 3 2026: "there's no need for this campaign to exist if we're only going after 2 people." The two-lead Quality campaign was a leftover of the Aug 2 de-dupe (every other Quality-persona contact had been emailed in July and moved to Resurrection).
+
+**Method (reusable for any persona refill):** `clay search query-mode` with `clay.filter_to_companies((26 domains))` plus `job_title is_similar_to` on the Stars/Quality/CAHPS/HEDIS/Member Experience list and `seniority in (Director, VP, C-suite, Head)`: 243 results, 0 credits. Classified in-model (risk management, cybersecurity, hospital-side quality and risk adjustment coding dropped; Centene kept to Medicare-explicit plus enterprise QI and member experience VPs). Exclusions: everyone in the Contacts (Buying Committee) table, every lead in Nate's five campaigns, the reply lane, the 12 cut, bounces, Excellus hold, customer parents (excluded at the search). Bridge via find-and-enrich-list-of-contacts (0 credits) caught Jennifer Swift moved off Stars at Centene and could not find Pattison (Lumeris) or Addison (Clover). Emails via workflow `wf_0tk4jo5z7RjGKo3rvR8` (Work Email waterfall + ZeroBounce): 41 rows, 66.9 credits, measured ~1.6/row all-in; 20 valid, 5 greylisted, 3 invalid, 11 none. Second pass with the Work Email routine and the LinkedIn URL as input resolved two hidden surnames (Charyl Norwood at CHPW, Thomas M. at L.A. Care) and returned a wrong-person hit for "Kelsey K." at Devoted (a nurse practitioner), which is why single-name inputs must never load unchecked.
+
+**Loaded Sep 3:** 20 verified leads into cam_viEbB6HkYsCPtxKbi with deduplicate on, each carrying plan_name, qbp_avg (member-weighted 2026 star average rounded to the half-star; Centene loads as Wellcare at 3.0), vm_hook and voice_script. Nathan (usr_9rxD82ZfapeZBGSoz) attached as campaign sender; readiness still reports "Your step must have a specific sender" so the per-step sender is a UI click. Preview on Barrad (lea_9AAWF3RxwAfc5LMTX) resolved cleanly.
+
+**Files:** roster `motions/star_ratings/Quality_FreshPull_Sep3.csv`, load payload `Quality_FreshPull_Load_Sep3.json`, page builder `build_quality_pull_page.py`, review page on the Desktop (Intradiem Deliverables/Quality_FreshPull_Sep3.html). Ledger row appended.
+
+**Open:** 7 greylisted or pattern-matched addresses (Duckett, Tuite, Norwood, Neal, Reid, Hebert, Thomas M.) stage as a second block with lemlist verifyEmail on (the classifier blocked that paid add in-session); 10 with no address (Curran, Burke, Lomax, Da Matta, Brosen, plus Zegada-Frias, Lim, Zhang, Sorrentino and McMaster whose Clay lookups were still running or empty); Jacobs, Borgmeyer and Johnson found but mailbox-not-found on ZeroBounce; Kelsey K. needs her surname. Launch is Dallas's call after Nate reads the page. Related: [[nate-campaign-rewrite-sep3]], [[clay-free-sourcing-path]], [[feedback-warn-before-large-credit-spend]].

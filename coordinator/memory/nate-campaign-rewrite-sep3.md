@@ -25,3 +25,5 @@ Sep 3 2026, Dallas: "we need to pause and improve all of the messaging for Nate'
 **Resolved Sep 3 evening:** Dallas picked variant A as the winner on the Resurrection "just tried you" step in the lemlist UI, so the old variant B no longer sends. Remaining: restart the four paused campaigns (Dallas's call), Quality stays draft until leads are loaded.
 
 **Restarted Sep 3 2026 (evening):** after a four-lead preview spot-check passed (variables resolved, blank-line paragraphs, no old copy), Stars - Fresh Pool / Finance, Blitz - The Hartford, Blitz - Citizens and Stars - Resurrection set back to running. Stars - Fresh Pool / Quality still a draft, no leads loaded.
+
+**Sep 3 2026 (later):** Quality campaign refilled from 2 to 22 leads (20 new, verified) via a free Clay search plus the work-email workflow; see [[quality-fresh-pull-sep3]]. Sender attached, step-level sender and launch still Dallas.
