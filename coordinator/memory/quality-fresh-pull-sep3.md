@@ -1,6 +1,6 @@
 ---
 name: quality-fresh-pull-sep3
-description: "Sep 3 2026: Stars Fresh Pool / Quality (cam_viEbB6HkYsCPtxKbi) rebuilt from 2 leads to 22 loaded (20 new, verified) plus 7 greylisted staged; 26 non-customer Stars parents searched free, 67 Clay credits on email; sender attached; launch and step-sender still Dallas"
+description: "Sep 3 2026: Stars Fresh Pool / Quality (cam_viEbB6HkYsCPtxKbi) rebuilt from 2 leads to 29 loaded (20 verified + 7 lemlist-verified + 2 original), all 29 matched to Accounts (Master); 67 Clay credits on email; sender attached; per-step sender and launch still Dallas"
 metadata:
   type: project
 ---
@@ -13,4 +13,6 @@ Dallas, Sep 3 2026: "there's no need for this campaign to exist if we're only go
 
 **Files:** roster `motions/star_ratings/Quality_FreshPull_Sep3.csv`, load payload `Quality_FreshPull_Load_Sep3.json`, page builder `build_quality_pull_page.py`, review page on the Desktop (Intradiem Deliverables/Quality_FreshPull_Sep3.html). Ledger row appended.
 
-**Open:** 7 greylisted or pattern-matched addresses (Duckett, Tuite, Norwood, Neal, Reid, Hebert, Thomas M.) stage as a second block with lemlist verifyEmail on (the classifier blocked that paid add in-session); 10 with no address (Curran, Burke, Lomax, Da Matta, Brosen, plus Zegada-Frias, Lim, Zhang, Sorrentino and McMaster whose Clay lookups were still running or empty); Jacobs, Borgmeyer and Johnson found but mailbox-not-found on ZeroBounce; Kelsey K. needs her surname. Launch is Dallas's call after Nate reads the page. Related: [[nate-campaign-rewrite-sep3]], [[clay-free-sourcing-path]], [[feedback-warn-before-large-credit-spend]].
+**Sep 3, later:** the 7 greylisted or pattern-matched addresses (Duckett, Tuite, Norwood, Neal, Reid, Hebert, Thomas M.) loaded with lemlist verifyEmail on (Dallas approved the 7 lemlist credits), BUT GET /api/team/credits returned 0 remaining, so lemlist's verification could not run and the seven sit in the campaign unverified (pattern-backed only: each address matches a ZeroBounce-valid colleague's pattern at the same domain). Campaign now 29 leads. Lead records expose no verification field; the v2 leads export is CSV and the MCP cannot parse it. Universe cross-check per [[feedback-account-list-crosscheck-before-load]]: all 29 current employers map to a non-customer, non-motion-excluded parent row in Accounts (Master); roster carries a universe_match column.
+
+**Open:** 10 with no address (Curran, Burke, Lomax, Da Matta, Brosen, plus Zegada-Frias, Lim, Zhang, Sorrentino and McMaster whose Clay lookups were still running or empty); Jacobs, Borgmeyer and Johnson found but mailbox-not-found on ZeroBounce; Kelsey K. needs her surname. Launch is Dallas's call after Nate reads the page. Related: [[nate-campaign-rewrite-sep3]], [[clay-free-sourcing-path]], [[feedback-warn-before-large-credit-spend]].
