@@ -409,3 +409,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback AM Gate Removed, Nate Reviews Sep2](feedback-am-gate-removed-nate-reviews-sep2.md) — Sep 2 2026: AM-clearance filter removed on the BO customer lane; rows load into the vertical campaigns and Nate reviews in lemlist; freshness + two-source email checks stay
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback Plain Spoken + Lemlist Spacing](feedback-plain-spoken-lemlist-spacing.md) — Sep 3 2026: every outreach line must survive being said aloud, no writerly filler; lemlist paragraphs need <p><br></p> blank lines or they bunch
