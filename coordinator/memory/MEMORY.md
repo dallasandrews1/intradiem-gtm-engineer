@@ -432,3 +432,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback Enrich In Clay Never Lemlist](feedback-enrich-in-clay-never-lemlist.md) — Sep 3 2026: never enrich on lemlist (no findEmail/verifyEmail/findPhone/linkedinEnrichment/enrich_lead); Clay does all enrichment and verification, lemlist receives finished rows
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [SF Prospect Exec Rows Stale Sep3](sf-prospect-exec-rows-stale-sep3.md) — Sep 3 2026: SF prospect executive rows are stale beyond repair (14/16 emails invalid, 2/20 profiles and wrong); source senior pools live from Clay search, pay only for emails on current people
