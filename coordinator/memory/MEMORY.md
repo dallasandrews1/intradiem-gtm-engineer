@@ -403,3 +403,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Naveen Product Materials Index Sep3](naveen-product-materials-index-sep3.md) — Sep 3 2026: all of Naveen DM product links traced; BOO Messaging Framework + marketing customer stories registry (Humana/Virgin Media only cleared, JPMC/AT&T/Liberty Mutual excluded) are the product sources; index in motions/shared
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Nate Campaign Rewrite Sep3](nate-campaign-rewrite-sep3.md) — Sep 3 2026: Nate four campaigns PAUSED, all copy rewritten under the doctrine and applied in lemlist; restart is Dallas call; Resurrection variant B needs a UI fix
