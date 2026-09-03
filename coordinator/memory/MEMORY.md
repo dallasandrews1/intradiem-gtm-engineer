@@ -388,3 +388,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-02
 - [Feedback Deliver HTML Not MD](feedback-deliver-html-not-md.md) — Sep 2 2026: every deliverable to Dallas is a branded HTML page on the Desktop with a path in chat; markdown is source only, never the handoff
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-02
+- [BO Net-New Package Sep2](bo-netnew-package-sep2.md) — Sep 2 2026 evening: BO Net-New (Nate) wave 1 load-ready (32 READY/36, holds McPherson/Powell/Bagley) at 28.4 credits via Work Email workflow; six signal sweeps + opener lines; customer lane staged with 0 clearances; senders/label/go lines open

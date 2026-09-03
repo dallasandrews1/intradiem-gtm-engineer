@@ -1,0 +1,16 @@
+---
+name: bo-netnew-package-sep2
+description: Sep 2 2026 evening: BO Net-New (Nate) wave 1 staged load-ready (32 READY of 36, 2 holds, 2 no email) from the six map rosters at 28.4 credits; opener lines per account from six signal sweeps; customer lane staged AM-gated with zero clearances; senders/label still Dallas's UI step
+metadata:
+  type: project
+---
+
+Sep 2 2026 (evening, worktree vs-code-agents-window-usage). BO Net-New - Back Office (Nate) `cam_DNErdZPANvC2sqRCK` has a load-ready wave 1: 32 READY rows in `motions/back_office_expansion/BO_NetNew_Wave1_Load_Sep2.csv` (Paychex 6, Truist 6, Centene 5, Fidelity 5, National Grid 5, Regions 5), full 150-row staging with wave/tier/load_status in `BO_NetNew_Leads_Staged_Sep2.csv`, per-contact audit in `BO_NetNew_Wave1_Audit_Sep2.csv`. Builder `build_netnew_lead_package.py` + `netnew_package_config.json` (phrase rules for `{{function}}`, tiers, holds, per-account `opener_line`). Emails: Salesforce at own domain (17 usable) then Work Email + ZeroBounce workflow `wf_0tk4jo5z7RjGKo3rvR8` via `clay routines runs start workflow:<id> --input` (trigger inputs full_name, company_name, company_domain, title, seniority, kind, clay_profile_id; results via `routines runs get --limit 100 --wait`). Measured 0.66-0.73 credits/row found (charged only on hits), 29/31 found, all at the account domain. Holds: Charlotte McPherson (retirement announced), Matt Powell (no current experience on Sep 2 verify), Shannon Bagley (Conference Board bio says former CAO). li_active still unmeasured.
+
+Signals (six signal-researcher passes on fable): Centene $355-405M severance / layoff wave / new CIO; Fidelity in-house WFM platform build (VP Eng posting Aug 20); National Grid PSC call-answer penalties + Sep 1 reorg under Librera; Truist Lyons CEO Sep 1, Infosys GCC; Paychex WISE results Aug 31; Regions Danella CAO Aug 11, Temenos migration 2027. Scratch copies at the session scratchpad `signals/`; summaries in `automation/logs/bo-expansion-2026-09-02.md`.
+
+Customer lane: `customer_lane_staging/` four vertical CSVs + `Clearance_Rollup_Sep2.csv`, 289 candidates, 0 cleared; Inger owns 6 accounts' rows, the other nine accounts have no AM name on disk. Nate's page: `Nate_NetNew_Package_Sep2.html`, artifact https://claude.ai/code/artifact/6ec5f53b-49a4-4617-8f18-d2abe9969a17 (published Sep 2, Desktop copy "Nate Back Office Wave One - Sep 2.html"); opener proposal in `E1_Opener_Proposal_Sep2.md` + `apply_e1_opener.py` (dry-run default).
+
+Open for Dallas: senders + `gtm-engineering-bo` label on all five campaigns (API cannot), go for the wave-1 load, go for the waves 2-4 email run (~93 rows, est 65-70, ceiling ~140), go for the Email 1 opener edit (proposed before/after in the session). lemlist MCP connector was NOT authorized in this session; the API key path in `automation/config/lemlist.env` did everything. Mem0 quota still exhausted (resets Oct 1).
+
+**How to apply:** the next wave = rerun the builder after the waves 2-4 email run writes into `netnew_email_results.csv`; never load anything without the explicit paste-back go. Related: [[nate-six-accounts-bo-maps-aug31]], [[bo-lemlist-shells-built-sep2]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-warn-before-large-credit-spend]].
