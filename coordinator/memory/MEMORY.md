@@ -415,3 +415,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Lemlist Bridge Sep3](lemlist-bridge-sep3.md) — Sep 3 2026: Audiences-to-lemlist Contacts bridge live (queue segment + workflow, stamp workflow), two lists seeded (150 + 285); hard-won Clay workflow CLI lessons (flat schemas, rule edges on target, HTTP auth in URL, scalar-only code outputs)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [JPMorgan Email Waterfall Stop Sep3](jpmorgan-email-waterfall-stop-sep3.md) — Clay Work Email waterfall is empty AND billed on JPMorgan domains (115 cr for 18 rows); Apollo people match by LinkedIn URL is the path for hard bank domains (6 of 7 verified, 6 Apollo credits)
