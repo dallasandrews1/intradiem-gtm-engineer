@@ -123,7 +123,7 @@ Pick by what the title owns. Same verified numbers across an account, different 
 | Group / C-level | Air cover only, after a thread is live. | |
 | New in role (six months or less) | A visible first-year win with no restructure. | "The listening tour ends and the agenda gets written." |
 
-**Back office**
+**Back office** (marketing's four BOO personas and what each is measured on live in `04-value-repository/BOO_Messaging_Framework_Jun26.md`: WFM Champion, Economic Buyer COO/VP Ops, Technical Buyer IT/CTO, End User Head of Ops. Read them before choosing a row.)
 
 | Persona | Angle | Worldview sentence |
 |---|---|---|

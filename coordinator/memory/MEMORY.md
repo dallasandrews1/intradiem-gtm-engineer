@@ -400,3 +400,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback BDRs Are The Experts](feedback-bdrs-are-the-experts.md) — Sep 3 2026: never judge Jack or Nate by week-old lemlist stats; the engine adopts their practice, keeps only company-protecting gates
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Naveen Product Materials Index Sep3](naveen-product-materials-index-sep3.md) — Sep 3 2026: all of Naveen DM product links traced; BOO Messaging Framework + marketing customer stories registry (Humana/Virgin Media only cleared, JPMC/AT&T/Liberty Mutual excluded) are the product sources; index in motions/shared

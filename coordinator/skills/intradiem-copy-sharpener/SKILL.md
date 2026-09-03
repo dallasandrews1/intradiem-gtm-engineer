@@ -62,10 +62,14 @@ Sections: header (date, channel, recipient, sender, sequence position) → QC re
 **Passes:**
 "Hi {{firstName}}, [dated signal per lead] puts the Monday backlog on a different footing this year, and most claims teams are still staffing it by guesswork.
 
-Intradiem sits on top of the case system and the WFM you already run and moves the work inside the day: it spots idle windows as they open, routes aging cases into them, and pushes training and admin into the quiet hours instead of the busy ones. Nothing to rip out, nothing new to govern.
+Intradiem's Back Office Optimizer shows you exactly how much work is piling up, whether the staff you have can handle it, and which case each worker should tackle next, before you miss an SLA or pay a penalty. It sits alongside the WFM and case system you already run.
 
 Worth a conversation on how other payer claims teams are running the week?
 
 Nathan"
 
-Claims ledger: no Intradiem number used (none VERIFIED for back office). Signal ships only with its dated source.
+Claims ledger: no Intradiem number used (the BOO framework's only figure is an illustrative model). Product sentence is marketing's own line from `04-value-repository/BOO_Messaging_Framework_Jun26.md`. Signal ships only with its dated source.
+
+## Product sentence sources (Sep 3 2026)
+
+Back office: `04-value-repository/BOO_Messaging_Framework_Jun26.md` (marketing's value proposition, personas, elevator pitch, tone). Front office and DWO: the official value deck claims in the Value Repository (7X ROI with payback in as little as 3 months, 90 to 120 day deployment, 6 to 10 percent productivity savings within weeks) and the 2X contract guarantee. Customer proof: `04-value-repository/Customer_Stories_Registry_Jul21.md`; only Humana and Virgin Media by name; JPMC, AT&T and Liberty Mutual never. Index of every source: `motions/shared/Product_Materials_Index_Sep3.md`.
