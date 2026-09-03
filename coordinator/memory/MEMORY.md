@@ -397,3 +397,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Jack Vertical Strategy Pack Skill Sep3](jack-vertical-strategy-pack-skill-sep3.md) — Sep 3 2026: Naveen says copy lacks product/DWO depth; Jack shared vertical-strategy-pack skill; adopt the persona/situational library, not its unverified stats or email-1 meeting ask
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback BDRs Are The Experts](feedback-bdrs-are-the-experts.md) — Sep 3 2026: never judge Jack or Nate by week-old lemlist stats; the engine adopts their practice, keeps only company-protecting gates

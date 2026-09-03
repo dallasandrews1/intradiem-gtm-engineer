@@ -26,11 +26,14 @@ What a valid signal means for this motion and how to reference it qualitatively 
 ## MOTION-SPECIFIC BANS
 Framings this motion must never use. WFM example: never characterize their WFM/CCaaS platform (Verint, NICE, Calabrio, Genesys, Amazon Connect) as unable, slow, or lacking; never cite a competitor or customer number by hand.
 
-## BRAND CONVENTION
-A (brand-light Days 1-5) or B (product at most once from Day 1). WFM = B.
+## PRODUCT SENTENCE (replaces the old brand convention, Sep 3 2026)
+The one concrete sentence E1 uses to say what Intradiem does in this motion, on top of what the prospect already runs. Intradiem named once. Concrete actions, never a category label. Rewrite it from Naveen's messaging document when it lands. Back-office example: "Intradiem sits on top of the case system and the WFM you already run and moves the work inside the day: it spots idle windows as they open, routes aging cases into them, and pushes training and admin into the quiet hours instead of the busy ones."
+
+## E1 CLOSE SHAPE
+Benchmark question ("Worth a conversation on how other [persona] teams run this?") or offer note (name the note in motions/shared/Offer_Notes_Aug3.md). Never a calendar ask in E1.
 
 ## SENDER / SIGNATURE
-Who sends (per motion) and the sign-off flip (first name D1-5, full name D6+), applied in the signature layer, not the MessageGen output.
+Who sends (per motion). First name only, applied in the signature layer, not the MessageGen output; the mailbox signature block carries the rest.
 
 ## GOLD STANDARD (E1)
 One fully-written Email 1 in this motion's voice that hits the whole arc with no fabricated number, as the cadence anchor for E2-E5.
