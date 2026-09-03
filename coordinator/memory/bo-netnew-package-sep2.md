@@ -1,6 +1,6 @@
 ---
 name: bo-netnew-package-sep2
-description: Sep 2 2026 evening: BO Net-New (Nate) wave 1 staged load-ready (32 READY of 36, 2 holds, 2 no email) from the six map rosters at 28.4 credits; opener lines per account from six signal sweeps; customer lane staged AM-gated with zero clearances; senders/label still Dallas's UI step
+description: Sep 2 2026: BO Net-New (Nate) wave 1 LOADED (32 leads, draft, no sender yet) with the per-account opener Email 1 applied by API; whole 150-roster emailed (132 ready, 6 held, 12 no email) at 153.8 credits; SF emails two-source verified; customer lane staged AM-gated with zero clearances
 metadata:
   type: project
 ---
@@ -14,3 +14,6 @@ Customer lane: `customer_lane_staging/` four vertical CSVs + `Clearance_Rollup_S
 Open for Dallas: senders + `gtm-engineering-bo` label on all five campaigns (API cannot), go for the wave-1 load, go for the waves 2-4 email run (~93 rows, est 65-70, ceiling ~140), go for the Email 1 opener edit (proposed before/after in the session). lemlist MCP connector was NOT authorized in this session; the API key path in `automation/config/lemlist.env` did everything. Mem0 quota still exhausted (resets Oct 1).
 
 **How to apply:** the next wave = rerun the builder after the waves 2-4 email run writes into `netnew_email_results.csv`; never load anything without the explicit paste-back go. Related: [[nate-six-accounts-bo-maps-aug31]], [[bo-lemlist-shells-built-sep2]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-warn-before-large-credit-spend]].
+
+
+**Later Sep 2 (Dallas delegated the opener call and gave the go):** SF emails verified through the Work Email workflow (11 match, 5 variants adopted from Clay, Hodge held as single-source; rule: a Salesforce address never loads without a second source). Email 1 rewritten by API: `PATCH /api/sequences/{sid}/steps/{stepId}` requires `type` in the body; opener first, two-clocks second, CTA "without adding headcount"; applied at zero leads. Waves 2-4 run: 103 rows, 91 valid, 2 foreign-domain rejects held (Harapas bbandt.com, Campbell sunwestbank.com), ~1.05 credits/row (above the 0.7 sample rate). Wave 1 LOADED: 32 leads via `POST /api/campaigns/{id}/leads/{email}?deduplicate=true` with function/parent_account/opener_line, campaign still DRAFT with no sender. Session total 153.8 credits (67,567.2 -> 67,413.4). Still Dallas's hands: sender + label on all five, start the campaign, Enrich Person or Sales Nav check on the six holds, wave 2 load after wave-1 replies are read (runbook rule).
