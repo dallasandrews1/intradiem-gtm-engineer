@@ -394,3 +394,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Lemlist API Campaign Defaults Sep2](lemlist-api-campaign-defaults-sep2.md) — API-created lemlist campaigns default to a Europe/Paris schedule, no sender, no label; PATCH the schedule timezone and set sender before launch (found on the BO campaigns Sep 2 2026)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Jack Vertical Strategy Pack Skill Sep3](jack-vertical-strategy-pack-skill-sep3.md) — Sep 3 2026: Naveen says copy lacks product/DWO depth; Jack shared vertical-strategy-pack skill; adopt the persona/situational library, not its unverified stats or email-1 meeting ask
