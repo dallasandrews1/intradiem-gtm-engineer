@@ -456,3 +456,10 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Open Items Sep4](open-items-sep4.md) — Sep 4 2026 end-of-day snapshot of open GTM items and next moves; full list in motions/shared/Open_Items_Sep4.md
 - [Jenn East Exec, ELT Knows Players Sep4](jenn-east-exec-elt-knows-players-sep4.md) — Jenn East (spelled Jenn) is on the exec team; ELT knows every player, never explain roles or teams in leadership-facing copy
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Nate BO Review + Maximus Add Sep4](nate-bo-review-maximus-sep4.md) — Sep 4 2026: Nathan's verdicts on the four BO customer campaigns (FS still open), Maximus cohort loaded to BPO via add_account_cohort.py
+- [DWO Shell Load Plan Sep4](dwo-shell-load-plan-sep4.md) — Sep 4 2026: 700 of 1,135 loadable at 285 accounts; E1 needs angleIdea/angleProof/angleAsk variables before load; Nate read page delivered; nothing loaded
+- [Lane B Pilot DWO Cohort Sep4](lane-b-pilot-dwo-cohort-sep4.md) — Lane B rides on DWO wave 1 (cohort GTMENG-DWO1-2026-09, test 337/holdout 363 by sha1 domain); heat-list cutter WAITING on empty pool
+- [Enrichment Backlog Sep4](enrichment-backlog-sep4.md) — 673 gaps across pools; 177 (not 172) DWO rows in two stuck runs; lemlist list endpoint hides email, per-contact GET has it
+- [Council Feed + Stamp Plans Sep4](council-feed-and-stamp-plans-sep4.md) — council_meeting_feed.py and lead_source_stamp_plan.py built; no SF write path, Sierra's ticket is the gate
