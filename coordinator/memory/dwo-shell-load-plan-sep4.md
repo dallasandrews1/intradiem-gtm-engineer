@@ -17,4 +17,4 @@ DWO Executives - Live Pool (Nate) cam_SiD4KmWcRuhiF6uhL: `motions/dwo_executives
 **Update Sep 4 afternoon:** after the delegated spend pass the campaign holds 804 leads at 346 accounts (test 399 / holdout 405), 36 without a URL, 36 provider-unit COOs flagged; still DRAFT on the main mailbox.
 
 
-**Copy check Sep 4 afternoon:** Email 1 was 139-167 words as first loaded; Rule B openers, proofs and long account names trimmed (loader NAME_MAP), now median 101. Email 2 no longer dates the 12,000 VTO hours. Nate page live at https://dwo-exec-read.pages.dev; Nate has not reviewed DWO copy yet. Campaign 803 after Vega's removal.
+**Copy check Sep 4 afternoon:** Email 1 was 139-167 words as first loaded; a trimmed Email 1 was loaded and REVERTED on Dallas's word (copy stands as the Sep 4 doc wrote it, median 128 words); NAME_MAP for long account names and the possessive rule kept. Email 2 no longer dates the 12,000 VTO hours. Nate page live at https://dwo-exec-read.pages.dev; Nate has not reviewed DWO copy yet. Campaign 803 after Vega's removal.

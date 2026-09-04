@@ -472,3 +472,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Work Email By URL Beats Workflow Sep4](work-email-by-url-beats-workflow-sep4.md) — Work Email routine by LinkedIn URL: 88% found at ~1.1-1.4 cr/row; name-and-domain workflow bills every miss; banks to Apollo
 - [Nate Front Office Maps Sep4](nate-front-office-maps-sep4.md) — Sep 4 2026: front-office maps for Nate's six (87 people, mode front_office on the map pipeline), Centene two-map page for Rachel, Strike Room ask still open
 - [Feedback Rep Read Pages Deployed](feedback-rep-read-pages-deployed.md) — Sep 4 2026: anything a rep must read is a deployed Cloudflare page (dwo-exec-read.pages.dev pattern), Desktop HTML is Dallas-only, no internals on rep pages
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Copy Over Word Ceiling](feedback-copy-over-word-ceiling.md) — Sep 4 2026: never trim approved copy for the 110-word line; only verified-claims and rendering fixes go in unasked
