@@ -17,3 +17,9 @@ Sep 4 2026. Dallas said the planned recording (v2, Sep 2) felt awkward and chopp
 **Asks for Naveen (Slack draft given Sep 4):** confirm with Jason a narrated video is fine; send his set-up lines; watch the rehearsal take Fri Sep 4; confirm slot length.
 
 **How to apply:** Demo_Recording_Script.md and Recording_UISheet_Sep2.md in motions/all_hands_sep14/ are v3 and supersede the v2 text quoted in [[naveen-call-sep2-demo-three-acts]]. Due Tue Sep 8. Related: [[allhands-ai-session-package-aug31]].
+
+**Sep 4 evening verification pass (live systems, before recording):**
+- Act 1 ask `Build the strike plan for AmeriHealth Caritas.` has never been run in Claude Code. The TAM engine's own plan for that domain prints placeholder dollars ($7.1M, $2,380/agent, a "Medicaid plan about your size" line) and `Owner: Jordan Kim` (placeholder seller). Act 1 is now two recordings (the ask + first 15s, then the finished output) joined by a straight cut; no dollar or owner line on tape. Dallas runs the ask off camera first and reports which path fired.
+- Slack #gtm-outbound-nathan (C0BM9V6KGSG) and #gtm-outbound-jack (C0BN0JT9D6U) hold only Dallas's own posts (Jul 31 to Sep 1); no lemlist relay post has ever landed. Screen 7 cut; seven screens now.
+- "All hands demo" campaign (cam_SxnHzvAr3WsvWPPeY): 11 of Jack's UK leads (Saga, L&G, D&G, Ageas), all variables filled; steps = email, LI visit, LI invite, call branch, email 2, LI message/call branch, breakup. NO voice note step. Demo lead = Kate Taphouse (Saga, lea_iewAHWD8KE9bw6stP); email 2 and LI message carry the "15-20 minutes per agent" figure (CONFIRM in the Value Repo, UK on Jack's authority), scroll past without pausing.
+- Live counts Sep 4: segment 312, people 140,993. Partner brief resolves to /briefs/ally (no .html).

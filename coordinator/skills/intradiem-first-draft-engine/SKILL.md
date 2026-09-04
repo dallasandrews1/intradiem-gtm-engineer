@@ -171,3 +171,6 @@ Every voice note script gets a 2 to 3 sentence written TL;DL that passes the sam
 ## Output
 
 No separate file. This skill governs the process inside any other skill's output. When asked for copy directly, deliver: the message ready to send, one sentence stating the one idea, the persona row used, nothing else unless asked.
+
+## Sep 4 addendum (the pressure standard)
+The cadence line above is the Sep 3 floor. From Sep 4 the standard for net-new sequences is the pressure model in the doctrine's Sep 4 addendum: five emails across two threads, three calls that all leave voicemails (EA route when there is no number), three LinkedIn DMs for accepted connects, a voice note where the persona warrants it, one breakup last, invite withdrawn after it, 16 to 17 touches over 18 business days. C-level seats get calls. Write the colleague line as a fact from the account map, never as a guess. No apology, no exit talk, direct asks after Email 1. Reference copy: `motions/shared/Messaging_Gold_Examples_Sep4.md`.

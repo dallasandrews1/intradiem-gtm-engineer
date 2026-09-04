@@ -287,3 +287,6 @@ Use `{{sender}}` for the sender name when the sequence is meant to be reusable a
 - It does not ship an unverified Intradiem number, or a peer figure that undercuts the thesis, to clear a gap. If the proof is not in the Value Repository, or does not actually support the argument, the claim does not appear.
 - It does not assert a hard contract count or a star level it has not verified. Count-safe until confirmed.
 - It does not default to Star Ratings. The motion is chosen per run; Stars is simply the first fully-built module and the source of the reference example.
+
+## Sep 4 addendum (the pressure standard)
+The cadence line above is the Sep 3 floor. From Sep 4 the standard for net-new sequences is the pressure model in the doctrine's Sep 4 addendum: five emails across two threads, three calls that all leave voicemails (EA route when there is no number), three LinkedIn DMs for accepted connects, a voice note where the persona warrants it, one breakup last, invite withdrawn after it, 16 to 17 touches over 18 business days. C-level seats get calls. Write the colleague line as a fact from the account map, never as a guess. No apology, no exit talk, direct asks after Email 1. Reference copy: `motions/shared/Messaging_Gold_Examples_Sep4.md`.
