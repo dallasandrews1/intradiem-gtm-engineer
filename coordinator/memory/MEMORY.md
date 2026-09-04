@@ -438,3 +438,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback Net-New Pool Is Clay Sourced](feedback-netnew-pool-is-clay-sourced.md) — Sep 3 2026: presented prospect pools come from live Clay sourcing; (SF) lists are suppression/match keys only
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback Suppression Lives In Clay Not Lemlist](feedback-suppression-lives-in-clay-not-lemlist.md) — Sep 4 2026: (SF) mirror lists come out of lemlist; suppression runs in Clay, lemlist holds only sequenceable rows
