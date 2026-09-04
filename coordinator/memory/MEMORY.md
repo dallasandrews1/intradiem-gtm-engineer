@@ -483,3 +483,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Calls First Net New](feedback-calls-first-net-new.md) — Sep 4 2026: calls and voicemails are the core of net-new pipeline; every sequence carries call steps, phones sourced before build
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [AllHands Demo v3 Narrated Sep4](allhands-demo-v3-narrated-sep4.md) — Sep 4 2026: demo plan v3, narration kept in the cut, eight screens, 5:00, one live execution; deck patched and redeployed; four Naveen asks
