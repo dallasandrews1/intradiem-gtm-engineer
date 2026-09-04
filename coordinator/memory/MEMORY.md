@@ -486,3 +486,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [AllHands Demo v3 Narrated Sep4](allhands-demo-v3-narrated-sep4.md) — Sep 4 2026: demo plan v3, narration kept in the cut, eight screens, 5:00, one live execution; deck patched and redeployed; four Naveen asks
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Scripts No Meta Name The Columns](feedback-scripts-no-meta-name-the-columns.md) — Sep 4 2026: pages Dallas follows live carry no rationale or asks sections; each step names table, view, column run and what it fills
+- [Feedback No Apology No Exit Talk](feedback-no-apology-no-exit-talk.md) — Sep 4 2026: never admit not knowing the org, never apologize, one breakup only; every other touch moves forward
