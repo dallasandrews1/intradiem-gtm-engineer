@@ -447,3 +447,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Default Sender Is Nate](feedback-default-sender-is-nate.md) — Sep 4 2026: engine-built campaigns send as Nathan by default, Jack works independently
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [DWO Exec Campaign Staged Sep4](dwo-exec-campaign-staged-sep4.md) — Sep 4 2026: DWO Executives - Live Pool (Nate) shell cam_SiD4KmWcRuhiF6uhL staged as draft, five touches, sender Nathan, no leads
+- [motionStatus Not A Lemlist Gate Sep4](motionstatus-not-a-lemlist-gate-sep4.md) — Sep 4 2026: held/staged/sf_stale leads still send; pull flagged rows by hand before any start
+- [BO Pre-send Verdict Sep4](bo-presend-verdict-sep4.md) — Sep 4 2026: exclusion gate PASS on 332 real rows, AM clearance unverified on customer lanes, Net-New NO-GO pending fixes and the cold-mailbox decision
