@@ -475,3 +475,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Copy Over Word Ceiling](feedback-copy-over-word-ceiling.md) — Sep 4 2026: never trim approved copy for the 110-word line; only verified-claims and rendering fixes go in unasked
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Nate Campaign Structure Review Sep4](nate-campaign-structure-review-sep4.md) — Sep 4 2026: all 11 Nate lemlist campaigns scored on nine lines; no tracking domain blocks 7 at send, empty BO branches, 6 unrouted in relay, LI cap 20/day paces DWO; proposals staged, nothing applied
+- [Feedback Rep Deliverables Are Deployed Pages](feedback-rep-deliverables-are-deployed-pages.md) — Sep 4 2026: rep and partner deliverables ship as deployed pages on the house standard, never Desktop files or artifact links
+- [Rep Campaign Hook Built Sep4](rep-campaign-hook-built-sep4.md) — Sep 4 2026: hourly :25 pre-send hook for rep-built lemlist campaigns; maps by sender, flags guessed addresses, dry-run estimates verification
