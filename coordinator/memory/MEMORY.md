@@ -441,3 +441,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [Feedback Suppression Lives In Clay Not Lemlist](feedback-suppression-lives-in-clay-not-lemlist.md) — Sep 4 2026: (SF) mirror lists come out of lemlist; suppression runs in Clay, lemlist holds only sequenceable rows
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Lemlist SF Lists Retired Sep4](lemlist-sf-lists-retired-sep4.md) — Sep 4 2026: three (SF) lemlist lists retired via retire_sf_lists.py, DWO live wave 1 (1,060) loaded, 172 stuck rows and wave 2 open
