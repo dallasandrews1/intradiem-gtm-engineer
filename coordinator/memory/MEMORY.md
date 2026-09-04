@@ -480,3 +480,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Nate Campaign Structure Review Sep4](nate-campaign-structure-review-sep4.md) — Sep 4 2026: all 11 Nate lemlist campaigns scored on nine lines; no tracking domain blocks 7 at send, empty BO branches, 6 unrouted in relay, LI cap 20/day paces DWO; proposals staged, nothing applied
 - [Feedback Rep Deliverables Are Deployed Pages](feedback-rep-deliverables-are-deployed-pages.md) — Sep 4 2026: rep and partner deliverables ship as deployed pages on the house standard, never Desktop files or artifact links
 - [Rep Campaign Hook Built Sep4](rep-campaign-hook-built-sep4.md) — Sep 4 2026: hourly :25 pre-send hook for rep-built lemlist campaigns; maps by sender, flags guessed addresses, dry-run estimates verification
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Calls First Net New](feedback-calls-first-net-new.md) — Sep 4 2026: calls and voicemails are the core of net-new pipeline; every sequence carries call steps, phones sourced before build
