@@ -435,3 +435,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
 - [SF Prospect Exec Rows Stale Sep3](sf-prospect-exec-rows-stale-sep3.md) — Sep 3 2026: SF prospect executive rows are stale beyond repair (14/16 emails invalid, 2/20 profiles and wrong); source senior pools live from Clay search, pay only for emails on current people
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-03
+- [Feedback Net-New Pool Is Clay Sourced](feedback-netnew-pool-is-clay-sourced.md) — Sep 3 2026: presented prospect pools come from live Clay sourcing; (SF) lists are suppression/match keys only
