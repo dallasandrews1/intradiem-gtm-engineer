@@ -1,6 +1,6 @@
 ---
 name: dwo-shell-load-plan-sep4
-description: Sep 4 2026 evening, DWO Executives shell load plan dry-run (700 loadable of 1,135 at 285 accounts), angle variables needed in Email 1 before load, Nate read page delivered, nothing loaded or launched
+description: Sep 4 2026, DWO Executives shell LOADED on Dallas's go (690 leads in cam_SiD4KmWcRuhiF6uhL, draft, never launched), Email 1 A/B on per-lead angle variables, 64 leads without URL flagged unconfirmed, sender still the main mailbox
 metadata:
   type: project
 ---
@@ -9,3 +9,6 @@ DWO Executives - Live Pool (Nate) cam_SiD4KmWcRuhiF6uhL: `motions/dwo_executives
 **Why:** Email 1 in lemlist hard-codes the core angle, so the family swap only works if the three middle paragraphs become per-lead variables (`angleIdea`, `angleProof`, `angleAsk`); the loader already fills them. Lead fields also carry `cohortId` / `cohortArm` for the Lane B pilot ([[lane-b-pilot-dwo-cohort-sep4]]).
 
 **How to apply:** order on go: (1) edit E1 A and B templates to the variables while the campaign has zero leads, (2) `--go`, (3) integrity sweep + three previews. Sender stays the intradiem.com main until lemwarm clears nathan.belfield@intradiemhq.com (active, DNS 100/100, lemwarm state not readable by API). Nate read page: Desktop/Intradiem Deliverables/DWO_Executives_Nate_Read_Sep4.html.
+
+
+**Update Sep 4 late morning:** loaded on Dallas's go. Email 1 A and B edited to {{angleIdea}}/{{angleProof}}/{{angleAsk}} first, then 699 loaded, then the free bridge on the 85 email-only rows exposed six movers/noise plus three account mismatches (Fincik, George mapped to AAA Texas; Mastrean now FIS): removed via ~/.local/bin/lemlist-lead-remove. 690 leads, test 336 / holdout 354, 94 possessives patched (loader now uses poss()). Lesson: a verified email without a LinkedIn URL is not proof of a current seat; the bridge found 6 of 13 resolvable email-only DWO rows had moved.

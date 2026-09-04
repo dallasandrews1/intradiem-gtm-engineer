@@ -9,3 +9,6 @@ Backlog page + CSV in motions/enrichment/ (build_backlog_page.py <scratch>). Per
 **Why:** the rule is every sequenceable contact ends with a verified email AND a LinkedIn URL; campaign leads are complete by construction, the gaps sit on the lists.
 
 **How to apply:** `GET /api/contacts?listId=` returns no email field; `GET /api/contacts/{id}` returns `email` top-level and custom fields under `fields` (single worker, ~0.3 s a call). Run order: A free bridge (0), B Enrich Person on misses (0.5/hit), C re-run stuck rows (~283, over the 200 line: 15-row test then Dallas's go, or cancel), D Work Email by URL on confirmed-current no_email rows (~0.8 on find), E Stars 21 (~34). Nothing above ran on Sep 4.
+
+
+**Update Sep 4:** Run A ran (15 of 85 found, 70 miss). Run C 15-row test measured 3.04 credits/row (45.6 total, over the 30 ceiling; a single inline run cannot be stopped), 73% valid; the full re-run of the remaining 162 is ~490 credits, held. No-find rows bill every provider in the waterfall, so the 1.6/row calibration only holds on high-hit domains.

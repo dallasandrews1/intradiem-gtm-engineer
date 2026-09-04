@@ -463,3 +463,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Lane B Pilot DWO Cohort Sep4](lane-b-pilot-dwo-cohort-sep4.md) — Lane B rides on DWO wave 1 (cohort GTMENG-DWO1-2026-09, test 337/holdout 363 by sha1 domain); heat-list cutter WAITING on empty pool
 - [Enrichment Backlog Sep4](enrichment-backlog-sep4.md) — 673 gaps across pools; 177 (not 172) DWO rows in two stuck runs; lemlist list endpoint hides email, per-contact GET has it
 - [Council Feed + Stamp Plans Sep4](council-feed-and-stamp-plans-sep4.md) — council_meeting_feed.py and lead_source_stamp_plan.py built; no SF write path, Sierra's ticket is the gate
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Check-ins Sweep Otter Weekly](feedback-checkins-sweep-otter-weekly.md) — Sep 4 2026: every weekly check-in or readout is built from a full Otter sweep of that week plus the file record; Dallas replaces his own 15Five lines with the built ones
+- [ST Water Bounces Rep-Loaded Gap Sep4](st-water-bounces-rep-loaded-gap-sep4.md) — Sep 4 2026: 4 of 6 ST Water bounces came from Jack loading guessed addresses by hand in lemlist; rep-built UK campaigns bypass the Clay verify path and the integrity sweep
