@@ -467,3 +467,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Check-ins Sweep Otter Weekly](feedback-checkins-sweep-otter-weekly.md) — Sep 4 2026: every weekly check-in or readout is built from a full Otter sweep of that week plus the file record; Dallas replaces his own 15Five lines with the built ones
 - [ST Water Bounces Rep-Loaded Gap Sep4](st-water-bounces-rep-loaded-gap-sep4.md) — Sep 4 2026: 4 of 6 ST Water bounces came from Jack loading guessed addresses by hand in lemlist; rep-built UK campaigns bypass the Clay verify path and the integrity sweep
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Work Email By URL Beats Workflow Sep4](work-email-by-url-beats-workflow-sep4.md) — Work Email routine by LinkedIn URL: 88% found at ~1.1-1.4 cr/row; name-and-domain workflow bills every miss; banks to Apollo
+- [Nate Front Office Maps Sep4](nate-front-office-maps-sep4.md) — Sep 4 2026: front-office maps for Nate's six (87 people, mode front_office on the map pipeline), Centene two-map page for Rachel, Strike Room ask still open
+- [Feedback Rep Read Pages Deployed](feedback-rep-read-pages-deployed.md) — Sep 4 2026: anything a rep must read is a deployed Cloudflare page (dwo-exec-read.pages.dev pattern), Desktop HTML is Dallas-only, no internals on rep pages

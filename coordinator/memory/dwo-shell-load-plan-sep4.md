@@ -12,3 +12,9 @@ DWO Executives - Live Pool (Nate) cam_SiD4KmWcRuhiF6uhL: `motions/dwo_executives
 
 
 **Update Sep 4 late morning:** loaded on Dallas's go. Email 1 A and B edited to {{angleIdea}}/{{angleProof}}/{{angleAsk}} first, then 699 loaded, then the free bridge on the 85 email-only rows exposed six movers/noise plus three account mismatches (Fincik, George mapped to AAA Texas; Mastrean now FIS): removed via ~/.local/bin/lemlist-lead-remove. 690 leads, test 336 / holdout 354, 94 possessives patched (loader now uses poss()). Lesson: a verified email without a LinkedIn URL is not proof of a current seat; the bridge found 6 of 13 resolvable email-only DWO rows had moved.
+
+
+**Update Sep 4 afternoon:** after the delegated spend pass the campaign holds 804 leads at 346 accounts (test 399 / holdout 405), 36 without a URL, 36 provider-unit COOs flagged; still DRAFT on the main mailbox.
+
+
+**Copy check Sep 4 afternoon:** Email 1 was 139-167 words as first loaded; Rule B openers, proofs and long account names trimmed (loader NAME_MAP), now median 101. Email 2 no longer dates the 12,000 VTO hours. Nate page live at https://dwo-exec-read.pages.dev; Nate has not reviewed DWO copy yet. Campaign 803 after Vega's removal.
