@@ -34,3 +34,5 @@ A motion build folder containing: the filled motion_slots, the 5 assembled + sha
 
 ## First-run note
 The workflow template does not exist as a parameterized artifact yet; the proven WFM graph is the reference. Generalizing it into a token-swappable stamp template is a live Clay operation (read the WFM workflow, extract the node graph, replace motion-specific prompt text with slots). Do that deliberately with Dallas against Clay, not unprompted against his live graph.
+## Retired 2026-09-05: Clay-side messaging
+Dallas's decision: Clay does not write messaging. Step 4 (MessageGen prompt injection into workflow agent nodes) is retired. A stamped motion builds sources, scoring, signals, the contacts segment, enrichment (email, posts, platforms, persona key) and the gates; copy is written Claude-side per contact by intradiem-first-draft-engine and intradiem-copy-sharpener and loaded to lemlist by the bridge. Do not assemble or paste MessageGen prompts. Reference: motions/shared/Clay_MessageGen_Retirement_Sep5.md.

@@ -503,3 +503,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Feedback Audiences Is Not Salesforce](feedback-audiences-is-not-salesforce-sep5.md) — Sep 5 2026: say "stamp on the Clay company record", never "write back"; nothing writes to Salesforce
 - [MessageGen Stale vs Sep3 Doctrine](messagegen-stale-vs-sep3-doctrine.md) — Clay MessageGen still runs the 5-touch, 115-word, "Worth 15 minutes" pre-Sep-3 rules while live lemlist copy is hand-authored under the Sep 3 doctrine
 - [Copy Authored Per Campaign Not Per Row](copy-authored-per-campaign-not-per-row-sep4.md) — Sep 4 decision: copy authored per campaign with lemlist variables; Clay is the variable factory, not the prose writer
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Check Memory Before Describing Pipeline](feedback-check-memory-before-describing-pipeline.md) — Sep 5 2026: read memory before explaining how a motion works; live lemlist copy is Claude-side variables, not Clay MessageGen
+- [Clay MessageGen Retired Sep5](clay-messagegen-retired-sep5.md) — Sep 5 2026: Clay finds, enriches, stores; Claude decides, writes, gates; MessageGen, Claygent clones, critic + gate columns and Functions, Sync Leads, Alpha workflows retired, delete after the Sep 8 recording
