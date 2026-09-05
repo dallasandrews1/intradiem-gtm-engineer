@@ -1,20 +1,22 @@
 ---
 name: wfm-present-motion-sep5
-description: "Sep 5 2026: WFM Present motion built on the platform reads (81 companies, 1,822 people, 0 credits); 40-lead wave 1 with Claude-side variables; lemlist shell cam_K6dGjBt6WukSo3jvB DRAFT, 0 leads, awaiting Nate's read and sender"
+description: "Sep 5 2026: platform-keyed motions load in FULL, no waves (Dallas's call); WFM Present cam_K6dGjBt6WukSo3jvB 362 leads and Genesys Present cam_b7TS4fCDCnt2f8S84 296 leads, both DRAFT, 0 credits; cap 10 per account, customer gate, US only"
 metadata: 
   node_type: memory
   type: project
   originSessionId: 32356113-80bc-4c67-becf-7d26485dac27
-  modified: 2026-09-05T06:25:53.925Z
+  modified: 2026-09-05T06:55:51.656Z
 ---
 
-Built Sep 5 2026 after the PredictLeads platform backfill ([[tech-stack-verified-read-sep5]], [[cc-platform-backfill-sep5]]).
+Built Sep 5 2026 on the PredictLeads platform backfill ([[tech-stack-verified-read-sep5]], [[cc-platform-backfill-sep5]]).
 
-- Universe (Clay Audiences, 0 credits): companies segment audseg_0tkvnqxJPhevjxbg4hJ (81 US prospects with a WFM vendor read inside 12 months), people segment audseg_0tkvnsrRpKkpm2FBk9q (1,822 with an email already in Audiences).
-- Wave 1: 40 leads at 23 accounts, max two per account, accounts already in a lemlist campaign excluded. File motions/wfm_present/WFM_Present_Wave1_Load_Sep5.csv. WFM mix Verint 16, Calabrio 14, Aspect 8, NICE 2. Variables are Claude-side per lead (opener with the dated read, angleIdea, angleAsk, peak, workTeams, wfmPlatform, acdPlatform, colleague lines); shared angleProof is the Humana set only.
-- lemlist: cam_K6dGjBt6WukSo3jvB "WFM Present - Wave 1 (Nate)", DRAFT, 0 leads, 33 steps on the DWO pressure-standard tree with WFM copy. Ids in motions/wfm_present/WFM_Present_Lemlist_Campaign_Sep5.json.
-- Same day, same read files: Genesys partner list for Frank/Haresh (145 fresh, 34 with WFM) at gtm-partner-pilot.pages.dev/genesys/; customer platform reads for Nate's back-office lane at backoffice-maps.pages.dev/platforms/.
+**Dallas's rule (Sep 5, late):** "stop the waves and upload all the contacts into these campaigns, these are very specific motions." Platform-keyed motions load in full. What replaces the wave: US only; person-level dedupe (our index of every campaign plus lemlist's own cross-campaign check); cap 10 per account (VP+ first, then WFM titles, then LinkedIn on file); customer gate on every account (SF exclusion segment audseg_0tk324emMVGAwsna7g4 plus parent-level holds: Optum, Aetna, Assurant, TTEC, Maximus, AT&T U-verse). Held names carry a reason and are the next names per account.
 
-**Why:** Dallas asked what the platform reads change for pipeline and Nate's sequences; the answer was a motion keyed on the WFM already in the building ("the intraday layer on top of the WFM you already run"), plus the partner and customer cuts.
+- WFM Present: companies audseg_0tkvnqxJPhevjxbg4hJ (81), people audseg_0tkvnsrRpKkpm2FBk9q (1,822). lemlist cam_K6dGjBt6WukSo3jvB, 33 steps, 362 leads at 54 accounts (39 hand-written, the rest generated from the account read on the same frame, every E1 at or under 110 words). Name still says "Wave 1", rename in the UI. Nate read page live at wfm-present-read.pages.dev.
+- Genesys Present: companies audseg_0tkvp4cWjaRzEpkwzCH (111), people audseg_0tkvp3gkKr94ubHuURa (1,932). lemlist cam_b7TS4fCDCnt2f8S84, 34 steps with the ACD as the platform, 296 leads at 52 accounts. Accounts with a WFM read belong to WFM Present, not here.
+- Tooling: motions/wfm_present/build_full_load.py (plan, --go load, --reconcile), scratch map_people_to_cos.py (people to account by account-domain filter, 0 credits), build_nate_read_page.py. Ids in each motion's *_Lemlist_Campaign_Sep5.json.
+- Customer side: 59 customer accounts with a named platform stay a read for the back-office lane (backoffice-maps.pages.dev/platforms/); no customer contacts loaded, AM-clearance rule stands ([[bo-expansion-council-aug24]]).
 
-**How to apply:** Nate reads the copy before load (read page in motions/wfm_present/). Loading is a --go loader after his word; sender and labels are his UI steps; never launch from a session ([[bo-lemlist-shells-built-sep2]]). Wave 2 draws from the same people segment, next title tier, no new credits needed until emails run out.
+**Why:** the platform read makes the platform-keyed story specific enough to run at full width; a 40-lead wave under-used it.
+
+**How to apply:** new platform-keyed motions (Five9, Amazon Connect, NICE next) follow the same planner and rules. Sender and labels are Nate's UI steps; never launch from a session ([[bo-lemlist-shells-built-sep2]]). Lift the cap per account only on Nate's word.

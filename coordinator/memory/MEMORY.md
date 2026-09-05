@@ -518,3 +518,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
 - [All-Hands Demo Footage Review Sep5](allhands-demo-footage-review-sep5.md) — 6 clips shot, 2 screens missing, 11 defects, rough cut 4:07 via build_rough_cut.sh
 - [WFM Present Motion Sep5](wfm-present-motion-sep5.md) — Sep 5 2026: WFM Present motion on the platform reads (81 cos / 1,822 people, 0 credits), 40-lead wave 1, lemlist cam_K6dGjBt6WukSo3jvB DRAFT 0 leads awaiting Nate
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
+- [Feedback No Claims Guidance To Partners](feedback-no-claims-guidance-to-partners.md) — partner-facing pages drop the "what we can say" section; partner reps are the sellers
