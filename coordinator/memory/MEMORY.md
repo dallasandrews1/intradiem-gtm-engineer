@@ -490,3 +490,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Scripts No Meta Name The Columns](feedback-scripts-no-meta-name-the-columns.md) — Sep 4 2026: pages Dallas follows live carry no rationale or asks sections; each step names table, view, column run and what it fills
 - [Feedback No Apology No Exit Talk](feedback-no-apology-no-exit-talk.md) — Sep 4 2026: never admit not knowing the org, never apologize, one breakup only; every other touch moves forward
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Tech Stack Verified Read Sep5](tech-stack-verified-read-sep5.md) — Sep 5 2026: engine + strike skill require source URL and date under 12 months before a vendor name prints or reaches copy; AmeriHealth ACD/WFM unverified, desktop is Salesforce Service Cloud Voice
+- [Campaigns Started Sep4](campaigns-started-sep4.md) — Sep 4 2026 late: eight Nate campaigns live on the main mailbox after Chris/Naveen go (BO x3 + Quality launched, Finance/Resurrection/Citizens/Hartford resumed); FS, Net-New, DWO held
