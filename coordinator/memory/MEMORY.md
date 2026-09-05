@@ -507,3 +507,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Check Memory Before Describing Pipeline](feedback-check-memory-before-describing-pipeline.md) — Sep 5 2026: read memory before explaining how a motion works; live lemlist copy is Claude-side variables, not Clay MessageGen
 - [Clay MessageGen Retired Sep5](clay-messagegen-retired-sep5.md) — Sep 5 2026: Clay finds, enriches, stores; Claude decides, writes, gates; MessageGen, Claygent clones, critic + gate columns and Functions, Sync Leads, Alpha workflows retired, delete after the Sep 8 recording
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Clay Query Live Needs OAuth](clay-query-live-needs-oauth.md) — Sep 5 2026: query-live is unusable from sessions (OAuth only); use rows get by id, search-count, or a UI filter
