@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2b07d59f-caa0-4120-a028-088a631552f9
-  modified: 2026-09-05T04:59:26.727Z
+  modified: 2026-09-05T05:18:59.484Z
 ---
 
 Sep 5 2026, diagnosed on real rows. In table `Contacts (Buying Committee)`
@@ -39,4 +39,23 @@ Load-bearing downstream: the `Validate Email` action column
 (f_0thvwiqGFtriBqJMqx6) takes its `email` input from `email_final`, so an empty
 `email_final` means Validate Email cannot run on that row at all.
 
-Related: [[clay-free-sourcing-path]], [[feedback-warn-before-large-credit-spend]]
+Two Clay mechanics learned the hard way on this table (Sep 5 2026):
+
+- **Clay filter panels use ONE join operator per level.** Setting a condition to `And`
+  flips every condition at that level; And and Or cannot be mixed side by side. To get
+  `(A or B or C) and D and E`, the Or-list must live inside its own filter group. Often
+  simpler: find a single condition that isolates the same rows and keep the whole level
+  `And`.
+- **An `Or` condition can only ADD rows to a view, never remove them.** Adding
+  `customer_exclude equal to FALSE` to an Or-joined level excludes nothing.
+
+`customer_exclude` (f_0thzalcNJ5VDtBRUcri) is NOT a real exclusion gate. Its formula is a
+hardcoded six-name denylist against `parent_key`:
+`["humana","uhc","cvs","molina","elevance","hcsc"].includes(parent_key...) ? "TRUE" : "FALSE"`.
+The table has 31 distinct parent_key values; the other 25 return "FALSE" by construction
+regardless of real account status. Stored as TEXT "TRUE"/"FALSE" (uppercase), with 10 rows
+empty. Should be re-pointed at the Salesforce exclusion segment. Same hand-rolled-local-formula
+pattern as the WFM-Adjacency leak.
+
+Related: [[clay-free-sourcing-path]], [[feedback-warn-before-large-credit-spend]],
+[[gate-integrity-fn-send-ready-not-shared]], [[wfm_adjacency_leak_escalated_aug3]]
