@@ -510,3 +510,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Clay Query Live Needs OAuth](clay-query-live-needs-oauth.md) — Sep 5 2026: query-live is unusable from sessions (OAuth only); use rows get by id, search-count, or a UI filter
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
+- [CC Platform Backfill Sep5](cc-platform-backfill-sep5.md) — Sep 5 2026: 1,763 Prospect companies read for 1,875 credits; 44% ACD hit (not the 80% projected), 581 fresh enough to name, DWO 59%
+- [Clay Backfill Loop Pattern Sep5](clay-backfill-loop-pattern-sep5.md) — batched segment drain: --limit caps at 10, retry transient kicks, wait for settle or double-read, tolerate 6-min dispatch lag

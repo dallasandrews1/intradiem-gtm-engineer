@@ -174,3 +174,14 @@ No separate file. This skill governs the process inside any other skill's output
 
 ## Sep 4 addendum (the pressure standard)
 The cadence line above is the Sep 3 floor. From Sep 4 the standard for net-new sequences is the pressure model in the doctrine's Sep 4 addendum: five emails across two threads, three calls that all leave voicemails (EA route when there is no number), three LinkedIn DMs for accepted connects, a voice note where the persona warrants it, one breakup last, invite withdrawn after it, 16 to 17 touches over 18 business days. C-level seats get calls. Write the colleague line as a fact from the account map, never as a guess. No apology, no exit talk, direct asks after Email 1. Reference copy: `motions/shared/Messaging_Gold_Examples_Sep4.md`.
+
+## Platform read (added 2026-09-05)
+
+Every company in Audiences now carries a sourced contact center read, written by the `Tech stack read` workflow from the company's own job posts (PredictLeads through Clay): `CC Platform (latest)` (the ACD vendor), `CC Platform last seen` (ISO date), `WFM Platform (latest)` (the workforce vendor), `CC Platforms (all, PredictLeads)` (every match with dates), and `CC Platform (rep confirmed)` (a fact a rep stated, with who and when). The same rows are in `tam-outbound-engine/data/cc_platform_reads_all_sep5.csv` and, for customers, `motions/back_office_expansion/BO_Customer_CC_Platforms_Sep5.csv`.
+
+Rules for using it in copy:
+- A vendor name may appear in a message only when `CC Platform last seen` is within the last 12 months, or when `CC Platform (rep confirmed)` names it. Rep-confirmed wins over the read when they disagree.
+- Name the WFM vendor for WFM, operations and back-office seats ("on top of Calabrio"); name the ACD for the technical validator seat ("alongside Genesys"). Never both in one sentence.
+- Older reads are context for the rep's call notes, never a line in an email. Blank means say nothing about platforms; do not guess and do not infer a vendor from a job title.
+- The line is a fit statement, not a compliment: "on top of Verint, nothing replaced" is the shape. It goes in E1 for WFM personas and in the technical touch for everyone else, once per sequence.
+- Read the fields from the Audiences company record (by normalized domain) before drafting; if the record has no read, draft without a platform line.
