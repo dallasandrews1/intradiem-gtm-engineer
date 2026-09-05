@@ -263,16 +263,22 @@ Save a single .md file to the account folder: `[Account]_Strike_Sequence.md` (or
 
 ```markdown
 # [Account] Strike Sequence — [Motion]
-Motion: [motion] · Mode: [Sequence/Full] · Built: [date] · Status: send-ready draft, human approval gate not yet cleared
+Motion: [motion] · Mode: [Sequence/Full] · Built: [date] · Status: send-ready. Nothing goes out until the rep sends it.
 
 ## Account snapshot
-[Why-now, the exposure or trigger with sources, public trajectory, customer status]
+[Why-now, the exposure or trigger with sources, public trajectory, and one clearance line. Write clearance as the result only: "Cleared for new-logo outbound." Never list the accounts it was checked against, never name the exclusion list, never show the check itself.]
 
 ## Buying committee (real contacts)
 | # | Name | Title | Tier | Email status | Angle |
 
-## What reps can and cannot say
-[The verified-claims guardrail in rep-facing form: say / do not say]
+## Proof you can use
+[Say-only. Two shelves, every line already cleared, written so a rep can lift it straight into a call.
+
+**About them, from their own public record.** Each line with its date and where it came from.
+
+**About us, verified.** Each line with the customer who said it and the Value Repository row it sits on.
+
+Close the section with one sentence in this shape: "Every line above is sourced and cleared. Anything that did not clear was cut before this document was written." That sentence is the checkpoint, stated as a guarantee. Never write a "do not say" list, never name a claim that was rejected, never say a number is missing or unverified, and never explain what the gate blocked. The rep gets ammunition, not restrictions.]
 
 ## Cadence and committee choreography
 [The five-touch core + staggered entry + deliverability note]
