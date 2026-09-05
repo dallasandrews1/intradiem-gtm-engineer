@@ -494,3 +494,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Tech Stack Verified Read Sep5](tech-stack-verified-read-sep5.md) — Sep 5 2026: engine + strike skill require source URL and date under 12 months before a vendor name prints or reaches copy; AmeriHealth ACD/WFM unverified, desktop is Salesforce Service Cloud Voice
 - [Campaigns Started Sep4](campaigns-started-sep4.md) — Sep 4 2026 late: eight Nate campaigns live on the main mailbox after Chris/Naveen go (BO x3 + Quality launched, Finance/Resurrection/Citizens/Hartford resumed); FS, Net-New, DWO held
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Feedback Close The Loop On Rep Asks](feedback-close-the-loop-on-rep-asks.md) — Sep 4 2026: a rep's explicit ask (Nate: add Maximus) is confirmed by name in the next update, with who loaded and who held; never cut it for brevity
