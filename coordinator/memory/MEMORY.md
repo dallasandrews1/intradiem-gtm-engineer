@@ -497,3 +497,9 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
 - [Feedback Close The Loop On Rep Asks](feedback-close-the-loop-on-rep-asks.md) — Sep 4 2026: a rep's explicit ask (Nate: add Maximus) is confirmed by name in the next update, with who loaded and who held; never cut it for brevity
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-04
+- [Clay Formula Column Refs Sep4](clay-formula-column-refs-sep4.md) — Clay formulas resolve to column IDs, so a mis-capitalized name reads as 'Invalid field'; read live column names + real JSON keys (action test, 1 cr) before writing one
+- [Feedback Audiences Is Not Salesforce](feedback-audiences-is-not-salesforce-sep5.md) — Sep 5 2026: say "stamp on the Clay company record", never "write back"; nothing writes to Salesforce
+- [MessageGen Stale vs Sep3 Doctrine](messagegen-stale-vs-sep3-doctrine.md) — Clay MessageGen still runs the 5-touch, 115-word, "Worth 15 minutes" pre-Sep-3 rules while live lemlist copy is hand-authored under the Sep 3 doctrine
+- [Copy Authored Per Campaign Not Per Row](copy-authored-per-campaign-not-per-row-sep4.md) — Sep 4 decision: copy authored per campaign with lemlist variables; Clay is the variable factory, not the prose writer
