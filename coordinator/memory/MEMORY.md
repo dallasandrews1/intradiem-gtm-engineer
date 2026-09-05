@@ -521,3 +521,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
 - [Feedback No Claims Guidance To Partners](feedback-no-claims-guidance-to-partners.md) — partner-facing pages drop the "what we can say" section; partner reps are the sellers
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
+- [TAM Seed Data Never Swapped Sep5](tam-seed-data-never-swapped-sep5.md) — TAM CSVs are still the Jul 1 2026 interview seed; source column + SEED banner guard added, demo Act 1 moved to Centene
+- [Clay Name Search Misses Abbreviated Surnames](clay-name-search-misses-abbreviated-surnames.md) — a by-name Clay miss is never proof of a departure; confirm with the URL-keyed Enrich Person routine (0.5 cr)
