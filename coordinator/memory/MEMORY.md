@@ -525,3 +525,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
 - [TAM Seed Data Never Swapped Sep5](tam-seed-data-never-swapped-sep5.md) — TAM CSVs are still the Jul 1 2026 interview seed; source column + SEED banner guard added, demo Act 1 moved to Centene
 - [Clay Name Search Misses Abbreviated Surnames](clay-name-search-misses-abbreviated-surnames.md) — a by-name Clay miss is never proof of a departure; confirm with the URL-keyed Enrich Person routine (0.5 cr)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-05
+- [Brain Snapshot Rewrite Sep5](brain-snapshot-rewrite-sep5.md) — hosted brain now reads a dated gtm_state.json and withholds stale/uncited figures; Render redeploy still open
+- [Audiences Strike Universe Refresh Sep5](audiences-strike-universe-refresh-sep5.md) — 7 rows to 1,560 real accounts at 0 credits (verified); agent_count is the blocker, 2.6x ratio spread
+- [AllHands Final Cut Sep5](allhands-final-cut-sep5.md) — v2 cut assembled 4:18 on Desktop, zero traps in frame; narration unrecorded (all 8 takes silent), Act 3 short, Act 1 copy scroll dropped
