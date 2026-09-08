@@ -533,3 +533,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-07
 - [AllHands Naveen Edits Sep7](allhands-naveen-edits-sep7.md) — his 5 notes built without re-recording; v2 cut 4:38, system walk + 3 act openers + 2 coda slides, retitled "Using AI to widen the net"
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-07
+- [Feedback No Defensive Copy](feedback-no-defensive-copy.md) — Sep 7 2026: never name a doubt to dismiss it ("nothing is a mock-up"); read every on-screen line aloud, clipped parallel fragments are the AI-deck tell
