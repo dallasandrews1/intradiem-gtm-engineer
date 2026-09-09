@@ -552,3 +552,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [Feedback Cut Every Word That Doesn't Earn It](feedback-cut-every-word-that-doesnt-earn-it.md) — Sep 9 2026: delete every word, phrase or sentence that doesn't earn its place or sound like a person; first drafts ran a third too long
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Feedback First Layer For Non-Technical Readers](feedback-first-layer-for-non-technical-readers.md) — Sep 9 2026: mixed-audience pages get a light first layer (present link first, detail behind closed toggles, 'Sample team A' naming); depth is for the sponsor session
