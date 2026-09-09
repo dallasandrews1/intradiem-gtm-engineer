@@ -558,3 +558,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [GTM Cadence Sep8 Next Steps](gtm-cadence-sep8-next-steps.md) — Sep 8 cadence outcomes + Sep 9 DMs; 6sense fields verified populated in Audiences; Tom cleared new domains; Optum name-drop conflicts with the Value Repository
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Feedback Clay Profile Search For Product Signals](feedback-clay-profile-search-for-product-signals.md) — Sep 9 2026: run Clay advanced search on profile text before calling LinkedIn unreachable; batches of ~45 domains, 0 credits, Enrich Person to read the sentence
