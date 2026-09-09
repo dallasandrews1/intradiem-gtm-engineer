@@ -1,0 +1,16 @@
+---
+name: upt-displacement-verint-nice-sep9
+description: Sep 9 2026 UPT displacement build for Naveen's Sep 10 meeting with John; Verint estate 58 / NICE estate 142 prospects, sweep done (4 module-named, 22 vendor-confirmed) from the PredictLeads stack read, six Audiences segments, Verint-first call, sequences in motions/upt_displacement
+metadata:
+  type: project
+---
+
+Naveen's Sep 8 2026 1:1 ask: lists of companies running Verint DPA and NICE Desktop Analytics (front and back office), the DWO contacts at each, and a "Verint attack" / "NICE attack" sequence, ready before his Thursday Sep 10 meeting with John Norton. Product is User Productivity Tracking (UPT), the desktop layer; Naveen's framing is insight-only tools versus action.
+
+Built Sep 9 (0 credits): `motions/upt_displacement/`. Verint estate 58 prospect accounts (50 on Verint WFM), NICE estate 142 (97 CXone, 67 inContact, 15 NICE WFM), 13 in both, 14 held out: 11 SF customers plus Duke Energy (in the Customer Value Registry while SF Account Type says Prospect, the HCSC pattern again), Optum360 (optum.com) and an Aetna subsidiary, all caught by a name cross-check against the registry; the three are now in the six segments' filters and in the TAM engine customer_denylist.json. Six Audiences segments (ids in `lists/segments_made.json`). 112 operating executives at 53 of these accounts are already in the DWO Executives campaign and never get a second sequence. Brief page `UPT_Attack_Brief_Sep10.html` (Desktop copy too), copy in `UPT_Attack_Sequences_Sep9.md`.
+
+**The limit that shapes the motion:** no stack-read source detects the desktop-analytics module as a SKU; the lists are vendor estates. Each account needs a second signal (job posting naming DPA / Desktop Analytics, LinkedIn skill, vendor case study, or the rep-confirmed field) before it loads. Maximus is the rep-confirmed worked example (Nate, Sep 4).
+
+**Signal sweep (Sep 9, ~130 web searches):** desktop-analytics module named in public at 4 accounts (BCBSLA: Verint DPA in its case study; TTEC and Teleperformance: NICE Desktop Analytics; Maximus: Nate's read plus Verint's blinded Medicaid-BPO story naming DPA), vendor confirmed at 20 more, third-party listing only at 2, stack read alone at the rest. Vendors blind most desktop-analytics stories; web search cannot reach LinkedIn profiles or Workday/iCIMS job boards, so the rep-confirmed field and a Sales Nav keyword pass are the real qualifiers. Sweep also caught Express Scripts (Cigna), American Bankers Life (Assurant), Oak Street Health (CVS), BT Business (BT/EE) as customer families, and First Utility and Vivint Solar as merged entities; lists now Verint 58 / NICE 142, 20 held out, denylist extended. Outside-list finds: Continuum Global Solutions (Verint DPA) and Absa (NICE Desktop Analytics).
+
+**Calls made:** Verint first, NICE second, sourced to Nate's Aug 18 (NICE bundled free, harder to displace; Verint BO users unhappy) and Sep 4 (Maximus) reads. Module never the layer: copy says "on top of Verint" / "alongside CXone." Next: signal sweep on all 196 this week, wave 1 (Verint, six verticals + BPO, 30 to 50 accounts) week of Sep 21 on the warm mailbox, first read Oct 1. Related: [[feedback-6sense-replacement-lobby]], [[positioning-automation-first-aug17]], [[gtm-campaign-alignment-meeting-sep3]].

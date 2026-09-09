@@ -536,3 +536,11 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-07
 - [Feedback No Defensive Copy](feedback-no-defensive-copy.md) — Sep 7 2026: never name a doubt to dismiss it ("nothing is a mock-up"); read every on-screen line aloud, clipped parallel fragments are the AI-deck tell
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [UPT Displacement Verint/NICE Sep9](upt-displacement-verint-nice-sep9.md) — Sep 9 2026: Verint 58 / NICE 142 prospects, six segments, Verint first; sweep found the module named at 4 (BCBSLA, Maximus, TTEC, Teleperformance), vendor at 20; 9 customer-family or merged holds caught; brief + copy in motions/upt_displacement
+- [Naveen 1:1 Sep8 Asks](naveen-1on1-sep8-asks.md) — Sep 8 2026: Naveen reviews lemlist copy and owes messaging guidance, second domain waits on Tom, all-hands split, UPT attack ask for Sep 10 with John
+- [Outlook Read Paths VS Code Sep9](outlook-read-paths-vscode-sep9.md) — no session path reads Outlook mail; check pmo register then ask Dallas to paste
+- [Sierra BOO Framework V04 Sep9](sierra-boo-messaging-framework-v04-sep9.md) — marketing's integrated-campaign copy; Optum named at 18.4% vs registry blinded 15%
+- [JW Four Canadian Accounts Sep9](jw-four-canadian-accounts-sep9.md) — Sep 9 2026: JW MacDonald asked for back-office maps on Bell Canada, BMO, Telus, Canada Life (all prospects, SF IDs recorded); set jw on the Nate pipeline; review with JW + Nate next
+- [AllHands Naveen Notes Sep9](allhands-naveen-map-ask-sep9.md) — Sep 9 2026: Naveen's map-as-motion-graphic, no 'Nine campaigns', strong-AI notes built into v3 same day (flow scene, AI named on screen and in the read, 4:57)
