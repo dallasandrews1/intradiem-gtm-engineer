@@ -567,3 +567,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [Sierra BO Campaign Thread Sep9](sierra-bo-campaign-thread-sep9.md) — Sep 9 2026 thread: V04 copy approved for BO sequences, Optum/McKesson self-suppression, Melissa iteration question, Sierra's Pardot tracked-link question, timeline still owed
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Feedback Sierra Marketing Deliverables Approved As-Is](feedback-sierra-marketing-deliverables-approved-as-is.md) — Sep 9 2026: anything Sierra delivers for marketing is approved as-is and counts as marketing sign-off for the claims gate (names, figures); record it in the registry and use it
