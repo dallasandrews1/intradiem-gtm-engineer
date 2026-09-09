@@ -544,3 +544,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Sierra BOO Framework V04 Sep9](sierra-boo-messaging-framework-v04-sep9.md) — marketing's integrated-campaign copy; Optum named at 18.4% vs registry blinded 15%
 - [JW Four Canadian Accounts Sep9](jw-four-canadian-accounts-sep9.md) — Sep 9 2026: JW MacDonald asked for back-office maps on Bell Canada, BMO, Telus, Canada Life (all prospects, SF IDs recorded); set jw on the Nate pipeline; review with JW + Nate next
 - [AllHands Naveen Notes Sep9](allhands-naveen-map-ask-sep9.md) — Sep 9 2026: Naveen's map-as-motion-graphic, no 'Nine campaigns', strong-AI notes built into v3 same day (flow scene, AI named on screen and in the read, 4:57)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Side Quest Measurement Layer Sep9](side-quest-measurement-layer-sep9.md) — Sep 9 2026: adoption engine + telemetry dashboard + Greenlight data contract built on sample data in motions/ai_adoption_sidequest/; Kathryn's SMF/CSA v1.0 are the spec; Joey to Jason Dowden; Derek session open
+- [Feedback Deploy Everything To Pages](feedback-deploy-everything-to-pages.md) — Sep 9 2026: every built page goes live on a noindex Pages project by default, link first; hosting caution is Dallas's call, never a reason to withhold
+- [Wrangler Pages Create Force Sep9](wrangler-pages-create-force-sep9.md) — wrangler 4.130 delegates `pages project create` to Workers and fails; pass --force once to create the Pages project, then deploy normally
