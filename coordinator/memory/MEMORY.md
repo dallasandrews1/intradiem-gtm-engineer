@@ -561,3 +561,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [Feedback Clay Profile Search For Product Signals](feedback-clay-profile-search-for-product-signals.md) — Sep 9 2026: run Clay advanced search on profile text before calling LinkedIn unreachable; batches of ~45 domains, 0 credits, Enrich Person to read the sentence
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [BO Copy Three Versions Sep9](bo-copy-three-versions-sep9.md) — Sep 9: BO copy A/B/C compared, run C; 6sense keyword trigger design note delivered; proof figures page-verified (15 percent, 90-day pilot; 18.4 unverified)
