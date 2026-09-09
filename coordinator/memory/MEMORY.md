@@ -549,3 +549,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Side Quest Measurement Layer Sep9](side-quest-measurement-layer-sep9.md) — Sep 9 2026: adoption engine + telemetry dashboard + Greenlight data contract built on sample data in motions/ai_adoption_sidequest/; Kathryn's SMF/CSA v1.0 are the spec; Joey to Jason Dowden; Derek session open
 - [Feedback Deploy Everything To Pages](feedback-deploy-everything-to-pages.md) — Sep 9 2026: every built page goes live on a noindex Pages project by default, link first; hosting caution is Dallas's call, never a reason to withhold
 - [Wrangler Pages Create Force Sep9](wrangler-pages-create-force-sep9.md) — wrangler 4.130 delegates `pages project create` to Workers and fails; pass --force once to create the Pages project, then deploy normally
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Feedback Cut Every Word That Doesn't Earn It](feedback-cut-every-word-that-doesnt-earn-it.md) — Sep 9 2026: delete every word, phrase or sentence that doesn't earn its place or sound like a person; first drafts ran a third too long
