@@ -1,0 +1,12 @@
+---
+name: sierra-bo-campaign-thread-sep9
+description: Sep 9 2026 email thread "Back Office Integrated Campaign: outbound messaging for review" - V04 copy approved for the two BO sequences, Optum/McKesson must never get their own story, Melissa asked if copy can pivot, Naveen asked Dallas to incorporate before launch, Sierra asked whether Pardot custom-redirect tracked links help lemlist; her EOW timeline never arrived
+metadata:
+  type: project
+---
+
+Thread (Sierra Jones, sierra.moore@intradiem.com, Digital Marketing Strategist; cc Naveen, Carter, Genna). Sep 2: V04 messaging sent to marketing (Cheryl Eckel, Melissa Spies, Carter, John Englund; cc Ellen Hoy, Rachel-Lyn Cavano, Kristen DuPree), Syrup LinkedIn ads need ~3 weeks ramp, timeline promised by EOW (never posted to the thread as of Sep 9), asked whether sales/GTM outreach can launch first before all-hands, lander + ads target late September, John Englund writes lander copy. Sep 8: Melissa "good start, no changes now", asked whether email 1 can be changed if it gets no traction. Sep 9 10:44: Sierra says the messaging is APPROVED for the two back-office sequences; named customers (Optum, McKesson) must not receive copy naming their own account. Sep 9 10:49: Naveen asks Dallas to incorporate the messaging into the BO multichannel campaigns before formal launch and to explain how iteration works for Melissa. Sep 9 latest: Sierra is creating Pardot (Account Engagement) custom-redirect tracked links with UTMs and completion actions for CRM campaign association and asks whether that helps the sequences or lemlist already tracks.
+
+Dallas's reply drafted Sep 9 (in session, not sent): use her redirects as the only hop with lemlist click tracking off, one lander link per track from Email 2 onward (Email 1 link-free by doctrine), copy going in as version C, UnitedHealth/McKesson rows get the alternate proof line, 15 vs 18.4 percent and Optum naming asked as two checks, iteration = variants per step plus wave-by-wave swaps on replies, customer lanes launch first and net-new after mailbox warm-up, plus the Jack/Nate mailbox ask on the second sending domain and the 6sense technology-used field note.
+
+**How to apply:** marketing's approval covers V04 content, not the doctrine rebuild; keep the reply-all thread as the record for launch order and link tracking. Related: [[bo-copy-three-versions-sep9]], [[sierra-boo-messaging-framework-v04-sep9]], [[gtm-cadence-sep8-next-steps]], [[lemlist-sending-domain-fleet-aug31]].

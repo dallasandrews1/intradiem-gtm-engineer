@@ -564,3 +564,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [BO Copy Three Versions Sep9](bo-copy-three-versions-sep9.md) — Sep 9: BO copy A/B/C compared, run C; 6sense keyword trigger design note delivered; proof figures page-verified (15 percent, 90-day pilot; 18.4 unverified)
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
+- [Sierra BO Campaign Thread Sep9](sierra-bo-campaign-thread-sep9.md) — Sep 9 2026 thread: V04 copy approved for BO sequences, Optum/McKesson self-suppression, Melissa iteration question, Sierra's Pardot tracked-link question, timeline still owed
