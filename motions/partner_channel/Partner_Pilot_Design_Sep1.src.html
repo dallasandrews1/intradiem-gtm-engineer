@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Partner Channel Pilot</title>
+<!--FONTS-->
+<style>
+/* funnel */
+.funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:22px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg);box-shadow:var(--shadow)}
+.funnel div{padding:18px 20px;border-right:1px solid var(--line);position:relative}
+.funnel div:last-child{border-right:none}
+.funnel .st{font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+.funnel b{display:block;font-size:16.5px;letter-spacing:-.01em;margin:6px 0 4px;color:var(--ink)}
+.funnel small{display:block;font-size:12.5px;color:var(--ink-3);line-height:1.45}
+.funnel .add{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px;color:var(--ink-2)}
+.funnel .add span{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-600);font-weight:600;display:block;margin-bottom:3px}
+.funnel .mark{position:absolute;top:0;left:0;right:0;height:3px;background:var(--green)}
+.funnel div.goal .mark{background:var(--orange)}
+/* two-column need / make */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.split .card ul{margin-top:8px}
+/* spec blocks */
+.spec{display:grid;grid-template-columns:170px 1fr;gap:12px 20px;margin-top:14px;font-size:14.5px}
+.spec dt{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;padding-top:3px}
+.spec dd{color:var(--ink-2)}
+.spec dd b{color:var(--ink)}
+.metric td:first-child{color:var(--ink);font-weight:700;white-space:nowrap}
+@media(max-width:900px){.funnel{grid-template-columns:1fr 1fr}.funnel div{border-bottom:1px solid var(--line)}.split{grid-template-columns:1fr}.spec{grid-template-columns:1fr}}
+@media(max-width:600px){.funnel{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">GTM Engineering &middot; Partner channel &middot; Pilot design</div>
+    <h1 data-h="2">Ten accounts, 45 days, <span class="spark">one number</span>.</h1>
+    <p class="sub" data-h="3">A pilot on the partner pre-pipeline: GTM Engineering works a small cohort of registered accounts the way it works new logo, and the read comes from the Salesforce stage fields Partnerships already keeps.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="249">0</span></b><span>pre-pipeline records today</span></div>
+      <div><b>$<span class="hc" data-to="101">0</span>M</b><span>pre-pipeline ACV, $46M qualified</span></div>
+      <div><b><span class="hc" data-to="25">0</span>%+</b><span>registered lead to 12-minute meeting</span></div>
+      <div><b><span class="hc" data-to="45">0</span> days</b><span>the window the benchmark is read in</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>Haresh Gangwani, Frank Ciccone</div>
+      <div><span>Status</span>Design. Account list review Tue Sep 1, 1:30 CT.</div>
+      <div><span>By</span>Dallas Andrews, GTM Engineering</div>
+      <div><span>First partner</span>3xG (Verint whitespace list). Five9 next.</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>The test.</b> Five to ten accounts Frank picks, worked with sourced buying committees, per-account briefings, and multi-channel sequences, against the same benchmark Partnerships already holds itself to: 25%+ of registered leads reach the 12-minute meeting inside 45 days.</li>
+        <li><b>The read.</b> Nothing new to track. Pilot accounts get one flag in Salesforce; the stage fields and their dates do the rest. A holdout of similar accounts stays on the current process so the comparison is like for like.</li>
+        <li><b>What runs in the background.</b> A weekly update back to each partner on the accounts they gave us, and a nurture drip for registered accounts that aren't ready yet. Both drafted by the engine, both sent on Frank's say-so until they've earned autopilot.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">The funnel, as Salesforce keeps it</div>
+    <h2>Four stages already on the record. The pilot adds work at each one, not fields.</h2>
+    <p class="lede">Stage names below are the pre-pipeline values as they read today; the exact API names get confirmed with Sales Ops when the report is shared.</p>
+    <div class="funnel rv">
+      <div><i class="mark"></i><div class="st">Stage 1</div><b>Registered lead</b><small>Partner registers the account; prospect, partner rep and partner account are captured.</small><div class="add"><span>Pilot adds</span>Buying committee sourced (VITO, champion, evaluator, gatekeeper), verified emails, one-page account briefing.</div></div>
+      <div><i class="mark"></i><div class="st">Stage 2</div><b>CAM to AE intro delivered</b><small>Channel manager hands the account to the AE.</small><div class="add"><span>Pilot adds</span>Sequence starts the same day: email, LinkedIn, call prompts, partner named where 3xG agrees.</div></div>
+      <div><i class="mark"></i><div class="st">Stage 3</div><b>12-minute meeting scheduled</b><small>Partner intro, then the partner-to-customer intro. This is the benchmark stage.</small><div class="add"><span>Pilot adds</span>Prep note per attendee; sequence pauses automatically on the stage change.</div></div>
+      <div class="goal"><i class="mark"></i><div class="st">Stage 4</div><b>Customer meeting (40 minutes)</b><small>The conversion to qualified opportunity. Disqualified is the other exit.</small><div class="add"><span>Pilot adds</span>Second-read metric. Disqualified reasons feed the next cohort's targeting.</div></div>
+    </div>
+    <p style="margin-top:16px">Reference record for what a fast conversion looks like: <b>Five9 to Automated Health Systems</b>, registered and converted to opportunity Aug 18, engagement notes attached in Salesforce. That file is the pattern the briefings and sequences are written against.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Benchmark and cohort</div>
+    <h2>Partnerships' own number, read on a small cohort with a holdout.</h2>
+    <div class="grid">
+      <div class="card rv">
+        <span class="tag go">Benchmark</span>
+        <h4>25%+ to the 12-minute meeting inside 45 days</h4>
+        <p>Primary read. The 40-minute customer meeting is the second read, on the same clock. Speed is reported alongside rate: median days from registered lead to 12-minute meeting scheduled.</p>
+        <ul>
+          <li>Baseline comes from the existing 249 records: trailing conversion and median days by stage, computed from the same fields, once the report is shared.</li>
+          <li>Cost per meeting sits next to the Cold row on the council view when the first meetings land, in the council's own units.</li>
+        </ul>
+      </div>
+      <div class="card rv" style="--i:1">
+        <span class="tag now">Cohort</span>
+        <h4>Five to ten accounts, picked by Frank on Sep 1</h4>
+        <p>From the 3xG whitespace list, operational visualizer accounts first (a first back-office deployment, then nothing), then real back-office deployments, then desktop-analytics-only.</p>
+        <ul>
+          <li>Not current Intradiem customers; any that are get held for the account manager, never worked cold.</li>
+          <li>Enough seats to matter and a findable operations leadership layer; both checked before the pick, at no credit cost.</li>
+          <li>3xG's sensitive columns are stripped before the list touches any tool.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gate rv">
+      <h4>Holdout</h4>
+      <p>A matched set of similar accounts (same segment band, similar seats) stays on the current partner process for the same 45 days and is read from the same fields. If the picked list is too small to split, the comparison falls back to the trailing twelve months of the same stages, stated as such on the readout. Either way the pilot is judged against Partnerships' own history, not against a number GTM Engineering chose.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Measurement</div>
+    <h2>Read from the pre-pipeline stage fields. One flag added, nothing else.</h2>
+    <div class="tablewrap">
+      <table class="metric">
+        <thead><tr><th>Metric</th><th>Read from</th><th>When</th></tr></thead>
+        <tbody>
+          <tr class="rv"><td>Reached 12-minute meeting by day 45</td><td>Stage = 12-minute meeting scheduled, stage date minus registered date</td><td>Weekly, final at day 45</td></tr>
+          <tr class="rv"><td>Median days to 12-minute meeting</td><td>Same two dates, cohort and holdout side by side</td><td>Weekly</td></tr>
+          <tr class="rv"><td>Reached customer meeting (40 minutes)</td><td>Stage = customer meeting, or opportunity created</td><td>Day 45 and day 90</td></tr>
+          <tr class="rv"><td>Touches to first reply</td><td>Lemlist activity per account, joined on domain</td><td>Weekly</td></tr>
+          <tr class="rv"><td>Disqualified, with reason</td><td>Stage = disqualified plus the reason field where filled</td><td>Weekly; feeds cohort two</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <dl class="spec">
+      <dt>Pilot flag</dt><dd>One way to identify pilot accounts in Salesforce, proposed as a campaign membership (campaign: GTM Engineering, partner pilot, 3xG) so it also carries the GTM Engineering lead source the council asked for. Sales Ops picks the mechanism.</dd>
+      <dt>Access</dt><dd>Read access to the pre-pipeline report and the reference record is the only Salesforce ask. GTM Engineering reads; it does not write to the pre-pipeline object.</dd>
+      <dt>Readout</dt><dd>One weekly line in the Friday readout and the partner update; a one-page day-45 read for Haresh and Frank. Surfaced and realized stay separate, as everywhere else.</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Weekly partner update</div>
+    <h2>The partner hears what happened with the accounts they gave us, every week, without anyone writing it.</h2>
+    <dl class="spec">
+      <dt>What it is</dt><dd>One short email per partner alliance manager (3xG: Jeremy), assembled Monday morning: accounts received, where each stands in the funnel, meetings booked that week, what we're doing next, and one line the partner can act on (an intro, a nudge, a date).</dd>
+      <dt>Sources</dt><dd>Pre-pipeline stage changes for that partner's registered accounts (read-only), lemlist activity for the same accounts, the pilot flag. Nothing typed by hand.</dd>
+      <dt>Who sends</dt><dd>Drafted by the engine into Frank's review; sent from Frank. After four consecutive weeks with no edits the checkpoint moves to "send unless stopped by 9:00", the same widening pattern used elsewhere. It never sends unreviewed in the pilot.</dd>
+      <dt>Content rules</dt><dd>Account status only; no pricing, no internal notes, nothing about other partners. Any Intradiem figure passes the verified-claims gate before it appears.</dd>
+      <dt>Logging</dt><dd>The job writes a log the daily rundown reads. It does not message anyone on its own.</dd>
+    </dl>
+    <div class="callout rv">
+      <h4>Partner-seller side, separate track</h4>
+      <p>Frank's other gap is staying visible to partner AEs and solution consultants. That's a monthly note to the partner-seller list Frank keeps (webinar recordings, the one-pagers, a customer story), sent from Frank, with the list held in Clay so the engine can see who opened and who went quiet. Same review gate. Marketing supplies the pieces.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Nurture drip</div>
+    <h2>Registered accounts that aren't ready yet stay warm on a slow, light sequence.</h2>
+    <dl class="spec">
+      <dt>Who enters</dt><dd>Registered accounts past the first sequence without a meeting, and accounts the partner says are not ready. Never a current customer, never an account with an open opportunity.</dd>
+      <dt>Shape</dt><dd>Four touches over 45 days (day 1, 12, 26, 40), email plus a LinkedIn profile view; no call prompts. Each touch carries one piece: the DMG webinar recording, the back-office one-pager, a short customer story, a partner-co-signed note where 3xG agrees to be named.</dd>
+      <dt>Exit</dt><dd>Stops automatically when the stage moves to 12-minute meeting scheduled or disqualified, or on any reply. Replies route to Frank and the sending rep the same hour.</dd>
+      <dt>Sender</dt><dd>Proposed: Nate's dedicated sending domain, Frank on reply-to. Frank confirms on Sep 1.</dd>
+      <dt>Copy</dt><dd>Drafted from the per-account briefing, sharpened and gated (verified claims, customer exclusion) before load. Frank reviews the four touches once; after that the sequence runs on its own.</dd>
+    </dl>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Inputs</div>
+    <h2>What comes from 3xG, and what GTM Engineering makes.</h2>
+    <div class="split">
+      <div class="card rv">
+        <span class="tag now">From 3xG, per account</span>
+        <ul>
+          <li>Account name and headquarters (a domain is enough to resolve the rest)</li>
+          <li>Verint products deployed and roughly when (last 24 months), seat counts: already in the whitespace file</li>
+          <li>Which bucket: desktop analytics only, back-office deployment, operational visualizer</li>
+          <li>Whether 3xG is fine being named in outreach; the original deployment sponsor where they know one (name and title; email is a bonus)</li>
+          <li>One sentence on why the account stalled after the first deployment</li>
+        </ul>
+      </div>
+      <div class="card rv" style="--i:1">
+        <span class="tag go">GTM Engineering generates</span>
+        <ul>
+          <li>The buying committee per account with verified emails and LinkedIn (VITO, champion, evaluator, gatekeeper)</li>
+          <li>A one-page briefing per account: what changed, who's who, the angle. Replaces the Gemini pass Jeremy was running.</li>
+          <li>The multi-channel sequences in lemlist, reviewed by Frank before anything goes out</li>
+          <li>The weekly update back to 3xG and the nurture drip</li>
+          <li>The day-45 read against the benchmark</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout rv">
+      <h4>Stripped before use</h4>
+      <p>Pricing, margins, contract terms, 3xG's internal notes and people. The intake script drops these columns on read and writes a manifest of what it removed, so the scrub is on the record.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Next six weeks</div>
+    <h2>Running by the all-hands, read at day 45.</h2>
+    <ul class="cal">
+      <li class="rv"><span class="d">Tue Sep 1</span><span class="e">Account list review with Frank</span><span class="r">Cohort and holdout picked; sensitive columns agreed; who is named in outreach; Salesforce report shared.</span></li>
+      <li class="rv"><span class="d">Sep 2 to 4</span><span class="e">Committees sourced, briefings written</span><span class="r">Customer-exclusion gate on every account; sequences drafted from the briefings.</span></li>
+      <li class="rv"><span class="d">Week of Sep 7</span><span class="e">Frank reviews copy; first wave loads</span><span class="r">Weekly partner update drafts its first Monday email; pipeline council Sep 10 hears "running", no numbers yet.</span></li>
+      <li class="rv"><span class="d">Week of Sep 14</span><span class="e">All-hands: the 3xG engine is one of the nine running</span><span class="r">Five9 intro through Frank and Haresh sets up cohort two.</span></li>
+      <li class="rv"><span class="d">Late October</span><span class="e">Day-45 read</span><span class="r">Rate and speed against the benchmark, cohort versus holdout, one page for Haresh and Frank.</span></li>
+    </ul>
+    <div class="gate rv">
+      <h4>What Sep 1 settles</h4>
+      <p>The five to ten accounts and their holdout; which whitespace columns stay out; whether 3xG is named; the reply-to for the drip; and read access to the pre-pipeline report and the Automated Health Systems record. Everything after that is build.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. GTM Engineering &middot; Partner channel</span>
+  <span>Pilot design v1 &middot; Sep 1 2026 &middot; source: channel campaigns call, Aug 31 2026</span>
+</footer>
+</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">GTM Engineering &middot; Partner channel</div>
+  <h1 data-a="3">Ten accounts, 45 days, <span class="spark">one number</span>.</h1>
+  <p class="pl" data-a="4">A pilot on the partner pre-pipeline, read from the stage fields Partnerships already keeps.</p>
+</section>
+<section class="pslide" data-title="Funnel">
+  <div class="pe" data-a="1">The funnel, as Salesforce keeps it</div>
+  <h2 data-a="2">Four stages on the record. <span class="spark">Work added at each one</span>, no new fields.</h2>
+  <div class="pgrid" data-a="3">
+    <div><b>Registered lead</b><span>Committee sourced, emails verified, one-page briefing.</span></div>
+    <div><b>Intro delivered</b><span>Sequence starts the same day, partner named where agreed.</span></div>
+    <div><b>12-minute meeting</b><span>The benchmark stage. Prep note per attendee.</span></div>
+    <div><b>Customer meeting</b><span>The second read. Disqualified reasons feed cohort two.</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="Benchmark">
+  <div class="pe" data-a="1">Benchmark and cohort</div>
+  <h2 data-a="2">Partnerships' own number, <span class="spark">on a small cohort with a holdout</span>.</h2>
+  <div class="pgrid c3" data-a="3">
+    <div><i class="big">25%+</i><b>to the 12-minute meeting</b><span>inside 45 days; the 40-minute meeting is the second read.</span></div>
+    <div><i class="big">5 to 10</i><b>accounts Frank picks</b><span>operational visualizer first; current customers held for the AM.</span></div>
+    <div><i class="big">1</i><b>flag in Salesforce</b><span>everything else is read from the stage fields and their dates.</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="Background">
+  <div class="pe" data-a="1">Runs in the background</div>
+  <h2 data-a="2">The partner hears what happened. <span class="spark">Nobody writes it.</span></h2>
+  <ul class="plist" data-a="3">
+    <li><span class="d">Weekly update</span><span><b>Per partner, Monday morning.</b> <span class="r">Accounts received, stage, meetings, next step. Frank reviews, Frank sends, gate widens after four clean weeks.</span></span></li>
+    <li><span class="d">Nurture drip</span><span><b>Four light touches over 45 days.</b> <span class="r">Exits on a meeting or a reply. Never a customer, never an open opportunity.</span></span></li>
+    <li><span class="d">Partner sellers</span><span><b>Monthly note from Frank.</b> <span class="r">Webinars, one-pagers, stories; list held so the engine sees who went quiet.</span></span></li>
+  </ul>
+</section>
+<section class="pslide" data-title="Next">
+  <div class="pe" data-a="1">Next six weeks</div>
+  <h2 data-a="2">Running by the all-hands. <span class="spark">Read at day 45.</span></h2>
+  <ul class="plist" data-a="3">
+    <li><span class="d">Sep 1</span><span><b>List review with Frank.</b> <span class="r">Cohort, holdout, columns, naming, report access.</span></span></li>
+    <li><span class="d">Sep 2 to 4</span><span><b>Committees, briefings, sequences.</b> <span class="r">Customer-exclusion gate on every account.</span></span></li>
+    <li><span class="d">Week of Sep 7</span><span><b>Frank reviews copy; first wave loads.</b> <span class="r">Council hears "running".</span></span></li>
+    <li><span class="d">Late October</span><span><b>Day-45 read.</b> <span class="r">Cohort versus holdout, one page.</span></span></li>
+  </ul>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; Partner channel pilot</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 5</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<!--PRESENT-->
+</body>
+</html>
