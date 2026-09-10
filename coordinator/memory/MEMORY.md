@@ -570,3 +570,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-09
 - [Feedback Sierra Marketing Deliverables Approved As-Is](feedback-sierra-marketing-deliverables-approved-as-is.md) — Sep 9 2026: anything Sierra delivers for marketing is approved as-is and counts as marketing sign-off for the claims gate (names, figures); record it in the registry and use it
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
+- [All-hands Marketing PPTX Sep10](allhands-marketing-pptx-sep10.md) — Sep 10 2026: marketing's exact AI-Champions PPT built with the demo video embedded via motions/all_hands_sep14/build_pptx.py; Desktop/Intradiem Deliverables/All-hands demo (Sep 10)/; headshots open
