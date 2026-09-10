@@ -585,3 +585,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [BO Integrated Campaign Thread Sep9](bo-integrated-campaign-thread-sep9.md) — copy approved, Melissa asks can we pivot mid-flight, Sierra asks about Pardot tracked links, Naveen ads touch base Sep 11
 - [Lemlist Attribution Design Sep10](lemlist-attribution-design-sep10.md) — attribution via lemlist SF sync + lead fields, not per-campaign Pardot redirects (redirect actions need cookied prospects)
 - [Feedback Peer Messages No Instructions](feedback-peer-messages-no-instructions.md) — Sep 10 2026: never tell a peer how to do their job in their tool; say what we handle and what we need, stop
+- [15Five Week 10 Sep 5-11](fifteenfive-week10-sep5-11.md) — Sep 10 2026: this week's check-in built from Otter + Slack + files, live as week 7 on fifteenfive-backfill.pages.dev, 12 lines, not yet submitted
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
+- [Slack Surfaces + Workflows Findings Sep10](slack-surfaces-workflows-findings-sep10.md) — Surfaces are static, Workflow Builder has no outbound step, Slackbot MCP client needs slack_identity_auth (brain returns 401 today)
