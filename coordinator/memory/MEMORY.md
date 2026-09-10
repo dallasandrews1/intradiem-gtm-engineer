@@ -573,3 +573,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
 - [All-hands Marketing PPTX Sep10](allhands-marketing-pptx-sep10.md) — Sep 10 2026: marketing's exact AI-Champions PPT built with the demo video embedded via motions/all_hands_sep14/build_pptx.py; Desktop/Intradiem Deliverables/All-hands demo (Sep 10)/; headshots open
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
+- [Feedback Title GTM Engineer Only](feedback-title-gtm-engineer-only.md) — Sep 10 2026: Dallas's title on any slide or bio is plain 'GTM Engineer', no AI Champion or other add-ons
