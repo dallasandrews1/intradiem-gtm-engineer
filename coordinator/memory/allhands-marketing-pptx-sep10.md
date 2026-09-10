@@ -18,4 +18,6 @@ Live counts used Sep 10: lemlist running = 8 (Nate: BO Expansion Insurance, Hart
 
 Open: headshots (no photo on disk or via Slack/M365 tools; the two circular picture placeholders are empty, marketing or Dallas drops them in); which intro slide stays depends on Jen/marketing's call.
 
+**Copy pass (Sep 10, Dallas's ask: no fluff, no AI-sounding lines):** title cut to "GTM Engineering: using AI to widen the net" (Naveen's phrase had AI twice); Dallas's title plain "GTM Engineer"; bios one or two plain sentences; no "judgment checkpoints", "gated", "orchestrated", "capacity created" on a slide, say "a person deciding at the points that matter", "checked", "time given back"; "About 1,800 hours" carries the estimate; "adopted by leadership" dropped from the committee card.
+
 **How to apply:** rerun the script after any count change; never put the hour arithmetic on a slide; the video is silent on purpose (Naveen Sep 9 "Please do it live"). Related: [[allhands-naveen-map-ask-sep9]], [[allhands-final-cut-sep5]], [[feedback-no-showy-deliverable-copy]].
