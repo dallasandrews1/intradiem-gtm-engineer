@@ -576,3 +576,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
 - [Feedback Title GTM Engineer Only](feedback-title-gtm-engineer-only.md) — Sep 10 2026: Dallas's title on any slide or bio is plain 'GTM Engineer', no AI Champion or other add-ons
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
+- [Feedback Reach-Out By Committee Not Seats](feedback-reach-out-by-committee-not-seats.md) — Sep 10 2026: size reach-out as the buying committee present per account (role holders found), never a seats-per-account quota
