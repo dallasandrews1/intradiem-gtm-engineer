@@ -1,6 +1,6 @@
 ---
 name: outlook-read-paths-vscode-sep9
-description: Sep 9 2026 - no path reads Dallas's Outlook mail from a VS Code / CLI session (M365 connector unauthorized, New Outlook has no AppleScript message access, headless claude -p hits the same auth wall); ask Dallas to paste the email
+description: Sep 9 2026 - the M365 connector can show as unauthorized mid-session; after a session resume it worked (Sep 10). New Outlook has no AppleScript message access and headless claude -p shares the auth state. Retry the connector first, then ask Dallas to paste
 metadata:
   type: project
 ---
@@ -9,4 +9,4 @@ Tried Sep 9 2026 while asked to read a Naveen email: the claude.ai Microsoft 365
 
 **Why:** an hour of probing produced nothing; the fastest path is the paste.
 
-**How to apply:** when Dallas asks to read an Outlook email, check the pmo register/log for a captured quote, then ask him to paste the body (or authorize Microsoft 365 in claude.ai connector settings). Do not spend the session on store forensics again. Related: [[naveen-1on1-sep8-asks]].
+**How to apply:** when the M365 tools are missing, load them with ToolSearch first (they reappeared after the Sep 10 resume and read the whole thread). If still unauthorized, check the pmo register/log for a captured quote, then ask him to paste. Never spend a session on store forensics. Long thread bodies overflow the tool result; slice the saved file with python and cut at the first quoted-message marker. Related: [[naveen-1on1-sep8-asks]].

@@ -580,5 +580,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
 - [Feedback Reach-Out By Committee Not Seats](feedback-reach-out-by-committee-not-seats.md) — Sep 10 2026: size reach-out as the buying committee present per account (role holders found), never a seats-per-account quota
 
-## Swept from Dallass-MacBook-Pro on 2026-09-01
-- [Context-Bus Ingest Verified Aug6](context-bus-ingest-verified-aug6.md) — first cross-laptop drop ingested clean on work Mac; sync docs/skills for parity, do NOT load automation plists here, coordinator CLAUDE.md brand rule was stale
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
+- [Inger Churn-Risk Save Plan Sep10](inger-churn-risk-save-plan-sep10.md) — Sep 10 2026: Inger's churn-risk save system ask (Cleveland Clinic Jan 2027 renewal, RFP, Harmonic); Save Room + tracker import + staged watcher built same day (RED 5 of 7); PMO list = Project Task Tracker export schema; settle the disputed savings number before widening
+- [BO Integrated Campaign Thread Sep9](bo-integrated-campaign-thread-sep9.md) — copy approved, Melissa asks can we pivot mid-flight, Sierra asks about Pardot tracked links, Naveen ads touch base Sep 11
+- [Lemlist Attribution Design Sep10](lemlist-attribution-design-sep10.md) — attribution via lemlist SF sync + lead fields, not per-campaign Pardot redirects (redirect actions need cookied prospects)
+- [Feedback Peer Messages No Instructions](feedback-peer-messages-no-instructions.md) — Sep 10 2026: never tell a peer how to do their job in their tool; say what we handle and what we need, stop
