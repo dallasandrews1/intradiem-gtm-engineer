@@ -597,3 +597,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Feedback AM Pages Verified Only, No New Tool](feedback-am-pages-verified-only-no-new-tool.md) — Sep 11 2026: AM-facing rooms show only verified contacts (no confirm-in-Sales-Nav asks) and the value arrives in Outlook/PMO list; the page is the link behind the note, never a tool to remember
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Feedback Map vs Route Comms Plan](feedback-map-vs-route-comms-plan.md) — Sep 11 2026: a save room's first screen is the communication plan (routes around the blocker, lanes with owners by role, dated moves, gated messages) on the ADT precedent; contacts and health are the appendix
