@@ -600,3 +600,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Feedback Map vs Route Comms Plan](feedback-map-vs-route-comms-plan.md) — Sep 11 2026: a save room's first screen is the communication plan (routes around the blocker, lanes with owners by role, dated moves, gated messages) on the ADT precedent; contacts and health are the appendix
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [AM Hierarchies Only Inger Sep11](am-hierarchies-only-inger-sep11.md) — Sep 11 2026: only Inger's 12 AM maps ever arrived; Savannah asked in the marketing group DM about hierarchies + a post-all-hands follow-up
