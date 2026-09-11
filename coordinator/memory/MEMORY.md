@@ -628,3 +628,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Brain Hosted On Personal Accounts Sep11](brain-hosted-on-personal-accounts-sep11.md) — brain on Dallas personal Render, snapshot on personal Cloudflare; say "a service I host on my own account", never "our service", in admin or leadership copy
 - [Brain Snapshot Publish Leg Manual Sep11](brain-snapshot-publish-leg-manual-sep11.md) — brain refetches the URL every 5 min but nothing on this Mac auto-publishes the snapshot; nightly stages only, stale at 36h unless --deploy is wired
 - [Brain Live Loop Plan Sep11](brain-live-loop-plan-sep11.md) — four-part loop plan (Audiences accounts, unreviewed-to-cited triggers via Slack approve/deny, nightly --deploy, weekly research job); loop thread owns it incl. the deploy flag; approve/deny rides the rundown listener, never new scopes on the GTM Brain app
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Live Loop Strike Universe Sep11](live-loop-strike-universe-sep11.md) — Sep 11 2026 dry-run build: universe from Audiences segment at build time, war-room signals served unreviewed with APPROVE/DENY in the rundown thread (no new Slack scopes), nightly deploy flag off, weekly facts refresh plist not loaded; Dallas shapes the segment filter and flips the flags
