@@ -96,7 +96,7 @@ BODY = f"""
 </div>
 <h3>Inger's sixteen, placed</h3>
 <div class="tablewrap"><table><thead><tr><th>Name</th><th>Title in research</th><th>Title live (Salesforce or LinkedIn)</th><th>Bridge</th><th>Role in the save</th><th>Track</th><th>Email</th></tr></thead><tbody>{inger_rows}</tbody></table></div>
-<div class="gate rv"><h4>Emails</h4><p>Salesforce emails are real. The seven bridged names were validated on Sep 10 2026 through the Clay Work Email routine fed the LinkedIn URL: 7 of 7 found for 4.2 credits. Two differ from the name pattern (rganem, scottr), which is why inferred addresses never send. The four names the bridge did not match (Chom, Laraway, Peacock, Rothman) still carry inferred addresses and need a Sales Navigator confirmation before any spend.</p></div>
+<div class="gate rv"><h4>Emails</h4><p>Salesforce emails are real. All twelve searchable names from Inger's research were verified Sep 10 and 11 2026 through the Clay Work Email routine: 12 of 12 found for 6.9 credits. Three differ from the name pattern (rganem, scottr, rr), which is why inferred addresses never send. Leslie Chom shows retired on LinkedIn and is off the list; the Florida David has no surname.</p></div>
 <details class="rv"><summary>Back-office map, 20 cards</summary><div class="tablewrap"><table><thead><tr><th>#</th><th>Name</th><th>Title</th><th>Level</th><th>Function</th><th>Reports to</th><th>Flag</th></tr></thead><tbody>{bo_rows}</tbody></table></div></details>
 <details><summary>Salesforce-known contacts, {len(d['known'])}</summary><div class="tablewrap"><table><thead><tr><th>Name</th><th>Title</th><th>Email</th><th>Lead status</th></tr></thead><tbody>{known_rows}</tbody></table></div></details>
 </div></section>

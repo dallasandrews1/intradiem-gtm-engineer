@@ -723,14 +723,14 @@
   {
    "name": "Leslie Chom",
    "title_inger": "Director and Product Owner, Patient and Caregiver Computing",
-   "title_live": "",
-   "linkedin": "",
-   "bridge": "not found at domain",
+   "title_live": "Retired (LinkedIn headline, Sep 11 2026)",
+   "linkedin": "https://www.linkedin.com/in/leslie-chom-2067473/",
+   "bridge": "departed",
    "layer": "new",
-   "role": "RFP evaluator. Confirm in Sales Nav before any touch.",
-   "track": "Stakeholder",
+   "role": "Retired. Off the list.",
+   "track": "Off",
    "email": "",
-   "email_inferred": "choml@ccf.org",
+   "email_inferred": "",
    "email_validated": ""
   },
   {
@@ -749,28 +749,28 @@
   {
    "name": "Dennis Laraway",
    "title_inger": "EVP and Chief Financial Officer",
-   "title_live": "",
+   "title_live": "EVP and CFO since Mar 2023 (Cleveland Clinic newsroom)",
    "linkedin": "",
-   "bridge": "not found at domain",
+   "bridge": "confirmed on the web",
    "layer": "new",
    "role": "Economic buyer. Only after the reviewed number holds.",
    "track": "Hold, then exec",
    "email": "",
-   "email_inferred": "larawayd@ccf.org",
-   "email_validated": ""
+   "email_inferred": "",
+   "email_validated": "larawayd@ccf.org"
   },
   {
    "name": "Bill Peacock",
    "title_inger": "EVP and Chief of Operations",
-   "title_live": "",
+   "title_live": "EVP, Chief of Operations (Cleveland Clinic leadership page)",
    "linkedin": "",
-   "bridge": "not found at domain",
+   "bridge": "confirmed on the web",
    "layer": "new",
    "role": "Top of operations. Mary Ann's touch, same gate.",
    "track": "Hold, then exec",
    "email": "",
-   "email_inferred": "peacockb@ccf.org",
-   "email_validated": ""
+   "email_inferred": "",
+   "email_validated": "peacockw@ccf.org"
   },
   {
    "name": "Kelly Hancock",
@@ -783,7 +783,7 @@
    "track": "Back office",
    "email": "",
    "email_inferred": "",
-   "email_validated": ""
+   "email_validated": "hancockk@ccf.org"
   },
   {
    "name": "Emily Monteleone",
@@ -796,7 +796,7 @@
    "track": "Back office",
    "email": "",
    "email_inferred": "",
-   "email_validated": ""
+   "email_validated": "monteleonee@ccf.org"
   },
   {
    "name": "Rebecca Vance",
@@ -853,15 +853,15 @@
   {
    "name": "Richard Rothman",
    "title_inger": "Indian River, quality improvement",
-   "title_live": "",
-   "linkedin": "",
-   "bridge": "not found at domain",
+   "title_live": "VP and Chief Medical Officer, Indian River Hospital",
+   "linkedin": "https://www.linkedin.com/in/richardrothmanmd/",
+   "bridge": "found, confirmed",
    "layer": "new",
    "role": "Regional",
    "track": "Bench",
    "email": "",
-   "email_inferred": "rothmanr@ccf.org",
-   "email_validated": ""
+   "email_inferred": "",
+   "email_validated": "rr@ccf.org"
   },
   {
    "name": "David (surname not given)",
@@ -1399,7 +1399,7 @@
    "Task Due Date": "9/10/2026",
    "Task Progress": "Completed",
    "Assigned To": "Dallas Andrews",
-   "Notes": "Done 9/10/2026: 7 of 7 found via the Clay Work Email routine, 4.2 credits. Two differ from the name pattern (rganem, scottr). Four names still need Sales Nav confirmation: Chom, Laraway, Peacock, Rothman.",
+   "Notes": "Done 9/11/2026: 12 of 12 searchable names verified via the Clay Work Email routine, 6.9 credits. Leslie Chom shows retired on LinkedIn and is off the list; the Florida \"David\" has no surname.",
    "Additional Assignees": "",
    "Archive?": "No",
    "Link to Item": "",
@@ -1435,12 +1435,14 @@
  "email_validation": {
   "date": "2026-09-10",
   "method": "Clay Work Email routine (function t_0thx4ovuPGp8sjH2hPP) fed LinkedIn URL + name + ccf.org",
-  "found": 7,
-  "of": 7,
-  "credits": 4.2,
+  "found": 12,
+  "of": 12,
+  "credits": 6.9,
   "runs": [
    "run_0tl610sVtNRxiYNudRU",
-   "run_0tl611qBZshzes8yvyC"
+   "run_0tl611qBZshzes8yvyC",
+   "run_0tl76g5N43Ag7w8Cooe",
+   "run_0tl76klBXcafpRbffsk"
   ]
  },
  "email_pattern": {

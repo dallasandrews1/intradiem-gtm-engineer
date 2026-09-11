@@ -26,27 +26,29 @@ inger = [
  ("Scott Faini", "IT Product Director, Unified Communications", "Sr. Director Unified Communications (Salesforce)", "", "in Salesforce", "known", "RFP voice. Platform continuity.", "Stakeholder"),
  ("Katherine Neal", "IT Director and Product Owner, Access Innovations", "Senior IT Solutions Architect, Patient Access, Patient Experience and Revenue Cycle Management (since Jul 2025)", "https://www.linkedin.com/in/kate-neal95/", "found, title differs", "new", "RFP evaluator, technical. Title on LinkedIn is architect, not director.", "Stakeholder"),
  ("Bob Ganem", "ITD Director and Product Owner", "ITD Director Product Owner (since Jun 2022)", "https://www.linkedin.com/in/bob-ganem-92509921/", "found, confirmed", "new", "RFP evaluator", "Stakeholder"),
- ("Leslie Chom", "Director and Product Owner, Patient and Caregiver Computing", "", "", "not found at domain", "new", "RFP evaluator. Confirm in Sales Nav before any touch.", "Stakeholder"),
+ ("Leslie Chom", "Director and Product Owner, Patient and Caregiver Computing", "Retired (LinkedIn headline, Sep 11 2026)", "https://www.linkedin.com/in/leslie-chom-2067473/", "departed", "new", "Retired. Off the list.", "Off"),
  ("Terri Horan", "Product Owner, Patient Journey (Digital Health)", "Product Owner Patient Journey, Digital Health (since Sep 2018)", "https://www.linkedin.com/in/terri-horan-b0474851/", "found, confirmed", "new", "Patient-experience angle on agent time", "Stakeholder"),
- ("Dennis Laraway", "EVP and Chief Financial Officer", "", "", "not found at domain", "new", "Economic buyer. Only after the reviewed number holds.", "Hold, then exec"),
- ("Bill Peacock", "EVP and Chief of Operations", "", "", "not found at domain", "new", "Top of operations. Mary Ann's touch, same gate.", "Hold, then exec"),
+ ("Dennis Laraway", "EVP and Chief Financial Officer", "EVP and CFO since Mar 2023 (Cleveland Clinic newsroom)", "", "confirmed on the web", "new", "Economic buyer. Only after the reviewed number holds.", "Hold, then exec"),
+ ("Bill Peacock", "EVP and Chief of Operations", "EVP, Chief of Operations (Cleveland Clinic leadership page)", "", "confirmed on the web", "new", "Top of operations. Mary Ann's touch, same gate.", "Hold, then exec"),
  ("Kelly Hancock", "EVP, Chief Caregiver Officer and Chief Administrative Officer", "on the back-office map, card 20", "https://www.linkedin.com/in/k-kelly-hancock-dnp-rn-ne-bc-faan-93325974/", "on back-office map", "map", "Distinct line from the sponsor. Expansion, not the save.", "Back office"),
  ("Emily Monteleone", "Director of Strategic Workforce Planning", "on the back-office map, card 17", "https://www.linkedin.com/in/emily-monteleone-52631a2a/", "on back-office map", "map", "Workforce planning lane", "Back office"),
  ("Rebecca Vance", "Senior HR Director, Connected Care, Nursing and Pharmacy", "Senior Director, HR Services (since May 2024)", "https://www.linkedin.com/in/rebeccalvance/", "found, confirmed", "new", "Caregiver office, consulted on workforce", "Nurture"),
  ("Meredith Foxx", "SVP and Enterprise Chief Nursing Officer", "Senior Vice President (since Jun 2020)", "https://www.linkedin.com/in/meredith-foxx-4306b7108/", "found, confirmed", "new", "Triage lines, burnout. Low fit for the save.", "Nurture"),
  ("Sonya Pease", "Chief of Quality, Safety and Patient Experience, Florida", "Chief Quality, Safety and Patient Experience Officer, Cleveland Clinic Florida (since Jun 2019)", "https://www.linkedin.com/in/sonya-pease-md-mba-cpxp-fasa-35685222/", "found, confirmed", "new", "Regional, clinical", "Bench"),
  ("F. Scott Ross", "Hospital operations, Florida", "Chief Medical Officer, Fort Lauderdale (since May 2021)", "https://www.linkedin.com/in/scott-ross-1717ba1a6/", "found, title differs", "new", "Regional clinical leadership, not operations as written", "Bench"),
- ("Richard Rothman", "Indian River, quality improvement", "", "", "not found at domain", "new", "Regional", "Bench"),
+ ("Richard Rothman", "Indian River, quality improvement", "VP and Chief Medical Officer, Indian River Hospital", "https://www.linkedin.com/in/richardrothmanmd/", "found, confirmed", "new", "Regional", "Bench"),
  ("David (surname not given)", "Florida Market", "", "", "cannot search", "new", "Needs a surname", "Bench"),
 ]
 VALIDATED = {"Bob Ganem":"rganem@ccf.org","Terri Horan":"horant@ccf.org","Katherine Neal":"nealk@ccf.org","Rebecca Vance":"vancer@ccf.org",
-             "Meredith Foxx":"foxxm@ccf.org","Sonya Pease":"peases@ccf.org","F. Scott Ross":"scottr@ccf.org"}  # Clay Work Email routine, Sep 10 2026, 7 of 7, 4.2 credits
+             "Meredith Foxx":"foxxm@ccf.org","Sonya Pease":"peases@ccf.org","F. Scott Ross":"scottr@ccf.org",
+             "Dennis Laraway":"larawayd@ccf.org","Bill Peacock":"peacockw@ccf.org","Richard Rothman":"rr@ccf.org",
+             "Kelly Hancock":"hancockk@ccf.org","Emily Monteleone":"monteleonee@ccf.org"}  # Clay Work Email routine, Sep 10-11 2026, 12 of 12 searchable, 6.9 credits
 inger_rows = []
 for n, t_inger, t_live, url, status, layer, role, track in inger:
     email_known = next((k["email"] for k in known_rows if k["name"].lower().split()[-1] == n.lower().split()[-1] and k["name"].lower().split()[0][:3] == n.lower().split()[0][:3]), "")
     inger_rows.append({"name": n, "title_inger": t_inger, "title_live": t_live, "linkedin": url, "bridge": status, "layer": layer,
                        "role": role, "track": track, "email": email_known,
-                       "email_inferred": "" if (email_known or layer != "new" or status in ("cannot search",) or n in VALIDATED) else infer_email(n),
+                       "email_inferred": "" if (email_known or layer not in ("new", "map") or status in ("cannot search", "departed") or n in VALIDATED) else infer_email(n),
                        "email_validated": VALIDATED.get(n, "")})
 
 # Layer 3: the back-office map (Aug 25 2026, 20 cards)
@@ -102,7 +104,7 @@ items = [
  ("Harmonic Migration", "Present the migration as continuity, with the customer's open issues carried into the plan", "11/9/2026", "Not started", "Amy Johnson;Matt McConnell", "Inger: a bad migration experience is the exit trigger."),
  ("Executive Review", "Executive review with Lisa Yerian; CFO and COO notes only after the reviewed savings number holds", "11/9/2026", "Not started", "Mary Ann Chandler;Inger Escamilla", "Dennis Laraway and Bill Peacock not found at the domain by the free bridge; confirm in Sales Nav."),
  ("Save Room", "Cleveland Clinic Save Room live; weekly health watcher and Monday owner digest running", "9/19/2026", "In progress", "Dallas Andrews", "Page built 9/10/2026. Watcher staged, not loaded."),
- ("Contact Validation", "Validated work emails for the seven net-new names the free bridge found", "9/10/2026", "Completed", "Dallas Andrews", "Done 9/10/2026: 7 of 7 found via the Clay Work Email routine, 4.2 credits. Two differ from the name pattern (rganem, scottr). Four names still need Sales Nav confirmation: Chom, Laraway, Peacock, Rothman."),
+ ("Contact Validation", "Validated work emails for the seven net-new names the free bridge found", "9/10/2026", "Completed", "Dallas Andrews", "Done 9/11/2026: 12 of 12 searchable names verified via the Clay Work Email routine, 6.9 credits. Leslie Chom shows retired on LinkedIn and is off the list; the Florida \"David\" has no surname."),
  ("Brainstorm", "Cleveland Clinic save brainstorm with Clint, Nicole and leadership; owners assigned live from this list", "9/25/2026", "Not started", "Inger Escamilla", "Sep 10 call. Dallas to attend with the Save Room."),
  ("Nurture", "Monthly one-pager to known contacts in lemlist; stakeholder sequence to net-new names after Inger clears them", "10/10/2026", "Not started", "Dallas Andrews;Nicole Garcia", "No loads until cleared. Content from marketing."),
 ]
@@ -113,7 +115,7 @@ with open(DATA / "Cleveland_Clinic_PMO_Tracker_Import.csv", "w", newline="") as 
 out = {"account": "Cleveland Clinic", "sf_account_id": "001V5000006bHWPIA2", "domain": "clevelandclinic.org", "email_domain": "ccf.org",
        "am": "Inger Escamilla", "success_manager": "Amy Johnson", "customer_owner": "Shantel Adams", "sponsor": "Rena Thompson",
        "renewal": "January 2027", "as_of": TODAY, "known": known_rows, "inger": inger_rows, "bo_map": bo_rows, "health": health, "plan": plan, "open_items": open_items,
-       "email_validation": {"date": TODAY, "method": "Clay Work Email routine (function t_0thx4ovuPGp8sjH2hPP) fed LinkedIn URL + name + ccf.org", "found": 7, "of": 7, "credits": 4.2, "runs": ["run_0tl610sVtNRxiYNudRU", "run_0tl611qBZshzes8yvyC"]},
+       "email_validation": {"date": TODAY, "method": "Clay Work Email routine (function t_0thx4ovuPGp8sjH2hPP) fed LinkedIn URL + name + ccf.org", "found": 12, "of": 12, "credits": 6.9, "runs": ["run_0tl610sVtNRxiYNudRU", "run_0tl611qBZshzes8yvyC", "run_0tl76g5N43Ag7w8Cooe", "run_0tl76klBXcafpRbffsk"]},
        "email_pattern": {"pattern": "<last><first initial>@ccf.org", "basis": "27 of 35 parseable Salesforce emails; numeric suffix on collisions (adamss8, reidl2)"}}
 (DATA / "save_room_cleveland_clinic.json").write_text(json.dumps(out, indent=1))
 # Evidence file the watcher scores
