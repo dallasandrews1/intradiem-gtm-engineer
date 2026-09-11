@@ -170,7 +170,10 @@ def _read_snapshot():
     Covers a private GitHub raw fetch, a Cloudflare Access service token, or a signed URL.
     """
     if STATE_URL:
-        headers = {"Cache-Control": "no-cache", "Accept": "application/json"}
+        # Cloudflare (Pages included) answers 403 to urllib's default "Python-urllib/x.y"
+        # user agent; a named agent passes (verified Sep 11 2026 against the live snapshot).
+        headers = {"Cache-Control": "no-cache", "Accept": "application/json",
+                   "User-Agent": "intradiem-gtm-brain/2.1"}
         token = os.environ.get("GTM_STATE_TOKEN", "").strip()
         if token:
             header_name = os.environ.get("GTM_STATE_AUTH_HEADER", "Authorization").strip()
