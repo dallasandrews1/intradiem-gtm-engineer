@@ -1,0 +1,1450 @@
+{
+ "account": "Cleveland Clinic",
+ "sf_account_id": "001V5000006bHWPIA2",
+ "domain": "clevelandclinic.org",
+ "email_domain": "ccf.org",
+ "am": "Inger Escamilla",
+ "success_manager": "Amy Johnson",
+ "customer_owner": "Shantel Adams",
+ "sponsor": "Rena Thompson",
+ "renewal": "January 2027",
+ "as_of": "2026-09-10",
+ "known": [
+  {
+   "name": "Shantel Adams",
+   "title": "Supervisor",
+   "email": "adamss8@ccf.org",
+   "linkedin": "",
+   "lead_status": "Converted",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Mary Kay Pienta",
+   "title": "Program Manager",
+   "email": "pientam@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/marykaypienta",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Mark Petkovsek",
+   "title": "",
+   "email": "petkovm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Linda Reid",
+   "title": "Senior Director of Nursing Education",
+   "email": "reidl2@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/linda-gardner-reed-dnp-med-ba-rn-cnor-57ba6293/",
+   "lead_status": "Converted",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Daniel St Jean",
+   "title": "? Director, Integrated Enterprise Applications",
+   "email": "stjeand@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Bill Oblaczynski",
+   "title": "Systems Analyst I",
+   "email": "oblaczw@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Beverly Hunter",
+   "title": "Training Coordinator",
+   "email": "hunterb2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Shannan Ritchie",
+   "title": "Interim President, Lakewood Hospital, a Cleveland Clinic Hospital",
+   "email": "ritchis@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "David Devereux",
+   "title": "",
+   "email": "devered@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Szabo Hunor",
+   "title": "",
+   "email": "szaboh@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Mary Allen",
+   "title": "",
+   "email": "allenm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Melanie Johnstone",
+   "title": "",
+   "email": "johnstm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Anthony (Tony) Zunt",
+   "title": "Aspect specialist",
+   "email": "zunta@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Cisco Verint Team",
+   "title": "",
+   "email": "contactcenterengineering@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Thomas Heidi",
+   "title": "",
+   "email": "thomash@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Matt Kull",
+   "title": "Chief Information Officer",
+   "email": "kullm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Aaron Evans",
+   "title": "Manager, Call Center",
+   "email": "evansa9@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Major Adams",
+   "title": "Success, Call Center Support Services Partner",
+   "email": "adamsm16@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Angela Letwin",
+   "title": "IT Business Relationship Manager",
+   "email": "letwina@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Lisa Goode",
+   "title": "Director, Service Delivery",
+   "email": "goodel@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/lisa-goode-283a536",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Marius Giulvezan",
+   "title": "",
+   "email": "giulvem@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Doug Dvorak",
+   "title": "Workforce Management Analyst",
+   "email": "dvorakd@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Laurie Spencer",
+   "title": "Call Center Manager",
+   "email": "spencel@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Rodina Bizri",
+   "title": "Administrator for Appointments at the Call Center",
+   "email": "bizrir@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Sue Milheim",
+   "title": "Sr. Director, Revenue Cycle Management",
+   "email": "susan.milheim@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Cole Mae",
+   "title": "",
+   "email": "colemae@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Rena Thompson",
+   "title": "Senior Director of Operations",
+   "email": "thompsr6@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/rena-thompson-8382ab7a",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Lisa Yerian",
+   "title": "Executive Vice President and Chief Clinical & Operational Improvement Officer",
+   "email": "yerianl@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/lisa-yerian-a087b0a4",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Cindy Hemsoth",
+   "title": "Director, Customer Services",
+   "email": "cindy.hemsoth@cchswest.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Randy Kusmer",
+   "title": "IT Manager",
+   "email": "kusmerr@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Wayne Mitchell",
+   "title": "Manager, Front End Systems",
+   "email": "mitchew@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Wayne Simon",
+   "title": "Management Information Systems",
+   "email": "wsimon@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Terrie DeBerry",
+   "title": "Coordinator",
+   "email": "deberrt@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Dion Walton",
+   "title": "performance metrics analyst",
+   "email": "waltond3@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Mae Zing",
+   "title": "Ombudsman",
+   "email": "zingm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Shane Ricker",
+   "title": "",
+   "email": "rickers2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Ricardo Gomez",
+   "title": "IT Manager",
+   "email": "gomezr2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Rodney Foster",
+   "title": "Manager of Service Express Center",
+   "email": "fosterr@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Dennis Bates",
+   "title": "Network Consultant and Engineer",
+   "email": "batesd1@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Deborah Latterner",
+   "title": "",
+   "email": "latterd2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Steve Serdio",
+   "title": "Systems Administrator",
+   "email": "serdios@ccf.prg",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Jim Halloran",
+   "title": "Director, IT Operations",
+   "email": "halloranj@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Janet Latterner",
+   "title": "Manager",
+   "email": "latterj@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Adrienne Boissy",
+   "title": "Chief Experience Officer",
+   "email": "boissya@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Yvonne Parker",
+   "title": "Manager CCHS Call Centers",
+   "email": "parkery@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Lisa Griffin",
+   "title": "Director Access Optimization",
+   "email": "griffil3@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Patrick Violette",
+   "title": "PFS Department Manager II - Customer Service",
+   "email": "violetp@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Annette Garsteck",
+   "title": "Training Manager, Access to Care Contact Center",
+   "email": "garstea@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Gary Holkovic",
+   "title": "Director of Telecommunications Services",
+   "email": "",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Cynthia Leach",
+   "title": "",
+   "email": "leachc@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Brian Deford",
+   "title": "",
+   "email": "defordw@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Rosetta Clements",
+   "title": "ADMIN PROGRAM COORDINATOR",
+   "email": "clemenr@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Marcus Fitch",
+   "title": "Real Time, Call Center Support Services Analyst",
+   "email": "fitchm@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Adam Gilbert",
+   "title": "Senior Project Manager",
+   "email": "gilbera3@ccf.org",
+   "linkedin": "https://www.linkedin.com/in/adamgilbertpmp",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Thomas Vernon",
+   "title": "Director In the Office of Learning and Performance Development",
+   "email": "vernont@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Angie Edelinsky",
+   "title": "Analyst",
+   "email": "edelina@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Agnes Coleman",
+   "title": "",
+   "email": "colemaa@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Patty Nahra",
+   "title": "Executive Director, Access To Care",
+   "email": "nahrap@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Adam Fogelman",
+   "title": "Senior Information Technology Executive",
+   "email": "fogelma@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Bill Warnock",
+   "title": "ITD Project Manager",
+   "email": "warnocb@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Gina Tabone",
+   "title": "Nurse Manager of Nurse on Call",
+   "email": "taboneg@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "John Grdina",
+   "title": "Administrator, Call Center Support Services",
+   "email": "grdinaj@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Deb Osborn",
+   "title": "Admin Project Coordinator",
+   "email": "osbornd@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Dan Piunno",
+   "title": "QA Analyst",
+   "email": "piunnod@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Guljeet Singh",
+   "title": "Systems Analyst II",
+   "email": "singhg3@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Scott Faini",
+   "title": "Sr. Director Unified Communications",
+   "email": "fainis@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Donald Renaudin",
+   "title": "IT Project Manager",
+   "email": "renaudd@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Donna Ferrante",
+   "title": "Cleveland Clinic",
+   "email": "ferrand@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "David Devereux",
+   "title": "",
+   "email": "devered2@cccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Christopher Soska",
+   "title": "Chief Operating Officer",
+   "email": "christopher.soska@martinhealth.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Ken Griffith",
+   "title": "",
+   "email": "ken.griffith@cchswest.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Susan Svitak",
+   "title": "Non Support Role",
+   "email": "svitaks@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Shantell Rawls",
+   "title": "Success Partner",
+   "email": "rawlss2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Jennifer Fragapane",
+   "title": "Senior Director",
+   "email": "esposij@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Mickey DeAngelo",
+   "title": "Real Time Performance Metric Analyst",
+   "email": "deangem@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Wayne Snow",
+   "title": "General Manager",
+   "email": "wsnow@cleveland.com",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Lisa Brooks",
+   "title": "Success Manager (CC's)",
+   "email": "brooksl2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Terra Johnstone",
+   "title": "",
+   "email": "johnstt2@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Craig Dukes",
+   "title": "",
+   "email": "dukesc@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Sarah Frusteri",
+   "title": "System Analyst",
+   "email": "frustes@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Eric Kokochak",
+   "title": "Director - Call Center Operations",
+   "email": "kokoche@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  },
+  {
+   "name": "Deborah Ware Stewart",
+   "title": "Cleveland Clinic Field Services",
+   "email": "dware@ccf.org",
+   "linkedin": "",
+   "lead_status": "",
+   "source": "Salesforce (Audiences, Aug 25 2026)"
+  }
+ ],
+ "inger": [
+  {
+   "name": "Rena Thompson",
+   "title_inger": "Director, Enterprise Contact Center Operations",
+   "title_live": "Senior Director of Operations (Salesforce)",
+   "linkedin": "",
+   "bridge": "in Salesforce",
+   "layer": "known",
+   "role": "Sponsor. Owns the savings conversation.",
+   "track": "Inger",
+   "email": "thompsr6@ccf.org",
+   "email_inferred": "",
+   "email_validated": ""
+  },
+  {
+   "name": "Scott Faini",
+   "title_inger": "IT Product Director, Unified Communications",
+   "title_live": "Sr. Director Unified Communications (Salesforce)",
+   "linkedin": "",
+   "bridge": "in Salesforce",
+   "layer": "known",
+   "role": "RFP voice. Platform continuity.",
+   "track": "Stakeholder",
+   "email": "fainis@ccf.org",
+   "email_inferred": "",
+   "email_validated": ""
+  },
+  {
+   "name": "Katherine Neal",
+   "title_inger": "IT Director and Product Owner, Access Innovations",
+   "title_live": "Senior IT Solutions Architect, Patient Access, Patient Experience and Revenue Cycle Management (since Jul 2025)",
+   "linkedin": "https://www.linkedin.com/in/kate-neal95/",
+   "bridge": "found, title differs",
+   "layer": "new",
+   "role": "RFP evaluator, technical. Title on LinkedIn is architect, not director.",
+   "track": "Stakeholder",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "nealk@ccf.org"
+  },
+  {
+   "name": "Bob Ganem",
+   "title_inger": "ITD Director and Product Owner",
+   "title_live": "ITD Director Product Owner (since Jun 2022)",
+   "linkedin": "https://www.linkedin.com/in/bob-ganem-92509921/",
+   "bridge": "found, confirmed",
+   "layer": "new",
+   "role": "RFP evaluator",
+   "track": "Stakeholder",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "rganem@ccf.org"
+  },
+  {
+   "name": "Leslie Chom",
+   "title_inger": "Director and Product Owner, Patient and Caregiver Computing",
+   "title_live": "",
+   "linkedin": "",
+   "bridge": "not found at domain",
+   "layer": "new",
+   "role": "RFP evaluator. Confirm in Sales Nav before any touch.",
+   "track": "Stakeholder",
+   "email": "",
+   "email_inferred": "choml@ccf.org",
+   "email_validated": ""
+  },
+  {
+   "name": "Terri Horan",
+   "title_inger": "Product Owner, Patient Journey (Digital Health)",
+   "title_live": "Product Owner Patient Journey, Digital Health (since Sep 2018)",
+   "linkedin": "https://www.linkedin.com/in/terri-horan-b0474851/",
+   "bridge": "found, confirmed",
+   "layer": "new",
+   "role": "Patient-experience angle on agent time",
+   "track": "Stakeholder",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "horant@ccf.org"
+  },
+  {
+   "name": "Dennis Laraway",
+   "title_inger": "EVP and Chief Financial Officer",
+   "title_live": "",
+   "linkedin": "",
+   "bridge": "not found at domain",
+   "layer": "new",
+   "role": "Economic buyer. Only after the reviewed number holds.",
+   "track": "Hold, then exec",
+   "email": "",
+   "email_inferred": "larawayd@ccf.org",
+   "email_validated": ""
+  },
+  {
+   "name": "Bill Peacock",
+   "title_inger": "EVP and Chief of Operations",
+   "title_live": "",
+   "linkedin": "",
+   "bridge": "not found at domain",
+   "layer": "new",
+   "role": "Top of operations. Mary Ann's touch, same gate.",
+   "track": "Hold, then exec",
+   "email": "",
+   "email_inferred": "peacockb@ccf.org",
+   "email_validated": ""
+  },
+  {
+   "name": "Kelly Hancock",
+   "title_inger": "EVP, Chief Caregiver Officer and Chief Administrative Officer",
+   "title_live": "on the back-office map, card 20",
+   "linkedin": "https://www.linkedin.com/in/k-kelly-hancock-dnp-rn-ne-bc-faan-93325974/",
+   "bridge": "on back-office map",
+   "layer": "map",
+   "role": "Distinct line from the sponsor. Expansion, not the save.",
+   "track": "Back office",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": ""
+  },
+  {
+   "name": "Emily Monteleone",
+   "title_inger": "Director of Strategic Workforce Planning",
+   "title_live": "on the back-office map, card 17",
+   "linkedin": "https://www.linkedin.com/in/emily-monteleone-52631a2a/",
+   "bridge": "on back-office map",
+   "layer": "map",
+   "role": "Workforce planning lane",
+   "track": "Back office",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": ""
+  },
+  {
+   "name": "Rebecca Vance",
+   "title_inger": "Senior HR Director, Connected Care, Nursing and Pharmacy",
+   "title_live": "Senior Director, HR Services (since May 2024)",
+   "linkedin": "https://www.linkedin.com/in/rebeccalvance/",
+   "bridge": "found, confirmed",
+   "layer": "new",
+   "role": "Caregiver office, consulted on workforce",
+   "track": "Nurture",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "vancer@ccf.org"
+  },
+  {
+   "name": "Meredith Foxx",
+   "title_inger": "SVP and Enterprise Chief Nursing Officer",
+   "title_live": "Senior Vice President (since Jun 2020)",
+   "linkedin": "https://www.linkedin.com/in/meredith-foxx-4306b7108/",
+   "bridge": "found, confirmed",
+   "layer": "new",
+   "role": "Triage lines, burnout. Low fit for the save.",
+   "track": "Nurture",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "foxxm@ccf.org"
+  },
+  {
+   "name": "Sonya Pease",
+   "title_inger": "Chief of Quality, Safety and Patient Experience, Florida",
+   "title_live": "Chief Quality, Safety and Patient Experience Officer, Cleveland Clinic Florida (since Jun 2019)",
+   "linkedin": "https://www.linkedin.com/in/sonya-pease-md-mba-cpxp-fasa-35685222/",
+   "bridge": "found, confirmed",
+   "layer": "new",
+   "role": "Regional, clinical",
+   "track": "Bench",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "peases@ccf.org"
+  },
+  {
+   "name": "F. Scott Ross",
+   "title_inger": "Hospital operations, Florida",
+   "title_live": "Chief Medical Officer, Fort Lauderdale (since May 2021)",
+   "linkedin": "https://www.linkedin.com/in/scott-ross-1717ba1a6/",
+   "bridge": "found, title differs",
+   "layer": "new",
+   "role": "Regional clinical leadership, not operations as written",
+   "track": "Bench",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": "scottr@ccf.org"
+  },
+  {
+   "name": "Richard Rothman",
+   "title_inger": "Indian River, quality improvement",
+   "title_live": "",
+   "linkedin": "",
+   "bridge": "not found at domain",
+   "layer": "new",
+   "role": "Regional",
+   "track": "Bench",
+   "email": "",
+   "email_inferred": "rothmanr@ccf.org",
+   "email_validated": ""
+  },
+  {
+   "name": "David (surname not given)",
+   "title_inger": "Florida Market",
+   "title_live": "",
+   "linkedin": "",
+   "bridge": "cannot search",
+   "layer": "new",
+   "role": "Needs a surname",
+   "track": "Bench",
+   "email": "",
+   "email_inferred": "",
+   "email_validated": ""
+  }
+ ],
+ "bo_map": [
+  {
+   "card": "1",
+   "depth": "0",
+   "name": "Janice Murphy",
+   "title": "Chief Operating Officer Regional Hospitals and FHC",
+   "level": "C",
+   "function": "Operations",
+   "reports_to": "Top of the map",
+   "linkedin": "https://www.linkedin.com/in/janice-murphy-44aa32111/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "2",
+   "depth": "1",
+   "name": "Johnny Diamond",
+   "title": "Senior Vice President Operations",
+   "level": "SVP",
+   "function": "Operations",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/johnny-diamond-4815161a4/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "3",
+   "depth": "2",
+   "name": "Kris Bennett",
+   "title": "Vice President Operations Northeast Ohio",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Johnny Diamond",
+   "linkedin": "https://www.linkedin.com/in/kris-bennett-68bb5417/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "4",
+   "depth": "3",
+   "name": "Kevin Nelson",
+   "title": "Senior Director International and Emerging Markets Finance Operations",
+   "level": "Director",
+   "function": "Finance & shared services",
+   "reports_to": "Kris Bennett",
+   "linkedin": "https://www.linkedin.com/in/kevin-nelson-80232713/",
+   "flag": "same name in Salesforce at T-Mobile; confirm the CRM badge before adding",
+   "lane": ""
+  },
+  {
+   "card": "5",
+   "depth": "3",
+   "name": "Sarah Charai",
+   "title": "Executive Director, Supply Chain Operations",
+   "level": "Director",
+   "function": "Administration & supply chain",
+   "reports_to": "Kris Bennett",
+   "linkedin": "https://www.linkedin.com/in/sarah-charai/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "6",
+   "depth": "1",
+   "name": "Spencer Kowal, MHA, CPA",
+   "title": "SVP, Finance and Chief Accounting Officer",
+   "level": "SVP",
+   "function": "Finance & shared services",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/spencer-kowal-mha-cpa-3556626/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "7",
+   "depth": "2",
+   "name": "Timothy Compan",
+   "title": "Managing Director, Credit",
+   "level": "VP",
+   "function": "Fraud, credit & disputes",
+   "reports_to": "Spencer Kowal, MHA, CPA",
+   "linkedin": "https://www.linkedin.com/in/timothy-compan-33827716/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "8",
+   "depth": "2",
+   "name": "Tracy Peffley",
+   "title": "Vice President, Revenue Cycle Management",
+   "level": "VP",
+   "function": "Billing, payments & revenue",
+   "reports_to": "Spencer Kowal, MHA, CPA",
+   "linkedin": "https://www.linkedin.com/in/tracy-peffley-0566488/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "9",
+   "depth": "3",
+   "name": "Daniel Medve",
+   "title": "Director, Revenue Cycle Management",
+   "level": "Director",
+   "function": "Billing, payments & revenue",
+   "reports_to": "Tracy Peffley",
+   "linkedin": "https://www.linkedin.com/in/daniel-medve-60a7666/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "10",
+   "depth": "3",
+   "name": "Deborah Knight-Lauricia",
+   "title": "Senior Director, Revenue Cycle",
+   "level": "Director",
+   "function": "Billing, payments & revenue",
+   "reports_to": "Tracy Peffley",
+   "linkedin": "https://www.linkedin.com/in/dlauricia/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "11",
+   "depth": "3",
+   "name": "Nick Judd, MBA, RHIA",
+   "title": "Executive Director, HIM and Clinical Revenue Cycle Services",
+   "level": "Director",
+   "function": "Billing, payments & revenue",
+   "reports_to": "Tracy Peffley",
+   "linkedin": "https://www.linkedin.com/in/nick-judd-mba-rhia-b2847571/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "12",
+   "depth": "1",
+   "name": "Chad Cummings",
+   "title": "Vice President of Lean Transformation & Continuous Improvement",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/chad-cummings-552b825a/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "13",
+   "depth": "2",
+   "name": "James Millar",
+   "title": "Enterprise Director of Continuous Improvement - Shared Services",
+   "level": "Director",
+   "function": "Finance & shared services",
+   "reports_to": "Chad Cummings",
+   "linkedin": "https://www.linkedin.com/in/james-millar-7980522b/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "14",
+   "depth": "1",
+   "name": "Jill Prendergast",
+   "title": "Vice President of Human Resource Services",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/jill-prendergast-28268518/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "15",
+   "depth": "2",
+   "name": "Michelle Rigsby",
+   "title": "Senior Director HR - Shared Services",
+   "level": "Director",
+   "function": "Finance & shared services",
+   "reports_to": "Jill Prendergast",
+   "linkedin": "https://www.linkedin.com/in/michelle-rigsby-79b79710a/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "16",
+   "depth": "1",
+   "name": "Vinh Nguyen",
+   "title": "Vice President - International and Emerging Markets",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/vinh-nguyen-59285011/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "17",
+   "depth": "1",
+   "name": "Emily Monteleone",
+   "title": "Director of Strategic Workforce Planning",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Janice Murphy",
+   "linkedin": "https://www.linkedin.com/in/emily-monteleone-52631a2a/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "18",
+   "depth": "0",
+   "name": "Stephen Downey",
+   "title": "Chief Supply Chain & Support Services Officer",
+   "level": "C",
+   "function": "Administration & supply chain",
+   "reports_to": "Top of the map",
+   "linkedin": "https://www.linkedin.com/in/stevejdowney/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "19",
+   "depth": "1",
+   "name": "Scott Dwyer",
+   "title": "Senior Director Supply Chain Management - Commodity Sourcing",
+   "level": "Director",
+   "function": "Administration & supply chain",
+   "reports_to": "Stephen Downey",
+   "linkedin": "https://www.linkedin.com/in/scott-dwyer-17844a5/",
+   "flag": "",
+   "lane": ""
+  },
+  {
+   "card": "20",
+   "depth": "0",
+   "name": "K. Kelly Hancock, DNP, RN, NE-BC, FAAN",
+   "title": "Executive Vice President, Chief Caregiver Officer & Chief Administrative Officer",
+   "level": "EVP",
+   "function": "Administration & supply chain",
+   "reports_to": "Top of the map",
+   "linkedin": "https://www.linkedin.com/in/k-kelly-hancock-dnp-rn-ne-bc-faan-93325974/",
+   "flag": "",
+   "lane": ""
+  }
+ ],
+ "health": {
+  "as_of": "2026-09-10",
+  "overall": "RED",
+  "codes": [
+   {
+    "code": "Value dispute",
+    "status": "RED",
+    "evidence": [
+     [
+      "Success Plan notes",
+      "2025-11-06",
+      "Success review stopped at slide five; customer challenged savings accuracy, unmet feature commitments and open cases, said extra staff was needed to run Intradiem."
+     ],
+     [
+      "Success Plan, Active sheet",
+      "2025-11-18",
+      "Investment Return Review and Agreement opened, priority High, no status recorded since."
+     ],
+     [
+      "Sep 2026 adoption deck",
+      "2026-09-07",
+      "Deck still reports $719K YTD savings and 1.9x; the customer has not agreed the method."
+     ]
+    ]
+   },
+   {
+    "code": "Sponsor silence",
+    "status": "RED",
+    "evidence": [
+     [
+      "Success Plan notes",
+      "2025-11-11",
+      "Weekly meeting cancelled by Shantel."
+     ],
+     [
+      "Success Plan notes",
+      "2025-12-17",
+      "Adoption review cancelled by Shantel; deck sent instead."
+     ],
+     [
+      "Success Plan notes",
+      "2025-12-30",
+      "Weekly meeting cancelled (Mary Kay)."
+     ],
+     [
+      "Inger, Sep 10 call",
+      "2026-09-10",
+      "Rena accepts meetings then cancels day-of or the day before; Shantel declines any new-product conversation and will not name contacts."
+     ]
+    ]
+   },
+   {
+    "code": "Adoption decline",
+    "status": "RED",
+    "evidence": [
+     [
+      "Sep 2026 adoption deck",
+      "2026-09-07",
+      "Dynamic session accept 17.8% against a 75% goal; 10% of agents receiving dynamic sessions against 80%; 7% of agents coached against 80%."
+     ],
+     [
+      "Success Plan, Active sheet",
+      "2026-06-12",
+      "End of Shift rules paused; Leave Early rules paused the same day, reason not recorded."
+     ],
+     [
+      "Success Plan, Active sheet",
+      "2024-12-10",
+      "Enhanced Staffing (VTO and VOT) on hold: current Verint version not compatible."
+     ],
+     [
+      "Sep 2026 adoption deck",
+      "2026-09-07",
+      "13 of 17 contracted use cases deployed. Bright spots: coaching acceptance 83%, AUX self-cure 94%."
+     ]
+    ]
+   },
+   {
+    "code": "Open case aging",
+    "status": "YELLOW",
+    "evidence": [
+     [
+      "Success Plan notes",
+      "2025-11-18",
+      "Four open cases: 00322148, 00321545, 00321947, 00321814."
+     ],
+     [
+      "Success Plan notes",
+      "2025-12-16",
+      "SSO token expiry issue may not resolve until after the new year; case 323900 (agents kicked out of the IDE) opened 12/11."
+     ],
+     [
+      "Success Plan, Active sheet",
+      "2026-09-10",
+      "Open Cases section is empty; current case status has to be confirmed with Amy."
+     ]
+    ]
+   },
+   {
+    "code": "Executive change",
+    "status": "GREEN",
+    "evidence": [
+     [
+      "Sales Nav bridge",
+      "2026-08-25",
+      "Michael Waterman retired, removed from the map. No change recorded for Thompson, Adams, Yerian or Faini."
+     ],
+     [
+      "Clay bridge",
+      "2026-09-10",
+      "Katherine Neal is a Senior IT Solutions Architect since Jul 2025, not the director title in the research."
+     ]
+    ]
+   },
+   {
+    "code": "Competitive event",
+    "status": "RED",
+    "evidence": [
+     [
+      "Inger, Sep 10 call",
+      "2026-09-10",
+      "RFP out for the CCaaS stack. Harmonic migration conversations starting. Read: one-year renewal, migration, then exit unless the experience changes."
+     ]
+    ]
+   },
+   {
+    "code": "Renewal clock",
+    "status": "RED",
+    "evidence": [
+     [
+      "Inger, Sep 10 call",
+      "2026-09-10",
+      "Renewal in January 2027; two options presented, none signed. 113 days to Jan 1."
+     ]
+    ]
+   }
+  ]
+ },
+ "plan": [
+  [
+   "To Oct 10",
+   "Settle the number, staff the room",
+   "ROI line-by-line with Shantel closes (Amy, Matt). Case closure dates in writing. Coach Now supervisors on record. Save Room live, owners assigned in Inger's brainstorm, digest starts the Monday after."
+  ],
+  [
+   "To Nov 9",
+   "Continuity with the RFP evaluators",
+   "Faini, Ganem, Horan and Neal hear platform continuity from Inger and one technical voice. Harmonic presented as continuity, not a project. Executive review with Yerian. CFO note only if the reviewed number holds."
+  ],
+  [
+   "To Dec 9",
+   "Option chosen, expansion separated",
+   "Renewal option selected. Hancock line approached as back-office expansion, on its own track, after the renewal conversation is stable."
+  ]
+ ],
+ "open_items": [
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Investment Return Review",
+   "Task Description": "Align on investment-return method and validate the savings line by line with Shantel",
+   "Task Due Date": "10/10/2026",
+   "Task Progress": "In progress",
+   "Assigned To": "Amy Johnson;Matt McConnell",
+   "Notes": "Open since 11/18/2025 (Success Plan, priority High). Committed at the 11/6/2025 success review.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Investment Return Review",
+   "Task Description": "Review the original business case against current performance; set savings expectations the customer accepts",
+   "Task Due Date": "10/10/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Mary Ann Chandler;Matt McConnell",
+   "Notes": "11/6/2025 commitment.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Open Cases",
+   "Task Description": "Confirm status of cases 00322148, 00321545, 00321947, 00321814, 323900 and give CCF a closure timeline in writing",
+   "Task Due Date": "9/25/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Amy Johnson",
+   "Notes": "Open Cases section of the Success Plan is empty as of 9/8/2026.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Paused Rules",
+   "Task Description": "Record why End of Shift and Leave Early rules were paused 6/12/2026 and what would restart them",
+   "Task Due Date": "9/25/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Amy Johnson",
+   "Notes": "Success Plan Active sheet.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "User Proof",
+   "Task Description": "Collect two-sentence statements from supervisors using Coach Now (83% acceptance) and teams self-curing AUX alerts",
+   "Task Due Date": "10/10/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Amy Johnson;Inger Escamilla",
+   "Notes": "Inger's bottom-up track. Feeds the impact summary for Rena.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "RFP Continuity",
+   "Task Description": "Platform-continuity conversation with Scott Faini, Bob Ganem, Terri Horan and Katherine Neal",
+   "Task Due Date": "11/9/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Inger Escamilla",
+   "Notes": "Verified line: sits on top of the existing WFM, integrates with Genesys Cloud, NICE and others. Katherine Neal is an architect, not a director. Leslie Chom not found at the domain; confirm in Sales Nav.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Harmonic Migration",
+   "Task Description": "Present the migration as continuity, with the customer's open issues carried into the plan",
+   "Task Due Date": "11/9/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Amy Johnson;Matt McConnell",
+   "Notes": "Inger: a bad migration experience is the exit trigger.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Executive Review",
+   "Task Description": "Executive review with Lisa Yerian; CFO and COO notes only after the reviewed savings number holds",
+   "Task Due Date": "11/9/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Mary Ann Chandler;Inger Escamilla",
+   "Notes": "Dennis Laraway and Bill Peacock not found at the domain by the free bridge; confirm in Sales Nav.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Save Room",
+   "Task Description": "Cleveland Clinic Save Room live; weekly health watcher and Monday owner digest running",
+   "Task Due Date": "9/19/2026",
+   "Task Progress": "In progress",
+   "Assigned To": "Dallas Andrews",
+   "Notes": "Page built 9/10/2026. Watcher staged, not loaded.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Contact Validation",
+   "Task Description": "Validated work emails for the seven net-new names the free bridge found",
+   "Task Due Date": "9/10/2026",
+   "Task Progress": "Completed",
+   "Assigned To": "Dallas Andrews",
+   "Notes": "Done 9/10/2026: 7 of 7 found via the Clay Work Email routine, 4.2 credits. Two differ from the name pattern (rganem, scottr). Four names still need Sales Nav confirmation: Chom, Laraway, Peacock, Rothman.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Brainstorm",
+   "Task Description": "Cleveland Clinic save brainstorm with Clint, Nicole and leadership; owners assigned live from this list",
+   "Task Due Date": "9/25/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Inger Escamilla",
+   "Notes": "Sep 10 call. Dallas to attend with the Save Room.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  },
+  {
+   "Project Name": "Cleveland Clinic",
+   "Task Name": "Nurture",
+   "Task Description": "Monthly one-pager to known contacts in lemlist; stakeholder sequence to net-new names after Inger clears them",
+   "Task Due Date": "10/10/2026",
+   "Task Progress": "Not started",
+   "Assigned To": "Dallas Andrews;Nicole Garcia",
+   "Notes": "No loads until cleared. Content from marketing.",
+   "Additional Assignees": "",
+   "Archive?": "No",
+   "Link to Item": "",
+   "Edit Task": ""
+  }
+ ],
+ "email_validation": {
+  "date": "2026-09-10",
+  "method": "Clay Work Email routine (function t_0thx4ovuPGp8sjH2hPP) fed LinkedIn URL + name + ccf.org",
+  "found": 7,
+  "of": 7,
+  "credits": 4.2,
+  "runs": [
+   "run_0tl610sVtNRxiYNudRU",
+   "run_0tl611qBZshzes8yvyC"
+  ]
+ },
+ "email_pattern": {
+  "pattern": "<last><first initial>@ccf.org",
+  "basis": "27 of 35 parseable Salesforce emails; numeric suffix on collisions (adamss8, reidl2)"
+ }
+}

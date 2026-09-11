@@ -1,0 +1,139 @@
+{
+ "account": "Cleveland Clinic",
+ "renewal_date": "2027-01-01",
+ "as_of": "2026-09-10",
+ "codes": [
+  {
+   "code": "Value dispute",
+   "status": "RED",
+   "evidence": [
+    [
+     "Success Plan notes",
+     "2025-11-06",
+     "Success review stopped at slide five; customer challenged savings accuracy, unmet feature commitments and open cases, said extra staff was needed to run Intradiem."
+    ],
+    [
+     "Success Plan, Active sheet",
+     "2025-11-18",
+     "Investment Return Review and Agreement opened, priority High, no status recorded since."
+    ],
+    [
+     "Sep 2026 adoption deck",
+     "2026-09-07",
+     "Deck still reports $719K YTD savings and 1.9x; the customer has not agreed the method."
+    ]
+   ]
+  },
+  {
+   "code": "Sponsor silence",
+   "status": "RED",
+   "evidence": [
+    [
+     "Success Plan notes",
+     "2025-11-11",
+     "Weekly meeting cancelled by Shantel."
+    ],
+    [
+     "Success Plan notes",
+     "2025-12-17",
+     "Adoption review cancelled by Shantel; deck sent instead."
+    ],
+    [
+     "Success Plan notes",
+     "2025-12-30",
+     "Weekly meeting cancelled (Mary Kay)."
+    ],
+    [
+     "Inger, Sep 10 call",
+     "2026-09-10",
+     "Rena accepts meetings then cancels day-of or the day before; Shantel declines any new-product conversation and will not name contacts."
+    ]
+   ]
+  },
+  {
+   "code": "Adoption decline",
+   "status": "RED",
+   "evidence": [
+    [
+     "Sep 2026 adoption deck",
+     "2026-09-07",
+     "Dynamic session accept 17.8% against a 75% goal; 10% of agents receiving dynamic sessions against 80%; 7% of agents coached against 80%."
+    ],
+    [
+     "Success Plan, Active sheet",
+     "2026-06-12",
+     "End of Shift rules paused; Leave Early rules paused the same day, reason not recorded."
+    ],
+    [
+     "Success Plan, Active sheet",
+     "2024-12-10",
+     "Enhanced Staffing (VTO and VOT) on hold: current Verint version not compatible."
+    ],
+    [
+     "Sep 2026 adoption deck",
+     "2026-09-07",
+     "13 of 17 contracted use cases deployed. Bright spots: coaching acceptance 83%, AUX self-cure 94%."
+    ]
+   ]
+  },
+  {
+   "code": "Open case aging",
+   "status": "YELLOW",
+   "evidence": [
+    [
+     "Success Plan notes",
+     "2025-11-18",
+     "Four open cases: 00322148, 00321545, 00321947, 00321814."
+    ],
+    [
+     "Success Plan notes",
+     "2025-12-16",
+     "SSO token expiry issue may not resolve until after the new year; case 323900 (agents kicked out of the IDE) opened 12/11."
+    ],
+    [
+     "Success Plan, Active sheet",
+     "2026-09-10",
+     "Open Cases section is empty; current case status has to be confirmed with Amy."
+    ]
+   ]
+  },
+  {
+   "code": "Executive change",
+   "status": "GREEN",
+   "evidence": [
+    [
+     "Sales Nav bridge",
+     "2026-08-25",
+     "Michael Waterman retired, removed from the map. No change recorded for Thompson, Adams, Yerian or Faini."
+    ],
+    [
+     "Clay bridge",
+     "2026-09-10",
+     "Katherine Neal is a Senior IT Solutions Architect since Jul 2025, not the director title in the research."
+    ]
+   ]
+  },
+  {
+   "code": "Competitive event",
+   "status": "RED",
+   "evidence": [
+    [
+     "Inger, Sep 10 call",
+     "2026-09-10",
+     "RFP out for the CCaaS stack. Harmonic migration conversations starting. Read: one-year renewal, migration, then exit unless the experience changes."
+    ]
+   ]
+  },
+  {
+   "code": "Renewal clock",
+   "status": "RED",
+   "evidence": [
+    [
+     "Inger, Sep 10 call",
+     "2026-09-10",
+     "Renewal in January 2027; two options presented, none signed. 113 days to Jan 1."
+    ]
+   ]
+  }
+ ]
+}
