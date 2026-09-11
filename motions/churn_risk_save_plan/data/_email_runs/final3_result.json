@@ -1,0 +1,30 @@
+{
+  "routineRunId": "run_0tl76g5N43Ag7w8Cooe",
+  "mode": "inline",
+  "total": 3,
+  "finished": 3,
+  "status": "complete",
+  "data": [
+    {
+      "id": "richard-rothman",
+      "status": "complete",
+      "result": {
+        "Work Email": "rr@ccf.org"
+      }
+    },
+    {
+      "id": "bill-peacock",
+      "status": "complete",
+      "result": {
+        "Work Email": "peacockw@ccf.org"
+      }
+    },
+    {
+      "id": "dennis-laraway",
+      "status": "complete",
+      "result": {
+        "Work Email": "larawayd@ccf.org"
+      }
+    }
+  ]
+}

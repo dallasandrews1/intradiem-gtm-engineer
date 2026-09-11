@@ -1,0 +1,23 @@
+{
+  "routineRunId": "run_0tl76klBXcafpRbffsk",
+  "mode": "inline",
+  "total": 2,
+  "finished": 2,
+  "status": "complete",
+  "data": [
+    {
+      "id": "emily-monteleone",
+      "status": "complete",
+      "result": {
+        "Work Email": "monteleonee@ccf.org"
+      }
+    },
+    {
+      "id": "kelly-hancock",
+      "status": "complete",
+      "result": {
+        "Work Email": "hancockk@ccf.org"
+      }
+    }
+  ]
+}

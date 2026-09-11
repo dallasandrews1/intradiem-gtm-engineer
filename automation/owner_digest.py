@@ -7,6 +7,16 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ap = argparse.ArgumentParser(); ap.add_argument("--date"); ap.add_argument("--dry-run", action="store_true"); a = ap.parse_args()
 today = datetime.date.fromisoformat(a.date) if a.date else datetime.date.today()
 cfg = json.loads((ROOT / "automation/config/owner_digest.json").read_text())
+# Verified contacts per account, from the save-room data (only verified or Salesforce emails ever leave this composer)
+def verified_contacts(acct):
+    p = ROOT / "motions/churn_risk_save_plan/data" / f"save_room_{acct.lower().replace(' ', '_')}.json"
+    if not p.exists(): return []
+    d = json.loads(p.read_text()); out = []
+    for r in d.get("inger", []):
+        em = r.get("email_validated") or r.get("email")
+        if em and r.get("bridge") != "departed":
+            out.append((r["name"], r.get("title_live") or r.get("title_inger", ""), em, r.get("track", "")))
+    return out
 
 def parse_due(s):
     for f in ("%m/%d/%Y", "%Y-%m-%d", "%m/%d/%y"):
@@ -69,8 +79,14 @@ for owner, its in sorted(by_owner.items()):
             d = parse_due(r["Task Due Date"]); od = " <b>(overdue)</b>" if d and d < today else ""
             body.append(f"<li><b>{H.escape(r['Task Name'])}</b>: {H.escape(r['Task Description'])}. Due {H.escape(r['Task Due Date'] or 'not set')}.{od}</li>")
         body.append("</ul>")
-        for acct in accts: body.append(f"<p>{H.escape(status_line(acct))}</p>")
-        body.append("<p>The Save Room has the detail. Reply here if an item is wrong or done.</p>")
+        for acct in accts:
+            body.append(f"<p>{H.escape(status_line(acct))}</p>")
+            vc = verified_contacts(acct)
+            if vc and route.get("contacts_block", True):
+                body.append(f"<p>Verified contacts at {H.escape(acct)} (emails checked, ready to use):</p><ul>")
+                for n, t, em, tr in vc: body.append(f"<li><b>{H.escape(n)}</b>, {H.escape(t.split(' (')[0])}: {H.escape(em)}</li>")
+                body.append("</ul>")
+        body.append(f"<p>Everything above is also at {H.escape(cfg.get('room_url', ''))}. Reply here if an item is wrong or done.</p>")
         drafts.append({"owner": owner, "to": route["email"], "email_status": route.get("email_status", ""), "subject": cfg["subject_template"].format(account=", ".join(accts)), "bodyType": "html", "body": "".join(body)})
 L += ["## Rundown block (Dallas, carried by gtm-daily-rundown; no separate DM)"]
 for acct in cfg["accounts"]: L.append(f"- {status_line(acct)}")

@@ -10,6 +10,7 @@
     "Dallas Andrews":  {"channel": "rundown", "note": "carried in the single morning Slack DM by gtm-daily-rundown (source 16); no separate DM"}
   },
   "rollup": {"to": "Mary Ann Chandler", "channel": "rundown_only_until_decided", "content": "one line per account: overall status, red codes, overdue count"},
+  "room_url": "https://save-rooms.pages.dev/cleveland-clinic/inger/",
   "subject_template": "{account}: your open items this week",
   "cadence": "Mondays 7:30, after account-health-watch (7:10) and before gtm-daily-rundown (7:50)"
 }

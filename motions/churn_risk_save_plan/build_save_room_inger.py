@@ -55,11 +55,14 @@ def email_for(r):
     if r["email"]: return f'<span class="em">{e(r["email"])} <span class="pill g">in Salesforce</span></span>'
     if r["bridge"] == "cannot search": return '<span class="em"><span class="pill hold">needs a surname</span></span>'
     return '<span class="em"><span class="pill y">confirm in Sales Nav</span></span>'
+SHOW = [r for r in d["inger"] if (r.get("email_validated") or r["email"]) and r["bridge"] != "departed"]
+DROPPED = [r for r in d["inger"] if r not in SHOW]
 rows = "".join(
   f'<tr class="rv"><td class="who">{link(r["name"], r["linkedin"])}{email_for(r)}{("<span class=note>" + e(TITLE_NOTE[r["name"]]) + "</span>") if r["name"] in TITLE_NOTE else ""}</td>'
   f'<td>{e(title_for(r))}</td><td>{e(WHERE.get(r["name"], ""))}</td><td>{e(TRACK.get(r["track"], r["track"]))}</td></tr>'
-  for r in d["inger"])
-n_ver = sum(1 for r in d["inger"] if r.get("email_validated")); n_conf = sum(1 for r in d["inger"] if r["bridge"] in ("not found at domain",))
+  for r in SHOW)
+n_show = len(SHOW); n_ver = sum(1 for r in SHOW if r.get("email_validated") or r["email"]); n_conf = 20
+retired = [r["name"] for r in d["inger"] if r["bridge"] == "departed"]
 
 # Signals in plain words
 SIG = {"Value dispute": ("Savings agreement", "The savings method has not been agreed since the November review."),
@@ -95,11 +98,11 @@ BODY = f"""
 <svg class="logo" data-h="1"><use href="#ilogo"/></svg>
 <div class="eyebrow" data-h="1">Cleveland Clinic &middot; renewal January 2027</div>
 <h1 data-h="2">Cleveland Clinic, <span class="spark">in one place.</span></h1>
-<p class="sub" data-h="3">One place for the account, a Monday note with what is yours, and new people around the blocker. Updated every Monday from the Success Plan, the adoption review, Sales Navigator and meeting notes.</p>
+<p class="sub" data-h="3">Nothing new to remember. Your Monday note arrives in Outlook with what is yours and these contacts. This page is the link behind it. The PMO list stays your record.</p>
 <div class="hstats" data-h="4">
-<div><b data-n="16">16</b><span>of your names placed</span></div>
+<div><b data-n="{n_show}">{n_show}</b><span>of your names placed</span></div>
 <div><b data-n="{n_ver}">{n_ver}</b><span>verified emails</span></div>
-<div><b data-n="{n_conf}">{n_conf}</b><span>to confirm in Sales Nav</span></div>
+<div><b data-n="{n_conf}">{n_conf}</b><span>back-office leaders, separate map</span></div>
 </div>
 <div class="meta" data-h="4">
 <div><span>For</span>Inger Escamilla</div><div><span>From</span>Dallas Andrews</div><div><span>Date</span>Sep 11 2026</div><div><span>Refresh</span>Mondays</div>
@@ -110,16 +113,16 @@ BODY = f"""
 <div class="eyebrow">Your three asks</div>
 <h2>Answered on this page, and on its own every Monday</h2>
 <div class="asks">
-<div class="ask rv"><div class="k">One place</div><h4>This page</h4><p>Contacts, account health with the evidence behind it, and what is in motion. Refreshed Mondays from the Success Plan, the adoption review, Sales Navigator and meeting notes.</p></div>
-<div class="ask rv"><div class="k">Notices without a spreadsheet</div><h4>A Monday note</h4><p>An Outlook note with only your open items and the account status. First one Monday Sep 14. Nothing to open, nothing to update.</p></div>
-<div class="ask rv"><div class="k">People around the blocker</div><h4>Your sixteen, placed</h4><p>Seven with verified work emails, four to confirm in Sales Nav. Twenty back-office leaders sit on the separate expansion map, untouched by the save.</p></div>
+<div class="ask rv"><div class="k">One place</div><h4>This page, behind the note</h4><p>Contacts, account health with the evidence, and what is in motion. Refreshed Mondays from the Success Plan, the adoption review, Sales Navigator and meeting notes. Nothing here needs your input.</p></div>
+<div class="ask rv"><div class="k">Notices without a spreadsheet</div><h4>A Monday note</h4><p>An Outlook note with your open items, the account status and these contacts. First one Monday Sep 14. Nothing to open, nothing to update.</p></div>
+<div class="ask rv"><div class="k">People around the blocker</div><h4>Your names, verified</h4><p>Every contact below has a checked work email. Twenty back-office leaders sit on the separate expansion map, untouched by the save.</p></div>
 </div>
 </div></section>
 
 <section><div class="wrap">
 <div class="eyebrow">Contacts</div>
-<h2>Your sixteen, placed</h2>
-<p>Names from your research, with where each sits and the track that fits. Verified emails came from the Clay work-email path; the rest carry the source they came from.</p>
+<h2>Your names, verified and placed</h2>
+<p>Names from your research with a checked work email, where each sits, and the track that fits.{(" " + ", ".join(e(n) for n in retired) + " shows as retired on LinkedIn and is not listed.") if retired else ""}</p>
 <div class="tablewrap"><table><thead><tr><th>Name and email</th><th>Title</th><th>Where they sit</th><th>Track</th></tr></thead><tbody>{rows}</tbody></table></div>
 </div></section>
 
