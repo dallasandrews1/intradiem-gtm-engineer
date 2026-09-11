@@ -40,11 +40,18 @@ Environment:
     GTM_STATE_MAX_AGE_HOURS       redact past this age, default 36.
     GTM_STATE_HARD_MAX_AGE_HOURS  refuse past this age, default 168.
     GTM_API_KEYS           "label:key,label:key". Unset runs open in dev and logs "dev".
+    SLACK_SIGNING_SECRET   Slack app signing secret. When set, a /mcp request carrying a valid
+                           X-Slack-Signature (Slackbot's MCP client, slack_identity_auth) passes
+                           without an API key and is logged as actor "slackbot". Unset means the
+                           key path alone, unchanged. 2026-09-11.
 """
 import datetime
+import hashlib
+import hmac
 import json
 import os
 import threading
+import time
 import urllib.error
 import urllib.request
 
@@ -53,6 +60,10 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse
 
 from mcp.server.fastmcp import FastMCP
+try:
+    from mcp.server.transport_security import TransportSecuritySettings
+except ImportError:  # mcp < 1.10 had no host pinning, so there is nothing to relax
+    TransportSecuritySettings = None
 
 import gtm_state
 
@@ -83,6 +94,57 @@ def auth(x_api_key):
     if x_api_key not in keys:
         raise HTTPException(status_code=401, detail="invalid or missing API key")
     return keys[x_api_key]
+
+
+SLACK_REPLAY_WINDOW_SECONDS = 300
+
+
+def verify_slack_signature(headers, body, secret, now=None, window=SLACK_REPLAY_WINDOW_SECONDS):
+    """True only when `headers` carry a signature Slack made over `body` with `secret`.
+
+    Slack's scheme: base string "v0:<X-Slack-Request-Timestamp>:<raw body>", HMAC-SHA256 with
+    the app signing secret, hex digest, header "X-Slack-Signature: v0=<hex>". The timestamp
+    must sit within `window` seconds of now (replay guard). Constant-time compare. Pure
+    function so it is testable without the web layer.
+    """
+    if not secret:
+        return False
+    h = {str(k).lower(): v for k, v in headers.items()}
+    sig = h.get("x-slack-signature", "")
+    ts = h.get("x-slack-request-timestamp", "")
+    if not sig or not ts:
+        return False
+    try:
+        ts_int = int(ts)
+    except (TypeError, ValueError):
+        return False
+    now = time.time() if now is None else now
+    if abs(now - ts_int) > window:
+        return False
+    if isinstance(body, str):
+        body = body.encode("utf-8")
+    base = b"v0:" + ts.encode("utf-8") + b":" + (body or b"")
+    expected = "v0=" + hmac.new(secret.encode("utf-8"), base, hashlib.sha256).hexdigest()
+    return hmac.compare_digest(expected, sig)
+
+
+def resolve_actor(headers, body, keys, slack_secret, now=None):
+    """Decide who is calling /mcp. Returns (actor, mode) or None to reject.
+
+    Order: a valid Slack signature wins (actor "slackbot", mode "slack_identity"); otherwise
+    the existing key path exactly as before (no keys configured = open "dev"; a known key =
+    its label; anything else = reject). A signature is only consulted when a secret is set,
+    so an unset SLACK_SIGNING_SECRET leaves the brain key-only.
+    """
+    if slack_secret and verify_slack_signature(headers, body, slack_secret, now=now):
+        return ("slackbot", "slack_identity")
+    if not keys:
+        return ("dev", "open")
+    h = {str(k).lower(): v for k, v in headers.items()}
+    key = h.get("x-api-key") or h.get("authorization", "").replace("Bearer ", "").strip()
+    if key in keys:
+        return (keys[key], "api_key")
+    return None
 
 
 def log(actor, path, extra=None):
@@ -266,7 +328,16 @@ def _impact():
 
 
 # ---------- remote MCP (for the Claude plugin) ----------
-mcp_server = FastMCP("intradiem-gtm", stateless_http=True, streamable_http_path="/")
+# Host pinning OFF (2026-09-11). FastMCP's default host is 127.0.0.1, and on that default mcp
+# >= 1.10 turns on DNS-rebinding protection with an allow list of localhost forms only, so a
+# request whose Host header is the public Render hostname is refused with 421 before any tool
+# runs. This service is public, HTTPS, and authenticated by key or Slack signature in the
+# middleware above the transport, which is the protection that matters here. Without this
+# every keyed /mcp call on Render fails 421 (reproduced locally against the Render hostname).
+_mcp_kwargs = {}
+if TransportSecuritySettings is not None:
+    _mcp_kwargs["transport_security"] = TransportSecuritySettings(enable_dns_rebinding_protection=False)
+mcp_server = FastMCP("intradiem-gtm", stateless_http=True, streamable_http_path="/", **_mcp_kwargs)
 
 _FRESHNESS_NOTE = ("Every response carries generated_at, age_hours and freshness. If "
                    "freshness is not 'fresh', scores, ROI and generated copy have been "
@@ -322,17 +393,24 @@ mcp_app = mcp_server.streamable_http_app()
 
 
 class KeyAuthMiddleware(BaseHTTPMiddleware):
-    """Same API-key gate as the REST side, applied to the MCP endpoint, plus logging."""
+    """Same API-key gate as the REST side, applied to the MCP endpoint, plus logging.
+
+    Second door (2026-09-11): Slackbot's MCP client cannot send a static key, only a request
+    signature (auth_type slack_identity_auth). With SLACK_SIGNING_SECRET set, a request whose
+    X-Slack-Signature verifies over the raw body passes as actor "slackbot". The body is only
+    read when a signature header is present, so the key path is untouched.
+    """
     async def dispatch(self, request, call_next):
         keys = load_keys()
-        if keys:
-            key = request.headers.get("x-api-key") or \
-                request.headers.get("authorization", "").replace("Bearer ", "").strip()
-            if key not in keys:
-                return JSONResponse({"error": "invalid or missing API key"}, status_code=401)
-            log(keys[key], "/mcp")
-        else:
-            log("dev", "/mcp")
+        secret = os.environ.get("SLACK_SIGNING_SECRET", "").strip()
+        body = b""
+        if secret and "x-slack-signature" in request.headers:
+            body = await request.body()
+        resolved = resolve_actor(request.headers, body, keys, secret)
+        if resolved is None:
+            return JSONResponse({"error": "invalid or missing API key"}, status_code=401)
+        actor, mode = resolved
+        log(actor, "/mcp", {"auth": mode} if mode == "slack_identity" else None)
         return await call_next(request)
 
 
@@ -349,13 +427,13 @@ async def lifespan(_app):
 
 
 # ---------- REST API (for Slack and everything else) ----------
-app = FastAPI(title="Intradiem GTM Brain", version="2.0", lifespan=lifespan)
+app = FastAPI(title="Intradiem GTM Brain", version="2.1", lifespan=lifespan)
 
 
 @app.get("/healthz")
 def healthz():
     """Liveness plus snapshot age, so a monitor can catch a stale brain without a key."""
-    out = {"ok": True, "service": "intradiem-gtm-brain", "version": "2.0",
+    out = {"ok": True, "service": "intradiem-gtm-brain", "version": "2.1",
            "source": "url" if STATE_URL else ("path" if STATE_PATH else "unconfigured")}
     try:
         state = get_state()

@@ -16,6 +16,8 @@ EXPOSE 8000
 # Required at run time:
 #   GTM_STATE_URL   published snapshot, e.g. https://gtm-brain-state.pages.dev/gtm_state.json
 #   GTM_API_KEYS    "slack:KEY1,claude:KEY2"
+#   SLACK_SIGNING_SECRET   (optional) lets Slackbot's MCP client in by request signature;
+#                          unset = key-only, unchanged
 # Optional: GTM_STATE_TTL_SECONDS (300), GTM_STATE_MAX_AGE_HOURS (36),
 #           GTM_STATE_HARD_MAX_AGE_HOURS (168)
 # /healthz reports snapshot age and returns ok:false once the snapshot is not fresh.

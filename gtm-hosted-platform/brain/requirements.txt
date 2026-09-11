@@ -1,3 +1,3 @@
 fastapi>=0.110
 uvicorn[standard]>=0.27
-mcp>=1.12
+mcp>=1.12,<2  # 2.x renamed FastMCP to MCPServer; app.py is written against 1.x (pinned 2026-09-11)
