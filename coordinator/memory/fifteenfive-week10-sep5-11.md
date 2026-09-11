@@ -1,6 +1,6 @@
 ---
 name: fifteenfive-week10-sep5-11
-description: "Sep 10 2026: the Sep 5 to 11 15Five check-in (week 10) built from the Otter sweep, the week's Slack DMs and the file record; live as the seventh week on fifteenfive-backfill.pages.dev, 12 lines, not yet submitted"
+description: "Sep 10 2026: the Sep 5 to 11 15Five check-in (week 10) built from the Otter sweep, the week's Slack DMs and the file record; live as the seventh week on fifteenfive-backfill.pages.dev, 11 lines, cut to 30-60 words each Sep 11, not yet submitted"
 metadata:
   type: project
 ---

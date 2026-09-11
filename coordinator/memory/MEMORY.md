@@ -585,7 +585,12 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [BO Integrated Campaign Thread Sep9](bo-integrated-campaign-thread-sep9.md) — copy approved, Melissa asks can we pivot mid-flight, Sierra asks about Pardot tracked links, Naveen ads touch base Sep 11
 - [Lemlist Attribution Design Sep10](lemlist-attribution-design-sep10.md) — attribution via lemlist SF sync + lead fields, not per-campaign Pardot redirects (redirect actions need cookied prospects)
 - [Feedback Peer Messages No Instructions](feedback-peer-messages-no-instructions.md) — Sep 10 2026: never tell a peer how to do their job in their tool; say what we handle and what we need, stop
-- [15Five Week 10 Sep 5-11](fifteenfive-week10-sep5-11.md) — Sep 10 2026: this week's check-in built from Otter + Slack + files, live as week 7 on fifteenfive-backfill.pages.dev, 12 lines, not yet submitted
+- [15Five Week 10 Sep 5-11](fifteenfive-week10-sep5-11.md) — Sep 10 2026: this week's check-in built from Otter + Slack + files, live as week 7 on fifteenfive-backfill.pages.dev, 11 lines, cut to 30-60 words each Sep 11, not yet submitted
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-10
 - [Slack Surfaces + Workflows Findings Sep10](slack-surfaces-workflows-findings-sep10.md) — Surfaces are static, Workflow Builder has no outbound step, Slackbot MCP client needs slack_identity_auth (brain returns 401 today)
+- [Feedback Check-in Lines Short Natural](feedback-checkin-lines-short-natural.md) — Sep 11 2026: 15Five lines are 30 to 60 words, one idea, sound like Dallas; never a build log
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Feedback Deploy Every Page](feedback-deploy-every-page.md) — Sep 11 2026: every room/page/build is deployed to a live Cloudflare Pages link in the same turn (deploy-<project> folder, noindex, branded 404); Desktop file alone is not delivered
+- [Brain MCP 421 Host Pinning Sep11](brain-mcp-421-host-pinning-sep11.md) — live /mcp likely 421s on every keyed call (FastMCP host pinning); fixed with Slack auth door + mcp<2 pin, staged not deployed, verify with keyed tools/list
