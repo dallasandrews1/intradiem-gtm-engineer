@@ -620,3 +620,11 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Brain Snapshot Fetch 403 Urllib UA Sep11](brain-snapshot-fetch-403-urllib-ua-sep11.md) — brain 2.1 live on Render (c027f12, Sep 11 19:48Z) with healthz fresh after a User-Agent fix; Cloudflare Pages 403s the stock Python-urllib agent, name the agent on any brain fetch
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [TAM Universe Swapped Real Accounts Sep11](tam-universe-swapped-real-accounts-sep11.md) — Sep 11 2026: TAM engine now runs on 16 sourced net-new prospects (34 cited triggers, labelled agent estimates), snapshot published, brain strike_list serves cited rows; seed CSVs live on only as the test fixture
+- [Alex Elevance BO Maps Sep11](alex-elevance-bo-maps-sep11.md) — Sep 11 2026: Alex Bauer's Elevance map transcribed, two back-office maps (Elevance Health, Carelon) built as set alex; no parent Elevance/Anthem record in Audiences, 18 plan accounts, 303 known people
+- [Feedback Admin Request Notes Terse](feedback-admin-request-notes-terse.md) — Sep 11 2026: admin/IT request notes are two short factual paragraphs, security facts up front, no offers or softeners
+- [Brain Hosted On Personal Accounts Sep11](brain-hosted-on-personal-accounts-sep11.md) — brain on Dallas personal Render, snapshot on personal Cloudflare; say "a service I host on my own account", never "our service", in admin or leadership copy
+- [Brain Snapshot Publish Leg Manual Sep11](brain-snapshot-publish-leg-manual-sep11.md) — brain refetches the URL every 5 min but nothing on this Mac auto-publishes the snapshot; nightly stages only, stale at 36h unless --deploy is wired
+- [Brain Live Loop Plan Sep11](brain-live-loop-plan-sep11.md) — four-part loop plan (Audiences accounts, unreviewed-to-cited triggers via Slack approve/deny, nightly --deploy, weekly research job); loop thread owns it incl. the deploy flag; approve/deny rides the rundown listener, never new scopes on the GTM Brain app

@@ -1,6 +1,6 @@
 ---
 name: tam-seed-data-never-swapped-sep5
-description: "The TAM engine's account and trigger CSVs are still the Jul 1 2026 interview-build seed, never swapped for real data; caught Sep 5 2026 and guarded with a source column plus a SEED banner"
+description: "RESOLVED 2026-09-11, see tam-universe-swapped-real-accounts-sep11. The TAM engine's account and trigger CSVs are still the Jul 1 2026 interview-build seed, never swapped for real data; caught Sep 5 2026 and guarded with a source column plus a SEED banner"
 metadata: 
   node_type: memory
   type: project
@@ -37,7 +37,7 @@ it has no sourced committee at all (the Sep 5 run reported the TAM engine return
 people and there is no Clay export for it). Any named committee in the retired Sep 5 output was not
 sourced from a roster and must not be recorded.
 
-Open: fill `source` on the six rows or replace the file with the real account universe. Related:
+RESOLVED Sep 11 2026: the file was replaced with a 16-account sourced universe, seed rows survive only as tests/fixture_seed/ ([[tam-universe-swapped-real-accounts-sep11]]). Related:
 [[allhands-demo-footage-review-sep5]], [[gtm-engineering-totals-aug27]].
 
 ## Shared platform read (Sep 5 2026)
