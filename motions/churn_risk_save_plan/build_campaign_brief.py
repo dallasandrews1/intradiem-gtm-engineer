@@ -16,13 +16,13 @@ for r in d["inger"]:
     if r["track"] in INCLUDE_TRACKS:
         rows.append({"full_name": r["name"], "title": (r["title_live"] or r["title_inger"]).split(" (")[0], "email": em,
                      "email_source": "checked Sep 2026 (work-email verification)" if r.get("email_validated") else "Salesforce, checked Sep 2026",
-                     "linkedin": r["linkedin"], "company": "Cleveland Clinic", "group": "IT and RFP", "send_as": "Amy Johnson alias", "notes": ""})
+                     "linkedin": r["linkedin"], "company": "Cleveland Clinic", "group": "IT and RFP"})
     else: excluded.append((r["name"], EXCLUDE_WHY.get(r["track"], r["track"])))
 SPONSOR_LINE = {"rena thompson", "shantel adams", "linda reid", "mary kay pienta", "adam gilbert", "eric kokochak", "lisa yerian"}
 known_marketable = [k for k in d["known"] if k["email"] and k["title"] and k["name"].lower() not in SPONSOR_LINE and "@" in k["email"]]
 for k in known_marketable:
     rows.append({"full_name": k["name"], "title": k["title"], "email": k["email"], "email_source": "Salesforce (marketing's own records, not re-verified)", "linkedin": k["linkedin"],
-                 "company": "Cleveland Clinic", "group": "Salesforce-known contact center and IT", "send_as": "Amy Johnson alias", "notes": "Pardot bounce handling applies"})
+                 "company": "Cleveland Clinic", "group": "Salesforce-known contact center and IT"})
 out_csv = HERE / "data/Cleveland_Clinic_Verified_List_Nicole_Sep11.csv"
 with open(out_csv, "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
