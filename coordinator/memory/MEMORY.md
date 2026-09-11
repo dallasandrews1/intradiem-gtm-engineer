@@ -603,3 +603,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [AM Hierarchies Only Inger Sep11](am-hierarchies-only-inger-sep11.md) — Sep 11 2026: only Inger's 12 AM maps ever arrived; Savannah asked in the marketing group DM about hierarchies + a post-all-hands follow-up
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Slack GTM Brain App Created Sep11](slack-gtm-brain-app-created-sep11.md) — app exists with mcp:connect + MCP Servers page; install is admin-gated (Request to Workspace Install), hold until the brain deploys
