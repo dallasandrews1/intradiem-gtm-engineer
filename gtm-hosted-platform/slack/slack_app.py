@@ -39,15 +39,44 @@ def brain_get(path):
     return r.json()
 
 
+def freshness_note(env):
+    """The brain serves a dated snapshot. A seller must never read a figure without its age,
+    and must never be shown a blank where a withheld number was. Added 2026-09-05."""
+    if env.get("freshness") == "fresh":
+        return None
+    return (env.get("warning")
+            or f"Data freshness: {env.get('freshness')}. Figures withheld; do not quote.")
+
+
+def tech_summary(p):
+    """Only a sourced, dated read (engine `tech` block) is shown; anything else is 'unverified'."""
+    tech = p.get("tech") or {}
+    parts = [f"{k.upper()} {tech[k]['value']}" for k in ("acd", "wfm") if tech.get(k, {}).get("verified")]
+    return "tech " + "/".join(parts) if parts else "tech stack unverified"
+
+
 def format_plan(p):
     """Slack Block Kit: snapshot, why-now, and each persona's day-1 touch."""
+    owner = p.get("seller") or "unassigned"
+    if isinstance(owner, dict):
+        owner = owner.get("seller_name", "unassigned")
     blocks = [
         {"type": "header", "text": {"type": "plain_text", "text": f"Strike plan: {p['company']}"}},
-        {"type": "section", "text": {"type": "mrkdwn", "text":
-            f"*{p['domain']}* · {p['industry']} · ~{p['agent_count']:,} agents on {p['acd']}/{p['wfm']}\n"
-            f"Fit *{p['icp_total']}/100* (Tier {p['tier']}) · Recoverable *{p['roi_label']}/yr* "
-            f"({p['roi_per_agent_label']}/agent) · Owner {p['seller']['seller_name'] if p.get('seller') else 'unassigned'}"}},
     ]
+    if p.get("redacted"):
+        # The engine withheld this row's figures (stale snapshot, or no citation on the
+        # account). Say so plainly instead of rendering zeros and blanks.
+        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text":
+            f"*{p['domain']}* · {p.get('industry', 'industry unknown')} · Owner {owner}\n"
+            f":warning: *Figures withheld.* {p.get('redaction_reason', '')}"}})
+    else:
+        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text":
+            f"*{p['domain']}* · {p['industry']} · ~{p['agent_count']:,} agents · {tech_summary(p)}\n"
+            f"Fit *{p['icp_total']}/100* (Tier {p['tier']}) · Recoverable *{p['roi_label']}/yr* "
+            f"({p['roi_per_agent_label']}/agent) · Owner {owner}"}})
+    note = freshness_note(p)
+    if note:
+        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f":warning: {note}"}})
     why = "\n".join(f"• *{t['label']}*: {t['detail']}" for t in p.get("triggers", []))
     if why:
         blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"*Why now*\n{why}"}})
@@ -76,7 +105,14 @@ def strikeplan(ack, respond, command):
             respond("The strike engine is unreachable right now. Try again shortly.")
             return
         lines = ["*Strike list, ranked.* Run `/strikeplan <domain>` for the full plan.\n"]
-        for a in accts:
+        note = freshness_note(accts)
+        if note:
+            lines.append(f":warning: {note}\n")
+        for a in accts.get("accounts", []):
+            if a.get("redacted"):
+                lines.append(f"• *{a['company']}* ({a['domain']}) — figures withheld "
+                             f"({'no source on the row' if a.get('seed') else 'snapshot not fresh'})")
+                continue
             flag = " :fire:" if a.get("fresh") else ""
             lines.append(f"• *{a['company']}* ({a['domain']}) — fit {a['fit']}, {a['roi']}/yr — {a['top_trigger']}{flag}")
         respond("\n".join(lines))

@@ -22,7 +22,8 @@ FUNC.update({lbl: lbl.replace(" & ", " and ") for lbl, _ in CFG.get("func_extra"
 
 rows = list(csv.DictReader(open(P["build_sheets_csv"])))
 by = OrderedDict()
-for r in rows: by.setdefault(r["account"], []).append(r)
+GROUP = "map_name" if CFG.get("group_by") == "map_name" else "account"   # a page of several maps for one account groups by map name
+for r in rows: by.setdefault(r[GROUP], []).append(r)
 acct_type = {}
 p = P["known_companies"]
 if os.path.exists(p):
@@ -204,7 +205,7 @@ def account_section(acct, rs):
     status = '<span class="pill go">Built in Sales Navigator</span>' if built else '<span class="pill now">Ready to build</span>'
     sfp = f'<span class="pill sf">{E(at)} in Salesforce</span>' if at and at.lower() != "customer" else ""
     return f"""<section class="acct" id="{slug(acct)}"><div class="wrap">
-<div class="head"><div><h2>{E(acct)}{status}{sfp}</h2><div class="mapname">In Sales Navigator: <b>{E(acct)} - Back Office</b></div></div>
+<div class="head"><div><h2>{E(acct)}{status}{sfp}</h2><div class="mapname">In Sales Navigator: <b>{E(acct if GROUP == "map_name" else acct + " - " + CFG.get("map_suffix","Back Office"))}</b></div></div>
 <div class="stats"><div><b>{len(rs)}</b>people</div><div><b>{len(tops)}</b>senior executives</div></div></div>
 <div class="execs">{execs}</div>{(chr(10) + '<p class="note">' + E(CFG.get("account_notes", {}).get(acct, "")) + '</p>') if CFG.get("account_notes", {}).get(acct) else ''}
 </div>
@@ -237,23 +238,26 @@ JS = """
   park(); window.addEventListener('load',park); window.addEventListener('resize',park);
 })();
 </script>"""
+SIB = CFG.get("sibling_links") or []
+sib = ('<div class="sib" data-h="5"><span>%s</span>%s</div>' % (E(CFG.get("sibling_label","Also for you")), "".join(f'<a href="{E(h)}">{E(t)}</a>' for t, h in SIB))) if SIB else ""
+SIB_CSS = '.sib{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}\n.sib span{font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9DBBAE;font-weight:600}\n.sib a{font-size:13.5px;font-weight:500;color:#C4ECD4;text-decoration:none;border-bottom:1px solid rgba(123,211,160,.45);padding-bottom:1px}\n.sib a:hover{color:#fff;border-color:#fff}\n' if SIB else ""
 NOTE_CSS = ".note{margin:16px 0 0;font-size:14px;color:var(--ink-2);max-width:90ch;border-left:3px solid var(--orange);padding-left:12px}" if CFG.get("account_notes") else ""
 page = f"""<title>{CFG["title"]}</title>
-<style>{fonts}{CSS}{NOTE_CSS}</style>
+<style>{fonts}{CSS}{SIB_CSS}{NOTE_CSS}</style>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">{logo}</svg>
 <div class="sheet">
 <header class="hero" id="top"><div class="wrap">
 <svg class="logo"><use href="#ilogo"/></svg>
-<div class="eyebrow" data-h="1">GTM Engineering &middot; Back office expansion</div>
+<div class="eyebrow" data-h="1">{E(CFG.get("eyebrow","GTM Engineering · Back office expansion")).replace("·","&middot;")}</div>
 <h1 data-h="2">{CFG["headline_html"]}</h1>
 <p class="sub" data-h="3">{E(CFG["sub"])}</p>
 <div class="hstats" data-h="4"><div><b class="hc" data-to="{len(by)}">0</b><span>accounts</span></div><div><b class="hc" data-to="{total}">0</b><span>people</span></div><div><b class="hc" data-to="{execs_n}">0</b><span>senior executives</span></div><div><b class="hc" data-to="{built_n if built_n else todo_n}">0</b><span>{"maps built in Sales Navigator" if built_n else "maps ready to build"}</span></div></div>
 <div class="meta" data-h="5"><div><span>{E(REP_LABEL)}</span>{E(AM)}</div><div><span>Prepared by</span>Dallas Andrews</div><div><span>Date</span>{DATE}</div></div>
-<div class="nav" data-h="5">{nav}</div>
+{sib}<div class="nav" data-h="5">{nav}</div>
 </div></header>
 <div class="legend"><div class="wrap">{CFG.get("legend_html", '<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run the back office. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.')}</div></div>
 {"".join(account_section(a, rs) for a, rs in by.items())}
-<div class="foot"><svg class="logo"><use href="#ilogo"/></svg><span>GTM Engineering &middot; Back office expansion &middot; {DATE}</span></div>
+<div class="foot"><svg class="logo"><use href="#ilogo"/></svg><span>{E(CFG.get("eyebrow","GTM Engineering · Back office expansion")).replace("·","&middot;")} &middot; {DATE}</span></div>
 </div>
 {JS}"""
 open(OUT, "w").write(page)

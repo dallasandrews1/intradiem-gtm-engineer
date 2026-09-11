@@ -1,0 +1,197 @@
+
+=== Resurrection cam_sh3JCJoxtEHyjGrsw seqs=5 root=seq_D4jpFJfsipwr33bny
+  [stp_dGP6c9HRDyaWCZog5] linkedinVisit +0 (~d0)
+  [stp_eLt2WgPsuZziMkCkj] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_Ns5pGHqNJKe2WcQ8h] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2 within seq=seq_WbTtwaYkMggGu9ztX
+        [stp_3P8mtA3juwKYMXjJg] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message after accepted connect (approve before sending)' msg_words=53 chars=326 vars=['firstName', 'plan_name']
+        [stp_kBkdqpRK7voEnbLup] phone +1 (~d4) pri=2 title='Call {{firstName}} ({{plan_name}}), they accepted the connect' msg_words=92 chars=558 vars=['firstName', 'plan_name']
+        [stp_zgdinKdRRCcsTg9qA] email +3 (~d7) subj='one more before the window closes' words=50 vars=['firstName', 'plan_name']
+        [stp_MPXXucbkXwjkiiJSP] manual +0 (~d7) title='STRAY STEP from an API test (Dallas): delete this step, it does nothing'
+     -> FALLBACK key=None delay=None  seq=seq_3Aj58rf9Yp8kZpdvS
+        [stp_np2nhyGjHiKYZTM26] phone +0 (~d3) pri=2 title='Call {{firstName}} ({{plan_name}}), then the "just tried you" email goes out' msg_words=92 chars=549 vars=['firstName', 'plan_name']
+        [stp_afdYJbTbPXLZkvxkC] email +0 (~d3) AB=A subj='just tried you' words=125 | B subj='just tried you' words=86 vars=['firstName', 'plan_name']
+        [stp_Xwt4NgD3FFSFTvvbY] conditional +3 (~d6)
+           -> Opened email key=emailsOpened delay=3 within seq=seq_3FpmiTeBzmnZiTzFy
+              [stp_WqeFKM5M9Rjn7ehvF] email +1 (~d7) subj='re: just tried you' words=50 vars=['firstName', 'plan_name']
+           -> FALLBACK key=None delay=None  seq=seq_L3XgZazRhgn6WdP3R
+              [stp_JZWJtgNf59zwwWDBB] email +1 (~d7) subj='closing the loop' words=38 vars=['firstName', 'plan_name']
+  [stp_6eBfPTm3Y92XNT363] linkedinVoiceNote +0 (~d3) MANUAL title='STRAY STEP from an API test (Dallas): delete this step, it does nothing'
+  TYPES: {'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 2, 'linkedinSend': 1, 'phone': 2, 'email': 4, 'manual': 1, 'linkedinVoiceNote': 1}  VARS: ['firstName', 'plan_name']
+
+=== FP Quality cam_viEbB6HkYsCPtxKbi seqs=5 root=seq_uya6vybEyCKXZbfMg
+  [stp_b9Ns4nuZJSpT8Xr6s] email +0 (~d0) AB=True subj='the service measures at {{plan_name}}' words=162 | B subj='the service measures at {{plan_name}}' words=172 vars=['firstName', 'plan_name', 'qbp_avg']
+  [stp_8J5JnyMK2KZpXFfDj] linkedinVisit +0 (~d0)
+  [stp_isrRgXBN6XPZniHCJ] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_sZvH7Pz3ZD4qmhkw8] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2 within seq=seq_FKqfv2325wMmz8Dtc
+        [stp_BiYawgXJqunKqMKQ6] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message after accepted connect (approve before sending)' msg_words=63 chars=378 vars=['firstName', 'plan_name', 'qbp_avg']
+        [stp_g5ovqqDRpZR2wZ9GM] phone +1 (~d4) pri=1 title='Call 1 for {{firstName}} ({{plan_name}}), Quality lane, no voicemail' msg_words=242 chars=1345 vars=['firstName', 'plan_name', 'vm_hook']
+        [stp_LumCYdLyCLbM5ssPX] linkedinVoiceNote +1 (~d5) MANUAL pri=1 title='Voice note {{firstName}}: read voice_script variable. Swap to AI clone pre-launch' vars=['firstName']
+        [stp_QkYs9KGRARYvZzeso] phone +1 (~d6) pri=1 title='Call 2 for {{firstName}} ({{plan_name}}), leave voicemail' msg_words=105 chars=660 vars=['firstName', 'plan_name', 'vm_hook']
+        [stp_6Ec35QjTN8wxQTyzh] email +2 (~d8) subj='re: the service measures at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+        [stp_SgSrRTk2JmXjFk6h2] email +2 (~d10) subj='re: the service measures at {{plan_name}}' words=40 vars=['firstName', 'plan_name']
+     -> FALLBACK key=None delay=None  seq=seq_bXJmtu4Xx6y8LxTWh
+        [stp_QyuyWoxXW4geGSKtq] conditional +0 (~d3)
+           -> Has phone number key=hasPhoneNumber delay=None  seq=seq_kLTLpLpFLCyvp6Kcd
+              [stp_6ypPNXP38fcrnDCqk] phone +0 (~d3) pri=1 title='Voicemail for {{firstName}} ({{plan_name}}), Quality lane' msg_words=112 chars=715 vars=['firstName', 'plan_name', 'vm_hook']
+              [stp_WwSBttJmtvcmP9wE7] phone +1 (~d4) pri=1 title='Call {{firstName}} ({{plan_name}}), day after voicemail, no second voicemail' msg_words=76 chars=440 vars=['firstName', 'plan_name', 'vm_hook']
+              [stp_Su5qdLPGd4uk4KAFZ] email +2 (~d6) subj='re: the service measures at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+              [stp_LABLiwASiNCuHtSHy] phone +2 (~d8) pri=1 title='Final call for {{firstName}} ({{plan_name}}), double-tap, no voicemail' msg_words=77 chars=448 vars=['firstName', 'plan_name']
+              [stp_wthvAbfD3vu8iKFFo] email +1 (~d9) subj='re: the service measures at {{plan_name}}' words=40 vars=['firstName', 'plan_name']
+           -> FALLBACK key=None delay=None  seq=seq_xayDCoQKqqpnEm9YC
+              [stp_qtHRkBxNm5JZyzMh6] linkedinLikeLastPost +1 (~d4)
+              [stp_8DAMjzoDTD3LFy2Rv] linkedinFollow +0 (~d4) msg_words=0 chars=0
+              [stp_REBxnFqwvo4FF9xFk] email +1 (~d5) subj='re: the service measures at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+              [stp_CBmQ7XJkTNsyXF5hr] email +4 (~d9) subj='re: the service measures at {{plan_name}}' words=40 vars=['firstName', 'plan_name']
+  TYPES: {'email': 7, 'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 2, 'linkedinSend': 1, 'phone': 5, 'linkedinVoiceNote': 1, 'linkedinLikeLastPost': 1, 'linkedinFollow': 1}  VARS: ['firstName', 'plan_name', 'qbp_avg', 'vm_hook']
+
+=== FP Finance cam_2gy9hmEvMjYEuPZ8A seqs=5 root=seq_JgHnp4nwCZ47sqjXo
+  [stp_hmp9Gp7dAZFgkgqPq] email +0 (~d0) AB=True subj='the bonus line at {{plan_name}}' words=169 | B subj='the bonus line at {{plan_name}}' words=180 vars=['firstName', 'plan_name', 'qbp_avg']
+  [stp_83GFzJMt2A4TenMqw] linkedinVisit +0 (~d0)
+  [stp_Fa84LhBJhhopceLaQ] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_GcKhnDZjWZ63LdSHq] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2 within seq=seq_Mtnqt8s9LKr9bKnpD
+        [stp_y85XidZL3XCecpzAZ] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message after accepted connect (approve before sending)' msg_words=65 chars=377 vars=['firstName', 'plan_name', 'qbp_avg']
+        [stp_mGX4zdGjW24szwMn2] phone +1 (~d4) pri=1 title='Call 1 for {{firstName}} ({{plan_name}}), Finance lane, no voicemail' msg_words=235 chars=1281 vars=['firstName', 'plan_name', 'vm_hook']
+        [stp_9YLwdR5Rrt6eAvXns] linkedinVoiceNote +1 (~d5) MANUAL pri=1 title='Voice note {{firstName}}: read voice_script variable. Swap to AI clone pre-launch' vars=['firstName']
+        [stp_79dFBYM92pciNTc4p] phone +1 (~d6) pri=1 title='Call 2 for {{firstName}} ({{plan_name}}), leave voicemail' msg_words=105 chars=654 vars=['firstName', 'plan_name', 'vm_hook']
+        [stp_WGh7oxAFgKYpWpvxX] email +2 (~d8) subj='re: the bonus line at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+        [stp_zqvz6RiisyJP7jrEu] email +2 (~d10) subj='re: the bonus line at {{plan_name}}' words=36 vars=['firstName', 'plan_name']
+     -> FALLBACK key=None delay=None  seq=seq_EC4Cdf7fZFrZnwPvB
+        [stp_nF7DdGnStHBGxcgo2] conditional +0 (~d3)
+           -> Has phone number key=hasPhoneNumber delay=None  seq=seq_dN2LWWFxL8ZcnHe5f
+              [stp_2PEMT5MxZGCvQ4gCc] phone +0 (~d3) pri=1 title='Voicemail for {{firstName}} ({{plan_name}}), Finance lane' msg_words=112 chars=709 vars=['firstName', 'plan_name', 'vm_hook']
+              [stp_bz4CCwLzxstfepkkT] phone +1 (~d4) pri=1 title='Call {{firstName}} ({{plan_name}}), day after voicemail, no second voicemail' msg_words=76 chars=431 vars=['firstName', 'plan_name', 'vm_hook']
+              [stp_SAQGYwNEDHNYMo7yg] email +2 (~d6) subj='re: the bonus line at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+              [stp_GvbcKTybfkWs3egL4] phone +2 (~d8) pri=1 title='Final call for {{firstName}} ({{plan_name}}), double-tap, no voicemail' msg_words=77 chars=443 vars=['firstName', 'plan_name']
+              [stp_WF7nrb9fXE4DJZttE] email +1 (~d9) subj='re: the bonus line at {{plan_name}}' words=36 vars=['firstName', 'plan_name']
+           -> FALLBACK key=None delay=None  seq=seq_GTqA7GD4zMosMcNqP
+              [stp_5Hce5ibX4ngDWTtsW] email +1 (~d4) subj='re: the bonus line at {{plan_name}}' words=119 vars=['firstName', 'plan_name']
+              [stp_3LpxWdMEAWbfWx97z] linkedinLikeLastPost +0 (~d4)
+              [stp_bpSfradbwDv99pHwv] linkedinFollow +0 (~d4) msg_words=0 chars=0
+              [stp_Jph7kpizSM2omfnAe] linkedinVisit +1 (~d5)
+              [stp_d586JNgt2ithx2mqa] email +4 (~d9) subj='re: the bonus line at {{plan_name}}' words=36 vars=['firstName', 'plan_name']
+  TYPES: {'email': 7, 'linkedinVisit': 2, 'linkedinInvite': 1, 'conditional': 2, 'linkedinSend': 1, 'phone': 5, 'linkedinVoiceNote': 1, 'linkedinLikeLastPost': 1, 'linkedinFollow': 1}  VARS: ['firstName', 'plan_name', 'qbp_avg', 'vm_hook']
+
+=== Blitz Citizens cam_yWefPqaDhNNv4RyQK seqs=5 root=seq_vWS3ceMs5oh8YB6E5
+  [stp_scn8zBoQtoAuP9AgE] email +0 (~d0) AB=True subj='the half that's left' words=151 | B subj='the half that's left' words=168 vars=['firstName']
+  [stp_AMNMyiizNC9oGkxpS] linkedinVisit +0 (~d0)
+  [stp_uwR7RtiuadGjtG59g] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}} at Citizens, no note (approve before sending)' vars=['firstName']
+  [stp_LBq3LQfkYHP3HqjwA] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2 within seq=seq_d8BtwftFedbCAdGvY
+        [stp_4oFHeJmAEYrh6bXHD] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message after accepted connect (approve before sending)' msg_words=64 chars=352 vars=['firstName']
+        [stp_n6TyMNxkjuvkZrPqm] phone +1 (~d4) pri=1 title='Call 1 for {{firstName}} (Citizens), no voicemail' msg_words=245 chars=1329 vars=['firstName', 'vm_hook']
+        [stp_r74setWyajvdR2yPm] linkedinVoiceNote +1 (~d5) MANUAL pri=1 title='Voice note {{firstName}}: read voice_script in the body. Swap to AI clone pre-launch' msg_words=1 chars=16 vars=['firstName', 'voice_script']
+        [stp_usi9YgduCawPoMniK] phone +1 (~d6) pri=1 title='Call 2 for {{firstName}} (Citizens), leave voicemail' msg_words=99 chars=611 vars=['firstName', 'vm_hook']
+        [stp_t4YyNH3bvLP7dZWgM] email +2 (~d8) subj='re: the half that's left' words=119 vars=['firstName']
+        [stp_jdBdpZdERe7eSTobo] email +2 (~d10) subj='re: the half that's left' words=44 vars=['firstName']
+     -> FALLBACK key=None delay=None  seq=seq_pLg7k89aowjBXuGMi
+        [stp_EWfNGvTBY55KcqSMb] conditional +0 (~d3)
+           -> Has phone number key=hasPhoneNumber delay=None  seq=seq_rButuj6uT9QfZJunq
+              [stp_oewTS8bXHTpAgwavt] phone +0 (~d3) pri=1 title='Voicemail for {{firstName}} (Citizens), no connect on LinkedIn' msg_words=106 chars=666 vars=['firstName', 'vm_hook']
+              [stp_T8KzCY7Fq7q66BvnQ] phone +1 (~d4) pri=1 title='Call {{firstName}} (Citizens), day after voicemail, no second voicemail' msg_words=75 chars=426 vars=['firstName', 'vm_hook']
+              [stp_5a4AbeFcXpjRTAmcR] email +2 (~d6) subj='re: the half that's left' words=119 vars=['firstName']
+              [stp_kEt8LTw26BYBezMZc] phone +2 (~d8) pri=1 title='Final call for {{firstName}} (Citizens), double-tap close, no voicemail' msg_words=84 chars=470 vars=['firstName']
+              [stp_MmRkH4eX4LAQuQ2hC] email +1 (~d9) subj='re: the half that's left' words=44 vars=['firstName']
+           -> FALLBACK key=None delay=None  seq=seq_vTyQc2EYYDgHSY8vp
+              [stp_ZNej6Ez543J6P5vmu] email +3 (~d6) subj='re: the half that's left' words=119 vars=['firstName']
+              [stp_6t8sLfACTNf8gFms8] linkedinLikeLastPost +0 (~d6)
+              [stp_HB5FwQLwgParnaXCa] linkedinFollow +0 (~d6) msg_words=0 chars=0
+              [stp_L3dvptguTckQEvH94] linkedinVisit +1 (~d7)
+              [stp_QQRXiaQzdQYekGZ4H] email +4 (~d11) subj='re: the half that's left' words=44 vars=['firstName']
+  TYPES: {'email': 7, 'linkedinVisit': 2, 'linkedinInvite': 1, 'conditional': 2, 'linkedinSend': 1, 'phone': 5, 'linkedinVoiceNote': 1, 'linkedinLikeLastPost': 1, 'linkedinFollow': 1}  VARS: ['firstName', 'vm_hook', 'voice_script']
+
+=== Blitz Hartford cam_fYp7Nh9wB72gfMke6 seqs=5 root=seq_jG8aiuxE8FCQD564C
+  [stp_MwwcFRGtWS9GY9yoJ] email +0 (~d0) AB=True subj='the claims side of the AI number' words=163 | B subj='the claims side of the AI number' words=178 vars=['firstName']
+  [stp_cCd5DgBmLjosZeKBM] linkedinVisit +0 (~d0)
+  [stp_nZoDaTy3ALNS46bGz] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}} at The Hartford, no note (approve first)' vars=['firstName']
+  [stp_NvvZ37iTfpMbvWpMp] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2 within seq=seq_DrLnaPQw4KjR3tobM
+        [stp_NeBRHt488XSHbLmvB] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message after accepted connect (approve before sending)' msg_words=66 chars=390 vars=['firstName']
+        [stp_6TkpGJRtRv7XLryaQ] phone +1 (~d4) pri=1 title='Call 1 for {{firstName}} (The Hartford), no voicemail' msg_words=233 chars=1301 vars=['firstName', 'vm_hook']
+        [stp_7QNCWBL6JigjN5Efs] linkedinVoiceNote +1 (~d5) MANUAL pri=1 title='Voice note {{firstName}}: read voice_script in the body. Swap to AI clone pre-launch' msg_words=1 chars=16 vars=['firstName', 'voice_script']
+        [stp_Exk874hWjGJzWJzPx] phone +1 (~d6) pri=1 title='Call 2 for {{firstName}} (The Hartford), leave voicemail' msg_words=101 chars=620 vars=['firstName', 'vm_hook']
+        [stp_un4Y4stcgJFjSNamu] email +2 (~d8) subj='re: the claims side of the AI number' words=101 vars=['firstName']
+        [stp_usGHSFy2jjRRP2LGF] email +2 (~d10) subj='re: the claims side of the AI number' words=44 vars=['firstName']
+     -> FALLBACK key=None delay=None  seq=seq_HNAaK9YfAcPge7HsE
+        [stp_Ceuzy5dwZC87SsBAe] conditional +0 (~d3)
+           -> Has phone number key=hasPhoneNumber delay=None  seq=seq_Pa7JYyP45rAyP5vnk
+              [stp_5sNTrLPNrS7xqfobc] phone +0 (~d3) pri=1 title='Voicemail for {{firstName}} (The Hartford), no connect on LinkedIn' msg_words=108 chars=675 vars=['firstName', 'vm_hook']
+              [stp_DDWtmpJcGb4sMfvAm] phone +1 (~d4) pri=1 title='Call {{firstName}} (The Hartford), day after voicemail, no second voicemail' msg_words=73 chars=424 vars=['firstName', 'vm_hook']
+              [stp_2EyhwKb8irsw8MKEq] email +2 (~d6) subj='re: the claims side of the AI number' words=101 vars=['firstName']
+              [stp_cxk2ntRzbzNHukCRr] phone +2 (~d8) pri=1 title='Final call for {{firstName}} (The Hartford), double-tap close, no voicemail' msg_words=78 chars=453 vars=['firstName']
+              [stp_Z2p2cDvkmJwtAPPcX] email +1 (~d9) subj='re: the claims side of the AI number' words=44 vars=['firstName']
+           -> FALLBACK key=None delay=None  seq=seq_mZ3DFWrsQHiu623Ai
+              [stp_BCcEf8PwC4Qn6vZb9] email +3 (~d6) subj='re: the claims side of the AI number' words=101 vars=['firstName']
+              [stp_DKzqZ2ibotbTzTKfu] linkedinLikeLastPost +0 (~d6)
+              [stp_o67paTCqSZazNaDaB] linkedinFollow +0 (~d6) msg_words=0 chars=0
+              [stp_vsKzz5iDMb2nuPa9m] linkedinVisit +1 (~d7)
+              [stp_2ek52DPKmHsRbQfbQ] email +4 (~d11) subj='re: the claims side of the AI number' words=44 vars=['firstName']
+  [stp_6s7955iZXipEEB2Xr] linkedinVoiceNote +1 (~d4) msg_words=1 chars=16 vars=['voice_script']
+  TYPES: {'email': 7, 'linkedinVisit': 2, 'linkedinInvite': 1, 'conditional': 2, 'linkedinSend': 1, 'phone': 5, 'linkedinVoiceNote': 2, 'linkedinLikeLastPost': 1, 'linkedinFollow': 1}  VARS: ['firstName', 'vm_hook', 'voice_script']
+
+=== BO HC Payer cam_N92Tgg29ncHWnYAD9 seqs=3 root=seq_yKYrb3hnDLzPk7xoi
+  [stp_z5F3mCrKShmLTNkoL] email +0 (~d0) subj='the monday backlog' words=98 vars=['firstName']
+  [stp_WMTZcLaXgkJGNQysY] linkedinVisit +1 (~d1)
+  [stp_ci8gK7YJiazWe2RuP] linkedinInvite +0 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_LvZjuu74bdvKjCb6Y] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2  seq=seq_xbqjuE3d37TxQatzK
+     -> FALLBACK key=None delay=None  seq=seq_DmZsvdLSjYowsQbtd
+  [stp_zym48JPERwfr8bZrn] linkedinSend +2 (~d5) MANUAL pri=1 title='LinkedIn message for {{firstName}} (approve before sending)' msg_words=55 chars=335 vars=['firstName']
+  [stp_3bAX7YGxSbDrTiHwu] email +2 (~d7) subj='yesterday's report' words=94 vars=['enterprise_line', 'firstName']
+  [stp_xm5BjcoR9WtWHDuGZ] phone +2 (~d9) title='Call {{firstName}} (CLEARED NAMES ONLY, check owner_cleared first)' msg_words=28 chars=203 vars=['firstName', 'function', 'parent_account']
+  TYPES: {'email': 2, 'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 1, 'linkedinSend': 1, 'phone': 1}  VARS: ['enterprise_line', 'firstName', 'function', 'parent_account']
+
+=== BO FS cam_x8ehMHnWSjBr2CLQe seqs=3 root=seq_4w3kLgwdMAzRTAiSp
+  [stp_xBnk2aBQxKNB7iFSk] email +0 (~d0) subj='between the reports' words=97 vars=['firstName']
+  [stp_RBaDyAJWePxYR6taq] linkedinVisit +1 (~d1)
+  [stp_bd4npPdSBPEaPmAN9] linkedinInvite +0 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_NFsycGNY8XcAar37z] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2  seq=seq_zAgdphy8aeTr4ksS5
+     -> FALLBACK key=None delay=None  seq=seq_z3mByM5mCSnA9qihA
+  [stp_xMmmD6tT3HEJynudY] linkedinSend +2 (~d5) MANUAL pri=1 title='LinkedIn message for {{firstName}} (approve before sending)' msg_words=49 chars=320 vars=['firstName']
+  [stp_jSbYb5m9qNzgcFKqJ] email +2 (~d7) subj='found capacity' words=98 vars=['enterprise_line', 'firstName']
+  [stp_fTNF8N6qFgXgeLham] phone +2 (~d9) title='Call {{firstName}} (CLEARED NAMES ONLY, check owner_cleared first)' msg_words=23 chars=169 vars=['firstName', 'function', 'parent_account']
+  TYPES: {'email': 2, 'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 1, 'linkedinSend': 1, 'phone': 1}  VARS: ['enterprise_line', 'firstName', 'function', 'parent_account']
+
+=== BO Insurance cam_HCu4jiFB8oinz2s3F seqs=3 root=seq_4vdyhxWTp9EbZH4zu
+  [stp_sp7RzkWmADxKJFvMi] email +0 (~d0) subj='the tat clock' words=96 vars=['firstName']
+  [stp_e4hc3SJkkX3HjzLSC] linkedinVisit +1 (~d1)
+  [stp_FcTgMoN59oPovR3Br] linkedinInvite +0 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_iY7a6R8E6TFf4Y3br] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2  seq=seq_eE4zJdKMWNgytS4tL
+     -> FALLBACK key=None delay=None  seq=seq_467xbTnYjPYGQFWKm
+  [stp_ApaBwvKb4wQLSHR7K] linkedinSend +2 (~d5) MANUAL pri=1 title='LinkedIn message for {{firstName}} (approve before sending)' msg_words=51 chars=297 vars=['firstName']
+  [stp_r46oP6tygcvkCM5SL] email +2 (~d7) subj='the overtime premium' words=97 vars=['enterprise_line', 'firstName']
+  [stp_kJRt7tECeWHfaPdLw] phone +2 (~d9) title='Call {{firstName}} (CLEARED NAMES ONLY, check owner_cleared first)' msg_words=23 chars=164 vars=['firstName', 'function', 'parent_account']
+  TYPES: {'email': 2, 'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 1, 'linkedinSend': 1, 'phone': 1}  VARS: ['enterprise_line', 'firstName', 'function', 'parent_account']
+
+=== BO BPO cam_Fy287YF9X5fjPYBSo seqs=3 root=seq_qbR7ebFK9QhskSa9o
+  [stp_sAZEdSN2sEkQQFGSg] email +0 (~d0) subj='the margin line' words=104 vars=['firstName']
+  [stp_moQqsWthFxnsGMfzL] linkedinVisit +1 (~d1)
+  [stp_sM66DExHbsZMN9ECx] linkedinInvite +0 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_uqeEtKc4BeC7dCTdc] conditional +2 (~d3)
+     -> Accepted invite key=linkedinInviteAccepted delay=2  seq=seq_ZeAEm29fmKYh85n8n
+     -> FALLBACK key=None delay=None  seq=seq_QL85GhPwMoHzofyjF
+  [stp_vxzjwtNsbd4veW7wS] linkedinSend +2 (~d5) MANUAL pri=1 title='LinkedIn message for {{firstName}} (approve before sending)' msg_words=45 chars=283 vars=['firstName']
+  [stp_DpkDLAsLnfKCdifXe] email +2 (~d7) subj='slas in real time, cost at month end' words=98 vars=['enterprise_line', 'firstName']
+  [stp_eCwGbnZTN6WG8JpDL] phone +2 (~d9) title='Call {{firstName}} (CLEARED NAMES ONLY, check owner_cleared first)' msg_words=23 chars=166 vars=['firstName', 'function', 'parent_account']
+  TYPES: {'email': 2, 'linkedinVisit': 1, 'linkedinInvite': 1, 'conditional': 1, 'linkedinSend': 1, 'phone': 1}  VARS: ['enterprise_line', 'firstName', 'function', 'parent_account']
+
+=== BO Net-New cam_DNErdZPANvC2sqRCK seqs=1 root=seq_tegzQbC5PCQ78qHBm
+  [stp_fgmFp3zcdyuGEYkbF] email +0 (~d0) subj='two clocks' words=63 vars=['firstName', 'function', 'opener_line']
+  [stp_Tu9fibaCwEJHiaAwi] linkedinInvite +1 (~d1) MANUAL pri=1 title='LinkedIn connect for {{firstName}}, no note (approve before sending)' vars=['firstName']
+  [stp_CyddxKvApMD4XGLbb] phone +2 (~d3) title='Voicemail for {{firstName}} ({{function}}, {{parent_account}}). CLEARED FOR CALL ONLY.' msg_words=51 chars=301 vars=['firstName', 'function', 'parent_account']
+  [stp_ABCCRYeXeGmimFZLS] linkedinSend +0 (~d3) MANUAL pri=1 title='LinkedIn message for {{firstName}} (approve before sending)' msg_words=52 chars=317 vars=['firstName', 'function']
+  [stp_BBQHMuwcMNp7aE9Tu] email +2 (~d5) subj='the headcount cutoff' words=103 vars=['firstName']
+  [stp_dtqqhbsG3ej8cHSec] email +3 (~d8) subj='closing the loop' words=66 vars=['firstName']
+  TYPES: {'email': 3, 'linkedinInvite': 1, 'phone': 1, 'linkedinSend': 1}  VARS: ['firstName', 'function', 'opener_line', 'parent_account']
+
+=== DWO Exec cam_SiD4KmWcRuhiF6uhL seqs=1 root=seq_XiYpoRMDksmH7c93u
+  [stp_vQd7kTCL3DpDgkryR] email +0 (~d0) AB=True subj='idle minutes at {{companyName}}' words=7 | B subj='idle minutes at {{companyName}}' words=33 vars=['angleAsk', 'angleIdea', 'angleProof', 'companyName', 'firstName', 'opener']
+  [stp_Aegqh8dxAyJkcNw6x] linkedinInvite +1 (~d1) msg_words=23 chars=157 vars=['companyName', 'firstName']
+  [stp_i8y3aXX9new5wdXMm] email +2 (~d3) subj='' words=69 vars=['firstName']
+  [stp_nQC6y3NEJbTFt79He] linkedinSend +3 (~d6) msg_words=73 chars=430 vars=['companyName', 'firstName']
+  [stp_KfbFDrRTvrztqBPPZ] email +4 (~d10) subj='' words=43 vars=['companyName', 'firstName', 'peak']
+  TYPES: {'email': 3, 'linkedinInvite': 1, 'linkedinSend': 1}  VARS: ['angleAsk', 'angleIdea', 'angleProof', 'companyName', 'firstName', 'opener', 'peak']

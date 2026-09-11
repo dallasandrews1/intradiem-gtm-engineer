@@ -1,0 +1,73 @@
+{
+ "jul26_lists": {
+  "Back_Office_Operations_Leaders_Jul26.csv": "ops_leaders",
+  "Back_Office_COO_SVP_Executives_Jul26.csv": "coo_svp",
+  "Back_Office_Product_Owners_Jul26.csv": "product_owners",
+  "Back_Office_Claims_IT_Leaders_Jul26.csv": "claims_it"
+ },
+ "account_vertical": {
+  "Aetna": "hc",
+  "Elevance": "hc",
+  "Molina": "hc",
+  "UnitedHealthcare": "hc",
+  "Humana": "hc",
+  "Cigna": "hc",
+  "Goldman": "fs",
+  "Goldman Sachs": "fs",
+  "JPMorgan": "fs",
+  "Wells Fargo": "fs",
+  "Synchrony": "fs",
+  "US Bancorp": "fs",
+  "MetLife": "ins",
+  "Prudential": "ins",
+  "Prudential Financial": "ins",
+  "Assurant": "ins",
+  "Guardian Life": "ins",
+  "Travelers": "ins",
+  "Zurich North America": "ins",
+  "Capita": "bpo",
+  "Foundever": "bpo",
+  "Maximus": "bpo"
+ },
+ "campaign_ids": {
+  "hc": "cam_N92Tgg29ncHWnYAD9",
+  "fs": "cam_x8ehMHnWSjBr2CLQe",
+  "ins": "cam_HCu4jiFB8oinz2s3F",
+  "bpo": "cam_Fy287YF9X5fjPYBSo"
+ },
+ "parent_account": {
+  "Goldman": "Goldman Sachs",
+  "Prudential": "Prudential Financial",
+  "Elevance": "Elevance Health",
+  "Molina": "Molina Healthcare",
+  "Synchrony": "Synchrony Financial",
+  "Cigna": "Cigna",
+  "Capita": "Capita",
+  "Foundever": "Foundever",
+  "Maximus": "Maximus"
+ },
+ "am_owner": {
+  "Assurant": "Inger Escamilla",
+  "Cleveland Clinic": "Inger Escamilla",
+  "Cox Communications": "Inger Escamilla",
+  "DIRECTV": "Inger Escamilla",
+  "Goldman Sachs": "Inger Escamilla",
+  "Guardian Life": "Inger Escamilla",
+  "McKesson": "Inger Escamilla",
+  "MetLife": "Inger Escamilla",
+  "Prudential Financial": "Inger Escamilla",
+  "Rogers Communications": "Inger Escamilla",
+  "Travelers": "Inger Escamilla",
+  "Zurich North America": "Inger Escamilla",
+  "Goldman": "Inger Escamilla",
+  "Prudential": "Inger Escamilla"
+ },
+ "function_phrase_default": "operations",
+ "enterprise_line_brand_safe": "There's also a version of this your own front office already runs today, which makes the conversation more concrete than a cold pitch.",
+ "neutral_line": {
+  "hc": "The teams furthest along treat it as a scheduling fact, not a reporting gap, which changes who owns the fix.",
+  "fs": "The interesting part is that the fix is operational, not another reporting layer, which changes the budget conversation.",
+  "ins": "The teams getting ahead of it started by measuring the gap for two weeks, which made the case internal and concrete.",
+  "bpo": "The operators moving first are using it in renewal conversations, because proving it beats promising it."
+ }
+}

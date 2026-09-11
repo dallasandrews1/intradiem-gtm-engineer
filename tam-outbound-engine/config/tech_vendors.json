@@ -1,0 +1,36 @@
+{
+  "_comment": "Verified tech-stack read. tech_stack_refresh.py runs the Clay action below once per domain (1 credit, PredictLeads: job posts, site tags, DNS), keeps only the names in filter (exact match), maps each hit to a canonical vendor and a lane (acd or wfm), and writes the most recently seen vendor per lane to data/tam_accounts.csv with predictleads:<url> as source and last_seen_at as observed. Added 2026-09-05.",
+  "clay_action": {
+    "packageId": "aa68bb13-b114-404a-a5cf-f920e72fbc90",
+    "actionKey": "predict-leads-get-tech-stack-for-company-v3",
+    "credits_per_run": 1
+  },
+  "filter": [
+    "NICE CXone", "NICE inContact", "NICE Workforce Management", "NICE IEX", "NICE",
+    "Five9", "Genesys", "Genesys Cloud", "Genesys Cloud CX",
+    "Verint", "Verint Workforce Management",
+    "Calabrio", "Calabrio ONE",
+    "Aspect Workforce Management", "Alvaria",
+    "Amazon Connect", "TalkDesk", "Talkdesk",
+    "Avaya", "Avaya Aura", "Avaya CentreVu Supervisor", "Avaya Call Management System", "Avaya Experience Portal",
+    "Cisco Unified Contact Center", "Webex Contact Center", "RingCentral"
+  ],
+  "canonical": {
+    "NICE CXone": "NICE", "NICE inContact": "NICE", "NICE": "NICE",
+    "NICE Workforce Management": "NICE", "NICE IEX": "NICE",
+    "Five9": "Five9",
+    "Genesys": "Genesys", "Genesys Cloud": "Genesys", "Genesys Cloud CX": "Genesys",
+    "Verint": "Verint", "Verint Workforce Management": "Verint",
+    "Calabrio": "Calabrio", "Calabrio ONE": "Calabrio",
+    "Aspect Workforce Management": "Aspect", "Alvaria": "Aspect",
+    "Amazon Connect": "Amazon Connect",
+    "TalkDesk": "Talkdesk", "Talkdesk": "Talkdesk",
+    "Avaya": "Avaya", "Avaya Aura": "Avaya", "Avaya CentreVu Supervisor": "Avaya",
+    "Avaya Call Management System": "Avaya", "Avaya Experience Portal": "Avaya",
+    "Cisco Unified Contact Center": "Cisco", "Webex Contact Center": "Cisco", "RingCentral": "RingCentral"
+  },
+  "lane": {
+    "acd": ["NICE CXone", "NICE inContact", "Five9", "Genesys", "Genesys Cloud", "Genesys Cloud CX", "Amazon Connect", "TalkDesk", "Talkdesk", "Avaya", "Avaya Aura", "Avaya CentreVu Supervisor", "Avaya Call Management System", "Avaya Experience Portal", "Cisco Unified Contact Center", "Webex Contact Center", "RingCentral"],
+    "wfm": ["NICE Workforce Management", "NICE IEX", "NICE", "Verint", "Verint Workforce Management", "Calabrio", "Calabrio ONE", "Aspect Workforce Management", "Alvaria"]
+  }
+}

@@ -26,6 +26,11 @@ logo = (TPL / "logo_symbol.html").read_text()
 present = (TPL / "present.js").read_text()
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
+
+# Partner pages drop the "Likely role" column: the committee read is our own working guess,
+# not something to hand a partner rep as fact. These widths re-balance the four that remain.
+LDR4 = (".ldr th:nth-child(1){width:16%}.ldr th:nth-child(2){width:28%}"
+        ".ldr th:nth-child(3){width:18%}.ldr th:nth-child(4){width:38%}")
 BAD_FLAGS = {"UNVERIFIED", "EMPLOYEE SENTIMENT"}
 
 HUD = """<div id="hud">
@@ -123,7 +128,9 @@ def page(d, partner):
             sections.append((sec, items))
     leaders = [l for l in d.get("leaders", []) if keep(l, partner)]
     triggers = [t for t in d.get("triggers", []) if keep(t, partner)]
-    say = [s for s in d.get("we_can_say", []) if (not partner or s.get("tier") == "1:many")]
+    # Claims guidance is an internal reference only. The partner reps do their own selling;
+    # the partner-safe page does not tell them what they may or may not say.
+    say = [] if partner else d.get("we_can_say", [])
     sources = d.get("sources", [])
 
     h = []
@@ -131,7 +138,7 @@ def page(d, partner):
     A(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>{E(d["short"])} account brief ({mode})</title>
-<!--FONTS--><style>{CSS}</style></head><body><!--LOGO-->
+<!--FONTS--><style>{CSS}{LDR4 if partner else ""}</style></head><body><!--LOGO-->
 <button id="presentBtn" type="button" aria-label="Open present mode">Present</button><div id="prog"></div>
 <div class="sheet">
 <header class="hero"><div class="wrap">
@@ -166,11 +173,13 @@ def page(d, partner):
     if leaders:
         A('<section><div class="wrap"><div class="eyebrow">Who to talk to</div>')
         A(f'<h2>{d["h2_leaders"]}</h2>')
-        A('<div class="tablewrap"><table class="ldr"><thead><tr><th>Name</th><th>Title</th><th>Likely role</th><th>Status</th><th>Why them</th></tr></thead><tbody>')
+        role_th = "" if partner else "<th>Likely role</th>"
+        A(f'<div class="tablewrap"><table class="ldr"><thead><tr><th>Name</th><th>Title</th>{role_th}<th>Status</th><th>Why them</th></tr></thead><tbody>')
         for l in leaders:
             nm = f'<a href="{E(l["linkedin"])}" target="_blank" rel="noopener">{E(l["name"])}</a>' if l.get("linkedin") else E(l["name"])
             rc = "vito" if "VITO" in l.get("role", "") else ""
-            A(f'<tr class="rv"><td class="nm">{nm}</td><td>{E(l["title"])}</td><td><span class="role {rc}">{E(l["role"])}</span></td><td><span class="fresh">{E(l.get("status",""))}{(" · " + E(l["fresh"])) if l.get("fresh") else ""}</span></td><td>{l.get("note","")}</td></tr>')
+            role_td = "" if partner else f'<td><span class="role {rc}">{E(l["role"])}</span></td>'
+            A(f'<tr class="rv"><td class="nm">{nm}</td><td>{E(l["title"])}</td>{role_td}<td><span class="fresh">{E(l.get("status",""))}{(" · " + E(l["fresh"])) if l.get("fresh") else ""}</span></td><td>{l.get("note","")}</td></tr>')
         A('</tbody></table></div>')
         A(f'<p style="margin-top:12px;font-size:13px;color:var(--ink-3)">{d["leaders_note"]}</p></div></section>')
 
@@ -232,7 +241,8 @@ def page(d, partner):
         A('<section class="pslide" data-title="People"><div class="pe" data-a="1">Who to talk to</div>')
         A(f'<h2 data-a="2">{d["deck"]["people"]}</h2><ul class="plist" data-a="3">')
         for l in leaders[:5]:
-            A(f'<li><span class="d">{E(l["role"].split(" (")[0])}</span><span><b>{E(l["name"])}</b>, {E(l["title"])}</span></li>')
+            lbl = "Named" if partner else E(l["role"].split(" (")[0])
+            A(f'<li><span class="d">{lbl}</span><span><b>{E(l["name"])}</b>, {E(l["title"])}</span></li>')
         A('</ul></section>')
     if triggers:
         A('<section class="pslide" data-title="Timing"><div class="pe" data-a="1">Timing</div>')

@@ -1,0 +1,19 @@
+{
+  "_note": "Level 1 process-integrity inputs come from project records, not telemetry. SAMPLE values.",
+  "readiness_assessment": {
+    "completed_groups": 3,
+    "target_groups": 4
+  },
+  "baseline_documentation": {
+    "documented_groups": 4,
+    "target_groups": 4
+  },
+  "manager_briefing": {
+    "briefed": 3,
+    "managers": 4
+  },
+  "milestones": {
+    "completed_on_time": 5,
+    "planned_to_date": 6
+  }
+}

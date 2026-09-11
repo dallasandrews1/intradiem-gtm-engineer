@@ -1,0 +1,337 @@
+{
+ "set": "nate_front",
+ "rep": "Nathan Belfield",
+ "rep_short": "Nate",
+ "rep_label": "Prepared for",
+ "date": "September 4, 2026",
+ "title": "Front Office Maps, Nate's Six",
+ "headline_html": "Six <span class=\"spark\">front-office maps</span>.",
+ "sub": "One new Sales Navigator map per account: the people who run customer service, the contact centers, workforce management and the service technology at six prospects. Every name checked against Salesforce and the live sequences.",
+ "legend_html": "<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run customer service, the contact centers or workforce management. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.",
+ "md_title": "# Front-office map build sheets, Nate's six\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: the customer operations executive, then the leaders of contact center operations, workforce management and service technology, then the directors under them. Reporting lines are inferred from titles; confirm each card in Sales Navigator as it is added.\n",
+ "mode": "front_office",
+ "map_suffix": "Front Office",
+ "eyebrow": "GTM Engineering · Front office, net-new",
+ "files": {
+  "roster": "",
+  "candidates": "nate_front_candidates.csv",
+  "sf_check": "nate_front_sf_check.csv",
+  "known_companies": "nate_known_layer_companies.csv",
+  "build_sheets_csv": "FO_Map_Build_Sheets_Nate.csv",
+  "build_sheets_md": "FO_Map_Build_Sheets_Nate.md",
+  "bench_csv": "FO_Map_Bench_Nate.csv",
+  "snapshot_csv": "_built_snapshot_nate_front.csv",
+  "changes_md": "FO_Map_Changes_Built_Nate.md",
+  "page_out": "account_maps/nate_frontoffice_maps.html"
+ },
+ "built": [],
+ "select": "balanced",
+ "sweep_sources": [],
+ "candidate_default_source": "Sep 4 search",
+ "accounts": {
+  "Centene": {
+   "sweep": "sweeps/nate_front/centene.csv",
+   "domains": [
+    "centene.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bHjVIAU"
+   ],
+   "vertical": "healthcare payer",
+   "aliases": [
+    "centene",
+    "sunshine health",
+    "ambetter",
+    "wellcare",
+    "coordinated care",
+    "silver summit",
+    "magnolia health",
+    "sunflower health",
+    "meridian",
+    "peach state",
+    "superior healthplan",
+    "buckeye health",
+    "fidelis care",
+    "health net",
+    "absolute total care",
+    "carolina complete health",
+    "western sky",
+    "managed health services",
+    "nh healthy families",
+    "home state health",
+    "louisiana healthcare connections",
+    "iowa total care",
+    "arkansas total care",
+    "nebraska total care",
+    "trillium",
+    "centene dental",
+    "envolve",
+    "celtic",
+    "pennsylvania health & wellness",
+    "mhs indiana",
+    "hawaii"
+   ],
+   "us_only": false
+  },
+  "Fidelity Investments": {
+   "sweep": "sweeps/nate_front/fidelity.csv",
+   "domains": [
+    "fidelity.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9JlIAI",
+    "001V5000006bCxAIAU"
+   ],
+   "vertical": "financial services",
+   "aliases": [
+    "fidelity",
+    "fmr",
+    "national financial"
+   ],
+   "us_only": false
+  },
+  "National Grid": {
+   "sweep": "sweeps/nate_front/national_grid.csv",
+   "domains": [
+    "nationalgridus.com",
+    "nationalgrid.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bDbdIAE",
+    "001V50000090dFjIAI"
+   ],
+   "vertical": "utility",
+   "aliases": [
+    "national grid"
+   ],
+   "us_only": true
+  },
+  "Truist": {
+   "sweep": "sweeps/nate_front/truist.csv",
+   "domains": [
+    "truist.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9K6IAI"
+   ],
+   "vertical": "banking",
+   "aliases": [
+    "truist",
+    "suntrust",
+    "bb&t"
+   ],
+   "us_only": false
+  },
+  "Paychex": {
+   "sweep": "sweeps/nate_front/paychex.csv",
+   "domains": [
+    "paychex.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b7jbIAA"
+   ],
+   "vertical": "payroll and HR outsourcing",
+   "aliases": [
+    "paychex",
+    "surepayroll"
+   ],
+   "us_only": false
+  },
+  "Regions Financial": {
+   "sweep": "sweeps/nate_front/regions.csv",
+   "domains": [
+    "regions.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bHUwIAM"
+   ],
+   "vertical": "banking",
+   "aliases": [
+    "regions"
+   ],
+   "us_only": false
+  }
+ },
+ "drop": [],
+ "priority": [],
+ "manual_under": [
+  [
+   "Truist",
+   "Christopher Adams",
+   "Kimberly Dorsett"
+  ],
+  [
+   "Truist",
+   "Denise Adams",
+   "Kimberly Dorsett"
+  ],
+  [
+   "Truist",
+   "Janet Solomon",
+   "Kimberly Dorsett"
+  ],
+  [
+   "Truist",
+   "Maan Al-Abdullah",
+   "Kimberly Dorsett"
+  ],
+  [
+   "Fidelity Investments",
+   "Diane Simmons",
+   "Emily Hawthorne"
+  ]
+ ],
+ "title_override": [],
+ "dual": [
+  [
+   "Fidelity Investments",
+   "Diana Patel"
+  ],
+  [
+   "Regions Financial",
+   "Kathy Bond"
+  ]
+ ],
+ "verify": [],
+ "phrases": [],
+ "topics_extra": {},
+ "func_extra": [],
+ "collision": {},
+ "bridge_results": [
+  "nate_front_bridge_results.csv",
+  "nate_front_bridge_results_2.csv"
+ ],
+ "manual_add": [],
+ "account_notes": {
+  "Centene": "Contact centers sit under the corporate COO (Colleen Askvig) with plan-level COOs running their own member services; Fidel Ligsay's line is Health Net Federal Services. Centene's front office already has Stars wave-one names in a live sequence, so check the collision flag before adding anyone from this map to outreach.",
+  "Fidelity Investments": "Fidelity's service organization splits by business: Ashley Richter runs the Covington participant services contact center, Robert Cummings's client services line sits in Stock Plan Services, and Jessica Henck's global workforce optimization team is the enterprise WFM owner. 'Client services' at Fidelity includes brokerage client teams; the names here carry operations or contact-center words.",
+  "National Grid": "US customer operations under the Chief Customer Officer (Bill Malee) with Frederick Daum over the contact centers; UK service leaders were excluded. National Grid has PSC call-answer penalties on the record (see the back-office page signals).",
+  "Paychex": "Paychex is sales-heavy and thin at Director-plus in service operations; Elizabeth Roaldsen's operations and customer experience line is the whole map. Search 'Service Center' and 'Client Service' directly in Sales Navigator for the layer below.",
+  "Regions Financial": "Regions' contact centers roll up to Douglas Pennington (EVP, Head of Contact Center) through Vicki Yackel; the VP-level contact center managers are the operating layer. The Clay index carries few Regions directors, so the map leans on Salesforce-known names that were live-checked today.",
+  "Truist": "Kimberly Dorsett (EVP, Head of Truist Care Centers) is placed over the three SVP contact center directors and the capacity planning VP as a best guess from titles; confirm in Sales Navigator. Jamie Swider owns care center operations, workforce management and IVR. Strategic Workforce Planning at Truist is an HR function and was left off."
+ },
+ "band_override": [],
+ "root_exclude": [],
+ "confirm": [],
+ "exec_cap": 4,
+ "trim": [
+  [
+   "Fidelity Investments",
+   "Mike Pegnato",
+   "subsidiary trust company COO, not the customer operations line"
+  ],
+  [
+   "Fidelity Investments",
+   "Pankaj Shetye",
+   "business management director, COO in title only"
+  ],
+  [
+   "Fidelity Investments",
+   "Jim Freeman",
+   "business-line head (Stock Plan Services); the client services leaders beneath him are the ICP"
+  ],
+  [
+   "Regions Financial",
+   "Luna Ashley Carlson",
+   "finance executive"
+  ],
+  [
+   "Regions Financial",
+   "Michael Branca",
+   "corporate services (facilities and procurement), not customer operations"
+  ],
+  [
+   "Regions Financial",
+   "Mike Amrine",
+   "deposit and document operations is the back-office map"
+  ],
+  [
+   "Regions Financial",
+   "Leah Layton",
+   "commercial card implementations, not the contact center"
+  ],
+  [
+   "Regions Financial",
+   "Margaret Schuneman",
+   "retail branch workforce, not contact-center workforce management"
+  ],
+  [
+   "Regions Financial",
+   "Xenia Lane",
+   "insights and analytics seat"
+  ],
+  [
+   "Truist",
+   "Brian Downer",
+   "corporate services, not customer operations"
+  ],
+  [
+   "Truist",
+   "Michael Parks",
+   "technology hosting"
+  ],
+  [
+   "Truist",
+   "Tim Bicha",
+   "mortgage servicing is the back-office map"
+  ],
+  [
+   "Truist",
+   "Shannon Aycock",
+   "credit card operations is the back-office map"
+  ],
+  [
+   "Truist",
+   "Neeraj Khanna",
+   "technology service delivery, not the contact center"
+  ],
+  [
+   "Truist",
+   "Eric Volpe",
+   "technology service delivery manager"
+  ],
+  [
+   "Truist",
+   "Heather Wingo",
+   "HR strategic workforce planning, not contact-center workforce management"
+  ],
+  [
+   "Truist",
+   "Jennifer Cline, GPHR",
+   "HR strategic workforce planning, not contact-center workforce management"
+  ],
+  [
+   "Truist",
+   "Dino Harapas",
+   "HR strategic workforce planning, not contact-center workforce management"
+  ],
+  [
+   "Truist",
+   "Jonathan Fisher",
+   "Premier Banking segment lead, COO in title only"
+  ]
+ ],
+ "pad_to_cap": true,
+ "require_url": true,
+ "finance_rollup": false,
+ "peer_head_rule": false,
+ "exec_cap_by_account": {},
+ "root_prefs_generic": [
+  "customer",
+  "service",
+  "operating",
+  "experience",
+  "contact",
+  "care"
+ ],
+ "root_prefs_finance": [],
+ "specific_overlap_for_vp": true,
+ "sibling_links": [
+  [
+   "Back office maps for the same six accounts",
+   "/nate/"
+  ]
+ ],
+ "sibling_label": "Also for you"
+}

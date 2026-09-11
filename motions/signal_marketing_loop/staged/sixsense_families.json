@@ -1,0 +1,95 @@
+{
+  "_comment": "STAGED, not merged. Proposed trigger families for 6sense keyword-group segments read from Clay Audiences (company field '6sense Segments (2)', audf_0tkdvbt5xi8uZgVuErt; Buying Stage audf_0tkdv0iCtUFDmNN8aH3; 6QA audf_0tkduziXxDQmcRNqfNB). Merge into tam-outbound-engine/config/triggers.json under 'triggers' only after Sierra's segments exist and one dry run has been read. Weights sit below web_product (30) on purpose. Design: motions/signal_marketing_loop/6sense_Keyword_Trigger_Design_Sep9.md",
+  "triggers": {
+    "sixsense_kw_competitor": {
+      "label": "6sense keyword group: desktop analytics competitors (Verint DPA, NICE desktop analytics)",
+      "weight": 28,
+      "recency": {"fresh_days": 14, "stale_days": 45, "stale_floor": 0.3},
+      "source": "sixsense_segment",
+      "segment_name": "6s - KW - Desktop analytics competitors",
+      "play": "Route to the UPT displacement sequence for the account's known stack. The hit picks the angle and the timing; the message never references research, a search, or a competitor as evidence.",
+      "stakes": "An account reading about desktop analytics is pricing the module now. The cost of a slow answer is a renewal that locks the incumbent for another term.",
+      "route_personas": ["cc_ops", "wfm", "bo_claims", "bo_shared"]
+    },
+    "sixsense_kw_backoffice": {
+      "label": "6sense keyword group: back-office capacity and SLA",
+      "weight": 26,
+      "recency": {"fresh_days": 14, "stale_days": 45, "stale_floor": 0.3},
+      "source": "sixsense_segment",
+      "segment_name": "6s - KW - Back-office capacity",
+      "play": "Back-office one-idea (the backlog is a timing problem). Customers route to the AM's clearance sheet, never a cold sequence.",
+      "stakes": "Back-office budget requests land in the same cycle as the SLA misses that justify them. Whoever is in the room before the headcount ask wins it.",
+      "route_personas": ["bo_claims", "bo_shared", "coo_finance"]
+    },
+    "sixsense_kw_wfm": {
+      "label": "6sense keyword group: WFM incumbents (Verint WFM, NICE IEX, Calabrio, Aspect)",
+      "weight": 22,
+      "recency": {"fresh_days": 14, "stale_days": 45, "stale_floor": 0.3},
+      "source": "sixsense_segment",
+      "segment_name": "6s - KW - WFM incumbents",
+      "play": "The intraday layer WFM never finished, on top of whatever they run. Never a rip-and-replace line.",
+      "stakes": "A WFM evaluation window is the one time the intraday gap is on the table. After the decision it closes for three years.",
+      "route_personas": ["wfm", "cc_ops"]
+    },
+    "sixsense_kw_intraday": {
+      "label": "6sense keyword group: intraday and real-time management",
+      "weight": 22,
+      "recency": {"fresh_days": 14, "stale_days": 45, "stale_floor": 0.3},
+      "source": "sixsense_segment",
+      "segment_name": "6s - KW - Intraday",
+      "play": "They are naming our category without our name. Lead with the idle-minutes-and-overtime one-idea.",
+      "stakes": "Teams researching intraday management are usually a budget cycle away from picking something. The cost of a slow answer is a shortlist you are not on.",
+      "route_personas": ["wfm", "cc_ops", "coo_finance"]
+    },
+    "sixsense_kw_category": {
+      "label": "6sense keyword group: dynamic workforce orchestration and brand terms",
+      "weight": 20,
+      "recency": {"fresh_days": 14, "stale_days": 45, "stale_floor": 0.3},
+      "source": "sixsense_segment",
+      "segment_name": "6s - KW - Category",
+      "play": "Brand or category research. DWO executive sequence; front office and back office together.",
+      "stakes": "Someone at the account has heard the name. The next touch decides whether it is remembered as a vendor or a category.",
+      "route_personas": ["coo_finance", "cc_ops"]
+    },
+    "sixsense_stage_decision": {
+      "label": "6sense Account Buying Stage is Decision or Purchase (modifier)",
+      "weight": 15,
+      "recency": {"fresh_days": 30, "stale_days": 120, "stale_floor": 0.4},
+      "source": "sixsense_field",
+      "field": "audf_0tkdv0iCtUFDmNN8aH3",
+      "values": ["Decision", "Purchase"],
+      "play": "Modifier only. Moves the direct ask from Email 4 to Email 2 and favors Lane A over cohort. Never appears in copy.",
+      "stakes": "",
+      "route_personas": []
+    },
+    "sixsense_6qa": {
+      "label": "6sense 6QA true (modifier)",
+      "weight": 10,
+      "recency": {"fresh_days": 30, "stale_days": 120, "stale_floor": 0.4},
+      "source": "sixsense_field",
+      "field": "audf_0tkduziXxDQmcRNqfNB",
+      "values": ["True", "true"],
+      "play": "Modifier only. Never appears in copy or a rep alert as a talking point.",
+      "stakes": "",
+      "route_personas": []
+    }
+  },
+  "heat_loop_block": {
+    "sixsense": {
+      "_doc": "Signal 5. Company-level events from 6sense keyword-group segments synced Salesforce -> Audiences, read at 0 credits. Segment ids filled once Sierra builds the 6sense side. in_sequence_realert: an account already in a live lemlist campaign alerts the rep on a competitor or back-office hit at any score.",
+      "enabled_dry_run": true,
+      "segment_field": "audf_0tkdvbt5xi8uZgVuErt",
+      "stage_field": "audf_0tkdv0iCtUFDmNN8aH3",
+      "sixqa_field": "audf_0tkduziXxDQmcRNqfNB",
+      "segments": {
+        "sixsense_kw_competitor": "",
+        "sixsense_kw_backoffice": "",
+        "sixsense_kw_wfm": "",
+        "sixsense_kw_intraday": "",
+        "sixsense_kw_category": ""
+      },
+      "in_sequence_realert_families": ["sixsense_kw_competitor", "sixsense_kw_backoffice"],
+      "never_in_message": ["segment_name", "keyword", "score", "stage", "6qa", "temperature", "profile_fit", "search_count", "geo"]
+    }
+  }
+}

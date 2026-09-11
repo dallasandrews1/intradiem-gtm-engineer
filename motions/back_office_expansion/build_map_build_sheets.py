@@ -121,7 +121,7 @@ def select_balanced(cs, cap=30):
             if byf[f] and len(picked)<mid_budget:
                 c=byf[f].pop(0); picked.append(c); chosen.append(c)
     # lanes 3 and 4 (workforce planning / product owners, operations technology): three each when the sourcing has them
-    for ln in ("Workforce planning & product owners","Operations technology"):
+    for ln in tuple(LANE34):
         have=sum(1 for c in chosen if c["lane"]==ln)
         pool=[c for c in mids+dirs if c["lane"]==ln and c not in chosen]
         pool.sort(key=lambda c:(sen(c),act(c),c["name"]))
@@ -176,7 +176,7 @@ for acct in sorted(cands):
          return (c.get("active",False), len(below)>0, len(below), -ORDER.get(c["band"],9))
      sweep.sort(key=gap_score, reverse=True)
      sweep=[c for c in sweep if (acct,c["name"]) in PRIORITY]+[c for c in sweep if (acct,c["name"]) not in PRIORITY]
-     for ln in ("Workforce planning & product owners","Operations technology"):
+     for ln in tuple(LANE34):
          have=[c for c in base if c["lane"]==ln]
          need=max(0,3-len(have))
          picks=[c for c in sweep if c["lane"]==ln][:need]
@@ -185,7 +185,7 @@ for acct in sorted(cands):
      if len(base)>30:
          managers={c["under"] for c in base if c.get("under")}
          def keep_score(c):
-             return (c["name"] in protected, c["band"] in ("C","EVP","SVP"), c["name"] in managers, c["lane"] in ("Workforce planning & product owners","Operations technology"), -ORDER.get(c["band"],9), c.get("active",False))
+             return (c["name"] in protected, c["band"] in ("C","EVP","SVP"), c["name"] in managers, c["lane"] in tuple(LANE34), -ORDER.get(c["band"],9), c.get("active",False))
          base.sort(key=keep_score, reverse=True)
          OVERFLOW.setdefault(acct,[]).extend((d["name"],d["title"],d["url"]) for d in base[30:])
          base=base[:30]
@@ -290,8 +290,8 @@ for acct in sorted(cands):
     for t in sorted([x for x in cs if x["depth"]==0],key=lambda x:(ORDER.get(x["band"],9),x["name"])): ordered.append(t); walk(t["name"],1,ordered)
     for c in cs:
         if c not in ordered: ordered.append(c)
-    md.append(f"\n## {acct}: back office map ({len(cs)} leads)\n")
-    md.append(f"Map name in Sales Nav: `{acct} - Back Office`\n")
+    md.append(f"\n## {acct}: {CFG.get('map_suffix','Back Office').lower()} map ({len(cs)} leads)\n")
+    md.append(f"Map name in Sales Nav: `{acct} - {CFG.get('map_suffix','Back Office')}`\n")
     if CFG.get("account_notes",{}).get(acct): md.append(CFG["account_notes"][acct]+"\n")
     md.append("| # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |")
     md.append("|---|---|---|---|---|---|---|")
@@ -299,7 +299,7 @@ for acct in sorted(cands):
         indent="&nbsp;&nbsp;&nbsp;"*c["depth"]
         fv=SF_FLAG.get((acct,c["name"]),""); flag=" (in Salesforce)" if fv.startswith("IN_SF:") else (" (confirm CRM badge)" if fv else "")
         md.append(f"| {i} | {indent}**{c['name']}**{flag} | {c['title']} | {c['band']} | {c['func']} | {c['under'] or 'Top of the map'}{(' ; ' + c['tie']) if c.get('tie') else ''} | {c['url']} |")
-        rows_out.append({"account":acct,"map_name":f"{acct} - Back Office","order":i,"depth":c["depth"],"full_name":c["name"],"title":c["title"],"level":c["band"],"function":c["func"],"reports_up_to":c["under"] or "Top of the map","executive":c["exec"],"linkedin_url":c["url"],"source":c["src"],"badge_check":("VERIFY:not found by the profile check; confirm current role" if (acct,c["name"]) in VERIFY else ("VERIFY:two LinkedIn profiles, ours may be the old one; confirm" if (acct,c["name"]) in DUAL else ("VERIFY:"+CFG["_confirm"][(acct,c["name"])] if (acct,c["name"]) in CFG["_confirm"] else SF_FLAG.get((acct,c["name"]),"")))),"li_active":"yes" if c.get("active") else "","note":c.get("tie",""),"lane":c.get("lane","")})
+        rows_out.append({"account":acct,"map_name":f"{acct} - {CFG.get('map_suffix','Back Office')}","order":i,"depth":c["depth"],"full_name":c["name"],"title":c["title"],"level":c["band"],"function":c["func"],"reports_up_to":c["under"] or "Top of the map","executive":c["exec"],"linkedin_url":c["url"],"source":c["src"],"badge_check":("VERIFY:not found by the profile check; confirm current role" if (acct,c["name"]) in VERIFY else ("VERIFY:two LinkedIn profiles, ours may be the old one; confirm" if (acct,c["name"]) in DUAL else ("VERIFY:"+CFG["_confirm"][(acct,c["name"])] if (acct,c["name"]) in CFG["_confirm"] else SF_FLAG.get((acct,c["name"]),"")))),"li_active":"yes" if c.get("active") else "","note":c.get("tie",""),"lane":c.get("lane","")})
     md.append("\nPaste list for the map search box: " + "; ".join(c["name"] for c in ordered) + "\n")
     _t=[x for x in CFG.get("trim",[]) if x[0]==acct]
     if _t:

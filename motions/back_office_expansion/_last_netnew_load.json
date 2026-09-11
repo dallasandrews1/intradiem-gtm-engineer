@@ -1,0 +1,416 @@
+[
+ {
+  "email": "tarsha.fletcher@centene.com",
+  "leadId": "lea_fpnsTtT4t8CtSpbDr",
+  "parent_account": "Centene",
+  "wave": "3"
+ },
+ {
+  "email": "celwood@centene.com",
+  "leadId": "lea_GSC3tGbP5ky85zzi8",
+  "parent_account": "Centene",
+  "wave": "3"
+ },
+ {
+  "email": "danclark@centene.com",
+  "leadId": "lea_yPgiA9cK636s3Wkcr",
+  "parent_account": "Centene",
+  "wave": "3"
+ },
+ {
+  "email": "aleksandra.phelps@centene.com",
+  "leadId": "lea_vhDpRevazRtA5dJRr",
+  "parent_account": "Centene",
+  "wave": "3"
+ },
+ {
+  "email": "amy.aspinwall@fidelity.com",
+  "leadId": "lea_5QKv8TM3exyAhq5Ap",
+  "parent_account": "Fidelity",
+  "wave": "3"
+ },
+ {
+  "email": "amy.hansel@fidelity.com",
+  "leadId": "lea_wp5JKBrK9g5gEwBM9",
+  "parent_account": "Fidelity",
+  "wave": "3"
+ },
+ {
+  "email": "david.cannistraro@fidelity.com",
+  "leadId": "lea_D2qoKJafZCJPvFNMd",
+  "parent_account": "Fidelity",
+  "wave": "3"
+ },
+ {
+  "email": "katie.thomas@fidelity.com",
+  "leadId": "lea_sdcYxBXzwGeokY9a5",
+  "parent_account": "Fidelity",
+  "wave": "3"
+ },
+ {
+  "email": "lauren.madden@fidelity.com",
+  "leadId": "lea_eWMdujfzP4nkxkTe5",
+  "parent_account": "Fidelity",
+  "wave": "3"
+ },
+ {
+  "email": "joseph.weber@nationalgrid.com",
+  "leadId": "lea_iz2dpm4RNRzFcgu8N",
+  "parent_account": "National Grid",
+  "wave": "3"
+ },
+ {
+  "email": "paul.mccool@nationalgrid.com",
+  "leadId": "lea_dNBdD3Ko4srQF8Jtu",
+  "parent_account": "National Grid",
+  "wave": "3"
+ },
+ {
+  "email": "philippe.montillier@nationalgrid.com",
+  "leadId": "lea_hK4q8Juj8y7p9bTTA",
+  "parent_account": "National Grid",
+  "wave": "3"
+ },
+ {
+  "email": "stephen.derosa@nationalgrid.com",
+  "leadId": "lea_fnroe85TMzegYjC28",
+  "parent_account": "National Grid",
+  "wave": "3"
+ },
+ {
+  "email": "preston.suggs@regions.com",
+  "leadId": "lea_mhd9Mn4GDBXHbAojE",
+  "parent_account": "Regions",
+  "wave": "3"
+ },
+ {
+  "email": "michael.petras@regions.com",
+  "leadId": "lea_NnSiT7ZiPRwmroFN9",
+  "parent_account": "Regions",
+  "wave": "3"
+ },
+ {
+  "email": "sarvjeet.kaur@regions.com",
+  "leadId": "lea_Phwt7ywExvJAYsm5G",
+  "parent_account": "Regions",
+  "wave": "3"
+ },
+ {
+  "email": "wakeela.riley@regions.com",
+  "leadId": "lea_5XLQSHtpHgw7KqzgP",
+  "parent_account": "Regions",
+  "wave": "3"
+ },
+ {
+  "email": "nicholas.s.patriciu@truist.com",
+  "leadId": "lea_mcusBdwcaaiYwR9o7",
+  "parent_account": "Truist",
+  "wave": "3"
+ },
+ {
+  "email": "karen.weich@truist.com",
+  "leadId": "lea_7qFiXMqe9eBMiZMPx",
+  "parent_account": "Truist",
+  "wave": "3"
+ },
+ {
+  "email": "dana.wilson@truist.com",
+  "leadId": "lea_p453oyhEdHHhXRapr",
+  "parent_account": "Truist",
+  "wave": "3"
+ },
+ {
+  "email": "kris.socie@truist.com",
+  "leadId": "lea_2ypBYQeWv5f3YKgfY",
+  "parent_account": "Truist",
+  "wave": "3"
+ },
+ {
+  "email": "mary.honaker@truist.com",
+  "leadId": "lea_rPT6spZai5bmb5vx3",
+  "parent_account": "Truist",
+  "wave": "3"
+ },
+ {
+  "email": "cory.dial@centene.com",
+  "leadId": "lea_LGCL7K9qDt2CFbjDP",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "susan.smith@centene.com",
+  "leadId": "lea_FtizcBef2suQiKFj7",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "michael.baca@centene.com",
+  "leadId": "lea_vTYc8Dp7Y5Gt4AsRn",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "steele.k.huss@centene.com",
+  "leadId": "lea_qFKWAz6yLYTLKL69z",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "swhite@centene.com",
+  "leadId": "lea_CwdMeKWAaaTcSDjQS",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "deanna.neal@centene.com",
+  "leadId": "lea_MsqNLuoiSM3Wbjx98",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "jim.ohalloran@centene.com",
+  "leadId": "lea_nMFwEiercR64GMtGC",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "cjones@centene.com",
+  "leadId": "lea_fqpEBKDcELaggdzcW",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "lyndsy.blonquist@centene.com",
+  "leadId": "lea_JYA2aGRG3Lu3LqAGf",
+  "parent_account": "Centene",
+  "wave": "4"
+ },
+ {
+  "email": "syed.razvi@fidelity.com",
+  "leadId": "lea_jbgqbY4ndiDN2iMn2",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "vicki.humston@fidelity.com",
+  "leadId": "lea_4Z7C8wtwmvpxJ2mMd",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "emris.varghese@fidelity.com",
+  "leadId": "lea_b8oJSGdbAdL96jr3h",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "christopher.tremblay@fidelity.com",
+  "leadId": "lea_6e6NgcaN9SXgMf35Z",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "andre.alexander@fidelity.com",
+  "leadId": "lea_bLmKQaLmpsbsBitq7",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "jj@fidelity.com",
+  "leadId": "lea_Qa2KTxzE8RJLMa5mi",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "joyette.schneider@fidelity.com",
+  "leadId": "lea_P9S4i3aZNJz5NRWja",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "amelia.volz@fidelity.com",
+  "leadId": "lea_uvwCip7ocW3kiRrMk",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "william.kraus@fidelity.com",
+  "leadId": "lea_TvcNK9j2nawwFakZB",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "brenton.sadowski@fidelity.com",
+  "leadId": "lea_tLAS8AcBrJ6dus9zK",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "andrew.czuchra@fidelity.com",
+  "leadId": "lea_iZ3yXrs55rrivBXAg",
+  "parent_account": "Fidelity",
+  "wave": "4"
+ },
+ {
+  "email": "matt.snow@regions.com",
+  "leadId": "lea_WyiBT8coJPwZqujmz",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "michael.craig@regions.com",
+  "leadId": "lea_CYgkeceASPri8ZZ9r",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "scott.gust@regions.com",
+  "leadId": "lea_aice3J3FnfesimjDN",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "shonda.duffey@regions.com",
+  "leadId": "lea_GtDpqSiiGudGz26xq",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "steve.killough@regions.com",
+  "leadId": "lea_rK3Nf886MmLf83heC",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "william.blagg@regions.com",
+  "leadId": "lea_hGTC83FyEPYi8LNaH",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "montinike.hobbs@regions.com",
+  "leadId": "lea_vSahQES5iNj3Bz4di",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "tabitha.leech@regions.com",
+  "leadId": "lea_FHrx3ap97PWQfDymt",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "brad.raines@regions.com",
+  "leadId": "lea_f6k4yadqEtgHa7WyD",
+  "parent_account": "Regions",
+  "wave": "4"
+ },
+ {
+  "email": "nick.isbrandtsen@truist.com",
+  "leadId": "lea_wKTayam9yXaMAoQxx",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "prabhu.krishnadas@truist.com",
+  "leadId": "lea_mkMYeKLKtdiJkEuym",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "ruthanna.birchfield@truist.com",
+  "leadId": "lea_6ieSiaE7fJc674qrX",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "shannon.aycock@truist.com",
+  "leadId": "lea_RXQcoimrHX3vN2JTz",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "shayna.rendenna@truist.com",
+  "leadId": "lea_Wcvk9DcchFr3LTSMR",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "paul.barnes@truist.com",
+  "leadId": "lea_BvPLjGH5wdMAfN2gF",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "beth.tilley@truist.com",
+  "leadId": "lea_XFftXAcQ6GxYgkoHH",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "merwyn.fraser@truist.com",
+  "leadId": "lea_Tr83ZcMQFm9KNKpnr",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "paige.langston-tedder@truist.com",
+  "leadId": "lea_wY6FWwYfoBtEEmouY",
+  "parent_account": "Truist",
+  "wave": "4"
+ },
+ {
+  "email": "sally.librera@nationalgrid.com",
+  "leadId": "lea_dfwGQPv3hhzwovg4g",
+  "parent_account": "National Grid",
+  "wave": "9"
+ },
+ {
+  "email": "bill.malee@nationalgrid.com",
+  "leadId": "lea_98TCL8f5pAkZHPjdB",
+  "parent_account": "National Grid",
+  "wave": "9"
+ },
+ {
+  "email": "charles.mcleod@nationalgrid.com",
+  "leadId": "lea_cdsdyz3iXmJZdL7Rw",
+  "parent_account": "National Grid",
+  "wave": "9"
+ },
+ {
+  "email": "lisa.wieland@nationalgrid.com",
+  "leadId": "lea_GxWazTQWbWkk6hM3a",
+  "parent_account": "National Grid",
+  "wave": "9"
+ },
+ {
+  "email": "douglas.stein@nationalgrid.com",
+  "leadId": "lea_YLTGbczYkTmcfnETS",
+  "parent_account": "National Grid",
+  "wave": "9"
+ },
+ {
+  "email": "anil.chadha@regions.com",
+  "leadId": "lea_WLfRh7rPnphrd5hJw",
+  "parent_account": "Regions",
+  "wave": "9"
+ },
+ {
+  "email": "dave_keenan@regions.com",
+  "leadId": "lea_R6Ze4SfAk67XyaGEd",
+  "parent_account": "Regions",
+  "wave": "9"
+ },
+ {
+  "email": "michael.maguire@truist.com",
+  "leadId": "lea_7jBpE7XiMZ8PXi3e9",
+  "parent_account": "Truist",
+  "wave": "9"
+ },
+ {
+  "email": "steve.hagerman@truist.com",
+  "leadId": "lea_L7D9iRsQnKhdx24P2",
+  "parent_account": "Truist",
+  "wave": "9"
+ }
+]

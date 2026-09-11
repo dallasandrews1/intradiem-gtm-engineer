@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Adoption telemetry</title>
+<!--FONTS-->
+<style>
+#ribbon{position:fixed;top:0;left:0;right:0;z-index:80;background:var(--forest);color:var(--green-300);font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;text-align:center;padding:8px 12px;border-bottom:1px solid rgba(255,255,255,.14)}
+#ribbon b{color:#fff;font-weight:600}
+body{padding-top:32px}
+#presentBtn{top:44px}
+body.present #ribbon{display:none}
+body.present{padding-top:0}
+.tog{display:inline-block;margin-top:18px;font:600 11px var(--ff-mono);letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--forest);border:1px solid var(--forest);border-radius:6px;padding:9px 14px;cursor:pointer}
+.tog:hover{background:var(--forest);color:#fff}
+.tog::before{content:"+ ";}
+.tog.open::before{content:"\2212 ";}
+.thr.closed,.ug.closed{display:none}
+@media print{#ribbon{position:static}}
+.thr{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:18px;background:var(--zebra);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.thr label{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:6px}
+.thr .f{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--ink-2)}
+.thr input{width:58px;font:600 14px var(--ff-mono);color:var(--ink);border:1px solid var(--line-strong);border-radius:6px;padding:6px 8px;background:#fff}
+.thr .note{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-2)}
+.thr button{font:600 11px var(--ff-mono);letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--forest);border:1px solid var(--forest);border-radius:6px;padding:8px 12px;cursor:pointer}
+.thr button:hover{background:var(--forest);color:#fff}
+.bars{display:flex;align-items:flex-end;gap:3px;height:22px}
+.bars i{display:block;width:9px;background:var(--green);border-radius:2px 2px 0 0;min-height:2px;opacity:.85}
+.bars i.z{background:var(--line)}
+.cbars{display:flex;align-items:flex-end;gap:10px;height:120px;margin-top:18px;padding:0 4px;border-bottom:1px solid var(--line)}
+.cbars div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.cbars i{display:block;width:100%;max-width:64px;background:var(--forest);border-radius:4px 4px 0 0}
+.cbars b{font-family:var(--ff-mono);font-size:11px;color:var(--forest);font-weight:600;margin-bottom:4px}
+.cbars span{font-family:var(--ff-mono);font-size:10px;color:var(--ink-3);margin-top:6px;letter-spacing:.06em}
+.ug{margin-top:20px}
+.ug h3{margin-top:22px;font-size:16px}
+.ug h3 small{font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-left:10px}
+.ug table td{padding:8px 14px 8px 0;font-size:13.5px}
+.ug td.u{white-space:nowrap;color:var(--ink);font-weight:700}
+.ug td.tr{font-size:12px}
+.pill.risk{background:#FDECD9;color:var(--orange-600)}
+.pill.sus{background:var(--tint);color:var(--green-600)}
+.pill.act{background:var(--tint-soft);color:var(--green-600);border:1px solid var(--tint)}
+.pill.low{background:var(--zebra);color:var(--ink-3);border:1px solid var(--line)}
+.pill.none{background:#FDECD9;color:var(--orange-600)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.tiles div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow)}
+.tiles div b{display:block;font-weight:900;font-size:26px;color:var(--forest);letter-spacing:-.01em;line-height:1.1}
+.tiles div span{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-top:6px}
+.tiles div small{display:block;font-size:12.5px;color:var(--ink-2);margin-top:6px}
+.tiles div.off b{color:var(--ink-3)}
+.mgr .card h4{display:flex;justify-content:space-between;align-items:center}
+.mgr .kv{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:10px}
+.mgr .kv div{font-size:13.5px;color:var(--ink-2);display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0}
+.mgr .kv div b{color:var(--ink);font-family:var(--ff-mono);font-size:12.5px}
+.src td.s{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.src td.s.c{color:var(--green-600)}.src td.s.p{color:var(--orange-600)}.src td.s.n{color:var(--ink-3)}
+.l13 td.v{font-family:var(--ff-mono);font-size:13px;color:var(--forest);font-weight:600;white-space:nowrap}
+.l13 td.v.na{color:var(--ink-3);font-weight:500}
+.cta{display:inline-block;margin-top:18px;background:var(--forest);color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:12px 18px;border-radius:6px}
+.cta:hover{background:var(--green-600)}
+@media(max-width:900px){.thr{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<div id="ribbon"><b>Sample data.</b> No real people or teams on this page.</div>
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">AI change management side quest &middot; telemetry prototype</div>
+    <h1 data-h="2">Every signal in the framework, <span class="spark">on one page</span>.</h1>
+    <p class="sub" data-h="3">Every signal in the Success Metrics Framework, computed from a usage log, with the triggers wired to the playbook and a view per manager. <b>All sample data</b> until the Greenlight feed lands.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" id="h-active" data-to="0">0</span>%</b><span>active usage rate, trailing week</span></div>
+      <div><b><span class="hc" id="h-sus" data-to="0">0</span>%</b><span>users at sustained use</span></div>
+      <div><b><span class="hc" id="h-open" data-to="0">0</span></b><span>interventions open</span></div>
+      <div><b><span class="hc" id="h-resp" data-to="0">0</span>%</b><span>manager alerts answered</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>Status</span>Prototype, sample data. Waiting on the Greenlight feed.</div>
+      <div><span>Reads</span>Success Metrics Framework v1.0, Current State Assessment v1.0 (Kathryn, Aug 18)</div>
+      <div><span>Window</span><em id="m-window" style="font-style:normal"></em></div>
+      <div><span>By</span>Dallas Andrews</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>What this is.</b> The charter's "telemetry tracking built": all three levels of the framework from one usage log, four triggers wired to the playbook.</li>
+        <li><b>What it runs on.</b> 40 synthetic users, 4 teams, 8 weeks. Swap in a Greenlight export with the same columns and it recomputes.</li>
+        <li><b>What it needs.</b> Thresholds (what counts as sustained use), the Greenlight answers on the contract sheet, and a pilot team.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Level 2 &middot; adoption signals</div>
+    <h2>What counts as adoption is a threshold, and those are yours to set.</h2>
+    <p class="lede">Every [X] and [Y] in the framework lives in one config file. Change them and the page recomputes.</p>
+    <button type="button" class="tog" data-for="thr">Adjust thresholds</button>
+    <div class="thr closed" id="thr">
+      <div><label>Active usage</label><div class="f"><input id="t-au-min" type="number" min="1"> uses in <input id="t-au-days" type="number" min="1"> days</div></div>
+      <div><label>Sustained use</label><div class="f"><input id="t-su-uses" type="number" min="1"> uses in <input id="t-su-days" type="number" min="1"> days</div></div>
+      <div><label>Usage drop</label><div class="f"><input id="t-ud-pct" type="number" min="1" max="100">% over <input id="t-ud-days" type="number" min="1"> days</div></div>
+      <div><label>Plateau</label><div class="f">no lift after <input id="t-ap-days" type="number" min="1"> days</div></div>
+      <div><label>Zero use</label><div class="f">no use after <input id="t-zu-days" type="number" min="1"> days</div></div>
+      <div class="note"><span id="thr-note">Showing the values in config/signals.json.</span><button type="button" id="thr-reset">Reset to config</button></div>
+    </div>
+    <h3>Uses per week, whole cohort</h3>
+    <div class="cbars" id="cbars"></div>
+    <h3>By team</h3>
+    <div class="tablewrap"><table id="teams"><thead><tr><th>Team</th><th>Users</th><th>Active</th><th>Sustained</th><th>Never used</th><th>Median days to first use</th><th>Median days to sustained</th><th>Agents used</th><th>Spread</th><th>Weeks</th></tr></thead><tbody></tbody></table></div>
+    <p>Spread is Team Adoption Variance: standard deviation of per-user uses over four weeks inside one team. Agents used is Feature Utilization Depth: share of available agents touched in four weeks.</p>
+    <button type="button" class="tog" data-for="users" id="users-tog">Show the users</button>
+    <div class="ug closed" id="users"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Level 2 &middot; risk signals to playbook</div>
+    <h2>A trigger is a condition in the data; the playbook says what happens next.</h2>
+    <p class="lede">Three of the four triggers fire from usage telemetry. Sustained workaround needs a source it doesn't have yet. Each firing carries the action, owner and response window, then whether a response was logged and whether usage lifted inside 14 days.</p>
+    <div class="tiles" id="trig-tiles"></div>
+    <p><b>Owners and response windows are placeholders.</b> The playbook sets the real ones.</p>
+    <div class="tablewrap"><table id="ints"><thead><tr><th>User</th><th>Team</th><th>Trigger</th><th>Fired</th><th>Playbook action</th><th>Owner</th><th>Due</th><th>Status</th><th>Lift in 14 d</th></tr></thead><tbody></tbody></table></div>
+    <div class="gate">
+      <h4>What the engine never does</h4>
+      <p>Send anything. It lists what fired, who owns it, and when it was due. The playbook decides what goes out and where.</p>
+    </div>
+  </div>
+</section>
+
+<section class="mgr">
+  <div class="wrap">
+    <div class="eyebrow">Level 2 &middot; manager engagement</div>
+    <h2>Manager behavior is the largest controllable variable, so it gets its own view.</h2>
+    <p class="lede">One card per manager: adoption, spread, alerts waiting on them, whether they've opened this page. In the pilot each manager sees only their own.</p>
+    <div class="grid c4" id="mgrs"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Levels 1 and 3 &middot; process integrity and strategic impact</div>
+    <h2>Process metrics say the pilot ran as designed; impact metrics wait for a baseline.</h2>
+    <div class="grid">
+      <div class="card"><h4>Level 1 &middot; process integrity</h4><p>From project records, not telemetry. Sample values.</p>
+        <div class="tablewrap"><table class="l13" id="l1"><tbody></tbody></table></div></div>
+      <div class="card"><h4>Level 3 &middot; strategic impact</h4><p>Directional in the pilot, quantified at close. Empty rows wait for a baseline.</p>
+        <div class="tablewrap"><table class="l13" id="l3"><tbody></tbody></table></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Data contract</div>
+    <h2>Each signal traces to one field the feed has to carry.</h2>
+    <p class="lede">Section B2 of the Current State Assessment from the engine's side: what each signal needs, and whether this page computes it, proxies it, or has no source. The contract sheet turns it into the questions for Jason Dowden.</p>
+    <div class="tablewrap"><table class="src" id="src"><thead><tr><th>Framework signal</th><th>On this feed</th><th>What the feed needs to carry</th></tr></thead><tbody></tbody></table></div>
+    <a class="cta" href="Greenlight_Data_Contract.html">Open the data contract sheet &rarr;</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Open with the team</div>
+    <h2>Seven decisions turn the prototype into the pilot's dashboard.</h2>
+    <ul class="threads">
+      <li><b>Sustained-use threshold.</b> Try values in the panel above; the one that sticks goes into config.</li>
+      <li><b>Greenlight telemetry.</b> Which signals the reporting can feed, at what latency, export or API. Joey has the contract sheet for Jason Dowden.</li>
+      <li><b>The pilot team.</b> One or two groups with an agent rollout ahead of them. The AI champions know who.</li>
+      <li><b>Productivity baseline.</b> Defined with the pilot team and Finance before launch, or the row stays empty.</li>
+      <li><b>Qualitative methods.</b> Survey, interviews, or both at midpoint and close.</li>
+      <li><b>Where it lives.</b> Hosted here for now. The Zuar path Matt Graves's trackers took is a question for Jason Dowden.</li>
+      <li><b>Vocabulary.</b> No change-stage labels on this page, on purpose. The productized version needs its own words; Kathryn's call.</li>
+    </ul>
+    <div class="line">Next: Greenlight answers back, export in, first weekly review on this page.</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal &middot; AI change management side quest</span>
+  <span>Joey Fogle &middot; Kathryn Anderson &middot; Dallas Andrews &middot; prototype on sample data &middot; Sep 9 2026</span>
+</footer>
+</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">AI change management side quest &middot; telemetry</div>
+  <h1 data-a="3">Every signal in the framework, <span class="spark">on one page</span>.</h1>
+  <p class="pl" data-a="4">Usage log in, three levels of metrics out, four triggers wired to the playbook. Sample data until Greenlight lands.</p>
+</section>
+<section class="pslide" data-title="Three levels">
+  <div class="pe" data-a="1">What it measures</div>
+  <h2 data-a="2">Process, behavior, <span class="spark">impact</span>.</h2>
+  <div class="pgrid c3">
+    <div data-a="3"><b>Level 1 &middot; process integrity</b><span>Readiness assessments done, baselines documented, managers briefed, triggers monitored, milestones held. From project records.</span></div>
+    <div data-a="4"><b>Level 2 &middot; adoption outcomes</b><span>Active use, time to first and sustained use, agents used, spread inside a team, manager engagement. From the usage log.</span></div>
+    <div data-a="5"><b>Level 3 &middot; strategic impact</b><span>Adoption at close, time to sustained adoption, intervention effectiveness. Productivity and cost wait for a baseline.</span></div>
+  </div>
+</section>
+<section class="pslide" data-title="Triggers">
+  <div class="pe" data-a="1">Risk signals to playbook</div>
+  <h2 data-a="2">A condition in the data, <span class="spark">an owner and a clock</span>.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">Usage drop</span><span class="r"><b>Micro-coaching prompt, manager alert.</b> Manager owns it, five days.</span></li>
+    <li data-a="4"><span class="d">Plateau</span><span class="r"><b>Targeted enablement</b> in the user's own workflow. Enablement owns it, ten days.</span></li>
+    <li data-a="5"><span class="d">Zero use</span><span class="r"><b>Manager escalation, individual outreach.</b> Manager owns it, five days.</span></li>
+    <li data-a="6"><span class="d">Workaround</span><span class="r"><b>Workflow adjustment review.</b> Defined, unmonitored until it has a source.</span></li>
+  </ul>
+  <p class="pl" data-a="7">Each firing records the response and whether usage lifted inside 14 days.</p>
+</section>
+<section class="pslide" data-title="Managers">
+  <div class="pe" data-a="1">Manager view</div>
+  <h2 data-a="2">One card per manager, <span class="spark">their team only</span>.</h2>
+  <div class="pgrid c4" id="pmgrs"></div>
+</section>
+<section class="pslide" data-title="Needs">
+  <div class="pe" data-a="1">What turns it into the pilot dashboard</div>
+  <h2 data-a="2">Thresholds, <span class="spark">a feed</span>, and one team.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">Team sets</span><span class="r">What sustained use means, in uses and days</span></li>
+    <li data-a="4"><span class="d">Greenlight answers</span><span class="r">Which signals the reporting can feed, at what latency, export or API</span></li>
+    <li data-a="5"><span class="d">Champions name</span><span class="r">One or two teams with a real agent rollout ahead</span></li>
+    <li data-a="6"><span class="d">Finance confirms</span><span class="r">The productivity and cost baselines, or those rows stay empty</span></li>
+    <li data-a="7"><span class="d">Then</span><span class="r">Sample rows out, export in, first weekly review on this page</span></li>
+  </ul>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; adoption telemetry</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 5</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<script id="state" type="application/json"><!--STATE--></script>
+<script>
+(function(){
+  var S=JSON.parse(document.getElementById('state').textContent);
+  var DAY=86400000;
+  function P(s){var p=s.split('-');return Date.UTC(+p[0],+p[1]-1,+p[2]);}
+  function iso(t){return new Date(t).toISOString().slice(0,10);}
+  function fmtd(s){if(!s)return '';var d=new Date(P(s));return d.toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'});}
+  var AVAIL=P(S.window.tool_available_date), ASOF=P(S.window.as_of_date);
+  var T=JSON.parse(JSON.stringify(S.thresholds));
+  var T0=JSON.parse(JSON.stringify(S.thresholds));
+  var TS=S.trigger_specs;
+  // response records, derived from the engine's fired list
+  var RESP={}; S.interventions.forEach(function(i){RESP[i.user_id+'|'+i.trigger]={responded_on:i.responded_on,coaching:i.coaching_conversation};});
+
+  function countBetween(days,a,b){var n=0;for(var k in days){var t=+k;if(t>=a&&t<=b)n+=days[k];}return n;}
+  function firstSustained(days,first,uses,within){if(first===null)return null;for(var d=first;d<=ASOF;d+=DAY){if(countBetween(days,d-(within-1)*DAY,d)>=uses)return d;}return null;}
+  function scoreUser(u){
+    var days={};u.daily.forEach(function(p){days[P(p[0])]=p[1];});
+    var keys=Object.keys(days).map(Number);var first=keys.length?Math.min.apply(null,keys):null;
+    var au=T.active_usage,su=T.sustained_use,ud=T.usage_drop,ap=T.adoption_plateau,zu=T.zero_use;
+    var usesPeriod=countBetween(days,ASOF-(au.period_days-1)*DAY,ASOF);
+    var sustainedOn=firstSustained(days,first,su.uses,su.within_days);
+    var sustainedNow=countBetween(days,ASOF-(su.within_days-1)*DAY,ASOF)>=su.uses;
+    var cd=ud.compare_days;
+    var recent=countBetween(days,ASOF-(cd-1)*DAY,ASOF), prior=countBetween(days,ASOF-(2*cd-1)*DAY,ASOF-cd*DAY);
+    var first14=first!==null?countBetween(days,first,first+13*DAY):0;
+    var lb=T.team_variance.lookback_days;var usesLookback=countBetween(days,ASOF-(lb-1)*DAY,ASOF);
+    var trig=[];
+    if(first===null&&(ASOF-AVAIL)/DAY>=zu.after_days)trig.push({trigger:'zero_use',fired:AVAIL+zu.after_days*DAY});
+    function dropOn(day){var r=countBetween(days,day-(cd-1)*DAY,day),p=countBetween(days,day-(2*cd-1)*DAY,day-cd*DAY);return p>=ud.min_prior_uses&&r<=p*(1-ud.drop_pct/100);}
+    if(first!==null&&dropOn(ASOF)){var fired=ASOF;while(fired>AVAIL+2*cd*DAY&&dropOn(fired-DAY))fired-=DAY;trig.push({trigger:'usage_drop',fired:fired});}
+    if(first!==null&&(ASOF-first)/DAY>=ap.after_days&&sustainedOn===null&&recent<=first14)trig.push({trigger:'adoption_plateau',fired:first+ap.after_days*DAY});
+    return {u:u,days:days,first:first,ttfu:first!==null?(first-AVAIL)/DAY:null,sustainedOn:sustainedOn,ttsu:sustainedOn!==null?(sustainedOn-first)/DAY:null,
+      sustainedNow:sustainedNow,active:usesPeriod>=au.min_uses_per_period,usesLookback:usesLookback,recent:recent,triggers:trig};
+  }
+  function median(xs){xs=xs.filter(function(x){return x!==null&&x!==undefined;}).sort(function(a,b){return a-b;});if(!xs.length)return null;var m=xs.length>>1;return xs.length%2?xs[m]:(xs[m-1]+xs[m])/2;}
+  function pstdev(xs){if(xs.length<2)return 0;var m=xs.reduce(function(a,b){return a+b;},0)/xs.length;return Math.sqrt(xs.reduce(function(a,b){return a+(b-m)*(b-m);},0)/xs.length);}
+  function pct(x){return x===null||x===undefined?'n/a':Math.round(x*100)+'%';}
+  function recompute(){
+    var R=S.users.map(scoreUser);
+    var lw=T.intervention_effect.lift_window_days;
+    var ints=[];
+    R.forEach(function(r){r.triggers.forEach(function(t){
+      var sp=TS[t.trigger];var rec=RESP[r.u.user_id+'|'+t.trigger]||{};
+      var responded=!!rec.responded_on;var due=t.fired+sp.response_window_days*DAY;
+      var lift=null;if((ASOF-t.fired)/DAY>=lw){var after=countBetween(r.days,t.fired+DAY,t.fired+lw*DAY),before=countBetween(r.days,t.fired-lw*DAY,t.fired-DAY);lift=after>before;}
+      ints.push({user:r.u,trigger:t.trigger,label:sp.label,fired:t.fired,action:sp.action,owner:sp.owner_role,mf:sp.manager_facing,due:due,
+        status:responded?'responded':(ASOF>due?'overdue':'open'),coaching:!!rec.coaching,measurable:lift!==null,lift:lift});
+    });});
+    var teams={};R.forEach(function(r){(teams[r.u.team]=teams[r.u.team]||[]).push(r);});
+    var TT=Object.keys(teams).sort().map(function(name){
+      var tu=teams[name];var ti=ints.filter(function(i){return i.user.team===name;});var mf=ti.filter(function(i){return i.mf;});
+      var atRisk={},coached={};ti.forEach(function(i){atRisk[i.user.user_id]=1;if(i.coaching)coached[i.user.user_id]=1;});
+      var eng=S.teams.filter(function(t){return t.team===name;})[0]||{};
+      return {team:name,manager:tu[0].u.manager,users:tu.length,
+        active:tu.filter(function(r){return r.active;}).length/tu.length,
+        sustained:tu.filter(function(r){return r.sustainedNow;}).length/tu.length,
+        never:tu.filter(function(r){return r.first===null;}).length,
+        mttfu:median(tu.map(function(r){return r.ttfu;})),mttsu:median(tu.map(function(r){return r.ttsu;})),
+        depth:eng.feature_depth,variance:pstdev(tu.map(function(r){return r.usesLookback;})),
+        fired:ti.length,open:ti.filter(function(i){return i.status!=='responded';}).length,
+        resp:mf.length?mf.filter(function(i){return i.status==='responded';}).length/mf.length:null,
+        coach:Object.keys(atRisk).length?Object.keys(coached).length/Object.keys(atRisk).length:null,
+        views:eng.dashboard_views,engaged:eng.manager_engaged,weekly:eng.weekly,rows:tu};
+    });
+    var mf=ints.filter(function(i){return i.mf;});var meas=ints.filter(function(i){return i.measurable;});
+    var C={active:R.filter(function(r){return r.active;}).length/R.length,sustained:R.filter(function(r){return r.sustainedNow;}).length/R.length,
+      open:ints.filter(function(i){return i.status!=='responded';}).length,fired:ints.length,
+      resp:mf.length?mf.filter(function(i){return i.status==='responded';}).length/mf.length:null,
+      eff:meas.length?meas.filter(function(i){return i.lift;}).length/meas.length:null,effN:meas.length,
+      mttsu:median(R.map(function(r){return r.ttsu;}))};
+    render(R,TT,ints,C);
+    return {R:R,TT:TT,ints:ints,C:C};
+  }
+  function bars(w){var mx=Math.max(1,Math.max.apply(null,w));return '<div class="bars">'+w.map(function(v){return '<i class="'+(v?'':'z')+'" style="height:'+Math.max(2,Math.round(v/mx*22))+'px" title="'+v+'"></i>';}).join('')+'</div>';}
+  function statusPill(r){if(r.sustainedNow)return '<span class="pill sus">Sustained</span>';if(r.active)return '<span class="pill act">Active</span>';if(r.first===null)return '<span class="pill none">No use</span>';return '<span class="pill low">Low</span>';}
+  function stPill(s){return '<span class="pill '+(s==='responded'?'go':s==='overdue'?'now':'hold')+'">'+s+'</span>';}
+  function render(R,TT,ints,C){
+    var set=function(id,v){var el=document.getElementById(id);el.setAttribute('data-to',v);el.textContent=v;};
+    set('h-active',Math.round(C.active*100));set('h-sus',Math.round(C.sustained*100));set('h-open',C.open);set('h-resp',C.resp===null?0:Math.round(C.resp*100));
+    document.getElementById('m-window').textContent=fmtd(S.window.tool_available_date)+' to '+fmtd(S.window.as_of_date)+', '+S.cohort.users+' sample users, '+S.teams.length+' sample teams';
+    var cw=S.cohort.weekly,mx=Math.max.apply(null,cw);
+    document.getElementById('cbars').innerHTML=cw.map(function(v,i){return '<div><b>'+v+'</b><i style="height:'+Math.max(3,Math.round(v/mx*80))+'px"></i><span>W'+(i+1)+'</span></div>';}).join('');
+    document.querySelector('#teams tbody').innerHTML=TT.map(function(t){return '<tr><td class="who">'+t.team+'<br><small style="font-weight:400;color:var(--ink-3)">'+t.manager+'</small></td><td>'+t.users+'</td><td>'+pct(t.active)+'</td><td>'+pct(t.sustained)+'</td><td>'+t.never+'</td><td>'+(t.mttfu===null?'n/a':t.mttfu+' d')+'</td><td>'+(t.mttsu===null?'n/a':t.mttsu+' d')+'</td><td>'+pct(t.depth)+'</td><td>'+t.variance.toFixed(1)+'</td><td>'+bars(t.weekly)+'</td></tr>';}).join('');
+    document.getElementById('users').innerHTML=TT.map(function(t){return '<h3>'+t.team+'<small>'+t.manager+' &middot; '+t.users+' users</small></h3><div class="tablewrap"><table><thead><tr><th>User</th><th>Weeks</th><th>Status</th><th>First use</th><th>Sustained on</th><th>Triggers</th></tr></thead><tbody>'+t.rows.map(function(r){return '<tr><td class="u">'+r.u.display+'</td><td>'+bars(r.u.weekly)+'</td><td>'+statusPill(r)+'</td><td>'+(r.first===null?'<span style="color:var(--ink-3)">none</span>':fmtd(iso(r.first))+' <small style="color:var(--ink-3)">(day '+r.ttfu+')</small>')+'</td><td>'+(r.sustainedOn===null?'<span style="color:var(--ink-3)">not yet</span>':fmtd(iso(r.sustainedOn))+' <small style="color:var(--ink-3)">('+r.ttsu+' d after first)</small>')+'</td><td class="tr">'+(r.triggers.length?r.triggers.map(function(x){return '<span class="pill risk">'+TS[x.trigger].label+'</span>';}).join(' '):'')+'</td></tr>';}).join('')+'</tbody></table></div>';}).join('');
+    var by={};ints.forEach(function(i){by[i.trigger]=(by[i.trigger]||0)+1;});
+    document.getElementById('trig-tiles').innerHTML=Object.keys(TS).map(function(k){var sp=TS[k];var off=!sp.source;return '<div class="'+(off?'off':'')+'"><b>'+(off?'n/a':(by[k]||0))+'</b><span>'+sp.label+'</span><small>'+(off?'No telemetry source yet. '+sp.action+'.':sp.action+'. '+sp.owner_role+', '+sp.response_window_days+' days.')+'</small></div>';}).join('');
+    ints.sort(function(a,b){return b.fired-a.fired||a.user.team.localeCompare(b.user.team);});
+    document.querySelector('#ints tbody').innerHTML=ints.length?ints.map(function(i){return '<tr><td class="who">'+i.user.display+'</td><td>'+i.user.team+'</td><td><span class="pill risk">'+i.label+'</span></td><td>'+fmtd(iso(i.fired))+'</td><td>'+i.action+'</td><td class="own">'+i.owner+'</td><td>'+fmtd(iso(i.due))+'</td><td>'+stPill(i.status)+(i.coaching?' <small style="color:var(--green-600)">coached</small>':'')+'</td><td>'+(i.measurable?(i.lift?'<span class="pill go">yes</span>':'<span class="pill hold">no</span>'):'<span style="color:var(--ink-3)">not yet</span>')+'</td></tr>';}).join(''):'<tr><td colspan="9">Nothing fired at these thresholds.</td></tr>';
+    var mc=function(t,dark){return '<div class="card'+(dark?' dark':'')+'"><h4>'+t.manager+'<span class="pill '+(t.engaged?'go':'now')+'">'+(t.engaged?'engaged':'not engaged')+'</span></h4><p>'+t.team+' &middot; '+t.users+' users</p><div class="kv"><div>Active<b>'+pct(t.active)+'</b></div><div>Sustained<b>'+pct(t.sustained)+'</b></div><div>Never used<b>'+t.never+'</b></div><div>Spread<b>'+t.variance.toFixed(1)+'</b></div><div>Open alerts<b>'+t.open+'</b></div><div>Alerts answered<b>'+pct(t.resp)+'</b></div><div>Coaching rate<b>'+pct(t.coach)+'</b></div><div>Opened this page, 14 d<b>'+t.views+'</b></div></div></div>';};
+    document.getElementById('mgrs').innerHTML=TT.map(function(t){return mc(t,false);}).join('');
+    document.getElementById('pmgrs').innerHTML=TT.map(function(t,i){return '<div data-a="'+(i+3)+'"><span class="big">'+pct(t.sustained)+'</span><b>'+t.manager+'</b><span>'+t.open+' open alert'+(t.open===1?'':'s')+' &middot; '+(t.engaged?'opens the page':'has not opened the page')+'</span></div>';}).join('');
+    var l1=S.level1;var rows1=[['Readiness assessment completion',pct(l1.readiness_assessment_completion)],['Baseline documentation rate',pct(l1.baseline_documentation_rate)],['Manager briefing completion',pct(l1.manager_briefing_completion)],['Intervention trigger coverage',pct(l1.intervention_trigger_coverage)+' <small style="color:var(--ink-3)">'+l1.trigger_coverage_detail+'</small>'],['Milestone adherence',pct(l1.milestone_adherence)]];
+    document.querySelector('#l1 tbody').innerHTML=rows1.map(function(r){return '<tr><td>'+r[0]+'</td><td class="v">'+r[1]+'</td></tr>';}).join('');
+    var l3=S.level3;var rows3=[['Adoption rate now',pct(C.sustained),false],['Time to sustained adoption, median',C.mttsu===null?'n/a':C.mttsu+' days',false],['Intervention effectiveness',C.eff===null?'not yet measurable':pct(C.eff)+' <small style="color:var(--ink-3)">of '+C.effN+' measurable</small>',false],['Retention of adoption gains',l3.retention_note,true],['Productivity lift',l3.productivity_note,true],['Cost avoidance',l3.cost_note,true],['Employee sentiment shift',l3.sentiment_note,true]];
+    document.querySelector('#l3 tbody').innerHTML=rows3.map(function(r){return '<tr><td>'+r[0]+'</td><td class="v'+(r[2]?' na':'')+'">'+r[1]+'</td></tr>';}).join('');
+    var lab={computed:['c','computed'],proxy:['p','proxy'],no_source:['n','no source']};
+    document.querySelector('#src tbody').innerHTML=Object.keys(S.signal_sources).map(function(k){var v=S.signal_sources[k];return '<tr><td class="who">'+k+'</td><td class="s '+lab[v.status][0]+'">'+lab[v.status][1]+'</td><td>'+v.needs+'</td></tr>';}).join('');
+  }
+  // threshold panel
+  var F={'t-au-min':['active_usage','min_uses_per_period'],'t-au-days':['active_usage','period_days'],'t-su-uses':['sustained_use','uses'],'t-su-days':['sustained_use','within_days'],'t-ud-pct':['usage_drop','drop_pct'],'t-ud-days':['usage_drop','compare_days'],'t-ap-days':['adoption_plateau','after_days'],'t-zu-days':['zero_use','after_days']};
+  function fill(){Object.keys(F).forEach(function(id){document.getElementById(id).value=T[F[id][0]][F[id][1]];});}
+  function changed(){var same=JSON.stringify(T)===JSON.stringify(T0);document.getElementById('thr-note').textContent=same?'Showing the values in config/signals.json.':'Recomputed in the browser. The config file is still the reference.';}
+  Object.keys(F).forEach(function(id){document.getElementById(id).addEventListener('input',function(){var v=parseInt(this.value,10);if(!(v>0))return;T[F[id][0]][F[id][1]]=v;changed();recompute();});});
+  document.getElementById('thr-reset').addEventListener('click',function(){T=JSON.parse(JSON.stringify(T0));fill();changed();recompute();});
+  [].forEach.call(document.querySelectorAll('.tog'),function(b){b.addEventListener('click',function(){var t=document.getElementById(b.getAttribute('data-for'));var open=t.classList.toggle('closed')===false;b.classList.toggle('open',open);});});
+  document.getElementById('users-tog').textContent='Show the '+S.cohort.users+' users';
+  fill();
+  window.__adoption=recompute();
+  window.__adoptionRecompute=recompute;
+})();
+</script>
+<!--PRESENT-->
+</body>
+</html>

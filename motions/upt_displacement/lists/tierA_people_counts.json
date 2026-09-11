@@ -1,0 +1,50 @@
+{
+ "Verint_FO": {
+  "Blue Cross Blue Shield of Louisiana": 12,
+  "New York Life Insurance Company": 52,
+  "Blue Shield of California (BSCA)": 0,
+  "Verizon": 317,
+  "The Hartford Financial Services Group": 107,
+  "Gainwell Technologies": 2,
+  "Maximus": 36,
+  "TTEC": 0,
+  "Teleperformance UK": 0,
+  "Allstate Corporation": 0
+ },
+ "Verint_BO": {
+  "Blue Cross Blue Shield of Louisiana": 4,
+  "New York Life Insurance Company": 5,
+  "Blue Shield of California (BSCA)": 0,
+  "Verizon": 9,
+  "The Hartford Financial Services Group": 18,
+  "Gainwell Technologies": 0,
+  "Maximus": 2,
+  "TTEC": 0,
+  "Teleperformance UK": 0,
+  "Allstate Corporation": 0
+ },
+ "NICE_FO": {
+  "Blue Cross Blue Shield of Louisiana": 0,
+  "New York Life Insurance Company": 0,
+  "Blue Shield of California (BSCA)": 0,
+  "Verizon": 317,
+  "The Hartford Financial Services Group": 107,
+  "Gainwell Technologies": 2,
+  "Maximus": 36,
+  "TTEC": 36,
+  "Teleperformance UK": 50,
+  "Allstate Corporation": 62
+ },
+ "NICE_BO": {
+  "Blue Cross Blue Shield of Louisiana": 0,
+  "New York Life Insurance Company": 0,
+  "Blue Shield of California (BSCA)": 0,
+  "Verizon": 9,
+  "The Hartford Financial Services Group": 18,
+  "Gainwell Technologies": 0,
+  "Maximus": 2,
+  "TTEC": 1,
+  "Teleperformance UK": 0,
+  "Allstate Corporation": 25
+ }
+}

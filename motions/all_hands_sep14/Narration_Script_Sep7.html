@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All-hands demo, narration script</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#014637;--green:#2DB56E;--green-600:#228752;--green-300:#7BD3A0;--orange:#F58220;--ink:#202020;--sidebar:#F5F4F2;--line:#E0E0E0;--r:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Roboto,'Helvetica Neue',Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+.hero{background:var(--forest);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-220px;top:-260px;width:820px;height:820px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.30),transparent 62%)}
+.w{max-width:1120px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
+.logo{height:36px;color:#fff;display:block;margin-bottom:44px}
+.eye{font-family:'Roboto Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;color:var(--green-300)}
+.eye.dk{color:var(--green-600)}
+h1{font-weight:900;font-size:52px;line-height:1.04;letter-spacing:-.02em;margin:16px 0 18px;max-width:20ch}
+.lede{font-size:19px;line-height:1.55;color:#C7DAD1;max-width:62ch}
+.statband{display:flex;gap:0;margin-top:44px;border-top:1px solid rgba(255,255,255,.18);padding-top:26px}
+.statband div{flex:1}
+.statband b{display:block;font-size:38px;font-weight:900;color:var(--green-300);letter-spacing:-.02em;line-height:1}
+.statband span{font-family:'Roboto Mono',Menlo,monospace;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#9FBDB1;display:block;margin-top:9px}
+section{padding:56px 0 8px}
+h2{font-weight:900;font-size:30px;letter-spacing:-.02em;margin:12px 0 10px;max-width:26ch}
+h3{font-weight:700;font-size:17px;margin:30px 0 10px}
+p{font-size:15.5px;line-height:1.62;max-width:76ch;margin-bottom:12px}
+.tw{overflow-x:auto;margin:20px 0 8px;border:1px solid var(--line);border-radius:var(--r)}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:720px}
+th{font-family:'Roboto Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.09em;font-size:10.5px;font-weight:600;text-align:left;padding:12px 14px;background:var(--sidebar);border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid #EFEFEF;vertical-align:top;line-height:1.45}
+tr:last-child td{border-bottom:none}
+.mono{font-family:'Roboto Mono',Menlo,monospace;font-size:12px}
+.tag{font-family:'Roboto Mono',Menlo,monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:3px 7px;border-radius:4px;white-space:nowrap}
+.ok{background:#E4F5EC;color:var(--green-600)}
+.warn{background:#FDEDDF;color:#B45B10}
+.miss{background:#FBE3E3;color:#A32A2A}
+.gate{border-left:4px solid var(--green);background:#F4FBF7;padding:16px 20px;border-radius:0 var(--r) var(--r) 0;margin:18px 0}
+.callout{border-left:4px solid var(--orange);background:#FFF7F0;padding:16px 20px;border-radius:0 var(--r) var(--r) 0;margin:18px 0}
+.gate p,.callout p{margin-bottom:0;font-size:14.5px}
+ol,ul{margin:10px 0 14px 22px}
+li{font-size:15px;line-height:1.6;margin-bottom:9px;max-width:74ch}
+li b{font-weight:700}
+code{font-family:'Roboto Mono',Menlo,monospace;font-size:12.5px;background:var(--sidebar);padding:2px 6px;border-radius:4px}
+pre{background:var(--forest);color:#D6E7E0;padding:18px 20px;border-radius:var(--r);overflow-x:auto;font-family:'Roboto Mono',Menlo,monospace;font-size:12.5px;line-height:1.65;margin:14px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px 0}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:20px 22px}
+.card h4{font-size:15px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14px;margin-bottom:0}
+footer{background:var(--sidebar);margin-top:56px;padding:34px 0;border-top:1px solid var(--line)}
+footer p{font-size:13px;color:#666;margin:0}
+@media(max-width:820px){h1{font-size:36px}.grid{grid-template-columns:1fr}.statband{flex-wrap:wrap;gap:22px}.statband div{flex:1 1 40%}}
+</style>
+<body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46"><path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/><path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/><path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/><path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/><path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/><path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/></symbol></svg>
+<div class="hero"><div class="w">
+<svg class="logo" viewBox="0 0 187 46"><use href="#ilogo"/></svg>
+<div class="eye">All-hands demo &middot; narration script &middot; 7 September 2026</div>
+<h1>Read this over the cut and it lands on the first take.</h1>
+<p class="lede">Twenty-three lines written to the timecodes the picture is locked to, re-cut for the new opener, the system walk and the three act scenes. Four of them are deliberate silences where the screen is doing the work. No line asks for more than 2.5 words a second.</p>
+<div class="statband">
+<div><b>4:38</b><span>picture locked</span></div>
+<div><b>551</b><span>words in the read</span></div>
+<div><b>1.98</b><span>words per second</span></div>
+<div><b>23</b><span>lines</span></div>
+<div><b>4</b><span>held silences</span></div>
+</div>
+</div></div>
+
+<section><div class="w">
+<div class="eye dk">How to record it</div>
+<h2>Three things on your Desktop, in this order</h2>
+<ol>
+<li><b>Open <code>AllHands Narration Booth.html</code></b> in Chrome or Safari. It plays the cut on the right and puts the line you are speaking on the left in large type, with the seconds left on that line counting down. Space plays and pauses, R restarts, the arrows step a cue at a time, and clicking a cue jumps there.</li>
+<li><b>Record your voice on its own, not the screen.</b> QuickTime, File, New Audio Recording. One continuous pass from the top. If you fluff a line, pause, breathe, and pick that line up from its start.</li>
+<li><b>Hand me the audio.</b> <code>python3 add_narration.py voice.m4a</code> cleans it, matches it to the picture and writes the narrated file.</li>
+</ol>
+<div class="gate"><p><b>The new scenes read themselves.</b> The system walk and the three act openers put their own words on screen, so the lines over them are short on purpose. Say the line, then let the room read. The nine-second silence over the enrichment is still the strongest beat in Act 2.</p></div>
+</div></section>
+
+<section><div class="w">
+<div class="eye dk">The read</div>
+<h2>Every line, with the room it has</h2>
+<div class="tw"><table>
+<tr><th>At</th><th>Where</th><th>Say</th><th>Room</th><th>Words</th></tr>
+<tr><td class='mono'>0:00</td><td>Open</td><td>This is the engine our go-to-market runs on. Everything you are about to see is live.</td><td class='mono'>7s</td><td class='mono'>16</td></tr><tr><td class='mono'>0:07</td><td>System</td><td>Six steps. Most of them run themselves. Two places a person still decides, and those are the two that keep us safe.</td><td class='mono'>12s</td><td class='mono'>22</td></tr><tr><td class='mono'>0:19</td><td>Act 1</td><td>Act one. A rep, a target account, and a blank page.</td><td class='mono'>7s</td><td class='mono'>11</td></tr><tr><td class='mono'>0:26</td><td>Act 1</td><td>One ask, in plain English. The engine reads the public record, names the buying committee, and writes a ten-day plan: emails, LinkedIn notes and voicemails for every person on it, in the rep's voice. Every signal on screen carries its date and its source. This is what Nate and the sales team run from today.</td><td class='mono'>26s</td><td class='mono'>55</td></tr><tr><td class='mono'>0:52</td><td>Act 1</td><td>It carries the rules with it: what is verified, who is excluded, and how to answer the pushback before it comes.</td><td class='mono'>9s</td><td class='mono'>21</td></tr><tr><td class='mono'>1:00</td><td>Act 1</td><td><i>[ Nothing. Let the card land. ]</i></td><td class='mono'>2s</td><td class='mono'>&mdash;</td></tr><tr><td class='mono'>1:03</td><td>Act 2</td><td>Act two. Our customers' front offices know us. Their back offices don't.</td><td class='mono'>8s</td><td class='mono'>12</td></tr><tr><td class='mono'>1:10</td><td>Act 2</td><td>So we went and found them. Everyone we know, in one place, synced from Salesforce. A hundred and forty thousand people. Then one saved filter: back-office leaders, director and up, inside accounts we already serve. Three hundred and twelve people who have never heard from us. That used to be a week of exports and spreadsheets. It costs nothing and it stays current on its own.</td><td class='mono'>31s</td><td class='mono'>66</td></tr><tr><td class='mono'>1:41</td><td>Act 2</td><td>For every one of them: verify the email, read what they have said publicly, find which contact center platforms their company runs, and pull the persona and the angle. Here is that research running on ten people at once.</td><td class='mono'>17s</td><td class='mono'>39</td></tr><tr><td class='mono'>1:58</td><td>Act 2</td><td><i>[ Say nothing. Nine seconds. The screen carries it. ]</i></td><td class='mono'>9s</td><td class='mono'>&mdash;</td></tr><tr><td class='mono'>2:07</td><td>Act 2</td><td>Then the engine writes the first touch for each person from exactly this, and every draft passes a fact check before it moves.</td><td class='mono'>10s</td><td class='mono'>23</td></tr><tr><td class='mono'>2:16</td><td>Act 2</td><td>Then it turns names into the org. When the account management team needed back-office maps for their strategic accounts, it sourced the people, checked every name against Salesforce, and delivered them as a live page. This is MetLife: the senior executive at the top, the lanes underneath, who reports up to whom. Eighteen accounts so far, and the account manager clears every name before a word goes out.</td><td class='mono'>33s</td><td class='mono'>68</td></tr><tr><td class='mono'>2:49</td><td>Act 2</td><td>And inside every org there is a buying committee. We used to sell to one person. Now we sell to four: the economic buyer, the evaluator, the champion, and the integration owner. Here is State Farm's. This is the targeting standard now.</td><td class='mono'>20s</td><td class='mono'>42</td></tr><tr><td class='mono'>3:09</td><td>Act 2</td><td><i>[ Nothing. Let the card land. ]</i></td><td class='mono'>2s</td><td class='mono'>&mdash;</td></tr><tr><td class='mono'>3:11</td><td>Act 3</td><td>Act three. The rep has the people and the drafts. Running them is the job.</td><td class='mono'>7s</td><td class='mono'>15</td></tr><tr><td class='mono'>3:18</td><td>Act 3</td><td>So that is automated too. Cleared contacts land here. Email, LinkedIn and a call step per person, on a cadence. Every line you are reading was drafted by the engine for this individual, at this company, this week. The rep owns the send, and every reply comes back to them. Seven campaigns are sending today across North America and the UK.</td><td class='mono'>27s</td><td class='mono'>61</td></tr><tr><td class='mono'>3:45</td><td>Act 3</td><td><i>[ Nothing. Let the card land. ]</i></td><td class='mono'>2s</td><td class='mono'>&mdash;</td></tr><tr><td class='mono'>3:47</td><td>Coda</td><td>It doesn't stop at outbound. Alliances asked, and the same engine answered.</td><td class='mono'>6s</td><td class='mono'>12</td></tr><tr><td class='mono'>3:53</td><td>Coda</td><td>Account research and a follow-up one-pager per partner account. Two skills build both in about five minutes, and Frank runs them himself.</td><td class='mono'>14s</td><td class='mono'>22</td></tr><tr><td class='mono'>4:07</td><td>Coda</td><td>Public sources, read on the day, with the gaps named rather than filled.</td><td class='mono'>6s</td><td class='mono'>13</td></tr><tr><td class='mono'>4:12</td><td>Coda</td><td>Who to talk to, where each name came from, and what still needs a live check before it reaches a sequence.</td><td class='mono'>12s</td><td class='mono'>21</td></tr><tr><td class='mono'>4:24</td><td>Coda</td><td>And the one-pager that follows, built from that company's own filings. The same engine routed a thousand webinar registrants in a week.</td><td class='mono'>10s</td><td class='mono'>22</td></tr><tr><td class='mono'>4:33</td><td>Close</td><td>One engine. It runs work like this for any team.</td><td class='mono'>4s</td><td class='mono'>10</td></tr>
+</table></div>
+</div></section>
+
+<footer><div class="w"><p>GTM Engineering &middot; 7 September 2026 &middot; read it over <code>Intradiem_AllHands_Demo_v2_Sep7.mp4</code></p></div></footer>
+
+</body></html>

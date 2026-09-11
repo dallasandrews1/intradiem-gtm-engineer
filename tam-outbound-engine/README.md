@@ -28,7 +28,7 @@ python3 test_account_engine.py                     # 13 checks
 
 ## What you swap (the data layer)
 
-- `data/tam_accounts.csv` firmographics + contact-center infra: `domain, company, industry, employees, agent_count, acd, wfm`
+- `data/tam_accounts.csv` firmographics + contact-center infra: `domain, company, industry, employees, agent_count, acd, acd_source, acd_observed, wfm, wfm_source, wfm_observed`. The `acd`/`wfm` values feed scoring as before. A value is printed in the plan and allowed into copy only when its `_source` (URL) and `_observed` (YYYY-MM-DD, no older than `tech.verified_max_age_days` in `config/icp_weights.json`) are filled; otherwise the plan prints `Tech stack: unverified` and the copy falls back to "your ACD" / "WFM". Sources come from `tech_stack_refresh.py` (one Clay PredictLeads run per domain, 1 credit, reads job posts; `--domain X` dry-runs, `--write` stores acd/wfm with `predictleads:<url>` and the last-seen date; vendor list, canonical names and ACD/WFM lanes in `config/tech_vendors.json`), or from a cited research pass per the strike-sequence skill's FULL mode. Never from a website tech scan, which cannot see contact-center platforms.
 - `data/triggers.csv` detected buying triggers: `domain, trigger_type, detail, date` (filled by Apollo, Clay, news, and job scrapers in the role)
 - `data/sellers.csv` ownership: `domain, seller_name, seller_email, seller_slack`
 
@@ -55,6 +55,20 @@ The accounts are real companies; the trigger details and ROI assumptions are
 sample inputs to demonstrate the engine. Swap the three CSVs for real enrichment
 output and the plays are real. Keep the ROI assumptions in `roi_model.json`
 conservative and defensible, since that number goes in front of a buyer.
+
+**As of 5 Sep 2026 that swap has not happened.** All six rows are still the Jul 1
+2026 seed. Both data CSVs now carry a `source` column and provenance is opt-in: a
+row with an empty `source` is treated as seed, prints `[SEED]` in the ranked list
+and a full-width banner on `--plan`, and the strike-sequence skill refuses to put
+its fit score, tier, agent count, ROI or triggers in a plan. Fill `source` with a
+real dated citation to clear a row.
+
+This guard exists because a seed trigger ("you won two new Medicaid state
+contracts") reached a drafted AmeriHealth Caritas strike plan on 5 Sep 2026 while
+the account's actual public record said revenue grew 15% to $28.1B *despite
+winning no new state contracts*, and that they had cut 102 administrative roles.
+The engine was doing exactly what it was built to do with the data it had. The
+data was never swapped.
 
 ## Surfaces (built)
 

@@ -28,13 +28,17 @@ Centene's Medicare book runs largely under the Wellcare brand, and by public CMS
 
 | # | Name | Title | Tier | Email status | Angle |
 |---|---|---|---|---|---|
-| 1 | Corey Taliaferro | VP, Health Plan Operations (Carolina Complete Health) | A | Enriching (email drafted, fires on validation) | QO + BOO |
+| 1 | Corey Taliaferro | VP, Health Plan Operations (Carolina Complete Health) | A | Role confirmed live 2026-09-05; email still pending validation | QO + BOO |
 | 2 | Cyrus Hoseini | VP, Operations | B | Verified | QO + BOO |
 | 3 | Justin Hedrick | VP, Operations and System Integration | B | Verified | QO + BOO |
 | 4 | Matthew Tran | Sr Director, Member Experience and Innovation | B | Verified | QO |
 | 5 | Jesse Lewis | Sr Director, Medicare Operations | B | Verified | QO + BOO |
 
-**LinkedIn:** Taliaferro /in/coreytaliaferromba/ · Hoseini /in/cyrus-hoseini-b739209/ · Hedrick /in/justin-hedrick-3bb08b6/ · Tran /in/matttran/ · Lewis /in/jesse-lewis-44445815a/
+**LinkedIn (re-verified against Clay 2026-09-05; three URLs were wrong and are corrected here):** Hoseini /in/cyrushoseini/ (was /in/cyrus-hoseini-b739209/) · Hedrick /in/justinhedrick/ (was /in/justin-hedrick-3bb08b6/) · Tran /in/matttran/ (unchanged) · Lewis /in/jesse-lewis-executive/ (was /in/jesse-lewis-44445815a/) · Taliaferro /in/coreytaliaferromba/ (unconfirmed, see below)
+
+**Role check, Clay 2026-09-05.** All four confirmed contacts are current at Centene Corporation with the titles above: Hoseini VP Operations (since 2025-11), Hedrick VP Operations and System Integration (since 2026-02, the newest seat), Tran Senior Director of Member Experience and Innovation (since 2022-03), Lewis Senior Director Medicare Operations (since 2025-06). **Taliaferro confirmed live** via the Enrich Person routine (`function:t_0thx4ohpCNT3KNijyVo`, 0.5 credit, keyed on his LinkedIn URL): Vice President Health Plan Operations, Carolina Complete Health, at Centene Corporation, `is_current: true`, in seat since 2023-03-01. His LinkedIn URL on this roster was correct.
+
+**Why the name searches missed him, and why it matters:** his LinkedIn display name is "Corey J. T.", not "Corey Taliaferro". Clay's company-scoped people search matches on name, so every by-name lookup returned nothing even though Clay's coverage of both companies is good (20 contacts at Carolina Complete Health alone). A name-based miss is NOT evidence someone has left. Anyone who abbreviates their surname on LinkedIn is invisible to that path; confirm with the URL-keyed Enrich Person routine before concluding a departure. All five seats are confirmed current as of 2026-09-05. Taliaferro's email is still the only open item.
 
 **Emails:** Hoseini cyrus.hoseini@centene.com · Hedrick justin.hedrick@centene.com · Tran matthew.tran@centene.com · Lewis jesse.lewis@centene.com · Taliaferro pending validation (Clay enriching)
 

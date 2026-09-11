@@ -1,0 +1,1092 @@
+[
+  {
+    "campaignId": "cam_sh3JCJoxtEHyjGrsw",
+    "campaignName": "",
+    "sequences": [
+      {
+        "id": "seq_D4jpFJfsipwr33bny",
+        "steps": [
+          {
+            "id": "stp_dGP6c9HRDyaWCZog5",
+            "sequenceId": "seq_D4jpFJfsipwr33bny",
+            "type": "linkedinVisit",
+            "delay": 0
+          },
+          {
+            "id": "stp_eLt2WgPsuZziMkCkj",
+            "sequenceId": "seq_D4jpFJfsipwr33bny",
+            "type": "linkedinInvite",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn connect for {{firstName}}, no note (approve before sending)"
+          },
+          {
+            "id": "stp_Ns5pGHqNJKe2WcQ8h",
+            "sequenceId": "seq_D4jpFJfsipwr33bny",
+            "type": "conditional",
+            "delay": 2,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_WbTtwaYkMggGu9ztX",
+                "label": "Accepted invite",
+                "key": "linkedinInviteAccepted",
+                "delay": 2,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_3Aj58rf9Yp8kZpdvS",
+                "fallback": true
+              }
+            ]
+          },
+          {
+            "id": "stp_6eBfPTm3Y92XNT363",
+            "sequenceId": "seq_D4jpFJfsipwr33bny",
+            "type": "linkedinVoiceNote",
+            "delay": 0,
+            "message": "",
+            "manual": true,
+            "title": "STRAY STEP from an API test (Dallas): delete this step, it does nothing"
+          }
+        ]
+      },
+      {
+        "id": "seq_WbTtwaYkMggGu9ztX",
+        "steps": [
+          {
+            "id": "stp_3P8mtA3juwKYMXjJg",
+            "sequenceId": "seq_WbTtwaYkMggGu9ztX",
+            "type": "linkedinSend",
+            "delay": 0,
+            "message": "Thanks for connecting, {{firstName}}. I emailed a few weeks back on the last half-star at {{plan_name}}, and the scoring window's kept narrowing since. If it's worth a fresh look before the peak stretch, have 15 minutes this week or next?",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn message after accepted connect (approve before sending)"
+          },
+          {
+            "id": "stp_kBkdqpRK7voEnbLup",
+            "sequenceId": "seq_WbTtwaYkMggGu9ztX",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call script (leave as voicemail if no answer): {{firstName}}, this is Nathan with Intradiem. Appreciated the connect on LinkedIn. I reached out a few weeks back on the last half-star at {{plan_name}} and the service measures that still move it this cycle. I can walk you through which of your contracts sit closest to the line. I'm at [number], or just reply to my earlier email. Thanks {{firstName}}.",
+            "priority": 2,
+            "title": "Call {{firstName}} ({{plan_name}}), they accepted the connect"
+          },
+          {
+            "id": "stp_zgdinKdRRCcsTg9qA",
+            "sequenceId": "seq_WbTtwaYkMggGu9ztX",
+            "type": "email",
+            "delay": 3,
+            "subject": "eating my words",
+            "message": "<p style=\"margin: 0px; box-sizing: border-box;\">Hi {{firstName}}, I told you my last note was my last note, and then the scoring window kept shrinking, so here I am eating my words once. The measures still movable are being scored in live interactions right now, and once the window closes the cheap fixes close with it.&nbsp;</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p style=\"margin: 0px; box-sizing: border-box;\">If the last half-star makes the priority list before then, I'm easy to find. This one really is the last one.</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p style=\"margin: 0px; box-sizing: border-box;\">Thanks,</p><p style=\"margin: 0px; box-sizing: border-box;\">Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_MPXXucbkXwjkiiJSP",
+            "sequenceId": "seq_WbTtwaYkMggGu9ztX",
+            "type": "manual",
+            "delay": 0,
+            "message": "",
+            "title": "STRAY STEP from an API test (Dallas): delete this step, it does nothing"
+          }
+        ]
+      },
+      {
+        "id": "seq_3Aj58rf9Yp8kZpdvS",
+        "steps": [
+          {
+            "id": "stp_np2nhyGjHiKYZTM26",
+            "sequenceId": "seq_3Aj58rf9Yp8kZpdvS",
+            "type": "phone",
+            "delay": 0,
+            "message": "Call script (leave as voicemail if no answer): {{firstName}}, this is Nathan with Intradiem. I sent you a note a few weeks back on the last half-star at {{plan_name}} and the service measures that still move it this cycle. That window keeps closing a week at a time, which is the only reason I'm calling. I can walk you through which of your contracts sit closest to the line. I'm at [number], or just reply to the email. Thanks {{firstName}}.",
+            "priority": 2,
+            "title": "Call {{firstName}} ({{plan_name}}), then the \"just tried you\" email goes out"
+          },
+          {
+            "id": "stp_afdYJbTbPXLZkvxkC",
+            "sequenceId": "seq_3Aj58rf9Yp8kZpdvS",
+            "type": "email",
+            "delay": 0,
+            "subject": "just tried you",
+            "message": "<p style=\"margin: 0px; box-sizing: border-box;\">Hi {{firstName}}, just tried your line, no luck, so leaving this here instead. I emailed a few weeks back about the last half-star at {{plan_name}} and the service measures that still move it this cycle. That window's kept closing a week at a time since, which is the only reason I'm back in your inbox.</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p style=\"margin: 0px; box-sizing: border-box;\">If it's worth a fresh look before the peak stretch, have 15 minutes this week or next?</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p style=\"margin: 0px; box-sizing: border-box;\">Nathan</p>",
+            "abTest": true,
+            "variantB": {
+              "subject": "just tried you",
+              "message": "<p style=\"margin: 0px; box-sizing: border-box;\">Hi {{firstName}}, just tried your line, no luck, so leaving this here instead. I emailed a few weeks back about the last half-star at {{plan_name}} and the service measures that still move it this cycle. That window's kept closing a week at a time since, which is the only reason I'm back in your inbox.</p><p style=\"margin: 0px; box-sizing: border-box;\">Rather than ask for time again: worth me sending over a short note on which service measures still move this cycle? No meeting attached, I'll just send it over.</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p style=\"margin: 0px; box-sizing: border-box;\">Thanks,</p><p style=\"margin: 0px; box-sizing: border-box;\">Nathan</p>"
+            }
+          },
+          {
+            "id": "stp_Xwt4NgD3FFSFTvvbY",
+            "sequenceId": "seq_3Aj58rf9Yp8kZpdvS",
+            "type": "conditional",
+            "delay": 3,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_3FpmiTeBzmnZiTzFy",
+                "label": "Opened email",
+                "key": "emailsOpened",
+                "delay": 3,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_L3XgZazRhgn6WdP3R",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_3FpmiTeBzmnZiTzFy",
+        "steps": [
+          {
+            "id": "stp_WqeFKM5M9Rjn7ehvF",
+            "sequenceId": "seq_3FpmiTeBzmnZiTzFy",
+            "type": "email",
+            "delay": 1,
+            "subject": "eating my words",
+            "message": "<p>Hi {{firstName}}, I told you my last note was my last note, and then the scoring window kept shrinking, so here I am eating my words once. The measures still movable are being scored in live interactions right now, and once the window closes the cheap fixes close with it. If the last half-star makes the priority list before then, I'm easy to find.</p><p>This one really is the last one.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_L3XgZazRhgn6WdP3R",
+        "steps": [
+          {
+            "id": "stp_JZWJtgNf59zwwWDBB",
+            "sequenceId": "seq_L3XgZazRhgn6WdP3R",
+            "type": "email",
+            "delay": 1,
+            "subject": "closing the loop",
+            "message": "<p>Hi {{firstName}}, closing the loop on my notes about the last half-star at {{plan_name}}. If this sits on someone else's desk, glad to be pointed the right way. Either way I'll leave it here until the timing fits.</p><p>This is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "campaignId": "cam_2gy9hmEvMjYEuPZ8A",
+    "campaignName": "",
+    "sequences": [
+      {
+        "id": "seq_JgHnp4nwCZ47sqjXo",
+        "steps": [
+          {
+            "id": "stp_hmp9Gp7dAZFgkgqPq",
+            "sequenceId": "seq_JgHnp4nwCZ47sqjXo",
+            "type": "email",
+            "delay": 0,
+            "subject": "the bonus at {{qbp_avg}}",
+            "message": "<p>Hi {{firstName}}, {{opener_line}} You'll know the exact picture far better than I do. The measures still movable this cycle are mostly operational, not clinical.</p><p>Thought it might be worth talking through how you're modeling the cliff and which measures still move it. Have 15 minutes in the next few weeks?</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>",
+            "abTest": true,
+            "variantB": {
+              "subject": "the bonus at {{qbp_avg}}",
+              "message": "<p>Hi {{firstName}}, {{opener_line}} You'll know the exact picture far better than I do. The measures still movable this cycle are mostly operational, not clinical.</p><p>Worth me sending over a short note on how plans near the line usually model the cliff this cycle? No meeting attached, I'll just send it over.</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>"
+            }
+          },
+          {
+            "id": "stp_83GFzJMt2A4TenMqw",
+            "sequenceId": "seq_JgHnp4nwCZ47sqjXo",
+            "type": "linkedinVisit",
+            "delay": 0
+          },
+          {
+            "id": "stp_Fa84LhBJhhopceLaQ",
+            "sequenceId": "seq_JgHnp4nwCZ47sqjXo",
+            "type": "linkedinInvite",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn connect for {{firstName}}, no note (approve before sending)"
+          },
+          {
+            "id": "stp_GcKhnDZjWZ63LdSHq",
+            "sequenceId": "seq_JgHnp4nwCZ47sqjXo",
+            "type": "conditional",
+            "delay": 2,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+                "label": "Accepted invite",
+                "key": "linkedinInviteAccepted",
+                "delay": 2,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_EC4Cdf7fZFrZnwPvB",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_Mtnqt8s9LKr9bKnpD",
+        "steps": [
+          {
+            "id": "stp_y85XidZL3XCecpzAZ",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "linkedinSend",
+            "delay": 0,
+            "message": "Thanks for connecting, {{firstName}}. The heart of my note: near 4.0 the bonus turns on a half-star, and the half-star is mostly an execution question in the service measures, not a clinical one. Worth a short call on how you're modeling the exposure?",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn message after accepted connect (approve before sending)"
+          },
+          {
+            "id": "stp_mGX4zdGjW24szwMn2",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 1 of 2, no voicemail if no answer (the voicemail comes with call 2). Opener: {{firstName}}, Nathan with Intradiem, we connected on LinkedIn this week. Reason for the call: {{vm_hook}} Ask: 15 minutes on how you're modeling the cliff. If timing pushback: the measurement year is more than half spent, so this cycle's window closes before the October release.",
+            "priority": 1,
+            "title": "Call 1 for {{firstName}} ({{plan_name}}), Finance lane, no voicemail"
+          },
+          {
+            "id": "stp_9YLwdR5Rrt6eAvXns",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "linkedinVoiceNote",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "Voice note {{firstName}}: read voice_script variable. Swap to AI clone pre-launch"
+          },
+          {
+            "id": "stp_79dFBYM92pciNTc4p",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 2 of 2. If no answer, leave voicemail: {{firstName}}, Nathan with Intradiem. {{vm_hook}} Worth 15 minutes on how you're modeling the cliff versus what closing it returns. I'm at [number], or just reply to my email. Thanks {{firstName}}.",
+            "priority": 1,
+            "title": "Call 2 for {{firstName}} ({{plan_name}}), leave voicemail"
+          },
+          {
+            "id": "stp_WGh7oxAFgKYpWpvxX",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "email",
+            "delay": 2,
+            "subject": "the cliff is being priced in now",
+            "message": "<p>Hi {{firstName}}, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. {{contract_line}}</p><p>Keeping service execution steady through those peak weeks is what Intradiem does, and it's why those measures stay movable. Fifteen minutes and I'll walk you through the finance view on what holding the next half-star costs versus what the bonus returns.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_zqvz6RiisyJP7jrEu",
+            "sequenceId": "seq_Mtnqt8s9LKr9bKnpD",
+            "type": "email",
+            "delay": 2,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll leave it here. One thought worth keeping: missing the line by a fraction and missing it by a lot cost the same: one cycle of bonus, and the cheapest place to buy it back is the contracts already sitting closest to the line. When the cliff becomes a finance priority, the operational-execution angle is where I'd start the model. Glad to help whenever the timing fits.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_EC4Cdf7fZFrZnwPvB",
+        "steps": [
+          {
+            "id": "stp_nF7DdGnStHBGxcgo2",
+            "sequenceId": "seq_EC4Cdf7fZFrZnwPvB",
+            "type": "conditional",
+            "delay": 0,
+            "conditions": [
+              {
+                "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+                "label": "Has phone number",
+                "key": "hasPhoneNumber"
+              },
+              {
+                "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_dN2LWWFxL8ZcnHe5f",
+        "steps": [
+          {
+            "id": "stp_2PEMT5MxZGCvQ4gCc",
+            "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+            "type": "phone",
+            "delay": 0,
+            "message": "Voicemail script: {{firstName}}, this is Nathan with Intradiem. {{vm_hook}} Fifteen minutes on how you're modeling the cliff versus what closing it returns? I'm at [number], or just reply to my email. Thanks {{firstName}}.",
+            "priority": 1,
+            "title": "Voicemail for {{firstName}} ({{plan_name}}), Finance lane"
+          },
+          {
+            "id": "stp_bz4CCwLzxstfepkkT",
+            "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call, day after the voicemail. If no answer, hang up, no second voicemail. If they answer: {{firstName}}, Nathan with Intradiem, I left you a note yesterday on the quality-bonus line at {{plan_name}}. {{vm_hook}} Worth 15 minutes on how you're modeling it?",
+            "priority": 1,
+            "title": "Call {{firstName}} ({{plan_name}}), day after voicemail, no second voicemail"
+          },
+          {
+            "id": "stp_SAQGYwNEDHNYMo7yg",
+            "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+            "type": "email",
+            "delay": 2,
+            "subject": "the cliff is being priced in now",
+            "message": "<p>Hi {{firstName}}, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. {{contract_line}}</p><p>Keeping service execution steady through those peak weeks is what Intradiem does, and it's why those measures stay movable. Fifteen minutes and I'll walk you through the finance view on what holding the next half-star costs versus what the bonus returns.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_GvbcKTybfkWs3egL4",
+            "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+            "type": "phone",
+            "delay": 2,
+            "message": "Final call, no voicemail (one already left). If they answer: {{firstName}}, Nathan with Intradiem, I'll be quick. I've sent a couple notes on the bonus exposure at {{plan_name}}. Before I close the file on this: is the Stars cliff a this-cycle question for your team, or a next-year one? Either answer is useful.",
+            "priority": 1,
+            "title": "Final call for {{firstName}} ({{plan_name}}), double-tap, no voicemail"
+          },
+          {
+            "id": "stp_WF7nrb9fXE4DJZttE",
+            "sequenceId": "seq_dN2LWWFxL8ZcnHe5f",
+            "type": "email",
+            "delay": 1,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll leave it here. One thought worth keeping: missing the line by a fraction and missing it by a lot cost the same: one cycle of bonus, and the cheapest place to buy it back is the contracts already sitting closest to the line. When the cliff becomes a finance priority, the operational-execution angle is where I'd start the model. Glad to help whenever the timing fits.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_GTqA7GD4zMosMcNqP",
+        "steps": [
+          {
+            "id": "stp_5Hce5ibX4ngDWTtsW",
+            "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+            "type": "email",
+            "delay": 1,
+            "subject": "the cliff is being priced in now",
+            "message": "<p>Hi {{firstName}}, one point on timing for the finance model specifically. The measurement that sets the next rating is running across this year, so the contracts near the line are being decided in the peak weeks between now and year end, not on the October release. {{contract_line}}</p><p>Keeping service execution steady through those peak weeks is what Intradiem does, and it's why those measures stay movable. Fifteen minutes and I'll walk you through the finance view on what holding the next half-star costs versus what the bonus returns.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_3LpxWdMEAWbfWx97z",
+            "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+            "type": "linkedinLikeLastPost",
+            "delay": 0
+          },
+          {
+            "id": "stp_bpSfradbwDv99pHwv",
+            "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+            "type": "linkedinFollow",
+            "delay": 0,
+            "subject": "",
+            "message": "<div><br></div>"
+          },
+          {
+            "id": "stp_Jph7kpizSM2omfnAe",
+            "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+            "type": "linkedinVisit",
+            "delay": 1
+          },
+          {
+            "id": "stp_d586JNgt2ithx2mqa",
+            "sequenceId": "seq_GTqA7GD4zMosMcNqP",
+            "type": "email",
+            "delay": 4,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll leave it here. One thought worth keeping: missing the line by a fraction and missing it by a lot cost the same: one cycle of bonus, and the cheapest place to buy it back is the contracts already sitting closest to the line. When the cliff becomes a finance priority, the operational-execution angle is where I'd start the model. Glad to help whenever the timing fits.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "campaignId": "cam_viEbB6HkYsCPtxKbi",
+    "campaignName": "",
+    "sequences": [
+      {
+        "id": "seq_uya6vybEyCKXZbfMg",
+        "steps": [
+          {
+            "id": "stp_b9Ns4nuZJSpT8Xr6s",
+            "sequenceId": "seq_uya6vybEyCKXZbfMg",
+            "type": "email",
+            "delay": 0,
+            "subject": "the last stretch to 4.0",
+            "message": "<p>Hi {{firstName}}, {{opener_line}} For a book sitting there, the last few points usually come from the customer-service measures, and they're being set right now, in this measurement year, not on the October release.</p><p>Thought it might be worth finding time to talk through which of your contracts sit closest to the line and which measures still move them this cycle. Have 15 minutes in the next few weeks?</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>",
+            "abTest": true,
+            "variantB": {
+              "subject": "the last stretch to 4.0",
+              "message": "<p>Hi {{firstName}}, {{opener_line}} For a book sitting there, the last few points usually come from the customer-service measures, and they're being set right now, in this measurement year, not on the October release.</p><p>Worth me sending over a short note on which service measures still swing a book near the line this cycle? No meeting attached, I'll just send it over.</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>"
+            }
+          },
+          {
+            "id": "stp_8J5JnyMK2KZpXFfDj",
+            "sequenceId": "seq_uya6vybEyCKXZbfMg",
+            "type": "linkedinVisit",
+            "delay": 0
+          },
+          {
+            "id": "stp_isrRgXBN6XPZniHCJ",
+            "sequenceId": "seq_uya6vybEyCKXZbfMg",
+            "type": "linkedinInvite",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn connect for {{firstName}}, no note (approve before sending)"
+          },
+          {
+            "id": "stp_sZvH7Pz3ZD4qmhkw8",
+            "sequenceId": "seq_uya6vybEyCKXZbfMg",
+            "type": "conditional",
+            "delay": 2,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+                "label": "Accepted invite",
+                "key": "linkedinInviteAccepted",
+                "delay": 2,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_bXJmtu4Xx6y8LxTWh",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_FKqfv2325wMmz8Dtc",
+        "steps": [
+          {
+            "id": "stp_BiYawgXJqunKqMKQ6",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "linkedinSend",
+            "delay": 0,
+            "message": "Thanks for connecting, {{firstName}}. The short version of my note: the last few points to 4.0 usually sit in the customer-service and CAHPS measures, and they're being decided in the live weeks between now and December, not on the October release. Worth 15 minutes on the contracts nearest your line?",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn message after accepted connect (approve before sending)"
+          },
+          {
+            "id": "stp_g5ovqqDRpZR2wZ9GM",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 1 of 2, no voicemail if no answer (the voicemail comes with call 2). Opener: {{firstName}}, Nathan with Intradiem, we connected on LinkedIn this week. Reason for the call: {{vm_hook}} Ask: 15 minutes on the contracts nearest your line and the measures that still move them. If timing pushback: the scoring window is more than half spent, it closes before the October release.",
+            "priority": 1,
+            "title": "Call 1 for {{firstName}} ({{plan_name}}), Quality lane, no voicemail"
+          },
+          {
+            "id": "stp_LumCYdLyCLbM5ssPX",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "linkedinVoiceNote",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "Voice note {{firstName}}: read voice_script variable. Swap to AI clone pre-launch"
+          },
+          {
+            "id": "stp_QkYs9KGRARYvZzeso",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 2 of 2. If no answer, leave voicemail: {{firstName}}, Nathan with Intradiem. {{vm_hook}} I can walk you through which of your contracts sit closest to the line and which measures still move them this cycle. I'm at [number], or just reply to my email. Thanks {{firstName}}.",
+            "priority": 1,
+            "title": "Call 2 for {{firstName}} ({{plan_name}}), leave voicemail"
+          },
+          {
+            "id": "stp_6Ec35QjTN8wxQTyzh",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "email",
+            "delay": 2,
+            "subject": "the window is more than half spent",
+            "message": "<p>Hi {{firstName}}, the reason this is a now question and not an October one: the measurement that sets the next rating is running across this year and is already more than half spent. Every peak week where service slips under load counts toward the next cliff before the number ever publishes, and the customer-service measures are the first to feel it. {{contract_line}}</p><p>Holding that experience steady while the scoring is live is the piece Intradiem works on. Fifteen minutes and I'll walk you through the specific measures where a book near your line usually wins or loses the half-star before the window closes.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_SgSrRTk2JmXjFk6h2",
+            "sequenceId": "seq_FKqfv2325wMmz8Dtc",
+            "type": "email",
+            "delay": 2,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll stop here. One parting thought: the customer-service measures are the first to slip under load and the slowest to recover once a scoring window closes, which is why holding them in real time is worth more than fixing them after. When protecting the last half-star becomes a focus, that's the seam I work. Glad to help whenever the timing's right.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_bXJmtu4Xx6y8LxTWh",
+        "steps": [
+          {
+            "id": "stp_QyuyWoxXW4geGSKtq",
+            "sequenceId": "seq_bXJmtu4Xx6y8LxTWh",
+            "type": "conditional",
+            "delay": 0,
+            "conditions": [
+              {
+                "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+                "label": "Has phone number",
+                "key": "hasPhoneNumber"
+              },
+              {
+                "sequenceId": "seq_xayDCoQKqqpnEm9YC",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_kLTLpLpFLCyvp6Kcd",
+        "steps": [
+          {
+            "id": "stp_6ypPNXP38fcrnDCqk",
+            "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+            "type": "phone",
+            "delay": 0,
+            "message": "Voicemail script: {{firstName}}, this is Nathan with Intradiem. {{vm_hook}} I can walk you through which of your contracts sit closest to the line and which measures still move them. I'm at [number], or just reply to my email. Thanks {{firstName}}.",
+            "priority": 1,
+            "title": "Voicemail for {{firstName}} ({{plan_name}}), Quality lane"
+          },
+          {
+            "id": "stp_WwSBttJmtvcmP9wE7",
+            "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call, day after the voicemail. If no answer, hang up, no second voicemail. If they answer: {{firstName}}, Nathan with Intradiem, I left you a note yesterday on the customer-service measures inside your last half-star at {{plan_name}}. Worth 15 minutes on which contracts sit closest to the line?",
+            "priority": 1,
+            "title": "Call {{firstName}} ({{plan_name}}), day after voicemail, no second voicemail"
+          },
+          {
+            "id": "stp_Su5qdLPGd4uk4KAFZ",
+            "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+            "type": "email",
+            "delay": 2,
+            "subject": "the window is more than half spent",
+            "message": "<p>Hi {{firstName}}, the reason this is a now question and not an October one: the measurement that sets the next rating is running across this year and is already more than half spent. Every peak week where service slips under load counts toward the next cliff before the number ever publishes, and the customer-service measures are the first to feel it. {{contract_line}}</p><p>Holding that experience steady while the scoring is live is the piece Intradiem works on. Fifteen minutes and I'll walk you through the specific measures where a book near your line usually wins or loses the half-star before the window closes.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_LABLiwASiNCuHtSHy",
+            "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+            "type": "phone",
+            "delay": 2,
+            "message": "Final call, no voicemail (one already left). If they answer: {{firstName}}, Nathan with Intradiem, I'll be quick. I've sent a couple notes on the last half-star at {{plan_name}}. Before I close the file on this: is protecting the line a this-cycle question for your team, or a next-year one? Either answer is useful.",
+            "priority": 1,
+            "title": "Final call for {{firstName}} ({{plan_name}}), double-tap, no voicemail"
+          },
+          {
+            "id": "stp_wthvAbfD3vu8iKFFo",
+            "sequenceId": "seq_kLTLpLpFLCyvp6Kcd",
+            "type": "email",
+            "delay": 1,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll stop here. One parting thought: the customer-service measures are the first to slip under load and the slowest to recover once a scoring window closes, which is why holding them in real time is worth more than fixing them after. When protecting the last half-star becomes a focus, that's the seam I work. Glad to help whenever the timing's right.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_xayDCoQKqqpnEm9YC",
+        "steps": [
+          {
+            "id": "stp_qtHRkBxNm5JZyzMh6",
+            "sequenceId": "seq_xayDCoQKqqpnEm9YC",
+            "type": "linkedinLikeLastPost",
+            "delay": 1
+          },
+          {
+            "id": "stp_8DAMjzoDTD3LFy2Rv",
+            "sequenceId": "seq_xayDCoQKqqpnEm9YC",
+            "type": "linkedinFollow",
+            "delay": 0,
+            "subject": "",
+            "message": "<div><br></div>"
+          },
+          {
+            "id": "stp_REBxnFqwvo4FF9xFk",
+            "sequenceId": "seq_xayDCoQKqqpnEm9YC",
+            "type": "email",
+            "delay": 1,
+            "subject": "the window is more than half spent",
+            "message": "<p>Hi {{firstName}}, the reason this is a now question and not an October one: the measurement that sets the next rating is running across this year and is already more than half spent. Every peak week where service slips under load counts toward the next cliff before the number ever publishes, and the customer-service measures are the first to feel it. {{contract_line}}</p><p>Holding that experience steady while the scoring is live is the piece Intradiem works on. Fifteen minutes and I'll walk you through the specific measures where a book near your line usually wins or loses the half-star before the window closes.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_CBmQ7XJkTNsyXF5hr",
+            "sequenceId": "seq_xayDCoQKqqpnEm9YC",
+            "type": "email",
+            "delay": 4,
+            "subject": "leaving it here",
+            "message": "<p>Hi {{firstName}}, I'll stop here. One parting thought: the customer-service measures are the first to slip under load and the slowest to recover once a scoring window closes, which is why holding them in real time is worth more than fixing them after. When protecting the last half-star becomes a focus, that's the seam I work. Glad to help whenever the timing's right.</p><p>Either way, this is my last note.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "campaignId": "cam_fYp7Nh9wB72gfMke6",
+    "campaignName": "",
+    "sequences": [
+      {
+        "id": "seq_jG8aiuxE8FCQD564C",
+        "steps": [
+          {
+            "id": "stp_MwwcFRGtWS9GY9yoJ",
+            "sequenceId": "seq_jG8aiuxE8FCQD564C",
+            "type": "email",
+            "delay": 0,
+            "subject": "where the growth lands",
+            "message": "<p>Hi {{firstName}}, {{opener_line}}</p><p>Automation tends to land on the predictable work first, because that's the easy place to put it, so the unpredictable work stays human and the volatile side of the operation ends up carrying the service promise on a plan written before the week happened.</p><p>Thought it might be worth hearing how you're holding service steady when the week doesn't match the plan. Have 15 minutes in the next couple weeks?</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>",
+            "abTest": true,
+            "variantB": {
+              "subject": "where the growth lands",
+              "message": "<p>Hi {{firstName}}, {{opener_line}}</p><p>Automation tends to land on the predictable work first, because that's the easy place to put it, so the unpredictable work stays human and the volatile side of the operation ends up carrying the service promise on a plan written before the week happened.</p><p>Should I send over a short note on what separates a cheap volatile week from an expensive one on the servicing side? No meeting attached, I'll just send it.</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>"
+            }
+          },
+          {
+            "id": "stp_cCd5DgBmLjosZeKBM",
+            "sequenceId": "seq_jG8aiuxE8FCQD564C",
+            "type": "linkedinVisit",
+            "delay": 0
+          },
+          {
+            "id": "stp_nZoDaTy3ALNS46bGz",
+            "sequenceId": "seq_jG8aiuxE8FCQD564C",
+            "type": "linkedinInvite",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn connect for {{firstName}} at The Hartford, no note (approve first)"
+          },
+          {
+            "id": "stp_NvvZ37iTfpMbvWpMp",
+            "sequenceId": "seq_jG8aiuxE8FCQD564C",
+            "type": "conditional",
+            "delay": 2,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+                "label": "Accepted invite",
+                "key": "linkedinInviteAccepted",
+                "delay": 2,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_HNAaK9YfAcPge7HsE",
+                "fallback": true
+              }
+            ]
+          },
+          {
+            "id": "stp_6s7955iZXipEEB2Xr",
+            "sequenceId": "seq_jG8aiuxE8FCQD564C",
+            "type": "linkedinVoiceNote",
+            "delay": 1,
+            "message": "{{voice_script}}"
+          }
+        ]
+      },
+      {
+        "id": "seq_DrLnaPQw4KjR3tobM",
+        "steps": [
+          {
+            "id": "stp_NeBRHt488XSHbLmvB",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "linkedinSend",
+            "delay": 0,
+            "message": "Thanks for connecting, {{firstName}}. The heart of my note: automation lands first on the predictable work, so the volatile side of the operation ends up carrying the service promise on a forecast written before the week happened. Worth a short call on how you're closing that gap?",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn message after accepted connect (approve before sending)"
+          },
+          {
+            "id": "stp_6TkpGJRtRv7XLryaQ",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 1 of 2. If no answer, hang up. No voicemail (that comes with call 2).\n\nOPENER, four beats, then stop talking:\n1) Say their first name. Pause.\n2) \"It's Nathan Belfield at Intradiem.\"\n3) Reason: \"We connected on LinkedIn this week. {{vm_hook}}\"\n4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: 20 to 30 seconds on the one insight, then hand them the floor. \"Is that anywhere near how it plays out at The Hartford?\"\n\nTHE ASK: \"Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece on the servicing side. If it turns out that's already handled, I'll say so and leave you alone.\"\n\nON A YES: lock the slot on the call. Two concrete options, never \"I'll send some times over.\"\n\nIF BUSY: \"Completely get it. Ten seconds so you know what this was: {{vm_hook}} When's better this week for a proper 15 minutes?\"\n\nIF BRUSH-OFF: accept it immediately, no second pitch. \"Fair enough, I won't push. One thing before I go, is that because it's already handled, or just not the priority right now?\" Then: \"Either way, appreciate you being straight with me. I'll leave you be.\" HARD STOP.",
+            "priority": 1,
+            "title": "Call 1 for {{firstName}} (The Hartford), no voicemail"
+          },
+          {
+            "id": "stp_7QNCWBL6JigjN5Efs",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "linkedinVoiceNote",
+            "delay": 1,
+            "message": "{{voice_script}}",
+            "manual": true,
+            "priority": 1,
+            "title": "Voice note {{firstName}}: read voice_script in the body. Swap to AI clone pre-launch"
+          },
+          {
+            "id": "stp_Exk874hWjGJzWJzPx",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 2 of 2. If no answer, LEAVE THE VOICEMAIL below. Under 30 seconds, warm, unhurried.\n\nVOICEMAIL: \"{{firstName}}, this is Nathan Belfield with Intradiem. {{vm_hook}} If it's useful I'll walk you through where carriers usually find the first measurable piece on the servicing side. I'm at 937-238-3179, or just reply to my email. Thanks {{firstName}}.\"\n\nIF THEY ANSWER, use the four-beat opener and skip the LinkedIn reference:\n1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"{{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nThen the same flow as call 1: expand one insight, hand them the floor with \"Is that anywhere near how it plays out at The Hartford?\", then the 15-minute ask with the honest-exit clause.",
+            "priority": 1,
+            "title": "Call 2 for {{firstName}} (The Hartford), leave voicemail"
+          },
+          {
+            "id": "stp_un4Y4stcgJFjSNamu",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "email",
+            "delay": 2,
+            "subject": "no number on it yet",
+            "message": "<p>Hi {{firstName}}, one point on timing. At most carriers the AI story has a number attached on the underwriting side and not yet on the claims and service side, and from the outside The Hartford looks the same. {{contract_line}}</p><p>That number usually shows up once the work gets reallocated while the day is still running rather than reconciled after it, and that's the part Intradiem handles. Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece.</p><p>And if it's just a no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_usGHSFy2jjRRP2LGF",
+            "sequenceId": "seq_DrLnaPQw4KjR3tobM",
+            "type": "email",
+            "delay": 2,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: the fastest quote in the market and the slowest claim in the market can live inside the same company, and customers only remember the second one. When the servicing side becomes the number you have to move, real-time execution is where I'd start. That's the seam I work, so I'm easy to find.</p><p>Either way, good luck this quarter.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_HNAaK9YfAcPge7HsE",
+        "steps": [
+          {
+            "id": "stp_Ceuzy5dwZC87SsBAe",
+            "sequenceId": "seq_HNAaK9YfAcPge7HsE",
+            "type": "conditional",
+            "delay": 0,
+            "conditions": [
+              {
+                "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+                "label": "Has phone number",
+                "key": "hasPhoneNumber"
+              },
+              {
+                "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_Pa7JYyP45rAyP5vnk",
+        "steps": [
+          {
+            "id": "stp_5sNTrLPNrS7xqfobc",
+            "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+            "type": "phone",
+            "delay": 0,
+            "message": "Dial, and if no answer LEAVE THIS VOICEMAIL. Under 30 seconds, warm, unhurried.\n\nVOICEMAIL: \"{{firstName}}, this is Nathan Belfield with Intradiem. {{vm_hook}} If it's useful I'll walk you through where carriers usually find the first measurable piece on the servicing side. I'm at 937-238-3179, or just reply to my email. Thanks {{firstName}}.\"\n\nIF THEY ANSWER, four-beat opener, then stop talking:\n1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"I sent you a note this week. {{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: one insight for 20 to 30 seconds, then hand them the floor. \"Is that anywhere near how it plays out at The Hartford?\"\nTHE ASK: \"Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece on the servicing side.\"\nIF BRUSH-OFF: accept it, one either/or question, release warmly. No second pitch.",
+            "priority": 1,
+            "title": "Voicemail for {{firstName}} (The Hartford), no connect on LinkedIn"
+          },
+          {
+            "id": "stp_DDWtmpJcGb4sMfvAm",
+            "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call, the day after the voicemail. If no answer, hang up. NO second voicemail.\n\nIF THEY ANSWER, four beats: 1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"I left you a note yesterday. {{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: one insight, then hand them the floor. \"Is that anywhere near how it plays out at The Hartford?\"\nTHE ASK: \"Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece on the servicing side. If it's already handled, I'll say so and leave you alone.\"\nIF BUSY: ten-second version of the reason, then trade up to a real slot this week.",
+            "priority": 1,
+            "title": "Call {{firstName}} (The Hartford), day after voicemail, no second voicemail"
+          },
+          {
+            "id": "stp_2EyhwKb8irsw8MKEq",
+            "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+            "type": "email",
+            "delay": 2,
+            "subject": "no number on it yet",
+            "message": "<p>Hi {{firstName}}, one point on timing. At most carriers the AI story has a number attached on the underwriting side and not yet on the claims and service side, and from the outside The Hartford looks the same. {{contract_line}}</p><p>That number usually shows up once the work gets reallocated while the day is still running rather than reconciled after it, and that's the part Intradiem handles. Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece.</p><p>And if it's just a no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_cxk2ntRzbzNHukCRr",
+            "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+            "type": "phone",
+            "delay": 2,
+            "message": "Final call. No voicemail, one is already left.\n\nIF THEY ANSWER: \"{{firstName}}, Nathan Belfield at Intradiem, I'll be quick. I've sent a couple of notes on how the volatile side of a carrier's operation ends up carrying the service promise. Before I close the file: is that a this-year question for your team, or a next-year one? Either answer is useful.\"\n\nWhatever they say, thank them and mean it. If next year, ask permission to come back then. If this year, lock 15 minutes on the call with two concrete options.",
+            "priority": 1,
+            "title": "Final call for {{firstName}} (The Hartford), double-tap close, no voicemail"
+          },
+          {
+            "id": "stp_Z2p2cDvkmJwtAPPcX",
+            "sequenceId": "seq_Pa7JYyP45rAyP5vnk",
+            "type": "email",
+            "delay": 1,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: the fastest quote in the market and the slowest claim in the market can live inside the same company, and customers only remember the second one. When the servicing side becomes the number you have to move, real-time execution is where I'd start. That's the seam I work, so I'm easy to find.</p><p>Either way, good luck this quarter.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_mZ3DFWrsQHiu623Ai",
+        "steps": [
+          {
+            "id": "stp_BCcEf8PwC4Qn6vZb9",
+            "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+            "type": "email",
+            "delay": 3,
+            "subject": "no number on it yet",
+            "message": "<p>Hi {{firstName}}, one point on timing. At most carriers the AI story has a number attached on the underwriting side and not yet on the claims and service side, and from the outside The Hartford looks the same. {{contract_line}}</p><p>That number usually shows up once the work gets reallocated while the day is still running rather than reconciled after it, and that's the part Intradiem handles. Fifteen minutes and I'll walk you through where carriers usually find the first measurable piece.</p><p>And if it's just a no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_DKzqZ2ibotbTzTKfu",
+            "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+            "type": "linkedinLikeLastPost",
+            "delay": 0
+          },
+          {
+            "id": "stp_o67paTCqSZazNaDaB",
+            "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+            "type": "linkedinFollow",
+            "delay": 0,
+            "subject": "",
+            "message": "<div><br></div>"
+          },
+          {
+            "id": "stp_vsKzz5iDMb2nuPa9m",
+            "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+            "type": "linkedinVisit",
+            "delay": 1
+          },
+          {
+            "id": "stp_2ek52DPKmHsRbQfbQ",
+            "sequenceId": "seq_mZ3DFWrsQHiu623Ai",
+            "type": "email",
+            "delay": 4,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: the fastest quote in the market and the slowest claim in the market can live inside the same company, and customers only remember the second one. When the servicing side becomes the number you have to move, real-time execution is where I'd start. That's the seam I work, so I'm easy to find.</p><p>Either way, good luck this quarter.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "campaignId": "cam_yWefPqaDhNNv4RyQK",
+    "campaignName": "",
+    "sequences": [
+      {
+        "id": "seq_vWS3ceMs5oh8YB6E5",
+        "steps": [
+          {
+            "id": "stp_scn8zBoQtoAuP9AgE",
+            "sequenceId": "seq_vWS3ceMs5oh8YB6E5",
+            "type": "email",
+            "delay": 0,
+            "subject": "The half that's left",
+            "message": "<p style=\"margin: 0px; box-sizing: border-box;\">Hi {{firstName}}, {{opener_line}}</p><p style=\"margin: 0px; box-sizing: border-box;\">Every deflection program I've watched runs into the same second thing. The calls that still reach a person are the hard ones, so handle time climbs, while the easy volume that used to absorb schedule slack quietly goes away. The savings are real, and the queue behind them gets harder to run.</p><p style=\"margin: 0px; box-sizing: border-box;\">Thought it might be worth talking through how you're planning the human side of that shift.&nbsp;</p><p style=\"margin: 0px; box-sizing: border-box;\">Have 15 minutes in the next couple weeks?</p><p style=\"margin: 0px; box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></p><p class=\"MsoNormal\" style=\"margin: 0px; box-sizing: border-box;\"><span style=\"font-size: 13.5pt; font-family: Tahoma, sans-serif; color: rgb(1, 67, 53); box-sizing: border-box;\">Nathan Belfield</span></p><p class=\"MsoNormal\" style=\"margin: 0px; box-sizing: border-box;\"><span style=\"font-size: 10.5pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(1, 67, 53); box-sizing: border-box;\">Pipeline Generation Lead | </span><a href=\"http://www.intradiem.com/\" style=\"box-sizing: border-box;\"><span style=\"font-size: 10.5pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(237, 125, 49); box-sizing: border-box;\">www.intradiem.com</span></a></p><p class=\"MsoNormal\" style=\"margin: 0px; box-sizing: border-box;\"><span style=\"font-size: 10.5pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(1, 67, 53); box-sizing: border-box;\">937.238.3179</span></p><p class=\"MsoNormal\" style=\"margin: 0px; box-sizing: border-box;\"><span style=\"font-size: 10.5pt; font-family: &quot;Times New Roman&quot;, serif; color: rgb(1, 67, 53); box-sizing: border-box;\">Mailing Address: 2500 Dallas Hwy | Ste 202 | DPT#37049 | Marietta, GA 30064</span></p>",
+            "abTest": true,
+            "variantB": {
+              "subject": "the half that's left",
+              "message": "<p>Hi {{firstName}}, {{opener_line}}</p><p>Every deflection program I've watched runs into the same second thing. The calls that still reach a person are the hard ones, so handle time climbs, while the easy volume that used to absorb schedule slack quietly goes away. The savings are real, and the queue behind them gets harder to run.</p><p>Should I send over a short note on what teams usually hit on the human side once deflection gets real? No meeting attached, I'll just send it.</p><p>If you'd rather not hear from me, one word and I'll stop.</p><p>Nathan</p>"
+            }
+          },
+          {
+            "id": "stp_AMNMyiizNC9oGkxpS",
+            "sequenceId": "seq_vWS3ceMs5oh8YB6E5",
+            "type": "linkedinVisit",
+            "delay": 0
+          },
+          {
+            "id": "stp_uwR7RtiuadGjtG59g",
+            "sequenceId": "seq_vWS3ceMs5oh8YB6E5",
+            "type": "linkedinInvite",
+            "delay": 1,
+            "message": "",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn connect for {{firstName}} at Citizens, no note (approve before sending)"
+          },
+          {
+            "id": "stp_LBq3LQfkYHP3HqjwA",
+            "sequenceId": "seq_vWS3ceMs5oh8YB6E5",
+            "type": "conditional",
+            "delay": 2,
+            "delayType": "within",
+            "conditions": [
+              {
+                "sequenceId": "seq_d8BtwftFedbCAdGvY",
+                "label": "Accepted invite",
+                "key": "linkedinInviteAccepted",
+                "delay": 2,
+                "delayType": "within"
+              },
+              {
+                "sequenceId": "seq_pLg7k89aowjBXuGMi",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_d8BtwftFedbCAdGvY",
+        "steps": [
+          {
+            "id": "stp_4oFHeJmAEYrh6bXHD",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "linkedinSend",
+            "delay": 0,
+            "message": "Thanks for connecting, {{firstName}}. The heart of my note: once AI answers the easy half of the calls, the half that's left is all exceptions, and the schedule has nothing cheap in it to absorb the change. Worth a short call on how you're planning that side of it?",
+            "manual": true,
+            "priority": 1,
+            "title": "LinkedIn message after accepted connect (approve before sending)"
+          },
+          {
+            "id": "stp_n6TyMNxkjuvkZrPqm",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 1 of 2. If no answer, hang up. No voicemail (that comes with call 2).\n\nOPENER, four beats, then stop talking:\n1) Say their first name. Pause.\n2) \"It's Nathan Belfield at Intradiem.\"\n3) Reason: \"We connected on LinkedIn this week. {{vm_hook}}\"\n4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: 20 to 30 seconds on the one insight, then hand them the floor. \"Is that anywhere near how it's playing out at Citizens?\"\n\nTHE ASK: \"Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale. If it turns out that's already handled, I'll say so and leave you alone.\"\n\nON A YES: lock the slot on the call. Two concrete options, never \"I'll send some times over.\"\n\nIF BUSY: \"Completely get it. Ten seconds so you know what this was: {{vm_hook}} When's better this week for a proper 15 minutes?\"\n\nIF BRUSH-OFF: accept it immediately, no second pitch. \"Fair enough, I won't push. One thing before I go, is that because it's already handled, or just not the priority right now?\" Then: \"Either way, appreciate you being straight with me. I'll leave you be.\" HARD STOP.",
+            "priority": 1,
+            "title": "Call 1 for {{firstName}} (Citizens), no voicemail"
+          },
+          {
+            "id": "stp_r74setWyajvdR2yPm",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "linkedinVoiceNote",
+            "delay": 1,
+            "message": "{{voice_script}}",
+            "manual": true,
+            "priority": 1,
+            "title": "Voice note {{firstName}}: read voice_script in the body. Swap to AI clone pre-launch"
+          },
+          {
+            "id": "stp_usi9YgduCawPoMniK",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call 2 of 2. If no answer, LEAVE THE VOICEMAIL below. Under 30 seconds, warm, unhurried.\n\nVOICEMAIL: \"{{firstName}}, this is Nathan Belfield with Intradiem. {{vm_hook}} If it's useful I'll walk you through what the human side of a deflection program usually looks like once it's running at scale. I'm at 937-238-3179, or just reply to my email. Thanks {{firstName}}.\"\n\nIF THEY ANSWER, use the four-beat opener and skip the LinkedIn reference:\n1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"{{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nThen the same flow as call 1: expand one insight, hand them the floor with \"Is that anywhere near how it's playing out at Citizens?\", then the 15-minute ask with the honest-exit clause.",
+            "priority": 1,
+            "title": "Call 2 for {{firstName}} (Citizens), leave voicemail"
+          },
+          {
+            "id": "stp_t4YyNH3bvLP7dZWgM",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "email",
+            "delay": 2,
+            "subject": "a quarter by year end",
+            "message": "<p>Hi {{firstName}}, one point on timing. The public commitment is a quarter of calls answered without a human by the end of this year, on the way to half. That puts the change inside the next two quarters, not next year. {{contract_line}}</p><p>Keeping service steady while the mix moves underneath you is the part that has to be managed in the moment rather than in the next morning's report, and that's the work Intradiem does. Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_jdBdpZdERe7eSTobo",
+            "sequenceId": "seq_d8BtwftFedbCAdGvY",
+            "type": "email",
+            "delay": 2,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: a deflection program gets judged on the half that goes away and decided by the half that stays. When the calls that are left are all exceptions and the schedule has less slack in it to absorb them, that's the seam I work. If it ever becomes a live question at Citizens, I'm easy to find.</p><p>Either way, good luck with the rollout.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_pLg7k89aowjBXuGMi",
+        "steps": [
+          {
+            "id": "stp_EWfNGvTBY55KcqSMb",
+            "sequenceId": "seq_pLg7k89aowjBXuGMi",
+            "type": "conditional",
+            "delay": 0,
+            "conditions": [
+              {
+                "sequenceId": "seq_rButuj6uT9QfZJunq",
+                "label": "Has phone number",
+                "key": "hasPhoneNumber"
+              },
+              {
+                "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+                "fallback": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "seq_rButuj6uT9QfZJunq",
+        "steps": [
+          {
+            "id": "stp_oewTS8bXHTpAgwavt",
+            "sequenceId": "seq_rButuj6uT9QfZJunq",
+            "type": "phone",
+            "delay": 0,
+            "message": "Dial, and if no answer LEAVE THIS VOICEMAIL. Under 30 seconds, warm, unhurried.\n\nVOICEMAIL: \"{{firstName}}, this is Nathan Belfield with Intradiem. {{vm_hook}} If it's useful I'll walk you through what the human side of a deflection program usually looks like once it's running at scale. I'm at 937-238-3179, or just reply to my email. Thanks {{firstName}}.\"\n\nIF THEY ANSWER, four-beat opener, then stop talking:\n1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"I sent you a note this week. {{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: one insight for 20 to 30 seconds, then hand them the floor. \"Is that anywhere near how it's playing out at Citizens?\"\nTHE ASK: \"Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale.\"\nIF BRUSH-OFF: accept it, one either/or question, release warmly. No second pitch.",
+            "priority": 1,
+            "title": "Voicemail for {{firstName}} (Citizens), no connect on LinkedIn"
+          },
+          {
+            "id": "stp_T8KzCY7Fq7q66BvnQ",
+            "sequenceId": "seq_rButuj6uT9QfZJunq",
+            "type": "phone",
+            "delay": 1,
+            "message": "Call, the day after the voicemail. If no answer, hang up. NO second voicemail.\n\nIF THEY ANSWER, four beats: 1) First name. Pause. 2) \"It's Nathan Belfield at Intradiem.\" 3) \"I left you a note yesterday. {{vm_hook}}\" 4) \"Can I take 30 seconds, and you tell me if it's not for you?\"\n\nIF THEY ENGAGE: one insight, then hand them the floor. \"Is that anywhere near how it's playing out at Citizens?\"\nTHE ASK: \"Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale. If it's already handled, I'll say so and leave you alone.\"\nIF BUSY: ten-second version of the reason, then trade up to a real slot this week.",
+            "priority": 1,
+            "title": "Call {{firstName}} (Citizens), day after voicemail, no second voicemail"
+          },
+          {
+            "id": "stp_5a4AbeFcXpjRTAmcR",
+            "sequenceId": "seq_rButuj6uT9QfZJunq",
+            "type": "email",
+            "delay": 2,
+            "subject": "a quarter by year end",
+            "message": "<p>Hi {{firstName}}, one point on timing. The public commitment is a quarter of calls answered without a human by the end of this year, on the way to half. That puts the change inside the next two quarters, not next year. {{contract_line}}</p><p>Keeping service steady while the mix moves underneath you is the part that has to be managed in the moment rather than in the next morning's report, and that's the work Intradiem does. Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_kEt8LTw26BYBezMZc",
+            "sequenceId": "seq_rButuj6uT9QfZJunq",
+            "type": "phone",
+            "delay": 2,
+            "message": "Final call. No voicemail, one is already left.\n\nIF THEY ANSWER: \"{{firstName}}, Nathan Belfield at Intradiem, I'll be quick. I've sent a couple of notes on what happens to the calls that are left once the AI answers the easy ones. Before I close the file: is that a this-year question for your team, or a next-year one? Either answer is useful.\"\n\nWhatever they say, thank them and mean it. If next year, ask permission to come back when the rollout is further along. If this year, lock 15 minutes on the call with two concrete options.",
+            "priority": 1,
+            "title": "Final call for {{firstName}} (Citizens), double-tap close, no voicemail"
+          },
+          {
+            "id": "stp_MmRkH4eX4LAQuQ2hC",
+            "sequenceId": "seq_rButuj6uT9QfZJunq",
+            "type": "email",
+            "delay": 1,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: a deflection program gets judged on the half that goes away and decided by the half that stays. When the calls that are left are all exceptions and the schedule has less slack in it to absorb them, that's the seam I work. If it ever becomes a live question at Citizens, I'm easy to find.</p><p>Either way, good luck with the rollout.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      },
+      {
+        "id": "seq_vTyQc2EYYDgHSY8vp",
+        "steps": [
+          {
+            "id": "stp_ZNej6Ez543J6P5vmu",
+            "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+            "type": "email",
+            "delay": 3,
+            "subject": "a quarter by year end",
+            "message": "<p>Hi {{firstName}}, one point on timing. The public commitment is a quarter of calls answered without a human by the end of this year, on the way to half. That puts the change inside the next two quarters, not next year. {{contract_line}}</p><p>Keeping service steady while the mix moves underneath you is the part that has to be managed in the moment rather than in the next morning's report, and that's the work Intradiem does. Fifteen minutes and I'll walk you through what the human side usually looks like once a deflection program is running at scale.</p><p>And if the answer's just no, one word does it.</p><p>Nathan Belfield</p>"
+          },
+          {
+            "id": "stp_6t8sLfACTNf8gFms8",
+            "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+            "type": "linkedinLikeLastPost",
+            "delay": 0
+          },
+          {
+            "id": "stp_HB5FwQLwgParnaXCa",
+            "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+            "type": "linkedinFollow",
+            "delay": 0,
+            "subject": "",
+            "message": "<div><br></div>"
+          },
+          {
+            "id": "stp_L3dvptguTckQEvH94",
+            "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+            "type": "linkedinVisit",
+            "delay": 1
+          },
+          {
+            "id": "stp_QQRXiaQzdQYekGZ4H",
+            "sequenceId": "seq_vTyQc2EYYDgHSY8vp",
+            "type": "email",
+            "delay": 4,
+            "subject": "closing the file",
+            "message": "<p>Hi {{firstName}}, closing the file on this one. One thought worth keeping: a deflection program gets judged on the half that goes away and decided by the half that stays. When the calls that are left are all exceptions and the schedule has less slack in it to absorb them, that's the seam I work. If it ever becomes a live question at Citizens, I'm easy to find.</p><p>Either way, good luck with the rollout.</p><p>Nathan Belfield</p>"
+          }
+        ]
+      }
+    ]
+  }
+]

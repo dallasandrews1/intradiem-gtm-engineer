@@ -1,0 +1,4913 @@
+{
+ "generated_at": "2026-09-09T13:06:10",
+ "sample_data": true,
+ "window": {
+  "tool_available_date": "2026-07-13",
+  "as_of_date": "2026-09-06",
+  "_note": "Sample window: 8 weeks from the day the tool was made available to the pilot population."
+ },
+ "thresholds": {
+  "_note": "Thresholds for every Success Metrics Framework signal. Every [X]/[Y] placeholder in the framework lives here, never in the engine script. Values below are starting points for the team to set at baseline.",
+  "active_usage": {
+   "period_days": 7,
+   "min_uses_per_period": 2,
+   "_def": "Active Usage Rate: share of target users with at least min_uses_per_period uses in the trailing period_days."
+  },
+  "sustained_use": {
+   "uses": 6,
+   "within_days": 14,
+   "_def": "Sustained use: the first day a user's trailing within_days count reaches uses. Time-to-Sustained-Use counts from first use to that day."
+  },
+  "usage_drop": {
+   "compare_days": 14,
+   "min_prior_uses": 4,
+   "drop_pct": 50,
+   "_def": "Usage Drop: trailing compare_days count fell by drop_pct or more against the prior compare_days, for users whose prior window had at least min_prior_uses."
+  },
+  "adoption_plateau": {
+   "after_days": 28,
+   "_def": "Adoption Plateau: first use at least after_days ago, sustained use never reached, and trailing 14-day count no higher than the user's first 14 days."
+  },
+  "zero_use": {
+   "after_days": 21,
+   "_def": "Zero-Use Persistence: no logged use after_days or more after the tool was available to the user."
+  },
+  "feature_depth": {
+   "available_agents": [
+    "Knowledge assistant",
+    "CRM assistant",
+    "Meeting summarizer",
+    "Drafting assistant",
+    "Roleplay coach",
+    "Data explainer"
+   ],
+   "_def": "Feature Utilization Depth: distinct agents used over the trailing 28 days, as a share of available_agents."
+  },
+  "manager_engagement": {
+   "dashboard_views_period_days": 14,
+   "engaged_min_views": 2,
+   "_def": "Manager Dashboard Engagement: a manager counts as engaged with engaged_min_views or more dashboard opens in the trailing period."
+  },
+  "intervention_effect": {
+   "lift_window_days": 14,
+   "_def": "Intervention Effectiveness: usage in the lift_window_days after an intervention fired exceeds usage in the same span before it."
+  },
+  "team_variance": {
+   "lookback_days": 28,
+   "_def": "Team Adoption Variance: population standard deviation of per-user use counts over lookback_days, per manager."
+  }
+ },
+ "cohort": {
+  "users": 40,
+  "active_rate": 0.6,
+  "sustained_rate": 0.55,
+  "ever_used": 33,
+  "never_used": 7,
+  "median_ttfu": 7,
+  "median_ttsu": 10,
+  "feature_depth": 0.39,
+  "managers_engaged": 2,
+  "managers": 4,
+  "interventions_fired": 16,
+  "interventions_open": 11,
+  "interventions_overdue": 10,
+  "response_rate": 0.31,
+  "effectiveness_rate": 0.22,
+  "effectiveness_n": 9,
+  "weekly": [
+   40,
+   85,
+   112,
+   122,
+   130,
+   146,
+   132,
+   126
+  ],
+  "by_trigger": {
+   "usage_drop": 6,
+   "adoption_plateau": 3,
+   "zero_use": 7,
+   "sustained_workaround": 0
+  }
+ },
+ "teams": [
+  {
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "users": 10,
+   "active_rate": 0.9,
+   "sustained_rate": 0.9,
+   "never_used": 0,
+   "median_ttfu": 5.0,
+   "median_ttsu": 6.5,
+   "feature_depth": 0.58,
+   "variance": 4.96,
+   "open_alerts": 0,
+   "fired": 1,
+   "response_rate": 1.0,
+   "coaching_rate": 1.0,
+   "dashboard_views": 3,
+   "manager_engaged": true,
+   "weekly": [
+    18,
+    33,
+    43,
+    44,
+    43,
+    56,
+    52,
+    49
+   ]
+  },
+  {
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "users": 10,
+   "active_rate": 0.5,
+   "sustained_rate": 0.4,
+   "never_used": 2,
+   "median_ttfu": 7.5,
+   "median_ttsu": 8.5,
+   "feature_depth": 0.32,
+   "variance": 9.79,
+   "open_alerts": 5,
+   "fired": 6,
+   "response_rate": 0.25,
+   "coaching_rate": 0.0,
+   "dashboard_views": 1,
+   "manager_engaged": false,
+   "weekly": [
+    9,
+    17,
+    25,
+    27,
+    32,
+    31,
+    26,
+    25
+   ]
+  },
+  {
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "users": 10,
+   "active_rate": 0.8,
+   "sustained_rate": 0.7,
+   "never_used": 0,
+   "median_ttfu": 5.5,
+   "median_ttsu": 12,
+   "feature_depth": 0.5,
+   "variance": 8.75,
+   "open_alerts": 0,
+   "fired": 3,
+   "response_rate": 1.0,
+   "coaching_rate": 1.0,
+   "dashboard_views": 4,
+   "manager_engaged": true,
+   "weekly": [
+    11,
+    25,
+    30,
+    37,
+    40,
+    40,
+    37,
+    40
+   ]
+  },
+  {
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "users": 10,
+   "active_rate": 0.2,
+   "sustained_rate": 0.2,
+   "never_used": 5,
+   "median_ttfu": 7,
+   "median_ttsu": 11.5,
+   "feature_depth": 0.17,
+   "variance": 7.47,
+   "open_alerts": 6,
+   "fired": 6,
+   "response_rate": 0.0,
+   "coaching_rate": 0.0,
+   "dashboard_views": 0,
+   "manager_engaged": false,
+   "weekly": [
+    2,
+    10,
+    14,
+    14,
+    15,
+    19,
+    17,
+    12
+   ]
+  }
+ ],
+ "users": [
+  {
+   "user_id": "user01@sample.invalid",
+   "display": "Pilot user 01",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-13",
+   "ttfu_days": 0,
+   "sustained_on": "2026-07-16",
+   "ttsu_days": 3,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 11,
+   "uses_prior": 11,
+   "uses_lookback": 22,
+   "total_uses": 46,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "Data explainer",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    7,
+    6,
+    6,
+    5,
+    6,
+    5,
+    5,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-13",
+     2
+    ],
+    [
+     "2026-07-14",
+     2
+    ],
+    [
+     "2026-07-16",
+     2
+    ],
+    [
+     "2026-07-17",
+     1
+    ],
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-21",
+     2
+    ],
+    [
+     "2026-07-23",
+     2
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     2
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user02@sample.invalid",
+   "display": "Pilot user 02",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-15",
+   "ttfu_days": 2,
+   "sustained_on": "2026-07-21",
+   "ttsu_days": 6,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 8,
+   "uses_recent": 13,
+   "uses_prior": 12,
+   "uses_lookback": 25,
+   "total_uses": 45,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Data explainer",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    3,
+    6,
+    5,
+    6,
+    5,
+    7,
+    5,
+    8
+   ],
+   "daily": [
+    [
+     "2026-07-15",
+     2
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     2
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     2
+    ],
+    [
+     "2026-09-03",
+     2
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user03@sample.invalid",
+   "display": "Pilot user 03",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-15",
+   "ttfu_days": 2,
+   "sustained_on": "2026-07-20",
+   "ttsu_days": 5,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 5,
+   "uses_recent": 12,
+   "uses_prior": 13,
+   "uses_lookback": 25,
+   "total_uses": 45,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Data explainer",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7,
+    5
+   ],
+   "daily": [
+    [
+     "2026-07-15",
+     1
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-17",
+     2
+    ],
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     2
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user04@sample.invalid",
+   "display": "Pilot user 04",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-15",
+   "ttfu_days": 2,
+   "sustained_on": "2026-07-24",
+   "ttsu_days": 9,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 13,
+   "uses_prior": 13,
+   "uses_lookback": 26,
+   "total_uses": 45,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "Data explainer",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    3,
+    3,
+    7,
+    6,
+    6,
+    7,
+    7,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-15",
+     2
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     2
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     2
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     2
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user05@sample.invalid",
+   "display": "Pilot user 05",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-29",
+   "ttfu_days": 16,
+   "sustained_on": "2026-08-05",
+   "ttsu_days": 7,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 3,
+   "uses_recent": 9,
+   "uses_prior": 10,
+   "uses_lookback": 19,
+   "total_uses": 26,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "Data explainer",
+    "Drafting assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    0,
+    2,
+    5,
+    3,
+    7,
+    6,
+    3
+   ],
+   "daily": [
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     2
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user06@sample.invalid",
+   "display": "Pilot user 06",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-20",
+   "ttfu_days": 7,
+   "sustained_on": "2026-08-11",
+   "ttsu_days": 22,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 3,
+   "uses_recent": 8,
+   "uses_prior": 10,
+   "uses_lookback": 18,
+   "total_uses": 23,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    1,
+    2,
+    2,
+    5,
+    5,
+    5,
+    3
+   ],
+   "daily": [
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-26",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user07@sample.invalid",
+   "display": "Pilot user 07",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-23",
+   "ttfu_days": 10,
+   "sustained_on": "2026-07-28",
+   "ttsu_days": 5,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 10,
+   "uses_prior": 9,
+   "uses_lookback": 19,
+   "total_uses": 34,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Data explainer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    0,
+    3,
+    5,
+    7,
+    4,
+    5,
+    4,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-23",
+     2
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     2
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     2
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user08@sample.invalid",
+   "display": "Pilot user 08",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-21",
+   "ttfu_days": 8,
+   "sustained_on": "2026-08-18",
+   "ttsu_days": 28,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 8,
+   "uses_recent": 14,
+   "uses_prior": 8,
+   "uses_lookback": 22,
+   "total_uses": 29,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    2,
+    3,
+    2,
+    2,
+    6,
+    6,
+    8
+   ],
+   "daily": [
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     2
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     2
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     2
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-02",
+     2
+    ],
+    [
+     "2026-09-03",
+     2
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user09@sample.invalid",
+   "display": "Pilot user 09",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-16",
+   "ttfu_days": 3,
+   "sustained_on": "2026-08-19",
+   "ttsu_days": 34,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 4,
+   "uses_recent": 10,
+   "uses_prior": 5,
+   "uses_lookback": 15,
+   "total_uses": 17,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "CRM assistant"
+   ],
+   "weekly": [
+    1,
+    0,
+    0,
+    1,
+    3,
+    2,
+    6,
+    4
+   ],
+   "daily": [
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-13",
+     2
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-25",
+     2
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     2
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user10@sample.invalid",
+   "display": "Pilot user 10",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "first_use": "2026-07-20",
+   "ttfu_days": 7,
+   "sustained_on": "2026-07-23",
+   "ttsu_days": 3,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 1,
+   "uses_prior": 8,
+   "uses_lookback": 9,
+   "total_uses": 28,
+   "feature_depth": 0.33,
+   "agents_used": [
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    7,
+    8,
+    4,
+    3,
+    5,
+    1,
+    0
+   ],
+   "daily": [
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-21",
+     2
+    ],
+    [
+     "2026-07-22",
+     2
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-28",
+     2
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     2
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-28",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "user_id": "user11@sample.invalid",
+   "display": "Pilot user 11",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-14",
+   "ttfu_days": 1,
+   "sustained_on": "2026-07-20",
+   "ttsu_days": 6,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 7,
+   "uses_recent": 14,
+   "uses_prior": 13,
+   "uses_lookback": 27,
+   "total_uses": 50,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    5,
+    5,
+    8,
+    5,
+    7,
+    6,
+    7,
+    7
+   ],
+   "daily": [
+    [
+     "2026-07-14",
+     2
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-17",
+     2
+    ],
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-28",
+     2
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     2
+    ],
+    [
+     "2026-07-31",
+     2
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     2
+    ],
+    [
+     "2026-08-12",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     2
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-01",
+     2
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user12@sample.invalid",
+   "display": "Pilot user 12",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-21",
+   "ttfu_days": 8,
+   "sustained_on": "2026-08-05",
+   "ttsu_days": 15,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 5,
+   "uses_recent": 13,
+   "uses_prior": 12,
+   "uses_lookback": 25,
+   "total_uses": 35,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Data explainer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    0,
+    2,
+    2,
+    6,
+    4,
+    8,
+    8,
+    5
+   ],
+   "daily": [
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-05",
+     2
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-17",
+     2
+    ],
+    [
+     "2026-08-18",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     2
+    ],
+    [
+     "2026-08-26",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     2
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user13@sample.invalid",
+   "display": "Pilot user 13",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-27",
+   "ttfu_days": 14,
+   "sustained_on": "2026-08-06",
+   "ttsu_days": 10,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 10,
+   "uses_prior": 9,
+   "uses_lookback": 19,
+   "total_uses": 26,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    0,
+    5,
+    2,
+    5,
+    4,
+    4,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-09-01",
+     2
+    ],
+    [
+     "2026-09-03",
+     2
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user14@sample.invalid",
+   "display": "Pilot user 14",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-31",
+   "ttfu_days": 18,
+   "sustained_on": "2026-08-05",
+   "ttsu_days": 5,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 3,
+   "uses_recent": 9,
+   "uses_prior": 10,
+   "uses_lookback": 19,
+   "total_uses": 26,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    0,
+    0,
+    2,
+    5,
+    6,
+    4,
+    6,
+    3
+   ],
+   "daily": [
+    [
+     "2026-07-31",
+     2
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-05",
+     2
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-25",
+     2
+    ],
+    [
+     "2026-08-26",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user15@sample.invalid",
+   "display": "Pilot user 15",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-22",
+   "ttfu_days": 9,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 1,
+   "uses_recent": 2,
+   "uses_prior": 1,
+   "uses_lookback": 3,
+   "total_uses": 6,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "Knowledge assistant"
+   ],
+   "weekly": [
+    0,
+    1,
+    2,
+    0,
+    0,
+    1,
+    1,
+    1
+   ],
+   "daily": [
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "adoption_plateau",
+     "fired_on": "2026-08-19"
+    }
+   ]
+  },
+  {
+   "user_id": "user16@sample.invalid",
+   "display": "Pilot user 16",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-16",
+   "ttfu_days": 3,
+   "sustained_on": "2026-07-23",
+   "ttsu_days": 7,
+   "sustained_now": false,
+   "active": true,
+   "uses_period": 2,
+   "uses_recent": 2,
+   "uses_prior": 2,
+   "uses_lookback": 4,
+   "total_uses": 16,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "CRM assistant"
+   ],
+   "weekly": [
+    3,
+    3,
+    3,
+    3,
+    0,
+    2,
+    0,
+    2
+   ],
+   "daily": [
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-17",
+     2
+    ],
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-23",
+     2
+    ],
+    [
+     "2026-07-30",
+     2
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-09-01",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user17@sample.invalid",
+   "display": "Pilot user 17",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-16",
+   "ttfu_days": 3,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 1,
+   "uses_recent": 1,
+   "uses_prior": 5,
+   "uses_lookback": 6,
+   "total_uses": 10,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    1,
+    3,
+    0,
+    0,
+    1,
+    4,
+    0,
+    1
+   ],
+   "daily": [
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-24",
+     2
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-09-02"
+    },
+    {
+     "trigger": "adoption_plateau",
+     "fired_on": "2026-08-13"
+    }
+   ]
+  },
+  {
+   "user_id": "user18@sample.invalid",
+   "display": "Pilot user 18",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": "2026-07-20",
+   "ttfu_days": 7,
+   "sustained_on": "2026-07-31",
+   "ttsu_days": 11,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 11,
+   "uses_lookback": 11,
+   "total_uses": 23,
+   "feature_depth": 0.33,
+   "agents_used": [
+    "Data explainer",
+    "Drafting assistant"
+   ],
+   "weekly": [
+    0,
+    3,
+    3,
+    6,
+    9,
+    2,
+    0,
+    0
+   ],
+   "daily": [
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     2
+    ],
+    [
+     "2026-08-10",
+     2
+    ],
+    [
+     "2026-08-11",
+     2
+    ],
+    [
+     "2026-08-12",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-08-26"
+    }
+   ]
+  },
+  {
+   "user_id": "user19@sample.invalid",
+   "display": "Pilot user 19",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user20@sample.invalid",
+   "display": "Pilot user 20",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user21@sample.invalid",
+   "display": "Pilot user 21",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-14",
+   "ttfu_days": 1,
+   "sustained_on": "2026-07-21",
+   "ttsu_days": 7,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 12,
+   "uses_prior": 13,
+   "uses_lookback": 25,
+   "total_uses": 46,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    3,
+    7,
+    5,
+    6,
+    6,
+    7,
+    6,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-14",
+     1
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-17",
+     1
+    ],
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-22",
+     2
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-28",
+     2
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-17",
+     2
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     2
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user22@sample.invalid",
+   "display": "Pilot user 22",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-16",
+   "ttfu_days": 3,
+   "sustained_on": "2026-07-22",
+   "ttsu_days": 6,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 12,
+   "uses_prior": 13,
+   "uses_lookback": 25,
+   "total_uses": 42,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Data explainer",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    3,
+    5,
+    4,
+    5,
+    7,
+    6,
+    6,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-17",
+     2
+    ],
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     2
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     2
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     2
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user23@sample.invalid",
+   "display": "Pilot user 23",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-13",
+   "ttfu_days": 0,
+   "sustained_on": "2026-07-24",
+   "ttsu_days": 11,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 7,
+   "uses_recent": 14,
+   "uses_prior": 10,
+   "uses_lookback": 24,
+   "total_uses": 42,
+   "feature_depth": 0.83,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant",
+    "Meeting summarizer",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    3,
+    3,
+    6,
+    6,
+    5,
+    5,
+    7,
+    7
+   ],
+   "daily": [
+    [
+     "2026-07-13",
+     1
+    ],
+    [
+     "2026-07-14",
+     1
+    ],
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     2
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user24@sample.invalid",
+   "display": "Pilot user 24",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-24",
+   "ttfu_days": 11,
+   "sustained_on": "2026-08-05",
+   "ttsu_days": 12,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 5,
+   "uses_recent": 11,
+   "uses_prior": 10,
+   "uses_lookback": 21,
+   "total_uses": 28,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Knowledge assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    1,
+    2,
+    4,
+    4,
+    6,
+    6,
+    5
+   ],
+   "daily": [
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-31",
+     2
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user25@sample.invalid",
+   "display": "Pilot user 25",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-29",
+   "ttfu_days": 16,
+   "sustained_on": "2026-08-17",
+   "ttsu_days": 19,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 11,
+   "uses_prior": 10,
+   "uses_lookback": 21,
+   "total_uses": 24,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant"
+   ],
+   "weekly": [
+    0,
+    0,
+    2,
+    1,
+    4,
+    6,
+    5,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-29",
+     2
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     2
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user26@sample.invalid",
+   "display": "Pilot user 26",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-20",
+   "ttfu_days": 7,
+   "sustained_on": "2026-07-30",
+   "ttsu_days": 10,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 4,
+   "uses_recent": 8,
+   "uses_prior": 12,
+   "uses_lookback": 20,
+   "total_uses": 31,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "Data explainer",
+    "Drafting assistant",
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    0,
+    3,
+    4,
+    4,
+    6,
+    6,
+    4,
+    4
+   ],
+   "daily": [
+    [
+     "2026-07-20",
+     1
+    ],
+    [
+     "2026-07-21",
+     1
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-29",
+     2
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-05",
+     2
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     2
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-17",
+     2
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user27@sample.invalid",
+   "display": "Pilot user 27",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-30",
+   "ttfu_days": 17,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": true,
+   "uses_period": 2,
+   "uses_recent": 2,
+   "uses_prior": 1,
+   "uses_lookback": 3,
+   "total_uses": 5,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "Roleplay coach"
+   ],
+   "weekly": [
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    2
+   ],
+   "daily": [
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "adoption_plateau",
+     "fired_on": "2026-08-27"
+    }
+   ]
+  },
+  {
+   "user_id": "user28@sample.invalid",
+   "display": "Pilot user 28",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-14",
+   "ttfu_days": 1,
+   "sustained_on": "2026-09-01",
+   "ttsu_days": 49,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 3,
+   "uses_recent": 6,
+   "uses_prior": 2,
+   "uses_lookback": 8,
+   "total_uses": 13,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "Meeting summarizer"
+   ],
+   "weekly": [
+    1,
+    2,
+    1,
+    1,
+    2,
+    0,
+    3,
+    3
+   ],
+   "daily": [
+    [
+     "2026-07-14",
+     1
+    ],
+    [
+     "2026-07-22",
+     2
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-01",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user29@sample.invalid",
+   "display": "Pilot user 29",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-23",
+   "ttfu_days": 10,
+   "sustained_on": "2026-08-04",
+   "ttsu_days": 12,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 5,
+   "uses_lookback": 5,
+   "total_uses": 15,
+   "feature_depth": 0.33,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant"
+   ],
+   "weekly": [
+    0,
+    1,
+    3,
+    6,
+    4,
+    1,
+    0,
+    0
+   ],
+   "daily": [
+    [
+     "2026-07-23",
+     1
+    ],
+    [
+     "2026-07-27",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-04",
+     2
+    ],
+    [
+     "2026-08-06",
+     2
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-12",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-21",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-08-25"
+    }
+   ]
+  },
+  {
+   "user_id": "user30@sample.invalid",
+   "display": "Pilot user 30",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "first_use": "2026-07-17",
+   "ttfu_days": 4,
+   "sustained_on": "2026-08-11",
+   "ttsu_days": 25,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 1,
+   "uses_recent": 1,
+   "uses_prior": 4,
+   "uses_lookback": 5,
+   "total_uses": 14,
+   "feature_depth": 0.33,
+   "agents_used": [
+    "Drafting assistant",
+    "Roleplay coach"
+   ],
+   "weekly": [
+    1,
+    3,
+    2,
+    3,
+    1,
+    3,
+    0,
+    1
+   ],
+   "daily": [
+    [
+     "2026-07-17",
+     1
+    ],
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-29",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-09-04",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-09-01"
+    }
+   ]
+  },
+  {
+   "user_id": "user31@sample.invalid",
+   "display": "Pilot user 31",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": "2026-07-23",
+   "ttfu_days": 10,
+   "sustained_on": "2026-08-07",
+   "ttsu_days": 15,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 6,
+   "uses_recent": 12,
+   "uses_prior": 7,
+   "uses_lookback": 19,
+   "total_uses": 27,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant"
+   ],
+   "weekly": [
+    0,
+    2,
+    1,
+    5,
+    3,
+    4,
+    6,
+    6
+   ],
+   "daily": [
+    [
+     "2026-07-23",
+     2
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-08-03",
+     2
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     2
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     1
+    ],
+    [
+     "2026-08-18",
+     1
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ],
+    [
+     "2026-08-24",
+     1
+    ],
+    [
+     "2026-08-25",
+     1
+    ],
+    [
+     "2026-08-26",
+     1
+    ],
+    [
+     "2026-08-27",
+     2
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     2
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-02",
+     1
+    ],
+    [
+     "2026-09-03",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user32@sample.invalid",
+   "display": "Pilot user 32",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": "2026-07-21",
+   "ttfu_days": 8,
+   "sustained_on": "2026-07-29",
+   "ttsu_days": 8,
+   "sustained_now": true,
+   "active": true,
+   "uses_period": 5,
+   "uses_recent": 10,
+   "uses_prior": 9,
+   "uses_lookback": 19,
+   "total_uses": 30,
+   "feature_depth": 0.5,
+   "agents_used": [
+    "CRM assistant",
+    "Drafting assistant",
+    "Knowledge assistant"
+   ],
+   "weekly": [
+    0,
+    3,
+    5,
+    3,
+    2,
+    7,
+    5,
+    5
+   ],
+   "daily": [
+    [
+     "2026-07-21",
+     2
+    ],
+    [
+     "2026-07-24",
+     1
+    ],
+    [
+     "2026-07-28",
+     2
+    ],
+    [
+     "2026-07-29",
+     2
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-03",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-17",
+     1
+    ],
+    [
+     "2026-08-18",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     2
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-27",
+     2
+    ],
+    [
+     "2026-08-28",
+     1
+    ],
+    [
+     "2026-08-31",
+     1
+    ],
+    [
+     "2026-09-01",
+     1
+    ],
+    [
+     "2026-09-03",
+     1
+    ],
+    [
+     "2026-09-04",
+     2
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user33@sample.invalid",
+   "display": "Pilot user 33",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": "2026-07-17",
+   "ttfu_days": 4,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 1,
+   "uses_recent": 3,
+   "uses_prior": 2,
+   "uses_lookback": 5,
+   "total_uses": 7,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "Roleplay coach"
+   ],
+   "weekly": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    2,
+    2,
+    1
+   ],
+   "daily": [
+    [
+     "2026-07-17",
+     1
+    ],
+    [
+     "2026-07-28",
+     1
+    ],
+    [
+     "2026-08-19",
+     2
+    ],
+    [
+     "2026-08-28",
+     2
+    ],
+    [
+     "2026-08-31",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user34@sample.invalid",
+   "display": "Pilot user 34",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": "2026-07-16",
+   "ttfu_days": 3,
+   "sustained_on": "2026-08-17",
+   "ttsu_days": 32,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 4,
+   "uses_prior": 4,
+   "uses_lookback": 8,
+   "total_uses": 13,
+   "feature_depth": 0.17,
+   "agents_used": [
+    "CRM assistant"
+   ],
+   "weekly": [
+    1,
+    0,
+    1,
+    3,
+    1,
+    3,
+    4,
+    0
+   ],
+   "daily": [
+    [
+     "2026-07-16",
+     1
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-08-05",
+     1
+    ],
+    [
+     "2026-08-07",
+     2
+    ],
+    [
+     "2026-08-11",
+     1
+    ],
+    [
+     "2026-08-17",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-24",
+     2
+    ],
+    [
+     "2026-08-27",
+     1
+    ],
+    [
+     "2026-08-28",
+     1
+    ]
+   ],
+   "triggers": []
+  },
+  {
+   "user_id": "user35@sample.invalid",
+   "display": "Pilot user 35",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": "2026-07-20",
+   "ttfu_days": 7,
+   "sustained_on": "2026-07-27",
+   "ttsu_days": 7,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 12,
+   "uses_lookback": 12,
+   "total_uses": 26,
+   "feature_depth": 0.33,
+   "agents_used": [
+    "Data explainer",
+    "Knowledge assistant"
+   ],
+   "weekly": [
+    0,
+    5,
+    6,
+    3,
+    9,
+    3,
+    0,
+    0
+   ],
+   "daily": [
+    [
+     "2026-07-20",
+     2
+    ],
+    [
+     "2026-07-22",
+     1
+    ],
+    [
+     "2026-07-23",
+     2
+    ],
+    [
+     "2026-07-27",
+     2
+    ],
+    [
+     "2026-07-28",
+     2
+    ],
+    [
+     "2026-07-30",
+     1
+    ],
+    [
+     "2026-07-31",
+     1
+    ],
+    [
+     "2026-08-04",
+     1
+    ],
+    [
+     "2026-08-06",
+     1
+    ],
+    [
+     "2026-08-07",
+     1
+    ],
+    [
+     "2026-08-10",
+     2
+    ],
+    [
+     "2026-08-11",
+     2
+    ],
+    [
+     "2026-08-12",
+     2
+    ],
+    [
+     "2026-08-13",
+     1
+    ],
+    [
+     "2026-08-14",
+     2
+    ],
+    [
+     "2026-08-19",
+     1
+    ],
+    [
+     "2026-08-20",
+     1
+    ],
+    [
+     "2026-08-21",
+     1
+    ]
+   ],
+   "triggers": [
+    {
+     "trigger": "usage_drop",
+     "fired_on": "2026-08-27"
+    }
+   ]
+  },
+  {
+   "user_id": "user36@sample.invalid",
+   "display": "Pilot user 36",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user37@sample.invalid",
+   "display": "Pilot user 37",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user38@sample.invalid",
+   "display": "Pilot user 38",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user39@sample.invalid",
+   "display": "Pilot user 39",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  },
+  {
+   "user_id": "user40@sample.invalid",
+   "display": "Pilot user 40",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "first_use": null,
+   "ttfu_days": null,
+   "sustained_on": null,
+   "ttsu_days": null,
+   "sustained_now": false,
+   "active": false,
+   "uses_period": 0,
+   "uses_recent": 0,
+   "uses_prior": 0,
+   "uses_lookback": 0,
+   "total_uses": 0,
+   "feature_depth": 0.0,
+   "agents_used": [],
+   "weekly": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "daily": [],
+   "triggers": [
+    {
+     "trigger": "zero_use",
+     "fired_on": "2026-08-03"
+    }
+   ]
+  }
+ ],
+ "interventions": [
+  {
+   "user_id": "user10@sample.invalid",
+   "display": "Pilot user 10",
+   "team": "Sample team A",
+   "manager": "Sample manager A",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-09-02",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-09-07",
+   "status": "responded",
+   "responded_on": "2026-09-05",
+   "coaching_conversation": true,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user15@sample.invalid",
+   "display": "Pilot user 15",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "adoption_plateau",
+   "label": "Adoption plateau",
+   "fired_on": "2026-08-19",
+   "action": "Targeted enablement: one worked example in the user's own workflow",
+   "owner_role": "enablement",
+   "manager_facing": false,
+   "response_due": "2026-08-29",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": true
+  },
+  {
+   "user_id": "user17@sample.invalid",
+   "display": "Pilot user 17",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-09-02",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-09-07",
+   "status": "open",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user17@sample.invalid",
+   "display": "Pilot user 17",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "adoption_plateau",
+   "label": "Adoption plateau",
+   "fired_on": "2026-08-13",
+   "action": "Targeted enablement: one worked example in the user's own workflow",
+   "owner_role": "enablement",
+   "manager_facing": false,
+   "response_due": "2026-08-23",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": true
+  },
+  {
+   "user_id": "user18@sample.invalid",
+   "display": "Pilot user 18",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-08-26",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-31",
+   "status": "responded",
+   "responded_on": "2026-09-03",
+   "coaching_conversation": false,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user19@sample.invalid",
+   "display": "Pilot user 19",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user20@sample.invalid",
+   "display": "Pilot user 20",
+   "team": "Sample team B",
+   "manager": "Sample manager B",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user27@sample.invalid",
+   "display": "Pilot user 27",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "trigger": "adoption_plateau",
+   "label": "Adoption plateau",
+   "fired_on": "2026-08-27",
+   "action": "Targeted enablement: one worked example in the user's own workflow",
+   "owner_role": "enablement",
+   "manager_facing": false,
+   "response_due": "2026-09-06",
+   "status": "responded",
+   "responded_on": "2026-08-30",
+   "coaching_conversation": true,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user29@sample.invalid",
+   "display": "Pilot user 29",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-08-25",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-30",
+   "status": "responded",
+   "responded_on": "2026-09-04",
+   "coaching_conversation": true,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user30@sample.invalid",
+   "display": "Pilot user 30",
+   "team": "Sample team C",
+   "manager": "Sample manager C",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-09-01",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-09-06",
+   "status": "responded",
+   "responded_on": "2026-09-03",
+   "coaching_conversation": true,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user35@sample.invalid",
+   "display": "Pilot user 35",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "usage_drop",
+   "label": "Usage drop",
+   "fired_on": "2026-08-27",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-09-01",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": false,
+   "lift": null
+  },
+  {
+   "user_id": "user36@sample.invalid",
+   "display": "Pilot user 36",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user37@sample.invalid",
+   "display": "Pilot user 37",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user38@sample.invalid",
+   "display": "Pilot user 38",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user39@sample.invalid",
+   "display": "Pilot user 39",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  },
+  {
+   "user_id": "user40@sample.invalid",
+   "display": "Pilot user 40",
+   "team": "Sample team D",
+   "manager": "Sample manager D",
+   "trigger": "zero_use",
+   "label": "Zero-use persistence",
+   "fired_on": "2026-08-03",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_due": "2026-08-08",
+   "status": "overdue",
+   "responded_on": null,
+   "coaching_conversation": false,
+   "measurable": true,
+   "lift": false
+  }
+ ],
+ "level1": {
+  "readiness_assessment_completion": 0.75,
+  "baseline_documentation_rate": 1.0,
+  "manager_briefing_completion": 0.75,
+  "intervention_trigger_coverage": 0.75,
+  "trigger_coverage_detail": "3 of 4 defined triggers have a telemetry source",
+  "milestone_adherence": 0.83
+ },
+ "level3": {
+  "adoption_rate_now": 0.55,
+  "time_to_sustained_median_days": 10,
+  "intervention_effectiveness": 0.22,
+  "retention_of_gains": null,
+  "retention_note": "measured 60 to 90 days after close",
+  "productivity_lift": null,
+  "productivity_note": "needs a baseline from the pilot team and Finance",
+  "cost_avoidance": null,
+  "cost_note": "needs a Finance baseline",
+  "sentiment_shift": null,
+  "sentiment_note": "needs the pre-pilot survey"
+ },
+ "trigger_specs": {
+  "usage_drop": {
+   "label": "Usage drop",
+   "source": "usage_log",
+   "action": "Micro-coaching prompt to the user; alert to the manager",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_window_days": 5
+  },
+  "adoption_plateau": {
+   "label": "Adoption plateau",
+   "source": "usage_log",
+   "action": "Targeted enablement: one worked example in the user's own workflow",
+   "owner_role": "enablement",
+   "manager_facing": false,
+   "response_window_days": 10
+  },
+  "zero_use": {
+   "label": "Zero-use persistence",
+   "source": "usage_log",
+   "action": "Manager escalation plus individual outreach",
+   "owner_role": "manager",
+   "manager_facing": true,
+   "response_window_days": 5
+  },
+  "sustained_workaround": {
+   "label": "Sustained workaround",
+   "source": null,
+   "action": "Workflow adjustment review",
+   "owner_role": "project team",
+   "manager_facing": false,
+   "response_window_days": 10,
+   "_note": "No telemetry source yet. Needs process observation or a self-report field; stays defined but unmonitored until one exists."
+  }
+ },
+ "signal_sources": {
+  "Active Usage Rate": {
+   "status": "computed",
+   "needs": "per user per day: count of uses (conversations or messages)"
+  },
+  "Time-to-First-Use": {
+   "status": "computed",
+   "needs": "per user: seat granted date; first logged use"
+  },
+  "Time-to-Sustained-Use": {
+   "status": "computed",
+   "needs": "per user per day use counts (derived)"
+  },
+  "Workflow Deviation Rate": {
+   "status": "no_source",
+   "needs": "not in usage telemetry; needs process observation or a self-report field"
+  },
+  "Escalation Pattern Shift": {
+   "status": "no_source",
+   "needs": "case or call routing data from the pilot team's own system"
+  },
+  "Feature Utilization Depth": {
+   "status": "computed",
+   "needs": "per use: which agent or skill was used; list of available agents"
+  },
+  "Manager Dashboard Engagement": {
+   "status": "computed",
+   "needs": "access log of the manager report: who opened it, when"
+  },
+  "Coaching Conversation Rate": {
+   "status": "proxy",
+   "needs": "manager-logged conversation date per at-risk user (self-report form)"
+  },
+  "Intervention Response Rate": {
+   "status": "computed",
+   "needs": "manager-logged response per fired alert"
+  },
+  "Team Adoption Variance": {
+   "status": "computed",
+   "needs": "roster with manager per user (derived)"
+  },
+  "Usage Drop": {
+   "status": "computed",
+   "needs": "derived from per user per day counts"
+  },
+  "Adoption Plateau": {
+   "status": "computed",
+   "needs": "derived from per user per day counts"
+  },
+  "Zero-Use Persistence": {
+   "status": "computed",
+   "needs": "derived from roster availability date and usage"
+  },
+  "Sustained Workaround": {
+   "status": "no_source",
+   "needs": "process observation or self-report; no telemetry equivalent"
+  }
+ }
+}

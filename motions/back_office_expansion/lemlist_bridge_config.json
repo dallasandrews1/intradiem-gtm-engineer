@@ -1,0 +1,31 @@
+{
+ "workflow_id": "wf_0tksukwf5aTgJAeDNYp",
+ "segment_id": "audseg_0tksulu9n6WSaxUpUVB",
+ "fields": {
+  "push_motion": "audf_0tksujvqxEAibqfojzc",
+  "status": "audf_0tksujvhU8J9D6v3g9J",
+  "contact_id": "audf_0tksujv857ZtgSWtqxX",
+  "pushed_at": "audf_0tksujwCpeWrMgZG2RB",
+  "company_domain": "audf_0tk33ntxQy4KyigBAmi"
+ },
+ "lists": {
+  "bo_netnew": "clt_QCnnNJDQ3WcpMKLed",
+  "bo_customer": "clt_YXPqEq2yJSLqzsXcB",
+  "stars": "clt_cFTdy7x5S7kwFWGEH",
+  "blitz": "clt_meQSGjaeYbQx4R4iT",
+  "wfm_adjacency": "clt_sf7n3Rz92KubMaqNL",
+  "cost_mandate": "clt_5i33LD244QYcjmLCL",
+  "bo_leaders": "clt_wgDkc4GbiL929XthY",
+  "webinar_sep2": "clt_ddYJ2PYTPGTfJXw7D",
+  "dwo_exec": "clt_FKm6KuNcgeghas73o"
+ },
+ "denylist_domains_source": "tam-outbound-engine/config/customer_denylist.json",
+ "notes": "Set Lemlist Push Motion on an Audiences person to queue them. The segment already excludes Account Type Customer/Partner; the code node re-checks the denylist domains. lemlist dedupes on email/LinkedIn at upsert. Custom fields motion/motion_status/parent_account are stamped only once Dallas creates them in lemlist Settings > Custom fields.",
+ "stamp_workflow_id": "wf_0tksuthtP8TEFF2WxHF",
+ "lemlist_custom_fields": [
+  "motion",
+  "motionStatus",
+  "parentAccount"
+ ],
+ "notes_sep3_evening": "US-market lists added Sep 3 evening by motions/lemlist_contacts/ (build_us_lists.py, push_us_lists.py). The bridge workflow node still maps only bo_netnew and bo_customer; rebuild with build_lemlist_bridge.py before queueing Audiences people under the new motions."
+}

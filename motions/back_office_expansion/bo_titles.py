@@ -16,8 +16,15 @@ def band(t, hint=""):
     if re.search(r"\b(director|executive director)\b",t): return "Director"
     return hint or "Director"
 FUNC_EXTRA=[]
+MODE=["back_office"]
 def configure(cfg):
-    """Apply a rep set's vocabulary: extra function labels (checked first) and extra topics."""
+    """Apply a rep set's vocabulary: extra function labels (checked first) and extra topics. A set with
+    "mode": "front_office" swaps lanes, topics and functions for the front-office vocabulary (fo_vocab.py) in place."""
+    if cfg.get("mode")=="front_office":
+        import fo_vocab
+        MODE[0]="front_office"; LANES[:]=fo_vocab.LANES; LANE34[:]=list(fo_vocab.LANE34)
+        TOPICS.clear(); TOPICS.update(fo_vocab.TOPICS); FUNC_EXTRA[:]=[(lbl,re.compile(rx)) for lbl,rx in fo_vocab.FUNC_RULES]
+        return
     FUNC_EXTRA[:]=[(lbl,re.compile(rx)) for lbl,rx in cfg.get("func_extra",[])]
     TOPICS.update(cfg.get("topics_extra",{}))
 def func(t):
@@ -35,6 +42,7 @@ LANES=[("Operations executives", r"\b(chief|coo|cfo|cao|evp|executive vice presi
  ("Workforce planning & product owners", r"workforce|capacity planning|product owner|head of product|scheduling"),
  ("Operations technology", r"operations technology|technology operations|business systems|claims technology|claims systems|operations platform|systems implementation|business technology|application"),
  ("Operations leaders", r".")]
+LANE34=["Workforce planning & product owners","Operations technology"]
 def lane(t):
     tl=(t or "").lower()
     for name,rx in LANES:

@@ -1,0 +1,13 @@
+{
+ "campaign": {"id": "cam_SiD4KmWcRuhiF6uhL", "name": "DWO Executives - Live Pool (Nate)", "sequenceId": "seq_XiYpoRMDksmH7c93u", "sender": "usr_9rxD82ZfapeZBGSoz (Nathan Belfield)", "status_at_stage": "draft, no leads", "staged": "2026-09-04"},
+ "steps": [
+  {"pos": 1, "id": "stp_vQd7kTCL3DpDgkryR", "type": "email", "delay": 0, "abTest": true, "variantB_template": "etp_6HP8esiycXYkMhtvH", "note": "E1: A benchmark question, B offer note"},
+  {"pos": 2, "id": "stp_Aegqh8dxAyJkcNw6x", "type": "linkedinInvite", "delay": 1},
+  {"pos": 3, "id": "stp_i8y3aXX9new5wdXMm", "type": "email", "delay": 2, "note": "E2 in thread"},
+  {"pos": 4, "id": "stp_nQC6y3NEJbTFt79He", "type": "linkedinSend", "delay": 3},
+  {"pos": 5, "id": "stp_KfbFDrRTvrztqBPPZ", "type": "email", "delay": 4, "note": "E3 breakup"}
+ ],
+ "lead_variables": ["firstName", "companyName", "opener", "workTeams", "peak"],
+ "source_list": "clt_Fg8mhEJ7F9uRK9go3 (DWO Executives, Live (Clay))",
+ "copy_source": "DWO_Exec_Sequence_Sep4.md"
+}

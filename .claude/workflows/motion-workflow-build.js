@@ -1,3 +1,12 @@
+// SUPERSEDED 2026-09-04. This workflow builds the per-row copy path: a Clay
+// send-readiness Workflow plus a MessageGen prompt that drafts a 5-touch set on
+// every row. Outreach copy is now authored once per campaign in Claude Code and
+// personalised through lemlist variables, so Clay's job is the variable factory
+// (find, verify, compute the per-lead facts) and lemlist owns the message.
+// The send_ready and human_approved gates this script verified were deleted from
+// the live tables on 2026-09-04. Do not run this to stamp a new motion until it
+// is rebuilt against the variables model. See memory copy-authored-per-campaign-not-per-row-sep4.
+
 export const meta = {
   name: 'motion-workflow-build',
   description: 'Build and adversarially test a new motion\'s Clay send-readiness Workflow (Alpha) + MessageGen prompt, per Clay_Motion_Scaffold_SOP_v1.md and Motion_Workflow_Build_Prompt_TEMPLATE_v1.md',
@@ -137,7 +146,7 @@ Report messagegen_file_path, workflow_id, workflow_name, known_good_result, know
   const roundCritics = await parallel([
     () => agent(
       `Adversarially re-verify a Clay Workflow (Alpha) build. Do NOT trust the builder's self-report. Root: ${ROOT}. Workflow id: ${build.workflow_id}.
-Use the Clay MCP read tool to independently pull the live workflow graph. Confirm against ${ROOT}/Motion_Workflow_Build_Prompt_TEMPLATE_v1.md: all 9 nodes present in order, every gate genuinely fail-closed (a failed gate exits and never reaches send_ready=READY), NO send/sync/launch node exists anywhere in the graph, human_approved defaults FALSE. FAIL if any of these don't hold, citing the specific node.`,
+Use the Clay MCP read tool to independently pull the live workflow graph. Confirm against ${ROOT}/Motion_Workflow_Build_Prompt_TEMPLATE_v1.md: all 9 nodes present in order, every gate genuinely fail-closed (a failed gate exits and never reaches a ready state), NO send/sync/launch node exists anywhere in the graph. NOTE: the send_ready and human_approved columns this check used to assert were retired on 2026-09-04; treat the customer-exclusion and verified-email gates as the ones that must hold. FAIL if any of these don't hold, citing the specific node.`,
       { schema: CRITIC_SCHEMA, label: 'critic:structure', phase: 'Critique' }
     ),
     () => agent(
@@ -149,7 +158,7 @@ Use the Clay MCP read tool to independently pull the live workflow graph. Confir
       { schema: CRITIC_SCHEMA, label: 'critic:copy-quality', phase: 'Critique' }
     ),
     () => agent(
-      `Independently verify this claim rather than trusting it: "known_bad_result was ${build.known_bad_result}". Use the Clay MCP read/table tools to pull the actual known-bad fixture's run result for workflow ${build.workflow_id} directly from Clay. Confirm it genuinely exited at node 8 (figure-integrity critic) with a FAIL/HOLD status, not send_ready=READY and not a silent pass-through. FAIL this check if the live run data doesn't match the builder's claim, or if you cannot independently retrieve the run result.`,
+      `Independently verify this claim rather than trusting it: "known_bad_result was ${build.known_bad_result}". Use the Clay MCP read/table tools to pull the actual known-bad fixture's run result for workflow ${build.workflow_id} directly from Clay. Confirm it genuinely exited at node 8 (figure-integrity critic) with a FAIL/HOLD status, not a pass to a ready state and not a silent pass-through. FAIL this check if the live run data doesn't match the builder's claim, or if you cannot independently retrieve the run result.`,
       { schema: CRITIC_SCHEMA, label: 'critic:known-bad-verify', phase: 'Critique' }
     ),
   ])

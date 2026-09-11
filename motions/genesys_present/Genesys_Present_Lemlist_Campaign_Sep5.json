@@ -1,0 +1,20 @@
+{
+ "motion": "genesys_present",
+ "campaignId": "cam_b7TS4fCDCnt2f8S84",
+ "campaignName": "Genesys Present (Nate)",
+ "status_at_build": "draft, leads loaded by build_full_load.py genesys --go, sender not set",
+ "timezone": "America/New_York",
+ "built": "2026-09-05",
+ "pattern": "WFM Present tree with the ACD as the platform in the copy; native Genesys Cloud integration line only where the read names Genesys Cloud",
+ "variables": ["firstName","companyName","opener","angleIdea","angleProof","angleAsk","peak","workTeams","wfmPlatform","acdPlatform","colleagueFirst","colleagueLine"],
+ "sequences": {
+  "main": {"id": "seq_ejggSABTKvy96ymBe", "steps": ["stp_FuaFELCo8dx4xRk3t E1 email d0","stp_DA8Lm9QXvLzZA7sou linkedinVisit d0","stp_S9ZmhM4gGNishMZNq conditional hasLinkedinUrl","stp_PFvckHZhn8uJ73TpK conditional linkedinInviteAccepted within 2"]},
+  "has_url": {"id": "seq_ZF9NnqdBEGeRDdaXW", "steps": ["stp_QpAKcTKdAK2k5eFtf linkedinInvite d1","stp_9b8i4pMKcxbwedEyC Call 1 d1","stp_ZmCq74zDhbQKzf5at E2 d1"]},
+  "no_url": {"id": "seq_QATm75gNpJ3QCY5te", "steps": ["stp_rHWHfNwZERZbbzuP7 Call 1 d2","stp_2iCLZeybehiYyTdHu E2 d1","stp_ZZg8aWp2BrYtzSiFu Call 2 d3","stp_TGWFJGGgXfhSqgqPT just-tried d0","stp_cJB49sFYs6t7gHqeS E3 peak d3","stp_r8dmgspvshxZtxRde Call 3 d4","stp_de3JrQG4kgpS2g8MS E4 d1","stp_3K4H6KpA4HXjeapKW breakup d4"]},
+  "accepted": {"id": "seq_SKm4GWSrgZwcyuPtG", "steps": ["stp_egYeN9nqGzHDAztDG DM1 manual d0","stp_tzXC9XXomAkd783CG Call 2 d2","stp_C2MKPfscyPor9qZzZ just-tried d0","stp_iKBSwjZhucYiaTcxy E3 peak d2","stp_vSZcHcLcciMz7wb6R DM2 manual d2","stp_djadMy7PhES7brXpS Call 3 d2","stp_d78bTNsczY8kJNaki E4 d1","stp_AmmeGQq4dYiDm6QML DM3 manual d2","stp_zoSKYY4RQADNZpcnw breakup d2"]},
+  "not_accepted": {"id": "seq_uvcLbJsLPAGkTrSWN", "steps": ["stp_bj4hTwswz7vYRyKAL likeLastPost d0","stp_q4b7tSHkNEefiWkpc Call 2 d2","stp_kHFsucBjpXsrPKuve just-tried d0","stp_qp6eq5GcrXaYTN6Nd E3 peak d2","stp_yAwNWDRSCDsTyuSGT linkedinVisit d2","stp_T43BAPWFBmHbjxFHG Call 3 d2","stp_gEkRvxkYNEJbvS2G3 E4 d1","stp_GwNWopzC6dKSc8d6x breakup d4","stp_EeoXS93cy3cXZdkwW withdrawInvitation d2"]}
+ },
+ "clay": {"companies_segment": "audseg_0tkvp4cWjaRzEpkwzCH (Genesys Present companies, 111)", "people_segment": "audseg_0tkvp3gkKr94ubHuURa (Genesys Present people, 1,932 with email)"},
+ "load_file": "motions/genesys_present/Genesys_Present_Full_Load_Sep5.csv (354 leads at 52 accounts, cap 10, US only, WFM Present accounts excluded, customer gate applied)",
+ "next": "sender set in the UI; Nate reads the copy; never launch from a session"
+}

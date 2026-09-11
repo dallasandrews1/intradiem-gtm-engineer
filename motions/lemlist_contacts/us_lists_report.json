@@ -1,0 +1,102 @@
+{
+ "stars": {
+  "candidates": 221,
+  "keep": 147,
+  "excluded": 16,
+  "excluded_by": {
+   "Humana": 4,
+   "UnitedHealthcare": 4,
+   "Health Care Service Corporation": 3,
+   "Aetna (CVS Health)": 3,
+   "Blue Cross and Blue Shield of Illinois, Montana, New Mexico, Oklahoma & Texas": 1,
+   "CVS Health": 1
+  },
+  "dup": 58,
+  "no_email_or_li": 0,
+  "with_email": 126,
+  "with_li": 147,
+  "accounts": 29
+ },
+ "blitz": {
+  "candidates": 15,
+  "keep": 15,
+  "excluded": 0,
+  "excluded_by": {},
+  "dup": 0,
+  "no_email_or_li": 0,
+  "with_email": 15,
+  "with_li": 15,
+  "accounts": 3
+ },
+ "wfm_adjacency": {
+  "candidates": 471,
+  "keep": 206,
+  "excluded": 265,
+  "excluded_by": {
+   "Elevance Health": 143,
+   "Molina Healthcare": 122
+  },
+  "dup": 0,
+  "no_email_or_li": 0,
+  "with_email": 0,
+  "with_li": 206,
+  "accounts": 5
+ },
+ "cost_mandate": {
+  "candidates": 7,
+  "keep": 5,
+  "excluded": 2,
+  "excluded_by": {
+   "Citi": 2
+  },
+  "dup": 0,
+  "no_email_or_li": 0,
+  "with_email": 4,
+  "with_li": 5,
+  "accounts": 5
+ },
+ "bo_leaders_prospects": {
+  "candidates": 1326,
+  "keep": 1148,
+  "excluded": 100,
+  "excluded_by": {
+   "farmersinsurance.com": 23,
+   "assurant.com": 15,
+   "anthem.com": 13,
+   "Zurich North America": 10,
+   "citi.com": 6,
+   "elevancehealth.com": 5,
+   "mckesson.com": 4,
+   "Zurich Insurance Group": 4,
+   "cigna.com": 3,
+   "Assurant Specialty Property": 3
+  },
+  "dup": 4,
+  "no_email_or_li": 74,
+  "with_email": 1136,
+  "with_li": 607,
+  "accounts": 387
+ },
+ "webinar_t1_dirplus": {
+  "candidates": 1050,
+  "keep": 970,
+  "excluded": 71,
+  "excluded_by": {
+   "citi.com": 21,
+   "cigna.com": 7,
+   "td.com": 5,
+   "elevancehealth.com": 5,
+   "farmersinsurance.com": 5,
+   "anthem.com": 4,
+   "evernorth.com": 4,
+   "assurant.com": 4,
+   "Elavon": 4,
+   "mckesson.com": 3
+  },
+  "dup": 9,
+  "no_email_or_li": 0,
+  "with_email": 970,
+  "with_li": 601,
+  "accounts": 374
+ }
+}

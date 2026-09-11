@@ -1,0 +1,529 @@
+{
+ "generated": "2026-09-03",
+ "campaignId": "cam_viEbB6HkYsCPtxKbi",
+ "campaign": "Stars - Fresh Pool / Quality (Nate)",
+ "deduplicate": true,
+ "leads": [
+  {
+   "email": "laetitia.barrad@blueshieldca.com",
+   "firstName": "Laetitia",
+   "lastName": "Barrad",
+   "companyName": "Blue Shield of California",
+   "companyDomain": "blueshieldca.com",
+   "jobTitle": "Director, Clinical Quality (Medicare Stars)",
+   "linkedinUrl": "https://www.linkedin.com/in/laetitia-barrad-30a01433/",
+   "customVariables": {
+    "plan_name": "Blue Shield of California",
+    "qbp_avg": "3.5",
+    "vm_hook": "Your title has Medicare Stars in it, so you already know which measures are still open this year.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Blue Shield's book looks to be near 3.5, and the customer service measures that still move it are being scored on live calls right now. We keep those steady during the day on top of the WFM you already run. Worth a short conversation on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "tory.robinson@blueshieldca.com",
+   "firstName": "Victoria",
+   "lastName": "Robinson",
+   "companyName": "Blue Shield of California",
+   "companyDomain": "blueshieldca.com",
+   "jobTitle": "Director of Quality Improvement",
+   "linkedinUrl": "https://www.linkedin.com/in/toryrobinson/",
+   "customVariables": {
+    "plan_name": "Blue Shield of California",
+    "qbp_avg": "3.5",
+    "vm_hook": "Quality improvement usually owns the clinical side, and the service measures are the ones nobody owns cleanly.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: Blue Shield sits about a half-star from 4.0, and the fastest points are the service measures, scored on live calls between now and December. We keep those steady during the day. Worth fifteen minutes on which measures decide it for a book like yours? Thanks."
+   }
+  },
+  {
+   "email": "christine.mckinney@blueshieldca.com",
+   "firstName": "Christine",
+   "lastName": "McKinney",
+   "companyName": "Blue Shield of California",
+   "companyDomain": "blueshieldca.com",
+   "jobTitle": "Vice President, Customer Experience and Digital Transformation",
+   "linkedinUrl": "https://www.linkedin.com/in/christine-mckinney-2237b4/",
+   "customVariables": {
+    "plan_name": "Blue Shield of California",
+    "qbp_avg": "3.5",
+    "vm_hook": "The customer experience number and the Stars number are the same calls, and they're being scored this week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I wrote: at about 3.5, Blue Shield's next half-star sits in the customer service measures, and those are decided in the busy weeks, not in October. We hold service steady during the day on top of the WFM already in place. Worth a short call on how that lands in your area? Thanks."
+   }
+  },
+  {
+   "email": "rebecca.gale@blueshieldca.com",
+   "firstName": "Rebecca",
+   "lastName": "Gale",
+   "companyName": "Blue Shield of California",
+   "companyDomain": "blueshieldca.com",
+   "jobTitle": "Senior Director, End-to-End Member Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/rebecca-gale-b0898430/",
+   "customVariables": {
+    "plan_name": "Blue Shield of California",
+    "qbp_avg": "3.5",
+    "vm_hook": "End-to-end member experience covers the exact calls CMS scores, and they're being scored this measurement year.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. My note in short: Blue Shield looks to be near 3.5, and the member experience measures are the ones that can still move this cycle. We keep adherence and handle time steady during the day so those calls hold up. Worth fifteen minutes on your contracts nearest the line? Thanks."
+   }
+  },
+  {
+   "email": "gaurav.gambhir@blueshieldca.com",
+   "firstName": "Gaurav",
+   "lastName": "Gambhir",
+   "companyName": "Blue Shield of California",
+   "companyDomain": "blueshieldca.com",
+   "jobTitle": "Senior Director, Member Engagement / Personalization / AI",
+   "linkedinUrl": "https://www.linkedin.com/in/gauravgambhir/",
+   "customVariables": {
+    "plan_name": "Blue Shield of California",
+    "qbp_avg": "3.5",
+    "vm_hook": "Member engagement gets scored on the phone too, and that side is decided in the live weeks between now and December.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Quick version: Blue Shield sits near 3.5, and the service side of the member experience measures is still open this year. We keep the service floor steady during the day on top of the WFM already running. Worth a short conversation on where that fits? Thanks."
+   }
+  },
+  {
+   "email": "danielle.henderson@cambiahealth.com",
+   "firstName": "Danielle",
+   "lastName": "Henderson",
+   "companyName": "Cambia Health Solutions",
+   "companyDomain": "cambiahealth.com",
+   "jobTitle": "Vice President Customer Experience and Operations",
+   "linkedinUrl": "https://www.linkedin.com/in/danielle-henderson-b1b615109/",
+   "customVariables": {
+    "plan_name": "Regence",
+    "qbp_avg": "3.0",
+    "vm_hook": "Customer experience and operations in one seat means you own the calls CMS is scoring this week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: Regence sits near 3.0, and the customer service measures are the ones that move fastest from there. They're decided in the busy weeks, and we keep service steady through them on top of the WFM you already run. Worth a short call on how that looks from your seat? Thanks."
+   }
+  },
+  {
+   "email": "kirsten.sanderson-cornelius@centene.com",
+   "firstName": "Kirsten",
+   "lastName": "Sanderson-Cornelius",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Senior Director, Medicare Strategy Quality Improvement",
+   "linkedinUrl": "https://www.linkedin.com/in/kirstenvsanderson/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Medicare strategy quality is exactly the seat that has to explain the service measures every October.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I wrote: Wellcare's book looks to be near 3.0 on the weighted view, and the service measures are the fastest points back. They're scored in the busy weeks, and we keep service steady through them on top of the WFM already running. Worth fifteen minutes on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "jesse.korella@centene.com",
+   "firstName": "Jesse",
+   "lastName": "Korella",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Vice President, Customer Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/jesse-korella/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Customer experience at Centene's scale is a Stars number, and the calls behind it are being scored this week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Quick version: Wellcare sits near 3.0 on the weighted view, and the customer service measures are the ones that move fastest from there. We keep adherence and handle time steady during the day, on top of the WFM you already run. Worth a short call on how that fits your area? Thanks."
+   }
+  },
+  {
+   "email": "kellie.rice@centene.com",
+   "firstName": "Kellie",
+   "lastName": "Rice",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Vice President, Sales and Member Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/kellie-rice-16ba3a2a/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Sales and member experience in one seat means retention and Stars are the same phone calls.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting, and congrats on the new role. Wellcare's book looks to be near 3.0, and the service measures are the fastest way back toward 4.0. They're scored in the busy weeks, and we keep service steady through them on top of the WFM already in place. Worth a short conversation before the fall peak? Thanks."
+   }
+  },
+  {
+   "email": "kmottl@centene.com",
+   "firstName": "Katie",
+   "lastName": "Mottl",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Vice President, Product & Member Engagement",
+   "linkedinUrl": "https://www.linkedin.com/in/kathleen-mottl-ms/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Member engagement gets scored on the phone, and that part is decided in the live weeks, not in October.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I emailed: Wellcare sits near 3.0 on the weighted view, and the customer service measures are still open this measurement year. We keep adherence and handle time steady during the day on top of the WFM you already run. Worth fifteen minutes on where that fits? Thanks."
+   }
+  },
+  {
+   "email": "jamie.morin@centene.com",
+   "firstName": "Jamie",
+   "lastName": "Morin",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Vice President, Quality Improvement (Strategy & Vendor Management)",
+   "linkedinUrl": "https://www.linkedin.com/in/jamie-morin-31438827/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Vendor management on the quality side usually covers clinical vendors, and the service measures sit outside that list.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. My note in short: Wellcare sits near 3.0 on the weighted view, and the customer service measures are the ones that can still move this cycle. We keep service steady during the day on top of the WFM already running. Worth fifteen minutes on which measures usually decide it? Thanks."
+   }
+  },
+  {
+   "email": "kari.gilson@centene.com",
+   "firstName": "Kari",
+   "lastName": "Hadley Gilson",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Vice President, Quality & Risk Adjustment Process Improvement",
+   "linkedinUrl": "https://www.linkedin.com/in/kari-hadley-gilson-mph-cphq-b265b297/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Process improvement across quality is the seat that sees the service measures slip first in a peak week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: Wellcare sits near 3.0 on the weighted view, and the customer service measures are the ones still open this year. We keep service steady during the day on top of the WFM you already run. Worth fifteen minutes on which measures usually decide the next half-star? Thanks."
+   }
+  },
+  {
+   "email": "paul.whitaker@centene.com",
+   "firstName": "Paul",
+   "lastName": "Whitaker",
+   "companyName": "Centene Corporation",
+   "companyDomain": "centene.com",
+   "jobTitle": "Sr. Director Call Center Customer Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/paul-whitaker-46a33812/",
+   "customVariables": {
+    "plan_name": "Wellcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Call center customer experience is the exact number CMS scores, and you own the floor it's scored on.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I wrote: Wellcare sits near 3.0 on the weighted view, and the customer service measures are decided on your floor in the busy weeks. We sit on top of the WFM and phone system already there and keep adherence and handle time steady during the day. Worth fifteen minutes on how that lands? Thanks."
+   }
+  },
+  {
+   "email": "grace.crofton@ccmapd.com",
+   "firstName": "Grace",
+   "lastName": "Kim Crofton",
+   "companyName": "Clever Care Health Plan",
+   "companyDomain": "clevercarehealthplan.com",
+   "jobTitle": "Vice President, Risk Adjustment and Quality",
+   "linkedinUrl": "https://www.linkedin.com/in/grace-kim-crofton-b986b71/",
+   "customVariables": {
+    "plan_name": "Clever Care",
+    "qbp_avg": "3.5",
+    "vm_hook": "Risk adjustment and quality in one seat means you own both halves of the revenue, and the service half is scored now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting, and congrats on the new role. Clever Care looks to be near 3.5, so the next half-star is the bonus line, and the service measures are the fastest way there. They're scored in the busy weeks, and we keep service steady through them. Worth a short conversation before the fall peak? Thanks."
+   }
+  },
+  {
+   "email": "charyl.norwood@chpw.org",
+   "firstName": "Charyl",
+   "lastName": "Norwood",
+   "companyName": "Community Health Plan of Washington",
+   "companyDomain": "chpw.org",
+   "jobTitle": "Vice President Customer Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/charyl-n-a1509951/",
+   "customVariables": {
+    "plan_name": "CHPW",
+    "qbp_avg": "3.0",
+    "vm_hook": "Customer experience at a 3.0 book is where the next half-star usually comes from, and it's being scored this week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: CHPW looks to be near 3.0, and the customer service measures are the fastest points back toward 4.0. They're scored on live calls between now and December, and we keep adherence and handle time steady during the day. Worth fifteen minutes on where that fits? Thanks."
+   }
+  },
+  {
+   "email": "vidur.sharma@devoted.com",
+   "firstName": "Vidur",
+   "lastName": "Sharma",
+   "companyName": "Devoted Health",
+   "companyDomain": "devoted.com",
+   "jobTitle": "Senior Director, Member Experience Operations",
+   "linkedinUrl": "https://www.linkedin.com/in/vidur-sharma-b4985952/",
+   "customVariables": {
+    "plan_name": "Devoted",
+    "qbp_avg": "3.5",
+    "vm_hook": "Member experience operations is the seat where the CAHPS score and the schedule meet, and both are live right now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting, and congrats on the newer role. Devoted looks to be near 3.5, and the service measures that decide the next half-star are scored in the busy weeks. We keep adherence and handle time steady through them on top of the WFM you already run. Worth fifteen minutes before the fall peak? Thanks."
+   }
+  },
+  {
+   "email": "alison.holliday@devoted.com",
+   "firstName": "Alison",
+   "lastName": "Holliday",
+   "companyName": "Devoted Health",
+   "companyDomain": "devoted.com",
+   "jobTitle": "Medical Director, Member Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/alison-holliday-md-mph-ab050231/",
+   "customVariables": {
+    "plan_name": "Devoted",
+    "qbp_avg": "3.5",
+    "vm_hook": "A medical director on member experience sees the clinical side, and the service measures are the part scored on the phone.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: Devoted sits near 3.5, and the customer service measures are the fastest points toward 4.0. They're scored on live calls between now and December, and we keep those steady during the day. Worth a short conversation on where that fits your work? Thanks."
+   }
+  },
+  {
+   "email": "kara_kitazaki-chun@hmsa.com",
+   "firstName": "Kara",
+   "lastName": "Kitazaki-Chun",
+   "companyName": "HMSA",
+   "companyDomain": "hmsa.com",
+   "jobTitle": "Vice President, Quality Management",
+   "linkedinUrl": "https://www.linkedin.com/in/kara-kitazaki-chun-52600b1/",
+   "customVariables": {
+    "plan_name": "HMSA",
+    "qbp_avg": "3.5",
+    "vm_hook": "Quality management at HMSA covers the whole book, and the service measures are the part scored this week.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: HMSA looks to be near 3.5, so the next half-star is the bonus line, and the customer service measures are the fastest way there. We keep service steady during the day on top of the WFM you already run. Worth fifteen minutes on the contracts nearest the line? Thanks."
+   }
+  },
+  {
+   "email": "andrew.hebert@medica.com",
+   "firstName": "Andrew",
+   "lastName": "Hebert",
+   "companyName": "Medica",
+   "companyDomain": "medica.com",
+   "jobTitle": "Director of Clinical HEDIS Strategy",
+   "linkedinUrl": "https://www.linkedin.com/in/andrew-hebert-841b2750/",
+   "customVariables": {
+    "plan_name": "Medica",
+    "qbp_avg": "3.5",
+    "vm_hook": "HEDIS is the clinical half, and the service half is being scored on live calls right now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Short version: Medica looks to be near 3.5, so the next half-star is the bonus line, and the service measures are the fastest way there. We keep adherence and handle time steady during the day on top of the WFM you already run. Worth a short call on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "jimasha.daniel@medica.com",
+   "firstName": "Jimasha",
+   "lastName": "Daniel",
+   "companyName": "Medica",
+   "companyDomain": "medica.com",
+   "jobTitle": "Senior Director, Risk Adjustment & HEDIS",
+   "linkedinUrl": "https://www.linkedin.com/in/jimashadaniel/",
+   "customVariables": {
+    "plan_name": "Medica",
+    "qbp_avg": "3.5",
+    "vm_hook": "You're new in the seat, and the service measures are the part of the book being scored on your first fall peak.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting, and congrats on the new role. Medica sits near 3.5, and the customer service measures are the fastest points to the next half-star. They're scored in the busy weeks, and we keep service steady through them. Worth fifteen minutes before the fall volume hits? Thanks."
+   }
+  },
+  {
+   "email": "bill.gerlach@point32health.org",
+   "firstName": "Bill",
+   "lastName": "Gerlach",
+   "companyName": "Point32Health",
+   "companyDomain": "point32health.org",
+   "jobTitle": "Vice President, Customer Experience and Digital Innovation",
+   "linkedinUrl": "https://www.linkedin.com/in/gerlachbill/",
+   "customVariables": {
+    "plan_name": "Point32Health",
+    "qbp_avg": "3.5",
+    "vm_hook": "Customer experience and digital in one seat means the calls that still reach a person are the ones CMS scores.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I wrote: Point32 looks to be near 3.5, so the next half-star is the bonus line, and the customer service measures are the fastest way there. We keep adherence and handle time steady during the day on top of the WFM already running. Worth a short conversation on how that fits your area? Thanks."
+   }
+  },
+  {
+   "email": "jensmith@lumeris.com",
+   "firstName": "Jennifer",
+   "lastName": "Smith",
+   "companyName": "Essence Healthcare",
+   "companyDomain": "essencehealthcare.com",
+   "jobTitle": "Senior Director, Member Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/jennifer-smith-ab72254/",
+   "customVariables": {
+    "plan_name": "Essence Healthcare",
+    "qbp_avg": "3.0",
+    "vm_hook": "Member experience at a 3.0 book is where the next half-star usually comes from, and it's being scored now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Quick version: Essence looks to be near 3.0, and the member experience measures are the fastest way back toward 4.0. They're scored in the busy weeks, and we keep service steady through them on top of the WFM you already run. Worth a short call on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "mthomas@lacare.org",
+   "firstName": "Thomas",
+   "lastName": "M.",
+   "companyName": "L.A. Care Health Plan",
+   "companyDomain": "lacare.org",
+   "jobTitle": "Director, Quality Performance Informatics",
+   "linkedinUrl": "https://www.linkedin.com/in/thomas-m-7442b36/",
+   "customVariables": {
+    "plan_name": "L.A. Care",
+    "qbp_avg": "3.0",
+    "vm_hook": "Quality performance informatics sees the service measures in the data first, usually a few weeks after they slipped on the floor.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Quick version: L.A. Care looks to be near 3.0, and the customer service measures are the fastest points back toward 4.0. They're scored on live calls in the busy weeks, and we keep adherence and handle time steady during the day. Worth a short conversation on which measures usually decide it? Thanks."
+   }
+  }
+ ],
+ "greylisted_hold": [
+  {
+   "email": "charity.duckett@cambiahealth.com",
+   "firstName": "Charity",
+   "lastName": "Duckett",
+   "companyName": "Cambia Health Solutions",
+   "companyDomain": "cambiahealth.com",
+   "jobTitle": "Director, Member Experience and Engagement",
+   "linkedinUrl": "https://www.linkedin.com/in/charity-duckett-26a6b74a/",
+   "customVariables": {
+    "plan_name": "Regence",
+    "qbp_avg": "3.0",
+    "vm_hook": "Member experience at a 3.0 book is where the next half-star usually comes from, and it's being scored now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I emailed: Regence looks to be near 3.0, and the member experience measures are the fastest way back toward 4.0. They're scored on live calls between now and December, and we keep those steady during the day. Worth fifteen minutes on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "nicole.tuite@cambiahealth.com",
+   "firstName": "Nicole",
+   "lastName": "Tuite",
+   "companyName": "Cambia Health Solutions",
+   "companyDomain": "cambiahealth.com",
+   "jobTitle": "Vice President Customer Experience and Service Delivery Operations",
+   "linkedinUrl": "https://www.linkedin.com/in/ntuite/",
+   "customVariables": {
+    "plan_name": "Regence",
+    "qbp_avg": "3.0",
+    "vm_hook": "You're two months into the seat, so the fall peak is the first one on your watch, and it's being scored.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting, and congrats on the new role. Regence looks to be near 3.0, and the service measures that move it are scored in the busy weeks between now and December. We keep adherence and handle time steady during the day on top of the WFM already in place. Worth fifteen minutes before the fall volume hits? Thanks."
+   }
+  },
+  {
+   "email": "leighanne.neal@bcbsfl.com",
+   "firstName": "Leigh Anne",
+   "lastName": "Neal",
+   "companyName": "Florida Blue",
+   "companyDomain": "floridablue.com",
+   "jobTitle": "Vice President, Medicare Quality",
+   "linkedinUrl": "https://www.linkedin.com/in/leigh-anne-neal/",
+   "customVariables": {
+    "plan_name": "Florida Blue",
+    "qbp_avg": "3.5",
+    "vm_hook": "Medicare quality at Florida Blue's size means the next half-star is a large number, and the service half is scored now.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. The reason I emailed: Florida Blue looks to be near 3.5, so the next half-star is the bonus line, and the service measures are the fastest way there. They're decided in the busy weeks, and we keep service steady through them on top of the WFM already in place. Worth fifteen minutes on the contracts closest to the line? Thanks."
+   }
+  },
+  {
+   "email": "david.reid@bcbsfl.com",
+   "firstName": "David",
+   "lastName": "Reid",
+   "companyName": "Florida Blue",
+   "companyDomain": "floridablue.com",
+   "jobTitle": "Senior Director, Medicare Member Experience",
+   "linkedinUrl": "https://www.linkedin.com/in/davidreidcisa/",
+   "customVariables": {
+    "plan_name": "Florida Blue",
+    "qbp_avg": "3.5",
+    "vm_hook": "Medicare member experience is the exact set of measures still open this year, and they're scored on the phone.",
+    "voice_script": "Hey, it's Nathan Belfield, thanks for connecting. Quick version: Florida Blue sits near 3.5, and the member experience measures are the ones that decide the next half-star. They're scored on live calls between now and December, and we keep adherence and handle time steady during the day. Worth a short call on which measures usually decide it? Thanks."
+   }
+  }
+ ],
+ "bench": [
+  {
+   "name": "Michelle Zegada-Frias",
+   "company": "CareFirst BlueCross BlueShield",
+   "title": "Director, Quality Management and Standards",
+   "linkedin": "https://www.linkedin.com/in/michelle-zegada-frias-pmp-458a733/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Jen Jacobs",
+   "company": "Centene Corporation",
+   "title": "Director, Member Experience & Innovation",
+   "linkedin": "https://www.linkedin.com/in/jen-jacobs-6b7761a/",
+   "reason": "invalid/mailbox_not_found",
+   "note": "Work Email returns jennifer.jacobs@wellcare.com both passes, ZeroBounce says mailbox not found"
+  },
+  {
+   "name": "Anita Borgmeyer",
+   "company": "Centene Corporation",
+   "title": "Staff Vice President, Prospect and Member Engagement and Communications",
+   "linkedin": "https://www.linkedin.com/in/anita-borgmeyer-ab64294/",
+   "reason": "invalid/mailbox_not_found",
+   "note": "Work Email returns aborgmeyer@centene.com both passes, ZeroBounce says mailbox not found"
+  },
+  {
+   "name": "Erin Curran",
+   "company": "Centene Corporation",
+   "title": "Vice President, Quality Improvement and Accreditation",
+   "linkedin": "https://www.linkedin.com/in/erin-curran-mph-msw/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Alicia Johnson",
+   "company": "Centene Corporation",
+   "title": "Vice President, Quality Improvement",
+   "linkedin": "https://www.linkedin.com/in/alicia-johnson-310018217/",
+   "reason": "invalid/mailbox_not_found",
+   "note": "Work Email returns alicia.johnson@centene.com both passes, ZeroBounce says mailbox not found; new in seat Jun 2026, mailbox may not be indexed yet"
+  },
+  {
+   "name": "Kelsey K.",
+   "company": "Devoted Health",
+   "title": "Director, CAHPS Program",
+   "linkedin": "https://www.linkedin.com/in/kelsey-k-21492a1b/",
+   "reason": "bench_wrong_person",
+   "note": "second pass returned kelsey.mcmahon@devoted.com, a nurse practitioner, not this Kelsey; needs the surname from LinkedIn before any email"
+  },
+  {
+   "name": "Rayson Lim",
+   "company": "IEHP",
+   "title": "Senior Director, Member Experience",
+   "linkedin": "https://www.linkedin.com/in/raysonlim/",
+   "reason": "no_email",
+   "note": "goes by Ray"
+  },
+  {
+   "name": "Benjamin Burke",
+   "company": "Medica",
+   "title": "Director of Quality Improvement",
+   "linkedin": "https://www.linkedin.com/in/benjamin-burke-75bc/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Keith McMaster",
+   "company": "MetroPlusHealth",
+   "title": "Senior Director of Medicare Stars",
+   "linkedin": "https://www.linkedin.com/in/keith-mcmaster-8125b888/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Cecilia Zhang",
+   "company": "MetroPlusHealth",
+   "title": "Director of CAHPS",
+   "linkedin": "https://www.linkedin.com/in/cecilia-zhang/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Eleanor Sorrentino",
+   "company": "MetroPlusHealth",
+   "title": "SVP, Quality Management",
+   "linkedin": "https://www.linkedin.com/in/eleanor-sorrentino-b38b411a/",
+   "reason": "no_email",
+   "note": ""
+  },
+  {
+   "name": "Laura Brosen",
+   "company": "MetroPlusHealth",
+   "title": "Senior Director of Quality, Performance Improvement",
+   "linkedin": "https://www.linkedin.com/in/laura-brosen-rn-msj-98982a5/",
+   "reason": "no_email",
+   "note": "second pass returned lr@metroplus.org, not a personal mailbox, discarded"
+  },
+  {
+   "name": "Kennya Da Matta",
+   "company": "VNS Health",
+   "title": "Director, Quality Management",
+   "linkedin": "https://www.linkedin.com/in/kennya-dilegge-msn-rn-cssgb-348a862aa/",
+   "reason": "no_email",
+   "note": "LinkedIn shows Dilegge, confirm surname at email step"
+  },
+  {
+   "name": "Christina Lomax",
+   "company": "VNS Health",
+   "title": "Director, Quality & Performance Improvement",
+   "linkedin": "https://www.linkedin.com/in/christina-b-lomax-mha-3388a83a/",
+   "reason": "no_email",
+   "note": "from the committee table, never emailed, re-bridged current Sep 3"
+  }
+ ]
+}

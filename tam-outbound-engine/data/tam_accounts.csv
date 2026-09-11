@@ -1,7 +1,8 @@
-domain,company,industry,employees,agent_count,acd,wfm
-hcsc.com,Health Care Service Corporation,Health Insurance,25000,5000,Unknown,Unknown
-amerihealthcaritas.com,AmeriHealth Caritas,Health Insurance,7000,3000,Five9,NICE
-navient.com,Navient,Financial Services,6000,2500,Genesys,Calabrio
-breadfinancial.com,Bread Financial,Financial Services,8000,2000,Unknown,Calabrio
-lincolnfinancial.com,Lincoln Financial Group,Insurance,13000,2200,NICE,NICE
-onemain.com,OneMain Financial,Financial Services,9000,2800,Unknown,Unknown
+domain,company,industry,employees,agent_count,acd,acd_source,acd_observed,wfm,wfm_source,wfm_observed,source
+centene.com,Centene Corporation,Health Insurance,61100,10000,Unknown,,,Unknown,,,"employees 61,100 at 2025-12-31 per SEC filings (stockanalysis.com/stocks/cnc/employees); 28.0M at-risk members per Q2 2025 10-Q (sec.gov/Archives/edgar/data/1071739/000107173925000150). agent_count is a banded ESTIMATE, not a disclosed figure: no payer publishes it. Confirm with the exact-title count method used on icp-committees (four exact contact-centre title strings, fuzzy matching off). Band is robust: 5,000-9,999 scores 22 and 10,000+ scores 25, so the tier does not turn on it."
+hcsc.com,Health Care Service Corporation,Health Insurance,25000,5000,Unknown,,,Unknown,,,
+amerihealthcaritas.com,AmeriHealth Caritas,Health Insurance,7000,3000,Avaya,predictleads:https://www.avaya.com,2024-01-30,Verint,predictleads:http://www.verint.com,2024-01-30,
+navient.com,Navient,Financial Services,6000,2500,Genesys,,,Calabrio,,,
+breadfinancial.com,Bread Financial,Financial Services,8000,2000,Unknown,,,Calabrio,,,
+lincolnfinancial.com,Lincoln Financial Group,Insurance,13000,2200,NICE,,,NICE,,,
+onemain.com,OneMain Financial,Financial Services,9000,2800,Unknown,,,Unknown,,,

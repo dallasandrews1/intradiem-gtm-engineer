@@ -1,0 +1,146 @@
+company,domain,industry,acd_last_seen,wfm_latest,all_platforms,sfdc_owner_id
+Aware Super,aware.com.au,Banking,2026-04-16,,"Amazon Connect (2024-02-08), Genesys Cloud (2026-04-16)",005V500000EvcGbIAJ
+Clear2Pay NV SA,fisglobal.com,Banking,2026-05-14,,"Amazon Connect (2024-07-30), Avaya Call Management System (2024-04-16), Genesys (2026-05-14), Genesys Cloud (2026-05-14)",005V5000001gBKBIA2
+Frost Bank,frostbank.com,Banking,2025-09-09,Verint,"Avaya (2025-07-15), Avaya Experience Portal (2024-10-16), Genesys (2025-09-09), Genesys Cloud (2025-07-15), Genesys Cloud CX (2025-07-15), Verint Workforce Management (2022-02-23)",005V5000001gBKBIA2
+Huntington National Bank,huntington.com,Banking,2026-02-22,,"Genesys (2026-02-22), Genesys Cloud (2025-06-22)",005V5000001gAGQIA2
+Intrum,intrum.com,Banking,2026-08-24,,"Genesys (2026-08-24), Genesys Cloud (2026-08-24), Genesys Cloud CX (2026-08-24)",005V5000001gBKBIA2
+M&T Bank Corporation,mtb.com,Banking,2026-08-06,,"Genesys Cloud (2026-08-06), Genesys Cloud CX (2026-08-06)",005V5000001gAGSIA2
+OP Financial Group,op.fi,Banking,2026-03-30,,"Genesys (2026-03-30), Genesys Cloud (2026-03-30)",005V5000001gBKBIA2
+Rabobank,rabobank.com,Banking,2026-01-21,,"Genesys (2026-01-21), Genesys Cloud (2026-01-21)",005V5000002ZZTFIA4
+VyStar Credit Union,vystarcu.org,Banking,2026-05-19,,"Avaya (2025-11-22), Avaya Call Management System (2024-06-25), Genesys (2026-05-19), Genesys Cloud (2026-05-19)",005V5000006tDZ3IAM
+Automated Health Systems (AHS),automated-health.com,Business Services,2026-08-06,Calabrio,"Calabrio (2024-11-23), Five9 (2026-06-29), Genesys (2026-08-06), Genesys Cloud (2026-08-06), NICE inContact (2022-09-30)",005V5000003n4QZIAY
+Computacenter plc,computacenter.com,Business Services,2026-09-02,,"Five9 (2022-10-20), Genesys Cloud (2026-09-02), Genesys Cloud CX (2026-08-17)",005V5000002ZZTFIA4
+Dell,dell.com,Business Services,2025-12-21,,"Genesys (2025-12-21), Genesys Cloud (2025-12-21), Genesys Cloud CX (2025-12-21)",005V5000001gAGTIA2
+Ebay Ventures,ebayinc.com,Business Services,2026-08-26,Aspect,"Alvaria (2024-11-22), Avaya (2022-07-26), Genesys Cloud (2026-08-26), Genesys Cloud CX (2026-08-21)",005V5000001gAGTIA2
+HelloFresh USA,hellofresh.com,Business Services,2026-03-06,Aspect,"Alvaria (2024-11-24), Genesys Cloud (2026-03-06)",005V5000006tDZ3IAM
+SimpliSafe,simplisafe.com,Business Services,2025-09-17,NICE,"Avaya (2025-08-23), Five9 (2025-06-08), Genesys (2025-09-17), Genesys Cloud (2025-08-27), Genesys Cloud CX (2025-08-27), Nice Workforce Management (2025-08-27)",005V5000001gAGSIA2
+Teleperformance UK,teleperformance.com,Business Services,2026-03-25,Calabrio,"Alvaria (2025-03-10), Amazon Connect (2025-02-24), Avaya (2025-03-10), Calabrio (2025-03-10), Genesys (2026-03-25), Genesys Cloud (2025-04-09), Genesys Cloud CX (2026-03-12), NICE CXone (2024-10-21)",005V5000002ZZTFIA4
+Vattenfall,vattenfall.com,Business Services,2026-05-07,,"Amazon Connect (2024-08-12), Avaya (2024-03-24), Genesys Cloud (2026-05-07)",005V5000001gBKBIA2
+Wolters Kluwer,wolterskluwer.com,Business Services,2026-03-10,,Genesys Cloud (2026-03-10),005V5000001gAGQIA2
+Zurich North America,zurichna.com,Business Services,2026-03-09,,"Genesys (2026-03-09), Genesys Cloud (2025-11-14)",005V500000GElNdIAL
+Pitney Bowes,pitneybowes.com,Custom Software & IT Services,2026-09-04,,"Avaya (2023-10-21), Genesys (2026-09-04), Genesys Cloud (2025-09-01), RingCentral (2026-05-27)",005V5000001gAGPIA2
+ATB Financial,atb.com,Div Financial Services,2026-05-26,,"Genesys (2026-03-03), Genesys Cloud (2026-05-26), RingCentral (2025-12-08)",005V5000004XWIAIA4
+Admiral Group,admiralgroup.co.uk,Div Financial Services,2026-07-17,,"Amazon Connect (2025-05-03), Genesys Cloud (2026-07-17)",005V5000002ZZTFIA4
+Athene,athene.com,Div Financial Services,2026-09-05,,"Genesys (2026-09-05), Genesys Cloud (2026-09-05)",005V5000001gBKBIA2
+Chime,chime.com,Div Financial Services,2026-08-23,Calabrio,"Avaya (2020-12-03), Calabrio (2026-07-23), Five9 (2026-01-30), Genesys (2026-08-23), Genesys Cloud (2026-08-23), Genesys Cloud CX (2026-08-15)",005V5000001gAGSIA2
+Credit Acceptance,creditacceptance.com,Div Financial Services,2026-09-04,Aspect,"Alvaria (2024-11-20), Five9 (2025-06-12), Genesys (2026-09-04), Genesys Cloud (2026-09-04), Genesys Cloud CX (2026-01-26), NICE inContact (2024-11-14)",005V5000001gAGSIA2
+DNB,dnb.no,Div Financial Services,2026-07-27,,"Avaya (2026-07-27), Genesys (2026-07-27), Genesys Cloud (2026-07-27), Genesys Cloud CX (2026-07-27)",005V5000001gBKBIA2
+Desjardins Group,desjardins.com,Div Financial Services,2026-07-10,,Genesys (2026-07-10),005V5000004XWIAIA4
+Domestic & General,domesticandgeneral.com,Div Financial Services,2026-03-29,,"Genesys (2026-03-29), Genesys Cloud (2026-02-06)",005V5000002ZZTFIA4
+Fidelity Investments,fidelity.com,Div Financial Services,2026-02-26,,"Genesys Cloud (2026-02-26), Genesys Cloud CX (2026-02-26)",005V5000001gAGSIA2
+Fidelity Investments Canada ULC,fidelity.ca,Div Financial Services,2026-06-01,,"Avaya (2025-06-11), Genesys (2026-06-01), Genesys Cloud (2026-06-01)",005V5000001gAGSIA2
+Franklin Templeton Investments,franklintempleton.com,Div Financial Services,2025-12-09,,"Genesys (2025-11-11), Genesys Cloud (2025-12-09)",005V5000001gAGUIA2
+General Motors Financial Company,gmfinancial.com,Div Financial Services,2026-07-27,,"Avaya (2026-03-11), Genesys (2026-07-27), Genesys Cloud (2026-07-27)",005V5000001gAGWIA2
+Gjensidige,gjensidige.no,Div Financial Services,2025-10-28,Calabrio,"Calabrio (2025-12-04), Genesys (2025-10-28)",005V5000001gBKBIA2
+Greensky,greensky.com,Div Financial Services,2025-11-16,,Genesys (2025-11-16),005V5000001gBKBIA2
+Manulife Financial Corporation,manulife.com,Div Financial Services,2026-01-01,Verint,"Avaya Call Management System (2022-12-09), Genesys Cloud (2026-01-01), Genesys Cloud CX (2026-01-01), Verint Workforce Management (2025-11-29)",005V5000001gAGQIA2
+Morgan Stanley,morganstanley.com,Div Financial Services,2026-05-24,,"Genesys (2026-05-24), Genesys Cloud (2026-05-24)",005V5000004XWIAIA4
+National Bank of Canada,nbc.ca,Div Financial Services,2026-04-26,,"Genesys (2026-04-26), Genesys Cloud (2026-04-26)",005V5000004XWIAIA4
+NationsBenefits,nationsbenefits.com,Div Financial Services,2026-07-30,Calabrio,"Calabrio (2024-11-21), Genesys (2026-07-09), Genesys Cloud (2026-07-09), Genesys Cloud CX (2026-07-30)",005V5000001gAGWIA2
+Nationwide Mutual Insurance Company,nationwide.com,Div Financial Services,2026-09-04,,"Avaya (2023-03-09), Genesys (2026-09-04), Genesys Cloud (2026-09-04), Genesys Cloud CX (2026-01-02)",005V5000001gAGSIA2
+PayPal,paypal.com,Div Financial Services,2026-05-05,,"Genesys Cloud (2026-05-05), Genesys Cloud CX (2026-05-05), TalkDesk (2026-03-21)",005V5000001gAGQIA2
+Principal Financial Group,principal.com,Div Financial Services,2026-08-11,,"Genesys (2026-06-30), Genesys Cloud (2026-08-11)",005V5000001gAGWIA2
+Royal Automobile Club of Queensland ( RACQ),racq.com.au,Div Financial Services,2026-08-29,Aspect,"Alvaria (2024-11-20), Genesys Cloud (2026-08-29)",005V5000001gBKBIA2
+Scotiabank,scotiabank.com,Div Financial Services,2026-07-09,Verint,"Amazon Connect (2026-05-30), Genesys Cloud (2026-07-09), NICE inContact (2026-05-30), Verint (2026-07-17)",005V5000001gAGQIA2
+Skipton Building Society,skipton.co.uk,Div Financial Services,2026-09-04,,"Genesys (2026-09-04), Genesys Cloud (2023-08-28)",005V5000002ZZTFIA4
+Southwest Business Corporation (SWBC),swbc.com,Div Financial Services,2026-06-20,Aspect,"Alvaria (2026-08-26), Avaya (2026-01-20), Genesys (2026-06-20), Genesys Cloud (2026-06-20), Genesys Cloud CX (2024-11-25)",005V5000001gAGTIA2
+The Co-operators,cooperators.ca,Div Financial Services,2026-07-09,,"Genesys (2026-07-09), Genesys Cloud (2026-07-09)",005V5000004XWIAIA4
+The Hartford Financial Services Group,thehartford.com,Div Financial Services,2026-08-28,NICE,"Amazon Connect (2026-08-21), Five9 (2026-08-21), Genesys Cloud (2026-08-28), NICE CXone (2025-09-15), Nice Workforce Management (2024-11-16)",005V5000001gAGSIA2
+Uniqa,uniqa.pl,Div Financial Services,2026-08-08,,Genesys Cloud (2026-08-08),005V5000002ZZTFIA4
+VanCity,vancity.com,Div Financial Services,2026-08-16,,"Genesys (2026-08-16), Genesys Cloud (2026-08-16)",005V5000004XWIAIA4
+Visa,visa.com,Div Financial Services,2026-07-04,,Genesys Cloud (2026-07-04),005V5000006tDZ3IAM
+iA Financial Group,ia.ca,Div Financial Services,2026-09-02,,"Genesys (2026-09-02), Genesys Cloud (2026-09-02), Genesys Cloud CX (2026-05-07)",005V5000004XWIAIA4
+loanDepot.com LLC,loandepot.com,Div Financial Services,2026-08-13,Verint,"Avaya (2022-01-20), Genesys (2026-08-13), Genesys Cloud (2026-08-13), Verint Workforce Management (2025-10-21)",005V5000001gBKBIA2
+Kaplan Higher Education,kaplan.com,Education,2026-06-23,,"Avaya (2023-11-30), Genesys (2026-06-23), Genesys Cloud (2026-06-23), Genesys Cloud CX (2026-02-27)",005V5000001gAGSIA2
+University of Phoenix,phoenix.edu,Education,2026-08-30,,Genesys Cloud (2026-08-30),005V5000001gBKBIA2
+Computershare UK,computershare.com,Fin Services,2026-08-14,,"Avaya (2023-04-03), Avaya Call Management System (2023-04-03), Genesys (2023-04-03), Genesys Cloud (2026-08-14)",005V5000001gBKBIA2
+Florida Blue,floridablue.com,Health Insurance,2026-07-10,,"Avaya (2020-06-04), Five9 (2026-01-08), Genesys Cloud (2026-07-10), Genesys Cloud CX (2026-07-10)",005V5000006tDZ3IAM
+Premera Blue Cross Washington (BCBS WA),premera.com,Health Insurance,2026-09-03,,"Avaya (2022-07-28), Genesys Cloud (2026-09-03), Genesys Cloud CX (2026-09-03)",005V5000001gBKBIA2
+Independent Health Corporation,independenthealth.com,Healthcare Insurance,2026-07-07,,"Genesys Cloud (2026-07-07), Genesys Cloud CX (2022-09-07)",005V5000001gAPTIA2
+Ascension Health,ascension.org,Healthcare Provider,2026-08-28,,"Avaya (2026-07-11), Genesys Cloud (2026-08-28)",005V5000001gAGWIA2
+Baystate Health,baystatehealth.org,Healthcare Provider,2026-06-23,,"Genesys (2026-06-23), Genesys Cloud (2026-06-23)",005V5000001gBKBIA2
+HCA Healthcare,hcahealthcare.com,Healthcare Provider,2026-07-10,,"Genesys (2026-07-10), Genesys Cloud (2026-07-10), Genesys Cloud CX (2026-07-10)",005V5000006tDZ3IAM
+Intermountain Health,intermountainhealthcare.org,Healthcare Provider,2026-08-16,,"Genesys (2026-08-16), Genesys Cloud (2026-08-16)",005V5000006tDZ3IAM
+Lucet,lucethealth.com,Healthcare Provider,2026-07-05,,Genesys Cloud (2026-07-05),005V5000001gAGRIA2
+McKesson Inc,mckesson.com,Healthcare Provider,2026-07-31,,Genesys Cloud (2026-07-31),005V500000GElNdIAL
+Modivcare (formerly Logisticare),modivcare.com,Healthcare Provider,2026-06-09,,"Avaya (2025-11-19), Five9 (2025-11-19), Genesys (2026-06-09), Genesys Cloud (2026-06-09), Genesys Cloud CX (2026-06-09)",005V5000001gBKBIA2
+Roche Diagnostics,roche.com,Healthcare Provider,2026-05-13,,"Genesys Cloud (2026-05-13), TalkDesk (2025-09-14)",005V5000006tDZ3IAM
+Vantive,vantive.com,Healthcare Provider,2025-11-13,,"Amazon Connect (2025-04-21), Avaya (2025-04-21), Five9 (2025-04-21), Genesys (2025-11-13), Genesys Cloud (2025-11-13)",005V5000001gAGWIA2
+Bon Secours Mercy Health,bsmhealth.org,Healthcare_Provider,2026-03-29,Calabrio,"Calabrio (2026-01-19), Genesys (2026-03-29), Genesys Cloud (2025-04-16)",005V5000001gBKBIA2
+AIG Life Insurance of Canada,aig.ca,Home & Auto Insurance,2026-07-22,Verint,"Avaya (2025-08-20), Genesys (2026-07-14), Genesys Cloud (2026-07-22), Verint (2023-01-18)",005V5000004XWIAIA4
+American Family Insurance,amfam.com,Home & Auto Insurance,2026-09-02,,"Genesys (2026-09-02), Genesys Cloud (2026-09-02), Genesys Cloud CX (2026-09-02)",005V5000001gAGWIA2
+American International Group (AIG),aig.com,Home & Auto Insurance,2026-08-20,Verint,"Avaya (2025-06-08), Genesys Cloud (2026-08-20), Verint (2022-12-09)",005V5000001gAGQIA2
+BlueCross BlueShield South Carolina (BCBS SC),southcarolinablues.com,Home & Auto Insurance,2026-07-06,,"Avaya (2026-06-01), Genesys (2026-05-01), Genesys Cloud (2026-07-06)",005V5000001gBKBIA2
+Gallagher,ajg.com,Home & Auto Insurance,2026-03-04,Calabrio,"Avaya (2025-10-03), Calabrio (2024-11-19), Five9 (2024-10-09), Genesys (2026-03-04), Genesys Cloud (2026-01-29), Verint (2023-03-02)",005V5000001gAGTIA2
+Insurance Corporation of British Columbia (ICBC),icbc.com,Home & Auto Insurance,2026-09-02,Aspect,"Alvaria (2026-07-22), Genesys (2026-07-27), Genesys Cloud (2026-09-02), Genesys Cloud CX (2026-09-02)",005V5000001gAGSIA2
+Mapfre (UK),mapfre.com,Home & Auto Insurance,2026-01-02,,"Avaya (2021-12-14), Genesys (2026-01-02), Genesys Cloud (2024-07-23)",005V5000002ZZTFIA4
+Wawanesa Insurance,wawanesa.com,Home & Auto Insurance,2026-08-28,,"Avaya (2024-06-03), Genesys (2026-08-20), Genesys Cloud (2026-08-28), Genesys Cloud CX (2026-08-20)",005V5000004XWIAIA4
+Achmea,achmea.nl,Insurance,2026-06-17,,"Avaya (2022-05-10), Genesys (2026-06-17), Genesys Cloud (2026-06-17)",005V5000002ZZTFIA4
+Aetna Claims,aetna.com,Insurance,2026-09-03,,Genesys (2026-09-03),005V5000001gA77IAE
+Aetna Clinical,aetna.com,Insurance,2026-09-03,,Genesys (2026-09-03),005V5000001gA77IAE
+Grupo Nacional Provincial SA,gnp.com.mx,Insurance,2026-08-13,,"Genesys (2026-08-13), Genesys Cloud (2026-08-13)",005V5000001gAPOIA2
+BD Biosciences,bd.com,Manufacturing,2026-04-25,,Genesys Cloud (2026-04-25),005V5000006tDZ3IAM
+Cardinal Health,cardinalhealth.com,Manufacturing,2026-09-03,,"Amazon Connect (2025-05-13), Avaya Call Management System (2025-11-11), Five9 (2025-03-13), Genesys (2026-09-03), Genesys Cloud (2026-09-03)",005V5000001gAGSIA2
+Lexmark International,lexmark.com,Manufacturing,2026-02-03,,"Genesys (2026-02-03), Genesys Cloud (2026-01-15), Genesys Cloud CX (2026-01-15)",005V5000001gAGSIA2
+"Medline Industries, Inc.",medline.com,Manufacturing,2026-07-10,,"Amazon Connect (2025-11-21), Five9 (2026-06-23), Genesys Cloud (2026-07-10), Genesys Cloud CX (2026-07-10), NICE CXone (2026-01-11), NICE inContact (2025-11-21), RingCentral (2026-01-11)",005V5000001gBKBIA2
+Red Energy,redenergy.com.au,Manufacturing,2026-06-12,,"Genesys (2026-06-12), Genesys Cloud (2026-06-12)",005V500000EvcGbIAJ
+SMITH & NEPHEW PLC,smith-nephew.com,Manufacturing,2026-06-17,,"Amazon Connect (2026-01-22), Genesys (2026-06-17), Genesys Cloud (2026-06-17), Genesys Cloud CX (2026-06-17)",005V5000002ZZTFIA4
+ZEISS Company,zeiss.com,Manufacturing,2026-08-26,Calabrio,"Calabrio (2026-02-22), Genesys Cloud (2026-08-26)",005V5000001gAPOIA2
+Sirius XM Radio,siriusxm.com,Media & Internet,2026-08-31,,"Amazon Connect (2025-10-13), Genesys Cloud (2026-08-31), Genesys Cloud CX (2026-08-31)",005V5000001gBKBIA2
+Aptive Environmental,aptivepestcontrol.com,Other,2025-11-07,Calabrio,"Calabrio (2024-11-24), Genesys (2025-11-07), Genesys Cloud (2024-04-22)",005V5000006tDZ3IAM
+Sutherland Global Services,sutherlandglobal.com,Outsourcer,2026-07-21,Calabrio,"Calabrio (2026-08-24), Genesys Cloud (2026-07-21), Genesys Cloud CX (2026-06-11)",005V5000001gAGWIA2
+Xerox,xerox.com,Outsourcer,2026-09-02,,"Genesys (2026-09-02), Genesys Cloud (2026-04-26), Genesys Cloud CX (2026-04-26), TalkDesk (2022-07-07)",005V5000001gBKBIA2
+Aaron's,aarons.com,Retail,2026-09-02,,"Genesys (2026-09-02), Genesys Cloud (2025-05-16)",005V5000001gAGTIA2
+Ashley Furniture Industries,ashleyfurnitureindustriesllc.com,Retail,2026-06-21,,"Avaya (2026-06-21), Five9 (2026-03-11), Genesys (2026-06-21), Genesys Cloud (2026-06-21), NICE inContact (2026-06-21)",005V5000001gAGSIA2
+Catalyst Brands,catalystbrands.com,Retail,2026-02-22,,"Genesys (2026-02-22), Genesys Cloud (2026-02-22), Genesys Cloud CX (2026-02-22)",005V5000006tDZ3IAM
+Chewy,chewy.com,Retail,2026-08-21,Calabrio,"Calabrio (2026-07-25), Genesys (2026-08-21), Genesys Cloud (2026-08-21), Genesys Cloud CX (2026-08-21)",005V5000001gAGRIA2
+DriveTime Automotive,drivetime.com,Retail,2026-08-19,,"Avaya (2026-02-04), Genesys (2026-08-19), Genesys Cloud (2026-08-19)",005V5000001gBKBIA2
+Duluth Trading Co.,duluthtrading.com,Retail,2026-09-03,Calabrio,"Calabrio (2026-06-03), Genesys (2026-09-03)",005V5000001gBKBIA2
+H&M Group,hmgroup.com,Retail,2026-08-12,,Genesys Cloud (2026-08-12),005V5000001gBKBIA2
+NEXT,next.co.uk,Retail,2026-01-20,,"Amazon Connect (2026-01-20), Genesys (2026-01-20), Genesys Cloud (2026-01-20)",005V5000002ZZTFIA4
+Newegg,newegg.com,Retail,2026-03-25,,"Amazon Connect (2026-03-25), Genesys (2026-03-25), Genesys Cloud (2026-03-25)",005V5000001gBKBIA2
+Safelite Auto Glass,safelite.com,Retail,2026-08-20,,"Amazon Connect (2023-07-23), Avaya (2026-08-12), Avaya Call Management System (2023-03-06), Genesys (2026-08-20), Genesys Cloud (2026-08-20)",005V5000001gAGQIA2
+Subaru of America,subaru.com,Retail,2025-10-10,,"Genesys (2025-10-10), Genesys Cloud (2024-05-20)",005V5000001gBKBIA2
+Target Corporation,target.com,Retail,2026-02-23,,"Genesys (2026-02-23), Genesys Cloud (2026-02-23), Genesys Cloud CX (2026-02-23)",005V5000001gAGQIA2
+The Finish Line,finishline.com,Retail,2025-11-13,,"Genesys (2025-11-13), Genesys Cloud (2025-05-07)",005V5000001gAGRIA2
+WAL-MART STORES (U K) LTD,walmart.com,Retail,2025-11-09,Aspect,"Alvaria (2026-07-10), Genesys Cloud (2025-11-09)",005V5000002ZZTFIA4
+eBay (UK),ebay.com,Retail,2026-08-26,,"Genesys (2026-08-26), Genesys Cloud CX (2026-08-26)",005V5000002ZZTFIA4
+Enova International Inc,enova.com,Software,2026-03-26,,"Genesys (2026-03-26), Genesys Cloud (2025-01-16)",005V5000001gAGRIA2
+Sabre Holdings Corporation,sabre.com,Technology,2025-09-29,,"Avaya (2025-09-29), Avaya Call Management System (2025-09-29), Genesys (2025-09-29), Genesys Cloud (2025-09-29)",005V5000001gA76IAE
+BT Business and Public Sector,bt.com,Telco/Cable,2026-07-16,,"Genesys Cloud (2026-07-16), NICE CXone (2025-12-10), NICE inContact (2025-10-06), Webex Contact Center (2024-06-06)",005V5000002ZZTFIA4
+Bell Canada,bell.ca,Telco/Cable,2026-08-19,,"Amazon Connect (2026-07-21), Genesys Cloud (2026-08-19), NICE CXone (2026-08-19)",005V5000004XWIAIA4
+Breezeline,breezeline.com,Telco/Cable,2026-07-05,,"Genesys (2023-01-14), Genesys Cloud (2026-07-05), Genesys Cloud CX (2022-11-01)",005V5000001gAGRIA2
+DNA,dna.fi,Telco/Cable,2025-11-13,Calabrio,"Calabrio (2023-03-24), Genesys (2025-11-13), Genesys Cloud (2025-11-13)",005V5000001gBKBIA2
+EE,ee.co.uk,Telco/Cable,2026-07-31,,Genesys Cloud (2026-07-31),005V5000002ZZTFIA4
+Hi3G Access,tre.se,Telco/Cable,2026-05-16,,"Genesys (2026-05-16), Genesys Cloud (2026-05-16)",005V5000001gBKBIA2
+Lumen Technologies (formerly CenturyLink),lumen.com,Telco/Cable,2025-11-06,,Genesys Cloud CX (2025-11-06),005V5000001gAGTIA2
+Plusnet,plus.net,Telco/Cable,2026-04-21,,"Genesys Cloud (2026-04-21), Genesys Cloud CX (2026-04-21)",005V5000002ZZTFIA4
+Proximus,proximus.com,Telco/Cable,2026-06-03,,Genesys Cloud (2026-06-03),005V5000001gBKBIA2
+Tele2,tele2.com,Telco/Cable,2026-08-16,,"Avaya (2024-03-24), Genesys (2026-08-08), Genesys Cloud (2026-08-16)",005V5000001gBKBIA2
+Videotron,videotron.com,Telco/Cable,2026-07-08,,Genesys (2026-07-08),005V5000001gAGTIA2
+Virgin Media (IRE),virginmedia.ie,Telco/Cable,2026-08-30,,Genesys Cloud (2026-08-30),005V5000002ZZTFIA4
+Vodafone (UK),vodafone.com,Telco/Cable,2026-05-12,,"Genesys Cloud (2026-05-12), Genesys Cloud CX (2026-05-12)",005V5000002ZZTFIA4
+AT&T Services - Backoffice,att.com,Telco_Cable,2026-09-03,Calabrio,"Calabrio One (2025-08-05), Genesys (2026-09-03), RingCentral (2026-03-30)",005V500000GElYvIAL
+AT&T U-Verse,att.com/uverse,Telco_Cable,2026-09-03,Calabrio,"Calabrio One (2025-08-05), Genesys (2026-09-03), RingCentral (2026-03-30)",005V500000GElYvIAL
+General Communication,gci.com,Telco_Cable,2026-08-30,,"Genesys (2026-03-14), Genesys Cloud (2026-08-30)",005V5000001gAGPIA2
+Telenor,telenor.com,Telco_Cable,2025-11-15,Calabrio,"Calabrio (2026-08-31), Calabrio One (2023-05-23), Genesys Cloud (2025-11-15)",005V5000001gBKBIA2
+American Airlines,aa.com,Transportation,2026-02-02,,Genesys Cloud (2026-02-02),005V5000004XWIAIA4
+DHL,dhl.com,Transportation,2026-08-03,,"Amazon Connect (2025-11-05), Avaya (2026-07-29), Genesys Cloud CX (2026-08-03)",005V5000001gBKBIA2
+NetJets,netjets.com,Transportation,2025-11-24,Calabrio,"Avaya (2024-07-09), Calabrio (2026-06-27), Genesys (2025-11-24), Genesys Cloud (2025-11-24)",005V5000001gBKBIA2
+Qantas Airline,qantas.com,Travel,2026-08-10,Aspect,"Alvaria (2024-09-03), Amazon Connect (2025-07-26), Genesys (2026-08-10), Genesys Cloud (2026-08-10)",005V5000001gA6IIAU
+AES Corporation,aes.com,Utilities,2026-07-27,,"Genesys (2026-07-27), Genesys Cloud (2026-07-27), Genesys Cloud CX (2026-05-13)",005V5000001gBKBIA2
+British Columbia Hydro and Power Authority,bchydro.com,Utilities,2026-08-24,,Genesys Cloud (2026-08-24),005V5000001gBKBIA2
+EPCOR,epcor.com,Utilities,2026-08-22,,"Genesys (2026-08-22), Genesys Cloud (2026-08-22)",005V5000006tDZ3IAM
+Genesis Energy,genesisenergy.co.nz,Utilities,2026-05-19,,Genesys Cloud (2026-05-19),005V5000002ZZTFIA4
+"Interstate Gas Supply, Inc",igs.com,Utilities,2026-09-03,,Genesys (2026-09-03),005V5000001gBKBIA2
+Nv Energy,nvenergy.com,Utilities,2026-07-24,,"Genesys (2026-07-24), Genesys Cloud (2026-07-24)",005V5000001gBKBIA2
+OGE Energy Corp.,oge.com,Utilities,2026-09-03,,"Genesys (2026-09-03), Genesys Cloud (2022-09-06)",005V5000001gBKBIA2
+Ores,ores.be,Utilities,2026-08-23,,Genesys Cloud (2026-08-23),005V5000001gBKBIA2
+Republic Services,republicservices.com,Utilities,2025-10-16,Calabrio,"Calabrio (2024-11-25), Genesys (2025-10-16), Genesys Cloud (2025-10-16), Genesys Cloud CX (2025-10-16)",005V5000001gAGSIA2
+TE Connectivity,te.com,Utilities,2026-09-02,,"Amazon Connect (2026-07-16), Genesys (2026-09-02), Genesys Cloud (2026-08-27)",005V5000004XWIAIA4
+The Dayton Power and Light Company,aes-ohio.com,Utilities,2026-07-18,,Genesys Cloud (2026-07-18),005V5000001gBKBIA2
+Cox,cox.com,,2026-01-12,,"Genesys (2026-01-12), Genesys Cloud (2025-07-14)",005V5000001gAxtIAE
+Etraveli Group,etraveligroup.com,,2026-03-10,,"Avaya (2021-02-15), Genesys (2026-03-10), Genesys Cloud (2026-03-03), Genesys Cloud CX (2025-08-20)",005V500000CrD3RIAV
+LoanCare LLC,loancareservicing.com,,2026-07-16,,"Genesys (2026-07-16), Genesys Cloud (2026-07-16), Genesys Cloud CX (2026-07-16)",005V5000006tDZ3IAM
+Loblaw Company,loblaw.ca,,2025-11-26,,"Genesys (2025-11-26), Genesys Cloud (2025-11-26)",005V5000004XWIAIA4
+Pentagon Federal Credit Union,penfed.org,,2026-08-14,,"Avaya (2024-09-19), Genesys (2026-08-14), Genesys Cloud (2026-08-14)",005V5000006tDZ3IAM

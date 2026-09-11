@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Greenlight data contract</title>
+<!--FONTS-->
+<style>
+.feeds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.feeds .card h4 .ct{font-size:13px}
+.feeds code{font-family:var(--ff-mono);font-size:12.5px;color:var(--forest);background:var(--zebra);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.b2 td.fill{font-family:var(--ff-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap}
+.b2 td.need{font-size:13.5px}
+.qs{list-style:none;margin-top:16px;border-top:1px solid var(--line)}
+.qs li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2)}
+.qs .n{width:34px;height:34px;border-radius:6px;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.qs b{color:var(--ink)}
+@media(max-width:900px){.feeds{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">AI change management side quest &middot; data contract</div>
+    <h1 data-h="2">What the pilot dashboard needs <span class="spark">from Greenlight</span>.</h1>
+    <p class="sub" data-h="3">For the reporting review with Jason Dowden. Three feeds, fourteen signals, six questions. The answers fill Section B2 of the assessment and decide which triggers the pilot can run.</p>
+    <div class="meta" data-h="4">
+      <div><span>For</span>Joey Fogle</div>
+      <div><span>Feeds</span>Success Metrics Framework v1.0, Section 2a to 2c; CSA Section B2</div>
+      <div><span>Status</span>Questions open.</div>
+      <div><span>By</span>Dallas Andrews</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>The ask.</b> Per-user, per-day usage with the agent used, the seat roster, and the manager report's access log. Daily is fine.</li>
+        <li><b>Why.</b> Eleven of fourteen signals compute from those three feeds. The other three need a source outside Greenlight.</li>
+        <li><b>Then.</b> Sample rows out, export in, first weekly review.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Three feeds</div>
+    <h2>Everything the framework measures traces to three tables.</h2>
+    <div class="feeds">
+      <div class="card"><div class="tag go">Feed 1</div><h4>Usage log</h4><p>One row per user, per day, per agent or skill.</p>
+        <ul><li><code>user</code> email or stable id</li><li><code>date</code></li><li><code>agent</code> name of the agent, skill or project used</li><li><code>uses</code> conversations started, or messages sent, one of the two</li></ul>
+        <p>Drives active use, time to first use, time to sustained use, feature depth, team spread, and three of the four triggers.</p></div>
+      <div class="card"><div class="tag go">Feed 2</div><h4>Seat roster</h4><p>One row per person in the pilot.</p>
+        <ul><li><code>user</code></li><li><code>team</code> and <code>manager</code></li><li><code>seat_granted</code> the date the tool became available to them</li></ul>
+        <p>Time to first use counts from the seat date, not the pilot start.</p></div>
+      <div class="card"><div class="tag go">Feed 3</div><h4>Manager report access</h4><p>One row per open of the manager report, or of the dashboard.</p>
+        <ul><li><code>manager</code></li><li><code>opened_on</code></li></ul>
+        <p>Drives Manager Dashboard Engagement. If the report has no access log, the dashboard can keep its own.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Section B2 &middot; signal by signal</div>
+    <h2>Fourteen signals, each with the field it needs and a column for the answer.</h2>
+    <p class="lede">The three blank columns are Jason's: collectable, latency, source. The engine column is what this side computes from the three feeds.</p>
+    <div class="tablewrap"><table class="b2"><thead><tr><th>Framework signal</th><th>Needs</th><th>Engine</th><th>Collectable</th><th>Latency</th><th>Source</th></tr></thead><tbody>
+      <tr><td class="who">Active Usage Rate</td><td class="need">Feed 1 counts</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Time-to-First-Use</td><td class="need">Feed 2 seat date, Feed 1 first row</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Time-to-Sustained-Use</td><td class="need">Feed 1 counts (derived)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Feature Utilization Depth</td><td class="need">Feed 1 agent column, list of available agents</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Team Adoption Variance</td><td class="need">Feed 2 manager per user (derived)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Manager Dashboard Engagement</td><td class="need">Feed 3</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Coaching Conversation Rate</td><td class="need">Manager self-report per at-risk user (a form, not Greenlight)</td><td class="st">proxy</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">form / 1:1 notes</td></tr>
+      <tr><td class="who">Intervention Response Rate</td><td class="need">Manager-logged response per fired alert (same form)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">form / tracker</td></tr>
+      <tr><td class="who">Usage Drop</td><td class="need">Feed 1 (derived)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Adoption Plateau</td><td class="need">Feed 1 (derived)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Zero-Use Persistence</td><td class="need">Feed 1 and Feed 2 (derived)</td><td class="st">computed</td><td class="fill">yes / no / proxy</td><td class="fill">rt / daily / weekly / lag</td><td class="fill">export / api / admin view</td></tr>
+      <tr><td class="who">Workflow Deviation Rate</td><td class="need">Process observation or a self-report field; not in usage telemetry</td><td class="st">no source</td><td class="fill">yes / no / proxy</td><td class="fill">lag</td><td class="fill">observation</td></tr>
+      <tr><td class="who">Escalation Pattern Shift</td><td class="need">The pilot team's own case or call routing data</td><td class="st">no source</td><td class="fill">yes / no / proxy</td><td class="fill">lag</td><td class="fill">pilot team system</td></tr>
+      <tr><td class="who">Sustained Workaround</td><td class="need">Process observation or self-report</td><td class="st">no source</td><td class="fill">yes / no / proxy</td><td class="fill">lag</td><td class="fill">observation</td></tr>
+    </tbody></table></div>
+    <div class="callout">
+      <h4>Three rows have no telemetry source</h4>
+      <p>Workflow deviation, escalation shift and sustained workaround live in the pilot team's own process, not in any AI tool. Carry them as observed or self-reported, or leave them out with a note.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Six questions for the review</div>
+    <h2>The answers settle latency, access, and who may see what.</h2>
+    <ul class="qs">
+      <li><span class="n">1</span><span><b>What exists.</b> Which daily, weekly and per-user reports managers already have. Can we see one.</span></li>
+      <li><span class="n">2</span><span><b>How it comes out.</b> CSV, API, admin view, or the Zuar path Matt Graves's trackers took. Something the team can run without asking.</span></li>
+      <li><span class="n">3</span><span><b>Granularity.</b> Per user per day, with the agent named. Per week works, but time to first use gets rougher.</span></li>
+      <li><span class="n">4</span><span><b>History.</b> How far back the log goes. The baseline needs the weeks before the pilot.</span></li>
+      <li><span class="n">5</span><span><b>Who sees per-user rows.</b> Proposal: their manager and the project team; leadership sees team level. Jason and Kathryn to confirm.</span></li>
+      <li><span class="n">6</span><span><b>Where the dashboard lives long term.</b> If it's Zuar or an internal page, Feed 3 can come from there.</span></li>
+    </ul>
+    <div class="gate">
+      <h4>When the answers land</h4>
+      <p>Export in, engine reruns, real weeks on the dashboard. A "no" greys its row rather than removing it, so the gap stays visible.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal &middot; AI change management side quest</span>
+  <span>For the Greenlight reporting review &middot; Sep 9 2026</span>
+</footer>
+</div>
+<!--PRESENT-->
+</body>
+</html>

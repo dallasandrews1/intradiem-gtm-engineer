@@ -1,6 +1,37 @@
 {
   "_source": "Nate's SF report is the exclusion source of truth. name_aliases cover brand/legal-name gaps (word-boundary match on normalized company names). Update sf_report_csv when a fresh SF export lands.",
   "sf_report_csv": "../greenlight-pack/Active_Customers_SF_Jul10.csv",
-  "domains": ["hcsc.com"],
-  "name_aliases": ["hcsc", "health care service", "humana", "unitedhealth", "uhc", "cvs health", "aetna", "molina", "elevance", "anthem"]
+  "domains": [
+    "hcsc.com",
+    "duke-energy.com",
+    "optum.com",
+    "express-scripts.com",
+    "evernorth.com",
+    "assurant.com",
+    "oakstreethealth.com",
+    "bt.com"
+  ],
+  "name_aliases": [
+    "hcsc",
+    "health care service",
+    "humana",
+    "unitedhealth",
+    "uhc",
+    "cvs health",
+    "aetna",
+    "molina",
+    "elevance",
+    "anthem",
+    "duke energy",
+    "optum",
+    "express scripts",
+    "evernorth",
+    "evicore",
+    "assurant",
+    "oak street health",
+    "bt group",
+    "bt business",
+    "cigna"
+  ],
+  "_sep9_note": "Duke Energy and Optum added Sep 9 2026: both in the Customer Value Registry (Greenlight) while Salesforce Account Type reads Prospect (Duke) or the record is a subsidiary (Optum360). Caught by the UPT displacement list cross-check. Sep 9 sweep added Express Scripts/Evernorth (Cigna), Assurant subsidiaries, Oak Street Health (CVS) and BT Group (BT/EE story in marketing's registry)."
 }

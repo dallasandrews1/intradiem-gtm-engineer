@@ -1,0 +1,80 @@
+<!doctype html><html><head><meta charset="utf-8"><title>One engine</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#014637;--green:#2DB56E;--green-300:#7BD3A0;--orange:#F58220}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{background:var(--forest);color:#fff;font-family:Roboto,'Helvetica Neue',Arial,sans-serif;position:relative}
+body::after{content:"";position:absolute;right:-300px;top:-280px;width:1000px;height:1000px;border-radius:50%;background:radial-gradient(circle,rgba(45,181,110,.28),transparent 62%);pointer-events:none}
+.wrap{position:absolute;inset:0;padding:70px 110px 120px;z-index:1;display:flex;flex-direction:column}
+.logo{height:40px;width:163px;color:#fff;display:block;margin-bottom:38px}
+.eye{font-family:'Roboto Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.18em;font-size:20px;font-weight:600;color:var(--green-300);margin-bottom:16px}
+h1{font-weight:900;font-size:76px;line-height:1.02;letter-spacing:-.02em}
+h1 span{color:var(--green-300)}
+.sub{font-size:29px;color:#C7DAD1;margin-top:18px;max-width:56ch;line-height:1.35}
+
+.rail{display:flex;align-items:stretch;gap:0;margin-top:76px}
+.node{flex:1;position:relative;opacity:0;transform:translateY(16px);transition:none}
+.node.on{opacity:1;transform:none}
+.box{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.17);border-radius:10px;padding:24px 22px 26px;height:250px;display:flex;flex-direction:column}
+.num{font-family:'Roboto Mono',Menlo,monospace;font-size:13px;font-weight:600;color:#6E9285;letter-spacing:.12em}
+.nm{font-weight:900;font-size:34px;letter-spacing:-.01em;margin:11px 0 12px}
+.ds{font-size:18.5px;line-height:1.38;color:#A9C4B9;flex:1}
+.chip{position:absolute;top:-13px;left:20px;font-family:'Roboto Mono',Menlo,monospace;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:5px;opacity:0}
+.chip.show{opacity:1}
+.chip.ai{background:var(--green);color:#04281E}
+.chip.hu{background:var(--orange);color:#2A1102}
+.gap{flex:0 0 34px;display:flex;align-items:center;justify-content:center;opacity:0}
+.gap.on{opacity:1}
+.gap svg{width:17px;height:17px;color:#4C7466}
+
+.lanes{margin-top:66px;display:flex;flex-direction:column;gap:26px}
+.lane{opacity:0}
+.lane.on{opacity:1}
+.lrow{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:9px}
+.lane .tag{font-family:'Roboto Mono',Menlo,monospace;font-size:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-300)}
+.lane .cap{font-size:19px;color:#A9C4B9}
+.track{height:14px;background:rgba(255,255,255,.09);border-radius:7px;position:relative}
+.track i{position:absolute;top:0;bottom:0;background:var(--green);border-radius:7px}
+.bar{position:absolute;left:110px;bottom:46px;width:210px;height:7px;background:var(--orange);border-radius:4px}
+</style></head><body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46"><path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/><path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/><path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/><path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/><path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/><path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/></symbol></svg>
+<div class="wrap">
+<svg class="logo" viewBox="0 0 187 46"><use href="#ilogo"/></svg>
+<div class="eye">How it works</div>
+<h1>One engine. <span>Three acts run on it.</span></h1>
+<div class="sub" id="sub">Every campaign we run moves through the same six steps.</div>
+
+<div class="rail" id="rail">
+  <div class="node" data-i="1"><div class="chip ai">AI runs it</div><div class="box"><div class="num">01</div><div class="nm">Signal</div><div class="ds">What changed at the account, from the public record, with a date on it.</div></div></div>
+  <div class="gap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="node" data-i="2"><div class="chip hu">Human checkpoint</div><div class="box"><div class="num">02</div><div class="nm">Find</div><div class="ds">Who sits inside it. Current customers taken out before anything moves.</div></div></div>
+  <div class="gap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="node" data-i="3"><div class="chip ai">AI runs it</div><div class="box"><div class="num">03</div><div class="nm">Research</div><div class="ds">Email checked, what they have said publicly, the platforms they run.</div></div></div>
+  <div class="gap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="node" data-i="4"><div class="chip ai">AI runs it</div><div class="box"><div class="num">04</div><div class="nm">Write</div><div class="ds">The touches for that person, in the rep's voice, every claim checked.</div></div></div>
+  <div class="gap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="node" data-i="5"><div class="chip hu">Human checkpoint</div><div class="box"><div class="num">05</div><div class="nm">Run</div><div class="ds">Email, LinkedIn and the phone, on a cadence, across seven campaigns.</div></div></div>
+  <div class="gap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12h14M13 6l6 6-6 6"/></svg></div>
+  <div class="node" data-i="6"><div class="chip ai">To the rep</div><div class="box"><div class="num">06</div><div class="nm">Reply</div><div class="ds">Comes straight back to the person whose name is on the message.</div></div></div>
+</div>
+
+<div class="lanes" id="lanes">
+  <div class="lane" data-l="1"><div class="lrow"><span class="tag">Act 1 &middot; Strike rooms</span><span class="cap">One ask, one account, end to end.</span></div><div class="track"><i style="left:0%;right:0%"></i></div></div>
+  <div class="lane" data-l="2"><div class="lrow"><span class="tag">Act 2 &middot; Back office, inside our customers</span><span class="cap">Three hundred people who have never heard from us.</span></div><div class="track"><i style="left:17%;right:51%"></i></div></div>
+  <div class="lane" data-l="3"><div class="lrow"><span class="tag">Act 3 &middot; Multi-channel sequences</span><span class="cap">Everyone the first two acts produce.</span></div><div class="track"><i style="left:68%;right:0%"></i></div></div>
+</div>
+</div><div class="bar"></div>
+<script>
+const k=+(new URLSearchParams(location.search).get('k')||0);
+const nodes=[...document.querySelectorAll('.node')], gaps=[...document.querySelectorAll('.gap')],
+      lanes=[...document.querySelectorAll('.lane')];
+// k0 title | k1..k6 nodes | k7 ai chips | k8 checkpoints | k9..k11 lanes | k12 hold
+nodes.forEach((n,i)=>{ if(k>=i+1) n.classList.add('on'); });
+gaps.forEach((g,i)=>{ if(k>=i+2) g.classList.add('on'); });
+if(k>=7) document.querySelectorAll('.chip.ai').forEach(c=>c.classList.add('show'));
+if(k>=8) document.querySelectorAll('.chip.hu').forEach(c=>c.classList.add('show'));
+lanes.forEach((l,i)=>{ if(k>=9+i) l.classList.add('on'); });
+if(k>=7) document.getElementById('sub').textContent='Most of it the AI runs itself. Two places a person still decides.';
+if(k>=9) document.getElementById('sub').textContent='The three acts are the same six steps, entered at different points.';
+</script></body></html>

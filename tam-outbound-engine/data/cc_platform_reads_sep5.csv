@@ -1,0 +1,56 @@
+domain,acd_latest,acd_last_seen,wfm_latest,all_platforms_with_dates,source,in_audiences
+achmea.nl,Genesys,2026-06-17,,"Avaya (2022-05-10), Genesys (2026-06-17), Genesys Cloud (2026-06-17)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+aetna.com,Genesys,2026-09-03,,Genesys (2026-09-03),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+assurant.com,NICE,2026-08-07,Aspect,"Alvaria (2024-11-22), NICE CXone (2026-08-07), Webex Contact Center (2026-08-07)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+baystatehealth.org,Genesys,2026-06-23,,"Genesys (2026-06-23), Genesys Cloud (2026-06-23)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+blueshieldca.com,Avaya,2026-06-07,Verint,"Avaya (2026-06-07), Avaya Call Management System (2024-08-13), Genesys (2026-03-30), Genesys Cloud (2026-02-28), Genesys Cloud CX (2025-09-19), Verint Workforce Management (2026-01-16)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+britishairways.com,Genesys,2025-08-04,,"Genesys (2025-08-04), Genesys Cloud (2025-08-04), Genesys Cloud CX (2025-08-04)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+cambiahealth.com,NICE,2025-08-11,,NICE inContact (2025-08-11),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+capita.com,Five9,2026-07-29,Aspect,"Alvaria (2026-08-06), Five9 (2026-07-29), Verint Workforce Management (2023-04-25)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+carefirst.com,NICE,2025-08-19,,"Genesys (2025-07-22), Genesys Cloud (2025-07-22), NICE CXone (2025-08-19)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+centene.com,Amazon Connect,2026-08-26,Calabrio,"Amazon Connect (2026-08-26), Avaya Call Management System (2025-10-24), Calabrio (2024-11-25), Genesys (2025-11-18), Genesys Cloud (2025-11-18)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+cigna.com,Amazon Connect,2026-08-20,Calabrio,"Amazon Connect (2026-08-20), Calabrio (2025-11-09), Genesys Cloud (2025-02-11), Webex Contact Center (2025-02-11)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+citizensbank.com,Amazon Connect,2026-07-10,Aspect,"Alvaria (2024-11-25), Amazon Connect (2026-07-10), Avaya (2023-01-11)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+excellusbcbs.com,Avaya,2023-08-01,,Avaya (2023-08-01),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+fidelity.com,Genesys,2026-02-26,,"Genesys Cloud (2026-02-26), Genesys Cloud CX (2026-02-26)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+floridablue.com,Genesys,2026-07-10,,"Avaya (2020-06-04), Five9 (2026-01-08), Genesys Cloud (2026-07-10), Genesys Cloud CX (2026-07-10)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+foundever.com,Genesys,2026-08-22,Calabrio,"Amazon Connect (2026-08-22), Avaya Call Management System (2026-08-15), Calabrio (2026-07-23), Genesys (2026-05-04), Genesys Cloud (2026-08-22), NICE CXone (2026-08-22)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+hcsc.com,Five9,2023-05-11,,"Avaya (2022-12-27), Five9 (2023-05-11)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+humana.com,Genesys,2026-09-01,Aspect,"Alvaria (2024-09-04), Avaya Call Management System (2024-05-28), Genesys Cloud CX (2026-09-01), Verint Workforce Management (2024-07-24)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+iehp.org,,,Verint,Verint (2023-04-28),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+jpmorganchase.com,,,Calabrio,Calabrio (2026-05-24),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+maximus.com,NICE,2026-07-09,Calabrio,"Calabrio (2024-09-23), NICE CXone (2026-07-09), Verint Workforce Management (2023-09-30)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+medica.com,Five9,2026-04-17,,"Avaya (2026-04-15), Avaya Call Management System (2026-01-26), Avaya Experience Portal (2022-09-05), Five9 (2026-04-17), RingCentral (2026-04-17)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+metlife.com,Genesys,2026-06-21,,"Avaya Call Management System (2022-08-16), Genesys Cloud (2026-06-21), Genesys Cloud CX (2026-05-26)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+nationalgrid.com,,,Calabrio,Calabrio (2024-11-17),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+nationalgridus.com,,,Calabrio,Calabrio (2024-11-25),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+optum.com,NICE,2026-08-23,Calabrio,"Calabrio (2026-07-26), NICE CXone (2026-08-23)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+paychex.com,Avaya,2023-02-16,Calabrio,"Avaya (2023-02-16), Calabrio (2023-07-23)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+point32health.org,Avaya,2024-12-16,Verint,"Avaya (2024-12-16), Verint Workforce Management (2026-05-27)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+prudential.com,Genesys,2026-07-06,,"Amazon Connect (2025-12-03), Avaya (2025-06-13), Five9 (2025-12-03), Genesys (2025-12-03), Genesys Cloud (2026-07-06), NICE CXone (2025-12-03)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+regions.com,Amazon Connect,2026-07-25,,"Amazon Connect (2026-07-25), Genesys Cloud (2025-02-12)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+synchrony.com,Avaya,2026-08-02,,Avaya (2026-08-02),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+thehartford.com,Genesys,2026-08-28,NICE,"Amazon Connect (2026-08-21), Five9 (2026-08-21), Genesys Cloud (2026-08-28), NICE CXone (2025-09-15), Nice Workforce Management (2024-11-16)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+travelers.com,Amazon Connect,2023-05-08,Aspect,"Alvaria (2024-11-14), Amazon Connect (2023-05-08)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+truist.com,RingCentral,2024-03-18,,RingCentral (2024-03-18),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+unitedutilities.com,Avaya,2025-04-03,,Avaya (2025-04-03),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+vnshealth.org,Five9,2026-08-22,,Five9 (2026-08-22),"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+wellsfargo.com,Genesys,2026-02-26,,"Amazon Connect (2026-02-26), Genesys Cloud (2026-02-26), TalkDesk (2026-02-26)","predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+anthem.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+bbandt.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+cvshealth.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+gs.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+lumeris.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+molinahealthcare.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+uhc.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+unitedhealthgroup.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+usbank.com,,,,,"predictleads via Clay workflow wf_0tkv9u0BKvNYsV4NsQx, 2026-09-05",yes
+lacare.org,,,,Five9 (2026-03-17); Nice Workforce Management (2024-11-25),"predictleads via clay actions test, 2026-09-05",no
+chpw.org,,,,,"predictleads via clay actions test, 2026-09-05",no
+hmsa.com,,,,Amazon Connect (2026-04-01),"predictleads via clay actions test, 2026-09-05",no
+myzinghealth.com,,,,RingCentral (2021-10-08),"predictleads via clay actions test, 2026-09-05",no
+caloptima.org,,,,,"predictleads via clay actions test, 2026-09-05",no
+solishealthplans.com,,,,,"predictleads via clay actions test, 2026-09-05",no
+imperialhealthplan.com,,,,,"predictleads via clay actions test, 2026-09-05",no
+metroplus.org,,,,Calabrio One (2023-01-18); Avaya (2022-01-08); Calabrio (2024-11-21),"predictleads via clay actions test, 2026-09-05",no
+severntrent.co.uk,,,,,"predictleads via clay actions test, 2026-09-05",no

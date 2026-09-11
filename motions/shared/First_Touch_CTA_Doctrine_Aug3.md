@@ -1,3 +1,5 @@
+> **Superseded Sep 3 2026 by `Messaging_Doctrine_Sep3.md`.** The offer-note ending survives there as one of two allowed Email 1 closes (the other is the benchmark question); the no-calendar rule survives; the market split, the per-lead variable contract and the state notes below remain accurate history.
+
 # First-Touch CTA Doctrine (Aug 3 2026)
 
 Source: Jack Ohagan's direct feedback on the Aug 3 Matt & Jack sync ("the CTA won't work. I don't think a meeting ask in the first touch") plus Dallas's decision to A/B the same idea on the US side. This doctrine binds every prompt that generates first-touch email copy from here forward: MessageGen prompts, first-draft-engine runs, motion-stamp assemblies, and any new campaign build.
