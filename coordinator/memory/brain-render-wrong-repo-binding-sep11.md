@@ -14,5 +14,7 @@ Found Sep 11 2026 19:20Z via the Render MCP connector (workspace tea-d8mpusho3t8
 - GTM_STATE_URL set to `https://gtm-brain-state.pages.dev/gtm_state.json` via the connector Sep 11 19:20Z (merge write). The connector has no env-var READ tool, so GTM_API_KEYS and SLACK_SIGNING_SECRET presence is unverified from here.
 - The Render MCP connector cannot change a service's repo or branch (only env vars, deploys, logs). Re-binding is a Render dashboard step: Settings > Build & Deploy > Repository. The Render GitHub app must be granted access to the private intradiem-gtm-engineer repo first.
 
+- RESOLVED Sep 11 2026 19:43Z: Dallas re-bound the repo in the dashboard; Render auto-built main 4ac3706 with mcp 1.30.0 and reported live; healthz shows version 2.1 and the unsigned /mcp/ probe returns 401. Follow-on snapshot 403 in [[brain-snapshot-fetch-403-urllib-ua-sep11]].
+
 **Why:** two repos with near-identical names; the Jun 13 interview-era repo got wired to Render and the Aug 26 private repo never was.
 **How to apply:** re-bind the repo in the dashboard (branch main, Dockerfile path and root dir unchanged), which triggers a build of intradiem-gtm-engineer main; then verify healthz version 2.1 and the unsigned /mcp/ 401 probe, then the keyed tools/list. See [[brain-render-deploy-prereqs-sep11]], [[brain-mcp-421-host-pinning-sep11]].

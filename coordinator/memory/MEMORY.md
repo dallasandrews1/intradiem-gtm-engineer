@@ -617,3 +617,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Brain Render Wrong Repo Binding Sep11](brain-render-wrong-repo-binding-sep11.md) — Render service deploys main of the Jun 13 intradiem-gtm-system repo, not intradiem-gtm-engineer; re-bind is a dashboard step the connector cannot do; GTM_STATE_URL set Sep 11
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Brain Snapshot Fetch 403 Urllib UA Sep11](brain-snapshot-fetch-403-urllib-ua-sep11.md) — brain 2.1 live on Render (c027f12, Sep 11 19:48Z) with healthz fresh after a User-Agent fix; Cloudflare Pages 403s the stock Python-urllib agent, name the agent on any brain fetch

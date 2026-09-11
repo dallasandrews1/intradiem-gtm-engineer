@@ -10,3 +10,5 @@ Dallas rejected two versions of his all-hands confidence-monitor notes (Sep 11 2
 **Why:** notes on a confidence monitor are read as his own inner voice mid-talk; anything formatted reads as foreign up there.
 
 **How to apply:** anything Dallas reads to himself (stage notes, call prep, cue cards) starts from his own Slack register, keeps claims and timecodes exact, and drops every label, bracket, and header. Related: [[feedback-slack-voice-short-casual]], [[dallas-voice-professional-vs-personal]].
+
+**Sep 11 third pass:** Dallas rejected the lowercase version too: "none of these sound like a person would actually say any of these weird fragment sentences out loud." Anything he speaks must be full sentences with subjects, verbs and connectors ("The first one is...", "So that's automated too, and..."), never clipped ad-copy fragments ("Act one. A rep, a blank page."). Notes to self can stay short; spoken lines cannot.
