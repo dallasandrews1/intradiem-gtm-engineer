@@ -7,6 +7,18 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ap = argparse.ArgumentParser(); ap.add_argument("--date"); ap.add_argument("--dry-run", action="store_true"); a = ap.parse_args()
 today = datetime.date.fromisoformat(a.date) if a.date else datetime.date.today()
 cfg = json.loads((ROOT / "automation/config/owner_digest.json").read_text())
+# Lane moves due this week, from the communication plan (owner routing by lane name)
+LANE_OWNER = {"Inger": "Inger Escamilla", "Amy": "Amy Johnson", "Nicole and marketing": "Nicole Garcia", "Executive voice": "Matt McConnell"}
+def lane_moves(owner, acct, today):
+    p = ROOT / "motions/churn_risk_save_plan/data" / f"comms_plan_{acct.lower().replace(' ', '_')}.json"
+    if not p.exists(): return []
+    plan = json.loads(p.read_text()); out = []
+    for m in plan["moves"]:
+        if LANE_OWNER.get(m["lane"]) != owner: continue
+        wk = datetime.date.fromisoformat(m["week"]); due = datetime.date.fromisoformat(m["due"])
+        if wk <= today + datetime.timedelta(days=6) and due >= today - datetime.timedelta(days=14) and m["status"] != "done":
+            out.append((m["move"], due, m["status"]))
+    return out
 # Verified contacts per account, from the save-room data (only verified or Salesforce emails ever leave this composer)
 def verified_contacts(acct):
     p = ROOT / "motions/churn_risk_save_plan/data" / f"save_room_{acct.lower().replace(' ', '_')}.json"
@@ -66,7 +78,10 @@ drafts = []
 for owner, its in sorted(by_owner.items()):
     route = cfg["owners"].get(owner, {"channel": "unrouted"})
     overdue = [r for r in its if (d := parse_due(r["Task Due Date"])) and d < today]
-    L += [f"## {owner} ({route['channel']}): {len(its)} open, {len(overdue)} overdue"]
+    accts_o = sorted({r["Project Name"] for r in its})
+    moves = [(acc, mv) for acc in accts_o for mv in lane_moves(owner, acc, today)]
+    L += [f"## {owner} ({route['channel']}): {len(moves)} lane moves this week, {len(its)} open, {len(overdue)} overdue"]
+    for acc, (mv, due, st) in moves: L.append(f"- LANE [{acc}] {mv} (due {due:%m/%d/%Y}{', HELD' if st == 'held' else ''})")
     for r in its:
         d = parse_due(r["Task Due Date"]); flag = " OVERDUE" if d and d < today else ""
         L.append(f"- [{r['Project Name']}] {r['Task Name']}: {r['Task Description']} (due {r['Task Due Date'] or 'none'}, {r['Task Progress']}){flag}")
@@ -74,7 +89,12 @@ for owner, its in sorted(by_owner.items()):
     if route["channel"] == "outlook_draft":
         accts = sorted({r["Project Name"] for r in its})
         first = owner.split()[0]
-        body = [f"<p>Hi {H.escape(first)},</p>", "<p>Your open items this week:</p>", "<ul>"]
+        body = [f"<p>Hi {H.escape(first)},</p>"]
+        if moves:
+            body.append("<p>Your moves this week in the plan:</p><ul>")
+            for acc, (mv, due, st) in moves: body.append(f"<li><b>{H.escape(mv)}</b>. By {due:%b %d}.{' Held until the savings method is agreed.' if st == 'held' else ''}</li>")
+            body.append("</ul>")
+        body += ["<p>Open items on the PMO list:</p>", "<ul>"]
         for r in its:
             d = parse_due(r["Task Due Date"]); od = " <b>(overdue)</b>" if d and d < today else ""
             body.append(f"<li><b>{H.escape(r['Task Name'])}</b>: {H.escape(r['Task Description'])}. Due {H.escape(r['Task Due Date'] or 'not set')}.{od}</li>")

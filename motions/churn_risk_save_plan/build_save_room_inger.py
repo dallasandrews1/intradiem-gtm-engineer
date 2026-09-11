@@ -2,7 +2,7 @@
 """Inger-facing Cleveland Clinic Save Room. Reads data/save_room_cleveland_clinic.json. Internal pages untouched."""
 import json, pathlib, shutil, html as H
 HERE = pathlib.Path(__file__).parent; BO = HERE.parent / "back_office_expansion"
-d = json.loads((HERE / "data/save_room_cleveland_clinic.json").read_text())
+d = json.loads((HERE / "data/save_room_cleveland_clinic.json").read_text()); plan = json.loads((HERE / "data/comms_plan_cleveland_clinic.json").read_text())
 fonts = (BO / "_fonts_embed.css").read_text(); logo = (BO / "_logo_symbol.svg").read_text()
 CSS = (HERE / "build_page.py").read_text().split('CSS = """')[1].split('"""')[0] + """
 .asks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
@@ -29,7 +29,40 @@ td.who{white-space:normal;min-width:230px}
 .motion li{display:grid;grid-template-columns:1fr 120px;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-2)}
 .motion li b{color:var(--ink)}
 .motion li .d{font-family:var(--ff-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-600);text-align:right}
-@media(max-width:760px){.asks{grid-template-columns:1fr}.sig summary{grid-template-columns:1fr}.sig .ev{padding-left:0}.motion li{grid-template-columns:1fr}.motion li .d{text-align:left}}
+.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.route{border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;background:#fff;box-shadow:var(--shadow);border-top:4px solid var(--green)}
+.route.held{border-top-color:var(--orange)}
+.route .k{font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+.route.held .k{color:var(--orange-600)}
+.route h4{font-size:17px;font-weight:700;margin:6px 0 4px;letter-spacing:-.01em}
+.route .via{font-size:14px;color:var(--ink);margin:0}
+.route p{font-size:13.5px;color:var(--ink-2);margin-top:6px;max-width:none}
+.lanes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.lanecol{border:1px solid var(--line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);overflow:hidden}
+.lanecol .head{background:var(--forest);color:#fff;padding:14px 16px}
+.lanecol .head b{display:block;font-size:16px;font-weight:900;letter-spacing:-.01em}
+.lanecol .head span{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-300);font-weight:600}
+.lanecol .head p{color:#C7DAD1;font-size:12.5px;margin-top:4px;max-width:none}
+.lanecol ul{list-style:none;padding:6px 16px 10px}
+.lanecol li{padding:8px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.lanecol li:first-child{border-top:none}
+.lanecol li .d{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-600);font-weight:600;margin-bottom:2px}
+.lanecol li.held .d{color:var(--orange-600)}
+.msgs{margin-top:16px}
+.msg{border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-top:12px}
+.msg summary{padding:14px 18px;cursor:pointer;list-style:none;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.msg summary::-webkit-details-marker{display:none}
+.msg summary b{font-size:15.5px;color:var(--ink)}
+.msg summary span{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.msg .in{padding:0 18px 16px;display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+.msg pre{white-space:pre-wrap;font-family:var(--ff);font-size:14.5px;line-height:1.55;color:var(--ink);background:var(--zebra);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:0}
+.msg .side{font-size:13.5px;color:var(--ink-2)}
+.msg .side b{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);margin:10px 0 3px}
+.msg .side b:first-child{margin-top:0}
+.rules{list-style:none;margin-top:14px;max-width:820px}
+.rules li{padding:8px 0 8px 26px;position:relative;font-size:14.5px;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.rules li::before{content:"";position:absolute;left:6px;top:16px;width:7px;height:7px;border-radius:2px;background:var(--orange)}
+@media(max-width:760px){.routes,.lanes{grid-template-columns:1fr}.msg .in{grid-template-columns:1fr}.asks{grid-template-columns:1fr}.sig summary{grid-template-columns:1fr}.sig .ev{padding-left:0}.motion li{grid-template-columns:1fr}.motion li .d{text-align:left}}
 """
 def e(s): return H.escape(str(s or ""))
 def link(n, u): return f'<a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a>' if u else e(n)
@@ -91,18 +124,35 @@ MOTION = [
 ]
 motion = "".join(f'<li class="rv"><span><b>{e(t)}</b>{(" &middot; " + e(n)) if n else ""}</span><span class="d">{e(dd)}</span></li>' for t, n, dd in MOTION)
 
+held_routes = {"exec-voice"}
+routes = "".join(f'<div class="route rv{" held" if r["id"] in held_routes else ""}"><div class="k">{e(r["lane"])}{" &middot; held" if r["id"] in held_routes else ""}</div><h4>{e(r["name"])}</h4><p class="via">{e(r["via"])}</p><p>{e(r["why"])}</p></div>' for r in plan["routes"])
+import datetime as _dt
+def wk(s_): d_=_dt.date.fromisoformat(s_); return d_.strftime("%b %d")
+lanes = ""
+for L in plan["lanes"]:
+    mv = [m for m in plan["moves"] if m["lane"] == L["lane"]]
+    items = "".join(f'<li class="{m["status"]}"><span class="d">{wk(m["week"])}{" &middot; held" if m["status"]=="held" else ""}</span>{e(m["move"])}</li>' for m in mv)
+    lanes += f'<div class="lanecol rv"><div class="head"><span>{e(L["role"])}</span><b>{e(L["lane"])}</b><p>{e(L["owns"])}</p></div><ul>{items}</ul></div>'
+msgs = ""
+for m in plan["messages"]:
+    claims = "".join(f'<div>{e(c)}<br><span style="color:var(--ink-3)">{e(src)}</span></div>' for c, src in m["claims"])
+    msgs += (f'<details class="msg rv"><summary><b>{e(m["name"])}</b><span>{e(m["from"])} &middot; {e(m["when"])}</span></summary><div class="in">'
+             f'<pre>subject: {e(m["subject"])}\n\n{e(m["body"])}</pre><div class="side"><b>To</b>{e(m["to"])}<b>The one idea</b>{e(m["one_idea"])}<b>Claims and where they come from</b>{claims}<b>Check</b>{e(m["qc"])}</div></div></details>')
+rules = "".join(f'<li class="rv">{e(r)}</li>' for r in plan["rules"])
+n_routes = len(plan["routes"]); n_moves = len(plan["moves"])
 BODY = f"""
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">{logo}</svg>
 <div class="sheet">
 <header class="hero" id="hero"><div class="wrap">
 <svg class="logo" data-h="1"><use href="#ilogo"/></svg>
-<div class="eyebrow" data-h="1">Cleveland Clinic &middot; renewal January 2027</div>
-<h1 data-h="2">Cleveland Clinic, <span class="spark">in one place.</span></h1>
-<p class="sub" data-h="3">Nothing new to remember. Your Monday note arrives in Outlook with what is yours and these contacts. This page is the link behind it. The PMO list stays your record.</p>
+<div class="eyebrow" data-h="1">Cleveland Clinic &middot; communication plan &middot; renewal January 2027</div>
+<h1 data-h="2">More people at the table <span class="spark">by January.</span></h1>
+<p class="sub" data-h="3">Six routes around the blocker, four lanes with an owner each, dated moves through December, and the messages written. Built on the ADT save. Your Monday note carries what is yours; this page is the link behind it.</p>
 <div class="hstats" data-h="4">
-<div><b data-n="{n_show}">{n_show}</b><span>of your names placed</span></div>
-<div><b data-n="{n_ver}">{n_ver}</b><span>verified emails</span></div>
-<div><b data-n="{n_conf}">{n_conf}</b><span>back-office leaders, separate map</span></div>
+<div><b data-n="{n_routes}">{n_routes}</b><span>routes around the blocker</span></div>
+<div><b data-n="4">4</b><span>lanes, one owner each</span></div>
+<div><b data-n="{n_moves}">{n_moves}</b><span>dated moves to Dec 9</span></div>
+<div><b data-n="{n_ver}">{n_ver}</b><span>verified contacts</span></div>
 </div>
 <div class="meta" data-h="4">
 <div><span>For</span>Inger Escamilla</div><div><span>From</span>Dallas Andrews</div><div><span>Date</span>Sep 11 2026</div><div><span>Refresh</span>Mondays</div>
@@ -110,8 +160,29 @@ BODY = f"""
 </div></header>
 
 <section><div class="wrap">
+<div class="eyebrow">Around the blocker</div>
+<h2>Six ways in that do not run through Rena or Shantel</h2>
+<div class="routes">{routes}</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Lanes</div>
+<h2>Who does what, by week</h2>
+<p>Four voices, one plan. Each lane has an owner by role. Dates are the week the move belongs to; the PMO list carries the rows once your brainstorm confirms them.</p>
+<div class="lanes">{lanes}</div>
+<ul class="rules">{rules}</ul>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Messages</div>
+<h2>Written, checked, ready to match to the sender's voice</h2>
+<p>Each message has one idea, opens on their world, names what we do in concrete terms, and ends on one question. Every number traces to the Value Repository or the customer's own adoption review. Open one to read it with its claims.</p>
+<div class="msgs">{msgs}</div>
+</div></section>
+
+<section><div class="wrap">
 <div class="eyebrow">Your three asks</div>
-<h2>Answered on this page, and on its own every Monday</h2>
+<h2>What arrives on its own</h2>
 <div class="asks">
 <div class="ask rv"><div class="k">One place</div><h4>This page, behind the note</h4><p>Contacts, account health with the evidence, and what is in motion. Refreshed Mondays from the Success Plan, the adoption review, Sales Navigator and meeting notes. Nothing here needs your input.</p></div>
 <div class="ask rv"><div class="k">Notices without a spreadsheet</div><h4>A Monday note</h4><p>An Outlook note with your open items, the account status and these contacts. First one Monday Sep 14. Nothing to open, nothing to update.</p></div>
@@ -133,12 +204,6 @@ BODY = f"""
 <ul class="sig">{sig}</ul>
 </div></section>
 
-<section><div class="wrap">
-<div class="eyebrow">In motion</div>
-<h2>Ninety days to the renewal decision</h2>
-<p>Owners get set in your brainstorm, on the PMO list. These are the moves and their dates.</p>
-<ul class="motion">{motion}</ul>
-</div></section>
 
 <footer class="foot"><svg class="logo"><use href="#ilogo"/></svg><span>GTM Engineering &middot; Cleveland Clinic &middot; Sep 11 2026</span><span>Internal to Intradiem. Sources: Salesforce, Cleveland Clinic Success Plan 2026, September 2026 adoption review, Inger's research.</span></footer>
 </div>
