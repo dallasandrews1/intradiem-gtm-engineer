@@ -155,7 +155,7 @@ BODY = f"""
 <svg class="logo" data-h="1"><use href="#ilogo"/></svg>
 <div class="eyebrow" data-h="1">Cleveland Clinic &middot; communication plan &middot; renewal January 2027</div>
 <h1 data-h="2">More people at the table <span class="spark">by January.</span></h1>
-<p class="sub" data-h="3">Six routes around the blocker, four lanes with an owner each, dated moves through December, and the messages written. Built on the ADT save. Your Monday note carries what is yours; this page is the link behind it.</p>
+<p class="sub" data-h="3">Six routes around the blocker, four lanes with an owner each, dated moves through December, and the messages written. Built the way the ADT renewal was saved last winter: a different voice at the top, marketing wide, references, a renewal track. Your Monday note carries what is yours; this page is the link behind it.</p>
 <div class="hstats" data-h="4">
 <div><b data-n="{n_routes}">{n_routes}</b><span>routes around the blocker</span></div>
 <div><b data-n="4">4</b><span>lanes, one owner each</span></div>
