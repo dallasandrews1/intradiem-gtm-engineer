@@ -611,3 +611,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Feedback Never Tell Colleagues What To Say](feedback-never-tell-colleagues-what-to-say.md) — Sep 11 2026: no claims-in/out lists or rules on any colleague-facing page; the verified-claims gate governs Claude's drafting only
 - [AllHands Confidence Notes Sep11](allhands-confidence-notes-sep11.md) — Sep 11 2026: paste-ready confidence-monitor notes for the Sep 14 all-hands in the Sep 10 deck folder; live read says 8 campaigns / 23 maps vs cues.json seven / eighteen
 - [Brain Render Deploy Prereqs Sep11](brain-render-deploy-prereqs-sep11.md) — Render runs pre-Sep-5 code, no auto-deploy, snapshot never published; publish + GTM_STATE_URL must precede Manual Deploy or the brain 503s
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Feedback Stage Notes In His Register](feedback-stage-notes-in-his-register.md) — Sep 11 2026: notes Dallas reads to himself use his Slack register (lowercase, contractions, asides), no labels or brackets; claims and timecodes stay exact
