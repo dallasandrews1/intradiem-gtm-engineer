@@ -1,0 +1,7 @@
+{
+  "channel_name": "gtm-partner-briefs",
+  "channel_id": "C0BU944D1QA",
+  "live": false,
+  "seen_request_ts": [],
+  "notes": "live=false means the watcher replies to nothing and deploys nothing; it writes what it WOULD have done to the log. Dallas flips live after the channel exists and one dry run reads clean. channel_id gets filled by the first run via slack_search_channels."
+}

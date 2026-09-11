@@ -1,0 +1,235 @@
+{
+  "note": "State + config for rep_campaign_hook.py (built Sep 4 2026 after the ST Water bounces). rep_users maps lemlist user ids to the relay's rep keys; name_hints resolve Dallas-built campaigns whose name carries the rep; exclude_campaign_ids are campaigns the hook must never map or sweep (demo/test shells); seen_campaigns is the hook's own memory so a campaign is swept once. credit_rate_* are the measured per-row costs of wf_0tk4jo5z7RjGKo3rvR8 (0.66-0.78 on high-hit domains, 1.6 all-in on the Quality pull, up to 3.04 on no-find rows); warn_first_line is the Sep 3 2026 rule.",
+  "rep_users": {
+    "usr_9rxD82ZfapeZBGSoz": "nathan",
+    "usr_Bfn76ik549nxaFJYW": "jack"
+  },
+  "name_hints": {
+    "(Jack)": "jack",
+    "(Nate)": "nathan",
+    "(Nathan)": "nathan"
+  },
+  "exclude_campaign_ids": {
+    "cam_SxnHzvAr3WsvWPPeY": "All hands demo (Dallas's Sep 14 demo shell, Jack's mailbox attached; not a rep campaign)"
+  },
+  "credit_rate_low": 0.78,
+  "credit_rate_high": 1.6,
+  "warn_first_line": 200,
+  "seen_campaigns": {
+    "cam_sh3JCJoxtEHyjGrsw": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_viEbB6HkYsCPtxKbi": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_2gy9hmEvMjYEuPZ8A": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_nwKASgttBM6QT8XGq": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_fHGtNHbbj7LmThFgX": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_yWefPqaDhNNv4RyQK": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_fYp7Nh9wB72gfMke6": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_et6gRwgXgjeeYQg4B": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_Nuemg4Xpt3zXYBKS7": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_938B3Jbdw8k6NNgAj": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_7NXbM7HgYtRvMtodm": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_dJ7dT8gfRsisufQ6T": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_wPHsdosLdeT5t5Kct": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_N92Tgg29ncHWnYAD9": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_x8ehMHnWSjBr2CLQe": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_HCu4jiFB8oinz2s3F": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_Fy287YF9X5fjPYBSo": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_DNErdZPANvC2sqRCK": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_SiD4KmWcRuhiF6uhL": {
+      "date": "2026-09-04",
+      "rep": "nathan",
+      "note": "pre-existing in relay map, engine-built, not swept"
+    },
+    "cam_GK8kMPNrjyHc5N3g6": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_QyjxJkbN52aE6o3fj": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "leads": 34,
+      "no_record": 30
+    },
+    "cam_Ljt4MKs6jgNhev2u9": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_uAQgRovxEHb438P77": {
+      "date": "2026-09-04",
+      "rep": "jack",
+      "leads": 5,
+      "no_record": 4
+    },
+    "cam_WaDLXcAtit6auc8ay": {
+      "date": "2026-09-05",
+      "rep": "nathan",
+      "leads": 11,
+      "no_record": 6
+    },
+    "cam_K6dGjBt6WukSo3jvB": {
+      "date": "2026-09-05",
+      "rep": "nathan",
+      "leads": 362,
+      "no_record": 0
+    },
+    "cam_b7TS4fCDCnt2f8S84": {
+      "date": "2026-09-05",
+      "rep": "nathan",
+      "leads": 296,
+      "no_record": 0
+    },
+    "cam_bHu63gEtPXCLNHrwH": {
+      "date": "2026-09-07",
+      "rep": "jack",
+      "leads": 16,
+      "no_record": 10
+    },
+    "cam_mu5Mzi5PhsHC6YjRW": {
+      "date": "2026-09-07",
+      "rep": "jack",
+      "leads": 16,
+      "no_record": 12
+    },
+    "cam_Yoy25QPtwpctW45Nt": {
+      "date": "2026-09-07",
+      "rep": "jack",
+      "leads": 2,
+      "no_record": 1
+    },
+    "cam_3iCLPYEPxDtGTicfJ": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_4nhNTSW2hpgmTdyX8": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_KzpkXbHekqWg67ea5": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_C49vFJtbxtfv7kzRX": {
+      "date": "2026-09-07",
+      "rep": "jack",
+      "leads": 85,
+      "no_record": 68
+    },
+    "cam_8bhZPYbFr4vsAnbX8": {
+      "date": "2026-09-07",
+      "rep": "jack",
+      "leads": 2,
+      "no_record": 2
+    },
+    "cam_km9xanQYqowcT5PZz": {
+      "date": "2026-09-09",
+      "rep": "jack",
+      "leads": 25,
+      "no_record": 12
+    },
+    "cam_k2D3B2GqW2Q6WqPY3": {
+      "date": "2026-09-09",
+      "rep": "jack",
+      "leads": 23,
+      "no_record": 20
+    },
+    "cam_GNWuq629eXT8Yk6nk": {
+      "date": "2026-09-11",
+      "rep": "jack",
+      "leads": 0,
+      "recheck_when_loaded": true
+    },
+    "cam_kDgZw2b6ixJ8AJKrR": {
+      "date": "2026-09-09",
+      "rep": "jack",
+      "leads": 74,
+      "no_record": 70
+    },
+    "cam_7YkL3TD82f3cSiN6E": {
+      "date": "2026-09-09",
+      "rep": "jack",
+      "leads": 1,
+      "no_record": 0
+    }
+  }
+}

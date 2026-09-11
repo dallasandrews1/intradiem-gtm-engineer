@@ -10,6 +10,8 @@ from datetime import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 API = "https://api.lemlist.com/api"
+STATE_FILE = os.path.join(HERE, "config", "lemlist_pulse_state.json")
+REGRESSION_STATUSES = {"paused", "ended"}
 
 
 def load_key():
@@ -38,6 +40,19 @@ def is_plan_gated(resp):
     return PLAN_GATE in str(resp)
 
 
+def load_prior_state():
+    try:
+        with open(STATE_FILE) as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_state(state):
+    with open(STATE_FILE, "w") as f:
+        json.dump(state, f, indent=2)
+
+
 def main():
     key = load_key()
     lines = [f"# Lemlist pulse - {datetime.now().strftime('%Y-%m-%d %H:%M')}", ""]
@@ -54,6 +69,34 @@ def main():
             lines.append("- PLAN-GATED: /api/campaigns needs emailPro (trial ended Aug 13). This is NOT zero campaigns; the relay's MCP path covers campaign state. Do not read this as all-quiet.")
         else:
             lines.append(f"- none (raw: {str(camps)[:150]})")
+
+    campaigns_trustworthy = bool(campaigns) and not is_plan_gated(camps)
+    if campaigns_trustworthy:
+        prior_state = load_prior_state()
+        current_state = {
+            c.get("_id"): {"name": c.get("name"), "status": c.get("status")}
+            for c in campaigns if c.get("_id")
+        }
+        regressions = []
+        other_changes = []
+        for cid, cur in current_state.items():
+            prior = prior_state.get(cid)
+            if not prior or prior.get("status") == cur["status"]:
+                continue
+            change = f"- {cur['name']} | {prior.get('status')} -> {cur['status']} | id: {cid}"
+            if prior.get("status") == "running" and cur["status"] in REGRESSION_STATUSES:
+                regressions.append(change)
+            else:
+                other_changes.append(change)
+        if regressions:
+            lines.append("")
+            lines.append("## REGRESSION WATCH - campaign dropped out of running since last pulse")
+            lines.extend(regressions)
+        if other_changes:
+            lines.append("")
+            lines.append("## Other status changes since last pulse")
+            lines.extend(other_changes)
+        save_state(current_state)
 
     lines.append("")
     lines.append("## Activity (last 100 events)")

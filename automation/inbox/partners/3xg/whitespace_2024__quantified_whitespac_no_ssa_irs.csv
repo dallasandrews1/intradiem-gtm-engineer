@@ -1,0 +1,1306 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,,Prereq's,150 min. 
+WFM Ent,QM 
+Trans bot (speech),Non Speech Customers,Rec +
+voice capture,Saas has Voice Capture,includes Trans,requires trans,requires trans
+,,,,,,,,,,,,,,,,,,,,,,,,,,,List Price,240,240,120,624,128,480,197,600,120
+Totals,Totals,,,,,4266,111055,20560,76285,34171,57763,69114,0,76287,59257,0,0,10765,0,1164,0,899,0,0,0,,Total Opportunity,16587360,9191280,1721280,68050320,10299904,38624640,15852393,23418600,4411560,188157337
+Bill To Name,Account Name,Bucket,,Max License,Type    (WFE),EDM-Rec,Rec,Encrp,QM,AQM,DPA,WFM,WFMPro,PM,Speech,RTAA,IQ,CF,XM,VFC,community,RecPubSafe,ChAuto,KMEnt,KMPro,,,Workflex,Quality Bot   ,Trans Bot,Wrap Up 624+128,Voice Capture,RT Coach w Trans,Redaction,Speech 480+120,Encryption,Total
+"Alliance Technology Group, LLC",USDA,500-1999,x,873,Perpetual,0,873,873,873,0,143,0,0,873,0,0,0,0,0,0,0,0,0,0,0,,,0,209520,104760,544752,111744,419040,171981,523800,,2085597
+"Alliance Technology Group, LLC",Bureau of Fiscal Service fka Bureau of Public Debt,500-1999,,780,Perpetual,0,40,780,40,0,0,40,0,780,0,0,0,0,0,0,0,0,0,0,0,,,9600,9600,4800,24960,5120,19200,7880,24000,,105160
+"Amazon Web Services, Inc.",Nationwide Mutual Insurance Co.,5000-9999,x,6400,SaaS,0,1,0,0,0,6400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,624,,,197,,,821
+"Amazon Web Services, Inc.","Avis Budget Car Rental, LLC (ABCR)",2000-4999,,2450,SaaS,2450,2450,0,2350,0,2350,2350,0,0,2002,0,0,0,0,0,0,0,0,0,0,,,564000,564000,,,,,,,,1128000
+"Amazon Web Services, Inc.",Regions Bank,2000-4999,x,2143,SaaS,0,2143,0,2143,2143,0,993,0,2143,0,0,0,0,0,0,0,0,0,0,0,,,238320,,,1337232,,,,,,1575552
+"Amazon Web Services, Inc.",First Republic Bank,500-1999,x,1400,SaaS,1400,1400,0,301,0,301,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,72240,36120,873600,,,,,,982200
+"Amazon Web Services, Inc.","Best Western International, Inc.",500-1999,,600,SaaS,0,600,0,600,600,600,600,0,600,0,0,0,0,0,0,0,0,0,0,0,,,144000,,,374400,76800,288000,118200,,,1001400
+Arrias Technical Solutions Inc.,Toronto Hydro-Electric System Limited,500-1999,,980,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,980,0,0,0,,,0,,,,,,,,,0
+"Arrow Enterprise Computing Solutions, Inc","Quantum Health, Inc.",500-1999,,1180,Perpetual,0,0,1180,2,0,0,0,0,0,1180,0,0,0,0,0,0,0,0,0,0,,,0,480,,,,,,,,480
+"Atos IT Solutions and Services, Inc.",Medstar Health,500-1999,,779,Term,0,779,0,779,0,51,285,0,371,0,0,0,0,0,0,0,0,0,0,0,,,68400,186960,93480,486096,99712,373920,153463,467400,93480,2022911
+Avaya LLC,Department of Veterans Affairs,2000-4999,x,3579,Term,0,0,0,0,0,3579,0,0,0,3579,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Horizon Healthcare Services, Inc. d/b/a Horizon BCBS of New Jersey",2000-4999,x,3240,Term,0,0,1,0,0,1230,0,0,0,0,0,0,3240,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,HCA National Patient Account SVC KY,2000-4999,x,3228,Term,0,3228,1,0,0,3180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,2014272,413184,1549440,635916,1936800,,6549612
+Avaya LLC,TSYS,2000-4999,x,2838,Term,0,156,0,0,0,2838,0,0,0,2838,0,0,0,0,0,0,0,0,0,0,,,0,,,97344,19968,74880,30732,,18720,241644
+Avaya LLC,Christus Health Data Center,2000-4999,x,2732,Perpetual,0,2732,1018,1524,592,149,567,0,1524,0,0,0,0,0,0,0,0,0,0,0,,,136080,,,1704768,349696,1311360,538204,1639200,,5679308
+Avaya LLC,Allina Health,2000-4999,x,2259,Perpetual,0,2259,256,1256,1000,358,641,0,1645,670,0,0,0,0,0,0,0,0,0,0,,,153840,,,1409616,289152,1084320,445023,,,3381951
+Avaya LLC,GE Healthcare (APCS CC Global Hub),2000-4999,x,2179,Perpetual,0,40,0,0,0,0,2179,0,0,0,0,0,0,0,0,0,0,0,0,0,,,522960,,,24960,5120,19200,7880,24000,4800,608920
+Avaya LLC,State of Washington - Department of Social and Health Services (DSHS),2000-4999,x,2100,Term,0,0,0,0,0,2100,0,0,0,1020,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Mastercard Technologies, LLC",500-1999,x,2095,SaaS,0,2093,0,2093,2093,2093,2093,0,2093,2095,0,0,378,0,0,0,0,0,0,0,,,502320,,,1306032,,,,,,1808352
+Avaya LLC,The Results Company,500-1999,x,2000,SaaS,2000,2000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Cognizant Healthcare Services, LLC",500-1999,x,1920,Term,0,0,1,0,0,1920,0,0,0,0,0,0,1920,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Southern Company,500-1999,x,1863,Term,0,276,4,0,0,690,0,0,0,1863,0,0,638,0,0,0,0,0,0,0,,,0,,,172224,35328,132480,54372,,,394404
+Avaya LLC,Xcel Energy,500-1999,x,1724,SaaS,0,800,3,800,1600,1724,800,0,800,1724,0,0,1724,0,0,0,0,0,0,0,,,192000,,,499200,,,,,,691200
+Avaya LLC,HD Supply,500-1999,x,1722,Term,0,0,0,0,0,0,0,0,0,1722,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"DTE Energy Inc. dba DTE Energy Corporate Services, LLC",500-1999,x,1668,Term,0,0,0,0,0,1020,0,0,0,1668,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Nordstrom, Inc.",500-1999,,1649,Term,0,0,0,0,0,1649,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Penn State Health,500-1999,x,1320,Term,0,1320,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,823680,168960,633600,260040,792000,158400,2836680
+Avaya LLC,Amtrak,500-1999,,1294,SaaS,647,783,0,647,647,1294,647,0,1294,1294,0,0,0,0,0,0,0,0,0,0,,,155280,,,488592,,,,,,643872
+Avaya LLC,Independence Blue Cross,500-1999,x,1201,SaaS,0,1,0,1,0,1,1201,0,1201,0,0,0,0,0,0,0,0,0,0,0,,,288240,240,120,624,128,480,197,,,290029
+Avaya LLC,Scott & White Memorial Hospital,500-1999,x,1163,Term,0,1163,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,725712,148864,558240,229111,697800,139560,2499287
+Avaya LLC,Map Communications,500-1999,x,1080,Term,0,1080,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,673920,138240,518400,212760,648000,,2191320
+Avaya LLC,United States Pharmaceutical Group LLC dba Convey Health Solutions LLC,500-1999,x,1078,Term,0,1078,1,1078,0,0,1078,0,1078,1078,0,0,0,0,0,0,0,0,0,0,,,258720,258720,,672672,137984,517440,212366,,,2057902
+Avaya LLC,Norton Lifelock Capex,500-1999,x,1020,Term,0,1020,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,636480,130560,489600,200940,612000,,2069580
+Avaya LLC,VA Medical Cntr Chief Supply Svc,500-1999,x,1014,Term,0,0,0,0,0,1014,0,0,0,1014,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Reliance Insurance,500-1999,x,1008,Term,0,1008,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,628992,129024,483840,198576,604800,120960,2166192
+Avaya LLC,MGM Resorts,500-1999,,1008,Term,0,0,0,0,0,0,0,0,0,1008,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,American Family Life Assurance Company of Columbus (AFLAC),500-1999,x,952,Term,0,20,1,10,0,952,10,0,10,952,0,0,952,0,0,0,0,0,0,0,,,2400,2400,,12480,2560,9600,3940,,,33380
+Avaya LLC,TransUnion LLC,500-1999,x,940,Term,0,0,0,0,0,940,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Allstate Insurance Co. of Canada Ltd.,500-1999,x,827,Term,0,0,0,0,0,827,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"MSC Industrial Direct CO., Inc.",500-1999,x,801,SaaS,0,800,0,800,801,0,800,0,800,0,0,0,0,0,0,0,0,0,0,0,,,192000,,,499200,,,,,,691200
+Avaya LLC,"Skybridge Americas, Inc.",500-1999,x,800,Perpetual,0,400,401,400,0,800,400,0,400,0,0,0,400,0,0,0,0,0,0,0,,,96000,96000,48000,249600,51200,192000,78800,240000,,1051600
+Avaya LLC,Northwell Health (fka North Shore LI Jewish Hospital),500-1999,x,800,Term,0,0,9,0,0,800,0,0,0,455,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,The University of Texas M.D. Anderson Cancer Center,500-1999,x,760,Term,0,760,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,474240,97280,364800,149720,456000,91200,1633240
+Avaya LLC,Wawanesa Insurance,500-1999,x,731,Term,0,480,0,0,0,731,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,299520,61440,230400,94560,288000,57600,1031520
+Avaya LLC,Medical University Hospital Authority,500-1999,x,720,Term,0,720,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,449280,92160,345600,141840,432000,,1460880
+Avaya LLC,Shared Technologies Service Group,500-1999,x,701,Term,0,0,0,0,0,701,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,TB Consulting LLC,500-1999,x,670,Term,0,670,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,418080,85760,321600,131990,402000,80400,1439830
+Avaya LLC,Beth Israel Deaconess Medical Center,500-1999,x,661,Term,0,661,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,412464,84608,317280,130217,396600,79320,1420489
+Avaya LLC,Nordstrom Bank,500-1999,x,651,SaaS,0,650,0,650,650,495,0,0,650,651,0,0,0,0,0,0,0,0,0,0,,,0,,,405600,83200,312000,128050,,,928850
+Avaya LLC,Parkview Corporate Health,500-1999,x,650,Term,0,650,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,405600,83200,312000,128050,390000,,1318850
+Avaya LLC,Charlton Memorial Hospital,500-1999,x,600,Term,0,0,0,0,0,300,0,0,0,600,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Alere Health, Inc",500-1999,x,600,Perpetual,0,600,0,600,600,0,0,0,600,0,0,0,50,0,0,0,0,0,0,0,,,0,,,374400,76800,288000,118200,360000,72000,1289400
+Avaya LLC,University of Washington Medicine,500-1999,x,580,SaaS,0,580,0,580,580,0,250,0,580,0,0,0,0,0,0,0,0,0,0,0,,,60000,,,361920,,,,,,421920
+Avaya LLC,Scripps Mercy Hospital,500-1999,x,564,Term,0,0,1,0,0,564,0,0,0,516,0,0,72,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,B2B Bank,500-1999,x,513,Perpetual,0,513,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,320112,65664,246240,101061,307800,61560,1102437
+Avaya LLC,Sentara,500-1999,x,506,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,506,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Walter Reed National Military Medical Center (NMMC),500-1999,x,500,Term,0,500,0,0,0,152,0,0,0,0,0,0,492,0,0,0,0,0,0,0,,,0,,,312000,64000,240000,98500,300000,60000,1074500
+"BEI Holdings, Inc. (DBA: Business Electronics)",Eversource Energy,500-1999,,1642,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1642,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Yale New Haven Hospital,500-1999,x,899,Perpetual,0,860,862,747,5,525,746,0,543,0,0,0,393,0,0,0,899,0,0,0,,,179040,,,536640,110080,412800,169420,516000,,1923980
+"BEI Holdings, Inc. (DBA: Business Electronics)",Yale University,500-1999,x,515,Perpetual,0,515,316,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,321360,65920,247200,101455,309000,,1044935
+Bell Canada,TD Bank N.A.- USA,5000-9999,x,5026,Term,0,50,0,50,0,0,0,0,0,5026,0,0,0,0,0,0,0,0,0,0,,,0,12000,,31200,6400,24000,9850,,6000,89450
+Bell Canada,"Industrielle Alliance, Assurances et Services Financier Inc.",500-1999,x,965,Perpetual,0,965,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,602160,123520,463200,190105,579000,115800,2073785
+Bell Canada,"Medavie, Inc.",500-1999,x,851,Perpetual,0,850,851,850,0,600,450,0,650,200,0,0,0,0,0,0,0,0,0,0,,,108000,204000,,530400,108800,408000,167450,,,1526650
+Bell Canada,CGI,500-1999,x,750,Perpetual,0,0,0,0,0,379,750,0,371,0,0,0,0,0,0,0,0,0,0,0,,,180000,,,,,,,,,180000
+BT Americas Inc.,"Farmers Group, Inc.",5000-9999,x,9554,SaaS,1,9554,0,9554,9553,1,1,0,9554,0,0,0,0,0,0,0,0,0,0,0,,,240,,,5961696,,,,,,5961936
+BT AXA Group,Genworth North America Corporation,500-1999,x,1201,Perpetual,0,0,0,0,0,500,1201,0,1,230,0,0,0,0,0,0,0,0,0,0,,,288240,,,,,,,,,288240
+"Capture Technologies, Inc.",City of Stockton Police and Fire,500-1999,,512,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,512,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Interinsurance Exchange of the Automobile Club,Over 10000,,13270,Term,0,13270,18,6659,4941,6659,905,0,7255,3700,0,0,0,0,0,0,0,0,0,0,,,217200,,,8280480,1698560,6369600,2614190,,,19180030
+Carousel Industries of North America,Burlington Northern Santa Fe LLC,500-1999,,2020,Term,0,2020,2016,1741,0,0,0,0,1741,0,0,0,0,0,700,0,0,0,0,0,,,0,417840,208920,1260480,258560,969600,397940,1212000,,4725340
+Carousel Industries of North America,"CDK Global, LLC",500-1999,,885,Perpetual,0,0,0,0,0,0,885,0,885,0,0,0,0,0,0,0,0,0,0,0,,,212400,,,,,,,,,212400
+Carousel Industries of North America,North Middlesex Savings Bank Inc.,500-1999,x,600,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,600,0,0,0,0,0,,,0,,,,,,,,,0
+CBTS Technology Solutions LLC,Corewell Health,2000-4999,x,2960,SaaS,255,2960,0,1625,255,0,1453,0,0,0,0,0,0,0,0,0,0,0,0,0,,,348720,,,1847040,,,,,,2195760
+Cerium Networks,Boeing Employees Credit Union,500-1999,x,745,SaaS,0,745,1,381,381,0,497,0,381,501,0,0,0,0,0,0,0,0,0,0,,,119280,,,464880,,,,,,584160
+Cerium Networks,Avista Corporation,500-1999,x,501,Term,0,342,501,205,0,183,190,0,205,177,0,0,0,0,0,0,0,0,0,0,,,45600,49200,,213408,43776,164160,67374,,,583518
+"Cisco Systems, Inc.",Progressive Casualty Insurance Company,Over 10000,x,20700,SaaS,0,0,0,0,0,0,20700,0,20700,0,0,0,0,0,0,0,0,0,0,0,,,4968000,,,,,,,,,4968000
+"Cisco Systems, Inc.",Costco Wholesale Corporation,5000-9999,x,5401,SaaS,0,5401,0,5400,5400,5400,5400,0,5400,5400,0,0,0,0,0,0,0,0,0,0,,,1296000,,,3370224,,,,,,4666224
+"Cisco Systems, Inc.",Ford Motor Credit,2000-4999,x,3850,Term,0,0,0,150,2400,3850,3850,0,3850,0,0,0,0,0,0,0,0,0,0,0,,,924000,,,,,,,,,924000
+"Cisco Systems, Inc.",The Cleveland Clinic Foundation,2000-4999,x,3577,Term,0,3577,2289,212,0,0,200,0,212,0,0,0,0,0,0,0,0,0,0,0,,,48000,50880,25440,2232048,457856,1716960,704669,2146200,,7382053
+"Cisco Systems, Inc.","T-Mobile USA, Inc.",2000-4999,x,3117,Perpetual,0,3117,3117,3117,907,0,2517,0,0,2517,0,0,0,0,0,0,0,0,0,0,,,604080,,,1945008,398976,1496160,614049,,,5058273
+"Cisco Systems, Inc.",Regents of the University of Michigan,500-1999,x,1610,Term,0,0,0,1610,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,386400,193200,,,,,,,579600
+"Cisco Systems, Inc.",DoITT,500-1999,x,1210,Perpetual,0,0,0,0,1210,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,,,,,,,,,240
+"Cisco Systems, Inc.","VW Credit, Inc.",500-1999,x,825,Perpetual,0,0,0,0,0,825,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Bureau of Fiscal Service fka Bureau of Public Debt,500-1999,x,780,Perpetual,0,40,780,40,0,0,40,0,780,0,0,0,0,0,0,0,0,0,0,0,,,9600,9600,4800,24960,5120,19200,7880,24000,,105160
+"Cisco Systems, Inc.",US Navysparwarsyscen,500-1999,x,695,Perpetual,0,0,695,0,0,0,1,0,1,695,0,0,0,0,0,0,0,0,0,0,,,240,,,,,,,,,240
+"Cisco Systems, Inc.","Medavie, Inc.",500-1999,x,600,Perpetual,0,0,600,600,0,600,200,0,0,150,0,0,0,0,0,0,0,0,0,0,,,48000,144000,,,,,,,,192000
+"Cisco Systems, Inc.",Banner Health dba North Colorado Medical Center,500-1999,x,558,Perpetual,0,557,558,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,,,347568,71296,267360,109729,334200,,1130393
+"Cisco Systems, Inc.",Yale University,500-1999,x,500,Perpetual,0,500,301,0,0,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,312000,64000,240000,98500,300000,,1014500
+Connex Quebec Inc,Ministere de l'Emploi et de la Solidarite sociale,2000-4999,,3434,Term,0,1522,675,1522,0,0,2391,0,3434,286,0,0,0,0,0,0,0,0,0,0,,,573840,365280,,949728,194816,730560,299834,,,3114058
+Connex Telecommunications Inc.,TD Bank N.A.- USA,5000-9999,x,7143,Term,0,5065,819,7143,0,0,0,0,0,6146,0,0,0,0,0,0,0,0,0,0,,,0,1714320,,3160560,648320,2431200,997805,,,8952205
+Connex Telecommunications Inc.,Bank of Montreal (BMO),5000-9999,x,5394,Term,0,5394,0,4830,0,118,0,0,1047,3640,0,0,0,0,0,0,0,0,0,0,,,0,1159200,,3365856,690432,2589120,1062618,,647280,9514506
+Connex Telecommunications Inc.,Sun Life Assurance Company of Canada,2000-4999,x,3761,Term,0,3761,381,2230,0,85,0,0,12,0,0,0,0,0,0,0,0,0,0,0,,,0,535200,267600,2346864,481408,1805280,740917,2256600,,8433869
+Connex Telecommunications Inc.,Manulife Financial,2000-4999,x,2542,Term,0,2040,0,1540,250,10,2542,0,1042,1240,0,0,0,0,0,0,0,0,0,0,,,610080,,,1272960,261120,979200,401880,,244800,3770040
+Connex Telecommunications Inc.,Bank of Nova Scotia,500-1999,,1512,Term,0,308,0,0,0,0,1047,0,0,1512,0,0,0,0,0,0,0,0,0,0,,,251280,,,192192,39424,147840,60676,,36960,728372
+Connex Telecommunications Inc.,BMO Bank N.A. f/k/a BMO Harris Bank N.A.,500-1999,,701,Term,0,701,0,701,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,168240,84120,437424,89728,336480,138097,420600,84120,1758809
+"ConvergeOne, Inc",Texas Health and Human Services Commission (HHSC),5000-9999,x,6604,Term,0,6604,0,5758,0,72,5075,0,4984,5,0,0,0,0,0,0,0,0,0,0,,,1218000,1381920,,4120896,845312,3169920,1300988,,792480,12829516
+"ConvergeOne, Inc",AmeriHealth Caritas Health Plan,5000-9999,x,6246,Term,0,3975,76,3807,0,3533,6246,0,5377,0,0,0,0,0,0,0,0,0,0,0,,,1499040,913680,456840,2480400,508800,1908000,783075,2385000,,10934835
+"ConvergeOne, Inc","Mercury Insurance Services, LLC",5000-9999,x,5863,Perpetual,0,5863,0,2760,0,2742,736,0,373,0,0,0,0,0,0,0,0,0,0,0,,,176640,662400,331200,3658512,750464,2814240,1155011,3517800,703560,13769827
+"ConvergeOne, Inc",TB Consulting LLC,2000-4999,,3472,Term,0,0,0,0,0,0,3472,0,0,0,0,0,0,0,0,0,0,0,0,0,,,833280,,,,,,,,,833280
+"ConvergeOne, Inc","T-Mobile USA, Inc.",2000-4999,,3117,Perpetual,0,3117,3117,3117,907,0,2517,0,0,2517,0,0,0,0,0,0,0,0,0,0,,,604080,,,1945008,398976,1496160,614049,,,5058273
+"ConvergeOne, Inc",AGA Service Company fka Allianz Global Assistance,500-1999,,1400,Term,0,1362,1400,1256,0,413,1332,0,0,1134,0,0,0,0,0,0,0,0,0,0,,,319680,301440,,849888,174336,653760,268314,,,2567418
+"ConvergeOne, Inc",Global Payments,500-1999,,1200,Term,0,1200,1200,1200,0,1200,1200,0,1200,1200,0,0,0,0,0,0,0,0,0,0,,,288000,288000,,748800,153600,576000,236400,,,2290800
+"ConvergeOne, Inc",Guardian Protection Services (Armstrong Group of Companies),500-1999,,873,Perpetual,0,260,0,560,0,300,873,0,873,300,0,0,0,0,0,0,0,0,0,0,,,209520,134400,,162240,33280,124800,51220,,31200,746660
+"ConvergeOne, Inc",Suncoast Credit Union,500-1999,,863,Term,0,863,764,713,0,0,664,0,100,400,0,0,0,0,0,0,0,0,0,0,,,159360,171120,,538512,110464,414240,170011,,,1563707
+"ConvergeOne, Inc",Harris County Hospital District,500-1999,,850,Perpetual,0,447,0,846,0,0,846,0,850,0,0,0,0,0,0,0,0,0,0,0,,,203040,203040,101520,278928,57216,214560,88059,268200,53640,1468203
+"ConvergeOne, Inc","Cardinal Health 5, LLC",500-1999,,806,Term,0,0,0,0,0,65,806,0,0,70,0,0,0,0,0,0,0,0,0,0,,,193440,,,,,,,,,193440
+"ConvergeOne, Inc","Essendant Management Services LLC., f/k/a United Stationers Supply Co.",500-1999,,800,Perpetual,0,400,0,800,0,0,0,0,512,0,0,0,0,0,0,0,0,0,0,0,,,0,192000,96000,249600,51200,192000,78800,240000,48000,1147600
+"ConvergeOne, Inc",Kansas Turnpike Authority,500-1999,,675,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,675,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",WFUBMC - North Carolina Baptist Hospital,500-1999,,612,Term,0,612,0,425,0,242,425,0,425,0,0,0,0,0,0,0,0,0,0,0,,,102000,102000,51000,381888,78336,293760,120564,367200,73440,1570188
+"CWT US, LLC",CWT Global B.V.,5000-9999,,9050,SaaS,0,9050,0,9050,9050,9050,9050,0,9050,2252,0,0,0,0,0,0,0,0,0,0,,,2172000,,,5647200,,,,,,7819200
+Eaton and Associates,Human Services Agency - City and County of San Francisco (CCSF),2000-4999,,2511,SaaS,0,0,0,2511,0,0,0,837,0,0,0,0,0,0,0,0,0,0,0,0,,,0,602640,301320,,,,,,,903960
+"Evergy Metro, Inc.","Evergy Services, Inc.",500-1999,,953,SaaS,270,305,0,575,0,515,1,0,306,575,270,0,0,0,0,0,0,953,950,0,,,240,138000,,190320,,,,,,328560
+"Four Points Technology, LLC",USDA,500-1999,,730,Perpetual,0,730,730,730,0,0,0,0,730,0,0,0,0,0,0,0,0,0,0,0,,,0,175200,87600,455520,93440,350400,143810,438000,,1743970
+"Goserco, Inc.","City and County of Denver, Denver 911",500-1999,,980,Perpetual,0,0,0,0,0,0,175,0,175,0,0,0,0,0,0,0,980,0,0,0,,,42000,,,,,,,,,42000
+"Goserco, Inc.",City of Portland - BOEC,500-1999,,598,Perpetual,0,0,0,0,0,140,140,0,0,140,0,0,0,0,0,0,598,0,0,0,,,33600,,,,,,,,,33600
+"Goserco, Inc.",Presbyterian Healthcare Services,500-1999,,520,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,520,0,0,0,0,0,,,0,,,,,,,,,0
+Group Elite Communications Inc.,The National Bank of Canada,5000-9999,x,7620,Term,0,2675,2678,2675,0,0,0,0,0,7620,0,0,0,0,0,0,0,0,0,0,,,0,642000,,1669200,342400,1284000,526975,,,4464575
+Group Elite Communications Inc.,Ford Motor Credit,5000-9999,,6585,Term,0,6585,6585,5685,0,700,0,0,0,3200,0,0,0,0,0,0,0,0,0,0,,,0,1364400,,4109040,842880,3160800,1297245,,,10774365
+Group Elite Communications Inc.,Intermountain Healthcare (IHC),2000-4999,,3999,Term,0,3999,0,2853,0,1036,657,0,120,0,0,0,0,0,0,0,0,0,0,0,,,157680,684720,342360,2495376,511872,1919520,787803,2399400,479880,9778611
+Group Elite Communications Inc.,"Baptist Health South Florida, Inc.",2000-4999,,2521,Term,0,2521,0,1183,341,1133,492,0,1133,1133,0,0,0,0,0,0,0,0,0,0,,,118080,,,1573104,322688,1210080,496637,,302520,4023109
+Group Elite Communications Inc.,Trinity Health,500-1999,x,1500,Term,0,0,1500,1500,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,360000,180000,,,,,,,540000
+Group Elite Communications Inc.,University of Michigan,500-1999,,1300,Term,0,1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,811200,166400,624000,256100,780000,156000,2793700
+Group Elite Communications Inc.,DoITT,500-1999,,1210,Perpetual,0,0,0,0,1210,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,,,,,,,,,240
+Group Elite Communications Inc.,UMASS Memorial,500-1999,,1000,Term,0,1000,0,500,0,0,500,0,500,0,0,0,0,0,0,0,0,0,0,0,,,120000,120000,60000,624000,128000,480000,197000,600000,120000,2449000
+Group Elite Communications Inc.,WageWorks,500-1999,,807,Term,0,226,0,226,0,0,807,0,0,0,0,0,0,0,0,0,0,0,0,0,,,193680,54240,27120,141024,28928,108480,44522,135600,27120,760714
+Group Elite Communications Inc.,Carle Foundation Hospital,500-1999,,700,Term,0,700,0,550,550,0,550,0,0,0,0,0,0,0,0,0,17,0,0,0,,,132000,,,436800,89600,336000,137900,420000,84000,1636300
+Group Elite Communications Inc.,"HealthEquity, Inc.",500-1999,,693,Term,0,100,0,650,0,650,693,0,650,0,0,0,0,0,0,0,0,0,0,0,,,166320,156000,78000,62400,12800,48000,19700,60000,12000,615220
+Group Elite Communications Inc.,American Water,500-1999,,601,Term,0,600,601,600,400,0,600,0,600,0,0,0,0,0,0,0,0,0,0,0,,,144000,,,374400,76800,288000,118200,360000,,1361400
+Group Elite Communications Inc.,Livingston International Inc.,500-1999,,585,Perpetual,0,0,0,0,0,585,585,0,585,0,0,0,0,0,0,0,0,0,0,0,,,140400,,,,,,,,,140400
+Group Elite Communications Inc.,Banner Health dba North Colorado Medical Center,500-1999,,558,Perpetual,0,557,558,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,,,347568,71296,267360,109729,334200,,1130393
+Group Elite Communications Inc.,Portland General Electric,500-1999,,503,Term,0,503,503,353,503,353,353,0,0,353,0,0,0,0,0,0,0,0,0,0,,,84720,,,313872,64384,241440,99091,,,803507
+IBM Canada Ltd.,Bell Canada,5000-9999,,5452,Term,0,5452,0,5452,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,1308480,654240,3402048,697856,2616960,1074044,3271200,654240,13679068
+IBM Canada Ltd.,TD Bank N.A.- USA,500-1999,,1624,Term,0,1624,0,1624,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,389760,194880,1013376,207872,779520,319928,974400,194880,4074616
+"Immix Technology, Inc.",Human Services Agency - City and County of San Francisco (CCSF),2000-4999,,2511,SaaS,0,0,0,2511,0,0,0,837,0,0,0,0,0,0,0,0,0,0,0,0,,,0,602640,301320,,,,,,,903960
+"Immix Technology, Inc.",North Texas Tollway Authority (NTTA),500-1999,,1005,Term,0,460,462,460,0,615,529,0,1005,460,0,0,0,0,0,0,0,0,0,0,,,126960,110400,,287040,58880,220800,90620,,,894700
+"Immix Technology, Inc.",USDA,500-1999,,873,Perpetual,0,873,873,873,0,143,175,0,873,0,0,0,0,0,0,0,0,0,0,0,,,42000,209520,104760,544752,111744,419040,171981,523800,,2127597
+"Immix Technology, Inc.",Virginia (VA) Department of Taxation,500-1999,,522,Perpetual,0,522,272,522,0,240,522,0,271,0,0,0,0,0,0,0,0,0,0,0,,,125280,125280,62640,325728,66816,250560,102834,313200,,1372338
+"Inova Solutions, Inc.",John Hopkins University,2000-4999,,2375,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2375,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Arthur J. Gallagher (US),Over 10000,,10200,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Janney Montgomery Scott LLC,5000-9999,,6340,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6340,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Burlington Northern Santa Fe LLC,2000-4999,,4002,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Societe Generale Americas Operational Services, Inc.",2000-4999,,2755,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2755,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Vertical Screen, Inc.",2000-4999,,2328,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2328,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Point 72 Asset Management, L.P.",2000-4999,,2160,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2160,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Cobb County,2000-4999,,2148,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2148,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Sea Mar Community Health Centers,500-1999,,2002,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2002,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Centura Health - Englewood,500-1999,,1647,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1647,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",New Jersey Turnpike Authority Inc,500-1999,,1400,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1400,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Federated Investors,500-1999,,1335,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1335,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Baptist Health System, Inc",500-1999,,1130,SaaS,1130,1130,0,800,800,800,380,0,0,800,0,0,0,0,0,0,0,0,0,0,,,91200,,,705120,,,,,,796320
+"ISI Telemanagement Solutions, LLC",Metropolitan Atlanta Rapid Transit Authority (MARTA),500-1999,,1130,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1130,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Community Clinic of NWA,500-1999,,1050,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1050,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Entergy Services Inc,500-1999,,1042,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1042,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Stafford County - VA,500-1999,,1000,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1000,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",United Heritage Credit Union,500-1999,,955,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,955,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",M&T Bank,500-1999,,882,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,882,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",TaxAudit,500-1999,,800,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,800,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Reid Hospital & Health Systems,500-1999,,718,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,718,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Advisor Group,500-1999,,650,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,650,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Fidelity Bank of Kansas,500-1999,,602,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,602,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",University of Texas Health Science Center San Antonio,500-1999,,586,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,586,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Cambia Health Solutions, Inc. fka Regence Group, The",500-1999,,566,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,566,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Idaho Department of Health and Welfare,500-1999,,564,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,564,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",University Medical Center of El Paso,500-1999,,522,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,522,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",OMAHA PUBLIC POWER DISTRICT (OPPD),500-1999,,515,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,515,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Radwell International Inc.,500-1999,,511,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,511,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",ARVEST BANK,500-1999,,510,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,510,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",East Central Ind. School District,500-1999,,502,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,502,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Altamonte Springs,500-1999,,500,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,500,0,0,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Hanover Insurance Group,500-1999,,1690,Perpetual,0,1690,0,554,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,132960,66480,1054560,216320,811200,332930,1014000,202800,3831250
+Kova Corporation,Burlington County 911,500-1999,,1308,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1308,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Orange County Emergency Services,500-1999,,1268,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1268,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Septa,500-1999,,1089,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1089,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Martin County FL Sheriff,500-1999,,785,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,785,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Miami Dade Fire Rescue,500-1999,,746,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,746,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,"General Dynamics Information Technology, Inc.",500-1999,,1080,Perpetual,0,360,364,685,360,715,362,0,722,1080,0,0,0,0,0,0,0,0,0,0,,,86880,,,224640,46080,172800,70920,,,601320
+Meridian IT Inc.,American Family Life Assurance Company of Columbus (AFLAC),500-1999,,550,Term,0,0,0,0,0,0,0,0,550,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Baltimore County Communications Center,500-1999,,1416,Perpetual,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,1416,0,0,0,,,240,,,,,,,,,240
+"Motorola Solutions, Inc.",Montgomery County Maryland,500-1999,,991,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,991,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Massachusetts State Police,500-1999,,905,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,905,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Public Service Enterprise Group (PSEG),500-1999,,556,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,556,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",City of Stockton Police and Fire,500-1999,,512,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,512,0,0,0,,,0,,,,,,,,,0
+Netagen Communication Technologies Inc.,City of Calgary,500-1999,,688,Term,0,688,80,224,0,224,224,0,224,289,0,0,0,0,0,0,0,0,0,0,,,53760,53760,,429312,88064,330240,135536,,,1090672
+"Northland Business Systems, Inc.",Minnesota Central Region,500-1999,,835,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,835,0,0,0,,,0,,,,,,,,,0
+NWN Corporation,Florida Department of Children and Families / Florida Abuse Hotline,500-1999,,1050,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,1050,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Patterson Companies,Patterson Dental Supply,500-1999,,847,SaaS,0,847,0,567,567,469,376,0,567,458,0,0,414,0,0,0,0,0,0,0,,,90240,,,528528,,,,,,618768
+"Presidio Networked Solutions, LLC",Entergy Services Inc,2000-4999,x,2200,Term,0,2200,0,1100,1100,1100,1100,0,1100,1100,0,0,0,0,0,0,0,0,0,0,,,264000,,,1372800,281600,1056000,433400,,264000,3671800
+"Presidio Networked Solutions, LLC",NYUMC Langone,2000-4999,x,2134,Perpetual,0,2134,1661,1678,401,1115,1359,0,1659,835,0,0,0,0,0,0,0,0,0,0,,,326160,,,1331616,273152,1024320,420398,,,3375646
+"Presidio Networked Solutions, LLC",Geisinger Health Systems,500-1999,,1868,Perpetual,0,1867,1868,1522,0,441,1,0,1523,456,0,0,0,0,0,0,0,0,0,0,,,240,365280,,1165008,238976,896160,367799,,,3033463
+"Presidio Networked Solutions, LLC",1199 SEIU National Benefits Fund,500-1999,,600,SaaS,600,600,0,300,300,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,,,0,,,374400,76800,288000,118200,,,857400
+"Red River Solutioins, LLC","Advance Auto Parts, Inc.",500-1999,,1000,SaaS,0,1000,0,700,700,700,700,0,700,0,0,0,0,0,0,0,0,0,0,0,,,168000,,,624000,128000,480000,197000,,,1597000
+"Reliant Energy Retail Services, LLC.",NRG Energy Inc,2000-4999,,2120,Term,0,2120,2111,2120,0,2110,610,0,0,1793,0,0,0,0,0,0,0,0,0,0,,,146400,508800,,1322880,271360,1017600,417640,,,3684680
+ServiceMaster Consumer Services Limited Partnership,"Terminix Consumer Services, LLC",500-1999,x,1500,SaaS,0,1500,0,1500,1500,0,1500,0,1500,0,0,0,0,0,0,0,0,0,0,0,,,360000,,,936000,,,,,,1296000
+Servion Global Solutions Inc,Costco Wholesale Corporation,5000-9999,,9969,SaaS,2292,9969,0,9967,9967,9967,9967,0,9967,9969,0,0,2380,0,0,0,0,0,0,0,,,2392080,,,6220656,,,,,,8612736
+Servion Global Solutions Inc,Propharma Group LLC,500-1999,x,950,SaaS,0,750,0,750,750,0,750,0,950,0,0,0,0,0,0,0,0,0,0,0,,,180000,,,468000,96000,360000,147750,,,1251750
+Servion Global Solutions Inc,Mount Sinai Medical Center,500-1999,x,730,Term,0,601,0,604,0,0,595,0,595,730,0,0,0,0,0,0,0,0,0,0,,,142800,144960,,375024,76928,288480,118397,,72120,1218709
+Servion Global Solutions Inc,"Hinge Health, Inc.",500-1999,x,610,SaaS,610,610,0,610,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,146400,73200,380640,,,,,,600240
+SHI International Corp,Idaho Department of Health and Welfare,500-1999,x,564,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,564,0,0,0,0,0,,,0,,,,,,,,,0
+SimComm Pte Ltd,Cognizant Technical Solutions,5000-9999,x,5175,Perpetual,0,5175,0,150,0,0,0,0,600,600,0,0,0,0,0,0,0,0,0,0,,,0,36000,,3229200,662400,2484000,1019475,,621000,8052075
+Sound Communications Inc.,Duke Energy Corporation,2000-4999,,3301,SaaS,3300,3300,1,3301,660,3300,301,0,1,3300,0,660,0,0,0,0,1869,0,0,0,,,72240,,,2059200,,,,,,2131440
+Sound Communications Inc.,First Energy Corporation,2000-4999,,2191,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2191,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Clayton Homes,500-1999,,1155,Term,0,1155,0,1155,0,36,0,0,1155,700,0,0,0,0,0,0,0,0,0,0,,,0,277200,,720720,147840,554400,227535,,138600,2066295
+Sound Communications Inc.,City of Columbus OH,500-1999,,1122,Perpetual,0,0,0,0,0,0,0,0,0,52,0,0,0,0,0,0,1122,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,United Parcel Service (UPS),500-1999,,1102,Perpetual,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1102,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Federal Express,500-1999,,750,Term,0,750,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,468000,96000,360000,147750,450000,90000,1611750
+Sound Communications Inc.,Warren County OH,500-1999,,643,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,643,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,KUB,500-1999,,533,SaaS,0,0,0,0,0,40,0,16,0,16,0,0,0,0,0,0,533,0,0,0,,,0,,,,,,,,,0
+SPAR Solutions LLC,American Credit Acceptance,500-1999,,940,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,940,,,0,,,,,,,,,0
+"Talkdesk, Inc.",Freedom Care LLC,500-1999,,791,SaaS,0,0,0,0,0,0,791,0,0,0,0,0,0,0,0,0,0,0,0,0,,,189840,,,,,,,,,189840
+TELUS,La Capitale,2000-4999,,2201,Perpetual,0,1100,2201,1100,0,0,0,0,1100,0,0,0,0,0,0,0,0,0,0,0,,,0,264000,132000,686400,140800,528000,216700,660000,,2627900
+TELUS,"Telus International (CDA), Inc.",500-1999,,720,Term,0,720,720,720,0,0,720,0,720,720,0,0,0,0,0,0,0,0,0,0,,,172800,172800,,449280,92160,345600,141840,,,1374480
+TELUS,Lussier Cabinet De Services Financiers Inc.,500-1999,,585,Perpetual,0,585,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,365040,74880,280800,115245,351000,70200,1257165
+Tenerity,Trilegiant Corporation,500-1999,,1000,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1000,0,0,,,0,,,,,,,,,0
+TTEC Services Corporation,The Cleveland Clinic Foundation,500-1999,,1705,Term,0,1705,1105,1100,0,400,1200,0,1100,1100,0,0,0,0,0,0,0,0,0,0,,,288000,264000,,1063920,218240,818400,335885,,,2988445
+TTEC Services Corporation,US Navysparwarsyscen,500-1999,,1390,Perpetual,0,0,1390,0,0,0,2,0,2,1390,0,0,0,0,0,0,0,0,0,0,,,480,,,,,,,,,480
+TTEC Services Corporation,Los Angeles Dept. Water & Power,500-1999,,1200,Perpetual,0,1200,0,1200,0,0,0,0,1200,0,0,0,0,0,0,0,0,0,0,0,,,0,288000,144000,748800,153600,576000,236400,720000,144000,3010800
+TTEC Services Corporation,Army & Air Force Exchange Services (AAFES),500-1999,,1060,Term,0,1060,1,530,355,355,530,0,530,740,0,0,0,0,0,0,0,0,0,0,,,127200,,,661440,135680,508800,208820,,,1641940
+TTEC Services Corporation,"VW Credit, Inc.",500-1999,,825,Perpetual,0,0,0,0,0,825,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vista Com,Bank of Oklahoma,500-1999,,605,Perpetual,0,605,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,377520,77440,290400,119185,363000,72600,1300145
+Vonage Business Limited,Goosehead Insurance,500-1999,,1118,SaaS,0,0,0,0,0,0,0,1118,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.",UMB Financial Corporation,2000-4999,,4800,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4800,0,0,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.",USDA,500-1999,,873,Perpetual,0,873,873,873,0,143,0,0,873,0,0,0,0,0,0,0,0,0,0,0,,,0,209520,104760,544752,111744,419040,171981,523800,,2085597
+WTI Holdings LLC dba Waterfield Technologies,California Physicians' Service dba Blue Shield of California,5000-9999,,5013,Term,0,5010,5013,4010,0,4010,4010,0,1100,4220,0,0,0,0,0,0,0,0,0,0,,,962400,962400,,3126240,641280,2404800,986970,,,9084090
+WTI Holdings LLC dba Waterfield Technologies,Emory University,500-1999,,1462,Perpetual,0,1462,0,860,0,0,860,0,860,612,0,0,0,0,0,0,0,0,0,0,,,206400,206400,,912288,187136,701760,288014,,175440,2677438
+WTI Holdings LLC dba Waterfield Technologies,Five Star Call Centers,500-1999,,747,Term,0,0,0,0,0,0,747,0,747,0,0,0,0,0,0,0,0,0,0,0,,,179280,,,,,,,,,179280
+WTI Holdings LLC dba Waterfield Technologies,CapTel Incorporated,500-1999,,650,Term,0,0,0,0,0,0,650,0,650,0,0,0,0,0,0,0,0,0,0,0,,,156000,,,,,,,,,156000
+WTI Holdings LLC dba Waterfield Technologies,Partnership HealthPlan of California,500-1999,,600,Term,0,600,0,500,0,450,500,0,500,450,0,0,0,0,0,0,0,0,0,0,,,120000,120000,,374400,76800,288000,118200,,72000,1169400
+"Intrado Life & Safety Canada, Inc.",Washoe County Sheriff,150-499,,492,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,492,0,0,0,,,0,,,,,,,,,0
+TELUS,CSST (Commission Sante Securite),150-499,,490,Perpetual,0,440,0,490,0,85,275,0,275,0,0,0,0,0,0,0,0,0,0,0,,,66000,117600,58800,274560,56320,211200,86680,264000,52800,1187960
+Connex Quebec Inc,CSST (Commission Sante Securite),150-499,,490,Perpetual,0,440,0,490,0,85,275,0,275,0,0,0,0,0,0,0,0,0,0,0,,,66000,117600,58800,274560,56320,211200,86680,264000,52800,1187960
+"Talkdesk, Inc.",Memorial Healthcare System,150-499,,490,SaaS,0,0,0,0,0,0,0,490,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Roehl Transport, Inc.",150-499,,486,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,486,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Children's Hospital Los Angeles,150-499,,480,Term,0,480,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,299520,61440,230400,94560,288000,57600,1031520
+"ISI Telemanagement Solutions, LLC",Philadelphia Housing Authority,150-499,,480,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,480,0,0,0,0,0,,,0,,,,,,,,,0
+Interactions Insights Corporation,Polish and Slavic Federal Credit Union,150-499,,480,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,480,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Cengage Learning,150-499,,478,SaaS,0,0,0,0,0,0,0,478,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Freeman Health System, Inc.",150-499,,463,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,463,0,0,0,0,0,,,0,,,,,,,,,0
+"Alliance Technology Group, LLC",DXC Technology Services LLC,150-499,,462,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,462,460,0,,,0,,,,,,,,,0
+Enterprise Services LLC,DXC Technology Services LLC,150-499,,462,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,462,460,0,,,0,,,,,,,,,0
+Avaya LLC,Xplornet Communications Inc.,150-499,,460,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,460,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+TTEC Services Corporation,"American Honda Motor Co., Inc.",150-499,,458,Perpetual,0,458,0,458,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,109920,54960,285792,58624,219840,90226,274800,54960,1149362
+Aria Solutions USA Inc.,"American Honda Motor Co., Inc.",150-499,,458,Perpetual,0,458,0,458,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,109920,54960,285792,58624,219840,90226,274800,54960,1149362
+"ISI Telemanagement Solutions, LLC","American Eagle Financial Credit Union, Inc.",150-499,,451,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,451,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Nuance Communications,150-499,,450,Term,0,450,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,280800,57600,216000,88650,270000,54000,967050
+"Motorola Solutions, Inc.",Burlington County 911,150-499,,446,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,446,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Loma Linda University,150-499,,444,Term,0,370,0,370,0,0,370,0,370,0,0,0,444,0,0,0,0,0,0,0,,,88800,88800,44400,230880,47360,177600,72890,222000,44400,1017130
+"World Wide Technology, Inc.",LG&E and KU Services,150-499,,443,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,443,0,0,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Tampa Electric Company,150-499,,440,Perpetual,0,390,392,365,0,365,366,0,366,440,0,0,0,0,0,0,0,0,0,0,,,87840,87600,,243360,49920,187200,76830,,,732750
+"Cisco Systems, Inc.",Tampa Electric Company,150-499,,440,Perpetual,0,390,392,365,0,365,366,0,366,440,0,0,0,0,0,0,0,0,0,0,,,87840,87600,,243360,49920,187200,76830,,,732750
+TOS,Toronto Hydro-Electric System Limited,150-499,,440,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,440,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Dane County,150-499,,438,Perpetual,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,438,0,0,0,,,240,,,,,,,,,240
+"ISI Telemanagement Solutions, LLC",Hennepin County,150-499,,424,Perpetual,0,424,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,264576,54272,203520,83528,254400,50880,911176
+SHI International Corp,Hennepin County,150-499,,424,Perpetual,0,424,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,264576,54272,203520,83528,254400,50880,911176
+Avaya LLC,City of Portland,150-499,,421,Perpetual,0,421,0,210,0,0,105,0,281,0,0,0,0,0,0,0,0,0,0,0,,,25200,50400,25200,262704,53888,202080,82937,252600,50520,1005529
+Avaya LLC,Cellular South,150-499,,420,Term,0,0,0,0,0,420,0,0,0,420,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Atos IT Solutions and Services, Inc.",Blue Cross and Blue Shield of Vermont,150-499,,416,Perpetual,0,208,0,416,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,99840,49920,129792,26624,99840,40976,124800,24960,596752
+CBTS Technology Solutions LLC,Tampa Electric Company,150-499,,415,Perpetual,0,365,367,365,0,365,366,0,366,415,0,0,0,0,0,0,0,0,0,0,,,87840,87600,,227760,46720,175200,71905,,,697025
+Sound Communications Inc.,Westmoreland County 911,150-499,,405,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,405,0,0,0,,,0,,,,,,,,,0
+"Four Points Technology, LLC",TSA - Telecommunication Group,150-499,,405,Perpetual,0,405,0,405,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,97200,48600,252720,51840,194400,79785,243000,48600,1016145
+"ISI Telemanagement Solutions, LLC","Ralis Services, Inc.",150-499,,405,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,405,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Mississippi Department of Information Technology Services (MS ITS),150-499,,400,SaaS,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,249600,51200,192000,78800,,,571600
+Carousel Industries of North America,ConServe,150-499,,400,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,400,0,0,0,0,0,,,0,,,,,,,,,0
+SPAR Solutions LLC,Agilent Technologies Inc,150-499,,400,SaaS,0,1,0,1,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,400,,,240,240,120,624,128,480,197,,,2029
+Connex Services US Inc,"Carexm, LLC",150-499,,400,SaaS,0,0,0,0,0,0,400,0,0,0,0,0,0,0,0,0,0,0,0,0,,,96000,,,,,,,,,96000
+"Northland Business Systems, Inc.",Washington County Sheriff,150-499,,398,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,398,0,0,0,,,0,,,,,,,,,0
+Group Elite Communications Inc.,Rocky Mountain Poison & Drug Center,150-499,,396,Perpetual,0,396,0,385,0,0,396,0,385,172,0,0,0,0,0,0,0,0,0,0,,,95040,92400,,247104,50688,190080,78012,,47520,800844
+"Presidio Networked Solutions, LLC",Rocky Mountain Poison & Drug Center,150-499,,396,Perpetual,0,396,0,385,0,0,396,0,385,172,0,0,0,0,0,0,0,0,0,0,,,95040,92400,,247104,50688,190080,78012,,47520,800844
+Avaya LLC,Volkswagen of America,150-499,,392,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,392,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Fort Lauderdale,150-499,,390,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,390,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",Openedge ( a Division of Global Payments),150-499,,381,Term,0,380,381,300,0,300,300,0,300,300,0,0,0,0,0,0,0,0,0,0,,,72000,72000,,237120,48640,182400,74860,,,687020
+Group Elite Communications Inc.,Health Alliance Medical Plans,150-499,,375,Perpetual,0,0,0,0,375,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Health Alliance Medical Plans,150-499,,375,Perpetual,0,0,0,0,375,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Schneider Electric,150-499,,371,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,371,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Alaska Land Mobile Radio,150-499,,367,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,367,0,0,0,,,0,,,,,,,,,0
+Amway Corp.,Alticor Inc.,150-499,,366,Perpetual,0,365,366,365,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,87600,43800,227760,46720,175200,71905,219000,,872225
+Avaya LLC,"US Foods, Inc.",150-499,,364,Perpetual,0,364,121,243,243,0,0,0,243,0,0,0,0,0,0,0,0,0,0,0,,,0,,,227136,46592,174720,71708,218400,,738556
+"Northland Business Systems, Inc.",Metropolitan Council,150-499,,362,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,362,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,illumifin Corporation,150-499,,360,Term,0,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,224640,46080,172800,70920,216000,43200,773640
+Avaya LLC,Blue Cross Blue Shield of SC,150-499,,360,Term,0,360,0,0,0,6,0,0,0,12,0,0,0,0,0,0,0,0,0,0,,,0,,,224640,46080,172800,70920,,43200,557640
+Avaya LLC,MTST Helena Data Center,150-499,,360,Term,0,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,224640,46080,172800,70920,216000,43200,773640
+Avaya LLC,Carrington Mortgage Holdings,150-499,,360,Term,0,360,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,224640,46080,172800,70920,216000,,730440
+Avaya LLC,Morley Companies,150-499,,360,Term,0,0,0,0,0,360,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Inter County Regional Radio System (ICORRS),150-499,,359,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,359,0,0,0,,,0,,,,,,,,,0
+"Axispoint Technology Solutions Group, Inc.",Orlando Health,150-499,,351,Term,0,350,351,230,0,230,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,55200,27600,218400,44800,168000,68950,210000,,792950
+"ConvergeOne, Inc",Sacramento Municipal Utility District,150-499,,350,Perpetual,0,310,300,300,0,300,300,0,300,350,0,0,0,0,0,0,0,0,0,0,,,72000,72000,,193440,39680,148800,61070,,,586990
+Avaya LLC,Integris SW Med Center aka Integris TCP,150-499,,341,Perpetual,0,341,0,160,0,164,0,0,160,0,0,0,0,0,0,0,0,0,0,0,,,0,38400,19200,212784,43648,163680,67177,204600,40920,790409
+Wipro Limited,Greater Toronto Airport Authority,150-499,,340,Perpetual,0,340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,212160,43520,163200,66980,204000,40800,730660
+"Motorola Solutions, Inc.",Howard County 911,150-499,,338,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,338,0,0,0,,,0,,,,,,,,,0
+"Presidio Networked Solutions, LLC",Duquesne Light Company,150-499,,336,Term,0,335,336,285,0,165,165,0,0,165,0,0,165,0,0,0,10,0,0,0,,,39600,68400,,209040,42880,160800,65995,,,586715
+"Motorola Solutions, Inc.",Calvert County MD,150-499,,335,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,335,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Orange County Regional Computer,150-499,,330,Term,0,156,1,0,0,210,0,0,0,330,0,0,0,0,0,0,0,0,0,0,,,0,,,97344,19968,74880,30732,,,222924
+"ISI Telemanagement Solutions, LLC",Occidental Petroleum Corporation,150-499,,325,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,325,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Patient First Corporation,150-499,,324,Term,0,324,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,202176,41472,155520,63828,194400,38880,696276
+BT Americas Inc.,Santander - US,150-499,,322,Perpetual,0,94,0,0,0,0,0,0,0,0,0,0,0,0,322,0,0,0,0,0,,,0,,,58656,12032,45120,18518,56400,11280,202006
+CBTS Technology Solutions LLC,Consumers Energy Company,150-499,,322,Term,0,322,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,200928,41216,154560,63434,193200,38640,691978
+"Motorola Solutions, Inc.",United States Army,150-499,,318,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,318,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,University Of Connecticut Health Center,150-499,,315,Perpetual,0,315,0,315,315,0,0,0,315,0,0,0,0,0,0,0,0,0,0,0,,,0,,,196560,40320,151200,62055,189000,37800,676935
+"World Wide Technology, Inc.",Yukon Kuskokwim Health Corp,150-499,,315,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,315,0,0,0,0,0,,,0,,,,,,,,,0
+WTI Holdings LLC dba Waterfield Technologies,"Delta Dental Plan of Michigan, Inc",150-499,,314,Perpetual,0,0,0,0,0,0,314,0,197,0,0,0,0,0,0,0,0,0,0,0,,,75360,,,,,,,,,75360
+Vista Com,Lower Colorado River Authority,150-499,,312,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,312,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",Leon Medical Centers,150-499,,310,SaaS,0,0,0,0,0,0,0,310,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Community Bank & Trust,150-499,,309,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,309,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Colorado Springs School District,150-499,,306,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,306,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Olmsted County Sheriff,150-499,,304,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,304,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Avaya Global IT CCT,150-499,,301,Perpetual,0,300,301,300,0,60,300,0,301,300,0,0,300,0,0,0,0,0,0,0,,,72000,72000,,187200,38400,144000,59100,,,572700
+Group Elite Communications Inc.,Physicians Mutual Insurance Company,150-499,,301,Perpetual,0,300,300,301,0,0,300,0,300,150,0,0,0,0,0,0,0,0,0,0,,,72000,72240,,187200,38400,144000,59100,,,572940
+"ISI Telemanagement Solutions, LLC",Hope Enterprise Corp.,150-499,,301,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,301,0,0,0,0,0,,,0,,,,,,,,,0
+"Cameo Global, Inc.",Physicians Mutual Insurance Company,150-499,,301,Perpetual,0,0,300,301,0,0,300,0,300,0,0,0,0,0,0,0,0,0,0,0,,,72000,72240,36120,,,,,,,180360
+Avaya LLC,Convergent Resources a/k/a ER Solutions,150-499,,300,Term,0,300,0,0,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,187200,38400,144000,59100,180000,36000,644700
+Avaya LLC,Legacy System Office,150-499,,300,Term,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,187200,38400,144000,59100,180000,36000,644700
+Avaya LLC,Weill Cornell Medical College,150-499,,300,Term,0,300,0,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,187200,38400,144000,59100,180000,36000,644700
+Group Elite Communications Inc.,Usana Health Sciences,150-499,,300,Term,0,300,0,255,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,61200,30600,187200,38400,144000,59100,180000,36000,736500
+"Cisco Systems, Inc.",Physicians Mutual Insurance Company,150-499,,300,Perpetual,0,0,300,300,0,0,300,0,0,0,0,0,0,0,0,0,0,0,0,0,,,72000,72000,36000,,,,,,,180000
+"ISI Telemanagement Solutions, LLC",Clarke County Hospital,150-499,,300,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Covenant Management Systems,150-499,,295,Perpetual,0,295,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,184080,37760,141600,58115,177000,35400,633955
+"Immix Technology, Inc.",Community Health Choice,150-499,,295,SaaS,0,0,0,0,0,0,0,295,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+New Era Technology CX,Revel Systems,150-499,,293,Term,0,293,0,163,0,0,163,0,0,0,0,0,0,0,0,0,0,0,0,0,,,39120,39120,19560,182832,37504,140640,57721,175800,35160,727457
+Vonage Business Limited,"Rocket Travel, Inc.",150-499,,290,SaaS,0,0,0,0,0,0,0,290,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Baptist Health,150-499,,286,Term,0,286,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,178464,36608,137280,56342,171600,34320,614614
+WTI Holdings LLC dba Waterfield Technologies,Kohler,150-499,,284,Perpetual,0,283,284,283,0,184,271,0,260,272,0,0,0,0,0,0,0,0,0,0,,,65040,67920,,176592,36224,135840,55751,,,537367
+"IPC Systems, Inc.",MUFG Securities Americas Inc.,150-499,,281,Perpetual,0,281,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,,,0,,,175344,35968,134880,55357,168600,33720,603869
+"Amazon Web Services, Inc.",LA County Department of Child and Family Services,150-499,,280,SaaS,0,0,0,0,0,0,0,280,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.","Lord, Abbett & Co. LLC",150-499,,280,Perpetual,0,280,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,174720,35840,134400,55160,168000,33600,601720
+"World Wide Technology, Inc.",Shasta Community Health Center,150-499,,280,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,280,0,0,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Federal Reserve Bank,150-499,,275,Perpetual,0,0,0,0,0,0,275,0,0,0,0,0,0,0,0,0,0,0,0,0,,,66000,,,,,,,,,66000
+"ConvergeOne, Inc",Frost National Bank,150-499,,274,Term,0,273,274,273,273,263,273,0,273,273,0,0,0,0,0,0,0,0,0,0,,,65520,,,170352,34944,131040,53781,,,455637
+"ISI Telemanagement Solutions, LLC",Mecklenburg County,150-499,,271,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,271,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Delta Defense LLC,150-499,,271,SaaS,0,0,0,0,0,0,0,271,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,TCS e-Serve International Ltd,150-499,,270,Perpetual,0,270,71,170,0,0,0,0,170,0,0,0,0,0,0,0,0,0,0,0,,,0,40800,20400,168480,34560,129600,53190,162000,,609030
+Avaya LLC,VCU POCA,150-499,,270,Term,0,0,0,0,0,0,0,0,0,270,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Long View Systems Corporation,"Hydro One Networks, Inc.",150-499,,270,Term,0,270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,168480,34560,129600,53190,162000,32400,580230
+"ISI Telemanagement Solutions, LLC",Central Electric Power Cooperative (CEPC),150-499,,269,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,269,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Atlanticare Health System,150-499,,268,Perpetual,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,268,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Texas A&M University,150-499,,264,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,264,0,0,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,NSM Insurance Group,150-499,,260,SaaS,0,0,0,0,0,0,0,260,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Entergy Services Inc,150-499,,258,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,258,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Corewell Health,150-499,,256,SaaS,0,256,0,255,255,20,215,0,255,0,0,0,0,0,0,0,0,0,0,0,,,51600,,,159744,,,,,,211344
+"Capture Technologies, Inc.",NAWCAD,150-499,,252,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,252,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Kissimmee Utility Authority,150-499,,251,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,251,0,0,0,0,0,,,0,,,,,,,,,0
+Archsys Incorporated,Spirit Airlines,150-499,,251,Term,0,250,251,0,0,0,0,0,0,0,0,0,0,0,0,0,161,0,0,0,,,0,,,156000,32000,120000,49250,150000,,507250
+Avaya LLC,Lydia Security Monitoring T/A Cops,150-499,,250,Term,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,156000,32000,120000,49250,150000,30000,537250
+Avaya LLC,Hudson Valley Credit Union,150-499,,250,Term,0,30,0,0,0,191,0,0,0,250,0,0,0,0,0,0,0,0,0,0,,,0,,,18720,3840,14400,5910,,3600,46470
+Avaya LLC,Miami-Dade County ICFB fka Overtown Transit,150-499,,250,Perpetual,0,0,0,0,0,150,0,0,250,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Harborview Medical Center,150-499,,250,SaaS,0,0,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,New York City Board of Education (Central),150-499,,250,SaaS,0,0,0,0,0,250,250,0,0,250,0,0,0,0,0,0,0,0,0,0,,,60000,,,,,,,,,60000
+Carousel Industries of North America,Cartus Corporation,150-499,,250,SaaS,250,250,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,156000,32000,120000,49250,,,357250
+Servion Global Solutions Inc,Roche Diagnostics Corporation,150-499,,250,SaaS,0,250,0,250,250,0,0,0,250,250,0,0,0,0,0,0,0,0,0,0,,,0,,,156000,32000,120000,49250,,,357250
+"Alliance Technology Group, LLC","Allianz Technology of America, Inc.",150-499,,250,Perpetual,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,0,,,60000,,,,,,,,,60000
+"ISI Telemanagement Solutions, LLC",Florida Polytechnic University,150-499,,250,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,250,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,BioScript Solutions,150-499,,250,SaaS,0,0,0,0,0,0,0,250,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Hayes e-Government,150-499,,249,Term,0,249,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,155376,31872,119520,49053,149400,29880,535101
+Avaya LLC,University of Utah,150-499,,246,Term,0,0,0,0,0,246,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Arrow Enterprise Computing Solutions, Inc","Atos IT Solutions and Services, Inc.",150-499,,246,SaaS,0,0,0,110,0,0,0,246,0,0,0,0,0,0,0,0,0,0,0,0,,,0,26400,13200,,,,,,,39600
+Avaya LLC,Portsmouth Naval Hospital,150-499,,240,Term,0,144,0,0,0,240,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,89856,18432,69120,28368,86400,17280,309456
+"Northland Business Systems, Inc.",MetCad 911,150-499,,234,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,234,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,MetCad 911,150-499,,233,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,233,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Invitae Corporation,150-499,,231,SaaS,0,0,0,0,0,0,0,231,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Minnesota State Retirement Services,150-499,,229,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",University of Kansas Medical Center,150-499,,226,Term,0,225,226,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,140400,28800,108000,44325,135000,,456525
+"Talkdesk, Inc.",Early Warning Services LLC,150-499,,225,SaaS,0,0,0,0,0,0,0,225,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+LexisNexis Risk Solutions Inc.,"LexisNexis VitalChek Network, Inc.",150-499,,225,Term,0,0,0,0,0,225,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Great Wolf Resorts, Inc.",150-499,,225,SaaS,0,0,0,0,0,0,225,0,0,0,0,0,0,0,0,0,0,0,0,0,,,54000,,,,,,,,,54000
+"Motorola Solutions, Inc.",Santee Cooper Power,150-499,,224,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,224,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Personal Touch Holding Co.,150-499,,222,Term,0,222,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,138528,28416,106560,43734,133200,26640,477078
+"ISI Telemanagement Solutions, LLC",Retirement Systems of Alabama,150-499,,220,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,220,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Flare Logistics, Inc.",150-499,,220,SaaS,0,0,0,0,0,0,220,0,0,0,0,0,0,0,0,0,0,0,0,0,,,52800,,,,,,,,,52800
+Avaya LLC,"Asset Marketing Services, LLC",150-499,,216,Term,0,216,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,134784,27648,103680,42552,129600,25920,464184
+"ConvergeOne, Inc","WebMD, LLC",150-499,,215,Term,0,215,215,215,0,0,0,0,215,215,0,0,215,0,0,0,0,0,0,0,,,0,51600,,134160,27520,103200,42355,,,358835
+Vonage Business Limited,GAF Materials,150-499,,215,SaaS,0,0,0,0,0,0,0,215,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Snohomish County Public Utility,150-499,,211,Perpetual,0,211,0,171,0,0,0,0,171,0,0,0,0,0,0,0,0,0,0,0,,,0,41040,20520,131664,27008,101280,41567,126600,25320,514999
+Avaya LLC,"Venetian Casino Resort, LLC",150-499,,210,Term,0,0,1,0,0,210,0,0,0,210,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Staley Technologies,150-499,,210,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,210,0,0,0,,,0,,,,,,,,,0
+"Talkdesk, Inc.",Quadient,150-499,,210,SaaS,0,0,0,0,0,0,0,210,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Unify, Inc.",Blue Cross and Blue Shield of Vermont,150-499,,208,Perpetual,0,0,0,208,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,49920,24960,,,,,,,74880
+Group Elite Communications Inc.,"Industrielle Alliance, Assurances et Services Financier Inc.",150-499,,206,Perpetual,0,206,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,128544,26368,98880,40582,123600,24720,442694
+Sound Communications Inc.,Garrett County 911,150-499,,206,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Berkley Technology Services,150-499,,206,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Septa,150-499,,205,Perpetual,0,205,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,127920,26240,98400,40385,123000,24600,440545
+"ISI Telemanagement Solutions, LLC",Advanced Infusion Systems Healthcare,150-499,,205,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,205,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Porsche Cars North America Inc,150-499,,204,Term,0,0,1,0,0,204,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",TriMet,150-499,,204,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,204,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Chelan PUD,150-499,,204,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,204,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Hospital For Special Surgery,150-499,,201,SaaS,0,200,0,200,200,50,0,0,200,201,0,0,0,0,0,0,0,0,0,0,,,0,,,124800,25600,96000,39400,,,285800
+"ISI Telemanagement Solutions, LLC",City of Brenham,150-499,,201,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,201,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Umpqua Health,150-499,,201,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,201,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Indiana Farm Bureau Insurance,150-499,,201,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,201,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",ConAgra Foods,150-499,,201,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,201,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Healthgrades,150-499,,201,SaaS,0,0,0,0,0,0,0,201,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Natl Jew Med & Res Cntr,150-499,,200,Term,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,124800,25600,96000,39400,120000,24000,429800
+Avaya LLC,Liberty Mutual,150-499,,200,SaaS,200,200,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,48000,24000,124800,25600,96000,39400,120000,,477800
+Servion Global Solutions Inc,"Intradiem, inc.",150-499,,200,Term,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,0,,,48000,,,,,,,,,48000
+"Presidio Networked Solutions, LLC","Selective Insurance Company of America, Inc.",150-499,,200,SaaS,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Kindred Healthcare,150-499,,200,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,200,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"School Specialty, Inc.",150-499,,200,SaaS,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Behavioral Health Response, Inc.",150-499,,200,SaaS,0,0,0,0,0,0,0,200,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Talkdesk, Inc.",Maxor National Pharmacy Services LLC,150-499,,194,SaaS,0,0,0,0,0,0,0,194,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Kenton County,150-499,,194,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,194,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Reading Hospital & Medical Center,150-499,,192,Term,0,192,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,119808,24576,92160,37824,115200,23040,412608
+Group Elite Communications Inc.,"Intralox, LLC",150-499,,192,Term,0,192,192,192,0,0,192,0,192,0,0,0,0,0,0,0,0,0,0,0,,,46080,46080,23040,119808,24576,92160,37824,115200,,504768
+Sound Communications Inc.,Dayton Power & Light,150-499,,192,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,192,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Columbia Bank,150-499,,191,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,191,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Columbia Basin Health Association,150-499,,190,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,190,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Centre County 911,150-499,,189,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,189,0,0,0,,,0,,,,,,,,,0
+"Axispoint Technology Solutions Group, Inc.",Safra Bank,150-499,,187,Perpetual,0,187,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,116688,23936,89760,36839,112200,22440,401863
+"ISI Telemanagement Solutions, LLC",OrthoCarolina,150-499,,186,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,186,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Hawaii County Civil Defense Agency,150-499,,182,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,182,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,CSSS de Chicoutimi,150-499,,181,Perpetual,0,180,181,180,180,0,0,0,180,0,0,0,0,0,0,0,0,0,0,0,,,0,,,112320,23040,86400,35460,108000,,365220
+Avaya LLC,Ademco Inc,150-499,,180,Term,0,180,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,112320,23040,86400,35460,108000,21600,386820
+"Cisco Systems, Inc.",Arthur J. Gallagher (US),150-499,,180,Term,0,180,180,180,0,180,180,0,180,0,0,0,180,0,0,0,0,0,0,0,,,43200,43200,21600,112320,23040,86400,35460,108000,,473220
+"IPC Systems, Inc.","PNC Bank, National Association",150-499,,180,Perpetual,0,180,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,112320,23040,86400,35460,108000,21600,386820
+"Capture Technologies, Inc.",United States Marines,150-499,,180,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,180,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Erlanger Medical Center,150-499,,178,Term,0,178,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,111072,22784,85440,35066,106800,21360,382522
+"ISI Telemanagement Solutions, LLC",North Kansas City Hospital,150-499,,178,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,178,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",The Blackstone Group Inc,150-499,,175,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,175,0,0,0,0,0,,,0,,,,,,,,,0
+"Adtech Global Solutions, Inc.","City and County of Denver, Denver 911",150-499,,175,Perpetual,0,0,0,0,0,0,175,0,175,0,0,0,0,0,0,0,0,0,0,0,,,42000,,,,,,,,,42000
+Evolve IP LLC,"Comoto Holdings, Inc.",150-499,,175,SaaS,0,0,0,0,0,0,0,175,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Norgren Express,150-499,,172,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,172,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Broward County Aviation Department,150-499,,171,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,171,0,0,0,0,0,,,0,,,,,,,,,0
+Meridian IT Inc.,Donlen Corporation,150-499,,169,SaaS,0,169,105,169,0,105,169,0,169,0,0,0,0,0,0,0,0,0,0,0,,,40560,40560,20280,105456,,,,,,206856
+Avaya LLC,Washington Suburban Sanitary Commission,150-499,,168,Term,0,0,0,0,0,168,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,McMaster University,150-499,,166,SaaS,166,166,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,103584,,,,,,103584
+Avaya LLC,Brooks Equipment Company,150-499,,165,Term,0,165,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,102960,21120,79200,32505,99000,19800,354585
+"Goserco, Inc.",Bernalillo County Sheriff,150-499,,161,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,161,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Santa Clara Valley Transportation Authority,150-499,,161,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,161,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Bernalillo County Sheriff,150-499,,161,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,161,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Affordable Care,150-499,,161,SaaS,0,0,0,161,0,0,161,0,0,0,0,0,0,0,0,0,0,0,0,0,,,38640,38640,19320,,,,,,,96600
+Accent Techn Solutions,Accenture,150-499,,160,Term,0,160,160,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,99840,20480,76800,31520,96000,,324640
+"Motorola Solutions, Inc.",Newton County GA E911,150-499,,160,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,160,0,0,0,,,0,,,,,,,,,0
+"Replay Systems, Inc.",Palm Beach Gardens,150-499,,158,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,158,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",MINN Southeast Regional,150-499,,158,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,158,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,MTD Products Inc.,150-499,,158,SaaS,0,0,0,0,0,0,0,158,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Replay Systems, Inc.",Macon-Bibb County E911,150-499,,157,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,157,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",United States Department of Energy,150-499,,157,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,157,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Healthwell Foundation, Inc",150-499,,157,SaaS,0,0,0,0,0,0,0,157,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,YUMA REGIONAL MEDICAL CENTER,150-499,,156,Term,0,18,0,0,0,156,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,11232,2304,8640,3546,10800,2160,38682
+"ISI Telemanagement Solutions, LLC",Baltimore County Public Schools,150-499,,156,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,156,0,0,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,Elara Caring,150-499,,156,SaaS,0,0,0,0,0,0,0,156,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Group Elite Communications Inc.,"Tacoma Public Utilities - Tacoma, WA",150-499,,155,Term,0,155,155,155,0,90,155,0,146,0,0,0,0,0,0,0,0,0,0,0,,,37200,37200,18600,96720,19840,74400,30535,93000,,407495
+"Cisco Systems, Inc.",Yale New Haven Hospital,150-499,,155,Perpetual,0,155,155,155,0,155,155,0,0,0,0,0,0,0,0,0,0,0,0,0,,,37200,37200,18600,96720,19840,74400,30535,93000,,407495
+"ISI Telemanagement Solutions, LLC",Northwest Orthopaedic Specialists,150-499,,155,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,155,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Citrus County Sheriff's Office,150-499,,155,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,155,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Wicomico Emergency 911,150-499,,154,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,154,0,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",AT&T - San Bernardino Police Department,150-499,,152,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,152,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Denver Health and Hospitals,150-499,,151,Term,0,150,50,150,0,0,151,0,151,0,0,0,0,0,0,0,0,0,0,0,,,36240,36000,18000,93600,19200,72000,29550,90000,,394590
+"ISI Telemanagement Solutions, LLC",Allegacy Federal Credit Union,150-499,,151,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,151,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Leander,150-499,,151,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,151,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Maryland Transportation Authority (MTA),150-499,,151,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,151,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,State of New Mexico,150-499,,150,Term,0,150,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,93600,19200,72000,29550,90000,18000,322350
+Avaya LLC,Guardian Alarm,150-499,,150,Term,0,150,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,93600,19200,72000,29550,90000,,304350
+Avaya LLC,Blue Cross Blue Shield of Mississippi,150-499,,150,Perpetual,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Otis Elevator Company (OTIS),150-499,,150,SaaS,0,0,0,150,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,,,0,36000,18000,,,,,,,54000
+"ISI Telemanagement Solutions, LLC",Banco Itau S/A,150-499,,150,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Kelowna Airport,150-499,,150,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Omaha National,150-499,,150,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Humana Inc,150-499,,150,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,150,0,0,0,0,0,,,0,,,,,,,,,0
+The Ayco Company LP,"The Goldman Sachs Group, Inc.",150-499,,150,SaaS,0,0,0,0,0,0,150,0,150,0,0,0,0,0,0,0,0,0,0,0,,,36000,,,,,,,,,36000
+Vonage Business Limited,"Clearone Advantage, LLC",150-499,,150,SaaS,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,DISA Global Solutions,150-499,,150,SaaS,0,0,0,0,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Ken Garff Automotive, LLC",150-499,,150,SaaS,0,0,0,150,0,0,0,150,0,0,0,0,0,0,0,0,0,0,0,0,,,0,36000,18000,,,,,,,54000
+Sound Communications Inc.,Wicomico Emergency 911,Under 150,,146,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,146,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Citadel Federal Credit Union,Under 150,,144,Term,0,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,17280,17280
+Avaya LLC,Avnet Inc.,Under 150,,144,Term,0,144,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,17280,17280
+Avaya LLC,Medica Health Plans,Under 150,,144,Term,0,0,0,0,0,144,0,0,0,0,0,0,58,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+BT Americas Inc.,"Bridgewater Associates, LP",Under 150,,144,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,144,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Maricopa Integrated Health Services,Under 150,,141,Term,0,141,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,16920,16920
+Avaya LLC,Guard.Me International Insurance,Under 150,,141,Perpetual,0,140,141,140,0,0,40,0,0,140,0,0,0,0,0,0,0,0,0,0,,,9600,33600,,,,,,,,43200
+Avaya LLC,Associated RGNL & Univ Pathologists (ARUP),Under 150,,140,Term,0,140,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.","Starkey Laboratories, Inc",Under 150,,140,SaaS,0,140,0,140,140,140,140,0,140,140,0,0,0,0,0,0,0,0,0,0,,,33600,,,,,,,,,33600
+"ISI Telemanagement Solutions, LLC",Birmingham Water Works Board,Under 150,,140,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,140,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Conga Solutions,Under 150,,140,SaaS,0,0,0,0,0,0,0,140,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Atlantic Union Bank,Under 150,,140,SaaS,0,0,0,0,0,0,0,140,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Somerset Department of Emergency Services,Under 150,,139,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,139,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Covenant Health Care,Under 150,,138,Term,0,138,1,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",Durango / La Plata Emergency Communications Center,Under 150,,138,Perpetual,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,138,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Durango / La Plata Emergency Communications Center,Under 150,,138,Perpetual,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,138,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Benefis Healthcare,Under 150,,136,Perpetual,0,136,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,,,0,,,,,,,,16320,16320
+Vonage Business Limited,"Labor First, LLC",Under 150,,136,SaaS,0,0,0,0,0,0,0,136,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,City of Saskatoon,Under 150,,135,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,135,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Memphis Police Department,Under 150,,134,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,134,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Shelby County Sheriff,Under 150,,134,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,134,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Jefferson City Police Department,Under 150,,133,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,133,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Jefferson City Police Department,Under 150,,133,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,133,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,State of Washington Health Care Authority,Under 150,,132,Term,0,132,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,15840,15840
+Avaya LLC,Peace Health Oregon Region,Under 150,,130,Term,0,130,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,15600,15600
+"ISI Telemanagement Solutions, LLC",Florida Health Care Plan,Under 150,,130,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,130,0,0,0,0,0,,,0,,,,,,,,,0
+"Cameo Global, Inc.","Champion Energy Service, LLC",Under 150,,130,SaaS,0,0,0,0,0,0,130,0,0,0,0,0,0,0,0,0,0,0,0,0,,,31200,,,,,,,,,31200
+Kova Corporation,Orleans Parish Communication District,Under 150,,129,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,129,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",SSM Health,Under 150,,129,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,129,0,0,0,0,0,,,0,,,,,,,,,0
+"Arrow Enterprise Computing Solutions, Inc",Federal Mogul Motorparts LLC,Under 150,,129,Perpetual,0,129,0,129,0,0,0,0,129,0,0,0,0,0,0,0,0,0,0,0,,,0,30960,15480,,,,,,15480,61920
+"Intrado Life & Safety Canada, Inc.",Orleans Parish Communication District,Under 150,,129,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,129,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Metropolitan Airport Commission,Under 150,,128,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,0,0,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,Regional Municipality of York,Under 150,,128,Perpetual,0,0,0,0,0,0,128,0,128,0,0,0,0,0,0,0,0,0,0,0,,,30720,,,,,,,,,30720
+Avaya LLC,"United Automobile Insurance Group, Inc.",Under 150,,126,Perpetual,0,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,15120,15120
+"ConvergeOne, Inc","United Automobile Insurance Group, Inc.",Under 150,,126,Perpetual,0,126,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,15120,15120
+"ISI Telemanagement Solutions, LLC",Texas Mutual Insurance,Under 150,,126,Perpetual,0,126,0,50,0,0,50,0,50,0,0,0,0,0,0,0,0,0,0,0,,,12000,12000,6000,,,,,,15120,45120
+"Motorola Solutions, Inc.",City of Gatineau,Under 150,,126,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Texas Mutual Insurance,Under 150,,125,Perpetual,0,125,0,50,0,0,50,0,50,0,0,0,0,0,0,0,0,0,0,0,,,12000,12000,6000,,,,,,15000,45000
+"ConvergeOne, Inc","Evergy Services, Inc.",Under 150,,125,SaaS,0,125,0,125,0,125,0,0,125,125,0,0,0,0,0,0,0,0,0,0,,,0,30000,,,,,,,,30000
+"ConvergeOne, Inc",Wescom Credit Union,Under 150,,125,Term,0,0,0,0,0,0,125,0,0,0,0,0,0,0,0,0,0,0,0,0,,,30000,,,,,,,,,30000
+"ISI Telemanagement Solutions, LLC",Kelley Kronenberg,Under 150,,125,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,125,0,0,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",North County Dispatch JPA,Under 150,,125,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,125,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Imperial Capital,Under 150,,123,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Northern PA Radio System (NTRTP),Under 150,,121,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Tidelands Health Systems,Under 150,,121,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Communication Federal Credit Union,Under 150,,121,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","McLane Company, Inc.",Under 150,,121,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",New Mexico Aging and Long Term Services Department,Under 150,,121,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,121,0,0,0,0,0,,,0,,,,,,,,,0
+New Era Technology CX,Lifeway Christian Resources,Under 150,,121,Perpetual,0,120,121,120,0,120,110,0,120,0,0,0,0,0,0,0,0,0,0,0,,,26400,28800,14400,,,,,,,69600
+Avaya LLC,Suncor Wood Buffalo,Under 150,,120,Term,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,14400,14400
+Avaya LLC,Vets First Choice,Under 150,,120,Term,0,120,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,14400,14400
+Avaya LLC,Matanuska Telephone Assocaiation (MTA),Under 150,,120,Term,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Lifeway Christian Resources,Under 150,,120,Perpetual,0,0,120,120,0,120,110,0,120,0,0,0,0,0,0,0,0,0,0,0,,,26400,28800,14400,,,,,,,69600
+"ISI Telemanagement Solutions, LLC",Banco De Credito & Inversiones,Under 150,,120,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,120,0,0,0,0,0,,,0,,,,,,,,,0
+"Cameo Global, Inc.",Lifeway Christian Resources,Under 150,,120,Perpetual,0,120,120,120,0,120,110,0,120,0,0,0,0,0,0,0,0,0,0,0,,,26400,28800,14400,,,,,,,69600
+Avaya LLC,C3i Solutions,Under 150,,118,Perpetual,0,118,118,118,118,0,0,0,118,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Hartford Hospital,Under 150,,117,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,117,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Associa Inc.,Under 150,,116,SaaS,0,0,0,0,0,0,0,116,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Michelin North America Inc.,Under 150,,115,SaaS,0,0,0,0,0,0,0,115,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,U.S. Nuclear Regulatory Commission,Under 150,,114,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,114,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Floyd County GA,Under 150,,113,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,113,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,OneAmerica Financial Partners,Under 150,,111,Term,0,0,0,0,0,111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Town of Middletown, DE",Under 150,,111,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,111,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Pacific Service Credit Union,Under 150,,110,Term,0,110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,13200,13200
+"Amazon Web Services, Inc.","Sportsmans Warehouse Holdings, Inc.",Under 150,,110,SaaS,0,0,0,110,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,,,0,26400,13200,,,,,,,39600
+"ISI Telemanagement Solutions, LLC",American Eagle Outfitters,Under 150,,110,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Karmanos Cancer Institute,Under 150,,110,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",LAFCU,Under 150,,110,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Dorchester County Department of Emergency Services,Under 150,,110,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,110,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Juniper Networks, Inc.",Under 150,,110,SaaS,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"iCIMS, Inc.",Under 150,,110,SaaS,0,0,0,0,0,0,0,110,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Central Arkansas Water,Under 150,,109,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,109,0,0,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Solano County Sheriff's Department,Under 150,,109,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,109,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Acuity Eye La Jolla, P.C.",Under 150,,108,SaaS,0,0,0,108,0,0,0,108,0,0,0,0,0,0,0,0,0,0,0,0,,,0,25920,12960,,,,,,,38880
+Carousel Industries of North America,Salinas Valley Memorial,Under 150,,107,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,107,0,0,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,MFS Investment Management,Under 150,,106,SaaS,106,106,0,62,62,0,0,0,0,76,0,62,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Presidio Networked Solutions, LLC",WSECU,Under 150,,105,Perpetual,0,0,0,0,0,0,105,0,74,0,0,0,0,0,0,0,0,0,0,0,,,25200,,,,,,,,,25200
+TELUS,Electrical Safety Authority (ESA),Under 150,,105,Term,0,104,105,104,0,104,0,0,104,0,0,0,0,0,0,0,0,0,0,0,,,0,24960,12480,,,,,,,37440
+"BEI Holdings, Inc. (DBA: Business Electronics)",State of Delaware,Under 150,,105,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,105,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",DE Transit,Under 150,,104,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,104,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Silac Insurance Company,Under 150,,104,SaaS,0,0,0,0,0,0,0,104,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Holston Medical Group,Under 150,,103,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,103,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Sonora Quest Laboratories,Under 150,,102,Term,0,102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,12240,12240
+Geomant UK Ltd,City of Oceanside,Under 150,,102,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,102,0,0,0,0,0,,,0,,,,,,,,,0
+Group Elite Communications Inc.,Denver Health and Hospitals,Under 150,,101,Term,0,100,0,100,0,0,101,0,101,0,0,0,0,0,0,0,0,0,0,0,,,24240,24000,12000,,,,,,12000,72240
+"ISI Telemanagement Solutions, LLC","Federal Home Loan Bank of Indianapolis, IN",Under 150,,101,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,101,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",GI Associates,Under 150,,101,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,101,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Grande Ronde Hospital,Under 150,,101,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,101,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Bombardier Transportation (PS),Under 150,,101,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,101,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,The School District of Philadelphia,Under 150,,100,Term,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,12000,12000
+Avaya LLC,World Strides,Under 150,,100,Term,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,12000,12000
+Avaya LLC,Orange County Board of County Commissioners,Under 150,,100,Perpetual,0,50,0,50,0,60,0,0,100,0,0,0,0,0,0,0,0,0,0,0,,,0,12000,6000,,,,,,6000,24000
+BT Americas Inc.,"AQR Capital Management, LLC",Under 150,,100,Perpetual,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,12000,12000
+"Presidio Networked Solutions, LLC",Denver Health and Hospitals,Under 150,,100,Term,0,100,0,100,0,0,100,0,100,0,0,0,0,0,0,0,0,0,0,0,,,24000,24000,12000,,,,,,12000,72000
+"Immix Technology, Inc.",National Archives and Records Administration,Under 150,,100,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,,,0,,,,,,,,,0
+"Atos IT Solutions and Services, Inc.",University of Texas Southwest Medical Center,Under 150,,100,SaaS,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Larned State Hospital,Under 150,,100,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Henrico County,Under 150,,100,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,Ontario Power Generation,Under 150,,100,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Varidesk LLC,Under 150,,100,SaaS,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Unify, Inc.",University of Texas Southwest Medical Center,Under 150,,100,SaaS,0,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Custodia Technology Americas Inc.,Liberty Mutual,Under 150,,100,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",AmaWaterways,Under 150,,100,SaaS,0,0,0,0,0,0,100,0,0,0,0,0,0,0,0,0,0,0,0,0,,,24000,,,,,,,,,24000
+"ISI Telemanagement Solutions, LLC",City of London Investment Management,Under 150,,98,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Sunnyvale Police Dept.,Under 150,,98,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",BOONE COUNTY FISCAL COURT,Under 150,,98,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0,,,0,,,,,,,,,0
+TELUS,"Fortis Alberta, Inc.",Under 150,,97,Perpetual,0,97,0,92,0,0,92,0,92,92,0,0,0,0,0,0,0,0,0,0,,,22080,22080,,,,,,,11640,55800
+"BEI Holdings, Inc. (DBA: Business Electronics)",Yonkers Police Department,Under 150,,97,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Yonkers Police Department,Under 150,,97,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,,,0,,,,,,,,,0
+"Talkdesk, Inc.","Docebo, Inc.",Under 150,,94,SaaS,0,0,0,0,0,0,0,94,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Mountainview Hospital,Under 150,,93,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,93,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",First National Bank and Trust,Under 150,,92,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,0,0,,,0,,,,,,,,,0
+"Talkdesk, Inc.",Zenbusiness Pbc,Under 150,,92,SaaS,0,0,0,0,0,0,0,92,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Spokane Transit Authority,Under 150,,92,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,92,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Illinois Hospital Association,Under 150,,91,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Mueller, Inc",Under 150,,91,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Extraco Banks,Under 150,,91,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,91,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,FAA,Under 150,,90,Term,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10800,10800
+Avaya LLC,DHS,Under 150,,90,Term,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10800,10800
+"BEI Holdings, Inc. (DBA: Business Electronics)",Pepco Holdings,Under 150,,90,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",American Public Media Group,Under 150,,90,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Anixter International Inc,Under 150,,90,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Assistenza International,Under 150,,90,SaaS,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",United States Steel Corporation,Under 150,,89,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,89,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Kvh Industries, Inc.",Under 150,,89,SaaS,0,0,0,0,0,0,0,89,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Kirtland Federal Credit Union,Under 150,,88,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,0,0,0,,,0,,,,,,,,,0
+Proquire LLC,Accenture State Healthcare Services LLC,Under 150,,88,SaaS,0,88,0,88,88,0,88,0,88,0,0,0,0,0,0,0,0,0,0,0,,,21120,,,,,,,,,21120
+"ISI Telemanagement Solutions, LLC",Family and Children's Services,Under 150,,87,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,87,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Tift County 911,Under 150,,87,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,87,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Source Support Services, Inc.",Under 150,,87,SaaS,0,0,0,0,0,0,0,87,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,The Ann & Robert H. Lurie Children's Hospital of Chicago,Under 150,,86,Term,0,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10320,10320
+"Goserco, Inc.",Mesa Fire and Medical Department,Under 150,,86,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,86,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,State of Florida - Hayes Hosted Solution,Under 150,,85,Term,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10200,10200
+"8X8, Inc.","Agiliti Health, Inc.",Under 150,,85,SaaS,0,0,0,85,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,,,0,20400,10200,,,,,,,30600
+Avaya LLC,City Holding Company,Under 150,,84,Term,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10080,10080
+Avaya LLC,City of Santa Fe,Under 150,,84,Term,0,84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,10080,10080
+"Motorola Solutions, Inc.",Raleigh County WV E911,Under 150,,84,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,84,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Chaffee County - CO,Under 150,,83,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,83,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",North Memorial Hospital - MN,Under 150,,82,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Whitfield County GA E911,Under 150,,82,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Toronto Hydro-Electric System Limited,Under 150,,82,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Casio Electronic,Under 150,,81,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Esse Health,Under 150,,81,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Jefferson County Iowa 911,Under 150,,81,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Jefferson County Iowa 911,Under 150,,81,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Brave Health, Inc.",Under 150,,81,SaaS,0,0,0,0,0,0,0,81,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Board of Regents of OU/OUHSC,Under 150,,80,Term,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,9600,9600
+Avaya LLC,CCSF-MULTI TENANT/MARKET,Under 150,,80,Perpetual,0,80,0,80,0,0,0,0,80,0,0,0,30,0,0,0,0,0,0,0,,,0,19200,9600,,,,,,9600,38400
+CBTS Technology Solutions LLC,Hurley Medical Center,Under 150,,80,SaaS,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,19200,9600,,,,,,,28800
+"Amazon Web Services, Inc.",The Assistance Fund Inc,Under 150,,80,SaaS,0,0,0,80,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,,,0,19200,9600,,,,,,,28800
+"Vintegrity Partners, LLC.",DE Health and Social Services,Under 150,,80,Term,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,9600,9600
+"Motorola Solutions, Inc.",Anne Arundel Fire Department,Under 150,,80,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Rio Grande Co.,Under 150,,80,SaaS,0,0,0,80,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,,,0,19200,9600,,,,,,,28800
+Vonage Business Limited,"Shipbob, Inc.",Under 150,,78,SaaS,0,0,0,0,0,0,0,78,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Pratt & Whitney Security,Under 150,,77,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,77,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Killeen Independent School District,Under 150,,77,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,77,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",NuStar Energy,Under 150,,77,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,77,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.","Chevron U.S.A Inc., acting through its Chevron Products Company division",Under 150,,77,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,77,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Boca Raton Regional Hospital,Under 150,,76,Term,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,9120,9120
+Avaya LLC,Ascension Health,Under 150,,76,Term,0,76,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,9120,9120
+"ISI Telemanagement Solutions, LLC",Tri-County Technical College,Under 150,,76,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Hendrick Hudson School District,Under 150,,76,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",United Heritage Insurance,Under 150,,76,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,0,0,,,0,,,,,,,,,0
+"NTT America, Inc.",Intermountain Healthcare (IHC),Under 150,,76,Term,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,,,0,,,,,,,,4080,4080
+"Capture Technologies, Inc.",Naval Surface Warfare Center,Under 150,,76,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Capital District Transportation Authority (CDTA),Under 150,,76,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"RegaloRx, Inc.",Under 150,,76,SaaS,0,0,0,0,0,0,0,76,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,AAA East Central,Under 150,,75,Perpetual,0,0,0,0,0,0,75,0,75,0,0,0,0,0,0,0,0,0,0,0,,,18000,,,,,,,,,18000
+"ISI Telemanagement Solutions, LLC","Associated Wholesale Grocers, Inc.",Under 150,,75,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,0,0,,,0,,,,,,,,,0
+"Edge Communications Solutions, LLC",Norfolk Southern Corporation,Under 150,,75,Term,0,75,0,75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,18000,9000,,,,,,9000,36000
+"Motorola Solutions, Inc.",Regional Emergency Dispatch Authority,Under 150,,75,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Go Wireless, Inc.",Under 150,,75,SaaS,0,0,0,75,0,0,0,75,0,0,0,0,0,0,0,0,0,0,0,0,,,0,18000,9000,,,,,,,27000
+Avaya LLC,Florida Department of Education,Under 150,,74,Term,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,8880,8880
+Avaya LLC,Pocono Medical Center,Under 150,,74,Perpetual,0,74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,8880,8880
+Sound Communications Inc.,Preston 9-1-1,Under 150,,74,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Allina Health,Under 150,,74,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Saint Louis Fire Department,Under 150,,74,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Saint Louis Fire Department,Under 150,,74,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,74,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,"Dominion Energy Services, Inc.",Under 150,,73,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Sandoval County,Under 150,,73,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Queen Anne's County Department of Emergency Services,Under 150,,73,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,73,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Pennsylvania One Call System,Under 150,,72,Term,0,30,0,0,0,72,0,0,0,72,0,0,72,0,0,0,0,0,0,0,,,0,,,,,,,,3600,3600
+"ISI Telemanagement Solutions, LLC","ABB, INC",Under 150,,72,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Farmers Bank and Trust,Under 150,,72,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Campbell County Consolidated Dispatch,Under 150,,72,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,72,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Newport Healthcare,Under 150,,72,SaaS,0,0,0,0,0,0,0,72,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",BC Transit,Under 150,,71,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",New Enterprise Stone and Lime Co Inc.,Under 150,,71,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,0,0,,,0,,,,,,,,,0
+"Replay Systems, Inc.",West Palm Beach Public Utilities,Under 150,,71,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Heartland Fire Communications,Under 150,,71,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,71,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Washington Gas Light Company,Under 150,,70,Term,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,8400,8400
+"ISI Telemanagement Solutions, LLC","City of Midlothian, Texas",Under 150,,70,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,0,0,,,0,,,,,,,,,0
+"Replay Systems, Inc.",West Palm Beach PD,Under 150,,70,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Health Network Laboratories,Under 150,,70,SaaS,0,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Eleanor Health, Inc.",Under 150,,69,SaaS,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Casey's General Stores, Inc.",Under 150,,69,SaaS,0,0,0,0,0,0,0,69,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Replay Systems, Inc.",Delray Beach PD,Under 150,,68,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,68,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.","Macy's Credit and Customer Services, Inc. f/k/a FACS Group, Inc.",Under 150,,66,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Euronet Worldwide Inc,Under 150,,66,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,66,0,0,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Teleflex Incorporated,Under 150,,65,Perpetual,0,65,0,65,0,65,65,0,65,0,0,0,0,0,0,0,0,0,0,0,,,15600,15600,7800,,,,,,7800,46800
+WTI Holdings LLC dba Waterfield Technologies,Northridge,Under 150,,65,Perpetual,0,0,0,65,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,,,240,15600,7800,,,,,,,23640
+"ISI Telemanagement Solutions, LLC",Southeast Alabama Medical Center,Under 150,,65,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Benton PUD,Under 150,,65,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",FHLBank Topeka,Under 150,,65,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,0,0,0,0,0,,,0,,,,,,,,,0
+"Talkdesk, Inc.",2U Inc,Under 150,,65,SaaS,0,0,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,City of Oshawa,Under 150,,65,Perpetual,0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,65,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Metabolic Living,Under 150,,65,SaaS,0,0,0,0,0,0,0,65,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Delaware River & Bay Authority (DRBA),Under 150,,64,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Archrock Services, L.P.",Under 150,,64,SaaS,0,0,0,64,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,15360,7680,,,,,,,23040
+"Goserco, Inc.",Goodyear Police Department,Under 150,,64,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,64,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)","MASCO Services, Inc",Under 150,,63,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",J Paul Getty Trust,Under 150,,63,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Preston 9-1-1,Under 150,,63,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,SEIU,Under 150,,63,SaaS,0,0,0,0,0,0,0,63,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",New Haven Public Safety,Under 150,,62,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,Mister Car Wash,Under 150,,62,SaaS,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Catoosa County GA E911,Under 150,,62,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Memphis Shelby International Airport,Under 150,,62,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,62,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Dixie Electric Membership Corp,Under 150,,61,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",California ISO,Under 150,,61,Perpetual,0,61,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7320,7320
+"ISI Telemanagement Solutions, LLC",City County IT Commission- Wausau Wisconsin,Under 150,,61,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",County of Sussex Prosecutor's Office,Under 150,,61,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Mille Lacs County Sheriff,Under 150,,61,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,61,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,New York City Transit Authority,Under 150,,60,Term,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,Veterinary Pet Insurance,Under 150,,60,Term,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,US Geological Survey National Mapping WIT,Under 150,,60,Term,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,FAA OKC,Under 150,,60,Term,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,CCSF / Laguna Honda Hospital,Under 150,,60,Perpetual,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,"General Mills, Inc.",Under 150,,60,Term,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+Avaya LLC,One Call Care Management Inc,Under 150,,60,Perpetual,0,60,0,60,60,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,7200,7200
+WTI Holdings LLC dba Waterfield Technologies,Dlivrd,Under 150,,60,SaaS,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,,,14400,,,,,,,,,14400
+"ISI Telemanagement Solutions, LLC",Camden National Corporation,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","NCCI Holdings, Inc.",Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Hendricks Regional Health,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,,,0,,,,,,,,,0
+"NTT America, Inc.","American Honda Motor Co., Inc.",Under 150,,60,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",City of Washington Police Department,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,City of Washington Police Department,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,,,0,,,,,,,,,0
+Black Box Network Services,Dixie Electric Membership Corp,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,,,0,,,,,,,,,0
+Wilmac Business Equipment Company Inc.,Reliant Community Federal Credit Union,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,,,0,,,,,,,,,0
+Genworth North America Corporation,CareScout LLC,Under 150,,60,Term,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Ellis County TX,Under 150,,60,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Royal Canin USA, Inc.",Under 150,,60,SaaS,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,ACS Technologies,Under 150,,60,SaaS,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Columbus Regional Airport Authority,Under 150,,59,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,59,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Bridge City Independent School District,Under 150,,58,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Rochester Police 911,Under 150,,58,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,58,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Gordon County E911,Under 150,,57,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Spokane Transit Authority,Under 150,,57,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Xcel Energy,Under 150,,56,SaaS,0,56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",County of Sussex Sheriff's Dept,Under 150,,56,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,0,0,,,0,,,,,,,,,0
+Vista Com,Ponca City Public Safety Communications,Under 150,,56,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,56,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,ADS Security,Under 150,,55,Term,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,6600,6600
+"ConvergeOne, Inc",Madison Gas & Electric Company,Under 150,,55,Perpetual,0,0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,,,13200,,,,,,,,,13200
+"ISI Telemanagement Solutions, LLC",Grapevine Colleyville Independent School District,Under 150,,55,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Deciem Beauty Group Inc,Under 150,,55,SaaS,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,North Shore University Health System,Under 150,,54,Term,0,54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,6480,6480
+Avaya LLC,El Paso First Health Plans Inc.,Under 150,,54,Term,0,12,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,0,0,,,0,,,,,,,,1440,1440
+TOS,City of Oshawa,Under 150,,54,Perpetual,0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,54,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",PBF Energy,Under 150,,54,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Sprague Operating Resources,Under 150,,53,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",City of Madison,Under 150,,53,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,53,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,East Hampton Town Police Department,Under 150,,52,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Crow Wing County Sheriff,Under 150,,52,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Shell Deer Park,Under 150,,52,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",US Department of Homeland Security (FEMA),Under 150,,52,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Salisbury MD Police Department,Under 150,,52,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,52,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.",Altus AFB,Under 150,,51,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Franklin Pud,Under 150,,51,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",The Denver Hospice,Under 150,,51,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",McLeod County,Under 150,,51,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,51,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,"The Energy Federation, Inc.",Under 150,,51,SaaS,0,0,0,0,0,0,0,51,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Community Hospital,Under 150,,50,Perpetual,0,50,0,50,50,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,6000,6000
+Avaya LLC,Northern Montana Hospital - Corporate Account,Under 150,,50,Perpetual,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,6000,6000
+Avaya LLC,"Retail Finance International Holdings, Inc. (RFIH)",Under 150,,50,Term,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,MARRIOTT INTERNATIONAL,Under 150,,50,Term,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,The Fairfield County Board of Count,Under 150,,50,SaaS,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",The Aerospace Corporation,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+BT Americas Inc.,New York Stock Exchange,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Preble County Sheriff,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",The Bank of New York Mellon f/k/a Mellon Bank,Under 150,,50,Perpetual,0,40,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,4800,4800
+"ISI Telemanagement Solutions, LLC",Town of Gilbert,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Pella Regional Health Center,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Samaritan Healthcare,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",State of Idaho,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",M Health Fairview,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Barstow Police Department,Under 150,,50,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,"Infusion Software, Inc",Under 150,,50,SaaS,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",AIDS Healthcare Foundation,Under 150,,50,SaaS,0,0,0,50,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,,,0,12000,6000,,,,,,,18000
+"8X8, Inc.",HealthEZ,Under 150,,50,SaaS,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,"Nashville Electric - Nashville, TN",Under 150,,49,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Cohoes Police Department,Under 150,,49,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Gem Plumbing & Heating Services, LLC",Under 150,,49,SaaS,0,0,0,49,0,0,0,49,0,0,0,0,0,0,0,0,0,0,0,0,,,0,11760,5880,,,,,,,17640
+"Motorola Solutions, Inc.",Borough of Roselle,Under 150,,48,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,48,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Reckitt Benckiser (RB) US,Under 150,,48,SaaS,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",LGM Financial Services Inc,Under 150,,48,SaaS,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",F-M Ambulance Service (Sanford Health),Under 150,,47,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,47,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Florida Dept Law Enforcement-Hayes,Under 150,,46,Term,0,46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,5520,5520
+"ConvergeOne, Inc",University of Utah,Under 150,,46,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Hunters Ambulance Service Inc.,Under 150,,46,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Belhaven College,Under 150,,46,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,46,0,0,0,0,0,,,0,,,,,,,,,0
+BT Americas Inc.,Fidelity Investments,Under 150,,45,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,,,0,,,,,,,,,0
+WTI Holdings LLC dba Waterfield Technologies,Madison Gas & Electric Company,Under 150,,45,Perpetual,0,0,0,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,0,,,10800,,,,,,,,,10800
+"World Wide Technology, Inc.",University of Missouri,Under 150,,45,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Southwest Medical Center,Under 150,,45,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Wallingford Police Department,Under 150,,45,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.","Spectrum Vision Partners, LLC",Under 150,,45,SaaS,0,0,0,45,0,0,0,45,0,0,0,0,0,0,0,0,0,0,0,0,,,0,10800,5400,,,,,,,16200
+"IPC Systems, Inc.",Canaccord Financial,Under 150,,44,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Little Rock,Under 150,,44,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,,,0,,,,,,,,,0
+Wilmac Business Equipment Company Inc.,Eagle Commodities,Under 150,,44,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,State of Connecticut Department of Social Services,Under 150,,43,Perpetual,0,43,5,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Central Michigan University,Under 150,,43,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Scott County Sheriff,Under 150,,43,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Capital Metro,Under 150,,42,Term,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,5040,5040
+Avaya LLC,Eastman Chemical Company,Under 150,,42,Term,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,5040,5040
+Avaya LLC,Community College of Philadelphia,Under 150,,42,Term,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,5040,5040
+"BEI Holdings, Inc. (DBA: Business Electronics)",Branford Police Department,Under 150,,42,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Connally Memorial Medical Center,Under 150,,42,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Wright County Sheriff,Under 150,,42,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,National Aeronautics and Space Administration (NASA),Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Hocking County 911,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Newtown Police Department,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Enfield Police Department,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Scarsdale Public Safety,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Ector County Appraisal District,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",University of MN Police,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Marathon County Sheriff,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",North Fulton Regional Radio System Authority,Under 150,,41,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Rolex,Under 150,,41,SaaS,0,0,0,41,0,0,0,41,0,0,0,0,0,0,0,0,0,0,0,0,,,0,9840,4920,,,,,,,14760
+Avaya LLC,Treasure Island,Under 150,,40,Term,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4800,4800
+Avaya LLC,Sacramento Municipal Utility District,Under 150,,40,Perpetual,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4800,4800
+Avaya LLC,City of Norfolk Information Services,Under 150,,40,Perpetual,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4800,4800
+Avaya LLC,Illinois Municipal Retirement Fund,Under 150,,40,SaaS,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,GAVS,Under 150,,40,SaaS,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+CBTS Technology Solutions LLC,LAFCU,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,City of Toledo,Under 150,,40,SaaS,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,University of North Carolina Greensboro,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Butler Health System,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Trac Intermodal,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Tipmont REMC,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Union Square Credit Union,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Long Beach Police Department,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",Douglas County School District,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,Insight Financial Credit Union Inc,Under 150,,40,SaaS,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Comstar Technologies LLC,"Design Data Systems, Inc.",Under 150,,40,SaaS,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,,,9600,,,,,,,,,9600
+"Motorola Solutions, Inc.",Douglas County School District,Under 150,,40,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,City of Pasadena,Under 150,,39,Perpetual,0,39,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4680,4680
+"BEI Holdings, Inc. (DBA: Business Electronics)",Holyoke Gas & Electric,Under 150,,39,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,North Findlay Township Police,Under 150,,38,Perpetual,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,,,0,,,,,,,,120,120
+"ISI Telemanagement Solutions, LLC",Saltzer Medical,Under 150,,38,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Longview,Under 150,,38,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Smith Center for the Performing Arts,Under 150,,38,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,City of Zanesville,Under 150,,37,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",ALTAGAS LTD.,Under 150,,37,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,North Bellmore Fire District,Under 150,,37,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Setauket Fire Department,Under 150,,37,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Benton County Sheriff,Under 150,,37,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,37,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,State of Washington Department Retirement System,Under 150,,36,Term,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4320,4320
+"ISI Telemanagement Solutions, LLC",City of College Station,Under 150,,36,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Hunton Group,Under 150,,36,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,36,0,0,0,0,0,,,0,,,,,,,,,0
+"Arrow Enterprise Computing Solutions, Inc",Hennepin County,Under 150,,36,Perpetual,0,36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4320,4320
+Avaya LLC,Windsor Casino,Under 150,,35,Term,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4200,4200
+Sound Communications Inc.,Community Health Systems,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Croton-on-Hudson Police Department,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Collier County,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",National Inventors Hall of Fame,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Texas A&M International University,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",United States Air Force,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",National Park Service,Under 150,,35,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,ALSTAR,Under 150,,34,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",State of Connecticut Capitol Police,Under 150,,34,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Northwestern Mutual,Under 150,,34,Perpetual,0,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,4080,4080
+"Northland Business Systems, Inc.",Brown County,Under 150,,34,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Sherburne County Sheriff,Under 150,,34,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,,,0,,,,,,,,,0
+"SBM Electronics, Inc.",ALSTAR,Under 150,,34,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Walker County E-911,Under 150,,33,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Travelers Corporate Security,Under 150,,33,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Travelers Corporate Security,Under 150,,33,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Simi Valley Police Department,Under 150,,33,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Brightstar Credit Union,Under 150,,33,SaaS,0,0,0,33,0,0,0,33,0,0,0,0,0,0,0,0,0,0,0,0,,,0,7920,3960,,,,,,,11880
+Kova Corporation,Florida Atlantic University,Under 150,,32,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Allegheny County Airport Authority,Under 150,,32,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",South Orange Village,Under 150,,32,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Jefferson County Public Schools,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","City of Cape Coral, Florida",Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Wheatland Electric Cooperative, Inc.",Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",District of West Vancouver,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Electric Cooperatives of Arkansas,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Thresholds,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Goodhue County Sheriff,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Vancouver Airport Authority,Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Rio Tinto (Kennecott Utah Copper),Under 150,,31,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,THE HOSPITAL AUTHORITY OF VALDOSTA AND LOWNDES COUNTY GEORGiA,Under 150,,30,Term,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3600,3600
+Avaya LLC,Midfirst Bank,Under 150,,30,Term,0,30,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Transportation Security Administration (TSA),Under 150,,30,Perpetual,0,30,0,30,0,0,30,0,30,0,0,0,0,0,0,0,0,0,0,0,,,7200,7200,3600,,,,,,3600,21600
+Avaya LLC,Aquarius Hotel Casino,Under 150,,30,Perpetual,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3600,3600
+Avaya LLC,Samaritan Corvallis CDC,Under 150,,30,Term,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3600,3600
+Avaya LLC,Howard University Hospital,Under 150,,30,SaaS,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",DriveTime Automotive Group,Under 150,,30,Perpetual,0,30,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,7200,3600,,,,,,3600,14400
+Kova Corporation,Clifton Police Department - NJ,Under 150,,30,Perpetual,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,30,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Manchester Police Department,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.",Aetna Life Insurance Company,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Star Financial Bank,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Clark County Water Reclamation,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Norman Regional Health System,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",The City of Pembroke Pines,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Washington County 911,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Washington County 911,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,,,0,,,,,,,,,0
+Wilmac Business Equipment Company Inc.,Alberta Investment Management Corporation,Under 150,,30,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Westminster Communications Center,Under 150,,30,Perpetual,0,0,0,0,30,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",City of Regina,Under 150,,30,SaaS,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Texas County & District Retirement System (TCDRS),Under 150,,30,SaaS,0,0,0,30,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,,,0,7200,3600,,,,,,,10800
+"BEI Holdings, Inc. (DBA: Business Electronics)",Glastonbury Police Department,Under 150,,29,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Blue Earth County,Under 150,,29,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Wabasha County Sheriff,Under 150,,29,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Murrieta Police Department,Under 150,,29,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Madera Police Department,Under 150,,29,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Marcus Hotels & Resorts,Under 150,,29,SaaS,0,0,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Emory University,Under 150,,28,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Todd County Sheriff,Under 150,,28,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Imperial County Sheriff,Under 150,,28,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Kindercare Education LLC,Under 150,,28,SaaS,0,0,0,28,0,0,0,28,0,0,0,0,0,0,0,0,0,0,0,0,,,0,6720,3360,,,,,,,10080
+Avaya LLC,City of Portsmouth,Under 150,,27,Perpetual,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3240,3240
+Avaya LLC,CISSAT Hospital Rouyn Noranda,Under 150,,27,Perpetual,0,27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3240,3240
+Sound Communications Inc.,University of Chicago,Under 150,,27,Perpetual,0,26,27,26,0,0,0,0,26,0,0,0,0,0,0,0,0,0,0,0,,,0,6240,3120,,,,,,,9360
+"BEI Holdings, Inc. (DBA: Business Electronics)",East Haven Police Department,Under 150,,27,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Cowley County,Under 150,,27,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Idaho Department of Fish and Game,Under 150,,27,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",City of Gladstone,Under 150,,27,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Meeker County Sheriff,Under 150,,27,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)","Cigna Corporate Services, LLC",Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Department of Insurance,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Bayer US LLC,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Beal Bank,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Laredo,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Columbia County Georgia,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Fortis BC,Under 150,,26,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Ridgetop Road,Under 150,,25,Term,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3000,3000
+Avaya LLC,City of Tacoma (Telecommunications),Under 150,,25,Perpetual,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3000,3000
+Avaya LLC,National Elev Industry,Under 150,,25,Term,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3000,3000
+Avaya LLC,PANTHERS BRHC LTD,Under 150,,25,Perpetual,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,3000,3000
+Avaya LLC,Transit Workers Union Local 100,Under 150,,25,SaaS,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,LifeNet Health,Under 150,,25,Perpetual,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Conyers Police Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,United States Navy,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Town of Palm Beach Police,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Yale University Security Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",DZ Bank AG,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Rockdale County,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Manhasset Lakeville Fire District,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Riverhead Police Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Terryville Fire District,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Center Moriches Fire Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Bond County 911,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Watonwan County 911,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",County of Doniphan,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Polk County Sheriff,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.","Hamilton County Sheriff, NE",Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Kandiyohi County Sheriff,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Macon County 911,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Mahnomen County Sheriff,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Washington University Police Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Wilkin County MN Sheriff,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Washington University Police Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Macon County 911,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Bond County 911,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Intrado Life & Safety Canada, Inc.",Kodak Security Company,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",California State University Fresno,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Hayward CA Police Department,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",San Bernadino City USD School Police,Under 150,,25,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Texas Bank & Trust Company,Under 150,,25,SaaS,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"8X8, Inc.",Radian Group Inc.,Under 150,,25,SaaS,0,0,0,25,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,,,0,6000,3000,,,,,,,9000
+"8X8, Inc.","Revival Animal Health, Inc.",Under 150,,25,SaaS,0,0,0,25,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,,,0,6000,3000,,,,,,,9000
+"8X8, Inc.",City of Vaughan,Under 150,,25,SaaS,0,0,0,0,0,0,0,25,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Rocky Mountain Cancer Centers Colorado,Under 150,,24,Term,0,24,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Tallahassee Community College,Under 150,,24,Term,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2880,2880
+Avaya LLC,FL Department of Corrections,Under 150,,24,Term,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2880,2880
+Avaya LLC,Sulphur Springs Valley Electric Coop.,Under 150,,24,Term,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2880,2880
+Kova Corporation,North Plainfield Police Department,Under 150,,24,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Adult & Child Mental Health Care, LLC",Under 150,,24,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,,,0,,,,,,,,,0
+Vista Com,Oklahoma Highway Patrol,Under 150,,24,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,United Bank for Africa Plc,Under 150,,24,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,,,0,,,,,,,,,0
+Wilmac Business Equipment Company Inc.,"HBK Services, LLC",Under 150,,24,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,City of Gastonia,Under 150,,23,Term,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2760,2760
+Avaya LLC,PeaceHealth St Joseph Hospital Bellingham,Under 150,,23,Term,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2760,2760
+Kova Corporation,Mutual of America,Under 150,,23,Perpetual,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,,,0,,,,,,,,,0
+Vista Com,Baylor Scott & White Medical Center,Under 150,,23,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Community Bridges Inc,Under 150,,22,SaaS,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Town of Bedford Police Department,Under 150,,22,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Ratiodata,Under 150,,22,Perpetual,0,22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2640,2640
+"ISI Telemanagement Solutions, LLC",KPC Global Management,Under 150,,22,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Pike County Sheriff's Office,Under 150,,22,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Jones County Sheriff,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Sleepy Hollow Police Department,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Town of New Canaan,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Einstein Medical Center,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.","Conning, Inc",Under 150,,21,Perpetual,0,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2520,2520
+"ISI Telemanagement Solutions, LLC","American Federation of State, City and Municipal Employees (AFSCME)",Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",City of Decatur,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Magnolia Regional Health,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",NASA Goddard Space Flight Center,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Essex County Correctional,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Public School Teacher's Pension and Retirement Fund,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",First Choice Community Healthcare,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Pennington County Sheriff,Under 150,,21,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,,,0,,,,,,,,,0
+Evolve IP LLC,Cenikor Foundation,Under 150,,21,SaaS,0,0,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,County of Montgomery,Under 150,,20,Term,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Avaya LLC,Providence Health Centralia,Under 150,,20,Perpetual,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Avaya LLC,Boston Mutual Life Insurance,Under 150,,20,Term,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Avaya LLC,Cornerstone Medical Care,Under 150,,20,Perpetual,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Avaya LLC,WSDOT Dayton TMC (Washington State Department of Transportation),Under 150,,20,Perpetual,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Avaya LLC,CSX Transportation Inc.,Under 150,,20,SaaS,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Nova Southeastern University,Under 150,,20,SaaS,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",Sammons Financial Group,Under 150,,20,Perpetual,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2400,2400
+Connex Telecommunications Inc.,Rogers Communications Canada Inc.,Under 150,,20,Term,0,10,0,10,0,10,0,0,0,20,0,0,0,0,0,0,0,0,0,0,,,0,2400,,,,,,,1200,3600
+Carousel Industries of North America,Southern Ohio Medical Center,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+BT Americas Inc.,Tudor Investment Corporation,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,IndyGo,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Mamaroneck Village Police Department,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,,,0,,,,,,,,,0
+"Alliance Technology Group, LLC",Bureau of The Fiscal Service,Under 150,,20,Perpetual,0,20,20,20,0,0,20,0,20,0,0,0,0,0,0,0,0,0,0,0,,,4800,4800,2400,,,,,,,12000
+"ISI Telemanagement Solutions, LLC","Portsmouth Mission Alliance, LLC",Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Madison Memorial Hospital,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Bingham Memorial Hospital,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Tristate Capital Bank,Under 150,,20,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,,,0,,,,,,,,,0
+Vonage Business Limited,Radiant Credit Union fka SunState Federal Credit Union,Under 150,,20,SaaS,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Cromwell Police Department,Under 150,,19,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Troy Police Department,Under 150,,19,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Troy Police Department,Under 150,,19,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Albuquerque Public Schools,Under 150,,19,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,North York General Hospital,Under 150,,18,SaaS,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",York Traditions Bank,Under 150,,18,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,,,0,,,,,,,,,0
+Meridian IT Inc.,Rochester Institute of Technology,Under 150,,18,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Martin County,Under 150,,18,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,County of Crittenden,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Clinton County Emergency Services,Under 150,,17,Perpetual,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,120,120
+"BEI Holdings, Inc. (DBA: Business Electronics)",Brookfield Police Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"World Wide Technology, Inc.", United States Central Command,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","The Palace, Inc",Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",County of Lackawanna Transit System,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,0,0,,,0,,,,,,,,,0
+Vista Com,"BOKF, NA",Under 150,,17,Perpetual,0,17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,2040,2040
+May Day Communications Inc.,Amityville Police,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,St. Johns University,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Huntington Fire District,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Adelphi University,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Jericho Fire District,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",AT&T Fortuna Police Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",AT&T  Marysville Police Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Washburn County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Otter Tail County 911,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Antelope County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Aitkin County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Pope County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Burt County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Charleston MO Department of Public Safety,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",County of Chase,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",County of Redwood,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Winona County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Douglas County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Faribault County PD,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Missouri State University PD,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Nicollet County,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",St. Louis University,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Thayer County Sheriff,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",LeSueur County,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Charleston MO Department of Public Safety,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,St. Louis University,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Missouri State University PD,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Richmond CA Police Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",City College of San Francisco,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Lodi Police Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Amador County Sheriff Department,Under 150,,17,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Commodity Futures,Under 150,,16,Perpetual,0,15,16,7,7,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",North Haven Police Department,Under 150,,16,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Amanyara Resort,Under 150,,16,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",North Arkansas Regional Medical Center,Under 150,,16,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,,,0,,,,,,,,,0
+Business Communications Inc.,"KLLM Transport Services, LLC",Under 150,,16,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",McLennan Community College,Under 150,,16,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Centerbridge Partners,Under 150,,15,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Fresh Direct,Under 150,,15,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Fillmore County Sheriff,Under 150,,15,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,City Of St. John's,Under 150,,15,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)","Pfizer, Inc",Under 150,,14,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Stratford Police Department,Under 150,,14,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Granby Police Department,Under 150,,14,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",LANDESBANK BADEN-WURTTEMBERG,Under 150,,14,Perpetual,0,14,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1680,1680
+"Northland Business Systems, Inc.",Stearns County Sheriff,Under 150,,14,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Douglas AZ Police Department,Under 150,,14,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Coventry Police Department,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",University of Hartford,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Ardsley Village Police Department,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Detewe,Under 150,,13,Perpetual,0,12,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,,,0,,,,,,,,1440,1440
+"World Wide Technology, Inc.",LA Air Force Base,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",University of New Mexico Sandoval Regional Medical Center,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,State University of New York,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Stevens County,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Cass County Sheriff,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Dodge County Sheriff,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Grant County Sheriff,Under 150,,13,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,General Dynamics,Under 150,,12,Term,0,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1440,1440
+"BEI Holdings, Inc. (DBA: Business Electronics)",Irvington Police Department,Under 150,,12,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Walker Jones,Under 150,,12,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Kansas City University,Under 150,,12,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Imperial Tobacco Group Brands LLC,Under 150,,11,Term,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1320,1320
+"ConvergeOne, Inc",Allianz Life Insurance Company of North America,Under 150,,11,Term,0,10,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Rocky Mountain Poison & Drug Center,Under 150,,11,Perpetual,0,11,0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,0,0,0,,,2640,,,,,,,,1320,3960
+Sound Communications Inc.,"Autozone, Inc.",Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Montgomery Co Transit Services,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,North Miami Beach Police Department,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",East Chester Police Department,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Groton Police Department,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Midland States Bank,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Corpus Christi Regional Transportation Authority,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Peoples Bank of China formerly Rosewood Investment,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",Newark Element14,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",School Board Of Palm Beach County,Under 150,,11,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,CTMF IT DATA CENTER,Under 150,,10,Perpetual,0,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Burlington Bristol Bridge,Under 150,,10,Perpetual,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1200,1200
+Avaya LLC,LVCD Corporate,Under 150,,10,Term,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1200,1200
+Avaya LLC,Jet Delivery,Under 150,,10,Term,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1200,1200
+Group Elite Communications Inc.,"Millennium Process Group, Inc.",Under 150,,10,Term,0,0,2,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,2400,1200,,,,,,,3600
+"IPC Systems, Inc.",OSTERTAG DETEWE HOLDING GMBH,Under 150,,10,Perpetual,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1200,1200
+"ISI Telemanagement Solutions, LLC",BC Securities,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Cherry County Hospital,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Industrial and Commercial Bank of China LTD NY Branch,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Rush University Medical Center,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,,,0,,,,,,,,,0
+Vista Com,University of Texas of the Permian Basin,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,State University of New York Maritime College,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",University of Texas of the Permian Basin,Under 150,,10,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,,,0,,,,,,,,,0
+Custodia Technology Americas Inc.,Bank of Nova Scotia,Under 150,,10,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Florida Department of Juvenile Justice,Under 150,,9,Term,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,1080,1080
+Sound Communications Inc.,Clarion Hospital,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",City of Plattsburgh,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",MILFORD POLICE DEPARTMENT,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.","DV TRADING, LLC",Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",First National Bank & Trust Company,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Big Stone County,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Mower County Sheriff,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",SSM St. Clare Health Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Minnetonka Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Chester Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Phelps County Regional Medical Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Rockhurst University,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",SSM Saint Joseph Health Center (St. Charles),Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",St. Peter Police,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",East Prairie Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Freeborn County Sheriff,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",SSM Saint Mary's Health Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",UMSL - Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,SSM Saint Mary's Health Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Phelps County Regional Medical Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,UMSL - Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Chester Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,East Prairie Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Rockhurst University,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,SSM Saint Joseph Health Center (St. Charles),Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,SSM St. Clare Health Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Chino Valley Medical Center,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Pima Community College,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Santa Rosa Junior College Police Department,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Kaiser Permanente,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Capture Technologies, Inc.",Mojave Air and Space Port,Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.","Boulder City, NV",Under 150,,9,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Maimonides Medical Center,Under 150,,8,Term,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,960,960
+Avaya LLC,EAJ Assistance Services Canada,Under 150,,8,Perpetual,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,960,960
+"BEI Holdings, Inc. (DBA: Business Electronics)",Wolcott Police Department,Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Stratford Fire Department,Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Excel Energy,Under 150,,8,Perpetual,0,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,960,960
+"IPC Systems, Inc.","ARTISAN PARTNERS, LP",Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",URM Stores Inc,Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Woori America Bank,Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Yukon Energy Corporation,Under 150,,8,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Shawnee Mission School District,Under 150,,7,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Great Plains Health,Under 150,,7,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,,,0,,,,,,,,,0
+"Northland Business Systems, Inc.",Global Medical Response (fka Air Medical Group Holdings (AMGH)),Under 150,,7,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,FRESHTIX,Under 150,,6,SaaS,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Howard County 911,Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Quincy Fire Department,Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Woodbridge Fire Department,Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",National Institutes of Health (NIH),Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Pueblo County,Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Conflulytics,Under 150,,6,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Department of Veterans Affairs,Under 150,,6,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Carolina East Medical Center,Under 150,,5,Term,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,600,600
+Avaya LLC,Michael Garron Hospital,Under 150,,5,SaaS,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,New Era Technology,Under 150,,5,SaaS,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Bessette - Createur de confort,Under 150,,5,SaaS,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+WTI Holdings LLC dba Waterfield Technologies,Federal Reserve Bank,Under 150,,5,Perpetual,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,,,1200,,,,,,,,,1200
+May Day Communications Inc.,Town of Brookhaven,Under 150,,5,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Ortho Clinical Diagnostics,Under 150,,4,Perpetual,0,2,0,2,0,0,4,0,2,0,0,0,0,0,0,0,0,0,0,0,,,960,480,240,,,,,,240,1920
+Avaya LLC,NB Power Corporation,Under 150,,4,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Sloan Global Holdings, LLC",Under 150,,4,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Broadmead Care,Under 150,,4,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Port Moody Police Department,Under 150,,4,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,,,0,,,,,,,,,0
+BT Americas Inc.,Commerzbank AG New York,Under 150,,3,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Indigo Sky Casino,Under 150,,3,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",University of North Carolina School of the Arts (UNCSA),Under 150,,3,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC","Analog Devices, Inc.",Under 150,,3,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,,,0,,,,,,,,,0
+BusComm Incorporated,Global Medical Response (fka Air Medical Group Holdings (AMGH)),Under 150,,3,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,,,0,,,,,,,,,0
+Sound Communications Inc.,Clarion University of Pennsylvania,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Marine Corps,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Berenberg Bank,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Henderson Global Investors,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",New York Blood Center,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",BUILD Initiative TSNE,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,,,0,,,,,,,,,0
+"Insight Direct USA, Inc.","Chevron U.S.A Inc., acting through its Chevron Products Company division",Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,,,0,,,,,,,,,0
+"ADS Alliance Data Systems, Inc","Comenity Servicing, LLC",Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,,,0,,,,,,,,,0
+Dell Marketing LP,Quest Software Inc.,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Santa Rosa CA Police Department,Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,,,0,,,,,,,,,0
+Talbots,"Premium Brands Services, LLC",Under 150,,2,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,CAA - Q9 Brampton,Under 150,,1,Perpetual,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,120,120
+Avaya LLC,Humber River Hospital,Under 150,,1,Term,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,UMASS Medical School,Under 150,,1,Term,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Forbes Hospital,Under 150,,1,Term,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc",Texas Mutual Insurance,Under 150,,1,Perpetual,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,120,120
+Sound Communications Inc.,The Cleveland Clinic Foundation,Under 150,,1,Term,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"BEI Holdings, Inc. (DBA: Business Electronics)",Trinity College,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.",Intact Financial Corporation,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC","Interval International, Inc.",Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",Keys Energy Services,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,,,0,,,,,,,,,0
+May Day Communications Inc.,Floral Park Police Department,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC","Newsela, Inc",Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",National Information Solutions Cooperative (NISC),Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",SugarCRM,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",Georgian Partners,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",Start Early,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",GMB Architecture and Engineering,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Social Edge Consulting, LLC",Health Catalyst,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+Affinion Group,Trilegiant Corporation,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,,0,,,,,,,,,0
+"Goserco, Inc.",AT&T - Oceanside Police Department,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"cxLoyalty. Inc.,",Trilegiant Corporation,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,,0,,,,,,,,,0
+Emerson Electric Co.,Emerson Process Management,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+Shoregroup Solutions LLC,Yale New Haven Hospital,Under 150,,1,Perpetual,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Intrado Life & Safety Canada, Inc.",State of Delaware,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+Alamo City Engineering Services Inc,Defense Information Systems Agency,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Autozone, Inc.","Autozone Parts, Inc.",Under 150,,1,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,,,0,,,,,,,,,0
+Arrias Technical Solutions Inc.,Greater Toronto Airport Authority,Under 150,,1,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Aveva Software, LLC.","Invensys System, Inc.",Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+"Connexions Loyalty Acquisition, LLC",Trilegiant Corporation,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Northern Arizona University Police Department,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",City of Manchester,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Combined Regional Communications Authority,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Santa Clara Valley Transportation Authority,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Flagstaff Police Department,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Virginia State Police,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Lee County GA E911,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Motorola Solutions, Inc.",Lowndes County E-911,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,,0,,,,,,,,,0
+"Torch Technologies, Inc.",Defense Information Systems Agency,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+Trace Systems Inc,Defense Information Systems Agency,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+Leidos Innovations Corp.,Defense Information Systems Agency,Under 150,,1,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,CLAY COUNTY ELECTRIC,Under 150,,0,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Meridian IT Inc.,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"Intlx Solutions, LLC",Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Cognizant Technology Solutions US Corporation,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,ConvergeOne Inc.,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Journey.AI,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,University of Pennsylvania - Penn Medicine at Rittenhouse,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,CAA South Central Ontario Systems and Services Inc.,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Accelerated Learning,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Stein Lodge,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,DHL Express (USA) Inc.,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Victory Auto Group,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Accenture,Under 150,,0,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,"AMC Technology, LLC",Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Avaya LLC,Interactive Northwest Inc,Under 150,,0,SaaS,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc","EGS Financial Care, Inc. fka NCO Financial Systems, Inc.",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ConvergeOne, Inc","Total System Services, Inc. (TSYS)",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Carousel Industries of North America,Automobile Club of Southern California,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.",Speedway LLC,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Cisco Systems, Inc.","Quantum Health, Inc.",Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Naval War College,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",United States Army Recruiting Command,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.","U.S. Department of Health and Human Services (NIH, NICHD)",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",DC Public Library,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Coast Guard HQ Washington DC,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Defense Health Agency,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Defense Manpower Data Center (DMDC),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",U.S. Office of Personnel Management,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Defense Travel Management Office-Pentagon,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Army Public Health - MEDCOM,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Federal Bureau of Investigation,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Equal Employment Opportunity Commission,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",FEDERAL HIGHWAY ADMINISTRATION - DOT,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",USAF EXPEDITIONARY CENTER,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Federal Law Enforcement Training Center,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",U.S. Department of Health and Human Services (NIH NHLBI),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",HHS ROCKVILLE HR CENTER (CDC),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",U.S. Department of Treasury (U.S. Mint),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Human Resource Command HRC Fort Knox,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",U.S. Securities and Exchange Commission,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Army - US MEPCOM,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Immigration and Customs Enforcement - Dept of Homeland Security,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Army TRADOC,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Department of Homeland Security,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Naval Inspector General,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",NEXCOM Navy Exchange,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",US Navy Sexual Assault Prevention Response Office (SAPRO),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Army Reserve Command,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Army Talent Management Task Force,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Army Analytics Group,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",U.S. Department of Health and Human Services (CDC),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Immix Technology, Inc.",Social Security Administration,Under 150,,0,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Kova Corporation,Chester County 911 Center,Under 150,,0,Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"IPC Systems, Inc.","U.S. Bancorp successor in interest to MUFG Union Bank, N.a.",Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",MASSACHUSETTS TRIAL COURTS - ADMINISTRATIVE OFFICE,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",MINNESOTA DEPARTMENT OF HEALTH,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",New York City Dept of Education,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"ISI Telemanagement Solutions, LLC",United Nations,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+SHI International Corp,MINNESOTA DEPARTMENT OF HEALTH,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+SHI International Corp,MASSACHUSETTS TRIAL COURTS - ADMINISTRATIVE OFFICE,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+SHI International Corp,"EGS Financial Care, Inc. fka NCO Financial Systems, Inc.",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Evergy Metro, Inc.",Kansas City Power & Light,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Associated Bank N.A.,Associated Banc Corp (Associated Bank),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"PictureU Promotions, Inc",Cabela's LLC f/k/a Cabela's Inc.,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"PictureU Promotions, Inc","Bass Pro, LLC f/k/a Bass Pro Shops",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+"Insight Direct USA, Inc.",MASSACHUSETTS TRIAL COURTS - ADMINISTRATIVE OFFICE,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Qwest Corporation,"Embarq Management Company dba CenturyLink, Inc.",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+LiveVox Inc.,Pull-A-Part,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+LiveVox Inc.,Penn Credit Corporation,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+LiveVox Inc.,"Ascension Point Recovery Services, LLC",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+LiveVox Inc.,"BHS Hospital Services, Inc.",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Retail Business Services LLC,Hannaford Bros. Co,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,American Battle Monuments Commission,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Department of Justice (OJP),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Department of Health and Human Services (CDC),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,Bureau of The Fiscal Service,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Office of Personnel Management,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,Centers for Medicare and Medicaid Services (CMS),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,Smithsonian Institution,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,Defense Logistics Agency,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Department of Health and Human Services (NIH NHLBI),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,Federal Bureau of Investigation,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Department of Treasury (U.S. Mint),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,National Aeronautics and Space Administration (NASA),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,U.S. Securities and Exchange Commission,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,National Institute of Health,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Federal Consulting Group,National Marine Fisheries Service (NOAA/NMFS),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+SynaVoice LLC,Bureau of The Fiscal Service,Under 150,,0,Perpetual,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+NASA Shared Service Center (NSSC),National Aeronautics and Space Administration (NASA),Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+National Financial Partners Corp.,"Kestra Financial, Inc.",Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+Compulink Technologies Inc,MTA - NYC Transit,Under 150,,0,Perp/Term,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,,0,,,,,,,,,0
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,x,x,x,x,,x,x,x,x,x
+""

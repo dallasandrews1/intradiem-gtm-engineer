@@ -10,7 +10,7 @@
 		<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/run_rundown_thread_listener.sh</string>
 	</array>
 	<key>StartInterval</key>
-	<integer>600</integer>
+	<integer>1800</integer>
 	<key>StandardOutPath</key>
 	<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/logs/_launchd_rundownthreads.out</string>
 	<key>StandardErrorPath</key>

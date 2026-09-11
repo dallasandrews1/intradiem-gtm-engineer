@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.dallasandrews.gtm.repcampaignhook</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/zsh</string>
+		<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/run_rep_campaign_hook.sh</string>
+	</array>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Minute</key>
+		<integer>25</integer>
+	</dict>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>StandardOutPath</key>
+	<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/logs/_launchd_repcampaignhook.out</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/logs/_launchd_repcampaignhook.err</string>
+</dict>
+</plist>
