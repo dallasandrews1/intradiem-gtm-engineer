@@ -594,3 +594,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Feedback Deploy Every Page](feedback-deploy-every-page.md) — Sep 11 2026: every room/page/build is deployed to a live Cloudflare Pages link in the same turn (deploy-<project> folder, noindex, branded 404); Desktop file alone is not delivered
 - [Brain MCP 421 Host Pinning Sep11](brain-mcp-421-host-pinning-sep11.md) — live /mcp likely 421s on every keyed call (FastMCP host pinning); fixed with Slack auth door + mcp<2 pin, staged not deployed, verify with keyed tools/list
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Feedback AM Pages Verified Only, No New Tool](feedback-am-pages-verified-only-no-new-tool.md) — Sep 11 2026: AM-facing rooms show only verified contacts (no confirm-in-Sales-Nav asks) and the value arrives in Outlook/PMO list; the page is the link behind the note, never a tool to remember
