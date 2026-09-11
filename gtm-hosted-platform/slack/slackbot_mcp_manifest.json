@@ -1,0 +1,29 @@
+{
+  "display_information": {
+    "name": "Intradiem GTM Brain",
+    "description": "Lets Slackbot answer strike-plan, signal and impact questions from the GTM brain.",
+    "long_description": "Connects Slackbot's MCP client to the hosted Intradiem GTM brain (read-only). Slackbot can list the ranked strike accounts, pull one account's strike plan, read expansion and risk signals, and read the impact scorecard. Every answer carries the snapshot's generated_at and freshness; stale or uncited figures are withheld by the brain, not shown. Authenticated by Slack request signature (slack_identity_auth): no API key is stored in Slack."
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "Intradiem GTM Brain",
+      "always_online": true
+    }
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["mcp:connect"]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  },
+  "mcp_servers": {
+    "gtm_brain": {
+      "url": "https://intradiem-gtm-system.onrender.com/mcp/",
+      "auth_type": "slack_identity_auth"
+    }
+  }
+}
