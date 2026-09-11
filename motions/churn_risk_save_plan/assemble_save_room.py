@@ -78,8 +78,8 @@ health = {
     ("Success Plan notes", "2025-12-16", "SSO token expiry issue may not resolve until after the new year; case 323900 (agents kicked out of the IDE) opened 12/11."),
     ("Success Plan, Active sheet", TODAY, "Open Cases section is empty; current case status has to be confirmed with Amy.")]},
   {"code": "Executive change", "status": "GREEN", "evidence": [
-    ("Sales Nav bridge", "2026-08-25", "Michael Waterman retired, removed from the map. No change recorded for Thompson, Adams, Yerian or Faini."),
-    ("Clay bridge", TODAY, "Katherine Neal is a Senior IT Solutions Architect since Jul 2025, not the director title in the research.")]},
+    ("LinkedIn check", "2026-08-25", "Michael Waterman retired, removed from the map. No change recorded for Thompson, Adams, Yerian or Faini."),
+    ("LinkedIn check", TODAY, "Katherine Neal is a Senior IT Solutions Architect since Jul 2025, not the director title in the research.")]},
   {"code": "Competitive event", "status": "RED", "evidence": [
     ("Inger, Sep 10 call", "2026-09-10", "RFP out for the CCaaS stack. Harmonic migration conversations starting. Read: one-year renewal, migration, then exit unless the experience changes.")]},
   {"code": "Renewal clock", "status": "RED", "evidence": [

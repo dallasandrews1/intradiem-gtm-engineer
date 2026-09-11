@@ -22,8 +22,8 @@
   {
    "id": "parallel-team",
    "name": "The parallel team",
-   "via": "Access to Care leaders already in Salesforce (Patty Nahra, Lisa Griffin) hearing what the hub teams run",
-   "why": "A friendlier department with the same workflow. Peer proof travels sideways when it cannot travel up.",
+   "via": "Kate Becka, Director, Access Capacity Management (beckak@ccf.org, checked), in seat since February 2026; Melissa Restaino, Senior Director, Access Transformation, reached through Kate or LinkedIn (no confirmed address)",
+   "why": "A friendlier department with the same shape of day, and capacity management is the workflow we run. The Executive Director of Enterprise Access Operations seat is an open posting, so the transformation leads are the door for now.",
    "lane": "Amy",
    "adt": "ADT: new line of business pilot socialised alongside the renewal"
   },
@@ -98,9 +98,9 @@
   },
   {
    "lane": "Nicole and marketing",
-   "week": "2026-09-22",
-   "due": "2026-09-26",
-   "move": "Campaign brief accepted; verified list loaded to lemlist as a draft, nothing sent",
+   "week": "2026-09-29",
+   "due": "2026-10-02",
+   "move": "Campaign brief and the list handed over after the brainstorm confirms the lanes; Pardot audience built, nothing sent",
    "status": "planned"
   },
   {
@@ -149,7 +149,7 @@
    "lane": "Amy",
    "week": "2026-10-13",
    "due": "2026-10-17",
-   "move": "Message 3, the peer note, to Patty Nahra and Lisa Griffin",
+   "move": "Message 3, the peer note, to Kate Becka; Melissa Restaino by LinkedIn",
    "status": "planned"
   },
   {
@@ -235,7 +235,22 @@
      "Cleveland Clinic Success Plan (Enhanced Staffing hold note), customer's own record"
     ]
    ],
-   "qc": "Opens on their world with the dated signal (the fall RFP). Product sentence is concrete. One idea. One question naming the topic. 96 words. No numbers claimed beyond the platform facts. Sender voice to match Inger's own sent mail."
+   "qc": "Opens on their world with the dated signal (the fall RFP). Product sentence is concrete. One idea. One question naming the topic. 96 words. No numbers claimed beyond the platform facts. Sender voice to match Inger's own sent mail.",
+   "renders": [
+    {
+     "to_first": "Bob",
+     "body": "Hi Bob,\n\nWith the contact center RFP open this fall, one part of the stack does not need to move with it: Intradiem runs alongside Avaya today and integrates the same way with Genesys Cloud, NICE and the other platforms on a shortlist like yours, on top of the Verint schedules your teams already keep.\n\nThat means the alerts and schedule adjustments the hubs use every day carry across whichever platform wins, without a second migration for the agents.\n\nWould a short technical read on how the integration works against your shortlist help the evaluation?\n\nInger"
+    },
+    {
+     "to_first": "Terri",
+     "body": "Hi Terri,\n\nWith the contact center RFP open this fall, one part of the stack does not need to move with it: Intradiem runs alongside Avaya today and integrates the same way with Genesys Cloud, NICE and the other platforms on a shortlist like yours, on top of the Verint schedules your teams already keep.\n\nThat means the alerts and schedule adjustments the hubs use every day carry across whichever platform wins, without a second migration for the agents.\n\nWould a short technical read on how the integration works against your shortlist help the evaluation?\n\nInger"
+    },
+    {
+     "to_first": "Katherine",
+     "body": "Hi Katherine,\n\nWith the contact center RFP open this fall, one part of the stack does not need to move with it: Intradiem runs alongside Avaya today and integrates the same way with Genesys Cloud, NICE and the other platforms on a shortlist like yours, on top of the Verint schedules your teams already keep.\n\nThat means the alerts and schedule adjustments the hubs use every day carry across whichever platform wins, without a second migration for the agents.\n\nWould a short technical read on how the integration works against your shortlist help the evaluation?\n\nInger"
+    }
+   ],
+   "waits_for": ""
   },
   {
    "id": "m2",
@@ -258,19 +273,21 @@
      "Success Plan notes, 2025-11-06 and Active sheet 2025-11-18"
     ]
    ],
-   "qc": "Uses only the customer's own adoption numbers; the disputed $719K and 1.9x are deliberately absent. One idea. One ask. Placeholder for the supervisors' words is marked and must be filled before send. Sender voice to match Amy's."
+   "qc": "Uses only the customer's own adoption numbers; the disputed $719K and 1.9x are deliberately absent. One idea. One ask. Placeholder for the supervisors' words is marked and must be filled before send. Sender voice to match Amy's.",
+   "renders": [],
+   "waits_for": "the supervisors' statements"
   },
   {
    "id": "m3",
    "name": "Message 3: peer note to the parallel team",
-   "to": "Patty Nahra (Executive Director, Access to Care), Lisa Griffin (Director, Access Optimization)",
+   "to": "Kate Becka (Director, Access Capacity Management, beckak@ccf.org checked); Melissa Restaino by LinkedIn until an address is confirmed",
    "from": "Amy",
    "when": "Week of Oct 13",
    "route": "parallel-team",
    "one_idea": "The hub teams next to yours run the same workflow with fewer manual adjustments, and the configuration is already built.",
    "persona": "Customer / Service Director row: one lever moving cost and service the same direction",
    "subject": "what the hub teams are running",
-   "body": "Hi {{firstName}},\n\nThe contact center hubs have been running Intradiem on top of the Verint schedules for two years, and in August the AUX teams cleared 93.8% of their own adherence alerts before a supervisor had to step in, while 4,461 leave-early offers went out and were accepted when volume dropped.\n\nAccess to Care carries the same shape of day, so the same configuration would apply without a new build.\n\nWould it be useful to see the hub setup next to your queues?\n\nAmy",
+   "body": "Hi {{firstName}},\n\nThe contact center hubs have been running Intradiem on top of the Verint schedules for two years, and in August the AUX teams cleared 93.8% of their own adherence alerts before a supervisor had to step in, while 4,461 leave-early offers went out and were accepted when volume dropped.\n\nAccess carries the same shape of day, and capacity management is the piece the hubs lean on most, so the same configuration would apply without a new build.\n\nWould it be useful to see the hub setup next to your queues?\n\nAmy",
    "claims": [
     [
      "93.8% AUX self-cure and 4,461 Leave Early accepted (August 2026)",
@@ -281,7 +298,14 @@
      "Success Plan Closed sheet: use cases launched May 2024"
     ]
    ],
-   "qc": "Sideways peer proof, their own numbers. Product named once with a concrete action. One question. 84 words. Recipients are Salesforce-known contacts, not the sponsor line."
+   "qc": "Sideways peer proof, their own numbers. Product named once with a concrete action. One question. Under 100 words. Recipient verified current on LinkedIn (in seat since Feb 2026) with a checked work email; Restaino has no confirmed address so she is reached by LinkedIn; not the sponsor line.",
+   "renders": [
+    {
+     "to_first": "Kate",
+     "body": "Hi Kate,\n\nThe contact center hubs have been running Intradiem on top of the Verint schedules for two years, and in August the AUX teams cleared 93.8% of their own adherence alerts before a supervisor had to step in, while 4,461 leave-early offers went out and were accepted when volume dropped.\n\nAccess carries the same shape of day, and capacity management is the piece the hubs lean on most, so the same configuration would apply without a new build.\n\nWould it be useful to see the hub setup next to your queues?\n\nAmy"
+    }
+   ],
+   "waits_for": ""
   },
   {
    "id": "m4",
@@ -304,9 +328,12 @@
      "Value Repository line 80: a 2X guarantee written into the contract, VERIFIED 1:1, exact contract wording to confirm with Naveen before it is quoted; this draft does not quote the number"
     ]
    ],
-   "qc": "Under 80 words. Names the engaged colleagues. Held: sends only when the agreed-method line is true. Sender voice to match Matt's."
+   "qc": "Under 80 words. Names the engaged colleagues. Held: sends only when the agreed-method line is true. Sender voice to match Matt's.",
+   "renders": [],
+   "waits_for": ""
   }
  ],
+ "senders_note": "Drafts for each sender to make their own. Nothing here goes out in anyone's name until they have read it and changed what they want changed.",
  "rules": [
   "Nothing account-specific goes to the sponsor line (Rena, Shantel) except from Amy or Inger.",
   "The disputed savings figures ($719K YTD, 1.9x) never leave Intradiem until the method is agreed.",
