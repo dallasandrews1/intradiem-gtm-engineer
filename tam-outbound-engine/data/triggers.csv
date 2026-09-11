@@ -1,14 +1,17 @@
-domain,trigger_type,detail,date
-hcsc.com,cost_mandate,you've set operational efficiency targets for 2026,2026-06-02
-hcsc.com,cc_expansion,member growth across your five Blue Cross states is driving call volume,2026-05-20
-amerihealthcaritas.com,cc_expansion,you won two new Medicaid state contracts,2026-06-05
-amerihealthcaritas.com,wfm_hiring,you're hiring Workforce Management analysts and RTAs,2026-06-08
-navient.com,cost_mandate,your last earnings call flagged a board-level cost mandate,2026-05-18
-navient.com,wfm_hiring,you're hiring workforce management staff,2026-04-10
-breadfinancial.com,cost_mandate,you kicked off a cost reduction program,2026-02-01
-breadfinancial.com,leadership_change,you brought in a new VP of Customer Operations,2026-06-01
-lincolnfinancial.com,csat_pressure,you're in the middle of a digital and claims modernization push,2026-05-25
-lincolnfinancial.com,leadership_change,you brought in a new VP of Operations,2026-03-15
-onemain.com,cc_expansion,you're balancing branch and contact center volume with active hiring,2026-04-20
-onemain.com,wfm_hiring,you're in a contact center hiring push,2026-05-30
-centene.com,New operations or CX leader,"April 2026 leadership restructure: Daniel Finke named Group President Markets and Commercial (external hire from Convey Health), Michael Carson promoted to Group President Medicare and Specialty. CFO announced departure Aug 2026. 2026 guidance holds SG&A ratio at 7.1-7.7% against $170-174B premium revenue and 27.6M members, with stated emphasis on continued SG&A discipline.",2026-09-05
+domain,trigger_type,detail,date,source
+centene.com,cost_mandate,your incoming CFO arrives this month from a finance-transformation brief and takes the seat on January 1,2026-08-17,"Centene press release 2026-08-17, Planned Chief Financial Officer Transition: Drew Asher steps down Dec 2026, Chris Neczypor (previously EVP and CFO, Lincoln Financial; corporate finance, strategy, transformation, capital management) joins Sep 2026 and becomes EVP and CFO 2027-01-01. investors.centene.com/2026-08-17-Centene-Announces-Planned-Chief-Financial-Officer-Transition and SEC 8-K sec.gov/Archives/edgar/data/0001071739/000107173926000165"
+centene.com,qbp_earnings_pressure,on your Q2 call you named Stars cut-point and methodology changes as a margin headwind while committing to Medicare Advantage breakeven or better by 2027,2026-07-28,"Centene Q2 2026 earnings call, 2026-07-28. Company cited artificial cut point increases and STARS program methodology changes as industry-wide headwinds to margin expansion, alongside a commitment to breakeven or better in Medicare Advantage by 2027 and improvement in more than 90 percent of core clinical measures. fool.com/earnings/call-transcripts/2026/07/28/centene-cnc-q2-2026-earnings-call-transcript and healthcaredive.com/news/centene-cnc-q2-2026-guidance-hike-aca-medicaid/826286"
+centene.com,quality_identity_gap,"your Stars climb is on the record, and the contracts still sitting at 3.5 are where the rest of the bonus money is",2025-10-08,"Public CMS 2026 Star Ratings release 2025-10-08, plus the refreshed QBP model (Jul 9 2026 parent_key rekey) in StarRatings_Centene_StrikeRoom_Sequence_FINAL.md: 21 contracts confirmed at the 3.5 cliff, largest sub-4.0 block Wellcare by Fidelis Care ~69k members at 3.0, trajectory ~1 percent to ~18-20 percent of members in 4-plus-star plans 2025 to 2026. Clearly dated public filing; scores at the recency floor by design."
+hcsc.com,cost_mandate,you've set operational efficiency targets for 2026,2026-06-02,
+hcsc.com,cc_expansion,member growth across your five Blue Cross states is driving call volume,2026-05-20,
+amerihealthcaritas.com,cc_expansion,you won two new Medicaid state contracts,2026-06-05,
+amerihealthcaritas.com,wfm_hiring,you're hiring Workforce Management analysts and RTAs,2026-06-08,
+navient.com,cost_mandate,your last earnings call flagged a board-level cost mandate,2026-05-18,
+navient.com,wfm_hiring,you're hiring workforce management staff,2026-04-10,
+breadfinancial.com,cost_mandate,you kicked off a cost reduction program,2026-02-01,
+breadfinancial.com,leadership_change,you brought in a new VP of Customer Operations,2026-06-01,
+lincolnfinancial.com,csat_pressure,you're in the middle of a digital and claims modernization push,2026-05-25,
+lincolnfinancial.com,leadership_change,you brought in a new VP of Operations,2026-03-15,
+onemain.com,cc_expansion,you're balancing branch and contact center volume with active hiring,2026-04-20,
+onemain.com,wfm_hiring,you're in a contact center hiring push,2026-05-30,
+centene.com,New operations or CX leader,"April 2026 leadership restructure: Daniel Finke named Group President Markets and Commercial (external hire from Convey Health), Michael Carson promoted to Group President Medicare and Specialty. CFO announced departure Aug 2026. 2026 guidance holds SG&A ratio at 7.1-7.7% against $170-174B premium revenue and 27.6M members, with stated emphasis on continued SG&A discipline.",2026-09-05,

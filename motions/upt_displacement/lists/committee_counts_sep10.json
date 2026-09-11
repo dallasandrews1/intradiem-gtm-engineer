@@ -1,0 +1,263 @@
+{
+ "Blue Cross Blue Shield of Louisiana": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 5,
+  "performance_opex": 1,
+  "back_office": 4,
+  "cc_technology": 2,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "New York Life Insurance Company": {
+  "champion_wfm_rt": 8,
+  "ops_owner": 19,
+  "performance_opex": 1,
+  "back_office": 5,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "Blue Shield of California (BSCA)": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 0,
+  "performance_opex": 0,
+  "back_office": 0,
+  "cc_technology": 0,
+  "vito_in_dwo": 1,
+  "tier": "A"
+ },
+ "Verizon": {
+  "champion_wfm_rt": 15,
+  "ops_owner": 124,
+  "performance_opex": 4,
+  "back_office": 3,
+  "cc_technology": 7,
+  "vito_in_dwo": 1,
+  "tier": "A"
+ },
+ "The Hartford Financial Services Group": {
+  "champion_wfm_rt": 10,
+  "ops_owner": 41,
+  "performance_opex": 5,
+  "back_office": 14,
+  "cc_technology": 2,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "Gainwell Technologies": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 1,
+  "performance_opex": 1,
+  "back_office": 0,
+  "cc_technology": 1,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "Maximus": {
+  "champion_wfm_rt": 1,
+  "ops_owner": 17,
+  "performance_opex": 5,
+  "back_office": 1,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "TTEC": {
+  "champion_wfm_rt": 6,
+  "ops_owner": 5,
+  "performance_opex": 2,
+  "back_office": 0,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "Teleperformance UK": {
+  "champion_wfm_rt": 14,
+  "ops_owner": 10,
+  "performance_opex": 5,
+  "back_office": 0,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "A"
+ },
+ "Allstate Corporation": {
+  "champion_wfm_rt": 6,
+  "ops_owner": 18,
+  "performance_opex": 2,
+  "back_office": 23,
+  "cc_technology": 3,
+  "vito_in_dwo": 3,
+  "tier": "A"
+ },
+ "Alorica": {
+  "champion_wfm_rt": 9,
+  "ops_owner": 10,
+  "performance_opex": 2,
+  "back_office": 1,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Columbia Sportswear": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 1,
+  "performance_opex": 0,
+  "back_office": 0,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Consumer Cellular": {
+  "champion_wfm_rt": 1,
+  "ops_owner": 5,
+  "performance_opex": 0,
+  "back_office": 0,
+  "cc_technology": 1,
+  "vito_in_dwo": 1,
+  "tier": "B"
+ },
+ "Corpay (formerly FLEETCOR)": {
+  "champion_wfm_rt": 1,
+  "ops_owner": 3,
+  "performance_opex": 1,
+  "back_office": 0,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "DHU Healthcare UK": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": 0,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Farmers Group": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "First National Bank of Omaha": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "FirstSource": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "IEHP": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 1,
+  "tier": "B"
+ },
+ "MSC Industrial Direct": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Manulife Financial Corporation": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 4,
+  "tier": "B"
+ },
+ "Navy Federal Credit Union": {
+  "champion_wfm_rt": 1,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 6,
+  "tier": "B"
+ },
+ "Qualfon": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "RSA Insurance Group (Canada)": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": 0,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Serco": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Serco Inc": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "State Employees Credit Union (SECU)": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 2,
+  "tier": "B"
+ },
+ "Telus Corporation": {
+  "champion_wfm_rt": null,
+  "ops_owner": 2,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 0,
+  "tier": "B"
+ },
+ "Trupanion": {
+  "champion_wfm_rt": null,
+  "ops_owner": null,
+  "performance_opex": null,
+  "back_office": null,
+  "cc_technology": null,
+  "vito_in_dwo": 1,
+  "tier": "B"
+ }
+}

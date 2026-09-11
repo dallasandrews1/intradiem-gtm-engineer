@@ -1,0 +1,399 @@
+{
+ "title": "EMEA channel partner map",
+ "angle": "who sells each platform, and who sells more than one",
+ "subhead": "The channel partners selling Five9, Cisco, Avaya, Genesys, Aspect (Alvaria), Verint and Amazon Connect across Europe, the Middle East and Africa, from the vendors' own partner directories. Sep 2 2026.",
+ "tldr": [
+  "<strong>Seventeen partners carry three or more of the seven platforms.</strong> BT Business (five), Sabio, TTEC Digital and Connect Managed Services (four), then Orange Business, NTT DATA, Damovo, Deutsche Telekom, IP Integration, IST Networks, Axians, Activeo, Indra, Seidor, Deloitte Digital, Accenture and Capgemini. Their sellers already sit between an ACD and a WFM layer, which is where Intradiem lives.",
+  "<strong>Start with the Genesys-plus-Avaya bench.</strong> IDC ranks Genesys and Avaya as the two largest contact center providers in Europe, and the partners that carry both (Sabio, Damovo, IP Integration, Maintel, Westcon-Comstor for distribution) hold the deepest installed bases in the UK, DACH and Benelux.",
+  "<strong>Market share exists at vendor level only, and mostly global.</strong> No analyst publishes partner-level share in EMEA; vendor-level EMEA share sits inside paid IDC, DMG and Omdia reports. Every published figure that matters is on this page with its region attached, so a global number never travels as an EMEA one. Where a partner is the named largest for a vendor, the quote and source are on its row.",
+  "<strong>The UK holds the deepest bench for all seven; the rest of EMEA is platform-specific.</strong> Genesys runs the widest network outside the UK (Turkey, Poland, the Gulf, Nordics, Iberia), Five9 is concentrated in the UK, Iberia and DACH, Verint's channel is UK plus Nordic, Swiss and Dutch compliance specialists, Aspect has nine EMEA resellers, and Amazon Connect is delivered by UK, German and Iberian AWS consultancies."
+ ],
+ "share_h2": "Only vendor-level share is published, and most of it is global.",
+ "share_intro": "Check the region before quoting a number. Partner-level EMEA share is not published by anyone.",
+ "share_note": [
+  "IDC's European Contact Center Market Shares 2024 (doc EUR153039425) holds the only vendor-by-vendor Europe table. It is paid; its top three (Genesys, Avaya, Zendesk) is public.",
+  "DMG's 2024 WEM Market Share Report carries a Europe cut and a direct-versus-partner cut for Verint, NICE, Genesys and Calabrio ($4,500). It is the report to buy if a defensible EMEA WFM share is ever needed.",
+  "Omdia's CCaaS tracker (CY24) covers EMEA for 25 to 30 vendors including AWS, Avaya, Five9, Genesys and NICE, also paid."
+ ],
+ "vendors_h2": "How each platform goes to market in EMEA",
+ "vendor_order": [
+  "five9",
+  "cisco",
+  "avaya",
+  "genesys",
+  "alvaria",
+  "verint",
+  "connect"
+ ],
+ "vendors": [
+  {
+   "slug": "five9",
+   "name": "Five9",
+   "context": "Sells EMEA through a UK-headquartered team with offices in Porto, Munich, Dublin, Amsterdam, Barcelona, Stockholm and Johannesburg. States that DACH and Benelux are sold primarily through partners and that partner-influenced business was over 80% of new bookings globally (Feb 2025). The EMEA channel is concentrated in UK managed service providers (Babble, Onecom, Opus, Exponential-e) plus BT as the strategic carrier and WTG for DACH.",
+   "program": "Gold, Silver, Authorized levels; types Reseller, Service Provider, Technology Solution Broker, SI, Referral. EMEA Partner of the Year: Onecom (2022), Opus (2024), Exponential-e (2025); DACH: WTG (2024 and 2025).",
+   "share": "No EMEA figure. International is 11.5% of revenue (FY2025 10-K); 12.7% of global CCaaS revenue (Metrigy 2025); Leader in the IDC European CCaaS MarketScape 2025.",
+   "method_read": "Global Partner Locator, all 190 pages (1,704 records), EMEA-located partners kept",
+   "method_plus": "Five9 partner profiles, 2024 and 2025 Global Partner Awards, press"
+  },
+  {
+   "slug": "cisco",
+   "name": "Cisco",
+   "context": "Contact center goes to market almost entirely through partners; EMEA is about 26% of Cisco revenue. The CX channel is recognised through the WebexOne awards (EMEA Customer Experience winners BrightCloud 2023, Cisilion 2024, Natilik 2025) and distributed by Comstor and TD SYNNEX. Carriers (BT, Orange, Deutsche Telekom, Virgin Media O2, Vodafone) resell Webex Contact Center inside broader Webex bundles.",
+   "program": "Cisco 360 (Jan 2026) replaced Gold, Premier and Select with Preferred and Portfolio Partner per architecture, plus Cisco Powered Services accreditations including Webex Contact Center. Older sources still cite Gold and Master Collaboration.",
+   "share": "No EMEA figure. Outside IDC's European top three; eighth globally by CCaaS share yet the fastest growing (Metrigy 2025); Niche Player in the 2025 Gartner CCaaS MQ; 10.0% of the global on-prem platform market.",
+   "method_read": "No public directory with a contact center filter",
+   "method_plus": "WebexOne 2023 to 2025 awards, Partner Summit 2025 awards, partner pages"
+  },
+  {
+   "slug": "avaya",
+   "name": "Avaya",
+   "context": "After Chapter 11 (May 2023) Avaya narrowed to its top roughly 1,500 customers, and in 2025 pushed sub-200-seat cloud customers to partners, naming BT, Maintel and Sabio as certified carrier options. Westcon-Comstor is the EMEA master agent and distributor. The channel is deepest in the UK (Sabio, Maintel, FourNet, IPI, Connect) and DACH (WTG, Damovo, T&N, CCT), with a Gulf tier of self-described largest partners (CGC, Syscom, BCS).",
+   "program": "Avaya Edge with Diamond, Sapphire and Emerald tiers as partners describe them; Avaya's own partner page was unreachable, so tiers are partner statements.",
+   "share": "No EMEA figure. 36.3% of the global on-prem platform market (Metrigy 2025) inside a market shrinking about 20% a year; IDC ranks Avaya second in Europe for 2024 behind Genesys.",
+   "method_read": "Partner locator offline on Sep 2 2026",
+   "method_plus": "Partner pages, Avaya newsroom, Westcon announcements, Feb 2025 customer notice"
+  },
+  {
+   "slug": "genesys",
+   "name": "Genesys",
+   "context": "EMEA is a first-class region (1,600+ staff, 17 countries) run direct to partners with no distributor tier. Elite sits above Platinum and has gone to Sabio (Apr 2026), Kerv (May 2025), Orange Business and KPN. Carriers hold the largest homogeneous installed bases (Orange has 48,550 licences under management; BT, KPN, Telia, Telefonica), and the four named global SIs are Accenture, Capgemini, Deloitte Digital and IBM.",
+   "program": "Ascend: Bronze, Silver, Gold, Platinum, Elite; types Solution Provider, Referral, Services, and Technology Solutions Distributor (North America only).",
+   "share": "No EMEA figure. 20.0% of global CCaaS revenue, second to NICE (Metrigy 2025); nearly 45% of Genesys Cloud revenue is outside North America; IDC's top European provider for 2024; Frost's number one growth leader in Europe (2023).",
+   "method_read": "Partner Finder, all 595 records, Region = EMEA (252 entities, multi-country groups collapsed)",
+   "method_plus": "Elite announcements, Genesys newsroom, event sponsor lists, partner pages"
+  },
+  {
+   "slug": "alvaria",
+   "name": "Aspect / Alvaria",
+   "context": "One holding company, two brands since Sep 2024: Aspect (WFM and WEM) and Alvaria CX (outbound and compliance), majority-owned by Nut Tree Capital since Oct 2025 with a new Aspect board and CEO in 2026. EMEA offices in London, Madrid, Cologne, Geneva, Rotterdam, Rome and Claregalway, but no named EMEA leader and no Alvaria CX partner directory. The route to market in EMEA is Avaya (Aspect's only Alliance partner and the resale route for Alvaria CX) plus a short list of Aspect Diamond resellers.",
+   "program": "Aspect: Alliance, Reseller and Referral tracks with a Diamond tier and an 88-partner directory (15 readable). Alvaria CX: a channel program with a Partner Hub still under development.",
+   "share": "No EMEA figure and no global one. Covered in DMG's 2025 and 2026 WFM reports alongside NICE, Verint, Calabrio and Intradiem, without percentages.",
+   "method_read": "Aspect partner directory, all four pages (55 partners, 9 in EMEA)",
+   "method_plus": "Aspect and Alvaria press, Call Centre Helper"
+  },
+  {
+   "slug": "verint",
+   "name": "Verint",
+   "context": "Private since Nov 2025 under Thoma Bravo and combined with Calabrio; EMEA was about 18% of revenue and a third of headcount in the last public 10-K. Verint co-sells through platform partners (Avaya OEM, Five9 hosts and resells WFO, Cisco via Calabrio, 8x8, Odigo) and decorates its EMEA channel at an annual summit (2025: 90 partners). The UK holds the deepest bench (Sabio, Kerv, BSL, IPI, FourNet, BT), with Nordic, Swiss, Dutch and DACH specialists on recording and compliance.",
+   "program": "Four types published (Technology, Channel, Consultancy, Global Alliance) and no tier ladder; Gold, Platinum, Elite and Premier are partner self-descriptions. Award tracks CX, FC (financial compliance), WFE and Cloud.",
+   "share": "No EMEA figure. EMEA is 18% of Verint revenue (FY2025 10-K); DMG holds the Europe WEM cut behind a paywall; a press estimate puts Verint plus Calabrio at about 40% of WFM globally (unattributed, unverified).",
+   "method_read": "Partner directory with Regions = EMEA and Type = Channel Partner (50 entries)",
+   "method_plus": "Verint EMEA Partner Summit awards 2022 to 2025, partner pages, 10-K"
+  },
+  {
+   "slug": "connect",
+   "name": "Amazon Connect",
+   "context": "Sold through the AWS Partner Network. The Amazon Connect Service Delivery designation (2019) is being replaced by the Amazon Connect Customer Services Competency (Jun 2026), and Westcon-Comstor, TD SYNNEX, Ingram Micro and Arrow distribute AWS across EMEA without Connect-specific programmes. The EMEA delivery bench is UK specialists (CloudInteract, Connect, Route 101, SVL, Acceleraate), tecRacer and LionGate in Germany, Awiant in Sweden, Storm Reply in Italy, plus the global SIs (Accenture, Deloitte, PwC, NTT DATA, TTEC Digital).",
+   "program": "APN tiers Select, Advanced, Premier; Amazon Connect Service Delivery (deprecated Jun 2027) and the Amazon Connect Customer Services Competency (two categories). The only Connect-specific EMEA award on record: TTEC Digital (VoiceFoundry), UKI 2021.",
+   "share": "No EMEA figure. Third globally by seats (DMG, Dec 2024 data); $1B annualized run rate (Amazon, Oct 2025); Frost Radar EMEA 2024 Leader; not among the named Leaders in IDC's 2025 European CCaaS MarketScape.",
+   "method_read": "AWS Partner Finder, Product = Amazon Connect, all 197 results, EMEA-based kept",
+   "method_plus": "APN Service Delivery and Competency posts, AWS EMEA awards 2025, partner pages"
+  }
+ ],
+ "vendor_slugs": {
+  "five9": "five9",
+  "cisco": "cisco",
+  "cisco webex": "cisco",
+  "webex": "cisco",
+  "webex contact center": "cisco",
+  "webex contact centre": "cisco",
+  "avaya": "avaya",
+  "genesys": "genesys",
+  "genesys cloud": "genesys",
+  "alvaria": "alvaria",
+  "aspect": "alvaria",
+  "alvaria/aspect": "alvaria",
+  "alvaria and aspect": "alvaria",
+  "verint": "verint",
+  "amazon connect": "connect"
+ },
+ "aliases": {
+  "sabio": "Sabio Group",
+  "kerv": "Kerv Experience",
+  "kerv experience": "Kerv Experience",
+  "bt": "BT Business",
+  "bt bt": "BT Business",
+  "orange": "Orange Business",
+  "connect managed": "Connect Managed Services",
+  "ipi": "IP Integration (IPI)",
+  "ip integration": "IP Integration (IPI)",
+  "deloitte": "Deloitte Digital",
+  "deloitte digital": "Deloitte Digital",
+  "deutsche telekom": "Deutsche Telekom (T-Systems)",
+  "deutsche telekom t systems": "Deutsche Telekom (T-Systems)",
+  "telefonica": "Telefonica Tech",
+  "telefonica tech": "Telefonica Tech",
+  "telefonica telefonica tech": "Telefonica Tech",
+  "proximus nxt": "Proximus NXT",
+  "proximus proximus nxt": "Proximus NXT",
+  "teleperformance": "Teleperformance (TP Infinity)",
+  "teleperformance tp infinity": "Teleperformance (TP Infinity)",
+  "reply": "Reply (Storm Reply)",
+  "ttec digital": "TTEC Digital",
+  "ntt data": "NTT DATA",
+  "westcon comstor": "Westcon-Comstor",
+  "wtg": "WTG",
+  "t&n ag": "T&N AG (WTG group)",
+  "babble": "Babble",
+  "awiant": "Awiant",
+  "fournet": "FourNet",
+  "cancom": "CANCOM (incl. Kapsch BusinessCom)",
+  "concentrix": "Concentrix",
+  "vodafone": "Vodafone Business",
+  "axians": "Axians (VINCI Energies)",
+  "td synnex": "TD SYNNEX",
+  "britannic": "Britannic Technologies",
+  "servion global": "Servion Global Solutions",
+  "bcs": "BCS (Business Continuity Solutions)",
+  "cgc": "CGC (Converged Generation Communications)",
+  "united": "United Technologies (KSA)",
+  "t&n": "T&N AG (WTG group)",
+  "al moammar information systems": "Al Moammar Information Systems (MIS)",
+  "british telecommunications": "BT Business",
+  "i p integration": "IP Integration (IPI)",
+  "conn3ct": "Connect Managed Services",
+  "ttec": "TTEC Digital",
+  "maintel europe": "Maintel",
+  "servion global fz": "Servion Global Solutions",
+  "comapp s r l": "ComApp",
+  "comapp": "ComApp",
+  "exponential e": "Exponential-e",
+  "opus": "Opus Technology",
+  "onecom": "Onecom",
+  "telefonica soluciones de informatica": "Telefonica Tech",
+  "evcoms": "Evcoms",
+  "assist digital": "Assist Digital",
+  "jasco enterprise": "Jasco",
+  "nuvias uc": "Nuvias UC",
+  "acceleraate": "Acceleraate",
+  "tele train": "Tele-Train Software",
+  "tecracer": "tecRacer",
+  "liongate": "LionGate AG",
+  "harbers ict": "Harbers ICT",
+  "harbers": "Harbers ICT",
+  "route 101": "Route 101",
+  "cloudinteract": "CloudInteract",
+  "indra": "Indra",
+  "seidor": "Seidor",
+  "navarra tecnologia del software": "Seidor",
+  "konecta": "Konecta",
+  "capgemini": "Capgemini",
+  "accenture": "Accenture",
+  "ibm consulting": "IBM Consulting",
+  "ibm": "IBM Consulting",
+  "ist networks": "IST Networks",
+  "ist": "IST Networks",
+  "algotech polska": "Algotech",
+  "algotech": "Algotech",
+  "cx engage": "CX Engage",
+  "united mak": "United MAK Group",
+  "united makgroup": "United MAK Group",
+  "black box network uk": "Black Box",
+  "black box": "Black Box",
+  "almavia cx": "Almavia CX",
+  "activeo": "Activeo",
+  "raya cx": "Raya CX",
+  "kpn": "KPN",
+  "telia": "Telia",
+  "tele2": "Tele2",
+  "swisscom": "Swisscom",
+  "wtg communication": "WTG",
+  "deloitte spain": "Deloitte Digital",
+  "deloitte emea apac": "Deloitte Digital",
+  "deloitte sweden": "Deloitte Digital",
+  "pwc": "PwC",
+  "ey": "EY",
+  "kmpg": "KPMG",
+  "capgemini america": "Capgemini",
+  "telefonica tech espana": "Telefonica Tech",
+  "konecta group": "Konecta",
+  "e and enterprise": "e& enterprise",
+  "td synnex supply chain": "TD SYNNEX",
+  "west telco europa": "West Telco Europa",
+  "atento": "Atento",
+  "telenet": "Telenet Business",
+  "damovo": "Damovo",
+  "al moammar information": "Al Moammar Information Systems (MIS)",
+  "makwa it": "Makwa IT Technologies",
+  "makwait": "Makwa IT Technologies",
+  "serco": "Serco",
+  "worldline": "Worldline",
+  "custodia": "Custodia Technology",
+  "tm": "TM Group",
+  "nasstar": "Nasstar",
+  "luware": "Luware",
+  "1global": "1GLOBAL",
+  "axcess nordic": "Axcess Nordic",
+  "evolutio cloud enabler": "Evolutio",
+  "evolutio": "Evolutio",
+  "warpcom": "Warpcom",
+  "infinit cx": "infinit.cx",
+  "unify communications and collaboration": "__drop__",
+  "tele train software": "Tele-Train Software",
+  "tele'train software": "Tele-Train Software",
+  "komsa": "KOMSA",
+  "sprint": "Sprint",
+  "sprint s a": "Sprint",
+  "nuvias": "Nuvias UC",
+  "damovo deutschland": "Damovo",
+  "maintel": "Maintel",
+  "ist integration and technologie": "IST Networks",
+  "istnetworks": "IST Networks",
+  "gulf customer experience branch": "Gulf Customer Experience",
+  "tata communications": "Tata Communications",
+  "tata communications middle east": "Tata Communications",
+  "tata communications uk": "Tata Communications",
+  "4net": "FourNet",
+  "ip cloud": "IPCLOUD",
+  "cpcecho lda": "CPCEcho",
+  "cpcecho": "CPCEcho",
+  "gamma network": "Gamma",
+  "gamma telecom": "Gamma",
+  "business systems": "BSL Group",
+  "softwareone": "SoftwareOne",
+  "softwareone inc": "SoftwareOne"
+ },
+ "drop": [
+  "Charterhouse Voice & Data (CVD Group)",
+  "Diyar United Company",
+  "Atea",
+  "Bechtle",
+  "Swisscom",
+  "Infosys",
+  "Cognizant",
+  "Computacenter",
+  "Aptiva",
+  "TDC Erhverv",
+  "IPC Systems",
+  "Unify Communications and Collaboration",
+  "2Ring, spol. s r.o.",
+  "2Ring, spol",
+  "APIZEE",
+  "Aveni",
+  "CX Index - Feedback Analytics",
+  "DuoKey",
+  "GN Audio",
+  "Omilia Natural Language Solutions",
+  "PCI Pal",
+  "Resilient plc",
+  "Sematell",
+  "Sestek Ses Ve Iletisim Bilg.Tek.San.Ve Tic.A.S",
+  "SoliCall",
+  "Spitch AG",
+  "Sycurio",
+  "Syndeo",
+  "Syntec",
+  "Keyon",
+  "Prime Contact!",
+  "Eemaan",
+  "Occam Networks",
+  "Smoke Customer Intelligence",
+  "Intelly Solutions"
+ ],
+ "drop_links": {
+  "Vodafone Business": [
+   "avaya"
+  ],
+  "Telefonica Tech": [
+   "cisco"
+  ],
+  "Proximus NXT": [
+   "cisco"
+  ],
+  "TD SYNNEX": [
+   "avaya",
+   "connect"
+  ],
+  "Westcon-Comstor": [
+   "five9",
+   "connect"
+  ],
+  "Concentrix": [
+   "connect"
+  ],
+  "Britannic Technologies": [
+   "verint"
+  ],
+  "TTEC Digital": [
+   "alvaria"
+  ],
+  "Cognizant": [
+   "connect"
+  ]
+ },
+ "map_h2": "All 386 partners, most platforms first",
+ "map_intro": "Filter by platform, pick two to see who carries both, or drop the referral agents. Dark green means the vendor's own directory or the partner's page confirms it; pale green means one source.",
+ "start_h2": "Where to start",
+ "start": [
+  {
+   "title": "Start with the integrators that carry several platforms",
+   "body": "Sabio (Genesys Elite, Avaya Diamond, Verint Partner of the Year 2025, Amazon Connect), Damovo (Avaya Diamond, Cisco 360, Genesys Premier across DACH, Ireland and Poland), Kerv (Genesys Elite, Verint Elite), IP Integration (Avaya Diamond, Genesys Premier, Verint), Connect Managed Services (Five9 Gold, Genesys Premier, Amazon Connect, Avaya) and TTEC Digital. Their practice leads already sell an ACD and a WFM layer together, so an orchestration layer between the two fits a motion they already run."
+  },
+  {
+   "title": "Carriers hold the biggest installed bases",
+   "body": "BT Business (Five9 Gold, Genesys Elite, Webex, a Verint-powered managed service), Orange Business (Genesys Elite in ten countries, Cisco, three Verint awards), Deutsche Telekom (Genesys Premier, Webex, Amazon Connect), KPN (Genesys Premier), Telia and Tele2 (Genesys and Verint in the Nordics), Proximus and Telenet in Belgium. Carriers hold the largest homogeneous installed bases and already run managed contact centre services; the fit is a managed-service add-on, not a resale line."
+  },
+  {
+   "title": "Genesys has a bench in almost every country",
+   "body": "Genesys is the only platform with a deep bench outside the UK: 16 Elite and 36 Premier partners across EMEA, including Indra, Seidor and Evolutio in Iberia, infinit.cx and Unima in DACH and Poland, IST Networks and Ejada in the Gulf, Advania across the Nordics. Filter the map by Genesys and a country to get the local shortlist."
+  },
+  {
+   "title": "Westcon-Comstor is the only distributor that matters",
+   "body": "Cisco through Comstor and Avaya as EMEA master agent, with AWS added in Nov 2024. TD SYNNEX carries Five9 and Cisco in EMEA at award level; KOMSA distributes Five9 and Genesys in Germany; Nuvias UC distributes Five9 in the UK. ScanSource has no EMEA operation."
+  },
+  {
+   "title": "Verint's award winners are the WFM shortlist",
+   "body": "Sabio, Kerv, Orange Business, BT, Axcess Nordic (Nordics), Luware (Switzerland), Tele-Train (DACH), Evcoms (Ireland), 1GLOBAL (Netherlands) and Makwa IT (South Africa) are the EMEA partners Verint decorated between 2022 and 2025. After the Calabrio combination the same partners carry the combined WFM estate."
+  }
+ ],
+ "confidence": [
+  {
+   "area": "Five9",
+   "level": "High"
+  },
+  {
+   "area": "Cisco",
+   "level": "High"
+  },
+  {
+   "area": "Avaya",
+   "level": "Medium"
+  },
+  {
+   "area": "Genesys",
+   "level": "High"
+  },
+  {
+   "area": "Aspect / Alvaria",
+   "level": "Low"
+  },
+  {
+   "area": "Verint",
+   "level": "High"
+  },
+  {
+   "area": "Amazon Connect",
+   "level": "Medium"
+  },
+  {
+   "area": "Market share",
+   "level": "Low"
+  }
+ ],
+ "gaps": [
+  "Three vendor directories are JavaScript-rendered and were only partly read: Aspect (15 of 88 partners), Verint (first 18 entries), and the Five9 and AWS partner finders (not readable). A browser pass on each is the fastest way to extend the map.",
+  "Iberia, Italy, CEE, Turkey and the Gulf have one or two named partners per platform at most; the Nordics beyond Telia, Axcess Nordic and Awiant are thin.",
+  "Not verified either way, despite being obvious candidates: TD SYNNEX and Ingram Micro on Five9 or Genesys in EMEA; Vodafone Business, Telefonica Tech, Atos (Eviden), Capgemini and NTT DATA on Verint; Capita, Econocom, Axians and Proximus on Genesys.",
+  "Tier words are vendor-specific and partly self-described: Verint publishes no tier ladder, Avaya's partner page was unreachable, and Cisco retired Gold, Premier and Select in Jan 2026 while older sources still cite them.",
+  "Partner scale (revenue, headcount) is missing for most UK specialists (Natilik, Cisilion, IP Integration, FourNet, Babble, Opus, Onecom).",
+  "Aspect and Alvaria have no named EMEA leader and no Alvaria CX partner directory; their EMEA channel is effectively Avaya's channel plus direct offices.",
+  "Aptiva (Aspect's EMEA implementation partner since Sep 2025) and MakwaIT (Verint EMEA Partner of the Year CX 2024) could not be identified beyond the announcements; both need a name, a country and a website before they are worked."
+ ],
+ "method_h2": "Built from the vendors' own partner directories",
+ "method_intro": "Each directory was read in full and filtered to EMEA, then joined with award lists, partner pages and filings. Platform vendors that resell each other (Avaya for Aspect, Five9 hosting Verint, Cisco via Calabrio) sit in the platform cards, not in the partner list.",
+ "method_notes": [
+  "Cisco publishes no partner directory that can be filtered to contact center, so Cisco rows come from the WebexOne and Partner Summit award lists, Cisco partner pages and the partners' own Webex Contact Center pages.",
+  "Avaya's partner locator was offline during the pull (avaya.com/partners returned 404), so Avaya rows come from partner pages, Avaya newsroom items and Westcon's distribution announcements.",
+  "Referral agents appear as their own type so they can be filtered out; most are UK Five9 sales agents."
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "routineRunId": "run_0tl610sVtNRxiYNudRU",
+  "mode": "inline",
+  "total": 2,
+  "finished": 2,
+  "status": "complete",
+  "data": [
+    {
+      "id": "terri-horan",
+      "status": "complete",
+      "result": {
+        "Work Email": "horant@ccf.org"
+      }
+    },
+    {
+      "id": "bob-ganem",
+      "status": "complete",
+      "result": {
+        "Work Email": "rganem@ccf.org"
+      }
+    }
+  ]
+}

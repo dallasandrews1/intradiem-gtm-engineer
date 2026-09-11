@@ -1,0 +1,3280 @@
+[
+ {
+  "name": "24sessionscom BV",
+  "web": "http://24sessions.com",
+  "city": "Amsterdam",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "2Ring, spol. s.r.o.",
+  "web": "http://www.2ring.com",
+  "city": "Bratislava 1",
+  "cc": "SK",
+  "country": "Slovakia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "4iG Information Technology Ltd.",
+  "web": "https://www.4ig.hu/it/it-home-en",
+  "city": "Budapest",
+  "cc": "HU",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Ascotel Jordan",
+  "web": "ascotel.com.jo",
+  "city": "Amman",
+  "cc": "JO",
+  "country": "Jordan",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Accenture S.P.A ( Italy )",
+  "web": "accenture.com",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Activeo SAS",
+  "web": "http://www.activeo.com",
+  "city": "Issy-Les-Moulineaux",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Activeo Suisse S\u00e5RL",
+  "web": "www.activeo.com",
+  "city": "Rolle",
+  "cc": "CH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Adesso Netherlands B.V.",
+  "web": "NA",
+  "city": "Nieuwegein",
+  "cc": "NL",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Advanced Technology Solutions International",
+  "web": "https://atsint.com",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Advania Finland Oy",
+  "web": "https://www.advania.fi/fi/palvelumme/asiakaskokemus/genesys-cloud",
+  "city": "Espoo",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Advania Island ehf",
+  "web": "https://advania.is",
+  "city": "Reykjav\u00edk",
+  "cc": "IS",
+  "country": "Iceland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Advania Norge AS",
+  "web": "www.advania.no",
+  "city": "Oslo",
+  "cc": "NO",
+  "country": "Norway",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Advania Sverige AB",
+  "web": "https://advania.se",
+  "city": "Stockholm",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Adventus Solutions Sia",
+  "web": "www.adventus.lv",
+  "city": "Riga",
+  "cc": "LV",
+  "country": "Latvia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Al Arabiya Systems Engineering (ASE)",
+  "web": "https://ase.sa",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Al Futtaim Technologies L L C",
+  "web": "http://www.alfuttaimtechnologies.com",
+  "city": "Dubai",
+  "cc": "AE",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Al Nafitha International Information Technology Company",
+  "web": "https://alnafitha.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ALCASYS Czech Republic, s.r.o.",
+  "web": "http://www.alcasys.eu",
+  "city": "Praha 4",
+  "cc": "CZ",
+  "country": "Czech Republic",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Alcasys Slovakia a.s",
+  "web": "https://alcasys.eu",
+  "city": "Bratislava 4",
+  "cc": "SK",
+  "country": "Slovakia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Algotech Bulgaria",
+  "web": "N/A",
+  "city": "Sofia",
+  "cc": "BG",
+  "country": "Bulgaria",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Algotech Serbia",
+  "web": "http://www.algotech.rs",
+  "city": "Novi Beograd",
+  "cc": "RS",
+  "country": "Serbia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Almavia CX SAS",
+  "web": "https://almavia.fr",
+  "city": "Paris",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Altron Systems Integration a Division of Altron TMT (Pty) Ltd",
+  "web": "https://www.altronsystemsintegration.co.za/",
+  "city": "Sandton",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Altuera LLC",
+  "web": "altueralab.com",
+  "city": "Moscow",
+  "cc": "RU",
+  "country": "Russia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "AMT Group",
+  "web": "http://www.amt.ru",
+  "city": "Moscow",
+  "cc": "RU",
+  "country": "Russia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Anana Limited",
+  "web": "https://sabiogroup.com",
+  "city": "Bristol",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Ankido Company for Information Technology Ltd",
+  "web": "https://supercell.iq/contact-us",
+  "city": "Mansour",
+  "cc": "IQ",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "APIZEE",
+  "web": "https://www.apizee.com",
+  "city": "Lannion",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Member",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "arvato Systems GmbH",
+  "web": "www.arvato-systems.de",
+  "city": "G\u00fctersloh",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Asseco SEE Bilisim Teknolojileri A.S.",
+  "web": "https://tr.asseco.com/",
+  "city": "Maslak",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Asseco South Eastern Europe SA",
+  "web": "https://see.asseco.com/",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Asterlogic Limited",
+  "web": "www.asterlogic.co.uk",
+  "city": "Manchester",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "atip GmbH",
+  "web": "https://atip.de",
+  "city": "Frankfurt Am Main",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Aveni Ltd",
+  "web": "https://aveni.ai",
+  "city": "Edinburgh",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Baltnetos komunikacijos",
+  "web": "https://www.balt.net/cloud-computing-and-server-experts",
+  "city": "Vilnius",
+  "cc": "LT",
+  "country": "Lithuania",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "BARPHONE",
+  "web": "www.barphone.gr",
+  "city": "Metamorfosi",
+  "cc": "GR",
+  "country": "Greece",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Baud Telecom Company Ltd",
+  "web": "http://www.btc-networks.com",
+  "city": "Jeddah",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Belam Ltd",
+  "web": "https://belam.lv",
+  "city": "Limassol",
+  "cc": "CY",
+  "country": "Cyprus",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Black Box",
+  "web": "blackbox.com",
+  "city": "Sp\u00e5nga",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Black Box Network Services UK Limited",
+  "web": "https://www.bboxservices.com/",
+  "city": "Reading",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "British Telecommunications PLC",
+  "web": "www.bt.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "BSI Business Systems Integration AG",
+  "web": "www.bsiag.com",
+  "city": "D\u00e4ttwil Ag",
+  "cc": "CH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "BTC Networks Egypt Company",
+  "web": "https://btcnetworks.net/",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Business Connexion (Pty) Ltd",
+  "web": "www.bcx.co.za",
+  "city": "Pta",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "acrinax Ltd",
+  "web": "http;//www.kaptec.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "C Square Consulting PVT Ltd",
+  "web": "https://csquare.co",
+  "city": "Karachi Shahra-E-Faisal",
+  "cc": "PK",
+  "country": "Pakistan",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Call Center Resources Dan. A.S.",
+  "web": "http://www.ccr.com.tr",
+  "city": "Kozyata\u011f\u0131",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CCR FZ LLC",
+  "web": "http://ccr.com.tr/en/",
+  "city": "Dubai",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NCR Corporation, Abu Dhabi",
+  "web": "ncr.com",
+  "city": "Abu Dhabi",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NCR Corporation, Dubai Branch",
+  "web": "https://ncr.com",
+  "city": "Dubai",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CCR",
+  "web": "https://www.ccr.group/en/",
+  "city": "Zug",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Centro Global Solutions",
+  "web": "Centrocdx.com",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Ceritek Sarl",
+  "web": "ceritek.com",
+  "city": "Noisy-Le-Grand",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CGI ISMC Polska Sp. z o.o.",
+  "web": "www.cgi.com",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Wecom",
+  "web": "https://wecom.om",
+  "city": "Muscat",
+  "cc": "OM",
+  "country": "Oman",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CloudComm 360 Ltd",
+  "web": "www.cloudcomm360.com",
+  "city": "Batley",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CloudCX Ltd",
+  "web": "https://cloudcx.ai",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Cloudoe BV",
+  "web": "www.cloudoe.nl",
+  "city": "'S-Hertogenbosch",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ComApp S.r.l",
+  "web": "www.comapp.it",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Conn3ct (Connect Managed Services (UK) Limited)",
+  "web": "https://www.weconnect.tech/about-us/",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Pivotal Data",
+  "web": "www.pivotaldata.co.za",
+  "city": "Midrand",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Consnet Pty Ltd",
+  "web": "https://www.consnet.co.za/",
+  "city": "Johannesburg",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CPCECHO",
+  "web": "www.svdi.pt",
+  "city": "Canidelo",
+  "cc": "PT",
+  "country": "Portugal",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CS Infocomm Computers Trading LLC",
+  "web": "csinfocomm.com",
+  "city": "Dubai",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CTI Planet Srl",
+  "web": "www.ctiplanet.it",
+  "city": "Biella",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Customer Experience Yazilim Danismalik Ticaret LTD",
+  "web": "http://customerexperience.com.tr",
+  "city": "Istanbul",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Customer Interaction Solutions AG",
+  "web": "cisolutions.ch",
+  "city": "Glattfelden",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CXinMotion",
+  "web": "www.cxinmotion.com",
+  "city": "Armagh",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Damovo Deutschland GmbH & Co. KG",
+  "web": "https://damovo.com",
+  "city": "D\u00fcsseldorf",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Damovo Ireland Limited",
+  "web": "https://www.damovo.com/en/contactus",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DAMOVO POLSKA",
+  "web": "http://www.damovo.pl",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DDM Consulting NV",
+  "web": "www.ddmconsulting.be",
+  "city": "Turnhout",
+  "cc": "BE",
+  "country": "Belgium",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Navarra Tecnolog\u00eda del Software SL",
+  "web": "https://www.seidor.com/",
+  "city": "VITORIA-GASTEIZ",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Deutsche Telekom Business Solutions GmbH",
+  "web": "https://geschaeftskunden.telekom.de",
+  "city": "Frankfurt Am Main",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "T-Systems Multimedia Solutions GmbH",
+  "web": "https://www.t-systems-mms.com/",
+  "city": "Dresden",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Dimensions Solutions for Telecommunications and Information Technology Company",
+  "web": "https://ds-cx.com/en/Home/Contact",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Direct Information System LLC",
+  "web": "www.datadirect.ae",
+  "city": "Dubai",
+  "cc": "",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DNA Oyj",
+  "web": "https://dna.fi",
+  "city": "Helsinki",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DuoKey SA",
+  "web": "https://duokey.com/",
+  "city": "Prilly",
+  "cc": "CH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Member",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Duqm Data Centre SAOC (D2C) OMAN",
+  "web": "www.ooredoo.om",
+  "city": "Bausher",
+  "cc": "OM",
+  "country": "Oman",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DXC Technology Finland Oy",
+  "web": "https://www.dxc.technology/",
+  "city": "Espoo",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Bizmatica Sistemi S.p.a.",
+  "web": "http://www.bizmatica.com",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Eemaan Limited",
+  "web": "http://www.eemaan.com/",
+  "city": "Reading",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Ejada Systems Company",
+  "web": "https://www.ejada.com/",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "EMBEDIT s.r.o",
+  "web": "www.embedit.com",
+  "city": "Praha 6",
+  "cc": "CZ",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Emergya Ingenieria SL",
+  "web": "www.emergya.com",
+  "city": "Sevilla",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Evolutio Cloud Enabler, S.A.",
+  "web": "https://www.evolutio.com/en/",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Experience Shift Company for Business Services",
+  "web": "https://www.x-shift.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "FACYLE S.A.S.",
+  "web": "www.facyle.com",
+  "city": "Toulouse",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "CX Index - Feedback Analytics Limited",
+  "web": "http://cxindex.com",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Fiebig GmbH",
+  "web": "https://fiebig.com",
+  "city": "Frankfurt",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Fourth Dimension Systems Company",
+  "web": "http://www.fdsme.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Fourth Dimension Systems LLC",
+  "web": "www.fdsme.com",
+  "city": "Dubai\u200f\u00a0",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Frontline Solutions",
+  "web": "www.frontline-solutions.nl",
+  "city": "Vianen",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "FROSTEQ AB",
+  "web": "frosteq.com",
+  "city": "Uppsala",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "eleven (GEMA Consulting Ireland Limited)",
+  "web": "https://makeiteleven.com",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "GEOMANT-ALGOTECH Zrt.",
+  "web": "www.algotech.hu",
+  "city": "Budapest",
+  "cc": "HU",
+  "country": "Hungary",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "GlobalConnect AB",
+  "web": "https://www.globalconnect.se/",
+  "city": "Stockholm",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "GN Audio A/S",
+  "web": "mojomedia.dk",
+  "city": "Ballerup",
+  "cc": "DK",
+  "country": "Denmark",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Hewlett-Packard Italiana S.r.l",
+  "web": "https://www.hpe.com",
+  "city": "Cernusco Sul Naviglio",
+  "cc": "IT",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "IBM World Trade Corporation (Egypt Branch)",
+  "web": "www.ibm.com",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Ideal Systems NV",
+  "web": "http://www.idealsystems.be/",
+  "city": "Vilvoorde",
+  "cc": "BE",
+  "country": "Belgium",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "IKUSI S.L.",
+  "web": "www.ikusi.com",
+  "city": "Alcala De Henares",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Indra Italia spa",
+  "web": "http://indracompany.com/en",
+  "city": "Roma",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Indra Soluciones Tecnolog\u00edas de la Informaci\u00f3n, S.L.",
+  "web": "www.indra.es",
+  "city": "Alcobendas",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Inetum Espa\u00f1a, S.A.U.",
+  "web": "https://www.inetum.com/es",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Inetum",
+  "web": "www.inetum.com",
+  "city": "Saint-Ouen-Sur-Seine",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "infinit.cx GmbH",
+  "web": "http://www.infinit.cx/",
+  "city": "M\u00fcnchen",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ISTNetworks",
+  "web": "http://www.istnetworks.com",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Intelly Solutions AB",
+  "web": "http://intelly.solutions",
+  "city": "B\u00e5lsta",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Intracom S.A. Telecom Solutions",
+  "web": "http://www.intracom-telecom.com",
+  "city": "Markopoulo",
+  "cc": "GR",
+  "country": "Greece",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Intrarom",
+  "web": "intrarom.ro",
+  "city": "Bucuresti",
+  "cc": "RO",
+  "country": "Romania",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "I P Integration Ltd",
+  "web": "https://www.ipintegration.com",
+  "city": "Reading",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "IST Integration Services And Technologies Co.",
+  "web": "http://www.istnetworks.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ITNAVPRO",
+  "web": "itnavpro.com",
+  "city": "Petah Tikva",
+  "cc": "IL",
+  "country": "Israel",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Jathwa Technical for Information Technology Company Ltd.",
+  "web": "http://jathwa.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Kalaam Telecom Bahrain B.S.C",
+  "web": "https://kalaam-telecom.com",
+  "city": "Manama",
+  "cc": "BH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Kerv Experience",
+  "web": "https://kerv.com/about-kerv/kerv-divisions/kerv-experience/",
+  "city": "Richmond",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Keyon BV",
+  "web": "https://www.parley.io",
+  "city": "Almere",
+  "cc": "NL",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Klearcom Tech Ltd",
+  "web": "www.klearcom.com",
+  "city": "Waterford",
+  "cc": "IE",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Koc Sistem Bilgi ve letiim Hizmetleri A.S.",
+  "web": "https://www.kocsistem.com.tr/en",
+  "city": "Uenalan",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "KOMSA AG",
+  "web": "https://komsa.com",
+  "city": "Hartmannsdorf",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Konecta Italia S.p.A.",
+  "web": "www.comdatagroup.com",
+  "city": "Corsico",
+  "cc": "IT",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "KPN B.V.",
+  "web": "www.kpn.com",
+  "city": "Amersfoort",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "LLC Orange Business Services",
+  "web": "www.orange-business.com/ru",
+  "city": "Moscow",
+  "cc": "RU",
+  "country": "Russia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Logix d.o.o.",
+  "web": "http://www.logix.si",
+  "city": "Ljubljana",
+  "cc": "SI",
+  "country": "Slovenia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Lutech S.p.A.",
+  "web": "https://lutech.it",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Maintel Europe Limited",
+  "web": "www.maintel.co.uk",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Mannai Trading Company WLL",
+  "web": "www.mannaiautos.com",
+  "city": "Doha",
+  "cc": "QA",
+  "country": "Qatar",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Mellon Technologies Systems and Services Commercial S.A.",
+  "web": "www.mellongroup.com",
+  "city": "Piraeus",
+  "cc": "GR",
+  "country": "Greece",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Mentat Conseil",
+  "web": "www.mentat.fr",
+  "city": "Paris",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Merykh Arabian Technologies d/b/a VIS Arabia",
+  "web": "www.visarabia.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Mindware FZ LLC",
+  "web": "https://www.mindware.net/",
+  "city": "Dubai",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NCR Solutions (Middle East) LLC.",
+  "web": "www.ncr.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Nova IT LLC",
+  "web": "www.novait.com.ua",
+  "city": "Kyiv",
+  "cc": "UA",
+  "country": "Ukraine",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Novellus Palvelut Oy",
+  "web": "novellus.fi",
+  "city": "Parainen",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Belgium NV/SA",
+  "web": "hello.global.ntt",
+  "city": "Machelen",
+  "cc": "BE",
+  "country": "Belgium",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Czech Republic s.r.o",
+  "web": "dimensiondata.com",
+  "city": "Praha 4",
+  "cc": "CZ",
+  "country": "Czech Republic",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT DATA Deutschland Gmbh",
+  "web": "nttdata.com",
+  "city": "M\u00fcnchen",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Data Italia S.p.A.",
+  "web": "https://it.nttdata.com/",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Data Spain SL",
+  "web": "https://es.nttdata.com/",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Data UK Ltd",
+  "web": "www.nttdata.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT France SASU",
+  "web": "dimensiondata.com",
+  "city": "Paris",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Germany AG &amp; Co. KG",
+  "web": "https://hello.global.ntt/de-de/#",
+  "city": "Bad Homburg",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Hungary Trading and Service Ltd",
+  "web": "https://didata.com",
+  "city": "Budapest",
+  "cc": "HU",
+  "country": "Hungary",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Ireland Limited",
+  "web": "https://global.ntt",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Netherlands B.V.",
+  "web": "https://www.nttdata.com/global/en/",
+  "city": "Amersfoort",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Poland sp. z o.o",
+  "web": "www.wybierznttdata.pl",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Slovakia s.r.o.",
+  "web": "dimensiondata.com",
+  "city": "Bratislava 3",
+  "cc": "SK",
+  "country": "Slovakia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NTT Switzerland SA",
+  "web": "www.dimensiondata.com",
+  "city": "Crissier",
+  "cc": "CH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Nuuday A/S",
+  "web": "tdcnetdesign.dk",
+  "city": "Kobenhavn Sv",
+  "cc": "DK",
+  "country": "Denmark",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "NXO FRANCE SASU",
+  "web": "www.nxo.eu",
+  "city": "Puteaux",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Occam Networks Limited",
+  "web": "www.occam.global",
+  "city": "Hertford",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Omilia Natural Language Solutions Ltd",
+  "web": "https://omilia.com",
+  "city": "Limassol",
+  "cc": "CY",
+  "country": "Cyprus",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "OmniHouse s.r.o.",
+  "web": "omnihouse.eu",
+  "city": "Dob\u0159\u00ed\u010d",
+  "cc": "CZ",
+  "country": "Czech Republic",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Optimus Telecom",
+  "web": "optimus-telecom.ma",
+  "city": "Rabat",
+  "cc": "MA",
+  "country": "Morocco",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Denmark A/S",
+  "web": "www.orange.com",
+  "city": "Glostrup",
+  "cc": "DK",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Germany GmbH",
+  "web": "https://orange.com",
+  "city": "D\u00fcsseldorf",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Holdings UK Limited",
+  "web": "https://www.orange-business.com/en/business-needs/customer-experience",
+  "city": "Slough",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ORANGE BUSINESS NETHERLANDS B.V.",
+  "web": "https://www.orange-business.com/en/business-needs/customer-experience",
+  "city": "Amsterdam",
+  "cc": "US",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services",
+  "web": "https://www.orange-business.com/en/business-needs/customer-experience",
+  "city": "Segrate",
+  "cc": "IT",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services Portugal S.A.",
+  "web": "https://www.orange-business.com/en/business-needs/customer-experience",
+  "city": "Alfragide",
+  "cc": "PT",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services",
+  "web": "www.obs.com",
+  "city": "Pozuelo De Alarcon",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services Hungary",
+  "web": "www.orange.com",
+  "city": "Budapest",
+  "cc": "HU",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services Poland Sp. z o.o",
+  "web": "https://orange.com",
+  "city": "Warsaw",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Services S.A.",
+  "web": "https://orange.com",
+  "city": "Saint-Denis",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange Business Switzerland AG",
+  "web": "https://orange-business.com",
+  "city": "Zurich",
+  "cc": "CH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Orange SA",
+  "web": "https://www.orange-business.com/",
+  "city": "Nanterre",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Origen Middle East Technology Services and Trading WLL",
+  "web": "https://www.origen.qa",
+  "city": "Doha",
+  "cc": "QA",
+  "country": "Qatar",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "PCI Pal",
+  "web": "www.pcipal.com",
+  "city": "Ipswich",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "PlusNet Solutions, S.L.",
+  "web": "plusnetsolutions.com",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "PolyAI Limited",
+  "web": "https://poly.ai",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Prime Contact! BV",
+  "web": "www.prime-contact.com",
+  "city": "Almere",
+  "cc": "NL",
+  "country": "Netherlands",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Procat International Ltd.",
+  "web": "procat.com.tr",
+  "city": "Anadoluhisari",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Proximus NXT",
+  "web": "genesys.com",
+  "city": "Brussel",
+  "cc": "BE",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "QuandaGo International B.V.",
+  "web": "www.quandago.com",
+  "city": "Capelle Aan Den Ijssel",
+  "cc": "NL",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "R-MAD Limited",
+  "web": "http://www.r-mad.com",
+  "city": "Pereybere",
+  "cc": "MU",
+  "country": "Mauritius",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "R.I.S.K. SCIENTIFIC PRODUCTION COMPANY",
+  "web": "https://risk.az",
+  "city": "N\u0259simi",
+  "cc": "AZ",
+  "country": "Azerbaijan",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Raya Customer Experience",
+  "web": "https://rayacx.com/",
+  "city": "Warsawa",
+  "cc": "EG",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Raya Integration",
+  "web": "raya-it.net",
+  "city": "Sixth Of October",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Releasy Customer Management AB",
+  "web": "www.reysystems.com",
+  "city": "Solna",
+  "cc": "SE",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Resilient plc",
+  "web": "smartnumbers.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sabio Denmark ApS",
+  "web": "N/A",
+  "city": "K\u00f8benhavn \u00d8",
+  "cc": "DK",
+  "country": "Denmark",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SABIO FRANCE SAS",
+  "web": "https://sabiogroup.com/fr",
+  "city": "Paris",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sabio Ib\u00e9rica, S.A.",
+  "web": "https://sabiogroup.com/es",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sabio Ltd",
+  "web": "sabiogroup.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Safricloud",
+  "web": "safricloud.com",
+  "city": "Durban",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Saga d.o.o. Beograd",
+  "web": "www.saga.rs",
+  "city": "Beograd",
+  "cc": "RS",
+  "country": "Serbia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SEETON GROUP LLC",
+  "web": "https://www.seeton.pro/en/",
+  "city": "Kyiv",
+  "cc": "UA",
+  "country": "Ukraine",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sematell GmbH",
+  "web": "www.sematell.com",
+  "city": "Saarbr\u00fccken",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Member",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sentient Machines Limited",
+  "web": "www.sentientmachines.tech",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Scorebuddy QA by Sentient Solutions Ltd",
+  "web": "www.scorebuddyqa.com",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Servion Global Solutions FZ LLC",
+  "web": "https://servion.com",
+  "city": "Sharjah",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sestek Ses Ve Ileti\u015fim Bilg.Tek.San.Tic. A.\u015e.",
+  "web": "https://sestek.com",
+  "city": "Istanbul",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Setera Communications Oy",
+  "web": "www.setera.com",
+  "city": "Espoo",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sii sp z oo",
+  "web": "www.sii.pl",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Silah Gulf",
+  "web": "http://www.silah.bh",
+  "city": "Manama",
+  "cc": "BH",
+  "country": "Bahrain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Simply Infinity GmbH",
+  "web": "www.simply-infinity.ch",
+  "city": "Kriens",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sistas",
+  "web": "sistas.com.tr",
+  "city": "Cank",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SITA SCARL- Switzerland",
+  "web": "www.sita.aero",
+  "city": "Vernier, Geneva",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Smoke Customer Intelligence",
+  "web": "www.smokeci.com",
+  "city": "Randburg",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Member",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SocialRel8 Ltd t/a EvaluAgent",
+  "web": "www.evaluagent.com",
+  "city": "Middlesbrough",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SOFTPHONE SRL",
+  "web": "http://www.softphone.it/",
+  "city": "Milano",
+  "cc": "IT",
+  "country": "Italy",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Softtech A.S.",
+  "web": "www.softtech.com.tr",
+  "city": "Istanbul (Europe)",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SoliCall Ltd",
+  "web": "http://solicall.com",
+  "city": "Tel Mond",
+  "cc": "IL",
+  "country": "Israel",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Spitch AG",
+  "web": "https://spitch.ch",
+  "city": "Zurich",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SPRINT S.A.",
+  "web": "www.sprint.pl",
+  "city": "Olsztyn",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Summit Technology Solutions",
+  "web": "https://www.summit-mea.com/",
+  "city": "Cairo",
+  "cc": "EG",
+  "country": "Egypt",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Swisscom (Schweiz) AG",
+  "web": "http://www.swisscom.ch",
+  "city": "Zurich",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Sycurio",
+  "web": "semafone.com",
+  "city": "Guildford",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Syndeo",
+  "web": "http://syndeo.cx",
+  "city": "Belfast",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Syntec Limited",
+  "web": "http://www.syntec.co.uk",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Authorized",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SYS Telekomunikasyon Bilgisayar Elektronik san. Ve Tic. A.S.",
+  "web": "https://sys.com.tr",
+  "city": "Istanbul",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Tata Communications Middle East FZ LLC- Dubai Branch",
+  "web": "https://www.tatacommunications.com/about/offices/",
+  "city": "Dubai",
+  "cc": "",
+  "country": "Utd.Arab.Emir.",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Tata Communications (UK) Ltd",
+  "web": "www.tatacommunications.com",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "TechneValue GmbH",
+  "web": "www.technevalue.com",
+  "city": "Pf\u00e4ffikon Sz",
+  "cc": "CH",
+  "country": "Switzerland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "tecRacer GmbH & Co. KG",
+  "web": "www.tecracer.com",
+  "city": "Hannover",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "TeKnowledge Middle East FZ-LLC",
+  "web": "www.teknowledge.com",
+  "city": "Dubai",
+  "cc": "AE",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Tele2 Sverige AB",
+  "web": "www.tele2.se",
+  "city": "Kista",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Telecard Ltd",
+  "web": "www.telecard.com.pk",
+  "city": "Karachi Clifton",
+  "cc": "PK",
+  "country": "Pakistan",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Telefonica Soluciones de Informatica",
+  "web": "telefonica.com",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Telenet BVBA",
+  "web": "https://nextel.be",
+  "city": "Mechelen",
+  "cc": "BE",
+  "country": "Belgium",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Telia Finland Oyj",
+  "web": "https://www.teliacommunication.fi/",
+  "city": "Helsinki",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Telia Company AB",
+  "web": "http://www.teliasonera.com",
+  "city": "Solna",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "SunnyPhone SARL",
+  "web": "www.telsi.fr",
+  "city": "Noyal-Ch\u00e2tillon-sur-Seiche",
+  "cc": "FR",
+  "country": "France",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Artificial Solutions",
+  "web": "https://www.artificial-solutions.com/",
+  "city": "Stockholm",
+  "cc": "SE",
+  "country": "Sweden",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "THINK BEYOND SP. Z O. O.",
+  "web": "www.thinkbeyond.cloud",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Tibo sistemi d.o.o.",
+  "web": "www.tibo.hr",
+  "city": "Zagreb",
+  "cc": "HR",
+  "country": "Croatia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Tieto Finland Oy",
+  "web": "www.tieto.com",
+  "city": "Espoo",
+  "cc": "FI",
+  "country": "Finland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "TSG IT Advanced Systems Ltd",
+  "web": "https://www.tsgitsystems.com/en/company-profile/",
+  "city": "Tel Aviv - Jaffa",
+  "cc": "IL",
+  "country": "Israel",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "TTEC.",
+  "web": "https://www.ttec.com/emea/contact-us",
+  "city": "London",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "UCS Bilisim Sistemleri Ltd. Sti",
+  "web": "ucsturkey.com",
+  "city": "Istanbul",
+  "cc": "TR",
+  "country": "Turkey",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Umbono Cloud Services (Pty) Ltd",
+  "web": "www.oculartechnologies.com",
+  "city": "Sandton",
+  "cc": "ZA",
+  "country": "South Africa",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Uni Systems",
+  "web": "unisystems.gr",
+  "city": "Kallithea",
+  "cc": "GR",
+  "country": "Greece",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Unify Communications and Collaboration GmbH &amp; Co. KG",
+  "web": "https://unify.com",
+  "city": "M\u00fcnchen",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Verizon UK Ltd",
+  "web": "https://www.verizon.com/business/en-gb/",
+  "city": "Reading",
+  "cc": "GB",
+  "country": "United Kingdom",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Veziri Ltd",
+  "web": "www.veziri.com",
+  "city": "Tbilisi",
+  "cc": "GE",
+  "country": "Georgia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Viacomms Telecom KSCC",
+  "web": "www.viacomms.com",
+  "city": "Salmiya",
+  "cc": "KW",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "VR Voice GmbH",
+  "web": "https://www.vrvoice.de",
+  "city": "Dortmund",
+  "cc": "DE",
+  "country": "Germany",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Warpcom Services S.A.",
+  "web": "www.warpcom.com",
+  "city": "Amadora",
+  "cc": "PT",
+  "country": "Portugal",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Elite",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "WE ARE MARKETING, S.L.U.",
+  "web": "https://wearemarketing.com",
+  "city": "Madrid",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [
+   "Genesys Cloud"
+  ],
+  "tiers": []
+ },
+ {
+  "name": "Weber Solutions SL.",
+  "web": "https://www.webersolutions.es/",
+  "city": "Villaviciosa De Od\u00f3n",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "DigitalWell",
+  "web": "https://digitalwell.com",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Hadef Information Technology Co.",
+  "web": "www.hadefit.com",
+  "city": "Riyadh",
+  "cc": "SA",
+  "country": "Saudi Arabia",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Whirly sp. z o.o.",
+  "web": "www.whirly.pl",
+  "city": "Warszawa",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Wren Data Ltd",
+  "web": "wrendata.com",
+  "city": "Dublin",
+  "cc": "IE",
+  "country": "Ireland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "xseed-Consultoria e Sistemas de Informa\u00c7\u00c3o",
+  "web": "www.xseed.pt",
+  "city": "Linda A Velha",
+  "cc": "PT",
+  "country": "Portugal",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Xylos NV",
+  "web": "www.xylos.com",
+  "city": "Antwerpen",
+  "cc": "BE",
+  "country": "Belgium",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Unima 2000 Systemy teleinformatyczne S.A",
+  "web": "www.unima2000.pl",
+  "city": "Krak\u00f3w",
+  "cc": "PL",
+  "country": "Poland",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Premier",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Zain Bahrain",
+  "web": "https://www.bh.zain.com/en",
+  "city": "AL SEEF",
+  "cc": "BH",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "Zaion SAS",
+  "web": "https://zaion.ai/en/",
+  "city": "Paris",
+  "cc": "FR",
+  "country": "",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ },
+ {
+  "name": "ZETADE GABINETE DE INGENIERA INFORMATICA Y TELECOMUNICACIONES SL",
+  "web": "www.zetade.com",
+  "city": "Valencia",
+  "cc": "ES",
+  "country": "Spain",
+  "region": [
+   "EMEA"
+  ],
+  "tier": "Accredited",
+  "expertise": [],
+  "tiers": []
+ }
+]

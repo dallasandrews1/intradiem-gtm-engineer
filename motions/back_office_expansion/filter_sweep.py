@@ -33,7 +33,7 @@ for acct, spec in CFG["accounts"].items():
         reason = gate_reason(t, r["full_name"], spec, r.get("location", ""))
         b = band(t)
         pr = prev.get((acct, re.sub(r"[^a-z ]", "", r["full_name"].split(",")[0].lower()).strip()))
-        url = ""; src = CFG.get("candidate_default_source", "search")
+        url = (r.get("linkedin_url") or "").strip(); src = CFG.get("candidate_default_source", "search")
         if pr:
             url = pr.get("linkedin_url", "")
             if "bridged" in pr.get("source", "") or "live-verified" in pr.get("source", ""):

@@ -57,6 +57,17 @@ Claude plugin ┼──> brain/app.py (FastAPI, hosted)  ──> the two engines
 Salesforce (v2) ┘        auth (X-API-Key) + request log (brain/logs/requests.jsonl)
 ```
 
+- **Data flow (rewritten 2026-09-05).** The brain does NOT import the engines. A generator
+  (`brain/build_gtm_state.py`) runs where the real data lives, scores all three engines and
+  emits one `gtm_state.json`; the brain fetches that over HTTP (`GTM_STATE_URL`, token
+  supported) and serves it. Refreshing what sellers see is a file publish, not a redeploy.
+  Baking the CSVs into the image was the stale-data root cause: the brain served July data
+  into September. Every response carries `generated_at`/`freshness`, and past 36h or on any
+  uncited (`seed`) row the fit, ROI and generated copy are WITHHELD, not served. No bundled
+  fallback exists on purpose: no snapshot means 503, never an old answer. Publish with
+  `brain/publish_gtm_state.sh` (stages by default, `--deploy` to push); the nightly
+  `automation/sync_publish.sh` regenerates and stages it. Contract + tests:
+  `brain/gtm_state.py`, `brain/test_brain_state.py` (31 checks).
 - **Brain** (`brain/app.py`): FastAPI service. `docker build -f gtm-hosted-platform/brain/Dockerfile -t intradiem-gtm-brain .` from the **project root** (engine folders must be in build context), or `pip install -r requirements.txt && uvicorn app:app`. Auth via `GTM_API_KEYS` env var (`label:key` comma list - one key per surface so the log shows which surface drove usage). Endpoints: `/v1/strike`, `/v1/strike/{domain}`, `/v1/signals`, `/v1/signals/{domain}`, `/v1/impact`, all requiring `X-API-Key`.
 - **Slack** (`slack/slack_app.py`): Socket Mode app, `/strikeplan [domain]` slash command, calls the brain via `BRAIN_URL`/`BRAIN_API_KEY`.
 - **Claude plugin** (`plugin/intradiem-gtm/`): remote (URL + key in `.claude-plugin/plugin.json`) by default; `mcp/gtm_client.py` is the local-stdio fallback if the brain can't be exposed over the network. Ships `RULES_OF_THE_ROAD.md` and a bundled skill (`skills/strike-plans/SKILL.md`) that always carries the verify-before-send guardrail.

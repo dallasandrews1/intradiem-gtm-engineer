@@ -1,0 +1,57 @@
+{
+ "hc": {
+  "campaignId": "cam_N92Tgg29ncHWnYAD9",
+  "steps": [
+   "stp_z5F3mCrKShmLTNkoL",
+   "stp_WMTZcLaXgkJGNQysY",
+   "stp_ci8gK7YJiazWe2RuP",
+   "stp_zym48JPERwfr8bZrn",
+   "stp_3bAX7YGxSbDrTiHwu",
+   "stp_xm5BjcoR9WtWHDuGZ"
+  ]
+ },
+ "fs": {
+  "campaignId": "cam_x8ehMHnWSjBr2CLQe",
+  "steps": [
+   "stp_xBnk2aBQxKNB7iFSk",
+   "stp_RBaDyAJWePxYR6taq",
+   "stp_bd4npPdSBPEaPmAN9",
+   "stp_xMmmD6tT3HEJynudY",
+   "stp_jSbYb5m9qNzgcFKqJ",
+   "stp_fTNF8N6qFgXgeLham"
+  ]
+ },
+ "ins": {
+  "campaignId": "cam_HCu4jiFB8oinz2s3F",
+  "steps": [
+   "stp_sp7RzkWmADxKJFvMi",
+   "stp_e4hc3SJkkX3HjzLSC",
+   "stp_FcTgMoN59oPovR3Br",
+   "stp_ApaBwvKb4wQLSHR7K",
+   "stp_r46oP6tygcvkCM5SL",
+   "stp_kJRt7tECeWHfaPdLw"
+  ]
+ },
+ "bpo": {
+  "campaignId": "cam_Fy287YF9X5fjPYBSo",
+  "steps": [
+   "stp_sAZEdSN2sEkQQFGSg",
+   "stp_moQqsWthFxnsGMfzL",
+   "stp_sM66DExHbsZMN9ECx",
+   "stp_vxzjwtNsbd4veW7wS",
+   "stp_DpkDLAsLnfKCdifXe",
+   "stp_eCwGbnZTN6WG8JpDL"
+  ]
+ },
+ "netnew": {
+  "campaignId": "cam_DNErdZPANvC2sqRCK",
+  "steps": [
+   "stp_fgmFp3zcdyuGEYkbF",
+   "stp_Tu9fibaCwEJHiaAwi",
+   "stp_CyddxKvApMD4XGLbb",
+   "stp_ABCCRYeXeGmimFZLS",
+   "stp_BBQHMuwcMNp7aE9Tu",
+   "stp_dtqqhbsG3ej8cHSec"
+  ]
+ }
+}

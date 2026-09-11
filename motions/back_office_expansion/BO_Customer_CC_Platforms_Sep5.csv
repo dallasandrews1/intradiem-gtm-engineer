@@ -1,0 +1,83 @@
+domain,company,account_type,industry,acd_latest,acd_last_seen,acd_fresh_12mo,wfm_latest,all_platforms,rep_confirmed,read_status,sfdc_owner_id
+adt.com,ADT,Customer,Other,Avaya,2026-08-27,yes,NICE,"Avaya Call Management System (2026-08-27), Five9 (2026-08-10), Nice Workforce Management (2022-01-03)",,read: Avaya/NICE,005V5000001gAGQIA2
+att.com,AT&T Entertainment Group,Customer,Telco_Cable,Genesys,2026-09-03,yes,Calabrio,"Calabrio One (2025-08-05), Genesys (2026-09-03), RingCentral (2026-03-30)",,read: Genesys/Calabrio,005V500000GElYvIAL
+axa.co.uk/home.aspx,AXA (UK),Customer,Insurance,Avaya,2023-01-03,no,,Avaya (2023-01-03),,read: Avaya,005V5000001gA7DIAU
+fairmont.com,AccorHotels,Customer,Travel,Amazon Connect,2024-07-24,no,,Amazon Connect (2024-07-24),,read: Amazon Connect,005V5000002ZZTEIA4
+aetna.com,Aetna Medicaid,Customer,Health Insurance,Genesys,2026-09-03,yes,,Genesys (2026-09-03),,read: Genesys,005V5000001gA77IAE
+amazon.com,Amazon,Customer,Retail,Genesys,2026-08-15,yes,Calabrio,"Calabrio (2026-06-14), Genesys (2026-08-15), Genesys Cloud (2026-08-15)",,read: Genesys/Calabrio,005V5000001gAGUIA2
+amexglobalbusinesstravel.com,American Express Global Business Travel,Customer,Travel,Avaya,2022-06-15,no,,"Avaya (2022-06-15), Avaya Call Management System (2022-06-15)",,read: Avaya,005V5000002ZZTEIA4
+ameriprise.com,Ameriprise Financial,Customer,Fin Services,Cisco,2026-09-02,yes,Aspect,"Alvaria (2024-11-22), RingCentral (2023-05-06), Webex Contact Center (2026-09-02)",,read: Cisco/Aspect,005V5000002ZZTEIA4
+amica.com,Amica Mutual,Customer,Home & Auto Insurance,Genesys,2025-10-25,yes,,"Genesys (2025-10-25), Genesys Cloud (2023-10-09)",,read: Genesys,005V5000001gAGWIA2
+blackboard.com,Anthology,Customer,Other,Avaya,2022-12-10,no,,Avaya (2022-12-10),,read: Avaya,005V5000002ZZTEIA4
+autogeneral.com.au,Auto & General Insurance Company,Customer,Insurance,Genesys,2026-07-10,yes,,"Avaya (2026-07-10), Genesys (2026-07-10), Genesys Cloud (2026-07-10)",,read: Genesys,005V5000001gA7DIAU
+bswhealth.com,Baylor Scott & White Health,Customer,Healthcare Provider,Genesys,2026-06-11,yes,Calabrio,"Calabrio (2026-05-26), Genesys (2026-05-26), Genesys Cloud (2026-06-11), Genesys Cloud CX (2026-06-11)",,read: Genesys/Calabrio,005V5000001gAGTIA2
+bluecrossnc.com,Blue Cross Blue Shield of North Carolina,Customer,Health Insurance,Genesys,2025-12-24,yes,,"Avaya (2022-01-03), Genesys (2025-12-24), Genesys Cloud (2025-05-15)",,read: Genesys,005V5000006tDZ3IAM
+centrica.com,CENTRICA PLC,Customer,Utilities,Amazon Connect,2026-07-10,yes,Aspect,"Alvaria (2024-09-17), Amazon Connect (2026-07-10), Genesys (2023-10-21), Genesys Cloud CX (2022-04-12)",,read: Amazon Connect/Aspect,005V5000001gA7DIAU
+cps.com,CPS Testing,Customer,Government,Talkdesk,2024-01-09,no,,TalkDesk (2024-01-09),,read: Talkdesk,005V5000003n1XYIAY
+cvs.com,CVS Health Retail,Customer,Healthcare Insurance,Avaya,2021-08-14,no,,Avaya (2021-08-14),,read: Avaya,005V5000001gAGQIA2
+cvs.com/specialty,CVS Health Specialty,Customer,Healthcare Insurance,Avaya,2021-08-14,no,,Avaya (2021-08-14),,read: Avaya,005V5000001gAGQIA2
+cibc.com,Canadian Imperial Bank Of Commerce (CIBC),Customer,Banking,Amazon Connect,2026-07-10,yes,,"Amazon Connect (2026-07-10), Five9 (2025-07-02), Genesys Cloud CX (2025-04-16), RingCentral (2024-02-15)",,read: Amazon Connect,005V5000001gAGQIA2
+capita.com,Capita,Customer,Technology,Five9,2026-07-29,yes,Aspect,"Alvaria (2026-08-06), Five9 (2026-07-29), Verint Workforce Management (2023-04-25)",,read: Five9/Aspect,005V5000002ZZTFIA4
+capitalgroup.com,Capital Group,Customer,Div Financial Services,Genesys,2024-05-04,no,,Genesys Cloud (2024-05-04),,read: Genesys,005V5000001gAGWIA2
+charter.com,Charter Communications,Customer,Telco/Cable,Talkdesk,2022-11-17,no,,"Avaya (2020-06-02), NICE CXone (2022-05-02), TalkDesk (2022-11-17)",,read: Talkdesk,005V5000001gA77IAE
+clevelandclinic.org,Cleveland Clinic,Customer,Healthcare Provider,Avaya,2026-02-25,yes,,Avaya (2026-02-25),,read: Avaya,005V500000GElNdIAL
+comcast.com,Comcast Corporation,Customer,Telco_Cable,Five9,2026-03-20,yes,,Five9 (2026-03-20),,read: Five9,005V5000001gAGQIA2
+coxautoinc.com,Cox Automotive,Customer,Retail,Genesys,2026-08-10,yes,,"Amazon Connect (2026-02-03), Avaya (2026-02-03), Five9 (2026-02-03), Genesys Cloud (2026-08-10)",,read: Genesys,005V500000GElNdIAL
+cox.com,Cox Communications,Customer,Telco/Cable,Genesys,2026-01-12,yes,,"Genesys (2026-01-12), Genesys Cloud (2025-07-14)",,read: Genesys,005V5000001gA77IAE
+coxenterprises.com,Cox Enterprises Inc,Customer,Cable,Amazon Connect,2026-01-28,yes,,"Amazon Connect (2026-01-28), Avaya Experience Portal (2024-03-24), Five9 (2026-01-28), TalkDesk (2025-04-09)",,read: Amazon Connect,005V5000001gA77IAE
+directv.com,DIRECTV,Customer,Telco_Cable,Genesys,2026-05-12,yes,,"Genesys (2026-03-21), Genesys Cloud (2026-05-12)",,read: Genesys,005V500000GElNdIAL
+edwardjones.com,Edward Jones,Customer,Div Financial Services,Avaya,2026-07-11,yes,Verint,"Avaya (2026-07-11), Genesys (2023-12-06), Genesys Cloud (2023-12-06), Verint Workforce Management (2022-06-14)",,read: Avaya/Verint,005V5000001gAGSIA2
+evolent.com,Evolent,Customer,Healthcare Provider,Genesys,2026-08-23,yes,,"Avaya (2024-10-20), Genesys (2026-08-13), Genesys Cloud (2026-08-13), Genesys Cloud CX (2026-08-23), NICE inContact (2024-06-11)",,read: Genesys,005V5000001gAGTIA2
+exeloncorp.com,Exelon Corporation,Customer,Utilities,Avaya,2023-09-10,no,,Avaya (2023-09-10),,read: Avaya,005V5000002ZZTEIA4
+foundever.com,Foundever (Sitel),Customer,Outsourcer,Genesys,2026-08-22,yes,Calabrio,"Amazon Connect (2026-08-22), Avaya Call Management System (2026-08-15), Calabrio (2026-07-23), Genesys (2026-05-04), Genesys Cloud (2026-08-22), NICE CXone (2026-08-22)",,read: Genesys/Calabrio,005V5000002ZZTEIA4
+guardianlife.com,Guardian Life,Customer,Fin Services,Avaya,2025-03-24,no,,"Amazon Connect (2023-05-21), Avaya (2025-03-24), TalkDesk (2023-01-17)",,read: Avaya,005V500000GElNdIAL
+hcsc.com,Health Care Service Corporation,Customer,Healthcare Insurance,Five9,2023-05-11,no,,"Avaya (2022-12-27), Five9 (2023-05-11)",,read: Five9,005V5000001gA77IAE
+humana.com,Humana,Customer,Healthcare Insurance,Genesys,2026-09-01,yes,Aspect,"Alvaria (2024-09-04), Avaya Call Management System (2024-05-28), Genesys Cloud CX (2026-09-01), Verint Workforce Management (2024-07-24)",,read: Genesys/Aspect,005V5000001gAGQIA2
+illumifin.com,Illumifin,Customer,Div Financial Services,Five9,2026-03-03,yes,,"Avaya (2024-06-06), Avaya Call Management System (2024-06-06), Five9 (2026-03-03)",,read: Five9,005V5000004XWIAIA4
+kaiserpermanente.org,Kaiser Washington,Customer,Healthcare Provider,NICE,2026-08-18,yes,Aspect,"Alvaria (2024-11-24), NICE CXone (2026-08-18)",,read: NICE/Aspect,005V5000002ZZTEIA4
+luxottica.com,Luxottica,Customer,Manufacturing,Genesys,2022-11-03,no,,"Genesys (2022-11-03), Genesys Cloud (2022-11-03)",,read: Genesys,005V5000004XWIAIA4
+metlife.com,MetLife,Customer,Fin Services,Genesys,2026-06-21,yes,,"Avaya Call Management System (2022-08-16), Genesys Cloud (2026-06-21), Genesys Cloud CX (2026-05-26)",,read: Genesys,005V500000GElNdIAL
+optum.com,Optum,Customer,Healthcare Insurance,NICE,2026-08-23,yes,Calabrio,"Calabrio (2026-07-26), NICE CXone (2026-08-23)",,read: NICE/Calabrio,005V5000001gA77IAE
+pnc.com,PNC Financial,Customer,Banking,Avaya,2026-08-13,yes,,"Avaya (2026-08-13), Genesys (2026-06-09), Genesys Cloud (2026-08-02)",,read: Avaya,005V500000GElYvIAL
+pillpack.com,PillPack,Customer,Retail,Five9,2020-06-07,no,,Five9 (2020-06-07),,read: Five9,005V5000001gAGWIA2
+progleasing.com,Progressive Leasing,Customer,Div Financial Services,Genesys,2024-08-01,no,,"Amazon Connect (2024-06-18), Genesys (2024-08-01), Genesys Cloud (2024-08-01)",,read: Genesys,005V5000001gAGTIA2
+prudential.com,Prudential Financial,Customer,Fin Services,Genesys,2026-07-06,yes,,"Amazon Connect (2025-12-03), Avaya (2025-06-13), Five9 (2025-12-03), Genesys (2025-12-03), Genesys Cloud (2026-07-06), NICE CXone (2025-12-03)",,read: Genesys,005V500000GElNdIAL
+rogers.com,Rogers Communications Canada,Customer,Telco/Cable,Genesys,2026-01-15,yes,,"Genesys Cloud (2025-06-17), Genesys Cloud CX (2026-01-15)",,read: Genesys,005V500000GElNdIAL
+racv.com.au,Royal Automobile Club Victoria (RACV),Customer,Home & Auto Insurance,Genesys,2026-07-10,yes,,"Genesys (2026-07-10), Genesys Cloud (2026-07-10)",,read: Genesys,005V5000002ZZTFIA4
+scanhealthplan.com,SCAN Health Plan,Customer,Insurance,Genesys,2026-03-27,yes,Calabrio,"Avaya (2026-01-31), Calabrio (2026-01-31), Five9 (2026-01-31), Genesys (2026-03-27), Genesys Cloud (2026-02-02)",,read: Genesys/Calabrio,005V5000006tDZ3IAM
+snapfinance.com,Snap Finance LLC,Customer,Fin Services,Talkdesk,2023-01-27,no,,TalkDesk (2023-01-27),,read: Talkdesk,005V5000002ZZTEIA4
+sofi.com,Social Finance (SoFi),Customer,Fin Services,Genesys,2024-03-07,no,,"Avaya (2023-07-12), Genesys Cloud (2024-03-07)",,read: Genesys,005V5000002ZZTEIA4
+synchrony.com,Synchrony Financial,Customer,Fin Services,Avaya,2026-08-02,yes,,Avaya (2026-08-02),,read: Avaya,005V500000GElYvIAL
+tiaa.org,TIAA-CREF,Customer,Div Financial Services,Avaya,2024-10-30,no,,"Avaya (2024-10-30), Genesys Cloud (2023-12-04)",,read: Avaya,005V5000001gAGSIA2
+homedepot.com,The Home Depot,Customer,Retail,Talkdesk,2022-06-28,no,,TalkDesk (2022-06-28),,read: Talkdesk,005V5000002ZZTEIA4
+northwesternmutual.com,The Northwestern Mutual Life Insurance Company,Customer,Fin Services,Five9,2026-04-30,yes,Verint,"Five9 (2026-04-30), Verint Workforce Management (2025-09-08)",,read: Five9/Verint,005V5000002ZZTEIA4
+travelers.com,The Travelers Companies,Customer,Insurance,Amazon Connect,2023-05-08,no,Aspect,"Alvaria (2024-11-14), Amazon Connect (2023-05-08)",,read: Amazon Connect/Aspect,005V500000GElNdIAL
+vibrant.org,Vibrant Emotional Health,Customer,Healthcare Provider,Genesys,2026-03-30,yes,,"Genesys (2026-03-30), Genesys Cloud (2026-03-30)",,read: Genesys,005V500000GElNdIAL
+virginmedia.com,Virgin Media O2 (UK),Customer,Telco/Cable,Amazon Connect,2023-02-17,no,,"Amazon Connect (2023-02-17), Avaya (2020-06-02)",,read: Amazon Connect,005V5000001gA7DIAU
+vitality.co.uk,VitalityHealth,Customer,Healthcare Insurance,Avaya,2023-06-22,no,Aspect,"Alvaria (2025-01-14), Avaya (2023-06-22)",,read: Avaya/Aspect,005V5000001gA7DIAU
+wellsfargo.com,Wells Fargo (Alvaria),Customer,Div Financial Services,Genesys,2026-02-26,yes,,"Amazon Connect (2026-02-26), Genesys Cloud (2026-02-26), TalkDesk (2026-02-26)",,read: Genesys,005V5000001gAGQIA2
+aetnamedicare.com,Aetna Medicare,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gA77IAE
+btplc.com/Thegroup/Ourcompany/Groupbusinesses/btconsumer/index.htm,BT Group,Customer,Telco/Cable,,,,,,,read: none found,005V5000001gA7DIAU
+caaclubgroup.ca,CAA Club Group,Customer,Home & Auto Insurance,,,,,,,read: none found,005V5000002ZZTEIA4
+cvshealth.com,CVS Health,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gAGQIA2
+cvshealth.com/pharmacy-care/specialty-pharmacy,CVS Health PBM,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gAGQIA2
+comed.com,Commonwealth Edison Company,Customer,Utilities,,,,,,,read: none found,005V5000002ZZTEIA4
+dominionenergy.com,Dominion Energy,Customer,Utilities,,,,,,,read: none found,005V5000006tDZ3IAM
+gs.com,Goldman Sachs,Customer,Fin Services,,,,,,,read: none found,005V500000GElNdIAL
+wageworks.com,HealthEquity,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000002ZZTEIA4
+jpmorganchase.com,JPMorgan Chase,Customer,Banking,,,,Calabrio,Calabrio (2026-05-24),,read: Calabrio,005V500000GElYvIAL
+kp.org,Kaiser NCal,Customer,Healthcare Provider,,,,,,,read: none found,005V5000002ZZTEIA4
+molinahealthcare.com,Molina Healthcare,Customer,Health Insurance,,,,,,,read: none found,005V5000001gAGTIA2
+optumrx.com/public/landing,OptumRx,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gA77IAE
+peco.com,PECO,Customer,Utilities,,,,,,,read: none found,005V5000002ZZTEIA4
+pgecorp.com,PG&E Corporation,Customer,Utilities,,,,,,,read: none found,005V5000002ZZTEIA4
+pepco.com,Pepco Holdings(PHI),Customer,Utilities,,,,,,,read: none found,005V5000002ZZTEIA4
+rbc.com,Royal Bank of Canada (RBC),Customer,Banking,,,,,,,read: none found,005V5000001gAGSIA2
+royalcaribbean.com,Royal Caribbean Cruises,Customer,Hospitality,,,,,,,read: none found,005V5000001gAGQIA2
+sanlam.com,Sanlam RSA,Customer,Banking,,,,,,,read: none found,005V5000002ZZTFIA4
+sce.com,Southern California Edison Company,Customer,Utilities,,,,,,,read: none found,005V5000002ZZTEIA4
+usbank.com,US Bancorp,Customer,Banking,,,,,,,read: none found,005V5000001gAGQIA2
+unitedhealthgroup.com,UnitedHealth Group (UHG),Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gA77IAE
+unitedhealthcare.com,UnitedHealthcare,Customer,Healthcare Insurance,,,,,,,read: none found,005V5000001gA77IAE
+wayfair.com,Wayfair,Customer,Retail,,,,Calabrio,Calabrio (2022-04-11),,read: Calabrio,005V5000001gA77IAE
+wellmedhealthcare.com,WellMed Medical,Customer,Healthcare_Provider,,,,,,,read: none found,005V5000001gA77IAE

@@ -1,0 +1,51 @@
+{
+ "Centene": {"why":"Centene is cutting its way to a smaller company while claims, appeals and enrollment volume stays put. 2026 severance is guided at $355M to $405M for enterprise optimization, headcount fell to 59,800 by Q2, and employees reported a new layoff wave on Aug 10. The first public prior-auth data (Aug 13) shows Medicare Advantage appeals overturned above 90% on a seven-day clock, and 133 MA plans exit in 2027, which means a run-out year of claims and appeals for members Centene no longer bills.",
+  "signals":[
+   {"d":"Jul 28","t":"2026 severance $355M to $405M, headcount 59,800 (Q2 8-K)","u":"https://www.sec.gov/Archives/edgar/data/0001071739/000107173926000154/a20260728ex991pressrelease.htm","s":"STRONG"},
+   {"d":"Aug 10","t":"Employees report a new layoff wave on top of the June buyout","u":"https://www.benefitspro.com/2026/08/10/centene-employees-post-about-a-new-wave-of-layoffs/","s":"STRONG"},
+   {"d":"Aug 13","t":"KFF prior-auth data: MA appeals overturned above 90%, 7-day turnaround","u":"https://www.kff.org/patient-consumer-protections/prior-authorization-metrics-provide-new-insights-into-insurer-practices-but-gaps-remain/","s":"STRONG"},
+   {"d":"Aug 20","t":"2027 MA retrenchment: 3 state exits, 133 plans, ~340K members","u":"https://www.healthcarelabyrinth.com/august-20-2026/","s":"MEDIUM"},
+   {"d":"Aug 31","t":"New CIO Bradley Bolivar with an AI and automation remit","u":"https://www.prnewswire.com/news-releases/centene-appoints-new-chief-information-officer-302864350.html","s":"MEDIUM"}
+  ],
+  "call":"Susan Smith's line owns the work that does not shrink with the headcount: claims (King, Fletcher, Cattani), UM (Wachter), encounters (Bond), workforce management (Salvatore)."},
+ "Fidelity": {"why":"Fidelity is building its own workforce-management platform for the phone side (a founding VP of Engineering role posted Aug 20) while the processing queues behind it keep growing: Q2 trades were up 31% year over year and Medicare Services passed 25,000 customers. Back-office teams return five days a week in September while phone roles stay exempt, so the two populations now run on different rhythms.",
+  "signals":[
+   {"d":"Aug 20","t":"Posting: VP of Engineering, Workforce Management (in-house WFM platform, phone side)","u":"https://jobs.fidelity.com/en/jobs/2127334/vp-of-engineering-workforce-management/","s":"STRONG"},
+   {"d":"Aug 4","t":"Q2 business update: trades +31%, calls +5%, planning interactions +7%","u":"https://about.fidelity.com/data-and-insights/q2-2026-business-update","s":"MEDIUM"},
+   {"d":"Sep","t":"Five-day return to office for 21,000+ staff; phone-based service exempt","u":"https://www.investmentnews.com/ria-news/fidelity-requiring-full-time-office-return-for-thousands-of-us-workers/266404","s":"MEDIUM"},
+   {"d":"Undated","t":"Charlotte McPherson (Middle Office Ops) has announced retirement; successor not named","u":"https://www.linkedin.com/in/charlotte-mcpherson-12945311/","s":"HOLD"}
+  ],
+  "call":"Emily Hawthorne's operations line: capacity planning (O'Brien), workforce optimization (Henck, Coons), money movement (Calafiore Zaslau), healthcare operations (Blalock)."},
+ "National Grid": {"why":"All three National Grid New York companies missed the 2025 call-answer standard and the PSC took about $24M in adjustments in July. On Sep 1 New York and New England came under one interim US President, Sally Librera, with an announcement that leads on operating performance and cost, and the Massachusetts gas rate case (which leans on labor cost) is decided Nov 30.",
+  "signals":[
+   {"d":"Jul 16","t":"NY PSC penalties for 2025 customer-service misses; call answer rate the common failure","u":"https://dps.ny.gov/news/psc-hits-five-utilities-50-million-penalties-failing-meet-2025-customer-service-standards","s":"STRONG"},
+   {"d":"Sep 1","t":"Reorganization: NY and New England under Sally Librera as Interim President, US","u":"https://www.sec.gov/Archives/edgar/data/0001004315/000165495426007117/a8707o.htm","s":"MEDIUM"},
+   {"d":"Nov 30","t":"Massachusetts gas rate case DPU 26-50 decision due; filing cites labor cost","u":"https://mass.gov/info-details/national-grid-2026-gas-base-distribution-rate-case/","s":"MEDIUM"},
+   {"d":"Aug 1","t":"MA basic service rate +11.8%, lands as payment-plan volume a cycle later","u":"https://electricityrates.com/resources/national-grid-rate-increase-august-2026/","s":"WEAK"}
+  ],
+  "call":"Bill Malee's customer organization: billing and collections (Bostic), customer operations and the Kraken program (Molinaro), workforce management (MacVicar); plus payroll (LaVeck) and finance operations (Taylor)."},
+ "Truist": {"why":"Mike Lyons became CEO on Sep 1 with the Street openly expecting a reset inside 90 days. Q2 held full-year expense growth near flat and framed efficiency as capacity to be redeployed, a $500M Infosys capability center in Hyderabad is taking on finance, HR and back-office work over five years, and there is still no COO: operations sits under Steve Hagerman with technology.",
+  "signals":[
+   {"d":"Sep 1","t":"Mike Lyons starts as CEO; analysts expect a plan inside 90 days","u":"https://www.bankingdive.com/news/mike-lyons-truist-ceo-banking-growth-profits-southeast/829310/","s":"MEDIUM"},
+   {"d":"Jul 17","t":"Q2: expense growth held at 1.75%; efficiencies redeployed into revenue roles","u":"https://www.investing.com/news/transcripts/earnings-call-transcript-truist-beats-q2-2026-eps-but-shares-slip-premarket-93CH-4798511","s":"MEDIUM"},
+   {"d":"May (live)","t":"Infosys $500M+ Hyderabad capability center: finance, HR, back-office scope","u":"https://www.peoplematters.in/news/business/infosys-lands-dollar500-million-gcc-deal-to-hire-4500-employees-in-hyderabad-49557","s":"STRONG"},
+   {"d":"Aug 24","t":"Digital outage, 5,000+ reports; lands in disputes and payment exception queues days later","u":"https://gvwire.com/2026/08/24/truist-down-for-thousands-of-users-downdetector-shows/","s":"MEDIUM"}
+  ],
+  "call":"Steve Hagerman's operations line: payments (Ward, Lyewski, Harpole), accounting operations (Buck, Taylor), mortgage servicing (Bicha), workforce planning (Cline, Jameson)."},
+ "Paychex": {"why":"Paychex published on Aug 31 that its WISE agents handled 350,000+ conversations with one in five closing with no person, and its August release pulls tax, implementation and support volume into self-service. What is left in the queues is exceptions, the hardest volume to staff a week out, while Enterprise Service just absorbed every 100+ employee client across two platforms.",
+  "signals":[
+   {"d":"Aug 31","t":"WISE results: 350K+ conversations, 20%+ resolved with no human, implementation workflows","u":"https://www.globenewswire.com/news-release/2026/08/31/3353324/0/en/wise-at-work-early-results-show-paychex-ai-is-reducing-payroll-errors-and-improving-service-efficiency-at-scale.html","s":"STRONG"},
+   {"d":"Aug","t":"Product release: penalty tracker and self set-up cut support, tax and implementation contacts","u":"https://www.paychex.com/product-releases/august-2026","s":"STRONG"},
+   {"d":"Jun 24","t":"Paycor synergies past $100M; FY27 margin guide at the high end of the usual range","u":"https://www.investing.com/news/transcripts/earnings-call-transcript-paychex-beats-q4-2026-estimates-but-shares-fall-93CH-4758564","s":"MEDIUM"},
+   {"d":"Jun 24","t":"Realignment: 100+ employee clients consolidated into Enterprise across Flex and Paycor","u":"https://finance.yahoo.com/markets/stocks/articles/paychex-inc-q4-2026-earnings-164344979.html","s":"MEDIUM"}
+  ],
+  "call":"Liz Roaldsen's operations and customer experience line (Hall, Magee, Mechling, Dwyer) and Chad Parodi's HR and benefits services (Paulick)."},
+ "Regions": {"why":"Regions named Kate Danella Chief Administrative Officer on Aug 11 with core-platform modernization in her remit, and its Aug 7 investor deck reaffirms flat-ish expense growth in the same year deposit operations pilots a Temenos core beside the legacy mainframe, with customer migration in 2027. The efficiency ratio has climbed two quarters running and check fraud is back in the trade press.",
+  "signals":[
+   {"d":"Aug 11","t":"Kate Danella named CAO; Dave Keenan to advisory role Sep 1, retires end of 2026","u":"https://www.sec.gov/Archives/edgar/data/0001281761/000128176126000060/leadershipupdatesnewsrel.htm","s":"MEDIUM"},
+   {"d":"Aug 7","t":"Investor deck: expense growth +1.5% to 3.5%, Temenos deposit core piloting 2026, migration 2027","u":"https://www.sec.gov/Archives/edgar/data/0001281761/000128176126000057/a3q26investormeetingmate.htm","s":"MEDIUM"},
+   {"d":"Aug 20","t":"Check-fraud enforcement puts the 2023 $135M episode back in print","u":"https://www.americanbanker.com/news/check-fraud-case-highlights-insider-risk-for-banks","s":"MEDIUM"},
+   {"d":"Sep 15","t":"Barclays fireside chat, 9 a.m. ET: same-day reason to write","u":"https://www.businesswire.com/news/home/20260825621595/en/Regions-Financial-Corp.-to-Participate-in-Barclays-24th-Annual-Global-Financial-Services-Conference","s":"WEAK"}
+  ],
+  "call":"The operations line under the CAO: payment operations (Danley), enterprise operations and fraud (Powell, Schott, Prothro, DeLozier), collections (Nicol), deposit and document operations (Amrine)."}
+}

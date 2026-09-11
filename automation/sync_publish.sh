@@ -80,6 +80,21 @@ else
   say "$NOW  nothing to push (origin/main = $(git rev-parse --short origin/main))"
 fi
 
+# 4b. brain snapshot: regenerate + stage, so the hosted brain has something current to
+# fetch. Log-only and non-fatal, per the swarm convention (no DM; the daily rundown reads
+# this log). STAGES ONLY, never deploys: publishing is outward-facing and the snapshot
+# carries seller emails and generated prospect copy, so the wrangler push stays a
+# deliberate act. Added 2026-09-05 with the brain's snapshot rewrite.
+BRAIN="$ENGINE/gtm-hosted-platform/brain/publish_gtm_state.sh"
+if [ -x "$BRAIN" ]; then
+  if out=$("$BRAIN" 2>&1); then
+    say "$NOW  brain snapshot regenerated and staged"
+  else
+    say "$NOW  brain snapshot FAILED (hosted brain will keep serving its last one, redacted once stale): $(printf '%s' "$out" | tail -2 | tr '\n' ' ')"
+    say "evt: brain-snapshot-$TODAY#stale"
+  fi
+fi
+
 # 5. uncommitted work, main checkout + worktrees
 unpushed=0
 report_tree() {  # $1 path $2 label

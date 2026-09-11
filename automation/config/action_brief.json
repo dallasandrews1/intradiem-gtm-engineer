@@ -8,7 +8,7 @@
       "route": "nathan",
       "briefs": {
         "stars": {
-          "title": "\u2b50 Nate's Daily Action Brief \u00b7 Star Ratings (US)",
+          "title": "⭐ Nate's Daily Action Brief · Star Ratings (US)",
           "campaigns": {
             "cam_sh3JCJoxtEHyjGrsw": "Resurrection",
             "cam_viEbB6HkYsCPtxKbi": "Quality",
@@ -18,11 +18,12 @@
           "playbook_sources": [
             "motions/shared/Cold_Call_Playbook_Aug2.md",
             "StarRatings_Wave1_Persona_Sequences_Jul13.md",
-            "motions/star_ratings/Lemlist_Variable_Stage_Jul31.md"
+            "motions/star_ratings/Lemlist_Variable_Stage_Jul31.md",
+            "motions/star_ratings/Nate_Copy_Rewrite_Sep3.md"
           ]
         },
         "blitz": {
-          "title": "\u26a1 Nate's Daily Action Brief \u00b7 Blitz (Citizens / The Hartford)",
+          "title": "⚡ Nate's Daily Action Brief · Blitz (Citizens / The Hartford)",
           "campaigns": {
             "cam_yWefPqaDhNNv4RyQK": "Citizens",
             "cam_fYp7Nh9wB72gfMke6": "The Hartford"
@@ -38,6 +39,49 @@
               "reason": "warm play, Keegan re-entry; never a blank connect"
             }
           ]
+        },
+        "backoffice": {
+          "title": "🏢 Nate's Daily Action Brief · Back Office (customer lanes + net-new)",
+          "campaigns": {
+            "cam_N92Tgg29ncHWnYAD9": "BO Healthcare Payer",
+            "cam_x8ehMHnWSjBr2CLQe": "BO Financial Services",
+            "cam_HCu4jiFB8oinz2s3F": "BO Insurance",
+            "cam_Fy287YF9X5fjPYBSo": "BO BPO",
+            "cam_DNErdZPANvC2sqRCK": "BO Net-New"
+          },
+          "lane_tagged": true,
+          "playbook_sources": [
+            "motions/back_office_expansion/BO_Lemlist_Campaign_Copy_Sep2.md",
+            "motions/shared/Messaging_Gold_Examples_Sep4.md"
+          ],
+          "held_leads": [
+            {
+              "name": "Ilene Baylinson",
+              "company": "Maximus",
+              "reason": "no current role confirmed on LinkedIn; Sales Nav look before load"
+            }
+          ],
+          "call_rule": "Customer lanes: call only names the AM has cleared (call_cleared = yes). Net-New: call only names the AE has cleared."
+        },
+        "dwo": {
+          "title": "💼 Nate's Daily Action Brief · DWO Executives",
+          "campaigns": {
+            "cam_SiD4KmWcRuhiF6uhL": "DWO Executives - Live Pool"
+          },
+          "lane_tagged": true,
+          "playbook_sources": [
+            "motions/dwo_executives/DWO_Exec_Sequence_Sep4.md",
+            "motions/shared/Messaging_Gold_Examples_Sep4.md",
+            "motions/dwo_executives/DWO_Exec_Tree_Built_Sep4.json"
+          ],
+          "held_leads": [
+            {
+              "name": "36 provider-unit COOs (flag = provider unit COO in DWO_Shell_Load_Plan_Sep4.csv)",
+              "company": "various",
+              "reason": "Nate to confirm the seat fits before the first call"
+            }
+          ],
+          "call_rule": "Every call leaves a voicemail; no direct number means the EA route through the main line. Order the list: replies first, accepted connects and new-in-role next."
         }
       }
     },
@@ -47,7 +91,7 @@
       "route": "jack",
       "briefs": {
         "insurance_fs": {
-          "title": "\ud83c\udfe6 Jack's Daily Action Brief \u00b7 UK Insurance / FS",
+          "title": "🏦 Jack's Daily Action Brief · UK Insurance / FS",
           "campaigns": {
             "cam_nwKASgttBM6QT8XGq": "Insurance/FS"
           },
@@ -58,7 +102,7 @@
           ]
         },
         "airlines": {
-          "title": "\u2708\ufe0f Jack's Daily Action Brief \u00b7 UK Airlines",
+          "title": "✈️ Jack's Daily Action Brief · UK Airlines",
           "campaigns": {
             "cam_fHGtNHbbj7LmThFgX": "Airlines"
           },

@@ -1,0 +1,22 @@
+{
+ "continuum-gs.com": {
+  "company": "Continuum Global Solutions",
+  "note": "Verint case study: Desktop and Process Analytics to measure 15,000 remote agents' productivity (BPO)",
+  "source": "https://www.verint.com/case-studies/"
+ },
+ "absa.africa": {
+  "company": "Absa",
+  "note": "NICE Back Office WFM plus Desktop Analytics, 1,800 back-office agents, 24,000 productive hours (South Africa, outside the six verticals' US focus)",
+  "source": "https://www.nice.com/resources/absa-improve-operational-efficiency-with-deep-insight-to-agent-productivity"
+ },
+ "cigna.com": {
+  "company": "Cigna / Evernorth / eviCore",
+  "note": "Live postings for a Verint DPA Architect (Bloomfield CT) and a Verint DPA lead analyst (eviCore). CUSTOMER, reference only for the signal shape",
+  "source": "https://www.disabledperson.com/jobs/33039421-verint-desktop-and-process-analytics-dpa-architect-oe-advisor"
+ },
+ "guardianlife.com": {
+  "company": "Guardian Life",
+  "note": "Verint case study: DPA across contact center and back office, productivity up 20 percent, overtime down 30 percent. CUSTOMER (Inger's map), proof reference only",
+  "source": "https://www.verint.com/case-studies/guardian-life-insurance-company-of-america/"
+ }
+}

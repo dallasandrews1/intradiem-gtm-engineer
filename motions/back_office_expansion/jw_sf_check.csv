@@ -1,0 +1,200 @@
+account,full_name,linkedin_url,in_salesforce,match_confidence,sf_matched_name,sf_company,sf_title,sf_email,sf_lead_status,sf_lead_source,sf_owner,sf_account_id,match_method,notes
+Bell Canada,Nikki Moffat,https://www.linkedin.com/in/nikki-moffat-39b4b337/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Matt MacEwen,https://www.linkedin.com/in/matt-macewen-3a990a2a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,James Beresford,https://www.linkedin.com/in/james-beresford-233114343/,yes,high,James Beresford,Government Of Canada,Senior Vice President Customer Service,,Open,6sense,005V5000003MZBtIAO,,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Bell Canada,Jag Siva,https://www.linkedin.com/in/jag-siva-4481135/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,"Mario Barbieri, MBA",https://www.linkedin.com/in/mario-barbieri-mba-6aa1a19/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Joe Montano,https://www.linkedin.com/in/joe-montano-8286436/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Dana Lohnes,https://www.linkedin.com/in/dana-lohnes-7639961a9/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Joan Lusch,https://www.linkedin.com/in/joan-lusch-5226604a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,John Schembri,https://www.linkedin.com/in/john-schembri-9b38a29/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,mary smith,https://www.linkedin.com/in/mary-smith-824a411b/,possible,low,Mary Smith,,Director of Rogers Call Center,mary.smith@walmart.com,,,,001V5000006bDbDIAU,exact_name,exact name match only (2 records); different company or blank
+Bell Canada,Cindy Mallette,https://www.linkedin.com/in/cindy-mallette-90815a10/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Julie Lamontagne,https://www.linkedin.com/in/julie-lamontagne-1b696b28/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Sofia Ahmad,https://www.linkedin.com/in/sofia-ahmad-54450a98/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Karen Nelson Shokar,https://www.linkedin.com/in/karen-nelson-shokar-56535966/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Krista Smith,https://www.linkedin.com/in/krista-smith-22159b2/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Anna Petkos,https://www.linkedin.com/in/anna-petkos-a6423085/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Walter Ramka,https://www.linkedin.com/in/walter-ramka-54a98344/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Stacey Ogilvy,https://www.linkedin.com/in/stacey-ogilvy-8a4877112/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Pietro Oliveri,https://www.linkedin.com/in/pietro-oliveri-1575b18/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Luc-David Martin,https://www.linkedin.com/in/luc-david-martin/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Ann Cullingham (Lee),https://www.linkedin.com/in/ann-lee-1ba71629/,possible,low,Ann Cullingham,Government Of Canada,"Director, Digital Operations",ann.lee@bell.ca,Open,6sense,00GV5000000la0WMAQ,,exact_name,exact name match only (1 record); different company or blank
+Bell Canada,Mac Xie,https://www.linkedin.com/in/mac-xie-b679b31/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Holly Haley,https://www.linkedin.com/in/holly-haley-aa224812/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Marc Isabelle,https://www.linkedin.com/in/marc-isabelle-a47041a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Mary Amoroso,https://www.linkedin.com/in/mary-amoroso-70952452/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Bell Canada,Brenda Podurgiel,https://www.linkedin.com/in/brenda-podurgiel-96602117/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Mona Malone,https://www.linkedin.com/in/mona-malone-b389b022/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Rahul Nalgirkar,https://www.linkedin.com/in/rahulnalgirkar/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jacob Sorensen,https://www.linkedin.com/in/jacob-sorensen-9060581/,possible,low,Jacob Sorensen,,"EVP, Head of Shared Services Solution Delivery",jacob.sorensen@bankofthewest.com,,,,001V5000006bHXaIAM,exact_name,exact name match only (1 record); different company or blank
+BMO,Andrew C.,https://www.linkedin.com/in/andrewcieslakums/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Aditya Sapru,https://www.linkedin.com/in/aditya-sapru-0188354/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Mandy Ramlow, MBA, CAMS",https://www.linkedin.com/in/mandy-ramlow-mba-cams-45915133/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Gillian Noble,https://www.linkedin.com/in/gillian-noble-b1161b48/,yes,high,Gillian Noble,,COO,gillian.noble@bmo.com,,,,001V5000006b9JGIAY,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+BMO,Jerry Calo,https://www.linkedin.com/in/jerry-calo-4ab984a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Matt Turnbull,https://www.linkedin.com/in/matt-turnbull-87556015/,yes,high,Matt Turnbull,Bank Of Montreal,"Head, Business Enablement (COO) - Financial Crimes Unit",,Open,6sense,005V5000003MZBtIAO,,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+BMO,"Joe Donat, CFA",https://www.linkedin.com/in/joe-donat-cfa-5933745/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Ann Marie Wright,https://www.linkedin.com/in/ann-marie-mitchell-wright/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Norman Cutler,https://www.linkedin.com/in/norman-cutler-576888/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Michael Schadt,https://www.linkedin.com/in/michael-schadt-6938836/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Chad Iwata,https://www.linkedin.com/in/chad-iwata-3a021724/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Shifra Kolsky,https://www.linkedin.com/in/shifra-kolsky-96a76711/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Michael Battagliese,https://www.linkedin.com/in/michael-battagliese-9aa6b42/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Augustin de Kerversau,https://www.linkedin.com/in/augustin-de-kerversau-776125a7/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jacqueline M. Scydick,https://www.linkedin.com/in/jmscydick/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Paul Malik,https://www.linkedin.com/in/paulmalik/,yes,high,Paul Malik,,"Head Senior VP, Customer Experience Execution",paul.malik@bmo.com,,,,001V5000006b9JGIAY,linkedin_slug,same LinkedIn profile in Salesforce (2 records); on this account
+BMO,Stephen Taylor,https://www.linkedin.com/in/stephen-taylor-1a31a816/,possible,low,Stephen Taylor,,"Manager I, Customer Operations -Cs Operations Sppt",stephen.taylor@oncor.com,,,,001V5000006bHkmIAE,exact_name,exact name match only (1 record); different company or blank
+BMO,Thomas Knopp,https://www.linkedin.com/in/thomas-knopp/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Karen Conway,https://www.linkedin.com/in/conwaykaren/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Tom Burian,https://www.linkedin.com/in/tom-burian-8a82a8125/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Raphael Schapiro,https://www.linkedin.com/in/raphael-schapiro-ab468564/,yes,high,Raphael Schapiro,,Head of T&O & Digital Integration,raphael.schapiro@bmo.com,,,,001V5000006b9JGIAY,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+BMO,Adam Schabes,https://www.linkedin.com/in/adam-schabes-168b64a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Dave Abplanalp, CPA",https://www.linkedin.com/in/dave-abplanalp-cpa-3a36b511/,yes,high,David Abplanalp,,Senior Vice President and Chief Operating Officer,dave.abplanalp@bmo.com,,,,001V5000006b9JGIAY,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+BMO,Hussaini Nuhu,https://www.linkedin.com/in/hussaini-nuhu-931a84165/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Noel Reynolds,https://www.linkedin.com/in/noel-reynolds-ab01a319/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Christopher Collaros,https://www.linkedin.com/in/christopher-collaros-428a39126/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Viviane Croux,https://www.linkedin.com/in/viviane-croux-85940335/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Anthony Tjong,https://www.linkedin.com/in/anthony-tjong-0654964/,possible,high,Anthony Tjong,,"Director, Sr. Technology Officer, Channels Technology, Online Banking Solutions",anthony.tjong@bmo.com,,,,001V5000006b9JGIAY,exact_name,exact name match only (1 record); on this account
+BMO,Daniel Jarry,https://www.linkedin.com/in/danieljarry/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Rosemary Mezik,https://www.linkedin.com/in/rosemary-mezik-30473922/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Brandi Allen,https://www.linkedin.com/in/brandi-allen-15a379b8/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jeremy Arrighi,https://www.linkedin.com/in/jeremy-arrighi-13002134/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Andrina Spearman,https://www.linkedin.com/in/andrina-spearman-7425772a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Sharon Xu,https://www.linkedin.com/in/sharon-xu-b9793816/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Kim Shllaku,https://www.linkedin.com/in/kim-shllaku-25944817a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Meghan Kostka,https://www.linkedin.com/in/meghan-kostka-01304419b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Darrell Majdell,https://www.linkedin.com/in/darrell-majdell-10817799/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Vivian Jiang,https://www.linkedin.com/in/vivian-jiang-0033b550/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Léna Harmandjian,https://www.linkedin.com/in/l%2525c3%2525a9na-harmandjian-48678a95/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Dave Truffelli,https://www.linkedin.com/in/dave-truffelli-33a08746/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Kelsey Martens,https://www.linkedin.com/in/kelsey-martens-01426849/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Danielle Schlabs,https://www.linkedin.com/in/danielle-johns-7419a080/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Krista Cowan,https://www.linkedin.com/in/krista-cowan-2896aa9b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Tasha Spransy,https://www.linkedin.com/in/tasha-spransy-2a896494/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Emily Krishnakumar,https://www.linkedin.com/in/emily-krishnakumar/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Amanda Welter,https://www.linkedin.com/in/amanda-burrows-14033135/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Tara Murphy,https://www.linkedin.com/in/tara-murphy-09978813/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jennifer Antonelli,https://www.linkedin.com/in/jennifer-antonelli-017281108/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Patrina Kegler,https://www.linkedin.com/in/patrina-kegler-5a8ab638/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jennifer Nunes,https://www.linkedin.com/in/jennifer-nunes-292b1992/,yes,high,Jennifer Nunes,,"Vice President & Regional Manager, Customer Service",jennifer.nunes@bankofthewest.com,,,,001V5000006bHXaIAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+BMO,Athanassiades Maria,https://www.linkedin.com/in/athanassiades-maria-201323b3/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Theresa McKinney Williams,https://www.linkedin.com/in/theresa-mckinney-williams-693b2b69/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Scott Shelton,https://www.linkedin.com/in/scott-shelton-90b53136/,possible,low,Scott Shelton,,"Supervisor, Contact Center",scott.shelton@securian.com,,,,001V5000006bHXsIAM,exact_name,exact name match only (1 record); different company or blank
+BMO,Bryan Cheek,https://www.linkedin.com/in/bryan-cheek-8194a48/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Martin Vermette,https://www.linkedin.com/in/martin-vermette-03221212/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jeff B.,https://www.linkedin.com/in/jeffreybender/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Daniel Cheriyan,https://www.linkedin.com/in/danielcheriyan/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Amy Ellis,https://www.linkedin.com/in/amy-ellis-05b6407/,possible,low,Amy Ellis,,"Senior Director Planning + Governance | Digital, Distribution + Reservations",amy.ellis@marriott.com,,,,001V5000006b9JyIAI,exact_name,exact name match only (1 record); different company or blank
+BMO,Julie Petrie,https://www.linkedin.com/in/julie-petrie-6025866a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Sarah Clements,https://www.linkedin.com/in/sarahjclements/,possible,high,Sarah Clements,,"Managing Director, HR Shared Services",sarah.clements@bmo.com,,,,001V5000006b9JGIAY,exact_name,exact name match only (1 record); on this account
+BMO,Douglas Marques,https://www.linkedin.com/in/douglas-marques-54080b24/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Chris Quinlan,https://www.linkedin.com/in/chris-quinlan-6306a8a6/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Luis Cortes,https://www.linkedin.com/in/luis-cortes-354abb1/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Laura Elgar,https://www.linkedin.com/in/laura-elgar-1941a4125/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Farooq Bhayani,https://www.linkedin.com/in/farooq-bhayani-51b566156/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Tammy Baker,https://www.linkedin.com/in/tammy-baker-099a7719/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Adriana Vejar,https://www.linkedin.com/in/adriana-vejar-a10921399/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Eric Chibnik,https://www.linkedin.com/in/eric-chibnik/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Laurie Carson,https://www.linkedin.com/in/laurie-carson-57b68836/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Anthony Bellicoso,https://www.linkedin.com/in/anthony-bellicoso-18a2578/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Neil Gandhi,https://www.linkedin.com/in/neil-gandhi-0469592b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Imran Shivji,https://www.linkedin.com/in/imran-shivji-43b53650/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Angelena Ellis,https://www.linkedin.com/in/angelena-ellis-3ba70240/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Caroline Ogeto,https://www.linkedin.com/in/caroline-ogeto-17290388/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Heather Kroliczek,https://www.linkedin.com/in/heather-kroliczek-430984235/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Marge Bauman,https://www.linkedin.com/in/marge-bauman-0873b521/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jeff Heinzelman,https://www.linkedin.com/in/jeff-heinzelman-666806b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Chinnapa Reddy, AAP, CBPR, CSPO®",https://www.linkedin.com/in/chinnapa-reddy-aap-cbpr-cspoâ®-9a851331/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Arumugam (Aru) Appadurai,https://www.linkedin.com/in/arumugam-appadurai/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Katherina Vivar, CTP",https://www.linkedin.com/in/katherinavivar/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Dimitrios Delios, MSc, CIA, CRCM, CAMS, CFE, CBP, CAPFC",https://www.linkedin.com/in/dimitrios-delios-msc-cia-cams-cfe-icbrr-cbp-678990101/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Sharon Blair,https://www.linkedin.com/in/sharon-blair-bmo/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Frank Pasceri,https://www.linkedin.com/in/francesco-pasceri-mba-a7344a3b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,"Rosie Marella, MBA, FICB",https://www.linkedin.com/in/rosie-marella-mba-ficb-56b005158/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Kathryn Digilio,https://www.linkedin.com/in/kathryn-digilio-b334979a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Stephanie D.,https://www.linkedin.com/in/stephanie-d-4a64693a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Kayla J.,https://www.linkedin.com/in/kayla-s-946b99148/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Pardeep Dosanjh,https://www.linkedin.com/in/pardeep-dosanjh-04abb864/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Jennifer Acquaah,https://www.linkedin.com/in/jennifer-acquaah-92220320b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Heather Purves,https://www.linkedin.com/in/heather-purves-09ab946/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Dan Logan,https://www.linkedin.com/in/danloganlaw/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+BMO,Mark Cashion,https://www.linkedin.com/in/mark-cashion-85a749a8/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Hesham Fahmy,https://www.linkedin.com/in/hesham-fahmy-6a90823/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,"Gopi Chande, FCPA",https://www.linkedin.com/in/gopi-chande-fcpa-0a4b2632/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Lloyd Switzer,https://www.linkedin.com/in/lloydswitzer/,possible,low,Lloyd Switzer,,"Vice President Network Transformation, Telus",lloyd.switzer@telus.com,,,,001V5000006b9JHIAY,exact_name,exact name match only (1 record); different company or blank
+Telus,"Matt Murray, FCPA, FCMA",https://www.linkedin.com/in/mattmurraycpa/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Kirti Karen Mani,https://www.linkedin.com/in/kirti-karen-mani-b0189b31/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,robert kaiser,https://www.linkedin.com/in/robert-kaiser-1bb0aa112/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Susan Wooldridge,https://www.linkedin.com/in/susan-wooldridge/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Scott Gaudet,https://www.linkedin.com/in/scgaudet/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Helene Savage,https://www.linkedin.com/in/helene-savage-5709a97/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Marc-Andre Coulombe,https://www.linkedin.com/in/marc-andre-coulombe-50102830/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Craig McLaughlin,https://www.linkedin.com/in/craig-mclaughlin-b2191a4/,yes,high,Craig McLaughlin,,"Manager, Operations/WFM",craig.mclaughlin@telus.com,,,,001V5000006bGwGIAU,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+Telus,Bob Yoon,https://www.linkedin.com/in/boyoon/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Patrick McCallen,https://www.linkedin.com/in/patrickmccallen/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Michelle Piasecki,https://www.linkedin.com/in/michelle-piasecki-telus/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Shaun Fuller,https://www.linkedin.com/in/shaun-fuller-56846860/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Ron Laverdiere,https://www.linkedin.com/in/ron-laverdiere-4a2583293/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,william baneham,https://www.linkedin.com/in/william-baneham-0889234/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Sandra Dominique,https://www.linkedin.com/in/sandra-dominique-59757313b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,John Smith,https://www.linkedin.com/in/john-smith-076201168/,possible,low,John Smith,not provided,,oct13sep05@gmail.com,,Web Site,005Dp000003pDbZIAU,,exact_name,exact name match only (10 records); different company or blank
+Telus,Brad Harper,https://www.linkedin.com/in/harperbrad/,yes,high,Brad Harper,,"Vice President, Workforce Solutions",brad_harper@telus.com,,,,001V5000006bGwGIAU,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+Telus,Steve Fast,https://www.linkedin.com/in/steve-fast-8a24914/,possible,low,Steve Fast,,"Vice President, Development & Support",steve.fast@telus.com,,,,001V5000006b9JHIAY,exact_name,exact name match only (1 record); different company or blank
+Telus,Tyson Joyce,https://www.linkedin.com/in/tyson-joyce-75353419/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Devyansh K.,https://www.linkedin.com/in/devyansh-k-a481798/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Shaye Draper,https://www.linkedin.com/in/shaye-draper-5a71126b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Lynn Salekin,https://www.linkedin.com/in/lynnsalekin/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Ramish Siddiqui,https://www.linkedin.com/in/ramishsiddiqui/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Catherine Blair,https://www.linkedin.com/in/catherinejblair/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Barbara Chiu,https://www.linkedin.com/in/barbara-chiu-39162723/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Scott McArthur,https://www.linkedin.com/in/scott-mcarthur-547b97/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Telus,Anne Gillam,https://www.linkedin.com/in/anne-gillam-8ab2b09/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Kate Nazar,https://www.linkedin.com/in/kate-nazar-105a5611/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Brady Aarssen,https://www.linkedin.com/in/brady-aarssen-30189418/,yes,high,Brady Aarssen,Canada Life,"Vice President, Centralized Operations Strategy And Transformation Canada",brady.aarssen@canadalife.com,,6sense SI,00GV5000000la0WMAQ,,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Canada Life,Roger Maguet,https://www.linkedin.com/in/rogermaguet/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Stuart Robinson,https://www.linkedin.com/in/stuart-robinson-280aaa4/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Tamara Schock,https://www.linkedin.com/in/tamara-schock-97293b7a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Andrew Conrad,https://www.linkedin.com/in/andrew-conrad-9b2234141/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Mei D.,https://www.linkedin.com/in/mei-d-154b7b15/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Ian Troup,https://www.linkedin.com/in/ian-troup-915a3262/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Ian Watson Dip PFS,https://www.linkedin.com/in/ian-watson-dip-pfs-b3555494/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Michael Cullen,https://www.linkedin.com/in/michael-cullen-5457b746/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Peta Banks,https://www.linkedin.com/in/peta-banks-89ba5855/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Rex C.,https://www.linkedin.com/in/rex-chin-71a25818/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Robert Lunny,https://www.linkedin.com/in/robert-lunny-322947a/,yes,high,Robert Lunny,,VP Group Claims and Contact Services,robert.lunny@gwl.ca,,,,001V5000006b7jmIAA,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+Canada Life,Christine Winter,https://www.linkedin.com/in/christine-winter-b7a5a5191/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Naomi Clegg,https://www.linkedin.com/in/naomi-clegg-a955aa160/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Eshan Kochar,https://www.linkedin.com/in/eshan-kochar-20206669/,possible,medium,Eshan Kochar,Canada Life,"AVP - Workforce, Insights and Strategy",eshan.kochar@canadalife.com,Qualified - Working,Event,00GV5000000la0WMAQ,,exact_name,exact name match only (1 record); company text matches
+Canada Life,Daien Sebasta,https://www.linkedin.com/in/daien-sebasta-607175ab/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Gautam Vyavaharkar,https://www.linkedin.com/in/gautam-vyavaharkar/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Jenny Gale,https://www.linkedin.com/in/jennygale/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Amanda Ashton,https://www.linkedin.com/in/amanda-ashton-0335a4177/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Kim Lee,https://www.linkedin.com/in/kim-lee-b5b9324a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Andriy Storozhuk,https://www.linkedin.com/in/andriy-storozhuk-8ba89a38/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,"Mirzet Alekic, CPA, CGA",https://www.linkedin.com/in/mirzet-alekic-cpa-cga-562a0a73/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Ahmed Ahmed,https://www.linkedin.com/in/ahmed-ahmed-0b49523/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Danielle Taylor,https://www.linkedin.com/in/danielle-taylor-9a459a160/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Scott Hunter,https://www.linkedin.com/in/scott-hunter-7316b2205/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Colleen Duggan,https://www.linkedin.com/in/colleen-duggan-8986a416/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Brent Allen,https://www.linkedin.com/in/brent-allen-70053419/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Shelley Sjoberg,https://www.linkedin.com/in/shelley-sjoberg-2407bb64/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,"Derek Bodkin, CPA, CMA",https://www.linkedin.com/in/derek-bodkin-cpa-cma-8282805/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,"Lisa Berard, CEBS",https://www.linkedin.com/in/lisa-berard-gba-1932b539/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Daniela Decary,https://www.linkedin.com/in/daniela-decary-95a2b113/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Louise Serpa,https://www.linkedin.com/in/louise-serpa-215167144/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Terry Levesque,https://www.linkedin.com/in/terry-p-levesque-2bb285140/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Nancy Vilhena-Pereira,https://www.linkedin.com/in/nancy-vilhena-pereira-40917411b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Karen Dick,https://www.linkedin.com/in/karen-dick-107317119/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,"Khalid Abdul Karim, MBBS",https://www.linkedin.com/in/drkhalidkarim/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Rita Iozzo,https://www.linkedin.com/in/rita-iozzo-88b0383b/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Matt Williamson,https://www.linkedin.com/in/matt-williamson-10467978/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Barbara Bebee,https://www.linkedin.com/in/barbara-bebee-446b28128/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Moe El-farra,https://www.linkedin.com/in/moe-el-farra-0a0827210/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Andrea Kearnan,https://www.linkedin.com/in/andrea-kearnan-20476027a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Tracy Ryland,https://www.linkedin.com/in/tracy-ryland-3a4a13159/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Owen Wilding,https://www.linkedin.com/in/owen-wilding-4abb7a52/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Declan Carroll,https://www.linkedin.com/in/declan-carroll-249791173/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Karri Kazarian,https://www.linkedin.com/in/karri-kazarian-bb908690/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Canada Life,Mike Horton,https://www.linkedin.com/in/mike-horton-041b7048/,possible,low,Mike Horton,,"Assistant VP, Field Operations",mike.horton@cox.com,,,,001V5000006b9JVIAY,exact_name,exact name match only (2 records); different company or blank
+Canada Life,Janice Guzzi,https://www.linkedin.com/in/janice-guzzi-34400a31/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people

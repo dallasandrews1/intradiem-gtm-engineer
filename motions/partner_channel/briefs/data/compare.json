@@ -40,7 +40,7 @@
   {
    "a": "People",
    "j": "Executive names with titles, no LinkedIn URLs, no emails. Head of WFM and head of shared services both marked <i>recommend LinkedIn search</i>.",
-   "e": "16 named people per account with likely committee role, status and freshness; LinkedIn URLs on most. The Maximus WFM owner (Marc Hillman, Sr Director of Workforce Management) and the AI executives who arrived in April and May 2026 are named. Emails run on the picked cohort after Frank's go."
+   "e": "16 named people per account with status and freshness, and the likely committee role on the internal version; LinkedIn URLs on most. The Maximus WFM owner (Marc Hillman, Sr Director of Workforce Management) and the AI executives who arrived in April and May 2026 are named. Emails run on the picked cohort after Frank's go."
   },
   {
    "a": "Timing",
@@ -50,7 +50,7 @@
   {
    "a": "Verified-claims posture",
    "j": "Savings scenarios from a fully loaded FTE cost times 10, 20 or 30% of Verint seats, with the totals carried into the account narrative.",
-   "e": "No dollar estimate on either page. A What Intradiem can say block carries only Value Repository lines with their approval tier; the scenario table is discussed in an internal note and never rendered. The partner-safe build fails if a dollar figure or an unverified flag survives."
+   "e": "No dollar estimate on either page. Every line is checked against the Value Repository by approval tier, and the internal version carries that claims list; the partner page leaves the wording to the partner rep. The scenario table is discussed in an internal note and never rendered. The partner-safe build fails if a dollar figure or an unverified flag survives."
   },
   {
    "a": "Verint framing",

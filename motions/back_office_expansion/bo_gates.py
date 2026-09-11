@@ -2,7 +2,7 @@
 """Title gates for net-new back-office sourcing: which titles never reach a map, and why. One definition used by
 filter_sweep.py (at sourcing time) and by apply_bridge.py / verify_live.py (re-gating refreshed titles)."""
 import re
-from bo_titles import band, topics, is_root
+from bo_titles import band, topics, is_root, MODE
 LEVEL_RX = re.compile(r"\b(chief|ceo|coo|cfo|cao|cio|president|evp|executive vice president|svp|senior vice president|sr\.? vice president|vice president|vp|avp|associate vice president|assistant vice president|2nd vice president|second vice president|managing director|executive director|director|head of|global head|head,)\b", re.I)
 # front line and non-back-office gates, in the order they are reported
 GATES = [
@@ -37,11 +37,15 @@ def gate_reason(title, full_name="", spec=None, location=""):
     elif re.search(r"\b(cio|cto)\b|chief information|chief technology", t, re.I): return "title_excluded_gate_it_engineering"
     if not spec.get("lob_cfo_ok") and re.search(r"\bcfo\b|chief financial officer\s*[,(\-/]|chief financial officer (of|for|at)\b", t, re.I): return "title_excluded_gate_lob_finance"
     for name, rx in GATES:
+        if name == "title_excluded_gate_front_line" and MODE[0] == "front_office": continue   # the front office IS the map
+        if name == "title_excluded_gate_it_engineering" and MODE[0] == "front_office" and re.search(__import__("fo_vocab").KEEP_TECH, t, re.I): continue
         if name == "title_excluded_gate_front_line" and spec.get("front_line_ok_with_ops") and re.search(r"operations|service", t, re.I): continue   # at service-business accounts, "customer success/experience" IS the operations org
+        if name == "title_excluded_gate_individual_contributor" and spec.get("assoc_director_ok") and re.search(r"associate director", t, re.I) and not re.search(r"analyst|specialist|coordinator|consultant|advisor", t, re.I): continue   # Canadian banks and telcos: Associate Director is a management tier, not an IC
         if name == "title_excluded_gate_it_engineering" and KEEP_TECH.search(t): continue
         if name == "title_excluded_gate_legal" and re.search(r"fraud|financial crimes|bsa|aml", t, re.I) and not re.search(r"counsel|attorney|compliance officer|audit", t, re.I): continue
         if rx.search(t): return name
     if band(t) not in ("C", "EVP", "SVP", "VP", "AVP", "Director"): return "title_excluded_gate_below_director"
-    if not topics(t) and not is_root(t): return "no_back_office_function_in_title"
-    if spec.get("require_specific_topic") and not is_root(t) and topics(t) <= GENERIC: return "generic_operations_title"
+    if MODE[0] == "front_office" and re.search(__import__("fo_vocab").EXCLUDE, t, re.I) and not is_root(t): return "title_excluded_gate_not_front_office"
+    if not topics(t) and not is_root(t): return "no_back_office_function_in_title" if MODE[0] == "back_office" else "no_front_office_function_in_title"
+    if spec.get("require_specific_topic") and not is_root(t) and topics(t) <= (__import__("fo_vocab").GENERIC if MODE[0] == "front_office" else GENERIC): return "generic_operations_title"
     return ""

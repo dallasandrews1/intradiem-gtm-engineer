@@ -1,0 +1,9 @@
+user_id,trigger,responded_on,coaching_conversation_on
+user09@sample.invalid,adoption_plateau,2026-08-22,2026-08-22
+user10@sample.invalid,usage_drop,2026-09-05,2026-09-05
+user16@sample.invalid,adoption_plateau,2026-08-24,
+user18@sample.invalid,usage_drop,2026-09-03,
+user27@sample.invalid,adoption_plateau,2026-08-30,2026-08-30
+user28@sample.invalid,adoption_plateau,2026-08-23,2026-08-23
+user29@sample.invalid,usage_drop,2026-09-04,2026-09-04
+user30@sample.invalid,usage_drop,2026-09-03,2026-09-03

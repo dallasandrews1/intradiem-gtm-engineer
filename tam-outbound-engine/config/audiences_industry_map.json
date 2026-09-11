@@ -1,0 +1,22 @@
+{
+  "_comment": "Maps Clay Audiences industry labels to the ICP keys in icp_weights.json. Built 2026-09-05 from the 2,287 live company records. Unmapped labels fall to 'Other' (8 pts).",
+  "_open_question": "Intradiem sells across six verticals (Healthcare, Financial Services, Insurance, Retail, Telecom, Utilities) but icp_weights.industry_points only scores Health Insurance, Financial Services, Banking, Insurance and Healthcare Services. Retail (235 companies), Utilities (194) and Telco/Cable (99) therefore land on 'Other' at 8 points and can never reach Tier 1 on industry. That is a scoring-config decision, not a mapping bug: either add the three verticals to industry_points or accept that they rank low. Flagged, not decided.",
+  "map": {
+    "Healthcare Insurance": "Health Insurance",
+    "Health Insurance": "Health Insurance",
+    "Healthcare Payer": "Health Insurance",
+    "Div Financial Services": "Financial Services",
+    "Fin Services": "Financial Services",
+    "Financial Services": "Financial Services",
+    "Banking": "Banking",
+    "Credit Union": "Banking",
+    "Home & Auto Insurance": "Insurance",
+    "Insurance": "Insurance",
+    "Life Insurance": "Insurance",
+    "Healthcare Provider": "Healthcare Services",
+    "Healthcare_Provider": "Healthcare Services",
+    "Healthcare Services": "Healthcare Services",
+    "Healthcare": "Healthcare Services"
+  },
+  "default": "Other"
+}

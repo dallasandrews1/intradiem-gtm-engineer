@@ -1,0 +1,134 @@
+{
+ "set": "centene_rachel",
+ "rep": "Rachel DiBello",
+ "rep_short": "Rachel",
+ "rep_label": "Prepared for",
+ "date": "September 4, 2026",
+ "title": "Centene, Two Maps",
+ "headline_html": "Centene: <span class=\"spark\">back office</span> and <span class=\"spark\">front office</span>.",
+ "sub": "Two Sales Navigator maps for one account: the people who run claims, appeals and shared services, and the people who run member services, the contact centers and workforce management. Every name checked against Salesforce and live-verified this week.",
+ "legend_html": "<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run part of the operation. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.",
+ "md_title": "# Front-office map build sheets, Nate's six\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: the customer operations executive, then the leaders of contact center operations, workforce management and service technology, then the directors under them. Reporting lines are inferred from titles; confirm each card in Sales Navigator as it is added.\n",
+ "mode": "back_office",
+ "map_suffix": "",
+ "eyebrow": "GTM Engineering · Centene",
+ "files": {
+  "roster": "",
+  "candidates": "nate_front_candidates.csv",
+  "sf_check": "nate_front_sf_check.csv",
+  "known_companies": "nate_known_layer_companies.csv",
+  "build_sheets_csv": "_centene_rachel_sheet.csv",
+  "build_sheets_md": "_centene_rachel_sheet.md",
+  "bench_csv": "_centene_rachel_bench.csv",
+  "snapshot_csv": "_built_snapshot_centene_rachel.csv",
+  "changes_md": "_centene_rachel_changes.md",
+  "page_out": "account_maps/centene_maps_rachel.html"
+ },
+ "built": [],
+ "select": "balanced",
+ "sweep_sources": [],
+ "candidate_default_source": "Sep 4 search",
+ "accounts": {
+  "Centene": {
+   "sweep": "sweeps/nate_front/centene.csv",
+   "domains": [
+    "centene.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bHjVIAU"
+   ],
+   "vertical": "healthcare payer",
+   "aliases": [
+    "centene",
+    "sunshine health",
+    "ambetter",
+    "wellcare",
+    "coordinated care",
+    "silver summit",
+    "magnolia health",
+    "sunflower health",
+    "meridian",
+    "peach state",
+    "superior healthplan",
+    "buckeye health",
+    "fidelis care",
+    "health net",
+    "absolute total care",
+    "carolina complete health",
+    "western sky",
+    "managed health services",
+    "nh healthy families",
+    "home state health",
+    "louisiana healthcare connections",
+    "iowa total care",
+    "arkansas total care",
+    "nebraska total care",
+    "trillium",
+    "centene dental",
+    "envolve",
+    "celtic",
+    "pennsylvania health & wellness",
+    "mhs indiana",
+    "hawaii"
+   ],
+   "us_only": false
+  }
+ },
+ "drop": [],
+ "priority": [],
+ "manual_under": [],
+ "title_override": [],
+ "dual": [
+  [
+   "Fidelity Investments",
+   "Diana Patel"
+  ],
+  [
+   "Regions Financial",
+   "Kathy Bond"
+  ]
+ ],
+ "verify": [],
+ "phrases": [],
+ "topics_extra": {},
+ "func_extra": [],
+ "collision": {},
+ "bridge_results": [
+  "nate_front_bridge_results.csv",
+  "nate_front_bridge_results_2.csv"
+ ],
+ "manual_add": [],
+ "account_notes": {
+  "Centene - Back Office": "Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator. Amy Weiser (was Director of Operations at UnitedHealthcare, a known Intradiem contact) joined Centene in May 2026 as Vice President, Medicare Market, Midwest (https://www.linkedin.com/in/amyweiser1). Market P&L seat, not back-office ICP, so she stays off the sequence; she is a warm door for Nate into Centene Medicare operations (Dan Clark's line).",
+  "Centene - Front Office": "Contact centers sit under the corporate COO (Colleen Askvig) with plan-level COOs running their own member services; Fidel Ligsay's line is Health Net Federal Services. Centene's front office already has Stars wave-one names in a live sequence, so check the collision flag before adding anyone from this map to outreach."
+ },
+ "band_override": [],
+ "root_exclude": [],
+ "confirm": [],
+ "exec_cap": 4,
+ "trim": [],
+ "pad_to_cap": true,
+ "require_url": true,
+ "finance_rollup": false,
+ "peer_head_rule": false,
+ "exec_cap_by_account": {},
+ "root_prefs_generic": [
+  "customer",
+  "service",
+  "operating",
+  "experience",
+  "contact",
+  "care"
+ ],
+ "root_prefs_finance": [],
+ "specific_overlap_for_vp": true,
+ "group_by": "map_name",
+ "sibling_links": [
+  [
+   "Every back-office map Nathan has",
+   "/nate/"
+  ]
+ ],
+ "sibling_label": "Related"
+}

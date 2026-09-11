@@ -1,0 +1,1496 @@
+[
+ {
+  "name": "Babble",
+  "type": "Reseller - Service Provider, Professional Services",
+  "tier": "Gold",
+  "loc": "Essex, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA, Agent Assist, WFA"
+ },
+ {
+  "name": "BT Business",
+  "type": "Reseller - Service Provider, Professional Services",
+  "tier": "Gold",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "United States, Canada, APAC, EMEA, LATAM",
+  "certs": "VCC, Digital Channels, IVA, Agent Assist, WFA"
+ },
+ {
+  "name": "Connect Managed Services (UK) Limited",
+  "type": "Reseller - Service Provider, Professional Services",
+  "tier": "Gold",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA, Agent Assist, WFA"
+ },
+ {
+  "name": "Exponential-E Limited",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Gold",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Opus Technology",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Gold",
+  "loc": "Surrey, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA, Agent Assist"
+ },
+ {
+  "name": "Assist Digital",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Silver",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "EY (Ernst & Young)",
+  "type": "Systems Integrator",
+  "tier": "Silver",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "United States, Canada, APAC, EMEA, LATAM",
+  "certs": ""
+ },
+ {
+  "name": "Onecom Limited",
+  "type": "Reseller - Service Provider, Professional Services",
+  "tier": "Silver",
+  "loc": "Hampshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA, Five9 QM Training, Five9 QM Implementation, Agent Assist, WFA"
+ },
+ {
+  "name": "186Kloud",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "60K Ltd",
+  "type": "Referral - Direct",
+  "tier": "Authorized",
+  "loc": "Bulgaria",
+  "country": "Bulgaria",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Academia Ltd",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "",
+  "certs": ""
+ },
+ {
+  "name": "Acceleraate Limited",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Accenture (SI)",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Dublin, Ireland",
+  "country": "Ireland",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Advanta",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Staffordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Advent Communications",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "West Midlands, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Afiniti",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "Ireland",
+  "country": "Ireland",
+  "regions": "United States, Canada, EMEA, LATAM",
+  "certs": ""
+ },
+ {
+  "name": "AFTK GmbH",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "AL Performance",
+  "type": "Referral - Direct",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, Agent Assist"
+ },
+ {
+  "name": "Almavia CX",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Alphatech",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Altice Portugal",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Askblue, Lda",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Asterlogic Limited",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "Lancashire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Atento",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Luxembourg",
+  "country": "Luxembourg",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Athenium Technology Group",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "South Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Aura Alliance Limited",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "AVI-SPL",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Avodaq AG HQ",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "United States, EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Avoira Limited",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Lancashire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Awaken 2 Business",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Hertfordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Behind Every Cloud",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Blue IP",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Boxxe",
+  "type": "Referral - Sales Agent, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "North Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "BPI OnDemand",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Berkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "BRAVANTIC EVOLVING TECHNOLOGY, S.A.",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Britannic Technologies",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Surrey, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Bulb Tech Group",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Essex, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Business Systems Limited",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Cadence Consulting",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "West Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Call Plan Solutions Limited",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "North Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Capgemini America",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Cici Group",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Leicestershire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Cirrus Telecom",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Cloud Integrate",
+  "type": "Referral - Direct",
+  "tier": "Authorized",
+  "loc": "Netherlands",
+  "country": "Netherlands",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "COMPRiS GmbH",
+  "type": "Referral - Direct",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Contact Centre Panel",
+  "type": "Referral - Direct",
+  "tier": "Authorized",
+  "loc": "South Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Convergent Technology",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "CPCEcho, LDA",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Creative Global Strategy",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Cyberati Digital",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Mauritius",
+  "country": "Mauritius",
+  "regions": "APAC",
+  "certs": ""
+ },
+ {
+  "name": "Darwin Technology Solutions Ltd",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "South Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "United States",
+  "certs": ""
+ },
+ {
+  "name": "Datatechfactory GmbH & Co. KG",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Decunify - Solu\u00e7\u00f5es De Comunica\u00e7\u00f5es, S.A.",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Deloitte EMEA - APAC",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "APAC, EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Deloitte Spain",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Deloitte Sweden",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Detron Digital Workspace",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Netherlands",
+  "country": "Netherlands",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "DIGITALL Nature Gmbh",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "United States, EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Dr. Glinz COVIS GmbH",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Duplex Corporate Communications",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Buckinghamshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "E And Enterprise",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "United Arab Emirates",
+  "country": "United Arab Emirates",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Emergia",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Espria Limited",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Eternity Networks",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Israel",
+  "country": "Israel",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Evcoms",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Wicklow, Ireland",
+  "country": "Ireland",
+  "regions": "EMEA",
+  "certs": "VCC"
+ },
+ {
+  "name": "EveryCloud UK",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Excelien Global",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Fimainfo",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Gamma Network Solutions Ltd.",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Fife, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "GMTel",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA"
+ },
+ {
+  "name": "GoCX",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "United States, EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Gorilla Cloud Services",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Buckinghamshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "GTS Telecom SRL",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Romania",
+  "country": "Romania",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Gulf Customer Experience Branch (Gulf CX)",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Bahrain",
+  "country": "Bahrain",
+  "regions": "EMEA",
+  "certs": "VCC"
+ },
+ {
+  "name": "Horizon Telecom",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Gloucestershire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Hosted",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Hampshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Hosted Solutions",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "HSO Enterprise Solutions II Inc.",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Netherlands",
+  "country": "Netherlands",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "ICA",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Hertfordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Indra",
+  "type": "Referral - Sales Agent, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Infocom",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA"
+ },
+ {
+  "name": "Inform Communications Ltd.",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Co. Down, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Inithec Group",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Intergence Systems Ltd",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Cambridgeshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "IPCLOUD B.V.",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Netherlands",
+  "country": "Netherlands",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Jasco Enterprise (Pty) Ltd",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "South Africa",
+  "country": "South Africa",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Kaizen Networks",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Kingsfield Computers Ltd",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Lancashire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "KMPG International",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Netherlands",
+  "country": "Netherlands",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Komsa Ag",
+  "type": "Distributor",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Konecta Group",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Koris365",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Hertfordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Kuiper",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "West Midlands, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Lanmedia Spain",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Lasting System",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Romania",
+  "country": "Romania",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "LB Telecom",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater Manchester, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Liquid Voice",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "West Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Marlin Communications Ltd.",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Bristol, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Maximus UK Services Limited",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "South Glamorgan, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC"
+ },
+ {
+  "name": "Mdtel",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Modern Connectivity",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Egypt",
+  "country": "Egypt",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Moonsoft",
+  "type": "Referral - Sales Agent, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Finland",
+  "country": "Finland",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Nebula Insight",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "NGC Networks LTD",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "West Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "NhXTec GmbH",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Norman Networks",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "NOS Comunica\u00e7\u00f5es",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "NTS Communications LLP",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Shropshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Nunsys",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Nuveto EMEA",
+  "type": "Distributor, Reseller - Service Provider, Professional Services",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Nuvias UC",
+  "type": "Distributor, Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Gwent, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Occam Networks",
+  "type": "Technology - Resale, Technology - ISV",
+  "tier": "Authorized",
+  "loc": "Somerset, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "OFF Telekommunikation GmbH",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "",
+  "certs": ""
+ },
+ {
+  "name": "Outbound Solutions & Computing Ltd",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "PCI Pal",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "Suffolk, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "United States, Canada, APAC, EMEA, LATAM",
+  "certs": ""
+ },
+ {
+  "name": "Performio GmbH",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, Agent Assist"
+ },
+ {
+  "name": "Phase2 Software Ltd",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels, IVA, Agent Assist, WFA"
+ },
+ {
+  "name": "PrimeTel",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Cyprus",
+  "country": "Cyprus",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "PwC",
+  "type": "Systems Integrator",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Quality Connect Pty Ltd",
+  "type": "Referral - Sales Agent, Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "South Africa",
+  "country": "South Africa",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Resonate",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "SA Comm UK",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "West Midlands, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "SaaSCom",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Salesfive GmbH",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Samhammer AG",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "",
+  "certs": ""
+ },
+ {
+  "name": "SCC UK",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Seidor",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "ServiceCX",
+  "type": "Professional Services",
+  "tier": "Authorized",
+  "loc": "United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Sia Partners",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Simcomm Ltd",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Berkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Simoda",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "South Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Sloop Tech Ltd",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Surrey, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Social Telecoms",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Socialrel8 Ltd (Evaluagent)",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "North Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "SoftCat",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Buckinghamshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "SoftwareOne Inc",
+  "type": "Referral - Sales Agent, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Switzerland",
+  "country": "Switzerland",
+  "regions": "United States",
+  "certs": ""
+ },
+ {
+  "name": "Spectrum",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Staffordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Sprint SA",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Poland",
+  "country": "Poland",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Starlink W.L.L",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Qatar",
+  "country": "Qatar",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Sycurio Limited (Semafone)",
+  "type": "Technology - ISV",
+  "tier": "Authorized",
+  "loc": "Surrey, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "T&N AG",
+  "type": "Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Switzerland",
+  "country": "Switzerland",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "T&T Data Limited",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "TD SYNNEX Supply Chain Services Ltd (EMEA)",
+  "type": "Distributor, Referral - Sales Agent, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Tech Savvy Solutions",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Lancashire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "TechGiant",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Tele'Train Software GmbH",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "TELEFONICA TECH ESPA\u00d1A",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Telepoint",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Bulgaria",
+  "country": "Bulgaria",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Tesrex Ltd.",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Hertfordshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "The Networking Kit",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "TKG The Knowledge Group",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "TKUC GmbH",
+  "type": "Reseller - Direct, Reseller - Distribution, Professional Services",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Transform8tion Ltd.",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Greater London, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Tribework AG",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Switzerland",
+  "country": "Switzerland",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "U-COM A/S",
+  "type": "Reseller - Direct, Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Denmark",
+  "country": "Denmark",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "UCAdvisor",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "North Yorkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "UNIPARTNER IT SERVICES, S.A.",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Portugal",
+  "country": "Portugal",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Upfront",
+  "type": "Reseller - Distribution",
+  "tier": "Authorized",
+  "loc": "Belgium",
+  "country": "Belgium",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "VITEC",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "France",
+  "country": "France",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Wavenet Ltd",
+  "type": "Reseller - Service Provider, Professional Services",
+  "tier": "Authorized",
+  "loc": "West Midlands, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "West Pier Telecom Ltd",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "East Sussex, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "West Telco Europa",
+  "type": "Distributor",
+  "tier": "Authorized",
+  "loc": "Spain",
+  "country": "Spain",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Workair",
+  "type": "Reseller - Direct, Referral - Direct",
+  "tier": "Authorized",
+  "loc": "Dublin, Ireland",
+  "country": "Ireland",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "WTG Communication",
+  "type": "Referral - Sales Agent, Reseller - Direct, Professional Services",
+  "tier": "Authorized",
+  "loc": "Germany",
+  "country": "Germany",
+  "regions": "EMEA",
+  "certs": "VCC, Digital Channels"
+ },
+ {
+  "name": "Xeretec",
+  "type": "Referral - Sales Agent",
+  "tier": "Authorized",
+  "loc": "Berkshire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ },
+ {
+  "name": "Zeela Consulting",
+  "type": "Reseller - Direct",
+  "tier": "Authorized",
+  "loc": "Leicestershire, United Kingdom",
+  "country": "United Kingdom",
+  "regions": "EMEA",
+  "certs": ""
+ }
+]

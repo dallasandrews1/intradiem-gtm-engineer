@@ -943,7 +943,7 @@
   "Regions Financial": "Above the CAO sits C. Dandridge Massey, Chief Enterprise Operations and Technology Officer (since 2022); no LinkedIn profile found by Clay, search him in Sales Navigator. Dave Keenan retires end of 2026; Kate Danella is the named successor.",
   "National Grid": "Reorganizing September 1, 2026: US business units merge under one US President (Sally Librera, interim). Dan Davies, Chief Transformation Officer, has no findable LinkedIn profile. Re-check placements after September 1.",
   "Paychex": "Operations and client service (about 6,000 people) sit under the SVP, Operations and Customer Experience. Clay's index holds few Director-and-above operations titles at Paychex; the map is the full set it has. Robert Abresch (Senior Director, Payroll Operations per ZoomInfo) has no findable LinkedIn profile; search him in Sales Navigator. No workforce-planning leadership appears in the index at Director level or above.",
-  "Centene": "Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator.",
+  "Centene": "Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator. Amy Weiser (was Director of Operations at UnitedHealthcare, a known Intradiem contact) joined Centene in May 2026 as Vice President, Medicare Market, Midwest (https://www.linkedin.com/in/amyweiser1). Market P&L seat, not back-office ICP, so she stays off the sequence; she is a warm door for Nate into Centene Medicare operations (Dan Clark's line).",
   "Fidelity Investments": "Fidelity is private, so titles come from LinkedIn only. Barbara March (EVP Operations) and Kevin Barry (now Chief Privacy Officer) were removed after live checks; confirm the scope of the Chief Operations Officer card in Sales Navigator."
  },
  "band_override": [
@@ -1213,5 +1213,12 @@
    "finance data and reporting (MIS), not operations"
   ]
  ],
- "pad_to_cap": true
+ "pad_to_cap": true,
+ "sibling_links": [
+  [
+   "Front office maps for the same six accounts",
+   "/nate/front-office/"
+  ]
+ ],
+ "sibling_label": "Also for you"
 }

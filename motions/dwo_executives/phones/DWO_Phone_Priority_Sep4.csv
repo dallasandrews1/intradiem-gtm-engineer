@@ -1,0 +1,805 @@
+priority,tier_reason,name,firstName,lastName,title,companyName,domain,email,linkedinUrl,cohortArm,seats_at_account
+1,new in role (Rule A),Adam Hyde,Adam,Hyde,"Chief Operations Officer, Merchant Solutions",Fiserv,fiserv.com,adam.hyde@fiserv.com,https://www.linkedin.com/in/adam-hyde-28a5bb2a/,holdout,9
+1,new in role (Rule A),Ryan Crowley,Ryan,Crowley,Chief Operating Officer of Finxact,Fiserv,fiserv.com,ryan.crowley@fiserv.com,https://www.linkedin.com/in/ryan-crowley-8739b412/,holdout,9
+1,new in role (Rule A),Marcie Sierra,Marcie,Sierra,Market Chief Operations Officer,Mercy,mercy.net,marcie.sierra@mercy.net,,holdout,9
+1,new in role (Rule A),"Sam Atkinson, MHA",Sam,MHA,Chief Operating Officer,Mercy,mercy.net,sam.atkinson@mercy.net,https://www.linkedin.com/in/samatkinson95/,holdout,9
+1,new in role (Rule A),Abby Balsamo,Abby,Balsamo,"Global Sales COO, Commodities",Morgan Stanley,morganstanley.com,abby.balsamo@morganstanley.com,https://www.linkedin.com/in/abbybalsamo/,test,9
+1,new in role (Rule A),Devanand Singh,Devanand,Singh,"Vice President, Fixed Income - Credit Corporates COO",Morgan Stanley,morganstanley.com,devanand.singh@morganstanley.com,https://www.linkedin.com/in/devanand-singh-a7842020/,test,9
+1,new in role (Rule A),Eva Sampedro,Eva,Sampedro,COO - The PGP Group,Morgan Stanley,morganstanley.com,eva.sampedro@morganstanley.com,https://www.linkedin.com/in/evamariasampedro/,test,9
+1,new in role (Rule A),Jale B.,Jale,B.,Chief Administrative Officer,Morgan Stanley,morganstanley.com,jaleb@morganstanley.com,https://www.linkedin.com/in/jalebanay/,test,9
+1,new in role (Rule A),"Lola Ajayi, PMP",Lola,Ajayi,"Vice President, Securities Settlements Tech COO",Morgan Stanley,morganstanley.com,lola.ajayi@morganstanley.com,https://www.linkedin.com/in/lola-ajayi/,test,9
+1,new in role (Rule A),Meena Sivaraman,Meena,Sivaraman,"Vice President, IST COO team",Morgan Stanley,morganstanley.com,meena.sivaraman@morganstanley.com,https://www.linkedin.com/in/meenasivaramanlinkedin/,test,9
+1,new in role (Rule A),Megan Hogan,Megan,Hogan,Global Head of Talent Development and Global Talent COO,Morgan Stanley,morganstanley.com,megan.hogan@morganstanley.com,https://www.linkedin.com/in/megan-hogan-49425118/,test,9
+1,new in role (Rule A),Michael T. F.,Michael,F.,Vice President - US Rates COO,Morgan Stanley,morganstanley.com,mike.oliveros@morganstanley.com,https://www.linkedin.com/in/michael-friedman2393/,test,9
+1,new in role (Rule A),Viorica Chokshi,Viorica,Chokshi,"Managing Director,  Specialty Solutions Group - Chief Operating Officer",Morgan Stanley,morganstanley.com,viorica.chokshi@morganstanley.com,https://www.linkedin.com/in/viorica-chokshi-cfa-33959110/,test,9
+1,new in role (Rule A),Shawn Karney,Shawn,Karney,Vice President & Chief Administrative Officer- Neurosciences,Rochester Regional,rochesterregional.org,shawn.karney@rochesterregional.org,https://www.linkedin.com/in/shawnkarney/,test,9
+1,new in role (Rule A),Cong Liu,Cong,Liu,"Executive Director, Leveraged Lending COO",UBS Americas,ubs.com,cong.liu@ubs.com,,test,9
+1,new in role (Rule A),David McCall,David,McCall,Executive Director (Group COO Change Management),UBS Americas,ubs.com,david.mccall@ubs.com,,test,9
+1,new in role (Rule A),Haley Transou Terry,Haley,Terry,"Director, UBS Raleigh Chief Administrative Officer",UBS Americas,ubs.com,haley.transou-terry@ubs.com,,test,9
+1,new in role (Rule A),John Vander Zee,John,Vander Zee,"GWM US COO, Managing Director, UBS Wealth Management",UBS Americas,ubs.com,john.vanderzee@ubs.com,,test,9
+1,new in role (Rule A),Joshua Keller,Joshua,Keller,Electronic Trading Risk Manager | Execution Services COO,UBS Americas,ubs.com,joshua.keller@ubs.com,,test,9
+1,new in role (Rule A),Vivek Rodrigues,Vivek,Rodrigues,"Head of Platform Strategy, CAO GWM US (Managing Director)",UBS Americas,ubs.com,vivek.rodrigues@ubs.com,,test,9
+1,new in role (Rule A),Chad Miller,Chad,Miller,Chief Operating Officer,AdventHealth,adventhealth.com,chad.miller@adventhealth.com,,holdout,8
+1,new in role (Rule A),Jason Blanchard,Jason,Blanchard,COO/VP Operations,AdventHealth,adventhealth.com,jason.blanchard@adventhealth.com,,holdout,8
+1,new in role (Rule A),Keli Ramsey,Keli,Ramsey,"VP, Chief Operating Officer, AHMG EFD",AdventHealth,adventhealth.com,keli.ramsey@adventhealth.com,,holdout,8
+1,new in role (Rule A),Christopher Salonia,Christopher,Salonia,"Vice President, Strategy - Aladdin COO Team",BlackRock,blackrock.com,christopher.salonia@blackrock.com,https://www.linkedin.com/in/christophersalonia/,holdout,8
+1,new in role (Rule A),Sandra Mostacci,Sandra,Mostacci,"Managing Director, COO Strategy and Execution",Barclays,home.barclays,sandra.mostacci@barclays.com,https://www.linkedin.com/in/sandra-mostacci/,holdout,8
+1,new in role (Rule A),Lauren Sloan (Cromer),Lauren,Sloan,"Chief Operating Officer, Banking US",HSBC,hsbc.com,lauren.cromer@us.hsbc.com,https://www.linkedin.com/in/lauren-sloan-cromer-33615475/,test,8
+1,new in role (Rule A),Jason Wilhelmsen,Jason,Wilhelmsen,Chief Operating Officer,AmWins,amwins.com,jason.wilhelmsen@amwins.com,,test,7
+1,new in role (Rule A),"Ajla Sutkovic MBA, BS, RRT-ACCS",Ajla,BS,Chief Operating Officer,Banner Health,bannerhealth.com,ajla.sutkovic@bannerhealth.com,https://www.linkedin.com/in/ajla-sutkovic-mba-rrt-accs-va-bc-456309a1/,holdout,7
+1,new in role (Rule A),Alejandro Canavati,Alejandro,Canavati,SVP & Latam Chief Operating Officer,Christus Health,christushealth.org,alejandro.canavati@christushealth.org,https://www.linkedin.com/in/alejandro-canavati-92674744/,holdout,7
+1,new in role (Rule A),"Chris Glenney, FACHE",Chris,FACHE,SVP/Chief Operating Officer - US Ministries,Christus Health,christushealth.org,chris.glenney@christushealth.org,https://www.linkedin.com/in/chris-glenney-fache-318b6738/,holdout,7
+1,new in role (Rule A),Aimee Cocolin,Aimee,Cocolin,Chief Operating Officer,HCA Healthcare,hcahealthcare.com,aimee.cocolin@hcahealthcare.com,https://www.linkedin.com/in/aimee-cocolin-2a425143/,test,7
+1,new in role (Rule A),Brandon Cohen,Brandon,Cohen,Chief Operating Officer,HCA Healthcare,hcahealthcare.com,brandon.cohen@hcahealthcare.com,https://www.linkedin.com/in/brandon-cohen-73176650/,test,7
+1,new in role (Rule A),Courtney Gibbons,Courtney,Gibbons,"Chief Operating Officer, HCA Florida Mercy Hospital",HCA Healthcare,hcahealthcare.com,courtney.gibbons@hcahealthcare.com,https://www.linkedin.com/in/courtney-gibbons-03b582a7/,test,7
+1,new in role (Rule A),Harpreet Sharma,Harpreet,Sharma,CNO/COO,HCA Healthcare,hcahealthcare.com,harpreet.sharma@hcahealthcare.com,https://www.linkedin.com/in/harpreet-sharma-94ba454b/,test,7
+1,new in role (Rule A),Kristen Lindenboom,Kristen,Lindenboom,Chief Operating Officer,HCA Healthcare,hcahealthcare.com,kristen.lindenboom@hcahealthcare.com,https://www.linkedin.com/in/kristen-lindenboom-7831064/,test,7
+1,new in role (Rule A),"Rachel Sloan, MHA",Rachel,MHA,Chief Operating Officer,HCA Healthcare,hcahealthcare.com,rachel.sloan@hcahealthcare.com,https://www.linkedin.com/in/rachel-sloan3229/,test,7
+1,new in role (Rule A),"Adam de la Peña - Gafke, CFRE",Adam,de la Peña Gafke,Senior Foundation Chief Operations Officer,Houston Methodist,houstonmethodist.org,apena@houstonmethodist.org,https://www.linkedin.com/in/adam-de-la-peã±a-gafke-cfre-9ab2076/,test,7
+1,new in role (Rule A),"Courtenay Bruce, JD, MA",Courtenay,Bruce,Chief Experience Officer & Professor of Care Experience,Houston Methodist,houstonmethodist.org,bc@houstonmethodist.org,https://www.linkedin.com/in/courtenay-bruce-jd-ma-b800bb9a/,test,7
+1,new in role (Rule A),Dean Kontul,Dean,Kontul,EVP- COO Consumer Bank,KeyBank,key.com,dean.kontul@key.com,,test,7
+1,new in role (Rule A),Luke Miller,Luke,Miller,Chief Operating Officer at Saint Thomas Midtown,Ascension Health,ascension.org,luke.miller@ascension.org,https://www.linkedin.com/in/lukemillerpharmd/,test,6
+1,new in role (Rule A),"Marco A. Lozano, FACHE",Marco,FACHE,Chief Operating Officer,Ascension Health,ascension.org,marco.lozano@ascension.org,https://www.linkedin.com/in/marco-a-lozano-fache-73874ab6/,test,6
+1,new in role (Rule A),Cornelius Young,Cornelius,Young,Chief Claims Officer,Plymouth Rock,plymouthrock.com,cyoung@plymouthrock.com,https://www.linkedin.com/in/cornelius-f-young-2002701/,holdout,6
+1,new in role (Rule A),Michelle Trindade,Michelle,Trindade,"Chief Operating Officer (COO), Direct Group",Plymouth Rock,plymouthrock.com,mtrindade@plymouthrock.com,https://www.linkedin.com/in/michelle-trindade/,holdout,6
+1,new in role (Rule A),Laura L. Irvine,Laura,Irvine,"SEVP, Chief Operating Officer & Chief Growth Officer",Texas Health Resources,texashealth.org,laurairvine@texashealth.org,https://www.linkedin.com/in/laura-l-irvine-7b33238/,holdout,6
+1,new in role (Rule A),"Lara Henshaw, DMSc, MBA, MS, CPHQ, CQIA",Lara,CQIA,COO Ambulatory Services,UCSF Health,ucsfhealth.org,lara.henshaw@ucsf.edu,https://www.linkedin.com/in/larahenshaw/,holdout,6
+1,new in role (Rule A),Marianna Spanos,Marianna,Spanos,"Executive in Residence & COO, Ambetter Health Solutions",Centene,centene.com,marianna.spanos@centene.com,https://www.linkedin.com/in/mariannaspanos/,holdout,5
+1,new in role (Rule A),Maurio Smith,Maurio,Smith,"Chief Operating Officer, Centene Medicaid",Centene,centene.com,msmith@centene.com,https://www.linkedin.com/in/mauriosmith/,holdout,5
+1,new in role (Rule A),Nicole Hazard,Nicole,Hazard,HR Chief Operating Officer,Citizens Bank,citizensbank.com,nicole.hazard@citizensbank.com,https://www.linkedin.com/in/nicolefhazard/,test,5
+1,new in role (Rule A),Christopher K Klem,Christopher,Klem,"Vice President, Managed Services Chief Operating Officer (COO)",Ericsson,ericsson.com,christopher.klem@ericsson.com,https://www.linkedin.com/in/christopher-klem/,test,5
+1,new in role (Rule A),Luke Stroh,Luke,Stroh,"Chief Operations Officer, Life, Annuity, Retirement",Transamerica,transamerica.com,luke.stroh@transamerica.com,https://www.linkedin.com/in/lukestroh/,holdout,5
+1,new in role (Rule A),Juan Ignacio Rubiolo,Juan,Rubiolo,EVP and Chief Operating Officer at The AES Corporation,AES,aes.com,juan.rubiolo@aes.com,https://www.linkedin.com/in/juan-ignacio-rubiolo-71108413/,holdout,4
+1,new in role (Rule A),Taylor Sloane,Taylor,Sloane,"Chief Operating Officer, Maximo",AES,aes.com,taylor.sloane@aes.com,https://www.linkedin.com/in/taylor-sloane-47b92717/,holdout,4
+1,new in role (Rule A),John O'Neill,John,O'Neill,Chief Transformation Officer,LPL Financial,lpl.com,john.oneill@lpl.com,https://www.linkedin.com/in/john-oneill7/,test,4
+1,new in role (Rule A),Gaurav Saini,Gaurav,Saini,Chief Administrative Officer,Manulife Financial,manulife.com,gaurav_saini@jhancock.com,https://www.linkedin.com/in/gaurav-saini-9b201815/,holdout,4
+1,new in role (Rule A),"Robert Welch, FACHE",Robert,FACHE,Chief Operating Officer,UCHealth,uchealth.org,robert.welch@uchealth.org,https://www.linkedin.com/in/robert-welch-fache-15371662/,test,4
+1,new in role (Rule A),"Scott Pion, FACHE",Scott,FACHE,Chief Operating Officer - Atrium Health Mercy,Atrium Health,atriumhealth.org,scott.pion@atriumhealth.org,https://www.linkedin.com/in/scottpion/,holdout,3
+1,new in role (Rule A),Danny Horanyi,Danny,Horanyi,Chief Operating Officer,Better Mortgage,better.com,dhoranyi@better.com,https://www.linkedin.com/in/danny-horanyi-a1286018/,test,3
+1,new in role (Rule A),Kacper Walicki,Kacper,Walicki,"Vice President, Head of Commercial Banking & Corporate Functions Compliance / Swap Dealer CCO",Capital One,capitalone.com,kacper.walicki@capitalone.com,https://www.linkedin.com/in/kacper-walicki-68498a6/,test,3
+1,new in role (Rule A),Thembi Machaba,Thembi,Machaba,Chief Human Resources Officer / Chief Administrative Officer,Freshpet,freshpet.com,tmachaba@freshpet.com,https://www.linkedin.com/in/thembi-machaba-1875b62/,test,3
+1,new in role (Rule A),Byron J. Auzenne,Byron,Auzenne,"Vice President Operations, COO",Memorial Hermann,memorialhermann.org,byron.auzenne@memorialhermann.org,https://www.linkedin.com/in/byron-j-auzenne-5116147/,holdout,3
+1,new in role (Rule A),Melissa Anderson,Melissa,Anderson,Chief Claims Officer,Old Republic,oldrepublic.com,manderson@oldrepublic.com,https://www.linkedin.com/in/melissa-anderson-5532954/,test,3
+1,new in role (Rule A),Brett Brunick,Brett,Brunick,Chief Operating Officer,Thrivent,thrivent.com,brett.brunick@thrivent.com,https://www.linkedin.com/in/bbrunick/,test,3
+1,new in role (Rule A),Keith Farley,Keith,Farley,"SVP, Chief Customer Officer",Aflac,aflac.com,kfarley@aflac.com,https://www.linkedin.com/in/keith-farley-8067662/,holdout,2
+1,new in role (Rule A),Raja Subramanian,Raja,Subramanian,Chief Customer Officer,CenterPoint Energy,centerpointenergy.com,raja.subramanian@centerpointenergy.com,https://www.linkedin.com/in/raja-subramanian-72704357/,test,2
+1,new in role (Rule A),Tim Keefe,Tim,Keefe,Chief Transformation Officer,Covetrus,covetrus.com,tim.keefe@covetrus.com,https://www.linkedin.com/in/tim-keefe/,holdout,2
+1,new in role (Rule A),Stephanie Wilder,Stephanie,Wilder,Regional Banking Chief Administrative Officer / Executive Vice President,Huntington National Bank,huntington.com,stephanie.wilder@huntington.com,https://www.linkedin.com/in/stephaniejwilder/,test,2
+1,new in role (Rule A),Stacey Waddell,Stacey,Waddell,EVP Chief Operations Officer,State Employees Credit Union,ncsecu.org,stacey.waddell@ncsecu.org,https://www.linkedin.com/in/stacey-waddell-47ab21139/,holdout,2
+1,new in role (Rule A),Serrena Iyer,Serrena,Iyer,"COO, Animation INKubator",Netflix,netflix.com,siyer@netflix.com,https://www.linkedin.com/in/serrenaaiyer/,test,2
+1,new in role (Rule A),Scott Weaver,Scott,Weaver,Chief Operating Officer,Orkin,orkin.com,sweaver@orkin.com,https://www.linkedin.com/in/scott-weaver-b3353012/,test,2
+1,new in role (Rule A),Kat Gesh-Wilson,Kat,Gesh-Wilson,"President and COO, BlueChoice HealthPlan",BlueCross BlueShield South Carolina,southcarolinablues.com,kat.gesh-wilson@bcbssc.com,https://www.linkedin.com/in/kat-gesh-wilson-8b954512/,holdout,2
+1,new in role (Rule A),Lee Jelenic,Lee,Jelenic,"EVP, Chief Administrative Officer",United Wholesale Mortgage,uwm.com,ljelenic@uwm.com,https://www.linkedin.com/in/lee-jelenic/,holdout,2
+1,new in role (Rule A),Daniel Joseph Dougherty Jr.,Daniel,Dougherty,SVP COO - Cash Connect,WSFS Bank,wsfsbank.com,ddougherty@wsfsbank.com,https://www.linkedin.com/in/daniel-joseph-dougherty-jr-a0311529/,holdout,2
+1,new in role (Rule A),Amy Walt,Amy,Walt,Chief Administrative Officer,Algonquin Power & Utilities,algonquinpower.com,amy.walt@algonquinpower.com,https://www.linkedin.com/in/amymwalt/,test,1
+1,new in role (Rule A),Jessica Agahi,Jessica,Agahi,"SVP, Chief Customer Officer",HD Supply,hdsupply.com,jessica.agahi@hdsupply.com,https://www.linkedin.com/in/jessicaagahi/,test,1
+1,new in role (Rule A),Barrett Scruggs,Barrett,Scruggs,"Chief Operating Officer, Klarna Bank USA (in organization)",Klarna,klarna.com,barrett.scruggs@klarna.com,https://www.linkedin.com/in/barrett-scruggs/,test,1
+1,new in role (Rule A),Roger Ahuja,Roger,Ahuja,Chief Operating Officer,Love's Travel Stops,loves.com,roger.ahuja@loves.com,https://www.linkedin.com/in/roger-ahuja-aa1bb7174/,test,1
+1,new in role (Rule A),Ryan Helwig,Ryan,Helwig,Chief Operations Officer,Oportun,oportun.com,ryan.helwig@oportun.com,https://www.linkedin.com/in/ryan-helwig-9494b010/,holdout,1
+1,new in role (Rule A),Liz Heitner,Liz,Heitner,Chief Administrative Officer,The Penn Mutual Life Insurance,pennmutual.com,eheitner@pennmutual.com,https://www.linkedin.com/in/liz-heitner-3463292/,test,1
+1,new in role (Rule A),Kari Irons,Kari,Irons,"SVP, Chief Experience Officer",Pilot Travel Centers,pilotflyingj.com,kari.irons@pilottravelcenters.com,,test,1
+1,new in role (Rule A),Jason Ellis,Jason,Ellis,Chief Administrative Officer,Staples,staples.com,jason.ellis@staples.com,https://www.linkedin.com/in/jasonellisesq/,holdout,1
+1,new in role (Rule A),Cole Allen,Cole,Allen,Chief Administrative Officer,SUNPOWER,sunpower.com,cole.allen@sunpower.com,https://www.linkedin.com/in/cole-allen-27007116a/,holdout,1
+1,new in role (Rule A),Cirsten Crayton,Cirsten,Crayton,Senior CCO,TDS Telecom,tdstelecom.com,cirsten.crayton@tdstelecom.com,https://www.linkedin.com/in/cirsten-crayton-9b5629350/,holdout,1
+1,new in role (Rule A),Jason Weekley,Jason,Weekley,"Chief Operating Officer, Utilities & President, Washington Gas",Washington Gas and Light,washingtongas.com,jason.weekley@washgas.com,https://www.linkedin.com/in/jweekley/,test,1
+1,new in role (Rule A),Jared Saft,Jared,Saft,Chief Operating Officer,Westgate Resorts,westgateresorts.com,jared.saft@westgateresorts.com,https://www.linkedin.com/in/jared-saft-7530912/,test,1
+2,multi-seat account,Amanda Greenbaum,Amanda,Greenbaum,COO Global Markets and International Risk,Bank of America,bankofamerica.com,amanda.greenbaum@bofa.com,https://www.linkedin.com/in/amanda-greenbaum-32a11215/,holdout,10
+2,multi-seat account,Kathleen Dryden,Kathleen,Dryden,"Managing Director, Corporate Treasury COO",Bank of America,bankofamerica.com,kathleen.dryden@bofa.com,https://www.linkedin.com/in/kathleen-dryden-b0b91963/,holdout,10
+2,multi-seat account,"Louanne Woznicki, CFA",Louanne,Woznicki,Global Renewable Energy Credit Chief Operating Officer,Bank of America,bankofamerica.com,louanne.woznicki@bofa.com,https://www.linkedin.com/in/louannewoznicki/,holdout,10
+2,multi-seat account,Marie Terezakis,Marie,Terezakis,Risk Executive and COO - Global Compliance & Operational Risk,Bank of America,bankofamerica.com,marie.terezakis@bofa.com,https://www.linkedin.com/in/marie-terezakis-4bb5bba/,holdout,10
+2,multi-seat account,Nicole Zelenko,Nicole,Zelenko,"Vice President - COO, Global Corporate & Investment Bank",Bank of America,bankofamerica.com,nicole.zelenko@bofa.com,https://www.linkedin.com/in/nicole-zelenko-1a7517b0/,holdout,10
+2,multi-seat account,Robin Fuller,Robin,Fuller,"Managing Director, Chief Operating Officer, Enterprise Independent Testing",Bank of America,bankofamerica.com,robin.fuller@bofa.com,https://www.linkedin.com/in/robin-fuller-5739b55/,holdout,10
+2,multi-seat account,Shannon Ivie,Shannon,Ivie,Chief Operating Officer - Global Response & Third Party Resiliency,Bank of America,bankofamerica.com,shannon.ivie@bofa.com,https://www.linkedin.com/in/shannon-ivie/,holdout,10
+2,multi-seat account,Sina Lee,Sina,Lee,SVP COO Business Management - Global Technology,Bank of America,bankofamerica.com,sina.lee@bofa.com,https://www.linkedin.com/in/sina-lee-09171641/,holdout,10
+2,multi-seat account,Sophia DeMarchi,Sophia,DeMarchi,COO Vice President,Bank of America,bankofamerica.com,sophia.demarchi@bofa.com,https://www.linkedin.com/in/sophia-demarchi-7187ab12b/,holdout,10
+2,multi-seat account,Zach Wardle,Zach,Wardle,COO & Strategy Realization – Prepaid Operations,Bank of America,bankofamerica.com,zach.wardle@bofa.com,https://www.linkedin.com/in/zwardle/,holdout,10
+2,multi-seat account,Chris Bevacqua,Chris,Bevacqua,North America COO & Global Head of Contact Centers,AIG,aig.com,chris.bevacqua@aig.com,https://www.linkedin.com/in/chris-bevacqua-b086252/,test,9
+2,multi-seat account,Chris Holcombe,Chris,Holcombe,"Global Claims, COO",AIG,aig.com,christopher.holcombe@aig.com,https://www.linkedin.com/in/chris-holcombe/,test,9
+2,multi-seat account,Greg Leonberger,Greg,Leonberger,COO - Global Warranty,AIG,aig.com,greg.leonberger@aig.com,https://www.linkedin.com/in/greg-leonberger-188a045/,test,9
+2,multi-seat account,Jennifer Holland,Jennifer,Holland,"VP and COO, AIG Warranty",AIG,aig.com,jennifer.holland@aig.com,https://www.linkedin.com/in/jennifer-holland-51955792/,test,9
+2,multi-seat account,Jill Dixon,Jill,Dixon,Multinational Chief Operating Officer,AIG,aig.com,jill.dixon@aig.com,https://www.linkedin.com/in/jill-macconnell-b281565/,test,9
+2,multi-seat account,Kathleen Carbone,Kathleen,Carbone,Chief Accounting Officer (CAO) and Global Controller,AIG,aig.com,kathleen.carbone@aig.com,https://www.linkedin.com/in/kathleen-carbone-85788479/,test,9
+2,multi-seat account,Kym Mccleerey,Kym,Mccleerey,Global Chief Operations Officer,AIG,aig.com,kym.mccleerey@aig.com,https://www.linkedin.com/in/kym-mccleerey-21588a4/,test,9
+2,multi-seat account,Rita Perez,Rita,Perez,"Chief Claims Officer, North America",AIG,aig.com,rita.perez@aig.com,https://www.linkedin.com/in/rita-perez-39389849/,test,9
+2,multi-seat account,Senthil Nathan,Senthil,Nathan,"Global Claims Operations COO, Technical & Service Delivery",AIG,aig.com,senthil.nathan@aig.com,https://www.linkedin.com/in/t-senthil-nathan/,test,9
+2,multi-seat account,Angela Marques Lobo,Angela,Lobo,"Senior Vice President, Chief Operations Officer and Transformation for Claims in Overseas General",Chubb,chubb.com,angela.lobo@chubb.com,https://www.linkedin.com/in/angela-marques-lobo-2b2946/,holdout,9
+2,multi-seat account,Daniel Alberto Gonzalez,Daniel,Gonzalez,COO LATAM Region,Chubb,chubb.com,daniel.gonzalez@chubb.com,https://www.linkedin.com/in/daniel-gonzalez-8145b266/,holdout,9
+2,multi-seat account,Francisco (Paco) Miron,Francisco,Miron,Chief Administrative Officer (CAO),Chubb,chubb.com,francisco.miron@chubb.com,https://www.linkedin.com/in/francisco-miron-83943a42/,holdout,9
+2,multi-seat account,"George F. Ohsiek, Jr.",George,Ohsiek,Chief Accounting Officer (CAO),Chubb,chubb.com,george.ohsiek@chubb.com,https://www.linkedin.com/in/george-f-ohsiek-jr-18243444/,holdout,9
+2,multi-seat account,Jason Ranucci,Jason,Ranucci,"Chief Operating Officer, North America Small & Lower Midmarket at Chubb",Chubb,chubb.com,jason.ranucci@chubb.com,https://www.linkedin.com/in/jason-ranucci/,holdout,9
+2,multi-seat account,Lawrence Wieser,Lawrence,Wieser,Chief Administrative Officer (CAO),Chubb,chubb.com,lawrence.wieser@chubb.com,https://www.linkedin.com/in/lawrence-wieser-3b8a7b20/,holdout,9
+2,multi-seat account,Michael Davenport,Michael,Davenport,Chief Operating Officer and Executive Vice President Agriculture,Chubb,chubb.com,michael.davenport@chubb.com,https://www.linkedin.com/in/michael-davenport-360b719/,holdout,9
+2,multi-seat account,Peilin Zhang,Peilin,Zhang,"Managing Director & COO, Asset Management",Chubb,chubb.com,peilin.zhang@chubb.com,https://www.linkedin.com/in/peilin-zhang-2b6690a/,holdout,9
+2,multi-seat account,William Hazelton,William,Hazelton,Chief Operating Officer NA Field Operations,Chubb,chubb.com,bill.hazelton@chubb.com,https://www.linkedin.com/in/william-hazelton-7b109575/,holdout,9
+2,multi-seat account,Adam Rosman,Adam,Rosman,"Executive Vice President, Chief Legal Officer & Chief Administrative Officer",Fiserv,fiserv.com,adam.rosman@fiserv.com,https://www.linkedin.com/in/adam-rosman-9944826/,holdout,9
+2,multi-seat account,Christine Chu,Christine,Chu,"COO, Corporate Systems",Fiserv,fiserv.com,christine.chu@fiserv.com,https://www.linkedin.com/in/christine-chu-b93109/,holdout,9
+2,multi-seat account,Christopher Marrone,Christopher,Marrone,"Chief Operating Officer, Global Business Solutions Technology",Fiserv,fiserv.com,christopher.marrone@fiserv.com,https://www.linkedin.com/in/christopher-marrone-46ba934/,holdout,9
+2,multi-seat account,Dan Parzych,Dan,Parzych,"COO and SVP Analytics, Data Commerce Solutions",Fiserv,fiserv.com,daniel.parzych@fiserv.com,https://www.linkedin.com/in/danparzych/,holdout,9
+2,multi-seat account,Jeff DeCarlo,Jeff,DeCarlo,COO Issuer Solutions,Fiserv,fiserv.com,jeffrey.decarlo@fiserv.com,https://www.linkedin.com/in/jeff-decarlo-4859123/,holdout,9
+2,multi-seat account,Manisha O.,Manisha,O.,COO group of PMO,Fiserv,fiserv.com,manisha.banthia@fiserv.com,https://www.linkedin.com/in/manisha-o-2a850636/,holdout,9
+2,multi-seat account,Tom Lowry,Tom,Lowry,"SVP, Chief Operating Officer - Finxact Next Generation Banking",Fiserv,fiserv.com,thomas.lowry@fiserv.com,https://www.linkedin.com/in/tomlowry/,holdout,9
+2,multi-seat account,Alan Smith,Alan,Smith,Chief Operating Officer,Mercy,mercy.net,alan.smith@mercy.net,https://www.linkedin.com/in/alan-smith-8b34a13a/,holdout,9
+2,multi-seat account,Alisyn Beffa,Alisyn,Beffa,Chief Operating Officer,Mercy,mercy.net,alisyn.beffa@mercy.net,https://www.linkedin.com/in/alisyn-beffa-b4912113/,holdout,9
+2,multi-seat account,Jason Demke,Jason,Demke,Chief Operating Officer,Mercy,mercy.net,jason.demke@mercy.net,https://www.linkedin.com/in/jasondemke/,holdout,9
+2,multi-seat account,"Mathew Smith, FACHE, FACMPE",Mathew,FACHE,Chief Operating Officer,Mercy,mercy.net,mathew.smith@mercy.net,https://www.linkedin.com/in/mathew-smith-fache-facmpe-217538102/,holdout,9
+2,multi-seat account,Mike Mudd,Mike,Mudd,Chief Operating Officer,Mercy,mercy.net,mike.mudd@mercy.net,https://www.linkedin.com/in/michaelamudd/,holdout,9
+2,multi-seat account,"Taylor Fowers, FACHE",Taylor,FACHE,Chief Operating Officer,Mercy,mercy.net,taylor.fowers@mercy.net,https://www.linkedin.com/in/taylor-fowers-069612109/,holdout,9
+2,multi-seat account,Taylor Lahar Warwick,Taylor,Warwick,"Chief Operating Officer, Mercy Springfield Communities",Mercy,mercy.net,taylor.warwick@mercy.net,https://www.linkedin.com/in/taylor-lahar-warwick-556b0638/,holdout,9
+2,multi-seat account,Daniel Sokac,Daniel,Sokac,"Vice President, Chief Administrative Officer of Surgical Services",Rochester Regional,rochesterregional.org,daniel.sokac@rochesterregional.org,https://www.linkedin.com/in/daniel-sokac-03003b89/,test,9
+2,multi-seat account,David Fernandez,David,Fernandez,"Chief Administrative Officer (CAO), Vice President, Cancer Service Line",Rochester Regional,rochesterregional.org,david.fernandez@rochesterregional.org,https://www.linkedin.com/in/david-fernandez-67543219/,test,9
+2,multi-seat account,Jill Graziano RN BSN MBA,Jill,BSN,President and COO of UMMC and Unity Hospital,Rochester Regional,rochesterregional.org,jill.graziano@rochesterregional.org,https://www.linkedin.com/in/jill-graziano-rn-mba/,test,9
+2,multi-seat account,"Jonathan Scott PA-C,MBA",Jonathan,PA-CMBA,Vice President and Chief Administrative Officer - Sands Constellation Heart and Vascular Institute,Rochester Regional,rochesterregional.org,jonathan.scott@rochesterregional.org,https://www.linkedin.com/in/jonathan-scott-pa-c-mba-a420b018/,test,9
+2,multi-seat account,"Katrina Wojciechowski MS, PA, EdD",Katrina,PA,"VP, Chief Operating Officer, Rochester General Hospital",Rochester Regional,rochesterregional.org,katrina.wojciechowski@rochesterregional.org,https://www.linkedin.com/in/katrina-wojciechowski-ms-pa-edd-7b554425b/,test,9
+2,multi-seat account,"Meghan Finneran, FACHE",Meghan,FACHE,Vice President Chief Administrative Officer,Rochester Regional,rochesterregional.org,meghan.finneran@rochesterregional.org,https://www.linkedin.com/in/meghan-finneran-fache/,test,9
+2,multi-seat account,Melissa Gardner,Melissa,Gardner,"President and COO, Rochester Regional Health Clinically Integrated Network",Rochester Regional,rochesterregional.org,melissa.gardner@rochesterregional.org,https://www.linkedin.com/in/melissa-gardner-b955574/,test,9
+2,multi-seat account,"Sinéad Ingersoll, FACHE, FACMPE, MHA",Sinéad,MHA,"Chief Operating Officer, Canton-Potsdam Hospital/St. Lawrence Region",Rochester Regional,rochesterregional.org,sinead.ingersoll@rochesterregional.org,https://www.linkedin.com/in/sinéad-ingersoll/,test,9
+2,multi-seat account,Jacqueline Sinski,Jacqueline,Sinski,Head of Strategy & Operations - Investment Bank Chief Risk Officer CAO,UBS Americas,ubs.com,jacqueline.sinski@ubs.com,,test,9
+2,multi-seat account,Nicholas Cole,Nicholas,Cole,"Chief Operating Officer, Unified Global Markets (Americas)",UBS Americas,ubs.com,nicholas.cole@ubs.com,,test,9
+2,multi-seat account,Stefanie Stannard,Stefanie,Stannard,COO - GFIW & UHNW,UBS Americas,ubs.com,stefanie.stannard@ubs.com,,test,9
+2,multi-seat account,Cory Ferrier,Cory,Ferrier,Chief Operating Officer,AdventHealth,adventhealth.com,cory.ferrier@adventhealth.com,,holdout,8
+2,multi-seat account,Jordan Smith,Jordan,Smith,VP & Chief Operating Officer - Riverview,AdventHealth,adventhealth.com,jordan.smith@adventhealth.com,,holdout,8
+2,multi-seat account,Katrina Vargas Mesa,Katrina,Mesa,Chief Operating Officer,AdventHealth,adventhealth.com,katrina.vargasmesa@adventhealth.com,,holdout,8
+2,multi-seat account,"Tim Williams, MBA, FACHE, FACMPE",Tim,FACHE,Chief Operating Officer,AdventHealth,adventhealth.com,tim.williams@adventhealth.com,,holdout,8
+2,multi-seat account,Zachary Crane,Zachary,Crane,Chief Operating Officer,AdventHealth,adventhealth.com,zachary.crane@adventhealth.com,,holdout,8
+2,multi-seat account,Brooke Marden,Brooke,Marden,VP - Client Risk Controls Aladdin COO Team,BlackRock,blackrock.com,brooke.bliven@blackrock.com,https://www.linkedin.com/in/brooke-marden-74820933/,holdout,8
+2,multi-seat account,Jasmine Nunez,Jasmine,Nunez,Portfolio Management Group - COO Team,BlackRock,blackrock.com,jasmine.nunez@blackrock.com,https://www.linkedin.com/in/jasmine-nunez-316b30144/,holdout,8
+2,multi-seat account,Jennifer Ottinger,Jennifer,Ottinger,Global Chief Operating Officer of BlackRock’s Portfolio Management Group,BlackRock,blackrock.com,jennifer.ottinger@blackrock.com,https://www.linkedin.com/in/jennifer-ottinger-971a887/,holdout,8
+2,multi-seat account,Laurie Hosie,Laurie,Hosie,"Managing Director, Americas Client Business Core COO",BlackRock,blackrock.com,laurie.hosie@blackrock.com,https://www.linkedin.com/in/laurie-hosie-b87a0b1/,holdout,8
+2,multi-seat account,Michael Colen,Michael,Colen,"Chief Operating Officer, Japan - Managing Director",BlackRock,blackrock.com,michael.colen@blackrock.com,https://www.linkedin.com/in/michael-colen-4537448/,holdout,8
+2,multi-seat account,Rachel Barry,Rachel,Barry,"Managing Director, Chief Operating Officer of Global Corporate Affairs",BlackRock,blackrock.com,rachel.barry@blackrock.com,https://www.linkedin.com/in/rachelbarry24/,holdout,8
+2,multi-seat account,Thalia Martinez,Thalia,Martinez,"Vice President, Business Manager - Aladdin Client Business COO Team",BlackRock,blackrock.com,thalia.martinez@blackrock.com,https://www.linkedin.com/in/thaliamartinezv/,holdout,8
+2,multi-seat account,"Ajay Kharbanda, MBA, CMPE, SFHM",Ajay,SFHM,Vice President Operations/COO Hampton Roads Medical Group,Bon Secours Mercy,bsmhealth.org,ajay_kharbanda@bshsi.org,https://www.linkedin.com/in/ajay-kharbanda-cmpe/,holdout,8
+2,multi-seat account,Jamey Howe,Jamey,Howe,Chief Accounting Officer (CAO),Bon Secours Mercy,bsmhealth.org,jhowe@bsmhealth.org,https://www.linkedin.com/in/jamey-howe-a049a53/,holdout,8
+2,multi-seat account,Jennifer Wehrs,Jennifer,Wehrs,Market Chief Operating Officer,Bon Secours Mercy,bsmhealth.org,jennifer_wehrs@bshsi.org,https://www.linkedin.com/in/jennifer-wehrs-75298146/,holdout,8
+2,multi-seat account,"Jeremy Skoog MBA, MPT, OCS",Jeremy,OCS,Chief Operating Officer - Bon Secours Medical Group,Bon Secours Mercy,bsmhealth.org,jeremy_skoog@bshsi.org,https://www.linkedin.com/in/jeremy-skoog-mba-mpt-ocs-08a31821/,holdout,8
+2,multi-seat account,Keri Richards,Keri,Richards,Chief Operating Officer,Bon Secours Mercy,bsmhealth.org,keri.richards@bsmhealth.org,https://www.linkedin.com/in/keri-richards-3271a974/,holdout,8
+2,multi-seat account,Megan Reyna,Megan,Reyna,"Chief Operating Officer, Population Health",Bon Secours Mercy,bsmhealth.org,mreyna@bsmhealth.org,https://www.linkedin.com/in/megan-reyna-293110114/,holdout,8
+2,multi-seat account,"Steven Durham, FACHE",Steven,FACHE,Chief Operating Officer,Bon Secours Mercy,bsmhealth.org,sdurham@mercy.com,https://www.linkedin.com/in/steven-durham-fache-57b47b96/,holdout,8
+2,multi-seat account,Woods McKibbens,Woods,McKibbens,"Chief Operating Officer, Urgent Care and Employer Services",Bon Secours Mercy,bsmhealth.org,mwoods@mercy.com,https://www.linkedin.com/in/woods-mckibbens-94589010/,holdout,8
+2,multi-seat account,Elaine Magil,Elaine,Magil,LIHTC COO,Fannie Mae,fanniemae.com,elaine_magil@fanniemae.com,https://www.linkedin.com/in/saraelainemagil/,holdout,8
+2,multi-seat account,Gina Papush,Gina,Papush,"Chief Data Officer, SVP and Senior Member of COO Leadership",Fannie Mae,fanniemae.com,gina_papush@fanniemae.com,https://www.linkedin.com/in/gina-papush-02ba5a7/,holdout,8
+2,multi-seat account,Janet B.,Janet,B.,"Vice President, Human Capital Consulting for COO Organization",Fannie Mae,fanniemae.com,janet_barlett@fanniemae.com,https://www.linkedin.com/in/janet-b-38819b6/,holdout,8
+2,multi-seat account,Janet Barlett,Janet,Barlett,"Vice President, Human Capital Consulting for COO Organization",Fannie Mae,fanniemae.com,janet_barlett@fanniemae.com,,holdout,8
+2,multi-seat account,Jason Dandridge,Jason,Dandridge,Co-Chief Operating Officer,Fannie Mae,fanniemae.com,jason_dandridge@fanniemae.com,https://www.linkedin.com/in/jason-dandridge-1405846/,holdout,8
+2,multi-seat account,Peter Akwaboah,Peter,Akwaboah,Chief Operating Officer,Fannie Mae,fanniemae.com,peter_akwaboah@fanniemae.com,,holdout,8
+2,multi-seat account,Sonia Zamborsky (she/her/hers),Sonia,Zamborsky,"Marketing & Communications, Multifamily COO",Fannie Mae,fanniemae.com,sonia_zamborsky@fanniemae.com,https://www.linkedin.com/in/soniazamborsky/,holdout,8
+2,multi-seat account,Tim McCallum,Tim,McCallum,Single-Family Chief Client Officer,Fannie Mae,fanniemae.com,tim_mccallum@fanniemae.com,https://www.linkedin.com/in/tim-mccallum-6b0a0b8/,holdout,8
+2,multi-seat account,Anne Marie Darling,Anne,Darling,Co-Chief Operating Officer,Barclays,home.barclays,annemarie.darling@barclays.com,https://www.linkedin.com/in/anne-marie-darling-969420211/,holdout,8
+2,multi-seat account,Antoinette O'Neill,Antoinette,O'Neill,Investment Bank Chief Operating Officer,Barclays,home.barclays,antoinette.oneill@barclays.com,https://www.linkedin.com/in/antoinette-o-neill-47306293/,holdout,8
+2,multi-seat account,"Ashley Wiseberg, J.D, M.B.A",Ashley,Wiseberg,Chief Controls Office: Control Partner COO US CB Payment Operations,Barclays,home.barclays,ashley.wiseberg@barclays.com,https://www.linkedin.com/in/ashley-wiseberg-j-d-m-b-a-2ba51a50/,holdout,8
+2,multi-seat account,Dawn Mander,Dawn,Mander,"Strategy & Transformation Lead, VP - Group Economic Crime COO",Barclays,home.barclays,dawn.mander@barclays.com,https://www.linkedin.com/in/dawn-mander-b124911/,holdout,8
+2,multi-seat account,Golam F. Mainuddin,Golam,Mainuddin,"Chief Operating Officer (COO), Group Compliance",Barclays,home.barclays,golam.mainuddin@barclays.com,https://www.linkedin.com/in/golammainuddin/,holdout,8
+2,multi-seat account,Robert Signorile,Robert,Signorile,Gloabl Head Wholesale Fraud and Americas  Econimic Crime COO,Barclays,home.barclays,rob.signorile@barclays.com,https://www.linkedin.com/in/robert-signorile-a769378/,holdout,8
+2,multi-seat account,Sarah Olejar,Sarah,Olejar,Vice President - Cash Equities Business Manager / COO,Barclays,home.barclays,sarah.olejar@barclays.com,https://www.linkedin.com/in/sarah-olejar-2612a187/,holdout,8
+2,multi-seat account,Allen Zhao,Allen,Zhao,"Americas Regional COO for GFX, EM Rates, Commdities, and Prime services",HSBC,hsbc.com,allen.zhao@us.hsbc.com,https://www.linkedin.com/in/allen-zhao-b38ab54/,test,8
+2,multi-seat account,Ann Brusgaard,Ann,Brusgaard,"Chief Operating Officer, Banking",HSBC,hsbc.com,annbrusgaard@hsbc.com.hk,https://www.linkedin.com/in/ann-brusgaard-84878b9/,test,8
+2,multi-seat account,Erika Sufilka,Erika,Sufilka,"COO Institutional Client Group, Americas",HSBC,hsbc.com,erika.sufilka@us.hsbc.com,https://www.linkedin.com/in/erikacurtin/,test,8
+2,multi-seat account,Jill Rosmarin,Jill,Rosmarin,"COO, Institutional  FX & EM Rates Sales, Americas",HSBC,hsbc.com,jill.s.rosmarin@us.hsbc.com,https://www.linkedin.com/in/jill-rosmarin/,test,8
+2,multi-seat account,Kyle Witt,Kyle,Witt,Head of Business Management - US COO Office,HSBC,hsbc.com,kyle.r.witt@us.hsbc.com,https://www.linkedin.com/in/kyle-witt-bb361535/,test,8
+2,multi-seat account,Nikhil Sadhu,Nikhil,Sadhu,Treasury - Americas COO,HSBC,hsbc.com,nikhil.sadhu@us.hsbc.com,https://www.linkedin.com/in/nikhil-sadhu-0a6391/,test,8
+2,multi-seat account,Sara Dodds,Sara,Dodds,"Chief Operating Officer, US and Corporate & Institutional Banking",HSBC,hsbc.com,sara.dodds@us.hsbc.com,https://www.linkedin.com/in/sara-dodds-2346475/,test,8
+2,multi-seat account,Adam Drucker,Adam,Drucker,Chief Operating Officer,Merrill,ml.com,adam.drucker@ml.com,https://www.linkedin.com/in/adam-drucker-750ba51a/,test,8
+2,multi-seat account,Boris Rauls,Boris,Rauls,COO Retirement & Personal Wealth Solutions,Merrill,ml.com,boris.rauls@bofa.com,https://www.linkedin.com/in/boris-rauls/,test,8
+2,multi-seat account,Erin B.,Erin,B.,"COO Business Support Manager, Vice President",Merrill,ml.com,erin.bagdasarian@bofa.com,https://www.linkedin.com/in/erin-b-2b603744/,test,8
+2,multi-seat account,George Castellano,George,Castellano,"Division Chief Operating Officer, Managing Director",Merrill,ml.com,george_castellano@ml.com,https://www.linkedin.com/in/george-castellano-a96a8517/,test,8
+2,multi-seat account,Gordana Warga,Gordana,Warga,Chief Operating Officer for The Gsell Group,Merrill,ml.com,gordana.warga@ml.com,https://www.linkedin.com/in/gordanawarga/,test,8
+2,multi-seat account,Leilei Chen,Leilei,Chen,"Private Wealth Management, International and Institutional COO Team",Merrill,ml.com,leilei.y.chen@ml.com,https://www.linkedin.com/in/leilei-chen-89b9933/,test,8
+2,multi-seat account,Nick Connor,Nick,Connor,"Division Chief Operating Officer, Managing Director",Merrill,ml.com,nicholas_connor@ml.com,https://www.linkedin.com/in/nick-connor-018953221/,test,8
+2,multi-seat account,"Patricio Diaz, CFA",Patricio,Diaz,Merrill Chief Operating Officer,Merrill,ml.com,patricio_diaz@bofa.com,https://www.linkedin.com/in/patricio-diaz-cfa-3431771/,test,8
+2,multi-seat account,Jason Smith,Jason,Smith,Chief Operating Officer,Piedmont Healthcare,piedmont.org,jason.smith@piedmont.org,https://www.linkedin.com/in/jason-smith-57bb8077/,holdout,8
+2,multi-seat account,Josh Roberts,Josh,Roberts,"Chief Operating Officer, Piedmont Atlanta Hospital",Piedmont Healthcare,piedmont.org,joshwa.roberts@piedmont.org,https://www.linkedin.com/in/josh-roberts-a8343b1/,holdout,8
+2,multi-seat account,Kevin Clark,Kevin,Clark,Chief Operating Officer,Piedmont Healthcare,piedmont.org,kev.clark@piedmont.org,https://www.linkedin.com/in/kevin-clark-463a236/,holdout,8
+2,multi-seat account,Kevin Hoppe,Kevin,Hoppe,"Chief Operating Officer, Physician Enterprise",Piedmont Healthcare,piedmont.org,kevin.hoppe@piedmont.org,https://www.linkedin.com/in/kevin-hoppe-022b9a5/,holdout,8
+2,multi-seat account,Laura Drew,Laura,Drew,Chief Operating Officer,Piedmont Healthcare,piedmont.org,laura.drew@piedmont.org,https://www.linkedin.com/in/lauradrew/,holdout,8
+2,multi-seat account,Ryan Bowcut,Ryan,Bowcut,Chief Operating Officer,Piedmont Healthcare,piedmont.org,ryan.bowcut@piedmont.org,https://www.linkedin.com/in/ryan-bowcut-43638016/,holdout,8
+2,multi-seat account,Scott Ansede,Scott,Ansede,"Executive Director Physician Specialty Ops, COO University Health Care Physicians, Hospital V.P.",Piedmont Healthcare,piedmont.org,scott.ansede@piedmont.org,,holdout,8
+2,multi-seat account,"Vicki Kaiser, MBA",Vicki,Kaiser,Chief Operating Officer,Piedmont Healthcare,piedmont.org,vicki_kaiser@piedmont.org,https://www.linkedin.com/in/vicki-kaiser-mba-17539096/,holdout,8
+2,multi-seat account,Brian Adams,Brian,Adams,Chief Operating Officer- UH Portage Medical Center,University Hospitals,uhhospitals.org,brian.adams@uhhospitals.org,https://www.linkedin.com/in/brian-adams-913819211/,holdout,8
+2,multi-seat account,"George Ata, MBA, FACHE",George,FACHE,"Chief Operating Officer, UH Physician Services & Systems of Care",University Hospitals,uhhospitals.org,george.ata@uhhospitals.org,https://www.linkedin.com/in/george-ata-mba-fache-4b05504/,holdout,8
+2,multi-seat account,Jana Bazzoli,Jana,Bazzoli,"Chief Operating Officer, Women's and Children's Services",University Hospitals,uhhospitals.org,jana.bazzoli@uhhospitals.org,https://www.linkedin.com/in/jana-bazzoli-3938b925/,holdout,8
+2,multi-seat account,Jason Pirtz,Jason,Pirtz,Chief Operating Officer,University Hospitals,uhhospitals.org,jason.pirtz@uhhospitals.org,https://www.linkedin.com/in/jason-pirtz-938a39167/,holdout,8
+2,multi-seat account,"Jonathan C. Sague, DNP",Jonathan,Sague,Chief Operating Officer,University Hospitals,uhhospitals.org,jonathan.sague@uhhospitals.org,https://www.linkedin.com/in/jonathan-c-sague-dnp-39a23a3b/,holdout,8
+2,multi-seat account,Paul Hinchey MD MBA,Paul,Hinchey,Chief Operating Officer,University Hospitals,uhhospitals.org,paul.hinchey@uhhospitals.org,https://www.linkedin.com/in/paul-hinchey-md-mba-b3b7a428/,holdout,8
+2,multi-seat account,Robyn Strosaker,Robyn,Strosaker,Market President and Chief Operating Officer,University Hospitals,uhhospitals.org,robyn.strosaker@uhhospitals.org,https://www.linkedin.com/in/robyn-strosaker-886a3890/,holdout,8
+2,multi-seat account,Sylvia R.,Sylvia,R.,Chief Operating Officer | President  | Senior Executive,University Hospitals,uhhospitals.org,r@uhhospitals.org,https://www.linkedin.com/in/sylviaradziszewski/,holdout,8
+2,multi-seat account,Ben Sloop,Ben,Sloop,Chief Operating Officer,AmWins,amwins.com,ben.sloop@amwins.com,https://www.linkedin.com/in/bensloop/,test,7
+2,multi-seat account,Caroline Branch,Caroline,Branch,COO,AmWins,amwins.com,caroline.branch@amwins.com,https://www.linkedin.com/in/cmbranch/,test,7
+2,multi-seat account,Eric Mohr,Eric,Mohr,"Chief Operating Officer, Amwins Special Risk Underwriters",AmWins,amwins.com,eric.mohr@amwins.com,https://www.linkedin.com/in/eric-mohr-1252ba16/,test,7
+2,multi-seat account,Kristin Downey,Kristin,Downey,Chief Administrative Officer,AmWins,amwins.com,kristin.downey@amwins.com,https://www.linkedin.com/in/kristin-downey-b3015423/,test,7
+2,multi-seat account,Reggie Moore,Reggie,Moore,Senior VP and COO   AmWINS Specialty Casualty,AmWins,amwins.com,reggie.moore@amwins.com,https://www.linkedin.com/in/reggie-moore-b056707/,test,7
+2,multi-seat account,"Scott Case, CPA",Scott,Case,Chief Operating Officer,AmWins,amwins.com,scott.case@amwins.com,,test,7
+2,multi-seat account,"Brian Butler, MBA",Brian,Butler,Chief Operations Officer,Banner Health,bannerhealth.com,brian.butler@bannerhealth.com,https://www.linkedin.com/in/brian-butler-899b9b2a/,holdout,7
+2,multi-seat account,Dr. Latisha Brown,Latisha,Brown,Director of Behavioral Health Services & CCO,Banner Health,bannerhealth.com,latisha.brown@bannerhealth.com,https://www.linkedin.com/in/latishabrown01/,holdout,7
+2,multi-seat account,"Jayleen Casano, MBA, FACHE, BSN",Jayleen,BSN,Chief Operating Officer,Banner Health,bannerhealth.com,jayleen.casano@bannerhealth.com,https://www.linkedin.com/in/jayleencasano/,holdout,7
+2,multi-seat account,"Megan Parsons MSN, RN, LSS-GB",Megan,LSS-GB,Chief Operating Officer,Banner Health,bannerhealth.com,megan.parsons@bannerhealth.com,https://www.linkedin.com/in/megan-parsons-msn-rn-lss-gb-8a0358172/,holdout,7
+2,multi-seat account,"Monica M. Bejarano, MHA",Monica,MHA,Banner Medical Group VP & COO,Banner Health,bannerhealth.com,monica.bejarano@bannerhealth.com,https://www.linkedin.com/in/monica-m-bejarano-mha-001a01157/,holdout,7
+2,multi-seat account,"Tawnya Tretschok, MA",Tawnya,Tretschok,Chief Operating Officer,Banner Health,bannerhealth.com,tawnya.tretschok@bannerhealth.com,https://www.linkedin.com/in/tawnya-tretschok-ma-01430138/,holdout,7
+2,multi-seat account,Brandy Moore,Brandy,Moore,Chief Operating Officer,Christus Health,christushealth.org,brandy.moore@christushealth.org,https://www.linkedin.com/in/brandy-moore-5834537/,holdout,7
+2,multi-seat account,"Gary Foster, FACHE, MSM, BSN, RN",Gary,BSN,Chief Operating Officer,Christus Health,christushealth.org,gary.foster@christushealth.org,https://www.linkedin.com/in/gary-foster/,holdout,7
+2,multi-seat account,George Kitzmiller,George,Kitzmiller,COO,Christus Health,christushealth.org,george.kitzmiller@christushealth.org,https://www.linkedin.com/in/george-kitzmiller-6781452/,holdout,7
+2,multi-seat account,"Gregory Fratantoni, MBA, FACHE",Gregory,FACHE,"Vice President, Chief Transformation Officer",Christus Health,christushealth.org,gregory.fratantoni@christushealth.org,https://www.linkedin.com/in/gregfratantoni/,holdout,7
+2,multi-seat account,Jennifer Beal,Jennifer,Beal,"SVP, CHRISTUS Health & CAO, CHRISTUS Trinity Clinic",Christus Health,christushealth.org,jennifer.beal@christushealth.org,https://www.linkedin.com/in/jennifer-beal-4a673323/,holdout,7
+2,multi-seat account,Bernard Jore,Bernard,Jore,Chief Operating Officer,Corewell Health,corewellhealth.org,bernard.jore@corewellhealth.org,https://www.linkedin.com/in/bernard-jore-a5584574/,holdout,7
+2,multi-seat account,"Chad Tuttle, MBA",Chad,Tuttle,Chief Operating Officer,Corewell Health,corewellhealth.org,chad.tuttle@corewellhealth.org,https://www.linkedin.com/in/chadtuttle/,holdout,7
+2,multi-seat account,Jonathan Ashford,Jonathan,Ashford,Chief Operating Officer and Vice President of Surgical Services Corewell Health,Corewell Health,corewellhealth.org,jonathan.ashford@corewellhealth.org,https://www.linkedin.com/in/jonathan-ashford-9b62846b/,holdout,7
+2,multi-seat account,Joshua Halverson,Joshua,Halverson,Senior Vice President / COO,Corewell Health,corewellhealth.org,joshua.halverson@corewellhealth.org,https://www.linkedin.com/in/joshua-halverson-55829311/,holdout,7
+2,multi-seat account,Kristie Smith,Kristie,Smith,"Chief Operating Officer, Greenville, Big Rapids and Reed City Hospitals",Corewell Health,corewellhealth.org,kristie.smith@corewellhealth.org,https://www.linkedin.com/in/kristie-smith-b35638202/,holdout,7
+2,multi-seat account,"Liz Youngblood MBA, RN, FACHE",Liz,FACHE,"SVP / Chief Operating Officer Hospitals & Post Acute Care, East Region",Corewell Health,corewellhealth.org,elizabeth.youngblood@corewellhealth.org,,holdout,7
+2,multi-seat account,Walter Lorang,Walter,Lorang,Executive Director & Chief Operating Officer - Arvon CIN,Corewell Health,corewellhealth.org,walter.lorang@corewellhealth.org,https://www.linkedin.com/in/walter-lorang-12188544/,holdout,7
+2,multi-seat account,Bill Morrill,Bill,Morrill,"VP, Chief Operating Officer of Middle Market",Hanover Insurance,hanover.com,wmorrill@hanover.com,https://www.linkedin.com/in/bill-morrill-1b735010/,holdout,7
+2,multi-seat account,David Lovely,David,Lovely,EVP and Chief Claims Officer,Hanover Insurance,hanover.com,dlovely@hanover.com,https://www.linkedin.com/in/djlovely/,holdout,7
+2,multi-seat account,Dick Lavey,Dick,Lavey,Chief Operating Officer,Hanover Insurance,hanover.com,rlavey@hanover.com,https://www.linkedin.com/in/dick-lavey-2b26611/,holdout,7
+2,multi-seat account,Gayle Falvey,Gayle,Falvey,SVP & COO Commercial and Specialty Operations,Hanover Insurance,hanover.com,gfalvey@hanover.com,https://www.linkedin.com/in/gayle-falvey-7879a13/,holdout,7
+2,multi-seat account,Kimberly Kennedy,Kimberly,Kennedy,Chief Operating Officer & Vice President of Personal Lines Strategic Operations,Hanover Insurance,hanover.com,kikennedy@hanover.com,https://www.linkedin.com/in/kimberly-kennedy-59413323/,holdout,7
+2,multi-seat account,Mark Welzenbach,Mark,Welzenbach,Executive Vice President and Chief Claims Officer,Hanover Insurance,hanover.com,mwelzenbach@hanover.com,https://www.linkedin.com/in/mark-welzenbach-044344259/,holdout,7
+2,multi-seat account,Sherrie Steen,Sherrie,Steen,VP Chief Operations Officer Specialty,Hanover Insurance,hanover.com,ssteen@hanover.com,https://www.linkedin.com/in/sherrie-steen-64b20728/,holdout,7
+2,multi-seat account,Joel Leone,Joel,Leone,Chief Operating Officer,HCA Healthcare,hcahealthcare.com,joel.leone@hcahealthcare.com,https://www.linkedin.com/in/joel-leone-a873a2103/,test,7
+2,multi-seat account,Brett Brosseau,Brett,Brosseau,"VP & COO, Houston Methodist Baytown",Houston Methodist,houstonmethodist.org,bbrosseau@houstonmethodist.org,https://www.linkedin.com/in/brettbrosseau/,test,7
+2,multi-seat account,Heidi Reigel,Heidi,Reigel,Chief Operating Officer,Houston Methodist,houstonmethodist.org,hreigel@houstonmethodist.org,https://www.linkedin.com/in/heidi-reigel-39032b36/,test,7
+2,multi-seat account,Jen Hauler Julian,Jen,Julian,Chief Operating Officer,Houston Methodist,houstonmethodist.org,jj@houstonmethodist.org,https://www.linkedin.com/in/jen-hauler-julian-01083bb/,test,7
+2,multi-seat account,Julie Peterson,Julie,Peterson,VP and Chief Operating Officer,Houston Methodist,houstonmethodist.org,jpeterson@houstonmethodist.org,https://www.linkedin.com/in/julie-peterson-03588169/,test,7
+2,multi-seat account,"Marco Mimbela, Ph.D., M.S.",Marco,Mimbela,Senior Project Manager to COO and CEO,Houston Methodist,houstonmethodist.org,mmimbela@houstonmethodist.org,https://www.linkedin.com/in/marco-mimbela-ph-d-m-s-bb7898134/,test,7
+2,multi-seat account,Barry Kaufman,Barry,Kaufman,Chief Operations Officer,KeyBank,key.com,barry_l_kaufman@keybank.com,,test,7
+2,multi-seat account,Brian Martinez,Brian,Martinez,"COO & Co-Head of Product, Commercial Bank",KeyBank,key.com,brian_martinez@keybank.com,https://www.linkedin.com/in/brian-martinez-25446a29/,test,7
+2,multi-seat account,Joe Calabrese,Joe,Calabrese,Chief Operating Officer at Key Wealth Management,KeyBank,key.com,joe_calabrese@keybank.com,https://www.linkedin.com/in/calabresejoe/,test,7
+2,multi-seat account,Jonathan Theberge,Jonathan,Theberge,"COO, Key Investment Services; Head of Investment Platforms & Product, Key Wealth",KeyBank,key.com,jonathan.theberge@key.com,https://www.linkedin.com/in/jonathan-theberge-84210347/,test,7
+2,multi-seat account,Oliver Kardos,Oliver,Kardos,"Business Banking Chief Operating Officer, KeyBank, NA",KeyBank,key.com,oliver_kardos@keybank.com,https://www.linkedin.com/in/oliver-kardos-78784856/,test,7
+2,multi-seat account,Tony Amador,Tony,Amador,"Chief Operating Officer of Key Technology, Operations, and Services Group",KeyBank,key.com,anthony_e_amador@keybank.com,https://www.linkedin.com/in/tony-amador-3269928/,test,7
+2,multi-seat account,Ajani Dunn,Ajani,Dunn,Chief Administrative Officer (CAO),Mayo Clinic,mayoclinic.org,dunn.ajani@mayo.edu,https://www.linkedin.com/in/ajani-dunn-284574/,holdout,7
+2,multi-seat account,Biju Samkutty,Biju,Samkutty,"Chief Operating Officer, International and Enterprise Automation",Mayo Clinic,mayoclinic.org,biju.samkutty@mayo.edu,https://www.linkedin.com/in/biju-samkutty-1567b348/,holdout,7
+2,multi-seat account,Charlotte Martin,Charlotte,Martin,Chief Operating Officer,Mayo Clinic,mayoclinic.org,martin.charlotte@mayo.edu,https://www.linkedin.com/in/charlotte-martin-151685127/,holdout,7
+2,multi-seat account,Christina Zorn,Christina,Zorn,"Chief Administrative Officer, Mayo Clinic",Mayo Clinic,mayoclinic.org,zorn.christina@mayo.edu,https://www.linkedin.com/in/christina-zorn/,holdout,7
+2,multi-seat account,Maneesh Goyal,Maneesh,Goyal,"Chief Operating Officer, Mayo Clinic Platform",Mayo Clinic,mayoclinic.org,goyal.maneesh@mayo.edu,https://www.linkedin.com/in/maneesh-goyal-2272060/,holdout,7
+2,multi-seat account,Natalie Caine,Natalie,Caine,Chief Administrative Officer Mayo Clinic Rochester,Mayo Clinic,mayoclinic.org,caine.natalie@mayo.edu,https://www.linkedin.com/in/natalie-caine-aa39955/,holdout,7
+2,multi-seat account,Roshanak Didehban,Roshanak,Didehban,Chief Administrative Officer,Mayo Clinic,mayoclinic.org,roshanak.didehban@mayo.edu,https://www.linkedin.com/in/roshanakdidehban/,holdout,7
+2,multi-seat account,Cameron McKennitt,Cameron,McKennitt,"Head of Transformation, New York/Chief Transformation Officer, US Gas",National Grid,nationalgrid.com,cameron.mckennitt@nationalgrid.com,https://www.linkedin.com/in/cameronmckennitt/,test,7
+2,multi-seat account,Christopher Laird,Christopher,Laird,Chief Operating Officer New England Electric,National Grid,nationalgrid.com,christopher.laird@nationalgrid.com,https://www.linkedin.com/in/christopher-laird-189270b0/,test,7
+2,multi-seat account,Daniel Davies,Daniel,Davies,Chief Transformation Officer,National Grid,nationalgrid.com,daniel.davies1@nationalgrid.com,https://www.linkedin.com/in/daniel-davies-7453b795/,test,7
+2,multi-seat account,Matthew Barnett,Matthew,Barnett,Chief Operating Officer,National Grid,nationalgrid.com,matthew.barnett@nationalgrid.com,https://www.linkedin.com/in/matthew-barnett-20262a26/,test,7
+2,multi-seat account,Sarah Orban Salati,Sarah,Salati,Chief Commercial Officer (CCO) National Grid Ventures US,National Grid,nationalgrid.com,sarah.salati@nationalgrid.com,https://www.linkedin.com/in/sarah-orban-salati-811452/,test,7
+2,multi-seat account,Shri Madhusudhan,Shri,Madhusudhan,"Chief Administrative Officer, NY",National Grid,nationalgrid.com,srividya.madhusudhan@nationalgrid.com,https://www.linkedin.com/in/shri-madhusudhan-43a48a4/,test,7
+2,multi-seat account,Tim Moore,Tim,Moore,"Chief Operations Officer, Gas - NE",National Grid,nationalgrid.com,timothy.moore@nationalgrid.com,https://www.linkedin.com/in/tim-moore-903b0015/,test,7
+2,multi-seat account,Aric Kinney,Aric,Kinney,Chief Operating Officer,Ascension Health,ascension.org,aric.kinney@ascension.org,https://www.linkedin.com/in/aric-kinney-41b07a11/,test,6
+2,multi-seat account,Derrick Naegler,Derrick,Naegler,Chief Operating Officer,Ascension Health,ascension.org,derrick.naegler@ascension.org,https://www.linkedin.com/in/derrick-naegler-b54562109/,test,6
+2,multi-seat account,Ellie Michael,Ellie,Michael,Chief Operating Officer,Ascension Health,ascension.org,ellie.michael@ascension.org,,test,6
+2,multi-seat account,James Stepien,James,Stepien,Chief Operating Officer,Ascension Health,ascension.org,james.stepien@ascension.org,https://www.linkedin.com/in/james-stepien-7a1a827/,test,6
+2,multi-seat account,Carlos Medina Occelli,Carlos,Occelli,Chief Operating Officer - US & Canada,Mercer,mercer.com,oc@marsh.com,https://www.linkedin.com/in/carlos-medina-occelli-56379b8/,test,6
+2,multi-seat account,Christopher Rose,Christopher,Rose,"Chief Operating Officer, US Health & Wealth",Mercer,mercer.com,christopher.rose@mercer.com,https://www.linkedin.com/in/christopher-rose-79b32a27/,test,6
+2,multi-seat account,Elena Ceballos,Elena,Ceballos,"COO and Special Projects Leader, Career Product",Mercer,mercer.com,elena.ceballos@mercer.com,https://www.linkedin.com/in/elena-ceballos-40a1a2/,test,6
+2,multi-seat account,Jeff Elliott,Jeff,Elliott,Global Chief Operating Officer,Mercer,mercer.com,jeff.elliott@mercer.com,https://www.linkedin.com/in/jeffwelliott/,test,6
+2,multi-seat account,Jon Gezotis,Jon,Gezotis,Chief Operating Officer,Mercer,mercer.com,jon.gezotis@mercer.com,https://www.linkedin.com/in/jon-gezotis-a9193b4/,test,6
+2,multi-seat account,Stephen Gouthro,Stephen,Gouthro,"Global Chief Operating Officer, Investment Solutions",Mercer,mercer.com,stephen.gouthro@mercer.com,https://www.linkedin.com/in/stephen-gouthro-3793647/,test,6
+2,multi-seat account,Chris Pinney,Chris,Pinney,"VP, CCO Workforce Planning & Learning",Navy Federal,navyfederal.org,chris_pinney@navyfederal.org,https://www.linkedin.com/in/chris-pinney-2b9967184/,test,6
+2,multi-seat account,Christopher Lakian,Christopher,Lakian,Contact Center-MLO • GPO & CCO,Navy Federal,navyfederal.org,christopher_lakian@navyfederal.org,https://www.linkedin.com/in/christopher-lakian-41a01874/,test,6
+2,multi-seat account,Davon Branch,Davon,Branch,MLO CCO III,Navy Federal,navyfederal.org,davon_branch@navyfederal.org,https://www.linkedin.com/in/davon-branch-317443147/,test,6
+2,multi-seat account,Kara Cardona,Kara,Cardona,Chief Operating Officer,Navy Federal,navyfederal.org,kara_cardona@navyfederal.org,https://www.linkedin.com/in/kara-cardona-2895012b/,test,6
+2,multi-seat account,Krystal Hughes,Krystal,Hughes,"AVP, CCO Quality, Training, & Communications",Navy Federal,navyfederal.org,krystal_hughes@navyfederal.org,https://www.linkedin.com/in/krystal-hughes-451339182/,test,6
+2,multi-seat account,Rebecca Villagomez,Rebecca,Villagomez,MSR V CCO Digital Assist,Navy Federal,navyfederal.org,rebecca_villagomez@navyfederal.org,https://www.linkedin.com/in/rebecca-miczuga-678536b1/,test,6
+2,multi-seat account,Andrew Leeds,Andrew,Leeds,Vice President and Chief Claims Officer,Plymouth Rock,plymouthrock.com,aleeds@plymouthrock.com,https://www.linkedin.com/in/andrew-leeds-32b4538/,holdout,6
+2,multi-seat account,Brooke Bass,Brooke,Bass,Chief Operating Officer,Plymouth Rock,plymouthrock.com,bbass@plymouthrock.com,https://www.linkedin.com/in/bmbass17/,holdout,6
+2,multi-seat account,Kevin Zygmunt,Kevin,Zygmunt,"Chief Operating Officer, Home",Plymouth Rock,plymouthrock.com,kzygmunt@plymouthrock.com,https://www.linkedin.com/in/kevin-zygmunt-6aa3586/,holdout,6
+2,multi-seat account,Scott Kwiker,Scott,Kwiker,"Chief Operating Officer, Plymouth Rock Home Assurance",Plymouth Rock,plymouthrock.com,skwiker@plymouthrock.com,https://www.linkedin.com/in/scott-kwiker-072ab527/,holdout,6
+2,multi-seat account,Chris Lane,Chris,Lane,Chief Accounting Officer (CAO),Texas Health Resources,texashealth.org,chrislane@texashealth.org,https://www.linkedin.com/in/chris-lane-cpa-67840221/,holdout,6
+2,multi-seat account,Josh Floren,Josh,Floren,"Executive Vice President, Hospital Channel Chief Operating Officer",Texas Health Resources,texashealth.org,joshfloren@texashealth.org,https://www.linkedin.com/in/josh-floren-2702a2a/,holdout,6
+2,multi-seat account,Kathleen (Kathi) Cox,Kathleen,Cox,"Chief Operating Officer, Ambulatory & Virtual Channel",Texas Health Resources,texashealth.org,kathleencox@texashealth.org,https://www.linkedin.com/in/kathleen-kathi-cox-a1b3436/,holdout,6
+2,multi-seat account,Mae Centeno,Mae,Centeno,COO/CNO Virtual Care Center and Virtual Care Delivery,Texas Health Resources,texashealth.org,maecenteno@texashealth.org,https://www.linkedin.com/in/mae-centeno-83639289/,holdout,6
+2,multi-seat account,Natalie Whitmer,Natalie,Whitmer,VP/COO,Texas Health Resources,texashealth.org,nataliewhitmer@texashealth.org,https://www.linkedin.com/in/natalieckelly/,holdout,6
+2,multi-seat account,"Andrew Fierro-Peretti, CPA",Andrew,Fierro-Peretti,VP Chief Accounting Officer (CAO),UCSF Health,ucsfhealth.org,andrew.fierro-peretti@ucsf.edu,https://www.linkedin.com/in/andrew-fierro-peretti-cpa-066b7690/,holdout,6
+2,multi-seat account,David Morgan,David,Morgan,VP/COO Faculty Practice and Ambulatory Services,UCSF Health,ucsfhealth.org,david.morgan@ucsf.edu,https://www.linkedin.com/in/david-morgan-83297657/,holdout,6
+2,multi-seat account,James Bennan,James,Bennan,Chief Operating Officer - Community Hospital  Division,UCSF Health,ucsfhealth.org,james.bennan@ucsf.edu,https://www.linkedin.com/in/james-bennan-aa57066/,holdout,6
+2,multi-seat account,Laurel Bray-Hanin,Laurel,Bray-Hanin,Vice President and Chief Operating Officer Adult Cancer Services,UCSF Health,ucsfhealth.org,laurel.bray-hanin@ucsf.edu,https://www.linkedin.com/in/laurel-bray-hanin-20a5b513a/,holdout,6
+2,multi-seat account,"Paul Myoung, FACHE",Paul,FACHE,VP/COO Adult Services,UCSF Health,ucsfhealth.org,paul.myoung@ucsf.edu,https://www.linkedin.com/in/pmyoung/,holdout,6
+2,multi-seat account,Colleen Askvig,Colleen,Askvig,Chief Operating Officer,Centene,centene.com,colleen.askvig@centene.com,https://www.linkedin.com/in/colleen-askvig-5b11b38/,holdout,5
+2,multi-seat account,Rayshawn Clay,Rayshawn,Clay,Chief Operating Officer Health Plan,Centene,centene.com,rclay@centene.com,https://www.linkedin.com/in/rayshawn-clay-mba-cpc-4b99234/,holdout,5
+2,multi-seat account,William Kruegel,William,Kruegel,Chief Operating Officer - Sunshine Health,Centene,centene.com,wkruegel@centene.com,https://www.linkedin.com/in/william-kruegel-b7641a19/,holdout,5
+2,multi-seat account,Alexander V. Lodi,Alexander,Lodi,COO - Treasury & Wholesale Payments,Citizens Bank,citizensbank.com,alexander.lodi@citizensbank.com,https://www.linkedin.com/in/alexandervlodi/,test,5
+2,multi-seat account,Domenick Forte,Domenick,Forte,Chief Operating Officer - Consumer Banking,Citizens Bank,citizensbank.com,domenick.forte@citizensbank.com,,test,5
+2,multi-seat account,Sarah Niederberger Becker,Sarah,Becker,"Chief Operating Officer, Commercial Real Estate",Citizens Bank,citizensbank.com,sarah.becker@citizensbank.com,https://www.linkedin.com/in/sarah-niederberger-becker-420a6933/,test,5
+2,multi-seat account,Shannon Lannigan,Shannon,Lannigan,"Senior Vice President, COO",Citizens Bank,citizensbank.com,shannon.lannigan@citizensbank.com,https://www.linkedin.com/in/shannon-lannigan-83821411/,test,5
+2,multi-seat account,Atinder (AJ) Singh,Atinder,Singh,"COO, Retirement Services, Control Operations and Service Transformation",Corebridge Financial,corebridgefinancial.com,atinder.singh@corebridgefinancial.com,https://www.linkedin.com/in/atinder-aj-singh-a35847/,holdout,5
+2,multi-seat account,Christopher Smith,Christopher,Smith,Executive Vice President and Chief Operating Officer,Corebridge Financial,corebridgefinancial.com,chris.smith@corebridgefinancial.com,https://www.linkedin.com/in/christopher-1-smith/,holdout,5
+2,multi-seat account,Kara R Boling,Kara,Boling,Chief Operations Officer - Retirement Services,Corebridge Financial,corebridgefinancial.com,kara.boling@corebridgefinancial.com,https://www.linkedin.com/in/kara-r-boling-71506873/,holdout,5
+2,multi-seat account,Matthew Dawes,Matthew,Dawes,Managing Director / COO - Global Capital Markets,Corebridge Financial,corebridgefinancial.com,matthew.dawes@corebridgefinancial.com,https://www.linkedin.com/in/matthew-dawes-286b2b2/,holdout,5
+2,multi-seat account,Nick Intrieri,Nick,Intrieri,COO of Individual Life and Retirement Operations,Corebridge Financial,corebridgefinancial.com,nicholas.intrieri@corebridgefinancial.com,https://www.linkedin.com/in/nick-intrieri-4656867/,holdout,5
+2,multi-seat account,Charles D.,Charles,D.,"VP, COO Managed Services Customer Unit Verizon",Ericsson,ericsson.com,chuck.delacey@ericsson.com,https://www.linkedin.com/in/charles-d-4b998912/,test,5
+2,multi-seat account,Christopher Blackwood,Christopher,Blackwood,"Chief Operations Officer, Ericsson Managed Services (MS COO)",Ericsson,ericsson.com,c@ericsson.com,https://www.linkedin.com/in/christopher-blackwood-4b70734/,test,5
+2,multi-seat account,Igor Maurell,Igor,Maurell,Vice-President & Group Chief Transformation Officer,Ericsson,ericsson.com,igor.maurell@ericsson.com,https://www.linkedin.com/in/igor-maurell-b221ab2/,test,5
+2,multi-seat account,Ross Price,Ross,Price,MS Chief Operating Officer,Ericsson,ericsson.com,ross.price@ericsson.com,https://www.linkedin.com/in/ross-price-%22whatever-it-takes-get-it-done%22-114203b/,test,5
+2,multi-seat account,David Simmons,David,Simmons,Chief Operations Officer,Intermountain Health,intermountainhealthcare.org,david.simmons@intermountainhealthcare.org,https://www.linkedin.com/in/david-simmons-044605100/,test,5
+2,multi-seat account,Josh Rohatinsky,Josh,Rohatinsky,Chief Operating Officer,Intermountain Health,intermountainhealthcare.org,josh.rohatinsky@intermountainhealthcare.org,https://www.linkedin.com/in/josh-rohatinsky/,test,5
+2,multi-seat account,Mark Evans,Mark,Evans,Chief Operating Officer,Intermountain Health,intermountainhealthcare.org,mark.evans@intermountainhealthcare.org,https://www.linkedin.com/in/mark-evans-66848628/,test,5
+2,multi-seat account,Nannette B.,Nannette,B.,Chief Operating Officer,Intermountain Health,intermountainhealthcare.org,nannette.berensen@intermountainhealthcare.org,https://www.linkedin.com/in/nannette-b-9b120852/,test,5
+2,multi-seat account,Scott Baker,Scott,Baker,Chief Administrative Officer (CAO) - Intermountain Healthcare Medical Groups,Intermountain Health,intermountainhealthcare.org,scott.baker@sclhealth.org,https://www.linkedin.com/in/scott-baker-70014b18/,test,5
+2,multi-seat account,Debra Griffin,Debra,Griffin,"Vice President, Chief Operations Officer at Nationwide Bank",Nationwide Mutual Insurance,nationwide.com,griffd1@nationwide.com,,test,5
+2,multi-seat account,Jim Rabenstine,Jim,Rabenstine,CCO,Nationwide Mutual Insurance,nationwide.com,jamesr@nationwide.com,https://www.linkedin.com/in/jim-rabenstine-41b067135/,test,5
+2,multi-seat account,Mark Berven,Mark,Berven,"President and Chief Operating Officer at Nationwide, leading P&C Insurance",Nationwide Mutual Insurance,nationwide.com,bervenm@nationwide.com,https://www.linkedin.com/in/mark-berven-5230b826/,test,5
+2,multi-seat account,Michelle Samuel,Michelle,Samuel,"SVP, Chief Customer Officer",Nationwide Mutual Insurance,nationwide.com,samuelm@nationwide.com,https://www.linkedin.com/in/michelle-samuel-0577b314/,test,5
+2,multi-seat account,Timothy Minnich,Timothy,Minnich,"Business Unit COO, Management Liability & Specialty",Nationwide Mutual Insurance,nationwide.com,timothy.minnich@nationwide.com,https://www.linkedin.com/in/timothy-minnich-0001a65/,test,5
+2,multi-seat account,Mital Patel,Mital,Patel,"Executive Vice President, Chief Operating Officer",RadNet,radnet.com,mital.patel@radnet.com,https://www.linkedin.com/in/mital-patel-radnet/,holdout,5
+2,multi-seat account,Norm Hames Hames,Norm,Hames,coo,RadNet,radnet.com,norman.hames@radnet.com,https://www.linkedin.com/in/norm-hames-hames-21b8848/,holdout,5
+2,multi-seat account,Sanjog Misra,Sanjog,Misra,Chief Commercial Officer (CCO),RadNet,radnet.com,sanjog.misra@radnet.com,https://www.linkedin.com/in/sanjog-misra-3a303558/,holdout,5
+2,multi-seat account,Steve Forthuber,Steve,Forthuber,President & COO,RadNet,radnet.com,steve.forthuber@radnet.com,https://www.linkedin.com/in/steve-forthuber-b616598/,holdout,5
+2,multi-seat account,Vickie Bedel,Vickie,Bedel,SVP of Operations and Chief Digital Innovation Officer,RadNet,radnet.com,victoria.bedel@radnet.com,https://www.linkedin.com/in/vickie-bedel-1788659/,holdout,5
+2,multi-seat account,Caroline Battles,Caroline,Battles,Chief Administrative Officer,SSM Health,ssmhealth.com,caroline.battles@ssmhealth.com,https://www.linkedin.com/in/caroline-pelot-battles/,holdout,5
+2,multi-seat account,John Nguyen,John,Nguyen,Chief Administrative Officer (CAO),SSM Health,ssmhealth.com,john.t.nguyen@ssmhealth.com,https://www.linkedin.com/in/john-nguyen-5303496/,holdout,5
+2,multi-seat account,"Kelly Baumer, FACHE",Kelly,FACHE,Chief Operating Officer SSM Health Saint Louis University Hospital and St. Mary’s Hospital-St. Louis,SSM Health,ssmhealth.com,kelly.baumer@ssmhealth.com,https://www.linkedin.com/in/kelly-baumer-fache-04558b7/,holdout,5
+2,multi-seat account,Kyle Nondorf,Kyle,Nondorf,Regional Chief Operating Officer - Mid Missouri/Oklahoma,SSM Health,ssmhealth.com,kyle.nondorf@ssmhealth.com,https://www.linkedin.com/in/kyle-nondorf-15b74630/,holdout,5
+2,multi-seat account,Tina Garrison,Tina,Garrison,Regional Chief Operating Officer -- St. Louis and Southern Illinois Regions,SSM Health,ssmhealth.com,tina.garrison@ssmhealth.com,https://www.linkedin.com/in/tina-garrison-4076614/,holdout,5
+2,multi-seat account,Carolyn Albin,Carolyn,Albin,Executive Director | Chief Operating Officer Orthopedics Arizona Sports Medicine Center,Tenet Healthcare,tenethealth.com,carolyn.albin@tenethealth.com,https://www.linkedin.com/in/carolyn-albin-5a626ba4/,test,5
+2,multi-seat account,Joseph Warburton,Joseph,Warburton,"Chief Operating Officer, Abrazo Health Arrowhead Campus",Tenet Healthcare,tenethealth.com,joseph.warburton@tenethealth.com,https://www.linkedin.com/in/joseph-warburton-2048455b/,test,5
+2,multi-seat account,Mary Bernardo,Mary,Bernardo,"Chief Operating Officer, Tenet Physician Resources Arizona Market",Tenet Healthcare,tenethealth.com,mary.bernardo@tenethealth.com,,test,5
+2,multi-seat account,Rob Stantus,Rob,Stantus,Chief Operating Officer,Tenet Healthcare,tenethealth.com,rob.stantus@tenethealth.com,https://www.linkedin.com/in/rob-stantus-aa4ba87/,test,5
+2,multi-seat account,"Stephen Newman, M.D.",Stephen,Newman,Vice Chairman and Chief Operating Officer,Tenet Healthcare,tenethealth.com,stephen.newman@tenethealth.com,https://www.linkedin.com/in/stephen-newman-m-d-1bb71a51/,test,5
+2,multi-seat account,Chris Fleming,Chris,Fleming,"COO, Individual Solutions",Transamerica,transamerica.com,chris.fleming@transamerica.com,https://www.linkedin.com/in/chris-fleming-2602519/,holdout,5
+2,multi-seat account,Joshua Durham,Joshua,Durham,Chief Operating Officer- Transamerica Asset Management,Transamerica,transamerica.com,joshua.durham@transamerica.com,https://www.linkedin.com/in/joshuadurham/,holdout,5
+2,multi-seat account,Julie Spore,Julie,Spore,Chief Administrative Officer (CAO),Transamerica,transamerica.com,julie.spore@transamerica.com,https://www.linkedin.com/in/julie-spore-a8937b38/,holdout,5
+2,multi-seat account,"Lori Pope, CPCU",Lori,Pope,Chief Transformation Officer & Head of Strategic Planning Office / Third Party Strategy - WFG,Transamerica,transamerica.com,lori.pope@transamerica.com,https://www.linkedin.com/in/lori-pope-cpcu-95b88321/,holdout,5
+2,multi-seat account,Cece Baute Mavico,Cece,Mavico,"Head of Wealth Oversight, Governance, and Risk Execution;  Truist Wealth Chief Operating Officer",Truist,truist.com,cece.mavico@truist.com,,test,5
+2,multi-seat account,Musselwhite. Virginia,Musselwhite.,Virginia,COO Governance Lead,Truist,truist.com,virginia.musselwhite@truist.com,https://www.linkedin.com/in/musselwhite-virginia-a2a4106b/,test,5
+2,multi-seat account,Scott Stanzel,Scott,Stanzel,Chief Communications Officer (CCO),Truist,truist.com,scott.stanzel@truist.com,https://www.linkedin.com/in/scott-stanzel-7a688b/,test,5
+2,multi-seat account,Tonya Belfield Tyson,Tonya,Tyson,"Wealth Brokerage Delivery Director, Chief Operations Officer",Truist,truist.com,tonya.tyson@truist.com,,test,5
+2,multi-seat account,Vonnie Pridemore,Vonnie,Pridemore,"Wealth Brokerage Chief Administrative Officer at Truist Investment Services, Inc.",Truist,truist.com,vonnie.pridemore@truist.com,,test,5
+2,multi-seat account,"Chris Jackson, MSN, RN, CENP, CNOR",Chris,CNOR,Chief Operations Officer,UnityPoint Health,unitypoint.org,christina.jackson@unitypoint.org,,test,5
+2,multi-seat account,Jenni Friedly,Jenni,Friedly,Vice President/Chief Operating Officer,UnityPoint Health,unitypoint.org,jenni.friedly@unitypoint.org,https://www.linkedin.com/in/jenni-friedly-950b7858/,test,5
+2,multi-seat account,Jessica Meisner,Jessica,Meisner,Chief Administrative Officer (CAO),UnityPoint Health,unitypoint.org,jessica.meisner@unitypoint.org,https://www.linkedin.com/in/jessica-meisner-49946714b/,test,5
+2,multi-seat account,Michael Namanny,Michael,Namanny,Chief Operating Officer UnityPoint Clinc,UnityPoint Health,unitypoint.org,michael.namanny@unitypoint.org,https://www.linkedin.com/in/michael-namanny-843a1688/,test,5
+2,multi-seat account,Philip Fitzgerald,Philip,Fitzgerald,Market Chief Operating Officer,UnityPoint Health,unitypoint.org,philip.fitzgerald@unitypoint.org,https://www.linkedin.com/in/philip-fitzgerald-a5296315b/,test,5
+2,multi-seat account,Aldemaro A.,Aldemaro,A.,Chief Transformation Officer,AES,aes.com,aldemaro.algarra@aes.com,,holdout,4
+2,multi-seat account,Evaristo Leonardi,Evaristo,Leonardi,Chief Operating Officer (COO).  Energy Infrastructure and International Markets SBU,AES,aes.com,evaristo.leonardi@aes.com,https://www.linkedin.com/in/evaristo-leonardi-14b3295/,holdout,4
+2,multi-seat account,Anthony R. Slimowicz,Anthony,Slimowicz,Chief Operating Officer of MGA and Specialty Risk,Amynta,amyntagroup.com,anthony.slimowicz@amyntagroup.com,https://www.linkedin.com/in/anthony-r-slimowicz-ba381710/,holdout,4
+2,multi-seat account,Jake Wilson,Jake,Wilson,Chief Operating Officer - Consumer,Amynta,amyntagroup.com,jake.wilson@amyntagroup.com,https://www.linkedin.com/in/jake-wilson-7a654711/,holdout,4
+2,multi-seat account,John Gray,John,Gray,Senior Vice President & Chief Operating Officer,Amynta,amyntagroup.com,john.gray@amyntagroup.com,,holdout,4
+2,multi-seat account,Scott Sadowsky,Scott,Sadowsky,"Executive Vice President, CUO & COO",Amynta,amyntagroup.com,scott.sadowsky@amyntagroup.com,,holdout,4
+2,multi-seat account,"Fowler Williams, CMB",Fowler,Williams,Chief Operating Officer,United Bank,bankwithunited.com,fowler.williams@bankwithunited.com,,holdout,4
+2,multi-seat account,Jim Consagra,Jim,Consagra,Chief Operating Officer,United Bank,bankwithunited.com,james.consagra@bankwithunited.com,https://www.linkedin.com/in/jim-consagra-6a50b258/,holdout,4
+2,multi-seat account,"Ross Draber, CFA",Ross,Draber,Chief Operating Officer,United Bank,bankwithunited.com,ross.draber@bankwithunited.com,https://www.linkedin.com/in/ross-draber-cfa-6b2a7319/,holdout,4
+2,multi-seat account,Tom Mudlaff,Tom,Mudlaff,"President, United Brokerage Services, Inc / Chief Operating Officer, United Wealth Management",United Bank,bankwithunited.com,tom.mudlaff@bankwithunited.com,https://www.linkedin.com/in/tom-mudlaff-5237192/,holdout,4
+2,multi-seat account,Ann Marie Wright,Ann,Wright,US Chief Administrative Officer,BMO,bmo.com,annmarie.wright@bmo.com,,holdout,4
+2,multi-seat account,Augustin de Kerversau,Augustin,de Kerversau,"Chief Operating Officer, BMO US Banking",BMO,bmo.com,augustin.dekerversau@bmo.com,,holdout,4
+2,multi-seat account,Kay Fillingham,Kay,Fillingham,"Chief Operating Officer, Legal and Regulatory Compliance",BMO,bmo.com,kay.fillingham@bmo.com,,holdout,4
+2,multi-seat account,Stephen Taylor,Stephen,Taylor,EVP and Chief Administrative Officer - US Operations,BMO,bmo.com,stephen.taylor@bmo.com,,holdout,4
+2,multi-seat account,David Ellsworth,David,Ellsworth,Chief Operating Officer and Senior Vice President,Constellation Energy,constellationenergy.com,dave@constellation.com,https://www.linkedin.com/in/david-ellsworth-2990a360/,holdout,4
+2,multi-seat account,Jim McHugh,Jim,McHugh,Chief Commercial Officer (CCO),Constellation Energy,constellationenergy.com,james.mchugh@constellation.com,https://www.linkedin.com/in/jim-mchugh-41346016a/,holdout,4
+2,multi-seat account,Marri Marchionda-Palmer,Marri,Marchionda-Palmer,Chief Operating Officer,Constellation Energy,constellationenergy.com,marri.marchionda-palmer@constellation.com,https://www.linkedin.com/in/marri-marchionda-palmer-65a256131/,holdout,4
+2,multi-seat account,Timothy Moore,Timothy,Moore,COO Constellation Power,Constellation Energy,constellationenergy.com,timothy.moore@constellation.com,https://www.linkedin.com/in/timothy-moore-004b7215/,holdout,4
+2,multi-seat account,Chris Berry,Chris,Berry,Chief Accounting Officer (CAO),DaVita,davita.com,chris.berry@davita.com,https://www.linkedin.com/in/chris-berry-463AAB12/,test,4
+2,multi-seat account,David Maughan,David,Maughan,Chief Operating Officer,DaVita,davita.com,david.maughan@davita.com,https://www.linkedin.com/in/david-maughan-858a771/,test,4
+2,multi-seat account,Matt Rippee,Matt,Rippee,Vice President and COO DaVita SNF Dialysis,DaVita,davita.com,matt.rippee@davita.com,https://www.linkedin.com/in/matt-rippee-94b60011b/,test,4
+2,multi-seat account,Nathan Lohmeyer,Nathan,Lohmeyer,"Chief Operating Officer, Value-Based Care",DaVita,davita.com,nathan.lohmeyer@davita.com,https://www.linkedin.com/in/nathanlohmeyer/,test,4
+2,multi-seat account,Adam S.,Adam,S.,"Chief Operating Officer (COO), Saifr.ai (Fidelity Labs, SVP)",Fidelity Investments,fidelity.com,adam.samadzada@fidelity.com,https://www.linkedin.com/in/adam-s-7117802/,holdout,4
+2,multi-seat account,Jay Linde,Jay,Linde,CCO,Fidelity Investments,fidelity.com,jay@fidelity.com,https://www.linkedin.com/in/jay-linde-0113a5142/,holdout,4
+2,multi-seat account,Mike Pegnato,Mike,Pegnato,"COO, Fidelity Personal Trust Company",Fidelity Investments,fidelity.com,michael.pegnato@fidelity.com,https://www.linkedin.com/in/mikepegnato/,holdout,4
+2,multi-seat account,Pankaj Shetye,Pankaj,Shetye,Director Business Management/COO,Fidelity Investments,fidelity.com,pankaj.shetye@fidelity.com,https://www.linkedin.com/in/pankaj-shetye-pmp-104a192/,holdout,4
+2,multi-seat account,"Daniel Craig, CFP®",Daniel,Craig,"SVP, COO Wealth Management",First Horizon National,firsthorizon.com,dcraig@firsthorizon.com,https://www.linkedin.com/in/danielcraig1/,holdout,4
+2,multi-seat account,Michael Graves,Michael,Graves,"Senior Vice President, Chief Operating Officer - Trust Division",First Horizon National,firsthorizon.com,mdgraves@firsthorizon.com,https://www.linkedin.com/in/michael-graves-9190444/,holdout,4
+2,multi-seat account,Sybil Stuber,Sybil,Stuber,Senior Accountant - Chief Accounting Officer’s Division (CAO),First Horizon National,firsthorizon.com,sstuber@firsthorizon.com,https://www.linkedin.com/in/sybil-stuber-088814154/,holdout,4
+2,multi-seat account,Tammy LoCascio,Tammy,LoCascio,Chief Operating Officer,First Horizon National,firsthorizon.com,tlocascio@firsthorizon.com,https://www.linkedin.com/in/tammy-locascio-7b183a5/,holdout,4
+2,multi-seat account,Alexandra Lalbachan,Alexandra,Lalbachan,Chief Operating Officer,Flagstar Bancorp,flagstar.com,alexandra.lalbachan@flagstar.com,,test,4
+2,multi-seat account,Craig Brown,Craig,Brown,"Executive Vice President, Chief Operating Officer of Credit",Flagstar Bancorp,flagstar.com,craig.brown@flagstar.com,https://www.linkedin.com/in/craig-brown-a8112b2/,test,4
+2,multi-seat account,Michael Adler,Michael,Adler,EVP/Chief Operating Officer - Commercial & Private Bank,Flagstar Bancorp,flagstar.com,michael.adler@flagstar.com,https://www.linkedin.com/in/mwadler/,test,4
+2,multi-seat account,Richard Raffetto,Richard,Raffetto,"Co-President, Co-COO & Chief Banking Officer",Flagstar Bancorp,flagstar.com,rich.raffetto@flagstar.com,https://www.linkedin.com/in/richard-raffetto-18524a44/,test,4
+2,multi-seat account,Graham Phillips,Graham,Phillips,COO - Platform & Infrastructure / Enterprise Operations & Technology,Freddie Mac,freddiemac.com,graham_phillips@freddiemac.com,https://www.linkedin.com/in/graham-phillips-7448861/,test,4
+2,multi-seat account,Leanne Spies,Leanne,Spies,"Senior Vice President, COO, & Divisional Risk Officer for Enterprise Operations & Technology",Freddie Mac,freddiemac.com,leanne_spies@freddiemac.com,https://www.linkedin.com/in/leanne-spies-ba50112/,test,4
+2,multi-seat account,"Marvin Boyd, PgMP, PMP, CSM, CSPO",Marvin,Boyd,Head of Enterprise Data Management | Enterprise Data Office Chief Operating Officer,Freddie Mac,freddiemac.com,marvin_boyd@freddiemac.com,https://www.linkedin.com/in/marvinjpboyd/,test,4
+2,multi-seat account,William Buskirk,William,Buskirk,Senior Vice President - Chief Operating Officer,Freddie Mac,freddiemac.com,william_buskirk@freddiemac.com,https://www.linkedin.com/in/william-buskirk-9179255/,test,4
+2,multi-seat account,Joseph Zimmerman,Joseph,Zimmerman,"Chief Operating Officer, Henry Ford Medical Group",Henry Ford Health,henryford.com,joseph.zimmerman@hfhs.org,https://www.linkedin.com/in/joseph-zimmerman-3ba347ab/,test,4
+2,multi-seat account,Karima Bentounsi,Karima,Bentounsi,President HF West Bloomfield & Regional COO HF Providence Novi & Southfield,Henry Ford Health,henryford.com,karima.bentounsi@hfhs.org,https://www.linkedin.com/in/karima-bentounsi-98446b10/,test,4
+2,multi-seat account,Michael Cervenak,Michael,Cervenak,Chief Operating Officer,Henry Ford Health,henryford.com,michaelc@thehenryford.org,,test,4
+2,multi-seat account,"Miles Schermerhorn, MHSA",Miles,MHSA,"Chief Administrative Officer (CAO), Mosaic Clinically Integrated Network (CIN) and Populance",Henry Ford Health,henryford.com,miles.schermerhorn@hfhs.org,https://www.linkedin.com/in/miles-schermerhorn-mhsa-375ab4a/,test,4
+2,multi-seat account,Brad Morrison,Brad,Morrison,Chief Operating Officer,Kettering Health Network,ketteringhealth.org,brad.morrison@ketteringhealth.org,https://www.linkedin.com/in/brad-morrison-22a72179/,holdout,4
+2,multi-seat account,Cristiane Santana Barnabas,Cristiane,Barnabas,Chief Operating Officer,Kettering Health Network,ketteringhealth.org,cristiane.santanabarnabas@ketteringhealth.org,https://www.linkedin.com/in/cristiane-santana-barnabas-0ba69b266/,holdout,4
+2,multi-seat account,Joshua Michalski,Joshua,Michalski,Chief Operating Officer,Kettering Health Network,ketteringhealth.org,joshua.michalski@ketteringhealth.org,https://www.linkedin.com/in/joshuamichalski/,holdout,4
+2,multi-seat account,Kevin Spaulding,Kevin,Spaulding,Chief Operating Officer,Kettering Health Network,ketteringhealth.org,kevin.spaulding@ketteringhealth.org,https://www.linkedin.com/in/kevinspaulding/,holdout,4
+2,multi-seat account,Daniel B. A.,Daniel,A.,President and Chief Operating Officer,LPL Financial,lpl.com,dan.allen@lpl.com,https://www.linkedin.com/in/daniel-b-a-1376421/,test,4
+2,multi-seat account,Matthew Enyedi,Matthew,Enyedi,"Group Managing Director, Chief Client Officer",LPL Financial,lpl.com,matthew.enyedi@lpl.com,https://www.linkedin.com/in/matthew-enyedi-a923857/,test,4
+2,multi-seat account,"Michael Hartman, CRCPTM",Michael,CRCP,Chief Compliance Officer and Director of Operations,LPL Financial,lpl.com,michael.hartman@lpl.com,https://www.linkedin.com/in/michael-hartman-crcp™-0792a360/,test,4
+2,multi-seat account,Rahul Joshi,Rahul,Joshi,Global Chief Operations Officer,Manulife Financial,manulife.com,rahul_joshi@manulife.com,https://www.linkedin.com/in/rahul-joshi-5a523272/,holdout,4
+2,multi-seat account,Ryan Sample,Ryan,Sample,"VP, Strategy and COO Operations - Investments",Manulife Financial,manulife.com,rsample@manulife.com,https://www.linkedin.com/in/ryan-sample-90888513/,holdout,4
+2,multi-seat account,"Thomas Zakian, CPA",Thomas,Zakian,Chief Operating Officer - Global Private Equity and Timberland,Manulife Financial,manulife.com,tzakian@manulife.com,https://www.linkedin.com/in/thomas-zakian-cpa-07141154/,holdout,4
+2,multi-seat account,"Damon Kinney, MBA",Damon,Kinney,DC Health Plan Chief Operating Officer (COO),MedStar Health,medstarhealth.org,damon.q.kinney@medstar.net,https://www.linkedin.com/in/damon-kinney-mba-91902596/,test,4
+2,multi-seat account,"Oliver M. Johnson, II",Oliver,Johnson,"EVP, Chief Administrative Officer, and General Counsel",MedStar Health,medstarhealth.org,oliver.m.johnson@medstar.net,https://www.linkedin.com/in/oliver-m-johnson-ii-b5152694/,test,4
+2,multi-seat account,"Raleigh Heard, Jr. (FACHE)",Raleigh,Heard,Chief Operating Officer,MedStar Health,medstarhealth.org,raleigh.heard@medstar.net,https://www.linkedin.com/in/raleigh-heard-jr-14146a12/,test,4
+2,multi-seat account,Tawanda Lindo,Tawanda,Lindo,VP of Operations/COO,MedStar Health,medstarhealth.org,tawanda.m.lindo@medstar.net,https://www.linkedin.com/in/tawanda-lindo-58993aa/,test,4
+2,multi-seat account,Krista Phillips,Krista,Phillips,Regional President & Chief Customer Officer,M&T Bank,mtb.com,kphillips3@mtb.com,https://www.linkedin.com/in/krista-phillips-5567b33/,holdout,4
+2,multi-seat account,"Laura Ferrino, CFP®, CTFA, CCPS, CLU",Laura,CCPS,"Chief Operating Officer, Buffalo Promise Neighborhood and Westminster Community Charter School",M&T Bank,mtb.com,lmancuso@mtb.com,https://www.linkedin.com/in/laura-ferrino-cfp®-ctfa-ccps-clu-06418715/,holdout,4
+2,multi-seat account,Ted Roach,Ted,Roach,Chief Operating Officer - Model Risk,M&T Bank,mtb.com,troach@mtb.com,https://www.linkedin.com/in/ted-roach-453880154/,holdout,4
+2,multi-seat account,Tracy Sendor Woodrow,Tracy,Woodrow,Chief Administrative Officer & Regional President,M&T Bank,mtb.com,twoodrow@mtb.com,https://www.linkedin.com/in/tracy-sendor-woodrow-0939b3a/,holdout,4
+2,multi-seat account,Anita Marshall,Anita,Marshall,"Managing Director, COO of US and Americas",Standard Chartered Bank,sc.com,anita.marshall@sc.com,https://www.linkedin.com/in/anitashawmarshall/,holdout,4
+2,multi-seat account,Brian C Owen,Brian,Owen,"Chief Operating Officer (COO), Global Markets, Americas",Standard Chartered Bank,sc.com,brian.owen@sc.com,https://www.linkedin.com/in/brian-c-owen-76b7046/,holdout,4
+2,multi-seat account,Caitlin Behrens,Caitlin,Behrens,"Chief Operating Officer, Americas",Standard Chartered Bank,sc.com,caitlin.behrens@sc.com,https://www.linkedin.com/in/caitlin-behrens-719bb180/,holdout,4
+2,multi-seat account,Sriram Reguraman,Sriram,Reguraman,"Chief Operating Officer, Global Banking Americas",Standard Chartered Bank,sc.com,sriram.reguraman@sc.com,https://www.linkedin.com/in/sriram-reguraman-273b631/,holdout,4
+2,multi-seat account,"Benjamin Levine, CPA",Benjamin,Levine,"Director, Global Banking & Markets and Group Treasury Audit, Chief Operating Officer",Scotiabank,scotiabank.com,ben.levine@scotiabank.com,https://www.linkedin.com/in/benjamin-levine-cpa-6b2b1149/,holdout,4
+2,multi-seat account,Hardeep Thind,Hardeep,Thind,COO Houston Branch,Scotiabank,scotiabank.com,hardeep.thind@scotiabank.com,https://www.linkedin.com/in/hardeepthind/,holdout,4
+2,multi-seat account,Jimmy Brolly,Jimmy,Brolly,"Associate Director, US FICC COO",Scotiabank,scotiabank.com,jimmy.brolly@scotiabank.com,https://www.linkedin.com/in/jimmy-brolly-58418645/,holdout,4
+2,multi-seat account,Sean Dusseau,Sean,Dusseau,"Managing Director, Chief Operating Officer, U.S.",Scotiabank,scotiabank.com,sean.dusseau@scotiabank.com,https://www.linkedin.com/in/sean-dusseau-22a46993/,holdout,4
+2,multi-seat account,Jim Tobojka,Jim,Tobojka,"COO, Senior Vice President, Global Operations",TE Connectivity,te.com,jim.tobojka@te.com,https://www.linkedin.com/in/jim-tobojka-ba38332/,test,4
+2,multi-seat account,Joe Donahue,Joe,Donahue,"Executive VP and Chief Operating Officer, President, Transportation Solutions",TE Connectivity,te.com,joe.donahue@te.com,https://www.linkedin.com/in/joe-donahue-2b72817/,test,4
+2,multi-seat account,Philip Gilchrist,Philip,Gilchrist,Chief Transformation Officer for AI and Sustainability,TE Connectivity,te.com,philip.gilchrist@te.com,https://www.linkedin.com/in/philip-gilchrist-7035395/,test,4
+2,multi-seat account,Rocío Schnell,Rocío,Schnell,Head of Global Operations | Application Tooling BU | Chief Operating Officer,TE Connectivity,te.com,rs@te.com,https://www.linkedin.com/in/rocío-schnell-8887a419/,test,4
+2,multi-seat account,"Brian Allen, FACHE",Brian,FACHE,Chief Operating Officer,UCHealth,uchealth.org,brian.allen@uchealth.org,https://www.linkedin.com/in/brian-allen-fache-4a763914/,test,4
+2,multi-seat account,Erin Smith,Erin,Smith,Chief Operating Officer,UCHealth,uchealth.org,erin.smith@uchealth.org,https://www.linkedin.com/in/erin-smith-b951804/,test,4
+2,multi-seat account,Robbie Dumond,Robbie,Dumond,Chief Operating Officer,UCHealth,uchealth.org,robbie.dumond@uchealth.org,https://www.linkedin.com/in/robbie-dumond-05469a164/,test,4
+2,multi-seat account,Chris Lee,Chris,Lee,"Chief Operating Officer, Children's Ambulatory Services",Vanderbilt Medical,vanderbilthealth.com,christopher.lee@vumc.org,https://www.linkedin.com/in/chris-lee-ab84a013/,holdout,4
+2,multi-seat account,Lee Ann Liska,Lee,Liska,"President and Chief Operating Officer, Vanderbilt University Hospital",Vanderbilt Medical,vanderbilthealth.com,lee.a.liska@vumc.org,https://www.linkedin.com/in/lee-ann-liska-8b0b5918/,holdout,4
+2,multi-seat account,"Steve Marshall, MBA",Steve,Marshall,VP/Chief Operating Officer Ambulatory Surgery Division,Vanderbilt Medical,vanderbilthealth.com,steve.marshall@vumc.org,https://www.linkedin.com/in/steve-marshall-mba/,holdout,4
+2,multi-seat account,"Tom Catron, PhD",Tom,Catron,Vice President and Chief Operating Officer,Vanderbilt Medical,vanderbilthealth.com,tom.catron@vumc.org,https://www.linkedin.com/in/tom-catron-phd-66608021/,holdout,4
+2,multi-seat account,Craig Herkert,Craig,Herkert,COO International | Marketing | Merchandising | Operations,WAL-MART STORES,walmart.com,craig.herkert@stthomas.edu,,test,4
+2,multi-seat account,Kieran Shanahan,Kieran,Shanahan,"EVP & Chief Operating Officer, Walmart U.S.",WAL-MART STORES,walmart.com,kieran.shanahan@walmart.com,https://www.linkedin.com/in/kieran-shanahan/,test,4
+2,multi-seat account,Laura Berg,Laura,Berg,"COO, Vice President Strategy & Transformation Acceleration (Walmart Labs)",WAL-MART STORES,walmart.com,laura.berg@walmart.com,,test,4
+2,multi-seat account,Paul Lewellen,Paul,Lewellen,"Chief Operating Officer, Walmart de Mexico",WAL-MART STORES,walmart.com,paul.lewellen@walmart.com,https://www.linkedin.com/in/paul-lewellen-b844116/,test,4
+2,multi-seat account,Brooke Barron,Brooke,Barron,Chief Operations Officer,Allstate,allstate.com,bbarron@allstate.com,,holdout,3
+2,multi-seat account,Megan Dougherty,Megan,Dougherty,Chief Operating Officer,Allstate,allstate.com,megandougherty@allstate.com,,holdout,3
+2,multi-seat account,Paul Lanspa,Paul,Lanspa,"Chief Operating Officer - Director  Analytics, Strategy, Compensation, and Technology",Allstate,allstate.com,paul.lanspa@allstate.com,,holdout,3
+2,multi-seat account,Alice Jowett,Alice,Jowett,Vice President Philanthropy & COO American Express Foundation,American Express,americanexpress.com,alice.jowett@aexp.com,https://www.linkedin.com/in/alice-jowett-6184408b/,holdout,3
+2,multi-seat account,Junaid Shams,Junaid,Shams,"COO, Global Dining & Head of Rooam",American Express,americanexpress.com,junaid.shams@aexp.com,https://www.linkedin.com/in/junaid-shams-32a034118/,holdout,3
+2,multi-seat account,Rahul Dutta,Rahul,Dutta,"EVP, CCO Global Commercial Services",American Express,americanexpress.com,rahul.d.dutta@aexp.com,https://www.linkedin.com/in/rahul-dutta-8b8531/,holdout,3
+2,multi-seat account,"Dwight R. Roache, DHA, MHA, FACHE",Dwight,FACHE,Chief Operating Officer - Atrium Health Cabarrus,Atrium Health,atriumhealth.org,dwight.roache@carolinashealthcare.org,https://www.linkedin.com/in/dwight-r-roache-dha-mha-fache-289b9422/,holdout,3
+2,multi-seat account,"Marjorie Saintil-Alston, MBA",Marjorie,Saintil-Alston,Vice President of Operations & Chief Operating Officer,Atrium Health,atriumhealth.org,marjorie.saintilalston@atriumhealth.org,https://www.linkedin.com/in/marjorie-saintil-alston-mba-1b9a8914/,holdout,3
+2,multi-seat account,Dean Sanpei,Dean,Sanpei,EVP Chief Strategy and Chief Administrative Officer,Baystate Health,baystatehealth.org,dean.sanpei@baystatehealth.org,https://www.linkedin.com/in/dean-sanpei-8122332b/,test,3
+2,multi-seat account,Jodi B. Stack,Jodi,Stack,President/Chief Operating Officer,Baystate Health,baystatehealth.org,jodi.stack@baystatehealth.org,https://www.linkedin.com/in/jodi-b-stack/,test,3
+2,multi-seat account,"Scott Lichtenberger, MD",Scott,Lichtenberger,Chief Operating Officer,Baystate Health,baystatehealth.org,scott.lichtenberger@baystatehealth.org,https://www.linkedin.com/in/scottlichtenberger/,test,3
+2,multi-seat account,Barry Feierstein,Barry,Feierstein,Chief Operating Officer,Better Mortgage,better.com,bfeierstein@better.com,https://www.linkedin.com/in/barryfeierstein/,test,3
+2,multi-seat account,"Chad Smith, AMP",Chad,AMP,President and COO,Better Mortgage,better.com,csmith@better.com,https://www.linkedin.com/in/chadsmith2/,test,3
+2,multi-seat account,Corey Lee,Corey,Lee,Commercial Bank Divisional COO,Capital One,capitalone.com,corey.lee@capitalone.com,https://www.linkedin.com/in/corey-lee-5b092a162/,test,3
+2,multi-seat account,Sean Armah,Sean,Armah,Chief Operating Officer,Capital One,capitalone.com,sean.armah@capitalone.com,https://www.linkedin.com/in/sean-armah-1a6a431/,test,3
+2,multi-seat account,Adam Long,Adam,Long,"Vice President, Chief Operations Officer Natural Gas",Duke Energy,duke-energy.com,adam.long2@duke-energy.com,https://www.linkedin.com/in/adam-long-242a4054/,test,3
+2,multi-seat account,Katherine Neebe,Katherine,Neebe,Chief Communications Officer (CCO) & SVP,Duke Energy,duke-energy.com,katherine.neebe@duke-energy.com,https://www.linkedin.com/in/kneebe/,test,3
+2,multi-seat account,Sasha Weintraub,Sasha,Weintraub,Executive Vice President & Chief Customer Officer,Duke Energy,duke-energy.com,sasha.weintraub@duke-energy.com,https://www.linkedin.com/in/sasha-weintraub-7469b5167/,test,3
+2,multi-seat account,Bryan Gaffy,Bryan,Gaffy,Chief Operating Officer - Acute Care Community Hospitals,Fairview Health Services,fairview.org,bryan.gaffy@fairview.org,https://www.linkedin.com/in/bryan-gaffy-33ba307/,test,3
+2,multi-seat account,Jeoff Will,Jeoff,Will,Chief Operating Officer,Fairview Health Services,fairview.org,jeoff.will@fairview.org,https://www.linkedin.com/in/jeoff-will-a241b128/,test,3
+2,multi-seat account,Trudi Trysla,Trudi,Trysla,Executive Vice President and Chief Administrative Officer | General Counsel,Fairview Health Services,fairview.org,trudi.trysla@fairview.org,https://www.linkedin.com/in/trudi-trysla-7b23bb5a/,test,3
+2,multi-seat account,Nicki Baty,Nicki,Baty,Chief Operating Officer,Freshpet,freshpet.com,nbaty@freshpet.com,https://www.linkedin.com/in/nicki-baty-a223742/,test,3
+2,multi-seat account,Nishu Patel,Nishu,Patel,Chief Accounting Officer (CAO),Freshpet,freshpet.com,npatel@freshpet.com,https://www.linkedin.com/in/nishu-patel-79a07612b/,test,3
+2,multi-seat account,Erin Lewis,Erin,Lewis,Chief Administrative Officer (CAO),IU Health,iuhealth.org,erin@iuhealth.org,https://www.linkedin.com/in/erin-lewis-16755393/,test,3
+2,multi-seat account,Kreigh Cook,Kreigh,Cook,Chief Operating Officer,IU Health,iuhealth.org,cook@iuhealth.org,https://www.linkedin.com/in/kreigh-cook-4b8b2388/,test,3
+2,multi-seat account,Sarah Wingfield,Sarah,Wingfield,Chief Operating Officer - IU Health Medical Group,IU Health,iuhealth.org,swingfield@iuhealth.org,https://www.linkedin.com/in/sarah-wingfield-2b58a63/,test,3
+2,multi-seat account,"Anselmo Collins, PE, MBA",Anselmo,Collins,Chief Operating Officer & Sr. AGM - Water System,LADWP,ladwp.com,anselmo.collins@ladwp.com,https://www.linkedin.com/in/anselmo-collins-pe-mba-57b19022/,holdout,3
+2,multi-seat account,Aram Benyamin,Aram,Benyamin,Chief Operating Officer,LADWP,ladwp.com,aram.benyamin@ladwp.com,https://www.linkedin.com/in/arambenyamin/,holdout,3
+2,multi-seat account,Joseph Ramallo,Joseph,Ramallo,Chief Customer Officer,LADWP,ladwp.com,joseph.ramallo@ladwp.com,https://www.linkedin.com/in/joseph-ramallo-729959b/,holdout,3
+2,multi-seat account,Andy Kauffman,Andy,Kauffman,Chief Commercial Officer (CCO) - US & Canada,Marriott,marriott.com,andy.kauffman@marriott.com,https://www.linkedin.com/in/andy-kauffman-5446601/,holdout,3
+2,multi-seat account,Julius W. Robinson,Julius,Robinson,"Chief Operating Officer, Western US & Gaylord Hotels Nationwide, Marriott International",Marriott,marriott.com,julius.robinson@marriott.com,https://www.linkedin.com/in/julius-w-robinson-2983142/,holdout,3
+2,multi-seat account,Mark Gaber,Mark,Gaber,"Chief Operations Officer, U.S. East",Marriott,marriott.com,mark.gaber@marriott.com,https://www.linkedin.com/in/mark-gaber-5b4b9a/,holdout,3
+2,multi-seat account,"Misty Hauser, DHA, MSN, RN",Misty,MSN,Vice President/Chief Operating Officer-Hospital Based Providers,Memorial Hermann,memorialhermann.org,misty.hauser@memorialhermann.org,https://www.linkedin.com/in/mhauser-rn/,holdout,3
+2,multi-seat account,Vivien Bond,Vivien,Bond,Vice President - Operations / Chief Operating Officer - Katy Hospital,Memorial Hermann,memorialhermann.org,vivien.bond@memorialhermann.org,https://www.linkedin.com/in/vivien-bond-8539aa14/,holdout,3
+2,multi-seat account,Jim Cocito,Jim,Cocito,SVP & COO Americas,Nokia,nokia.com,jimc@nokia.com,https://www.linkedin.com/in/jim-cocito/,holdout,3
+2,multi-seat account,Raghav Sahgal,Raghav,Sahgal,Chief Customer Officer,Nokia,nokia.com,raghav.sahgal@nokia.com,https://www.linkedin.com/in/raghavsahgal/,holdout,3
+2,multi-seat account,Scott Deo,Scott,Deo,Chief Operating Officer,Nokia,nokia.com,sdeo@nokia.com,https://www.linkedin.com/in/scott-deo-b82baa3/,holdout,3
+2,multi-seat account,Jeffrey Lange,Jeffrey,Lange,Chief Operating Officer,Old Republic,oldrepublic.com,jlange@oldrepublic.com,https://www.linkedin.com/in/jeffrey-lange-6a172223/,test,3
+2,multi-seat account,Sam Matthis,Sam,Matthis,Chief Operating Officer - Old Republic Allied Management Company,Old Republic,oldrepublic.com,smatthis@oldrepublic.com,https://www.linkedin.com/in/sam-matthis-a2b87ab/,test,3
+2,multi-seat account,David J. Bonenberger,David,Bonenberger,Executive Vice President and Chief Operating Officer - Utilities,PPL,pplweb.com,djbonenberger@pplweb.com,https://www.linkedin.com/in/david-j-bonenberger/,test,3
+2,multi-seat account,Eileen Saunders - Vice President and Chief Customer Officer,Eileen,Officer,"Vice President and Chief Customer Officer, PPL Corporation",PPL,pplweb.com,esaunders@pplweb.com,https://www.linkedin.com/in/eileen-saunders-vice-president-and-chief-customer-officer-378b1b1a5/,test,3
+2,multi-seat account,Greg Dudkin,Greg,Dudkin,COO,PPL,pplweb.com,gndudkin@pplweb.com,https://www.linkedin.com/in/greg-dudkin-5b82846/,test,3
+2,multi-seat account,Carolyn (Caruthers) Stewart,Carolyn,Stewart,"SVP, Chief Operating Officer, Global Technology",Reinsurance Group of America,rgare.com,carolyn.stewart@rgare.com,https://www.linkedin.com/in/carolyn-caruthers-stewart-86109221/,test,3
+2,multi-seat account,Derek Kueker,Derek,Kueker,"SVP, Chief Operating Officer, Americas",Reinsurance Group of America,rgare.com,dkueker@rgare.com,https://www.linkedin.com/in/derek-kueker-9b632288/,test,3
+2,multi-seat account,Kyle Miller,Kyle,Miller,"SVP, Chief Operating Officer, Investments",Reinsurance Group of America,rgare.com,kyle.miller@rgare.com,https://www.linkedin.com/in/kyle-miller-562ba9127/,test,3
+2,multi-seat account,Hilmoe Eric,Hilmoe,Eric,Chief Operating Officer - Sanford Health Sioux Falls,Sanford Health,sanfordhealth.org,eric.hilmoe@sanfordhealth.org,https://www.linkedin.com/in/hilmoe-eric-b9347475/,test,3
+2,multi-seat account,Jennifer Grennan,Jennifer,Grennan,Chief Administrative Officer,Sanford Health,sanfordhealth.org,grennanj@sanfordhealth.org,https://www.linkedin.com/in/jennifer-grennan-701a34361/,test,3
+2,multi-seat account,Matt Hocks,Matt,Hocks,Chief Operating Officer,Sanford Health,sanfordhealth.org,hocksm@sanfordhealth.org,https://www.linkedin.com/in/matt-hocks-5589237/,test,3
+2,multi-seat account,Brad Martin,Brad,Martin,"Chief Operating Officer, Loan Servicing and Support",Santander,santanderus.com,bmartin@santanderconsumerusa.com,http://www.linkedin.com/in/brad-martin-60abbb7,holdout,3
+2,multi-seat account,Dustin Neurath,Dustin,Neurath,"EVP, Chief Operating Officer",Santander,santanderus.com,dustin.neurath@santander.us,http://www.linkedin.com/in/dustin-neurath-74aa95140,holdout,3
+2,multi-seat account,Ishq Davis,Ishq,Davis,Chief Operating Officer (Infrastructure),Santander,santanderus.com,iydavis@santanderconsumerusa.com,http://www.linkedin.com/in/ishq-davis-9505654b,holdout,3
+2,multi-seat account,"Jeff Fowler, PE",Jeff,Fowler,"Chief Operating Officer, Solid Waste",Seattle City Light,seattle.gov,jeff.fowler@seattle.gov,,test,3
+2,multi-seat account,Robert Santoff,Robert,Santoff,Chief Operating Officer,Seattle City Light,seattle.gov,robert.santoff@seattle.gov,,test,3
+2,multi-seat account,Sarah Smith,Sarah,Smith,Chief Operating Officer,Seattle City Light,seattle.gov,sarah.smith@seattle.gov,https://www.linkedin.com/in/sarah-smith-98123a8a/,test,3
+2,multi-seat account,K Max Koonce II,K,Koonce,Chief Claims Officer,Sedgwick,sedgwick.com,max.koonce@sedgwick.com,https://www.linkedin.com/in/k-max-koonce-ii-571b3935/,test,3
+2,multi-seat account,"Laurie Craig, CSPO, CSM",Laurie,Craig,Global IT Chief Operations Officer,Sedgwick,sedgwick.com,laurie.craig@sedgwick.com,https://www.linkedin.com/in/laurie-craig-cspo-csm-1862153/,test,3
+2,multi-seat account,Vishy Padmanabhan,Vishy,Padmanabhan,Chief Transformation Officer,Sedgwick,sedgwick.com,vishy.padmanabhan@sedgwick.com,https://www.linkedin.com/in/vishy-padmanabhan-3624641/,test,3
+2,multi-seat account,John Tighe,John,Tighe,Chief Customer Officer,Tailored Brands,tailoredbrands.com,john.tighe@tailoredbrands.com,https://www.linkedin.com/in/john-tighe-16b2441b1/,test,3
+2,multi-seat account,Karla Gray,Karla,Gray,"Chief Operating Officer, EVP",Tailored Brands,tailoredbrands.com,karla.gray@tailoredbrands.com,https://www.linkedin.com/in/karla-gray-9280a5b/,test,3
+2,multi-seat account,Whit Alexander,Whit,Alexander,"EVP, Chief Customer Officer",Tailored Brands,tailoredbrands.com,whit.alexander@tailoredbrands.com,https://www.linkedin.com/in/whalexander/,test,3
+2,multi-seat account,Gretchen Agee,Gretchen,Agee,"Vice President, Asset Management Chief Administrative Officer",Thrivent,thrivent.com,gretchen.agee@thrivent.com,https://www.linkedin.com/in/gretchen-agee-2281bb25/,test,3
+2,multi-seat account,Sarah Bergstrom,Sarah,Bergstrom,"Vice President, Thrivent Funds Treasurer & Chief Operating Officer",Thrivent,thrivent.com,sarah.bergstrom@thrivent.com,https://www.linkedin.com/in/sarah-bergstrom-5736b411b/,test,3
+2,multi-seat account,"Camellia E. FitzGerald, CPA",Camellia,FitzGerald,Chief Accounting Officer (CAO),Viasat,viasat.com,camellia.fitzgerald@viasat.com,https://www.linkedin.com/in/camellia-e-fitzgerald-cpa-77b2a723/,test,3
+2,multi-seat account,Kai Tang,Kai,Tang,COO Viasat Commercial Businesses,Viasat,viasat.com,kai.tang@viasat.com,https://www.linkedin.com/in/katang/,test,3
+2,multi-seat account,Meherwan Polad,Meherwan,Polad,"Chief Commercial Officer (CCO), Aviation",Viasat,viasat.com,meherwan.polad@viasat.com,https://www.linkedin.com/in/meherwan-polad-360a6511/,test,3
+2,multi-seat account,Greg Balicki,Greg,Balicki,Head of COO Business Managament,Voya Financial,voya.com,gregory.balicki@voya.com,,test,3
+2,multi-seat account,Michael Peters,Michael,Peters,Chief Operating Officer,Voya Financial,voya.com,michael.peters@voya.com,,test,3
+2,multi-seat account,Mona Zielke,Mona,Zielke,Global COO,Voya Financial,voya.com,mona.zielke@voya.com,https://www.linkedin.com/in/monazielke/,test,3
+2,multi-seat account,"Brian Connor, FACHE, FACHDM",Brian,FACHDM,"Chief Operating Officer, WellSpan York",WellSpan Health,wellspan.org,bconnor@wellspan.org,https://www.linkedin.com/in/brian-connor-fache/,test,3
+2,multi-seat account,Kasey Paulus,Kasey,Paulus,"Executive Vice President, Chief Operating Officer",WellSpan Health,wellspan.org,kpaulus@wellspan.org,https://www.linkedin.com/in/kasey-paulus-mba-rn-cenp-b2b270a/,test,3
+2,multi-seat account,Keith Noll,Keith,Noll,Chief Administrative Officer,WellSpan Health,wellspan.org,knoll2@wellspan.org,https://www.linkedin.com/in/keith-noll-37882a15b/,test,3
+2,multi-seat account,Carlos Carriedo,Carlos,Carriedo,COO Americas Payments and Mobility,Wex,wexinc.com,carlos.carriedo@wexinc.com,https://www.linkedin.com/in/carlos-carriedo-588194/,test,3
+2,multi-seat account,Jay Dearborn,Jay,Dearborn,"Chief Operating Officer, International",Wex,wexinc.com,jay.dearborn@wexinc.com,https://www.linkedin.com/in/jay-dearborn/,test,3
+2,multi-seat account,Robert Deshaies,Robert,Deshaies,Chief Operating Officer,Wex,wexinc.com,robert.deshaies@wexinc.com,https://www.linkedin.com/in/robert-deshaies-3462b6/,test,3
+2,multi-seat account,Brian Walesa,Brian,Walesa,Chief Operating Officer,Advocate Aurora,advocatehealth.com,brian.walesa@advocatehealth.com,,holdout,2
+2,multi-seat account,"Joshua Baldobinos, MBA",Joshua,Baldobinos,Chief Operating Officer Advocate South Suburban,Advocate Aurora,advocatehealth.com,joshua.baldobinos@aah.org,https://www.linkedin.com/in/joshuabaldobinos/,holdout,2
+2,multi-seat account,Elena Boeva,Elena,Boeva,"U.S. Chief Operating Officer, AFLAC Global Investments",Aflac,aflac.com,eboeva@aflac.com,https://www.linkedin.com/in/elena-boeva-334aa12/,holdout,2
+2,multi-seat account,April Engelman,April,Engelman,Chief Operating Officer,Gallagher,ajg.com,april_engelman@gallagherre.com,,holdout,2
+2,multi-seat account,Mark Hansen,Mark,Hansen,Chief Operating Officer,Gallagher,ajg.com,mhansen@ajg.com,,holdout,2
+2,multi-seat account,Dave Rinaldo,Dave,Rinaldo,Chief Operating Officer,Aldi,aldi.us,dave.rinaldo@aldi.us,https://www.linkedin.com/in/dave-rinaldo/,test,2
+2,multi-seat account,Scott Patton,Scott,Patton,Chief Commercial Officer (CCO),Aldi,aldi.us,scott.patton@aldi.us,https://www.linkedin.com/in/scott-patton-aldi/,test,2
+2,multi-seat account,Chuck Beeman,Chuck,Beeman,"EVP, Chief Operating Officer (COO)",AmeriHealth Caritas,amerihealthcaritas.com,cbeeman@amerihealthcaritas.com,https://www.linkedin.com/in/chuck-beeman-b320042/,holdout,2
+2,multi-seat account,"Jerome Schorr, MHSA, CPHQ",Jerome,CPHQ,Chief Operations Officer,AmeriHealth Caritas,amerihealthcaritas.com,jerome.schorr@amerihealthcaritas.com,https://www.linkedin.com/in/jeromeschorr/,holdout,2
+2,multi-seat account,Tracy Schweitzer,Tracy,Schweitzer,Chief Administrative Officer,American Family Insurance,amfam.com,tracy.schweitzer@amfam.com,https://www.linkedin.com/in/tracy-schweitzer-202b9117/,test,2
+2,multi-seat account,Vince Pasqualicchio,Vince,Pasqualicchio,Investments Chief Operations Officer,American Family Insurance,amfam.com,vincent.pasqualicchio@amfam.com,https://www.linkedin.com/in/vince-pasqualicchio-b962971b/,test,2
+2,multi-seat account,Cheryl Norton,Cheryl,Norton,American Water - Chief Operating Officer,American Water,amwater.com,cheryl.norton@amwater.com,https://www.linkedin.com/in/cheryl-norton-a6715a152/,test,2
+2,multi-seat account,Matthew Prine,Matthew,Prine,Chief Customer Officer,American Water,amwater.com,matthew.prine@amwater.com,https://www.linkedin.com/in/matthewprine/,test,2
+2,multi-seat account,David E. Esca,David,Esca,Chief Operating Officer,AOL,aol.com,davide@aol.com,,holdout,2
+2,multi-seat account,Donnie Yancey,Donnie,Yancey,"Chief Operating Officer (COO), Chief Data Officer (CDO) at MapQuest",AOL,aol.com,dyancey@aol.com,,holdout,2
+2,multi-seat account,Dee Derryberry,Dee,Derryberry,Chief Operating Officer,Arvest Bank Group,arvest.com,dderryberry@arvest.com,,test,2
+2,multi-seat account,Yurik Paroubek,Yurik,Paroubek,Chief Operating Officer,Arvest Bank Group,arvest.com,yparoubek@arvest.com,https://www.linkedin.com/in/yurik-paroubek-69136594/,test,2
+2,multi-seat account,Gianluca Camplone,Gianluca,Camplone,"COO AutoNation Parts, Executive Vice President Business Development",AutoNation,autonation.com,camploneg@autonation.com,https://www.linkedin.com/in/gianluca-camplone-969538/,holdout,2
+2,multi-seat account,Jeff Parent,Jeff,Parent,Chief Operating Officer,AutoNation,autonation.com,parentj@autonation.com,https://www.linkedin.com/in/jeff-parent-1367a32/,holdout,2
+2,multi-seat account,Joe Greenberg,Joe,Greenberg,Chief Operating Officer,Blue Cross Blue Shield Arizona,azblue.com,joe.greenberg@azblue.com,https://www.linkedin.com/in/joe-greenberg-83b3996/,test,2
+2,multi-seat account,Kathleen Bonzani,Kathleen,Bonzani,Chief Accounting Officer (CAO),Blue Cross Blue Shield Arizona,azblue.com,kathleen.bonzani@azblue.com,https://www.linkedin.com/in/kathleen-bonzani-8068a016/,test,2
+2,multi-seat account,Dylan Paulsen,Dylan,Paulsen,Chief Operating Officer - Marketing & CLUB,Bass Pro,basspro.com,dlpaulsen@basspro.com,https://www.linkedin.com/in/dylanpaulsen/,test,2
+2,multi-seat account,John Paul Morris,John,Morris,Chief Customer Officer,Bass Pro,basspro.com,jmorris@basspro.com,https://www.linkedin.com/in/john-paul-morris-10962093/,test,2
+2,multi-seat account,Kreg Gruber,Kreg,Gruber,Chief Operating  Officer,Beacon Health,beaconhealthsystem.org,kgruber@beaconhealthsystem.org,https://www.linkedin.com/in/kreg-gruber-440b0a10/,test,2
+2,multi-seat account,"Mark Brett, FACHE",Mark,FACHE,Chief Operating Officer,Beacon Health,beaconhealthsystem.org,mbrett@beaconhealthsystem.org,https://www.linkedin.com/in/mark-brett-543ba615/,test,2
+2,multi-seat account,Kirk Saville,Kirk,Saville,Chief Communications Officer (CCO),BJ's Wholesale Club,bjs.com,ksaville@bjs.com,https://www.linkedin.com/in/kirk-saville-0702324/,test,2
+2,multi-seat account,Scott Schmadeke,Scott,Schmadeke,"Executive Vice President, Chief Operations Officer",BJ's Wholesale Club,bjs.com,sschmadeke@bjs.com,https://www.linkedin.com/in/scott-schmadeke-4b97441b/,test,2
+2,multi-seat account,Dawn Constantin,Dawn,Constantin,COO,BP,bp.com,dawn.constantin@bp.com,https://www.linkedin.com/in/dawn-constantin-6a07a228/,holdout,2
+2,multi-seat account,Teresa Lopez,Teresa,Lopez,COO Global Lightends Trading,BP,bp.com,teresa.lopez2@bp.com,https://www.linkedin.com/in/teresa-lopez-62554311/,holdout,2
+2,multi-seat account,Bijal S.,Bijal,S.,"Chief Operating Officer, BT Americas Inc",BT,bt.com,bijal.shah@bt.com,,test,2
+2,multi-seat account,Jack Blacksmith,Jack,Blacksmith,Chief Operations Officer,BT,bt.com,jack@bt.com,,test,2
+2,multi-seat account,Anthony Carano,Anthony,Carano,President & Chief Operating Officer,Caesars Entertainment,caesars.com,acarano@caesars.com,https://www.linkedin.com/in/anthony-carano-3445a034/,holdout,2
+2,multi-seat account,Sean McBurney,Sean,McBurney,Chief Commercial Officer (CCO) and Regional President,Caesars Entertainment,caesars.com,smcburney@caesars.com,https://www.linkedin.com/in/sean-mcburney-b7a3202/,holdout,2
+2,multi-seat account,Dwayne F.,Dwayne,F.,"COO, VP of Market Operations",CareSource,caresource.com,dwayne.flowers@caresource.com,https://www.linkedin.com/in/dwayne-f-52a50512/,test,2
+2,multi-seat account,Fred Schulz,Fred,Schulz,Chief Operating Officer,CareSource,caresource.com,fred.schulz@caresource.com,https://www.linkedin.com/in/fred-schulz-473202/,test,2
+2,multi-seat account,Kristen Campos,Kristen,Campos,Chief Communications Officer (CCO),Carnival,carnival.com,kcampos@carnival.com,https://www.linkedin.com/in/kristen-campos/,test,2
+2,multi-seat account,Sarah Beth Reno,Sarah,Reno,Chief Operating Officer,Carnival,carnival.com,sreno@carnival.com,https://www.linkedin.com/in/sarah-beth-reno-6a496512/,test,2
+2,multi-seat account,Jesus Soto,Jesus,Soto,EVP & Chief Operating Officer,CenterPoint Energy,centerpointenergy.com,jesus.soto@centerpointenergy.com,,test,2
+2,multi-seat account,John White,John,White,Chief Accounting Officer (CAO),Choice Hotels,choicehotels.com,john.white@choicehotels.com,https://www.linkedin.com/in/john-white-524a216/,test,2
+2,multi-seat account,Joshua Sloser,Joshua,Sloser,Chief Commercial Officer (CCO),Choice Hotels,choicehotels.com,joshua.sloser@choicehotels.com,https://www.linkedin.com/in/joshua-sloser-a608107/,test,2
+2,multi-seat account,Chris Askew,Chris,Askew,Chief Operating Officer,Cinch Home Services,cinchhomeservices.com,caskew@cinchhomeservices.com,https://www.linkedin.com/in/chris-askew-2204063/,test,2
+2,multi-seat account,Jessica Fields,Jessica,Fields,Chief Commercial Officer (CCO),Cinch Home Services,cinchhomeservices.com,jfields@cinchhomeservices.com,https://www.linkedin.com/in/fieldsjessica/,test,2
+2,multi-seat account,Andrea Thorpe,Andrea,Thorpe,Executive Vice President & Chief Experience Officer,COUNTRY Financial,countryfinancial.com,andrea.thorpe@countryfinancial.com,https://www.linkedin.com/in/andrea-thorpe-9905453/,holdout,2
+2,multi-seat account,Chad Allen,Chad,Allen,Executive Vice President & Chief Operating Officer,COUNTRY Financial,countryfinancial.com,chad.allen@countryfinancial.com,https://www.linkedin.com/in/chadallen3/,holdout,2
+2,multi-seat account,Bill N.,Bill,N.,Chief Operating Officer - North America,Covetrus,covetrus.com,bill.ng@covetrus.com,https://www.linkedin.com/in/williamtng/,holdout,2
+2,multi-seat account,Fallon Smith-Ziegler,Fallon,Smith-Ziegler,Business Management Strategist to Chief Administrative Officer,CPS Energy,cpsenergy.com,fasmith@cpsenergy.com,https://www.linkedin.com/in/fallon-smith-ziegler-7a819b33/,holdout,2
+2,multi-seat account,Lisa D Lewis,Lisa,Lewis,Chief Administrative Officer (CAO),CPS Energy,cpsenergy.com,lisa@cpsenergy.com,https://www.linkedin.com/in/lisa-d-lewis/,holdout,2
+2,multi-seat account,Jonathan Lum,Jonathan,Lum,Chief Operating Officer,Credit Acceptance,creditacceptance.com,jxl@creditacceptance.com,https://www.linkedin.com/in/jonathan-lum-252049b/,test,2
+2,multi-seat account,Nick Elliott,Nick,Elliott,Chief Transformation Officer,Credit Acceptance,creditacceptance.com,nelliott@creditacceptance.com,https://www.linkedin.com/in/nick-elliott-8b695b1/,test,2
+2,multi-seat account,Greg Why,Greg,Why,Chief Transformation Officer,Edelman Financial Engines,edelmanfinancialengines.com,gwhy@edelmanfinancialengines.com,https://www.linkedin.com/in/greg-why-a6601890/,holdout,2
+2,multi-seat account,Robert Blakley,Robert,Blakley,Controller and CAO,Edelman Financial Engines,edelmanfinancialengines.com,rblakley@edelmanfinancialengines.com,https://www.linkedin.com/in/robert-blakley-1bb81711/,holdout,2
+2,multi-seat account,Jared Lawrence,Jared,Lawrence,"Senior Vice President of Customer Operations and Digital Strategy, Chief Customer Officer",Eversource Energy,eversource.com,jared.lawrence@eversource.com,https://www.linkedin.com/in/jared-lawrence-a4588870/,test,2
+2,multi-seat account,Paul Chodak III,Paul,Chodak,"Executive Vice President and Chief Operating Officer, Eversource Energy.",Eversource Energy,eversource.com,paul.chodak@eversource.com,https://www.linkedin.com/in/paul-chodak-iii/,test,2
+2,multi-seat account,Grace Kunde,Grace,Kunde,Chief Accounting Officer (CAO),Extra Space Storage,extraspace.com,gkunde@extraspace.com,https://www.linkedin.com/in/grace-kunde-32b61a1/,holdout,2
+2,multi-seat account,Matthew Herrington,Matthew,Herrington,Executive Vice President of Operations / COO,Extra Space Storage,extraspace.com,mherrington@extraspace.com,https://www.linkedin.com/in/matthew-herrington-3bb54255/,holdout,2
+2,multi-seat account,"Mathew Gleason, MBA,CLU,RHU",Mathew,MBACLURHU,Chief Operating Officer - Life Companies,Farm Bureau Insurance,fbfs.com,mat.gleason@fbfs.com,https://www.linkedin.com/in/matgleason/,holdout,2
+2,multi-seat account,"Ron Mead, CPCU, LLIF, MBA",Ron,LLIF,Chief Operating Officer,Farm Bureau Insurance,fbfs.com,ron.mead@fbfs.com,https://www.linkedin.com/in/ron-mead-cpcu-llif-mba-3ba68a75/,holdout,2
+2,multi-seat account,Marcos Male,Marcos,Male,Chief Operating Officer FX & IRD - Sr Managing Director,First Citizens BancShares,firstcitizens.com,marcos.male@firstcitizens.com,https://www.linkedin.com/in/marcosmale/,holdout,2
+2,multi-seat account,Meghan Blair,Meghan,Blair,"Chief Operations Officer, First Citizens Commercial Bank",First Citizens BancShares,firstcitizens.com,meghan.blair@firstcitizens.com,https://www.linkedin.com/in/meghan-blair-1a6242111/,holdout,2
+2,multi-seat account,David Christopherson,David,Christopherson,"Executive Vice President, Chief Administrative Officer & Chief Legal Officer",Floor & Decor,flooranddecor.com,dchristopherson@flooranddecor.com,https://www.linkedin.com/in/david-christopherson-8a1964/,holdout,2
+2,multi-seat account,Krystal Zell,Krystal,Zell,"Executive Vice President, Chief Customer Officer",Floor & Decor,flooranddecor.com,krystal.zell@flooranddecor.com,https://www.linkedin.com/in/krystalzell/,holdout,2
+2,multi-seat account,Zafar Farooq,Zafar,Farooq,Chief Operating Officer,Huntington National Bank,huntington.com,zafar.farooq@huntington.com,https://www.linkedin.com/in/zafarfarooq/,test,2
+2,multi-seat account,Mark Anderson,Mark,Anderson,Chief Operating Officer,Hyatt Hotels,hyatt.com,mark.anderson@hyatt.com,https://www.linkedin.com/in/mark-anderson-236a7a19a/,test,2
+2,multi-seat account,Rajvir “RJ” Gosal,Rajvir,Gosal,Chief Operations Officer,Hyatt Hotels,hyatt.com,rj.gosal@hyatt.com,,test,2
+2,multi-seat account,Rob Olson,Rob,Olson,Chief Operating Officer,IKEA,ikea.com,robo@ikea.com,https://www.linkedin.com/in/rob-olson-39864427/,holdout,2
+2,multi-seat account,Samantha Giusti,Samantha,Giusti,"Chief Customer Officer, IKEA US",IKEA,ikea.com,samantha.giusti@ikea.com,https://www.linkedin.com/in/samantha-giusti-3a696228/,holdout,2
+2,multi-seat account,Denise Montgomery,Denise,Montgomery,"Chief Administrative Officer, Department of Medicine",Thomas Jefferson University Hospital,jefferson.edu,denise.montgomery@jefferson.edu,https://www.linkedin.com/in/denise-montgomery-94862225/,holdout,2
+2,multi-seat account,Thomas Balcavage,Thomas,Balcavage,"Senior Vice President, Chief Operations Officer of IS&T",Thomas Jefferson University Hospital,jefferson.edu,thomas.balcavage@jefferson.edu,https://www.linkedin.com/in/thomas-balcavage-1a0b05/,holdout,2
+2,multi-seat account,Eileen Cloherty,Eileen,Cloherty,Chief Accounting Officer (CAO),John Hancock Financial,johnhancock.com,ecloherty@jhancock.com,https://www.linkedin.com/in/eileen-cloherty-46766a194/,test,2
+2,multi-seat account,John Hatch PhD,John,Hatch,Chief Operating Officer- US Segment,John Hancock Financial,johnhancock.com,jhatch@jhancock.com,https://www.linkedin.com/in/john-hatch-128846/,test,2
+2,multi-seat account,Marcus Macip,Marcus,Macip,"Senior Vice President, Chief Administrative Officer",LHC,lhcgroup.com,marcus.macip@lhcgroup.com,https://www.linkedin.com/in/marcus-macip-7657495/,test,2
+2,multi-seat account,"Rajesh Shetye, MBA, MS",Rajesh,Shetye,"Sr. VP, Chief Transformation Officer",LHC,lhcgroup.com,rajesh.shetye@lhcgroup.com,https://www.linkedin.com/in/rajesh-shetye-mba-ms-147a621/,test,2
+2,multi-seat account,Josh Silverman,Josh,Silverman,Chief Operating Officer,LIBERTY Dental Plan,libertydentalplan.com,jsilverman@libertydentalplan.com,https://www.linkedin.com/in/josh-silverman-058b951/,test,2
+2,multi-seat account,Steve Sohn,Steve,Sohn,Chief Administrative Officer & General Counsel,LIBERTY Dental Plan,libertydentalplan.com,ssohn@libertydentalplan.com,https://www.linkedin.com/in/stevejsohn/,test,2
+2,multi-seat account,Daniel Shapero,Daniel,Shapero,Chief Operating Officer,LinkedIn,linkedin.com,dshapero@linkedin.com,https://www.linkedin.com/in/daniel-shapero-8b61310/,holdout,2
+2,multi-seat account,Darren Albert,Darren,Albert,"Vice President, HRBP- COO/Go To Market (GTM) Teams",LinkedIn,linkedin.com,dalbert@linkedin.com,https://www.linkedin.com/in/darrenalbert/,holdout,2
+2,multi-seat account,Alexis Sanchez Geigel,Alexis,Geigel,Executive VP and COO,Mapfre,mapfre.com,asanchez@mapfrepr.com,https://www.linkedin.com/in/alexis-sanchez-geigel-a3342135/,holdout,2
+2,multi-seat account,Dan Olohan,Dan,Olohan,Chief Operations Officer,Mapfre,mapfre.com,dolohan@mapfreusa.com,https://www.linkedin.com/in/dan-olohan-a5176340/,holdout,2
+2,multi-seat account,Arthur Khmura,Arthur,Khmura,Co-President and COO,National Debt Relief,nationaldebtrelief.com,arthur.k@nationaldebtrelief.com,https://www.linkedin.com/in/arthur-khmura-78276042/,holdout,2
+2,multi-seat account,Brit Simon,Brit,Simon,Chief Experience Officer (CXO),National Debt Relief,nationaldebtrelief.com,brit.simon@nationaldebtrelief.com,https://www.linkedin.com/in/brit-simon-b01bb2148/,holdout,2
+2,multi-seat account,Jennifer Hamrick,Jennifer,Hamrick,Chief Operating Officer,State Employees Credit Union,ncsecu.org,jennifer.hamrick@ncsecu.org,https://www.linkedin.com/in/jennifer-hamrick-671b0a184/,holdout,2
+2,multi-seat account,Amir Nasrabadi,Amir,Nasrabadi,Chief Operating Officer - Netflix Animation Studios,Netflix,netflix.com,anasrabadi@netflixanimation.com,https://www.linkedin.com/in/amir-nasrabadi-7649a46/,test,2
+2,multi-seat account,Christina Ching,Christina,Ching,Chief Accounting Officer (CAO),Newegg,newegg.com,christina.s.ching@newegg.com,https://www.linkedin.com/in/christina-ching-1b326613/,holdout,2
+2,multi-seat account,James Wu,James,Wu,COO/CTO,Newegg,newegg.com,james.j.wu@newegg.com,https://www.linkedin.com/in/james-wu-3b98217/,holdout,2
+2,multi-seat account,Bill Jefferson,Bill,Jefferson,Chief Operations Officer,Nisource,nisource.com,wjefferson@nisource.com,https://www.linkedin.com/in/bill-jefferson-903341b4/,holdout,2
+2,multi-seat account,Bob Heidorn,Bob,Heidorn,"President & COO, Columbia Gas of Ohio",Nisource,nisource.com,rheidorn@nisource.com,https://www.linkedin.com/in/bob-heidorn-907a26281/,holdout,2
+2,multi-seat account,Alexis DePree,Alexis,DePree,Chief Operating Officer,Nordstrom,nordstrom.com,alexis.depree@nordstrom.com,,test,2
+2,multi-seat account,Ken Worzel,Ken,Worzel,Chief Customer Officer,Nordstrom,nordstrom.com,ken.worzel@nordstrom.com,,test,2
+2,multi-seat account,John L.,John,L.,Chief Commercial Officer (CCO),OGE Energy,oge.com,lawsj@oge.com,https://www.linkedin.com/in/john-l-80a303/,holdout,2
+2,multi-seat account,Scott Briggs,Scott,Briggs,Chief Administrative Officer,OGE Energy,oge.com,briggssa@oge.com,https://www.linkedin.com/in/scott-briggs-3796a010/,holdout,2
+2,multi-seat account,Debbie Dennis,Debbie,Dennis,Chief Customer Officer and SVP Human Resources and Corporate Affairs,Oncor Electric Delivery Company,oncor.com,debbie.dennis@oncor.com,https://www.linkedin.com/in/debbie-dennis-103a836/,test,2
+2,multi-seat account,Ellen Buck,Ellen,Buck,COO,Oncor Electric Delivery Company,oncor.com,ellen.buck@oncor.com,https://www.linkedin.com/in/ellen-buck-185405201/,test,2
+2,multi-seat account,Randy Lentz,Randy,Lentz,Executive Vice President and Chief Operating Officer,ONEOK,oneok.com,randy.lentz@oneok.com,https://www.linkedin.com/in/randy-lentz-a182b62b/,holdout,2
+2,multi-seat account,Rob Martinovich,Rob,Martinovich,Executive Vice President and Chief Administrative Officer,ONEOK,oneok.com,rmartinovich@oneok.com,https://www.linkedin.com/in/rob-martinovich-48676b13/,holdout,2
+2,multi-seat account,Casey Carissimi,Casey,Carissimi,Chief Operating Officer,Orkin,orkin.com,casey.carissimi@rollins.com,https://www.linkedin.com/in/casey-carissimi-3b009899/,test,2
+2,multi-seat account,Chris Natali,Chris,Natali,Chief Accounting Officer (CAO),PayPal,paypal.com,cnatali@paypal.com,https://www.linkedin.com/in/chris-natali-9149786/,holdout,2
+2,multi-seat account,Preet Nagvanshi,Preet,Nagvanshi,Head of Global Revenue Operations & Enablement | Chief Operating Officer for Global Markets,PayPal,paypal.com,nagvanship@mail.paypal.com,https://www.linkedin.com/in/preet-nagvanshi-24a968/,holdout,2
+2,multi-seat account,Dustin Cheek,Dustin,Cheek,Chief Customer Experience Officer,Prime Therapeutics,primetherapeutics.com,dustin.cheek@primetherapeutics.com,https://www.linkedin.com/in/dustin-cheek-bbb844a/,holdout,2
+2,multi-seat account,Matthew Mertel,Matthew,Mertel,Chief Operating Officer,Prime Therapeutics,primetherapeutics.com,matthew.mertel@primetherapeutics.com,https://www.linkedin.com/in/matthewmertel/,holdout,2
+2,multi-seat account,Cody L.,Cody,L.,"Chief Supervision Officer and Head of Operations - Principal Securities, Inc.",Principal Financial,principal.com,lawler.cody@principal.com,https://www.linkedin.com/in/cody-l-11055145/,test,2
+2,multi-seat account,Jeff Cimini,Jeff,Cimini,"Chief Transformation Officer and Head of Planning, Performance and Transformation",Principal Financial,principal.com,cimini.jeff@principal.com,https://www.linkedin.com/in/jeff-cimini-7985b21/,test,2
+2,multi-seat account,Laura Hillman,Laura,Hillman,"Chief Operating Officer, Global Consumer & Retail Investment Banking",Raymond James,raymondjames.com,laura.hillman@raymondjames.com,https://www.linkedin.com/in/laura-lozier-hillman/,holdout,2
+2,multi-seat account,Will Hodge,Will,Hodge,Senior Managing Director and Chief Operating Officer of Investment Banking,Raymond James,raymondjames.com,william.hodge@raymondjames.com,https://www.linkedin.com/in/will-hodge-986b474/,holdout,2
+2,multi-seat account,Gregg Brummer,Gregg,Brummer,EVP - Chief Operating Officer,Republic Services,republicservices.com,gbrummer@republicservices.com,https://www.linkedin.com/in/gregg-brummer-745777a/,holdout,2
+2,multi-seat account,Jeff Hughes,Jeff,Hughes,"EVP, Chief Administrative Officer",Republic Services,republicservices.com,jhughes@republicservices.com,https://www.linkedin.com/in/jeff-hughes-59821126/,holdout,2
+2,multi-seat account,Brent Steineckert,Brent,Steineckert,Chief Administrative Officer (CAO),Sharp HealthCare,sharp.com,brent.steineckert@sharp.com,,holdout,2
+2,multi-seat account,Brett McClain,Brett,McClain,EVP/Chief Operating Officer,Sharp HealthCare,sharp.com,brett.mcclain@sharp.com,https://www.linkedin.com/in/brett-mcclain-2065604/,holdout,2
+2,multi-seat account,Juliette Jones,Juliette,Jones,COO Alamo Records,Sony Music,sonymusic.com,juliette.jones@sonymusic.com,https://www.linkedin.com/in/juliette-jones-9514a133/,holdout,2
+2,multi-seat account,Maria (Blanche) Fernandez,Maria,Fernandez,Chief Operating Officer Latin Iberia,Sony Music,sonymusic.com,maria.fernandez@sonymusic.com,https://www.linkedin.com/in/maria-blanche-fernandez-10b807/,holdout,2
+2,multi-seat account,April R.,April,R.,Vice President and Chief Operating Officer of Companion Benefit Alternative,BlueCross BlueShield South Carolina,southcarolinablues.com,april.richardson@bcbssc.com,https://www.linkedin.com/in/aprilrichardson/,holdout,2
+2,multi-seat account,Steve Greenley,Steve,Greenley,Chief Operating Officer,Spire,spireenergy.com,steven.greenley@spireenergy.com,https://www.linkedin.com/in/steve-greenley-ab9275a/,holdout,2
+2,multi-seat account,Tim Krick,Tim,Krick,Chief Accounting Officer (CAO),Spire,spireenergy.com,tim.krick@spireenergy.com,https://www.linkedin.com/in/tim-krick-7417b79/,holdout,2
+2,multi-seat account,Chance Allred,Chance,Allred,Chief Experience officer CXO and Chief Direct Sales Officer CDSO,Sunrun,sunrun.com,callred@sunrun.com,https://www.linkedin.com/in/chanceallred/,test,2
+2,multi-seat account,Patrick Kent,Patrick,Kent,Chief Operations Officer,Sunrun,sunrun.com,patrick.kent@sunrun.com,https://www.linkedin.com/in/patrick-kent-a7ba4b22/,test,2
+2,multi-seat account,Custis Proctor,Custis,Proctor,Chief Operating Officer - Alabama/Panhandle Banking Group,Synovus Financial,synovus.com,custisproctor@synovus.com,https://www.linkedin.com/in/custis-proctor-92672642/,test,2
+2,multi-seat account,David Abee,David,Abee,"Chief Operating Officer, Georgia Banking Group",Synovus Financial,synovus.com,davidabee@synovus.com,https://www.linkedin.com/in/david-abee-2b9a3717/,test,2
+2,multi-seat account,Christie Sandoval,Christie,Sandoval,Executive Vice President and Chief Customer Officer,T-Mobile,t-mobile.com,christie.sandoval@t-mobile.com,https://www.linkedin.com/in/christie-sandoval-0609b6b/,test,2
+2,multi-seat account,Jon Freier,Jon,Freier,Chief Operating Officer,T-Mobile,t-mobile.com,jon.freier@t-mobile.com,https://www.linkedin.com/in/jonfreier/,test,2
+2,multi-seat account,Kimberly C.,Kimberly,C.,"Senior Vice President, Chief Administrative Officer and Chief Human Resources Officer","Toyota Motor Sales, U.S.A.",toyota.com,kimberly.cockrell@toyota.com,https://www.linkedin.com/in/kimberly-c-a112831/,test,2
+2,multi-seat account,Mark Templin,Mark,Templin,Executive Vice President and COO,"Toyota Motor Sales, U.S.A.",toyota.com,mark.templin@toyota.com,https://www.linkedin.com/in/mark-templin-06278410/,test,2
+2,multi-seat account,Craig Pintoff,Craig,Pintoff,"Executive Vice President, Chief Administrative Officer",United Rentals,unitedrentals.com,cpintoff@ur.com,https://www.linkedin.com/in/craig-pintoff-25223a5/,holdout,2
+2,multi-seat account,Matt Flannery,Matt,Flannery,Executive Vice President and Chief Operating Officer,United Rentals,unitedrentals.com,mflanner@ur.com,https://www.linkedin.com/in/matt-flannery-1904bb24/,holdout,2
+2,multi-seat account,Melinda Wilner,Melinda,Wilner,Chief Operating Officer,United Wholesale Mortgage,uwm.com,mwilner@uwm.com,https://www.linkedin.com/in/melinda-wilner/,holdout,2
+2,multi-seat account,Anthony Spina,Anthony,Spina,Chief Operating Officer,Walgreens,walgreens.com,anthony.spina@walgreens.com,https://www.linkedin.com/in/anthony-spina-74b87610/,test,2
+2,multi-seat account,Sebastian Peterson,Sebastian,Peterson,Chief Marketing and Customer Experience Officer,Walgreens,walgreens.com,sp@walgreens.com,https://www.linkedin.com/in/sebastian-peterson-ab4957180/,test,2
+2,multi-seat account,Michael Hooper,Michael,Hooper,EVP & COO,WEC Business Services,wecenergygroup.com,michaelhooper@wecenergygroup.com,https://www.linkedin.com/in/michael-hooper-2371a01b0/,test,2
+2,multi-seat account,"Molly Mulroy, MBA",Molly,Mulroy,Executive Vice President and Chief Administrative Officer,WEC Business Services,wecenergygroup.com,molly.mulroy@wecenergygroup.com,,test,2
+2,multi-seat account,Joe Kohmann,Joe,Kohmann,Chief Operating Officer,Westfield Insurance,westfieldinsurance.com,joekohmann@westfieldgrp.com,https://www.linkedin.com/in/joe-kohmann-8ab57a16/,test,2
+2,multi-seat account,Kathleen Golovan,Kathleen,Golovan,Chief Administrative Officer,Westfield Insurance,westfieldinsurance.com,kathleengolovan@westfieldgrp.com,https://www.linkedin.com/in/kathleen-golovan-b836b23/,test,2
+2,multi-seat account,Debbie Fiorino,Debbie,Fiorino,"Chief Operating Officer, Dream Vacations & CruiseOne",World Travel,worldtravelholdings.com,dfiorino@worldtravelholdings.com,https://www.linkedin.com/in/debbie-fiorino-b950a41/,test,2
+2,multi-seat account,Jamie Cash,Jamie,Cash,"Chief Operating Officer, Luxury Travel Holdings & Cruiseline.com",World Travel,worldtravelholdings.com,jcash@worldtravelholdings.com,https://www.linkedin.com/in/jamiecash/,test,2
+2,multi-seat account,Michael Mendelson,Michael,Mendelson,"SVP, Chief Operating Officer - Wealth",WSFS Bank,wsfsbank.com,mmendelson@wsfsbank.com,https://www.linkedin.com/in/michaelmendelson/,holdout,2
+2,multi-seat account,Amanda Rome,Amanda,Rome,"Executive Vice President, Group President, Utilities, Chief Customer Officer",Xcel Energy,xcelenergy.com,amanda.rome@xcelenergy.com,https://www.linkedin.com/in/amanda-rome-13898062/,holdout,2
+2,multi-seat account,Timothy O'Connor,Timothy,O'Connor,Executive Vice President and Chief Operations Officer,Xcel Energy,xcelenergy.com,albert.s.choi@xcelenergy.com,https://www.linkedin.com/in/timothy-o-connor-1b5310a4/,holdout,2
+3,single seat,Jeff Lopper,Jeff,Lopper,Chief Accounting Officer (CAO),Fifth Third Ban,53.com,jeff.lopper@53.com,https://www.linkedin.com/in/jeff-lopper-5046543/,holdout,1
+3,single seat,Jean Alexander,Jean,Alexander,Chief Operating Officer,AARP,aarp.org,jeanette@aarp.org,https://www.linkedin.com/in/jean-alexander-184271/,holdout,1
+3,single seat,Chadwick Fox,Chadwick,Fox,EVP & Chief Customer Officer,Academy,academy.com,chad.fox@academy.com,https://www.linkedin.com/in/chad-fox-726702167/,holdout,1
+3,single seat,Dave Stevanovski,Dave,Stevanovski,COO,ACN,acninc.com,dave.stevanovski@acninc.com,https://www.linkedin.com/in/dave-stevanovski-3534038/,test,1
+3,single seat,Joshua Taub,Joshua,Taub,Chief Operating Officer,Activision,activision.com,jtaub@activision.com,https://www.linkedin.com/in/joshua-taub-411a7a1/,test,1
+3,single seat,Mara Bryant,Mara,Bryant,Chief Operating Officer / Operations Executive,Adventist Health,adventisthealth.org,bryantmc@ah.org,https://www.linkedin.com/in/mara-bryant-85323b10/,holdout,1
+3,single seat,Rebecca Pratt,Rebecca,Pratt,Aegon Global Technology COO,Aegon,aegon.com,rebecca.pratt@aegon.com,https://www.linkedin.com/in/rebecca-pratt-597b035a/,test,1
+3,single seat,Chris Brathwaite,Chris,Brathwaite,Chief Communications Officer (CCO),American Electric Power,aep.com,cbrathwaite@aep.com,https://www.linkedin.com/in/chris-brathwaite-3220072/,holdout,1
+3,single seat,Ryan Sherlock,Ryan,Sherlock,IAM - COO Business Controls Office,Allianz Life of America,allianzlife.com,ryan.sherlock@allianzlife.com,https://www.linkedin.com/in/ryan-sherlock-647763183/,holdout,1
+3,single seat,"Clinton Eubanks, CPA",Clinton,Eubanks,Chief Operating Officer - Capital Markets,Ally Financial,ally.com,clinton.eubanks@ally.com,https://www.linkedin.com/in/clinton-eubanks-cpa-3a205937/,test,1
+3,single seat,Matthew Ostiguy,Matthew,Ostiguy,"Senior Vice President, P&C Chief Operating Officer, American National Insurance Company",American National Insurance,americannational.com,matthew.ostiguy@americannational.com,https://www.linkedin.com/in/matthew-ostiguy-03840215/,holdout,1
+3,single seat,Tim Calvert,Tim,Calvert,Chief Operating Officer,Amerilife Group,amerilife.com,tcalvert@amerilife.com,https://www.linkedin.com/in/tim-calvert-288765/,test,1
+3,single seat,Eric Hunziker,Eric,Hunziker,Chief Claims Officer,American Modern Insurance Group,amig.com,ehunziker@amig.com,https://www.linkedin.com/in/eric-hunziker-39222611/,test,1
+3,single seat,Jacob Tetlow,Jacob,Tetlow,Chief Operating Officer,Arizona Public Service,aps.com,jacob.tetlow@aps.com,https://www.linkedin.com/in/jacob-tetlow-92158a41/,holdout,1
+3,single seat,Chris Hovey,Chris,Hovey,Chief Operations Officer,Arch Insurance,archcapgroup.com,chovey@archgroup.com,https://www.linkedin.com/in/chris-hovey-a45a851/,test,1
+3,single seat,Pablo Brizi,Pablo,Brizi,Chief Administrative Officer (CAO),Asurion,asurion.com,pablo.brizi@asurion.com,https://www.linkedin.com/in/pablobrizi/,test,1
+3,single seat,Mike Downing,Mike,Downing,Co-President and Chief Operating Officer,Athene,athene.com,mdowning@athene.com,https://www.linkedin.com/in/mike-downing-26461b16/,holdout,1
+3,single seat,Charlotte Ancel,Charlotte,Ancel,"President and COO, Berkshire Gas Company",AVANGRID,avangrid.com,charlotte.ancel@avangrid.com,https://www.linkedin.com/in/charlotte-ancel-a03bb684/,holdout,1
+3,single seat,"Kristy Rohwedder, MBA, BSN, RN",Kristy,BSN,Chief Operating Officer,Aveanna Healthcare,aveanna.com,kristy.rohwedder@aveanna.com,https://www.linkedin.com/in/kristy-rohwedder-mba-bsn-rn-28856222/,test,1
+3,single seat,"Shelley Neal Shaughnessy, FACHE, CMPE",Shelley,CMPE,"Chief Operating Officer, BHMG",Baptist Health,baptisthealth.com,shelley.shaughnessy@bhsi.com,https://www.linkedin.com/in/shelley-neal-shaughnessy-a5054011/,holdout,1
+3,single seat,Antonio (Tony) C.,Antonio,C.,"Chief Operating Officer for Barclays US Consumer Bank and Barclays Bank Delaware,",Barclays,barclaysus.com,antonio.castanon@barclays.com,https://www.linkedin.com/in/antonio-castanon-1b64981/,test,1
+3,single seat,Maly Bernstein,Maly,Bernstein,Chief Commercial Officer (CCO),Bath & Body Works,bbwinc.com,mbernstein@bbw.com,https://www.linkedin.com/in/maly-bernstein-2016145b/,test,1
+3,single seat,Sean Robbins,Sean,Robbins,Chief Operating Officer,Blue Cross & Blue Shield Association,bcbs.com,sean.robbins@bcbsa.com,https://www.linkedin.com/in/sean-robbins-b0228b10/,holdout,1
+3,single seat,Holly Graves,Holly,Graves,"Vice President, Operations and COO CMS Programs",Blue Cross Blue Shield Kansas,bcbsks.com,holly.graves@bcbsks.com,https://www.linkedin.com/in/holly-graves-5890a75/,holdout,1
+3,single seat,Karen Jozwiak,Karen,Jozwiak,"Director, Chief Operating Officer Division",Blue Cross Blue Shield Michigan,bcbsm.com,kjozwiak@umich.edu,https://www.linkedin.com/in/karen-jozwiak-1921b24/,test,1
+3,single seat,Lou Antonelli,Lou,Antonelli,Executive Vice President & Chief Operating Officer,Beyond Finance,beyondfinance.com,lantonelli@beyondfinance.com,https://www.linkedin.com/in/lou-antonelli-b9683767/,test,1
+3,single seat,Derrick Dickens,Derrick,Dickens,Senior Vice President and Chief Operating Officer,Baltimore Gas And Electric,bge.com,derrick.dickens@bge.com,https://www.linkedin.com/in/derrick-dickens-44ba2a12/,test,1
+3,single seat,Richard Lynch,Richard,Lynch,Executive Vice President and Chief Operating Officer,Blue Cross Blue Shield Massachusetts,bluecrossma.org,richard.lynch@bcbsma.com,https://www.linkedin.com/in/richard-lynch-52a1421/,holdout,1
+3,single seat,David Im,David,Im,Chief Operating Officer,Blue Cross Blue Shield of Minnesota,bluecrossmn.com,david.im@bluecrossmn.com,https://www.linkedin.com/in/david-im-a6b392/,holdout,1
+3,single seat,Susan Mullaney,Susan,Mullaney,Chief Operating Officer,Blue Shield of California,blueshieldca.com,susan.mullaney@blueshieldca.com,https://www.linkedin.com/in/susanmullaney/,holdout,1
+3,single seat,Amanda Raynor,Amanda,Raynor,Chief Operating Officer North America,BNP Paribas Asset Management,bnpparibas-am.com,amanda.raynor@bnpparibas-am.com,https://www.linkedin.com/in/amandaraynor/,test,1
+3,single seat,Mary Lou Burke Afonso,Mary,Afonso,COO of North America Center Operations,Bright Horizons,brighthorizons.com,mburke@brighthorizons.com,https://www.linkedin.com/in/mary-lou-burke-afonso-b7324132/,test,1
+3,single seat,Veronica Moturi,Veronica,Moturi,Chief Customer Officer,Brinks Home Security,brinkshome.com,vmoturi@brinkshome.com,https://www.linkedin.com/in/veronica-moturi-85287254/,holdout,1
+3,single seat,Chikako Tyler,Chikako,Tyler,"Executive Vice President, Chief Operating Officer",California Bank & Trust,calbanktrust.com,chikako.tyler@calbt.com,https://www.linkedin.com/in/cokada/,test,1
+3,single seat,Jennifer Kuhn,Jennifer,Kuhn,Chief Administrative Officer,Cano Health,canohealth.com,jennifer.kuhn@canohealth.com,https://www.linkedin.com/in/jennifer-kuhn-2672a888/,test,1
+3,single seat,Cheryl Toland,Cheryl,Toland,COO - Medicaid,Carefirst,carefirst.com,cheryl.toland@carefirst.com,https://www.linkedin.com/in/cheryl-toland-6b988813/,test,1
+3,single seat,Michael Huffaker,Michael,Huffaker,Chief Operating Officer,CarParts.com,carparts.com,michael.huffaker@usautoparts.com,https://www.linkedin.com/in/michael-huffaker-9826a62/,holdout,1
+3,single seat,Glen Vilim,Glen,Vilim,Chief Administrative Officer (CAO),Cenlar FSB,cenlar.com,glvilim@cenlar.com,https://www.linkedin.com/in/glen-vilim-9b23a2/,holdout,1
+3,single seat,Paul Day,Paul,Day,Chief Operating Officer,Chick-fil-A,chick-fil-a.com,pday@cfawaco.com,,test,1
+3,single seat,Janelle Sallenave,Janelle,Sallenave,Chief Operating Officer,Chime,chime.com,janelle.sallenave@chime.com,https://www.linkedin.com/in/janelle-sallenave-489416/,test,1
+3,single seat,Linda Matzigkeit,Linda,Matzigkeit,Chief Administrative Officer,Children's Healthcare of Atlanta,choa.org,linda.matzigkeit@choa.org,https://www.linkedin.com/in/linda-matzigkeit-b20454/,test,1
+3,single seat,Julie Abercrombie,Julie,Abercrombie,Chief Operating Officer,Community Health Systems,chs.net,julie_abercrombie@chs.net,https://www.linkedin.com/in/julie-abercrombie-b553b559/,holdout,1
+3,single seat,Jeremy Pope,Jeremy,Pope,Chief Administrative Officer,Citizens Property Insurance,citizensfla.com,jeremy.pope@citizensfla.com,https://www.linkedin.com/in/jeremy-pope-8254696a/,test,1
+3,single seat,Jean Linnenbringer,Jean,Linnenbringer,Chief Operations Officer,CNO Financial,cnoinc.com,jean.linnenbringer@cnoinc.com,https://www.linkedin.com/in/jean-linnenbringer-9b3a4a4/,test,1
+3,single seat,"Sarah Brady, CFA",Sarah,Brady,Chief Operating Officer of Commercial Tradable Products,Commerce Bancshares,commercebank.com,sarah.brady@commercebank.com,https://www.linkedin.com/in/sarah-brady-0961142b/,holdout,1
+3,single seat,James Williams,James,Williams,Market Chief Operating Officer,CommonSpirit Health,commonspirit.org,james@commonspirit.org,,test,1
+3,single seat,Elizabeth Hunter,Elizabeth,Hunter,Chief Operating Officer,Consumer Cellular,consumercellular.com,elizabeth.hunter@consumercellular.com,https://www.linkedin.com/in/elizabeth-hunter-71bb092/,test,1
+3,single seat,Tonya Berry,Tonya,Berry,Executive Vice President & Chief Operating Officer,Consumers Energy,consumersenergy.com,tonya.berry@cmsenergy.com,https://www.linkedin.com/in/tonyaberrys/,test,1
+3,single seat,Mike Brewer,Mike,Brewer,Chief Operating Officer,Crate & Barrel,crateandbarrel.com,mbrewer@crateandbarrel.com,https://www.linkedin.com/in/mike-brewer-9177356/,holdout,1
+3,single seat,Brad Carpenter,Brad,Carpenter,"Chief Operating Officer & EVP, Business Technology",C Spire Wireless,cspire.com,bcarpenter@cspire.com,https://www.linkedin.com/in/brad-carpenter-789b179/,holdout,1
+3,single seat,Matthew Shepherd,Matthew,Shepherd,Chief Operating Officer,Delta Community Credit Union,deltacommunitycu.com,matthew.shepherd@deltacommunitycu.com,https://www.linkedin.com/in/matthew-shepherd/,test,1
+3,single seat,"Carter, Charlotte",Carter,Charlotte,Chief Operating Officer,American Diabetes Association,diabetes.org,ccarter@diabetes.org,https://www.linkedin.com/in/carter-charlotte-9949637/,test,1
+3,single seat,Emily Taylor,Emily,Taylor,Chief Operating Officer,Dollar General,dollargeneral.com,emtaylor@dollargeneral.com,https://www.linkedin.com/in/emily-taylor-7759702/,holdout,1
+3,single seat,Shannon Bible,Shannon,Bible,Chief Experience Officer & EVP US & Canada,doTERRA,doterra.com,sbible@doterra.com,https://www.linkedin.com/in/shannon-farmer-9059b029/,holdout,1
+3,single seat,Parker Shi,Parker,Shi,Chief Operating Officer,East West Bank,eastwestbank.com,parker.shi@eastwestbank.com,https://www.linkedin.com/in/parkershi/,test,1
+3,single seat,Carlos R.,Carlos,R.,"Chief Customer Officer, Managing Director",eHarmony.com,eharmony.com,carlos.robles@eharmony.com,https://www.linkedin.com/in/kr0710/,holdout,1
+3,single seat,Mike Koby,Mike,Koby,"SVP & Chief Operating Officer, Gas Transmission & Midstream",Enbridge,enbridge.com,michael.koby@enbridge.com,https://www.linkedin.com/in/mike-koby-9b57ab1/,test,1
+3,single seat,Shawn Madore,Shawn,Madore,Vice President of Operations & COO,ENGIE Netherlands,engie.com,shawn.madore@engie.com,https://www.linkedin.com/in/shawn-madore-12aa37240/,test,1
+3,single seat,Anastasia Minor,Anastasia,Minor,Chief Transformation Officer,Entergy,entergy.com,am@entergy.com,https://www.linkedin.com/in/anastasia-minor-0155592/,holdout,1
+3,single seat,Barry Thornton,Barry,Thornton,Chief Operating Officer,Excellus Blue Cross Blue Shield,excellusbcbs.com,barry.thornton@cdphp.com,,test,1
+3,single seat,Sue Anthony,Sue,Anthony,Chief Operating Officer,Finance of America,financeofamerica.com,santhony@financeofamerica.com,https://www.linkedin.com/in/sue-anthony-a389a01/,holdout,1
+3,single seat,"Robert Lawson, CTP",Robert,Lawson,"Senior Vice President, Chief Administrative Officer",First American,firstam.com,rlawson@firstam.com,https://www.linkedin.com/in/rlawson/,test,1
+3,single seat,Toby Thomas,Toby,Thomas,COO,FirstEnergy,firstenergycorp.com,tthomas@firstenergycorp.com,https://www.linkedin.com/in/toby-thomas-247b6a3/,test,1
+3,single seat,Monique Little,Monique,Little,Chief Operations Officer,First Tech Federal Credit Union,firsttechfed.com,monique.little@firsttechfed.com,https://www.linkedin.com/in/monique-little-b16a104/,test,1
+3,single seat,Jeff Haymore,Jeff,Haymore,President & Chief Operating Officer,Flagship Credit Acceptance,flagshipcredit.com,jeff.haymore@flagshipcredit.com,https://www.linkedin.com/in/jeff-haymore-7625bb12/,holdout,1
+3,single seat,Steve Miller,Steve,Miller,"Chief Operating Officer, North America",Foot Locker,footlocker-inc.com,steve.miller@footlocker.com,https://www.linkedin.com/in/steve-miller-a4a0328/,test,1
+3,single seat,Laura Castro,Laura,Castro,Chief Operating Officer and Business Office Lead,Ford Motor Credit,ford.com,laura.castro@ford.com,https://www.linkedin.com/in/laura-castro-a2a9903b/,holdout,1
+3,single seat,Christopher (Chris) Walsh,Christopher,Walsh,"President, COO, Frost Brokerage and Investment Services",Frost Bank,frostbank.com,christopher.walsh@frostbank.com,https://www.linkedin.com/in/christopher-chris-walsh-68728310/,holdout,1
+3,single seat,Billy Soffera,Billy,Soffera,Chief Operating Officer,GFL Environmental,gflenv.com,bsoffera@gflenv.com,https://www.linkedin.com/in/billy-soffera-7b70a189/,holdout,1
+3,single seat,"Michael Hargis, MBA",Michael,Hargis,Chief Operating Officer,GoHealth,gohealth.com,mhargis@gohealth.com,https://www.linkedin.com/in/michael-hargis-mba-b27b1b/,holdout,1
+3,single seat,Shannon Sale,Shannon,Sale,"Executive Vice President, Chief Administrative Officer",Grady Health,gradyhealth.org,ssale@gmh.edu,https://www.linkedin.com/in/shannon-sale-237a434/,test,1
+3,single seat,Teresa Watkins,Teresa,Watkins,Chief Operations Officer,Green Dot,greendot.com,twatkins@greendot.com,https://www.linkedin.com/in/teresa-watkins-20477918/,test,1
+3,single seat,Bryan Niketh,Bryan,Niketh,Chief Operations Officer,Harley-Davidson Motor,harley-davidson.com,bryan.niketh@harley-davidson.com,https://www.linkedin.com/in/bryan-niketh-8a4a0518/,test,1
+3,single seat,Megan Remark,Megan,Remark,Chief Operating Officer,HealthPartners,healthpartners.com,megan.m.remark@healthpartners.com,https://www.linkedin.com/in/megan-remark-302387a/,holdout,1
+3,single seat,Michael Ettinger,Michael,Ettinger,"Executive Vice President, Chief Operating Officer",Henry Schein,henryschein.com,michael.ettinger@henryschein.com,https://www.linkedin.com/in/michael-ettinger-8a957811/,holdout,1
+3,single seat,Troy Hicks,Troy,Hicks,Chief Operating Officer,Herbalife,herbalife.com,troyh@herbalife.com,https://www.linkedin.com/in/troy-hicks-4031ba4/,holdout,1
+3,single seat,Tom Doran,Tom,Doran,EVP and Chief Operating Officer Highmark Health Plan,Highmark,highmark.com,thomas.doran@highmark.com,https://www.linkedin.com/in/tom-doran-1098231/,test,1
+3,single seat,Misha Moylan,Misha,Moylan,"SVP, Chief Accounting Officer (CAO)",Hilton Reservations Worldwide,hilton.com,misha.moylan@hilton.com,https://www.linkedin.com/in/misha-moylan-3a838113b/,test,1
+3,single seat,Jay Driggers,Jay,Driggers,"Vice President, Chief Experience Officer",Horizon Blue Cross Blue Shield of New Jersey,horizonblue.com,jay_driggers@horizonblue.com,https://www.linkedin.com/in/jaydriggers/,test,1
+3,single seat,Daniel Novotny,Daniel,Novotny,Chief Operations Officer,Hyundai Capital America,hyundaicapitalamerica.com,dnovotny@hcamerica.com,https://www.linkedin.com/in/daniel-novotny-b8824021/,holdout,1
+3,single seat,Adam Richins,Adam,Richins,Executive Vice President and Chief Operating Officer,Idaho Power,idahopower.com,arichins@idahopower.com,https://www.linkedin.com/in/adam-richins-8649266/,test,1
+3,single seat,Susie White,Susie,White,Chief Operating Officer,IEHP,iehp.org,white-s@iehp.org,https://www.linkedin.com/in/susie-white-71650614/,holdout,1
+3,single seat,David Pollack,David,Pollack,President & Chief Operating Officer,InterWell Health,interwellhealth.com,david.pollack@interwellhealth.com,https://www.linkedin.com/in/david-pollack-0418a2158/,holdout,1
+3,single seat,Mike Nicholson,Mike,Nicholson,"President, Chief Operating Officer",J.Crew,jcrew.com,michael.nicholson@jcrew.com,https://www.linkedin.com/in/michael-j-nicholson/,holdout,1
+3,single seat,Jody Brooks,Jody,Brooks,Chief Administrative Officer,JEA,jea.com,jody.brooks@jea.com,https://www.linkedin.com/in/jody-brooks-3556956/,test,1
+3,single seat,Chris Poitras,Chris,Poitras,"Division Vice President and Chief Operating Officer, College, Sports, and Specialty",Jostens,jostens.com,chris.poitras@jostens.com,https://www.linkedin.com/in/chris-poitras-22278b4/,holdout,1
+3,single seat,Scott Fordham,Scott,Fordham,Chief Operating Officer,Just Energy Group,justenergy.com,sfordham@justenergy.com,https://www.linkedin.com/in/scott-fordham-424a381b7/,holdout,1
+3,single seat,Kenneth Janis,Kenneth,Janis,Chief Operating Officer,Kelsey-Seybold Clinic,kelsey-seybold.com,kenneth.janis@kelsey-seybold.com,https://www.linkedin.com/in/kenneth-janis-3693b75/,holdout,1
+3,single seat,Jose Galiano,Jose,Galiano,Chief Operations Officer,Kemper,kemper.com,jgaliano@kemper.com,https://www.linkedin.com/in/jose-m-galiano/,holdout,1
+3,single seat,Patrick Walsh,Patrick,Walsh,Chief Operating Officer,Knitwell,knitwellgroup.com,patrick.walsh@knitwellgroup.com,https://www.linkedin.com/in/patrick-walsh-13452721/,test,1
+3,single seat,Mark Schroeder,Mark,Schroeder,"EVP & COO, Labcorp | President, Labcorp Diagnostics",Lab,labcorp.com,marks@labcorp.com,https://www.linkedin.com/in/schroeder-mark/,test,1
+3,single seat,Tom Jessee,Tom,Jessee,VP-COO,LG&E Energy KU Energy,lge-ku.com,tom.jessee@lge-ku.com,https://www.linkedin.com/in/tom-jessee-71ba595/,holdout,1
+3,single seat,Quique Vivas,Quique,Vivas,Chief Commercial Officer (CCO),Liberty Cablevision,libertypr.com,quique@libertypr.com,https://www.linkedin.com/in/enrique-vivas-gavi%c3%b1o-578bab9/,holdout,1
+3,single seat,Nicholas Tryphonides,Nicholas,Tryphonides,"COO, Markets North America and Principal Operating Officer, Lloyds Securities Inc.",Lloyds Bank,lloydsbankinggroup.com,nicholas.tryphonides@lbusa.com,https://www.linkedin.com/in/nicholas-tryphonides-9191727/,holdout,1
+3,single seat,Chris Yarbrough,Chris,Yarbrough,"CCO & Head of Legal, US",M&G Limited,mandg.com,christopher.yarbrough@mandg.com,,test,1
+3,single seat,Courtney R.,Courtney,R.,"Head of Affiliated Distribution Compliance and CCO for MML Investors Services, LLC",Massachusetts Mutual Life Insurance,massmutual.com,cr@massmutual.com,https://www.linkedin.com/in/courtneyrogersreid/,holdout,1
+3,single seat,Adam H.,Adam,H.,Chief Operating Officer,Medica,medica.com,adam.hjerpe@medica.com,https://www.linkedin.com/in/adam-hjerpe/,test,1
+3,single seat,Annette Terrien Hill,Annette,Hill,RNI Chief Operating Officer,Medical Mutual of Ohio,medmutual.com,annette.hill@medmutual.com,https://www.linkedin.com/in/annette-terrien-hill-28403866/,test,1
+3,single seat,Melissa E.,Melissa,E.,"AVP, Chief Operating Officer",Meritain Health,meritain.com,melissa.elwood@meritain.com,https://www.linkedin.com/in/melissa-e-79b6bb7/,holdout,1
+3,single seat,Nicholas Bertram,Nicholas,Bertram,President and Chief Operating Officer,Michaels Stores,michaels.com,nbertram@michaels.com,https://www.linkedin.com/in/nicbertram/,test,1
+3,single seat,Garland Wilkinson,Garland,Wilkinson,"SEVP, Chief Operating Officer",MidFirst Bank,midfirst.com,garland.wilkinson@midfirst.com,https://www.linkedin.com/in/garland-wilkinson-aa407b10/,test,1
+3,single seat,"Craig Bernier, CAMS",Craig,Bernier,Chief Compliance Officer (CCO),MoneyGram,moneygram.com,cbernier@moneygram.com,https://www.linkedin.com/in/craig-bernier-cams-23a68345/,test,1
+3,single seat,Robb Czyzewski,Robb,Czyzewski,Chief Operating Officer,Money Management International,moneymanagement.org,robb.czyzewski@moneymanagement.org,https://www.linkedin.com/in/robbcz/,test,1
+3,single seat,Daniel Headrick,Daniel,Headrick,Chief Operating Officer,Moxie Pest Control,moxieservices.com,daniel.headrick@moxieservices.com,https://www.linkedin.com/in/daniel-headrick-8655226b/,holdout,1
+3,single seat,Liz Mazzotta,Liz,Mazzotta,Chief Administrative Officer,Mutual of Omaha,mutualofomaha.com,liz.mazzotta@mutualofomaha.com,https://www.linkedin.com/in/liz-mazzotta-0605bb10/,holdout,1
+3,single seat,Latisha Hill,Latisha,Hill,Vice President Community Affairs & Chief Customer Officer,Avista,myavista.com,latisha.hill@avistacorp.com,https://www.linkedin.com/in/latisha-hill-1486a41ba/,holdout,1
+3,single seat,Michael Fiorello,Michael,Fiorello,"COO, Prepared Meals at NationsBenefits",NationsBenefits,nationsbenefits.com,mfiorello@nationsbenefits.com,https://www.linkedin.com/in/michael-fiorello-10896328/,holdout,1
+3,single seat,Darryl Munden,Darryl,Munden,Chief Operating Officer,Navitus Health Solutions,navitus.com,darryl.munden@navitus.com,https://www.linkedin.com/in/darrylmundenmba/,holdout,1
+3,single seat,Dave Wheeler,Dave,Wheeler,Chief Operating Officer,New Balance,newbalance.com,dave.wheeler@newbalance.com,https://www.linkedin.com/in/dave-wheeler-521091182/,holdout,1
+3,single seat,Carol Voorhees,Carol,Voorhees,Executive Vice President & Chief Operating Officer,NJM Insurance,njm.com,cvoorhees@njm.com,https://www.linkedin.com/in/carol-voorhees-267712148/,test,1
+3,single seat,Suzie Dieth,Suzie,Dieth,Consumer Vice President and Chief Experience Officer (CXO),NRG Energy,nrg.com,sdieth@nrg.com,https://www.linkedin.com/in/suziedieth/,holdout,1
+3,single seat,Hitesh Ruparel,Hitesh,Ruparel,Chief Operating Officer,NutriSystem,nutrisystem.com,hruparel@nutrisystem.com,https://www.linkedin.com/in/hiteshruparel01/,test,1
+3,single seat,Karin Sarratt,Karin,Sarratt,Chief Operating Officer,OneAmerica,oneamerica.com,karin.sarratt@oneamerica.com,https://www.linkedin.com/in/karin-sarratt/,test,1
+3,single seat,"Micah Conrad, CFA",Micah,Conrad,Chief Operating Officer,OneMain Financial,onemainfinancial.com,micah.conrad@onemainfinancial.com,https://www.linkedin.com/in/micah-conrad-cfa-9860891/,test,1
+3,single seat,Charles Kirol,Charles,Kirol,Chief Operating Officer,Peloton Interactive,onepeloton.com,charles.kirol@onepeloton.com,https://www.linkedin.com/in/charlie-kirol-b932a7a/,test,1
+3,single seat,Attila Miszti,Attila,Miszti,Chief Operating Officer,OUC,ouc.com,amiszti@ouc.com,https://www.linkedin.com/in/attila-miszti-4744591/,holdout,1
+3,single seat,Dirk Benson,Dirk,Benson,Chief Commercial Officer (CCO),Owens & Minor,owens-minor.com,dirk.benson@owens-minor.com,https://www.linkedin.com/in/dirkrbenson/,holdout,1
+3,single seat,Itai Perry,Itai,Perry,Chief Accounting Officer (CAO),Payoneer,payoneer.com,itaipe@payoneer.com,,test,1
+3,single seat,Hugh Roth,Hugh,Roth,Sr Vice President Sales - Chief Customer Officer - PepsiCo Global Foodservice,Pepsico,pepsico.com,hugh.roth@pepsico.com,https://www.linkedin.com/in/hugh-roth-5037538/,test,1
+3,single seat,David Redfield,David,Redfield,Chief Operating Officer,PetSmart,petsmart.com,dredfield@petsmart.com,https://www.linkedin.com/in/david-redfield-1ba2bb2/,test,1
+3,single seat,Katie Catlender,Katie,Catlender,"EVP, Chief Operating Officer",Point32Health,point32health.org,katie.catlender@point32health.org,https://www.linkedin.com/in/katie-catlender-95841422/,holdout,1
+3,single seat,"Benjamin Felton, MBA",Benjamin,Felton,Executive Vice President and Chief Operating Officer,Portland General Electric,portlandgeneral.com,benjamin.felton@portlandgeneral.com,https://www.linkedin.com/in/benjamin-felton-mba-0956184/,test,1
+3,single seat,David Quier,David,Quier,VP & COO,PPL Electric Utilities,pplelectric.com,daquier@pplweb.com,https://www.linkedin.com/in/david-quier-18136319/,holdout,1
+3,single seat,Rajat Puri,Rajat,Puri,"Executive Vice President, COO",Premera Blue Cross Washington,premera.com,rajat.puri@premera.com,https://www.linkedin.com/in/rajat-puri-93b2512/,holdout,1
+3,single seat,Mark Beauchamp,Mark,Beauchamp,EVP & COO Primerica Distribution,Primerica,primerica.com,mark.beauchamp@primerica.com,https://www.linkedin.com/in/mark-beauchamp-25a1a15/,test,1
+3,single seat,Wade Harrison,Wade,Harrison,Vice Chairman & Chief Operating Officer,Protective Life,protective.com,wade.harrison@protective.com,https://www.linkedin.com/in/wade-harrison-6a68506/,test,1
+3,single seat,Sarah Deutchman,Sarah,Deutchman,Chief Operating Officer,Pyramid Healthcare,pyramid-healthcare.com,sdeutchman@pyramidhc.com,https://www.linkedin.com/in/sarah-deutchman-6347a716/,holdout,1
+3,single seat,Ravi K Nekkalapu,Ravi,Nekkalapu,"Vice President, Chief Global Architect and Digital Transformation Executive",Quest Diagnostics,questdiagnostics.com,ravi.k.nekkalapu@questdiagnostics.com,https://www.linkedin.com/in/ravi-nekkalapu-a371904/,test,1
+3,single seat,Vince Fusco,Vince,Fusco,Chief Accounting Officer (CAO),Regal Cinemas,regmovies.com,vince.fusco@regalcinemas.com,,holdout,1
+3,single seat,Xin Li,Xin,Li,COO of Product Development at Roche,Roche Diagnostics,roche.com,li.xin@gene.com,https://www.linkedin.com/in/xin-li-670636b/,test,1
+3,single seat,Brian Voss,Brian,Voss,"Executive Vice President, Chief Operating Officer",Safelite Auto Glass,safelite.com,brian.voss@safelite.com,https://www.linkedin.com/in/brian-voss-7398b1/,test,1
+3,single seat,Elisa Natali Davis,Elisa,Davis,"Vice President, COO Command Center",Sallie Mae,salliemae.com,elisa.davis@salliemae.com,https://www.linkedin.com/in/elisanatalidavis/,holdout,1
+3,single seat,V. Don Angspatt,V.,Angspatt,Executive Vice President and Chief Operations Officer,SanDisk,sandisk.com,don.angspatt@sandisk.com,https://www.linkedin.com/in/v-don-angspatt-273477/,test,1
+3,single seat,David Fernandez,David,Fernandez,"CCO, Head of US Compliance",SEB Sweden,sebgroup.com,david.fernandez@seb.se,https://www.linkedin.com/in/david-fernandez-3558a650/,holdout,1
+3,single seat,Elisha Williams,Elisha,Williams,Chief Customer Service Operations Officer,Sentry Insurance,sentry.com,elisha.williams@sentry.com,https://www.linkedin.com/in/elishar/,test,1
+3,single seat,Matt Moore,Matt,Moore,President and Chief Operating Officer,Shelter Mutual Insurance,shelterinsurance.com,mmoore@shelterinsurance.com,https://www.linkedin.com/in/matt-moore-b48b9122/,test,1
+3,single seat,Brandy Bolden,Brandy,Bolden,Chief Customer Officer,Sacramento Municipal Utility District,smud.org,brandy.bolden@smud.org,https://www.linkedin.com/in/brandy-daniels-bolden-5062755/,test,1
+3,single seat,Stan Connally,Stan,Connally,Chief Operating Officer,Southern Company Gas,southerncompany.com,swconnal@southernco.com,https://www.linkedin.com/in/stan-connally-7b3b25401/,holdout,1
+3,single seat,Merritt Shwedel,Merritt,Shwedel,Chief Operating Officer,Spanx,spanx.com,merritt.shwedel@spanx.com,https://www.linkedin.com/in/merritt-shwedel-2611927/,test,1
+3,single seat,Sabrina Billings,Sabrina,Billings,Chief Operating Officer,State Farm Insurance,statefarm.com,sabrina.billings.wua1@statefarm.com,https://www.linkedin.com/in/sabrina-billings-7714b7a0/,test,1
+3,single seat,Maria Papola Megdal,Maria,Megdal,Executive Vice President and Chief Administrative Officer,St. Jude,stjude.org,mmegdal@stjude.org,https://www.linkedin.com/in/maria-papola-megdal-490aab57/,holdout,1
+3,single seat,Jeff Zwelling,Jeff,Zwelling,Chief Operating Officer,StubHub,stubhub.com,jeff.zwelling@stubhub.com,https://www.linkedin.com/in/zwelling/,test,1
+3,single seat,Jeff Walters,Jeff,Walters,President and COO,Subaru of America,subaru.com,jwalters@subaru.com,https://www.linkedin.com/in/jeff-walters-793b4798/,holdout,1
+3,single seat,Darlene Johnson,Darlene,Johnson,Chief Operations Officer,Suncoast Credit Union,suncoastcreditunion.com,darlene.johnson@suncoastcreditunion.com,https://www.linkedin.com/in/darlene-johnson-750b40181/,test,1
+3,single seat,Tom Flanagan,Tom,Flanagan,Vice-President-Chief Operating Officer,TAL,tal.com.au,tom@tal.com.au,,test,1
+3,single seat,Ateet Dhawan,Ateet,Dhawan,Chief Transformation Officer,Tech Mahindra Limited,techmahindra.com,ateet.dhawan@techmahindra.com,https://www.linkedin.com/in/ateet-dhawan/,holdout,1
+3,single seat,Cynthia Garcia,Cynthia,Garcia,Sr. Vice President & Chief Operating Officer,Tucson Electric Power,tep.com,cgarcia@tep.com,https://www.linkedin.com/in/cynthia-garcia-147582a/,test,1
+3,single seat,Mark Poston,Mark,Poston,Chief Commercial Officer (CCO),Thumbtack,thumbtack.com,mposton@thumbtack.com,https://www.linkedin.com/in/markposton/,test,1
+3,single seat,John O'Rourke,John,O'Rourke,"Chief Operating Officer, EVP, Marmaxx",The TJX Companies,tjx.com,john_orourke@tjx.com,https://www.linkedin.com/in/john-o-rourke-13b2856b/,test,1
+3,single seat,Julie Spencer Washington,Julie,Washington,Chief Marketing & Communications Officer  &  Chief Customer Experience Officer,Trinity Health,trinity-health.org,julie.washington@trinity-health.org,https://www.linkedin.com/in/julie-spencer-washington-0969443/,holdout,1
+3,single seat,Kris Caverly,Kris,Caverly,"Vice President of Group, Head of Corporate and COO Technology",T. Rowe Price,troweprice.com,kris_caverly@troweprice.com,https://www.linkedin.com/in/kris-caverly-9030b34/,holdout,1
+3,single seat,John Gallagher,John,Gallagher,Chief Operating Officer,Trupanion,trupanion.com,john.gallagher@trupanion.com,https://www.linkedin.com/in/john-gallagher-87093b56/,test,1
+3,single seat,Kecia Steelman,Kecia,Steelman,President & Chief Operating Officer,"Ulta Salon, Cosmetics & Fragrance",ulta.com,ksteelman@ulta.com,https://www.linkedin.com/in/kecia-steelman-57b8b66/,test,1
+3,single seat,George Fischer,George,Fischer,"Chief Operating Officer, Private Wealth Management",UMB Financial,umb.com,george.fischer@umb.com,https://www.linkedin.com/in/georgesfischer/,holdout,1
+3,single seat,Eric Aumen,Eric,Aumen,Chief Accounting Officer (CAO),Under Armour,underarmour.com,eaumen@underarmour.com,https://www.linkedin.com/in/eric-aumen-1292001/,holdout,1
+3,single seat,James Prutow,James,Prutow,EVP Chief Transformation Officer,Vantive,vantive.com,jim.prutow@vantive.com,https://www.linkedin.com/in/jimprutow/,test,1
+3,single seat,Michael Elliott,Michael,Elliott,Senior Vice President & Chief Operating Officer,VCU Health System,vcuhealth.org,michael.elliott@vcuhealth.org,https://www.linkedin.com/in/michael-elliott-65908630/,holdout,1
+3,single seat,Alfonso Villanueva,Alfonso,Villanueva,"EVP, Verizon Consumer & Chief Transformation Officer",Verizon,verizon.com,alfonso.villanueva@verizon.com,https://www.linkedin.com/in/alfonso-villanueva-47a02aa/,test,1
+3,single seat,Alesha Breite,Alesha,Breite,COO Digital Sales,Visa,visa.com,abreite@visa.com,https://www.linkedin.com/in/alesha-breite-2960231/,holdout,1
+3,single seat,Chad Meadows,Chad,Meadows,"EVP, Chief Operations Officer",VyStar Credit Union,vystarcu.org,meadowsc@vystarcu.org,https://www.linkedin.com/in/chad-meadows-bb4081b/,test,1
+3,single seat,Steve Schrobilgen,Steve,Schrobilgen,"Chief Operating Officer, E2E",Walmart Canada,walmart.ca,steve.schrobilgen@walmart.com,,test,1
+3,single seat,Sandy Gilsenan,Sandy,Gilsenan,Chief Retail and Customer Experience Officer,Warby Parker,warbyparker.com,sandy.gilsenan@warbyparker.com,https://www.linkedin.com/in/sandy-gilsenan-2114a91/,test,1
+3,single seat,Todd Nevenhoven,Todd,Nevenhoven,"SVP, Chief Operating Officer",wellabe,wellabe.com,tnevenhoven@wellabe.com,https://www.linkedin.com/in/todd-nevenhoven-189b659/,test,1
+3,single seat,David Skomo,David,Skomo,COO & Division President - HelathDyne,WellDyne,welldyne.com,dskomo@welldyne.com,https://www.linkedin.com/in/david-skomo-8a534ba/,holdout,1
+3,single seat,Ben Hawksworth,Ben,Hawksworth,Chief Operating Officer,Western Union,westernunion.com,ben.hawksworth@westernunion.com,https://www.linkedin.com/in/ben-hawksworth-3271642/,holdout,1
+3,single seat,Brian Gullbrants,Brian,Gullbrants,COO - North America,Wynn Resorts,wynnresorts.com,brian.gullbrants@wynnresorts.com,https://www.linkedin.com/in/brian-gullbrants-a30b5328/,test,1
+3,single seat,Jed Nachman,Jed,Nachman,Chief Operating Officer,Yelp,yelp.com,jnachman@yelp.com,https://www.linkedin.com/in/jed-nachman-62ba24/,holdout,1
+3,single seat,Prasad Gankanda,Prasad,Gankanda,Chief Operating Officer,Young Living Essential Oils,youngliving.com,pgankanda@youngliving.com,https://www.linkedin.com/in/prasad-gankanda-76a99ab/,test,1

@@ -2,9 +2,11 @@
 """Reply Engine v1 — classify a prospect reply, draft the reframe response, print the SOP checklist.
 
 Dry-run by default and by design: this script NEVER sends anything. It classifies,
-drafts from config templates, and tells the human exactly what to do next
-(including flipping bdr_claimed on the Contacts row, which drops send_ready
-READY -> HOLD via the live formula and pauses the automated cadence).
+drafts from config templates, and tells the human exactly what to do next.
+
+The cadence lives in lemlist, not Clay. A reply stops that lead's sequence in
+lemlist; the Clay row is a record, not a gate. The send_ready and human_approved
+columns were retired on 2026-09-04 when copy moved to per-campaign authoring.
 
 Usage:
     python3 reply_engine.py --reply "we just rolled out NICE last year"            # classify + draft
@@ -76,7 +78,7 @@ def sop_checklist(contact, account):
         "1. CLASSIFY  - confirm the category above matches the reply's real objection (read the whole thread).",
         "2. DRAFT     - run the draft through intradiem-copy-sharpener; verified-claims gate on any figure.",
         "3. APPROVE   - Nathan reads and okays the final text. It sends from Nathan's mailbox, his voice, his name.",
-        "4. CLAIM     - in Clay Contacts (Buying Committee), check bdr_claimed on %s's row. send_ready drops READY -> HOLD automatically; the cadence stops touching them." % who,
+        "4. STOP      - in lemlist, confirm the reply stopped %s's sequence and no further steps are queued. The Clay row does not gate the cadence." % who,
         "5. PAUSE     - confirm 'Pause leads at the same company on reply' held for %s (P2 has it ON; P1 gets it at launch)." % acct,
         "6. LOG       - closed-loop cols on the Contacts row: outcome=replied, category, response_sent date. Append to impact/outcomes.csv (date, account, type=reply, value, note).",
         "7. FOLLOW-UP - calendar the category's named follow-up date. No orphan replies.",

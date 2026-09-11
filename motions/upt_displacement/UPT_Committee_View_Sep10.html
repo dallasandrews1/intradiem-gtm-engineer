@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UPT Displacement Committees</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#014637;--green:#2DB56E;--green-600:#228752;--green-300:#7BD3A0;--orange:#F58220;--ink:#202020;--sidebar:#F5F4F2;--line:#E0E0E0;--r:8px}
+*{box-sizing:border-box} body{margin:0;font-family:Roboto,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.45}
+.mono{font-family:'Roboto Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:11px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+header.hero{background:radial-gradient(900px 420px at 15% 0%,rgba(45,181,110,.35),transparent 60%),var(--forest);color:#fff;padding:48px 0 40px}
+header .logo{width:150px;height:auto;color:#fff;display:block;margin-bottom:34px}
+.eyebrow{font-family:'Roboto Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:var(--green-600)}
+header .eyebrow{color:var(--green-300)}
+h1{font-weight:900;letter-spacing:-.02em;font-size:40px;line-height:1.08;margin:10px 0 14px;max-width:820px}
+header p.lede{font-size:18px;max-width:760px;margin:0 0 30px;opacity:.95}
+.statband{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.stat{border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:14px 16px}
+.stat b{display:block;font-size:34px;font-weight:900;letter-spacing:-.02em;color:var(--green-300);line-height:1}
+.stat span{display:block;margin-top:6px;font-size:13px;opacity:.9}
+main{padding:36px 0 60px}
+h2{font-weight:900;letter-spacing:-.02em;font-size:26px;margin:4px 0 4px}
+.sub{margin:0;color:#555;font-size:14px}
+.how{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-bottom:36px}
+.gate{border-left:4px solid var(--green);background:var(--sidebar);border-radius:var(--r);padding:14px 18px}
+.callout{border-left:4px solid var(--orange);background:var(--sidebar);border-radius:var(--r);padding:14px 18px}
+.how ul{margin:8px 0 0;padding-left:18px} .how li{margin:4px 0}
+.acct{border-top:1px solid var(--line);padding:28px 0 8px}
+.acct-head{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:end;margin-bottom:14px}
+.evidence{margin:0;font-size:14px;color:#444;background:var(--sidebar);border-radius:var(--r);padding:12px 14px}
+.evidence .mono{display:block;color:var(--green-600);margin-bottom:4px}
+table.lanes{width:100%;border-collapse:collapse;margin-bottom:12px}
+table.lanes thead th{font-family:'Roboto Mono',monospace;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:11px;text-align:left;color:#666;padding:6px 10px;border-bottom:1px solid var(--line)}
+table.lanes tbody th{text-align:left;font-weight:700;font-size:14px;padding:12px 10px;vertical-align:top;width:210px;border-bottom:1px solid var(--line)}
+table.lanes td{padding:12px 10px;vertical-align:top;border-bottom:1px solid var(--line);font-size:14px}
+td.note{color:#666;width:190px} .muted{color:#888}
+.p{display:grid;grid-template-columns:64px 1fr;gap:2px 10px;margin-bottom:8px} .p:last-child{margin-bottom:0}
+.p .tag{font-family:'Roboto Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--green-600);padding-top:3px}
+.p strong{grid-column:2} .p .t{grid-column:2;color:#555} .p .meta{grid-column:2;font-size:12px;margin-top:2px}
+.badge{display:inline-block;border-radius:4px;padding:1px 6px;font-family:'Roboto Mono',monospace;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-right:6px}
+.badge.sf{background:#E8F5EE;color:var(--green-600)} .badge.new{background:#FDEBD9;color:#B85A0D}
+.ok{color:var(--green-600)} .warn{color:#B85A0D}
+.next{border-top:1px solid var(--line);padding-top:28px;margin-top:20px}
+.next ol{padding-left:20px} .next li{margin:6px 0}
+footer{color:#777;font-size:12px;padding:20px 0 40px;border-top:1px solid var(--line)}
+@media (max-width:760px){.how,.acct-head{grid-template-columns:1fr} h1{font-size:30px} table.lanes tbody th{width:auto} td.note{width:auto}}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/>
+</symbol></svg>
+<header class="hero"><div class="wrap">
+  <svg class="logo" viewBox="0 0 187 46"><use href="#ilogo"/></svg>
+  <div class="eyebrow">UPT displacement · Verint attack, NICE attack · Sep 10, 2026</div>
+  <h1>The buying committee at each of the ten confirmed accounts</h1>
+  <p class="lede">Ten accounts have the desktop-analytics module in writing. This is who holds each committee role at each one, who is already in Salesforce, who was sourced today, and who has a verified email. Reach-out is sized by committee, not by a seat count.</p>
+  <div class="statband">
+    <div class="stat"><b>10</b><span>accounts, module confirmed</span></div>
+    <div class="stat"><b>71</b><span>committee members to sequence</span></div>
+    <div class="stat"><b>69</b><span>with a verified work email</span></div>
+    <div class="stat"><b>18</b><span>sourced today, not in Salesforce</span></div>
+    <div class="stat"><b>240</b><span>on the bench behind them</span></div>
+    <div class="stat"><b>5</b><span>executives covered by the exec campaign</span></div>
+  </div>
+</div></header>
+<main><div class="wrap">
+  <div class="how">
+    <div class="gate"><div class="eyebrow">How a committee is built</div>
+      <ul>
+        <li><strong>Champion:</strong> Head of Workforce Management or Real-Time. Reads the desktop report, owns the renewal.</li>
+        <li><strong>Ops owner:</strong> VP or Director of Contact Center Operations.</li>
+        <li><strong>Evaluator:</strong> Director of Operational Excellence, Performance or Quality.</li>
+        <li><strong>Back-office leader:</strong> VP or Director of Claims, Shared Services or Payment Operations.</li>
+        <li><strong>Technology gatekeeper:</strong> the contact-center platform or telephony lead.</li>
+        <li><strong>Executive:</strong> COO or CAO, covered by the DWO Executives campaign, never sequenced twice.</li>
+      </ul>
+      <p style="margin:10px 0 0;font-size:14px">Whoever holds the role is in. A role nobody holds is skipped. A deputy is added where an account has five or more people in the lane.</p>
+    </div>
+    <div class="callout"><div class="eyebrow" style="color:#B85A0D">Before anything loads</div>
+      <ul>
+        <li>Nate or the AE confirms the module per account.</li>
+        <li>Everyone sourced today was checked current on Sep 10. Salesforce rows are re-checked at load.</li>
+        <li>Verified email is the load gate. Two emails are still pending.</li>
+        <li>Phones are sourced on wave-1 seats before the campaign starts.</li>
+      </ul>
+    </div>
+  </div>
+  
+<section class="acct" id="thehartford">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint DPA</div><h2>The Hartford Financial Services Group</h2>
+    <p class="sub">9 to sequence across 5 of 5 roles · 9 with a verified email</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Technical lead holds a Verint Desktop Process Analytics certification. The stack read shows NICE only.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Andrea Mastrangelo</strong><span class='t'>AVP WFM</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Cristina Aldi</strong><span class='t'>AVP, WFM and Capacity Planning</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>8 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Jermaine Henson</strong><span class='t'>Chief Information Officer, Claims &amp; Enterprise Contact Center</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>David Lafrennie</strong><span class='t'>Senior Vice President Deposits Contact Centers</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>38 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Jane Wolak</strong><span class='t'>SVP, Personal Lines Operations and Enterprise Process Improvement</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Beth Abbott</strong><span class='t'>Director Process Quality Management Individual Lif</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>John Kinney</strong><span class='t'>Chief Claims Officer</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Charles McLaughlin</strong><span class='t'>Vice President - Property Claims</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>8 more on file in this lane</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Justin Grimm</strong><span class='t'>Director of Personal Lines Agency and Telephony Process</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>1 more on file in this lane</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="blueshieldca">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint Desktop Analytics</div><h2>Blue Shield of California</h2>
+    <p class="sub">9 to sequence across 5 of 5 roles · 8 with a verified email · 9 sourced today</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Workforce lead&#x27;s profile lists Verint Desktop Analytics.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Louis Cullo</strong><span class='t'>Business Systems Analyst (Workforce Management Lead)</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Andy Stover</strong><span class='t'>Senior Manager, Workforce Management and Analysis</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Lisa Lambert</strong><span class='t'>Senior Director, Call Center Operations</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Michelle Jackson</strong><span class='t'>Sr. Director, Customer Service and Interaction Management</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Taylor Ballou</strong><span class='t'>Vice President, Performance Optimization</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Morley Carroll</strong><span class='t'>Director of Operations</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Laura Barthel</strong><span class='t'>Sr. Manager, Operations (Group and EDI Enrollment)</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Donald Wynant</strong><span class='t'>Principal, Program Manager - Contact Center Modernization</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='warn'>email pending</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Syng Karrobi</strong><span class='t'>Senior Director Information Technology, Digital/Marketing/Customer Care</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who'>Susan Mullaney, Chief Operating Officer</td><td class='note'>Already in the DWO Executives campaign. Air cover only, no second sequence.</td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="verizon">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint Desktop Analytics</div><h2>Verizon</h2>
+    <p class="sub">8 to sequence across 5 of 5 roles · 8 with a verified email</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Profile: Verint support for 60K subscribers including Desktop Analytics. The stack read shows NICE CXone only.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Lou Tedrick</strong><span class='t'>SVP, Workforce Development</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Portia Stewart</strong><span class='t'>Senior Director, Workforce Execution</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>13 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Carol Larson</strong><span class='t'>Vice President Customer Service</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Genia Wilbourn</strong><span class='t'>Senior Vice President - Verizon Business Group, Global Customer Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>37 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Holyce Hess Groos</strong><span class='t'>Senior Vice President Operational Excellence and Transformation</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>2 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Danna Valsecchi</strong><span class='t'>Director of Shared Services - Financial Care</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>2 more on file in this lane</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Janis Meyer</strong><span class='t'>Vice President Call Center Technologies</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Greg Asselin</strong><span class='t'>Head of Contact Center Technology Solutions - Digital &amp; Personalization Integration</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>5 more on file in this lane</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who'>Alfonso Villanueva, EVP, Verizon Consumer &amp; Chief Transformation Officer</td><td class='note'>Already in the DWO Executives campaign. Air cover only, no second sequence.</td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="allstate">
+  <div class="acct-head">
+    <div><div class="eyebrow">Desktop analytics, vendor not named</div><h2>Allstate Corporation</h2>
+    <p class="sub">8 to sequence across 5 of 5 roles · 8 with a verified email</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> A Speech and Desktop Analytics consultant on staff. NICE CXone estate, vendor not named on the profile.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Brett Winchell</strong><span class='t'>HR Director, Workforce Insights &amp; Technology</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Chris Adcock</strong><span class='t'>Director, Assistance Center Strategy/WFM</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>4 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Randal Decoursey</strong><span class='t'>Vice President -Customer Service</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Bonita Ross</strong><span class='t'>SVP Customer Care and Claims Allstate Benefits</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>16 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Christina Thomas</strong><span class='t'>Director, Continuous Improvement (Allstate Benefits)</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>1 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Mike Roche</strong><span class='t'>Chief Claims Officer</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Cheryl Bendtsen</strong><span class='t'>Senior Vice President, Casualty Claims Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>20 more on file in this lane</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Ja Lee</strong><span class='t'>Manager-Call Center Technology</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>1 more on file in this lane</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who'>Brooke Barron, Chief Operations Officer; Paul Lanspa, Chief Operating Officer - Director  Analytics, Strategy, Compensation, and Technology; Megan Dougherty, Chief Operating Officer</td><td class='note'>Already in the DWO Executives campaign. Air cover only, no second sequence.</td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="newyorklife">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint DPA</div><h2>New York Life Insurance Company</h2>
+    <p class="sub">7 to sequence across 4 of 5 roles · 6 with a verified email · 2 sourced today</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Head of Workforce Management&#x27;s own profile: expanding Desktop Process Analytics.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Andrew Gedacht</strong><span class='t'>Corporate Vice President - WFM</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>David Goode</strong><span class='t'>Vice President, Corporate, Workforce Management</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>6 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Dorothy Staats</strong><span class='t'>Vice President OEM Relations and Customer Support</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Jennifer Dooley</strong><span class='t'>Corporate Vice President- Group Benefit Solutions Contact Center</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>17 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Don Trexler</strong><span class='t'>Vice President, Corporate Claims</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Geoff D&#x27;Angelo</strong><span class='t'>Corporate Vice President, Head of Telephony Experience</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Aaron Zachko</strong><span class='t'>Corporate Vice President - Head, Network and Telephony Shared Service</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='warn'>email pending</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="maximus">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint DPA</div><h2>Maximus</h2>
+    <p class="sub">7 to sequence across 4 of 5 roles · 7 with a verified email · 2 sourced today</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Rep read (Sep 4) plus a matching blinded vendor story. Verint in the back office.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Drex Fitzwater</strong><span class='t'>VP, Strategic Workforce Planning</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Dawn Gelle</strong><span class='t'>VP, Health Operations (call centers)</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Ferdinand Morales</strong><span class='t'>VP- Customer Service Center NY</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>15 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Christen Macmillan</strong><span class='t'>Vice President, Performance Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Lisbeth Bell</strong><span class='t'>Vice President, Quality Management Shared Services</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Kossi Patrick Noameshie</strong><span class='t'>Senior Manager CCaaS</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Marshall Ware</strong><span class='t'>Telephony Architect</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="tp">
+  <div class="acct-head">
+    <div><div class="eyebrow">NICE Desktop Analytics</div><h2>Teleperformance UK</h2>
+    <p class="sub">7 to sequence across 4 of 5 roles · 7 with a verified email · 1 sourced today</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> </p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Andrew Pace</strong><span class='t'>Senior Vice President, Workforce Management</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Russ Fletcher</strong><span class='t'>Vice President, Workforce Management</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>12 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Frank Mercado</strong><span class='t'>Vice President, Contact Center Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Jeffrey Hest</strong><span class='t'>Global Vice President Contact Center Solutions and Assessments</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>8 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Julie Loppe-Peyrin</strong><span class='t'>EVP Quality Assurance</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Lyle Hardy</strong><span class='t'>Senior Vice President R and D, Teleperformance USA</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Marlon de Mesa</strong><span class='t'>Executive Vice President, Head of Operations Support</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="gainwelltechnologies">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint DPA</div><h2>Gainwell Technologies</h2>
+    <p class="sub">6 to sequence across 4 of 5 roles · 6 with a verified email · 4 sourced today</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Head of Contact Center Technologies&#x27; profile owns Desktop Process Analytics.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Amanda Howell</strong><span class='t'>Director, Integrated Workforce Management</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Eric Hagen</strong><span class='t'>Customer Experience Workforce Management Director</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Melissa Rutledge</strong><span class='t'>Director Service Delivery - CX Quality Assurance and Vendor Management</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>AnneMarie Gramling</strong><span class='t'>Director, Shared Services Operations</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Jim Bruegger</strong><span class='t'>Director, Payment Integrity and Provider Services Operations</span><span class='meta'><span class='badge new'>sourced Sep 10</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Eshwar Muddasani</strong><span class='t'>Vice President of Product Engineering - Head of Contact Center Technologies</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="bcbsla">
+  <div class="acct-head">
+    <div><div class="eyebrow">Verint DPA</div><h2>Blue Cross Blue Shield of Louisiana</h2>
+    <p class="sub">5 to sequence across 4 of 5 roles · 5 with a verified email</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Vendor case study names the module at the account.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Jackie Addison</strong><span class='t'>VP, Customer Services</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Art Price</strong><span class='t'>Director, Customer Service</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Samuel Griffin</strong><span class='t'>VP, Performance &amp; Metrics/VP, IT</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Back-office leader</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Karen Lagrone</strong><span class='t'>VP of Claims Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Micah Holden</strong><span class='t'>Manager, IT Voice Communications &amp; Call Center Technology</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>No bench beyond the owner</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+<section class="acct" id="ttec">
+  <div class="acct-head">
+    <div><div class="eyebrow">NICE Desktop Analytics</div><h2>TTEC</h2>
+    <p class="sub">5 to sequence across 3 of 5 roles · 5 with a verified email</p></div>
+    <p class="evidence"><span class="mono">Why it's confirmed</span> Vendor case study: Desktop Analytics and Desktop Automation.</p>
+  </div>
+  <table class="lanes"><thead><tr><th>Role</th><th>Who</th><th>Bench</th></tr></thead><tbody>
+  <tr><th>Champion (WFM / real-time)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Colleen Ritchie</strong><span class='t'>EVP WFM</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Shane Thompson</strong><span class='t'>Vice President, Workforce Management</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>4 more on file in this lane</td></tr>
+<tr><th>Ops owner (contact center)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Chris Morley</strong><span class='t'>VP &amp; GM, Cloud Contact Center</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div><div class='p'><span class='tag'>Deputy</span><strong>Jill Wall</strong><span class='t'>Director, Call Center Operations</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>3 more on file in this lane</td></tr>
+<tr><th>Evaluator (performance / op-ex)</th><td class='who'><div class='p'><span class='tag'>Owner</span><strong>Bo Ramsey</strong><span class='t'>Director of Quality</span><span class='meta'><span class='badge sf'>in Salesforce</span> <span class='ok'>email verified</span></span></div></td><td class='note'>1 more on file in this lane</td></tr>
+<tr><th>Back-office leader</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Technology gatekeeper</th><td class='who muted'>Nobody in this role found</td><td class='note'>Lane skipped for this account.</td></tr>
+<tr><th>Executive (COO / CAO)</th><td class='who muted'>No COO or CAO in the executive pool</td><td class='note'></td></tr>
+  </tbody></table>
+</section>
+  <section class="next">
+    <div class="eyebrow">What happens next</div>
+    <h2>From committee to wave 1</h2>
+    <ol>
+      <li>Rep confirmation on the ten, then the same committee build on each vendor-confirmed account as it clears.</li>
+      <li>Phones on wave-1 seats; the two pending emails re-run.</li>
+      <li>Wave 1, Verint accounts, week of Sep 21, from Nate's warm mailbox. Every seat at an account starts the same day.</li>
+    </ol>
+  </section>
+</div></main>
+<footer><div class="wrap">Roster: motions/upt_displacement/lists/committee_roster_sep10.csv · counts from Audiences (Salesforce sync) and the Clay free sourcing path, Sep 10 2026 · Intradiem GTM Engineering</div></footer>
+</body></html>

@@ -1,0 +1,188 @@
+{
+ "pulled": "2026-09-09",
+ "swept": "2026-09-09",
+ "verint": {
+  "accounts": 60,
+  "icp_accounts": 40,
+  "outside_icp": 20,
+  "tiers": {
+   "A": 6,
+   "B": 9,
+   "D": 41,
+   "C": 3,
+   "A-": 1
+  },
+  "tiers_icp": {
+   "A": 5,
+   "B": 8,
+   "D": 23,
+   "C": 3,
+   "A-": 1
+  },
+  "nice_tags": {
+   "bundled, no evidence of use": 11,
+   "vendor confirmed, desktop module not named": 5
+  },
+  "tier_a_names": [
+   "Blue Shield of California (BSCA)",
+   "New York Life Insurance Company",
+   "The Hartford Financial Services Group",
+   "Blue Cross Blue Shield of Louisiana",
+   "Verizon",
+   "Maximus",
+   "Gainwell Technologies"
+  ],
+  "tier_b_names": [
+   "IEHP",
+   "Telus Corporation",
+   "Corpay (formerly FLEETCOR)",
+   "First National Bank of Omaha",
+   "Navy Federal Credit Union",
+   "Manulife Financial Corporation",
+   "MSC Industrial Direct",
+   "RSA Insurance Group (Canada)",
+   "Qualfon"
+  ],
+  "accounts_with_vito": 19,
+  "vito_people": 46,
+  "industries": [
+   [
+    "Home & Auto Insurance",
+    11
+   ],
+   [
+    "Div Financial Services",
+    8
+   ],
+   [
+    "Retail",
+    6
+   ],
+   [
+    "Health Insurance",
+    4
+   ],
+   [
+    "Hospitality",
+    4
+   ],
+   [
+    "Software",
+    4
+   ],
+   [
+    "Healthcare Provider",
+    3
+   ],
+   [
+    "Transportation",
+    3
+   ]
+  ],
+  "employees_20k_plus": 19
+ },
+ "nice": {
+  "accounts": 142,
+  "icp_accounts": 80,
+  "outside_icp": 62,
+  "tiers": {
+   "D": 121,
+   "B": 13,
+   "A": 6,
+   "A-": 1,
+   "C": 1
+  },
+  "tiers_icp": {
+   "D": 65,
+   "B": 9,
+   "A": 4,
+   "A-": 1,
+   "C": 1
+  },
+  "nice_tags": {
+   "bundled, no evidence of use": 124,
+   "vendor confirmed, desktop module not named": 15,
+   "bundled and used": 3
+  },
+  "tier_a_names": [
+   "The Hartford Financial Services Group",
+   "Allstate Corporation",
+   "Teleperformance UK",
+   "Verizon",
+   "Maximus",
+   "Gainwell Technologies",
+   "TTEC"
+  ],
+  "tier_b_names": [
+   "Alorica",
+   "State Employees Credit Union (SECU)",
+   "Telus Corporation",
+   "Corpay (formerly FLEETCOR)",
+   "Farmers Group",
+   "First National Bank of Omaha",
+   "Columbia Sportswear",
+   "DHU Healthcare UK",
+   "FirstSource",
+   "Serco Inc",
+   "Consumer Cellular",
+   "Trupanion",
+   "Serco"
+  ],
+  "accounts_with_vito": 40,
+  "vito_people": 78,
+  "industries": [
+   [
+    "Div Financial Services",
+    19
+   ],
+   [
+    "Home & Auto Insurance",
+    14
+   ],
+   [
+    "Manufacturing",
+    13
+   ],
+   [
+    "Retail",
+    11
+   ],
+   [
+    "Outsourcer",
+    9
+   ],
+   [
+    "Healthcare Provider",
+    8
+   ],
+   [
+    "Hospitality",
+    8
+   ],
+   [
+    "Telco/Cable",
+    8
+   ]
+  ],
+  "employees_20k_plus": 53
+ },
+ "both_estates": 15,
+ "customers_excluded": 20,
+ "held_blank_type": 1,
+ "segments": {
+  "Verint_companies": "audseg_0tl3twtmn4Hqi6guMmC",
+  "Verint_people_fo": "audseg_0tl3twuJkC5m8KRBhea",
+  "NICE_companies": "audseg_0tl3twuHBCMZznHBuwe",
+  "NICE_people_fo": "audseg_0tl3twvqwbYFAv8ym4h",
+  "Verint_people_bo": "audseg_0tl3tx8sNGhwU3nt242",
+  "NICE_people_bo": "audseg_0tl3tx9HYvy7tZeaXQt"
+ },
+ "segment_counts": {
+  "Verint_companies": 60,
+  "Verint_people_fo": 1353,
+  "NICE_companies": 142,
+  "NICE_people_fo": 2567,
+  "Verint_people_bo": 164,
+  "NICE_people_bo": 253
+ }
+}

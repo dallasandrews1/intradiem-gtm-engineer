@@ -9,20 +9,48 @@
     "Other": 8
   },
   "scale_bands": [
-    [10000, 25],
-    [5000, 22],
-    [2500, 18],
-    [1000, 12],
-    [0, 5]
+    [
+      10000,
+      25
+    ],
+    [
+      5000,
+      22
+    ],
+    [
+      2500,
+      18
+    ],
+    [
+      1000,
+      12
+    ],
+    [
+      0,
+      5
+    ]
   ],
   "tech": {
-    "acd_partner": ["Five9", "Genesys"],
+    "acd_partner": [
+      "Five9",
+      "Genesys"
+    ],
     "acd_partner_points": 15,
     "acd_other_points": 8,
-    "wfm_present": ["Verint", "Calabrio", "NICE", "Aspect"],
+    "wfm_present": [
+      "Verint",
+      "Calabrio",
+      "NICE",
+      "Aspect"
+    ],
     "wfm_present_points": 10,
-    "wfm_unknown_points": 5
+    "wfm_unknown_points": 5,
+    "verified_max_age_days": 365,
+    "_verified_note": "A tech read is printed or allowed into copy only when tam_accounts.csv carries <acd|wfm>_source (URL) and <acd|wfm>_observed (YYYY-MM-DD) no older than verified_max_age_days. Scoring uses the raw value regardless. Added 2026-09-05."
   },
   "pain_factor": 0.5,
-  "tiers": { "tier1_min": 76, "tier2_min": 55 }
+  "tiers": {
+    "tier1_min": 76,
+    "tier2_min": 55
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "_comment": "Weekly account-health watcher. Config over code: accounts, sources and thresholds live here. The scorer (automation/account_health_score.py) reads each account's evidence file and writes the log; the agent refreshes evidence from the sources first. Log-only: the daily rundown reads automation/logs/account-health-<date>.md. Nothing here sends.",
+  "log_family": "account-health",
+  "evidence_dir": "motions/churn_risk_save_plan/data",
+  "accounts": [
+    {
+      "name": "Cleveland Clinic", "slug": "cleveland_clinic", "sf_account_id": "001V5000006bHWPIA2",
+      "am": "Inger Escamilla", "success_manager": "Amy Johnson", "sponsor": "Rena Thompson", "customer_owner": "Shantel Adams",
+      "renewal_date": "2027-01-01",
+      "watch_people": ["Rena Thompson", "Shantel Adams", "Lisa Yerian", "Scott Faini", "Bob Ganem", "Terri Horan", "Katherine Neal", "Kelly Hancock"],
+      "sources": {
+        "success_plan_xlsx": "file:///b!aRBSs2z0_UKyUEvWn53FSXI5L1lH80NEl0Oe3kjs-qyKZzmfw3htRqQRKK8XFtQB/01EBQ3Q7WHGLXZOVGFSVHKT7HFA7MMJEOZ",
+        "adoption_deck_folder": "customersuccess/successmanagement/Customer Library/Cleveland Clinic/Customer Success Review/2026",
+        "salesnav_alerts": "Outlook, sender contains linkedin.com, trailing 7 days, names in watch_people",
+        "otter_query": "Cleveland Clinic",
+        "pmo_tracker_export": "motions/churn_risk_save_plan/data/Project Task Tracker.csv"
+      }
+    }
+  ],
+  "reason_codes": {
+    "Value dispute":    {"red": "savings method disputed and no agreed review closed", "yellow": "review scheduled, not closed", "green": "method agreed in writing"},
+    "Sponsor silence":  {"red_cancelled_in_4_weeks": 2, "yellow_cancelled_in_4_weeks": 1},
+    "Adoption decline": {"red": "accept rate under goal two months running, or any rule paused", "yellow": "one month under goal"},
+    "Open case aging":  {"red_days_open": 60, "yellow_days_open": 30},
+    "Executive change": {"red": "sponsor, blocker or evaluator changed role", "yellow": "a watched person changed title"},
+    "Competitive event":{"red": "RFP, vendor evaluation or platform migration in flight", "yellow": "rumoured"},
+    "Renewal clock":    {"red_days_to_renewal": 120, "yellow_days_to_renewal": 180}
+  },
+  "overall_rule": "RED if any of Value dispute, Renewal clock, Competitive event is RED, or three or more codes are RED; YELLOW if any code is YELLOW or RED; else GREEN",
+  "digest": {"status": "STAGED, not running", "cadence": "Mondays", "channel": "Outlook or Teams for AM and Success, Slack for GTM (decision open)", "rollup_to": "Mary Ann Chandler, one line per account, overdue items only"}
+}

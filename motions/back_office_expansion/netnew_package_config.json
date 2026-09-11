@@ -1,0 +1,447 @@
+{
+ "wave1_cap_per_account": 6,
+ "tier3_wave": 9,
+ "tier3_title_keys": [
+  "chief financial officer",
+  "president",
+  "retiring",
+  "chief technology",
+  "interim",
+  "chief customer officer"
+ ],
+ "ops_exec_keys": [
+  "operating",
+  "operations",
+  "administrative",
+  "process",
+  "payment",
+  "fraud",
+  "deposit",
+  "mortgage",
+  "servicing",
+  "shared services",
+  "supply chain"
+ ],
+ "parent_account": {
+  "Centene": "Centene",
+  "Fidelity Investments": "Fidelity",
+  "National Grid": "National Grid",
+  "Truist": "Truist",
+  "Paychex": "Paychex",
+  "Regions Financial": "Regions"
+ },
+ "company_name": {
+  "Centene": "Centene Corporation",
+  "Fidelity Investments": "Fidelity Investments",
+  "National Grid": "National Grid US",
+  "Truist": "Truist",
+  "Paychex": "Paychex",
+  "Regions Financial": "Regions Bank"
+ },
+ "extra_domains": {
+  "Fidelity Investments": [
+   "fmr.com",
+   "mail.fidelity.com"
+  ],
+  "Truist": [],
+  "National Grid": [
+   "nationalgrid.com"
+  ]
+ },
+ "phrase_rules": [
+  {
+   "all": [
+    "provider data"
+   ],
+   "phrase": "provider data operations"
+  },
+  {
+   "all": [
+    "healthcare"
+   ],
+   "phrase": "healthcare operations"
+  },
+  {
+   "all": [
+    "claims"
+   ],
+   "phrase": "claims operations"
+  },
+  {
+   "all": [
+    "utilization management"
+   ],
+   "phrase": "utilization management"
+  },
+  {
+   "all": [
+    "encounter"
+   ],
+   "phrase": "encounter operations"
+  },
+  {
+   "all": [
+    "configuration"
+   ],
+   "phrase": "configuration operations"
+  },
+  {
+   "all": [
+    "clinical operations"
+   ],
+   "phrase": "clinical operations"
+  },
+  {
+   "all": [
+    "workforce"
+   ],
+   "phrase": "workforce planning"
+  },
+  {
+   "all": [
+    "capacity planning"
+   ],
+   "phrase": "capacity planning"
+  },
+  {
+   "all": [
+    "billing"
+   ],
+   "phrase": "billing operations"
+  },
+  {
+   "all": [
+    "collections"
+   ],
+   "phrase": "collections"
+  },
+  {
+   "all": [
+    "fraud"
+   ],
+   "phrase": "fraud operations"
+  },
+  {
+   "all": [
+    "dispute"
+   ],
+   "phrase": "disputes operations"
+  },
+  {
+   "all": [
+    "credit"
+   ],
+   "none": [
+    "card"
+   ],
+   "phrase": "credit operations"
+  },
+  {
+   "all": [
+    "card"
+   ],
+   "phrase": "card operations"
+  },
+  {
+   "all": [
+    "payment"
+   ],
+   "phrase": "payment operations"
+  },
+  {
+   "all": [
+    "money transfer"
+   ],
+   "phrase": "money transfer operations"
+  },
+  {
+   "all": [
+    "money movement"
+   ],
+   "phrase": "money movement operations"
+  },
+  {
+   "all": [
+    "deposit"
+   ],
+   "phrase": "deposit operations"
+  },
+  {
+   "all": [
+    "mortgage"
+   ],
+   "phrase": "mortgage operations"
+  },
+  {
+   "all": [
+    "default"
+   ],
+   "phrase": "default operations"
+  },
+  {
+   "all": [
+    "lending"
+   ],
+   "phrase": "lending operations"
+  },
+  {
+   "all": [
+    "loan"
+   ],
+   "phrase": "loan operations"
+  },
+  {
+   "all": [
+    "brokerage"
+   ],
+   "phrase": "brokerage operations"
+  },
+  {
+   "all": [
+    "fund operations"
+   ],
+   "phrase": "fund operations"
+  },
+  {
+   "all": [
+    "middle office"
+   ],
+   "phrase": "middle-office operations"
+  },
+  {
+   "all": [
+    "settlement"
+   ],
+   "phrase": "settlements"
+  },
+  {
+   "all": [
+    "treasury"
+   ],
+   "phrase": "treasury operations"
+  },
+  {
+   "all": [
+    "accounting"
+   ],
+   "phrase": "accounting operations"
+  },
+  {
+   "all": [
+    "finance"
+   ],
+   "phrase": "finance operations"
+  },
+  {
+   "all": [
+    "financial operations"
+   ],
+   "phrase": "finance operations"
+  },
+  {
+   "all": [
+    "shared services"
+   ],
+   "phrase": "shared services"
+  },
+  {
+   "all": [
+    "hr"
+   ],
+   "phrase": "HR operations"
+  },
+  {
+   "all": [
+    "human"
+   ],
+   "phrase": "HR operations"
+  },
+  {
+   "all": [
+    "payroll"
+   ],
+   "phrase": "payroll operations"
+  },
+  {
+   "all": [
+    "benefits"
+   ],
+   "phrase": "benefits services"
+  },
+  {
+   "all": [
+    "procurement"
+   ],
+   "phrase": "procurement"
+  },
+  {
+   "all": [
+    "supply chain"
+   ],
+   "phrase": "supply chain operations"
+  },
+  {
+   "all": [
+    "customer operations"
+   ],
+   "phrase": "customer operations"
+  },
+  {
+   "all": [
+    "customer"
+   ],
+   "phrase": "customer operations"
+  },
+  {
+   "all": [
+    "client service"
+   ],
+   "phrase": "client service operations"
+  },
+  {
+   "all": [
+    "service"
+   ],
+   "phrase": "service operations"
+  },
+  {
+   "all": [
+    "implementation"
+   ],
+   "phrase": "implementation operations"
+  },
+  {
+   "all": [
+    "health"
+   ],
+   "phrase": "health operations"
+  },
+  {
+   "all": [
+    "tax"
+   ],
+   "phrase": "tax operations"
+  },
+  {
+   "all": [
+    "atm"
+   ],
+   "phrase": "ATM and cash operations"
+  },
+  {
+   "all": [
+    "cash"
+   ],
+   "phrase": "cash operations"
+  },
+  {
+   "all": [
+    "bsa"
+   ],
+   "phrase": "BSA operations"
+  },
+  {
+   "all": [
+    "edd"
+   ],
+   "phrase": "EDD operations"
+  },
+  {
+   "all": [
+    "financial crimes"
+   ],
+   "phrase": "financial crimes operations"
+  },
+  {
+   "all": [
+    "agency services"
+   ],
+   "phrase": "agency services operations"
+  },
+  {
+   "all": [
+    "business systems"
+   ],
+   "phrase": "business systems"
+  },
+  {
+   "all": [
+    "banking operations"
+   ],
+   "phrase": "banking operations"
+  },
+  {
+   "all": [
+    "business process"
+   ],
+   "phrase": "business process management"
+  },
+  {
+   "all": [
+    "operational excellence"
+   ],
+   "phrase": "operational excellence"
+  },
+  {
+   "all": [
+    "transformation"
+   ],
+   "phrase": "transformation operations"
+  },
+  {
+   "all": [
+    "enterprise operations"
+   ],
+   "phrase": "enterprise operations"
+  },
+  {
+   "all": [
+    "business operations"
+   ],
+   "phrase": "business operations"
+  },
+  {
+   "all": [
+    "product operations"
+   ],
+   "phrase": "product operations"
+  },
+  {
+   "all": [
+    "operations"
+   ],
+   "phrase": "operations"
+  }
+ ],
+ "function_default": {
+  "Operations": "operations",
+  "Finance & shared services": "finance operations",
+  "Administration & supply chain": "administrative operations",
+  "Fraud, credit & disputes": "fraud and disputes operations",
+  "Loan & mortgage operations": "loan operations",
+  "Payment & deposit operations": "payment operations",
+  "Retirement, investment & fund operations": "fund operations",
+  "Payroll & client service operations": "client service operations",
+  "Member, provider & enrollment operations": "enrollment operations",
+  "Claims": "claims operations",
+  "Billing, payments & revenue": "billing operations",
+  "Customer operations & meter-to-cash": "customer operations"
+ },
+ "holds": {
+  "https://www.linkedin.com/in/charlotte-mcpherson-12945311/": "retirement announced on her LinkedIn summary (date unverified); still SVP Middle Office Ops on Sep 2 verify; Nate decides, successor is the better target",
+  "https://www.linkedin.com/in/matt-powell-8a04b5241/": "Sep 2 Enrich Person returned no current experience and his LinkedIn headline reads Head of Financial Crimes per the sweep; title unconfirmed, check Sales Nav before send",
+  "https://www.linkedin.com/in/shannon-bagley-08b2a014/": "Conference Board bio reads Former Chief Administrative Officer (McKinsey senior advisor); LinkedIn stale (VP Internal Audit); treat as departed until confirmed"
+ },
+ "verify_notes": {
+  "https://www.linkedin.com/in/lisa-barnum-williams-85252b15b/": "LinkedIn headline now Head of Procurement Operations; company current",
+  "https://www.linkedin.com/in/lisa-wieland-aa55b51/": "still President, National Grid New England per Sep 2 verify; off the new Group ExCo"
+ },
+ "opener_line": {
+  "Centene": "your CFO framed this year's optimization as adapting to volume changes with fewer people, and claims, appeals and enrollment feel that first because the work doesn't shrink on the same clock as the headcount.",
+  "Fidelity": "Fidelity is building its own workforce-management platform for the phone side, which leaves an open question for the processing queues behind it, where the day's work lands on a different clock.",
+  "National Grid": "three National Grid companies missed the New York call-answer standard for 2025, and with New York and New England now under one US president, intraday capacity in billing, collections and customer operations is squarely on the table.",
+  "Truist": "a new CEO on a 90-day clock and an expense line held near flat means every operations leader at Truist is about to be asked what capacity can be freed without adding headcount.",
+  "Paychex": "Paychex just published that one in five service conversations now closes with no person on it, which makes the other four the operations question: the queue that's left is lumpier and harder to staff than the one you had.",
+  "Regions": "Regions reaffirmed flat expense growth in the same year deposit operations runs a legacy core beside a Temenos pilot, with the migration wave landing in 2027."
+ }
+}

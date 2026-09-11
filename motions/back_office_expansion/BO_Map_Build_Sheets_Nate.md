@@ -7,7 +7,7 @@ Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down:
 
 Map name in Sales Nav: `Centene - Back Office`
 
-Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator.
+Corporate operations run under the EVP & Chief Operating Officer (Susan Smith); plan-level COOs run their own health plans. Corporate function VPs are placed under the corporate COO. Appeals & grievances leadership (a quarter of the Jul 26 operations ICP list) did not surface in the data index for Centene; search 'Appeals' and 'Grievances' directly in Sales Navigator. Amy Weiser (was Director of Operations at UnitedHealthcare, a known Intradiem contact) joined Centene in May 2026 as Vice President, Medicare Market, Midwest (https://www.linkedin.com/in/amyweiser1). Market P&L seat, not back-office ICP, so she stays off the sequence; she is a warm door for Nate into Centene Medicare operations (Dan Clark's line).
 
 | # | Lead | Title | Level | Function | Reports up to (inferred) | LinkedIn |
 |---|---|---|---|---|---|---|

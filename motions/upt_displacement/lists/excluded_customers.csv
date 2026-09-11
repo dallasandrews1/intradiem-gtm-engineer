@@ -1,0 +1,22 @@
+company,domain,wfm_latest,cc_latest,why
+Oak Street Health LLC,oakstreethealth.com,,Five9,CVS Health subsidiary since 2023; CVS is a customer
+BT Business and Public Sector,bt.com,,Genesys,BT Group; the BT/EE story is in marketing's customer stories registry
+Kaiser Washington,kaiserpermanente.org,Aspect,NICE,Account Type = Customer in Salesforce; never in a cold motion
+Aetna Life Insurance Company Inc,aon.com,,RingCentral,"Aetna Inc is a customer; SF record carries the aon.com domain, treat as customer family"
+Optum,optum.com,Calabrio,NICE,Account Type = Customer in Salesforce; never in a cold motion
+Foundever (Sitel),foundever.com,Calabrio,Genesys,Account Type = Customer in Salesforce; never in a cold motion
+Express Scripts,express-scripts.com,Verint,Genesys,"Evernorth, which is Cigna, a customer (Cigna's own Verint DPA postings surfaced in the sweep)"
+Duke Energy,duke-energy.com,Verint,Avaya,customer per the Customer Value Registry (Greenlight); Salesforce Account Type says Prospect
+Humana,humana.com,Aspect,Genesys,Account Type = Customer in Salesforce; never in a cold motion
+Prudential Financial,prudential.com,,Genesys,Account Type = Customer in Salesforce; never in a cold motion
+Optum360,optum.com,Calabrio,NICE,subsidiary of Optum (customer); domain optum.com
+Charter Communications,charter.com,,Talkdesk,Account Type = Customer in Salesforce; never in a cold motion
+Vivint Solar,vivintsolar.com,,NICE,acquired by Sunrun (2020); Sunrun is already on the NICE list
+ADT,adt.com,NICE,Avaya,Account Type = Customer in Salesforce; never in a cold motion
+The Northwestern Mutual Life Insurance Company,northwesternmutual.com,Verint,Five9,Account Type = Customer in Salesforce; never in a cold motion
+American Bankers Life Assurance Company of Florida,assurant.com,Aspect,NICE,assurant.com; Assurant is a customer per the value registry
+Capita,capita.com,Aspect,Five9,Account Type = Customer in Salesforce; never in a cold motion
+Edward Jones,edwardjones.com,Verint,Avaya,Account Type = Customer in Salesforce; never in a cold motion
+First Utility,first-utility.com,Verint,,became Shell Energy (2019) and was sold to Octopus Energy (Dec 2023); entity no longer operates
+Evolent,evolent.com,,Genesys,Account Type = Customer in Salesforce; never in a cold motion
+IBM India Non CRM,ibm.com,Calabrio,NICE,Account Type blank; held until Salesforce says Prospect

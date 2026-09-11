@@ -1,0 +1,89 @@
+{
+ "motion": "wfm_present",
+ "campaignId": "cam_K6dGjBt6WukSo3jvB",
+ "campaignName": "WFM Present - Wave 1 (Nate)",
+ "status_at_build": "draft, 362 leads loaded Sep 5 (full motion, cap 10 per account), sender not set; name still says Wave 1, rename in the UI",
+ "timezone": "America/New_York",
+ "built": "2026-09-05",
+ "pattern": "pressure-standard tree copied from DWO cam_SiD4KmWcRuhiF6uhL, WFM copy",
+ "variables": [
+  "firstName",
+  "companyName",
+  "opener",
+  "angleIdea",
+  "angleProof",
+  "angleAsk",
+  "peak",
+  "workTeams",
+  "wfmPlatform",
+  "acdPlatform",
+  "colleagueFirst",
+  "colleagueLine"
+ ],
+ "sequences": {
+  "main": {
+   "id": "seq_JEjTHs7g2R8q3oXf4",
+   "steps": [
+    "stp_G5bGNxZ5cpMLA2t5N E1 email d0",
+    "stp_MhXtzsQ22B7qFth89 linkedinVisit d0",
+    "stp_TdJ5gEeqMG5w6X4qG conditional hasLinkedinUrl",
+    "stp_BwYfoBkNZxZ7eiezq conditional linkedinInviteAccepted within 2"
+   ]
+  },
+  "has_url": {
+   "id": "seq_zkdPt3HbRwxY5oXvR",
+   "steps": [
+    "stp_E7TWXy2wK2Dw3QK4j linkedinInvite d1",
+    "stp_mj3hbSwApEmAoSgcC Call 1 d1",
+    "stp_myo48KG76QdkFMaMe E2 d1"
+   ]
+  },
+  "no_url": {
+   "id": "seq_h6t5MpLui8aeivPs5",
+   "steps": [
+    "stp_CmoX5kc8mwmWgxL5Y Call 1 d2",
+    "stp_pk5WzYxRRECw2L99g E2 d1",
+    "stp_xkNa9TeQ8icGe4nt6 Call 2 d3",
+    "stp_ZRpKEvaDPAnqFxg4W just-tried email d0",
+    "stp_eDX5nbxWEat5GwaYP E3 peak d3",
+    "stp_ee25qd494JWosMv3S Call 3 d4",
+    "stp_n6Ttf2SvtMRrGqbYR E4 d1",
+    "stp_iSi338ketNTCcQoJa breakup d4"
+   ]
+  },
+  "accepted": {
+   "id": "seq_jXKb9mLpqP3cgCLps",
+   "steps": [
+    "stp_XAHmGgkukJNXKobem DM1 manual d0",
+    "stp_AZ83kzRtNBRAsaJkS Call 2 d2",
+    "stp_Zp72BN77yux5MjWGs just-tried email d0",
+    "stp_WoFPCHddcnaCzugvw E3 peak d2",
+    "stp_EprXJXQ9jeFprpb3k DM2 manual d2",
+    "stp_mg7MYMQxEBHHtSGDr Call 3 d2",
+    "stp_ogz6ngwkQfuGSa5jn E4 d1",
+    "stp_EoMkYhQBZYWPLwTm2 DM3 manual d2",
+    "stp_X2CGGS4hvgrGYwnDp breakup d2"
+   ]
+  },
+  "not_accepted": {
+   "id": "seq_xCwRuZu3QNbnDyF5E",
+   "steps": [
+    "stp_mFpPT442W9J6tihnJ likeLastPost d0",
+    "stp_AoNubQv7SBMju2H5t Call 2 d2",
+    "stp_49r6d3uTa6cdD83Dw just-tried email d0",
+    "stp_DLtSb9KuQNjGxR6su E3 peak d2",
+    "stp_8FKEQiYwXfrNmB7eS linkedinVisit d2",
+    "stp_Qhcj4o3YEfWxvYtvm Call 3 d2",
+    "stp_oEixFbS344jnrEqcQ E4 d1",
+    "stp_KRqn7bwvieA2CptTY breakup d4",
+    "stp_5322KZ48HDgYiLxWw withdrawInvitation d2"
+   ]
+  }
+ },
+ "clay": {
+  "companies_segment": "audseg_0tkvnqxJPhevjxbg4hJ (WFM Present companies, 81)",
+  "people_segment": "audseg_0tkvnsrRpKkpm2FBk9q (WFM Present people, 1,822 with email)"
+ },
+ "load_file": "motions/wfm_present/WFM_Present_Full_Load_Sep5.csv (planned rows) + WFM_Present_Held_Sep5.csv (held with reasons); the 40-lead wave file is history",
+ "next": "sender and labels in the UI; Nate reads the copy at wfm-present-read.pages.dev; lift the per-account cap on his word; never launch from a session"
+}

@@ -1,0 +1,1762 @@
+{
+ "set": "jw",
+ "rep": "JW MacDonald",
+ "rep_short": "JW",
+ "rep_label": "Prepared for",
+ "date": "September 9, 2026",
+ "title": "Back Office Maps, JW's Four",
+ "headline_html": "Four Canadian accounts, <span class=\"spark\">mapped</span>.",
+ "sub": "One new Sales Navigator map per account: the people who run the back office at Bell Canada, BMO, Telus and Canada Life. Every name checked against Salesforce and the live sequences.",
+ "legend_html": "<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run the back office. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.",
+ "md_title": "# Back-office map build sheets, JW's four\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: senior executive, then the SVP/VP who leads each function, then the directors under them. Reporting lines are inferred from titles and functions; confirm each card in Sales Navigator as it is added.\n",
+ "files": {
+  "roster": "",
+  "candidates": "jw_backoffice_candidates.csv",
+  "sf_check": "jw_sf_check.csv",
+  "known_companies": "jw_known_layer_companies.csv",
+  "build_sheets_csv": "BO_Map_Build_Sheets_JW.csv",
+  "build_sheets_md": "BO_Map_Build_Sheets_JW.md",
+  "bench_csv": "BO_Map_Bench_JW.csv",
+  "snapshot_csv": "_built_snapshot_jw.csv",
+  "changes_md": "BO_Map_Changes_Built_JW.md",
+  "page_out": "account_maps/jw_backoffice_maps.html"
+ },
+ "built": [],
+ "select": "balanced",
+ "sweep_sources": [],
+ "candidate_default_source": "Sep 9 search",
+ "accounts": {
+  "Bell Canada": {
+   "sweep": "sweeps/jw/bell_canada.csv",
+   "domains": [
+    "bell.ca",
+    "bce.ca"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9K0IAI"
+   ],
+   "vertical": "telecom",
+   "aliases": [
+    "bell canada",
+    "bell",
+    "bce",
+    "bell mobility",
+    "bell media",
+    "virgin plus",
+    "lucky mobile",
+    "bell mts",
+    "bell aliant",
+    "bell business markets"
+   ],
+   "assoc_director_ok": true
+  },
+  "BMO": {
+   "sweep": "sweeps/jw/bmo.csv",
+   "domains": [
+    "bmo.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9JGIAY"
+   ],
+   "vertical": "banking",
+   "aliases": [
+    "bmo",
+    "bank of montreal",
+    "bmo financial group",
+    "bmo harris",
+    "bmo nesbitt burns",
+    "bmo capital markets",
+    "bmo private wealth"
+   ],
+   "assoc_director_ok": true
+  },
+  "Telus": {
+   "sweep": "sweeps/jw/telus.csv",
+   "domains": [
+    "telus.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bGwGIAU"
+   ],
+   "vertical": "telecom",
+   "aliases": [
+    "telus",
+    "telus communications",
+    "telus health",
+    "telus mobility",
+    "koodo",
+    "public mobile",
+    "telus business"
+   ],
+   "assoc_director_ok": true
+  },
+  "Canada Life": {
+   "sweep": "sweeps/jw/canada_life.csv",
+   "domains": [
+    "canadalife.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b7jmIAA"
+   ],
+   "vertical": "insurance",
+   "aliases": [
+    "canada life",
+    "the canada life assurance",
+    "great-west life",
+    "great west life",
+    "great-west lifeco",
+    "london life",
+    "freedom 55",
+    "canada life assurance"
+   ]
+  }
+ },
+ "drop": [
+  "Adam Schabes",
+  "Andrew Conrad",
+  "Berto D.",
+  "Bo Pang",
+  "Caroline Bahadri",
+  "Chasity Daily",
+  "Chris Francovich",
+  "Christine Peloghitis",
+  "Ciara Mullarkey",
+  "Colleen Duggan",
+  "Cristóbal Cintrón, DrPH, MSc.",
+  "Curtis Platt",
+  "Dana Lohnes",
+  "Daniel T.",
+  "Danielle Taylor",
+  "Declan Carroll",
+  "Deirdre L.",
+  "Douglas Porter",
+  "Hussaini Nuhu",
+  "Iain Caskie",
+  "Ian Watson Dip PFS",
+  "Isabel Teixeira",
+  "Jag Siva",
+  "Jamie G.",
+  "Joe Donat, CFA",
+  "John Smith",
+  "Karen Conway",
+  "Kelsey McEwen",
+  "Kirti Karen Mani",
+  "Lloyd Switzer",
+  "Louise Lombard",
+  "Mandy Ramlow, MBA, CAMS",
+  "Manuel Sack",
+  "Maria Nicholls",
+  "Matt Murray, FCPA, FCMA",
+  "Matthew Chow",
+  "Maurice Hudon",
+  "Mei D.",
+  "Melissa Foxworth",
+  "Michael Schadt",
+  "Michelle Piasecki",
+  "Mike Drennan",
+  "Mirzet Alekic, CPA, CGA",
+  "Naomi Clegg",
+  "Nick Harding",
+  "Noel Reynolds",
+  "Owen Wilding",
+  "POOJA ARORA",
+  "Pamela Snively",
+  "Patrick McCallen",
+  "Peta Banks",
+  "Philip O Neill",
+  "Rex C.",
+  "Rob Vendetti",
+  "Robin Neal",
+  "Ron Laverdiere",
+  "Sara Joyce",
+  "Scott Anderson",
+  "Shaun Fuller",
+  "Shelley Sjoberg",
+  "Stuart Robinson",
+  "Susan Wooldridge",
+  "Tamara Schock",
+  "Tariq Perry",
+  "Terje Wefring",
+  "Thomas Baranko, JD, CTFA",
+  "Trish Gehlen Preston",
+  "Yukinori Nishio",
+  "cormac o'carroll",
+  "karine moses",
+  "robert kaiser"
+ ],
+ "priority": [
+  [
+   "BMO",
+   "Mona Malone"
+  ],
+  [
+   "BMO",
+   "Raphael Schapiro"
+  ],
+  [
+   "BMO",
+   "Jacob Sorensen"
+  ],
+  [
+   "BMO",
+   "Ann Marie Wright"
+  ],
+  [
+   "BMO",
+   "Augustin de Kerversau"
+  ],
+  [
+   "BMO",
+   "Gillian Noble"
+  ],
+  [
+   "BMO",
+   "Stephen Taylor"
+  ],
+  [
+   "BMO",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Heather Kroliczek"
+  ],
+  [
+   "BMO",
+   "Jacqueline M. Scydick"
+  ],
+  [
+   "BMO",
+   "Michael Battagliese"
+  ],
+  [
+   "BMO",
+   "Heather Purves"
+  ],
+  [
+   "BMO",
+   "Anthony Bellicoso"
+  ],
+  [
+   "BMO",
+   "Rosemary Mezik"
+  ],
+  [
+   "BMO",
+   "Chris Quinlan"
+  ],
+  [
+   "BMO",
+   "Sarah Clements"
+  ],
+  [
+   "BMO",
+   "Matt Turnbull"
+  ],
+  [
+   "BMO",
+   "Daniel Cheriyan"
+  ],
+  [
+   "BMO",
+   "Amy Ellis"
+  ],
+  [
+   "BMO",
+   "Emily Krishnakumar"
+  ],
+  [
+   "BMO",
+   "Julie Petrie"
+  ],
+  [
+   "BMO",
+   "Anthony Tjong"
+  ],
+  [
+   "BMO",
+   "Mark Cashion"
+  ],
+  [
+   "BMO",
+   "Laurie Carson"
+  ],
+  [
+   "BMO",
+   "Rosie Marella, MBA, FICB"
+  ],
+  [
+   "BMO",
+   "Kathryn Digilio"
+  ],
+  [
+   "BMO",
+   "Eric Chibnik"
+  ],
+  [
+   "BMO",
+   "Neil Gandhi"
+  ],
+  [
+   "BMO",
+   "Bryan Cheek"
+  ],
+  [
+   "BMO",
+   "Theresa McKinney Williams"
+  ],
+  [
+   "Canada Life",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Roger Maguet"
+  ],
+  [
+   "Canada Life",
+   "Kate Nazar"
+  ],
+  [
+   "Canada Life",
+   "Derek Bodkin, CPA, CMA"
+  ],
+  [
+   "Canada Life",
+   "Brent Allen"
+  ],
+  [
+   "Canada Life",
+   "Ian Troup"
+  ],
+  [
+   "Canada Life",
+   "Robert Lunny"
+  ],
+  [
+   "Canada Life",
+   "Eshan Kochar"
+  ],
+  [
+   "Canada Life",
+   "Kim Lee"
+  ],
+  [
+   "Canada Life",
+   "Karri Kazarian"
+  ],
+  [
+   "Canada Life",
+   "Daniela Decary"
+  ],
+  [
+   "Canada Life",
+   "Scott Hunter"
+  ],
+  [
+   "Canada Life",
+   "Mike Horton"
+  ],
+  [
+   "Canada Life",
+   "Karen Dick"
+  ],
+  [
+   "Canada Life",
+   "Terry Levesque"
+  ],
+  [
+   "Canada Life",
+   "Matt Williamson"
+  ],
+  [
+   "Canada Life",
+   "Barbara Bebee"
+  ],
+  [
+   "Canada Life",
+   "Rita Iozzo"
+  ],
+  [
+   "Canada Life",
+   "Andriy Storozhuk"
+  ],
+  [
+   "Canada Life",
+   "Janice Guzzi"
+  ],
+  [
+   "Canada Life",
+   "Ahmed Ahmed"
+  ],
+  [
+   "Canada Life",
+   "Louise Serpa"
+  ],
+  [
+   "Canada Life",
+   "Moe El-farra"
+  ],
+  [
+   "Canada Life",
+   "Andrea Kearnan"
+  ],
+  [
+   "Canada Life",
+   "Lisa Berard, CEBS"
+  ],
+  [
+   "Canada Life",
+   "Tracy Ryland"
+  ],
+  [
+   "Canada Life",
+   "Nancy Vilhena-Pereira"
+  ],
+  [
+   "Canada Life",
+   "Khalid Abdul Karim, MBBS"
+  ],
+  [
+   "Canada Life",
+   "Jenny Gale"
+  ],
+  [
+   "Canada Life",
+   "Amanda Ashton"
+  ],
+  [
+   "Telus",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Gopi Chande, FCPA"
+  ],
+  [
+   "Telus",
+   "Scott Gaudet"
+  ],
+  [
+   "Telus",
+   "Steve Fast"
+  ],
+  [
+   "Telus",
+   "Shaye Draper"
+  ],
+  [
+   "Telus",
+   "Devyansh K."
+  ],
+  [
+   "Telus",
+   "Brad Harper"
+  ],
+  [
+   "Telus",
+   "Lynn Salekin"
+  ],
+  [
+   "Telus",
+   "Barbara Chiu"
+  ],
+  [
+   "Telus",
+   "Ramish Siddiqui"
+  ],
+  [
+   "Telus",
+   "Catherine Blair"
+  ],
+  [
+   "Telus",
+   "Anne Gillam"
+  ],
+  [
+   "Telus",
+   "Helene Savage"
+  ],
+  [
+   "Telus",
+   "Tyson Joyce"
+  ],
+  [
+   "Telus",
+   "Bob Yoon"
+  ],
+  [
+   "Telus",
+   "Scott McArthur"
+  ],
+  [
+   "Bell Canada",
+   "Nikki Moffat"
+  ],
+  [
+   "Bell Canada",
+   "James Beresford"
+  ],
+  [
+   "Bell Canada",
+   "Matt MacEwen"
+  ],
+  [
+   "Bell Canada",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Sofia Ahmad"
+  ],
+  [
+   "Bell Canada",
+   "Stacey Ogilvy"
+  ],
+  [
+   "Bell Canada",
+   "Walter Ramka"
+  ],
+  [
+   "Bell Canada",
+   "Krista Smith"
+  ],
+  [
+   "Bell Canada",
+   "Anna Petkos"
+  ],
+  [
+   "Bell Canada",
+   "Karen Nelson Shokar"
+  ],
+  [
+   "Bell Canada",
+   "Pietro Oliveri"
+  ],
+  [
+   "Bell Canada",
+   "Brenda Podurgiel"
+  ],
+  [
+   "Bell Canada",
+   "John Schembri"
+  ],
+  [
+   "Bell Canada",
+   "Julie Lamontagne"
+  ],
+  [
+   "Bell Canada",
+   "Joe Montano"
+  ],
+  [
+   "Bell Canada",
+   "Joan Lusch"
+  ],
+  [
+   "Bell Canada",
+   "Ann Cullingham (Lee)"
+  ],
+  [
+   "Bell Canada",
+   "Marc Isabelle"
+  ],
+  [
+   "Bell Canada",
+   "Luc-David Martin"
+  ],
+  [
+   "Bell Canada",
+   "Mary Amoroso"
+  ],
+  [
+   "Bell Canada",
+   "Holly Haley"
+  ],
+  [
+   "Bell Canada",
+   "Mac Xie"
+  ],
+  [
+   "Bell Canada",
+   "Cindy Mallette"
+  ]
+ ],
+ "manual_under": [
+  [
+   "BMO",
+   "Stephen Taylor",
+   "Jacob Sorensen"
+  ],
+  [
+   "BMO",
+   "Christopher Collaros",
+   "Raphael Schapiro"
+  ],
+  [
+   "BMO",
+   "Heather Kroliczek",
+   "Stephen Taylor"
+  ],
+  [
+   "BMO",
+   "Jacqueline M. Scydick",
+   "Stephen Taylor"
+  ],
+  [
+   "BMO",
+   "Michael Battagliese",
+   "Augustin de Kerversau"
+  ],
+  [
+   "BMO",
+   "Heather Purves",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Anthony Bellicoso",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Rosemary Mezik",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Chris Quinlan",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Sarah Clements",
+   "Mona Malone"
+  ],
+  [
+   "BMO",
+   "Matt Turnbull",
+   "Mona Malone"
+  ],
+  [
+   "BMO",
+   "Daniel Cheriyan",
+   "Raphael Schapiro"
+  ],
+  [
+   "BMO",
+   "Amy Ellis",
+   "Stephen Taylor"
+  ],
+  [
+   "BMO",
+   "Emily Krishnakumar",
+   "Stephen Taylor"
+  ],
+  [
+   "BMO",
+   "Julie Petrie",
+   "Jacob Sorensen"
+  ],
+  [
+   "BMO",
+   "Anthony Tjong",
+   "Raphael Schapiro"
+  ],
+  [
+   "BMO",
+   "Mark Cashion",
+   "Christopher Collaros"
+  ],
+  [
+   "BMO",
+   "Laurie Carson",
+   "Heather Purves"
+  ],
+  [
+   "BMO",
+   "Rosie Marella, MBA, FICB",
+   "Heather Purves"
+  ],
+  [
+   "BMO",
+   "Kathryn Digilio",
+   "Heather Purves"
+  ],
+  [
+   "BMO",
+   "Eric Chibnik",
+   "Heather Kroliczek"
+  ],
+  [
+   "BMO",
+   "Neil Gandhi",
+   "Anthony Bellicoso"
+  ],
+  [
+   "BMO",
+   "Bryan Cheek",
+   "Sarah Clements"
+  ],
+  [
+   "BMO",
+   "Theresa McKinney Williams",
+   "Sarah Clements"
+  ],
+  [
+   "BMO",
+   "Mona Malone",
+   ""
+  ],
+  [
+   "BMO",
+   "Raphael Schapiro",
+   ""
+  ],
+  [
+   "BMO",
+   "Jacob Sorensen",
+   ""
+  ],
+  [
+   "BMO",
+   "Ann Marie Wright",
+   ""
+  ],
+  [
+   "BMO",
+   "Augustin de Kerversau",
+   ""
+  ],
+  [
+   "BMO",
+   "Gillian Noble",
+   ""
+  ],
+  [
+   "Canada Life",
+   "Brady Aarssen",
+   ""
+  ],
+  [
+   "Canada Life",
+   "Roger Maguet",
+   ""
+  ],
+  [
+   "Canada Life",
+   "Kate Nazar",
+   "Roger Maguet"
+  ],
+  [
+   "Canada Life",
+   "Derek Bodkin, CPA, CMA",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Brent Allen",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Ian Troup",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Robert Lunny",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Eshan Kochar",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Kim Lee",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Karri Kazarian",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Daniela Decary",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Scott Hunter",
+   "Kate Nazar"
+  ],
+  [
+   "Canada Life",
+   "Mike Horton",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Karen Dick",
+   "Derek Bodkin, CPA, CMA"
+  ],
+  [
+   "Canada Life",
+   "Terry Levesque",
+   "Derek Bodkin, CPA, CMA"
+  ],
+  [
+   "Canada Life",
+   "Matt Williamson",
+   "Brent Allen"
+  ],
+  [
+   "Canada Life",
+   "Barbara Bebee",
+   "Brent Allen"
+  ],
+  [
+   "Canada Life",
+   "Rita Iozzo",
+   "Derek Bodkin, CPA, CMA"
+  ],
+  [
+   "Canada Life",
+   "Andriy Storozhuk",
+   "Brady Aarssen"
+  ],
+  [
+   "Canada Life",
+   "Janice Guzzi",
+   "Ian Troup"
+  ],
+  [
+   "Canada Life",
+   "Ahmed Ahmed",
+   "Ian Troup"
+  ],
+  [
+   "Canada Life",
+   "Louise Serpa",
+   "Matt Williamson"
+  ],
+  [
+   "Canada Life",
+   "Moe El-farra",
+   "Matt Williamson"
+  ],
+  [
+   "Canada Life",
+   "Andrea Kearnan",
+   "Matt Williamson"
+  ],
+  [
+   "Canada Life",
+   "Lisa Berard, CEBS",
+   "Barbara Bebee"
+  ],
+  [
+   "Canada Life",
+   "Tracy Ryland",
+   "Karen Dick"
+  ],
+  [
+   "Canada Life",
+   "Nancy Vilhena-Pereira",
+   "Terry Levesque"
+  ],
+  [
+   "Canada Life",
+   "Khalid Abdul Karim, MBBS",
+   "Terry Levesque"
+  ],
+  [
+   "Canada Life",
+   "Jenny Gale",
+   "Kim Lee"
+  ],
+  [
+   "Canada Life",
+   "Amanda Ashton",
+   "Kim Lee"
+  ],
+  [
+   "Telus",
+   "Hesham Fahmy",
+   ""
+  ],
+  [
+   "Telus",
+   "Gopi Chande, FCPA",
+   ""
+  ],
+  [
+   "Telus",
+   "Scott Gaudet",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Steve Fast",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Shaye Draper",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Devyansh K.",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Brad Harper",
+   "Hesham Fahmy"
+  ],
+  [
+   "Telus",
+   "Lynn Salekin",
+   "Gopi Chande, FCPA"
+  ],
+  [
+   "Telus",
+   "Barbara Chiu",
+   "Gopi Chande, FCPA"
+  ],
+  [
+   "Telus",
+   "Ramish Siddiqui",
+   "Barbara Chiu"
+  ],
+  [
+   "Telus",
+   "Catherine Blair",
+   "Barbara Chiu"
+  ],
+  [
+   "Telus",
+   "Anne Gillam",
+   "Shaye Draper"
+  ],
+  [
+   "Telus",
+   "Helene Savage",
+   "Scott Gaudet"
+  ],
+  [
+   "Telus",
+   "Tyson Joyce",
+   "Scott Gaudet"
+  ],
+  [
+   "Telus",
+   "Patrick McCallen",
+   "Scott Gaudet"
+  ],
+  [
+   "Telus",
+   "Bob Yoon",
+   "Devyansh K."
+  ],
+  [
+   "Telus",
+   "Scott McArthur",
+   "Devyansh K."
+  ],
+  [
+   "Telus",
+   "Michelle Piasecki",
+   "Shaye Draper"
+  ],
+  [
+   "Telus",
+   "Ron Laverdiere",
+   "Shaye Draper"
+  ],
+  [
+   "Telus",
+   "Shaun Fuller",
+   "Shaye Draper"
+  ],
+  [
+   "Bell Canada",
+   "Nikki Moffat",
+   ""
+  ],
+  [
+   "Bell Canada",
+   "James Beresford",
+   ""
+  ],
+  [
+   "Bell Canada",
+   "Matt MacEwen",
+   ""
+  ],
+  [
+   "Bell Canada",
+   "Mario Barbieri, MBA",
+   "James Beresford"
+  ],
+  [
+   "Bell Canada",
+   "Sofia Ahmad",
+   "Matt MacEwen"
+  ],
+  [
+   "Bell Canada",
+   "Stacey Ogilvy",
+   "Matt MacEwen"
+  ],
+  [
+   "Bell Canada",
+   "Walter Ramka",
+   "Stacey Ogilvy"
+  ],
+  [
+   "Bell Canada",
+   "Krista Smith",
+   "Stacey Ogilvy"
+  ],
+  [
+   "Bell Canada",
+   "Anna Petkos",
+   "Matt MacEwen"
+  ],
+  [
+   "Bell Canada",
+   "Karen Nelson Shokar",
+   "Anna Petkos"
+  ],
+  [
+   "Bell Canada",
+   "Pietro Oliveri",
+   "James Beresford"
+  ],
+  [
+   "Bell Canada",
+   "Brenda Podurgiel",
+   "Pietro Oliveri"
+  ],
+  [
+   "Bell Canada",
+   "John Schembri",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Julie Lamontagne",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Joe Montano",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Joan Lusch",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Ann Cullingham (Lee)",
+   "James Beresford"
+  ],
+  [
+   "Bell Canada",
+   "Marc Isabelle",
+   "Ann Cullingham (Lee)"
+  ],
+  [
+   "Bell Canada",
+   "Luc-David Martin",
+   "James Beresford"
+  ],
+  [
+   "Bell Canada",
+   "Mary Amoroso",
+   "Luc-David Martin"
+  ],
+  [
+   "Bell Canada",
+   "Holly Haley",
+   "Luc-David Martin"
+  ],
+  [
+   "Bell Canada",
+   "Mac Xie",
+   "Matt MacEwen"
+  ],
+  [
+   "Bell Canada",
+   "Cindy Mallette",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Jag Siva",
+   "Mario Barbieri, MBA"
+  ],
+  [
+   "Bell Canada",
+   "Dana Lohnes",
+   "Mario Barbieri, MBA"
+  ]
+ ],
+ "title_override": [
+  [
+   "BMO",
+   "Raphael Schapiro",
+   "Chief Operating Officer, Technology & Operations Group, and Head of Transformation"
+  ],
+  [
+   "BMO",
+   "Jacob Sorensen",
+   "Executive Vice President, U.S. Chief Technology & Operations Officer"
+  ],
+  [
+   "BMO",
+   "Gillian Noble",
+   "Vice President & Chief Operating Officer, BMO Insurance"
+  ],
+  [
+   "BMO",
+   "Heather Purves",
+   "Managing Director, Retail Banking and Treasury Payment Operations (Deposits and Payments Canada)"
+  ],
+  [
+   "Telus",
+   "Hesham Fahmy",
+   "Executive Vice President, Chief Operations Officer and Chief Information Officer"
+  ],
+  [
+   "Telus",
+   "Helene Savage",
+   "Senior Director, Operations Leader, Retirement and Benefit Solutions (TELUS Health)"
+  ],
+  [
+   "Telus",
+   "Scott Gaudet",
+   "Vice President, Employer Operations (TELUS Health)"
+  ],
+  [
+   "Telus",
+   "Steve Fast",
+   "Vice President, Operational Excellence & Integration (TELUS Health)"
+  ],
+  [
+   "Telus",
+   "Tyson Joyce",
+   "Director, Quality and Continuous Improvement, Absence and Disability Management (TELUS Health)"
+  ],
+  [
+   "Bell Canada",
+   "Mary Amoroso",
+   "Associate Director, Service Operations, Bell Business Markets"
+  ],
+  [
+   "BMO",
+   "Stephen Taylor",
+   "Executive Vice President & Chief Administrative Officer, Operations (US)"
+  ]
+ ],
+ "dual": [
+  [
+   "Telus",
+   "Brad Harper"
+  ]
+ ],
+ "verify": [],
+ "phrases": [
+  "claims",
+  "disability",
+  "group benefits",
+  "policy",
+  "plan member",
+  "mortgage",
+  "deposit",
+  "loan",
+  "payments",
+  "billing",
+  "provisioning",
+  "order management",
+  "service assurance",
+  "credit",
+  "collections",
+  "wealth operations"
+ ],
+ "topics_extra": {
+  "loan": [
+   "loan servicing",
+   "loan operations",
+   "lending operations",
+   "servicing",
+   "escrow",
+   "default",
+   "loan administration",
+   "loan closing",
+   "loan processing",
+   "credit operations"
+  ],
+  "deposit": [
+   "deposit operations",
+   "deposit"
+  ],
+  "mortgage": [
+   "mortgage"
+  ],
+  "payments": [
+   "payments",
+   "wire",
+   "ach ",
+   "card operations",
+   "merchant operations",
+   "money movement",
+   "payment operations"
+  ],
+  "onboarding": [
+   "onboarding",
+   "kyc",
+   "account opening",
+   "client onboarding",
+   "aml operations"
+  ],
+  "wealth_ops": [
+   "wealth operations",
+   "investment operations",
+   "securities operations",
+   "brokerage operations",
+   "trading operations",
+   "settlement",
+   "reconciliation",
+   "asset servicing",
+   "custody",
+   "fund operations",
+   "transfer agent"
+  ],
+  "client_service": [
+   "client service",
+   "service operations",
+   "service delivery",
+   "service center operations",
+   "centralized service",
+   "enterprise service",
+   "head of service",
+   "customer operations",
+   "client operations"
+  ],
+  "policy_admin": [
+   "policy administration",
+   "policy services",
+   "policy operations",
+   "new business",
+   "underwriting operations",
+   "contract administration"
+  ],
+  "plan_member": [
+   "plan member",
+   "plan sponsor",
+   "member services operations",
+   "member operations",
+   "benefits administration",
+   "benefit operations"
+  ],
+  "group_ops": [
+   "group operations",
+   "group benefits",
+   "group life",
+   "group claims",
+   "health and dental",
+   "h&d operations"
+  ],
+  "provisioning": [
+   "provisioning",
+   "activation",
+   "order management",
+   "order fulfillment",
+   "service assurance",
+   "service delivery operations",
+   "service fulfillment",
+   "install operations"
+  ],
+  "billing_ops": [
+   "billing operations",
+   "revenue assurance",
+   "revenue operations",
+   "invoicing",
+   "billing and collections"
+  ],
+  "credit_collections": [
+   "credit and collections",
+   "collections operations",
+   "credit operations",
+   "receivables management"
+  ],
+  "back_office": [
+   "back office",
+   "back-office",
+   "middle office"
+  ],
+  "process": [
+   "process optimization",
+   "process excellence",
+   "process improvement",
+   "operational excellence",
+   "business process"
+  ],
+  "vendor": [
+   "vendor management",
+   "third party",
+   "outsourcing",
+   "bpo",
+   "partner operations"
+  ],
+  "quality": [
+   "quality assurance",
+   "quality control",
+   "quality operations"
+  ]
+ },
+ "func_extra": [
+  [
+   "Operations",
+   "chief administrative officer|chief operating officer|chief operations officer|chief technology & operations officer|chief technology and operations officer"
+  ],
+  [
+   "Finance & shared services",
+   "\\bcfo\\b|chief financial|controller|fp&a|shared services"
+  ],
+  [
+   "Loan, mortgage & deposit operations",
+   "loan servicing|loan operations|lending operations|loan administration|escrow|mortgage|default operations|deposit operations|\\bdeposit\\b|credit operations"
+  ],
+  [
+   "Payments & client onboarding",
+   "payments operations|payment operations|\\bpayments\\b|wire|\\bach\\b|card operations|merchant|money movement|onboarding|kyc|account opening|aml operations"
+  ],
+  [
+   "Wealth & securities operations",
+   "wealth operations|investment operations|securities operations|brokerage operations|trading operations|settlement|reconciliation|asset servicing|custody|fund operations|transfer agent"
+  ],
+  [
+   "Policy administration & new business",
+   "policy administration|policy services|policy operations|new business|contract administration"
+  ],
+  [
+   "Group benefits & plan member operations",
+   "group operations|group benefits|group life|group claims|health and dental|h&d operations|plan member|plan sponsor|benefits administration|benefit operations|member operations"
+  ],
+  [
+   "Order, provisioning & service assurance",
+   "provisioning|activation|order management|order fulfillment|service assurance|service fulfillment|install operations"
+  ],
+  [
+   "Billing, revenue assurance & collections",
+   "billing operations|revenue assurance|invoicing|billing and collections|credit and collections|collections operations|receivables management"
+  ]
+ ],
+ "collision": {},
+ "root_prefs_generic": [
+  "operating",
+  "administrative"
+ ],
+ "bridge_results": [
+  "jw_bridge_results_a.csv",
+  "jw_bridge_results_c.csv",
+  "jw_bridge_results_d.csv",
+  "jw_bridge_results_e.csv"
+ ],
+ "require_url": true,
+ "finance_rollup": false,
+ "root_prefs_finance": [
+  "shared services",
+  "operating",
+  "administrative",
+  "enterprise operations"
+ ],
+ "specific_overlap_for_vp": true,
+ "manual_add": [],
+ "account_notes": {
+  "Bell Canada": "Bell people list their employer as plain \"Bell\" on LinkedIn, and Bell's management ladder runs Senior Manager, Associate Director, Director, VP; Associate Director is a real management tier here and stays on the map. Billing, credit and collections and shared services sit under Finance Operations (Matt MacEwen); customer, client and provisioning operations sit under Customer Operations (James Beresford). Clay's index holds few Bell Director-and-above operations titles, so the map is deliberately built from Associate Director up; the next layer to search directly in Sales Navigator is Senior Manager, Workforce Management (three surfaced: customer care WFM, IVR call routing WFM, business intelligence and WFM). Salesforce already holds 280 Bell contacts; the two Workforce Management directors on record (Gendron, Frappier) have since changed roles, and Sebastien Lafond (VP Customer Operations, Shared Services) no longer surfaces as current.",
+  "BMO": "The Canadian bank and BMO U.S. are separate entities in every data source; this map spans both because operations are run North America wide (Deposit Operations US and Canada, Corporate and Commercial Lending Operations in Toronto and Chicago). Mona Malone became Chief Administrative Officer of BMO Financial Group in July 2025; Ann Marie Wright became US Chief Administrative Officer in November 2025. Jean-Michel Ares (Chief Technology & Operations Officer on the Salesforce record) has left BMO. Doug Sibley (Managing Director, Global Head of KYC, Client Onboarding and Client Operations, BMO Capital Markets) is confirmed in seat but has no findable LinkedIn profile; search him in Sales Navigator. Annie Ling (Chief Operating Officer) and Eli Laxmeter (VP Operations Technology) surfaced in search but could not be confirmed live.",
+  "Telus": "TELUS is two back offices: the telecom (billing and revenue assurance under Finance, customer service delivery and service assurance under the Chief Operations Officer) and TELUS Health (employer operations, retirement and benefit solutions administration, absence and disability management), which is a large processing business in its own right. Hesham Fahmy became EVP, Chief Operations Officer and CIO in February 2026. Salesforce holds only 31 TELUS contacts; Luca Zoppi and Daniel Yeung on the record have moved on. Clay's index holds few Director-and-above telecom operations titles at TELUS; search Sales Navigator directly for Director, Credit & Collections, Director, Billing Operations and Director, Order Management. TELUS International (a separate Salesforce account and a BPO) is out of scope for this map.",
+  "Canada Life": "Canada Life's back office is disability and claims operations (London, Winnipeg, Toronto, Calgary), group and plan-sponsor shared services, policy services and the retirement and investment operations under Workplace Retirement and Savings. Brady Aarssen became SVP, Canada Operations in October 2025 and is the operations executive on this map. The UK and Ireland arms (Canada Life UK, Canada Life Asset Management, Irish Life) share the LinkedIn company page and were removed. Brad Fedorchuk (EVP Group Customer, on the Salesforce record) left in June 2025; Michael Jones (VP Group Life and Disability Claims) retired in April 2026; Stefan Kristjanson (SVP Group Operations) is now chair at Irish Life. Salesforce holds 81 Canada Life contacts."
+ },
+ "band_override": [
+  [
+   "BMO",
+   "Raphael Schapiro",
+   "C"
+  ],
+  [
+   "BMO",
+   "Heather Kroliczek",
+   "SVP"
+  ],
+  [
+   "BMO",
+   "Heather Purves",
+   "SVP"
+  ],
+  [
+   "BMO",
+   "Eric Chibnik",
+   "VP"
+  ],
+  [
+   "Telus",
+   "Devyansh K.",
+   "VP"
+  ],
+  [
+   "Canada Life",
+   "Ian Troup",
+   "VP"
+  ]
+ ],
+ "root_exclude": [
+  [
+   "BMO",
+   "Andrew C."
+  ],
+  [
+   "BMO",
+   "Dave Abplanalp, CPA"
+  ],
+  [
+   "Canada Life",
+   "Mei D."
+  ],
+  [
+   "Canada Life",
+   "Tamara Schock"
+  ]
+ ],
+ "confirm": [
+  [
+   "Bell Canada",
+   "Stacey Ogilvy",
+   "LinkedIn headline reads Manager, credit and collections agency management; Apollo title is Director; confirm level"
+  ],
+  [
+   "Bell Canada",
+   "Brenda Podurgiel",
+   "profile lists both Director Supply Chain-Provisioning and Manager Supply Chain; confirm level"
+  ],
+  [
+   "Telus",
+   "Brad Harper",
+   "two profiles under this name (one reads Retired); live profile chosen by latest start"
+  ],
+  [
+   "BMO",
+   "Rosie Marella, MBA, FICB",
+   "Director, Deposit and Payments Canada, B2C Operations; confirm reporting line"
+  ],
+  [
+   "BMO",
+   "Michael Battagliese",
+   "Miami-based Head of Payments; confirm whether the seat is US Banking or enterprise"
+  ],
+  [
+   "Canada Life",
+   "Robert Lunny",
+   "VP Shared Services since 2006 per profile and Salesforce; confirm still in seat"
+  ],
+  [
+   "Bell Canada",
+   "Cindy Mallette",
+   "profile start date reads 1976; confirm still in seat"
+  ],
+  [
+   "Bell Canada",
+   "Nikki Moffat",
+   "CHRO & EVP Corporate Services; the corporate-services remit (shared services) is the reason she is on the map"
+  ],
+  [
+   "Telus",
+   "Brad Harper",
+   "Workforce Solutions may be a TELUS Health product line rather than workforce planning; confirm scope"
+  ],
+  [
+   "Canada Life",
+   "Derek Bodkin, CPA, CMA",
+   "LinkedIn (Mar 2026) reads VP Disability Operations; ZoomInfo still reads VP Insurance Business; live enrichment returned no result; confirm which"
+  ],
+  [
+   "Telus",
+   "Shaye Draper",
+   "interim VP per profile, ZoomInfo and The Org (Sep 2026); live enrichment returned no result"
+  ],
+  [
+   "BMO",
+   "Stephen Taylor",
+   "EVP & CAO, Operations (US) per BMO and The Org; a different seat from Ann Marie Wright, US CAO of BMO Financial Corporation"
+  ]
+ ],
+ "exec_cap": 6,
+ "peer_head_rule": false,
+ "trim": [
+  [
+   "BMO",
+   "Andrew C.",
+   "unit-level COO (LRCP), scope unclear"
+  ],
+  [
+   "BMO",
+   "Aditya Sapru",
+   "Corporate Finance is the commercial lending business, not operations"
+  ],
+  [
+   "BMO",
+   "Chad Iwata",
+   "Corporate Finance is the commercial lending business, not operations"
+  ],
+  [
+   "BMO",
+   "Viviane Croux",
+   "Corporate Finance is the commercial lending business, not operations"
+  ],
+  [
+   "BMO",
+   "Angelena Ellis",
+   "manager-level role carrying a VP grade"
+  ],
+  [
+   "BMO",
+   "Patrina Kegler",
+   "manager-level role carrying a VP grade"
+  ],
+  [
+   "BMO",
+   "Tasha Spransy",
+   "manager-level role carrying a VP grade"
+  ],
+  [
+   "BMO",
+   "Katherina Vivar, CTP",
+   "Treasury & Payment Solutions is the product and sales side"
+  ],
+  [
+   "BMO",
+   "Sharon Blair",
+   "Treasury & Payment Solutions is the product and sales side"
+  ],
+  [
+   "BMO",
+   "Pardeep Dosanjh",
+   "Treasury & Payment Solutions is the product and sales side"
+  ],
+  [
+   "BMO",
+   "Stephanie D.",
+   "Treasury & Payment Solutions is the product and sales side"
+  ],
+  [
+   "BMO",
+   "Arumugam (Aru) Appadurai",
+   "payments product, not operations"
+  ],
+  [
+   "BMO",
+   "Frank Pasceri",
+   "card acquisition is marketing"
+  ],
+  [
+   "BMO",
+   "Darrell Majdell",
+   "regional branch operations"
+  ],
+  [
+   "BMO",
+   "Jeremy Arrighi",
+   "regional branch operations"
+  ],
+  [
+   "BMO",
+   "Andrina Spearman",
+   "regional branch operations"
+  ],
+  [
+   "BMO",
+   "Jennifer Nunes",
+   "regional branch operations"
+  ],
+  [
+   "BMO",
+   "Léna Harmandjian",
+   "regional branch operations"
+  ],
+  [
+   "BMO",
+   "Kim Shllaku",
+   "wealth branch operations, regional"
+  ],
+  [
+   "BMO",
+   "Meghan Kostka",
+   "wealth branch operations, regional"
+  ],
+  [
+   "BMO",
+   "Kelsey Martens",
+   "wealth branch operations, regional"
+  ],
+  [
+   "BMO",
+   "Norman Cutler",
+   "controller, accounting"
+  ],
+  [
+   "BMO",
+   "Shifra Kolsky",
+   "controller, accounting"
+  ],
+  [
+   "BMO",
+   "Rahul Nalgirkar",
+   "finance"
+  ],
+  [
+   "BMO",
+   "Tom Burian",
+   "finance"
+  ],
+  [
+   "BMO",
+   "Jerry Calo",
+   "title names no function"
+  ],
+  [
+   "BMO",
+   "Scott Shelton",
+   "FP&A, planning"
+  ],
+  [
+   "BMO",
+   "Dan Logan",
+   "estate settlement, trust"
+  ],
+  [
+   "BMO",
+   "Danielle Schlabs",
+   "trust operations manager"
+  ],
+  [
+   "Canada Life",
+   "Mei D.",
+   "divisional CFO, initial-only profile"
+  ],
+  [
+   "Canada Life",
+   "Tamara Schock",
+   "Chief Accounting Officer, finance not operations"
+  ],
+  [
+   "Canada Life",
+   "Andrew Conrad",
+   "corporate finance"
+  ],
+  [
+   "Canada Life",
+   "Mirzet Alekic, CPA, CGA",
+   "finance business partner to shared services"
+  ],
+  [
+   "Canada Life",
+   "Gautam Vyavaharkar",
+   "fourth product owner; three already mapped"
+  ],
+  [
+   "Canada Life",
+   "Daien Sebasta",
+   "fourth product owner; three already mapped"
+  ],
+  [
+   "Canada Life",
+   "Christine Winter",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Canada Life",
+   "Michael Cullen",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Telus",
+   "Matt Murray, FCPA, FCMA",
+   "finance business partners (FP&A)"
+  ],
+  [
+   "Telus",
+   "Marc-Andre Coulombe",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Telus",
+   "Craig McLaughlin",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Telus",
+   "william baneham",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Telus",
+   "Sandra Dominique",
+   "generic operations title; function to confirm"
+  ],
+  [
+   "Bell Canada",
+   "mary smith",
+   "generic title, lower-case profile"
+  ],
+  [
+   "Telus",
+   "Michelle Piasecki",
+   "generic operations title, function unconfirmed"
+  ],
+  [
+   "Telus",
+   "Ron Laverdiere",
+   "generic operations title, function unconfirmed"
+  ],
+  [
+   "Telus",
+   "Shaun Fuller",
+   "generic operations title, function unconfirmed"
+  ],
+  [
+   "Telus",
+   "Patrick McCallen",
+   "generic operations title, function unconfirmed"
+  ],
+  [
+   "Bell Canada",
+   "Dana Lohnes",
+   "generic operations title, function unconfirmed"
+  ],
+  [
+   "Bell Canada",
+   "Jag Siva",
+   "generic operations title, no live confirm"
+  ]
+ ],
+ "pad_to_cap": true,
+ "sibling_links": [],
+ "sibling_label": "Also for you",
+ "exec_cap_by_account": {
+  "BMO": 7,
+  "Canada Life": 3,
+  "Telus": 2,
+  "Bell Canada": 3
+ }
+}

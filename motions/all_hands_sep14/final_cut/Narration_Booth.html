@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All-hands demo, narration booth</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#014637;--green:#2DB56E;--green-300:#7BD3A0;--orange:#F58220;--r:8px}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--forest);color:#fff;font-family:Roboto,'Helvetica Neue',Arial,sans-serif;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;overflow:hidden}
+header{display:flex;align-items:center;gap:20px;padding:14px 28px;border-bottom:1px solid rgba(255,255,255,.14);flex:0 0 auto}
+header .logo{height:26px;color:#fff}
+.mono{font-family:'Roboto Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600;color:var(--green-300)}
+header .sp{margin-left:auto;display:flex;gap:26px;align-items:center}
+main{flex:1;display:flex;min-height:0}
+.left{flex:1;display:flex;flex-direction:column;padding:30px 40px 24px;min-width:0}
+.right{flex:0 0 400px;border-left:1px solid rgba(255,255,255,.14);padding:22px;display:flex;flex-direction:column;gap:14px;min-height:0}
+video{width:100%;border-radius:var(--r);background:#000;display:block}
+.meta{display:flex;align-items:baseline;gap:16px;margin-bottom:16px}
+.act{font-family:'Roboto Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600;color:var(--green-300)}
+.clock{font-family:'Roboto Mono',Menlo,monospace;font-size:13px;color:#8FB0A4;margin-left:auto}
+#line{font-size:44px;line-height:1.24;font-weight:700;letter-spacing:-.01em;max-width:22ch;flex:1;display:flex;align-items:center}
+#line.hold{color:var(--green-300);font-weight:500;font-style:italic}
+#next{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;color:#7C9B8F;font-size:17px;line-height:1.4;max-width:60ch;min-height:60px}
+#next b{color:#9FBDB1;font-weight:600}
+.bar{height:5px;background:rgba(255,255,255,.14);border-radius:3px;overflow:hidden;margin-bottom:18px;flex:0 0 auto}
+.bar i{display:block;height:100%;background:var(--green);width:0}
+.pace{display:flex;gap:22px;margin-top:12px}
+.pace div b{display:block;font-size:24px;font-weight:900;color:var(--green-300);line-height:1}
+.pace div span{font-family:'Roboto Mono',Menlo,monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.12em;color:#7C9B8F;display:block;margin-top:5px}
+ol{list-style:none;overflow-y:auto;flex:1;min-height:0;margin:0}
+ol li{font-size:12px;line-height:1.4;padding:7px 9px;border-radius:5px;color:#7C9B8F;display:flex;gap:9px;cursor:pointer}
+ol li b{font-family:'Roboto Mono',Menlo,monospace;font-size:10.5px;color:#5E7C71;flex:0 0 38px}
+ol li.on{background:rgba(45,181,110,.16);color:#fff}
+ol li.on b{color:var(--green-300)}
+.keys{font-family:'Roboto Mono',Menlo,monospace;font-size:10px;letter-spacing:.1em;color:#6E8C81;text-transform:uppercase}
+.miss{background:#5A2410;border-left:4px solid var(--orange);padding:10px 14px;border-radius:0 5px 5px 0;font-size:12.5px;line-height:1.5;color:#FFD9BC}
+</style></head><body>
+<svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46"><path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/><path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/><path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/><path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/><path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/><path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/></symbol></svg>
+<header>
+<svg class="logo" viewBox="0 0 187 46"><use href="#ilogo"/></svg>
+<div class="mono">Narration booth</div>
+<div class="sp"><div class="keys">Space play &middot; R restart &middot; &larr; &rarr; cue</div></div>
+</header>
+<main>
+<div class="left">
+  <div class="bar"><i id="prog"></i></div>
+  <div class="meta"><div class="act" id="act">Open</div><div class="clock"><span id="clock">0:00.0</span> / 4:57.5 &middot; <span id="left">0.0s</span> left on this line</div></div>
+  <div id="line">Press space.</div>
+  <div id="next"></div>
+  <div class="pace">
+    <div><b id="wc">0</b><span>words on this line</span></div>
+    <div><b id="wps">0.00</b><span>words per second needed</span></div>
+    <div><b id="cue">1 / 25</b><span>cue</span></div>
+  </div>
+</div>
+<div class="right">
+  <video id="v" src="Intradiem_AllHands_Demo_v3_Sep9.mp4" preload="auto" muted playsinline></video>
+  <div class="miss" id="warn" style="display:none">Video not found. Keep this page in the same folder as <b>Intradiem_AllHands_Demo_v3_Sep9.mp4</b>.</div>
+  <ol id="list"></ol>
+</div>
+</main>
+<script>
+const CUES = [{"t": 0.0, "end": 6.0, "act": "Open", "line": "This is the AI engine our go-to-market runs on. Everything you are about to see is live."}, {"t": 6.0, "end": 13.0, "act": "Flow", "line": "Five places we already look, from Salesforce to the market signals, feed one AI engine."}, {"t": 13.0, "end": 25.6, "act": "Flow", "line": "The AI takes current customers out, writes the sequence for everyone cleared, and a reply lands back in Salesforce as a meeting."}, {"t": 25.6, "end": 37.8, "act": "System", "line": "Inside the engine, six steps. The AI runs most of them itself. Two places a person still decides, and those are the two that keep us safe."}, {"t": 37.8, "end": 45.2, "act": "Act 1", "line": "Act one. A rep, a target account, and a blank page."}, {"t": 45.2, "end": 70.8, "act": "Act 1", "line": "One ask, in plain English. The AI reads the public record, names the buying committee, and writes a ten-day plan: emails, LinkedIn notes and voicemails for every person on it, in the rep's voice. Every signal on screen carries its date and its source. This is what Nate and the sales team run from today."}, {"t": 70.8, "end": 79.4, "act": "Act 1", "line": "It carries the rules with it: what is verified, who is excluded, and how to answer the pushback before it comes."}, {"t": 79.4, "end": 81.8, "act": "Act 1", "line": "[ Nothing. Let the card land. ]"}, {"t": 81.8, "end": 89.3, "act": "Act 2", "line": "Act two. Our customers' front offices know us. Their back offices don't."}, {"t": 89.3, "end": 119.9, "act": "Act 2", "line": "So we went and found them. Everyone we know, in one place, synced from Salesforce. A hundred and forty thousand people. Then one saved filter: back-office leaders, director and up, inside accounts we already serve. Three hundred and twelve people who have never heard from us. That used to be a week of exports and spreadsheets. It costs nothing and it stays current on its own."}, {"t": 119.9, "end": 136.6, "act": "Act 2", "line": "For every one of them: verify the email, read what they have said publicly, find which contact center platforms their company runs, and pull the persona and the angle. Here is that research running on ten people at once."}, {"t": 136.6, "end": 145.6, "act": "Act 2", "line": "[ Say nothing. Nine seconds. The screen carries it. ]"}, {"t": 145.6, "end": 155.5, "act": "Act 2", "line": "Then the AI writes the first touch for each person from exactly this, and every draft passes a fact check before it moves."}, {"t": 155.5, "end": 188.1, "act": "Act 2", "line": "Then the AI turns names into the org. When the account management team needed back-office maps for their strategic accounts, it sourced the people, checked every name against Salesforce, and delivered them as a live page. This is MetLife: the senior executive at the top, the lanes underneath, who reports up to whom. Eighteen accounts so far, and the account manager clears every name before a word goes out."}, {"t": 188.1, "end": 207.7, "act": "Act 2", "line": "And inside every org there is a buying committee. We used to sell to one person. Now we sell to four: the economic buyer, the evaluator, the champion, and the integration owner. Here is State Farm's. This is the targeting standard now."}, {"t": 207.7, "end": 210.1, "act": "Act 2", "line": "[ Nothing. Let the card land. ]"}, {"t": 210.1, "end": 217.5, "act": "Act 3", "line": "Act three. The rep has the people and the drafts. Running them is the job."}, {"t": 217.5, "end": 244.1, "act": "Act 3", "line": "So that is automated too. Cleared contacts land here. Email, LinkedIn and a call step per person, on a cadence. Every line you are reading was drafted by the AI for this individual, at this company, this week. The rep owns the send, and every reply comes back to them. Seven campaigns are sending today across North America and the UK."}, {"t": 244.1, "end": 246.5, "act": "Act 3", "line": "[ Nothing. Let the card land. ]"}, {"t": 246.5, "end": 252.1, "act": "Coda", "line": "It doesn't stop at outbound. Alliances asked, and the same AI answered."}, {"t": 252.1, "end": 265.7, "act": "Coda", "line": "Account research and a follow-up one-pager per partner account. Two AI skills build both in about five minutes, and Frank runs them himself."}, {"t": 265.7, "end": 271.3, "act": "Coda", "line": "Public sources, read on the day, with the gaps named rather than filled."}, {"t": 271.3, "end": 282.9, "act": "Coda", "line": "Who to talk to, where each name came from, and what still needs a live check before it reaches a sequence."}, {"t": 282.9, "end": 292.5, "act": "Coda", "line": "And the one-pager that follows, built from that company's own filings. The same AI routed a thousand webinar registrants in a week."}, {"t": 292.5, "end": 297.0, "act": "Close", "line": "One AI engine. It runs work like this for any team."}];
+const v=document.getElementById('v'), lineEl=document.getElementById('line'),
+      nextEl=document.getElementById('next'), actEl=document.getElementById('act'),
+      clockEl=document.getElementById('clock'), leftEl=document.getElementById('left'),
+      progEl=document.getElementById('prog'), wcEl=document.getElementById('wc'),
+      wpsEl=document.getElementById('wps'), cueEl=document.getElementById('cue'),
+      listEl=document.getElementById('list');
+const fmt=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}.${Math.floor((s%1)*10)}`;
+const words=t=>t.startsWith('[')?0:t.split(/\s+/).length;
+
+CUES.forEach((c,i)=>{
+  const li=document.createElement('li');
+  li.innerHTML=`<b>${Math.floor(c.t/60)}:${String(Math.floor(c.t%60)).padStart(2,'0')}</b><span>${c.line.slice(0,74)}${c.line.length>74?'&hellip;':''}</span>`;
+  li.onclick=()=>{v.currentTime=c.t+0.05;};
+  listEl.appendChild(li);
+});
+
+let cur=-1;
+function tick(){
+  const t=v.currentTime;
+  clockEl.textContent=fmt(t);
+  let i=0; for(let k=0;k<CUES.length;k++) if(t>=CUES[k].t) i=k;
+  const c=CUES[i], dur=c.end-c.t, w=words(c.line);
+  if(i!==cur){
+    cur=i;
+    lineEl.textContent=c.line;
+    lineEl.className = c.line.startsWith('[') ? 'hold' : '';
+    actEl.textContent=c.act;
+    const n=CUES[i+1];
+    nextEl.innerHTML = n ? `<b>Next</b> &nbsp;${n.line}` : '<b>End of the read.</b>';
+    wcEl.textContent = w || '\u2014';
+    wpsEl.textContent = w ? (w/dur).toFixed(2) : '\u2014';
+    cueEl.textContent = `${i+1} / ${CUES.length}`;
+    [...listEl.children].forEach((li,k)=>li.classList.toggle('on',k===i));
+    listEl.children[i].scrollIntoView({block:'nearest'});
+  }
+  const rem=Math.max(0,c.end-t);
+  leftEl.textContent=rem.toFixed(1)+'s';
+  progEl.style.width=Math.min(100,((t-c.t)/dur)*100)+'%';
+  progEl.style.background = rem<1.5 && rem>0 ? 'var(--orange)' : 'var(--green)';
+  requestAnimationFrame(tick);
+}
+v.addEventListener('loadeddata',()=>{tick();});
+v.addEventListener('error',()=>{document.getElementById('warn').style.display='block';});
+addEventListener('keydown',e=>{
+  if(e.code==='Space'){e.preventDefault(); v.paused?v.play():v.pause();}
+  if(e.key==='r'||e.key==='R'){v.currentTime=0;}
+  if(e.key==='ArrowRight'){const n=CUES.find(c=>c.t>v.currentTime+0.2); if(n)v.currentTime=n.t+0.05;}
+  if(e.key==='ArrowLeft'){const p=[...CUES].reverse().find(c=>c.t<v.currentTime-0.6); if(p)v.currentTime=p.t+0.05;}
+});
+</script></body></html>

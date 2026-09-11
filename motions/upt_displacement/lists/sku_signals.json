@@ -1,0 +1,253 @@
+{
+ "bcbsla.com": {
+  "tier": "A",
+  "signal": "Verint case study names Desktop and Process Analytics at BCBS Louisiana alongside Call Recording, Speech Analytics, Quality Management, Coaching, WFM and Strategic Planner; 2.1M calls a year",
+  "source": "https://www.verint.com/case-studies/blue-cross-blue-shield-louisiana-enhances-the-customer-experience-through-new-insights/",
+  "date": "undated on page (Verint case study)",
+  "vendor": "Verint"
+ },
+ "ttec.com": {
+  "tier": "A",
+  "signal": "NICE case study: TTEC chose NICE for natively integrated desktop and interaction analytics; products named include Desktop Analytics and Desktop Automation; 40,000+ agents Executive Director, Systems Software Engineering lists desktop analytics among the platforms his team supports",
+  "source": "https://www.nice.com/resources/speech-analytics-meets-sales-excellence-with-ttec-and-nexidia",
+  "date": "undated on page (NICE resource, PDF dated 2022)",
+  "vendor": "NICE",
+  "nice_tag": "bundled and used"
+ },
+ "teleperformance.com": {
+  "tier": "A",
+  "signal": "NICE case studies: NICE WFM plus Desktop Analytics for back-office agents at Teleperformance Brasil; Interaction Analytics, Quality Optimizer, Customer Feedback and Desktop Analytics at six UK sites",
+  "source": "https://www.nice.com/resources/teleperformance-case-study",
+  "date": "undated on page (NICE resource, PDF Aug 2024)",
+  "vendor": "NICE",
+  "nice_tag": "bundled and used"
+ },
+ "maximus.com": {
+  "tier": "A-",
+  "signal": "Rep-confirmed (Nathan Belfield, Sep 4 2026: Verint in the back office, users unhappy). Verint's blinded Healthcare BPO case study (Medicaid processing for several US states, 14 teams first) names Operations Visualizer, Operations Manager and Desktop and Process Analytics and matches the Maximus footprint",
+  "source": "https://www.verint.com/case-studies/verint-helps-a-large-business-process-outsourcer-supporting-the-medicaid-processing-for-several-us-states-better-measure-and-improve-performance/",
+  "date": "rep read Sep 4 2026; case study undated",
+  "vendor": "Verint"
+ },
+ "navyfederal.org": {
+  "tier": "B",
+  "signal": "Verint case studies name WFM, Quality Management, Performance Management, Speech Analytics and Open Platform; ICMI 2022 finalist press release",
+  "source": "https://www.verint.com/case-studies/navy-federal-credit-union-unifies-departments-with-centralized-workforce-management/",
+  "date": "undated; press release Sep 14 2022",
+  "vendor": "Verint"
+ },
+ "newyorklife.com": {
+  "tier": "A",
+  "signal": "Two current profiles name the module: the CVP, Head of Workforce Management (since May 2022) is 'leading the journey to expand insight through Desktop Process Analytics to increase capacity by 10%'; a Voice Technology System Administrator deploys 'Verint desktop process & analytics (DPA) triggers'. Verint case study separately names Quality Bot and Speech Analytics",
+  "source": "https://www.linkedin.com/in/randy-kahlich-jr-1b0b5412/ ; https://www.linkedin.com/in/michael-snow-081929b8/",
+  "date": "profiles read Sep 9 2026",
+  "vendor": "Verint",
+  "method": "Clay profile search (Sep 9 2026, 0 credits) plus Enrich Person (0.5 cr): current-role profile text"
+ },
+ "qualfon.com": {
+  "tier": "B",
+  "signal": "Verint case study: Workforce Management and MyVerint app; 17 percent less real-time analyst busy work",
+  "source": "https://www.verint.com/case-studies/qualfon-enhances-employee-and-customer-experience-with-verint-workforce-management/",
+  "date": "Sep 2022 (BusinessWire)",
+  "vendor": "Verint"
+ },
+ "manulife.com": {
+  "tier": "B",
+  "signal": "Verint press release: Manulife speech analytics analyst presenting; daily insight reports to 200+ subscribers",
+  "source": "https://www.verint.com/press-room/2020-press-releases/verint-october-events-focus-on-how-ai-and-automation-in-customer-and-workforce-engagement-drive-insights-to-help-organizations-navigate-and-thrive/",
+  "date": "Oct 2020",
+  "vendor": "Verint"
+ },
+ "mscdirect.com": {
+  "tier": "B",
+  "signal": "Verint press release names MSC Industrial Supply a Verint customer (ICMI 2022 finalist, Best Large Contact Center)",
+  "source": "https://www.verint.com/press-room/2022-press-releases/verint-customers-msc-industrial-supply-co-and-navy-federal-credit-union-recognized-among-2022-icmi-global-contact-center-award-finalists/",
+  "date": "Sep 14 2022",
+  "vendor": "Verint"
+ },
+ "iehp.org": {
+  "tier": "B",
+  "signal": "IEHP governing board packet: Verint workforce management contracted since April 2013 for the call centers",
+  "source": "https://www.iehp.org/content/dam/iehp-org/en/documents/governing-board-meetings/governing-board-reports/august-2024/August%2012,%202024%20IEHP%20Governing%20Board%20Meeting%20-%20Meeting%20Packet%20-%208-12-2024.pdf",
+  "date": "Aug 12 2024",
+  "vendor": "Verint"
+ },
+ "telus.com": {
+  "tier": "B",
+  "signal": "Verint blog: TELUS International deploys Verint Workforce Engagement on Google Cloud, ~30,000 team members (May 2021). NICE also publishes a TELUS case study (2024 PDF)",
+  "source": "https://www.verint.com/blog/global-digital-customer-experience-leader-telus-international-deploys-verint-workforce-engagement-on-google-clouds-platform-worldwide/",
+  "date": "May 20 2021; NICE PDF Mar 2024",
+  "vendor": "Verint and NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "alorica.com": {
+  "tier": "B",
+  "signal": "CX Today case study: Alorica runs Verint Interaction Recording, Enterprise WFM, Community, Quality Management, Speech Analytics (stack read says NICE CXone; both present)",
+  "source": "https://www.cxtoday.com/workforce-engagement-management/cx-outsourcing-case-study-in-focus-verint-and-alorica/",
+  "date": "May 6 2022",
+  "vendor": "Verint (and NICE per stack read)",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "farmers.com": {
+  "tier": "B",
+  "signal": "NICE case study: Farmers Insurance on NICE WFM, schedule adherence and WFM reporting",
+  "source": "https://www.nice.com/resources/farmers-insurance",
+  "date": "2016 results",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "ncsecu.org": {
+  "tier": "B",
+  "signal": "NICE case study and press release: SECU on CXone Mpower (2,300 seats), IEX WFM and EEM (1,100 seats), Performance Management, Quality Management, Interaction Analytics",
+  "source": "https://www.nice.com/resources/transforming-member-experience-secus-journey-with-nice",
+  "date": "2025 (press release); results within the past year",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "consumercellular.com": {
+  "tier": "B",
+  "signal": "NICE case study: Consumer Cellular on CXone with Copilot for Agents and Automated Summary",
+  "source": "https://www.nice.com/resources/consumer-cellular-has-always-been-about-the-conversation-ai-made-it-a-better-one",
+  "date": "undated (2025-26 product)",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "trupanion.com": {
+  "tier": "B",
+  "signal": "NICE inContact CXone moved 900 Trupanion employees to remote work in 72 hours",
+  "source": "https://medium.com/inside-the-salesforce-ecosystem/united-way-trupanion-remain-open-with-nice-incontact-82a48716fde5",
+  "date": "2020",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "columbia.com": {
+  "tier": "B",
+  "signal": "NICE inContact blog: Columbia Sportswear runs multi-brand agents on inContact (CXone) across buildings, states and countries",
+  "source": "https://www.niceincontact.com/blog/columbia-sportswear-takes-customer-service-to-the-cloud",
+  "date": "undated (inContact era)",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "dhuhealthcare.com": {
+  "tier": "B",
+  "signal": "NICE case study: DHU Healthcare (NHS 111, 2.4M calls a year) on NICE WFM with Value Realisation Services",
+  "source": "https://www.nice.com/resources/dhu-healthcare-transforms-with-consultative-guidance-and-timesaving-automation",
+  "date": "undated (recent)",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "fnbo.com": {
+  "tier": "B",
+  "signal": "NICE case study (May 2026): FNBO on NICE WFM Suite and Employee Engagement Manager (Flex program). Overrides the older Verint WFM stack read",
+  "source": "https://www.nice.com/resources/case-study-fnbo",
+  "date": "May 2026",
+  "vendor": "NICE (current); Verint WFM read is stale",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "blueshieldca.com": {
+  "tier": "A",
+  "signal": "WFM Lead (since May 2018) lists Verint Workforce Engagement with Speech Analytics and Desktop Analytics; a former Verint Administrator for the Blue Shield call center names DPA among the products supported. Verint case study separately names Digital Experience",
+  "source": "https://www.linkedin.com/in/louiscullo/ ; https://www.linkedin.com/in/angela-marino-13752411/",
+  "date": "profiles read Sep 9 2026",
+  "vendor": "Verint",
+  "method": "Clay profile search (Sep 9 2026, 0 credits) plus Enrich Person (0.5 cr): current-role profile text"
+ },
+ "firstsource.com": {
+  "tier": "B",
+  "signal": "Verint community post: Firstsource on Verint Speech and Text Analytics; BusinessWire 2021: Firstsource moving WFM to the NICE WFM cloud suite",
+  "source": "https://www.businesswire.com/news/home/20211027005454/en",
+  "date": "Oct 27 2021",
+  "vendor": "Verint analytics and NICE WFM",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "serco.com": {
+  "tier": "B",
+  "signal": "Verint case study: Serco on Verint TimeFlex Bot for contact center scheduling; attrition down",
+  "source": "https://www.verint.com/case-studies/serco-improves-agent-schedule-flexibility-with-verint-timeflex-bot/",
+  "date": "undated (2024-25 product)",
+  "vendor": "Verint (and NICE per stack read)",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "rsagroup.ca": {
+  "tier": "B",
+  "signal": "Verint case studies name RSA (UK parent, Commercial Risk Solutions) on Verint Work Manager, back-office capacity up 20 percent. RSA Canada has been an Intact subsidiary since 2021",
+  "source": "https://www.verint.com/case-studies/rsa-case-study/",
+  "date": "2018-19 figures",
+  "vendor": "Verint (UK parent)",
+  "flag": "RSA Canada is Intact Financial since 2021; confirm the operating entity"
+ },
+ "aig.com": {
+  "tier": "C",
+  "signal": "AppsRunTheWorld lists AIG as a NICE inContact CXone customer (third-party technographic)",
+  "source": "https://www.appsruntheworld.com/customers-database/products/view/nice-incontact-cxone-cloud-cx-platform",
+  "date": "undated listing",
+  "vendor": "NICE (third party)",
+  "nice_tag": "bundled, no evidence of use"
+ },
+ "ashleyfurnitureindustriesllc.com": {
+  "tier": "C",
+  "signal": "AppsRunTheWorld lists Ashley Furniture as a NICE inContact CXone customer (third-party technographic)",
+  "source": "https://www.appsruntheworld.com/customers-database/products/view/nice-incontact-cxone-cloud-cx-platform",
+  "date": "undated listing",
+  "vendor": "NICE (third party)",
+  "nice_tag": "bundled, no evidence of use"
+ },
+ "fleetcor.com": {
+  "tier": "B",
+  "signal": "NICE case-study index: Corpay, AI analytics-driven resolution for travel support",
+  "source": "https://www.nice.com/resources?types=case-studies",
+  "date": "2025-26 index",
+  "vendor": "NICE",
+  "nice_tag": "vendor confirmed, desktop module not named"
+ },
+ "verizon.com": {
+  "tier": "A",
+  "signal": "Senior Manager, System Analysis (since Sep 2021) manages 'Verint production support for 60K subscribers' across five core products including Desktop Analytics and Workforce Management. Stack read shows NICE CXone only; Verint desktop analytics confirmed by profile",
+  "source": "https://www.linkedin.com/in/terri-outlaw-51512994/",
+  "date": "profile read Sep 9 2026",
+  "vendor": "Verint (profile) and NICE (stack read)",
+  "nice_tag": "vendor confirmed, desktop module not named",
+  "add_to_verint": true
+ },
+ "thehartford.com": {
+  "tier": "A",
+  "signal": "Technical lead provides 'technical support for Verint call recording, Speech Analytics and Desktop Process Analytics' and holds a Verint Desktop Process Analytics certification. Stack read shows NICE only",
+  "source": "https://www.linkedin.com/in/hamlin-mcdade-37bb3b/",
+  "date": "profile read Sep 9 2026",
+  "vendor": "Verint (profile) and NICE (stack read)",
+  "nice_tag": "vendor confirmed, desktop module not named",
+  "add_to_verint": true
+ },
+ "allstate.com": {
+  "tier": "A",
+  "signal": "'Business Intelligence Speech & Desktop Analytics Consultant' on staff, now Associate Manager, Operational Support & Speech Analytics, with Desktop Analytics in the role summary. Vendor not named on the profile",
+  "source": "https://www.linkedin.com/in/rafal-borkowski-b0225a39/",
+  "date": "profile read Sep 9 2026",
+  "vendor": "not named (stack read: NICE)",
+  "nice_tag": "bundled and used",
+  "method": "Clay profile search (Sep 9 2026, 0 credits) plus Enrich Person (0.5 cr): current-role profile text"
+ },
+ "gainwelltechnologies.com": {
+  "tier": "A",
+  "signal": "VP Product Engineering, Head of Contact Center Technologies (since Mar 2025) owns 'Workforce Management, Quality Management, Operations Manager, Desktop Process analytics'. Medicaid administration BPO, same footprint as Maximus",
+  "source": "https://www.linkedin.com/in/eshwar-muddasani-a4b40213/",
+  "date": "profile read Sep 9 2026",
+  "vendor": "Verint",
+  "flag": "Outside the six verticals in Salesforce (IT services) but a Medicaid BPO; treat as Outsourcer",
+  "method": "Clay profile search (Sep 9 2026, 0 credits) plus Enrich Person (0.5 cr): current-role profile text"
+ },
+ "amerihealthcaritas.com": {
+  "tier": "C",
+  "signal": "No account-level signal. A Business Analyst hired Aug 2024 carries Verint DPA experience from a prior Blue Shield of California role: a warm contact, not proof the module runs here",
+  "source": "https://www.linkedin.com/in/angela-marino-13752411/",
+  "date": "profile read Sep 9 2026",
+  "vendor": "none confirmed"
+ },
+ "progressive.com": {
+  "tier": "C",
+  "signal": "Profile search matched a Director of CRM at Progressive on the desktop-analytics terms; profile could not be resolved for enrichment, text unconfirmed",
+  "source": "Clay profile search Sep 9 2026",
+  "date": "Sep 9 2026",
+  "vendor": "unconfirmed"
+ }
+}

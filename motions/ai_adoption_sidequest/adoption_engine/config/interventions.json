@@ -1,0 +1,38 @@
+{
+  "_note": "Trigger to playbook mapping. The playbook text is Joey and Kathryn's; this file only says which trigger fires which action, who owns the response, and how long they have.",
+  "triggers": {
+    "usage_drop": {
+      "label": "Usage drop",
+      "source": "usage_log",
+      "action": "Micro-coaching prompt to the user; alert to the manager",
+      "owner_role": "manager",
+      "manager_facing": true,
+      "response_window_days": 5
+    },
+    "adoption_plateau": {
+      "label": "Adoption plateau",
+      "source": "usage_log",
+      "action": "Targeted enablement: one worked example in the user's own workflow",
+      "owner_role": "enablement",
+      "manager_facing": false,
+      "response_window_days": 10
+    },
+    "zero_use": {
+      "label": "Zero-use persistence",
+      "source": "usage_log",
+      "action": "Manager escalation plus individual outreach",
+      "owner_role": "manager",
+      "manager_facing": true,
+      "response_window_days": 5
+    },
+    "sustained_workaround": {
+      "label": "Sustained workaround",
+      "source": null,
+      "action": "Workflow adjustment review",
+      "owner_role": "project team",
+      "manager_facing": false,
+      "response_window_days": 10,
+      "_note": "No telemetry source yet. Needs process observation or a self-report field; stays defined but unmonitored until one exists."
+    }
+  }
+}

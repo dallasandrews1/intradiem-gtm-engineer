@@ -1,0 +1,49 @@
+{
+  "_note": "Thresholds for every Success Metrics Framework signal. Every [X]/[Y] placeholder in the framework lives here, never in the engine script. Values below are starting points for the team to set at baseline.",
+  "window": {
+    "tool_available_date": "2026-07-13",
+    "as_of_date": "2026-09-06",
+    "_note": "Sample window: 8 weeks from the day the tool was made available to the pilot population."
+  },
+  "active_usage": {
+    "period_days": 7,
+    "min_uses_per_period": 2,
+    "_def": "Active Usage Rate: share of target users with at least min_uses_per_period uses in the trailing period_days."
+  },
+  "sustained_use": {
+    "uses": 6,
+    "within_days": 14,
+    "_def": "Sustained use: the first day a user's trailing within_days count reaches uses. Time-to-Sustained-Use counts from first use to that day."
+  },
+  "usage_drop": {
+    "compare_days": 14,
+    "min_prior_uses": 4,
+    "drop_pct": 50,
+    "_def": "Usage Drop: trailing compare_days count fell by drop_pct or more against the prior compare_days, for users whose prior window had at least min_prior_uses."
+  },
+  "adoption_plateau": {
+    "after_days": 28,
+    "_def": "Adoption Plateau: first use at least after_days ago, sustained use never reached, and trailing 14-day count no higher than the user's first 14 days."
+  },
+  "zero_use": {
+    "after_days": 21,
+    "_def": "Zero-Use Persistence: no logged use after_days or more after the tool was available to the user."
+  },
+  "feature_depth": {
+    "available_agents": ["Knowledge assistant", "CRM assistant", "Meeting summarizer", "Drafting assistant", "Roleplay coach", "Data explainer"],
+    "_def": "Feature Utilization Depth: distinct agents used over the trailing 28 days, as a share of available_agents."
+  },
+  "manager_engagement": {
+    "dashboard_views_period_days": 14,
+    "engaged_min_views": 2,
+    "_def": "Manager Dashboard Engagement: a manager counts as engaged with engaged_min_views or more dashboard opens in the trailing period."
+  },
+  "intervention_effect": {
+    "lift_window_days": 14,
+    "_def": "Intervention Effectiveness: usage in the lift_window_days after an intervention fired exceeds usage in the same span before it."
+  },
+  "team_variance": {
+    "lookback_days": 28,
+    "_def": "Team Adoption Variance: population standard deviation of per-user use counts over lookback_days, per manager."
+  }
+}

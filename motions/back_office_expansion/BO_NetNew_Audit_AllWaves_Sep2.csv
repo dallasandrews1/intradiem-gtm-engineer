@@ -1,0 +1,151 @@
+wave,parent_account,name,email,customer_exclusion,email_domain,email_two_source_or_validated,variables,freshness,not_in_live_campaign,test_row,verdict,note
+1,Centene,Amy Falk,amy.falk@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Centene,Linda Gallina,lgallina@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Centene,Brandi Bond,brbond@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Centene,Candice McGee,candice.mcgee@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Centene,Christopher Salvatore,christopher.salvatore@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+1,Centene,Elliot Wachter,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,clay invalid elliot.wachter@centene.com
+1,Fidelity,Brian Blalock,brian.blalock@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Fidelity,Camille Calafiore Zaslau,camille.zaslau@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Fidelity,Charlotte McPherson,charlotte.mcpherson@fidelity.com,PASS,PASS,PASS,PASS,HOLD,PASS,PASS,HOLD,"retirement announced on her LinkedIn summary (date unverified); still SVP Middle Office Ops on Sep 2 verify; Nate decides, successor is the better target"
+1,Fidelity,Christopher O'Brien,christopher.obrien@fmr.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email (sf alternate chris.obrien@fmr.com)
+1,Fidelity,Jessica Henck,jessica.henck@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Fidelity,Doug Coons,doug.coons@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email (sf alternate doug.coons@fmr.com)
+1,National Grid,Christina Bostic,christina.bostic@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,National Grid,Erik Molinaro,erik.molinaro@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,National Grid,Kaitlin Taylor,kaitlin.taylor@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,National Grid,Tom LaVeck,thomas.laveck@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,National Grid,Kevin Knapp,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+1,National Grid,Bryan M.,bryan.marcelino@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Paychex,Chad Parodi,cparodi@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Paychex,Elizabeth Roaldsen,lroaldsen@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+1,Paychex,Tamara L. Hall,thall@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Paychex,Greg Magee,gmagee@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+1,Paychex,Marcia Paulick,mpaulick@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Paychex,William Ueland,wueland@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Regions,Franklin Danley,franklin.danley@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Regions,Matt Powell,matt.powell2@regions.com,PASS,PASS,PASS,PASS,HOLD,PASS,PASS,HOLD,"Sep 2 Enrich Person returned no current experience and his LinkedIn headline reads Head of Financial Crimes per the sweep; title unconfirmed, check Sales Nav before send"
+1,Regions,Daniel Nicol,daniel.nicol@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Regions,Denise Schott,denise.schott@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Regions,Brandon DeLozier,brandon.delozier@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Regions,Hunt Prothro,hunt.prothro@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Jennifer Buck,jennifer.buck@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Geneise Taylor,geneise.taylor@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Chris Ward,cward@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Alison Lyewski,alison.lyewski@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Yolanda Daniel,yolanda.daniel@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+1,Truist,Mike Harpole,michael.harpole@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Eric Wilson,eric.wilson@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Jodi Comunale,jodi.comunale@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Joe King,king@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Laurin Dixon,laurin.dixon@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Lisa Cattani,lisa.cattani@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Centene,Mary Beth Maginn,mmaginn@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Fidelity,Duc Nguyen,duc.nguyen@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Fidelity,Laurie Marshall,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+2,Fidelity,Lisa Barnum-Williams,lisa.williams@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,LinkedIn headline now Head of Procurement Operations; company current
+2,Fidelity,Mary Relihan,mm@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Fidelity,Clint Brandner,clint.brandner@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Fidelity,Sudhakar Kanagarajan,sudhakar.kanagarajan@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,National Grid,Nicola Rigby White,nicola.white@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,National Grid,Jeffrey Koenig,jeffrey.koenig@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,National Grid,James MacVicar,james.macvicar@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+2,National Grid,Griffin Reilly,griffin.reilly@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,National Grid,Howard Kamensky,howard.kamensky@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,National Grid,Shri Madhusudhan,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+2,Paychex,Alexander Mechling,amechling@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Paychex,Anne Dwyer,adwyer@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Paychex,Douglas Baxter,dbaxter@paychex.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Regions,Mike Amrine,mike.amrine@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+2,Regions,Rob Manning,rob_manning@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Regions,Adrian Isbell,adrian.isbell@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Regions,Benjamin Morgan,bmorgan@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Regions,Cassaundra Franklin,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+2,Regions,Cheryl Lloyd,cheryl.lloyd@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Truist,Tim Bicha,timothy.bicha@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Truist,Chris Lee,christopher.lee@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Truist,Joel Davis,joel.davis@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Truist,Renee Franck,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,clay unknown renee.franck@truist.com
+2,Truist,Jennifer Cline,jennifer.cline@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+2,Truist,Ashley Jameson,ashley.jameson@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+3,Centene,Suresh Nagarajan,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+3,Centene,Tarsha Fletcher,tarsha.fletcher@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+3,Centene,Curtis Elwood,celwood@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Centene,Dan Clark,danclark@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Centene,Shannon Bagley,,PASS,NO_EMAIL,NO_EMAIL,PASS,HOLD,PASS,PASS,HOLD,Conference Board bio reads Former Chief Administrative Officer (McKinsey senior advisor); LinkedIn stale (VP Internal Audit); treat as departed until confirmed
+3,Centene,Aleksandra Phelps,aleksandra.phelps@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,Allyn Jones,allyn.jones@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,Amy Aspinwall,amy.aspinwall@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,Amy Hansel,amy.hansel@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,David Cannistraro,david.cannistraro@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,Katie Haley Thomas,katie.thomas@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Fidelity,Lauren M.,lauren.madden@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,National Grid,Joe Weber,joseph.weber@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,National Grid,Paul McCool,paul.mccool@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,National Grid,Philippe Montillier,philippe.montillier@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,National Grid,Stephen DeRosa,stephen.derosa@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Regions,Dawn Graben,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+3,Regions,Hunter A.,hunter.allen@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Regions,Preston Suggs,preston.suggs@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Regions,Michael Petras,michael.petras@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Regions,Sarvjeet Kaur,sarvjeet.kaur@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Regions,Wakeela Riley,wakeela.riley@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Truist,Dino Harapas,,PASS,NO_EMAIL,NO_EMAIL,PASS,HOLD,PASS,PASS,HOLD,"Clay returned an address at another company (dino.harapas@bbandt.com); possible move, check Sales Nav"
+3,Truist,Nick Patriciu,nicholas.s.patriciu@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Truist,Karen Weich,karen.weich@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Truist,Dana M. Wilson,dana.wilson@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Truist,Kris Socie,kris.socie@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+3,Truist,Mary Grose Honaker,mary.honaker@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Candice Kwiatkowski,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,clay invalid ckwiatkowski@centene.com
+4,Centene,Cory Dial,cory.dial@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Susan Smith,susan.smith@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Michael B.,michael.baca@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Steele Huss MBA,steele.k.huss@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Susan White-Voight,swhite@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Walker,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+4,Centene,Deanna Neal,deanna.neal@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+4,Centene,Jim O'Halloran,jim.ohalloran@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email (sf alternate james.ohalloran@centene.com)
+4,Centene,Cortney Jones,cjones@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Lyndsy Blonquist,lyndsy.blonquist@centene.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Centene,Beverlon Hodge,beverlon.k.hodge@centene.com,PASS,PASS,SINGLE,PASS,HOLD,PASS,PASS,HOLD,Salesforce address with no second source yet (Clay found nothing); validate before load
+4,Fidelity,Syed Raza Razvi,syed.razvi@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Vicki Humston-Casas,vicki.humston@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Emris Varghese,emris.varghese@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Emily Hawthorne,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+4,Fidelity,Chris Tremblay,christopher.tremblay@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email (sf alternate chris.tremblay@mail.fidelity.com)
+4,Fidelity,Andre Alexander,andre.alexander@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Jaipal Chudasama,jj@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Joyette Schneider,joyette.schneider@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Amelia Volz,amelia.volz@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email (sf alternate amelia.volz@fmr.com)
+4,Fidelity,Bill Kraus,william.kraus@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Brenton Sadowski,brenton.sadowski@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Fidelity,Andrew Czuchra,andrew.czuchra@fidelity.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Eddie Englebert,,PASS,NO_EMAIL,NO_EMAIL,PASS,PASS,PASS,PASS,NEEDS_EMAIL,
+4,Regions,Matt Snow,matt.snow@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Michael Craig,michael.craig@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+4,Regions,Scott Gust,scott.gust@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Shonda Duffey,shonda.duffey@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Steve Killough,steve.killough@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,William M. Blagg,william.blagg@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Montinike Hobbs,montinike.hobbs@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Tabitha Leech,tabitha.leech@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Regions,Brad Raines,brad.raines@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Nick Isbrandtsen,nick.isbrandtsen@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Prabhu Krishnadas,prabhu.krishnadas@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Ruthanna Birchfield,ruthanna.birchfield@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Shannon Aycock,shannon.aycock@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Shayna Rendenna,shayna.rendenna@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Paul W Barnes,paul.barnes@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Beth Tilley,beth.tilley@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Merwyn Fraser MBA,merwyn.fraser@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+4,Truist,Paige Langston-Tedder,paige.langston-tedder@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+9,National Grid,Sally Librera,sally.librera@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,National Grid,Bill Malee,bill.malee@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email + salesforce match
+9,National Grid,Charles McLeod,charles.mcleod@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,National Grid,Lisa Wieland,lisa.wieland@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,"still President, National Grid New England per Sep 2 verify; off the new Group ExCo"
+9,National Grid,Douglas Stein,douglas.stein@nationalgrid.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,Regions,Anil Chadha,anil.chadha@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,Regions,Dave Keenan,dave_keenan@regions.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,Truist,Mike Maguire,michael.maguire@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,Truist,Steve Hagerman,steve.hagerman@truist.com,PASS,PASS,PASS,PASS,PASS,PASS,PASS,READY,clay_work_email
+9,Truist,Chad Campbell,,PASS,NO_EMAIL,NO_EMAIL,PASS,HOLD,PASS,PASS,HOLD,"Clay returned an address at another company (ccampbell@sunwestbank.com); possible move, check Sales Nav"

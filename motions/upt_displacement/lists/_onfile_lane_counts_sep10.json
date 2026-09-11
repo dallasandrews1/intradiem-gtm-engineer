@@ -1,0 +1,65 @@
+{
+ "Blue Cross Blue Shield of Louisiana": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 5,
+  "performance_opex": 1,
+  "back_office": 4,
+  "cc_technology": 1
+ },
+ "New York Life Insurance Company": {
+  "champion_wfm_rt": 8,
+  "ops_owner": 19,
+  "performance_opex": 0,
+  "back_office": 4,
+  "cc_technology": 0
+ },
+ "Verizon": {
+  "champion_wfm_rt": 15,
+  "ops_owner": 39,
+  "performance_opex": 3,
+  "back_office": 3,
+  "cc_technology": 7
+ },
+ "The Hartford Financial Services Group": {
+  "champion_wfm_rt": 10,
+  "ops_owner": 40,
+  "performance_opex": 5,
+  "back_office": 10,
+  "cc_technology": 2
+ },
+ "Gainwell Technologies": {
+  "champion_wfm_rt": 0,
+  "ops_owner": 1,
+  "performance_opex": 0,
+  "back_office": 0,
+  "cc_technology": 1
+ },
+ "Maximus": {
+  "champion_wfm_rt": 1,
+  "ops_owner": 17,
+  "performance_opex": 5,
+  "back_office": 0,
+  "cc_technology": 0
+ },
+ "TTEC": {
+  "champion_wfm_rt": 6,
+  "ops_owner": 5,
+  "performance_opex": 2,
+  "back_office": 0,
+  "cc_technology": 0
+ },
+ "Teleperformance UK": {
+  "champion_wfm_rt": 14,
+  "ops_owner": 10,
+  "performance_opex": 5,
+  "back_office": 0,
+  "cc_technology": 0
+ },
+ "Allstate Corporation": {
+  "champion_wfm_rt": 6,
+  "ops_owner": 18,
+  "performance_opex": 2,
+  "back_office": 22,
+  "cc_technology": 2
+ }
+}

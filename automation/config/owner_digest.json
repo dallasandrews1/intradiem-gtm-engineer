@@ -1,0 +1,15 @@
+{
+  "_comment": "Monday owner digest for churn-risk save plans. Reads the PMO tracker rows (the import CSV until the live list is readable) and the newest account-health log, groups open items by owner, and writes automation/logs/owner-digest-<date>.md. Outlook-routed owners get a DRAFT in Dallas's Outlook (never sent); Dallas's section is carried by the daily rundown, never a separate DM. Owners not listed here are reported under 'unrouted' and receive nothing.",
+  "tracker_sources": ["motions/churn_risk_save_plan/data/Cleveland_Clinic_PMO_Tracker_Import.csv"],
+  "tracker_export_glob": "motions/churn_risk_save_plan/data/Project Task Tracker*.csv",
+  "health_log_family": "account-health",
+  "accounts": ["Cleveland Clinic"],
+  "owners": {
+    "Inger Escamilla": {"channel": "outlook_draft", "email": "inger.escamilla@intradiem.com", "email_status": "inferred from the OneDrive path inger_escamilla_intradiem_com; the agent confirms by finding a message from this address before drafting"},
+    "Amy Johnson":     {"channel": "outlook_draft", "email": "amy.johnson@intradiem.com", "email_status": "inferred from the first.last pattern; the agent confirms by finding a message from this address before drafting, else logs UNCONFIRMED and skips the draft"},
+    "Dallas Andrews":  {"channel": "rundown", "note": "carried in the single morning Slack DM by gtm-daily-rundown (source 16); no separate DM"}
+  },
+  "rollup": {"to": "Mary Ann Chandler", "channel": "rundown_only_until_decided", "content": "one line per account: overall status, red codes, overdue count"},
+  "subject_template": "{account}: your open items this week",
+  "cadence": "Mondays 7:30, after account-health-watch (7:10) and before gtm-daily-rundown (7:50)"
+}

@@ -1,0 +1,82 @@
+{
+ "_purpose": "lemlist Contacts for the US market: one list per motion this engine has built. Pushing is free; enrichment never runs from here. Jack's UK rosters stay out (US filter on country, then email TLD when country is blank).",
+ "lists": {
+  "stars": {
+   "name": "Stars Buying Committee (Nate)",
+   "motion": "stars",
+   "source": "Clay table t_0thtm73HHxyiupTuepK plus the leads in the three Stars campaigns (Resurrection, Fresh Pool Quality, Fresh Pool Finance)"
+  },
+  "blitz": {
+   "name": "Blitz - Citizens + Hartford (Nate)",
+   "motion": "blitz",
+   "source": "leads in cam_yWefPqaDhNNv4RyQK and cam_fYp7Nh9wB72gfMke6"
+  },
+  "wfm_adjacency": {
+   "name": "WFM-Adjacency Prospects",
+   "motion": "wfm_adjacency",
+   "source": "Clay table t_0tic8arWbZp8bSx87Ad (L3), prospects only; companies with fewer than 5 rows are search noise and are dropped"
+  },
+  "cost_mandate": {
+   "name": "Cost-Mandate Contacts",
+   "motion": "cost_mandate",
+   "source": "Clay table t_0ti8tdqQAXiWMkx76Jj"
+  },
+  "bo_leaders_prospects": {
+   "name": "BO Leaders Prospects Dir+ (SF)",
+   "motion": "bo_leaders",
+   "source": "Audiences segment audseg_0tk324ghMPTbzvR8pGK"
+  },
+  "webinar_t1_dirplus": {
+   "name": "Sep 2 Webinar Prospects, WFM Dir+ (SF)",
+   "motion": "webinar_sep2",
+   "source": "Audiences segment audseg_0tk4ivq7cX4pEjivYgy"
+  },
+  "webinar_t2_dirplus": {
+   "name": "Sep 2 Webinar Prospects, CC Ops + BO Dir+ (SF)",
+   "motion": "webinar_sep2",
+   "source": "Audiences segment audseg_0tk4ivr8riXSR3RA4Vh (17,462 raw). NOT pushed: invite-list tier from the Aug 21 webinar build, not an ICP cut; superseded by dwo_executives on Sep 3 evening"
+  },
+  "dwo_executives": {
+   "name": "DWO Executives, Prospects (SF)",
+   "motion": "dwo_exec",
+   "source": "Audiences segment audseg_0tkt6d1AEexRFFN5PWj post-filtered to operations-anchored C-level/EVP/SVP titles, US, six verticals. Salesforce-sourced rows; superseded by dwo_executives_live, unmatched rows carry motionStatus sf_stale",
+   "list_id": "clt_FKm6KuNcgeghas73o",
+   "segment": "audseg_0tkt6d1AEexRFFN5PWj"
+  },
+  "dwo_executives_live": {
+   "name": "DWO Executives, Live (Clay)",
+   "motion": "dwo_exec",
+   "list_id": "clt_Fg8mhEJ7F9uRK9go3",
+   "source": "Clay advanced search, current C-suite/EVP/SVP operating executives at six-vertical US prospect accounts (source_dwo_live.py); 96% not in Salesforce; emails by Work Email + ZeroBounce, URLs by the free bridge, waved (run_dwo_wave.py, reconcile_dwo_wave.py)"
+  }
+ },
+ "existing_lists": {
+  "bo_netnew": "clt_QCnnNJDQ3WcpMKLed",
+  "bo_customer": "clt_YXPqEq2yJSLqzsXcB"
+ },
+ "exclusion": {
+  "sf_segment_companies": "audseg_0tk324emMVGAwsna7g4",
+  "install_base_table": "t_0ti4jj1hfZyEWcfirfU",
+  "denylist": "tam-outbound-engine/config/customer_denylist.json",
+  "domain_map": "motions/back_office_expansion/build_customer_wave1.py DOM"
+ },
+ "wfm_min_rows_per_company": 5,
+ "non_us_email_tlds": [
+  "uk",
+  "ca",
+  "ie",
+  "in",
+  "au",
+  "de",
+  "nl",
+  "be",
+  "ch",
+  "mx",
+  "ph",
+  "fr",
+  "es",
+  "it",
+  "za"
+ ],
+ "push_notes": "lemlist rejects a share of parallel upserts with a non-JSON body ({ error: }); four parallel shards lost 43% of rows, all recovered by retry_missing.py single-worker. Push single-worker or two workers at most."
+}

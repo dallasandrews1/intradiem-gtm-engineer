@@ -1,6 +1,6 @@
 ---
 name: intradiem-strike-sequence
-description: "Motion-agnostic account engine for Intradiem outbound. Turns an account into a full buying-committee outreach sequence staggered across business days with send-ready copy per contact. Default cadence is a five-touch multi-channel core (Centene Star Ratings is the built-in reference example); an extended arc is available for must-win contacts. Two modes: SEQUENCE (default, builds from existing engine/Clay research) and FULL (pulls from the TAM engine, signal engine, and Clay Contacts, then sequences). Runs any motion via a registry: Star Ratings cliff-edge is populated; back-office, install-base expansion/risk, competitive displacement, and cost-mandate are stubbed. Enforces two gates: verified-claims and current-customer exclusion. Trigger on: run the sequence, 10-day plan, execution roadmap, outreach plan, daily cadence, strike sequence, full pipeline, run the full engine for [account], build the sequence for [account], launch [account]. Load when an account is ready for outbound."
+description: "Motion-agnostic account engine for Intradiem outbound. Turns an account into a full buying-committee outreach sequence staggered across business days with send-ready copy per contact. Default cadence is a five-touch multi-channel core (Centene Star Ratings is the built-in reference example); an extended arc is available for must-win contacts. Two modes: SEQUENCE (default, builds from existing engine/Clay research) and FULL (pulls from the TAM engine, signal engine, and Clay Contacts, then sequences). Runs any motion via a registry: Star Ratings cliff-edge is populated; back-office, install-base expansion/risk, competitive displacement, and cost-mandate are stubbed. Enforces two gates: verified-claims and current-customer exclusion. Trigger on: build the strike plan for [account], strike plan, build the plan for [account], run the sequence, 10-day plan, execution roadmap, outreach plan, daily cadence, strike sequence, strike room, full pipeline, run the full engine for [account], build the sequence for [account], launch [account]. Load when an account is ready for outbound."
 ---
 
 ## When this skill applies
@@ -17,15 +17,43 @@ This skill consolidates what were two separate League skills (full-pipeline and 
 
 Detect the mode from the request. When ambiguous, default to SEQUENCE and say so.
 
+A bare ask ("build the strike plan for [account]") is the normal way this skill is invoked, by Dallas and by the sales team. It carries no rules with it and it is not supposed to. Everything the plan needs to be correct, cleared and rep-ready lives in this file. Never require the caller to paste constraints, pin numbers, or name what to leave out; if a rule is needed often enough to paste, it belongs here instead.
+
 ### SEQUENCE mode (default)
 The account and its committee already exist, pulled by the TAM engine, the signal engine, or the Clay Contacts table. This mode goes straight to building the staggered committee sequence with full copy. This is the fast path and the one used most often.
 
 Inputs it expects to already exist: a list of real, validated committee contacts (name, title, tier, email/LinkedIn, verification status), the account's why-now, and the motion.
 
+Even here, any fit score, tier or dimension breakdown that appears in the output comes from the engine and nowhere else. Run `python3 tam-outbound-engine/account_engine.py --plan <domain>` and read it. The three carve-outs in FULL mode step 1 (the ROI block, the placeholder peer line, a stale tech observation) apply identically.
+
 ### FULL mode
 The account is new or research is stale. This mode orchestrates the front half first, then hands off to the same sequence builder.
 
-1. Pull the account's strike plan from the TAM engine (`get_strike_plan(domain)` via the intradiem-tam MCP, or read `account_plays.json`). This carries fit score, triggers, personas, and the ROI model output. Treat all dollar/ROI figures from the engine as placeholder assumptions, never as verified numbers (see Verified-claims gate).
+1. Pull the account's strike plan from the TAM engine. Run it yourself, first, before writing anything: `python3 tam-outbound-engine/account_engine.py --plan <domain>` on Dallas's machine.
+
+   **Use the local CLI. Do not use the `intradiem-tam` / `intradiem-gtm` MCP for this.** That connector points at a hosted Render deployment (`intradiem-gtm-system.onrender.com`) running an older build with its own stale copy of the data. On 5 Sep 2026 a Cowork run took the MCP path and got a Centene record that did not exist locally: fit 43 Tier 3, no agent count, no triggers, `data_source: mock`, and copy reading "On ~0 agents that's about $0 a year" under a subject line about a seven-figure number. The local engine had the same account at 88 Tier 1 with three sourced triggers. The MCP also has an `add_strike_account` write that does not read back (`trigger_added: true`, then `triggers: []`), so a row added through it looks saved and is not.
+
+   **Status 2026-09-05:** the brain has been rebuilt to fix this (it now reads a dated snapshot, stamps `generated_at`/`freshness` on every response, withholds figures past 36h or on any uncited row, and the `add_strike_account` column drift is fixed). **The live Render service still runs the old build**, so this warning stands until it is redeployed. Keep using the local CLI.
+
+   **Refuse the run rather than work around a bad source.** Check the `data_source` the engine reports: `live` means every row is sourced, `mixed` means some are, `mock` means none are. If the account you are planning comes back `[SEED]`, or the engine cannot be reached at all, stop and say so. Do not fall back to the MCP, do not fill a missing agent count, ACD or WFM yourself, and do not produce a plan carrying $0 or ~0 anything. A row with no agent count is refused by the same gate as a row with no citation, because every ROI figure is `agents * ...` and a zero renders straight into prospect copy. Take the fit score, the dimension breakdown, the tier and the agent count from what it prints, verbatim. Never compose a score from the rubric, never adjust a dimension, never promote a tier. If the domain is not in `data/tam_accounts.csv` the engine cannot score it: say so and write the plan with no fit score rather than inventing one.
+
+   **If the output carries `!! SEED RECORD !!` or the row is marked `[SEED]`, stop treating the engine as a source for that account.** A seed row has no `source` citation, which means its firmographics and triggers are demonstration inputs from the Jul 1 2026 build, never replaced with real enrichment. The arithmetic is honest; the inputs are invented. Write the plan with **no fit score, no tier, no agent count, no ROI, and none of its triggers**, source the entire why-now yourself from the dated public record, and say plainly in your handback to Dallas that the account's TAM record is seed data and needs filling. Never repair a seed row by guessing a plausible figure. As of 5 Sep 2026 all six rows in that file are seed.
+
+   Three things in that output are inputs to your thinking and never reach the page:
+   - **The ROI block** (recoverable labor cost, per-agent figures). `config/roi_model.json` is `_verified: false`, so every dollar it produces is a placeholder assumption. No figure derived from it appears in the plan, in any form, including objection handles. Dollar figures built from the prospect's own public disclosures (CMS forgone-QBP math and the like) are a different shelf and stay allowed, labeled as estimates from public data.
+   - **The peer-outcome line** (for example "a Medicaid plan about your size recovered the equivalent of 40-plus agents of capacity"). `config/proof.json` marks every one of these a placeholder. They are not blinded customer stories, they are invented ones. Never ship one. Use the Value Repository's verified shelf instead.
+   - **A tech stack whose observation date is outside the verified window.** The engine prints the observation date and flags it. When it is stale, do not name the vendor anywhere in the copy; write "on top of the WFM they already run".
+
+   The engine's `triggers.csv` rows decay and are often months old. Treat them as a floor, not the answer: source the current public record yourself and date every signal you use. A signal about the prospect needs a source dated within 90 days, or a clearly dated public filing.
+   1b. **Verified tech-stack step (added 2026-09-05).** The engine's `acd`/`wfm` values are seeded placeholders until `tam-outbound-engine/data/tam_accounts.csv` carries a source and a date beside them (`acd_source`, `acd_observed`, `wfm_source`, `wfm_observed`; the plan prints `Tech stack: unverified` otherwise). Confirm the read for this one account before Gate A:
+      - State the credit estimate first. The primary read is one credit per domain. Stop and ask above 20 credits per account.
+      - **Primary: PredictLeads "Find technology stack" through Clay** (reads job posts, site tags and DNS; returns each technology with first/last seen dates). From the repo: `python3 tam-outbound-engine/tech_stack_refresh.py --lookup <domain> --json` for ANY domain, in the CSV or not. Read-only, never writes, reuses a fresh cached read for 0 credits and otherwise spends 1. Use `--domain <domain>` then `--write` only when the account already has a CSV row and you want the read stored on it. Direct CLI form: `clay workflows actions test aa68bb13-b114-404a-a5cf-f920e72fbc90 predict-leads-get-tech-stack-for-company-v3 --inputs '{"unparsedDomain":"<domain>","technologyNameFilter":"<the list in tam-outbound-engine/config/tech_vendors.json>","useExactTechnologyMatch":true}'`. Exact match matters: the fuzzy filter returns Cisco networking gear, Amazon retail and the C language. Sep 5 2026 proof on five accounts: AmeriHealth Caritas Verint + Avaya (last seen Jan 2024), Clover Health Amazon Connect (Dec 2025) + Five9 (Mar 2025), Devoted Health Calabrio + Talkdesk (Nov 2024), Medica Five9 + Avaya CMS (2026), Clever Care nothing. Five credits total.
+      - Fallback 1: the Clay MCP function **Company Job Openings** on the domain, reading each posting for the vendor names (it returns a slice of the openings, 10 of 70 on the Sep 5 run, so a miss is not proof of absence). Fallback 2: one cited research pass (a Claygent column in a table, or a web search in a session: the company plus each platform name, then the careers site). Accept only a page that names the platform in connection with this company. Clay's generic custom research data point returned "none found" on four of five accounts where PredictLeads had reads, so it is a last resort, not the first call.
+      - Name a vendor in copy **only** when `observed` is inside `verified_max_age_days` (365, in `config/icp_weights.json`). `--lookup` marks anything older `STALE`. A stale or absent read means the copy says "on top of the WFM they already run" and never guesses. A no-read is a normal outcome, not a failure: say nothing about their stack rather than reaching for an inference.
+      - Run it for the account you are planning. Never fan it out across a list of accounts without asking Dallas first; it is a credit spend on his workspace.
+      - Never use the Website Technology Stack function (BuiltWith) for this. It reads the marketing site and cannot see the contact-center or WFM platform.
+      - Write the result back to the CSV as `<acd|wfm>`, `<acd|wfm>_source`, `<acd|wfm>_observed` (YYYY-MM-DD). If nothing verifiable was found, leave the source and date empty; do not overwrite the value with a guess. State in the plan output which reads are verified and which are not.
+      - Related reads are worth recording in the plan notes even when they are not an ACD or WFM: a Salesforce Service Cloud Voice / CTI posting says what the agent desktop is, and that shapes the technical-validator copy.
 2. If the account is an existing customer, pull expansion/risk signals from the signal engine (`get_expansion_signals(domain)` via intradiem-signals). New-logo accounts skip this.
 3. Pull the real committee contacts from the Clay Contacts (Buying Committee) table. If the committee is thin (fewer than 6), expand it with a persona pull before sequencing. **Clay-read caveat:** the connected Clay MCP cannot read the built tables when Audiences is disabled for the workspace (`query-objects` and `ask-question-about-accounts` return "Clay Audiences is not enabled for this workspace"). When that happens, do not invent the data. Ask for an export/paste of the rows, or have an admin enable Audiences. Never fabricate a contact, a star level, or a contract count from an unreadable table.
 4. Confirm the motion and load its pack from the Motion Registry below.
@@ -255,16 +283,22 @@ Save a single .md file to the account folder: `[Account]_Strike_Sequence.md` (or
 
 ```markdown
 # [Account] Strike Sequence — [Motion]
-Motion: [motion] · Mode: [Sequence/Full] · Built: [date] · Status: send-ready draft, human approval gate not yet cleared
+Motion: [motion] · Mode: [Sequence/Full] · Built: [date] · Status: send-ready. Nothing goes out until the rep sends it.
 
 ## Account snapshot
-[Why-now, the exposure or trigger with sources, public trajectory, customer status]
+[Why-now, the exposure or trigger with sources, public trajectory, and one clearance line. Write clearance as the result only: "Cleared for new-logo outbound." Never list the accounts it was checked against, never name the exclusion list, never show the check itself.]
 
 ## Buying committee (real contacts)
 | # | Name | Title | Tier | Email status | Angle |
 
-## What reps can and cannot say
-[The verified-claims guardrail in rep-facing form: say / do not say]
+## Proof you can use
+[Say-only. Two shelves, every line already cleared, written so a rep can lift it straight into a call.
+
+**About them, from their own public record.** Each line with its date and where it came from.
+
+**About us, verified.** Each line with the customer who said it and the Value Repository row it sits on.
+
+Close the section with one sentence in this shape: "Every line above is sourced and cleared. Anything that did not clear was cut before this document was written." That sentence is the checkpoint, stated as a guarantee. Never write a "do not say" list, never name a claim that was rejected, never say a number is missing or unverified, and never explain what the gate blocked. The rep gets ammunition, not restrictions.]
 
 ## Cadence and committee choreography
 [The five-touch core + staggered entry + deliverability note]
@@ -287,3 +321,6 @@ Use `{{sender}}` for the sender name when the sequence is meant to be reusable a
 - It does not ship an unverified Intradiem number, or a peer figure that undercuts the thesis, to clear a gap. If the proof is not in the Value Repository, or does not actually support the argument, the claim does not appear.
 - It does not assert a hard contract count or a star level it has not verified. Count-safe until confirmed.
 - It does not default to Star Ratings. The motion is chosen per run; Stars is simply the first fully-built module and the source of the reference example.
+- It does not show its own working. The verified-claims gate, the customer-exclusion check and every engine diagnostic run BEFORE the document is written and leave no trace inside it. No "do not say" list, no `[UNVERIFIED]` tag in the rep's copy, no "not yet verified", no "unverified tech stack", no note about what a source could not confirm, no exclusion roster. A rejected claim is simply absent. The rep's document contains only what cleared, and says so once, as a guarantee. The `[UNVERIFIED]` marking discipline still applies to working notes and to anything handed back to Dallas; it just never reaches the rep-facing plan.
+- It does not hedge in the header. The status line says the plan is send-ready and that nothing goes out until the rep sends it. It never says a gate has not been cleared, because the gate the rep controls is the send.
+- It does not quote a fit score, tier, or dimension breakdown it did not get from the TAM engine. Run `python3 tam-outbound-engine/account_engine.py --plan <domain>` and use the numbers it returns. If the account is not in `data/tam_accounts.csv` the engine cannot score it: add the row first, or write the plan with no fit score at all. Never reconstruct a score from the rubric.

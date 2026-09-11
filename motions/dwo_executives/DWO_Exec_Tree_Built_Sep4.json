@@ -1,0 +1,235 @@
+{
+ "campaignId": "cam_SiD4KmWcRuhiF6uhL",
+ "builtAt": "2026-09-04 evening, API, campaign draft, nothing sent",
+ "root": {
+  "seq": "seq_XiYpoRMDksmH7c93u",
+  "steps": [
+   {
+    "id": "stp_vQd7kTCL3DpDgkryR",
+    "type": "email",
+    "d": 0,
+    "note": "Email 1 A/B (locked bodies). Variant A subject changed in the UI to 'Quick idea to cut agent idle minutes at {{companyName}}', not by the agent"
+   },
+   {
+    "id": "stp_NZxCJfcS4nFWiqwk5",
+    "type": "linkedinVisit",
+    "d": 0
+   },
+   {
+    "id": "stp_eHz73nQg3nyqSxiAt",
+    "type": "conditional hasLinkedinUrl",
+    "yes": "seq_dcePigmT6SFLAoAKJ",
+    "else": "seq_NKjWQutwnJgWjbgwe"
+   },
+   {
+    "id": "stp_jGv7jMqQTipsknara",
+    "type": "conditional linkedinInviteAccepted within 2 (created in the UI, delay set by the agent)",
+    "yes": "seq_oeT9dhfqsNmemABmK",
+    "else": "seq_2ZM3t7kuByhNR8Sar"
+   }
+  ]
+ },
+ "hasUrl_yes": {
+  "seq": "seq_dcePigmT6SFLAoAKJ",
+  "steps": [
+   {
+    "id": "stp_s7ysKFF6AHuanNFPT",
+    "type": "linkedinInvite",
+    "d": 1,
+    "ab": "A note / B blank (etp_3cgZ2PCHiKSuCQp2i)"
+   },
+   {
+    "id": "stp_RkQGWsp35dP4GjiAD",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 1, leave voicemail (20s), EA route if no number"
+   },
+   {
+    "id": "stp_J4fiJT3SfkNQpoJ6k",
+    "type": "email thread",
+    "d": 3,
+    "note": "Email 2 (locked)"
+   }
+  ]
+ },
+ "hasUrl_no": {
+  "seq": "seq_NKjWQutwnJgWjbgwe",
+  "steps": [
+   {
+    "id": "stp_7Xn7F6LZSGes3oeqJ",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 1, leave voicemail (20s), EA route if no number"
+   },
+   {
+    "id": "stp_b5Pdy5yq2gwQdJzeF",
+    "type": "email thread",
+    "d": 1,
+    "note": "Email 2 (locked)"
+   },
+   {
+    "id": "stp_Jfmwdtd973p6TTS8K",
+    "type": "phone",
+    "d": 3,
+    "note": "Call 2 voicemail"
+   },
+   {
+    "id": "stp_tMb28fAmfFjb3qgcM",
+    "type": "email thread",
+    "d": 0,
+    "note": "just tried you"
+   },
+   {
+    "id": "stp_iqD2JNZD7AHwu5wdW",
+    "type": "email new subject",
+    "d": 3,
+    "note": "Email 3 peak"
+   },
+   {
+    "id": "stp_v7NAsLAchtkLfHujQ",
+    "type": "phone",
+    "d": 4,
+    "note": "Call 3, closing voicemail (20s), this year or next"
+   },
+   {
+    "id": "stp_jCvejsTX6PqmgkB4G",
+    "type": "email thread",
+    "d": 1,
+    "note": "Email 4 one question"
+   },
+   {
+    "id": "stp_ihG6MrtLJEJNxM9zK",
+    "type": "email thread",
+    "d": 4,
+    "note": "Email 5 breakup (locked)"
+   }
+  ]
+ },
+ "accepted_yes": {
+  "seq": "seq_oeT9dhfqsNmemABmK",
+  "steps": [
+   {
+    "id": "stp_B6yWBbQshk9bToj4X",
+    "type": "linkedinSend manual",
+    "d": 0,
+    "note": "DM 1 (locked)"
+   },
+   {
+    "id": "stp_7jwA3SnFCKpG6Fxvm",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 2 voicemail"
+   },
+   {
+    "id": "stp_Y445xhQK8YH4AotiS",
+    "type": "email thread",
+    "d": 0,
+    "note": "just tried you"
+   },
+   {
+    "id": "stp_qrof3aZGdfRFmySZL",
+    "type": "email new subject",
+    "d": 3,
+    "note": "Email 3 peak"
+   },
+   {
+    "id": "stp_dkBMCEsSQreHR5tpX",
+    "type": "linkedinSend manual",
+    "d": 2,
+    "note": "DM 2"
+   },
+   {
+    "id": "stp_CBmZfaFPndk92Ey7q",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 3, closing voicemail (20s), this year or next"
+   },
+   {
+    "id": "stp_JhuoAume9QYdqWPRh",
+    "type": "email thread",
+    "d": 1,
+    "note": "Email 4 one question"
+   },
+   {
+    "id": "stp_GSxWnn6y5KcK32uY6",
+    "type": "linkedinSend manual",
+    "d": 2,
+    "note": "DM 3 close"
+   },
+   {
+    "id": "stp_PB682Wxndgo9YMRxg",
+    "type": "email thread",
+    "d": 2,
+    "note": "Email 5 breakup (locked)"
+   },
+   {
+    "UI_TODO": "manual Voice message step after DM 1 (API refuses voice notes inside branches)"
+   }
+  ]
+ },
+ "accepted_else": {
+  "seq": "seq_2ZM3t7kuByhNR8Sar",
+  "steps": [
+   {
+    "id": "stp_KhoYPGBFnT4ZjzQB5",
+    "type": "linkedinLikeLastPost",
+    "d": 0
+   },
+   {
+    "id": "stp_Qet2Tdxjpcz2qKekK",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 2 voicemail"
+   },
+   {
+    "id": "stp_TYYA3FY3y3AwKwhzZ",
+    "type": "email thread",
+    "d": 0,
+    "note": "just tried you"
+   },
+   {
+    "id": "stp_F4AD7JJzAqoRrdxYx",
+    "type": "email new subject",
+    "d": 3,
+    "note": "Email 3 peak"
+   },
+   {
+    "id": "stp_kMPQxk4mHchKnfxmk",
+    "type": "linkedinVisit",
+    "d": 2
+   },
+   {
+    "id": "stp_4M4Q7RC3WGqm9n2Xz",
+    "type": "phone",
+    "d": 2,
+    "note": "Call 3, closing voicemail (20s), this year or next"
+   },
+   {
+    "id": "stp_PW6pSyq37Ph5EQ6Mr",
+    "type": "email thread",
+    "d": 1,
+    "note": "Email 4 one question"
+   },
+   {
+    "id": "stp_G8TQo4Y8RkQ4Y2oup",
+    "type": "email thread",
+    "d": 4,
+    "note": "Email 5 breakup (locked)"
+   },
+   {
+    "id": "stp_r5uJAG4xw8f6KqNxS",
+    "type": "linkedinWithdrawInvitation",
+    "d": 2
+   }
+  ]
+ },
+ "deleted_old_root_steps": [
+  "stp_Aegqh8dxAyJkcNw6x invite",
+  "stp_i8y3aXX9new5wdXMm email 2",
+  "stp_nQC6y3NEJbTFt79He linkedinSend",
+  "stp_KfbFDrRTvrztqBPPZ email 3"
+ ],
+ "calls": "All three calls leave a voicemail (Dallas, Sep 4 evening: voicemails are the spine). Call 2 pairs with the same-hour just-tried-you email.",
+ "colleague_variables": "colleagueFirst + colleagueLine on 624 leads at 166 accounts (Sep 4 late, push_colleague_vars.py, 624/624 ok). Email 4 uses colleagueLine; DM 3 and Call 3 use colleagueFirst; Liquid if-blocks hide the line for single-seat leads.",
+ "copy_standard": "All non-locked step bodies rewritten Sep 4 late to the pressure standard (doctrine Sep 4 addendum, Messaging_Gold_Examples_Sep4.md)."
+}
