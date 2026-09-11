@@ -614,3 +614,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Feedback Stage Notes In His Register](feedback-stage-notes-in-his-register.md) — Sep 11 2026: notes Dallas reads to himself use his Slack register (lowercase, contractions, asides), no labels or brackets; claims and timecodes stay exact
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
+- [Brain Render Wrong Repo Binding Sep11](brain-render-wrong-repo-binding-sep11.md) — Render service deploys main of the Jun 13 intradiem-gtm-system repo, not intradiem-gtm-engineer; re-bind is a dashboard step the connector cannot do; GTM_STATE_URL set Sep 11
