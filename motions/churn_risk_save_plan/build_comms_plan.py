@@ -10,8 +10,8 @@ ROUTES = [
   "why": "The RFP evaluators sit in IT, not under Rena. Faini already knows us. The conversation is platform continuity, which is their question, not ours.", "lane": "Inger", "adt": "ADT: identify contacts within the account, utilize April Mitchell to set up meetings"},
  {"id": "groundswell", "name": "The user groundswell", "via": "Supervisors accepting Coach Now (79.6% acceptance in August) and the AUX teams self-curing 93.8% of alerts",
   "why": "Their own numbers, in their own words, become the impact summary Rena has not seen. Leadership cannot say nobody uses it.", "lane": "Amy", "adt": "ADT: customer references and voice of the customer"},
- {"id": "parallel-team", "name": "The parallel team", "via": "Access to Care leaders already in Salesforce (Patty Nahra, Lisa Griffin) hearing what the hub teams run",
-  "why": "A friendlier department with the same workflow. Peer proof travels sideways when it cannot travel up.", "lane": "Amy", "adt": "ADT: new line of business pilot socialised alongside the renewal"},
+ {"id": "parallel-team", "name": "The parallel team", "via": "Kate Becka, Director, Access Capacity Management (beckak@ccf.org, checked), in seat since February 2026; Melissa Restaino, Senior Director, Access Transformation, reached through Kate or LinkedIn (no confirmed address)",
+  "why": "A friendlier department with the same shape of day, and capacity management is the workflow we run. The Executive Director of Enterprise Access Operations seat is an open posting, so the transformation leads are the door for now.", "lane": "Amy", "adt": "ADT: new line of business pilot socialised alongside the renewal"},
  {"id": "exec-voice", "name": "The executive voice, held", "via": "Matt McConnell to Dennis Laraway or Bill Peacock, naming Rena and Scott Faini as the engaged team",
   "why": "A different voice at the top, the ADT move that worked. Held until the savings method is agreed with Shantel, because a disputed number at the CFO speeds the exit.", "lane": "Executive voice", "adt": "ADT: CEO outreach, Matt McConnell as a different voice"},
  {"id": "high-and-wide", "name": "High and wide", "via": "Nicole's monthly one-pager to the verified contacts and the Salesforce-known layer, sent as Amy's alias",
@@ -32,14 +32,14 @@ MOVES = [
  ("Inger", "2026-09-15", "2026-09-19", "Brainstorm with Clint, Nicole and leadership; owners confirmed on the PMO list from this plan", "planned"),
  ("Amy",   "2026-09-15", "2026-09-25", "Case closure dates in writing to the CCF team (00322148, 00321545, 00321947, 00321814, 323900)", "planned"),
  ("Amy",   "2026-09-15", "2026-09-25", "Why End of Shift and Leave Early were paused on Jun 12, and what restarts them", "planned"),
- ("Nicole and marketing", "2026-09-22", "2026-09-26", "Campaign brief accepted; verified list loaded to lemlist as a draft, nothing sent", "planned"),
+ ("Nicole and marketing", "2026-09-29", "2026-10-02", "Campaign brief and the list handed over after the brainstorm confirms the lanes; Pardot audience built, nothing sent", "planned"),
  ("Inger", "2026-09-22", "2026-09-26", "Call with Scott Faini: platform continuity through the RFP, and who else in IT should hear it", "planned"),
  ("Amy",   "2026-09-22", "2026-10-10", "Savings method session with Shantel, line by line, open since Nov 18 2025", "planned"),
  ("Inger", "2026-09-29", "2026-10-03", "Message 1 to Ganem, Horan and Neal (platform continuity), same week, same numbers", "planned"),
  ("Amy",   "2026-09-29", "2026-10-10", "Two-sentence statements from Coach Now supervisors and the AUX self-cure teams", "planned"),
  ("Nicole and marketing", "2026-10-06", "2026-10-06", "One-pager 1 to the verified contacts and the Salesforce-known layer, sent as Amy's alias", "planned"),
  ("Amy",   "2026-10-06", "2026-10-10", "Message 2, the impact summary, to Rena with the supervisors' words in it", "planned"),
- ("Amy",   "2026-10-13", "2026-10-17", "Message 3, the peer note, to Patty Nahra and Lisa Griffin", "planned"),
+ ("Amy",   "2026-10-13", "2026-10-17", "Message 3, the peer note, to Kate Becka; Melissa Restaino by LinkedIn", "planned"),
  ("Inger", "2026-10-13", "2026-10-17", "Executive review prep with Mary Ann: what Yerian hears, what the CFO note says", "planned"),
  ("Executive voice", "2026-10-20", "2026-10-24", "Message 4, Matt McConnell to Dennis Laraway (or Bill Peacock), naming Rena and Scott Faini", "held"),
  ("Amy",   "2026-10-20", "2026-10-31", "Harmonic migration presented as continuity, open issues carried into the plan", "planned"),
@@ -50,6 +50,7 @@ MOVES = [
  ("Inger", "2026-12-01", "2026-12-09", "Renewal option chosen; Hancock line approached as back-office expansion on its own track", "planned"),
 ]
 
+RECIPIENTS = {"m1": ["Bob", "Terri", "Katherine"], "m3": ["Kate"]}
 # The four messages. Senders: Inger (AM), Amy (SM), Matt McConnell (executive voice). Voice to match each sender's own sent mail before use.
 MESSAGES = [
  {"id": "m1", "name": "Message 1: RFP evaluators", "to": "Bob Ganem, Terri Horan, Katherine Neal (Scott Faini by call first)", "from": "Inger", "when": "Week of Sep 29", "route": "peer-door",
@@ -87,7 +88,7 @@ Amy""",
   "claims": [("79.6% coaching acceptance, 93.8% AUX self-cure, 4,461 Leave Early accepted (August 2026)", "Cleveland Clinic Adoption Meeting 09.2026 deck, the customer's own data, under 90 days"),
              ("Savings method open since November", "Success Plan notes, 2025-11-06 and Active sheet 2025-11-18")],
   "qc": "Uses only the customer's own adoption numbers; the disputed $719K and 1.9x are deliberately absent. One idea. One ask. Placeholder for the supervisors' words is marked and must be filled before send. Sender voice to match Amy's."},
- {"id": "m3", "name": "Message 3: peer note to the parallel team", "to": "Patty Nahra (Executive Director, Access to Care), Lisa Griffin (Director, Access Optimization)", "from": "Amy", "when": "Week of Oct 13", "route": "parallel-team",
+ {"id": "m3", "name": "Message 3: peer note to the parallel team", "to": "Kate Becka (Director, Access Capacity Management, beckak@ccf.org checked); Melissa Restaino by LinkedIn until an address is confirmed", "from": "Amy", "when": "Week of Oct 13", "route": "parallel-team",
   "one_idea": "The hub teams next to yours run the same workflow with fewer manual adjustments, and the configuration is already built.",
   "persona": "Customer / Service Director row: one lever moving cost and service the same direction",
   "subject": "what the hub teams are running",
@@ -95,14 +96,14 @@ Amy""",
 
 The contact center hubs have been running Intradiem on top of the Verint schedules for two years, and in August the AUX teams cleared 93.8% of their own adherence alerts before a supervisor had to step in, while 4,461 leave-early offers went out and were accepted when volume dropped.
 
-Access to Care carries the same shape of day, so the same configuration would apply without a new build.
+Access carries the same shape of day, and capacity management is the piece the hubs lean on most, so the same configuration would apply without a new build.
 
 Would it be useful to see the hub setup next to your queues?
 
 Amy""",
   "claims": [("93.8% AUX self-cure and 4,461 Leave Early accepted (August 2026)", "Adoption Meeting 09.2026 deck, customer's own data"),
              ("Two years on Verint", "Success Plan Closed sheet: use cases launched May 2024")],
-  "qc": "Sideways peer proof, their own numbers. Product named once with a concrete action. One question. 84 words. Recipients are Salesforce-known contacts, not the sponsor line."},
+  "qc": "Sideways peer proof, their own numbers. Product named once with a concrete action. One question. Under 100 words. Recipient verified current on LinkedIn (in seat since Feb 2026) with a checked work email; Restaino has no confirmed address so she is reached by LinkedIn; not the sponsor line."},
  {"id": "m4", "name": "Message 4: executive note, held", "to": "Dennis Laraway (or Bill Peacock)", "from": "Matt McConnell", "when": "Week of Oct 20, only after the savings method is agreed with Shantel", "route": "exec-voice",
   "one_idea": "The teams under Rena and Scott are already in a working thread on continuity through the RFP; the January decision should not cost their agents a second migration.",
   "persona": "Group / C-level: air cover only, after a thread is live, naming engaged colleagues",
@@ -122,7 +123,8 @@ Matt""",
 out = {"account": "Cleveland Clinic", "as_of": "2026-09-11", "precedent": "ADT save play, PMO Progress tracker export (Nov 2024 to Feb 2025): CEO outreach, high-and-wide marketing, customer references, partners, voice of the customer, renewal track",
        "routes": ROUTES, "lanes": LANES,
        "moves": [{"lane": l, "week": w, "due": d, "move": m, "status": s} for l, w, d, m, s in MOVES],
-       "messages": MESSAGES,
+       "messages": [dict(m, renders=[{"to_first": fn, "body": m["body"].replace("{{firstName}}", fn)} for fn in RECIPIENTS.get(m["id"], [])], waits_for=("the supervisors' statements" if m["id"] == "m2" else "")) for m in MESSAGES],
+       "senders_note": "Drafts for each sender to make their own. Nothing here goes out in anyone's name until they have read it and changed what they want changed.",
        "rules": ["Nothing account-specific goes to the sponsor line (Rena, Shantel) except from Amy or Inger.",
                  "The disputed savings figures ($719K YTD, 1.9x) never leave Intradiem until the method is agreed.",
                  "Message 4 is held until the agreed-method line is true.",

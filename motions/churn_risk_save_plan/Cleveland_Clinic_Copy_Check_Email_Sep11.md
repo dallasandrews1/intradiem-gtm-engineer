@@ -61,7 +61,7 @@ Claims:
 Check: Uses only the customer's own adoption numbers; the disputed $719K and 1.9x are deliberately absent. One idea. One ask. Placeholder for the supervisors' words is marked and must be filled before send. Sender voice to match Amy's.
 
 ### Message 3: peer note to the parallel team
-To: Patty Nahra (Executive Director, Access to Care), Lisa Griffin (Director, Access Optimization). From: Amy. When: Week of Oct 13.
+To: Kate Becka (Director, Access Capacity Management, beckak@ccf.org checked); Melissa Restaino by LinkedIn until an address is confirmed. From: Amy. When: Week of Oct 13.
 One idea: The hub teams next to yours run the same workflow with fewer manual adjustments, and the configuration is already built.
 Persona row: Customer / Service Director row: one lever moving cost and service the same direction
 
@@ -71,7 +71,7 @@ Hi {{firstName}},
 
 The contact center hubs have been running Intradiem on top of the Verint schedules for two years, and in August the AUX teams cleared 93.8% of their own adherence alerts before a supervisor had to step in, while 4,461 leave-early offers went out and were accepted when volume dropped.
 
-Access to Care carries the same shape of day, so the same configuration would apply without a new build.
+Access carries the same shape of day, and capacity management is the piece the hubs lean on most, so the same configuration would apply without a new build.
 
 Would it be useful to see the hub setup next to your queues?
 
@@ -80,7 +80,7 @@ Amy
 Claims:
 - 93.8% AUX self-cure and 4,461 Leave Early accepted (August 2026): Adoption Meeting 09.2026 deck, customer's own data
 - Two years on Verint: Success Plan Closed sheet: use cases launched May 2024
-Check: Sideways peer proof, their own numbers. Product named once with a concrete action. One question. 84 words. Recipients are Salesforce-known contacts, not the sponsor line.
+Check: Sideways peer proof, their own numbers. Product named once with a concrete action. One question. Under 100 words. Recipient verified current on LinkedIn (in seat since Feb 2026) with a checked work email; Restaino has no confirmed address so she is reached by LinkedIn; not the sponsor line.
 
 ### Message 4: executive note, held
 To: Dennis Laraway (or Bill Peacock). From: Matt McConnell. When: Week of Oct 20, only after the savings method is agreed with Shantel.
@@ -103,4 +103,4 @@ Claims:
 Check: Under 80 words. Names the engaged colleagues. Held: sends only when the agreed-method line is true. Sender voice to match Matt's.
 
 ## Recommendation
-Match each message to the sender's own sent mail before it goes (voice reference rule). m2 waits for the supervisors' statements. m4 stays held. Nothing loads to lemlist; these are one-to-one sends from the named senders.
+Match each message to the sender's own sent mail before it goes. m2 waits for the supervisors' statements. m4 stays held. Message 3 recipient changed Sep 11 after Nahra and Griffin failed the current-role check; Kate Becka verified, Restaino's returned address (lisa@ccf.org) rejected as off-pattern and not used.

@@ -1,0 +1,23 @@
+{
+  "routineRunId": "run_0tl7dx3FMngXsN6NaQ6",
+  "mode": "inline",
+  "total": 2,
+  "finished": 2,
+  "status": "complete",
+  "data": [
+    {
+      "id": "melissa-restaino",
+      "status": "complete",
+      "result": {
+        "Work Email": "lisa@ccf.org"
+      }
+    },
+    {
+      "id": "kate-becka",
+      "status": "complete",
+      "result": {
+        "Work Email": "beckak@ccf.org"
+      }
+    }
+  ]
+}

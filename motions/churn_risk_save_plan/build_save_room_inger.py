@@ -55,6 +55,7 @@ td.who{white-space:normal;min-width:230px}
 .msg summary b{font-size:15.5px;color:var(--ink)}
 .msg summary span{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .msg .in{padding:0 18px 16px;display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+.msg pre+pre{margin-top:10px}
 .msg pre{white-space:pre-wrap;font-family:var(--ff);font-size:14.5px;line-height:1.55;color:var(--ink);background:var(--zebra);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin:0}
 .msg .side{font-size:13.5px;color:var(--ink-2)}
 .msg .side b{display:block;font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);margin:10px 0 3px}
@@ -136,8 +137,13 @@ for L in plan["lanes"]:
 msgs = ""
 for m in plan["messages"]:
     claims = "".join(f'<div>{e(c)}<br><span style="color:var(--ink-3)">{e(src)}</span></div>' for c, src in m["claims"])
-    msgs += (f'<details class="msg rv"><summary><b>{e(m["name"])}</b><span>{e(m["from"])} &middot; {e(m["when"])}</span></summary><div class="in">'
-             f'<pre>subject: {e(m["subject"])}\n\n{e(m["body"])}</pre><div class="side"><b>To</b>{e(m["to"])}<b>The one idea</b>{e(m["one_idea"])}<b>Claims and where they come from</b>{claims}<b>Check</b>{e(m["qc"])}</div></div></details>')
+    if m.get("renders"):
+        body_html = "".join(f'<pre>to: {e(r["to_first"])}\nsubject: {e(m["subject"])}\n\n{e(r["body"])}</pre>' for r in m["renders"])
+    else:
+        body_html = f'<pre>subject: {e(m["subject"])}\n\n{e(m["body"])}</pre>'
+    flag = f'<span class="pill y">waits for {e(m["waits_for"])}</span>' if m.get("waits_for") else ('<span class="pill y">held</span>' if m["id"] == "m4" else "")
+    msgs += (f'<details class="msg rv"><summary><b>{e(m["name"])} {flag}</b><span>{e(m["from"])} &middot; {e(m["when"])}</span></summary><div class="in">'
+             f'<div>{body_html}</div><div class="side"><b>To</b>{e(m["to"])}<b>The one idea</b>{e(m["one_idea"])}<b>Claims and where they come from</b>{claims}<b>Check</b>{e(m["qc"])}</div></div></details>')
 rules = "".join(f'<li class="rv">{e(r)}</li>' for r in plan["rules"])
 n_routes = len(plan["routes"]); n_moves = len(plan["moves"])
 BODY = f"""
@@ -176,7 +182,7 @@ BODY = f"""
 <section><div class="wrap">
 <div class="eyebrow">Messages</div>
 <h2>Written, checked, ready to match to the sender's voice</h2>
-<p>Each message has one idea, opens on their world, names what we do in concrete terms, and ends on one question. Every number traces to the Value Repository or the customer's own adoption review. Open one to read it with its claims.</p>
+<p><b>{e(plan["senders_note"])}</b> Each message has one idea, opens on their world, names what we do in concrete terms, and ends on one question. Every number traces to the Value Repository or the customer's own adoption review. Open one to read it with its claims.</p>
 <div class="msgs">{msgs}</div>
 </div></section>
 
