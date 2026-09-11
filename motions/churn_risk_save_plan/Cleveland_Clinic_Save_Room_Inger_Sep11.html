@@ -144,9 +144,9 @@ td.who{white-space:normal;min-width:230px}
 <h1 data-h="2">Cleveland Clinic, <span class="spark">in one place.</span></h1>
 <p class="sub" data-h="3">One place for the account, a Monday note with what is yours, and new people around the blocker. Updated every Monday from the Success Plan, the adoption review, Sales Navigator and meeting notes.</p>
 <div class="hstats" data-h="4">
-<div><b data-n="16">0</b><span>of your names placed</span></div>
-<div><b data-n="7">0</b><span>verified emails</span></div>
-<div><b data-n="4">0</b><span>to confirm in Sales Nav</span></div>
+<div><b data-n="16">16</b><span>of your names placed</span></div>
+<div><b data-n="7">7</b><span>verified emails</span></div>
+<div><b data-n="4">4</b><span>to confirm in Sales Nav</span></div>
 </div>
 <div class="meta" data-h="4">
 <div><span>For</span>Inger Escamilla</div><div><span>From</span>Dallas Andrews</div><div><span>Date</span>Sep 11 2026</div><div><span>Refresh</span>Mondays</div>
@@ -192,7 +192,7 @@ td.who{white-space:normal;min-width:230px}
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.08});
   document.querySelectorAll('.rv').forEach(function(el,i){el.style.setProperty('--i',i%8);io.observe(el)});
   setTimeout(function(){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')})},1400);
-  document.querySelectorAll('[data-n]').forEach(function(el){var t=+el.getAttribute('data-n'),st=Date.now();var iv=setInterval(function(){var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)},30)});
+  document.querySelectorAll('[data-n]').forEach(function(el){var t=+el.getAttribute('data-n'),st=Date.now();el.textContent='0';var iv=setInterval(function(){var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)},30)});
 })();
 </script>
 </body></html>

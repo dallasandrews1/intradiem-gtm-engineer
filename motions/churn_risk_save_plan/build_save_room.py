@@ -68,10 +68,10 @@ BODY = f"""
 <h1 data-h="2">Cleveland Clinic, <span class="spark">{red} of 7 signals red.</span></h1>
 <p class="sub" data-h="3">Every contact we hold, the health read with its evidence, the ninety days to the renewal decision, and the open items in the PMO tracker's own columns.</p>
 <div class="hstats" data-h="4">
-<div><b data-n="{len(d['known'])}">0</b><span>contacts in Salesforce</span></div>
-<div><b data-n="16">0</b><span>names from Inger's research</span></div>
-<div><b data-n="20">0</b><span>back-office leaders mapped</span></div>
-<div><b data-n="{len(d['open_items'])}">0</b><span>open items, owners proposed</span></div>
+<div><b data-n="{len(d['known'])}">{len(d['known'])}</b><span>contacts in Salesforce</span></div>
+<div><b data-n="16">16</b><span>names from Inger's research</span></div>
+<div><b data-n="20">20</b><span>back-office leaders mapped</span></div>
+<div><b data-n="{len(d['open_items'])}">{len(d['open_items'])}</b><span>open items, owners proposed</span></div>
 </div>
 <div class="meta" data-h="4">
 <div><span>Account manager</span>{e(d['am'])}</div><div><span>Success manager</span>{e(d['success_manager'])}</div><div><span>Sponsor / customer owner</span>{e(d['sponsor'])} / {e(d['customer_owner'])}</div><div><span>As of</span>Sep 10 2026</div>
@@ -122,7 +122,7 @@ BODY = f"""
   var io=new IntersectionObserver(function(es){{es.forEach(function(x){{if(x.isIntersecting){{x.target.classList.add('on');io.unobserve(x.target)}}}})}},{{threshold:.08}});
   document.querySelectorAll('.rv').forEach(function(el,i){{el.style.setProperty('--i',i%8);io.observe(el)}});
   setTimeout(function(){{document.querySelectorAll('.rv').forEach(function(el){{el.classList.add('on')}})}},1400);
-  document.querySelectorAll('[data-n]').forEach(function(el){{var t=+el.getAttribute('data-n'),st=Date.now();var iv=setInterval(function(){{var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)}},30)}});
+  document.querySelectorAll('[data-n]').forEach(function(el){{var t=+el.getAttribute('data-n'),st=Date.now();el.textContent='0';var iv=setInterval(function(){{var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)}},30)}});
 }})();
 </script>
 """

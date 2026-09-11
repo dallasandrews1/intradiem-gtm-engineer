@@ -118,10 +118,10 @@ tr.rv{transform:none}
 <h1 data-h="2">One save plan per at-risk account, <span class="spark">owned and on a clock.</span></h1>
 <p class="sub" data-h="3">Built from Salesforce, the Success Plan, Sales Navigator and meeting notes. Each owner gets their items weekly. Mary Ann gets one line per account. The PMO list stays the record.</p>
 <div class="hstats" data-h="4">
-<div><b data-n="3">0</b><span>accounts at risk</span></div>
-<div><b data-n="89">0</b><span>Cleveland Clinic contacts in Salesforce</span></div>
-<div><b data-n="16">0</b><span>names Inger found</span></div>
-<div><b data-n="20">0</b><span>back-office leaders mapped</span></div>
+<div><b data-n="3">3</b><span>accounts at risk</span></div>
+<div><b data-n="89">89</b><span>Cleveland Clinic contacts in Salesforce</span></div>
+<div><b data-n="16">16</b><span>names Inger found</span></div>
+<div><b data-n="20">20</b><span>back-office leaders mapped</span></div>
 </div>
 <div class="meta" data-h="4">
 <div><span>Prepared for</span>Dallas, internal read</div>
@@ -241,7 +241,7 @@ tr.rv{transform:none}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.08});
   document.querySelectorAll('.rv').forEach(function(el,i){el.style.setProperty('--i',i%8);io.observe(el)});
   setTimeout(function(){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')})},1400);
-  document.querySelectorAll('[data-n]').forEach(function(el){var t=+el.getAttribute('data-n'),s=0,st=Date.now();var iv=setInterval(function(){var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)},30)});
+  document.querySelectorAll('[data-n]').forEach(function(el){var t=+el.getAttribute('data-n'),s=0,st=Date.now();el.textContent='0';var iv=setInterval(function(){var p=Math.min(1,(Date.now()-st)/900);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p>=1)clearInterval(iv)},30)});
 })();
 </script>
 </body></html>
