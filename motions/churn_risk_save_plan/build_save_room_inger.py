@@ -145,6 +145,10 @@ for m in plan["messages"]:
     msgs += (f'<details class="msg rv"><summary><b>{e(m["name"])} {flag}</b><span>{e(m["from"])} &middot; {e(m["when"])}</span></summary><div class="in">'
              f'<div>{body_html}</div><div class="side"><b>To</b>{e(m["to"])}<b>The one idea</b>{e(m["one_idea"])}<b>Claims and where they come from</b>{claims}<b>Check</b>{e(m["qc"])}</div></div></details>')
 rules = "".join(f'<li class="rv">{e(r)}</li>' for r in plan["rules"])
+ml = plan["marketing_lane"]
+mkt = (f'<h3>The marketing lane, for Nicole</h3><p>{e(ml["list"])}. {e(ml["tool"])}. Sends: {e("; ".join(ml["sends"]))}.</p>'
+       f'<div class="gate rv"><h4>What the one-pager can say</h4><p>' + " ".join(e(c) + "." for c in ml["claims_in"]) + '</p></div>'
+       f'<div class="callout rv"><h4>What stays out</h4><p>' + " ".join(e(c) + "." for c in ml["claims_out"]) + '</p></div>')
 n_routes = len(plan["routes"]); n_moves = len(plan["moves"])
 BODY = f"""
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">{logo}</svg>
@@ -177,6 +181,7 @@ BODY = f"""
 <p>Four voices, one plan. Each lane has an owner by role. Dates are the week the move belongs to; the PMO list carries the rows once your brainstorm confirms them.</p>
 <div class="lanes">{lanes}</div>
 <ul class="rules">{rules}</ul>
+{mkt}
 </div></section>
 
 <section><div class="wrap">
