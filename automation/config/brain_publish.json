@@ -1,0 +1,6 @@
+{
+  "_doc": "Nightly brain snapshot publish (automation/sync_publish.sh step 4b). deploy=false stages only (the Sep 5 behaviour); deploy=true runs publish_gtm_state.sh --deploy so the hosted brain refreshes itself within its 300s cache. Flip by hand once a dry-run snapshot looks right. Added 2026-09-11 (live loop spec).",
+  "deploy": false,
+  "signal_review_sync": true,
+  "universe_rebuild": true
+}

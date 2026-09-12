@@ -273,6 +273,25 @@ def run():
     check("every strike row carries provenance fields",
           all("source" in a and "seed" in a for a in live_strike["accounts"]))
 
+    # ---- live loop (2026-09-11): unreviewed war-room signals ride the row as context ----
+    unrev = [{"id": "sig-20260904-cambia-4fa040", "state": "unreviewed", "trigger_type": "cc_expansion",
+              "date": "2026-09-04", "quote": "Arkansas regulators approved the affiliation", "url": "https://example.com/x",
+              "org": "Cambia Health Solutions", "note": "context only"}]
+    seed_row = {"domain": "x.com", "company": "X", "icp_total": 70, "tier": 2, "roi_label": "$1M", "agent_count": 500,
+                "source": "", "seed": True, "triggers": [], "unreviewed_signals": unrev}
+    cited_row = {**seed_row, "source": "cited", "seed": False}
+    gated = gtm_state.apply_gates([seed_row, cited_row], "strike", "fresh", 1.0)
+    check("unreviewed signals survive the seed redaction (they carry their own source)",
+          gated[0]["unreviewed_signals"] == unrev and "icp_total" not in gated[0])
+    check("unreviewed signals survive on a cited row and carry no scoring fields",
+          gated[1]["unreviewed_signals"] == unrev and not any(k in unrev[0] for k in ("icp_total", "fit", "roi_label", "tier")))
+    check("every unreviewed signal carries id, quote and url",
+          all(sg.get("id") and sg.get("quote") and sg.get("url") for r in gated for sg in r["unreviewed_signals"]))
+    check("live strike snapshot counts unreviewed signals and reports review states",
+          "unreviewed_signals" in live_strike.get("counts", {}) and set(live_strike.get("review", {})) == {"unreviewed", "approved", "denied"})
+    check("live snapshot names its universe source",
+          live.get("universe") in ("audiences", "csv", "stale"))
+
     passed = sum(1 for _, c in checks if c)
     for name, cond in checks:
         print(f"  {'PASS' if cond else 'FAIL'}  {name}")

@@ -1,0 +1,551 @@
+{
+ "_doc": "Sourced account facts overlaying the Audiences record at build time. employees/contact_center need url + verbatim quote or they are ignored. Written by automation/account_facts_merge.py (weekly refresh) and by hand for corrections. Aggregator-only citations are rejected at merge.",
+ "facts": {
+  "centene.com": {
+   "company": "Centene Corporation",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 59800,
+    "as_of": "2026-06-30",
+    "url": "https://www.centene.com/who-we-are.html",
+    "quote": "59,800 EMPLOYEES"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-04-06",
+     "detail": "you restructured the executive team in April, hiring Daniel Finke from Convey Health as Group President, Markets and Commercial and promoting Michael Carson to Group President, Medicare and Specialty",
+     "quote": "Centene has hired Daniel Finke as Group President, Markets and Commercial ... appointed Michael Carson to Group President, Medicare and Specialty",
+     "url": "https://www.prnewswire.com/news-releases/centene-announces-new-executive-leadership-structure-302734400.html"
+    }
+   ],
+   "notes": "Marketplace membership fell from 5,862,800 to 3,494,700 year over year per the Jul 28 2026 release, so the SG&A improvement is partly volume shrink, not only efficiency.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "medica.com": {
+   "company": "Medica",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 3000,
+    "as_of": "2023-11",
+    "url": "https://finance.yahoo.com/news/minnetonka-based-medica-lays-off-212200758.html",
+    "quote": "In November, Medica was employing about 3,000 people."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cc_expansion",
+     "date": "2026-08-05",
+     "detail": "you take over UCare's Medicaid contracts on October 1, on top of the individual and MNsure members you absorbed in January, with nearly 300,000 people moving onto your plans",
+     "quote": "State contracts have been acquired by Medica, resulting in UCare's support for Medicaid contracts to end on Oct. 1, 2026.",
+     "url": "https://www.fox9.com/news/ucare-plans-layoff-100-remote-workers-operations-wind-down-aug-5-2026"
+    }
+   ],
+   "notes": "Employee count is STALE and pre-UCare (Star Tribune via Yahoo, Nov 2023); about 650 UCare staff were expected to be offered Medica roles in early 2026 and Revelio Labs shows 5,163 as of Mar 2026, both [UNVERIFIED]; medica.com blocks fetching.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "point32health.org": {
+   "company": "Point32Health",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 4000,
+    "as_of": "2026",
+    "url": "https://www.point32health.org/careers/culture-values",
+    "quote": "The Point32Health team is made up of 4,000+ colleagues."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-23",
+     "detail": "your CEO has put administrative costs under review and won't say whether layoffs are over after more than 450 cuts in three rounds",
+     "quote": "We're looking at our own administrative costs and making sure that we're as efficient as we can possibly be.",
+     "url": "https://www.bostonglobe.com/2026/07/23/business/glp-1-obesity-harvard-pilgrim-layoffs/"
+    },
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-06-03",
+     "detail": "you're consolidating the Harvard Pilgrim and Tufts Health Plan member portals and apps into one self-service experience under COO Katie Catlender",
+     "quote": "Unify Harvard Pilgrim and Tufts Health Plan member portals and mobile apps into a single, seamless digital experience.",
+     "url": "https://www.point32health.org/newsroom/news-media/point32health/point32health-launches-unified-digital-experience-members-and-providers"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-06-29",
+     "detail": "you've called 2026 a bridge year where profitability rests on cost discipline after a $141 million 2025 loss",
+     "quote": "the improvement reflects cost discipline, new care management programs, and the decision to stop covering GLP-1 drugs solely for weight loss",
+     "url": "https://commonwealthbeacon.org/the-codcast/bad-incentives-and-industry-headwinds-vex-point32health-ceo/"
+    }
+   ],
+   "notes": "More than 450 jobs cut over three rounds (Oct 2025 to Mar 2026) on a $301 million 2025 operating loss; CEO Patrick Gilligan (Jun 2025) and COO Katie Catlender (Jan 2024) are not fresh leadership changes.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "blueshieldca.com": {
+   "company": "Blue Shield of California",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 6500,
+    "as_of": "2026-04-22",
+    "url": "https://www.prnewswire.com/news-releases/healthcare-finance-veteran-cj-bhalla-named-chief-financial-officer-for-blue-shield-of-california-and-nonprofit-health-plans-parent-company-302749613.html",
+    "quote": "with six million members, over 6,500 employees, and more than $27 billion in annual revenue"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-08-27",
+     "detail": "your new COO Frank Caporusso took over enterprise-wide health plan operations on September 1 after Susan Mullaney's departure",
+     "quote": "Caporusso will step into a reconfigured chief operating officer role on September 1, following the departure of COO Susan Mullaney, who will leave the health plan to pursue other opportunities.",
+     "url": "https://news.blueshieldca.com/2026/08/27/blue-shield-of-california-announces-healthcare-executive-leader-frank-caporusso-as-chief-operating-officer"
+    },
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-05-18",
+     "detail": "your new CFO CJ Bhalla started May 18 for both Blue Shield of California and parent Ascendiun, succeeding an interim CFO",
+     "quote": "Bhalla will begin her role as chief financial officer (CFO) on May 18, succeeding interim CFO Kassie Maroney",
+     "url": "https://www.prnewswire.com/news-releases/healthcare-finance-veteran-cj-bhalla-named-chief-financial-officer-for-blue-shield-of-california-and-nonprofit-health-plans-parent-company-302749613.html"
+    }
+   ],
+   "notes": "Headcount trending down (over 7,500 in Jul 2025 boilerplate, over 6,500 by Apr 2026, plus 2025 and 2026 layoff rounds). Verint customer per an undated Verint case study; no dated in-window Verint event, so no verint_backoffice trigger claimed.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "cambiahealth.com": {
+   "company": "Cambia Health Solutions",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 4500,
+    "as_of": "2026",
+    "url": "https://www.cambiahealth.com/about",
+    "quote": "we're 4,500+ employees working across five states to serve nearly 4 million people."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cc_expansion",
+     "date": "2026-09-04",
+     "detail": "your Arkansas Blue Cross affiliation cleared regulators and takes effect Oct. 1, making you a six-state enterprise unifying operations under Cambia",
+     "quote": "The affiliation will unify operations and enable the organizations to share best practices and expertise for local plan innovation and services, deliver personalized member experiences and leverage Cambia's robust technology infrastructure.",
+     "url": "https://www.cambiahealth.com/news-and-stories/news-releases/arkansas-regulators-approve-arkansas-blue-cross-and-blue-shields-affiliation-with-cambia-health-solutions/"
+    }
+   ],
+   "notes": "The 4,500+ figure predates Arkansas Blue Cross, which adds more than 3,200 employees on Oct 1 2026 per the same release; Regence Medicare Advantage contracts average about 3.07 Stars for 2026 per NerdWallet (secondary, not claimed).",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "iehp.org": {
+   "company": "Inland Empire Health Plan",
+   "industry": "Health Insurance",
+   "employees": {
+    "value": 3800,
+    "as_of": "2026-07-27",
+    "url": "https://www.iehp.org/en/our-organization/newsroom/newsroom-archive/2026/iehp-to-enter-fourth-year-on-covered-california",
+    "quote": "nearly 3,800 team members who are fully committed to the vision"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cc_expansion",
+     "date": "2026-07-27",
+     "detail": "you enter your fourth Covered California year as the lowest-cost Silver and Bronze plan in both counties with open enrollment starting Nov. 1",
+     "quote": "Today, IEHP Covered supports nearly 35,000 members across five levels of coverage: Platinum, Gold, Silver, Bronze and a Minimum Coverage plan.",
+     "url": "https://www.iehp.org/en/our-organization/newsroom/newsroom-archive/2026/iehp-to-enter-fourth-year-on-covered-california"
+    }
+   ],
+   "notes": "Verint WFM shop per an Apr 2025 governing board packet (license extended through Apr 14 2027, PDF not parsed, not claimed as a trigger); a Workforce Management Intraday Specialist posting exists without scale, so no wfm_hiring trigger.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "healthfirst.org": {
+   "company": "Healthfirst",
+   "industry": "Health Insurance",
+   "employees": null,
+   "contact_center": null,
+   "triggers": [],
+   "notes": "No headcount clears the source bar: staff sit with HF Management Services LLC, which files no 990; Built In shows 3,909 and Revelio 5,800 (Mar 2026), both [UNVERIFIED]. Essential Plan 200-250 coverage ended 2026-07-01 (roughly 450,000 New Yorkers affected statewide); largest MA contract holds 4.5 Stars for 2026.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "amerihealthcaritas.com": {
+   "company": "AmeriHealth Caritas",
+   "industry": "Health Insurance",
+   "employees": null,
+   "contact_center": null,
+   "triggers": [],
+   "notes": "Official fact sheet PDF reportedly says nearly 10,000 employees but could not be extracted for verbatim confirmation [UNVERIFIED]; no 2026 releases on the newsroom; the prior seed claim of two new Medicaid contract wins remains unsupported (Georgia not awarded, Florida and Texas bids lost in 2024); interim president Gregg MacDonald since 2025-10-01.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "statefarm.com": {
+   "company": "State Farm",
+   "industry": "Insurance",
+   "employees": {
+    "value": 62000,
+    "as_of": "2026-02-26",
+    "url": "https://newsroom.statefarm.com/state-farm-reports-2025-financial-results/",
+    "quote": "its more than 19,200 agent offices and over 62,000 employees serve over 96 million policies and accounts"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-05-22",
+     "detail": "you're reworking California claims handling around fewer handoffs and clearer communication after the state's wildfire-claims findings",
+     "quote": "Fewer handoffs: helping customers connect with a clearer point of contact so they don't have to repeat their story.",
+     "url": "https://newsroom.statefarm.com/los-angeles-here-to-help-it-rebuild-stronger/"
+    },
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-08-06",
+     "detail": "your EVP of agency, sales and marketing has put a Human + Digital service model on record where technology takes the tasks so people do the helping",
+     "quote": "let technology do more of the tasks so people can do more of the helping.",
+     "url": "https://newsroom.statefarm.com/blog-human-digital-future-insurance/"
+    }
+   ],
+   "notes": "Customer service hiring named for Atlanta, Bloomington, Dallas and Phoenix; roughly 13,000 Bloomington employees consolidate into Corporate South by end of 2027; California DOI enforcement action 2026-05-04 (398 violations in 114 of 220 sampled wildfire claims) sits just outside the trigger window.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "truist.com": {
+   "company": "Truist Financial Corporation",
+   "industry": "Banking",
+   "employees": {
+    "value": 38711,
+    "as_of": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/92230/000009223026000030/tfc-20251231.htm",
+    "quote": "38,711"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-06-15",
+     "detail": "your incoming CEO Michael Lyons started September 1 with Bill Rogers moving to executive chair ahead of his April 2027 retirement",
+     "quote": "Truist Financial Corporation (NYSE: TFC) today announced Michael P. Lyons as its next president and chief executive officer, effective Sept. 1, 2026.",
+     "url": "https://www.sec.gov/Archives/edgar/data/0000092230/000119312526270320/d118981dex991.htm"
+    },
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-09-09",
+     "detail": "you've rolled AI call summaries across your care centers to shave roughly 30 seconds off every call",
+     "quote": "Based on average time savings of approximately 30 seconds per call, AI Call Summaries saved teammates more than 36,000 hours in the second quarter of 2026",
+     "url": "https://media.truist.com/2026-09-09-Truist-advances-AI-to-create-more-meaningful-client-interactions"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-17",
+     "detail": "you've guided 2026 noninterest expense growth to about 1.75% against 3.5 to 4% revenue growth",
+     "quote": "full-year revenue growth of 3.5% to 4% and noninterest expense growth of 1.75%",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/truist-financial-q2-2026-earnings-140452834.html"
+    }
+   ],
+   "notes": "Headcount confirmed in the FY2025 10-K by EDGAR full-text search, quote is the bare figure because the inline XBRL would not render; care centers are led by Kimberly Dorsett, Head of Truist Care Centers; AI Call Summaries supported more than 70% of care center inbound interactions in Q2 2026.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "regions.com": {
+   "company": "Regions Financial Corporation",
+   "industry": "Banking",
+   "employees": {
+    "value": 19969,
+    "as_of": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1281761/000128176126000019/rf-20251231.htm",
+    "quote": "19,969 full-time equivalent employees"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-08-11",
+     "detail": "your Consumer Banking head Kate Danella is moving up to Chief Administrative Officer as Dave Keenan retires at year end",
+     "quote": "Kate Danella, currently head of Consumer Banking, will succeed Keenan as Chief Administrative Officer.",
+     "url": "https://ir.regions.com/news-events/press-releases/news-details/2026/Regions-Financial-Announces-Upcoming-Retirement-of-Dave-Keenan-and-New-Executive-Leadership-Appointments/default.aspx"
+    },
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-08-11",
+     "detail": "John Jordan just took over Consumer Banking, which spans your retail branch network, Regions Mortgage and indirect lending",
+     "quote": "John Jordan will succeed Danella as head of Consumer Banking.",
+     "url": "https://ir.regions.com/news-events/press-releases/news-details/2026/Regions-Financial-Announces-Upcoming-Retirement-of-Dave-Keenan-and-New-Executive-Leadership-Appointments/default.aspx"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-17",
+     "detail": "you've guided 2026 adjusted expenses up only 1.5 to 3.5% while committing to full-year positive operating leverage",
+     "quote": "As we continue to invest in the franchise to support long-term growth, we remain focused on maintaining a disciplined approach to expense management",
+     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-regions-financial-tops-q2-2026-estimates-as-shares-slip-93CH-4798734"
+    }
+   ],
+   "notes": "Contact centers in Birmingham, Nashville, Houston and Salt Lake City per the careers page, no public headcount; the same-day 8-K states 'Expenses remained well-controlled; supporting self-funding of growth initiatives'.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "td.com": {
+   "company": "TD Bank Group (The Toronto-Dominion Bank)",
+   "industry": "Banking",
+   "employees": {
+    "value": 102218,
+    "as_of": "2025",
+    "url": "https://www.sec.gov/Archives/edgar/data/947263/000156276225000289/ex991.htm",
+    "quote": "TD had an average of 102,218 full-time equivalent employees for fiscal 2025."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-09-03",
+     "detail": "your Group Head and Chief Operating Officer Taylan Turan is leaving as part of the September 4 senior leadership reset",
+     "quote": "Taylan Turan, Group Head, Chief Operating Officer, will leave TD.",
+     "url": "https://td.mediaroom.com/2026-09-03-TD-Bank-Group-announces-senior-leadership-appointments-to-further-accelerate-strategy"
+    },
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-09-03",
+     "detail": "Paul Whitehead now oversees global client and colleague experience as your new SEVP, Global Corporate Services, effective September 4",
+     "quote": "Paul Whitehead is appointed Senior Executive Vice President, Global Corporate Services",
+     "url": "https://td.mediaroom.com/2026-09-03-TD-Bank-Group-announces-senior-leadership-appointments-to-further-accelerate-strategy"
+    }
+   ],
+   "notes": "Group-wide fiscal 2025 average FTE; the U.S. Banking segment shows 30,436 average FTE for Q3 2026 in the Aug 27 2026 results release, which also carries $200 million of 2026 year-to-date restructuring charges; call center operations were realigned from Corporate to the businesses in Q3 2025. A 2021 Jacksonville figure of about 200 customer service and operations positions was found and NOT used as a contact-centre count.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "fidelity.com": {
+   "company": "Fidelity Investments (FMR LLC)",
+   "industry": "Financial Services",
+   "employees": {
+    "value": 80000,
+    "as_of": "2026",
+    "url": "https://about.fidelity.com/",
+    "quote": "we employ over 80,000 associates across 11 countries, 14 global regional sites, and 215 Investor Centers"
+   },
+   "contact_center": null,
+   "triggers": [],
+   "notes": "Company page figure is undated (fetched 2026-09-11); Boston Globe 2026-05-07 corroborates about 80,000 and reports roughly 1,000 cuts plus about 3,300 planned 2026 hires, outside the trigger window; the Aug 4 2026 Q2 update carries a proud 96% CSAT line for Fidelity Medicare Services.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "breadfinancial.com": {
+   "company": "Bread Financial Holdings, Inc.",
+   "industry": "Financial Services",
+   "employees": {
+    "value": 6000,
+    "as_of": "2025-12-31",
+    "url": "https://stockanalysis.com/stocks/bfh/employees/",
+    "quote": "Bread Financial Holdings had 6,000 employees as of December 31, 2025."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-23",
+     "detail": "you've committed to positive operating leverage for 2026 and are funding new capabilities out of operational efficiencies",
+     "quote": "We expect to deliver positive operating leverage in 2026, excluding the pretax impacts from our debt repurchases.",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001101215/000110121526000068/exh991-2q26bfhepr_final.htm"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-23",
+     "detail": "your CEO told investors you're putting AI to work on productivity and efficiency, including agentic servicing",
+     "quote": "We are strategically integrating AI in ways that advance operational excellence by improving productivity and efficiency.",
+     "url": "https://www.theglobeandmail.com/investing/markets/markets-news/motley/3440230/bread-financial-bfh-q2-2026-earnings-call-transcript/"
+    },
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-07-14",
+     "detail": "your Chief Commercial Officer, who ran your digital and customer experience organizations, is retiring and a new Chief Revenue Officer steps in this September",
+     "quote": "Dennis McCarthy will become Executive Vice President and Chief Revenue Officer, and a member of Bread Financial's executive leadership team in early September, reporting to Andretta.",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001101215/000110121526000065/exhibit991pressrelease-exe.htm"
+    }
+   ],
+   "notes": "Headcount from a filing-derived tracker (FY2025 10-K filed 2026-02-13 truncated before Human Capital in every fetch); servicing blends domestic and offshore locations with no site headcounts named; Val Greer stays through February 2027 for transition.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "lincolnfinancial.com": {
+   "company": "Lincoln Financial Group (Lincoln National Corporation)",
+   "industry": "Insurance",
+   "employees": {
+    "value": 9423,
+    "as_of": "2025-12-31",
+    "url": "https://stockanalysis.com/stocks/lnc/employees/",
+    "quote": "Lincoln National had 9,423 employees as of December 31, 2025."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-08-10",
+     "detail": "your CFO left for Centene at the end of August and an interim CFO is running finance while you search for a permanent one",
+     "quote": "Adam Cohen, Senior Vice President, Chief Accounting Officer and Treasurer, has been appointed Interim Chief Financial Officer, effective immediately.",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/lincoln-financial-announces-chief-financial-110000779.html"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-30",
+     "detail": "you've told investors expense discipline is a strategic priority while G&A runs 5% higher on claims-platform and servicing investments",
+     "quote": "Each of these support a better experience for our customers and a more efficient platform over time. Expense discipline remains a strategic priority as we advance our transformation.",
+     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-lincoln-financial-beats-q2-2026-profit-view-shares-rise-93CH-4824652"
+    }
+   ],
+   "notes": "Headcount from a filing-derived tracker (FY2025 10-K rendered as XBRL only); Brian Kroll and CRO Andy Rallis left in June 2026 per Insurance Business; a Fort Wayne Workforce Management Analyst posting referenced Verint per the search index only, treat Verint use as [UNVERIFIED].",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "navient.com": {
+   "company": "Navient",
+   "industry": "Financial Services",
+   "employees": {
+    "value": 670,
+    "as_of": "2025-12-31",
+    "url": "https://stockanalysis.com/stocks/navi/employees/",
+    "quote": "Navient had 670 employees as of December 31, 2025."
+   },
+   "contact_center": null,
+   "triggers": [],
+   "notes": "Loan servicing outsourced to a third party in 2024 (Q2 2026 supplemental), so customer-facing servicing staff sit with the vendor; headcount fell 68% year over year.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "onemain.com": {
+   "company": "OneMain Financial",
+   "industry": "Financial Services",
+   "employees": {
+    "value": 9300,
+    "as_of": "2026-04-29",
+    "url": "https://www.sec.gov/Archives/edgar/data/1584207/000158420726000012/omf-20260429.htm",
+    "quote": "approximately 9,300 team members who show up every day committed to our customers and our mission"
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-29",
+     "detail": "you're holding an operating expense ratio guide of about 6.6% for the year while managed receivables grow 7%",
+     "quote": "We are maintaining our OpEx ratio guide of approximately 6.6%, for the year.",
+     "url": "https://www.theglobeandmail.com/investing/markets/stocks/OMF-N/pressreleases/3730762/onemain-omf-q2-2026-earnings-call-transcript/"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-07-29",
+     "detail": "you've rolled an internal AI tool to 9,000-plus team members to drive efficiency and speed up customer service",
+     "quote": "We have built an internal AI tool that gives our more than 9 thousand team members information they need, like policies or procedures, at their fingertips in an intuitive conversational manner driving efficiency and speeding up customer service.",
+     "url": "https://www.theglobeandmail.com/investing/markets/stocks/OMF-N/pressreleases/3730762/onemain-omf-q2-2026-earnings-call-transcript/"
+    }
+   ],
+   "notes": "Central Operations and customer service roles posted for Evansville IN, Fort Mill SC, London KY and Tempe AZ, no public site headcount.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "cunamutual.com": {
+   "company": "TruStage (formerly CUNA Mutual Group)",
+   "industry": "Insurance",
+   "employees": null,
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-08-13",
+     "detail": "your customer contact centers were shut for a month after the July cyberattack and only targeted reopening by mid-August",
+     "quote": "We expect to have basic servicing up and running for the majority of our businesses, including the reopening of our customer contact centers, by our mid-August target.",
+     "url": "https://www.trustage.com/newsroom/2026-press-releases/trustage-confirms-clean-isolated-technology-environment"
+    },
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-09-04",
+     "detail": "you're still working a backlog of Life and AD&D claims filed before July 11 and don't expect most paid until mid-September",
+     "quote": "We expect to complete payment of most Life and AD&D claims that were submitted prior to July 11, 2026, by mid-September.",
+     "url": "https://www.trustage.com/outage"
+    }
+   ],
+   "notes": "Mutual with no SEC headcount disclosure and no employee count on its about, careers, media kit or 2025 annual report pages; retirement, life and annuity call centers confirmed; newsroom banner dated Sep 11 2026 says systems are still being restored.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "lv.com": {
+   "company": "Liverpool Victoria Financial Services Limited (LV=)",
+   "industry": "Insurance",
+   "employees": null,
+   "contact_center": null,
+   "triggers": [],
+   "notes": "Headcount not sourced: lv.com and jobs.lv.com return 403 to automated fetch; the FY2025 group accounts (company 12383237, filed 18 Jul 2026) carry the employee note but download only via a short pre-signed Companies House URL, manual pull needed. LV= General Insurance is Allianz-owned, a separate account. Chief Customer Officer and Chief Transformation and Technology Officer hires were January 2026, outside the window.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "nationalgrid.com": {
+   "company": "National Grid plc",
+   "industry": "Other",
+   "employees": {
+    "value": 33026,
+    "as_of": "2026-03-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1004315/000100431526000006/R93.htm",
+    "quote": "Number of employees, year end, Mar. 31, 2026: Total 33,026; UK 14,554; US 18,472."
+   },
+   "contact_center": null,
+   "triggers": [
+    {
+     "trigger_type": "csat_pressure",
+     "date": "2026-07-16",
+     "detail": "your New York utilities were just assessed roughly $24 million in negative revenue adjustments for missing 2025 customer satisfaction and call answer rate targets",
+     "quote": "Niagara Mohawk Power Corporation d/b/a National Grid did not meet its Residential Customer Satisfaction Survey, Small/Medium Commercial and Industrial Customer Satisfaction Survey, or Call Answer Rate targets, thus incurring NRAs of 36 basis points, or approximately $16.97 million.",
+     "url": "https://dps.ny.gov/news/psc-hits-five-utilities-50-million-penalties-failing-meet-2025-customer-service-standards"
+    },
+    {
+     "trigger_type": "leadership_change",
+     "date": "2026-08-03",
+     "detail": "your US business is run by an interim President while the search concludes, and your executive committee shrinks from 13 to 8 on September 1",
+     "quote": "Sally Librera has been appointed President, US, on an interim basis while an internal and external search concludes.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1004315/000165495426007117/a8707o.htm"
+    },
+    {
+     "trigger_type": "wfm_hiring",
+     "date": "2026-09-11",
+     "detail": "you're hiring an Operations Manager for Kraken Customer Contact in Northboro who will own forecasting, workforce planning and scheduling as the Kraken operating model lands in your US customer operation",
+     "quote": "Own and optimize key operational processes, including billing, forecasting, workforce planning, and scheduling",
+     "url": "https://jobs-ats.nationalgrid.com/job/Northboro-Operations-Manager%2C-Kraken-Customer-Contact-MA-01532/1425936300/"
+    }
+   ],
+   "notes": "US business headcount is 18,472 in the same 20-F note (FY to 31 Mar 2026, filed 2026-06-03); the wfm_hiring trigger is dated by live verification because the posting shows no date; a Syracuse Customer Service Rep 2 class starts 2026-11-16 in a 24/7 union contact center; KEDLI ($1.72M) and KEDNY ($5.31M) also missed Call Answer Rate targets.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  },
+  "paychex.com": {
+   "company": "Paychex, Inc.",
+   "industry": "Other",
+   "employees": {
+    "value": 17600,
+    "as_of": "2026-05-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/0000723531/000119312526307785/payx-20260531.htm",
+    "quote": "As of May 31, 2026, we employed approximately 17,600 people, primarily in the U.S. and on a full-time basis."
+   },
+   "contact_center": {
+    "value": 7000,
+    "basis": "Company marketing claim on the undated paychex.com corporate headquarters page: 'With 7,000 customer support experts and over 600 HR professionals'; a marketing figure, not a filing.",
+    "url": "https://www.paychex.com/corporate"
+   },
+   "triggers": [
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-06-24",
+     "detail": "you've beaten your Paycor synergy targets with over $100 million in cost synergies and guided fiscal 2027 to roughly 44% adjusted operating margin",
+     "quote": "We exceeded our FY 2026 synergy targets associated with the Paycor acquisition, contributing more than 50 basis points to revenue growth and generating over $100 million in cost synergies.",
+     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-paychex-beats-q4-2026-estimates-but-shares-fall-93CH-4758564"
+    },
+    {
+     "trigger_type": "cost_mandate",
+     "date": "2026-06-24",
+     "detail": "your CFO has set service revenue per employee as a metric that must grow faster than revenue",
+     "quote": "We're trying to drive higher service revenue per employee, that's growing at a rate higher than our revenue growth rate.",
+     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-paychex-beats-q4-2026-estimates-but-shares-fall-93CH-4758564"
+    }
+   ],
+   "notes": "Headcount fell from about 19,000 (May 2025) to about 17,600 (May 2026) per the two 10-Ks, consistent with the Paycor synergy program; SVP Operations and Customer Experience Elizabeth Roaldsen (June 2024) remains the service leader of record.",
+   "facts_updated": "2026-09-11",
+   "facts_source": "signal-researcher fan-out Sep 11 2026 (7 agents, 3 accounts each)"
+  }
+ }
+}

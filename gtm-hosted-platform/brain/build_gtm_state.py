@@ -27,6 +27,48 @@ for _p in ("tam-outbound-engine", "intradiem-signal-engine", "impact"):
 
 import gtm_state  # noqa: E402
 
+REVIEWS = os.path.join(ROOT, "automation", "config", "signal_reviews.json")
+UNIVERSE_CFG = os.path.join(ROOT, "tam-outbound-engine", "config", "universe.json")
+
+
+def rebuild_universe():
+    """Live loop (2026-09-11): regenerate the strike universe from the Audiences segment before
+    scoring, when config/universe.json says source=audiences. Fails closed: on any error the last
+    written CSVs stay and the snapshot carries errors["universe"] so the brain can say so."""
+    try:
+        cfg = json.load(open(UNIVERSE_CFG))
+    except (OSError, ValueError):
+        return None
+    if cfg.get("source") != "audiences":
+        return "csv"
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(ROOT, "tam-outbound-engine", "universe_from_audiences.py")],
+                       capture_output=True, text=True, timeout=600)
+    if r.returncode != 0:
+        raise RuntimeError((r.stderr or r.stdout).strip().splitlines()[-1] if (r.stderr or r.stdout).strip() else f"exit {r.returncode}")
+    return "audiences"
+
+
+def load_reviews():
+    try:
+        return json.load(open(REVIEWS))
+    except (OSError, ValueError):
+        return {"signals": []}
+
+
+def unreviewed_by_domain(reviews):
+    out = {}
+    for sg in reviews.get("signals", []):
+        if sg.get("state") != "unreviewed" or not sg.get("domain"):
+            continue
+        out.setdefault(sg["domain"], []).append({
+            "id": sg["id"], "state": "unreviewed", "trigger_type": sg.get("trigger_type"), "date": sg.get("date"),
+            "quote": sg.get("quote"), "url": sg.get("url"), "org": sg.get("org"),
+            "note": "Unreviewed war-room signal: context only. It does not score and no copy is written from it. "
+                    "Reply APPROVE <id> or DENY <id> in the rundown thread.",
+        })
+    return out
+
 
 def build_strike():
     import account_engine
@@ -42,6 +84,8 @@ def build_strike():
     trig_src = {}
     for t in account_engine.load_csv("triggers.csv"):
         trig_src[(t["domain"], t.get("trigger_type"), t.get("date"))] = (t.get("source") or "").strip()
+    reviews = load_reviews()
+    unrev = unreviewed_by_domain(reviews)
     rows = []
     for p in plays:
         rows.append({
@@ -62,13 +106,20 @@ def build_strike():
             # positive agent count, and a source on every trigger).
             "source": p.get("source", ""),
             "seed": bool(p.get("seed")),
+            # Live loop: staged war-room signals awaiting Dallas's decision ride the row as
+            # context. Never scored, never in copy; approved ones re-enter as cited triggers.
+            "unreviewed_signals": unrev.get(p["domain"], []),
         })
     return {
         "data_source": account_engine.get_data_source(),
+        "review": {"unreviewed": sum(1 for sg in reviews.get("signals", []) if sg.get("state") == "unreviewed"),
+                   "approved": sum(1 for sg in reviews.get("signals", []) if sg.get("state") == "approved"),
+                   "denied": sum(1 for sg in reviews.get("signals", []) if sg.get("state") == "denied")},
         "accounts": rows,
         "excluded": excluded,
         "counts": {"accounts": len(rows), "seed": sum(1 for r in rows if r["seed"]),
-                   "customer_excluded": len(excluded)},
+                   "customer_excluded": len(excluded),
+                   "unreviewed_signals": sum(len(r["unreviewed_signals"]) for r in rows)},
     }
 
 
@@ -151,6 +202,11 @@ def build():
         "engines": {},
         "errors": {},
     }
+    try:
+        state["universe"] = rebuild_universe() or "csv"
+    except Exception as e:
+        state["universe"] = "stale"
+        state["errors"]["universe"] = f"universe rebuild failed, last CSV kept: {type(e).__name__}: {e}"
     for name, fn in (("strike", build_strike), ("signals", build_signals)):
         try:
             state["engines"][name] = fn()

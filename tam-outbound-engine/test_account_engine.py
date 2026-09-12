@@ -6,8 +6,15 @@ from datetime import date
 import account_engine as eng
 
 
+FIXTURE = __import__("os").path.join(__import__("os").path.dirname(__import__("os").path.abspath(__file__)), "tests", "fixture_seed")
+
+
 def run():
     cfg = eng.load_cfg()
+    # 2026-09-11: data/ now holds the real sourced universe. These checks pin the engine's
+    # behaviour on the Jul 1 seed rows (AmeriHealth fit/ROI/copy, HCSC exclusion, seed banner),
+    # so they read the frozen copy in tests/fixture_seed/ instead of live data.
+    eng.D = FIXTURE
     plays, excluded = eng.build_plays(cfg, date(2026, 6, 13))
     by = {p["domain"]: p for p in plays}
     checks = []

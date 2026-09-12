@@ -1,0 +1,75 @@
+{
+  "_doc": "Where the strike universe comes from. source=audiences reads the saved segment below at build time (0 credits) and REGENERATES data/tam_accounts.csv, data/sellers.csv and merges data/triggers.csv; source=csv leaves the files as they are. Shape the universe by editing the segment filter in Clay, not by editing CSVs. Added 2026-09-11 (live loop spec, motions/live_loop/LIVE_LOOP_SPEC.md).",
+  "source": "audiences",
+  "segment": {
+    "id": "audseg_0tl7vtuy9dbuQWxtJRK",
+    "name": "TAM Strike Universe (engine)",
+    "_note": "Created once by universe_from_audiences.py --create-segment; id written back here; --update-segment pushes this config's filter to it. Filter as of Sep 11 2026 (tightened on Dallas's go): SF Account Type = Prospect, employee_count >= 1000, industry in icp_industries, and (6sense 6QA true OR heat lane rep/cohort). include_platform_reads=true widens it to any CC platform read within read_max_age_days (354 on Sep 11; intent-only was about 170). include_facts_backed=true keeps any Prospect with a fresh filing-grade fact in data/account_facts.json in the universe regardless of the filter. Edit the filter in Clay or here, then --update-segment."
+  },
+  "fields": {
+    "account_type": "audf_0timw0xX6CfUdJXJznM",
+    "cc_platform_latest": "audf_0tkv9tyqFQ6H2g2ESvx",
+    "cc_platform_last_seen": "audf_0tkv9ty3of7Ng2tHFev",
+    "wfm_platform_latest": "audf_0tkv9tzQXmR5ZVaK4Mc",
+    "cc_platforms_all": "audf_0tkv9tzfu29933xgTW5",
+    "cc_platforms_read_date": "audf_0tkveafXRVwUeNNaBzs",
+    "sixsense_6qa": "audf_0tkduziXxDQmcRNqfNB",
+    "sixsense_stage": "audf_0tkdv0iCtUFDmNN8aH3",
+    "sixsense_intent": "audf_0tkdva7d4mepxMtaGdB",
+    "sixsense_temperature": "audf_0tkdvbn6vTKX7gfiS7N",
+    "heat_lane": "audf_0tkbgjx4SbZbS8yNu4j",
+    "heat_score": "audf_0tkbgjwfqXfbz3tVvFE"
+  },
+  "icp_industries": [
+    "Health Insurance",
+    "Healthcare Insurance",
+    "Healthcare Payer",
+    "Banking",
+    "Credit Union",
+    "Div Financial Services",
+    "Fin Services",
+    "Financial Services",
+    "Home & Auto Insurance",
+    "Insurance",
+    "Life Insurance",
+    "Healthcare Provider",
+    "Utilities",
+    "Telco/Cable",
+    "Retail"
+  ],
+  "min_employees": 1000,
+  "agent_ratio": {
+    "_doc": "Contact-centre agents as a share of employees, used ONLY when data/account_facts.json has no public contact-centre figure. Always labelled 'banded ESTIMATE' in source. Centene precedent 0.16 accepted Sep 5 2026.",
+    "Health Insurance": 0.15,
+    "Banking": 0.08,
+    "Financial Services": 0.1,
+    "Insurance": 0.1,
+    "Healthcare Services": 0.05,
+    "Other": 0.06,
+    "by_domain": {
+      "paychex.com": 0.2,
+      "nationalgrid.com": 0.05,
+      "onemain.com": 0.25
+    }
+  },
+  "facts_max_age_days": 90,
+  "exclude_domains": {
+    "navient.com": "loan servicing outsourced to a third party in 2024; contact-centre motion no longer applies (Sep 11 2026)"
+  },
+  "vendor_urls": {
+    "Avaya": "https://www.avaya.com",
+    "Five9": "https://www.five9.com",
+    "Genesys": "https://www.genesys.com",
+    "NICE": "https://www.nice.com",
+    "Verint": "https://www.verint.com",
+    "Calabrio": "https://www.calabrio.com",
+    "Aspect": "https://www.alvaria.com",
+    "Amazon Connect": "https://aws.amazon.com/connect/",
+    "Talkdesk": "https://www.talkdesk.com",
+    "Cisco": "https://www.cisco.com",
+    "RingCentral": "https://www.ringcentral.com"
+  },
+  "read_max_age_days": 365,
+  "include_platform_reads": false,
+  "include_facts_backed": true
+}

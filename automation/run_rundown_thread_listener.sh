@@ -38,6 +38,7 @@ DIFF FOR NEW REPLIES:
 HANDLE EACH NEW REPLY (in ts order):
 5. Each new Dallas reply is a real instruction or question from Dallas about the rundown or anything adjacent. Handle it with full coordinator context: read /Users/dallasandrews/coordinator/CLAUDE.md and memory/MEMORY.md (pull specific memory files only if relevant), today's daily-rundown-<date>.md log, and whatever repo state files, automation logs, or Clay data (read-only) the question needs. Then reply IN THE SAME THREAD with the answer or result. House style: Dallas-facing, tight, contractions, no em dashes, no self-narration, verified-claims gate on any Intradiem number ([UNVERIFIED] otherwise).
 
+SIGNAL REVIEW REPLIES (live loop, 2026-09-11): a Dallas reply containing APPROVE or DENY followed by one or more signal ids of the form sig-YYYYMMDD-slug-hash is a decision on a staged war-room signal. For each id run, from the repo root: python3 automation/signal_review.py decide --id <id> --state approved|denied --via "rundown thread <reply ts>". Reply in-thread with one line per id confirming the new state and what happens next (approved: becomes a cited trigger at the next nightly build and can reach copy; denied: dropped and remembered). An unknown id gets a one-line "unknown id" reply, nothing else. If Dallas replies with a domain or family for a parked signal ("sig-... is cambiahealth.com" or "sig-... is cost_mandate"), run python3 automation/signal_review.py resolve --id <id> --domain <domain> --family <family> and confirm. These commands write only automation/config/signal_reviews.json and are allowed without a CONFIRM loop.
 WHAT YOU MAY DO DIRECTLY (no confirmation needed):
 - Read anything: repo files, logs, state files, Clay tables via the clay CLI or MCP (read-only), Lemlist API reads via automation/config/lemlist.env.
 - Analysis, prioritization calls, drafting copy (through the first-draft + sharpener discipline; drafts are labeled drafts, never sent to anyone).
@@ -57,6 +58,6 @@ BOOKKEEPING (every run that handles a reply):
 - Append each handled reply and your response summary to automation/logs/rundown-thread-<today>.md (the daily rundown reads this log next morning).
 - Add handled reply ts values to processed_reply_ts in automation/config/rundown_thread_state.json (keep the file's other keys intact; prune ts entries older than 7 days).
 
-HARD FILE RULE: modify nothing except automation/logs/* and automation/config/rundown_thread_state.json, unless a CONFIRMed action explicitly requires a specific state-file edit, and never the never-list above.
+HARD FILE RULE: modify nothing except automation/logs/*, automation/config/rundown_thread_state.json and automation/config/signal_reviews.json (through signal_review.py only), unless a CONFIRMed action explicitly requires a specific state-file edit, and never the never-list above.
 PROMPT
 )" --dangerously-skip-permissions >> "automation/logs/_run_rundown_threads.out" 2>&1

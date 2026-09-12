@@ -1,0 +1,8 @@
+{
+  "_doc": "Weekly account-facts refresh (run_account_facts_refresh.sh, launchd com.dallasandrews.gtm.accountfacts, Sunday 06:00, plist NOT loaded until Dallas says so). Selects universe domains with no fact or a fact older than max_age_days, fans out the researcher prompt in automation/prompts/account_facts_researcher.txt, writes JSON to automation/inbox/account_facts/<date>/, then account_facts_merge.py validates and merges. merge=false means DRY RUN: the diff is logged, data/account_facts.json is not written.",
+  "merge": false,
+  "max_age_days": 90,
+  "max_per_run": 21,
+  "accounts_per_agent": 3,
+  "model": "strongest"
+}

@@ -86,9 +86,22 @@ fi
 # carries seller emails and generated prospect copy, so the wrangler push stays a
 # deliberate act. Added 2026-09-05 with the brain's snapshot rewrite.
 BRAIN="$ENGINE/gtm-hosted-platform/brain/publish_gtm_state.sh"
+# 2026-09-11 live loop: the loop's inputs run first (signal ledger sync, universe rebuild from
+# Audiences), then the snapshot; --deploy only when automation/config/brain_publish.json says so.
+PUBCFG="$ENGINE/automation/config/brain_publish.json"
+DEPLOY_FLAG=""
+if [ -f "$PUBCFG" ]; then
+  if python3 -c "import json,sys; sys.exit(0 if json.load(open('$PUBCFG')).get('signal_review_sync') else 1)" 2>/dev/null; then
+    if sr=$(python3 "$ENGINE/automation/signal_review.py" sync 2>&1); then say "$NOW  signal review synced: $(printf '%s' "$sr" | sed -n 3p)"; else say "$NOW  signal review sync FAILED: $(printf '%s' "$sr" | tail -1)"; fi
+  fi
+  if python3 -c "import json,sys; sys.exit(0 if json.load(open('$PUBCFG')).get('universe_rebuild') else 1)" 2>/dev/null; then
+    if ub=$(python3 "$ENGINE/tam-outbound-engine/universe_from_audiences.py" 2>&1); then say "$NOW  universe rebuilt from Audiences: $(printf '%s' "$ub" | python3 -c 'import json,sys; t=sys.stdin.read(); d=json.loads(t[:t.rfind("}")+1]); print(d["accounts"],"accounts,",d["triggers_added"],"triggers added")' 2>/dev/null)"; else say "$NOW  universe rebuild FAILED, last universe kept: $(printf '%s' "$ub" | tail -1)"; say "evt: brain-snapshot-$TODAY#universe-stale"; fi
+  fi
+  if python3 -c "import json,sys; sys.exit(0 if json.load(open('$PUBCFG')).get('deploy') else 1)" 2>/dev/null; then DEPLOY_FLAG="--deploy"; fi
+fi
 if [ -x "$BRAIN" ]; then
-  if out=$("$BRAIN" 2>&1); then
-    say "$NOW  brain snapshot regenerated and staged"
+  if out=$("$BRAIN" $DEPLOY_FLAG 2>&1); then
+    if [ -n "$DEPLOY_FLAG" ]; then say "$NOW  brain snapshot regenerated and DEPLOYED (brain_publish.json deploy=true)"; say "evt: brain-snapshot-$TODAY#deployed"; else say "$NOW  brain snapshot regenerated and staged (deploy=false)"; fi
   else
     say "$NOW  brain snapshot FAILED (hosted brain will keep serving its last one, redacted once stale): $(printf '%s' "$out" | tail -2 | tr '\n' ' ')"
     say "evt: brain-snapshot-$TODAY#stale"

@@ -1,0 +1,15 @@
+{
+  "_doc": "Salesforce owner id -> seller. Used by universe_from_audiences.py to write data/sellers.csv. Ids come from the Audiences company record (sfdc_owner_id). Fill by hand; the generator log lists ids it could not map. Emails marked constructed follow first.last@intradiem.com and need confirming.",
+  "005V5000001gAGSIA2": {"seller_name": "Keegan Sanders", "seller_email": "keegan.sanders@intradiem.com", "seller_slack": "@keegan.sanders", "note": "derived from Keegan's Aug 3 TAM list (81 matching accounts); email and handle constructed"},
+  "005V5000001gAGQIA2": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Centene and TD; unmapped"},
+  "005V5000001gAGTIA2": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Truist and State Farm; unmapped"},
+  "005V5000001gAGUIA2": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Cambia, BCBS Michigan; unmapped"},
+  "005V5000001gAGWIA2": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Paychex; unmapped"},
+  "005V5000001gBKBIA2": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns AmeriHealth Caritas, IEHP, Highmark, LV; unmapped"},
+  "005V5000002ZZTFIA4": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns National Grid (UK parent); unmapped"},
+  "005V5000004XWIAIA4": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Regions; unmapped"},
+  "005V5000006tDZ3IAM": {"seller_name": "", "seller_email": "", "seller_slack": "", "note": "owns Medica, Point32Health, Blue Shield of California, Healthfirst, Priority Health; unmapped"},
+  "_overrides_by_domain": {
+    "centene.com": {"seller_name": "Nathan Belfield", "seller_email": "nathan.belfield@intradiem.com", "seller_slack": "@nathan.belfield", "note": "set Sep 5 2026; Nate asked for Centene"}
+  }
+}
