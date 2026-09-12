@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-10T12:50:02.540761+00:00",
+  "generated_at": "2026-09-11T12:50:04.336070+00:00",
   "overall": {
     "posture": "BUILD",
-    "headline": "3 motions in build, 0 sends by design, 684 credits used",
+    "headline": "3 motions in build, 0 sends by design, 691 credits used",
     "gates": {
       "deliverability": "UNKNOWN",
       "credit_budget": "GREEN",
@@ -139,13 +139,13 @@
     "trust": "STALE"
   },
   "credits": {
-    "spent": 684.5,
-    "remaining": 4315.5,
+    "spent": 691.4,
+    "remaining": 4308.6,
     "budget": 5000.0,
-    "pct_consumed": 0.137,
+    "pct_consumed": 0.138,
     "flag_60pct": false,
     "cost_per_qualified_reply": null,
-    "trust": "STALE"
+    "trust": "LIVE"
   },
   "approval_queue": {
     "pending": 0,
@@ -230,9 +230,9 @@
     },
     {
       "name": "clay_credit_ledger",
-      "last_updated": "2026-08-06",
-      "status": "STALE",
-      "stale": true
+      "last_updated": "2026-09-11",
+      "status": "LIVE",
+      "stale": false
     },
     {
       "name": "clay_build_registry",
