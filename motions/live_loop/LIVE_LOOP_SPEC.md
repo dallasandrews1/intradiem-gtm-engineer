@@ -28,10 +28,11 @@ it, once the deploy flag is on.
 - `tam-outbound-engine/config/universe.json`: `source` (`audiences` or `csv`), the segment id,
   the industry map, the agent-ratio table and the freshness rule for facts. Config, not code.
 - Saved segment "TAM Strike Universe (engine)" on companies, created once from the CLI, edited
-  by Dallas in the Clay UI whenever the universe should change. Starting filter: Salesforce
-  Account Type = Prospect, employee_count >= 1000, industry in the ICP set, and at least one of
-  a contact-centre platform read, 6sense 6QA, or heat lane rep/cohort. Counts on Sep 11: 1,057
-  ICP prospects over 1,000 employees; 422 with a platform read; 169 6QA.
+  by Dallas in the Clay UI whenever the universe should change. Filter as of Sep 11 evening: Salesforce
+  Account Type = Prospect, employee_count >= 1000, industry in the ICP set, and 6sense 6QA or
+  heat lane rep/cohort (171). Researched accounts with a fresh filing-grade fact stay in
+  regardless (`include_facts_backed`). Widening to any platform read within 12 months gives
+  354 (`include_platform_reads`), then `--update-segment` pushes the config filter to Clay.
 - `tam-outbound-engine/universe_from_audiences.py` reads the segment (search-ids + get, 0
   credits), maps each record to the engine's row shape and writes `data/tam_accounts.csv` as a
   build artifact. Provenance per row: employees cite the Audiences record and its read date;
