@@ -631,3 +631,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-11
 - [Live Loop Strike Universe Sep11](live-loop-strike-universe-sep11.md) — Sep 11 2026 dry-run build: universe from Audiences segment at build time, war-room signals served unreviewed with APPROVE/DENY in the rundown thread (no new Slack scopes), nightly deploy flag off, weekly facts refresh plist not loaded; Dallas shapes the segment filter and flips the flags
+- [Polar Browser Strategy Sep13](polar-browser-strategy-sep13.md) — Sep 13 2026: Polar AI browser = hands for UI-only steps, Claude Code stays the engine; sheet + stop lines + report-back, CLI re-read is proof; no sends, no Sales Nav; plan page deploy-gtm-polar-plan

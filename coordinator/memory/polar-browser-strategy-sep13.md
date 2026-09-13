@@ -1,0 +1,20 @@
+---
+name: polar-browser-strategy-sep13
+description: Sep 13 2026: Polar (Chromium AI browser, ex-Perplexity Comet founder, launched Jul 29 2026) adopted as the hands for UI-only steps; Claude Code stays the engine; sheet + stop lines + report-back handshake; no sends, no Sales Nav, CLI re-read is proof
+metadata:
+  type: project
+---
+
+Dallas got Polar access Sep 13 2026 and asked for a strategy to run it alongside Claude Code. Plan page: `motions/shared/Polar_In_The_Stack_Sep13.html` (worktree vs-code-agents-window-usage), Desktop copy "Polar in the GTM Stack - Sep 13.html", deploy folder `deploy-gtm-polar-plan` (project gtm-polar-plan).
+
+What Polar is (verified polarbrowser.com + TechRepublic Jul 29 2026): Chromium browser with an agent that clicks, types, fills forms inside signed-in sessions; saves prompts as workflows on hourly/daily/weekly schedules; "use current page as context"; takeover anytime; guardrails on high-risk actions; SOC 2 in progress; prompts, screenshots and page context go to Polar servers; macOS only; freemium, ~$20/mo. Prompt injection via page text is the named risk.
+
+The split: Claude Code = engine (scoring, gates, copy, swarm, logs, rundown, everything with a CLI/API/connector). Polar = hands for UI-only steps that today end on a click-by-click sheet (Clay Functions/AI columns/table structure/input re-binds, lemlist UI-only steps and the lemwarm panel, Render/Slack/Cloudflare dashboard steps, UI filter exports where query-live needs OAuth).
+
+Handshake: the UI sheet gains two blocks, STOP-AND-HAND-BACK lines (any send, credit spend, gate change, sender change, unnamed delete) and REPORT-BACK (export/screenshot to `automation/inbox/polar/<task>/`). Polar's "done" is a claim; a CLI real-row read (gate-integrity-auditor, lemlist-lead-integrity, rows get) closes the item with an evt id; the rundown carries it. Recurring Polar workflows write files only; a polar-intake step (salesnav-csv-intake shape) ingests; Polar notifications off (single morning brief rule).
+
+Hard exclusions: Sales Navigator and LinkedIn (ToS, seat risk, Aug 7 decision stands); any send/launch/reply/Slack post/Salesforce write (rule 1); mixing untrusted-page reads with a write step in one task; run-on-all-rows without a named count (200-credit warn line). Review lane: new AI tools go through the contracts-team review Dallas owns as AI Champion; until cleared for Intradiem systems Polar runs on public web and already-covered tools.
+
+First tasks (all pre-existing open items): WFM L3 L1 Customer Lookup re-bind (t_0tic8arWbZp8bSx87Ad / f_0tjxaitimfHdnYmh4dN, open since Aug 20), two STRAY lemlist steps in Stars - Resurrection, voice-note step placement, lemwarm read per mailbox before the Sep 21 sender switch, Clay Signals job-change pricing read, website-tracking setup screen.
+
+**How to apply:** when a task is UI-only, write the sheet Polar-ready (ids, verified labels, stop lines, report-back) instead of parking it on the open-items list; never hand Polar a send, a Sales Nav step or an unscoped Clay run. Related: [[click-by-click-ui-sheet-standard]], [[wfm-l3-customer-lookup-inert-aug20]], [[lemlist-api-sequence-step-limits-aug31]], [[salesnav-access-aug7]], [[feedback-no-guessed-ui-steps]], [[single-morning-brief-rule]].
