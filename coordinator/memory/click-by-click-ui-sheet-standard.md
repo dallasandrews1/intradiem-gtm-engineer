@@ -23,3 +23,10 @@ metadata:
 **Complement (Dallas, 2026-07-19):** for AGENT-buildable tasks/handoffs (things Claude executes), provide a ready copy-paste prompt block INLINE in the chat that Dallas pastes back to trigger/confirm — do NOT make him open a document or compose the request. UI-only tasks → saved sheet; agent-buildable tasks → in-chat copy-paste prompt. Both in both CLAUDE.md.
 
 Also added to both CLAUDE.md working conventions. First instances: `UI_Sheet_fn_draft_critic_fix.md` (the Function fix) and the pending workflow-run sheet (after Claude wires the Stars trigger to L3). See [[star-ratings-upgrade-backlog]].
+
+**Polar-ready by default (Dallas, 2026-09-13):** since Polar (the AI browser on his personal Mac) executes these sheets, every UI sheet now carries two more blocks and a closing read:
+- **STOP-AND-HAND-BACK lines:** listed after the steps and repeated inline at the step. Always before any step that sends or launches, spends credits (any Clay estimate above 0), changes a gate or a sender, deletes anything the sheet did not name by id, or where the screen differs from the sheet (title, id, or an untouched input not matching the recorded value).
+- **REPORT-BACK block:** the exact files Polar saves (`report.md` plus named screenshots or exports) and the folder `automation/inbox/polar/<task-slug>/`. The task is registered in `automation/config/polar_tasks.json` with its verifier; `automation/polar_intake.py` logs the files and the `polar-intake` agent performs the verifier read.
+- **Verification that closes the task (Claude Code, not Polar):** the CLI or connector read that proves the change on the real row or campaign. A Polar report is a claim until that read lands.
+- The paste block is a single fenced block Dallas pastes into a Polar task, written to Polar (numbered, "do not improvise", the save path, "stop, do not message anyone"). Labels not in the vendor's docs are marked to confirm and the sheet says "read the screen".
+First instances: `motions/shared/polar_sheets/` (WFM L3 lookup re-bind, Stars - Resurrection stray steps), live at gtm-polar-sheets.pages.dev. See [[polar-browser-strategy-sep13]].
