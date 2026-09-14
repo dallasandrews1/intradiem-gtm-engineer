@@ -638,3 +638,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
 - [DWO Autopilot Lane Sep14](dwo-autopilot-lane-sep14.md) — DWO restructured: email 1, voicemail task, email 2 d3, LinkedIn after; brief dry run nathan/dwo
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
+- [Feedback No Draft Copy To AMs](feedback-no-draft-copy-to-ams.md) — Sep 14 2026: AM rooms carry no draft copy, never copy for a third person, never leadership named on a dated move
