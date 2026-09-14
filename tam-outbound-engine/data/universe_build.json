@@ -1,8 +1,8 @@
 {
- "built_at": "2026-09-14T02:30:31Z",
- "records": 181,
- "accounts": 181,
- "sellers": 22,
+ "built_at": "2026-09-14T06:12:33Z",
+ "records": 180,
+ "accounts": 180,
+ "sellers": 21,
  "triggers": 29,
  "triggers_added": 0,
  "segment_id": "audseg_0tl7vtuy9dbuQWxtJRK",
@@ -205,6 +205,6 @@
  },
  "excluded": [],
  "facts_used": 15,
- "estimates": 180,
+ "estimates": 179,
  "stale_facts": 0
 }

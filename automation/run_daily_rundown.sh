@@ -6,6 +6,8 @@ set -uo pipefail
 cd "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer"
 
 python3 build_control_tower.py >> "automation/logs/_run_daily_rundown.out" 2>&1 || true
+# control tower page (Sep 14 2026): renders the same state to gtm-control-tower-dn8.pages.dev, noindex, deterministic.
+python3 build_control_tower_page.py --deploy >> "automation/logs/_run_daily_rundown.out" 2>&1 || true
 
 "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/lib/claude_net.sh" --model claude-sonnet-5 -p "$(cat <<'PROMPT'
 /gtm-daily-rundown
