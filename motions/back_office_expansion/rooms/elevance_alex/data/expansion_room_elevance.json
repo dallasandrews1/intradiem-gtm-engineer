@@ -1,0 +1,4046 @@
+{
+ "account": "Elevance Health",
+ "am": "Alex Bauer",
+ "as_of": "2026-09-11",
+ "sponsor_line": [
+  "Gail Boudreaux",
+  "Felicia Norwood",
+  "Morgan Kendrick",
+  "Tricia Backofen",
+  "Jennifer Wade",
+  "Mark Davis",
+  "Kellie Kirven",
+  "Brian Altig",
+  "Kumar Gudavalli",
+  "Randy Tharp",
+  "Jody Sykes",
+  "Barb Anketell",
+  "Aaron Bennett",
+  "Angel Daley"
+ ],
+ "am_map": [
+  {
+   "name": "Gail Boudreaux",
+   "title": "President and CEO",
+   "reports_to": "",
+   "depth": "0",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Felicia Norwood",
+   "title": "Executive Vice President & ...",
+   "reports_to": "Gail Boudreaux",
+   "depth": "1",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Morgan Kendrick",
+   "title": "Executive Vice President, El...",
+   "reports_to": "Gail Boudreaux",
+   "depth": "1",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Tricia Backofen",
+   "title": "Vice President, Government...",
+   "reports_to": "Felicia Norwood",
+   "depth": "2",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Jennifer Wade",
+   "title": "Chief Member Service Officer",
+   "reports_to": "Morgan Kendrick",
+   "depth": "2",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Cheri Specht",
+   "title": "VP Local Experience",
+   "reports_to": "Morgan Kendrick",
+   "depth": "2",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Amish Patel",
+   "title": "Chief Information Officer GuideWell",
+   "reports_to": "Morgan Kendrick",
+   "depth": "2",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "card shows GuideWell as employer",
+   "entity": ""
+  },
+  {
+   "name": "Maurice Pardo",
+   "title": "",
+   "reports_to": "Tricia Backofen",
+   "depth": "3",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "has left Elevance Health (map header flag)",
+   "entity": ""
+  },
+  {
+   "name": "Mark Davis",
+   "title": "VP Business Solutions",
+   "reports_to": "Tricia Backofen",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Robin Nunn",
+   "title": "Director Customer Service",
+   "reports_to": "Tricia Backofen",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Kellie Kirven",
+   "title": "Staff VP Customer Care Operations",
+   "reports_to": "Tricia Backofen",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Kathy Colon",
+   "title": "Staff VP National",
+   "reports_to": "Tricia Backofen",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Minga Williams",
+   "title": "Director, Customer Care Op... WellPoint",
+   "reports_to": "Jennifer Wade",
+   "depth": "3",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": "WellPoint"
+  },
+  {
+   "name": "Brian Altig",
+   "title": "Director Workforce Manage...",
+   "reports_to": "Jennifer Wade",
+   "depth": "3",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Angela Robinson",
+   "title": "Director - SHBP",
+   "reports_to": "Jennifer Wade",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Kumar Gudavalli",
+   "title": "Corporate Vice President, T... SCAN",
+   "reports_to": "Jennifer Wade",
+   "depth": "3",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "card shows SCAN as employer",
+   "entity": ""
+  },
+  {
+   "name": "Randy Tharp",
+   "title": "Director Workforce Management (GBD)",
+   "reports_to": "Mark Davis",
+   "depth": "4",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Linda Pedersen",
+   "title": "Business Consultant",
+   "reports_to": "Kellie Kirven",
+   "depth": "4",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Michael Almquist",
+   "title": "WFM Sr Analyst",
+   "reports_to": "Kellie Kirven",
+   "depth": "4",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Janet Sokoloff",
+   "title": "Director, Enterprise Application Architect",
+   "reports_to": "Brian Altig",
+   "depth": "4",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Jeff Van Ornum",
+   "title": "Director II",
+   "reports_to": "Brian Altig",
+   "depth": "4",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Rachel Brooks",
+   "title": "Strategy & Program Develo...",
+   "reports_to": "Kumar Gudavalli",
+   "depth": "4",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Jamison Torok",
+   "title": "Technical Program Director Anthem, Inc.",
+   "reports_to": "Kumar Gudavalli",
+   "depth": "4",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Kip Kinzer",
+   "title": "Technical Program Director",
+   "reports_to": "Kumar Gudavalli",
+   "depth": "4",
+   "crm": "Update CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Jody Sykes",
+   "title": "Business Consultant",
+   "reports_to": "Randy Tharp",
+   "depth": "5",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Che Thompson",
+   "title": "Hyundai Motor Group Metaplant America (HMGMA)",
+   "reports_to": "Jody Sykes",
+   "depth": "6",
+   "crm": "CRM",
+   "placeholder": false,
+   "stale": "card shows Hyundai Motor Group Metaplant America",
+   "entity": ""
+  },
+  {
+   "name": "Barb Anketell",
+   "title": "VP, Consolidated Contact Centers, Diversified Business Group, DBG ...",
+   "reports_to": "",
+   "depth": "0",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Aaron Bennett",
+   "title": "Staff VP - WFM",
+   "reports_to": "Barb Anketell",
+   "depth": "1",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": ""
+  },
+  {
+   "name": "Angel Daley",
+   "title": "WFM Director (Carelon)",
+   "reports_to": "Aaron Bennett",
+   "depth": "2",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": "Carelon"
+  },
+  {
+   "name": "Valerie Hatcher",
+   "title": "WFM Business Consultant at Carelon",
+   "reports_to": "Angel Daley",
+   "depth": "3",
+   "crm": "",
+   "placeholder": true,
+   "stale": "",
+   "entity": "Carelon"
+  }
+ ],
+ "bo_maps": [
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 1,
+   "depth": 0,
+   "name": "Mark Kaye",
+   "title": "Executive Vice President & Chief Financial Officer (oversees Carelon)",
+   "level": "C",
+   "function": "Finance & shared services",
+   "reports_to": "Top of the map",
+   "linkedin": "https://www.linkedin.com/in/mark-kaye/",
+   "flag": "VERIFY:enterprise CFO, oversees Carelon since Feb 2026; C-suite overlap with the Elevance map is fine",
+   "lane": "Operations executives",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 2,
+   "depth": 1,
+   "name": "Will Feest",
+   "title": "President, Carelon Insights and Chief Operating Officer, Carelon",
+   "level": "C",
+   "function": "Operations",
+   "reports_to": "Mark Kaye",
+   "linkedin": "https://www.linkedin.com/in/william-feest-3aa9385/",
+   "flag": "",
+   "lane": "Operations executives",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 3,
+   "depth": 2,
+   "name": "Maureen Tarpinian, MBA",
+   "title": "Chief Operating Officer",
+   "level": "C",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/maureen-tarpinian-mba-52305149/",
+   "flag": "",
+   "lane": "Operations executives",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 4,
+   "depth": 3,
+   "name": "Jacquelyn Stupakevich",
+   "title": "Senior Vice President of Integrated Operations",
+   "level": "SVP",
+   "function": "Operations",
+   "reports_to": "Maureen Tarpinian, MBA",
+   "linkedin": "https://www.linkedin.com/in/jacquelyn-stupakevich-75393317/",
+   "flag": "",
+   "lane": "Operations executives",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 5,
+   "depth": 4,
+   "name": "Alicia DeSieno",
+   "title": "Director of Business Systems Architecture",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Jacquelyn Stupakevich",
+   "linkedin": "https://www.linkedin.com/in/alicia-desieno-84002b33/",
+   "flag": "",
+   "lane": "Operations technology",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 6,
+   "depth": 4,
+   "name": "Dee Durant",
+   "title": "Director Quality Operations",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Jacquelyn Stupakevich",
+   "linkedin": "https://www.linkedin.com/in/dee-durant-3b55b4166/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 7,
+   "depth": 4,
+   "name": "Kenny Mai, MBA",
+   "title": "Director Operations Services",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Jacquelyn Stupakevich",
+   "linkedin": "https://www.linkedin.com/in/kennynguyen993/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 8,
+   "depth": 3,
+   "name": "Christina Rosa",
+   "title": "Claims Director",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Maureen Tarpinian, MBA",
+   "linkedin": "https://www.linkedin.com/in/christinamrosa/",
+   "flag": "VERIFY:Lisa Laplante (VP Claims) could not be linked; claims directors placed under the COO, confirm",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 9,
+   "depth": 3,
+   "name": "Heather Gerard",
+   "title": "Claims Director",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Maureen Tarpinian, MBA",
+   "linkedin": "https://www.linkedin.com/in/heather-gerard-2897911a3/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 10,
+   "depth": 3,
+   "name": "Karen Swanker",
+   "title": "Claims Director",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Maureen Tarpinian, MBA",
+   "linkedin": "https://www.linkedin.com/in/karen-swanker-716044139/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 11,
+   "depth": 2,
+   "name": "Anthony Holston",
+   "title": "Staff VP, Grievances and Appeals",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/anthony-holston-021550290/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 12,
+   "depth": 3,
+   "name": "Lourdes Basmajian",
+   "title": "Director, Grievance & Appeals",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Anthony Holston",
+   "linkedin": "https://www.linkedin.com/in/lourdes-basmajian-0a958814/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 13,
+   "depth": 2,
+   "name": "Cliff Houde",
+   "title": "Staff VP - Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/cliff-houde-68681b5/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 14,
+   "depth": 3,
+   "name": "Sarah Albertini-Bond",
+   "title": "Director of Operations",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Cliff Houde",
+   "linkedin": "https://www.linkedin.com/in/sarahalbertinibond/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 15,
+   "depth": 3,
+   "name": "Shmeka Jones, MBA",
+   "title": "Director of Operations",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Cliff Houde",
+   "linkedin": "https://www.linkedin.com/in/shmekajones/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 16,
+   "depth": 3,
+   "name": "Thomas E. Allen, MBA",
+   "title": "Director, Workforce Management \u2013 Service Operations",
+   "level": "Director",
+   "function": "Payroll & client service operations",
+   "reports_to": "Cliff Houde",
+   "linkedin": "https://www.linkedin.com/in/teamba/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Workforce planning & product owners",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 17,
+   "depth": 2,
+   "name": "Kim Tommasone",
+   "title": "Staff VP, Implementations",
+   "level": "VP",
+   "function": "Payroll & client service operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/kim-tommasone-05375a18/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 18,
+   "depth": 3,
+   "name": "Mohammed S.",
+   "title": "Director Business Systems and Implementations",
+   "level": "Director",
+   "function": "Payroll & client service operations",
+   "reports_to": "Kim Tommasone",
+   "linkedin": "https://www.linkedin.com/in/mohammed-s-5876b8164/",
+   "flag": "",
+   "lane": "Operations technology",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 19,
+   "depth": 2,
+   "name": "Matt Monyhan",
+   "title": "Staff VP, Operations PI Solutions",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/matt-monyhan-3b0615103/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 20,
+   "depth": 3,
+   "name": "Andrea K. Knight",
+   "title": "Director, Client Execution, Carelon Payment Integrity",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Matt Monyhan",
+   "linkedin": "https://www.linkedin.com/in/andreaknight-gettingitdone/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 21,
+   "depth": 3,
+   "name": "John Kearney",
+   "title": "Director, Special Investigations Unit and Payment Integrity",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Matt Monyhan",
+   "linkedin": "http://www.linkedin.com/in/john-kearney-2b38b7111",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 22,
+   "depth": 3,
+   "name": "Mary Middleton Deadwiler",
+   "title": "Mary Deadwiler Director, Carelon Payment Integrity",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Matt Monyhan",
+   "linkedin": "https://www.linkedin.com/in/mary-middleton-deadwiler-79b45568/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 23,
+   "depth": 2,
+   "name": "Ryan Wilkie",
+   "title": "Vice President Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/ryan-wilkie-452453a/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 24,
+   "depth": 3,
+   "name": "Daniel Guasp",
+   "title": "Director Of Operations",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Ryan Wilkie",
+   "linkedin": "https://www.linkedin.com/in/daniel-guasp-617a1381/",
+   "flag": "VERIFY:profile still lists Beacon Health Options; placed under the VP Operations, confirm",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 25,
+   "depth": 2,
+   "name": "Sandra T.",
+   "title": "Staff Vice President, PBM Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/sandra-t-02aaab5/",
+   "flag": "VERIFY:initial-only surname on LinkedIn; Staff VP PBM Operations at CarelonRx, confirm the badge",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 26,
+   "depth": 3,
+   "name": "Alyssa B.",
+   "title": "Director of Workforce Management",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Sandra T.",
+   "linkedin": "https://www.linkedin.com/in/alyssa-frank-mba-571966a6/",
+   "flag": "",
+   "lane": "Workforce planning & product owners",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 27,
+   "depth": 3,
+   "name": "Bruce Shiralipour",
+   "title": "Director of Service Operations",
+   "level": "Director",
+   "function": "Payroll & client service operations",
+   "reports_to": "Sandra T.",
+   "linkedin": "https://www.linkedin.com/in/bruce-shiralipour-06bb1b93/",
+   "flag": "same name in Salesforce at unknown company; confirm the CRM badge before adding",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 28,
+   "depth": 2,
+   "name": "Selvi A.",
+   "title": "Staff Vice President International Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Will Feest",
+   "linkedin": "https://www.linkedin.com/in/selviaram/",
+   "flag": "VERIFY:initial-only surname; Carelon Global Solutions runs the offshore back office, confirm the badge",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Carelon",
+   "map": "Carelon - Back Office",
+   "card": 29,
+   "depth": 3,
+   "name": "Amy Potter",
+   "title": "International Business Operations Director",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Selvi A.",
+   "linkedin": "https://www.linkedin.com/in/amypotter3/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 1,
+   "depth": 0,
+   "name": "Felicia Norwood",
+   "title": "Executive Vice President & Chief Health Benefits Officer",
+   "level": "C",
+   "function": "Operations",
+   "reports_to": "Top of the map",
+   "linkedin": "https://www.linkedin.com/in/felicia-norwood-ab88b61a/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Operations executives",
+   "note": "",
+   "email": "felicia.norwood@elevancehealth.com",
+   "email_status": "validated"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 2,
+   "depth": 1,
+   "name": "Blake Main",
+   "title": "Chief Claims Officer",
+   "level": "C",
+   "function": "Claims",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/blakemain/",
+   "flag": "same name in Salesforce at unknown company; confirm the CRM badge before adding",
+   "lane": "Operations executives",
+   "note": "",
+   "email": "",
+   "email_status": "not found"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 3,
+   "depth": 2,
+   "name": "Melissa Wise",
+   "title": "Vice President, Claims",
+   "level": "VP",
+   "function": "Claims",
+   "reports_to": "Blake Main",
+   "linkedin": "https://www.linkedin.com/in/melissa-wise-983b9716/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Operations leaders",
+   "note": "",
+   "email": "melissa.wise@anthem.com",
+   "email_status": "validated"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 4,
+   "depth": 2,
+   "name": "Cassie Evans",
+   "title": "Director Medicare Claims",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Blake Main",
+   "linkedin": "https://www.linkedin.com/in/cassie-evans-46ba6443/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 5,
+   "depth": 2,
+   "name": "Corrine Livesay, GBA",
+   "title": "Director II, Claims; Stop Loss Business Unit",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Blake Main",
+   "linkedin": "https://www.linkedin.com/in/corrinelivesay/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 6,
+   "depth": 2,
+   "name": "Holly Huffman",
+   "title": "Senior Director, Claims Operations",
+   "level": "Director",
+   "function": "Claims",
+   "reports_to": "Blake Main",
+   "linkedin": "https://www.linkedin.com/in/hollymcneely/",
+   "flag": "VERIFY:Chris Thomas (Staff VP Claims Operations) left in 2024; the seat between her and Blake Main is unknown, confirm",
+   "lane": "Operations leaders",
+   "note": "",
+   "email": "holly.pennington@elevancehealth.com",
+   "email_status": "validated, surname differs; confirm"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 7,
+   "depth": 1,
+   "name": "Aim\u00e9e Dailey",
+   "title": "President, Government Business",
+   "level": "EVP",
+   "function": "Operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/aimee-dailey-40174516/",
+   "flag": "",
+   "lane": "Operations executives",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 8,
+   "depth": 2,
+   "name": "Natasha Lefear",
+   "title": "Staff VP, Government Business Encounters Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Aim\u00e9e Dailey",
+   "linkedin": "https://www.linkedin.com/in/natashalefear/",
+   "flag": "VERIFY:latest LinkedIn entry is a Women We Admire membership; confirm the Elevance seat",
+   "lane": "Operations leaders",
+   "note": "",
+   "email": "natasha.lefear@elevancehealth.com",
+   "email_status": "validated"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 9,
+   "depth": 2,
+   "name": "Amy (Godby) Ledford, PMP, PAHM",
+   "title": "State Medicaid Operations Director",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Aim\u00e9e Dailey",
+   "linkedin": "https://www.linkedin.com/in/amyledford24/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 10,
+   "depth": 2,
+   "name": "Latisha Greene",
+   "title": "Director II GBD Medicaid Appeals",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Aim\u00e9e Dailey",
+   "linkedin": "https://www.linkedin.com/in/latisha-greene-47649b35/",
+   "flag": "IN_SF:already in Salesforce (as Elevance Health)",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 11,
+   "depth": 1,
+   "name": "Becky Harbottle",
+   "title": "Staff VP, Commercial Grievances and Appeals",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/becky-harbottle-92a2aa20/",
+   "flag": "VERIFY:profile still lists Anthem, Inc.; confirm current",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 12,
+   "depth": 1,
+   "name": "Erin Bagniewski",
+   "title": "Staff VP Implementation",
+   "level": "VP",
+   "function": "Payroll & client service operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/erin-bagniewski/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 13,
+   "depth": 2,
+   "name": "Shannon Quillen",
+   "title": "Director of Business Systems Implementation",
+   "level": "Director",
+   "function": "Payroll & client service operations",
+   "reports_to": "Erin Bagniewski",
+   "linkedin": "https://www.linkedin.com/in/shannon-quillen-686a328/",
+   "flag": "",
+   "lane": "Operations technology",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 14,
+   "depth": 1,
+   "name": "Kathy Talnose",
+   "title": "Staff Vice President, Operations and Execution",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/kathy-talnose-17634290/",
+   "flag": "VERIFY:manager between her and Norwood not visible in the data; confirm",
+   "lane": "Operations leaders",
+   "note": "",
+   "email": "kathy.talnose@anthem.com",
+   "email_status": "validated"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 15,
+   "depth": 1,
+   "name": "Marla K. Wilson, MBA",
+   "title": "Vice President Provider Data Solutions",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/marlakwilson/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 16,
+   "depth": 2,
+   "name": "Kristine Smith (Huot)",
+   "title": "Staff VP, Enablement Office, Provider Data Solutions",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Marla K. Wilson, MBA",
+   "linkedin": "https://www.linkedin.com/in/kristine-huot-smith/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 17,
+   "depth": 2,
+   "name": "Laxmi Sharma - PMP, PAHM",
+   "title": "Director - Provider Data Solutions and Programs",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Marla K. Wilson, MBA",
+   "linkedin": "https://www.linkedin.com/in/laxmi-sharma-pmp-pahm-5b4973b6/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 18,
+   "depth": 1,
+   "name": "Michael Goodall",
+   "title": "Staff VP Global Financial Operations",
+   "level": "VP",
+   "function": "Finance & shared services",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/michael-goodall-62720bb7/",
+   "flag": "VERIFY:profile still lists Anthem BCBS; confirm current",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 19,
+   "depth": 1,
+   "name": "Nicole Keating, MBA, CLP, CSA",
+   "title": "Staff VP, Operations & Execution, Health Benefits Operations",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/nicoleakeating/",
+   "flag": "VERIFY:manager between her and Norwood not visible in the data; confirm",
+   "lane": "Operations leaders",
+   "note": "",
+   "email": "nikki.keating@elevancehealth.com",
+   "email_status": "validated"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 20,
+   "depth": 2,
+   "name": "Denny Jones",
+   "title": "Senior Director, Operational Excellence",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Nicole Keating, MBA, CLP, CSA",
+   "linkedin": "https://www.linkedin.com/in/denny-jones-426a105/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 21,
+   "depth": 2,
+   "name": "Diedre Rutherford",
+   "title": "Director, Business Process Automation",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Nicole Keating, MBA, CLP, CSA",
+   "linkedin": "https://www.linkedin.com/in/diedre-rutherford-74232369/",
+   "flag": "VERIFY:placed in Health Benefits Operations; confirm",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 22,
+   "depth": 2,
+   "name": "Francisco Escobedo",
+   "title": "Sr. Director, Business Systems Architecture",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Nicole Keating, MBA, CLP, CSA",
+   "linkedin": "https://www.linkedin.com/in/franciscoeescobedo/",
+   "flag": "VERIFY:placed in Health Benefits Operations after Lee Napier retired; confirm",
+   "lane": "Operations technology",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 23,
+   "depth": 1,
+   "name": "Pamela Hursh",
+   "title": "Staff Vice President, Solution Shared Services",
+   "level": "VP",
+   "function": "Finance & shared services",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/pamela-hursh-4b58a010/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 24,
+   "depth": 1,
+   "name": "Traci G.",
+   "title": "Staff Vice President Strategic Workforce Planning",
+   "level": "VP",
+   "function": "Operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/tracicaldwell/",
+   "flag": "VERIFY:initial-only surname on LinkedIn; Staff VP Strategic Workforce Planning is the workforce-planning seat, confirm the badge",
+   "lane": "Workforce planning & product owners",
+   "note": "",
+   "email": "",
+   "email_status": "not found"
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 25,
+   "depth": 2,
+   "name": "Bob Sanderson",
+   "title": "Director, Operations Development and Planning",
+   "level": "Director",
+   "function": "Operations",
+   "reports_to": "Traci G.",
+   "linkedin": "http://www.linkedin.com/in/bobsanderson1",
+   "flag": "VERIFY:Operations Development and Planning; placed under Strategic Workforce Planning, confirm",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 26,
+   "depth": 1,
+   "name": "Tracy M.",
+   "title": "Staff VP, Payment Integrity",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/tracymuck/",
+   "flag": "VERIFY:initial-only surname on LinkedIn; Staff VP Payment Integrity, confirm the badge",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 27,
+   "depth": 2,
+   "name": "Beth Franke",
+   "title": "Staff VP, Payment Integrity Special Investigations Unit",
+   "level": "VP",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Tracy M.",
+   "linkedin": "https://www.linkedin.com/in/beth-franke-281155b9/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 28,
+   "depth": 2,
+   "name": "Kristian Wilson",
+   "title": "Staff Vice President, Data Mining and Overpayment Operations, Elevance Health",
+   "level": "VP",
+   "function": "Payment & deposit operations",
+   "reports_to": "Tracy M.",
+   "linkedin": "https://www.linkedin.com/in/kristian-wilson-000253110/",
+   "flag": "IN_SF:already in Salesforce",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 29,
+   "depth": 1,
+   "name": "Trish Raines, PMP",
+   "title": "Staff Vice President, Carelon Implementations",
+   "level": "VP",
+   "function": "Payroll & client service operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/trish-raines-pmp-b535118a/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  },
+  {
+   "account": "Elevance Health",
+   "map": "Elevance Health - Back Office",
+   "card": 30,
+   "depth": 1,
+   "name": "Jennifer Evering",
+   "title": "Director of Enrollment Management",
+   "level": "Director",
+   "function": "Member, provider & enrollment operations",
+   "reports_to": "Felicia Norwood",
+   "linkedin": "https://www.linkedin.com/in/jennifer-evering-9916786a/",
+   "flag": "",
+   "lane": "Operations leaders",
+   "note": ""
+  }
+ ],
+ "bench_count": 82,
+ "removed": [
+  {
+   "account": "Elevance Health",
+   "name": "John Crowley",
+   "title": "President and Chief Operating Officer",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Michael Ogden, M.D., MMM, CPE",
+   "title": "Chief Medical Officer",
+   "why": "trimmed on review: Chief Medical Officer; clinical"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Denice Gilling",
+   "title": "Staff Vice President, Health Solutions Clinical Operations",
+   "why": "trimmed on review: clinical operations; clinical line"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Mark Reynolds",
+   "title": "Chief Operating Officer",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Clayborne Harris",
+   "title": "Healthplan Chief Financial Officer",
+   "why": "trimmed on review: plan CFO; finance, not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Pete Setzer, M.S., SPHR",
+   "title": "Staff VP Systems Solutions (COO), Florida Medicare",
+   "why": "trimmed on review: systems solutions for Florida Medicare; plan-level"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Susan Keeling",
+   "title": "Staff VP, Financial Operations",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Shawn Simmons",
+   "title": "Staff VP, Global HR Operations",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Ryan Thorsbakken",
+   "title": "Director of Operations Sr and COO Amerigroup GA",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Misti Webb",
+   "title": "Director of Operations & Chief Operating Officer",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "David A. Caruso",
+   "title": "Staff VP Finance (Florida Medicare)",
+   "why": "trimmed on review: segment finance; not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Garrick Ducat",
+   "title": "Exec. Director Chief Experience Office",
+   "why": "trimmed on review: Chief Experience Office; member experience line"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jay King",
+   "title": "Staff Vice President FP&A",
+   "why": "trimmed on review: FP&A; finance, not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Kristie S.",
+   "title": "Chief Operating Officer - Director of Operations, Wellpoint WA",
+   "why": "trimmed on review: initial-only surname; Wellpoint WA plan ops, lane covered by named plan COOs"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jeremy Randall",
+   "title": "Chief Operating Officer",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Nicholas Burnett",
+   "title": "Staff VP, GBD FP&A",
+   "why": "trimmed on review: FP&A; finance, not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Michelle Cowen",
+   "title": "Chief Operating Officer, Healthy Blue Kansas",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jeff Hammer",
+   "title": "Staff VP, Finance Operations",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "JoAnn Perkins",
+   "title": "Staff VP, LG Segment Migrations and Process Improvement",
+   "why": "no longer at account per live profile (now found via anthem.com; LinkedIn headline reads Retired; remov)"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "David N.",
+   "title": "Chief Financial Officer",
+   "why": "trimmed on review: plan CFO (Healthy Blue Kansas); finance, not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Kelly Vo",
+   "title": "Executive Vice President",
+   "why": "trimmed on review: Unicare Community (unrelated entity, 2003)"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Kimberly Hunt",
+   "title": "Staff VP Finance",
+   "why": "trimmed on review: corporate finance; not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Diana Brooks",
+   "title": "Staff Vice President - National Accounts Claims Operations - Anthem",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Katie Fahey",
+   "title": "Chief Operations Officer",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Colleen Parsons",
+   "title": "Staff Vice President, Finance",
+   "why": "trimmed on review: corporate finance; not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Van J Chang",
+   "title": "Staff Vice President, Medicaid Finance",
+   "why": "trimmed on review: Medicaid finance; not operations"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Alan Golivesky",
+   "title": "Operations Director / Business Change Manager",
+   "why": "trimmed on review: business change manager; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Denzel Brock",
+   "title": "Clinical Operations Director",
+   "why": "trimmed on review: clinical operations; clinical line"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Elizabeth Reyes",
+   "title": "Vice President of Provider Digital Channels",
+   "why": "live title fails gate (sales): Vice President of Provider Digital Channels"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Peter Austin",
+   "title": "Clinical Operations Director I",
+   "why": "trimmed on review: clinical operations; clinical line"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Cara Meland",
+   "title": "Business Change Director, Operations, Development, and Planning",
+   "why": "trimmed on review: business change director; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Beverly Winfield Pena",
+   "title": "Sr. Executive Secretary to VP of Operations",
+   "why": "trimmed on review: executive secretary"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Gail K. Boudreaux",
+   "title": "Vice President Operations",
+   "why": "trimmed on review: duplicate profile of the CEO carrying a VP title; not a real seat"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Stan Yang",
+   "title": "Vice President Operations",
+   "why": "trimmed on review: Unicare Biomedical (unrelated entity)"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Solomon J. Parker",
+   "title": "Program Director, LTSS Value Based and Workforce Initiatives",
+   "why": "trimmed on review: LTSS value-based program; clinical program"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Josh Robles",
+   "title": "Director Workforce Management",
+   "why": "trimmed on review: Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Matthew Householder",
+   "title": "Director, Workforce Management",
+   "why": "trimmed on review: Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Linda Hobbs",
+   "title": "Director Workforce management",
+   "why": "trimmed on review: Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Mike Horton",
+   "title": "Director, Workforce Management",
+   "why": "trimmed on review: Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jennie Broyles",
+   "title": "Director Workforce Management",
+   "why": "trimmed on review: Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jeff Howard",
+   "title": "Director Program Management, Operational Excellence",
+   "why": "trimmed on review: program management; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Christina McGovern",
+   "title": "Business Change Director; Business Process Transformation",
+   "why": "trimmed on review: business change director; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Renee Murphy",
+   "title": "Director, Financial Operations, Premium Cash Processing",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jan Meesey",
+   "title": "Executive Admin to VP Enterprise Operations Support",
+   "why": "trimmed on review: executive admin"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "John Fausto",
+   "title": "Senior Director Provider Operations",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Demetra Crandall",
+   "title": "Director Medicare Grievances & Appeals",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Stephanie Barnes-Blue",
+   "title": "Appeals & Grievance Manager",
+   "why": "live title fails gate (below_director): Appeals & Grievance Manager"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Keith Inman",
+   "title": "Project Director Provider Operations",
+   "why": "trimmed on review: project director; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Carla Brawner",
+   "title": "Director II, Individual Enrollment & Billing Central and East Region",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Sunil Nair",
+   "title": "Director I Claims at Anthem Inc",
+   "why": "trimmed on review: Director I Claims since 1998 at 'Anthem Inc'; stale card, claims lane covered"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Deb Johnson, LCSW, LICSW, LCASA",
+   "title": "Statewide Director Substance Use and Recovery Programs",
+   "why": "trimmed on review: substance use programs; clinical"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Tequila W.",
+   "title": "Claims Director",
+   "why": "trimmed on review: initial-only surname; claims lane covered"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Debra S.",
+   "title": "Director I Claims",
+   "why": "trimmed on review: initial-only surname; claims lane covered"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "chris thomas",
+   "title": "Financial Recovery Specialist",
+   "why": "no longer at account per live profile (now Apollo match (1 credit): left Elevance Mar 2024 (was VP Gove)"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Carole Rebbel",
+   "title": "Business Change Director. Special Investigations Unit, Payment Integrity",
+   "why": "trimmed on review: business change director; program role"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Jane Hite-Syed",
+   "title": "Chief Operating Officer at Wellpoint Federal, an Elevance Health Company",
+   "why": "trimmed on review: plan-level COO; state plan lens, add if Alex wants it"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Susan Armbruster",
+   "title": "Senior Vice President Service Operations",
+   "why": "trimmed on review: Amerigroup SVP with no start date; brand retired 2024, likely stale"
+  },
+  {
+   "account": "Elevance Health",
+   "name": "Annalisa Cooper",
+   "title": "Vice President Operations",
+   "why": "trimmed on review: Lumenos (WellPoint) 1999; stale brand"
+  },
+  {
+   "account": "Carelon",
+   "name": "Jonathan Edmonds",
+   "title": "Chief Operations Officer (Carelon Health of PA)",
+   "why": "trimmed on review: plan-level COO (Carelon Health of PA)"
+  },
+  {
+   "account": "Carelon",
+   "name": "Darrell Oliveira",
+   "title": "Chief Financial Officer",
+   "why": "trimmed on review: CFO Carelon (Mar 31 2026); budget owner, not an operations seat: named in the account note for Alex"
+  },
+  {
+   "account": "Carelon",
+   "name": "Winnie Chi",
+   "title": "Executive Director, Health Services Research and Implementation Sciences",
+   "why": "trimmed on review: health services research; not operations"
+  },
+  {
+   "account": "Carelon",
+   "name": "Carin Skapars",
+   "title": "Chief Quality Officer",
+   "why": "trimmed on review: Chief Quality Officer; clinical quality"
+  },
+  {
+   "account": "Carelon",
+   "name": "Vandhana Wadhwa",
+   "title": "West Regional Chief Medical Officer",
+   "why": "trimmed on review: Chief Medical Officer; clinical"
+  },
+  {
+   "account": "Carelon",
+   "name": "Alicia Williams",
+   "title": "COO/Director, Operations",
+   "why": "trimmed on review: COO/Director at plan level"
+  },
+  {
+   "account": "Carelon",
+   "name": "Tammy McCarthy",
+   "title": "Staff Vice President of Clinical Operations",
+   "why": "trimmed on review: clinical operations; clinical line"
+  },
+  {
+   "account": "Carelon",
+   "name": "Grant Kathy",
+   "title": "Senior Vice President, Chief of Service Center Operations",
+   "why": "trimmed on review: service center operations = contact center line"
+  },
+  {
+   "account": "Carelon",
+   "name": "Rebecca Marshall",
+   "title": "Senior Vice President and Controller",
+   "why": "trimmed on review: controller; finance, not operations"
+  },
+  {
+   "account": "Carelon",
+   "name": "Elisabeth Hager",
+   "title": "Chief Medical Officer Southeast/Central Region",
+   "why": "trimmed on review: Chief Medical Officer; clinical"
+  },
+  {
+   "account": "Carelon",
+   "name": "Diya Shah",
+   "title": "Founding Team & Head of Operations",
+   "why": "trimmed on review: ZipDrug founding team; not a Carelon operations seat"
+  },
+  {
+   "account": "Carelon",
+   "name": "Deb Tappen",
+   "title": "Operations at Carelon",
+   "why": "live title fails gate (below_director): Operations at Carelon"
+  },
+  {
+   "account": "Carelon",
+   "name": "Tiffany Bachman",
+   "title": "Care Management Operations Director",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Carelon",
+   "name": "Rejinath Radhakrishnan",
+   "title": "Director System Support",
+   "why": "live title fails gate (no_back_office_function_in_title): Director System Support"
+  },
+  {
+   "account": "Carelon",
+   "name": "Tom Holiday",
+   "title": "Director of Operations",
+   "why": "no longer at account per live enrichment (no current experience; last role ended unknown)"
+  },
+  {
+   "account": "Carelon",
+   "name": "LaTasha Rhodes",
+   "title": "Senior Account Service Manager/Operations Director",
+   "why": "trimmed on review: account service manager; individual contributor"
+  },
+  {
+   "account": "Carelon",
+   "name": "Raheel Anwar",
+   "title": "Customer Service Operations Director",
+   "why": "trimmed on review: customer service operations = contact center line"
+  },
+  {
+   "account": "Carelon",
+   "name": "Terry Billyard",
+   "title": "Assistant Vice President, Claims Operations Support",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Carelon",
+   "name": "Jean Olshefsky",
+   "title": "Director Recovery & Advocacy",
+   "why": "trimmed on review: recovery and advocacy; clinical"
+  },
+  {
+   "account": "Carelon",
+   "name": "Clarence Jordan",
+   "title": "Vice President, Wellness and Recovery",
+   "why": "trimmed on review: wellness and recovery; clinical"
+  },
+  {
+   "account": "Carelon",
+   "name": "Erika Sharillo LCSW",
+   "title": "SVP of Clinical Operations and Recovery",
+   "why": "trimmed on review: clinical operations and recovery; clinical"
+  },
+  {
+   "account": "Carelon",
+   "name": "Lisa Laplante",
+   "title": "VP Claims",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  },
+  {
+   "account": "Carelon",
+   "name": "Gerald Jones",
+   "title": "Assistant Director Appeals and Complaints",
+   "why": "trimmed on review: assistant director; below the map's level"
+  },
+  {
+   "account": "Carelon",
+   "name": "jodi mccall",
+   "title": "Director",
+   "why": "live title fails gate (no_back_office_function_in_title): Director"
+  },
+  {
+   "account": "Carelon",
+   "name": "Jodie Calvert",
+   "title": "Director of Service Operations",
+   "why": "not found by live profile check; bench until Sales Nav confirms"
+  }
+ ],
+ "known_groups": [
+  {
+   "sf_company": "Amerigroup",
+   "sf_account_id": "001V5000006bHWtIAM",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Aileen McCormick",
+     "title": "Retired - Regional Chief Executive Officer, AMERIGROUP Community Care of New Mexico, Inc",
+     "email": "amccormick@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/aileen-mccormick-4287075/",
+     "lead_status": ""
+    },
+    {
+     "name": "Alexandria Drohobyczer",
+     "title": "Dir CXP",
+     "email": "alexandria.drohobyczer@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Avril Cobb",
+     "title": "Operations Business Analyst II",
+     "email": "avril.cobb@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/avrilcobb/",
+     "lead_status": ""
+    },
+    {
+     "name": "Bill Coffin",
+     "title": "CFO",
+     "email": "bcoffin@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Brenda Milligan",
+     "title": "Director Service Support",
+     "email": "brenda.milligan@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/brenda-milligan-95317517",
+     "lead_status": ""
+    },
+    {
+     "name": "Brian Murray",
+     "title": "COO at Health Plus",
+     "email": "bmurray@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Brian Shipp",
+     "title": "Regional President",
+     "email": "brian.shipp@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/brian-shipp-b819a49/",
+     "lead_status": ""
+    },
+    {
+     "name": "Brian Smith",
+     "title": "National Contact Center Manager",
+     "email": "brian.smith@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/brian-smith-78bb6015",
+     "lead_status": ""
+    },
+    {
+     "name": "Carie Ward",
+     "title": "Director, Customer Service Operations",
+     "email": "cward@amerigroupcorp.com",
+     "linkedin": "http://www.linkedin.com/in/carie-ward-a555588",
+     "lead_status": ""
+    },
+    {
+     "name": "Catherine Mitchell",
+     "title": "Chief Operations Officer",
+     "email": "cmitchell@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Catherine Ramirez",
+     "title": "VP, Quality Management, Multi-Plan NJ and NY",
+     "email": "catherine.ramirez@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/catherine-ramirez-432aab4b/",
+     "lead_status": ""
+    },
+    {
+     "name": "Chris Larkin",
+     "title": "Telecom Engineer/Architect",
+     "email": "aca.larkin@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/chris-larkin/11/3b7/674",
+     "lead_status": ""
+    },
+    {
+     "name": "Cynthia Small",
+     "title": "instructional Designer",
+     "email": "cynthia.small@amerigroup.com",
+     "linkedin": "unable to verify",
+     "lead_status": ""
+    },
+    {
+     "name": "Daisy Parrilla",
+     "title": "Manager, National Call Center",
+     "email": "daisy.parrilla@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/daisy-parrilla/68/a80/b77",
+     "lead_status": ""
+    },
+    {
+     "name": "Deb Lee",
+     "title": "AVP Product Development",
+     "email": "dlee@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Debbie Hefley",
+     "title": "CFO",
+     "email": "deborah.hefley@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/debbie-hefley/11/a73/a94",
+     "lead_status": ""
+    },
+    {
+     "name": "Denise Robinson",
+     "title": "Director Workforce Management",
+     "email": "drobin4@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Don Monette",
+     "title": "Manager- Customer Care DSU",
+     "email": "don.monette@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/don-monette-49210913/",
+     "lead_status": ""
+    },
+    {
+     "name": "Dorette Cereceres",
+     "title": "Utilization Manager",
+     "email": "dorette.cereceres@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/dorette-cereceres/17/76b/a60",
+     "lead_status": ""
+    },
+    {
+     "name": "Ed Frank",
+     "title": "Instructional Designer",
+     "email": "ed.frank@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Edna Willingham",
+     "title": "Plan President, TN",
+     "email": "ewillingham@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/edna-willingham-52978230/",
+     "lead_status": ""
+    },
+    {
+     "name": "Frank Clepper",
+     "title": "President, Medicaid Health Plans, Kansas",
+     "email": "frank.clepper@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/frank-clepper/4/175/22a",
+     "lead_status": ""
+    },
+    {
+     "name": "Frank Cooper",
+     "title": "Regional VP & CFO",
+     "email": "fcooper@amerigroupcorp.com",
+     "linkedin": "Unable to Verify",
+     "lead_status": ""
+    },
+    {
+     "name": "Gary Dillard",
+     "title": "WFM Analyst",
+     "email": "gary.dillard@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/gary-dillard-01a5015",
+     "lead_status": ""
+    },
+    {
+     "name": "Gordon Schleffer",
+     "title": "Director II, Customer Care",
+     "email": "",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "James Carlson",
+     "title": "President and Chief Operating Officer",
+     "email": "jcarlson@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "James Magner",
+     "title": "Director of Performance Enhancement",
+     "email": "jmagner@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/pub/james-magner/4/b93/7b1",
+     "lead_status": ""
+    },
+    {
+     "name": "James Thomas",
+     "title": "Director, Customer Care",
+     "email": "james.thomas@amerigroup.com",
+     "linkedin": "No LI",
+     "lead_status": ""
+    },
+    {
+     "name": "James Truess",
+     "title": "Executive Vice President/Chief Financial Officer",
+     "email": "jtruess@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeff Phillips",
+     "title": "Director II, IT",
+     "email": "jphilli@amerigroupcorp.com",
+     "linkedin": "http://www.linkedin.com/in/jeff-phillips-0423b8b",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeff Schrecengost",
+     "title": "VP, IT Government Business Division",
+     "email": "jeff.schrecengost@anthem.com",
+     "linkedin": "https://www.amerigroup.com/medicaid-leadership.html",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeffrey Jones",
+     "title": "COO & RVP II, Iowa",
+     "email": "jjones@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/jeffrey-jones-23625518/",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer Arzberger",
+     "title": "Real Time Workforce Analyst",
+     "email": "jennifer.arzberger@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/jennifer-arzberger-53635b4a/",
+     "lead_status": ""
+    },
+    {
+     "name": "Jimette Purvis",
+     "title": "Manager, Workforce Management",
+     "email": "jimette.purvis@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/jimette-purvis-953a462",
+     "lead_status": ""
+    },
+    {
+     "name": "Joe Anderson",
+     "title": "Director of ITS Claims Operations",
+     "email": "janders@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/joe-anderson-08a2a316/",
+     "lead_status": ""
+    },
+    {
+     "name": "John Adams",
+     "title": "Workforce Supervisor, NCC Solutions and Support",
+     "email": "jadams4@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Joshua Levi",
+     "title": "Business Analyst I (WFM)",
+     "email": "josh.levi@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/joshua-levi-660b4273/",
+     "lead_status": ""
+    },
+    {
+     "name": "Jovon Shaw",
+     "title": "Workforce Analyst",
+     "email": "jovon.shaw@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Joyce Ryner",
+     "title": "Sr. Workforce Analyst",
+     "email": "jryner@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Judi Peterson",
+     "title": "Staff VP, Health Plan Operations",
+     "email": "jpeter1@amerigroupcorp.com",
+     "linkedin": "http://www.linkedin.com/in/judi-peterson-3671038",
+     "lead_status": ""
+    },
+    {
+     "name": "Julie Locke",
+     "title": "CEO, Health Plans Middle Atlantic",
+     "email": "julie.locke@amerigroup.com",
+     "linkedin": "https://www.bloomberg.com/research/stocks/private/person.asp?personId=36593580&privcapId=24801&previousCapId=24801&previousTitle=AMERIGROUP%20Corporation",
+     "lead_status": ""
+    },
+    {
+     "name": "Karie Dey",
+     "title": "Supervisor",
+     "email": "kdey@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kemas Ohale",
+     "title": "Director, IT Operations",
+     "email": "kemas.ohale@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/kemas-ohale/b4/80a/126",
+     "lead_status": ""
+    },
+    {
+     "name": "Ken Aversa",
+     "title": "SVP, Customer Service Operations",
+     "email": "kenneth.aversa@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/ken-aversa-529aa4",
+     "lead_status": ""
+    },
+    {
+     "name": "Kim Brogan",
+     "title": "Director Performance Enhancement",
+     "email": "kim.brogan@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/kim-brogan/a/413/841",
+     "lead_status": ""
+    },
+    {
+     "name": "Kim Turner",
+     "title": "Business Info Analyst II, Health Care Analytics",
+     "email": "kturner@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kristina Cox",
+     "title": "Director, Program/Project Management",
+     "email": "kcox001@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/kristina-cox-64965653/",
+     "lead_status": ""
+    },
+    {
+     "name": "Kurt Baumwart",
+     "title": "Director, Service Continuity",
+     "email": "kbaumwa@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/kurt-baumwart/",
+     "lead_status": ""
+    },
+    {
+     "name": "Laura Ciavola",
+     "title": "Senior Vice President of Operations",
+     "email": "lciavol@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Leona Rickerson",
+     "title": "AVP, Solutions and Support",
+     "email": "leona.rickerson@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/leona-rickerson/6b/99b/819",
+     "lead_status": ""
+    },
+    {
+     "name": "Leslie Saba",
+     "title": "Senior Vice President National Pharmacy Programs",
+     "email": "lsaba@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Linda Lyle",
+     "title": "Director, Operations Nashville",
+     "email": "lblyle@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/linda-lyle/3/94/b94",
+     "lead_status": ""
+    },
+    {
+     "name": "Linda Whitley-Taylor",
+     "title": "Senior Vice President, Human Resources",
+     "email": "ltaylor@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisa Bogard",
+     "title": "RVP/COO",
+     "email": "lbogard@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/lisa-bogard-1620ab81/",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisa Fisher",
+     "title": "Performance Strategist",
+     "email": "lfishe2@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/lisarfisher/",
+     "lead_status": ""
+    },
+    {
+     "name": "Liz Davis",
+     "title": "Director, Procurement & Contract Management",
+     "email": "liz.davis@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/liz-davis-6bb3234/",
+     "lead_status": ""
+    },
+    {
+     "name": "Lori Fox",
+     "title": "Director of NCC Reporting & Analytics",
+     "email": "lori.fox@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/lori-fox/16/6b5/14b",
+     "lead_status": ""
+    },
+    {
+     "name": "Lourdes Deleon",
+     "title": "Manager II, Customer Care",
+     "email": "lourdes.deleon@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/lourdes-deleon-50707958",
+     "lead_status": ""
+    },
+    {
+     "name": "Lucille Jones",
+     "title": "Supervisor, Workforce Management",
+     "email": "lucille.jones@amerigroupcorp.com",
+     "linkedin": "http://www.linkedin.com/in/lucille-jones-5753536",
+     "lead_status": ""
+    },
+    {
+     "name": "Marlen Rodriguez",
+     "title": "Call Center Manager",
+     "email": "mrodriguez@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mary McCluskey",
+     "title": "CMO",
+     "email": "mmccluskey@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/mary-mccluskey-76157147/",
+     "lead_status": ""
+    },
+    {
+     "name": "Maurice Pardo",
+     "title": "Contact Center Staff Vice President",
+     "email": "maurice.pardo@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/maurice-pardo-a87b758",
+     "lead_status": ""
+    },
+    {
+     "name": "Melissa Biancardi",
+     "title": "Account Manager",
+     "email": "mbianca@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Melissa Havig",
+     "title": "Director of Process Improvement",
+     "email": "melissa.havig@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/melissa-havig/0/8b/882",
+     "lead_status": ""
+    },
+    {
+     "name": "Mia Hughes",
+     "title": "Staff VP, Business Solutions",
+     "email": "mhughes@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/mia-hughes-cpa-pmp-ab2a054/",
+     "lead_status": ""
+    },
+    {
+     "name": "Michael Scarbrough",
+     "title": "Health Plan Chief Operating Officer",
+     "email": "",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Michele Haynam",
+     "title": "Assistant Vice President Leadership Development",
+     "email": "mhaynam@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Odell Akers",
+     "title": "Director of Telecommunications Systems",
+     "email": "odell.akers@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/odell-akers-00a7172/",
+     "lead_status": ""
+    },
+    {
+     "name": "Pam Piekney",
+     "title": "Director, Project Management",
+     "email": "pamela.piekney@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/pam-piekney-pmp/7/162/1b9",
+     "lead_status": ""
+    },
+    {
+     "name": "Paul Maxwell",
+     "title": "Director Medicare Telesales",
+     "email": "paul.maxwell@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/paul-maxwell-11a79413/",
+     "lead_status": ""
+    },
+    {
+     "name": "Paulo Duarte",
+     "title": "Director, Application Management and Support (inc.WFM)",
+     "email": "paulo.duarte@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/paulo-duarte/19/ab6/977",
+     "lead_status": ""
+    },
+    {
+     "name": "Phyllis Regotti",
+     "title": "SVP, Business Improvement",
+     "email": "phyllis.regotti@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/phyllis-regotti-4435666b/",
+     "lead_status": ""
+    },
+    {
+     "name": "Phyllis Smithhisler",
+     "title": "SVP, Business Improvement",
+     "email": "phyllis.smithhisler@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/phyllis-smithhisler-regotti-659a508",
+     "lead_status": ""
+    },
+    {
+     "name": "Rhonda Ham",
+     "title": "Customer Care Manager",
+     "email": "rhonda.ham@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/rhonda-ham/9/a6b/64a",
+     "lead_status": ""
+    },
+    {
+     "name": "Ricardo Allen",
+     "title": "Manager, Customer Care",
+     "email": "ricardo.allen@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/ricardo-allen/4/922/554",
+     "lead_status": ""
+    },
+    {
+     "name": "Richard Zoretic",
+     "title": "EVP & COO",
+     "email": "richard.zoretic@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/richard-zoretic-28849415/",
+     "lead_status": ""
+    },
+    {
+     "name": "Robert Savino",
+     "title": "Director of Workforce Management",
+     "email": "robert.savino@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Roger Cram",
+     "title": "President",
+     "email": "rcram@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/rogercram/",
+     "lead_status": ""
+    },
+    {
+     "name": "Russell Esposito",
+     "title": "Senior Vice President of Technology Services",
+     "email": "resposito@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Saima Khan",
+     "title": "Director, Business Transformation and Strategy",
+     "email": "saima.khan@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/saima-khan/13/859/359",
+     "lead_status": ""
+    },
+    {
+     "name": "Scott Anglin",
+     "title": "CFO, Government Business Division",
+     "email": "scott.anglin@anthem.com",
+     "linkedin": "https://www.amerigroup.com/medicaid-leadership.html",
+     "lead_status": ""
+    },
+    {
+     "name": "Scott Weersing",
+     "title": "Performance Consultant",
+     "email": "sweersi@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Shally Kormath",
+     "title": "IT Director",
+     "email": "shally.kormath@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/shally-kormath-6b57154/",
+     "lead_status": ""
+    },
+    {
+     "name": "Shally Pannikode",
+     "title": "VP, IT",
+     "email": "shalima.pannikode@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/shally-pannikode-999568b/",
+     "lead_status": ""
+    },
+    {
+     "name": "Shandy Rivera",
+     "title": "Quality Assurance Supervisor",
+     "email": "sriver2@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Shannon Stephens",
+     "title": "Business Analyst III",
+     "email": "shannon.stephens@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/shannon-stephens/97/426/a94",
+     "lead_status": ""
+    },
+    {
+     "name": "Sharon Leeman",
+     "title": "Director Organization Effectiveness",
+     "email": "sleeman@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/sharon-leeman-38024314/",
+     "lead_status": ""
+    },
+    {
+     "name": "Stephen Braden",
+     "title": "Director I Finance",
+     "email": "stephen.braden@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/stephen-braden-cpa/1/99/8a1",
+     "lead_status": ""
+    },
+    {
+     "name": "Stephen Williams",
+     "title": "Vice President, Customer Care",
+     "email": "swill10@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Steve Broudy",
+     "title": "Clinical Pharmacy Programs Director",
+     "email": "steve.broudy@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/steve-broudy-1a631a2/",
+     "lead_status": ""
+    },
+    {
+     "name": "Steve Obara",
+     "title": "AVP, Quality & Process Improvement",
+     "email": "steve.obara@amerigroup.com",
+     "linkedin": "http://www.linkedin.com/in/steve-obara-8aa477b",
+     "lead_status": ""
+    },
+    {
+     "name": "Steven Quigley",
+     "title": "Application Analyst",
+     "email": "squigle@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/steven-quigley-3836a213/",
+     "lead_status": ""
+    },
+    {
+     "name": "Stuart Battersby",
+     "title": "RVP, Finance & COO",
+     "email": "stuart.battersby@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/stuart-battersby/12/44b/363",
+     "lead_status": ""
+    },
+    {
+     "name": "Sue Haskins",
+     "title": "AVP ITS Engineering Svcs",
+     "email": "shaski1@amerigroupcorp.com",
+     "linkedin": "https://www.linkedin.com/in/susan-haskins-55845854/",
+     "lead_status": ""
+    },
+    {
+     "name": "Suzanne Greenberg",
+     "title": "Sr Lead ID",
+     "email": "suzanne.greenberg@amerigroup.com",
+     "linkedin": "unable to verify",
+     "lead_status": ""
+    },
+    {
+     "name": "Tanya Williams",
+     "title": "Manager II, Customer Care",
+     "email": "tanya.williams@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tina Whitfield",
+     "title": "VP, NCC Solutions and Support",
+     "email": "tina.whitfield@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/tina-whitfield/90/48b/130",
+     "lead_status": ""
+    },
+    {
+     "name": "Tisch Scott",
+     "title": "President, TX Medicaid Health Plan",
+     "email": "tisch.scott@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/tisch-scott-5898756/",
+     "lead_status": ""
+    },
+    {
+     "name": "Tisha Jordan",
+     "title": "WFM Anyalyst",
+     "email": "tisha.jordan@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Todd Drashner",
+     "title": "Performance Strategist",
+     "email": "tdrashn@amerigroupcorp.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tunde Sotunde",
+     "title": "President, North Region",
+     "email": "tunde.sotunde@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/tunde-sotunde-50b5465b/",
+     "lead_status": ""
+    },
+    {
+     "name": "Valerie Vandergrift-Rogers",
+     "title": "AVP, Dedicated Service Unit",
+     "email": "valerie.vandergrift-rogers@amergroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Vincent Ancona",
+     "title": "MD/DC Market President",
+     "email": "vincent.ancona@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/in/vincent-ancona-ba81ab2a/",
+     "lead_status": ""
+    },
+    {
+     "name": "Walter Townsend",
+     "title": "Business Analyst",
+     "email": "walter.townsend@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/walter-townsend/12/980/ab8",
+     "lead_status": ""
+    },
+    {
+     "name": "Wes Waters",
+     "title": "RVP, Finance",
+     "email": "james.waters@amerigroup.com",
+     "linkedin": "https://www.linkedin.com/pub/wes-waters/5/729/545",
+     "lead_status": ""
+    },
+    {
+     "name": "Yolanda Twyne-Robinson",
+     "title": "Director, Customer Care",
+     "email": "yolanda.twyne-robinson@amerigroup.com",
+     "linkedin": "No LI",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem BCBS Virginia (BCBS VA)",
+   "sf_account_id": "001V5000006bHjPIAU",
+   "account_type": "blank",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Carter Reid",
+     "title": "VP Operations",
+     "email": "carter.reid@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Christopher Lorenzo",
+     "title": "Director of Technology",
+     "email": "christopher.lorenzo@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Dean Wagstaff",
+     "title": "Operations Support/Data Center Manager",
+     "email": "dean.wagstaff@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jacque Simmons",
+     "title": "Manager, Technical Operations",
+     "email": "jacqueline.simmons@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jamisson Fowler",
+     "title": "IT Leader/VP",
+     "email": "jamisson.fowler@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jason Hoyt",
+     "title": "Process Improvement Manager",
+     "email": "jason.hoyt@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer McNeal",
+     "title": "Workforce Management Analyst",
+     "email": "jennifer.mcneal@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer Sultan",
+     "title": "Business Development Director, Large Group Strategies",
+     "email": "jennifer.sultan@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jim McCoy",
+     "title": "Director I",
+     "email": "jim.mccoy@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "John Roach",
+     "title": "Sr Business Improvement",
+     "email": "john.roach@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "K.C. Harris",
+     "title": "Director of Learning for Medicare/Federal Employee Program/National Government Services",
+     "email": "kc.harris@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Karen Dolecki",
+     "title": "Operations Delivery Director",
+     "email": "karen.dolecki@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Karen Meyer",
+     "title": "Sr Paralegal/Legal Specialist",
+     "email": "karen.meyer@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kathy Arrowood",
+     "title": "Trainer III CTT+",
+     "email": "kathy.arrowood@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kenyata Tyler",
+     "title": "WFM Analyst",
+     "email": "kenyata.tyler@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kim Turner",
+     "title": "Director, Planning & Performance",
+     "email": "kim.turner@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kimberly Hammett",
+     "title": "Manager, Technology",
+     "email": "kimberly.hammett@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Letha Fisher",
+     "title": "Director of Clinical Quality Management, Virginia",
+     "email": "letha.fisher@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Linda Wilson",
+     "title": "Manager, Clinical Contact Support",
+     "email": "linda.wilson@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lindsey Watson",
+     "title": "Process Improvement Manager",
+     "email": "lindsey.watson@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "MacGregor Gould",
+     "title": "Chief Operating Officer",
+     "email": "macgregor.gould@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Margaret Spillen",
+     "title": "Senior Operations Customer Service Department/RTA Analyst",
+     "email": "margaret.spillen@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mark Schuetze",
+     "title": "Business Change Manager",
+     "email": "mark.schuetze@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Michael Ratliff",
+     "title": "Learning Manager, Member Experience",
+     "email": "michael.ratliff@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Omar Page",
+     "title": "Manager, Workforce Management",
+     "email": "omar.page@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Peter Shamburger",
+     "title": "Voice Engineer",
+     "email": "pete.shamburger@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Ron Johnson",
+     "title": "Senior Network Operations Analyst",
+     "email": "ronald.johnson@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "S. Owen Hunt",
+     "title": "Executive Director and Counsel",
+     "email": "owen.hunt@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Shally Pannikode",
+     "title": "Staff VP",
+     "email": "shally.pannikode@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Susan Ferguson",
+     "title": "Director, Planning and Support",
+     "email": "susan.ferguson@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Terri Sykes",
+     "title": "Learning Director",
+     "email": "terri.sykes@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Thomas Huneycutt",
+     "title": "Workforce Management Analyst II- Scheduler",
+     "email": "thomas.huneycutt@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tom White",
+     "title": "Team Lead Integrated Network Operations Center",
+     "email": "tom.white@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tracey Papas",
+     "title": "Director, Continuous Value Improvement",
+     "email": "tracey.papas@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Wm. Taylor Rhodes",
+     "title": "Director, Resource Management / Change Management",
+     "email": "taylor.rhodes@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Empire Blue Cross Blue Shield (BCBS NY)",
+   "sf_account_id": "001V5000006b9JOIAY",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Alan Murray",
+     "title": "President NY Commercial and President and General Manager NY",
+     "email": "alan.murray@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Andrea Ragone",
+     "title": "WFM Analyst",
+     "email": "andrea.ragone@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Bridget Powers",
+     "title": "Manager II, Customer Care",
+     "email": "bridget.powers@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Chris Roberts",
+     "title": "",
+     "email": "christopher.roberts@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Dave Ryan",
+     "title": "",
+     "email": "david.ryan@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "David Ackman",
+     "title": "Chief Medical Officer",
+     "email": "david.ackman@empireblue.com",
+     "linkedin": "https://www.linkedin.com/in/david-ackman-md-mph-77906110",
+     "lead_status": ""
+    },
+    {
+     "name": "David Huber",
+     "title": "CFO at BCBS of New Jersey",
+     "email": "david.huber@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Dawn Green",
+     "title": "Manager II, Customer Care",
+     "email": "dawn.green@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Deborah Bohren",
+     "title": "Senior Vice President of Communications",
+     "email": "deborah.bohren@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Donna Palmer",
+     "title": "Director Accounting Operations",
+     "email": "donna.palmer@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Eileen Lesar",
+     "title": "Manager II, System Support & Programs",
+     "email": "eileen.lesar@empireblue.com",
+     "linkedin": "https://www.linkedin.com/in/eileen-lesar-b63685126",
+     "lead_status": ""
+    },
+    {
+     "name": "Elizabeth McManus",
+     "title": "Vice President of Operations",
+     "email": "elizabeth.mcmanus@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Fred Johnson",
+     "title": "Director of Enterprise Network Operations",
+     "email": "frederick.johnson@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Gina M. Spambanato",
+     "title": "",
+     "email": "gina.spambanato@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Gloria McCarthy",
+     "title": "Chief Operating Officer and Executive Vice President",
+     "email": "gloria.mccarthy@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Grace Messina",
+     "title": "Chief Information Officer and Vice President",
+     "email": "grace.messina@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "James Sagendorph",
+     "title": "Ass. VP Ops.",
+     "email": "james.sagendorph@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "James W. Wakefield",
+     "title": "Director I, Medicaid State Operations",
+     "email": "james.wakefield@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "John Gezzo",
+     "title": "Business Change Director",
+     "email": "john.gezzo@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Judy Angie",
+     "title": "",
+     "email": "nomail@mail.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kathleen Ford",
+     "title": "Manager II, Customer Care",
+     "email": "kathleen.ford@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kenneth Harth",
+     "title": "Chief Infrastructure Officer and Vice President",
+     "email": "kenneth.harth@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Linda Toohey",
+     "title": "",
+     "email": "linda.toohey@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mark Mulconry",
+     "title": "Director Mainframe Operations",
+     "email": "mark.mulconry@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Robert Lawrence",
+     "title": "Senior Vice President of Human Resources and Services",
+     "email": "robert.lawrence@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Robert Woods",
+     "title": "Project Manager",
+     "email": "robert.woods@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Swami Subramaniam",
+     "title": "",
+     "email": "swami.subramaniam@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Thomas Canty",
+     "title": "Vice President Ny",
+     "email": "thomas.canty@empireblue.com",
+     "linkedin": "https://www.linkedin.com/in/thomas-canty-5994629b",
+     "lead_status": ""
+    },
+    {
+     "name": "Thomas McKay",
+     "title": "Research & Analysis Manager",
+     "email": "thomas.mckay@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tim Lindy",
+     "title": "",
+     "email": "tim.lindy@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Valerie Bousa",
+     "title": "Director Information Systems",
+     "email": "valerie.bousa@empireblue.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "William Brink Hartman",
+     "title": "Director of Service Operations",
+     "email": "",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Beacon Health Options",
+   "sf_account_id": "001V5000006bBgNIAU",
+   "account_type": "Prospect",
+   "side": "Carelon",
+   "people": [
+    {
+     "name": "Amanda Baitsholts",
+     "title": "Workforce Management Analyst",
+     "email": "amanda.baitsholts@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Carmel Walz",
+     "title": "Director, Customer Service",
+     "email": "carmel.walz@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Cynthia Troxler",
+     "title": "Chief Operating Officer, Virginia Health Plan Magellan Complete Care of Virginia \u0096 Richmond, VA 20",
+     "email": "cynthia.troxler@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Dan Sheehan",
+     "title": "Executive VP & Chief Information Officer",
+     "email": "dan.sheehan@beaconhealthoptions.com",
+     "linkedin": "www.linkedin.com/in/dan-sheehan-307864",
+     "lead_status": ""
+    },
+    {
+     "name": "Daniel McCoy",
+     "title": "Executive VP & Chief Operating Officer",
+     "email": "daniel.mccoy@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/daniel-mccoy/de",
+     "lead_status": ""
+    },
+    {
+     "name": "Debbie Fera",
+     "title": "Call Center Analyst (CNS)",
+     "email": "debbie.fera@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Ian Donner",
+     "title": "Vice President of IT Service Management and Transformation",
+     "email": "ian.donner@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeff Allison",
+     "title": "Technology Call Center Tech Ii",
+     "email": "jeff.allison@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeffrey Gaulin",
+     "title": "AVP, IT Network Services",
+     "email": "jeffrey.gaulin@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer Rice",
+     "title": "Vice President, Account Partnerships",
+     "email": "jennifer.rice@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/jennifer-rice-29050b21/",
+     "lead_status": ""
+    },
+    {
+     "name": "Josephine Hargis",
+     "title": "VP of Operations",
+     "email": "josephine.hargis@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/josephine-hargis-046937a5/",
+     "lead_status": ""
+    },
+    {
+     "name": "Kristi Lotti",
+     "title": "Director, Call Center-CNS & Crl",
+     "email": "kristi.lotti@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kyra Lorde",
+     "title": "Director of Customer Service",
+     "email": "kyra.lorde@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/kyra-lorde-b06030152",
+     "lead_status": ""
+    },
+    {
+     "name": "Liz Danielian",
+     "title": "Director, Call Center-CNS & Crl",
+     "email": "liz.danielian@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/lizdanielianlcsw/",
+     "lead_status": ""
+    },
+    {
+     "name": "Lydia Barron",
+     "title": "SVP & CTO",
+     "email": "lydia.barron@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mark Mallard",
+     "title": "Assistant VP, Call Center Operations",
+     "email": "mark.mallard@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Martin Hester",
+     "title": "Tech Call Center Technic I",
+     "email": "",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mary Golden",
+     "title": "Director, Service Operations",
+     "email": "mary.golden@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/mary-golden-976548a0",
+     "lead_status": ""
+    },
+    {
+     "name": "Michael Curry",
+     "title": "Claims Director, Customer Service",
+     "email": "michael.curry@valueoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Mitch Betses",
+     "title": "Executive Vice President and Chief Operating Officer - Beacon Health Options",
+     "email": "mitch.betses@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Rhondale Henderson",
+     "title": "Director of Claims & Customer Service",
+     "email": "rhondale.henderson@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/rhondale-henderson-3a0144aa",
+     "lead_status": ""
+    },
+    {
+     "name": "Russell Petrella",
+     "title": "President & Chief Executive Officer",
+     "email": "",
+     "linkedin": "https://www.linkedin.com/in/russell-petrella-b0a5b5117",
+     "lead_status": ""
+    },
+    {
+     "name": "Sharon Hill",
+     "title": "Manager, Clinical -Clinical Referral Line & Virtual Call Center",
+     "email": "sharon.hill@beaconhealthoptions.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tammy McCarthy",
+     "title": "Vice President of Operations",
+     "email": "tammy.mccarthy@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/tammy-mccarthy-a9a6834b",
+     "lead_status": ""
+    },
+    {
+     "name": "Terry Billyard",
+     "title": "Assistant Vice President, Claims Operations Support",
+     "email": "terence.billyard@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/terrybillyard",
+     "lead_status": ""
+    },
+    {
+     "name": "Thurman Justice",
+     "title": "Executive VP & Chief Financial Officer",
+     "email": "thurman.justice@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/thurman-justice-cpa-14393a5",
+     "lead_status": ""
+    },
+    {
+     "name": "Yvette Ferrer",
+     "title": "Assistant VP, Call Center Operations",
+     "email": "yvette.ferrer@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/yvette-ferrer-3597aa125",
+     "lead_status": ""
+    },
+    {
+     "name": "Yvonne Jones",
+     "title": "Director, Diversity & Community Engagement",
+     "email": "yvonne.jones@beaconhealthoptions.com",
+     "linkedin": "https://www.linkedin.com/in/yvonne-jones-b2129788/",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Carelon Health",
+   "sf_account_id": "001V5000006bHfBIAU",
+   "account_type": "Prospect",
+   "side": "Carelon",
+   "people": [
+    {
+     "name": "Alexis Megeath",
+     "title": "Vice President, Operations",
+     "email": "alexis.megeath@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Ana Couto",
+     "title": "Director I, Customer Care",
+     "email": "ana.couto@caremore.com",
+     "linkedin": "https://www.linkedin.com/in/ana-couto-4176a4165",
+     "lead_status": ""
+    },
+    {
+     "name": "Ana Magana",
+     "title": "Manager I, Customer Care",
+     "email": "ana.magana@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Ben Scaccia",
+     "title": "Contact Center Staff Vice President",
+     "email": "ben.scaccia@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Christina Carbajal",
+     "title": "Manager I, Customer Care",
+     "email": "christina.carbajal@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Chuck Weber",
+     "title": "Senior Vice President of Operations",
+     "email": "chuck.weber@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Claudia Aguilar",
+     "title": "Manager I, Customer Care",
+     "email": "claudia.aguilar@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "David Hsieh",
+     "title": "CFO",
+     "email": "",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Dustin May",
+     "title": "Manager, Customer Care",
+     "email": "dustin.may@caremore.com",
+     "linkedin": "https://www.linkedin.com/in/dustin-may-b44150118",
+     "lead_status": ""
+    },
+    {
+     "name": "Gk Pitchumani",
+     "title": "Director, Information Technology",
+     "email": "gk@caremore.com",
+     "linkedin": "https://linkedin.com/in/gopalakrishnanpitchumani",
+     "lead_status": ""
+    },
+    {
+     "name": "Jack Brock",
+     "title": "Chief Information Officer, Carelon",
+     "email": "jack.brock@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/jackgbrock",
+     "lead_status": ""
+    },
+    {
+     "name": "James Lydiard",
+     "title": "Staff Vice President",
+     "email": "james.lydiard@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jazmine Waller",
+     "title": "Manager I, Customer Care",
+     "email": "jazmine.waller@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jim Duval",
+     "title": "Director, Information Technology",
+     "email": "jim.duval@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jim Rose",
+     "title": "Director Pharmacy",
+     "email": "james.rose@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "John White",
+     "title": "Director of Information Technology System Integration",
+     "email": "john.white@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jose Garcia",
+     "title": "Director-Human Resources",
+     "email": "jose.garcia@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kerry Matsumoto",
+     "title": "Chief Information Officer",
+     "email": "kerry.matsumoto@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Monica Castellanos",
+     "title": "Manager I, Customer Care",
+     "email": "monica.castellanos@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Patrick Bates",
+     "title": "Director IT Operations",
+     "email": "patrick.bates@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Rajat Puri",
+     "title": "President of Carelon Global Solutions and COO of Carelon",
+     "email": "rajat.puri@carelon.com",
+     "linkedin": "https://www.linkedin.com/in/rajat-puri-93b2512",
+     "lead_status": ""
+    },
+    {
+     "name": "Roshunda Miller",
+     "title": "Manager II, Customer Care",
+     "email": "roshunda.miller@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Samantha Wooddell",
+     "title": "Workforce Management Analyst",
+     "email": "samantha.wooddell@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Stacy Brouhard",
+     "title": "Director Claims",
+     "email": "stacy.brouhard@caremore.org",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tanya Brooks",
+     "title": "Manager II, Customer Care",
+     "email": "tanya.brooks@caremore.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Thomas Allen",
+     "title": "Director, Workforce Management \u2013 Service Operations",
+     "email": "thomase.allen@carelon.com",
+     "linkedin": "https://www.linkedin.com/in/thomas-e-allen-mba-73440633",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem Blue Cross Blue Shield Missouri (BCBS)",
+   "sf_account_id": "001V5000006bHjMIAU",
+   "account_type": "blank",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Amy Matthews",
+     "title": "Manager Pharmacy Clinical Operations",
+     "email": "amy.matthews@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Bill Jamison",
+     "title": "Staff VP Consumer Portals",
+     "email": "bill.jamison@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Cindy Bryan",
+     "title": "Business Information Developer/Operations Analyst",
+     "email": "cynthia.bryan@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Deanna Bowman",
+     "title": "Director, Transformation and Change Management",
+     "email": "deanna.bowman@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Diane Howard",
+     "title": "Sr Manager, WFM",
+     "email": "diane.howard@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Erin Hoeflinger",
+     "title": "President, Anthem Blue Cross & Blue Shield of Ohio",
+     "email": "erin.hoeflinger@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jill Blumberg",
+     "title": "WFM Analyst II",
+     "email": "jill.blumberg@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jonathan Cockrell",
+     "title": "Workforce Management Analyst II",
+     "email": "jonathan.cockrell@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Joseph Klein",
+     "title": "Associate General Counsel",
+     "email": "joseph.klein@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Judy Pershern",
+     "title": "Vice President and Counsel",
+     "email": "judy.pershern@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kathryn Turner",
+     "title": "Administrative Assistant II, Enterprise Im Solutions, Integrations and Operations",
+     "email": "kathryn.turner@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Kim VanWinkle",
+     "title": "Director, Service Operations",
+     "email": "kim.vanwinkle@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/kim-vanwinkle-53059bb",
+     "lead_status": ""
+    },
+    {
+     "name": "Kiran Annavarapu",
+     "title": "Director, Service Operations - Analytics & Decision Support: Enrollment/Billing, Quality",
+     "email": "kiran.annavarapu@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisette Styer",
+     "title": "Director II",
+     "email": "lisette.styer@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lynn Bricking",
+     "title": "Director, Compliance",
+     "email": "lynn.bricking@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/lynn-bricking-7260494b",
+     "lead_status": ""
+    },
+    {
+     "name": "Melissa Lauria",
+     "title": "Manager Central Region Quality Management",
+     "email": "melissa.lauria@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Pam Gates",
+     "title": "Manager National Operations Training",
+     "email": "pam.gates@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Rachel Reardon",
+     "title": "Regional Vice President of Medical Operations",
+     "email": "rachel.reardon@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Shelley Hahn",
+     "title": "Marketing Director at Anthem Blue Cross and Blue Shield",
+     "email": "shelley.hahn@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tedd Price",
+     "title": "Director Program Management",
+     "email": "tedd.price@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Wallace Adamson",
+     "title": "Staff Vice President",
+     "email": "wallace.adamson@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem BCBS of Wisconsin(BCBS WI)",
+   "sf_account_id": "001V5000006bHWyIAM",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Amy Faison",
+     "title": "Operations",
+     "email": "amy.buschel@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Carolyn Boeck",
+     "title": "Director, Customer Care",
+     "email": "carolyn.boeck@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Carolyn Rodgers",
+     "title": "Director I, Customer Care",
+     "email": "carolyn.rodgers@anthem.com",
+     "linkedin": "https://www.linkedin.com/pub/carolyn-rodgers/10/b50/2a4",
+     "lead_status": ""
+    },
+    {
+     "name": "Chris Ran",
+     "title": "",
+     "email": "cleosent@yahoo.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Cory Mauger",
+     "title": "Pharmacy Director",
+     "email": "cory.mauger@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Gina Wagner",
+     "title": "Sr. HR Manager",
+     "email": "gina.wagner@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer Bushman",
+     "title": "Talent and Leadership Strategy Director | Global Talent Organization",
+     "email": "jennifer.bushman@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Julia Meehan",
+     "title": "Director, Call Center",
+     "email": "julia.meehan@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lawrence Schreiber",
+     "title": "President",
+     "email": "lawrence.schreiber@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Leigh Johnson",
+     "title": "Senior Project Manager",
+     "email": "leigh-asf.johnson@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Leon Lamoreaux",
+     "title": "Medicaid Plan President",
+     "email": "leon.lamoreaux@bcbswi.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lindabeth Angle",
+     "title": "Director of Medicare Advantage Claims",
+     "email": "lindabeth.angle@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisa Halbach",
+     "title": "Staff VP, Senior Operations",
+     "email": "lisa.halbach@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/lisa-halbach-3357b56",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisa Hayes",
+     "title": "Director of Customer Care",
+     "email": "lisa.hayes@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/lisa-hayes-26bb2017/",
+     "lead_status": ""
+    },
+    {
+     "name": "Martin Silverstein",
+     "title": "EVP and Chief Strategy Officer",
+     "email": "martin.silverstein@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Michael Haessly",
+     "title": "Director, Corporate Communications",
+     "email": "michael.haessly@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Rick Rohlinger",
+     "title": "IT Director",
+     "email": "richard.rohlinger@wellpoint.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Timothy McLain",
+     "title": "Director",
+     "email": "tim@mclain.org",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem Clinical",
+   "sf_account_id": "001V5000006bHFNIA2",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Bob Torti",
+     "title": "Director II Clinical Operations Mgmt",
+     "email": "robert.torti@anthem.com",
+     "linkedin": "https://www.linkedin.com/pub/robert-torti/12/9a5/1a8",
+     "lead_status": ""
+    },
+    {
+     "name": "Brian Kehoe",
+     "title": "Clinical Quality Management Staff Vice President",
+     "email": "brian.kehoe@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Brian Renshaw",
+     "title": "VP & CFO Clinical Solutions",
+     "email": "brian.renshaw@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/brian-renshaw-84171746",
+     "lead_status": ""
+    },
+    {
+     "name": "Douglas Moreira",
+     "title": "Staff Vice President, Clinical Solutions Team",
+     "email": "douglas.moreira@anthem.com",
+     "linkedin": "https://www.linkedin.com/pub/doug-moreira/1/387/a0a",
+     "lead_status": ""
+    },
+    {
+     "name": "Jay Moore",
+     "title": "Chief Clinical Officer",
+     "email": "jay.moore@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jeff White",
+     "title": "Director, Drug Evaluation and Clinical Analytics",
+     "email": "jeff.white@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/geoffrey-white-sr-a2b31b46",
+     "lead_status": ""
+    },
+    {
+     "name": "Lisa Werlech",
+     "title": "Director, Clinical Quality",
+     "email": "lisa.werlech@amerigroup.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Marcus Wallace",
+     "title": "Senior Clinical Officer, Regional Vice President II - Medicaid West Region",
+     "email": "marcus.wallace@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/marcus-wallace-md-mba-facp-8063184",
+     "lead_status": ""
+    },
+    {
+     "name": "Mary East",
+     "title": "Director, Clinical Quality Management at WellPoint",
+     "email": "marybeth.east@anthem.com",
+     "linkedin": "https://www.linkedin.com/pub/marybeth-east/5b/a96/669",
+     "lead_status": ""
+    },
+    {
+     "name": "Razia Hashmi",
+     "title": "Vice President, Commercial Clinical Operations",
+     "email": "razia.hashmi@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/raziahashmi/",
+     "lead_status": ""
+    },
+    {
+     "name": "Stephen Friedhoff",
+     "title": "Senior Vice President Health Services, Blue Cross Blue Shield of North Carolina",
+     "email": "stephen.friedhoff@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "IngenioRx",
+   "sf_account_id": "001V5000006bCxOIAU",
+   "account_type": "Prospect",
+   "side": "Carelon",
+   "people": [
+    {
+     "name": "Antonette Gerdel",
+     "title": "cca",
+     "email": "antonette.gerdel@cvshealth.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Ariane Austin",
+     "title": "",
+     "email": "ariane.austin@ingenio-rx.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Bartu Bicerli",
+     "title": "Business Change Director",
+     "email": "bartu.bicerli@ingenio-rx.com",
+     "linkedin": "https://www.linkedin.com/in/bartu-bicerli",
+     "lead_status": ""
+    },
+    {
+     "name": "Chelsea Dixon",
+     "title": "Program Manager, Health",
+     "email": "chelsea.dixon@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/chelsea-dixon-2a1290127",
+     "lead_status": ""
+    },
+    {
+     "name": "Cimone Carter",
+     "title": "Pharmacy Operations, Clinical Pharmacy Care Center Staff Vice President",
+     "email": "cimone.carter@ingenio-rx.com",
+     "linkedin": "https://www.linkedin.com/in/cimone-carter",
+     "lead_status": ""
+    },
+    {
+     "name": "Hardik Patel",
+     "title": "Sr. Clinical Pharmacist",
+     "email": "hardik.patel@ingenio-rx.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Jennifer Aka",
+     "title": "Director of Clinical Pharmacy Programs, Clinical Pharmacy Care Center",
+     "email": "jennifer.aka@carelon.com",
+     "linkedin": "https://www.linkedin.com/in/jennifer-williamson-pharmd-bcgp-bc-adm-cde-33058185/",
+     "lead_status": ""
+    },
+    {
+     "name": "Marlene Clement",
+     "title": "Director II, Customer Care",
+     "email": "marlene.clement@ingenio-rx.com",
+     "linkedin": "https://www.linkedin.com/in/marleneclement",
+     "lead_status": ""
+    },
+    {
+     "name": "Niloufar Ahmadinikoo",
+     "title": "Director customer service",
+     "email": "nahmadinikoo@ingenio.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Tom Johnstone",
+     "title": "Business Change Director",
+     "email": "tom.johnstone@ingenio-rx.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem BCBS Colorado (BCBS CO)",
+   "sf_account_id": "001V5000006bHjFIAU",
+   "account_type": "blank",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Brandon Doss",
+     "title": "Customer Care Manager",
+     "email": "brandon.doss@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Daryl Pierce",
+     "title": "WFM Analyst",
+     "email": "daryl.pierce@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Garrie-ann Hyde",
+     "title": "Director, Customer Service",
+     "email": "garrie-ann.hyde@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "John Martie",
+     "title": "President, Anthem National Accounts",
+     "email": "john.martie@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Susan Williams",
+     "title": "Workforce Management Scheduling Analyst Sr.",
+     "email": "susan.williams@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "UniCare",
+   "sf_account_id": "001V5000006bHfFIAU",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Chuck Smith",
+     "title": "Information Technology",
+     "email": "chuck@unicaresys.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "May Ahdab",
+     "title": "Chief Executive Officer and President",
+     "email": "maya@unicaresys.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Patrick Bruin",
+     "title": "Director of Implementation Services",
+     "email": "patrickb@unicaresys.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Susan Boik",
+     "title": "Manager, Life Claims",
+     "email": "sboik60@hotmail.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem BCBS Maine (BCBS ME)",
+   "sf_account_id": "001V5000006bHjHIAU",
+   "account_type": "blank",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Becky Harbottle",
+     "title": "Commercial Claims & Adjustments Staff Vice President",
+     "email": "becky.harbottle@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/becky-harbottle-92a2aa20",
+     "lead_status": ""
+    },
+    {
+     "name": "Dan Corcoran",
+     "title": "President & General Manager",
+     "email": "dan.corcoran@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    },
+    {
+     "name": "Leslie Lampert",
+     "title": "Director II, Claims Operations",
+     "email": "leslie.lampert@anthem.com",
+     "linkedin": "https://www.linkedin.com/pub/leslie-lampert/10/52a/b85",
+     "lead_status": ""
+    },
+    {
+     "name": "Patty Skerritt",
+     "title": "Staff VP, Claims",
+     "email": "patty.skerritt@anthem.com",
+     "linkedin": "",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Anthem Blue Cross Blue Shield Indiana (BCBS IN)",
+   "sf_account_id": "001V5000006bHF2IAM",
+   "account_type": "blank",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Beth Brill",
+     "title": "Customer Service Manager",
+     "email": "beth.brill@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/beth-brill-1259488a",
+     "lead_status": ""
+    },
+    {
+     "name": "Daniel Mullen",
+     "title": "Vice President - Provider Operations",
+     "email": "daniel.mullen@anthem.com",
+     "linkedin": "https://www.linkedin.com/in/daniel-mullen-mba-mbb-csm-201a427",
+     "lead_status": ""
+    }
+   ]
+  },
+  {
+   "sf_company": "Blue Cross Blue Shield of Kentucky",
+   "sf_account_id": "001V5000006bHF3IAM",
+   "account_type": "Prospect",
+   "side": "Elevance Health",
+   "people": [
+    {
+     "name": "Susan McDowell",
+     "title": "Director II, Customer Care",
+     "email": "susan_mcdowell@wellpoint.com",
+     "linkedin": "https://www.linkedin.com/in/susan-mcdowell-6565a5ab",
+     "lead_status": ""
+    }
+   ]
+  }
+ ],
+ "known_total": 303,
+ "marketing_csv": {
+  "path": "/Users/dallasandrews/Desktop/Intradiem Deliverables/Elevance Health - Known Layer for Marketing - Sep 11.csv",
+  "rows": 303,
+  "included": 223
+ },
+ "emails": {
+  "Felicia Norwood": {
+   "email": "felicia.norwood@elevancehealth.com",
+   "status": "validated"
+  },
+  "Blake Main": {
+   "email": "",
+   "status": "not found"
+  },
+  "Melissa Wise": {
+   "email": "melissa.wise@anthem.com",
+   "status": "validated"
+  },
+  "Holly Huffman": {
+   "email": "holly.pennington@elevancehealth.com",
+   "status": "validated, surname differs; confirm"
+  },
+  "Nicole Keating, MBA, CLP, CSA": {
+   "email": "nikki.keating@elevancehealth.com",
+   "status": "validated"
+  },
+  "Kathy Talnose": {
+   "email": "kathy.talnose@anthem.com",
+   "status": "validated"
+  },
+  "Traci G.": {
+   "email": "",
+   "status": "not found"
+  },
+  "Natasha Lefear": {
+   "email": "natasha.lefear@elevancehealth.com",
+   "status": "validated"
+  }
+ },
+ "email_validation": {
+  "date": "2026-09-11",
+  "method": "Clay Work Email routine fed LinkedIn URL + name + elevancehealth.com",
+  "found": 6,
+  "of": 8,
+  "credits": 8.8
+ },
+ "facts": [
+  {
+   "k": "Contract",
+   "line": "December 2016 Anthem, Inc. Master Services Agreement and Order Form: a 350-seat proof of concept scaling to 3,500 rollout seats, $836,000 total order value, staffing and coaching modules with implementation services; term through May 2018 with automatic renewal. Current seats, ACV, renewal date and live modules: not confirmed.",
+   "source": "Alex's account plan, sources 1 and 2 (fully executed contract documents)"
+  },
+  {
+   "k": "Salesforce",
+   "line": "No parent Elevance Health or Anthem Inc. record. The customer lives as 18 plan and subsidiary accounts (Amerigroup 106 known people, Anthem BCBS Virginia 35, Empire BCBS 32, Beacon Health Options 28, Carelon Health 26, Anthem BCBS Missouri 21, BCBS Wisconsin 18, and eleven smaller), 303 known people, nearly all under one owner, Account Type Prospect or blank. Customer status comes from the install base.",
+   "source": "Audiences read, Sep 11 2026, 0 credits"
+  },
+  {
+   "k": "Leadership, Feb 26 2026",
+   "line": "Mark Kaye (EVP and CFO) added Carelon oversight; Felicia Norwood (EVP, Chief Health Benefits Officer) took the newly consolidated Health Benefits organization; Peter Haytaian left the Carelon presidency effective May 4.",
+   "source": "Elevance Health newsroom, Feb 26 2026"
+  },
+  {
+   "k": "Leadership, Mar 31 2026",
+   "line": "Aim\u00e9e Dailey President, Government Business; Kristy Duffey President, Carelon Health; Will Feest President, Carelon Insights and COO, Carelon; William Fleming Chief Growth and Strategy Officer, Carelon; Darrell Oliveira CFO, Carelon; Jeff Plante CFO, Health Benefits.",
+   "source": "Elevance Health newsroom, Mar 31 2026"
+  },
+  {
+   "k": "Q2 2026",
+   "line": "Operating revenue $49.8 billion; Health Benefits $42.7 billion; Carelon $19.2 billion, up 6 percent; benefit expense ratio 89.7 percent, up 80 basis points; medical membership down about 469,000 sequentially with Medicare Advantage, Medicaid and ACA attrition anticipated; opex up on targeted workforce investment; FY2026 adjusted EPS guidance raised to at least $27.",
+   "source": "Elevance Q2 2026 results, Jul 15 2026, via Alex's account plan"
+  },
+  {
+   "k": "AI program",
+   "line": "Ratnakar Lavu, EVP and Chief Digital and Information Officer, owns the AI roadmap, which includes claims-processing automation and internal productivity tools alongside member-facing AI. This is the in-house automation program the back-office conversation will meet, not a card on the map.",
+   "source": "Fortune, Feb 25 2026; MedCity News, Feb 2026"
+  },
+  {
+   "k": "Relationship map",
+   "line": "Alex's Elevance Health map holds 30 cards, all on the contact-center line (Boudreaux, Norwood, Kendrick, Backofen, Wade and the workforce teams under them), with Carelon people as placeholder cards. Four cards need a refresh.",
+   "source": "Sales Navigator, shared Sep 11 2026"
+  }
+ ]
+}

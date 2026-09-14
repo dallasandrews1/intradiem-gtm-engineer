@@ -32,6 +32,7 @@ if os.path.exists(p):
         for k in by:
             if k.lower().split()[0] in a.lower() and (k not in acct_type or (r.get("account_type") or "").lower() == "customer"):
                 acct_type[k] = r.get("account_type") or acct_type.get(k, "")
+acct_type.update(CFG.get("account_type_override", {}))   # install-base truth when Salesforce holds only plan-level records (Sep 11 2026, Elevance)
 
 CSS = """
 :root{--green:#2DB56E;--green-600:#228752;--green-300:#7BD3A0;--green-100:#C4ECD4;--forest:#014637;--orange:#F58220;--orange-600:#D96D12;

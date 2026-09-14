@@ -1,0 +1,60 @@
+account,full_name,linkedin_url,in_salesforce,match_confidence,sf_matched_name,sf_company,sf_title,sf_email,sf_lead_status,sf_lead_source,sf_owner,sf_account_id,match_method,notes
+Elevance Health,Felicia Norwood,https://www.linkedin.com/in/felicia-norwood-ab88b61a/,yes,high,Felicia Norwood,,"Executive Vice President & President, Government Health Benefits",felicia.norwood@anthem.com,,,,001V5000006bHC9IAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Elevance Health,Natasha Lefear,https://www.linkedin.com/in/natashalefear/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Traci G.,https://www.linkedin.com/in/tracicaldwell/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Erin Bagniewski,https://www.linkedin.com/in/erin-bagniewski/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,"Nicole Keating, MBA, CLP, CSA",https://www.linkedin.com/in/nicoleakeating/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Tracy M.,https://www.linkedin.com/in/tracymuck/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Becky Harbottle,https://www.linkedin.com/in/becky-harbottle-92a2aa20/,yes,high,Becky Harbottle,,Commercial Claims & Adjustments Staff Vice President,becky.harbottle@anthem.com,,,,001V5000006bHjHIAU,linkedin_slug,same LinkedIn profile in Salesforce (1 record); on this account
+Elevance Health,Christopher Swigon,https://www.linkedin.com/in/christopher-swigon-23118194/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Beth Franke,https://www.linkedin.com/in/beth-franke-281155b9/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Blake Main,https://www.linkedin.com/in/blakemain/,possible,low,Blake Main,,"VP, Kaiser Foundation Health Plan",blake.main@kp.org,,,,001V5000006b9JKIAY,exact_name,exact name match only (1 record); different company or blank
+Elevance Health,Kristine Smith (Huot),https://www.linkedin.com/in/kristine-huot-smith/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Kristian Wilson,https://www.linkedin.com/in/kristian-wilson-000253110/,yes,high,Kristian Wilson,,"Staff Vice President, Data Mining and Overpayment Operations, Elevance Health",kristian.wilson@anthem.com,,,,001V5000006bHC9IAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Elevance Health,Kathy Talnose,https://www.linkedin.com/in/kathy-talnose-17634290/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Michael Goodall,https://www.linkedin.com/in/michael-goodall-62720bb7/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,"Trish Raines, PMP",https://www.linkedin.com/in/trish-raines-pmp-b535118a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Pamela Hursh,https://www.linkedin.com/in/pamela-hursh-4b58a010/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,"Amy (Godby) Ledford, PMP, PAHM",https://www.linkedin.com/in/amyledford24/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Francisco Escobedo,https://www.linkedin.com/in/franciscoeescobedo/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Shannon Quillen,https://www.linkedin.com/in/shannon-quillen-686a328/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Diedre Rutherford,https://www.linkedin.com/in/diedre-rutherford-74232369/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Holly Huffman,https://www.linkedin.com/in/hollymcneely/,possible,medium,Holly Huffman,Elevance Health,"Senior Director, Claims Operations",holly.pennington@elevancehealth.com,Open,,005V500000Jb1qDIAR,,exact_name,exact name match only (1 record); company text matches
+Elevance Health,Latisha Greene,https://www.linkedin.com/in/latisha-greene-47649b35/,possible,medium,Latisha Greene,Elevance Health,Director II GBD Medicaid Appeals,latisha.greene@elevancehealth.com,Open,,005V500000Jb1qDIAR,,exact_name,exact name match only (1 record); company text matches
+Elevance Health,Melissa Wise,https://www.linkedin.com/in/melissa-wise-983b9716/,yes,high,Melissa Wise,,"Vice President, Claims",melissa.wise@anthem.com,,,,001V5000006bHC9IAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Elevance Health,"Marla K. Wilson, MBA",https://www.linkedin.com/in/marlakwilson/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,"Laxmi Sharma - PMP, PAHM",https://www.linkedin.com/in/laxmi-sharma-pmp-pahm-5b4973b6/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Stephanie Barnes-Blue,http://www.linkedin.com/in/stephanie-barnes-blue-65516026,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,"Corrine Livesay, GBA",https://www.linkedin.com/in/corrinelivesay/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Jennifer Evering,https://www.linkedin.com/in/jennifer-evering-9916786a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Cassie Evans,https://www.linkedin.com/in/cassie-evans-46ba6443/,yes,high,Cassie Evans,,Director - Medicare Claims,cassie.evans@anthem.com,,,,001V5000006bHC9IAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Carelon,"Maureen Tarpinian, MBA",https://www.linkedin.com/in/maureen-tarpinian-mba-52305149/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Cliff Houde,https://www.linkedin.com/in/cliff-houde-68681b5/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Sandra T.,https://www.linkedin.com/in/sandra-t-02aaab5/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Selvi A.,https://www.linkedin.com/in/selviaram/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Kim Tommasone,https://www.linkedin.com/in/kim-tommasone-05375a18/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Matt Monyhan,https://www.linkedin.com/in/matt-monyhan-3b0615103/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Jacquelyn Stupakevich,https://www.linkedin.com/in/jacquelyn-stupakevich-75393317/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Anthony Holston,https://www.linkedin.com/in/anthony-holston-021550290/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Sarah Albertini-Bond,https://www.linkedin.com/in/sarahalbertinibond/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Ryan Wilkie,https://www.linkedin.com/in/ryan-wilkie-452453a/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,"Shmeka Jones, MBA",https://www.linkedin.com/in/shmekajones/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,"Kenny Mai, MBA",https://www.linkedin.com/in/kennynguyen993/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Amy Potter,https://www.linkedin.com/in/amypotter3/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Tom Holiday,https://www.linkedin.com/in/tom-holiday-8bba642aa/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,"Thomas E. Allen, MBA",https://www.linkedin.com/in/teamba/,yes,high,Thomas Allen,,"Carelon Director - WFM, Service Operations",thomase.allen@carelon.com,,,,001V5000006bHC9IAM,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Carelon,Alyssa B.,https://www.linkedin.com/in/alyssa-frank-mba-571966a6/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Alicia DeSieno,https://www.linkedin.com/in/alicia-desieno-84002b33/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Mohammed S.,https://www.linkedin.com/in/mohammed-s-5876b8164/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Andrea K. Knight,https://www.linkedin.com/in/andreaknight-gettingitdone/,yes,high,Andrea Knight,,"Director, Customer Support, Property & Casualty Solutions",andrea.knight@optum.com,,,,001V5000006bDaxIAE,linkedin_slug,same LinkedIn profile in Salesforce (1 record)
+Carelon,John Kearney,http://www.linkedin.com/in/john-kearney-2b38b7111,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Christina Rosa,https://www.linkedin.com/in/christinamrosa/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Lourdes Basmajian,https://www.linkedin.com/in/lourdes-basmajian-0a958814/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Heather Gerard,https://www.linkedin.com/in/heather-gerard-2897911a3/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Mary Middleton Deadwiler,https://www.linkedin.com/in/mary-middleton-deadwiler-79b45568/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Karen Swanker,https://www.linkedin.com/in/karen-swanker-716044139/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Bruce Shiralipour,https://www.linkedin.com/in/bruce-shiralipour-06bb1b93/,possible,low,Bruce Shiralipour,,Director of Service Operations,mehran.shiralipour@elevancehealth.com,,,,001V5000006bHC9IAM,exact_name,exact name match only (1 record); different company or blank
+Carelon,Dee Durant,https://www.linkedin.com/in/dee-durant-3b55b4166/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Elevance Health,Aimée Dailey,https://www.linkedin.com/in/aimee-dailey-40174516/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Will Feest,https://www.linkedin.com/in/william-feest-3aa9385/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people
+Carelon,Mark Kaye,https://www.linkedin.com/in/mark-kaye/,no,,,,,,,,,,,no LinkedIn or exact-name hit in Audiences people

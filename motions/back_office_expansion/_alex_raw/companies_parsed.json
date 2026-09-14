@@ -1,0 +1,172 @@
+[
+ {
+  "record_id": 1024661172,
+  "name": "Empire Blue Cross Blue Shield (BCBS NY)",
+  "domain": "empireblue.com",
+  "sf_account_id": "001V5000006b9JOIAY",
+  "account_type": "Prospect",
+  "owner": "005V5000001gBKBIA2",
+  "employees": 101,
+  "known_people": 32
+ },
+ {
+  "record_id": 1024661397,
+  "name": "Anthem Blue Cross Blue Shield Indiana (BCBS IN)",
+  "domain": "anthem.com",
+  "sf_account_id": "001V5000006bHF2IAM",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 1,
+  "known_people": 2
+ },
+ {
+  "record_id": 1024661589,
+  "name": "Beacon Health Options",
+  "domain": "beaconhealthsystem.org",
+  "sf_account_id": "001V5000006bBgNIAU",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 7500,
+  "known_people": 28
+ },
+ {
+  "record_id": 1024661634,
+  "name": "IngenioRx",
+  "domain": "ingenio-rx.com",
+  "sf_account_id": "001V5000006bCxOIAU",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 1000,
+  "known_people": 10
+ },
+ {
+  "record_id": 1024661812,
+  "name": "Anthem Clinical",
+  "domain": "",
+  "sf_account_id": "001V5000006bHFNIA2",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 18000,
+  "known_people": 11
+ },
+ {
+  "record_id": 1024662063,
+  "name": "Anthem Workers Compensation",
+  "domain": "anthemwc.com",
+  "sf_account_id": "001V5000006bHfAIAU",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 43500,
+  "known_people": 0
+ },
+ {
+  "record_id": 1024662065,
+  "name": "UniCare",
+  "domain": "unicare.com",
+  "sf_account_id": "001V5000006bHfFIAU",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 1330,
+  "known_people": 4
+ },
+ {
+  "record_id": 1024662280,
+  "name": "Amerigroup",
+  "domain": "amerigroupcorp.com",
+  "sf_account_id": "001V5000006bHWtIAM",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 5100,
+  "known_people": 106
+ },
+ {
+  "record_id": 1024662404,
+  "name": "Anthem BCBS Maine (BCBS ME)",
+  "domain": "",
+  "sf_account_id": "001V5000006bHjHIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 200,
+  "known_people": 4
+ },
+ {
+  "record_id": 1024662405,
+  "name": "Anthem Blue Cross Blue Shield Missouri (BCBS)",
+  "domain": "wellpoint.com",
+  "sf_account_id": "001V5000006bHjMIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 42000,
+  "known_people": 21
+ },
+ {
+  "record_id": 1024662466,
+  "name": "Anthem BCBS of Wisconsin(BCBS WI)",
+  "domain": "anthem.com/health-insurance/wisconsin/health-plans",
+  "sf_account_id": "001V5000006bHWyIAM",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 200,
+  "known_people": 18
+ },
+ {
+  "record_id": 1024662518,
+  "name": "Anthem BCBS Colorado (BCBS CO)",
+  "domain": "",
+  "sf_account_id": "001V5000006bHjFIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 43500,
+  "known_people": 5
+ },
+ {
+  "record_id": 1024662882,
+  "name": "Carelon Health",
+  "domain": "carelonhealth.com",
+  "sf_account_id": "001V5000006bHfBIAU",
+  "account_type": "Prospect",
+  "owner": "005V5000001gA77IAE",
+  "employees": 3896,
+  "known_people": 26
+ },
+ {
+  "record_id": 1024662895,
+  "name": "Anthem Blue Cross Blue Shield of Nevada (BCBS NV)",
+  "domain": "",
+  "sf_account_id": "001V5000006bHjKIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 1000,
+  "known_people": 0
+ },
+ {
+  "record_id": 1024662897,
+  "name": "Anthem BCBS Virginia (BCBS VA)",
+  "domain": "www.bhs-inc.com",
+  "sf_account_id": "001V5000006bHjPIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 300,
+  "known_people": 35
+ },
+ {
+  "record_id": 1024663056,
+  "name": "Anthem BCBS New Hampshire (BCBS NH)",
+  "domain": "",
+  "sf_account_id": "001V5000006bHjLIAU",
+  "account_type": null,
+  "owner": "005V5000001gA77IAE",
+  "employees": 200,
+  "known_people": 0
+ },
+ {
+  "record_id": 1024663209,
+  "name": "Anthem",
+  "domain": "",
+  "sf_account_id": "001V5000008FcJnIAK",
+  "account_type": null,
+  "owner": "005V5000001gAxtIAE",
+  "employees": "",
+  "known_people": 0
+ }
+]

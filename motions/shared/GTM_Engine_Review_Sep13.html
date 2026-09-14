@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GTM Engine Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--forest:#014637;--green:#2DB56E;--green-300:#7BD3A0;--green-100:#C4ECD4;--orange:#F58220;--orange-600:#D96D12;
+--cream:#FFFFFF;--mono-dim:#9DBBAE;--dim:rgba(255,255,255,.68);--dim-2:rgba(255,255,255,.46);
+--line:rgba(255,255,255,.15);--line-2:rgba(255,255,255,.09);--card:rgba(255,255,255,.045)}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+html,body{background:var(--forest);color:var(--cream);font-family:Roboto,"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(1250px 720px at 80% -10%,rgba(45,181,110,.30) 0%,rgba(45,181,110,.10) 44%,rgba(45,181,110,0) 70%),var(--forest);background-attachment:fixed;min-height:100vh;font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+.mono{font-family:"Roboto Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+header{padding:34px 0 0}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brandrow .lg{width:150px;height:37px;color:var(--cream);display:block}
+.stamp{font-family:"Roboto Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--dim-2);text-align:right;line-height:1.7}
+.stamp b{color:var(--green-300);font-weight:500}
+.hero{padding:44px 0 34px}
+.eyebrow{font-family:"Roboto Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:var(--green-300);font-weight:600;display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.eyebrow:before{content:"";width:32px;height:2px;background:var(--green-300);flex:none}
+h1{font-size:clamp(31px,4.6vw,54px);font-weight:900;letter-spacing:-.028em;line-height:1.03;max-width:18ch}
+h1 .spark{color:var(--green-300)}
+.lede{color:var(--dim);font-size:16.5px;margin-top:20px;max-width:70ch;line-height:1.6}
+.lede+.lede{margin-top:13px}
+.lede b{color:var(--cream);font-weight:500}
+nav{position:sticky;top:0;z-index:40;background:rgba(1,70,55,.94);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:8px}
+.navin{display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.navin::-webkit-scrollbar{display:none}
+.navin a{font-family:"Roboto Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim-2);text-decoration:none;padding:15px 20px 13px;white-space:nowrap;border-bottom:2px solid transparent;transition:.15s;font-weight:500}
+.navin a:first-child{padding-left:0}
+.navin a:hover{color:var(--cream)}
+section{padding:64px 0 8px;border-top:1px solid var(--line-2)}
+section:first-of-type{border-top:0}
+.snum{font-family:"Roboto Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.17em;color:var(--green-300);font-weight:600;margin-bottom:11px}
+h2{font-size:clamp(24px,3vw,33px);font-weight:900;letter-spacing:-.022em;line-height:1.12;max-width:24ch}
+.sdek{color:var(--dim);font-size:15.5px;margin-top:14px;max-width:74ch;line-height:1.6}
+.sdek b{color:var(--cream);font-weight:500}
+.sdek+.sdek{margin-top:11px}
+.blk{margin-top:30px}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:1px;background:var(--line-2);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.stat>div{background:var(--forest);padding:19px 20px 17px}
+.stat .n{font-size:26px;font-weight:900;letter-spacing:-.02em;color:var(--green-300);font-variant-numeric:tabular-nums;line-height:1.1}
+.stat .n.o{color:var(--orange)}
+.stat .l{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mono-dim);margin-top:8px;font-weight:500;line-height:1.5}
+.stat .s{font-size:12.5px;color:var(--dim);margin-top:7px;line-height:1.45}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:20px 21px 19px;display:flex;flex-direction:column}
+.card .tag{font-family:"Roboto Mono",ui-monospace,monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;margin-bottom:11px;color:var(--green-300)}
+.card.open{border-color:rgba(245,130,32,.4)}
+.card.open .tag{color:var(--orange)}
+.card.plain .tag{color:var(--dim-2)}
+.card h3{font-size:17.5px;font-weight:700;letter-spacing:-.012em;line-height:1.28}
+.card .bd{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.58;flex:1}
+.card .bd b{color:var(--cream);font-weight:500}
+.card ul{margin:10px 0 0 18px;font-size:14px;color:var(--dim);line-height:1.58}
+.card li{margin-bottom:6px}
+.card li b{color:var(--cream);font-weight:500}
+.card .mt{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.05em;color:var(--dim-2);margin-top:15px;padding-top:13px;border-top:1px solid var(--line-2);line-height:1.6}
+.pill{display:inline-block;font-family:"Roboto Mono",ui-monospace,monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:2.5px 8px;border-radius:3px;vertical-align:1px}
+.pill.ok{background:rgba(45,181,110,.16);color:var(--green-300)}
+.pill.open{background:rgba(245,130,32,.17);color:var(--orange)}
+.pill.hold{background:rgba(255,255,255,.09);color:var(--dim)}
+.tbwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+th{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--green-300);font-weight:600;text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:12px 16px;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.5;color:var(--dim)}
+tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:rgba(255,255,255,.022)}
+td:first-child{color:var(--cream);font-weight:500}
+td b{color:var(--cream);font-weight:500}
+.note{border-left:3px solid var(--green);background:rgba(45,181,110,.075);padding:17px 20px;border-radius:0 8px 8px 0;margin-top:16px}
+.note.warn{border-left-color:var(--orange);background:rgba(245,130,32,.075)}
+.note .nt{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--green-300);margin-bottom:8px}
+.note.warn .nt{color:var(--orange)}
+.note p{font-size:14px;color:var(--dim);line-height:1.6}
+.note p b{color:var(--cream);font-weight:500}
+.note p+p{margin-top:9px}
+.steps{display:grid;gap:1px;background:var(--line-2);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.steps>div{background:var(--forest);padding:18px 21px;display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start}
+.steps .k{font-family:"Roboto Mono",ui-monospace,monospace;font-size:12px;font-weight:600;color:var(--orange);padding-top:2px}
+.steps h4{font-size:15.5px;font-weight:700;letter-spacing:-.008em;margin-bottom:6px}
+.steps p{font-size:13.8px;color:var(--dim);line-height:1.58}
+.steps p b{color:var(--cream);font-weight:500}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:stretch}
+.flow .box{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px 19px}
+.flow .box .t{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-300);font-weight:600;margin-bottom:9px}
+.flow .box h4{font-size:16px;font-weight:700;line-height:1.25;letter-spacing:-.01em}
+.flow .box p{font-size:13.5px;color:var(--dim);margin-top:8px;line-height:1.55}
+.flow .box p b{color:var(--cream);font-weight:500}
+.flow .arr{display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:22px;font-weight:900}
+.flow .box.hand{border-color:rgba(245,130,32,.45)}
+.flow .box.hand .t{color:var(--orange)}
+pre{background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:"Roboto Mono",ui-monospace,monospace;font-size:12.5px;line-height:1.6;color:#E7F3EC;white-space:pre-wrap;margin-top:14px}
+.prose p{font-size:15px;color:var(--dim);line-height:1.62;max-width:76ch}
+.prose p+p{margin-top:13px}
+.prose p b{color:var(--cream);font-weight:500}
+footer{margin-top:74px;border-top:1px solid var(--line);padding:30px 0 64px;display:flex;align-items:flex-start;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer .lg{width:112px;height:28px;color:var(--cream);opacity:.85;display:block}
+footer .fx{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.1em;color:var(--dim-2);text-align:right;line-height:1.85;text-transform:uppercase}
+footer .fx a{color:var(--green-300);text-decoration:none}
+@media(max-width:820px){.wrap{padding:0 20px}.split,.cards,.flow{grid-template-columns:1fr}.flow .arr{transform:rotate(90deg);padding:4px 0}.brandrow{align-items:flex-start}.stamp{text-align:left}footer{flex-direction:column}footer .fx{text-align:left}html{scroll-padding-top:110px}}
+
+.stat{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.tbwrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--mono-dim);text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03);white-space:nowrap}
+td{padding:11px 14px;border-bottom:1px solid var(--line-2);color:var(--dim);vertical-align:top;line-height:1.45}
+td b{color:var(--cream);font-weight:500}
+tr:last-child td{border-bottom:0}
+.g{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:3px 8px;border-radius:5px;display:inline-block;white-space:nowrap}
+.g.ok{color:#0b2f24;background:var(--green-300)}
+.g.part{color:#3a1e04;background:#F7C48A}
+.g.no{color:var(--cream);background:rgba(245,130,32,.55)}
+.g.dead{color:var(--dim);background:rgba(255,255,255,.1)}
+.narr{border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;background:var(--card);padding:22px 24px;margin-top:16px}
+.narr h3{font-size:18px;font-weight:700;letter-spacing:-.012em;line-height:1.3}
+.narr h3 .mono{color:var(--orange);font-size:11px;letter-spacing:.14em;margin-right:10px;font-weight:600}
+.narr p{color:var(--dim);font-size:14.5px;line-height:1.62;margin-top:11px}
+.narr p b{color:var(--cream);font-weight:500}
+.rt{border:1px solid var(--line);border-left:3px solid var(--green-300);border-radius:10px;background:var(--card);padding:20px 22px;margin-top:14px}
+.rt h3{font-size:16.5px;font-weight:700}
+.rt dl{margin-top:10px;display:grid;grid-template-columns:120px 1fr;gap:8px 16px;font-size:14px;line-height:1.55}
+.rt dt{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--green-300);font-weight:600;padding-top:3px}
+.rt dd{color:var(--dim)} .rt dd b{color:var(--cream);font-weight:500}
+.verd{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.verd>div{border:1px solid var(--line);border-radius:12px;padding:20px 21px;background:var(--card)}
+.verd .k{font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-300);font-weight:600}
+.verd .k.o{color:var(--orange)}
+.verd p{color:var(--dim);font-size:14.5px;line-height:1.6;margin-top:10px} .verd p b{color:var(--cream);font-weight:500}
+.steps{counter-reset:s;margin-top:18px}
+.steps>div{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line-2)}
+.steps>div:first-child{border-top:0}
+.steps>div:before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:"Roboto Mono",ui-monospace,monospace;font-size:13px;color:var(--green-300);font-weight:600;padding-top:3px}
+.steps h4{font-size:15.5px;font-weight:700;letter-spacing:-.01em}
+.steps p{color:var(--dim);font-size:14px;line-height:1.58;margin-top:6px} .steps p b{color:var(--cream);font-weight:500}
+.hold{color:var(--orange);font-family:"Roboto Mono",ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:600}
+.small{font-size:12.5px;color:var(--dim-2);margin-top:14px;line-height:1.55}
+footer{padding:40px 0 48px;border-top:1px solid var(--line-2);margin-top:60px;color:var(--dim-2);font-size:12.5px;line-height:1.6}
+@media (max-width:640px){.wrap{padding:0 18px}.rt dl{grid-template-columns:1fr}.steps>div{grid-template-columns:32px 1fr}}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="ilogo" viewBox="0 0 187 46">
+<path d="M0 22.8181V0L11.4426 11.4157V34.2338L0 22.8181Z" fill="#FDBF40"/>
+<path d="M22.8853 0H0L11.4426 11.4157H34.3279L22.8853 0Z" fill="#F58220"/>
+<path d="M45.7708 22.8319V45.6498L34.3281 34.2341V11.416L45.7708 22.8319Z" fill="#A5CE3A"/>
+<path d="M22.886 45.6503H45.7713L34.3286 34.248H11.4434L22.886 45.6503Z" fill="#2CB56E"/>
+<path d="M143.276 30.9492C145.874 30.9492 147.247 33.0359 147.489 35.9437H138.659C139.103 32.834 140.745 30.9492 143.276 30.9492ZM143.72 44.0343C140.462 44.0343 138.618 41.6784 138.551 37.7206H149.818V37.236C149.818 32.7666 147.691 29.1454 143.276 29.1454C139.305 29.1454 136.289 32.3628 136.289 37.5456C136.289 43.1188 139.345 45.9863 143.585 45.9863C145.874 45.9863 147.84 45.1786 149.388 43.9939V41.7861C147.772 43.0516 145.699 44.0343 143.734 44.0343M107.858 41.665C106.283 43.1324 104.357 44.1016 102.607 44.1016C100.857 44.1016 99.6861 43.2131 99.6861 41.4631C99.6861 39.2688 101.477 37.7341 107.858 37.0745V41.665ZM104.627 29.1319C102.742 29.1319 101.154 29.5223 99.6054 30.1146V32.2282C101.18 31.5551 102.823 31.1108 104.492 31.1108C106.552 31.1108 107.858 32.0397 107.858 34.2206V35.2841C100.507 35.9976 97.4246 37.7879 97.4246 41.5842C97.4246 44.465 99.4573 45.9997 102.271 45.9997C104.6 45.9997 106.498 44.9093 108.006 43.4958V45.6497H110.092V34.1128C110.092 30.7877 108.235 29.1184 104.64 29.1184M96.2265 29.1184C94.0726 29.1184 92.2552 30.2492 90.5052 31.7839V29.455H88.3781V45.6093H90.6397V34.2071C92.3898 32.4974 94.0994 31.1242 95.7821 31.1242C95.9706 31.1242 96.1456 31.1377 96.3072 31.1647V29.1184C96.3072 29.1184 96.2534 29.1184 96.2265 29.1184ZM83.8011 43.9131C82.0511 43.9131 81.4049 43.1996 81.4049 41.5572V31.3801H84.6088V29.4684H81.4049V25.1203H79.1836V29.4684H76.6797V31.3801H79.1836V41.9342C79.1836 44.9093 80.8664 45.8919 83.3972 45.8919C83.8415 45.8919 84.2453 45.8651 84.6088 45.8113V43.8593C84.3127 43.8863 84.03 43.8996 83.8146 43.8996M133.166 22.8721H130.931V25.1068H133.166V22.8721ZM130.931 29.455H133.152V45.6093H130.931V29.455ZM173.377 45.6093V34.4762C173.377 32.3896 172.515 31.1242 170.429 31.1242C168.746 31.1242 167.077 32.1474 165.286 33.8975V45.6093H163.065V34.4762C163.065 32.3896 162.203 31.1242 160.117 31.1242C158.434 31.1242 156.724 32.4974 154.974 34.2071V45.6093H152.713V29.455H154.84V31.7839C156.576 30.2492 158.394 29.1184 160.548 29.1184C163.052 29.1184 164.425 30.1416 165.003 31.9186C166.78 30.3166 168.665 29.1184 170.9 29.1184C174.117 29.1184 175.625 30.9627 175.625 34.0321V45.6093H173.363H173.377ZM124.537 32.1204C123.272 31.4742 122.073 31.1647 120.391 31.1647C117.483 31.1647 115.221 33.3455 115.221 37.8956C115.221 41.8265 117.106 43.94 119.677 43.94C121.589 43.94 123.097 42.7823 124.537 41.0322V32.1204ZM124.672 45.6093V43.2535C123.433 44.7208 121.831 45.9458 119.462 45.9458C115.894 45.9458 112.919 43.415 112.919 37.9898C112.919 32.08 116.379 29.2128 120.323 29.2128C121.966 29.2128 123.406 29.5224 124.537 30.0339V22.8721H126.798V45.6093H124.672ZM72.0487 45.6093V34.4762C72.0487 32.3896 71.0929 31.1242 69.0333 31.1242C67.3236 31.1242 65.5737 32.5244 63.7967 34.2745V45.6093H61.535V29.455H63.7832V31.8243C65.4391 30.2762 67.2968 29.105 69.4911 29.105C72.7085 29.105 74.3239 30.9493 74.3239 34.059V45.6093H72.0622H72.0487ZM54.8848 22.8721H57.2541V45.6093H54.8848V22.8721Z" fill="currentColor"/>
+<path d="M182.556 26.1427H182.947C183.404 26.1427 183.781 25.9946 183.781 25.6177C183.781 25.2946 183.539 25.0792 183.014 25.0792C182.799 25.0792 182.637 25.1061 182.556 25.1196V26.1427ZM182.53 28.162H181.695V24.5946C182.018 24.5273 182.476 24.4869 183.068 24.4869C183.741 24.4869 184.051 24.5946 184.306 24.7426C184.508 24.8907 184.656 25.1735 184.656 25.5235C184.656 25.9139 184.347 26.2235 183.916 26.3582V26.3984C184.266 26.533 184.468 26.7889 184.576 27.2735C184.683 27.812 184.751 28.0409 184.845 28.162H183.956C183.849 28.0274 183.781 27.7043 183.674 27.287C183.606 26.8966 183.391 26.7215 182.933 26.7215H182.543V28.162H182.53ZM180.322 26.2908C180.322 27.8793 181.506 29.1447 183.108 29.1447C184.71 29.1447 185.841 27.8793 185.841 26.3177C185.841 24.7562 184.683 23.4503 183.095 23.4503C181.506 23.4503 180.322 24.7292 180.322 26.3043M186.757 26.3043C186.757 28.3236 185.168 29.912 183.095 29.912C181.022 29.912 179.406 28.3236 179.406 26.3043C179.406 24.285 181.049 22.7368 183.095 22.7368C185.141 22.7368 186.757 24.3254 186.757 26.3043Z" fill="currentColor"/>
+</symbol></svg>
+<div class="wrap">
+<header>
+  <div class="brandrow">
+    <svg class="lg" role="img" aria-label="Intradiem"><use href="#ilogo"/></svg>
+    <div class="stamp">GTM Engineering<br><b>Engine review</b><br>Sep 13 2026, internal</div>
+  </div>
+  <div class="hero">
+    <div class="eyebrow">Full-stack review and pre-mortem</div>
+    <h1>The build is ahead of the funnel. <span class="spark">Fix the throughput loop before Oct 1.</span></h1>
+    <p class="lede"><b>Verdict:</b> the architecture, gates, sourcing and page system are strong enough to carry the role through December. The loop that turns a loaded lead into a reply is not running. Eight campaigns have been "live" since Sep 4 and not one lead has moved past its first touch, because every sequence's second step is a LinkedIn task nobody works. Nothing in the swarm was measuring that until tonight.</p>
+    <p class="lede">Read top to bottom: what the live numbers say, a component-by-component grade, the pre-mortem, what was built tonight, and the ordered moves for this week.</p>
+  </div>
+</header>
+
+<nav><div class="navin">
+  <a href="#s1">Numbers</a><a href="#s2">Components</a><a href="#s3">Pre-mortem</a><a href="#s4">Red team</a><a href="#s5">Verdict</a><a href="#s6">Built tonight</a><a href="#s7">Next layers</a><a href="#s8">This week</a>
+</div></nav>
+
+<section id="s1">
+  <div class="snum">01</div>
+  <h2>The numbers that decide the verdict</h2>
+  <p class="sdek">Live read Sep 13, from lemlist's lead export across the 39 mapped campaigns, the relay stats, the Clay balance and the engine test suites. Zero credits spent.</p>
+  <div class="blk"><div class="stat">
+    <div><div class="n">1,897</div><div class="l">Engine leads loaded</div><div class="s">16 engine campaigns, Nate's lanes</div></div>
+    <div><div class="n">190</div><div class="l">Leads launched</div><div class="s">1,707 loaded but never started (DWO 803, WFM 362, Genesys 296, BO net-new 130, BO FS 79)</div></div>
+    <div><div class="n o">0</div><div class="l">Replies, any state</div><div class="s">No lead in a replied state anywhere; 0 meetings</div></div>
+    <div><div class="n o">215</div><div class="l">Leads parked at a LinkedIn step</div><div class="s">151 after a visit, 64 after email 1, waiting on a manual task</div></div>
+    <div><div class="n o">99</div><div class="l">Open rep tasks</div><div class="s">98 Nathan, flat for 9+ days at the 20/day LinkedIn cap</div></div>
+    <div><div class="n">4 of 8</div><div class="l">Sep 4 campaigns still running</div><div class="s">Quality, Finance, HC Payer, BPO paused, cause unconfirmed</div></div>
+    <div><div class="n">25.6%</div><div class="l">Proof credits consumed</div><div class="s">62,403 of ~83,836 left; receipts ledger 56 days stale</div></div>
+    <div><div class="n o">6 days</div><div class="l">To the Day-75 tripwire</div><div class="s">Sep 19, 0 of 15 meetings; Oct 1 council judges cost per meeting</div></div>
+  </div></div>
+  <div class="blk cards">
+    <div class="card open"><div class="tag">Where the funnel actually stops</div><h3>Every live sequence advances one email, then waits for Nate</h3><div class="bd">Step 1 email delivered to ~147 leads. Step 2 in every campaign is a LinkedIn visit or invite task. Across all campaigns the completed count on step 2 is <b>zero</b>. Stars Resurrection has 42 leads at a LinkedIn step since Jul 31. The relay reported "no new events" every hour for nine days and treated that as normal.</div></div>
+    <div class="card open"><div class="tag">Blind spot</div><h3>Opens and clicks are switched off, so the deliverability gate can't fire</h3><div class="bd">Tracking was turned off Sep 4 on Quality, the four BO lanes, Net-New and DWO. OKR O4 KR3 pauses a domain the day it crosses 40% open. That number does not exist. Bounce is the only live signal (1 on HC Payer).</div></div>
+    <div class="card plain"><div class="tag">What's solid</div><h3>Sourcing, gates, governance and the page system are the strongest layers</h3><div class="bd">Customer-exclusion gate PASS on 332 real rows, verified-claims discipline everywhere copy is generated, 0-credit Clay sourcing at scale (4,363 DWO executives, 1,763 tech-stack reads), 23 deployed pages, three leadership hits (ICP committees, back-office maps, the all-hands package).</div></div>
+  </div>
+</section>
+
+<section id="s2">
+  <div class="snum">02</div>
+  <h2>Component by component</h2>
+  <p class="sdek">Grade reads: <span class="g ok">works</span> does its job on real data today, <span class="g part">partial</span> built and running but not on the loop that matters, <span class="g no">not yet</span> built, not producing, <span class="g dead">dormant</span> exists, nothing runs it.</p>
+  <div class="blk tbwrap"><table>
+    <tr><th>Layer</th><th>State today</th><th>Grade</th><th>The gap</th></tr>
+    <tr><td><b>TAM outbound engine</b></td><td>60/60 tests. Sourced net-new universe since Sep 11, 34 cited triggers, labelled estimates. Powers the brain's strike list.</td><td><span class="g ok">works</span></td><td>Universe is small; the weekly account-facts refresh is written but not loaded. Its output feeds strike rooms, not the live campaigns.</td></tr>
+    <tr><td><b>Signal engine (install base)</b></td><td>14/14 tests. Still runs on the 6-row sample accounts file; signals.json is dated Jun 13. Notifier dry-run.</td><td><span class="g dead">dormant</span></td><td>Never swapped to real usage data in 10 weeks. The account-health watcher (Sep 10) now does the risk half on real evidence. Decide: feed it or retire it into account-health.</td></tr>
+    <tr><td><b>Impact scorecard</b></td><td>outcomes.csv is a header row. impact.json last generated Aug 7, surfaced $41.65M labelled UNVERIFIED.</td><td><span class="g no">not yet</span></td><td>No realized row has ever been written. Nothing writes it. The council will ask for this number.</td></tr>
+    <tr><td><b>Cohesion conductor + 5 dashboards</b></td><td>DRY_RUN. Preflight NOT READY on the 4 people-gated blockers (a 5th, a regression from the Sep 11 universe swap, fixed tonight). engine_state.json seeded since Jul; control tower says "0 sends by design" while 8 campaigns send.</td><td><span class="g part">partial</span></td><td>The dashboards describe a system that was replaced by lemlist + Clay + the swarm. Attribution and baseline unratified 10 weeks. Either retire the seeded state or point the tower at the scorecard history.</td></tr>
+    <tr><td><b>Hosted brain + Slack app + plugin</b></td><td>Brain 2.1 live on Render since Sep 11, 36/36 tests, withholds stale data. Snapshot is staged nightly but never deployed (flag off), so it goes stale every 36h. Slack app install requested, awaiting admin.</td><td><span class="g part">partial</span></td><td>No seller has used it yet. Value is contingent on admin approval and the deploy flag. Keep it a Q4 surface, not a Q3 proof.</td></tr>
+    <tr><td><b>Clay sourcing + enrichment</b></td><td>Audiences SF-synced, 0-credit search at scale, tech-stack reads on 1,800 accounts, credit posture healthy (25.6%). Ledger 19 days behind.</td><td><span class="g ok">works</span></td><td>Backlog: 673 enrichment gaps, WFM L3 gate still bound to literal text (24 days), MessageGen retirement not executed in the UI.</td></tr>
+    <tr><td><b>lemlist sequences</b></td><td>16 engine campaigns. 190 leads launched, 1,707 waiting. 0 replies. Step 2 everywhere is a manual LinkedIn task. One 30/day mailbox; second domain cleared Sep 9, warm date Sep 21 to 25.</td><td><span class="g no">not yet</span></td><td>This is the layer the role is judged on and it isn't producing. Design assumption (calls and LinkedIn as the spine) needs the rep's throughput to be real, and it isn't.</td></tr>
+    <tr><td><b>Rep loop (Nate, Jack)</b></td><td>Nate's copy reviews happen; his task queue does not move. Jack builds his own campaigns by hand; the pre-send hook catches guessed addresses.</td><td><span class="g part">partial</span></td><td>No throughput agreement exists. The Daily Action Brief that would put tasks in front of Nate is live=false since Aug 17.</td></tr>
+    <tr><td><b>Swarm: 26 launchd jobs, 24 Claude-calling</b></td><td>Heartbeat, rundown (8 of 9 weekday fires in Sep), war room, meeting capture, hygiene, weekly watches all landing. Hourly relay is a 15 to 23 minute Claude session with 23 failures in two weeks, nearly always to report nothing.</td><td><span class="g part">partial</span></td><td>Cost and fragility sit in the relay. Registry drifted (two jobs undocumented 12 days, fixed tonight). Fix sheets sit unrun 3+ weeks while new lanes get built.</td></tr>
+    <tr><td><b>Agent architect + proposal ledger</b></td><td>Daily proposals since Jul 19. 60+ named proposals; the same one re-proposed up to 20 times; adoption near zero.</td><td><span class="g dead">dormant</span></td><td>A write-only loop. It needs an approve/deny step in the rundown thread (the signal-review pattern already exists) or a weekly cadence.</td></tr>
+    <tr><td><b>Measurement: receipts, council row, Salesforce</b></td><td>Receipts ledger last touched Jul 19. No reply-to-ledger path existed. Lead Source value is Sierra's ticket (Sep 12 date passed). Council feed 0 rows.</td><td><span class="g no">not yet</span></td><td>Cost per meeting, the number the row is judged on, was uncomputable. The scorecard built tonight closes the lemlist half; Salesforce is still the gap.</td></tr>
+    <tr><td><b>Skills (24) + copy doctrine</b></td><td>First-draft engine, sharpener, verified metrics, strike sequence, war room, readout, premortem, motion-stamp. Doctrine Sep 3 + gold examples. Naveen's read on the BO preview: "not going to get replies".</td><td><span class="g ok">works</span></td><td>The doctrine is ahead of what's loaded: Version C copy waits on Nate's read; MessageGen still holds pre-doctrine prompts.</td></tr>
+    <tr><td><b>Gates and governance</b></td><td>Exclusion union check on real rows, verified-claims gate, dry-run defaults, single morning brief, causal-chain logs, two-machine sync.</td><td><span class="g ok">works</span></td><td>WFM L3 lookup inert (no active leak, other clauses hold). Stars Contacts' documented gate columns are gone from the live schema; the real gate location is unconfirmed.</td></tr>
+    <tr><td><b>Pages and leadership artifacts</b></td><td>23 deployed pages; ICP committees, back-office maps (Inger 12, Nate 6, JW 4, Alex 2), save rooms, operating map, all-hands package, partner pilot, UPT brief.</td><td><span class="g ok">works</span></td><td>The credibility bank. It is what leadership sees. It is not what the council counts.</td></tr>
+    <tr><td><b>Adjacent lanes</b></td><td>Product AI Champion (3 goals closed), Side Quest telemetry (sample data), partner pilot, churn-risk save plan (staged watcher + digest, merge-gated).</td><td><span class="g part">partial</span></td><td>Each is real and each takes hours. None counts toward the 15.</td></tr>
+  </table></div>
+</section>
+
+<section id="s3">
+  <div class="snum">03</div>
+  <h2>Pre-mortem: it is Dec 31 and the row failed. Why.</h2>
+  <p class="sdek">Timeframe Sep 13 to Dec 31 2026. Written as if it already happened. Ranked by probability.</p>
+  <div class="narr"><h3><span class="mono">Failure 1, most likely</span>The engine produced volume the rep never worked, and the council judged the row on meetings</h3>
+    <p>On Sep 4 Dallas made calls and LinkedIn the spine of every net-new sequence and launched eight campaigns on Nate's mailbox. Every one of them put a manual LinkedIn task at step 2. Nate, whose July number came from 10,000 dials and six meetings, treated the lemlist task queue as a side list and it sat at 99 open tasks from Sep 4 through the all-hands. The hourly relay, built to shout when a reply landed, said "no new events" 24 times a day and nobody read silence as a stall. The Daily Action Brief that would have put the tasks in Nate's channel every morning stayed at live=false since the Aug 17 plan gate. <b>By Oct 1 the council row read 147 emails, 0 replies, cost per meeting undefined.</b> John Norton compared it with Cold's $3,402 and drew the obvious conclusion. Naveen's 15-meetings line went to zero on the channel that carried his name for it. The 1,707 leads loaded and never launched (DWO, WFM Present, Genesys, Net-New) were the strongest lists the company had and they never left draft, because the mailbox they were waiting for came online Sep 25 and the review they were waiting for never got scheduled.</p></div>
+  <div class="narr"><h3><span class="mono">Failure 2</span>Measurement never closed, so even the wins were invisible</h3>
+    <p>The pre-start plan named attribution ratification as the Week 1 move. It was still unratified at week 12. Sierra's Lead Source ticket missed its Sep 12 date and slid behind the Pardot migration; no Salesforce write path ever existed, so every lead the engine sourced landed in Cold or Digital when a rep touched it. The receipts ledger stayed at its Jul 19 entry because only Dallas could write it and Dallas was building. When Jack booked two UK meetings, they were Jack's. When a BO Insurance reply finally came in October, it was a Slack draft in Nate's channel and a line in an hourly log, and it reached the Friday readout as "one candidate, unconfirmed". <b>The Friday readout said "$0 realized" twelve weeks in a row</b>, honest every time and corrosive by November. Leadership did not decide the engine failed; it decided it could not tell, which for a proof budget is the same verdict.</p></div>
+  <div class="narr"><h3><span class="mono">Failure 3</span>The swarm consumed its operator instead of freeing him</h3>
+    <p>By mid-September there were 26 scheduled jobs, 24 of them Claude sessions, an hourly relay that failed 23 times in two weeks, an architect writing three proposals a day into a ledger nobody adopted from, a registry that drifted, and a worktree 141 commits ahead of main. The fixes that mattered were two-minute UI clicks (the WFM L3 rebind, the deliverability re-point, the ledger backfill) and they sat unrun for three weeks while new lanes shipped: save rooms, partner maps, PM kits, all-hands cuts. Each was real and each was asked for. <b>The pattern was build over operate</b>, and the rundown reported the same three blockers every morning with no escalation. In November somebody asked what GTM Engineering had produced and the honest answer was 23 pages and a stalled queue. That answer implicated Dallas's own choices, not the team's.</p></div>
+</section>
+
+<section id="s4">
+  <div class="snum">04</div>
+  <h2>Red team: why the current defenses don't hold</h2>
+  <div class="rt"><h3>Against failure 1, the unworked queue</h3><dl>
+    <dt>Defense now</dt><dd>Relay alerts to rep channels, Nate's copy reviews, the all-hands momentum, lemlist's own task list.</dd>
+    <dt>Why it fails</dt><dd>Every defense reports <b>events</b>, and a stall produces none. The brief that would push tasks is off. No throughput agreement exists with Nate, and at the 20/day LinkedIn cap 99 tasks take a week even if he starts Monday. The design (calls and LinkedIn as spine) is right for replies and wrong for a rep who isn't in lemlist daily.</dd>
+    <dt>The tell</dt><dd>Open rep tasks not falling three days running. <b>It has already fired</b>: 99 since Sep 4. The scorecard built tonight turns that into a STALLED line the rundown leads with.</dd></dl></div>
+  <div class="rt"><h3>Against failure 2, invisible outcomes</h3><dl>
+    <dt>Defense now</dt><dd>Council feed script, 11 stamp-plan CSVs, the OKR KR1 date, the hand-kept receipts ledger, the Friday readout's realized column.</dd>
+    <dt>Why it fails</dt><dd>All of it is downstream of a Salesforce value that lives in someone else's queue, and the only ledger that counts is written by hand by the busiest person in the loop. The relay detects a reply and stops at a Slack draft.</dd>
+    <dt>The tell</dt><dd>Sep 12 passed without the picklist value. Receipts ledger older than 30 days (it is 56). Tonight's receipts-candidates file makes the lemlist half automatic; the Salesforce half is still a ticket.</dd></dl></div>
+  <div class="rt"><h3>Against failure 3, build over operate</h3><dl>
+    <dt>Defense now</dt><dd>Single morning brief, the heartbeat, the proposal ledger, the causal-chain logs.</dd>
+    <dt>Why it fails</dt><dd>The rundown surfaces the same blocker daily and nothing escalates it into a calendar slot. The ledger has no adopt or decline step, so it grows instead of converging. Every new lane adds a job and a log the rundown must read.</dd>
+    <dt>The tell</dt><dd>The same blocker in three consecutive rundowns (WFM L3: 22). Proposals minted versus adopted (60+ versus roughly 0).</dd></dl></div>
+</section>
+
+<section id="s5">
+  <div class="snum">05</div>
+  <h2>Verdict</h2>
+  <div class="verd">
+    <div><div class="k o">Outside your control</div><p><b>Nate's daily task throughput and the reps' reply handling.</b> You cannot make a rep live in lemlist. You can only design sequences whose first two or three touches need no manual step, keep the receipts ledger on the engine side, and report task debt as a number every morning so the conversation is about a count, not a feeling.</p></div>
+    <div><div class="k">If you do nothing else this week</div><p><b>Monday, with Nate, one decision:</b> either he works the LinkedIn tasks daily at the cap, or you skip the LinkedIn steps for everyone on the eight live campaigns so the email steps flow. Then restart the four paused campaigns. Check Wednesday's scorecard: open tasks under 20 and at least one campaign with leads past step 2. That is the only move that changes the Oct 1 number.</p></div>
+    <div><div class="k">Confidence</div><p><b>Moderate.</b> The build is not the risk; the pieces exist and the gates hold. It tips on one factor: whether engine-sourced sequences produce measured replies before the Oct 1 council. If the queue moves this week and the second mailbox lands Sep 25 with the 1,707 waiting leads behind it, the row has a number by council. If not, December looks like September with more pages.</p></div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="snum">06</div>
+  <h2>Built tonight</h2>
+  <p class="sdek">Everything below is deterministic, read-only on lemlist, zero credits, and logs only. Nothing sends, nobody was messaged, no gate changed.</p>
+  <div class="blk cards">
+    <div class="card"><div class="tag">New, live in the hourly relay</div><h3>Campaign scorecard</h3><div class="bd"><b>automation/campaign_scorecard.py</b>, 13/13 offline tests. Reads lemlist's lead export, open tasks and the relay snapshot for all 39 mapped campaigns. Writes the per-campaign funnel log, a daily history CSV (the first real trend series), and the Pipeline Council CSV for OKR O1 KR2. Chained after the pulse inside the relay wrapper, so it runs every hour before the Claude call, and on demand with <b>run_campaign_scorecard.sh</b>.</div></div>
+    <div class="card"><div class="tag">New</div><h3>STALLED watch</h3><div class="bd">A running campaign with leads in flight, open rep tasks, and no lead movement for three days gets a STALLED line with an event id. History was seeded from the pulse logs, so the first read already says: Stars Resurrection 44 days, BO Insurance 11 days, Achmea (Jack) 16 days. The rundown skill now leads with the longest one.</div></div>
+    <div class="card"><div class="tag">New</div><h3>Receipts candidates</h3><div class="bd">When any campaign's replied, interested or meetings count rises day over day, a row lands in <b>logs/receipts_candidates.csv</b> with an event id. The ledger and outcomes.csv stay your hand; nothing can vanish between an hourly run and your next ledger pass.</div></div>
+    <div class="card plain"><div class="tag">Fixed</div><h3>Preflight regression</h3><div class="bd">The conductor's TAM contract check broke on the Sep 11 universe swap (build_plays now returns a pair). Patched in the worktree; preflight is back to the four expected people-gated blockers.</div></div>
+    <div class="card plain"><div class="tag">Fixed</div><h3>Registry and rundown drift</h3><div class="bd">heatlist and cohortcutter registered after 12 days undocumented; the scorecard is source 18 in the rundown skill; the two copies of that skill (home and coordinator) had diverged and are now one union.</div></div>
+    <div class="card plain"><div class="tag">Council row</div><h3>GTM_Engineering_Scorecard_2026-09.csv</h3><div class="bd">In motions/pipeline_council. Campaign, motion, rep, loaded, launched, replies, meetings, bounces, open rep tasks, credits (from a config map when you fill it), cost per meeting, Source = GTM Engineering, Opportunities blank until Salesforce. This is the row for Oct 1.</div></div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="snum">07</div>
+  <h2>The next layers, in the order they pay back</h2>
+  <p class="sdek">Each one is grounded in a gap above, not a wish list. Agent-buildable items carry a paste-back prompt in the chat that delivered this page.</p>
+  <div class="steps">
+    <div><div><h4>Task-debt relief: sequences that don't wait on a human for the first three touches <span class="hold">P0, design + one UI pass</span></h4><p>Rebuild the step order on the eight live campaigns and the five waiting ones: email 1, email 2 at +3, call task, then LinkedIn. Manual steps come after the sequence has already earned a reply chance. lemlist's skip-step-for-everyone exists for the live ones. This is the change that makes "running" mean something.</p></div></div>
+    <div><div><h4>Send-capacity model in the scorecard <span class="hold">P0, agent-buildable, small</span></h4><p>1,707 waiting leads on a 30/day mailbox is 57 days for one touch. Add days-to-drain per mailbox and per campaign to the scorecard so the second-domain decision and wave sizing are a number in the rundown, not a memory note.</p></div></div>
+    <div><div><h4>Receipts ledger drafter <span class="hold">P0, agent-buildable</span></h4><p>Weekly script that turns the scorecard history plus receipts candidates plus the credit ledger into a proposed ledger block you confirm in the rundown thread (APPROVE, like signal review). The ledger stops being 56 days stale without becoming automatic.</p></div></div>
+    <div><div><h4>Relay on a deterministic gate <span class="hold">P1, agent-buildable, behind a flag</span></h4><p>The hourly Claude relay session runs 15 to 23 minutes to say "no new events" and fails a quarter of the time. The scorecard now knows, in seconds, whether anything moved. Run the Claude step only when the deterministic diff finds a reply, bounce, accept or task change. Saves roughly eight hours of Claude runtime a day and removes the chronic failure. Ship behind a flag, default off, one week of side-by-side logs.</p></div></div>
+    <div><div><h4>Deliverability watch re-pointed at lemlist <span class="hold">P1, agent-buildable</span></h4><p>The Clay mirror is 56 days stale and not scrapable. lemlist exposes mailbox, DNS and warm status through the connector. Re-point the weekly watch there, add bounce rate per mailbox from the scorecard, and put open tracking back on one campaign as the canary so the 40% gate has a number.</p></div></div>
+    <div><div><h4>Proposal ledger gets an adopt or decline step <span class="hold">P1, small</span></h4><p>Move the architect to weekly, cap it at two proposals, and let the rundown thread listener take ADOPT or DROP on each, the way it takes APPROVE and DENY on signals. Sixty open proposals become a short list.</p></div></div>
+    <div><div><h4>Control tower on real state <span class="hold">P2</span></h4><p>Point the tower's funnel and motion rows at the scorecard history and the lemlist state instead of the seeded engine_state.json, or retire the five cohesion dashboards to the archive and let the operating map be the tower.</p></div></div>
+    <div><div><h4>Signal engine: feed it or fold it <span class="hold">P2, decision</span></h4><p>Ten weeks on sample data. Either the install-base usage export arrives and it earns its slot, or its six signals move into account-health-watch, which already reads real evidence weekly.</p></div></div>
+    <div><div><h4>Memory index over budget <span class="hold">P2, housekeeping</span></h4><p>MEMORY.md is 50KB against a 24KB load budget; half the index is cut from every session. Trim entries to one line under 200 characters and move detail into the topic files.</p></div></div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="snum">08</div>
+  <h2>Your moves this week, in dependency order</h2>
+  <div class="steps">
+    <div><div><h4>Hold: nothing to click before Monday's conversation</h4><p>The scorecard runs on its own from the next relay tick. Monday's rundown will lead with the three STALLED lines. Read it before you talk to Nate so the count is on the table.</p></div></div>
+    <div><div><h4>Monday: the one decision with Nate</h4><p>Daily LinkedIn task quota, or skip the LinkedIn steps for everyone on the eight live campaigns. Take the per-campaign open-task counts from the scorecard. No copy edits, no new loads until this is settled.</p></div></div>
+    <div><div><h4>Then restart the four paused campaigns and confirm why they paused</h4><p>Quality, Finance, HC Payer, BPO. Restart only after step 2, so the restart doesn't pour more leads into a queue that isn't moving.</p></div></div>
+    <div><div><h4>Merge the worktree into main</h4><p>141 commits, the conductor fix, account-health, owner-digest and polar-intake are all behind this. The scorecard lives in main already and does not conflict. Paste-back prompt in the chat.</p></div></div>
+    <div><div><h4>Second mailbox on the calendar, waiting leads sized against it</h4><p>Warm date Sep 21 to 25. The capacity line (next layer 2) gives the wave size. DWO's 803 go first: they are the C-suite list John asked for.</p></div></div>
+    <div><div><h4>Chase Sierra's Lead Source ticket, once, in writing</h4><p>Sep 12 passed. Until it ships, the council CSV is the row and Opportunities stays blank with a one-line reason.</p></div></div>
+    <div><div><h4>Wednesday: read the scorecard again</h4><p>Open tasks under 20 and one campaign with leads past step 2 means the loop is running. If not, the answer for Oct 1 is the design change in next layer 1, not more volume.</p></div></div>
+    <div><div><h4>Oct 1 council: ship the CSV as the row</h4><p>motions/pipeline_council/GTM_Engineering_Scorecard_2026-09.csv, plus the receipts candidates you confirmed. Estimates and realized stay separate.</p></div></div>
+  </div>
+  <p class="small">Sources: lemlist lead export and open tasks (Sep 13 21:05), lemlist campaign stats via the connector, automation logs Sep 7 to 13 (rundown, swarm-health, pipeline-receipts, credit-check, deliverability-watch, war room, agent-architect, relay), engine test suites and conductor preflight run tonight, memory files through Sep 13. All figures are internal reads; nothing here is prospect-facing or verified-claims material.</p>
+</section>
+
+<footer>GTM Engineering, Dallas Andrews. Internal working document, Sep 13 2026. Built from the repo, the automation logs and a live lemlist read. Nothing on this page is a customer or company claim.</footer>
+</div>
+</body></html>

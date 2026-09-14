@@ -42,7 +42,7 @@ for r in rows:
 # 6 AM-map people must not be on a map
 am={(r["account"],r["full_name"]) for r in csv.DictReader(open(P["roster"])) if r["source"].startswith("am_map")} if P["roster"] and os.path.exists(P["roster"]) else set()
 for r in rows:
-    if (r["account"],r["full_name"]) in am: fail.append(f"AM-map person on a back-office map: {r['account']} | {r['full_name']}")
+    if (r["account"],r["full_name"]) in am and r["full_name"] not in CFG.get("am_overlap_ok",[]): fail.append(f"AM-map person on a back-office map: {r['account']} | {r['full_name']}")   # am_overlap_ok: C-suite overlap the rep agreed to (Sep 11 2026, Alex/Elevance)
 # 6a people in another live sequence at the account never land on a map
 for r in rows:
     if (r["account"],r["full_name"]) in CFG["_collision"]: fail.append(f"sequence collision on map: {r['account']} | {r['full_name']} ({CFG['_collision'][(r['account'],r['full_name'])]})")

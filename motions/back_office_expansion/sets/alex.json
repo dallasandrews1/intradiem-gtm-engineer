@@ -1,0 +1,1427 @@
+{
+ "set": "alex",
+ "rep": "Alex Bauer",
+ "rep_short": "Alex",
+ "rep_label": "Account manager",
+ "date": "September 11, 2026",
+ "title": "Back Office Maps, Elevance Health",
+ "headline_html": "Elevance Health: <span class=\"spark\">two back-office maps</span>.",
+ "sub": "Two new Sales Navigator maps for one customer: the people who run claims, enrollment, provider and shared-services operations at Elevance Health, and the people who run operations at Carelon. Nobody from the existing relationship map; every name checked against Salesforce and live-verified.",
+ "legend_html": "<b>In Salesforce:</b> Intradiem already has a record for this person; they stay on the map because they run part of the back office. <b>Same name elsewhere in Salesforce:</b> a record with this name exists at another company.",
+ "md_title": "# Back-office map build sheets, Alex's Elevance Health\n",
+ "md_intro": "Each sheet is one new Sales Navigator Relationship Map (cap 30). Build top-down: senior executive, then the SVP/VP who leads each function, then the directors under them. Reporting lines are inferred from titles and functions until Alex confirms. Carelon is its own LinkedIn company page, so it gets its own map.\n",
+ "files": {
+  "roster": "BO_AccountMap_Roster_Alex.csv",
+  "roster_summary": "alex_roster_summary.md",
+  "known_people": "alex_known_layer_people.csv",
+  "candidates": "alex_backoffice_candidates.csv",
+  "sf_check": "alex_sf_check.csv",
+  "known_companies": "alex_known_layer_companies.csv",
+  "build_sheets_csv": "BO_Map_Build_Sheets_Alex.csv",
+  "build_sheets_md": "BO_Map_Build_Sheets_Alex.md",
+  "bench_csv": "BO_Map_Bench_Alex.csv",
+  "snapshot_csv": "_built_snapshot_alex.csv",
+  "changes_md": "BO_Map_Changes_Built_Alex.md",
+  "page_out": "account_maps/alex_backoffice_maps.html"
+ },
+ "built": [],
+ "select": "balanced",
+ "sweep_sources": [
+  "Sep 11 Clay sweep"
+ ],
+ "candidate_default_source": "Sep 11 search",
+ "accounts": {
+  "Elevance Health": {
+   "sweep": "sweeps/alex/elevance_health_only.csv",
+   "domains": [
+    "elevancehealth.com",
+    "anthem.com",
+    "wellpoint.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006b9JOIAY",
+    "001V5000006bHF2IAM",
+    "001V5000006bHFNIA2",
+    "001V5000006bHfAIAU",
+    "001V5000006bHfFIAU",
+    "001V5000006bHWtIAM",
+    "001V5000006bHjHIAU",
+    "001V5000006bHjMIAU",
+    "001V5000006bHWyIAM",
+    "001V5000006bHjFIAU",
+    "001V5000006bHjKIAU",
+    "001V5000006bHjPIAU",
+    "001V5000006bHjLIAU",
+    "001V5000008FcJnIAK"
+   ],
+   "vertical": "healthcare payer",
+   "aliases": [
+    "elevance",
+    "anthem",
+    "wellpoint",
+    "amerigroup",
+    "empire blue",
+    "empire bluecross",
+    "healthy blue",
+    "simply healthcare",
+    "unicare",
+    "paragon healthcare",
+    "aspire health",
+    "kroger specialty",
+    "blue cross",
+    "bluecross"
+   ],
+   "us_only": true
+  },
+  "Carelon": {
+   "sweep": "sweeps/alex/carelon.csv",
+   "domains": [
+    "carelon.com",
+    "carelonrx.com",
+    "carelonbehavioralhealth.com"
+   ],
+   "sf_account_ids": [
+    "001V5000006bBgNIAU",
+    "001V5000006bCxOIAU",
+    "001V5000006bHfBIAU"
+   ],
+   "vertical": "healthcare payer",
+   "aliases": [
+    "carelon",
+    "carelonrx",
+    "carelon behavioral",
+    "beacon health options",
+    "ingeniorx",
+    "carelon health",
+    "elevance",
+    "anthem"
+   ],
+   "us_only": true
+  }
+ },
+ "drop": [
+  "Aaron Bennett",
+  "Amish Patel",
+  "Angel Daley",
+  "Angela Robinson",
+  "Barb Anketell",
+  "Brian Altig",
+  "Che Thompson",
+  "Cheri Specht",
+  "Gail Boudreaux",
+  "Jamison Torok",
+  "Janet Sokoloff",
+  "Jeff Van Ornum",
+  "Jennifer Wade",
+  "Jody Sykes",
+  "Kathy Colon",
+  "Kellie Kirven",
+  "Kip Kinzer",
+  "Kumar Gudavalli",
+  "Linda Pedersen",
+  "Mark Davis",
+  "Maurice Pardo",
+  "Michael Almquist",
+  "Minga Williams",
+  "Morgan Kendrick",
+  "Rachel Brooks",
+  "Randy Tharp",
+  "Robin Nunn",
+  "Tricia Backofen",
+  "Valerie Hatcher"
+ ],
+ "priority": [
+  [
+   "Elevance Health",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Blake Main"
+  ],
+  [
+   "Elevance Health",
+   "Aim\u00e9e Dailey"
+  ],
+  [
+   "Elevance Health",
+   "Nicole Keating, MBA, CLP, CSA"
+  ],
+  [
+   "Elevance Health",
+   "Kathy Talnose"
+  ],
+  [
+   "Elevance Health",
+   "Traci G."
+  ],
+  [
+   "Elevance Health",
+   "Becky Harbottle"
+  ],
+  [
+   "Elevance Health",
+   "Tracy M."
+  ],
+  [
+   "Elevance Health",
+   "Marla K. Wilson, MBA"
+  ],
+  [
+   "Elevance Health",
+   "Kristine Smith (Huot)"
+  ],
+  [
+   "Elevance Health",
+   "Pamela Hursh"
+  ],
+  [
+   "Elevance Health",
+   "Erin Bagniewski"
+  ],
+  [
+   "Elevance Health",
+   "Melissa Wise"
+  ],
+  [
+   "Elevance Health",
+   "Holly Huffman"
+  ],
+  [
+   "Elevance Health",
+   "Cassie Evans"
+  ],
+  [
+   "Elevance Health",
+   "Corrine Livesay, GBA"
+  ],
+  [
+   "Elevance Health",
+   "Natasha Lefear"
+  ],
+  [
+   "Elevance Health",
+   "Latisha Greene"
+  ],
+  [
+   "Elevance Health",
+   "Amy (Godby) Ledford, PMP, PAHM"
+  ],
+  [
+   "Elevance Health",
+   "Stephanie Barnes-Blue"
+  ],
+  [
+   "Elevance Health",
+   "Laxmi Sharma - PMP, PAHM"
+  ],
+  [
+   "Elevance Health",
+   "Diedre Rutherford"
+  ],
+  [
+   "Elevance Health",
+   "Bob Sanderson"
+  ],
+  [
+   "Elevance Health",
+   "Francisco Escobedo"
+  ],
+  [
+   "Carelon",
+   "Mark Kaye"
+  ],
+  [
+   "Carelon",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Maureen Tarpinian, MBA"
+  ],
+  [
+   "Carelon",
+   "Sandra T."
+  ],
+  [
+   "Carelon",
+   "Cliff Houde"
+  ],
+  [
+   "Carelon",
+   "Matt Monyhan"
+  ],
+  [
+   "Carelon",
+   "Kim Tommasone"
+  ],
+  [
+   "Carelon",
+   "Anthony Holston"
+  ],
+  [
+   "Carelon",
+   "Selvi A."
+  ],
+  [
+   "Carelon",
+   "Ryan Wilkie"
+  ],
+  [
+   "Carelon",
+   "Jacquelyn Stupakevich"
+  ],
+  [
+   "Carelon",
+   "Christina Rosa"
+  ],
+  [
+   "Carelon",
+   "Heather Gerard"
+  ],
+  [
+   "Carelon",
+   "Andrea K. Knight"
+  ],
+  [
+   "Carelon",
+   "John Kearney"
+  ],
+  [
+   "Carelon",
+   "Mary Middleton Deadwiler"
+  ],
+  [
+   "Carelon",
+   "Rejinath Radhakrishnan"
+  ],
+  [
+   "Carelon",
+   "Tom Holiday"
+  ],
+  [
+   "Carelon",
+   "Alyssa B."
+  ],
+  [
+   "Carelon",
+   "Bruce Shiralipour"
+  ],
+  [
+   "Carelon",
+   "Lourdes Basmajian"
+  ],
+  [
+   "Carelon",
+   "Sarah Albertini-Bond"
+  ],
+  [
+   "Carelon",
+   "Kenny Mai, MBA"
+  ],
+  [
+   "Carelon",
+   "Dee Durant"
+  ],
+  [
+   "Carelon",
+   "Alicia DeSieno"
+  ],
+  [
+   "Carelon",
+   "Mohammed S."
+  ],
+  [
+   "Carelon",
+   "Thomas E. Allen, MBA"
+  ],
+  [
+   "Carelon",
+   "Amy Potter"
+  ],
+  [
+   "Elevance Health",
+   "Beth Franke"
+  ],
+  [
+   "Elevance Health",
+   "Kristian Wilson"
+  ],
+  [
+   "Elevance Health",
+   "Michael Goodall"
+  ],
+  [
+   "Elevance Health",
+   "Trish Raines, PMP"
+  ],
+  [
+   "Elevance Health",
+   "Jennifer Evering"
+  ],
+  [
+   "Carelon",
+   "Karen Swanker"
+  ],
+  [
+   "Carelon",
+   "Shmeka Jones, MBA"
+  ],
+  [
+   "Elevance Health",
+   "Denny Jones"
+  ],
+  [
+   "Carelon",
+   "Daniel Guasp"
+  ]
+ ],
+ "manual_under": [
+  [
+   "Elevance Health",
+   "Felicia Norwood",
+   ""
+  ],
+  [
+   "Elevance Health",
+   "Blake Main",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Aim\u00e9e Dailey",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Nicole Keating, MBA, CLP, CSA",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Kathy Talnose",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Traci G.",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Becky Harbottle",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Tracy M.",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Marla K. Wilson, MBA",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Kristine Smith (Huot)",
+   "Marla K. Wilson, MBA"
+  ],
+  [
+   "Elevance Health",
+   "Pamela Hursh",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Erin Bagniewski",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Melissa Wise",
+   "Blake Main"
+  ],
+  [
+   "Elevance Health",
+   "Holly Huffman",
+   "Blake Main"
+  ],
+  [
+   "Elevance Health",
+   "Cassie Evans",
+   "Blake Main"
+  ],
+  [
+   "Elevance Health",
+   "Corrine Livesay, GBA",
+   "Blake Main"
+  ],
+  [
+   "Elevance Health",
+   "Natasha Lefear",
+   "Aim\u00e9e Dailey"
+  ],
+  [
+   "Elevance Health",
+   "Latisha Greene",
+   "Aim\u00e9e Dailey"
+  ],
+  [
+   "Elevance Health",
+   "Amy (Godby) Ledford, PMP, PAHM",
+   "Aim\u00e9e Dailey"
+  ],
+  [
+   "Elevance Health",
+   "Stephanie Barnes-Blue",
+   "Becky Harbottle"
+  ],
+  [
+   "Elevance Health",
+   "Laxmi Sharma - PMP, PAHM",
+   "Marla K. Wilson, MBA"
+  ],
+  [
+   "Elevance Health",
+   "Diedre Rutherford",
+   "Nicole Keating, MBA, CLP, CSA"
+  ],
+  [
+   "Elevance Health",
+   "Bob Sanderson",
+   "Traci G."
+  ],
+  [
+   "Elevance Health",
+   "Francisco Escobedo",
+   "Nicole Keating, MBA, CLP, CSA"
+  ],
+  [
+   "Carelon",
+   "Mark Kaye",
+   ""
+  ],
+  [
+   "Carelon",
+   "Will Feest",
+   "Mark Kaye"
+  ],
+  [
+   "Carelon",
+   "Maureen Tarpinian, MBA",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Sandra T.",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Cliff Houde",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Matt Monyhan",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Kim Tommasone",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Anthony Holston",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Selvi A.",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Ryan Wilkie",
+   "Will Feest"
+  ],
+  [
+   "Carelon",
+   "Jacquelyn Stupakevich",
+   "Maureen Tarpinian, MBA"
+  ],
+  [
+   "Carelon",
+   "Christina Rosa",
+   "Maureen Tarpinian, MBA"
+  ],
+  [
+   "Carelon",
+   "Heather Gerard",
+   "Maureen Tarpinian, MBA"
+  ],
+  [
+   "Carelon",
+   "Andrea K. Knight",
+   "Matt Monyhan"
+  ],
+  [
+   "Carelon",
+   "John Kearney",
+   "Matt Monyhan"
+  ],
+  [
+   "Carelon",
+   "Mary Middleton Deadwiler",
+   "Matt Monyhan"
+  ],
+  [
+   "Carelon",
+   "Rejinath Radhakrishnan",
+   "Sandra T."
+  ],
+  [
+   "Carelon",
+   "Tom Holiday",
+   "Sandra T."
+  ],
+  [
+   "Carelon",
+   "Alyssa B.",
+   "Sandra T."
+  ],
+  [
+   "Carelon",
+   "Bruce Shiralipour",
+   "Sandra T."
+  ],
+  [
+   "Carelon",
+   "Lourdes Basmajian",
+   "Anthony Holston"
+  ],
+  [
+   "Carelon",
+   "Sarah Albertini-Bond",
+   "Cliff Houde"
+  ],
+  [
+   "Carelon",
+   "Kenny Mai, MBA",
+   "Jacquelyn Stupakevich"
+  ],
+  [
+   "Carelon",
+   "Dee Durant",
+   "Jacquelyn Stupakevich"
+  ],
+  [
+   "Carelon",
+   "Alicia DeSieno",
+   "Jacquelyn Stupakevich"
+  ],
+  [
+   "Carelon",
+   "Mohammed S.",
+   "Kim Tommasone"
+  ],
+  [
+   "Carelon",
+   "Thomas E. Allen, MBA",
+   "Cliff Houde"
+  ],
+  [
+   "Carelon",
+   "Amy Potter",
+   "Selvi A."
+  ],
+  [
+   "Elevance Health",
+   "Beth Franke",
+   "Tracy M."
+  ],
+  [
+   "Elevance Health",
+   "Kristian Wilson",
+   "Tracy M."
+  ],
+  [
+   "Elevance Health",
+   "Michael Goodall",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Trish Raines, PMP",
+   "Felicia Norwood"
+  ],
+  [
+   "Elevance Health",
+   "Jennifer Evering",
+   "Felicia Norwood"
+  ],
+  [
+   "Carelon",
+   "Karen Swanker",
+   "Maureen Tarpinian, MBA"
+  ],
+  [
+   "Carelon",
+   "Shmeka Jones, MBA",
+   "Cliff Houde"
+  ],
+  [
+   "Elevance Health",
+   "Denny Jones",
+   "Nicole Keating, MBA, CLP, CSA"
+  ],
+  [
+   "Carelon",
+   "Daniel Guasp",
+   "Ryan Wilkie"
+  ]
+ ],
+ "title_override": [
+  [
+   "Elevance Health",
+   "Bob Sanderson",
+   "Director, Operations Development and Planning"
+  ],
+  [
+   "Elevance Health",
+   "Nicole Keating, MBA, CLP, CSA",
+   "Staff VP, Operations & Execution, Health Benefits Operations"
+  ]
+ ],
+ "dual": [
+  [
+   "Carelon",
+   "Rhondale Henderson"
+  ]
+ ],
+ "verify": [],
+ "phrases": [
+  "claims",
+  "enrollment",
+  "billing",
+  "appeals",
+  "grievance",
+  "provider",
+  "utilization management",
+  "encounter",
+  "pharmacy",
+  "payment integrity",
+  "shared services",
+  "medicaid",
+  "medicare",
+  "government business",
+  "commercial"
+ ],
+ "topics_extra": {
+  "loan": [
+   "loan servicing",
+   "loan operations",
+   "lending operations",
+   "servicing",
+   "escrow",
+   "asset based lending",
+   "default",
+   "loan administration",
+   "loan closing",
+   "loan processing"
+  ],
+  "deposit": [
+   "deposit operations",
+   "deposit"
+  ],
+  "mortgage": [
+   "mortgage"
+  ],
+  "payments": [
+   "payments",
+   "wire",
+   "ach ",
+   "card operations",
+   "treasury management operations",
+   "merchant operations",
+   "money movement"
+  ],
+  "onboarding": [
+   "onboarding",
+   "kyc",
+   "account opening",
+   "client onboarding"
+  ],
+  "payroll": [
+   "payroll"
+  ],
+  "client_service": [
+   "client service",
+   "customer service operations",
+   "service operations",
+   "service delivery",
+   "dedicated service",
+   "service center operations",
+   "centralized service",
+   "enterprise service",
+   "head of service"
+  ],
+  "implementation": [
+   "implementation"
+  ],
+  "tax": [
+   "tax service",
+   "tax operations",
+   "tax filing",
+   "tax pay"
+  ],
+  "benefits": [
+   "benefits administration",
+   "benefit operations",
+   "401(k)",
+   "retirement services",
+   "401k",
+   "s125",
+   "section 125"
+  ],
+  "peo": [
+   "peo"
+  ],
+  "meter": [
+   "meter",
+   "meter to cash",
+   "meter-to-cash"
+  ],
+  "customer_ops": [
+   "customer operations",
+   "customer fulfillment",
+   "customer contracts",
+   "customer billing"
+  ],
+  "enrollment": [
+   "enrollment",
+   "eligibility"
+  ],
+  "provider": [
+   "provider data",
+   "provider operations",
+   "provider services",
+   "provider network operations",
+   "credentialing",
+   "provider relations operations"
+  ],
+  "appeals": [
+   "appeals",
+   "grievance"
+  ],
+  "um": [
+   "utilization management",
+   "medical management operations",
+   "care management operations",
+   "clinical operations"
+  ],
+  "member": [
+   "member operations",
+   "member services operations"
+  ],
+  "payment_integrity": [
+   "payment integrity",
+   "cost containment",
+   "subrogation",
+   "coordination of benefits",
+   "overpayment"
+  ],
+  "fund_ops": [
+   "fund operations",
+   "fund accounting",
+   "transfer agent",
+   "brokerage operations",
+   "trading operations",
+   "settlement",
+   "reconciliation",
+   "asset servicing",
+   "custody",
+   "workplace investing",
+   "defined benefit",
+   "defined contribution",
+   "retirement operations"
+  ],
+  "quality": [
+   "quality assurance",
+   "quality control",
+   "quality operations"
+  ],
+  "vendor": [
+   "vendor management",
+   "third party",
+   "outsourcing",
+   "bpo"
+  ],
+  "process": [
+   "process optimization",
+   "process excellence",
+   "process improvement",
+   "operational excellence"
+  ]
+ },
+ "func_extra": [
+  [
+   "Finance & shared services",
+   "\\bcfo\\b|chief financial|controller|fp&a|shared services"
+  ],
+  [
+   "Member, provider & enrollment operations",
+   "enrollment|eligibility|provider data|provider operations|provider services|provider network|credentialing|appeals|grievance|utilization management|member operations|payment integrity|subrogation|coordination of benefits|medical management operations"
+  ],
+  [
+   "Loan & mortgage operations",
+   "loan servicing|loan operations|lending operations|loan administration|escrow|mortgage|default operations|default"
+  ],
+  [
+   "Payment & deposit operations",
+   "deposit operations|deposit|card operations|payments operations|payment operations|payments|wire|\\bach\\b|treasury management operations|merchant|money movement|onboarding|kyc|account opening|money transfer"
+  ],
+  [
+   "Customer operations & meter-to-cash",
+   "meter|customer operations|customer fulfillment|customer contracts|customer billing"
+  ],
+  [
+   "Payroll & client service operations",
+   "payroll|\\bpeo\\b|tax service|tax operations|tax filing|benefits administration|implementation|client service|service operations|service delivery|dedicated service"
+  ],
+  [
+   "Retirement, investment & fund operations",
+   "fund operations|fund accounting|transfer agent|brokerage operations|trading operations|settlement|reconciliation|asset servicing|custody|workplace investing|defined benefit|defined contribution|retirement operations|retirement services|401\\(k\\)"
+  ]
+ ],
+ "collision": {},
+ "root_prefs_generic": [
+  "operating",
+  "administrative"
+ ],
+ "bridge_results": [
+  "alex_bridge_results_a.csv",
+  "alex_bridge_results_b.csv",
+  "alex_bridge_results_c.csv",
+  "alex_bridge_results_apollo.csv"
+ ],
+ "require_url": true,
+ "finance_rollup": false,
+ "root_prefs_finance": [
+  "shared services",
+  "operating",
+  "administrative",
+  "enterprise operations"
+ ],
+ "specific_overlap_for_vp": true,
+ "manual_add": [
+  {
+   "account": "Elevance Health",
+   "full_name": "Felicia Norwood",
+   "title": "Executive Vice President & Chief Health Benefits Officer",
+   "linkedin_url": "https://www.linkedin.com/in/felicia-norwood-ab88b61a/",
+   "note": "Feb 26 2026 release: leads the consolidated Health Benefits organization (elevancehealth.com/newsroom). On Alex's relationship map; C-suite overlap is fine, she is the executive the back office reports up to",
+   "source": "web research Sep 11"
+  },
+  {
+   "account": "Elevance Health",
+   "full_name": "Aim\u00e9e Dailey",
+   "title": "President, Government Business",
+   "linkedin_url": "https://www.linkedin.com/in/aimee-dailey-40174516/",
+   "note": "Mar 31 2026 release: Medicare, Medicaid, FGS and GRS under Felicia Norwood; the Medicaid and Medicare state operations directors sit in her division",
+   "source": "web research Sep 11"
+  },
+  {
+   "account": "Elevance Health",
+   "full_name": "Natasha Lefear",
+   "title": "Staff VP, Government Business Encounters Operations",
+   "linkedin_url": "https://www.linkedin.com/in/natashalefear",
+   "note": "The Org + Women We Admire profile: leads the regulatory encounters operations portfolio across 26 Medicaid markets",
+   "source": "web research Sep 11"
+  },
+  {
+   "account": "Carelon",
+   "full_name": "Will Feest",
+   "title": "President, Carelon Insights and Chief Operating Officer, Carelon",
+   "linkedin_url": "https://www.linkedin.com/in/william-feest-3aa9385/",
+   "note": "Mar 31 2026 release (elevancehealth.com/newsroom); the operations executive for Carelon",
+   "source": "web research Sep 11"
+  },
+  {
+   "account": "Carelon",
+   "full_name": "Mark Kaye",
+   "title": "Executive Vice President & Chief Financial Officer (oversees Carelon)",
+   "linkedin_url": "https://www.linkedin.com/in/mark-kaye/",
+   "note": "Feb 26 2026 release: CFO role expanded to include Carelon after Peter Haytaian's exit (effective May 4 2026); the executive Carelon reports up to. C-suite overlap with the enterprise is fine",
+   "source": "web research Sep 11"
+  },
+  {
+   "account": "Elevance Health",
+   "full_name": "Bob Sanderson",
+   "title": "Director, Operations Development and Planning",
+   "linkedin_url": "http://www.linkedin.com/in/bobsanderson1",
+   "note": "Clay index title; Apollo headline reads Business Operations Executive (generic), current at Elevance since May 2022",
+   "source": "Sep 11 search | web research",
+   "force": true
+  }
+ ],
+ "account_notes": {
+  "Elevance Health": "Health Benefits operations consolidated under Felicia Norwood on Feb 26 2026; the two Staff VPs of Operations and Execution in Health Benefits Operations (Keating, Talnose) started in that seat in June 2026, and their manager between them and Norwood is not visible in the data, so both sit under her until Alex confirms. Government Business (Medicaid, Medicare) runs under Aim\u00e9e Dailey since Mar 31 2026; state Medicaid and Medicare operations directors belong to her division and report to plan COOs, not to the Government customer-care line on the relationship map. Claims runs under Blake Main, Chief Claims Officer, with Chris Thomas as Staff VP Claims Operations. Workforce Management directors surfaced by the search were held to the bench because they are most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; the enterprise seat kept is Strategic Workforce Planning. Ratnakar Lavu, EVP and Chief Digital and Information Officer, owns the AI roadmap that includes claims-processing automation (Fortune, Feb 25 2026): not a card, but the in-house automation program the Back Office Optimizer conversation will meet. Two people are current but carry initials-only LinkedIn names and could not be linked: Richard (Rick) Misch, Staff VP Finance Operations / Commercial Billing and Collection Services, and Amber Kanady, Staff VP Payment Integrity Financial Operations (her profile sits under the separate 'Elevance Health (Formerly Anthem)' company page); search both by name in Sales Navigator. Chris Thomas (Staff VP Claims Operations) left in 2024 and Lee Napier has retired, both removed after the live check. The Staff VP of Claims Operations seat has been vacant since Chris Thomas left in 2024, so the claims directors sit directly under the Chief Claims Officer; likewise the Government Business directors sit under Aim\u00e9e Dailey until their VP layer is confirmed. Alex's own relationship map has four cards to refresh: Maurice Pardo has left, and Amish Patel (GuideWell), Kumar Gudavalli (SCAN) and Che Thompson (Hyundai) show other employers. Salesforce holds Elevance as eighteen plan-level accounts (Amerigroup, Anthem BCBS state plans, Empire, UniCare, Carelon Health, Beacon, IngenioRx) with 303 known people and no parent Elevance or Anthem Inc record, which is why the account plan found no contract record; the customer status comes from the install base.",
+  "Carelon": "Carelon reports to Mark Kaye (EVP and CFO) since Feb 26 2026 after Peter Haytaian's exit; Will Feest is President of Carelon Insights and COO of Carelon (Mar 31 2026). Darrell Oliveira became CFO of Carelon the same day (budget owner, kept off the map as a finance seat); Kristy Duffey is President of Carelon Health (clinical delivery, not the back office) and William Fleming is Chief Growth and Strategy Officer (commercial line). Many Carelon Behavioral Health people still list Beacon Health Options; those cards were live-checked. CarelonRx PBM operations (Sandra T.) is the pharmacy claims back office. Lisa Laplante (VP Claims) and Terry Billyard (AVP Claims Operations Support) surfaced in the search but could not be linked to a live profile, so the claims directors sit under the Carelon Behavioral Health COO until Alex confirms; search both by name in Sales Navigator."
+ },
+ "band_override": [
+  [
+   "Elevance Health",
+   "Natasha Lefear",
+   "VP"
+  ],
+  [
+   "Carelon",
+   "Will Feest",
+   "C"
+  ],
+  [
+   "Elevance Health",
+   "Aim\u00e9e Dailey",
+   "EVP"
+  ],
+  [
+   "Carelon",
+   "Mark Kaye",
+   "C"
+  ],
+  [
+   "Elevance Health",
+   "Felicia Norwood",
+   "C"
+  ]
+ ],
+ "root_exclude": [],
+ "confirm": [
+  [
+   "Elevance Health",
+   "Traci G.",
+   "initial-only surname on LinkedIn; Staff VP Strategic Workforce Planning is the workforce-planning seat, confirm the badge"
+  ],
+  [
+   "Elevance Health",
+   "Tracy M.",
+   "initial-only surname on LinkedIn; Staff VP Payment Integrity, confirm the badge"
+  ],
+  [
+   "Carelon",
+   "Sandra T.",
+   "initial-only surname on LinkedIn; Staff VP PBM Operations at CarelonRx, confirm the badge"
+  ],
+  [
+   "Carelon",
+   "Selvi A.",
+   "initial-only surname; Carelon Global Solutions runs the offshore back office, confirm the badge"
+  ],
+  [
+   "Elevance Health",
+   "Nicole Keating, MBA, CLP, CSA",
+   "manager between her and Norwood not visible in the data; confirm"
+  ],
+  [
+   "Elevance Health",
+   "Kathy Talnose",
+   "manager between her and Norwood not visible in the data; confirm"
+  ],
+  [
+   "Elevance Health",
+   "Diedre Rutherford",
+   "placed in Health Benefits Operations; confirm"
+  ],
+  [
+   "Elevance Health",
+   "Bob Sanderson",
+   "Operations Development and Planning; placed under Strategic Workforce Planning, confirm"
+  ],
+  [
+   "Carelon",
+   "Mark Kaye",
+   "enterprise CFO, oversees Carelon since Feb 2026; C-suite overlap with the Elevance map is fine"
+  ],
+  [
+   "Elevance Health",
+   "Holly Huffman",
+   "Chris Thomas (Staff VP Claims Operations) left in 2024; the seat between her and Blake Main is unknown, confirm"
+  ],
+  [
+   "Elevance Health",
+   "Francisco Escobedo",
+   "placed in Health Benefits Operations after Lee Napier retired; confirm"
+  ],
+  [
+   "Elevance Health",
+   "Michael Goodall",
+   "profile still lists Anthem BCBS; confirm current"
+  ],
+  [
+   "Elevance Health",
+   "Becky Harbottle",
+   "profile still lists Anthem, Inc.; confirm current"
+  ],
+  [
+   "Elevance Health",
+   "Natasha Lefear",
+   "latest LinkedIn entry is a Women We Admire membership; confirm the Elevance seat"
+  ],
+  [
+   "Carelon",
+   "Christina Rosa",
+   "Lisa Laplante (VP Claims) could not be linked; claims directors placed under the COO, confirm"
+  ],
+  [
+   "Carelon",
+   "Rhondale Henderson",
+   "two LinkedIn profiles; confirm the live one"
+  ],
+  [
+   "Carelon",
+   "Daniel Guasp",
+   "profile still lists Beacon Health Options; placed under the VP Operations, confirm"
+  ]
+ ],
+ "exec_cap": 4,
+ "peer_head_rule": false,
+ "exec_cap_by_account": {
+  "Elevance Health": 4,
+  "Carelon": 3
+ },
+ "trim": [
+  [
+   "Elevance Health",
+   "David N.",
+   "plan CFO (Healthy Blue Kansas); finance, not operations"
+  ],
+  [
+   "Elevance Health",
+   "Clayborne Harris",
+   "plan CFO; finance, not operations"
+  ],
+  [
+   "Elevance Health",
+   "Michael Ogden, M.D., MMM, CPE",
+   "Chief Medical Officer; clinical"
+  ],
+  [
+   "Elevance Health",
+   "Garrick Ducat",
+   "Chief Experience Office; member experience line"
+  ],
+  [
+   "Elevance Health",
+   "Kelly Vo",
+   "Unicare Community (unrelated entity, 2003)"
+  ],
+  [
+   "Elevance Health",
+   "Jan Meesey",
+   "executive admin"
+  ],
+  [
+   "Elevance Health",
+   "Beverly Winfield Pena",
+   "executive secretary"
+  ],
+  [
+   "Elevance Health",
+   "Gail K. Boudreaux",
+   "duplicate profile of the CEO carrying a VP title; not a real seat"
+  ],
+  [
+   "Elevance Health",
+   "Stan Yang",
+   "Unicare Biomedical (unrelated entity)"
+  ],
+  [
+   "Elevance Health",
+   "Annalisa Cooper",
+   "Lumenos (WellPoint) 1999; stale brand"
+  ],
+  [
+   "Elevance Health",
+   "Nicholas Burnett",
+   "FP&A; finance, not operations"
+  ],
+  [
+   "Elevance Health",
+   "Jay King",
+   "FP&A; finance, not operations"
+  ],
+  [
+   "Elevance Health",
+   "Colleen Parsons",
+   "corporate finance; not operations"
+  ],
+  [
+   "Elevance Health",
+   "Van J Chang",
+   "Medicaid finance; not operations"
+  ],
+  [
+   "Elevance Health",
+   "Kimberly Hunt",
+   "corporate finance; not operations"
+  ],
+  [
+   "Elevance Health",
+   "David A. Caruso",
+   "segment finance; not operations"
+  ],
+  [
+   "Elevance Health",
+   "Deb Johnson, LCSW, LICSW, LCASA",
+   "substance use programs; clinical"
+  ],
+  [
+   "Elevance Health",
+   "Denzel Brock",
+   "clinical operations; clinical line"
+  ],
+  [
+   "Elevance Health",
+   "Peter Austin",
+   "clinical operations; clinical line"
+  ],
+  [
+   "Elevance Health",
+   "Denice Gilling",
+   "clinical operations; clinical line"
+  ],
+  [
+   "Elevance Health",
+   "Solomon J. Parker",
+   "LTSS value-based program; clinical program"
+  ],
+  [
+   "Elevance Health",
+   "Kristie S.",
+   "initial-only surname; Wellpoint WA plan ops, lane covered by named plan COOs"
+  ],
+  [
+   "Elevance Health",
+   "Tequila W.",
+   "initial-only surname; claims lane covered"
+  ],
+  [
+   "Elevance Health",
+   "Debra S.",
+   "initial-only surname; claims lane covered"
+  ],
+  [
+   "Elevance Health",
+   "Sunil Nair",
+   "Director I Claims since 1998 at 'Anthem Inc'; stale card, claims lane covered"
+  ],
+  [
+   "Elevance Health",
+   "Alan Golivesky",
+   "business change manager; program role"
+  ],
+  [
+   "Elevance Health",
+   "Cara Meland",
+   "business change director; program role"
+  ],
+  [
+   "Elevance Health",
+   "Christina McGovern",
+   "business change director; program role"
+  ],
+  [
+   "Elevance Health",
+   "Carole Rebbel",
+   "business change director; program role"
+  ],
+  [
+   "Elevance Health",
+   "Jeff Howard",
+   "program management; program role"
+  ],
+  [
+   "Elevance Health",
+   "Keith Inman",
+   "project director; program role"
+  ],
+  [
+   "Carelon",
+   "Elisabeth Hager",
+   "Chief Medical Officer; clinical"
+  ],
+  [
+   "Carelon",
+   "Vandhana Wadhwa",
+   "Chief Medical Officer; clinical"
+  ],
+  [
+   "Carelon",
+   "Carin Skapars",
+   "Chief Quality Officer; clinical quality"
+  ],
+  [
+   "Carelon",
+   "Rebecca Marshall",
+   "controller; finance, not operations"
+  ],
+  [
+   "Carelon",
+   "Erika Sharillo LCSW",
+   "clinical operations and recovery; clinical"
+  ],
+  [
+   "Carelon",
+   "Clarence Jordan",
+   "wellness and recovery; clinical"
+  ],
+  [
+   "Carelon",
+   "Jean Olshefsky",
+   "recovery and advocacy; clinical"
+  ],
+  [
+   "Carelon",
+   "Diya Shah",
+   "ZipDrug founding team; not a Carelon operations seat"
+  ],
+  [
+   "Carelon",
+   "Grant Kathy",
+   "service center operations = contact center line"
+  ],
+  [
+   "Carelon",
+   "Raheel Anwar",
+   "customer service operations = contact center line"
+  ],
+  [
+   "Carelon",
+   "Winnie Chi",
+   "health services research; not operations"
+  ],
+  [
+   "Carelon",
+   "Gerald Jones",
+   "assistant director; below the map's level"
+  ],
+  [
+   "Carelon",
+   "Tammy McCarthy",
+   "clinical operations; clinical line"
+  ],
+  [
+   "Carelon",
+   "Darrell Oliveira",
+   "CFO Carelon (Mar 31 2026); budget owner, not an operations seat: named in the account note for Alex"
+  ],
+  [
+   "Elevance Health",
+   "Jeremy Randall",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "John Crowley",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Michelle Cowen",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Jane Hite-Syed",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Mark Reynolds",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Katie Fahey",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Misti Webb",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Ryan Thorsbakken",
+   "plan-level COO; state plan lens, add if Alex wants it"
+  ],
+  [
+   "Elevance Health",
+   "Pete Setzer, M.S., SPHR",
+   "systems solutions for Florida Medicare; plan-level"
+  ],
+  [
+   "Elevance Health",
+   "Susan Armbruster",
+   "Amerigroup SVP with no start date; brand retired 2024, likely stale"
+  ],
+  [
+   "Carelon",
+   "LaTasha Rhodes",
+   "account service manager; individual contributor"
+  ],
+  [
+   "Carelon",
+   "Jonathan Edmonds",
+   "plan-level COO (Carelon Health of PA)"
+  ],
+  [
+   "Carelon",
+   "Alicia Williams",
+   "COO/Director at plan level"
+  ],
+  [
+   "Elevance Health",
+   "Jennie Broyles",
+   "Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  ],
+  [
+   "Elevance Health",
+   "Josh Robles",
+   "Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  ],
+  [
+   "Elevance Health",
+   "Matthew Householder",
+   "Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  ],
+  [
+   "Elevance Health",
+   "Linda Hobbs",
+   "Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  ],
+  [
+   "Elevance Health",
+   "Mike Horton",
+   "Director Workforce Management: most likely the contact-center WFM team under Jennifer Wade and Brian Altig on the relationship map; confirm before adding"
+  ]
+ ],
+ "pad_to_cap": false,
+ "sibling_label": "Also for you",
+ "mode": "back_office",
+ "map_suffix": "Back Office",
+ "eyebrow": "GTM Engineering \u00b7 Elevance Health",
+ "am": "Alex Bauer",
+ "am_inbox": "~/Claude/Projects/Intradiem GTM Engineer/automation/inbox/salesnav/alex/transcribed",
+ "roster_source_label": "AM map",
+ "am_overlap_ok": [
+  "Felicia Norwood"
+ ],
+ "account_type_override": {
+  "Elevance Health": "Customer",
+  "Carelon": "Customer"
+ }
+}

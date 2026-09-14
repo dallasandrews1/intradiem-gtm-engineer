@@ -1,0 +1,43 @@
+{
+  "_doc": "Registry of Polar-ready tasks. slug = task id used in the REPORT block, the --paste flag and any downloaded-file folder (automation/inbox/polar/<slug>/ or ~/Downloads/polar/<slug>/). Polar has no local filesystem (probe Sep 13 2026), so the report arrives as text Dallas pastes back; files are optional downloads. verifier = what closes the task (a Polar report is a claim, the read below is proof). status: staged | run | verified | closed.",
+  "tasks": {
+    "wfm-l3-lookup-rebind": {
+      "title": "WFM L3: re-bind L1 Customer Lookup row value to the Company Domain column, run on all 524 rows",
+      "sheet": "motions/shared/polar_sheets/Polar_Sheet_WFM_L3_Lookup_Rebind_Sep13.md",
+      "system": "clay",
+      "table": "t_0tic8arWbZp8bSx87Ad",
+      "column": "f_0tjxaitimfHdnYmh4dN",
+      "expect": [],
+      "verifier": "clay tables columns get t_0tic8arWbZp8bSx87Ad shows fields|rowValue formulaText {{f_0ti8tdrnCsHVcUNjmh8}} (not the quoted literal); then gate-integrity-auditor reads customer_exclude on the Elevance/Molina/Carelon rows (expect 293 TRUE) and Send Ready stays HOLD on all of them",
+      "verifier_agent": "gate-integrity-auditor",
+      "chain": "gate-integrity-2026-08-20#wfm-l3-customer-lookup-inert",
+      "credits": "0 expected (internal lookup); the sheet stops before Run if Clay shows a credit estimate above 0",
+      "status": "staged",
+      "report": "REPORT block pasted back (Row value as read, rows run, credit estimate, Elevance row values, mismatches, screenshot links)",
+      "optional_files": [
+        "before.png",
+        "after.png"
+      ]
+    },
+    "stars-resurrection-stray-steps": {
+      "title": "lemlist Stars - Resurrection (Nate): delete the two STRAY steps left by the Aug 31 API probe",
+      "sheet": "motions/shared/polar_sheets/Polar_Sheet_Stars_Resurrection_Stray_Steps_Sep13.md",
+      "system": "lemlist",
+      "campaign": "cam_sh3JCJoxtEHyjGrsw",
+      "steps": [
+        "stp_6eBfPTm3Y92XNT363",
+        "stp_MPXXucbkXwjkiiJSP"
+      ],
+      "expect": [],
+      "verifier": "lemlist get_campaign_sequences cam_sh3JCJoxtEHyjGrsw returns neither step id; every other step id unchanged (13 steps across 5 sequences on Sep 13)",
+      "verifier_agent": "lemlist-lead-integrity",
+      "chain": "lemlist-api-sequence-step-limits-aug31 (memory, pre-convention)",
+      "credits": "0",
+      "status": "staged",
+      "report": "REPORT block pasted back (two titles deleted, dialog text, save click, campaign status, mismatches, screenshot link)",
+      "optional_files": [
+        "after.png"
+      ]
+    }
+  }
+}

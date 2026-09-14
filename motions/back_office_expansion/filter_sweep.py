@@ -55,7 +55,7 @@ for m in CFG.get("manual_add", []):
     nk = re.sub(r"[^a-z ]", "", m["full_name"].split(",")[0].lower()).strip()
     hit = [o for o in out if o["account"] == a and re.sub(r"[^a-z ]", "", o["full_name"].split(",")[0].lower()).strip() == nk]
     if hit:   # already sourced: the researched title and URL win, and force clears a stale leaver verdict
-        o = hit[0]; o["title"] = t; o["function_guess"] = func(t); o["band_guess"] = band(t)
+        o = hit[0]; o["title"] = t; o["function_guess"] = func(t); o["band_guess"] = band(t); o["full_name"] = m["full_name"]   # researched casing wins over an all-lowercase sweep name
         if m.get("linkedin_url"): o["linkedin_url"] = m["linkedin_url"]
         if m.get("force") or not KEEP_REASON.match(o["excluded_reason"]): o["excluded_reason"] = ""   # a researched executive passes the title gates
         o["search_query"] = "manual | " + m.get("note", "")[:80]; o["source"] = o["source"].split(" | ")[0] + " | web research"

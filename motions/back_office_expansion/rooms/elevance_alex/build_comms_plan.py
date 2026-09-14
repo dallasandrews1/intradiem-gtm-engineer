@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+"""Elevance Health expansion plan for Alex Bauer, in the Cleveland Clinic save-room shape (Sep 11 2026).
+Routes into the groups not using Intradiem, four lanes with an owner by role, dated moves, four gated messages.
+Sources: Alex's Greenlight account strategy (Sep 11 2026, marked rough by Alex), the Feb 26 and Mar 31 2026 Elevance releases,
+the Sep 11 back-office maps (set alex), the Value Repository. Emits data/comms_plan_elevance.json."""
+import json, pathlib
+HERE = pathlib.Path(__file__).parent; DATA = HERE / "data"; DATA.mkdir(exist_ok=True)
+
+ROUTES = [
+ {"id": "house-in-order", "name": "The record, first", "via": "Alex with Success and RevOps: current seats, ACV, renewal date, live modules and the admin of record, reconciled against the December 2016 Anthem agreement",
+  "why": "Every expansion conversation at Elevance quotes what the contact centers already run. Until the record is reconciled, nothing about Elevance's own usage is quotable, and the renewal position is unknown. Alex's plan puts this first, due Sep 25.", "lane": "Alex", "precedent": "Alex's account plan, opportunity 1: renewal protection and reconciliation"},
+ {"id": "claims-door", "name": "The claims door", "via": "Blake Main's line: Melissa Wise (VP Claims) and Holly Huffman (Senior Director, Claims Operations), reached by Alex; Jennifer Wade or Brian Altig named only if they agree",
+  "why": "Claims operations is the back office the current contract never touched. Since February the contact centers and claims report up the same Health Benefits structure, so the proof next door is now inside the same organization.", "lane": "Alex", "precedent": "Aug 24 council: expansion inside customers runs on a distinct line from the sponsor, AM clears"},
+ {"id": "new-seats", "name": "The new seats", "via": "Nicole Keating and Kathy Talnose, Staff VPs of Operations and Execution in Health Benefits Operations since June 2026; Traci Caldwell, Staff VP Strategic Workforce Planning since June 2025",
+  "why": "Leaders in a new seat write their agenda in the first year. A measurable capacity win that needs no restructure fits it, and utilization across the operations units is the number they are asked for first.", "lane": "Alex", "precedent": "Messaging doctrine: new-in-role play"},
+ {"id": "government-business", "name": "Government Business", "via": "Aimée Dailey's division, President since Mar 31: Natasha Lefear (Government Business encounters operations) and the state Medicaid operations directors on the map",
+  "why": "Medicaid and Medicare membership is falling and the benefit expense ratio rose to 89.7 percent in Q2; the operations leaders in that division carry the cost mandate. Same message shape as claims, after a claims or Health Benefits thread is live.", "lane": "Alex", "precedent": "Elevance Q2 2026 results, Jul 15 2026 (via Alex's plan)"},
+ {"id": "carelon-door", "name": "Carelon, a separate house", "via": "Will Feest (President Carelon Insights, COO Carelon) and Sandra T. (PBM operations, CarelonRx), through the executive voice to Mark Kaye, or through Trish Raines (Staff VP Carelon Implementations, Elevance side) as the peer door",
+  "why": "Carelon reports to the CFO since February and, in Alex's words, no one talks across groups. It has its own map for that reason. Held until a Health Benefits thread is live, so the Carelon conversation opens with a live reference inside Elevance.", "lane": "Executive voice", "precedent": "Feb 26 2026 release: Kaye takes Carelon oversight"},
+ {"id": "high-and-wide", "name": "High and wide", "via": "Marketing's back-office one-pager to the Salesforce-known layer (303 people across the 18 plan and subsidiary accounts) minus the sponsor line, sent as the success manager's alias",
+  "why": "Keeps the back-office story in front of the plans and subsidiaries nobody is calling, while the doors above are worked one at a time.", "lane": "Marketing", "precedent": "ADT save play: high-and-wide campaign to 100+ contacts"},
+]
+
+LANES = [
+ {"lane": "Alex", "role": "Senior Strategic Account Manager", "owns": "The record, the three doors, the working sessions, the executive review, the plan itself"},
+ {"lane": "Success manager", "role": "Customer Success (to name)", "owns": "What the contact centers run today in their own numbers, the admin of record, the sponsor-line proof every later message leans on"},
+ {"lane": "Marketing", "role": "Marketing", "owns": "High and wide: the known-layer list, the back-office one-pager, voice-of-customer alignment to the executive contacts"},
+ {"lane": "Executive voice", "role": "Mary Ann Chandler, Matt McConnell", "owns": "The notes to Felicia Norwood and Mark Kaye, held until a thread is live and the record is reconciled"},
+]
+
+MOVES = [
+ ("Alex", "2026-09-15", "2026-09-19", "Build the Elevance Health and Carelon back-office maps in Sales Navigator from the sheets; refresh the four stale cards on the relationship map (Pardo, Patel, Gudavalli, Thompson)", "planned"),
+ ("Alex", "2026-09-15", "2026-09-25", "Reconcile the record: seats, ACV, renewal date, live modules, admin of record, against the 2016 Anthem agreement", "planned"),
+ ("Success manager", "2026-09-15", "2026-09-26", "What the contact center teams run today, in their numbers: modules live, adoption, the last review", "planned"),
+ ("Alex", "2026-09-22", "2026-09-26", "Sponsor conversation with Jennifer Wade or Brian Altig: the back-office maps, whom they know in claims and Health Benefits Operations, whether their name can be used", "planned"),
+ ("Alex", "2026-09-29", "2026-10-03", "Message 1 to claims operations (Melissa Wise, Holly Huffman), sponsor named only with permission", "planned"),
+ ("Marketing", "2026-10-06", "2026-10-06", "One-pager 1 (back office, Optum named in email copy) to the known layer minus the sponsor line, as the success manager's alias", "planned"),
+ ("Alex", "2026-10-06", "2026-10-10", "Message 2 to Nicole Keating and Kathy Talnose (Health Benefits Operations)", "planned"),
+ ("Alex", "2026-10-13", "2026-10-17", "Message 3 to Traci Caldwell (Strategic Workforce Planning)", "planned"),
+ ("Alex", "2026-10-13", "2026-10-24", "Working session with whichever door replied: one claims or Health Benefits operations unit scoped the way the 2016 proof of concept was (350 seats before 3,500)", "planned"),
+ ("Executive voice", "2026-10-20", "2026-10-24", "Message 4, Mary Ann to Felicia Norwood, naming the engaged colleagues; only after a thread is live and the record is reconciled", "held"),
+ ("Alex", "2026-10-27", "2026-10-31", "Government Business door: Natasha Lefear and one state Medicaid operations director, same message shape with the Q2 cost signal", "planned"),
+ ("Marketing", "2026-11-03", "2026-11-03", "One-pager 2; voice-of-customer alignment to the executive contacts in Salesforce", "planned"),
+ ("Executive voice", "2026-11-10", "2026-11-14", "Carelon: Matt or Mary Ann to Mark Kaye, or Alex to Will Feest through Trish Raines; only after a Health Benefits thread is live", "held"),
+ ("Alex", "2026-11-17", "2026-11-21", "Executive review with Mary Ann: what Norwood and Kaye hear, which unit pilots first, the renewal position", "planned"),
+ ("Marketing", "2026-12-01", "2026-12-01", "One-pager 3", "planned"),
+ ("Alex", "2026-12-01", "2026-12-12", "Pilot scoped in one claims or Health Benefits operations unit, proof of concept to rollout as in 2016; renewal protection carried alongside", "planned"),
+]
+
+RECIPIENTS = {"m1": ["Melissa", "Holly"], "m2": ["Nicole", "Kathy"]}
+MESSAGES = [
+ {"id": "m1", "name": "Message 1: claims operations", "to": "Melissa Wise (VP Claims), Holly Huffman (Senior Director, Claims Operations)", "from": "Alex", "when": "Week of Sep 29, after the record is reconciled", "route": "claims-door",
+  "one_idea": "The claims backlog is a timing problem, not a staffing problem; the idle windows already inside the week are the capacity, and the automation the contact centers run can read them.",
+  "persona": "VP/Dir Claims Ops row: the backlog cleared by Friday grows back by Monday",
+  "subject": "the claims week and its idle windows",
+  "body": """Hi {{firstName}},
+
+Since Health Benefits came under one structure in February, claims and the contact centers report up the same line, and the contact center teams have run Intradiem's automation since the Anthem days.
+
+In claims we do a narrower thing: watch the queues and the idle windows inside the week, and move work and people into them as they open, on top of the case system and the WFM you already run. Optum recorded 18.4 percent productivity within nine months and about 14 fewer idle hours per associate a month.
+
+Would a short look at how the week's idle windows line up against your backlog be useful?
+
+Alex""",
+  "claims": [("Health Benefits consolidated under one structure in February 2026", "Elevance Health newsroom, Feb 26 2026 release"),
+             ("Contact center teams have run Intradiem since the Anthem days", "December 2016 Anthem MSA and Order Form (Alex's plan, sources 1 and 2); WAITS for the record reconciliation to confirm usage is live"),
+             ("Optum: 18.4 percent productivity within nine months, more than 14 fewer idle hours per associate per month", "Value Repository, marketing's back-office outreach framework V04 (Sep 9 2026), VERIFIED for email; never on a public asset")],
+  "qc": "Opens on their world with the dated signal (the February consolidation). One idea. Product action named in concrete terms, no product name or acronym. One question naming the topic. 109 words. Sender voice to match Alex's own sent mail."},
+ {"id": "m2", "name": "Message 2: the new seats", "to": "Nicole Keating, Kathy Talnose (Staff VPs, Operations and Execution, Health Benefits Operations)", "from": "Alex", "when": "Week of Oct 6", "route": "new-seats",
+  "one_idea": "A first-year win that needs no restructure: utilization across the operations units, measured live and filled, on the systems already in place.",
+  "persona": "New-in-role exec row: the listening tour ends and the agenda gets written",
+  "subject": "the first-year number",
+  "body": """Hi {{firstName}},
+
+New Operations and Execution seats in Health Benefits Operations since June, and the first year usually gets written around one number the whole organization can see.
+
+Intradiem's back-office automation measures the idle capacity inside a processing week and fills it, on top of the case systems and the WFM your teams already use, so nothing is restructured. A healthcare services company's 90-day pilot recorded 5.9 percent more active work time across its back office.
+
+Is utilization across the operations units something you can see live today, or is it still assembled after the fact?
+
+Alex""",
+  "claims": [("In seat since June 2026", "LinkedIn, live-checked Sep 11 2026"),
+             ("A healthcare services company's 90-day pilot: 5.9 percent more active work time", "Value Repository, customer stories registry (McKesson, BLINDED); marketing's framework V04")],
+  "qc": "Opens on their world (the new seat). One idea. Concrete product action, no product name. One question. 97 words. Nothing about Elevance's own usage, so it does not wait on the reconciliation."},
+ {"id": "m3", "name": "Message 3: strategic workforce planning", "to": "Traci Caldwell (Staff VP Strategic Workforce Planning)", "from": "Alex", "when": "Week of Oct 13", "route": "new-seats",
+  "one_idea": "Planning sets the shape of the year; the drift happens inside the day, and that is the layer the automation works on, on top of the WFM.",
+  "persona": "Head of Resource Planning / WFM row: the plan is right at 8am and wrong by 10",
+  "subject": "the plan at 8am",
+  "body": """Hi Traci,
+
+Strategic workforce planning sets the shape of the year; the drift happens inside the day, when the plan is right at 8am and wrong by 10 and a team absorbs it by hand.
+
+Intradiem's automation works on that layer: it reads the queues and schedules in real time and slots the adjustments, the breaks and the coaching into the windows as they open, on top of the WFM you already run, never replacing it. Deployments typically return 6 to 10 percent productivity within weeks of going live.
+
+Would a read on where the intraday drift sits across the operations units be useful?
+
+Alex""",
+  "claims": [("Sits on top of the existing WFM, never replaces it", "Value Repository line 86, VERIFIED"),
+             ("6 to 10 percent productivity savings within weeks of deployment", "Value Repository: official value deck, market leadership slide, 1:1 sales use")],
+  "qc": "Opens on her world. One idea. Product action concrete, WFM named as the layer we act on, not a rival. One question. 105 words. Initial-only LinkedIn surname resolved to Caldwell on Sep 11; confirm the badge in Sales Nav before send."},
+ {"id": "m4", "name": "Message 4: executive note, held", "to": "Felicia Norwood (EVP, Chief Health Benefits Officer)", "from": "Mary Ann Chandler", "when": "Week of Oct 20, only after a claims or Health Benefits thread is live and the record is reconciled", "route": "claims-door",
+  "one_idea": "Her own claims and operations teams are already in a working thread on extending what the contact centers run; the consolidated organization should get one commitment, not several.",
+  "persona": "Group / C-level: air cover only, after a thread is live, naming engaged colleagues",
+  "subject": "one commitment for the consolidated organization",
+  "body": """Felicia,
+
+Your claims and Health Benefits Operations teams are in a working thread with Alex Bauer on extending the automation your contact centers have run since the Anthem days into the operations units under your structure.
+
+Our record on the account is reconciled and current. I'd like fifteen minutes before your 2027 planning closes to make sure the commitment we bring matches what the consolidated organization needs.
+
+Mary Ann""",
+  "claims": [("A working thread is live", "MUST BE TRUE before send; Message 1 or 2 answered"),
+             ("Record reconciled and current", "MUST BE TRUE before send; Alex's Sep 25 reconciliation"),
+             ("Contact centers have run the automation since the Anthem days", "2016 Anthem MSA; usage confirmed by the reconciliation")],
+  "qc": "Under 80 words (71). Names the engaged colleague. Held on two conditions. Sender voice to match Mary Ann's."},
+]
+
+out = {"account": "Elevance Health", "as_of": "2026-09-11", "am": "Alex Bauer",
+       "precedent": "The Cleveland Clinic save room shape (plan first, people behind it) and the Aug 24 council rules for back-office expansion inside customers: a distinct line from the sponsor, the AM clears, the sponsor line untouched; commercially, the 2016 Anthem proof of concept to rollout",
+       "routes": ROUTES, "lanes": LANES,
+       "moves": [{"lane": l, "week": w, "due": d, "move": m, "status": s} for l, w, d, m, s in MOVES],
+       "messages": [dict(m, renders=[{"to_first": fn, "body": m["body"].replace("{{firstName}}", fn)} for fn in RECIPIENTS.get(m["id"], [])],
+                         waits_for=("the record reconciliation confirming live usage" if m["id"] == "m1" else "")) for m in MESSAGES],
+       "marketing_lane": {
+         "list": "Elevance Health - Known Layer for Marketing - Sep 11.csv (Alex passes it to marketing): the 303 Salesforce-known people across the 18 plan and subsidiary accounts, labeled as marketing's own data, not re-verified; the sponsor line and contact-center titles left out with reasons",
+         "tool": "Pardot, sent as the success manager's alias; nothing account-specific from marketing",
+         "sends": ["Oct 6: one-pager 1, back office", "Nov 3: one-pager 2 and voice-of-customer alignment to the executive contacts in Salesforce", "Dec 1: one-pager 3"],
+         "claims_in": ["Optum by name in email copy: 18.4 percent productivity within nine months, more than 14 fewer idle hours per associate per month, 15.4X ROI (marketing's back-office framework V04, Value Repository)",
+                       "A healthcare services company's 90-day pilot, blinded: 5.9 percent more active work time, 1,649 active work hours gained (pilot total, never per associate)",
+                       "Platform line: runs on top of the existing WFM, integrates with Genesys Cloud, NICE and the other platforms, nothing replaced",
+                       "Official deck lines for sales use: 6 to 10 percent productivity savings within weeks; time to value 90 to 120 days"],
+         "claims_out": ["Elevance's own seats, ACV, savings or adoption, until the record is reconciled",
+                        "The $748K Back Office Optimizer worked example (a model, never a result)", "Product names and acronyms in outreach (marketing's rule: Intradiem's back-office automation)",
+                        "Any idle-time percentage", "The Medicaid market-exit line from the account plan, until it has a dated source", "Any customer name other than Humana, Virgin Media or Optum"]},
+       "senders_note": "Drafts for Alex and Mary Ann to make their own. Nothing here goes out in anyone's name until they have read it and changed what they want changed.",
+       "rules": ["Nothing about Elevance's own usage, seats or savings is quoted until the record is reconciled (Sep 25).",
+                 "The sponsor line (Wade, Altig, Backofen, Kirven, Colon, Anketell) gets nothing account-specific except from Alex or the success manager; their names go into a message only with their permission.",
+                 "No product names or acronyms in outreach; Optum by name only in email, the healthcare services pilot stays blinded, the $748K model never ships.",
+                 "Message 4 and the Carelon note are held until a Health Benefits thread is live.",
+                 "Every recipient has a live profile checked Sep 11 2026 and a validated work email before send.",
+                 "Marketing sends as the success manager's alias only for the one-pager."]}
+(DATA / "comms_plan_elevance.json").write_text(json.dumps(out, indent=1))
+print("routes", len(ROUTES), "lanes", len(LANES), "moves", len(MOVES), "messages", len(MESSAGES))
+for m in MESSAGES: print(m["id"], len(m["body"].split()), "words")

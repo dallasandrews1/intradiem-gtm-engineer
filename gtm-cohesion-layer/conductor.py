@@ -623,6 +623,8 @@ def _check_tam():
         if not tam:
             return ("tam_contract", False, "tam engine module not found")
         plays = tam.build_plays(tam.load_cfg(), datetime.date.today())
+        if isinstance(plays, tuple):  # build_plays returns (plays, excluded) since the Sep 11 universe swap
+            plays = plays[0]
         if not plays:
             return ("tam_contract", False, "build_plays returned empty")
         missing = {"icp_total", "fresh"} - set(plays[0].keys())
