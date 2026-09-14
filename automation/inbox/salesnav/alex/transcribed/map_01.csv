@@ -1,0 +1,31 @@
+account,map_lead_count,source,full_name,title,title_truncated,reports_to,tree_depth,crm_status,role_label,notes
+Elevance Health,30,map,Gail Boudreaux,President and CEO,no,,0,CRM,No role,green check CRM badge; top of the map
+Elevance Health,30,map,Felicia Norwood,Executive Vice President & ...,yes,Gail Boudreaux,1,CRM,No role,green check CRM badge; EVP Chief Health Benefits Officer (consolidated Health Benefits org since Feb 2026)
+Elevance Health,30,map,Morgan Kendrick,"Executive Vice President, El...",yes,Gail Boudreaux,1,CRM,No role,green check CRM badge; Recently posted on LinkedIn
+Elevance Health,30,map,Tricia Backofen,"Vice President, Government...",yes,Felicia Norwood,2,CRM,No role,green check CRM badge
+Elevance Health,30,map,Jennifer Wade,Chief Member Service Officer,no,Morgan Kendrick,2,CRM,No role,green check CRM badge; also shows Added in the Recommended leads sidebar
+Elevance Health,30,map,Cheri Specht,VP Local Experience,no,Morgan Kendrick,2,,No role,placeholder card (grey avatar; no CRM badge; not linked)
+Elevance Health,30,map,Amish Patel,Chief Information Officer GuideWell,no,Morgan Kendrick,2,CRM,No role,green check CRM badge; Recently posted on LinkedIn; card shows GuideWell as employer (stale or wrong-company card; confirm)
+Elevance Health,30,map,Maurice Pardo,,yes,Tricia Backofen,3,CRM,No role,green check CRM badge; red flag Has left Elevance Health (the header's 1 lead left the company)
+Elevance Health,30,map,Mark Davis,VP Business Solutions,no,Tricia Backofen,3,,No role,placeholder card (grey avatar; no CRM badge)
+Elevance Health,30,map,Robin Nunn,Director Customer Service,no,Tricia Backofen,3,,No role,placeholder card (grey avatar; no CRM badge)
+Elevance Health,30,map,Kellie Kirven,Staff VP Customer Care Operations,no,Tricia Backofen,3,,No role,placeholder card (grey avatar; no CRM badge)
+Elevance Health,30,map,Kathy Colon,Staff VP National,no,Tricia Backofen,3,,No role,placeholder card (grey avatar; no CRM badge)
+Elevance Health,30,map,Minga Williams,"Director, Customer Care Op... WellPoint",yes,Jennifer Wade,3,CRM,No role,green check CRM badge; WellPoint entity
+Elevance Health,30,map,Brian Altig,Director Workforce Manage...,yes,Jennifer Wade,3,CRM,No role,green check CRM badge; contact-center WFM sponsor line
+Elevance Health,30,map,Angela Robinson,Director - SHBP,no,Jennifer Wade,3,,No role,placeholder card (grey avatar; no CRM badge); SHBP = State Health Benefit Plan (Georgia)
+Elevance Health,30,map,Kumar Gudavalli,"Corporate Vice President, T... SCAN",yes,Jennifer Wade,3,CRM,No role,green check CRM badge; card shows SCAN as employer (stale or wrong-company card; confirm)
+Elevance Health,30,map,Randy Tharp,Director Workforce Management (GBD),no,Mark Davis,4,,No role,placeholder card (grey avatar; no CRM badge); GBD = Government Business Division
+Elevance Health,30,map,Linda Pedersen,Business Consultant,no,Kellie Kirven,4,,No role,placeholder card; connector from the Kirven/Colon row; reports to one of: Kellie Kirven / Kathy Colon (confirm)
+Elevance Health,30,map,Michael Almquist,WFM Sr Analyst,no,Kellie Kirven,4,,No role,placeholder card; connector from the Kirven/Colon row; reports to one of: Kellie Kirven / Kathy Colon (confirm)
+Elevance Health,30,map,Janet Sokoloff,"Director, Enterprise Application Architect",no,Brian Altig,4,,No role,placeholder card; connector from the Altig/Robinson/Gudavalli row; reports to one of: Brian Altig / Angela Robinson / Kumar Gudavalli (confirm)
+Elevance Health,30,map,Jeff Van Ornum,Director II,no,Brian Altig,4,CRM,No role,green check CRM badge; connector from the Altig/Robinson/Gudavalli row (confirm manager)
+Elevance Health,30,map,Rachel Brooks,Strategy & Program Develo...,yes,Kumar Gudavalli,4,CRM,No role,green check CRM badge; connector from the Altig/Robinson/Gudavalli row (confirm manager)
+Elevance Health,30,map,Jamison Torok,"Technical Program Director Anthem, Inc.",no,Kumar Gudavalli,4,CRM,No role,green check CRM badge; Anthem entity label on card
+Elevance Health,30,map,Kip Kinzer,Technical Program Director,no,Kumar Gudavalli,4,Update CRM,No role,orange Update CRM badge (not yet in Salesforce)
+Elevance Health,30,map,Jody Sykes,Business Consultant,no,Randy Tharp,5,CRM,No role,green check CRM badge
+Elevance Health,30,map,Che Thompson,Hyundai Motor Group Metaplant America (HMGMA),no,Jody Sykes,6,CRM,No role,green check CRM badge; card shows Hyundai Motor Group Metaplant America as employer: stale card (has moved)
+Elevance Health,30,map,Barb Anketell,"VP, Consolidated Contact Centers, Diversified Business Group, DBG ...",yes,,0,,No role,placeholder card; right-hand floating column (no connector to the main tree); DBG = Diversified Business Group
+Elevance Health,30,map,Aaron Bennett,Staff VP - WFM,no,Barb Anketell,1,,No role,placeholder card; right-hand column under Anketell
+Elevance Health,30,map,Angel Daley,WFM Director (Carelon),no,Aaron Bennett,2,,No role,placeholder card; Carelon entity (Alex: Carelon placeholders live in the Elevance map)
+Elevance Health,30,map,Valerie Hatcher,WFM Business Consultant at Carelon,no,Angel Daley,3,,No role,placeholder card; Carelon entity

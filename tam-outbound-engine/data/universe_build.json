@@ -1,8 +1,8 @@
 {
- "built_at": "2026-09-12T03:06:00Z",
+ "built_at": "2026-09-14T02:26:00Z",
  "records": 181,
  "accounts": 181,
- "sellers": 23,
+ "sellers": 22,
  "triggers": 29,
  "triggers_added": 0,
  "segment_id": "audseg_0tl7vtuy9dbuQWxtJRK",
@@ -83,6 +83,7 @@
    "bp.com",
    "bjs.com",
    "davita.com",
+   "marykay.com",
    "comerica.com",
    "rossstores.com",
    "christushealth.org",
@@ -149,14 +150,14 @@
    "allianzlife.com",
    "raymondjames.com",
    "nrg.com",
-   "safeway.com",
-   "avangrid.com"
+   "safeway.com"
   ],
   "005V5000001gAGRIA2": [
    "wm.com",
    "southerncompany.com",
    "wowway.com",
    "dickssportinggoods.com",
+   "breezeline.com",
    "gap.com",
    "ameren.com",
    "primerica.com",

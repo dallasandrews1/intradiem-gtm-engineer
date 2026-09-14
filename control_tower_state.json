@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-11T12:50:04.336070+00:00",
+  "generated_at": "2026-09-13T12:30:05.154109+00:00",
   "overall": {
     "posture": "BUILD",
-    "headline": "3 motions in build, 0 sends by design, 691 credits used",
+    "headline": "3 motions in build, 0 sends by design, 693 credits used",
     "gates": {
       "deliverability": "UNKNOWN",
       "credit_budget": "GREEN",
@@ -139,10 +139,10 @@
     "trust": "STALE"
   },
   "credits": {
-    "spent": 691.4,
-    "remaining": 4308.6,
+    "spent": 693.0,
+    "remaining": 4307.0,
     "budget": 5000.0,
-    "pct_consumed": 0.138,
+    "pct_consumed": 0.139,
     "flag_60pct": false,
     "cost_per_qualified_reply": null,
     "trust": "LIVE"

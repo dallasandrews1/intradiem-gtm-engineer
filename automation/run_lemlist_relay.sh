@@ -9,6 +9,8 @@ set -uo pipefail
 cd "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer"
 
 python3 automation/lemlist_pulse.py >> "automation/logs/_run_lemlist_relay.out" 2>&1 || true
+# campaign-scorecard (Sep 13 2026): deterministic per-campaign funnel + STALLED watch + receipts candidates, read-only, 0 credits.
+python3 automation/campaign_scorecard.py >> "automation/logs/_run_lemlist_relay.out" 2>&1 || true
 
 "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer/automation/lib/claude_net.sh" --model claude-sonnet-5 -p "$(cat <<'PROMPT'
 Unattended scheduled run: Lemlist-to-Slack relay for rep channels. Nobody is watching live.
