@@ -1,0 +1,6 @@
+# Jobs staged by design (plist versioned or installed but deliberately not loaded). The swarm heartbeat reports these as STAGED, not DORMANT, and they do not count as drift. One launchd label per line.
+com.dallasandrews.gtm.receiptsrefresh
+com.dallasandrews.gtm.accountfacts
+com.dallasandrews.gtm.controltower
+com.dallasandrews.gtm.partnerbriefs
+com.intradiem.signals.daily

@@ -96,11 +96,16 @@ OUT="logs/swarm-health-${TODAY}.md"
       echo "- UNVERSIONED: ${lbl} is loaded and running but has no plist in the repo. It cannot be reviewed or restored."
       drift=1
     fi
-    if [ "$in_repo" -eq 1 ] && [ "$in_loaded" -eq 0 ]; then
+    staged=0
+    [ -f "${REPO_DIR}/config/staged_jobs.txt" ] && grep -v '^#' "${REPO_DIR}/config/staged_jobs.txt" | grep -qx "$lbl" && staged=1
+    if [ "$staged" -eq 1 ] && [ "$in_loaded" -eq 0 ]; then
+      echo "- STAGED (by design, config/staged_jobs.txt): ${lbl} is not loaded; load on Dallas's word."
+    fi
+    if [ "$in_repo" -eq 1 ] && [ "$in_loaded" -eq 0 ] && [ "$staged" -eq 0 ]; then
       echo "- DORMANT: ${lbl} is versioned in the repo but is NOT loaded. It is doing nothing."
       drift=1
     fi
-    if [ "$in_la" -eq 1 ] && [ "$in_loaded" -eq 0 ]; then
+    if [ "$in_la" -eq 1 ] && [ "$in_loaded" -eq 0 ] && [ "$staged" -eq 0 ]; then
       echo "- INSTALLED BUT NOT LOADED: ${lbl} plist is in LaunchAgents but launchd is not running it."
       drift=1
     fi

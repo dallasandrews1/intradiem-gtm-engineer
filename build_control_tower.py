@@ -300,6 +300,65 @@ def parse_readout_log(path: Path) -> List[Dict[str, str]]:
     return entries
 
 
+SCORECARD_HISTORY_PATH = Path(__file__).resolve().parent / "automation" / "logs" / "campaign_scorecard_history.csv"
+SCORECARD_LOG_GLOB = "campaign-scorecard-*.md"
+
+
+def read_live_campaigns() -> Dict[str, Any]:
+    """Live campaign funnel from campaign_scorecard_history.csv (Sep 13 2026): latest row per campaign,
+    engine campaigns aggregated per motion, plus the STALLED and capacity lines from the newest scorecard log.
+    This is the block that replaces the seeded per-motion funnel wherever it is present."""
+    import csv
+    out: Dict[str, Any] = {"trust": "MISSING", "as_of": None, "per_motion": {}, "campaigns": [], "stalled": [], "capacity": []}
+    if not SCORECARD_HISTORY_PATH.exists():
+        return out
+    latest: Dict[str, Dict[str, str]] = {}
+    with SCORECARD_HISTORY_PATH.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            cid = row.get("campaign_id")
+            if cid and (cid not in latest or row["date"] > latest[cid]["date"]):
+                latest[cid] = row
+    if not latest:
+        return out
+    def num(v: Optional[str]) -> int:
+        try:
+            return int(float(v or 0))
+        except ValueError:
+            return 0
+    as_of = max(r["date"] for r in latest.values())
+    per: Dict[str, Dict[str, int]] = {}
+    for r in latest.values():
+        motion = r.get("motion") or "Rep-built"
+        m = per.setdefault(motion, {"campaigns": 0, "running": 0, "leads": 0, "launched": 0, "in_progress": 0, "replies": 0, "interested": 0, "meetings": 0, "bounced": 0, "unsubscribed": 0, "open_tasks": 0, "waiting": 0})
+        m["campaigns"] += 1
+        m["running"] += 1 if r.get("status") == "running" else 0
+        m["leads"] += num(r.get("leads")); m["launched"] += num(r.get("leads")) - num(r.get("not_launched"))
+        m["in_progress"] += num(r.get("in_progress")); m["replies"] += num(r.get("replied")); m["interested"] += num(r.get("interested"))
+        m["meetings"] += num(r.get("meetings")); m["bounced"] += num(r.get("bounced")); m["unsubscribed"] += num(r.get("unsubscribed"))
+        m["open_tasks"] += num(r.get("open_tasks")); m["waiting"] += num(r.get("waiting"))
+        out["campaigns"].append({"id": r["campaign_id"], "name": r.get("campaign"), "motion": motion, "rep": r.get("rep"), "status": r.get("status"),
+                                 "leads": num(r.get("leads")), "launched": num(r.get("leads")) - num(r.get("not_launched")), "replies": num(r.get("replied")),
+                                 "meetings": num(r.get("meetings")), "open_tasks": num(r.get("open_tasks")), "mailbox": r.get("mailbox", "")})
+    out["per_motion"] = per
+    out["as_of"] = as_of
+    out["trust"] = "STALE" if is_stale(as_of, 2) else "LIVE"
+    logs = sorted(SCORECARD_HISTORY_PATH.parent.glob(SCORECARD_LOG_GLOB))
+    if logs:
+        section = None
+        for line in logs[-1].read_text(encoding="utf-8").splitlines():
+            if line.startswith("## STALLED"):
+                section = "stalled"; continue
+            if line.startswith("## Send capacity"):
+                section = "capacity"; continue
+            if line.startswith("## "):
+                section = None; continue
+            if section == "stalled" and line.startswith("- STALLED"):
+                out["stalled"].append(line[2:])
+            if section == "capacity" and line.startswith("- "):
+                out["capacity"].append(line[2:])
+    return out
+
+
 def build_motion_rows(engine_state: Dict[str, Any], impact: Dict[str, Any], registry: Dict[str, Any], credit_data: Dict[str, Any], play_data: Dict[str, Any]) -> List[Dict[str, Any]]:
     motion_definitions = [
         ("star_ratings", "Star Ratings"),
@@ -486,6 +545,7 @@ def build_state() -> Dict[str, Any]:
             "trust": "SEEDED" if engine_state.get("approval_queue", {}).get("pending", 0) == 0 else "LIVE",
         },
         "signals": signals,
+        "live_campaigns": read_live_campaigns(),
         "blockers_and_asks": blockers_and_asks,
         "sources": [
             {

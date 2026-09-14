@@ -18,7 +18,7 @@ Dallas iterates fast, so he wants one consolidated morning DM that tells him wha
 
 ## Inputs (read in this order; if a file is missing or stale, SAY so in that section rather than estimating around it)
 
-1. `control_tower_state.json` (repo root): gates (deliverability, credit, baseline), per-motion build_state + universe + funnel, blockers_and_asks (open-flagged), credit posture. The run script refreshes this via `build_control_tower.py` before this skill runs, so treat it as current.
+1. `control_tower_state.json` (repo root): gates (deliverability, credit, baseline), per-motion build_state + universe + funnel, blockers_and_asks (open-flagged), credit posture. Since Sep 13 2026 it also carries `live_campaigns` (read from the campaign scorecard history: per-motion running/leads/launched/replies/meetings/open_tasks/waiting, the STALLED lines, the capacity lines, trust LIVE or STALE). Where `live_campaigns.trust` is LIVE it overrides the seeded per-motion funnel and the "0 sends by design" reading; report motion movement from it. The run script refreshes this via `build_control_tower.py` before this skill runs, so treat it as current.
 2. `automation/logs/war-room-<today>.md`: overnight signals, priority ranks, plays, anything staged. If today's file is absent, note "war room log not found for today" in the signals section.
 3. `Clay_Build_State_Registry.md`: present-tense ground truth for Clay build state and open ⚠️ blockers.
 4. `gtm-cohesion-layer/engine_state.json` and `impact/impact.json`: funnel, approval queue, opportunity surfaced vs realized (never blend).
