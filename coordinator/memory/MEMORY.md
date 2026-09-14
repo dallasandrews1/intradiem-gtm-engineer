@@ -635,3 +635,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-13
 - [GTM Engine Review Sep13](gtm-engine-review-sep13.md) — Sep 13 2026 full review + pre-mortem: 0 replies, 215 leads parked at LinkedIn manual steps, 1,707 loaded never launched; campaign-scorecard built (hourly, rundown source 18); page gtm-engine-review.pages.dev
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
+- [DWO Autopilot Lane Sep14](dwo-autopilot-lane-sep14.md) — DWO restructured: email 1, voicemail task, email 2 d3, LinkedIn after; brief dry run nathan/dwo
