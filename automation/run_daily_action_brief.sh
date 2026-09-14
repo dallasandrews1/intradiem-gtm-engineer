@@ -10,7 +10,10 @@
 set -uo pipefail
 cd "/Users/dallasandrews/Claude/Projects/Intradiem GTM Engineer"
 
-if [[ "${FIXTURE:-0}" == "1" ]]; then
+if [[ -n "${BRIEF_REPS:-}" ]]; then
+  DUE="$BRIEF_REPS"   # manual scope, e.g. BRIEF_REPS='["nathan"]' for an on-demand dry run
+  FIXTURE_LINE=""
+elif [[ "${FIXTURE:-0}" == "1" ]]; then
   DUE='["jack","nathan"]'
   FIXTURE_LINE="FIXTURE MODE: compose from automation/config/action_brief_fixture.json instead of calling the Lemlist API. Treat its tasks/replies as the live queues. NEVER post to Slack in fixture mode regardless of any live flag; write renders to the log only."
 else
@@ -30,6 +33,8 @@ Reps due this run: $DUE
 $FIXTURE_LINE
 
 Config: automation/config/action_brief.json (reps, brief definitions, campaigns per brief, live flag, state.last_posted). Routing: automation/config/lemlist_channels.json (channels + route names; READ ONLY, never edit it). Auth: automation/config/lemlist.env has LEMLIST_API_KEY. Format contract: automation/config/action_brief_format.md, follow it exactly.
+
+DRY-RUN LANE FILTER (Sep 14 2026): when "live" is false and action_brief.json carries "dry_run_lanes", compose ONLY the brief keys listed for each due rep (e.g. nathan: ["dwo"]) and write one line per skipped lane: "lane <key>: not in dry_run_lanes, not composed". A brief whose config carries "autopilot_lane": true renders its autopilot section even when the campaign is paused, using the campaign's first automated email step and the count of leads not yet launched, labelled "if launched today"; never fabricate a recipient list.
 
 Do exactly this, for each due rep, for each of that rep's briefs:
 1. Fetch open tasks: curl -s -u ":\$LEMLIST_API_KEY" "https://api.lemlist.com/api/tasks?filters=%5B%5D" (filters param REQUIRED, %5B%5D = empty array; done tasks are excluded by the API). Keep only tasks whose campaignId belongs to this brief. HELD LEADS: if this brief's config carries a "held_leads" array, EXCLUDE those leads' tasks from every approval/task list in the brief and render exactly one line for each at the bottom of the brief's task section: "Held for Dallas: <name> (<company>) - do not action in Lemlist." Never list a held lead as an approval, a call, or any actionable item, regardless of what the task queue says.

@@ -231,5 +231,69 @@
  ],
  "calls": "All three calls leave a voicemail (Dallas, Sep 4 evening: voicemails are the spine). Call 2 pairs with the same-hour just-tried-you email.",
  "colleague_variables": "colleagueFirst + colleagueLine on 624 leads at 166 accounts (Sep 4 late, push_colleague_vars.py, 624/624 ok). Email 4 uses colleagueLine; DM 3 and Call 3 use colleagueFirst; Liquid if-blocks hide the line for single-seat leads.",
- "copy_standard": "All non-locked step bodies rewritten Sep 4 late to the pressure standard (doctrine Sep 4 addendum, Messaging_Gold_Examples_Sep4.md)."
+ "copy_standard": "All non-locked step bodies rewritten Sep 4 late to the pressure standard (doctrine Sep 4 addendum, Messaging_Gold_Examples_Sep4.md).",
+ "restructured_sep14": {
+  "when": "2026-09-14 early, API via the lemlist connector, campaign paused, nothing sent, sender unchanged (main mailbox)",
+  "why": "Autopilot lane: the first three touches need no manual LinkedIn step, so a lead gets email 1, the voicemail, and email 2 before anything waits on a task",
+  "root_now": [
+   {
+    "id": "stp_vQd7kTCL3DpDgkryR",
+    "type": "email",
+    "d": 0,
+    "note": "Email 1 A/B, unchanged"
+   },
+   {
+    "id": "stp_aJGLWhmk73ajWjYcx",
+    "type": "phone",
+    "d": 1,
+    "note": "NEW Call 1 voicemail task, script from the Sep 4 Call 1 minus the LinkedIn connect line (the invite now comes later)"
+   },
+   {
+    "id": "stp_xXqcnL3No78zYfHsG",
+    "type": "email thread",
+    "d": 2,
+    "note": "NEW Email 2, body verbatim from the Sep 4 Email 2, lands day 3"
+   },
+   {
+    "id": "stp_NZxCJfcS4nFWiqwk5",
+    "type": "linkedinVisit",
+    "d": 1,
+    "note": "old visit, delay 0 to 1 so it lands the day after email 2"
+   },
+   {
+    "id": "stp_eHz73nQg3nyqSxiAt",
+    "type": "conditional hasLinkedinUrl",
+    "note": "unchanged"
+   },
+   {
+    "id": "stp_jGv7jMqQTipsknara",
+    "type": "conditional linkedinInviteAccepted within 2",
+    "note": "unchanged"
+   }
+  ],
+  "deleted": [
+   {
+    "id": "stp_RkQGWsp35dP4GjiAD",
+    "where": "hasUrl_yes",
+    "was": "Call 1 (duplicate of the new root Call 1)"
+   },
+   {
+    "id": "stp_J4fiJT3SfkNQpoJ6k",
+    "where": "hasUrl_yes",
+    "was": "Email 2 (duplicate of the new root Email 2)"
+   },
+   {
+    "id": "stp_7Xn7F6LZSGes3oeqJ",
+    "where": "hasUrl_no",
+    "was": "Call 1 (duplicate)"
+   },
+   {
+    "id": "stp_b5Pdy5yq2gwQdJzeF",
+    "where": "hasUrl_no",
+    "was": "Email 2 (duplicate)"
+   }
+  ],
+  "api_note": "delete_sequence_step worked on this campaign (803 leads in review state, none reviewed), unlike the Aug 31 Stars case where reviewed leads blocked deletes",
+  "day_plan": "day 0 email 1 (auto) | day 1 Call 1 voicemail task | day 3 email 2 (auto, thread) | day 4 LinkedIn visit (auto) | day 5 invite (URL leads) | then the accepted / else branches as built Sep 4"
+ }
 }

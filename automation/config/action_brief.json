@@ -8,7 +8,7 @@
       "route": "nathan",
       "briefs": {
         "stars": {
-          "title": "⭐ Nate's Daily Action Brief · Star Ratings (US)",
+          "title": "\u2b50 Nate's Daily Action Brief \u00b7 Star Ratings (US)",
           "campaigns": {
             "cam_sh3JCJoxtEHyjGrsw": "Resurrection",
             "cam_viEbB6HkYsCPtxKbi": "Quality",
@@ -23,7 +23,7 @@
           ]
         },
         "blitz": {
-          "title": "⚡ Nate's Daily Action Brief · Blitz (Citizens / The Hartford)",
+          "title": "\u26a1 Nate's Daily Action Brief \u00b7 Blitz (Citizens / The Hartford)",
           "campaigns": {
             "cam_yWefPqaDhNNv4RyQK": "Citizens",
             "cam_fYp7Nh9wB72gfMke6": "The Hartford"
@@ -41,7 +41,7 @@
           ]
         },
         "backoffice": {
-          "title": "🏢 Nate's Daily Action Brief · Back Office (customer lanes + net-new)",
+          "title": "\ud83c\udfe2 Nate's Daily Action Brief \u00b7 Back Office (customer lanes + net-new)",
           "campaigns": {
             "cam_N92Tgg29ncHWnYAD9": "BO Healthcare Payer",
             "cam_x8ehMHnWSjBr2CLQe": "BO Financial Services",
@@ -64,7 +64,7 @@
           "call_rule": "Customer lanes: call only names the AM has cleared (call_cleared = yes). Net-New: call only names the AE has cleared."
         },
         "dwo": {
-          "title": "💼 Nate's Daily Action Brief · DWO Executives",
+          "title": "\ud83d\udcbc Nate's Daily Action Brief \u00b7 DWO Executives",
           "campaigns": {
             "cam_SiD4KmWcRuhiF6uhL": "DWO Executives - Live Pool"
           },
@@ -81,7 +81,9 @@
               "reason": "Nate to confirm the seat fits before the first call"
             }
           ],
-          "call_rule": "Every call leaves a voicemail; no direct number means the EA route through the main line. Order the list: replies first, accepted connects and new-in-role next."
+          "call_rule": "Every call leaves a voicemail; no direct number means the EA route through the main line. Order the list: replies first, accepted connects and new-in-role next.",
+          "autopilot_lane": true,
+          "autopilot_note": "Autopilot lane (Sep 14 2026): the first three touches are email 1, the voicemail task, email 2 at day 3, no manual LinkedIn step before email 2. The brief's job on this lane is the call list with scripts and the full copy of the day's automated emails; Nate approves the day's batch with one reply in his channel."
         }
       }
     },
@@ -91,7 +93,7 @@
       "route": "jack",
       "briefs": {
         "insurance_fs": {
-          "title": "🏦 Jack's Daily Action Brief · UK Insurance / FS",
+          "title": "\ud83c\udfe6 Jack's Daily Action Brief \u00b7 UK Insurance / FS",
           "campaigns": {
             "cam_nwKASgttBM6QT8XGq": "Insurance/FS"
           },
@@ -102,7 +104,7 @@
           ]
         },
         "airlines": {
-          "title": "✈️ Jack's Daily Action Brief · UK Airlines",
+          "title": "\u2708\ufe0f Jack's Daily Action Brief \u00b7 UK Airlines",
           "campaigns": {
             "cam_fHGtNHbbj7LmThFgX": "Airlines"
           },
@@ -121,8 +123,15 @@
   },
   "state": {
     "last_posted": {
-      "nathan": "2026-09-11",
+      "nathan": "2026-09-14",
       "jack": "2026-09-11"
     }
+  },
+  "dry_run_lanes": {
+    "_doc": "Sep 14 2026: while live=false, compose ONLY these lanes per rep (the autopilot lane pilot). Empty list or missing rep = compose nothing for that rep in dry run. Ignored when live=true.",
+    "nathan": [
+      "dwo"
+    ],
+    "jack": []
   }
 }
