@@ -641,3 +641,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
 - [Feedback No Draft Copy To AMs](feedback-no-draft-copy-to-ams.md) — Sep 14 2026: AM rooms carry no draft copy, never copy for a third person, never leadership named on a dated move
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
+- [Alex Five Accounts Build Sep14](alex-five-accounts-build-sep14.md) — Sep 14 2026: Synchrony/Citi/JPMC/PNC/AT&T maps built (set alex2, 86 people); /alex/ now an index; Citi is a Prospect
