@@ -644,3 +644,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-14
 - [Alex Five Accounts Build Sep14](alex-five-accounts-build-sep14.md) — Sep 14 2026: Synchrony/Citi/JPMC/PNC/AT&T maps built (set alex2, 86 people); /alex/ now an index; Citi is a Prospect
+
+## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-15
+- [6sense Signals In Clay Built Sep15](sixsense-signals-in-clay-built-sep15.md) — Sep 15 2026: 6sense intent lives in Clay as Audiences FIELDS not table columns; 10 signal segments + 12 families + scorer source built at 0 credits, dry run
