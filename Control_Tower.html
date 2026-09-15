@@ -49,6 +49,15 @@ section.in{opacity:1;transform:none}
 .kpi .n{font-weight:900;font-size:26px;letter-spacing:-.02em;color:var(--green-300);font-variant-numeric:tabular-nums;line-height:1}
 .kpi .n.hot{color:var(--orange)}
 .kpi .l{font:600 10px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mono-dim);margin-top:7px}
+/* live checks */
+.live{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.lv{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font:600 11px/1 var(--mono);letter-spacing:.04em;color:var(--dim);white-space:nowrap;max-width:100%}
+.lv .d{width:7px;height:7px;border-radius:50%;background:var(--green);position:relative;flex:none}
+.lv.live .d::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--green);animation:ring 1.8s ease-out infinite}
+.lv.failed,.lv.degraded{color:#FFC38A;border-color:rgba(245,130,32,.45)} .lv.failed .d,.lv.degraded .d{background:var(--orange)} .lv.failed .d{background:var(--red)}
+.lv.stale{color:#FFC38A} .lv.stale .d{background:var(--orange)} .lv.none{color:var(--dim-2)} .lv.none .d{background:rgba(255,255,255,.3)}
+.lv .t{color:#fff} .lv small{font-weight:500;color:var(--dim-2);letter-spacing:0;overflow:hidden;text-overflow:ellipsis}
+.lv.agent{border-style:dashed}
 /* gates */
 .gates{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
 .gate{position:relative;padding:16px 16px 14px;border-radius:var(--r);background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--green);overflow:hidden}
@@ -198,7 +207,7 @@ body.present .pnav{display:flex}
       <svg class="logo" viewBox="0 0 187 46"><use href="#ilogo"/></svg>
       <div class="eyebrow" style="margin-top:18px">GTM Engineering</div>
       <h1>Control Tower</h1>
-      <div class="sub" id="sub">Read-only view over the engine state. Every number carries its source and its date. Nothing on this page sends.</div>
+      <div class="sub" id="sub">Pulled live from Clay, lemlist and launchd at build time; every other tool is dated by the agent that reads it. Nothing on this page sends.</div>
     </div>
     <div class="hud">
       <div id="clock">--:--:--</div>
@@ -211,6 +220,8 @@ body.present .pnav{display:flex}
     <div class="big" id="headline">Loading state</div>
     <div class="kpis" id="kpis"></div>
   </div>
+
+  <div class="live" id="live"></div>
 
   <section id="gates">
     <div class="sec-head"><div><div class="eyebrow">01 · Gates</div><h2>What has to be green before anything scales</h2></div><div class="note">Each gate reads its own source. Orange means it holds volume. Grey means no live read exists yet.</div></div>
@@ -283,6 +294,7 @@ const fmt=n=>(n==null?'--':Number(n).toLocaleString('en-US'));
 const pct=(a,b)=>b?Math.round(100*a/b):0;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const chip=(t,cls)=>`<span class="chip ${(cls||'').toLowerCase()}"><span class="dot"></span>${t}</span>`;
+const hhmm=v=>v?String(v).slice(11,16):'';const dd=v=>v?String(v).slice(5,10).replace('-','/'):'';
 const esc=v=>String(v??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const who=mb=>{const [l,d]=String(mb).split('@');const n=(l||'').split('.')[0];return {name:n?n[0].toUpperCase()+n.slice(1):mb,dom:d||''};};
 
@@ -335,7 +347,7 @@ function render(s){
   const em=(s.live_campaigns&&s.live_campaigns.email_touch)||null; // not in state; derived below from campaigns when present
   const asof=lc.as_of||s.generated_at;const deg=lc.degraded||{};
   const carried=deg.carried_campaigns?`carried from ${deg.carried_from}`:null;
-  $('#asof').outerHTML=chip(`campaigns as of ${asof}${carried?' · '+carried:''}`,carried?'carried':(lc.trust||'missing'));
+  $('#asof').outerHTML=chip(`campaigns ${lc.source==='lemlist api'?'live '+hhmm(asof)+' UTC':'as of '+asof}${carried?' · '+carried:''}`,carried?'carried':(lc.trust||'missing'));
   $('#gen').textContent='generated '+new Date(s.generated_at).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
   // A degraded export is stated on the chip and in the funnel note, never in the opening line.
 
@@ -347,14 +359,18 @@ function render(s){
     ['replies',replies,''],['meetings',meetings,''],['credits used',Math.round(cr.spent||0),'']
   ].map(([l,v,c])=>`<div class="kpi"><div class="n ${c}" data-count="${v}">0</div><div class="l">${l}</div></div>`).join('');
 
+  /* live checks */
+  const lp=s.live_pulls||[];
+  $('#live').innerHTML=lp.map(p=>{const st=String(p.status||'none').toLowerCase();const agent=p.mode==='agent read';const when=agent?(p.as_of?'read '+dd(p.as_of):'no read'):(st==='failed'?'failed '+hhmm(p.as_of):hhmm(p.as_of)+' UTC');return `<span class="lv ${st} ${agent?'agent':''}" title="${esc(p.detail||'')}"><span class="d"></span><span class="t">${esc(p.tool)}</span>${when}<small>· ${esc(p.detail||'')}</small></span>`;}).join('');
+
   /* gates */
   const dw=s.deliverability_watch||{};const mbs=dw.mailboxes||[];const main=mbs.find(m=>/nathan.*intradiem\.com$/.test(m.mailbox))||mbs[0];const above=mbs.filter(m=>m.above_floor);
-  const stalled=(lc.stalled||[]);const gi=s.gate_integrity||{};const sr=s.signal_review||{};
+  const stalled=(lc.stalled||[]);const gi=s.gate_integrity||{};const sr=s.signal_review||{};const ct=s.clay_tables_live||{};
   const gates=[
-    {l:'Deliverability',cls:above.length?'warn':(main?'':'off'),v:main?`${(main.bounce_rate*100).toFixed(1)}% bounce`:'no read',d:main?`${who(main.mailbox).name}'s main mailbox, ${fmt(main.launched)} launched. ${above.length?above.map(m=>who(m.mailbox).name+' at '+(m.bounce_rate*100).toFixed(1)+'%, above the 3% floor').join('; '):'Floor is 3%.'} Read ${dw.as_of||'--'}.`:'No mailbox read on file.'},
+    {l:'Deliverability',cls:above.length?'warn':(main?'':'off'),v:main?`${(main.bounce_rate*100).toFixed(1)}% bounce`:'no read',d:main?`${who(main.mailbox).name}'s main mailbox, ${fmt(main.launched)} launched. ${above.length?above.map(m=>who(m.mailbox).name+' at '+(m.bounce_rate*100).toFixed(1)+'%, above the 3% floor').join('; '):'Floor is 3%.'} ${dw.source==='lemlist api (derived)'?'Live lemlist read '+hhmm(dw.as_of)+' UTC':'Weekly watch '+(dw.as_of||'--')}.`:'No mailbox read on file.'},
     {l:'Send gate',cls:'warn',v:`${fmt(waiting)} held`,d:'Loaded, never launched. First-touch capacity is the constraint, not the list. See section 05.'},
     {l:'Human approval',cls:sr.awaiting?'warn':'',v:sr.as_of?(sr.awaiting?`${sr.awaiting} awaiting`:'queue clear'):'in place',d:`Nothing sends without a rep starting the campaign; Nate reviews per name inside lemlist. ${sr.as_of?(sr.awaiting?sr.awaiting+' staged signal'+(sr.awaiting===1?'':'s')+' waiting on APPROVE or DENY in the rundown thread':'No staged signal waiting')+', '+sr.approved+' approved, '+sr.denied+' denied. Read '+String(sr.as_of).slice(0,10)+'.':'No signal-review read on file.'}`},
-    {l:'Customer exclusion',cls:gi.ready_leaks?'bad':(gi.flags?'warn':(gi.as_of?'':'off')),v:gi.as_of?`${gi.ready_leaks} leak${gi.ready_leaks===1?'':'s'} at READY`:'no read',d:gi.as_of?`Real-row audit ${gi.as_of}: ${fmt(gi.union_domains)} domains and ${fmt(gi.union_names)} names checked against every live table. ${gi.passes} pass, ${gi.flags} flagged${(gi.standing||[]).length?'; '+gi.standing.map(x=>x.item+', '+x.days+' days').join('; '):''}.`:'No gate-integrity read on file.'},
+    {l:'Customer exclusion',cls:(ct.status==='LIVE'?ct.leaks:gi.ready_leaks)?'bad':(gi.flags?'warn':((ct.status==='LIVE'||gi.as_of)?'':'off')),v:ct.status==='LIVE'?`${ct.leaks} leak${ct.leaks===1?'':'s'} at READY`:(gi.as_of?`${gi.ready_leaks} leak${gi.ready_leaks===1?'':'s'} at READY`:'no read'),d:`${ct.status==='LIVE'?`Live read ${hhmm(ct.pulled_at)} UTC: ${fmt(ct.rows)} real rows, ${ct.ready} READY, ${(ct.tables||[]).map(x=>x.label+' '+x.rows).join(', ')}.`:'Live table read failed; weekly audit carried.'} ${gi.as_of?`Weekly union audit ${gi.as_of}: ${fmt(gi.union_domains)} domains, ${gi.passes} pass, ${gi.flags} flagged${(gi.standing||[]).length?'; '+gi.standing.map(x=>x.item+', '+x.days+' days').join('; '):''}.`:''}`},
     {l:'Clay credits',cls:cr.balance==null?'off':((cr.pct_consumed||0)>.6?'warn':''),v:cr.balance==null?'no read':`${Math.round((cr.pct_consumed||0)*100)}% used`,d:cr.balance==null?'No live balance and no reconciliation block to carry.':`${fmt(Math.round(cr.spent))} consumed of ${fmt(Math.round(cr.made_available))} made available (${(cr.components||[]).map(c=>fmt(Math.round(c.credits))+' '+c.label).join(' + ')}). ${fmt(Math.round(cr.balance))} in the workspace now. ${cr.trust==='LIVE'?'Live pull':'Carried from the '+cr.as_of+' reconciliation'}${cr.trust==='LIVE'?' '+String(cr.as_of).slice(0,16).replace('T',' ')+' UTC':''}.`},
     {l:'Stalled campaigns',cls:stalled.length?'warn':'',v:`${stalled.length}`,d:stalled.length?stalled.map(t=>t.replace(/\s*\|.*$/,'')).join('; '):'None running with leads in flight and no movement for 3+ days.'},
     {l:'Baseline ratified',cls:(s.overall?.gates?.baseline_ratified)?'':'off',v:(s.overall?.gates?.baseline_ratified)?'yes':'pending',d:'Attribution baseline with Naveen. Realized numbers stay unverified until it lands.'},
@@ -388,7 +404,7 @@ function render(s){
     ['Replies','any reply state',replies,''],['Interested','marked interested',sum('interested'),''],['Meetings','booked',meetings,''],['Bounced','hard bounces',bounced,bounced?'hot':''],['Unsubscribed','',unsub,unsub?'hot':'']
   ];
   $('#funnelRows').innerHTML=rows.map(([l,sl,v,c])=>`<div class="frow"><div class="fl">${l}<small>${sl}</small></div><div class="bar"><i class="${c} ${v?'':'zero'}" data-w="${Math.max(v?1.5:0,pct(v,loaded))}"></i></div><div class="fn" data-count="${v}">0<small>${pct(v,loaded)}% of loaded</small></div></div>`).join('');
-  $('#funnelNote').textContent=`Engine campaigns only, rep-built excluded. Lifetime lead state, not cumulative sends. ${carried?'Campaign numbers carried from '+deg.carried_from+', the last clean lemlist read.':'As of '+asof+'.'}`;
+  $('#funnelNote').textContent=`Engine campaigns only, rep-built excluded. Lifetime lead state, not cumulative sends. ${carried?'Campaign numbers carried from '+deg.carried_from+', the last clean lemlist read.':(lc.source==='lemlist api'?'Pulled from lemlist at '+hhmm(asof)+' UTC.':'As of '+asof+', from the scorecard history.')}`;
 
   /* motions */
   $('#motionGrid').innerHTML=eng.sort((a,b)=>b[1].leads-a[1].leads).map(([name,m])=>{const p=pct(m.launched,m.leads);const st=stalled.filter(t=>(lc.campaigns||[]).some(c=>c.motion===name&&t.includes(c.name))).length;
@@ -432,13 +448,13 @@ function render(s){
   /* swarm */
   const sw=s.swarm||{};const jobs=sw.jobs||[];
   $('#swarmH').textContent=`${sw.loaded||jobs.length} scheduled jobs loaded, ${sw.versioned||'--'} versioned`;
-  $('#swarmNote').textContent=`${sw.drift||''} Read ${sw.as_of||'--'}. Every job writes a log; the daily rundown reads them. None messages anyone but Dallas.`;
-  $('#jobs').innerHTML=jobs.sort((a,b)=>b.runs-a.runs).map(j=>`<div class="job"><span class="hb"></span><span class="jn">${j.job}</span><span class="jr">${fmt(j.runs)}</span></div>`).join('')+(sw.staged||[]).map(j=>`<div class="job staged"><span class="hb"></span><span class="jn">${j}</span><span class="jr">staged</span></div>`).join('');
+  $('#swarmNote').textContent=`${sw.launchd_as_of?'launchctl read live at '+hhmm(sw.launchd_as_of)+' UTC'+((sw.nonzero_exit||[]).length?', non-zero last exit: '+sw.nonzero_exit.join(', '):', every last exit clean')+'. ':''}${sw.drift||''} Run counts from the heartbeat ${sw.as_of||'--'}. Every job writes a log; the daily rundown reads them. None messages anyone but Dallas.`;
+  $('#jobs').innerHTML=jobs.sort((a,b)=>b.runs-a.runs).map(j=>`<div class="job" title="${j.running?'running now':'last exit '+(j.last_exit??'--')}"><span class="hb" ${j.last_exit?'style="background:var(--red);animation:none"':''}></span><span class="jn">${j.job}</span><span class="jr">${fmt(j.runs)}</span></div>`).join('')+(sw.staged||[]).map(j=>`<div class="job staged"><span class="hb"></span><span class="jn">${j}</span><span class="jr">staged</span></div>`).join('');
   $('#fails').innerHTML=(sw.failures||[]).map(f=>`<div>${f}</div>`).join('');
 
   /* sources */
   const feeds={engine_state:'gates, approval queue (seeded)',impact:'realized funnel',clay_credits_live:'credits gate, credits used',clay_credit_ledger:'nothing on the page',clay_build_registry:'blockers, build state',account_plays:'signals',naveen_readout:'readout line'};
-  const extra=[{name:'campaign_scorecard_history',last_updated:lc.as_of,status:carried?'CARRIED':lc.trust,stale:lc.trust==='STALE',feeds:'headline, line, funnel, motions, capacity'},{name:'deliverability_watch',last_updated:dw.as_of,status:dw.trust,feeds:'deliverability gate'},{name:'swarm_health',last_updated:sw.as_of,status:sw.trust,feeds:'swarm'}];
+  const extra=[{name:lc.source==='lemlist api'?'lemlist api (live)':'campaign_scorecard_history',last_updated:lc.as_of,status:carried?'CARRIED':lc.trust,stale:lc.trust==='STALE',feeds:'headline, line, funnel, motions, capacity'},{name:'clay tables (live rows)',last_updated:ct.pulled_at,status:ct.status||'MISSING',feeds:'customer exclusion gate'},{name:'launchctl (live)',last_updated:sw.launchd_as_of,status:sw.launchd_as_of?'LIVE':'MISSING',feeds:'swarm'},{name:'deliverability_watch',last_updated:dw.as_of,status:dw.trust,feeds:'deliverability gate'},{name:'swarm_health',last_updated:sw.as_of,status:sw.trust,feeds:'swarm'}];
   Object.assign(feeds,{gate_integrity:'customer exclusion gate',signal_review:'human approval gate',war_room:'signals, dates to hold',heat_list:'heat, account cards'});
   $('#srcRows').innerHTML=[...extra,...(s.sources||[])].map(x=>`<tr><td>${x.name}</td><td class="mono">${x.last_updated?String(x.last_updated).slice(0,19).replace('T',' '):'--'}</td><td>${chip(String(x.status||'--').split(' ')[0],String(x.status||'').split(' ')[0].toLowerCase()==='partial'?'stale':String(x.status||'').split(' ')[0])}</td><td>${x.feeds||feeds[x.name]||''}</td></tr>`).join('');
 

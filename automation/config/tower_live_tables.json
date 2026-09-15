@@ -1,0 +1,16 @@
+{
+  "note": "Send tables the tower reads live at build time (0 credits, real rows via the Clay CLI). Column ids verified Sep 15 2026 with `clay tables columns list`. A leak is a row whose customer_exclude reads true (bool or the text TRUE) while send_ready reads READY.",
+  "tables": [
+    {"id": "t_0tic8arWbZp8bSx87Ad", "label": "WFM-Adjacency L3", "send_ready": "f_0ti9ygfsJv3y8g6Nkcz", "customer_exclude": "f_0tjxal4qnNvPxP2jZwN"},
+    {"id": "t_0thtm73HHxyiupTuepK", "label": "Star Ratings Contacts", "send_ready": null, "customer_exclude": "f_0thzalcNJ5VDtBRUcri"},
+    {"id": "t_0ti8tdqQAXiWMkx76Jj", "label": "Cost-Mandate Contacts", "send_ready": "f_0ti9ygfsJv3y8g6Nkcz", "customer_exclude": "f_0ti8tzlkFbzGTCeafqf", "human_approved": "f_0ti8u54EdbtYSjKi9SN"}
+  ],
+  "agent_reads": [
+    {"tool": "Otter", "log": "meeting-capture", "detail": "call transcripts, daily"},
+    {"tool": "Outlook / SharePoint", "log": "account-health", "detail": "Success Plan notes, SalesNav alerts, weekly"},
+    {"tool": "Slack", "log": "rundown-thread", "detail": "rundown thread replies, APPROVE and DENY receipts"},
+    {"tool": "Salesforce (via Clay Audiences)", "log": "gate-integrity", "detail": "customer and partner exclusion segment, weekly"},
+    {"tool": "Monday.com", "log": "pmo-actions", "detail": "AI initiatives board, action extraction"},
+    {"tool": "Apollo", "log": null, "detail": "connector only, no scheduled read yet"}
+  ]
+}

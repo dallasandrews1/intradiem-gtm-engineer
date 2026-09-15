@@ -710,6 +710,160 @@ def stamp_heat(accounts: Dict[str, Any], heat: Dict[str, Any]) -> None:
                 a["heat"] = {"heat": h["heat"], "lane": h["lane"]}
                 break
 
+
+# ---------------------------------------------------------------------------------------------------------
+# Live layer (Sep 15 2026, Dallas: "the tower is useless if it is not actively checking all the live tools").
+# Every pull below runs at build time, is stamped with its time, and says FAILED with what was carried when
+# the tool does not answer. Nothing here writes, sends or spends a credit.
+# ---------------------------------------------------------------------------------------------------------
+LIVE_TABLES_CFG = ROOT / "automation" / "config" / "tower_live_tables.json"
+LEMLIST_ENV = ROOT / "automation" / "config" / "lemlist.env"
+LEMLIST_CHANNELS = ROOT / "automation" / "config" / "lemlist_channels.json"
+
+
+def _now() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="minutes")
+
+
+def _truthy(v: Any) -> bool:
+    return v is True or (isinstance(v, str) and v.strip().lower() in ("true", "1", "yes"))
+
+
+def read_clay_tables_live() -> Dict[str, Any]:
+    """Real rows from every send table in tower_live_tables.json: row count, READY and HOLD counts, customer
+    flags, and leaks (customer flagged AND READY). Paginates the CLI at 100 rows a page."""
+    import subprocess, time
+    out: Dict[str, Any] = {"status": "FAILED", "pulled_at": None, "tables": [], "rows": 0, "ready": 0, "leaks": 0, "ms": 0, "error": None}
+    if not LIVE_TABLES_CFG.exists():
+        out["error"] = "no tower_live_tables.json"; return out
+    cfg = json.loads(LIVE_TABLES_CFG.read_text(encoding="utf-8"))
+    t0 = time.time()
+    try:
+        for t in cfg.get("tables", []):
+            rows, cursor, pages = [], None, 0
+            while True:
+                cmd = ["clay", "tables", "rows", "list", t["id"], "--limit", "100"] + (["--cursor", cursor] if cursor else [])
+                r = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+                d = json.loads(r.stdout)
+                if "data" not in d:
+                    raise RuntimeError(f"{t['label']}: {str(d)[:120]}")
+                rows.extend(d["data"]); cursor = d.get("cursor"); pages += 1
+                if not cursor or pages > 40:
+                    break
+            def val(row: Dict[str, Any], col: Optional[str]) -> Any:
+                if not col:
+                    return None
+                c = (row.get("cells") or {}).get(col) or {}
+                return c.get("value") if c.get("status") == "success" else None
+            ready = sum(1 for r_ in rows if str(val(r_, t.get("send_ready")) or "").upper() == "READY")
+            hold = sum(1 for r_ in rows if str(val(r_, t.get("send_ready")) or "").upper() == "HOLD")
+            cust = sum(1 for r_ in rows if _truthy(val(r_, t.get("customer_exclude"))))
+            leaks = sum(1 for r_ in rows if _truthy(val(r_, t.get("customer_exclude"))) and str(val(r_, t.get("send_ready")) or "").upper() == "READY")
+            approved = sum(1 for r_ in rows if _truthy(val(r_, t.get("human_approved")))) if t.get("human_approved") else None
+            out["tables"].append({"id": t["id"], "label": t["label"], "rows": len(rows), "ready": ready, "hold": hold, "customer_flagged": cust,
+                                  "leaks": leaks, "human_approved": approved, "has_send_ready": bool(t.get("send_ready"))})
+            out["rows"] += len(rows); out["ready"] += ready; out["leaks"] += leaks
+        out["status"] = "LIVE"
+    except Exception as e:  # CLI missing, not signed in, table renamed, timeout
+        out["error"] = str(e)[:160]
+    out["pulled_at"] = _now(); out["ms"] = int((time.time() - t0) * 1000)
+    return out
+
+
+def read_lemlist_live() -> Dict[str, Any]:
+    """Live lemlist read through the scorecard's own live_read() in a subprocess (campaign list, per-campaign
+    lead export, open tasks), summarized per campaign with the scorecard's rules so the numbers match the daily
+    log. Falls back to the scorecard history when lemlist does not answer inside five minutes."""
+    import subprocess, sys, time
+    out: Dict[str, Any] = {"status": "FAILED", "pulled_at": None, "ms": 0, "error": None, "rows": [], "export_errors": 0, "campaigns": 0}
+    t0 = time.time()
+    try:
+        code = ("import sys, json; sys.path.insert(0, %r); import campaign_scorecard as c; d = c.live_read(); "
+                "rows = [c.summarize(cid, x, d['relay']) for cid, x in d['campaigns'].items()]; print(json.dumps(rows))") % str(ROOT / "automation")
+        r = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True, timeout=300, cwd=str(ROOT / "automation"))
+        rows = json.loads(r.stdout.strip().splitlines()[-1])
+        if not isinstance(rows, list) or not rows:
+            raise RuntimeError("empty campaign list")
+        errs = sum(1 for x in rows if x.get("export_error"))
+        out.update({"rows": rows, "export_errors": errs, "campaigns": len(rows)})
+        # A read where most exports failed is not a live read; carry the history instead and say so.
+        out["status"] = "LIVE" if errs <= len(rows) * 0.25 else "DEGRADED"
+        if out["status"] == "DEGRADED":
+            out["error"] = f"{errs} of {len(rows)} lead exports failed"
+    except Exception as e:
+        out["error"] = str(e)[:160]
+    out["pulled_at"] = _now(); out["ms"] = int((time.time() - t0) * 1000)
+    return out
+
+
+def live_campaigns_from_rows(rows: List[Dict[str, Any]], history_mailbox: Dict[str, str], pulled_at: str) -> Dict[str, Any]:
+    """Shape a live lemlist read exactly like read_live_campaigns() shapes the history, so the page code is one path."""
+    per: Dict[str, Dict[str, int]] = {}
+    camps: List[Dict[str, Any]] = []
+    for r in rows:
+        motion = r.get("motion") or "Rep-built"
+        m = per.setdefault(motion, {"campaigns": 0, "running": 0, "leads": 0, "launched": 0, "in_progress": 0, "replies": 0, "interested": 0, "meetings": 0, "bounced": 0, "unsubscribed": 0, "open_tasks": 0, "waiting": 0})
+        launched = int(r["leads"]) - int(r["not_launched"])
+        m["campaigns"] += 1; m["running"] += 1 if r.get("status") == "running" else 0
+        m["leads"] += int(r["leads"]); m["launched"] += launched; m["in_progress"] += int(r["in_progress"]); m["replies"] += int(r["replied"])
+        m["interested"] += int(r["interested"]); m["meetings"] += int(r["meetings"]); m["bounced"] += int(r["bounced"]); m["unsubscribed"] += int(r["unsubscribed"])
+        m["open_tasks"] += int(r["open_tasks"]); m["waiting"] += int(r["not_launched"])
+        camps.append({"id": r["campaign_id"], "name": r["campaign"], "motion": motion, "rep": r.get("rep"), "status": r.get("status"), "leads": int(r["leads"]),
+                      "launched": launched, "replies": int(r["replied"]), "meetings": int(r["meetings"]), "open_tasks": int(r["open_tasks"]),
+                      "bounced": int(r["bounced"]), "mailbox": history_mailbox.get(r["campaign_id"], "")})
+    return {"trust": "LIVE", "as_of": pulled_at, "source": "lemlist api", "per_motion": per, "campaigns": camps, "stalled": [], "capacity": [],
+            "degraded": {"export_errors": 0, "carried_campaigns": 0, "carried_from": None}}
+
+
+def deliverability_from_campaigns(camps: List[Dict[str, Any]], pulled_at: str) -> Dict[str, Any]:
+    """Per-mailbox bounce from the live campaign rows (bounced over launched), same floor as the weekly watch."""
+    by: Dict[str, Dict[str, int]] = {}
+    for c in camps:
+        mb = c.get("mailbox")
+        if not mb:
+            continue
+        m = by.setdefault(mb, {"campaigns": 0, "launched": 0, "bounced": 0})
+        m["campaigns"] += 1; m["launched"] += int(c.get("launched") or 0); m["bounced"] += int(c.get("bounced") or 0)
+    mbs = []
+    for mb, m in by.items():
+        rate = (m["bounced"] / m["launched"]) if m["launched"] else None
+        mbs.append({"mailbox": mb, **m, "bounce_rate": rate, "above_floor": bool(rate is not None and rate > 0.03)})
+    return {"trust": "LIVE", "as_of": pulled_at, "source": "lemlist api (derived)", "mailboxes": sorted(mbs, key=lambda x: -x["launched"]), "floor_bounce": 0.03}
+
+
+def read_launchd_live() -> Dict[str, Any]:
+    """launchctl list, filtered to the swarm's labels: loaded jobs, which are running now, and last exit codes."""
+    import subprocess, time
+    out: Dict[str, Any] = {"status": "FAILED", "pulled_at": None, "ms": 0, "error": None, "jobs": {}, "loaded": 0, "nonzero_exit": []}
+    t0 = time.time()
+    try:
+        r = subprocess.run(["launchctl", "list"], capture_output=True, text=True, timeout=20)
+        for line in r.stdout.splitlines():
+            parts = line.split("\t")
+            if len(parts) == 3 and (parts[2].startswith("com.dallasandrews.gtm.") or parts[2].startswith("com.intradiem.")):
+                pid, status, label = parts
+                short = label.replace("com.dallasandrews.gtm.", "")
+                out["jobs"][short] = {"running": pid != "-", "last_exit": int(status) if status.lstrip("-").isdigit() else None}
+                if status not in ("0", "-") and not (pid != "-"):
+                    out["nonzero_exit"].append(f"{short} exit {status}")
+        out["loaded"] = len(out["jobs"]); out["status"] = "LIVE" if out["jobs"] else "FAILED"
+    except Exception as e:
+        out["error"] = str(e)[:160]
+    out["pulled_at"] = _now(); out["ms"] = int((time.time() - t0) * 1000)
+    return out
+
+
+def agent_reads() -> List[Dict[str, Any]]:
+    """Tools the tower cannot pull from a shell: dated by the newest log of the agent that reads them."""
+    cfg = json.loads(LIVE_TABLES_CFG.read_text(encoding="utf-8")) if LIVE_TABLES_CFG.exists() else {}
+    rows = []
+    for a in cfg.get("agent_reads", []):
+        log = _newest_log(a["log"]) if a.get("log") else None
+        as_of = log.stem.replace(a["log"] + "-", "") if log else None
+        rows.append({"tool": a["tool"], "mode": "agent read", "detail": a.get("detail"), "as_of": as_of, "log": a.get("log"),
+                     "status": ("STALE" if is_stale(as_of, 8) else "LIVE") if as_of else "NONE"})
+    return rows
+
 ACCOUNTS_CFG = Path(__file__).resolve().parent / "automation" / "config" / "accounts_in_motion.json"
 SEND_CAPACITY_CFG = Path(__file__).resolve().parent / "automation" / "config" / "send_capacity.json"
 
@@ -864,8 +1018,18 @@ def build_state() -> Dict[str, Any]:
     if funnel_total_sent > 0:
         headline = f"{funnel_total_sent} sends live, {credit_data['spent']:.0f} credits used, funnel still needs live verification"
 
-    live = read_live_campaigns()
+    live = read_live_campaigns()  # history read: keeps STALLED and capacity lines, and is the carry when lemlist fails
+    history_mailbox = {c["id"]: c.get("mailbox", "") for c in live.get("campaigns", [])}
+    lem = read_lemlist_live()
+    if lem["status"] == "LIVE":
+        fresh = live_campaigns_from_rows(lem["rows"], history_mailbox, lem["pulled_at"])
+        fresh["stalled"], fresh["capacity"] = live.get("stalled", []), live.get("capacity", [])
+        live = fresh
+    else:
+        live["source"] = f"campaign_scorecard_history (carried; lemlist {lem['status'].lower()}: {lem.get('error') or 'no answer'})"
     fill_capacity_lanes(live)
+    clay_tables = read_clay_tables_live()
+    launchd = read_launchd_live()
     if live.get("per_motion"):
         engine = {k: v for k, v in live["per_motion"].items() if k != "Rep-built"}
         loaded = sum(m["leads"] for m in engine.values()); launched = sum(m["launched"] for m in engine.values())
@@ -918,6 +1082,30 @@ def build_state() -> Dict[str, Any]:
     war_room = read_war_room()
     accounts = read_accounts_in_motion(live)
     stamp_heat(accounts, heat)
+
+    swarm = read_swarm()
+    if launchd["status"] == "LIVE":
+        known = {j["job"] for j in swarm["jobs"]}
+        for j in swarm["jobs"]:
+            j.update(launchd["jobs"].get(j["job"], {}))
+            j["loaded"] = j["job"] in launchd["jobs"]
+        for short, meta in launchd["jobs"].items():
+            if short not in known:
+                swarm["jobs"].append({"job": short, "runs": 0, "loaded": True, **meta})
+        swarm["loaded"] = launchd["loaded"]; swarm["launchd_as_of"] = launchd["pulled_at"]; swarm["nonzero_exit"] = launchd["nonzero_exit"]
+        swarm["trust"] = "LIVE"
+
+    live_pulls = [
+        {"tool": "Clay credits", "mode": "live pull", "status": credit_data["trust"], "as_of": credit_data.get("source_date"),
+         "detail": f"{credit_data.get('balance'):,.0f} in the workspace" if credit_data.get("balance") is not None else "no balance"},
+        {"tool": "Clay send tables", "mode": "live pull", "status": clay_tables["status"], "as_of": clay_tables["pulled_at"], "ms": clay_tables["ms"],
+         "detail": (f"{clay_tables['rows']:,} rows across {len(clay_tables['tables'])} tables, {clay_tables['ready']} READY, {clay_tables['leaks']} customer leaks" if clay_tables["status"] == "LIVE" else f"failed: {clay_tables.get('error')}; weekly audit carried")},
+        {"tool": "lemlist", "mode": "live pull", "status": lem["status"], "as_of": lem["pulled_at"], "ms": lem["ms"],
+         "detail": (f"{lem['campaigns']} campaigns, {lem['export_errors']} export errors" if lem["status"] != "FAILED" else f"failed: {lem.get('error')}; scorecard history carried from {live.get('as_of')}")},
+        {"tool": "launchd", "mode": "live pull", "status": launchd["status"], "as_of": launchd["pulled_at"], "ms": launchd["ms"],
+         "detail": (f"{launchd['loaded']} jobs loaded" + (f", {len(launchd['nonzero_exit'])} with a non-zero last exit" if launchd["nonzero_exit"] else ", all last exits clean") if launchd["status"] == "LIVE" else f"failed: {launchd.get('error')}")},
+        {"tool": "Cloudflare Pages", "mode": "live pull", "status": "LIVE", "as_of": _now(), "detail": "this page is the deploy; run_control_tower.sh pushes every build"},
+    ] + agent_reads()
 
     blockers_and_asks = []
     registry_blockers = registry.get("blockers", [])
@@ -1000,8 +1188,10 @@ def build_state() -> Dict[str, Any]:
         },
         "signals": signals,
         "live_campaigns": live,
-        "deliverability_watch": read_deliverability_watch(),
-        "swarm": read_swarm(),
+        "deliverability_watch": (deliverability_from_campaigns(live["campaigns"], live["as_of"]) if live.get("source") == "lemlist api" and any(c.get("mailbox") for c in live["campaigns"]) else read_deliverability_watch()),
+        "swarm": swarm,
+        "clay_tables_live": clay_tables,
+        "live_pulls": live_pulls,
         "accounts_in_motion": accounts,
         "gate_integrity": gate_integrity,
         "signal_review": signal_review,

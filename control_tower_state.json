@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:27:19.440293+00:00",
+  "generated_at": "2026-09-15T19:35:59.206651+00:00",
   "overall": {
     "posture": "LAUNCHING",
     "headline": "1,897 leads loaded across 16 engine campaigns, 190 launched, 1,707 waiting on first-touch capacity, 0 replies, 0 meetings, 22237 credits used",
@@ -147,7 +147,7 @@
     "cost_per_qualified_reply": null,
     "trust": "LIVE",
     "source": "clay credits",
-    "as_of": "2026-09-15T19:27+00:00",
+    "as_of": "2026-09-15T19:35+00:00",
     "balance": 61599.4,
     "made_available": 83836.0,
     "components": [
@@ -216,7 +216,8 @@
   ],
   "live_campaigns": {
     "trust": "LIVE",
-    "as_of": "2026-09-15",
+    "as_of": "2026-09-15T19:35+00:00",
+    "source": "lemlist api",
     "per_motion": {
       "Star Ratings": {
         "campaigns": 3,
@@ -274,20 +275,6 @@
         "open_tasks": 1,
         "waiting": 222
       },
-      "Back Office (net-new)": {
-        "campaigns": 1,
-        "running": 0,
-        "leads": 130,
-        "launched": 0,
-        "in_progress": 0,
-        "replies": 0,
-        "interested": 0,
-        "meetings": 0,
-        "bounced": 0,
-        "unsubscribed": 0,
-        "open_tasks": 0,
-        "waiting": 130
-      },
       "Back Office (customer lanes)": {
         "campaigns": 4,
         "running": 0,
@@ -301,6 +288,20 @@
         "unsubscribed": 2,
         "open_tasks": 66,
         "waiting": 113
+      },
+      "Back Office (net-new)": {
+        "campaigns": 1,
+        "running": 0,
+        "leads": 130,
+        "launched": 0,
+        "in_progress": 0,
+        "replies": 0,
+        "interested": 0,
+        "meetings": 0,
+        "bounced": 0,
+        "unsubscribed": 0,
+        "open_tasks": 0,
+        "waiting": 130
       },
       "DWO Executives": {
         "campaigns": 1,
@@ -347,19 +348,6 @@
     },
     "campaigns": [
       {
-        "id": "cam_2gy9hmEvMjYEuPZ8A",
-        "name": "Stars - Fresh Pool / Finance (Nate)",
-        "motion": "Star Ratings",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 13,
-        "launched": 13,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "nathan.belfield@intradiem.com"
-      },
-      {
         "id": "cam_sh3JCJoxtEHyjGrsw",
         "name": "Stars - Resurrection (Nate)",
         "motion": "Star Ratings",
@@ -370,6 +358,7 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 10,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
       },
       {
@@ -383,20 +372,22 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 22,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
       },
       {
-        "id": "cam_fHGtNHbbj7LmThFgX",
-        "name": "UK - Airlines (Jack)",
-        "motion": "UK named accounts",
-        "rep": "jack",
+        "id": "cam_2gy9hmEvMjYEuPZ8A",
+        "name": "Stars - Fresh Pool / Finance (Nate)",
+        "motion": "Star Ratings",
+        "rep": "nathan",
         "status": "paused",
-        "leads": 1,
-        "launched": 0,
+        "leads": 13,
+        "launched": 13,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
       },
       {
         "id": "cam_nwKASgttBM6QT8XGq",
@@ -409,33 +400,22 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
-        "id": "cam_GK8kMPNrjyHc5N3g6",
-        "name": "UK - Named Accounts / Prospect Clinic (Jack)",
+        "id": "cam_fHGtNHbbj7LmThFgX",
+        "name": "UK - Airlines (Jack)",
         "motion": "UK named accounts",
         "rep": "jack",
         "status": "paused",
-        "leads": 0,
+        "leads": 1,
         "launched": 0,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_fYp7Nh9wB72gfMke6",
-        "name": "Blitz - The Hartford (Nate)",
-        "motion": "Keegan Blitz",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 7,
-        "launched": 7,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "nathan.belfield@intradiem.com"
       },
       {
         "id": "cam_yWefPqaDhNNv4RyQK",
@@ -448,72 +428,22 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
       },
       {
-        "id": "cam_7NXbM7HgYtRvMtodm",
-        "name": "THE LV= Contact",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "ended",
-        "leads": 1,
-        "launched": 1,
+        "id": "cam_fYp7Nh9wB72gfMke6",
+        "name": "Blitz - The Hartford (Nate)",
+        "motion": "Keegan Blitz",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 7,
+        "launched": 7,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_938B3Jbdw8k6NNgAj",
-        "name": "British Airways \u2014 Heads of Customer Care + Tim Monk",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 6,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_Ljt4MKs6jgNhev2u9",
-        "name": "BA BOO",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 0,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_Nuemg4Xpt3zXYBKS7",
-        "name": "Achmea support",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 0,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_QyjxJkbN52aE6o3fj",
-        "name": "BA Test (Jack)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 34,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
       },
       {
         "id": "cam_et6gRwgXgjeeYQg4B",
@@ -526,84 +456,21 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 1,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
-        "id": "cam_DNErdZPANvC2sqRCK",
-        "name": "BO Net-New - Back Office (Nate)",
-        "motion": "Back Office (net-new)",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 130,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "nathan.belfield@intradiemhq.com"
-      },
-      {
-        "id": "cam_Fy287YF9X5fjPYBSo",
-        "name": "BO Expansion - BPO (Nate)",
-        "motion": "Back Office (customer lanes)",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 25,
-        "launched": 25,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 18,
-        "mailbox": "nathan.belfield@intradiem.com"
-      },
-      {
-        "id": "cam_HCu4jiFB8oinz2s3F",
-        "name": "BO Expansion - Insurance (Nate)",
-        "motion": "Back Office (customer lanes)",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 33,
-        "launched": 33,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 33,
-        "mailbox": "nathan.belfield@intradiem.com"
-      },
-      {
-        "id": "cam_N92Tgg29ncHWnYAD9",
-        "name": "BO Expansion - Healthcare Payer (Nate)",
-        "motion": "Back Office (customer lanes)",
-        "rep": "nathan",
-        "status": "paused",
-        "leads": 67,
-        "launched": 33,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 15,
-        "mailbox": "nathan.belfield@intradiem.com"
-      },
-      {
-        "id": "cam_dJ7dT8gfRsisufQ6T",
-        "name": "Debbie Rolechange",
+        "id": "cam_7NXbM7HgYtRvMtodm",
+        "name": "THE LV= Contact",
         "motion": "Rep-built",
         "rep": "jack",
-        "status": "running",
+        "status": "ended",
         "leads": 1,
         "launched": 1,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_uAQgRovxEHb438P77",
-        "name": "ST Water",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "paused",
-        "leads": 5,
-        "launched": 5,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
+        "bounced": 1,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
@@ -617,7 +484,22 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_N92Tgg29ncHWnYAD9",
+        "name": "BO Expansion - Healthcare Payer (Nate)",
+        "motion": "Back Office (customer lanes)",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 67,
+        "launched": 33,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 15,
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
       },
       {
         "id": "cam_x8ehMHnWSjBr2CLQe",
@@ -630,7 +512,50 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
+      },
+      {
+        "id": "cam_HCu4jiFB8oinz2s3F",
+        "name": "BO Expansion - Insurance (Nate)",
+        "motion": "Back Office (customer lanes)",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 33,
+        "launched": 33,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 33,
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
+      },
+      {
+        "id": "cam_Fy287YF9X5fjPYBSo",
+        "name": "BO Expansion - BPO (Nate)",
+        "motion": "Back Office (customer lanes)",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 25,
+        "launched": 25,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 18,
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
+      },
+      {
+        "id": "cam_DNErdZPANvC2sqRCK",
+        "name": "BO Net-New - Back Office (Nate)",
+        "motion": "Back Office (net-new)",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 130,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiemhq.com"
       },
       {
         "id": "cam_SiD4KmWcRuhiF6uhL",
@@ -643,20 +568,106 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiemhq.com"
       },
       {
-        "id": "cam_K6dGjBt6WukSo3jvB",
-        "name": "WFM Present - Wave 1 (Nate)",
-        "motion": "WFM Present",
-        "rep": "nathan",
+        "id": "cam_uAQgRovxEHb438P77",
+        "name": "ST Water",
+        "motion": "Rep-built",
+        "rep": "jack",
         "status": "paused",
-        "leads": 362,
+        "leads": 5,
+        "launched": 5,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 2,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_dJ7dT8gfRsisufQ6T",
+        "name": "Debbie Rolechange",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "running",
+        "leads": 1,
+        "launched": 1,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_938B3Jbdw8k6NNgAj",
+        "name": "British Airways \u2014 Heads of Customer Care + Tim Monk",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 6,
         "launched": 0,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
-        "mailbox": "nathan.belfield@intradiem.com"
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_Nuemg4Xpt3zXYBKS7",
+        "name": "Achmea support",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 0,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_GK8kMPNrjyHc5N3g6",
+        "name": "UK - Named Accounts / Prospect Clinic (Jack)",
+        "motion": "UK named accounts",
+        "rep": "jack",
+        "status": "paused",
+        "leads": 0,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_QyjxJkbN52aE6o3fj",
+        "name": "BA Test (Jack)",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 34,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_Ljt4MKs6jgNhev2u9",
+        "name": "BA BOO",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 0,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
       },
       {
         "id": "cam_WaDLXcAtit6auc8ay",
@@ -669,6 +680,21 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "nathan.belfield@intradiem.com"
+      },
+      {
+        "id": "cam_K6dGjBt6WukSo3jvB",
+        "name": "WFM Present - Wave 1 (Nate)",
+        "motion": "WFM Present",
+        "rep": "nathan",
+        "status": "paused",
+        "leads": 362,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
       },
       {
@@ -682,85 +708,8 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "nathan.belfield@intradiem.com"
-      },
-      {
-        "id": "cam_3iCLPYEPxDtGTicfJ",
-        "name": "Jack's campaign (1)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 0,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_4nhNTSW2hpgmTdyX8",
-        "name": "Jack's campaign (2)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 0,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_8bhZPYbFr4vsAnbX8",
-        "name": "Chase UK",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 2,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_C49vFJtbxtfv7kzRX",
-        "name": "Jack's campaign (4)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 82,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_KzpkXbHekqWg67ea5",
-        "name": "Jack's campaign (3)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "draft",
-        "leads": 0,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_Yoy25QPtwpctW45Nt",
-        "name": "DWO Event Manchester 29th",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "paused",
-        "leads": 2,
-        "launched": 0,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
       },
       {
         "id": "cam_bHu63gEtPXCLNHrwH",
@@ -773,6 +722,7 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
@@ -786,58 +736,91 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
-        "id": "cam_7YkL3TD82f3cSiN6E",
-        "name": "Jack's campaign (5)",
-        "motion": "Rep-built",
-        "rep": "jack",
-        "status": "ended",
-        "leads": 1,
-        "launched": 1,
-        "replies": 0,
-        "meetings": 0,
-        "open_tasks": 0,
-        "mailbox": "jack.ohagan@intradiem.com"
-      },
-      {
-        "id": "cam_GNWuq629eXT8Yk6nk",
-        "name": "Hastings Awareness",
+        "id": "cam_Yoy25QPtwpctW45Nt",
+        "name": "DWO Event Manchester 29th",
         "motion": "Rep-built",
         "rep": "jack",
         "status": "paused",
+        "leads": 2,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_3iCLPYEPxDtGTicfJ",
+        "name": "Jack's campaign (1)",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
         "leads": 0,
         "launched": 0,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
-        "id": "cam_k2D3B2GqW2Q6WqPY3",
-        "name": "Senior Claims UKI",
+        "id": "cam_4nhNTSW2hpgmTdyX8",
+        "name": "Jack's campaign (2)",
         "motion": "Rep-built",
         "rep": "jack",
-        "status": "paused",
-        "leads": 23,
+        "status": "draft",
+        "leads": 0,
         "launched": 0,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
-        "id": "cam_kDgZw2b6ixJ8AJKrR",
-        "name": "NL Planners",
+        "id": "cam_KzpkXbHekqWg67ea5",
+        "name": "Jack's campaign (3)",
         "motion": "Rep-built",
         "rep": "jack",
-        "status": "running",
-        "leads": 72,
-        "launched": 72,
+        "status": "draft",
+        "leads": 0,
+        "launched": 0,
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_C49vFJtbxtfv7kzRX",
+        "name": "Jack's campaign (4)",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 82,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_8bhZPYbFr4vsAnbX8",
+        "name": "Chase UK",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "draft",
+        "leads": 2,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       },
       {
@@ -851,6 +834,63 @@
         "replies": 0,
         "meetings": 0,
         "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_k2D3B2GqW2Q6WqPY3",
+        "name": "Senior Claims UKI",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "paused",
+        "leads": 23,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_GNWuq629eXT8Yk6nk",
+        "name": "Hastings Awareness",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "paused",
+        "leads": 0,
+        "launched": 0,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_kDgZw2b6ixJ8AJKrR",
+        "name": "NL Planners",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "running",
+        "leads": 72,
+        "launched": 72,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 5,
+        "mailbox": "jack.ohagan@intradiem.com"
+      },
+      {
+        "id": "cam_7YkL3TD82f3cSiN6E",
+        "name": "Jack's campaign (5)",
+        "motion": "Rep-built",
+        "rep": "jack",
+        "status": "ended",
+        "leads": 1,
+        "launched": 1,
+        "replies": 0,
+        "meetings": 0,
+        "open_tasks": 0,
+        "bounced": 0,
         "mailbox": "jack.ohagan@intradiem.com"
       }
     ],
@@ -872,7 +912,8 @@
   },
   "deliverability_watch": {
     "trust": "LIVE",
-    "as_of": "2026-09-14",
+    "as_of": "2026-09-15T19:35+00:00",
+    "source": "lemlist api (derived)",
     "mailboxes": [
       {
         "mailbox": "nathan.belfield@intradiem.com",
@@ -885,10 +926,18 @@
       {
         "mailbox": "jack.ohagan@intradiem.com",
         "campaigns": 25,
-        "launched": 59,
-        "bounced": 7,
-        "bounce_rate": 0.11864406779661017,
+        "launched": 85,
+        "bounced": 8,
+        "bounce_rate": 0.09411764705882353,
         "above_floor": true
+      },
+      {
+        "mailbox": "nathan.belfield@intradiemhq.com",
+        "campaigns": 2,
+        "launched": 0,
+        "bounced": 0,
+        "bounce_rate": null,
+        "above_floor": false
       }
     ],
     "floor_bounce": 0.03
@@ -899,67 +948,185 @@
     "jobs": [
       {
         "job": "warroom",
-        "runs": 10
+        "runs": 10,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "meetingcapture",
-        "runs": 10
+        "runs": 10,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "tablehygiene",
-        "runs": 10
+        "runs": 10,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "agentarchitect",
-        "runs": 10
+        "runs": 10,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "gateintegrity",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "pipelinereceipts",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "creditcheck",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "fridayreadout",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "deliverabilitywatch",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "competitorwatch",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "starsrefreshwatch",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "swarmheartbeat",
-        "runs": 10
+        "runs": 10,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "rundownthreads",
-        "runs": 483
+        "runs": 483,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "alumniwatch",
-        "runs": 2
+        "runs": 2,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "lemlistrelay",
-        "runs": 328
+        "runs": 328,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
       },
       {
         "job": "contextbus",
-        "runs": 30
+        "runs": 30,
+        "running": false,
+        "last_exit": 0,
+        "loaded": true
+      },
+      {
+        "job": "cohortcutter",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "syncpublish",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "controltower",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "heatlist",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "repcampaignhook",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "actionbrief",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "dailyrundown",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "accounthealth",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "ownerdigest",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
+      },
+      {
+        "job": "pmoextractor",
+        "runs": 0,
+        "loaded": true,
+        "running": false,
+        "last_exit": 0
       }
     ],
     "failures": [
@@ -974,8 +1141,142 @@
     ],
     "drift": "no drift: 26 loaded, 28 versioned, all four views agree",
     "loaded": 26,
-    "versioned": 28
+    "versioned": 28,
+    "launchd_as_of": "2026-09-15T19:35+00:00",
+    "nonzero_exit": []
   },
+  "clay_tables_live": {
+    "status": "LIVE",
+    "pulled_at": "2026-09-15T19:35+00:00",
+    "tables": [
+      {
+        "id": "t_0tic8arWbZp8bSx87Ad",
+        "label": "WFM-Adjacency L3",
+        "rows": 524,
+        "ready": 0,
+        "hold": 524,
+        "customer_flagged": 0,
+        "leaks": 0,
+        "human_approved": null,
+        "has_send_ready": true
+      },
+      {
+        "id": "t_0thtm73HHxyiupTuepK",
+        "label": "Star Ratings Contacts",
+        "rows": 153,
+        "ready": 0,
+        "hold": 0,
+        "customer_flagged": 16,
+        "leaks": 0,
+        "human_approved": null,
+        "has_send_ready": false
+      },
+      {
+        "id": "t_0ti8tdqQAXiWMkx76Jj",
+        "label": "Cost-Mandate Contacts",
+        "rows": 7,
+        "ready": 0,
+        "hold": 7,
+        "customer_flagged": 0,
+        "leaks": 0,
+        "human_approved": 0,
+        "has_send_ready": true
+      }
+    ],
+    "rows": 684,
+    "ready": 0,
+    "leaks": 0,
+    "ms": 5385,
+    "error": null
+  },
+  "live_pulls": [
+    {
+      "tool": "Clay credits",
+      "mode": "live pull",
+      "status": "LIVE",
+      "as_of": "2026-09-15T19:35+00:00",
+      "detail": "61,599 in the workspace"
+    },
+    {
+      "tool": "Clay send tables",
+      "mode": "live pull",
+      "status": "LIVE",
+      "as_of": "2026-09-15T19:35+00:00",
+      "ms": 5385,
+      "detail": "684 rows across 3 tables, 0 READY, 0 customer leaks"
+    },
+    {
+      "tool": "lemlist",
+      "mode": "live pull",
+      "status": "LIVE",
+      "as_of": "2026-09-15T19:35+00:00",
+      "ms": 16995,
+      "detail": "39 campaigns, 0 export errors"
+    },
+    {
+      "tool": "launchd",
+      "mode": "live pull",
+      "status": "LIVE",
+      "as_of": "2026-09-15T19:35+00:00",
+      "ms": 9,
+      "detail": "26 jobs loaded, all last exits clean"
+    },
+    {
+      "tool": "Cloudflare Pages",
+      "mode": "live pull",
+      "status": "LIVE",
+      "as_of": "2026-09-15T19:35+00:00",
+      "detail": "this page is the deploy; run_control_tower.sh pushes every build"
+    },
+    {
+      "tool": "Otter",
+      "mode": "agent read",
+      "detail": "call transcripts, daily",
+      "as_of": "2026-09-15",
+      "log": "meeting-capture",
+      "status": "LIVE"
+    },
+    {
+      "tool": "Outlook / SharePoint",
+      "mode": "agent read",
+      "detail": "Success Plan notes, SalesNav alerts, weekly",
+      "as_of": "2026-09-14",
+      "log": "account-health",
+      "status": "LIVE"
+    },
+    {
+      "tool": "Slack",
+      "mode": "agent read",
+      "detail": "rundown thread replies, APPROVE and DENY receipts",
+      "as_of": "2026-09-15",
+      "log": "rundown-thread",
+      "status": "LIVE"
+    },
+    {
+      "tool": "Salesforce (via Clay Audiences)",
+      "mode": "agent read",
+      "detail": "customer and partner exclusion segment, weekly",
+      "as_of": "2026-09-14",
+      "log": "gate-integrity",
+      "status": "LIVE"
+    },
+    {
+      "tool": "Monday.com",
+      "mode": "agent read",
+      "detail": "AI initiatives board, action extraction",
+      "as_of": "2026-09-15",
+      "log": "pmo-actions",
+      "status": "LIVE"
+    },
+    {
+      "tool": "Apollo",
+      "mode": "agent read",
+      "detail": "connector only, no scheduled read yet",
+      "as_of": null,
+      "log": null,
+      "status": "NONE"
+    }
+  ],
   "accounts_in_motion": {
     "trust": "LIVE",
     "accounts": [
@@ -1518,7 +1819,7 @@
   },
   "signal_review": {
     "trust": "LIVE",
-    "as_of": "2026-09-15T19:15:28Z",
+    "as_of": "2026-09-15T19:35:20Z",
     "staged": 57,
     "new": 0,
     "parked": 0,
@@ -1853,7 +2154,7 @@
     },
     {
       "name": "signal_review",
-      "last_updated": "2026-09-15T19:15:28Z",
+      "last_updated": "2026-09-15T19:35:20Z",
       "status": "LIVE",
       "stale": false,
       "feeds": "human approval gate"
@@ -1886,7 +2187,7 @@
     },
     {
       "name": "clay_credits_live",
-      "last_updated": "2026-09-15T19:27+00:00",
+      "last_updated": "2026-09-15T19:35+00:00",
       "status": "LIVE",
       "stale": false,
       "feeds": "credits gate, credits used"
