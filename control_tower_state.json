@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T19:35:59.206651+00:00",
+  "generated_at": "2026-09-15T19:43:45.090163+00:00",
   "overall": {
     "posture": "LAUNCHING",
     "headline": "1,897 leads loaded across 16 engine campaigns, 190 launched, 1,707 waiting on first-touch capacity, 0 replies, 0 meetings, 22237 credits used",
@@ -147,7 +147,7 @@
     "cost_per_qualified_reply": null,
     "trust": "LIVE",
     "source": "clay credits",
-    "as_of": "2026-09-15T19:35+00:00",
+    "as_of": "2026-09-15T19:43+00:00",
     "balance": 61599.4,
     "made_available": 83836.0,
     "components": [
@@ -216,7 +216,7 @@
   ],
   "live_campaigns": {
     "trust": "LIVE",
-    "as_of": "2026-09-15T19:35+00:00",
+    "as_of": "2026-09-15T19:43+00:00",
     "source": "lemlist api",
     "per_motion": {
       "Star Ratings": {
@@ -912,7 +912,7 @@
   },
   "deliverability_watch": {
     "trust": "LIVE",
-    "as_of": "2026-09-15T19:35+00:00",
+    "as_of": "2026-09-15T19:43+00:00",
     "source": "lemlist api (derived)",
     "mailboxes": [
       {
@@ -1142,12 +1142,12 @@
     "drift": "no drift: 26 loaded, 28 versioned, all four views agree",
     "loaded": 26,
     "versioned": 28,
-    "launchd_as_of": "2026-09-15T19:35+00:00",
+    "launchd_as_of": "2026-09-15T19:43+00:00",
     "nonzero_exit": []
   },
   "clay_tables_live": {
     "status": "LIVE",
-    "pulled_at": "2026-09-15T19:35+00:00",
+    "pulled_at": "2026-09-15T19:43+00:00",
     "tables": [
       {
         "id": "t_0tic8arWbZp8bSx87Ad",
@@ -1186,7 +1186,7 @@
     "rows": 684,
     "ready": 0,
     "leaks": 0,
-    "ms": 5385,
+    "ms": 6613,
     "error": null
   },
   "live_pulls": [
@@ -1194,38 +1194,38 @@
       "tool": "Clay credits",
       "mode": "live pull",
       "status": "LIVE",
-      "as_of": "2026-09-15T19:35+00:00",
+      "as_of": "2026-09-15T19:43+00:00",
       "detail": "61,599 in the workspace"
     },
     {
       "tool": "Clay send tables",
       "mode": "live pull",
       "status": "LIVE",
-      "as_of": "2026-09-15T19:35+00:00",
-      "ms": 5385,
+      "as_of": "2026-09-15T19:43+00:00",
+      "ms": 6613,
       "detail": "684 rows across 3 tables, 0 READY, 0 customer leaks"
     },
     {
       "tool": "lemlist",
       "mode": "live pull",
       "status": "LIVE",
-      "as_of": "2026-09-15T19:35+00:00",
-      "ms": 16995,
+      "as_of": "2026-09-15T19:43+00:00",
+      "ms": 19345,
       "detail": "39 campaigns, 0 export errors"
     },
     {
       "tool": "launchd",
       "mode": "live pull",
       "status": "LIVE",
-      "as_of": "2026-09-15T19:35+00:00",
-      "ms": 9,
+      "as_of": "2026-09-15T19:43+00:00",
+      "ms": 13,
       "detail": "26 jobs loaded, all last exits clean"
     },
     {
       "tool": "Cloudflare Pages",
       "mode": "live pull",
       "status": "LIVE",
-      "as_of": "2026-09-15T19:35+00:00",
+      "as_of": "2026-09-15T19:43+00:00",
       "detail": "this page is the deploy; run_control_tower.sh pushes every build"
     },
     {
@@ -2187,7 +2187,7 @@
     },
     {
       "name": "clay_credits_live",
-      "last_updated": "2026-09-15T19:35+00:00",
+      "last_updated": "2026-09-15T19:43+00:00",
       "status": "LIVE",
       "stale": false,
       "feeds": "credits gate, credits used"

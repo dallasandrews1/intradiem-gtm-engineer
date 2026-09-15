@@ -174,6 +174,10 @@ td:first-child{color:#fff;font-weight:700}
 .tblwrap{overflow-x:auto}
 footer{position:relative;z-index:1;margin-top:50px;padding:22px clamp(16px,3vw,40px);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--dim-2);font:500 11.5px/1.5 var(--mono)}
 footer .logo{width:96px}
+/* exec view (?view=exec): same state, leadership framing */
+body.exec #blockers,body.exec #sources,body.exec #fails,body.exec #execLink{display:none}
+#execLink{font:600 11px/1 var(--mono);letter-spacing:.06em;color:var(--dim-2);text-decoration:none;padding:8px 10px;border:1px dashed var(--line);border-radius:999px}
+#execLink:hover{color:var(--green-300)}
 /* present mode */
 body.present .wrap{max-width:none;padding:22px clamp(20px,4vw,64px)}
 body.present section{display:none;margin-top:26px}
@@ -213,6 +217,7 @@ body.present .pnav{display:flex}
       <div id="clock">--:--:--</div>
       <span class="chip" id="asof"><span class="dot"></span>as of --</span>
       <button class="btn" id="presentBtn" title="P">Present</button>
+      <a id="execLink" href="?view=exec" title="Leadership framing of the same state">exec view</a>
     </div>
   </header>
 
@@ -290,6 +295,8 @@ body.present .pnav{display:flex}
 <script>
 (function(){
 const $=s=>document.querySelector(s);
+const EXEC=new URLSearchParams(location.search).get('view')==='exec';if(EXEC)document.body.classList.add('exec');
+const laneOf=mb=>{const m=String(mb||'');const second=/hq\.com$/.test(m);const uk=/jack|ohagan/i.test(m);return (uk?'UK lane':'US lane')+(second?', second domain':', main mailbox');};
 const fmt=n=>(n==null?'--':Number(n).toLocaleString('en-US'));
 const pct=(a,b)=>b?Math.round(100*a/b):0;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -312,7 +319,10 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 (function bg(){const c=$('#bg'),x=c.getContext('2d');let w,h,pts=[];function size(){w=c.width=innerWidth*devicePixelRatio;h=c.height=innerHeight*devicePixelRatio;pts=Array.from({length:Math.round(innerWidth/22)},()=>({x:Math.random()*w,y:Math.random()*h,v:.08+Math.random()*.25,r:(.6+Math.random()*1.4)*devicePixelRatio}));}size();addEventListener('resize',size);if(reduced)return;(function f(){x.clearRect(0,0,w,h);x.fillStyle='rgba(123,211,160,.35)';for(const p of pts){p.y-=p.v*devicePixelRatio;if(p.y<-4)p.y=h+4;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}requestAnimationFrame(f);})();})();
 
 /* present mode */
+if(EXEC){['blockers','sources','execLink'].forEach(id=>{const n=document.getElementById(id);if(n)n.remove();});}
 const secs=[...document.querySelectorAll('section')];let pi=0;
+if(EXEC)secs.forEach((x,i)=>{const e=x.querySelector('.eyebrow');if(e)e.textContent=e.textContent.replace(/^\d\d/,String(i+1).padStart(2,'0'));});
+document.getElementById('pPos').textContent=`1 / ${secs.length}`;
 function setSlide(i){pi=(i+secs.length)%secs.length;secs.forEach((s,j)=>s.classList.toggle('active',j===pi));$('#pPos').textContent=`${pi+1} / ${secs.length}`;secs[pi].classList.add('in');secs[pi].querySelectorAll('.bar i[data-w]').forEach(i=>i.style.width=i.dataset.w+'%');scrollTo(0,0);}
 function present(on){document.body.classList.toggle('present',on);if(on)setSlide(0);}
 $('#presentBtn').onclick=()=>present(true);$('#pExit').onclick=()=>present(false);$('#pPrev').onclick=()=>setSlide(pi-1);$('#pNext').onclick=()=>setSlide(pi+1);
@@ -349,31 +359,36 @@ function render(s){
   const carried=deg.carried_campaigns?`carried from ${deg.carried_from}`:null;
   $('#asof').outerHTML=chip(`campaigns ${lc.source==='lemlist api'?'live '+hhmm(asof)+' UTC':'as of '+asof}${carried?' · '+carried:''}`,carried?'carried':(lc.trust||'missing'));
   $('#gen').textContent='generated '+new Date(s.generated_at).toLocaleString('en-US',{dateStyle:'medium',timeStyle:'short'});
+  if(EXEC){$('#sub').textContent='Pulled live from Clay, lemlist and the scheduler at every build. Nothing on this page sends.';document.querySelector('footer div').textContent='Read-only · rebuilt every morning · nothing on this page sends';}
   // A degraded export is stated on the chip and in the funnel note, never in the opening line.
 
   /* headline + kpis */
-  $('#headline').innerHTML=`<em>${fmt(loaded)}</em> leads loaded across ${camps} engine campaigns. <em>${fmt(launched)}</em> launched. <em class="hot">${fmt(waiting)}</em> waiting on first-touch capacity. ${replies} replies, ${meetings} meetings.`;
+  const capsAll=(lc.capacity||[]);const secondStart=(capsAll.map(x=>x.match(/hq\.com: .*?starts (\d{4}-\d{2}-\d{2})/)).find(Boolean)||[])[1];
+  const startTxt=secondStart?new Date(secondStart+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric'}):'Sep 25';
+  $('#headline').innerHTML=EXEC
+    ?`<em>${fmt(loaded)}</em> leads sourced, gated and loaded across ${camps} engine campaigns. <em>${fmt(launched)}</em> launched by reps. <em class="hot">${fmt(waiting)}</em> queued for first touch, paced by sender capacity; the second sending domain comes online ${startTxt}.`
+    :`<em>${fmt(loaded)}</em> leads loaded across ${camps} engine campaigns. <em>${fmt(launched)}</em> launched. <em class="hot">${fmt(waiting)}</em> waiting on first-touch capacity. ${replies} replies, ${meetings} meetings.`;
   const cr=s.credits||{};
   $('#kpis').innerHTML=[
-    ['launched',launched,''],['waiting',waiting,'hot'],['open rep tasks',tasks,tasks?'hot':''],
+    ['launched',launched,''],[EXEC?'queued for first touch':'waiting',waiting,'hot'],[EXEC?'rep steps open':'open rep tasks',tasks,tasks?'hot':''],
     ['replies',replies,''],['meetings',meetings,''],['credits used',Math.round(cr.spent||0),'']
   ].map(([l,v,c])=>`<div class="kpi"><div class="n ${c}" data-count="${v}">0</div><div class="l">${l}</div></div>`).join('');
 
   /* live checks */
   const lp=s.live_pulls||[];
-  $('#live').innerHTML=lp.map(p=>{const st=String(p.status||'none').toLowerCase();const agent=p.mode==='agent read';const when=agent?(p.as_of?'read '+dd(p.as_of):'no read'):(st==='failed'?'failed '+hhmm(p.as_of):hhmm(p.as_of)+' UTC');return `<span class="lv ${st} ${agent?'agent':''}" title="${esc(p.detail||'')}"><span class="d"></span><span class="t">${esc(p.tool)}</span>${when}<small>· ${esc(p.detail||'')}</small></span>`;}).join('');
+  $('#live').innerHTML=lp.filter(p=>!(EXEC&&p.status==='NONE')).map(p=>{if(EXEC){p={...p,detail:String(p.detail||'').replace(/run_control_tower\.sh pushes every build/,'deployed on every build')};if(p.tool==='launchd')p={...p,tool:'scheduler'};p={...p,detail:String(p.detail||'').replace('APPROVE and DENY receipts','approval receipts')};}const st=String(p.status||'none').toLowerCase();const agent=p.mode==='agent read';const when=agent?(p.as_of?'read '+dd(p.as_of):'no read'):(st==='failed'?'failed '+hhmm(p.as_of):hhmm(p.as_of)+' UTC');return `<span class="lv ${st} ${agent?'agent':''}" title="${esc(p.detail||'')}"><span class="d"></span><span class="t">${esc(p.tool)}</span>${when}<small>· ${esc(p.detail||'')}</small></span>`;}).join('');
 
   /* gates */
   const dw=s.deliverability_watch||{};const mbs=dw.mailboxes||[];const main=mbs.find(m=>/nathan.*intradiem\.com$/.test(m.mailbox))||mbs[0];const above=mbs.filter(m=>m.above_floor);
   const stalled=(lc.stalled||[]);const gi=s.gate_integrity||{};const sr=s.signal_review||{};const ct=s.clay_tables_live||{};
   const gates=[
-    {l:'Deliverability',cls:above.length?'warn':(main?'':'off'),v:main?`${(main.bounce_rate*100).toFixed(1)}% bounce`:'no read',d:main?`${who(main.mailbox).name}'s main mailbox, ${fmt(main.launched)} launched. ${above.length?above.map(m=>who(m.mailbox).name+' at '+(m.bounce_rate*100).toFixed(1)+'%, above the 3% floor').join('; '):'Floor is 3%.'} ${dw.source==='lemlist api (derived)'?'Live lemlist read '+hhmm(dw.as_of)+' UTC':'Weekly watch '+(dw.as_of||'--')}.`:'No mailbox read on file.'},
+    {l:'Deliverability',cls:above.length?'warn':(main?'':'off'),v:main?`${(main.bounce_rate*100).toFixed(1)}% bounce`:'no read',d:main?`${EXEC?'US main mailbox':who(main.mailbox).name+"'s main mailbox"}, ${fmt(main.launched)} launched. ${above.length?above.map(m=>(EXEC?laneOf(m.mailbox):who(m.mailbox).name)+' at '+(m.bounce_rate*100).toFixed(1)+'%, above the 3% floor').join('; '):'Floor is 3%.'} ${dw.source==='lemlist api (derived)'?'Live lemlist read '+hhmm(dw.as_of)+' UTC':'Weekly watch '+(dw.as_of||'--')}.`:'No mailbox read on file.'},
     {l:'Send gate',cls:'warn',v:`${fmt(waiting)} held`,d:'Loaded, never launched. First-touch capacity is the constraint, not the list. See section 05.'},
-    {l:'Human approval',cls:sr.awaiting?'warn':'',v:sr.as_of?(sr.awaiting?`${sr.awaiting} awaiting`:'queue clear'):'in place',d:`Nothing sends without a rep starting the campaign; Nate reviews per name inside lemlist. ${sr.as_of?(sr.awaiting?sr.awaiting+' staged signal'+(sr.awaiting===1?'':'s')+' waiting on APPROVE or DENY in the rundown thread':'No staged signal waiting')+', '+sr.approved+' approved, '+sr.denied+' denied. Read '+String(sr.as_of).slice(0,10)+'.':'No signal-review read on file.'}`},
-    {l:'Customer exclusion',cls:(ct.status==='LIVE'?ct.leaks:gi.ready_leaks)?'bad':(gi.flags?'warn':((ct.status==='LIVE'||gi.as_of)?'':'off')),v:ct.status==='LIVE'?`${ct.leaks} leak${ct.leaks===1?'':'s'} at READY`:(gi.as_of?`${gi.ready_leaks} leak${gi.ready_leaks===1?'':'s'} at READY`:'no read'),d:`${ct.status==='LIVE'?`Live read ${hhmm(ct.pulled_at)} UTC: ${fmt(ct.rows)} real rows, ${ct.ready} READY, ${(ct.tables||[]).map(x=>x.label+' '+x.rows).join(', ')}.`:'Live table read failed; weekly audit carried.'} ${gi.as_of?`Weekly union audit ${gi.as_of}: ${fmt(gi.union_domains)} domains, ${gi.passes} pass, ${gi.flags} flagged${(gi.standing||[]).length?'; '+gi.standing.map(x=>x.item+', '+x.days+' days').join('; '):''}.`:''}`},
+    {l:'Human approval',cls:sr.awaiting?'warn':'',v:sr.as_of?(sr.awaiting?`${sr.awaiting} ${EXEC?'in review':'awaiting'}`:'queue clear'):'in place',d:EXEC?`Nothing sends without a rep starting the campaign, and every name is reviewed inside lemlist first. ${sr.as_of?(sr.awaiting?sr.awaiting+' staged signal'+(sr.awaiting===1?'':'s')+' in human review before any outreach is drafted.':'No staged signal waiting.'):''}`:`Nothing sends without a rep starting the campaign; Nate reviews per name inside lemlist. ${sr.as_of?(sr.awaiting?sr.awaiting+' staged signal'+(sr.awaiting===1?'':'s')+' waiting on APPROVE or DENY in the rundown thread':'No staged signal waiting')+', '+sr.approved+' approved, '+sr.denied+' denied. Read '+String(sr.as_of).slice(0,10)+'.':'No signal-review read on file.'}`},
+    {l:'Customer exclusion',cls:(ct.status==='LIVE'?ct.leaks:gi.ready_leaks)?'bad':(gi.flags?'warn':((ct.status==='LIVE'||gi.as_of)?'':'off')),v:ct.status==='LIVE'?`${ct.leaks} leak${ct.leaks===1?'':'s'} at READY`:(gi.as_of?`${gi.ready_leaks} leak${gi.ready_leaks===1?'':'s'} at READY`:'no read'),d:`${ct.status==='LIVE'?`Live read ${hhmm(ct.pulled_at)} UTC: ${fmt(ct.rows)} real rows, ${ct.ready} READY, ${(ct.tables||[]).map(x=>x.label+' '+x.rows).join(', ')}.`:'Live table read failed; weekly audit carried.'} ${gi.as_of?(EXEC?`Checked weekly against the customer and partner union, ${fmt(gi.union_domains)} domains, last on ${gi.as_of}.`:`Weekly union audit ${gi.as_of}: ${fmt(gi.union_domains)} domains, ${gi.passes} pass, ${gi.flags} flagged${(gi.standing||[]).length?'; '+gi.standing.map(x=>x.item+', '+x.days+' days').join('; '):''}.`):''}`},
     {l:'Clay credits',cls:cr.balance==null?'off':((cr.pct_consumed||0)>.6?'warn':''),v:cr.balance==null?'no read':`${Math.round((cr.pct_consumed||0)*100)}% used`,d:cr.balance==null?'No live balance and no reconciliation block to carry.':`${fmt(Math.round(cr.spent))} consumed of ${fmt(Math.round(cr.made_available))} made available (${(cr.components||[]).map(c=>fmt(Math.round(c.credits))+' '+c.label).join(' + ')}). ${fmt(Math.round(cr.balance))} in the workspace now. ${cr.trust==='LIVE'?'Live pull':'Carried from the '+cr.as_of+' reconciliation'}${cr.trust==='LIVE'?' '+String(cr.as_of).slice(0,16).replace('T',' ')+' UTC':''}.`},
-    {l:'Stalled campaigns',cls:stalled.length?'warn':'',v:`${stalled.length}`,d:stalled.length?stalled.map(t=>t.replace(/\s*\|.*$/,'')).join('; '):'None running with leads in flight and no movement for 3+ days.'},
-    {l:'Baseline ratified',cls:(s.overall?.gates?.baseline_ratified)?'':'off',v:(s.overall?.gates?.baseline_ratified)?'yes':'pending',d:'Attribution baseline with Naveen. Realized numbers stay unverified until it lands.'},
+    {l:'Stalled campaigns',cls:stalled.length?'warn':'',v:`${stalled.length}`,d:stalled.length?stalled.map(t=>{t=t.replace(/\s*\|.*$/,'');if(!EXEC)return t;const m=t.match(/STALLED (\d+)d: .*\((\w+)\)\s*$/);return m?`one campaign, ${m[1]} days without movement (${/jack/i.test(m[2])?'UK lane':'US lane'})`:t.replace(/\((\w+)\)\s*$/,'');}).join('; '):'None running with leads in flight and no movement for 3+ days.'},
+    {l:'Baseline ratified',cls:(s.overall?.gates?.baseline_ratified)?'':'off',v:(s.overall?.gates?.baseline_ratified)?'yes':'pending',d:EXEC?'Attribution baseline to shape together. Realized pipeline is reported separately until it is agreed.':'Attribution baseline with Naveen. Realized numbers stay unverified until it lands.'},
   ];
   $('#gatesGrid').innerHTML=gates.map(g=>`<div class="gate ${g.cls}"><div class="gl">${g.l}</div><div class="gv"><span class="pulse"></span>${g.v}</div><div class="gd">${g.d}</div></div>`).join('');
 
@@ -417,7 +432,7 @@ function render(s){
   /* capacity */
   const caps=(lc.capacity||[]).map(t=>{const m=t.match(/^([^:]+@[^:]+): (\d+) waiting leads across (\d+) campaigns?, (?:from today|starts (\d{4}-\d{2}-\d{2})),(?: then)? (\d+) days for one touch at (\d+)\/day( UNVERIFIED cap)?(.*)$/);if(!m)return null;return {mb:m[1],waiting:+m[2],camps:+m[3],starts:m[4]||null,days:+m[5],cap:+m[6],unv:!!m[7],ramp:(m[8]||'').trim().replace(/^\(|\)$/g,'')};}).filter(Boolean);
   const maxW=Math.max(1,...caps.map(c=>c.waiting));
-  $('#lanes').innerHTML=caps.length?caps.map(c=>{const w=who(c.mb);const second=/hq\.com$/.test(w.dom);return `<div class="lane"><div class="who">${w.name} · ${second?'second domain':'main mailbox'}<small>${w.dom} · ${c.cap}/day${c.unv?' unverified':''}${c.starts?' · from '+c.starts:''}</small></div><div class="bar"><i class="${c.waiting?'hot':'zero'}" data-w="${pct(c.waiting,maxW)}"></i></div><div class="rt"><b>${fmt(c.waiting)} waiting</b>${c.days} days for one touch${c.ramp?' · '+c.ramp:''}</div></div>`;}).join('')+`<div class="lane" style="background:transparent;border-style:dashed"><div class="who">Engine total<small>sum of the lanes above</small></div><div class="bar"><i class="hot" data-w="100"></i></div><div class="rt"><b>${fmt(waiting)} waiting</b>binding constraint until Sep 25</div></div>`:'<div class="card">No capacity read on file.</div>';
+  $('#lanes').innerHTML=caps.length?caps.map(c=>{const w=who(c.mb);const second=/hq\.com$/.test(w.dom);return `<div class="lane"><div class="who">${EXEC?laneOf(c.mb):w.name+' · '+(second?'second domain':'main mailbox')}<small>${EXEC?'':w.dom+' · '}${c.cap}/day${c.unv?' unverified':''}${c.starts?' · from '+c.starts:''}</small></div><div class="bar"><i class="${c.waiting?'hot':'zero'}" data-w="${pct(c.waiting,maxW)}"></i></div><div class="rt"><b>${fmt(c.waiting)} waiting</b>${c.days} days for one touch${c.ramp?' · '+c.ramp:''}</div></div>`;}).join('')+`<div class="lane" style="background:transparent;border-style:dashed"><div class="who">Engine total<small>sum of the lanes above</small></div><div class="bar"><i class="hot" data-w="100"></i></div><div class="rt"><b>${fmt(waiting)} waiting</b>binding constraint until Sep 25</div></div>`:'<div class="card">No capacity read on file.</div>';
 
   /* what fired + heat */
   const wr=s.war_room||{};const ht=s.heat_list||{};const p1=wr.p1||[],p2=wr.p2||[];
@@ -427,10 +442,10 @@ function render(s){
   const MON={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
   const due=d=>{if(/overdue|imminent|any time|today|tomorrow/i.test(d))return true;const m=d.match(/\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2})\b/i);if(!m)return false;const now=new Date();let dt=new Date(now.getFullYear(),MON[m[1].slice(0,3).toLowerCase()],+m[2]);if(dt<now-60*864e5)dt.setFullYear(dt.getFullYear()+1);const days=(dt-now)/864e5;return days<=3;};
   $('#wrCol').innerHTML=(wrItems.map(x=>`<div class="wr ${x.cls}"><div class="wp">${x.p}</div><div class="wn">${esc(x.name)}</div><div class="wt">${esc(x.text)}</div></div>`).join('')||(wr.as_of?`<div class="wr"><div class="wp">quiet window</div><div class="wt">${esc(wr.p1_note||'Nothing cleared the bar in this window.')}</div></div>`:'<div class="card">No war-room read on file.</div>'))
-    +((sr.items||[]).length?`<div class="hcard" style="margin-bottom:8px"><div class="wp">Awaiting your call · reply APPROVE or DENY with the id in the rundown thread</div>${sr.items.map(i=>`<div class="wt" style="margin-top:6px"><b style="color:#fff">${esc(i.company)}</b> · ${esc(i.trigger)} · ${esc(i.date)} · <span class="mono">${esc(i.id)}</span><br>“${esc(i.quote)}”</div>`).join('')}</div>`:'')
-    +((wr.dates||[]).length?`<div class="hcard"><div class="wp">Dates to hold · ${wr.open_calls||0} open judgment call${wr.open_calls===1?'':'s'} for Dallas</div><div class="dates">${wr.dates.map(d=>`<div class="${due(d)?'due':''}">${esc(d.replace(/`/g,''))}</div>`).join('')}</div></div>`:'');
-  const top=(ht.top||[]).slice(0,12);const laneLabel=l=>({rep:'rep lane',cohort:'cohort',customer_am:'customer, AM lane',hold:'hold'}[l]||l);
-  $('#heatCol').innerHTML=`<div class="hcard"><div class="wp">Heat · ${ht.scored||0} companies scored ${ht.as_of||'--'}${ht.mode?' · '+esc(ht.mode):''}</div>${top.map(h=>`<div class="heat"><div class="hn" title="${esc(h.evidence)}">${esc(h.name)}<small>${laneLabel(h.lane)}</small></div><div class="bar"><i class="${h.lane==='rep'?'hot':(h.lane==='customer_am'?'am':(h.lane==='hold'?'zero':''))}" data-w="${h.heat}"></i></div><div class="hv ${h.lane}">${h.heat}</div></div>`).join('')||'<div class="wt">No heat read on file.</div>'}<div class="hfoot">Orange is the rep lane, green the ICP cohort, grey a current customer routed to the AM lane and never cold. Same-day rep alerts: ${(ht.rep_alerts||[]).map(a=>esc(a.name||a.domain)).join(', ')||'none'}.</div></div>`;
+    +((sr.items||[]).length&&!EXEC?`<div class="hcard" style="margin-bottom:8px"><div class="wp">Awaiting your call · reply APPROVE or DENY with the id in the rundown thread</div>${sr.items.map(i=>`<div class="wt" style="margin-top:6px"><b style="color:#fff">${esc(i.company)}</b> · ${esc(i.trigger)} · ${esc(i.date)} · <span class="mono">${esc(i.id)}</span><br>“${esc(i.quote)}”</div>`).join('')}</div>`:'')
+    +((wr.dates||[]).length?`<div class="hcard"><div class="wp">Dates to hold${EXEC?'':' · '+(wr.open_calls||0)+' open judgment call'+(wr.open_calls===1?'':'s')+' for Dallas'}</div><div class="dates">${wr.dates.map(d=>{d=d.replace(/`/g,'');if(EXEC)d=d.replace(/\s*\([^)]*(owns it|watcher)[^)]*\)/,'');return `<div class="${due(d)?'due':''}">${esc(d)}</div>`;}).join('')}</div></div>`:'');
+  const top=(ht.top||[]).filter(h=>!EXEC||h.lane==='rep'||(h.lane==='cohort'&&/triggers_csv|war_room/.test(h.evidence||''))).slice(0,12);const laneLabel=l=>({rep:'rep lane',cohort:'cohort',customer_am:'customer, AM lane',hold:'hold'}[l]||l);
+  $('#heatCol').innerHTML=`<div class="hcard"><div class="wp">Heat · ${ht.scored||0} companies scored ${ht.as_of||'--'}${ht.mode&&!EXEC?' · '+esc(ht.mode):''}</div>${top.map(h=>`<div class="heat"><div class="hn" title="${esc(h.evidence)}">${esc(h.name)}<small>${laneLabel(h.lane)}</small></div><div class="bar"><i class="${h.lane==='rep'?'hot':(h.lane==='customer_am'?'am':(h.lane==='hold'?'zero':''))}" data-w="${h.heat}"></i></div><div class="hv ${h.lane}">${h.heat}</div></div>`).join('')||'<div class="wt">No heat read on file.</div>'}<div class="hfoot">${EXEC?'Orange is a named account already with a seller, green an ICP-fit account the engine surfaced on a dated trigger. Current customers route to account management and never into cold outreach.':'Orange is the rep lane, green the ICP cohort, grey a current customer routed to the AM lane and never cold.'} Same-day rep alerts: ${(ht.rep_alerts||[]).map(a=>esc(a.name||a.domain)).join(', ')||'none'}.</div></div>`;
 
   /* accounts in motion */
   const am=s.accounts_in_motion||{};const accts=am.accounts||[];const reps=Object.entries(am.reps||{}).sort((a,b)=>b[1]-a[1]);
@@ -443,12 +458,12 @@ function render(s){
 
   /* blockers */
   const bl=s.blockers_and_asks||[];
-  $('#blkGrid').innerHTML=bl.map(b=>`<div class="blk ${b.type==='ask'||b.type==='readout'?'ask':''}"><div class="src">${b.type}${b.open?' · open':''} · ${b.source}</div><p>${String(b.text).replace(/`/g,'').slice(0,260)}${b.text.length>260?'…':''}</p></div>`).join('')||'<div class="card">Nothing open.</div>';
+  if(!EXEC)$('#blkGrid').innerHTML=bl.map(b=>`<div class="blk ${b.type==='ask'||b.type==='readout'?'ask':''}"><div class="src">${b.type}${b.open?' · open':''} · ${b.source}</div><p>${String(b.text).replace(/`/g,'').slice(0,260)}${b.text.length>260?'…':''}</p></div>`).join('')||'<div class="card">Nothing open.</div>';
 
   /* swarm */
   const sw=s.swarm||{};const jobs=sw.jobs||[];
   $('#swarmH').textContent=`${sw.loaded||jobs.length} scheduled jobs loaded, ${sw.versioned||'--'} versioned`;
-  $('#swarmNote').textContent=`${sw.launchd_as_of?'launchctl read live at '+hhmm(sw.launchd_as_of)+' UTC'+((sw.nonzero_exit||[]).length?', non-zero last exit: '+sw.nonzero_exit.join(', '):', every last exit clean')+'. ':''}${sw.drift||''} Run counts from the heartbeat ${sw.as_of||'--'}. Every job writes a log; the daily rundown reads them. None messages anyone but Dallas.`;
+  $('#swarmNote').textContent=`${sw.launchd_as_of?(EXEC?'Scheduler read live at ':'launchctl read live at ')+hhmm(sw.launchd_as_of)+' UTC'+((sw.nonzero_exit||[]).length?', non-zero last exit: '+sw.nonzero_exit.join(', '):', every last exit clean')+'. ':''}${sw.drift||''} Run counts from the heartbeat ${sw.as_of||'--'}. Every job writes a log; the daily rundown reads them. None messages anyone but Dallas.`;
   $('#jobs').innerHTML=jobs.sort((a,b)=>b.runs-a.runs).map(j=>`<div class="job" title="${j.running?'running now':'last exit '+(j.last_exit??'--')}"><span class="hb" ${j.last_exit?'style="background:var(--red);animation:none"':''}></span><span class="jn">${j.job}</span><span class="jr">${fmt(j.runs)}</span></div>`).join('')+(sw.staged||[]).map(j=>`<div class="job staged"><span class="hb"></span><span class="jn">${j}</span><span class="jr">staged</span></div>`).join('');
   $('#fails').innerHTML=(sw.failures||[]).map(f=>`<div>${f}</div>`).join('');
 
@@ -456,7 +471,7 @@ function render(s){
   const feeds={engine_state:'gates, approval queue (seeded)',impact:'realized funnel',clay_credits_live:'credits gate, credits used',clay_credit_ledger:'nothing on the page',clay_build_registry:'blockers, build state',account_plays:'signals',naveen_readout:'readout line'};
   const extra=[{name:lc.source==='lemlist api'?'lemlist api (live)':'campaign_scorecard_history',last_updated:lc.as_of,status:carried?'CARRIED':lc.trust,stale:lc.trust==='STALE',feeds:'headline, line, funnel, motions, capacity'},{name:'clay tables (live rows)',last_updated:ct.pulled_at,status:ct.status||'MISSING',feeds:'customer exclusion gate'},{name:'launchctl (live)',last_updated:sw.launchd_as_of,status:sw.launchd_as_of?'LIVE':'MISSING',feeds:'swarm'},{name:'deliverability_watch',last_updated:dw.as_of,status:dw.trust,feeds:'deliverability gate'},{name:'swarm_health',last_updated:sw.as_of,status:sw.trust,feeds:'swarm'}];
   Object.assign(feeds,{gate_integrity:'customer exclusion gate',signal_review:'human approval gate',war_room:'signals, dates to hold',heat_list:'heat, account cards'});
-  $('#srcRows').innerHTML=[...extra,...(s.sources||[])].map(x=>`<tr><td>${x.name}</td><td class="mono">${x.last_updated?String(x.last_updated).slice(0,19).replace('T',' '):'--'}</td><td>${chip(String(x.status||'--').split(' ')[0],String(x.status||'').split(' ')[0].toLowerCase()==='partial'?'stale':String(x.status||'').split(' ')[0])}</td><td>${x.feeds||feeds[x.name]||''}</td></tr>`).join('');
+  if(!EXEC)$('#srcRows').innerHTML=[...extra,...(s.sources||[])].map(x=>`<tr><td>${x.name}</td><td class="mono">${x.last_updated?String(x.last_updated).slice(0,19).replace('T',' '):'--'}</td><td>${chip(String(x.status||'--').split(' ')[0],String(x.status||'').split(' ')[0].toLowerCase()==='partial'?'stale':String(x.status||'').split(' ')[0])}</td><td>${x.feeds||feeds[x.name]||''}</td></tr>`).join('');
 
   secs.forEach(x=>io.observe(x));
   // band counts are outside sections
