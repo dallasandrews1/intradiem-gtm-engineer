@@ -1,0 +1,8 @@
+{
+  "note": "Total Clay credits made available to the project. The tower subtracts the LIVE balance from `clay credits` to get consumed-to-date; the CSV ledger never drives the headline number (Dallas, Sep 15 2026: the ledger's 693 was wrong by thousands). Figures per credit-check-2026-09-10.md.",
+  "components": [
+    {"label": "one-time proof budget", "credits": 72000.0, "as_of": "2026-07-18"},
+    {"label": "top-up from Clay's product lead", "credits": 11836.0, "as_of": "2026-07-31"}
+  ],
+  "flag_pct": 0.60
+}

@@ -151,6 +151,41 @@ def parse_credit_ledger(path: Path) -> Dict[str, Any]:
     }
 
 
+CREDITS_CFG = ROOT / "automation" / "config" / "clay_credits.json"
+RECON_LOG = ROOT / "automation" / "logs" / "credit_reconciliation.log"
+
+
+def read_live_credits(ledger: Dict[str, Any]) -> Dict[str, Any]:
+    """Consumed-to-date from the LIVE Clay balance, never from the CSV ledger (Sep 15 2026: the ledger said 693
+    while the workspace had consumed about 22,000). Pulls `clay credits` now; if the CLI is unavailable it carries
+    the newest block of credit_reconciliation.log (the weekly credit-check job) and says so. Total made available
+    comes from automation/config/clay_credits.json."""
+    import json as _json, re, subprocess
+    cfg = _json.loads(CREDITS_CFG.read_text(encoding="utf-8")) if CREDITS_CFG.exists() else {"components": [], "flag_pct": 0.6}
+    total = sum(float(c.get("credits", 0)) for c in cfg.get("components", []))
+    balance, as_of, trust = None, None, "MISSING"
+    try:
+        raw = subprocess.run(["clay", "credits"], capture_output=True, text=True, timeout=25).stdout
+        balance = float(_json.loads(raw)["balance"])
+        as_of, trust = datetime.now(timezone.utc).isoformat(timespec="minutes"), "LIVE"
+    except Exception:
+        if RECON_LOG.exists():
+            blocks = re.findall(r"===== (\d{4}-\d{2}-\d{2}) =====[\s\S]*?\"balance\": ([0-9.]+)", RECON_LOG.read_text(encoding="utf-8"))
+            if blocks:
+                as_of, balance, trust = blocks[-1][0], float(blocks[-1][1]), "CARRIED"
+    if balance is None or not total:
+        return {**ledger, "trust": "MISSING", "source": "none", "balance": balance, "made_available": total}
+    spent = total - balance
+    pct = spent / total
+    return {
+        "spent": round(spent, 1), "remaining": round(balance, 1), "budget": total, "pct_consumed": round(pct, 3),
+        "flag_60pct": pct >= float(cfg.get("flag_pct", 0.6)), "flag_85pct": pct >= 0.85, "cost_per_qualified_reply": None,
+        "motion_totals": ledger.get("motion_totals", {}), "trust": trust, "source_date": as_of, "source": "clay credits" if trust == "LIVE" else "credit_reconciliation.log",
+        "balance": round(balance, 1), "made_available": total, "components": cfg.get("components", []),
+        "ledger_running_total": ledger.get("spent"), "ledger_date": ledger.get("source_date"),
+    }
+
+
 # Canonical motion keys the rest of the tower uses. Registry rows name motions
 # with decoration ("Cost-Mandate Motion", "`WFM-Adjacency Motion` (wb_...)"), so
 # map by keyword rather than by an exact name match.
@@ -812,7 +847,7 @@ def build_motion_rows(engine_state: Dict[str, Any], impact: Dict[str, Any], regi
 def build_state() -> Dict[str, Any]:
     engine_state = read_json(ENGINE_STATE_PATH)
     impact = read_json(IMPACT_PATH)
-    credit_data = parse_credit_ledger(CREDIT_LEDGER_PATH)
+    credit_data = read_live_credits(parse_credit_ledger(CREDIT_LEDGER_PATH))
     registry = parse_registry(CLAY_REGISTRY_PATH)
     account_plays = read_json(ACCOUNT_PLAYS_PATH)
     readout_entries = parse_readout_log(READOUT_LOG_PATH)
@@ -948,6 +983,13 @@ def build_state() -> Dict[str, Any]:
             "flag_60pct": credit_data["flag_60pct"],
             "cost_per_qualified_reply": None,
             "trust": credit_data["trust"],
+            "source": credit_data.get("source"),
+            "as_of": credit_data.get("source_date"),
+            "balance": credit_data.get("balance"),
+            "made_available": credit_data.get("made_available"),
+            "components": credit_data.get("components", []),
+            "ledger_running_total": credit_data.get("ledger_running_total"),
+            "ledger_date": credit_data.get("ledger_date"),
         },
         "approval_queue": {
             "pending": engine_state.get("approval_queue", {}).get("pending", 0),
@@ -984,10 +1026,18 @@ def build_state() -> Dict[str, Any]:
                 "stale": is_stale(impact.get("generated_at"), 7),
             },
             {
-                "name": "clay_credit_ledger",
+                "name": "clay_credits_live",
                 "last_updated": credit_data.get("source_date"),
                 "status": credit_data["trust"],
-                "stale": credit_data["trust"] == "STALE",
+                "stale": credit_data["trust"] != "LIVE",
+                "feeds": "credits gate, credits used",
+            },
+            {
+                "name": "clay_credit_ledger",
+                "last_updated": credit_data.get("ledger_date"),
+                "status": "PARTIAL",
+                "stale": True,
+                "feeds": "nothing on the page; motion-level notes only, undercounts spend",
             },
             {
                 "name": "clay_build_registry",

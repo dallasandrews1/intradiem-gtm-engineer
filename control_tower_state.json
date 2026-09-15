@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-15T19:23:27.954061+00:00",
+  "generated_at": "2026-09-15T19:27:19.440293+00:00",
   "overall": {
     "posture": "LAUNCHING",
-    "headline": "1,897 leads loaded across 16 engine campaigns, 190 launched, 1,707 waiting on first-touch capacity, 0 replies, 0 meetings, 693 credits used",
+    "headline": "1,897 leads loaded across 16 engine campaigns, 190 launched, 1,707 waiting on first-touch capacity, 0 replies, 0 meetings, 22237 credits used",
     "gates": {
       "deliverability": "UNKNOWN",
       "credit_budget": "GREEN",
@@ -139,13 +139,31 @@
     "trust": "STALE"
   },
   "credits": {
-    "spent": 693.0,
-    "remaining": 4307.0,
-    "budget": 5000.0,
-    "pct_consumed": 0.139,
+    "spent": 22236.6,
+    "remaining": 61599.4,
+    "budget": 83836.0,
+    "pct_consumed": 0.265,
     "flag_60pct": false,
     "cost_per_qualified_reply": null,
-    "trust": "LIVE"
+    "trust": "LIVE",
+    "source": "clay credits",
+    "as_of": "2026-09-15T19:27+00:00",
+    "balance": 61599.4,
+    "made_available": 83836.0,
+    "components": [
+      {
+        "label": "one-time proof budget",
+        "credits": 72000.0,
+        "as_of": "2026-07-18"
+      },
+      {
+        "label": "top-up from Clay's product lead",
+        "credits": 11836.0,
+        "as_of": "2026-07-31"
+      }
+    ],
+    "ledger_running_total": 693.0,
+    "ledger_date": "2026-09-11"
   },
   "approval_queue": {
     "pending": 0,
@@ -1867,10 +1885,18 @@
       "stale": true
     },
     {
+      "name": "clay_credits_live",
+      "last_updated": "2026-09-15T19:27+00:00",
+      "status": "LIVE",
+      "stale": false,
+      "feeds": "credits gate, credits used"
+    },
+    {
       "name": "clay_credit_ledger",
       "last_updated": "2026-09-11",
-      "status": "LIVE",
-      "stale": false
+      "status": "PARTIAL",
+      "stale": true,
+      "feeds": "nothing on the page; motion-level notes only, undercounts spend"
     },
     {
       "name": "clay_build_registry",
