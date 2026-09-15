@@ -171,7 +171,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Table-Hygiene Agent](table-hygiene-agent-jul20.md) — daily column audit with SAFE-DELETE plans
 - [GTM Daily Rundown Jul 18](gtm-daily-rundown-jul18.md) — the single morning brief, all other DMs muted into it
 - [Control Tower Contract Jul 18](control-tower-contract-jul18.md) — read-and-render layer over engine_state.json
-- [Control Tower Build Status](control-tower-build-status.md) — both parser bugs fixed, refresh stays manual
+- [Control Tower Build Status](control-tower-build-status.md) — Jul 18 parser fixes; superseded on cadence by the Sep 15 rebuild (launchd job loaded, deploys daily)
 - [Cohesion Layer](intradiem-cohesion-layer.md) — single-source state tying the point tools together
 - [GTM Function Roadmap](gtm-function-roadmap.md) — the eight-layer function OS frame
 - [GTM Handoff + Orchestration Jul 18](gtm-handoff-and-orchestration-jul18.md) — durable handoff docs in the repo root
@@ -649,5 +649,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [6sense Signals In Clay Built Sep15](sixsense-signals-in-clay-built-sep15.md) — Sep 15 2026: 6sense intent lives in Clay as Audiences FIELDS not table columns; 10 signal segments + 12 families + scorer source built at 0 credits, dry run
 
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-15
-- [Control Tower Animated Rebuild Sep15](control-tower-animated-rebuild-sep15.md) — Sep 15 2026: animated tower live at gtm-control-tower-dn8.pages.dev (bare .pages.dev is another account's app), deploys daily 7:30, 31 accounts-in-motion panel, never lead the page with a failure
+- [Control Tower Animated Rebuild Sep15](control-tower-animated-rebuild-sep15.md) — Sep 15 2026: animated tower live at gtm-control-tower-dn8.pages.dev, deploys daily 7:30, ten sections; gates, Signals (war room + heat) and account heat tags read live logs; _newest_log takes dated names only; never lead the page with a failure
 - [Feedback Match The Delivery Alex Loved](feedback-match-the-delivery-alex-loved.md) — Sep 15 2026: every account gets its own map page + expansion room + index; never a combined page or anchors

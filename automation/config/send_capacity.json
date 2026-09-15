@@ -1,11 +1,55 @@
 {
   "_doc": "Send capacity for campaign_scorecard.py (Sep 13 2026). Daily caps are first-touch emails per mailbox per day; days_to_drain = waiting leads / cap. Tune here, never in code. Campaigns not listed under campaign_mailbox fall to default_mailbox_by_rep. A mailbox with active_from in the future is reported as 'starts <date>'. ramp entries override daily_cap from their date.",
   "mailboxes": {
-    "nathan.belfield@intradiem.com": {"rep": "nathan", "daily_cap": 30, "active_from": "2026-08-31", "note": "main mailbox, 20 to 30 a day per the Sep 4 Chris/Naveen go; lemlist campaign limit 40"},
-    "nathan.belfield@intradiemhq.com": {"rep": "nathan", "daily_cap": 30, "active_from": "2026-09-25", "ramp": [{"from": "2026-09-25", "daily_cap": 15}, {"from": "2026-10-02", "daily_cap": 30}], "note": "second domain, lemwarm since ~Aug 31; sender switch earliest Sep 21, planned Sep 25; week one 10 to 15 a day"},
-    "jack.ohagan@intradiem.com": {"rep": "jack", "daily_cap": 30, "active_from": "2026-07-01", "note": "Jack's main mailbox; address and cap UNVERIFIED, set from the Sep 4 pattern"}
+    "nathan.belfield@intradiem.com": {
+      "rep": "nathan",
+      "daily_cap": 30,
+      "active_from": "2026-08-31",
+      "note": "main mailbox, 20 to 30 a day per the Sep 4 Chris/Naveen go; lemlist campaign limit 40"
+    },
+    "nathan.belfield@intradiemhq.com": {
+      "rep": "nathan",
+      "daily_cap": 30,
+      "active_from": "2026-09-25",
+      "ramp": [
+        {
+          "from": "2026-09-25",
+          "daily_cap": 15
+        },
+        {
+          "from": "2026-10-02",
+          "daily_cap": 30
+        }
+      ],
+      "note": "second domain, lemwarm since ~Aug 31; sender switch earliest Sep 21, planned Sep 25; week one 10 to 15 a day"
+    },
+    "jack.ohagan@intradiem.com": {
+      "rep": "jack",
+      "daily_cap": 30,
+      "active_from": "2026-07-01",
+      "note": "Jack's main mailbox; address and cap UNVERIFIED, set from the Sep 4 pattern"
+    },
+    "jack.ohagan@intradiemhq.com": {
+      "rep": "jack",
+      "daily_cap": 30,
+      "active_from": "2026-09-25",
+      "ramp": [
+        {
+          "from": "2026-09-25",
+          "daily_cap": 15
+        },
+        {
+          "from": "2026-10-02",
+          "daily_cap": 30
+        }
+      ],
+      "note": "Jack's second-domain mailbox (dem_kRnQdzgvHtaFo8ZBi, created 2026-08-31, lemwarm alongside Nathan's); added Sep 15 2026 so the tower shows the lane; same ramp as Nathan's hq mailbox, switch date UNVERIFIED for Jack"
+    }
   },
-  "default_mailbox_by_rep": {"nathan": "nathan.belfield@intradiem.com", "jack": "jack.ohagan@intradiem.com"},
+  "default_mailbox_by_rep": {
+    "nathan": "nathan.belfield@intradiem.com",
+    "jack": "jack.ohagan@intradiem.com"
+  },
   "campaign_mailbox": {
     "cam_SiD4KmWcRuhiF6uhL": "nathan.belfield@intradiemhq.com",
     "cam_DNErdZPANvC2sqRCK": "nathan.belfield@intradiemhq.com"
