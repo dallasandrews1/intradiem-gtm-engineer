@@ -651,4 +651,3 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-15
 - [Control Tower Animated Rebuild Sep15](control-tower-animated-rebuild-sep15.md) — Sep 15 2026: animated tower live at gtm-control-tower-dn8.pages.dev (bare .pages.dev is another account's app), deploys daily 7:30, 31 accounts-in-motion panel, never lead the page with a failure
 - [Feedback Match The Delivery Alex Loved](feedback-match-the-delivery-alex-loved.md) — Sep 15 2026: every account gets its own map page + expansion room + index; never a combined page or anchors
-- [Tower pulls live tools, not logs](feedback-tower-live-tools-not-logs.md) — Dallas Sep 15: a stale number in front of Naveen destroys credibility; every tower figure is a stamped live pull or an explicitly carried log
