@@ -651,3 +651,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews-Claude-Projects-Intradiem-GTM-Engineer on 2026-09-15
 - [Control Tower Animated Rebuild Sep15](control-tower-animated-rebuild-sep15.md) — Sep 15 2026: animated tower live at gtm-control-tower-dn8.pages.dev (bare .pages.dev is another account's app), deploys daily 7:30, 31 accounts-in-motion panel, never lead the page with a failure
 - [Feedback Match The Delivery Alex Loved](feedback-match-the-delivery-alex-loved.md) — Sep 15 2026: every account gets its own map page + expansion room + index; never a combined page or anchors
+- [Lemlist Relay Dual-Surface Dedup FIXED Sep15](project-lemlist-relay-dual-surface-staleness-sep15.md) - MCP and REST minted different ids for the same event; canonical type|campaign|lead|date id plus stale-snapshot protocol now in the job prompt
+- [Dallas builds the SalesNav maps](feedback-dallas-builds-the-salesnav-maps.md) - the build is Dallas's, never write AM-facing copy that tells the AM to build it
+
+## Swept from -Users-dallasandrews on 2026-09-15
+- [All-hands video pacing Sep15](allhands-video-pacing-sep15.md) — scene holds derive from reading load; 7-min cap, buy time from footage heads never from the slides
