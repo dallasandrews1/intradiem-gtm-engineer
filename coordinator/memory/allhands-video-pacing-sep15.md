@@ -43,3 +43,13 @@ shipped for a week with the feedback wire running through the "Read and adjust" 
 a strikethrough, the engine footer breaking out of its box, and every source box trailing
 a wire stub into empty space for ten seconds because the stubs were hardcoded `class="on"`
 instead of waiting for the spine's keyframe.
+
+**Campaign-count rule (Sep 15):** do not put a "campaigns sending" count on a
+leadership-facing results slide. Lifetime across the four running lemlist campaigns
+(Jack's UK/NL) was 79 leads, 87 messages, zero replies and zero meetings; Nate's five NA
+campaigns hold 1,315 leads and are paused ON PURPOSE until launch, which is a deliberate
+staging decision and should never be framed as a stall. A campaign count invites "how is
+it going," and at ten weeks the send data cannot answer that. Show what the engine
+produced instead: leads loaded, researched and gated. Also noted: NL Planners is bouncing
+at 11.1%, which is the exact failure mode [[enrichment-doctrine-clay-not-lemlist]] and
+[[lemlist-trial-enrichment-credits-exhausted]] warn about.
