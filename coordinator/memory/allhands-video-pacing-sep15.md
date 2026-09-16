@@ -53,3 +53,21 @@ it going," and at ten weeks the send data cannot answer that. Show what the engi
 produced instead: leads loaded, researched and gated. Also noted: NL Planners is bouncing
 at 11.1%, which is the exact failure mode [[enrichment-doctrine-clay-not-lemlist]] and
 [[lemlist-trial-enrichment-credits-exhausted]] warn about.
+
+**Shipped 15 Sep 2026.** Video v4 (6:56) uploaded and the deck saved. Final state of the
+results slide: "1,315 leads loaded" and "25 account maps", no campaign-count claim
+anywhere.
+
+**Important for any future edit:** the deck that actually gets presented is the company
+master, where Dallas's segment is slides 85-88 (85 intro, 86 problem, 87 video,
+88 results). Naveen RESTYLED 86 and 88 on the $1B27 all-hands template, so
+`build_pptx.py` is the source of truth for the CONTENT and the speaker notes but NOT for
+the shipping design. Do not regenerate that pptx and assume it matches what is on screen.
+Naveen's layout file is `AI-Champions-Demo_GTM-Engineering (1)  final.pptx`, posted by him
+in Slack 10 Sep. The master arrives as a PDF export (`2026-AH-PPT-MASTER.pdf`), which
+cannot be edited, so any slide work needs the .pptx pulled first.
+
+Two things left open at ship time, both Dallas's call, neither a blocker: slide 88's
+370 hours / 4,600 / 12.4K / 950 are still the 10 Sep figures and were never re-verified,
+and NL Planners is bouncing at 11.1%, which matters before North America launches on the
+same domains.
