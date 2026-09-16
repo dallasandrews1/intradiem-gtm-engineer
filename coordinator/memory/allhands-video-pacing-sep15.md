@@ -1,26 +1,28 @@
 ---
 name: allhands-video-pacing-sep15
-description: All-hands demo scenes are timed from reading load, not by hand; 7-minute cap, time comes out of footage not scenes
+description: Slides carry headlines and the voice carries the sentence; scene holds = longer of read-time and say-time, 7-minute cap
 metadata:
   type: project
 ---
 
-The all-hands AI demo (`motions/all_hands_sep14/`) was re-timed on Sep 15 2026 because
-the scene and card holds were faster than the room could read or Dallas could narrate
-over. Naveen had already flagged it on Sep 9: "make sure the video flows slow or fast
-enough for you to match with script," and he wants it presented live, not pre-recorded.
+The all-hands AI demo (`motions/all_hands_sep14/`) was re-timed and rewritten on Sep 15
+2026. Naveen flagged it on Sep 9: "make sure the video flows slow or fast enough for you
+to match with script," and he wants it presented live, not pre-recorded.
 
-Hold time in `scenes/build_scenes.py` is now DERIVED from the words each keyframe puts
-on screen (`SETTLE + load/READ`, `PACE` env var scales the whole film), not typed in by
-hand. Add a row to a scene and it re-times itself. `final_cut/retime_cues.py` pins every
-narration line to something in the picture, one line per scene reveal.
+Two separate problems were being solved with one lever. **Reading load** is what makes a
+room feel behind, and that is fixed by shorter on-screen copy, not more seconds.
+**Talk time** is what Dallas needs to narrate, and that is fixed by seconds. Adding time
+alone left paragraphs on screen that he then had to read off the slide.
 
-**Why:** hand-set holds gave a 21-word bullet 2.0s (~630 wpm of reading demand) while a
-chip got the same 2.0s. The old cue sheet also had one sentence covering a four-row
-build, so the scenes had dead air while the text flew past.
+So: on-screen copy is now a headline of roughly eight words, a fragment not a sentence,
+and the narration carries the full thought. In `scenes/build_scenes.py` each keyframe is
+`(words newly on screen, the line said over it)` and its hold is the LONGER of reading it
+and saying it, so the picture cannot get ahead of the script. `final_cut/retime_cues.py`
+imports those same lines, so a line and the picture it runs over cannot drift apart.
 
-**How to apply:** hard cap is 7:00 for this video. When scenes need more room, take the
-time back out of slack in the FOOTAGE, off the HEAD of each clip so every shot still
-ends on the frame it was cut to end on. Never buy runtime back by speeding the
-explanation slides. Target 125-155 wpm per line; `retime_cues.py` flags anything faster.
+**How to apply:** hard cap is 7:00. When scenes need more room, take it out of slack in
+the FOOTAGE, off the HEAD of each clip so every shot still ends on the frame it was cut
+to end on. Never buy runtime back by speeding the explanation slides. If a scene still
+feels long, cut words from the slide before cutting seconds. `retime_cues.py` flags any
+line needing over 156 wpm. `PACE` env var scales the whole film.
 Related: [[deliverable-strength-framing]], [[naveen-facing-comms-rules]].
