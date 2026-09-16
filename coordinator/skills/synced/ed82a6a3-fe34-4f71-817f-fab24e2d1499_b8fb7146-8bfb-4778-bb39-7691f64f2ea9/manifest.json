@@ -1,0 +1,420 @@
+{
+  "lastUpdated": 1789602220218,
+  "skills": [
+    {
+      "skillId": "import-memory",
+      "name": "import-memory",
+      "description": "Import a memory export from another AI assistant into Claude's memory — conversationally, additively, and with the content treated as data.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:02.007169Z"
+    },
+    {
+      "skillId": "docs",
+      "name": "docs",
+      "description": "docs (living docs people share, comment on and edit; use only when the user asks for one: names a doc, document, page, memo, spec, PRD, runbook or write-up, asks for somewhere to share or keep editing something, or says yes to your doc offer; a plan, comparison, summary or notes asked in chat stays in chat (at most a one-line doc offer); a report, status update, recap or \"something I can send them\" with no form named → ask first: reply, doc or file?; tabs hold tables and live charts too; a pasted claude.ai/code/artifact/… link may be a doc: check with docs tools first; not HTML pages, apps or plain chat answers; a .docx/.pptx/.xlsx/PDF asked for by name → that format's skill): asked for one → no docs-connector instructions in context? call the docs connector's `guide` with topic.instructions first, then create the doc (headings only, no body) before any search, file read or plan, even with files attached. Documenting code means docstrings or repo docs, not a doc.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-16T00:10:45.680014Z"
+    },
+    {
+      "skillId": "morning",
+      "name": "morning",
+      "description": "Render the user's morning brief as a styled HTML artifact, or set it up as a recurring weekday task. Use only when the user explicitly asks to run, see, or set up their morning brief, or if they invoke /morning by name. A question about their day, schedule, or calendar is not by itself a request for the brief; answer it directly instead.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.990356Z"
+    },
+    {
+      "skillId": "skill_01KWGZhGttqsF3f9x853arvr",
+      "name": "intradiem-launch-kit",
+      "description": "Product-launch GTM kit compiler for Intradiem. Takes a product's readiness status (Market: Tom Russell, Business: Scott Kemme, Product: Chris Busbee) and compiles the full go-to-market execution package: positioning brief draft, enablement one-pager, outreach sequence set, demo script and interactive artifact spec, launch campaign brief for Marketing, war-room signal additions, and the launch instrumentation plan. First run: Back Office Optimizer, September 2026 GA. Then Queue Optimizer beta, Engagement Hub, and the 2027 GA wave. Trigger on: launch kit, GA package, launch plan for [product], BOO launch, QO beta launch, what does GTM need for the [product] launch, or any moment a readiness stream approaches its launch date. Load proactively when a launch date moves or a GA confidence read changes.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:50:02.021337Z"
+    },
+    {
+      "skillId": "skill_01GRc7e84DnaBsqMffzvEVzC",
+      "name": "intradiem-copy-sharpener",
+      "description": "Intradiem outreach copy quality gate. Takes drafted messaging and sharpens every word to send-ready C-suite quality. Applies CTA Philosophy (prospect is hero, feel not tell, meeting is their idea) plus 9 rules (So What Chain, Tenbit++ Framework, Length/Front-Loading, Brand-Light, Forcing Function Specificity, CTA Construction/Escalation, Persona/Tone, Linguistic Guardrails, Send-Ready Test) and a hard verified-claims gate against the Intradiem Value Repository. Runs AFTER intradiem-first-draft-engine. Trigger on any request to sharpen, review, or finalize Intradiem outreach copy: emails, LinkedIn, voice scripts, call scripts, Clay message variants. Returns sharpened copy plus CHANGES LOG.",
+      "source": "custom",
+      "updatedAt": "2026-07-16T22:06:32.069644Z"
+    },
+    {
+      "skillId": "skill_01ES6jPKgUS9zLY5o7nTn5an",
+      "name": "my-writing-style",
+      "description": "Dallas Andrews's writing voice for messages he sends as himself - internal notes, emails, Slack, handoffs. Draft from this whenever writing something Dallas will send in his own name.",
+      "source": "custom",
+      "updatedAt": "2026-07-21T19:56:25.197360Z"
+    },
+    {
+      "skillId": "skill_0136kGBs8TDZQEWw6dy1sHoV",
+      "name": "intradiem-first-draft-engine",
+      "description": "Pre-production thinking framework for Intradiem outreach messaging. Forces prospect-first cognition, single-idea message construction, and voice-matched drafting BEFORE any rules or checklists are applied. Produces a first draft that sounds like a real person wrote it in one sitting. Runs before intradiem-copy-sharpener, not after. Also the thinking layer for any edit to the Clay MessageGen system prompt. Trigger on any request to write, draft, or create Intradiem outreach messaging of any kind: emails, LinkedIn InMails, DMs, voice notes, follow-ups, Clay message variants, or any prospect-facing copy. Load proactively whenever messaging output is expected.",
+      "source": "custom",
+      "updatedAt": "2026-07-16T22:06:27.587642Z"
+    },
+    {
+      "skillId": "skill_01S6h1rJmqTEGm4NpYzy5Chr",
+      "name": "intradiem-strike-sequence",
+      "description": "Motion-agnostic account engine for Intradiem outbound. Turns an account into a full buying-committee outreach sequence staggered across business days with send-ready copy per contact. Default cadence is a five-touch multi-channel core (Centene Star Ratings is the built-in reference example); an extended arc is available for must-win contacts. Two modes: SEQUENCE (default, builds from existing engine/Clay research) and FULL (pulls from the TAM engine, signal engine, and Clay Contacts, then sequences). Runs any motion via a registry: Star Ratings cliff-edge is populated; back-office, install-base expansion/risk, competitive displacement, and cost-mandate are stubbed. Enforces two gates: verified-claims and current-customer exclusion. Trigger on: run the sequence, 10-day plan, execution roadmap, outreach plan, daily cadence, strike sequence, full pipeline, run the full engine for [account], build the sequence for [account], launch [account]. Load when an account is ready for outbound.",
+      "source": "custom",
+      "updatedAt": "2026-07-09T19:19:56.537952Z"
+    },
+    {
+      "skillId": "skill_01H29PzVHykySgfCS3feusok",
+      "name": "intradiem-backoffice-icp",
+      "description": "Back-office ICP builder for Mandate 3 (200+ back-office contacts) and the BOO launch universe. Holds the ICP straw-man hypothesis to bring to Scott Kemme, the back-office persona pain maps (claims ops, shared services, document processing, payment ops), qualification and dedup rules against install-base contacts, and the sourcing spec for the Clay persona pull. Trigger on: back-office ICP, who buys back office, 200 contacts, back-office personas, BOO targeting, source back-office contacts, prep for the Scott Kemme conversation, back-office qualification rules. Load proactively when any back-office sourcing, targeting, or BOO launch work begins.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:56:33.124939Z"
+    },
+    {
+      "skillId": "skill_01PVTZTKAowViytv17BuMmPb",
+      "name": "cognitive-calibration",
+      "description": "Universal pre-execution thinking framework: before any substantive output, detect the user's operating mode (Execution, Strategy, Build, Conversation), run a silent failure-mode scan weighted to the task type, apply compensating behaviors for Claude's documented weaknesses vs GPT and Gemini, and enforce output discipline so the deliverable matches what the user needs. Built from 50+ forensic failure instances across live enterprise sales sessions. Fires on EVERY substantive request (strategy, execution, copy, analysis, research, deal planning, recommendations) and on browser-driven work: Chrome extension sessions, live Clay/Apollo/CRM verification, canvas sweeps, any task where page reads become reported claims or counts (Gate 2B). The cognitive foundation layer for all downstream skills.",
+      "source": "custom",
+      "updatedAt": "2026-07-14T22:47:00.581169Z"
+    },
+    {
+      "skillId": "skill_01SGguhGMoLyoaL5uMnkXQv1",
+      "name": "intradiem-objection-handler",
+      "description": "Objection handler for Intradiem outbound and mid-funnel replies. Triggers when a prospect replies with pushback. Diagnoses the category (Bad Timing, We Have WFM, Built In-House RPA, Evaluating Competitor, No Budget, Send Info, Wait for October Ratings) and applies the Reframe Framework (Acknowledge → Insight Pivot → Soft CTA) in a calm, peer-level 3-4 sentence response drafted in the sending rep's voice. Trigger on: prospect pushed back, they said no, objection reply, they're evaluating someone else, they said send info, they have Verint or NICE already, they built it in-house, how do I respond to this reply. Load proactively whenever a prospect reply lands from any motion.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:56:31.727954Z"
+    },
+    {
+      "skillId": "skill_01PuYjdwq1yLc4vCWeAtze3A",
+      "name": "clay-wave-runbook",
+      "description": "Wave discipline for every Clay campaign. Enforces \"source the full universe once, process in waves\" and runs the per-wave checklist. Trigger on any Clay contact-volume decision or wave action - add contacts, load leads, fill the campaign, expand the campaign, next wave, wave 2, new batch, re-run enrichment, sync leads, how many contacts, load the rest, when do we go back, or starting/scaling any motion (Stars, Cost-Mandate, WFM-Adjacency, Install-Base, Back Office). Load proactively whenever a Clay build, campaign load, or launch is discussed. Canonical rules live in Clay_Golden_Standard.md section 16 and New_Motion_Build_Runbook.md at the project root - this skill enforces, those docs govern; if they disagree, the docs win.",
+      "source": "custom",
+      "updatedAt": "2026-07-15T23:04:00.537492Z"
+    },
+    {
+      "skillId": "skill_01NnVr86drBdE5XQ7hLDA5LG",
+      "name": "partner-followup-onepager",
+      "description": "Build the \"what if they say yes\" follow-up one-pager from a finished partner account brief, on the approved locked template. Trigger on \"build the one-pager for [account]\", \"follow-up for [account]\", \"what do we send next\", \"one-pager based on this brief\", or right after a partner-account-brief run. Fills the slots in template.html; never redesigns.",
+      "source": "plugin",
+      "updatedAt": "2026-09-01T20:57:03.860001Z",
+      "backingPluginId": "plugin_01B4hjsjuBmb4q1FLhsbAory"
+    },
+    {
+      "skillId": "skill_01S2Cx26J7AT7tWoonKJwKUB",
+      "name": "partner-account-brief",
+      "description": "Build a partner-channel account intelligence brief for one account or a pasted list. Trigger on \"run the brief for [account]\", \"brief [account]\", \"account brief\", \"run these accounts\", \"map this account list\", or when a rep hands over a list of target accounts. Produces the structured eight-section research brief (footprint, restructuring, cost pressure, pain signals, technology, people, timing, discovery questions, confidence and gaps) with a source and date on every line, ready for partner-seller prep.",
+      "source": "plugin",
+      "updatedAt": "2026-09-01T20:56:51.097716Z",
+      "backingPluginId": "plugin_01EvPCRiQDyGX5EuPSwsMaig"
+    },
+    {
+      "skillId": "skill_01WPjAX7o4MHLygdZyp8qjUv",
+      "name": "intradiem-verified-metrics",
+      "description": "Intradiem's source of truth for verified metrics, proof points, customer value stories, and positioning. Enforces citation discipline and 1:1/1:many approval tiers, plus the customer-sourced value tiers (CV-INTERNAL / CV-1:1 / CV-1:many) for Greenlight/Zuar per-account CTO/realized-value data. Primary source: 04-value-repository/Intradiem_Value_Repository.md + Customer_Value_Registry.md. Trigger when citing Intradiem stats, ROI, NRR, proof points, customer results, per-account CTO figures, or competitive positioning; when building outreach, strike plans, pitch prep, or webinar/marketing/QBR content with Intradiem data; or on \"what are our numbers,\" \"is that verified,\" \"what can I say about [customer],\" \"can I use their CTO number,\" \"update proof points,\" \"add a case study.\" Load proactively when output includes an Intradiem number or a customer's own usage figure, or when a new case study/deck is uploaded. Never skip because you \"remember\" a number — always check.",
+      "source": "custom",
+      "updatedAt": "2026-07-18T07:15:41.683597Z"
+    },
+    {
+      "skillId": "skill_01L6eX5KBnVG3kWXJDooK9HW",
+      "name": "naveen-weekly-readout",
+      "description": "Friday readout generator for Naveen. Reads engine_state.json, impact.json, the Clay credit ledger, and the week's war-room logs, then drafts the weekly manager readout in two formats: a Slack-length message and a one-page brief. Enforces the operating posture: surfaced vs realized never blended, provisional targets co-shaped never defended, risks flagged early, peer-level tone with zero domain explainers, head-start framing never finished-product framing. Trigger on: Friday readout, weekly readout, update for Naveen, draft my manager update, what do I tell Naveen this week. Run every Friday; load proactively when Friday work begins.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:50:00.338742Z"
+    },
+    {
+      "skillId": "skill_01VSdBf4FeY1cdQP9TqbHbeU",
+      "name": "ai-readiness-assessment",
+      "description": "AI Readiness Assessment — guided 5-dimension intake that scores whether a team is ready for an AI build. Trigger on phrases like \"I want to build an AI tool,\" \"can AI help with,\" \"we need an AI solution,\" \"how do I get started with AI,\" \"readiness check,\" \"AI assessment,\" \"is my team ready for AI,\" \"scope an AI project,\" \"build me something with AI,\" \"automate this with AI,\" \"can Claude do this for us,\" or \"I have an idea for AI.\" Also trigger proactively when someone describes a workflow problem and immediately jumps to requesting an AI tool without thinking through readiness — run the assessment first before building anything.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:10.556011Z"
+    },
+    {
+      "skillId": "skill_01M8U3N65udZu66ouBHSahzR",
+      "name": "intradiem-signal-to-play",
+      "description": "Closed-loop GTM engine that turns a single account signal into three synchronized outputs — a Marketing triggered-campaign brief, a Slack-ready Sales alert, and a send-ready personalized outreach draft — so Marketing and Sales act on the SAME trigger at the same time. Trigger on \"run the signal play for [account]\", \"signal to play\", \"turn this signal into outreach\", \"[account] just had [event], what do we do\", or any moment a real-world account signal (intent spike, leadership change, earnings/M&A, hiring surge, tech-stack shift, outage/disruption, regulatory deadline) needs to become coordinated GTM action. Mirrors Intradiem's own product thesis — real-time signals trigger automated action across the workforce — and doubles as an internal \"we run GTM the way our product runs operations\" proof point. Load proactively whenever a fresh account signal is surfaced.",
+      "source": "custom",
+      "updatedAt": "2026-06-21T19:30:04.330217Z"
+    },
+    {
+      "skillId": "skill_01LFdknjY3Hn84pprrVcxd4X",
+      "name": "intradiem-roi-business-case",
+      "description": "CFO / Economic-Buyer Economic Impact Statement builder for Intradiem. Triggers once an Economic Buyer (CFO, VP Finance, COO, VP/SVP Operations or Customer Care) is identified. Extracts operational and financial data from call transcripts across contact-center AND back-office workforces (agent and back-office FTE counts, AHT or cost-per-transaction, shrinkage/idle time, backlog, attrition, training load, vendor/WFM spend, budgets) and generates a 1-page business case with Current State, Projected Impact, Cost of Inaction, and Implementation Timeline. Trigger on \"build the business case for [account]\", \"ROI for [account]\", \"economic impact statement\", \"CFO case\", or after any call where workforce cost metrics are discussed. Built for the GTM Engineer to convert operational discovery into financial justification.",
+      "source": "custom",
+      "updatedAt": "2026-06-21T19:30:07.900007Z"
+    },
+    {
+      "skillId": "skill_01LvH5mCkGUexw42hSyyacKf",
+      "name": "dallas-brand",
+      "description": "Dallas Andrews's personal brand design skill. Goes beyond League's official brand guidelines to encode the emotional intent, design philosophy, and UX vision behind Dallas's documents. Includes descriptions of how documents should FEEL, what the final result should LOOK like, and the \"whimsical-but-serious\" duality that defines Dallas's personal brand. Use this skill alongside league-brand-assistant for any document Dallas creates — presentations, PDFs, decks, one-pagers, or any visual deliverable. The official brand skill provides the compliance rules; this skill provides the creative soul.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:08.838132Z"
+    },
+    {
+      "skillId": "skill_015KWiNUYzCcQRUDrBAJte7H",
+      "name": "intradiem-daily-war-room",
+      "description": "Daily signal scan across Intradiem's outbound universes: the 32 Tier A+B Star Ratings parents, the back-office target list, and named strategic accounts. Sweeps last 24-72 hours for market events (earnings mentions, Stars language in filings, CMS releases), plan-level signals (quality leadership changes, hiring clusters), operational signals (outages, backlog news, cost mandates, BPO changes), and tech-stack signals (WFM/ACD/CCaaS moves: Verint, NICE, Calabrio, Genesys, Amazon Connect). Ranks Priority 1-4, maps each to an Intradiem play, logs fresh triggers for the TAM engine, and hands triggered accounts to the copy skills. Trigger on: run the war room, daily scan, morning sweep, what fired overnight, any breaking news on a target account. Run every business morning.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:49:55.840960Z"
+    },
+    {
+      "skillId": "skill_01X1wvTUXimBk2MT4VkS7BRU",
+      "name": "league-ae-initializer",
+      "description": "AE system initialization and Canon lock. Indexes AE_Deal_Accelerator_Canon.md, BDR_Architect_Canon.md, and League_Payer_Value_Prop.pdf to establish session-wide constraints. Boot sequence for all downstream AE skills.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:07.907936Z"
+    },
+    {
+      "skillId": "skill_011KAPTJwRr2e8MtqxEqzdKV",
+      "name": "strategic-premortem",
+      "description": "Combined Pre-Mortem and Red Team adversarial review skill. Three phases: (1) Pre-Mortem assumes the plan failed, writes a post-mortem with named people, named decisions, and top 3 failure modes ranked by probability. (2) Red Team attacks the current plan's defenses against each failure mode. (3) Verdict delivers one uncontrollable risk, one action item, and a confidence rating. Trigger on: pre-mortem, red team, stress test, what could go wrong, devil's advocate, attack this plan, destroy this idea, what am I missing, poke holes, sanity check, what's the risk, run the gauntlet. Also trigger proactively before irreversible moves — proposals to leadership, timeline commitments, team-wide launches, or public commitments. Not for routine execution, copy generation, or tactical requests — strategic inflection points only.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:10.958362Z"
+    },
+    {
+      "skillId": "skill_019oucpU3NxcH2wnkXyW9tRw",
+      "name": "league-ae-briefing",
+      "description": "AE Briefing / Account Strike Packet. Generates 1-page forensic briefing with Primary Forcing Function, Playbook Hypothesis, Hidden Fear, Internal Enemy, and Strategic Intervention. Clinical tone, peer-level, output directly into chat for Slack channel copy.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:07.674490Z"
+    },
+    {
+      "skillId": "skill_014aQEL75xSGxLnesFt44gXb",
+      "name": "intradiem-content-engine",
+      "description": "Content repurposing engine. Turns one source asset (webinar, customer story, podcast, long-form blog, conference talk, analyst report) into a full multi-channel content set — blog post, LinkedIn carousel + single posts, a 3-touch nurture sequence, a sales one-pager, and social pull-quotes — all on-brand and consistent. Trigger on \"repurpose this\", \"turn this into content\", \"spin up content from [asset]\", \"make a content set from this webinar/story\", \"I need a campaign out of this\", or any moment a single piece of source material needs to become a coordinated content drop for Marketing. Built for the GTM Engineer to give Marketing volume and consistency from one input.",
+      "source": "custom",
+      "updatedAt": "2026-06-21T19:30:11.540741Z"
+    },
+    {
+      "skillId": "skill_015g6JXkkbr5CpNpXLJgwKJF",
+      "name": "clay-credit-steward",
+      "description": "Clay credit budget steward for Intradiem's 5,000-credit allocation. Estimates credit cost BEFORE any enrichment run or new table build, maintains the append-only credit ledger, tracks burn by motion, computes cost-per-qualified-reply, flags at 60% consumed, and packages the renewal receipts story (credits in, qualified replies and meetings out). Trigger on: credit check, can we afford this run, clay budget, credit ledger, how many credits left, before building any new Clay table or adding enrichment columns, and weekly before the Friday readout. Load proactively whenever a Clay build or enrichment expansion is being planned.",
+      "source": "custom",
+      "updatedAt": "2026-07-06T03:49:58.066680Z"
+    },
+    {
+      "skillId": "skill_01L49CNkF97GpvqX3yGGzfDP",
+      "name": "league-full-pipeline",
+      "description": "Master 7-phase autonomous account orchestrator. Runs complete research and outreach pipeline sequentially from Init through PDF generation. Trigger when starting a new Tier-1 account, running a full account pipeline, or launching an account from scratch. Includes 5-tier buying committee mapping and persona rules. Load proactively for any new account assignment.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:04.619958Z"
+    },
+    {
+      "skillId": "skill_016WWQvHjt3S19Hhqf1HAMQL",
+      "name": "intradiem-competitive-intel",
+      "description": "Competitive displacement orchestrator for Intradiem. Identifies competitor mentions (Verint, NICE, Calabrio, Assembled, Playvox, in-house RPA/scripts, status quo) and generates counter-narrative briefs with wedge analysis, reframe positioning, and trap-setting talking points. Trigger immediately when a competitor is named in any call, email, or note; when an RFP mentions competing solutions; or when a prospect says they're \"evaluating options.\" Built for the GTM Engineer to turn competitor mentions into operational wedges for Sales.",
+      "source": "custom",
+      "updatedAt": "2026-06-21T19:30:15.292974Z"
+    },
+    {
+      "skillId": "skill_015e3GPS6YVYnh9MDkFG4os8",
+      "name": "league-ae-pre-call-planner",
+      "description": "Pre-call discovery planner for AEs. Takes a prospect, call type, and available research — then produces a call-ready \"Disco Prep Sheet\" the AE can open 10 minutes before a call and execute from. Includes account snapshot, hypotheses, persona-specific L1/L2/L3 pain maps for 8+ C-suite personas, Waterfall & Pivot question framework, MEDDIC pre-call status, AI readiness discovery threads, buying/governance committee mapping, and a timed 30-minute call flow. Trigger when the user says \"prep me for a call,\" \"discovery prep,\" \"disco prep,\" \"pre-call planner,\" \"call prep for [account],\" \"get me ready for my call with [name],\" or \"pull a prep sheet.\" Also trigger when a meeting is mentioned with a prospect name and the user wants to prepare. Load proactively when a calendar meeting with a prospect is referenced and preparation has not been discussed.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:07.010550Z"
+    },
+    {
+      "skillId": "skill_01Rnq37PFaT3Ec4auDWY7ySG",
+      "name": "league-meddpicc",
+      "description": "MEDDPICC Hygiene Pass. Runs after every Discovery Call and significant mid-funnel calls. Populates all 8 MEDDPICC fields with Salesforce text and confidence ratings (Strong/Moderate/Gap). Generates Gap Report with specific follow-up questions.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:04.217847Z"
+    },
+    {
+      "skillId": "skill_01F5Mbi71EADqjCS9EB9KZQH",
+      "name": "league-ae-call-transcript",
+      "description": "Post-call transcript processing engine for AEs. Ingests a sales call transcript (discovery, follow-up, demo, or EBC) and produces four outputs: (1) an Executive Brief using the BLUF + 4 Army-style framework, (2) a MEDDIC scorecard with gap analysis, (3) a 255-character Salesforce activity update, and (4) a Challenger-framework follow-up email to the prospect with self-scoring rubric. Trigger when a transcript file is uploaded, when the user says \"process this transcript,\" \"run my call notes,\" \"generate a call summary,\" \"brief from this call,\" \"debrief this call,\" or \"post-call outputs.\" Load proactively when a .txt, .docx, or .md file is uploaded and appears to contain a meeting transcript.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:06.422665Z"
+    },
+    {
+      "skillId": "skill_01Cm1dxXn83UW7hZA9KX9Ldg",
+      "name": "league-first-draft-engine",
+      "description": "Pre-production thinking framework for outreach messaging. Forces prospect-first cognition, single-idea message construction, and voice-matched drafting BEFORE any rules or checklists are applied. Produces a first draft that sounds like a real person wrote it in one sitting. Runs before the Copy Sharpener, not after. Trigger on any request to write, draft, or create outreach messaging of any kind: emails, LinkedIn InMails, DMs, voice notes, follow-ups, or any prospect-facing copy. Also trigger when the execution roadmap or full pipeline reaches a step that requires written copy. Load proactively whenever the user asks for messaging output.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:01.482421Z"
+    },
+    {
+      "skillId": "skill_01Hf82ixtisp5kbfq6iqg7nc",
+      "name": "league-accord-map",
+      "description": "Accord MAP Architect. Triggers when prospect confirms go-live date or hard deadline. Reverse-engineers timeline from go-live using enterprise payer procurement benchmarks. Generates Accord workspace format with Give/Gets per phase.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:02.581736Z"
+    },
+    {
+      "skillId": "skill_01HGoLL4Eek7e1DNudyevXKj",
+      "name": "league-objection-handler",
+      "description": "Objection Handler. Triggers when prospect replies with pushback. Diagnoses objection category (Bad Timing, Build In-House, Competitor Eval, No Budget, Send Info). Applies Reframe Framework (Acknowledge → Insight Pivot → Soft CTA). Drafts 3-4 sentence response with calm, peer-to-peer, consultative tone.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:01.025335Z"
+    },
+    {
+      "skillId": "skill_01Pb2z1kPH8HodwGFE631W26",
+      "name": "league-deal-desk",
+      "description": "Weekly deal desk orchestrator. Generates Slack updates, ghostwrites champion-to-EB emails, and extracts MEDDPICC fields from transcripts. Output is account-specific deal briefing with structured sections ready for internal alignment.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:03.580821Z"
+    },
+    {
+      "skillId": "skill_01PoRdZSuoJ45jrhRMbSJYDA",
+      "name": "league-competitive-intel",
+      "description": "Competitive displacement orchestrator. Identifies competitor mentions (Epic, Accolade, Included Health, Wellframe, Castlight, build in-house, status quo) and generates counter-narrative briefs with wedge analysis, reframe positioning, and trap-setting talking points.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:58.629683Z"
+    },
+    {
+      "skillId": "skill_01VCZfkHh4yWKozd1u1b3QVN",
+      "name": "league-holistic-roadmap",
+      "description": "NHPRI-standard holistic 10-Day Execution Roadmap with full 5-tier buying committee coverage. Supersedes league-execution-roadmap by expanding from High-Propensity Trio to ALL identified committee members (minimum 8, target 10-16 contacts across Champion, Economic Buyer, Technical/Legal, Executive Sponsor, and Operational/Pain layers). Produces a single send-ready .md file with buying committee summary table, staggered entry schedule, and complete outreach copy for every contact organized by tier. Trigger on: roadmap, 10-day plan, execution roadmap, outreach plan, daily cadence, holistic roadmap, full committee roadmap, NHPRI-standard roadmap, run the full roadmap for [account]. Also trigger when league-full-pipeline reaches Phase 5. Load this skill instead of league-execution-roadmap for any new roadmap request — it is the current gold standard.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:57.036216Z"
+    },
+    {
+      "skillId": "skill_01NHPAUrQ2XNWsJYNtz4dGwP",
+      "name": "league-cfo-business-case",
+      "description": "CFO Economic Impact Statement builder. Triggers once Economic Buyer identified. Extracts economic data from transcripts (members, costs, churn, vendors, budgets) and generates 1-page business case with Current State, Projected Impact, Cost of Inaction, and Implementation Timeline.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:57.787314Z"
+    },
+    {
+      "skillId": "skill_01UHC254uBt1eEWwhbg1RcJy",
+      "name": "league-cold-call-playbook",
+      "description": "Tier 1 payer executive cold call script generator and live-call playbook. Produces persona-calibrated openers, 30-second expansions, objection handles, and memorizable 20/45-second script variants for every cold call touchpoint. Trigger on any request involving: cold call, cold calling, call script, phone script, live call, dial script, what to say when they pick up, how to open a call, call opener, call framework, objection handling on the phone, what to say if they push back, voicemail script, hail mary call, Day 9 call, Day 10 call, \"what do I say,\" \"how do I open,\" \"give me a script,\" call prep for cold outreach, or any request to generate or sharpen spoken-word outreach for payer executives. Also trigger when league-execution-roadmap or league-full-pipeline reaches a step that requires a cold call script, voice note script, or voicemail script. Load proactively when Dallas is working on any Tier 1 account outreach that includes phone-based touchpoints, even if not explicitly asked.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:59.147563Z"
+    },
+    {
+      "skillId": "skill_01TKA6fcqvcVjSiZwuMp6Tpu",
+      "name": "league-post-discovery",
+      "description": "Post-Discovery Follow-Up orchestrator. Runs immediately after multi-stakeholder Discovery Calls. Produces a Forwardable Recap email (BLUF + Assigned Next Steps + Top Problems/Solutions) for the full room, then individual 1:1 follow-up emails per stakeholder, plus Salesforce Activity summary. The recap anchors the deal narrative; the 1:1s deepen individual threads. Trigger on any post-disco follow-up, recap email, discovery debrief, \"send the follow-ups,\" \"write the recap,\" or any request to summarize and follow up after a multi-stakeholder call.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:59.749162Z"
+    },
+    {
+      "skillId": "skill_01MJX9UubbdYyaUp5hK3hfCJ",
+      "name": "league-copy-sharpener",
+      "description": "BDR Swipe File Sharpener. Takes drafted messaging and sharpens every word to send-ready C-suite quality. Applies CTA Philosophy (prospect is hero, feel not tell, meeting is their idea) plus 9 rules (So What Chain, Tenbit++ Framework, Length/Front-Loading, Brand-Light, Forcing Function Specificity, CTA Construction/Escalation, Persona/Tone, Linguistic Guardrails, Send-Ready Test). Includes LinkedIn touch logic, Day 1 blitz timeline, sign-off standards, and format-specific CTA rules. Returns sharpened copy plus CHANGES LOG.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:48:02.397685Z"
+    },
+    {
+      "skillId": "skill_014JxFRuxg7pgbjznTBUDrvZ",
+      "name": "league-tech-radar",
+      "description": "Weekly tech infrastructure signal sweep across all Tier-1 accounts. Filters for Microsoft Azure/Fabric, Facets, QNXT, HealthEdge, Epic, cloud migration, digital transformation partnerships in last 7 days. Maps signals to League plays and drafts CDO/CTO outreach angles.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:54.860030Z"
+    },
+    {
+      "skillId": "skill_017yoBJnPx9gtDqD3ie1gvxS",
+      "name": "league-daily-war-room",
+      "description": "Daily signal scan for all Tier-1 accounts. Filters for M&A, leadership changes, earnings, regulatory shifts in last 24-72 hours. Ranks by urgency (Priority 1-4). Generates Tenbit++ outreach sequences for triggered accounts.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:55.174749Z"
+    },
+    {
+      "skillId": "skill_01QLT8qf6xBdfk8JB7fnWK3F",
+      "name": "league-app-audit",
+      "description": "Digital Front Door Audit. Reviews iOS/Google Play app ratings for target payer. Extracts 1-star and 2-star complaints about fragmented UX, benefit navigation, login issues. Synthesizes into 3-bullet executive summary. Drafts 3-touch LinkedIn sequence for VP Digital Health / Director Member Experience.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:53.817614Z"
+    },
+    {
+      "skillId": "skill_01JUNJVx3XgB6BmzEoFEfigm",
+      "name": "league-brand-assistant",
+      "description": "League's brand assistant skill. Apply this skill whenever an employee is working on anything visual, written, or design-related — including slide decks, web content, emails, social posts, internal documents, or UI components. Triggers include requests to check brand consistency, choose colours or fonts, review copy for on-brand voice, pick a logo variant, flag accessibility issues, or ask any question about League's visual identity. Also trigger proactively when the user shares creative work and brand compliance hasn't been explicitly mentioned — they almost certainly want it to be on-brand. When in doubt, apply this skill.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:53.669682Z"
+    },
+    {
+      "skillId": "skill_01KdPkqZeCdxvJd4vdZpW5Eh",
+      "name": "league-brand-audit",
+      "description": "Programmatic brand compliance auditor for League documents. Runs any PPTX, DOCX, or HTML file through the League design token system and produces a compliance scorecard with specific violations, off-brand colors, font issues, and actionable fixes. Trigger on: audit this deck, check brand compliance, run a brand audit, is this on-brand, check this document, brand check, compliance check, token audit. Also trigger proactively when a user has just finished creating a PPTX or DOCX deliverable — offer to audit it before they share it. Load this skill alongside league-brand-assistant for the full brand compliance workflow.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:51.299254Z"
+    },
+    {
+      "skillId": "skill_01VmrNEekHfbvJQUa3Jwjrb2",
+      "name": "league-artisan-agent-builder",
+      "description": "Builds two copy-paste-ready Artisan (Ava) AI sales agents per target account — Digital Engagement (CIO/CTO/VP Digital) and Health Engagement (CMO/VP Pop Health/VP Quality). Gathers intelligence from Salesforce, Slack opportunity channels, web research, and project files, populates templates, verifies metrics, runs pre-mortem, and delivers final output. Trigger on: \"build artisan agents for [account]\", \"create agents for [account]\", \"artisan build\", \"set up outreach agents\", \"build ava agents\", \"run the artisan pipeline\", or any mention of Artisan/Ava agents with an account name. Load proactively when discussing a new target account that lacks agents.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:49.518700Z"
+    },
+    {
+      "skillId": "skill-creator",
+      "name": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "source": "anthropic-example",
+      "updatedAt": "2026-09-14T19:41:01.499089Z"
+    },
+    {
+      "skillId": "skill_012LXv1MiG9EkG7oLfDEhyXL",
+      "name": "league-shared-skill-creator",
+      "description": "Guides any League employee through creating a well-formed, League-specific SKILL.md file ready to submit as a PR to workspace-agents. Trigger when someone says: create a skill, write a skill, build a skill, add a skill, make a skill, teach Claude to do something, or wants Claude to learn a workflow. Also trigger when someone describes a repetitive task and wants Claude to handle it consistently. Load proactively when the user is working in the workspace-agents repo and asks what to do next.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:47.528312Z"
+    },
+    {
+      "skillId": "skill_011HQ4Z2KxsfeLcEiuCBybN7",
+      "name": "league-verified-metrics",
+      "description": "League's source of truth for verified metrics, proof points, and customer value stories. Enforces citation discipline and 1:1/1:many approval-tier compliance. Primary source: League Value Repository Q1 2026 (updated quarterly). Trigger when citing League stats, ROI numbers, proof points, engagement metrics, clinical outcomes, financial impact, or customer results. Also trigger when building outreach, pitch prep, webinar content, marketing collateral, QBR materials, or any customer-facing content with League data. Trigger on \"what are our numbers,\" \"where did that stat come from,\" \"is that verified,\" \"what can I say about [customer],\" \"update proof points,\" or \"add case study data.\" Load proactively when generating content that includes a League number or when a new case study or pitch deck is uploaded. Never skip because you \"remember\" a number — always check.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:49.920695Z"
+    },
+    {
+      "skillId": "skill_01PMPqyDgkQtPwyotAKB5gu6",
+      "name": "league-shared-skill-reviewer",
+      "description": "Reviews a League SKILL.md (and any accompanying REFERENCE.md or examples/) for compliance with the Code of Conduct, security requirements, and structural quality standards before a PR is merged. Produces a structured verdict with specific violations and recommended fixes. Trigger when someone says: review this skill, check this skill, audit this skill, is this skill ready to merge, does this skill pass, skill PR review, or skill quality check. Also trigger when a PR touches a SKILL.md file and the reviewer asks for a quality check. Load proactively when a SKILL.md file is opened and the context suggests review rather than authoring or editing.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:46.280034Z"
+    },
+    {
+      "skillId": "skill_01DUt9CR1qszAu9FpAV4SG1S",
+      "name": "health-outcomes",
+      "description": "Grounds Claude in clinical and health outcome measurement frameworks including HEDIS, CMS Star Ratings, CAHPS, NQF/Core Measures, SDOH, PROs, and population health metrics. Use this skill whenever anyone on the clinical design, content, or health outcomes team asks about: health or clinical outcomes, quality measures, performance metrics, patient experience, care gaps, chronic disease tracking, social determinants, or what outcomes to use for a health program or product feature. Also trigger when a user asks how to classify content or workflows to specific measures, wants to understand what a measure means or how it's calculated, or needs to map a patient journey to quality indicators. When in doubt, load this skill — clinical accuracy depends on it.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:48.758708Z"
+    },
+    {
+      "skillId": "skill_01RY8aFWMecVLZozr9pRqCkq",
+      "name": "weekly-portfolio-prioritization",
+      "description": "Run the Portfolio Prioritization workflow every Friday at 3:00 PM to rank target payer accounts by ROI opportunity, generate a PDF, and email a summary.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:48.046161Z"
+    },
+    {
+      "skillId": "skill_01Udf1SAo65xeFuXSkzSfpE5",
+      "name": "league-shared-skill-editor",
+      "description": "Guides any League employee through improving or editing an existing org skill from workspace-agents. Covers how to install the skill locally, manage the enterprise vs personal priority conflict, iterate safely, and submit a PR back to the org. Trigger when someone says: improve a skill, edit a skill, update a skill, fix a skill, change a skill, the skill isn't working right, I want to make a skill better, or iterate on a skill. Load proactively when someone is working with a skill file and mentions wanting to change it.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:44.996085Z"
+    },
+    {
+      "skillId": "xlsx",
+      "name": "xlsx",
+      "description": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .csv, or .tsv file (e.g., adding columns, computing formulas, formatting, charting, cleaning messy data); create a new spreadsheet from scratch or from other data sources; or convert between tabular file formats. Trigger especially when the user references a spreadsheet file by name or path — even casually (like \"the xlsx in my downloads\") — and wants something done to it or produced from it. Also trigger for cleaning or restructuring messy tabular data files (malformed rows, misplaced headers, junk data) into proper spreadsheets. The deliverable must be a spreadsheet file. Do NOT trigger when the primary deliverable is a Word document, HTML report, standalone Python script, database pipeline, or Google Sheets API integration, even if tabular data is involved.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.324012Z"
+    },
+    {
+      "skillId": "pptx",
+      "name": "pptx",
+      "description": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations as PowerPoint (.pptx) files; reading, parsing, or extracting text from any .pptx or .potx file (even if the extracted content will be used elsewhere, like in an email, summary, or creating a different type of slide deck); editing, modifying, or updating existing presentations; combining or splitting slide files; working with templates (.potx), layouts, speaker notes, or comments. Trigger whenever the user asks for a PowerPoint or .pptx file, or references a .pptx or .potx filename, regardless of what they plan to do with the content afterward. However, when the user asks for a deck, slides, a slide deck, or a presentation without naming a file format, default to using a dedicated slide-deck artifact type or a separate slides skill if this session offers one; otherwise, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.306681Z"
+    },
+    {
+      "skillId": "skill_01Jt98vkk3UvPiWb1ffzPBbM",
+      "name": "league-execution-roadmap",
+      "description": "Use this skill to map out a day-by-day outreach sequence for a payer account over 10 business days. Trigger for any request involving daily touchpoint scheduling, outreach cadence planning, or sequencing cold emails, LinkedIn, voice notes, and calls across numbered days. Also trigger when someone has completed account research and is ready to start prospecting or execute on outreach. Recognizable phrases: execution roadmap, day-by-day plan, 10-day plan, outreach plan, daily cadence, pincer, High-Propensity Trio, map out days 1 through 10, book a meeting. Produces Week 1 foundation touches, Week 2 pincer escalation, Day 10 hail mary, with send-ready scripts for every touchpoint. Do NOT trigger for strike packets, call prep, transcript processing, competitive intel, or objection handling alone. For all cold call, voice note, and voicemail scripts, this skill automatically invokes league-cold-call-playbook to ensure gold-standard output quality.",
+      "source": "custom",
+      "updatedAt": "2026-05-30T21:47:55.796720Z"
+    },
+    {
+      "skillId": "pdf",
+      "name": "pdf",
+      "description": "Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.",
+      "source": "anthropic",
+      "updatedAt": "2026-07-10T19:23:15.432550Z"
+    },
+    {
+      "skillId": "docx",
+      "name": "docx",
+      "description": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx) or Word templates (.dotx). Triggers include: any mention of 'Word doc', 'word document', '.docx', '.dotx', or requests to produce professional documents with formatting like tables of contents, page numbers, or letterheads. Also use when extracting or reorganizing content from .docx or .dotx files, inserting or replacing images in documents, find-and-replace in Word files, working with tracked changes or comments, or converting content into a polished Word document. If the user asks for a 'report', 'memo', 'letter', 'template', or similar deliverable as a Word or .docx file (to download, email or print), use this skill. However, if they ask for a document, page, report, memo, or notes WITHOUT naming a file format and the session offers Claude's own dedicated document or page skill or connector, use that instead. Do NOT use for PDFs, spreadsheets, Google Docs, or coding unrelated to document generation.",
+      "source": "anthropic",
+      "updatedAt": "2026-09-14T21:00:33.279708Z"
+    }
+  ]
+}
