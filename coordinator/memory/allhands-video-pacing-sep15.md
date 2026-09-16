@@ -26,3 +26,20 @@ to end on. Never buy runtime back by speeding the explanation slides. If a scene
 feels long, cut words from the slide before cutting seconds. `retime_cues.py` flags any
 line needing over 156 wpm. `PACE` env var scales the whole film.
 Related: [[deliverable-strength-framing]], [[naveen-facing-comms-rules]].
+
+**Sep 15 accuracy check, keep re-running this before any presentation:** lemlist showed
+only 4 campaigns RUNNING, all Jack's UK/Netherlands. Nate's five North America campaigns
+held 1,315 leads and had sent nothing since 1 Sep. Both the video ("seven campaigns
+sending across North America and the UK") and the results slide ("8 campaigns sending,
+live in North America and the UK") were wrong. Account maps had also moved 18 to 25.
+Never carry a campaign or roster count from a previous build into a deck or a script;
+pull it live and make the deck compute it, as `count_maps()` already does.
+
+**Scene-layout lesson (Sep 15):** never size SVG label text by estimating characters
+times a per-character width. Roboto is proportional and the estimate was wrong in both
+directions, twice. Measure in the browser with `getComputedTextLength()` (or
+`getBoundingClientRect` for HTML scenes) against the enclosing rect. The flow scene
+shipped for a week with the feedback wire running through the "Read and adjust" pill as
+a strikethrough, the engine footer breaking out of its box, and every source box trailing
+a wire stub into empty space for ten seconds because the stubs were hardcoded `class="on"`
+instead of waiting for the spine's keyframe.
