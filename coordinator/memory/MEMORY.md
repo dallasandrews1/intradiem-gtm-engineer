@@ -656,3 +656,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-15
 - [All-hands video pacing Sep15](allhands-video-pacing-sep15.md) — scene holds derive from reading load; 7-min cap, buy time from footage heads never from the slides
+
+## Swept from -Users-dallasandrews on 2026-09-16
+- [Frank Assurant package Sep16](../../../../coordinator/memory/frank-assurant-package-sep16.md) — Frank's map, room, brief and one-pager live; Assurant is Inger's customer with a SagesS3 registration, not Accenture
