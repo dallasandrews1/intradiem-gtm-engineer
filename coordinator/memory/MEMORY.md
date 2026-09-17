@@ -659,3 +659,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-16
 - [Frank Assurant package Sep16](../../../../coordinator/memory/frank-assurant-package-sep16.md) — Frank's map, room, brief and one-pager live; Assurant is Inger's customer with a SagesS3 registration, not Accenture
+
+## Swept from -Users-dallasandrews on 2026-09-16
+- [No account explainers to Frank](../../../../coordinator/memory/feedback-no-account-explainers-to-frank.md) — a note to a seller carries links, what was checked, one thing to confirm; never account status or the AM's role
