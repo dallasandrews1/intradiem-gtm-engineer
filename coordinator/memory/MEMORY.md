@@ -663,3 +663,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-16
 - [No account explainers to Frank](../../../../coordinator/memory/feedback-no-account-explainers-to-frank.md) — a note to a seller carries links, what was checked, one thing to confirm; never account status or the AM's role
 - [Feedback No Unresolved Contacts, Spend Credits](feedback-no-unresolved-contacts-spend-credits.md) — Sep 17 2026: no not_found or dual names on seller-facing maps; settle every name with paid Enrich Person before delivery
+- [Keegan Three Account Package Sep17](keegan-three-account-package-sep17.md) — Sep 17 2026: maps, rooms, briefs, one-pagers for Citizens, The Hartford, Vanguard; AE shape, builders, paid live gate, blitz defects found

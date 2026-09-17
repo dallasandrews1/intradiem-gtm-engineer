@@ -1,0 +1,22 @@
+---
+name: keegan-three-account-package-sep17
+description: "Sep 17 2026: the four-piece account package (org maps, account room, brief, one-pager) built for AE Keegan Sanders on Citizens, The Hartford and Vanguard after the SVP of Sales asked for the Frank/Inger/Alex treatment across AE accounts; builders, URLs, method and the defects found"
+metadata:
+  type: project
+---
+
+**Trigger (Sep 17 2026):** the rooms, org charts, one-pagers and briefs landed at all-hands Sep 15 to 16; the SVP of Sales asked for the same for the AEs' accounts. Keegan first because his TAM is on file (motions/keegan/). Top three = his own Aug 3 picks Citizens and The Hartford plus Vanguard, first on his bench. All three read Prospect, owner Keegan, 6sense Strong fit with back-office intent (Citizens Hot/Consideration, Hartford Warm/Decision, Vanguard Warm/Consideration). Lincoln Financial was the hottest other TAM account on the Sep 17 heat list (38).
+
+**The AE shape (net-new, no AM map):** per account (1) an org maps page at backoffice-maps.pages.dev/keegan/<slug>/ with a front-office map and a back-office map (Centene two-map shape; Vanguard is one combined map because its client service and operations do not split that way), (2) an account room at save-rooms.pages.dev/<slug>/keegan/ (routes in, lanes Keegan / Nathan / GTM Engineering / Executive voice held, dated moves, rules, sourced facts, appendix maps + live sequence + Salesforce-known layer), (3) a brief at .../keegan/brief/, (4) a one-pager at .../keegan/one-pager/ (HTML + PDF). Index at backoffice-maps.pages.dev/keegan/ with four buttons per account.
+
+**Builders:** motions/back_office_expansion/: sweeps/keegan/_run_sweeps.py (domain-scoped BO sweep), fo_sweep.py --set keegan_front, build_keegan_sheets.py (HAND-PLACED trees; the automatic inference put claims directors under absence management), build_keegan_account_pages.py, build_keegan_index.py, keegan_resolve.py (paid live gate), keegan_contacts.py, stage_keegan.sh. motions/keegan/accounts/: build_onepagers.py, build_briefs.py, people.py, plans.py, build_rooms.py, map_notes.json. Research: motions/keegan/research/*_sep17.md (six signal-researcher passes).
+
+**Pipeline extensions (all opt-in):** bo_gates.py `level_extra` per account (Vanguard ranks: Principal, Department Head); build_bo_map_artifact.py `hide_account_stat` and an "in the live sequence" badge read from the sheet's note column.
+
+**Lessons:** (1) Clay MCP find-and-enrich is company-scoped: leavers return not_found, never left, and it cannot see a second LinkedIn company page ("Citizens Financial Group, Inc." vs "Citizens"); resolve those by web search then paid Enrich Person. (2) Salesforce-known contact-center titles were mostly stale (Kevin Dunne at Staples, Bill Withers at UMB, Christa St. Cyr a startup CEO). (3) A profile with no dated current role comes back left_or_retired; treat as unverifiable and keep off the map (David Kryzanski, Claire Smith, Daniel Landers, Rob Gaus). (4) Non-ASCII LinkedIn slugs (cfp®) make `clay routines runs start` fail silently; percent-encode. (5) Subagent MCP lookups cost about 25K tokens per 20 names; always delegate them.
+
+**Finds worth keeping:** The Hartford's Jeff Beausoleil (in Nathan's blitz) lists "Business Lead - Amazon Connect" since Jan 2024, while the Salesforce stack read says Genesys/NICE. Citizens: Tashell Weaver now SVP Director of WFM Operations (Nov 2025); Bartolazo, Merritt, Taneja, Kaul all new in seat 2026.
+
+**Defects found in the live blitz (Dallas's hand):** Tashell Weaver is loaded in cam_yWefPqaDhNNv4RyQK with `tashell.weaver@voya.com`, a prior employer's domain; email 1 shows delivered, so it went to the wrong company. Dakota Pelletier is in neither Hartford campaign roster (7 leads, not 8); her live profile is linkedin.com/in/dakota/. Both blitz campaigns are LIVE (8 and 7 first emails delivered, 0 replies as of Sep 17).
+
+Related: [[feedback-no-unresolved-contacts-spend-credits]], [[frank-assurant-package-sep16]], [[feedback-match-the-delivery-alex-loved]], [[keegan-sanders-profile-aug3]], [[bo-map-pipeline-rep-sets-aug31]].
