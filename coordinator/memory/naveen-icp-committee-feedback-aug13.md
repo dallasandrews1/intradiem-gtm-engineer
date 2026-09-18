@@ -8,7 +8,7 @@ metadata:
   modified: 2026-08-16T03:24:08.539Z
 ---
 
-Naveen's Slack DM feedback on 2026-08-13 (~2am, right after presenting): the ICP buying-committee slides (built from icp-committees.pages.dev, products: Engagement Hub/Humana, Front-office Queue Optimizer/Centene, Back Office Optimizer/State Farm, prospect + customer tabs each) were a "massive hit". "John was blown" (senior leadership), Jen Lee was in the room, "the whole sales org is now crazy pumped", "Marketing has fully folded" in behind the motion. Naveen turned the committee data into a widget alongside the other ICP profiles Dallas sourced, said "I gave you full credit for that", introductions are on the way, and Haresh, President of Partnerships, wants to meet Dallas (Naveen is setting it up).
+Naveen's Slack DM feedback on 2026-08-13 (~2am, right after presenting): the ICP buying-committee slides (built from icp-committees.pages.dev, products: Engagement Hub/Humana, Front-office Queue Optimizer/Centene, Back Office Optimizer/State Farm, prospect + customer tabs each) were a "massive hit". "John was blown" (senior leadership), Jenn East (Chief of Staff) was in the room, NOT co-CEO Jen Lee (corrected by Dallas Sep 18 2026), "the whole sales org is now crazy pumped", "Marketing has fully folded" in behind the motion. Naveen turned the committee data into a widget alongside the other ICP profiles Dallas sourced, said "I gave you full credit for that", introductions are on the way, and Haresh, President of Partnerships, wants to meet Dallas (Naveen is setting it up).
 
 **Why:** this is the first leadership-level validation of the ICP/buying-committee work and it created three live demand channels at once: sales org expecting more "magic", a partnerships exec meeting, and marketing alignment.
 

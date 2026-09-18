@@ -8,7 +8,7 @@ metadata:
   modified: 2026-08-17T22:41:11.900Z
 ---
 
-From the Naveen DM thread, 2026-08-17 ~16:54 CDT: Naveen told Jen, who runs AI enablement at Intradiem (and was in the room for the Aug 13 ICP committee presentation, "Jen Leee"), that Dallas "would add insane value to the ORG," and referenced Dallas having led AI enablement at his previous firm. Naveen added "I think you will elevate Intradiem to another level with AI and it's totally needed." Dallas separately aligned with Chris's business/competitive enablement email, saying he can add value on enablement with AI plus enablement sessions as the tool suite grows.
+From the Naveen DM thread, 2026-08-17 ~16:54 CDT: Naveen told Jen, who runs AI enablement at Intradiem (and was in the room for the Aug 13 ICP committee presentation, "Jen Leee" in the thread, but Dallas confirmed Sep 18 2026 the person in the Aug 13 room was Jenn East, Chief of Staff, not co-CEO Jen Lee; treat this Jen as Jenn East unless the thread shows otherwise), that Dallas "would add insane value to the ORG," and referenced Dallas having led AI enablement at his previous firm. Naveen added "I think you will elevate Intradiem to another level with AI and it's totally needed." Dallas separately aligned with Chris's business/competitive enablement email, saying he can add value on enablement with AI plus enablement sessions as the tool suite grows.
 
 **Why:** enablement is materializing as Dallas's second lane beyond GTM engineering: sales org (Keegan/reps), partnerships (Haresh), and now AI enablement (Jen). Each lane has a named exec sponsor forming.
 
