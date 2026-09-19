@@ -9,6 +9,9 @@ The plan half tells a rep where to go. This kit is what they carry. First run: K
 
 Read `~/Claude/Projects/Intradiem GTM Engineer/motions/shared/Account_Execution_Kit_Runbook_Sep18.md` before doing anything. It holds the pieces, the standing decisions, the ten build steps in dependency order, the gates and the known traps. Follow its order.
 
+## Fastest path for the one-pager shelf
+For any rep after Keegan use the shared builder: write `shelf_<rep>.py`, run `motions/shared/execution_kit/build_shelf_generic.py` on it, then `link_shelf.py`. Give a builder agent `SHELF_BUILD_BRIEF.md` plus the department objective (AE net-new, AM expansion, AM save and renew, partners); the runbook lists how each objective changes the pages.
+
 ## Non-negotiables
 - Prerequisite: the account package exists (live-checked map sheets, plans, research files, contacts). If it doesn't, build that first.
 - Every finding on a page is the account's own public fact with a source and date. Proud, not wound. The account's rules in `plans.py` govern what is never named.
