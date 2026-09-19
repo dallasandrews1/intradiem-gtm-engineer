@@ -670,3 +670,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Feedback Social Proof Ships Sep18](feedback-social-proof-ships-sep18.md) — Sep 18 2026: blinded peer outcomes are NOT blocked; share every published result; when Dallas delegates the calls, make them
 - [Wrangler Pages Needs Force Sep18](spot-bonus-program-sep18.md) — wrangler 4.135 sends pages deploys to workers.dev unless --force; clear .wrangler from the deploy folder
 - [Severity: One Fact Not Explainer](feedback-severity-one-fact-not-explainer.md) — show a constraint's weight with one sourced fact the reader lacks, never explain the business to an insider
+- [Impact Is Capacity Not Seller Metrics](feedback-impact-is-capacity-not-seller-metrics.md) — never volunteer meetings as his yardstick; show capacity with sourced before/after facts, no hours totals
