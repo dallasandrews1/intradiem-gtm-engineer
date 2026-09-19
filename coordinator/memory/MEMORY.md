@@ -668,3 +668,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Spot Bonus Program Sep18](spot-bonus-program-sep18.md) — $1M pool via co-CEO Jen; three picks chosen, outbound engine left out until it has meetings
 - [Intradiem Org Chart Sep18](intradiem-org-chart-sep18.md) — two co-CEOs, Dallas sits in Product; Jenn East vs Jen Lee; Rachel DiBello is Enterprise Sales Director
 - [Feedback Social Proof Ships Sep18](feedback-social-proof-ships-sep18.md) — Sep 18 2026: blinded peer outcomes are NOT blocked; share every published result; when Dallas delegates the calls, make them
+- [Wrangler Pages Needs Force Sep18](spot-bonus-program-sep18.md) — wrangler 4.135 sends pages deploys to workers.dev unless --force; clear .wrangler from the deploy folder
+- [Severity: One Fact Not Explainer](feedback-severity-one-fact-not-explainer.md) — show a constraint's weight with one sourced fact the reader lacks, never explain the business to an insider
