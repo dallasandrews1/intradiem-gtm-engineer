@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Engagement Hub Sales Kit</title>
+<!--FONTS-->
+<style>
+/* page-specific */
+.vs{list-style:none;margin-top:16px;border-top:1px solid var(--line);max-width:820px}
+.vs li{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:center}
+.vs li b{color:var(--ink)}
+.vs li span{color:var(--ink-3)}
+.vs li .x{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;text-align:center}
+.src{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-top:26px}
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.pain div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow);font-size:15px;color:var(--ink);font-weight:700;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
+.pain div .n{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600;padding-top:3px}
+/* two days */
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:20px;background:var(--bg)}
+.seg button{background:none;border:none;padding:10px 18px;font-family:var(--ff);font-weight:700;font-size:14.5px;color:var(--ink-2);cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--forest);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--green-300);outline-offset:-2px}
+.day{display:none;margin-top:16px}
+.day.on{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.day div{border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;background:var(--bg);box-shadow:var(--shadow);font-size:14.5px;color:var(--ink-2)}
+.day div b{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}
+.day.today div{border-top:4px solid var(--orange)}
+.day.qo div{border-top:4px solid var(--green)}
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.flow div{border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;background:var(--bg);box-shadow:var(--shadow);position:relative}
+.flow div .who{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.flow div .does{font-weight:900;font-size:20px;color:var(--forest);letter-spacing:-.01em;margin-top:6px}
+.flow div.qo{background:var(--forest);border-color:var(--forest)}
+.flow div.qo .who{color:var(--green-300)}
+.flow div.qo .does{color:#fff}
+.flow div + div::before{content:"\2192";position:absolute;left:-13px;top:50%;transform:translateY(-50%);color:var(--green-600);font-weight:700;font-size:16px;background:var(--bg);line-height:1}
+/* stages (click to reveal) */
+.qs{list-style:none;margin-top:16px;max-width:900px}
+.qs li{border-bottom:1px solid var(--line)}
+.qs button{width:100%;text-align:left;background:none;border:none;padding:14px 0;font-family:var(--ff);font-size:17px;font-weight:700;color:var(--ink);cursor:pointer;display:grid;grid-template-columns:44px 1fr 24px;gap:12px;align-items:center}
+.qs button .q{width:34px;height:34px;border-radius:6px;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.qs button .ar{color:var(--ink-3);transition:transform .25s;font-size:18px;line-height:1.2}
+.qs button[aria-expanded="true"] .ar{transform:rotate(90deg);color:var(--green-600)}
+.qs .lf{display:none;padding:0 0 16px 56px;font-size:15px;color:var(--ink-2);max-width:760px}
+.qs .lf b{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;display:block;margin-bottom:4px}
+.qs li.open .lf{display:block}
+/* screens */
+.screens{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.screens div{border:1px dashed var(--line);border-radius:var(--r);padding:14px 16px;background:var(--zebra);font-size:13.5px;color:var(--ink-3)}
+.screens div .n{font-family:var(--ff-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--green-600);font-weight:600}
+.screens div .t{font-weight:700;color:var(--ink);font-size:15px;margin:3px 0 4px}
+/* capabilities */
+.caps{list-style:none;margin-top:16px;border-top:1px solid var(--line);max-width:820px}
+.caps li{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;font-weight:700;color:var(--ink);align-items:center}
+.caps li span{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600}
+.missing{list-style:none;margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+.missing li{padding:6px 0 6px 20px;position:relative;font-size:14.5px;color:var(--ink-2)}
+.missing li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:8px;border-radius:2px;background:var(--orange)}
+.missing li b{color:var(--ink)}
+/* present extras */
+.pslide .days{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px;max-width:1150px}
+.pslide .days > div{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:20px 24px;background:rgba(255,255,255,.04)}
+.pslide .days .h{font-family:var(--ff-mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.pslide .days .today .h{color:#FFB877}
+.pslide .days .qo .h{color:var(--green-300)}
+.pslide .days ul{list-style:none}
+.pslide .days li{padding:9px 0;border-top:1px solid rgba(255,255,255,.14);font-size:clamp(13.5px,1.15vw,16px);color:#C7DAD1}
+.pslide .days li b{display:block;color:#fff;font-size:clamp(15px,1.4vw,19px);margin-bottom:2px}
+.pslide .stat{margin-top:26px}
+.pslide .stat .big{font-weight:900;font-size:clamp(56px,8vw,120px);color:var(--green-300);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.pslide .stat span{display:block;color:#C7DAD1;margin-top:14px;font-size:clamp(16px,1.5vw,22px);max-width:40ch}
+@media(max-width:900px){.pain,.day.on,.flow,.screens{grid-template-columns:1fr 1fr}.flow div + div::before{display:none}.pslide .days{grid-template-columns:1fr}}
+@media(max-width:600px){.pain,.day.on,.flow,.screens,.missing{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<!--LOGO-->
+<button id="presentBtn" type="button" aria-label="Open present mode">Present</button>
+<div id="prog"></div>
+
+<div class="sheet">
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo"><use href="#ilogo"/></svg>
+    <div class="eyebrow" data-h="1">Sales enablement &middot; Engagement Hub</div>
+    <h1 data-h="2">Engagement Hub <span class="spark">sales kit</span>.</h1>
+    <p class="sub" data-h="3">One workspace for supervisors: wellness, performance, and adoption in a single view, with a recommendation engine that reads the signals and says what to do next. The Engagement Hub section of the Product roadmap deck as one working page. <b>No ROI example, discovery set, objection tracks, pricing or beta terms exist in the deck yet</b>; the page says so where they would sit.</p>
+    <div class="hstats" data-h="4">
+      <div><b><span class="hc" data-to="3">0</span></b><span>things supervisors own: wellness, performance, adoption</span></div>
+      <div><b><span class="hc" data-to="4">0</span></b><span>separate systems the signals sit in today</span></div>
+      <div><b><span class="hc" data-to="4">0</span></b><span>steps: detect, decide, measure, human-in-the-loop control</span></div>
+      <div><b>Q1 2027</b><span>availability, per the timeline slide</span></div>
+    </div>
+    <div class="meta" data-h="5">
+      <div><span>For</span>Sales and account management</div>
+      <div><span>Source</span>Product roadmap deck, All Hands 2026, Engagement Hub section</div>
+      <div><span>Built by</span>Dallas Andrews, GTM Engineering</div>
+      <div><span>Use</span>Internal. Press P to present.</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="tldr">
+      <div class="k">In one screen</div>
+      <ul>
+        <li><b>What it is:</b> one workspace for supervisors: wellness, performance, and adoption in a single view, with a recommendation engine that reads the signals and says what to do next.</li>
+        <li><b>The problem:</b> supervisors own three things and can see none of them in one place. The signals already exist. They sit in four separate systems, on four different grains, and none of them were built for a supervisor.</li>
+        <li><b>How it works:</b> one dashboard, two layers, in a continuous optimization loop. Detect and evaluate, decide, measure, with human-in-the-loop control and every step logged.</li>
+        <li><b>Availability:</b> Engagement Hub Q1 2027, Engagement Hub Pro late Q1 2027.</li>
+        <li><b>Not in this deck:</b> no ROI example, no discovery questions, no objection talk tracks, no beta terms, no pricing, no target accounts, and no statement of what Engagement Hub Pro adds. Nothing here is filled in from another deck or from memory.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="wrap">
+    <div class="eyebrow">01 &middot; The problem</div>
+    <h2>Supervisors own three things and can see none of them in one place.</h2>
+    <p class="lede">The signals already exist. They sit in four separate systems, on four different grains, and none of them were built for a supervisor. Click each responsibility to see what it costs when it stays invisible.</p>
+    <ul class="qs">
+      <li><button aria-expanded="false"><span class="q">1</span><span>Wellness. Burnout develops silently. By the time it shows up in handle time, absences, or attrition, the agent has been struggling for weeks.</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>The cost</b>Burnout that surfaces only after attrition has already landed. Replacing an agent costs far more than retaining one, and the early signals were in the data the whole time.</div></li>
+      <li><button aria-expanded="false"><span class="q">2</span><span>Performance. Supervisors spend up to half their week on coaching, and most of it is prep. Manual interpretation produces inconsistent decisions, because there is no peer baseline to judge against.</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>The cost</b>Coaching outcomes that depend on which supervisor read the spreadsheet, not what the data said, with no consistent peer or cohort benchmark to separate a real outlier from normal variation. Consistency becomes a matter of luck.</div></li>
+      <li><button aria-expanded="false"><span class="q">3</span><span>Adoption. Self cure rates, accept rates, login activity, and alert volume are the leading indicators of adoption, and nobody on the floor sees them.</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>The cost</b>Adoption gaps that stay invisible to managers above the supervisor. The platform quietly underdelivers and nobody knows where or why.</div></li>
+    </ul>
+    <div class="grid c4" style="margin-top:18px">
+      <div class="card"><div class="tag hold">Wellness</div><p>Burnout develops silently. By the time it shows up in attrition, the cost has already landed.</p></div>
+      <div class="card"><div class="tag hold">Performance</div><p>Coaching decisions are made in spreadsheets, producing inconsistent outcomes across supervisors.</p></div>
+      <div class="card"><div class="tag hold">Adoption</div><p>Adoption gaps stay invisible. Nobody above the floor can see which supervisors are engaging.</p></div>
+      <div class="card"><div class="tag now">The loop</div><p>No closed-loop feedback connecting interventions to outcomes.</p></div>
+    </div>
+    <h3>Where it comes from</h3>
+    <div class="grid c4">
+      <div class="card"><div class="tag go">Source</div><h4>ACD</h4></div>
+      <div class="card"><div class="tag go">Source</div><h4>WFM</h4></div>
+      <div class="card"><div class="tag go">Source</div><h4>Intradiem rules engine</h4></div>
+      <div class="card"><div class="tag go">Source</div><h4>Burnout model</h4></div>
+    </div>
+    <div class="gate">
+      <h4>One supervisor view</h4>
+      <p>Normalised into one supervisor view, team level and agent level.</p>
+    </div>
+    <div class="line">"Up to half their week on coaching" and "replacing an agent costs far more than retaining one" are as stated in the Product deck, with no source cited there. Customer-facing use of any figure goes through the Value Repository.</div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">02 &middot; How it works</div>
+    <h2>One dashboard. Two layers. Click each step for the deck's description.</h2>
+    <p class="lede">Four steps in a continuous optimization loop.</p>
+    <ul class="qs">
+      <li><button aria-expanded="false"><span class="q">1</span><span>Detect / Evaluate</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Peer-relative cohort scoring: agent ranked against teammates on same channel, queue, and tenure band. Operational metrics only, no PII enters the prompt.</div></li>
+      <li><button aria-expanded="false"><span class="q">2</span><span>Decide</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Recommendation appears inline on the dashboard. Supervisor accepts, declines, or modifies. Auto-apply available for low-touch actions where the customer opts in.</div></li>
+      <li><button aria-expanded="false"><span class="q">3</span><span>Measure</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Re-evaluation on a configurable cadence. If performance improves, the model logs success. If not, it sequences the next action, never repeating a failed recommendation.</div></li>
+      <li><button aria-expanded="false"><span class="q">4</span><span>Human-in-the-Loop Control</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Every step is logged: timestamp, action, confidence, rationale, and outcome. Full audit chain re-constructable end-to-end for AI governance review.</div></li>
+    </ul>
+    <h3>Product screens in the deck</h3>
+    <p class="lede">The deck carries a live guided demo, Engagement Hub &middot; Team Performance, in three views. They are not reproduced on this page; open the deck for the screens.</p>
+    <div class="screens" style="grid-template-columns:repeat(3,1fr)">
+      <div><div class="n">View 1</div><div class="t">Team performance</div>Live demo in the deck</div>
+      <div><div class="n">View 2</div><div class="t">Why this recommendation</div>Live demo in the deck</div>
+      <div><div class="n">View 3</div><div class="t">Agent detail</div>Live demo in the deck</div>
+    </div>
+  </div>
+</section>
+
+<section id="summary">
+  <div class="wrap">
+    <div class="eyebrow">03 &middot; The summary</div>
+    <h2>One workspace to see the signals, and a structured recommendation to act on them.</h2>
+    <p class="lede">Gives supervisors one workspace to see wellness, performance, and adoption signals, and routes a structured recommendation to act on what they find.</p>
+    <ul class="vs">
+      <li><span>Burnout surfaces in attrition</span><span class="x">to</span><b>Risk detected before it costs the operation</b></li>
+      <li><span>Coaching decisions made in spreadsheets</span><span class="x">to</span><b>Consistent, data-driven recommendations</b></li>
+      <li><span>Reactive interventions</span><span class="x">to</span><b>Every recommendation logged, auditable end to end</b></li>
+      <li><span>Inconsistent decisions</span><span class="x">to</span><b>Dashboard surfaces who's using Intradiem and who isn't</b></li>
+    </ul>
+    <div class="line">Rows are paired in the order the deck lays them out, before on the left, with Engagement Hub on the right. Outcomes are the deck's claims, not measured results.</div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <div class="eyebrow">04 &middot; Where it sits and availability</div>
+    <h2>Front Office Suite, new, on the Harmoniq platform.</h2>
+    <p class="lede">As the roadmap deck positions it.</p>
+    <div class="grid c3">
+      <div class="card"><div class="tag go">Platform slide</div><h4>Front Office Suite &middot; New</h4><p>Engagement Hub: predicts and prevents agent burnout. All new solutions available with Harmoniq.</p></div>
+      <div class="card"><div class="tag go">The climb to service agility</div><h4>Stage 3 &middot; Human to Hybrid</h4><p>The nature of the work. Engagement Hub (AI supervisor advisor), alongside Capability Cloud and Goal Advisor.</p></div>
+      <div class="card"><div class="tag hold">With Capability Cloud</div><h4>The whole person</h4><p>Engagement Hub, both front and back office: the whole person behind every intervention. Capability Cloud timeline is TBD.</p></div>
+    </div>
+    <div class="statband">
+      <div><div class="n">Q1 2027</div><div class="l">Engagement Hub</div></div>
+      <div><div class="n">Late Q1 2027</div><div class="l">Engagement Hub Pro</div></div>
+    </div>
+    <div class="line">Dates are the timeline slide of the Product roadmap deck, All Hands 2026. The deck does not say what Engagement Hub Pro adds, and names no beta.</div>
+  </div>
+</section>
+
+<section id="missing">
+  <div class="wrap">
+    <div class="eyebrow">05 &middot; Not in this deck</div>
+    <h2>What the Back Office Optimizer kit has and this one does not, yet.</h2>
+    <div class="callout">
+      <h4>No ROI example in the deck, so no calculator on this page</h4>
+      <p>The Engagement Hub slides carry no worked example, customer profile, benefit lines or payback claim. A calculator would have to invent its inputs and its formula, so there is none. When Product publishes an ROI example, it is rebuilt here the way the Back Office Optimizer calculator was: the deck's numbers reproduced first, interpretation stated.</p>
+    </div>
+    <ul class="missing">
+      <li><b>Discovery questions</b> and listen-fors</li>
+      <li><b>Objection talk tracks</b></li>
+      <li><b>Beta program</b>, if there is one: terms, eligibility, dates, obligations</li>
+      <li><b>Pricing and ACV</b> ranges</li>
+      <li><b>Engagement Hub Pro</b>: what it adds over Engagement Hub</li>
+      <li><b>Target accounts</b> and ICP definition</li>
+      <li><b>Deployment</b> prerequisites, connectors, out of scope, dependencies</li>
+      <li><b>Who buys and why</b> by persona, beyond the supervisor as user</li>
+    </ul>
+    <div class="line">Deck figures are internal enablement material. Customer-facing use of any number still goes through the Value Repository.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Open with Product</div>
+    <ul class="threads">
+      <li><b>Currency.</b> The source is the Engagement Hub section (five slides) of the Product roadmap deck Chris Busbee and Matt McConnell presented at All Hands 2026, read from the live deck on Sep 18, 2026. It is a roadmap presentation, not a sales enablement deck. Product confirms it is the narrative sellers should carry before this page is used on a call.</li>
+      <li><b>The two layers.</b> The deck says "One dashboard. Two layers." and then shows four steps. It does not name the two layers. Product names them, or the page keeps the four steps only.</li>
+      <li><b>Two unsourced claims.</b> "Supervisors spend up to half their week on coaching" and "replacing an agent costs far more than retaining one" have no source in the deck. Product names the source, or the page marks them as internal estimates.</li>
+      <li><b>The missing sections.</b> ROI example, discovery, objections, pricing, targets, deployment, what Pro adds. Product supplies each in any form and the page picks them up in the same shape as the Back Office Optimizer kit.</li>
+      <li><b>Where it lives.</b> This page is a file. It can sit on the Product SharePoint site or on a noindex Pages link like the other two kits; Product's call.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <svg class="logo"><use href="#ilogo"/></svg>
+  <span>Internal. Confidential and proprietary. Do not distribute.</span>
+  <span>Source: Product roadmap deck, All Hands 2026, Engagement Hub section &middot; Page: GTM Engineering, Sep 18 2026</span>
+</footer>
+</div>
+
+<div id="deck" aria-label="Presentation">
+<section class="pslide" data-title="Title">
+  <svg class="logo" style="height:40px;color:#fff;margin-bottom:26px" data-a="1"><use href="#ilogo"/></svg>
+  <div class="pe" data-a="2">Engagement Hub &middot; Sales kit</div>
+  <h1 data-a="3">One workspace <span class="spark">for supervisors</span>.</h1>
+  <p class="pl" data-a="4">Wellness, performance, and adoption in a single view, with a recommendation engine that <b>reads the signals and says what to do next.</b></p>
+</section>
+<section class="pslide" data-title="The problem">
+  <div class="pe" data-a="1">The problem</div>
+  <h2 data-a="2">Supervisors own three things and can see <span class="spark">none of them in one place</span>.</h2>
+  <div class="pgrid c3">
+    <div data-a="3"><b>Wellness</b><span>Burnout develops silently. By the time it shows up in attrition, the cost has already landed</span></div>
+    <div data-a="4"><b>Performance</b><span>Coaching decisions are made in spreadsheets, producing inconsistent outcomes across supervisors</span></div>
+    <div data-a="5"><b>Adoption</b><span>Adoption gaps stay invisible. Nobody above the floor can see which supervisors are engaging</span></div>
+  </div>
+  <p class="pl" data-a="6"><b>No closed-loop feedback</b> connecting interventions to outcomes.</p>
+</section>
+<section class="pslide" data-title="Four systems">
+  <div class="pe" data-a="1">Where it comes from</div>
+  <h2 data-a="2">The signals already exist. <span class="spark">They sit in four separate systems.</span></h2>
+  <div class="pgrid">
+    <div data-a="3"><b>ACD</b></div>
+    <div data-a="4"><b>WFM</b></div>
+    <div data-a="5"><b>Intradiem rules engine</b></div>
+    <div data-a="6"><b>Burnout model</b></div>
+  </div>
+  <p class="pl" data-a="7">Normalised into <b>one supervisor view</b>, team level and agent level.</p>
+</section>
+<section class="pslide" data-title="How it works">
+  <div class="pe" data-a="1">How it works</div>
+  <h2 data-a="2">One dashboard. <span class="spark">Two layers.</span></h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Detect / Evaluate</b><span>Peer-relative cohort scoring against teammates on same channel, queue, and tenure band. Operational metrics only, no PII enters the prompt</span></div>
+    <div data-a="4"><b>Decide</b><span>Recommendation appears inline on the dashboard. Supervisor accepts, declines, or modifies</span></div>
+    <div data-a="5"><b>Measure</b><span>Re-evaluation on a configurable cadence, never repeating a failed recommendation</span></div>
+    <div data-a="6"><b>Human-in-the-Loop Control</b><span>Every step is logged: timestamp, action, confidence, rationale, and outcome</span></div>
+  </div>
+  <p class="pl" data-a="7">A <b>continuous optimization loop</b>, with a full audit chain for AI governance review.</p>
+</section>
+<section class="pslide" data-title="Before and with">
+  <div class="pe" data-a="1">The summary</div>
+  <h2 data-a="2">See the signals, <span class="spark">act on a structured recommendation</span>.</h2>
+  <ul class="plist">
+    <li data-a="3"><span class="d">Burnout surfaces in attrition</span><span class="r"><b>Risk detected before it costs the operation</b></span></li>
+    <li data-a="4"><span class="d">Coaching decisions made in spreadsheets</span><span class="r"><b>Consistent, data-driven recommendations</b></span></li>
+    <li data-a="5"><span class="d">Reactive interventions</span><span class="r"><b>Every recommendation logged, auditable end to end</b></span></li>
+    <li data-a="6"><span class="d">Inconsistent decisions</span><span class="r"><b>Dashboard surfaces who's using Intradiem and who isn't</b></span></li>
+  </ul>
+</section>
+<section class="pslide" data-title="Availability">
+  <div class="pe" data-a="1">Availability</div>
+  <h2 data-a="2">New in the Front Office Suite, <span class="spark">on Harmoniq</span>.</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Engagement Hub</b><span>Q1 2027</span></div>
+    <div data-a="4"><b>Engagement Hub Pro</b><span>Late Q1 2027</span></div>
+  </div>
+  <p class="pl" data-a="5">Roadmap deck dates. <b>Deck claims; customer-facing numbers go through the Value Repository.</b></p>
+</section>
+</div>
+
+<div id="hud">
+  <div class="brand">Intradiem &middot; Engagement Hub</div>
+  <div class="dots" id="pdots"></div>
+  <div class="nav">
+    <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
+    <span class="cnt" id="pcount">1 / 6</span>
+    <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
+    <button class="esc" type="button" id="pexit">Esc exits</button>
+  </div>
+</div>
+
+<!--PRESENT-->
+<script>
+(function(){
+  // click to reveal
+  [].forEach.call(document.querySelectorAll('.qs button'),function(b){b.addEventListener('click',function(){
+    var li=b.parentNode, open=!li.classList.contains('open'); li.classList.toggle('open',open); b.setAttribute('aria-expanded',open?'true':'false');
+  });});
+})();
+</script>
+</body>
+</html>

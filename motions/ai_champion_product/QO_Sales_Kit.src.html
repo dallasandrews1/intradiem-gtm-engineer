@@ -8,6 +8,12 @@
 <!--FONTS-->
 <style>
 /* page-specific */
+.vs{list-style:none;margin-top:16px;border-top:1px solid var(--line);max-width:820px}
+.vs li{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:center}
+.vs li b{color:var(--ink)}
+.vs li span{color:var(--ink-3)}
+.vs li .x{font-family:var(--ff-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-600);font-weight:600;text-align:center}
+.src{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-top:26px}
 .pain{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
 .pain div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow);font-size:15px;color:var(--ink);font-weight:700;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
 .pain div .n{font-family:var(--ff-mono);font-size:11px;color:var(--green-600);font-weight:600;padding-top:3px}
@@ -81,16 +87,16 @@
     <svg class="logo"><use href="#ilogo"/></svg>
     <div class="eyebrow" data-h="1">Sales enablement &middot; Queue Optimizer (beta)</div>
     <h1 data-h="2">Queue Optimizer <span class="spark">sales kit</span>.</h1>
-    <p class="sub" data-h="3">From firefighting to service agility. The Product deck (beta) as one working page: the problem, the two days, the orchestration gap, how it works, the summary. <b>No ROI example, discovery set, objection tracks or beta terms exist in this deck yet</b>; the page says so where they would sit.</p>
+    <p class="sub" data-h="3">From firefighting to service agility. Two Product decks as one working page: the problem, the two days, the orchestration gap, how it works, the roadmap and availability. <b>No ROI example, discovery set, objection tracks or beta terms exist in either deck yet</b>; the page says so where they would sit.</p>
     <div class="hstats" data-h="4">
       <div><b><span class="hc" data-to="60">0</span> to 100%</b><span>of SLA management still manual (deck figure)</span></div>
-      <div><b><span class="hc" data-to="4">0</span></b><span>stages: capture, forecast, recommend, adjust</span></div>
+      <div><b><span class="hc" data-to="4">0</span></b><span>services: observe, decide, act, check</span></div>
       <div><b><span class="hc" data-to="6">0</span></b><span>WFM pain points the deck names</span></div>
-      <div><b><span class="hc" data-to="13">0</span></b><span>slides in the source deck</span></div>
+      <div><b><span class="hc" data-to="13">0</span></b><span>slides in the Jun 12 beta deck</span></div>
     </div>
     <div class="meta" data-h="5">
       <div><span>For</span>Sales and account management</div>
-      <div><span>Source</span>Queue Optimizer deck (beta) sales kit, Product, modified Jun 12, 2026</div>
+      <div><span>Source</span>Queue Optimizer deck (beta) sales kit, Product, Jun 12, 2026, and the Product roadmap deck, All Hands 2026</div>
       <div><span>Built by</span>Dallas Andrews, GTM Engineering</div>
       <div><span>Use</span>Internal. Press P to present.</div>
     </div>
@@ -102,10 +108,12 @@
     <div class="tldr">
       <div class="k">In one screen</div>
       <ul>
+        <li><b>What it is:</b> a constraint solver that continuously calculates optimal agent to queue assignments, protects monthly and quarterly SLA commitments, and applies the moves straight into your ACD.</li>
         <li><b>The pitch:</b> your WFM forecasts, your ACD routes, your dashboards visualize. None of them decide. Queue Optimizer is the layer that takes the signal from those tools and acts on it, across every commitment simultaneously.</li>
         <li><b>The two days:</b> the same demand spike. Today, risks show up late, decisions are firefighting, time goes to dashboard watching. With Queue Optimizer, early risk detection, approval controls, action recommendations.</li>
-        <li><b>How it works:</b> ACD data capture, forecast and predict, recommend, adjust. The business objective is a service level or ASA for each queue in the ACD, with its constraints.</li>
-        <li><b>Not in this deck:</b> no ROI example, no discovery questions, no objection talk tracks, no beta terms, no pricing, no target accounts. Product supplies those before sellers need them; nothing here is filled in from another deck or from memory.</li>
+        <li><b>How it works:</b> four services, one continuous loop. Observe, decide, act, check. The business objective is a service level or ASA for each queue in the ACD, with its constraints.</li>
+        <li><b>Availability:</b> beta mid Q4 2026, GA Q1 2027, per the roadmap deck.</li>
+        <li><b>Not in either deck:</b> no ROI example, no discovery questions, no objection talk tracks, no beta terms, no pricing, no target accounts. Product supplies those before sellers need them; nothing here is filled in from another deck or from memory.</li>
       </ul>
     </div>
   </div>
@@ -113,8 +121,24 @@
 
 <section id="problem">
   <div class="wrap">
-    <div class="eyebrow">01 &middot; The reputation risk</div>
-    <h2>Overstaffing, burnout and constant firefighting force WFM teams into survival mode.</h2>
+    <div class="eyebrow">01 &middot; Market challenges, the problem</div>
+    <h2>Your ACD routes calls. It cannot protect commitments.</h2>
+    <p class="lede">The forecast is built the day before, the operation is staffed to it, and the ACD routes one interaction at a time with no view of the monthly SLA trajectory. Then volume moves, agents call out, handle time drifts.</p>
+    <h3>Three pools of risk, one root cause</h3>
+    <div class="grid c3">
+      <div class="card"><div class="tag now">Penalty risk</div><p>Missed SLAs (B2B), regulatory fees (B2G).</p></div>
+      <div class="card"><div class="tag now">Reputation loss</div><p>High abandonment, customer churn risk (B2B, B2C).</p></div>
+      <div class="card"><div class="tag now">Administrative burden</div><p>FTE and RTA burden, misallocated analysts, overstaffing, agent burnout.</p></div>
+    </div>
+    <div class="grid c4" style="margin-top:16px">
+      <div class="card"><div class="tag hold">Routing, not SLA management</div><p>Modern ACDs use AI-driven routing to match caller to skill in real time. That optimizes the moment's customer experience, not the period's SLA or penalty trajectory.</p></div>
+      <div class="card"><div class="tag hold">Penalties and lost revenue</div><p>Missed guarantees trigger contract penalties that can reach millions per month, while abandoned calls bleed revenue and client trust.</p></div>
+      <div class="card"><div class="tag hold">Overstaffing as a hedge</div><p>Excess headcount gets carried as unavoidable OPEX, a blunt insurance policy against the miss.</p></div>
+      <div class="card"><div class="tag hold">Manual firefighting</div><p>Analysts spend hours daily watching dashboards and reassigning agents by hand. Most organizations still run SLA management this way.</p></div>
+    </div>
+    <div class="line">Wording above is the Product roadmap deck, All Hands 2026. "Millions per month" is the deck's phrase with no source cited there; customer-facing use of any figure goes through the Value Repository.</div>
+    <div class="src">From the Jun 12 beta deck</div>
+    <h3>Overstaffing, burnout and constant firefighting force WFM teams into survival mode.</h3>
     <p class="lede">Leaving little time for strategy or scale. Six pain points, in the deck's words.</p>
     <div class="pain">
       <div><span class="n">01</span>Too much time spent reacting</div>
@@ -157,6 +181,16 @@
       <div><b>Approval controls</b>Queues are stabilized using configurable approval.</div>
       <div><b>Action recommendations</b>Clear guidance on what to change, when, and why.</div>
     </div>
+    <div class="src">From the roadmap deck</div>
+    <h3>A day in the life: Beth, a real time analyst</h3>
+    <p class="lede">A composite of the people running intraday performance in dozens of contact centers. Her day is reactive by design, not by choice. She owns intraday SLA performance across every queue, her goal is to hit each target without over-staffing the floor, and today she finds risk by hand, on dashboards and spreadsheets.</p>
+    <ol class="steps">
+      <li><span class="n">1</span><span class="t">Forecast looks stable</span><span class="o">Morning &middot; calm</span><span class="r">Dashboards show green and no risk is visible yet, so Beth focuses on other projects. The problem is already forming, it just has not surfaced.</span></li>
+      <li><span class="n">2</span><span class="t">Risk becomes visible</span><span class="o">Midday &middot; watching</span><span class="r">Volume spikes, three agents call in sick, or a campaign goes live that nobody told workforce about. Service levels start slipping and the manual calculations begin.</span></li>
+      <li><span class="n">3</span><span class="t">Too late, firefighting mode</span><span class="o">Late day &middot; firefighting</span><span class="r">SLAs slip while emergency rebalancing starts. Overtime and exceptions increase. Every decision comes after the damage is done.</span></li>
+      <li><span class="n">4</span><span class="t">Results are locked</span><span class="o">End of day &middot; spent</span><span class="r">The day is over and the numbers are what they are. Fatigue carries forward into tomorrow, where the cycle repeats.</span></li>
+    </ol>
+    <div class="line">"By the time risk is visible, I'm already in recovery mode."</div>
   </div>
 </section>
 
@@ -182,19 +216,20 @@
 <section id="how">
   <div class="wrap">
     <div class="eyebrow">04 &middot; How it works</div>
-    <h2>Four stages. Click each for the deck's description.</h2>
+    <h2>Four services, one continuous loop. Click each for the deck's description.</h2>
+    <p class="lede">The Recommendation Engine analyzes business goals, forecasts, and ACD and WFM data to decide which agents to add or remove from each queue.</p>
     <ul class="qs">
-      <li><button aria-expanded="false"><span class="q">1</span><span>ACD data capture</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Additional ACD provider services capture call data (like number of calls offered and answered, SL / ASA, and average handle time) and store it to track queue performance and trends over time.</div></li>
-      <li><button aria-expanded="false"><span class="q">2</span><span>Forecast and predict</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>ACD data tracks intraday service levels and ASA, helping forecast staffing needs for each queue.</div></li>
-      <li><button aria-expanded="false"><span class="q">3</span><span>Recommend</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>The Recommendation Engine analyzes inputs from business goals, forecasts, and ACD/WFM systems to optimize queue assignments, deciding which agents to add or remove from each queue.</div></li>
-      <li><button aria-expanded="false"><span class="q">4</span><span>Adjust</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>User-to-queue assignments update automatically, either with supervisor approval or through full automation.</div></li>
+      <li><button aria-expanded="false"><span class="q">1</span><span>Observe &middot; ACD data capture</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Calls offered and answered, SL, ASA, and average handle time captured and stored to track queue performance and trends over time.</div></li>
+      <li><button aria-expanded="false"><span class="q">2</span><span>Decide &middot; Forecast and predict</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>Intraday service level and ASA tracked per queue against monthly and quarterly commitments, prioritizing the highest penalty first.</div></li>
+      <li><button aria-expanded="false"><span class="q">3</span><span>Act &middot; Recommend and adjust</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>User to queue assignments update automatically, with supervisor approval or through full automation, straight into the ACD.</div></li>
+      <li><button aria-expanded="false"><span class="q">4</span><span>Check &middot; End of shift reset</span><span class="ar">&rsaquo;</span></button><div class="lf"><b>Deck text</b>All agent queue changes revert automatically at shift close. No manual cleanup, no configuration drift.</div></li>
     </ul>
     <div class="gate">
       <h4>Business objective (SLA / ASA)</h4>
       <p>A service level or ASA for each queue in the ACD, along with the associated constraints.</p>
     </div>
     <h3>Product screens in the deck</h3>
-    <p class="lede">Four slides are product screenshots. They are not reproduced on this page; open the deck for the screens. Their caption, verbatim: "Evolve from reactive firefighting to proactive workforce optimization that delivers consistent performance."</p>
+    <p class="lede">Four slides in the Jun 12 deck are product screenshots. They are not reproduced on this page; open the deck for the screens. The roadmap deck carries a guided demo in four steps: queue targets, add target, strategy, recommendations. Their caption, verbatim: "Evolve from reactive firefighting to proactive workforce optimization that delivers consistent performance."</p>
     <div class="screens">
       <div><div class="n">Slide 9</div><div class="t">Setting queue targets</div>Screenshot in the deck</div>
       <div><div class="n">Slide 10</div><div class="t">Configuring constraints</div>Screenshot in the deck</div>
@@ -224,21 +259,47 @@
       <li><span>05</span>Comprehensive prioritization and optimization</li>
     </ul>
     <div class="line">Predictive analytics and strategic workforce recommendations, as the deck puts it. Outcomes are the deck's claims, not measured results.</div>
+    <div class="src">From the roadmap deck</div>
+    <h3>Immediate detection and action</h3>
+    <p class="lede">Transform reactive firefighting into proactive performance management.</p>
+    <ul class="vs">
+      <li><span>Late risk detection</span><span class="x">to</span><b>Immediate risk detection</b></li>
+      <li><span>Manual calculations</span><span class="x">to</span><b>Automated recommendations</b></li>
+      <li><span>Reactive decisions</span><span class="x">to</span><b>Proactive decisions</b></li>
+      <li><span>Firefighting mode</span><span class="x">to</span><b>Strategic focus</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <div class="eyebrow">06 &middot; Roadmap and availability</div>
+    <h2>The engine ships proven and gains automation from there.</h2>
+    <p class="lede">Same product, two horizons, as the roadmap deck positions it.</p>
+    <div class="grid">
+      <div class="card"><div class="tag go">Available now</div><h4>Recommendations, human in control</h4><ul><li>Constraint solver to optimize for SL and ASA</li><li>Recommendations</li></ul></div>
+      <div class="card"><div class="tag hold">Next</div><h4>Model choice and automation</h4><ul><li>Automated actions</li><li>Machine learning models added alongside Erlang-C, with the customer choosing which model to use</li><li>Goals beyond SL and ASA (roadmap being planned)</li></ul></div>
+    </div>
+    <div class="statband">
+      <div><div class="n">Mid Q4 2026</div><div class="l">Beta</div></div>
+      <div><div class="n">Q1 2027</div><div class="l">GA</div></div>
+    </div>
+    <div class="line">Dates are the timeline slide of the Product roadmap deck, All Hands 2026. No beta terms, eligibility or obligations appear in either deck.</div>
   </div>
 </section>
 
 <section id="missing">
   <div class="wrap">
-    <div class="eyebrow">06 &middot; Not in this deck</div>
+    <div class="eyebrow">07 &middot; Not in either deck</div>
     <h2>What the Back Office Optimizer kit has and this one does not, yet.</h2>
     <div class="callout">
       <h4>No ROI example in the deck, so no calculator on this page</h4>
-      <p>The Queue Optimizer deck carries no worked example, no customer profile, no benefit lines and no payback claim. A calculator would have to invent its inputs and its formula, so there is none. When Product publishes an ROI example, it is rebuilt here the way the Back Office Optimizer calculator was: the deck's numbers reproduced first, interpretation stated.</p>
+      <p>Neither Queue Optimizer deck carries a worked example, a customer profile, benefit lines or a payback claim. A calculator would have to invent its inputs and its formula, so there is none. When Product publishes an ROI example, it is rebuilt here the way the Back Office Optimizer calculator was: the deck's numbers reproduced first, interpretation stated.</p>
     </div>
     <ul class="missing">
       <li><b>Discovery questions</b> and listen-fors</li>
       <li><b>Objection talk tracks</b></li>
-      <li><b>Beta program</b> terms, eligibility, dates, obligations</li>
+      <li><b>Beta program</b> terms, eligibility, obligations (dates are now on the roadmap deck)</li>
       <li><b>Pricing and ACV</b> ranges</li>
       <li><b>Target accounts</b> and ICP definition</li>
       <li><b>Deployment</b> prerequisites, connectors, out of scope, dependencies</li>
@@ -253,8 +314,10 @@
   <div class="wrap">
     <div class="eyebrow">Open with Product</div>
     <ul class="threads">
-      <li><b>Currency.</b> The source deck is marked beta, "confidential and proprietary, do not distribute", and was modified Jun 12, 2026 in SharePoint (productmanagement / GTM / Sales Enablement / Queue Optimizer / Customer Facing Assets). Product confirms it is still the current beta narrative before sellers use this page on a call.</li>
+      <li><b>Two sources.</b> The Product roadmap deck, All Hands 2026 (Chris Busbee and Matt McConnell, September 2026) is the newer wording and leads each section; it names the four services observe, decide, act, check, where the Jun 12 deck named four stages ending in recommend and adjust. Product confirms which wording sellers carry.</li>
+      <li><b>Currency.</b> The Jun 12 source deck is marked beta, "confidential and proprietary, do not distribute", and was modified Jun 12, 2026 in SharePoint (productmanagement / GTM / Sales Enablement / Queue Optimizer / Customer Facing Assets). Product confirms it is still the current beta narrative before sellers use this page on a call.</li>
       <li><b>The one figure.</b> "60 to 100% of SLA management remains manual even in well-resourced organizations" has no source in the deck. Product names the source, or the page marks it as an internal estimate.</li>
+      <li><b>"Millions per month".</b> The roadmap deck says missed guarantees trigger contract penalties that can reach millions per month, with no source. Same treatment as the 60 to 100% figure.</li>
       <li><b>The missing sections.</b> ROI example, discovery, objections, beta terms, pricing, targets, deployment. Product supplies each in any form (slides, a doc, a spreadsheet) and the page picks them up in the same shape as the Back Office Optimizer kit.</li>
       <li><b>The screens.</b> Slides 9 to 12 are screenshots. If Product wants them on the page, they export as PNG and embed as is, captioned with the deck's caption.</li>
       <li><b>Where it lives.</b> This page is a file. It can sit on the Product SharePoint site or on a noindex Pages link like the Back Office Optimizer kit; Product's call.</li>
@@ -265,7 +328,7 @@
 <footer class="foot">
   <svg class="logo"><use href="#ilogo"/></svg>
   <span>Internal. Confidential and proprietary. Do not distribute.</span>
-  <span>Source: Queue Optimizer deck (beta) sales kit, Product, modified Jun 12 2026 &middot; Page: GTM Engineering, Aug 31 2026</span>
+  <span>Sources: Queue Optimizer deck (beta) sales kit, Product, Jun 12 2026; Product roadmap deck, All Hands 2026 &middot; Page: GTM Engineering, refreshed Sep 18 2026</span>
 </footer>
 </div>
 
@@ -276,7 +339,17 @@
   <h1 data-a="3">From firefighting to <span class="spark">service agility</span>.</h1>
   <p class="pl" data-a="4">Your tools forecast, route and visualize. <b>None of them decide.</b> Queue Optimizer is the layer that does.</p>
 </section>
-<section class="pslide" data-title="Reputation risk">
+<section class="pslide" data-title="The problem">
+  <div class="pe" data-a="1">Market challenges, the problem</div>
+  <h2 data-a="2">Your ACD routes calls. <span class="spark">It cannot protect commitments.</span></h2>
+  <div class="pgrid c3">
+    <div data-a="3"><b>Penalty risk</b><span>Missed SLAs (B2B), regulatory fees (B2G)</span></div>
+    <div data-a="4"><b>Reputation loss</b><span>High abandonment, customer churn risk (B2B, B2C)</span></div>
+    <div data-a="5"><b>Administrative burden</b><span>FTE and RTA burden, misallocated analysts, overstaffing, agent burnout</span></div>
+  </div>
+  <p class="pl" data-a="6">Three pools of risk, <b>one root cause</b>.</p>
+</section>
+<section class="pslide" data-title="Survival mode">
   <div class="pe" data-a="1">The reputation risk</div>
   <h2 data-a="2">Overstaffing, burnout and constant firefighting force WFM teams into <span class="spark">survival mode</span>.</h2>
   <div class="pgrid c3">
@@ -336,12 +409,12 @@
 </section>
 <section class="pslide" data-title="How it works">
   <div class="pe" data-a="1">How it works</div>
-  <h2 data-a="2">Capture. Forecast. Recommend. <span class="spark">Adjust.</span></h2>
+  <h2 data-a="2">Observe. Decide. Act. <span class="spark">Check.</span></h2>
   <div class="pgrid">
-    <div data-a="3"><b>ACD data capture</b><span>Calls offered and answered, SL / ASA, average handle time, stored to track queue performance and trends</span></div>
-    <div data-a="4"><b>Forecast and predict</b><span>Intraday service levels and ASA forecast staffing needs for each queue</span></div>
-    <div data-a="5"><b>Recommend</b><span>Business goals, forecasts and ACD/WFM inputs decide which agents to add or remove from each queue</span></div>
-    <div data-a="6"><b>Adjust</b><span>User-to-queue assignments update automatically, with supervisor approval or through full automation</span></div>
+    <div data-a="3"><b>Observe &middot; ACD data capture</b><span>Calls offered and answered, SL, ASA, and average handle time captured and stored to track queue performance and trends over time</span></div>
+    <div data-a="4"><b>Decide &middot; Forecast and predict</b><span>Intraday service level and ASA tracked per queue against monthly and quarterly commitments, prioritizing the highest penalty first</span></div>
+    <div data-a="5"><b>Act &middot; Recommend and adjust</b><span>User to queue assignments update automatically, with supervisor approval or through full automation, straight into the ACD</span></div>
+    <div data-a="6"><b>Check &middot; End of shift reset</b><span>All agent queue changes revert automatically at shift close. No manual cleanup, no configuration drift</span></div>
   </div>
   <p class="pl" data-a="7">Business objective: <b>a service level or ASA for each queue in the ACD</b>, with its constraints.</p>
 </section>
@@ -367,6 +440,16 @@
   </div>
   <p class="pl" data-a="7">Live performance data, staffing forecasts, configurable constraints. <b>Deck claims; customer-facing numbers go through the Value Repository.</b></p>
 </section>
+<section class="pslide" data-title="Availability">
+  <div class="pe" data-a="1">Roadmap and availability</div>
+  <h2 data-a="2">The engine ships proven and <span class="spark">gains automation from there</span>.</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Available now</b><span>Constraint solver to optimize for SL and ASA. Recommendations, human in control</span></div>
+    <div data-a="4"><b>Next</b><span>Automated actions, model choice. Machine learning models alongside Erlang-C. Goals beyond SL and ASA (roadmap being planned)</span></div>
+    <div data-a="5"><b>Beta</b><span>Mid Q4 2026</span></div>
+    <div data-a="6"><b>GA</b><span>Q1 2027</span></div>
+  </div>
+</section>
 </div>
 
 <div id="hud">
@@ -374,7 +457,7 @@
   <div class="dots" id="pdots"></div>
   <div class="nav">
     <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
-    <span class="cnt" id="pcount">1 / 10</span>
+    <span class="cnt" id="pcount">1 / 12</span>
     <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
     <button class="esc" type="button" id="pexit">Esc exits</button>
   </div>

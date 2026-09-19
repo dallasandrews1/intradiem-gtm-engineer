@@ -7,6 +7,7 @@
 <title>Back Office Optimizer Sales Kit</title>
 <!--FONTS-->
 <style>
+.src{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-top:26px}
 /* page-specific */
 .who{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
 .who div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--bg);box-shadow:var(--shadow);font-size:14px;color:var(--ink-2)}
@@ -102,7 +103,7 @@
     <svg class="logo"><use href="#ilogo"/></svg>
     <div class="eyebrow" data-h="1">Sales enablement &middot; Back Office Optimizer</div>
     <h1 data-h="2">Back Office Optimizer <span class="spark">sales kit</span>.</h1>
-    <p class="sub" data-h="3">Pitch, discovery, ROI, beta, objections, targets. The Product enablement deck as one working page, with the ROI model live.</p>
+    <p class="sub" data-h="3">Pitch, discovery, ROI, beta, objections, targets. The Product enablement deck as one working page, with the ROI model live, and the problem statement, capability names, roadmap and dates from the Product roadmap deck, All Hands 2026.</p>
     <div class="hstats" data-h="4">
       <div><b>$<span class="hc" data-to="748">0</span>K</b><span>worked-example annual benefit</span></div>
       <div><b><span class="hc" data-to="90">0</span> days</b><span>beta at no cost</span></div>
@@ -111,7 +112,7 @@
     </div>
     <div class="meta" data-h="5">
       <div><span>For</span>Sales and account management</div>
-      <div><span>Source</span>Product enablement deck, Jun 2, 2026</div>
+      <div><span>Source</span>Product enablement deck, Jun 2, 2026, and the Product roadmap deck, All Hands 2026</div>
       <div><span>Built by</span>Dallas Andrews, GTM Engineering</div>
       <div><span>Use</span>Internal. Press P to present.</div>
     </div>
@@ -123,10 +124,12 @@
     <div class="tldr">
       <div class="k">In one screen</div>
       <ul>
+        <li><b>What it is:</b> a digital twin of your back office that forecasts workload at regular intervals, shows managers whether today's staffing hits SLA, and tells every worker exactly what to work on next.</li>
         <li><b>The pitch:</b> back offices are operationally blind in real time. Dashboards show what already went wrong. Back Office Optimizer acts between the demand signal and the breach.</li>
         <li><b>Sell the prevention, not the dashboard.</b> Reporting vs prevention. Generic queue balancing vs next-work-item by skill. Static planning vs real-time orchestration. Rip-and-replace vs non-disruptive.</li>
         <li><b>Every deal needs a quantified business case.</b> The calculator below reproduces the deck's worked example; Sales Ops holds the live spreadsheet and approved ACV ranges.</li>
         <li><b>Beta:</b> 90 days at no cost, signed letter of intent, executive sponsor, one or two lighthouse workflows, a reference at the end.</li>
+        <li><b>Availability:</b> beta Q4 2026, GA Q1 2027, per the roadmap deck.</li>
       </ul>
     </div>
   </div>
@@ -135,20 +138,42 @@
 <section id="pitch">
   <div class="wrap">
     <div class="eyebrow">01 &middot; The pitch</div>
-    <h2>The problem isn't visibility. It's timing.</h2>
-    <p class="lede">Demand signal, risk emerging, risk visible, SLA breach. Today organizations act at the breach. Back Office Optimizer acts while the risk is emerging.</p>
-    <div class="grid c4">
-      <div class="card"><div class="tag go">See risk early</div><h4>Real-time visibility</h4><p>SLA risk surfaced before breaches occur.</p></div>
-      <div class="card"><div class="tag go">Next work item by skill</div><h4>Skills-based allocation</h4><p>Each next work item routed by skill, not by generic queue.</p></div>
-      <div class="card"><div class="tag go">Orchestrate dynamically</div><h4>Continuous routing</h4><p>Back-office work moved to the right people as the day changes.</p></div>
-      <div class="card"><div class="tag go">Stay ahead</div><h4>Proactive control</h4><p>Firefighting and manual triage replaced.</p></div>
+    <h2>Two visibility gaps, three costs that follow.</h2>
+    <p class="lede">Organizations struggle with efficient back office workforce allocation. The gap shows up at two levels, and everything downstream flows from it. The back office queue is asynchronous: work lands in a queue and moves through step after step, hand to hand, ageing at every stop. Nobody stopped working. The queue grew anyway, and it grew where the slowest step is.</p>
+    <div class="grid">
+      <div class="card"><div class="tag now">Cause &middot; managers</div><h4>Staffing visibility gap</h4><p>Managers cannot see when they are over or under staffed against SLA goals. The backlog report describes yesterday, today's plan runs on historical averages.</p></div>
+      <div class="card"><div class="tag now">Cause &middot; workers</div><h4>Work prioritization confusion</h4><p>Workers lack clear guidance on which task to tackle next by business priority. Selection defaults to whatever is on top or easiest.</p></div>
     </div>
+    <div class="grid c3" style="margin-top:16px">
+      <div class="card"><div class="tag hold">The cost</div><h4>Missed SLAs</h4><p>Staffing misalignment goes undetected until the breach has already landed.</p></div>
+      <div class="card"><div class="tag hold">The cost</div><h4>Cherry picking</h4><p>Inefficient task selection, with the urgent work aging under the easy work.</p></div>
+      <div class="card"><div class="tag hold">The cost</div><h4>Reactive decisions</h4><p>Staffing calls made after the backlog forms rather than before, when there is still time to act.</p></div>
+    </div>
+    <h3>One digital twin, four capabilities</h3>
+    <p class="lede">Back Office Optimizer builds a live model of your operation, tracking demand and service in real time, then puts four tools on top of it. All four are marked included, core, in the roadmap deck.</p>
+    <div class="grid c4">
+      <div class="card"><div class="tag go">Included &middot; core</div><h4>Capacity Insights</h4><p>Shows, at a glance, whether current staffing will meet or miss SLA against projected demand. Green means over staffed, red means under staffed, always relative to the goal, always live.</p></div>
+      <div class="card"><div class="tag go">Included &middot; core</div><h4>Scheduler Lite</h4><p>Covers multi day back office work without the weight of a full WFM deployment. Plans flow straight into the digital twin, so the forecast and the schedule never drift apart.</p></div>
+      <div class="card"><div class="tag go">Included &middot; core</div><h4>Next Work Item</h4><p>The answer to cherry picking. A simple interface any worker can ask, with the answer computed from business rules, granular skills, priorities, and SLA requirements. Part of the core, no separate license.</p></div>
+      <div class="card"><div class="tag go">Included &middot; core</div><h4>Persona dashboards</h4><p>Give managers, planners, and optimizers each a view built for their role. Same live twin underneath, three lenses on top, so every persona sees the operational insight that matters to them.</p></div>
+    </div>
+    <div class="src">From the Jun 2 enablement deck</div>
+    <p class="lede">Demand signal, risk emerging, risk visible, SLA breach. Today organizations act at the breach. Back Office Optimizer acts while the risk is emerging.</p>
     <h3>Why we win</h3>
     <ul class="vs">
       <li><span>Reporting</span><span class="x">vs</span><b>Prevention</b></li>
       <li><span>Generic queue balancing</span><span class="x">vs</span><b>Next work item by skill</b></li>
       <li><span>Static planning</span><span class="x">vs</span><b>Real-time orchestration</b></li>
       <li><span>Rip and replace</span><span class="x">vs</span><b>Non-disruptive architecture, sits above WFM, BPM and case systems</b></li>
+    </ul>
+    <div class="src">From the roadmap deck</div>
+    <h3>From reactive firefighting to proactive control</h3>
+    <p class="lede">Four things change the day Back Office Optimizer goes live. Same operation, read left to right.</p>
+    <ul class="vs">
+      <li><span>No real time SLA risk visibility</span><span class="x">to</span><b>Immediate SLA risk detection</b></li>
+      <li><span>Manual queue management</span><span class="x">to</span><b>Automated work orchestration</b></li>
+      <li><span>Reactive breach response</span><span class="x">to</span><b>Proactive breach prevention</b></li>
+      <li><span>Firefighting and overtime</span><span class="x">to</span><b>Strategic focus and control</b></li>
     </ul>
     <h3>Who buys and why</h3>
     <div class="who">
@@ -264,6 +289,12 @@
       <div class="card"><div class="tag now">Process</div><h4>How to join</h4><p>Signed letter of intent. Target regulated, complex environments in financial services, insurance, healthcare and utilities. Nominate a candidate through the account manager.</p></div>
     </div>
     <div class="line">Goal: 3 beta customers for soft launch, 6 lighthouse enterprise wins after launch</div>
+    <h3>Availability</h3>
+    <div class="statband">
+      <div><div class="n">Q4 2026</div><div class="l">Beta</div></div>
+      <div><div class="n">Q1 2027</div><div class="l">GA</div></div>
+    </div>
+    <div class="line">Dates are the timeline slide of the Product roadmap deck, All Hands 2026, the deck presented at All Hands and the source of truth for now.</div>
     <h3>Commercial model</h3>
     <div class="tablewrap"><table>
       <thead><tr><th>Element</th><th>Position</th></tr></thead>
@@ -345,11 +376,23 @@
       <div class="card"><div class="tag hold">Out of scope, phase 1</div><ul><li>Autonomous bot orchestration (phase 3)</li><li>Recommendation engine for back-office work (phase 2)</li><li>Replacing existing WFM or case systems</li></ul></div>
       <div class="card"><div class="tag now">Open dependencies</div><ul><li>Final connector library scope</li><li>Skill tagging API mapping per customer</li><li>ROI calculator parameters</li><li>Beta success criteria sign-off</li><li>Forecast algorithm sign-off</li></ul></div>
     </div>
-    <h3>Roadmap as positioned</h3>
+    <h3>Roadmap as positioned in the roadmap deck</h3>
+    <p class="lede">Three horizons.</p>
     <div class="grid c3">
-      <div class="card"><div class="tag go">Phase 1 &middot; 0 to 3 months</div><h4>Real-time visibility and work allocation</h4><p>Live SLA and case tracking, optimal work allocation, skill availability map, early-warning alerts, operational dashboards.</p></div>
-      <div class="card"><div class="tag hold">Phase 2 &middot; 9 to 18 months</div><h4>Intelligent recommendations</h4><p>Recommendation engine, constraint solver, scenario modelling, approval workflow, follow-the-sun capacity.</p></div>
-      <div class="card"><div class="tag hold">Phase 3 &middot; 18 to 24 months</div><h4>Agentic orchestration</h4><p>Bot re-prioritization, human plus AI orchestration, self-healing workflows, continuous optimization.</p></div>
+      <div class="card"><div class="tag go">Current</div><h4>Visibility and control</h4><p>The foundation ships day one, and Scheduler Lite is part of it.</p><ul><li>Scheduler Lite &middot; schedules multi day work</li><li>Next Work Item &middot; routes cases to the right worker</li><li>Capacity Insights &middot; demand vs capacity, live</li></ul></div>
+      <div class="card"><div class="tag hold">Next</div><h4>Recommendations</h4><p>AI driven rebalancing suggestions based on skill availability, queue depth, and SLA risk. One click to apply or dismiss.</p></div>
+      <div class="card"><div class="tag hold">Future</div><h4>Automated actions</h4><p>The system acts on recommendations autonomously, reprioritizing work and alerting humans only on exceptions.</p></div>
+    </div>
+    <div class="line">The Jun 2 deck gave these as phase 1 (0 to 3 months), phase 2 (9 to 18 months) and phase 3 (18 to 24 months). The roadmap deck carries no month ranges, so none are shown.</div>
+    <h3>The complete optimization framework</h3>
+    <p class="lede">Six core capabilities underpin the platform: observability, real time insights, and predictive planning, powering a continuous optimization loop.</p>
+    <div class="grid c3">
+      <div class="card"><div class="tag go">1</div><h4>Get one view across the enterprise</h4><p>See performance across teams, roles, functions, locations, work types, and service commitments with clear, actionable visibility.</p></div>
+      <div class="card"><div class="tag go">2</div><h4>Forecast demand with greater precision</h4><p>Continuously improve forecasting accuracy across processes, workflows, and skill groups as business conditions change.</p></div>
+      <div class="card"><div class="tag go">3</div><h4>Understand true capacity</h4><p>Model available capacity based on skills, productivity, processing times, variability, and staffing constraints, not just headcount.</p></div>
+      <div class="card"><div class="tag go">4</div><h4>Predict service risk before it cascades</h4><p>Identify emerging SLA, compliance, and operational risk before performance deteriorates, and prioritize intervention where it matters most.</p></div>
+      <div class="card"><div class="tag go">5</div><h4>Optimize flow across interconnected work</h4><p>Dynamically prioritize and distribute work based on skills, business impact, SLA urgency, and downstream dependencies.</p></div>
+      <div class="card"><div class="tag go">6</div><h4>Model scenarios instantly</h4><p>Evaluate the impact of changing volumes, staffing levels, productivity, or processing times before making operational decisions.</p></div>
     </div>
   </div>
 </section>
@@ -358,7 +401,10 @@
   <div class="wrap">
     <div class="eyebrow">Open with Product</div>
     <ul class="threads">
-      <li><b>Currency.</b> The source deck is dated Jun 2, 2026. Beta dates read "xx/xx/xxxx" in the deck; pricing and ACV ranges carry a "confirm with Sales leadership" note. Product confirms what changed before sellers use this page on a call.</li>
+      <li><b>Two sources.</b> The Product roadmap deck, All Hands 2026 (Chris Busbee and Matt McConnell, September 2026) is the newer wording and now carries the problem statement, the capability names, the roadmap and the dates. Discovery, ROI, beta terms, objections and targets are still the Jun 2 enablement deck, the only place they exist.</li>
+      <li><b>One line retired.</b> The Jun 2 deck opens on "The problem isn't visibility. It's timing." The roadmap deck opens on "Two visibility gaps, three costs that follow." The page carries the newer one so sellers do not say both. Product confirms.</li>
+      <li><b>Scheduler Lite and persona dashboards</b> are in the roadmap deck and not in the Jun 2 deck, so the discovery questions, ROI example and objections do not cover them yet.</li>
+      <li><b>Currency.</b> Beta dates read "xx/xx/xxxx" in the Jun 2 deck; this page uses the roadmap deck's timeline, beta Q4 2026 and GA Q1 2027. The Back Office Optimizer cover slide in the same deck still reads "Beta September 2026"; the timeline is the one used here. Pricing and ACV ranges carry a "confirm with Sales leadership" note. Product confirms what changed before sellers use this page on a call.</li>
       <li><b>Next decks in line.</b> Queue Optimizer deck (beta) sales kit and the Back Office Optimizer customer-facing presentation sit in the same SharePoint folder. Same conversion, once Product picks the order.</li>
       <li><b>Where it lives.</b> This page is a file. It can sit on the Product SharePoint site or on a noindex Pages link like the account maps; Product's call.</li>
     </ul>
@@ -368,7 +414,7 @@
 <footer class="foot">
   <svg class="logo"><use href="#ilogo"/></svg>
   <span>Internal. Confidential and proprietary.</span>
-  <span>Source: Back Office Optimizer Early Stage Enablement, Product, Jun 2026 &middot; Page: GTM Engineering, Aug 31 2026</span>
+  <span>Sources: Back Office Optimizer Early Stage Enablement, Product, Jun 2026; Product roadmap deck, All Hands 2026 &middot; Page: GTM Engineering, refreshed Sep 18 2026</span>
 </footer>
 </div>
 
@@ -379,9 +425,18 @@
   <h1 data-a="3">Prevent SLA failure <span class="spark">before it happens</span>.</h1>
   <p class="pl" data-a="4">From reactive SLA management to proactive operational confidence. <b>Sell the prevention, not the dashboard.</b></p>
 </section>
-<section class="pslide" data-title="Timing">
+<section class="pslide" data-title="The problem">
   <div class="pe" data-a="1">The problem</div>
-  <h2 data-a="2">The problem isn't visibility. <span class="spark">It's timing.</span></h2>
+  <h2 data-a="2">Two visibility gaps, <span class="spark">three costs that follow</span>.</h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Staffing visibility gap</b><span>Managers cannot see when they are over or under staffed against SLA goals</span></div>
+    <div data-a="4"><b>Work prioritization confusion</b><span>Workers lack clear guidance on which task to tackle next by business priority</span></div>
+  </div>
+  <p class="pl" data-a="5">The cost: <b>missed SLAs, cherry picking, reactive decisions.</b></p>
+</section>
+<section class="pslide" data-title="Timing">
+  <div class="pe" data-a="1">Timing</div>
+  <h2 data-a="2">Today organizations act at the breach. <span class="spark">Back Office Optimizer acts while the risk is emerging.</span></h2>
   <div class="tl">
     <div data-a="3"><span class="lab">Signal</span><b>Demand signal</b><span>Volume moves faster than the plan</span></div>
     <div class="act" data-a="4"><span class="lab">Act here</span><b>Risk emerging</b><span>Back Office Optimizer orchestrates before risk becomes breach</span></div>
@@ -391,12 +446,12 @@
 </section>
 <section class="pslide" data-title="How it works">
   <div class="pe" data-a="1">How it works</div>
-  <h2 data-a="2">See risk early. Route the next work item by skill. <span class="spark">Stay ahead.</span></h2>
+  <h2 data-a="2">One digital twin, <span class="spark">four capabilities</span>.</h2>
   <div class="pgrid">
-    <div data-a="3"><b>Real-time visibility</b><span>SLA risk before breaches occur</span></div>
-    <div data-a="4"><b>Next work item by skill</b><span>Skills-based allocation, not generic queues</span></div>
-    <div data-a="5"><b>Continuous routing</b><span>Back-office work moved to the right people as the day changes</span></div>
-    <div data-a="6"><b>Proactive control</b><span>Firefighting and manual triage replaced</span></div>
+    <div data-a="3"><b>Capacity Insights</b><span>A real time view of whether current staffing will meet or miss SLA goals against projected demand</span></div>
+    <div data-a="4"><b>Scheduler Lite</b><span>Lightweight workforce scheduling for multi day back office work, without a heavyweight WFM deployment</span></div>
+    <div data-a="5"><b>Next Work Item</b><span>Any worker asks "what should I work on next" and gets the highest priority item for their skills</span></div>
+    <div data-a="6"><b>Persona dashboards</b><span>Managers, planners, and optimizers each get a view built for their role</span></div>
   </div>
   <p class="pl" data-a="7">Sits above existing WFM, BPM and case systems. <b>No rip and replace.</b></p>
 </section>
@@ -443,6 +498,16 @@
     <li data-a="6"><span class="d">To join</span><span class="r">Signed letter of intent through the account manager</span></li>
   </ul>
 </section>
+<section class="pslide" data-title="Availability">
+  <div class="pe" data-a="1">Roadmap and availability</div>
+  <h2 data-a="2">Three horizons. <span class="spark">Visibility and control, recommendations, automated actions.</span></h2>
+  <div class="pgrid">
+    <div data-a="3"><b>Current</b><span>Scheduler Lite, Next Work Item, Capacity Insights. The foundation ships day one</span></div>
+    <div data-a="4"><b>Next</b><span>AI driven rebalancing suggestions. One click to apply or dismiss</span></div>
+    <div data-a="5"><b>Future</b><span>The system acts on recommendations autonomously, alerting humans only on exceptions</span></div>
+    <div data-a="6"><b>Beta Q4 2026, GA Q1 2027</b><span>Per the roadmap deck timeline</span></div>
+  </div>
+</section>
 <section class="pslide" data-title="Objections">
   <div class="pe" data-a="1">Objection handling</div>
   <h2 data-a="2">Four objections. <span class="spark">Four answers.</span></h2>
@@ -472,7 +537,7 @@
   <div class="dots" id="pdots"></div>
   <div class="nav">
     <button class="ab" type="button" id="pprev" aria-label="Previous">&larr;</button>
-    <span class="cnt" id="pcount">1 / 9</span>
+    <span class="cnt" id="pcount">1 / 11</span>
     <button class="ab" type="button" id="pnext" aria-label="Next">&rarr;</button>
     <button class="esc" type="button" id="pexit">Esc exits</button>
   </div>
