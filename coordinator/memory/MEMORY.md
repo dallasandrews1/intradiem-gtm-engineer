@@ -673,3 +673,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Impact Is Capacity Not Seller Metrics](feedback-impact-is-capacity-not-seller-metrics.md) — never volunteer meetings as his yardstick; show capacity with sourced before/after facts, no hours totals
 - [Needle Movers Wins Board Sep18](needle-movers-wins-board-sep18.md) — LIVE needle-movers-wins.pages.dev; no builder names; save-rooms root and /cleveland-clinic/ internal pages replaced Sep 18; old hash deployments still hold them
 - [Department Shelves Sep18](department-shelves-sep18.md) — Sep 18 2026: one-pager shelves live for AEs, AMs (Alex, Inger) and partners (Frank); shared builder; own-story guard; white-glove vs self-serve recommendation
+- [Product Roadmap All-Hands Sep18](product-roadmap-allhands-sep18.md) — QO/BOO beta Q4 2026 and GA Q1 2027, EH Q1 2027, Capability Cloud TBD; where Dallas's work maps onto Product's needle
+- [AE Selfserve Project Sep18](ae-selfserve-project-sep18.md) — Sep 18 2026: AE Account Desk Claude project staged (three locked skills over Keegan's library); not uploaded; refresh order deploy, export, check, upload
+- [Sales Kits Roadmap Refresh Sep18](sales-kits-roadmap-refresh-sep18.md) — QO, BOO refreshed and new EH kit, all three LIVE (eh-sales-kit.pages.dev is new), repo uncommitted; two-source rule; BOO beta date conflict in the deck
