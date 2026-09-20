@@ -687,3 +687,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Wrangler pages --force trap](wrangler-pages-force-delegation-trap.md) — without --force an agent's pages create/deploy becomes a Workers deploy from the cwd; read the hostname back after create
 - [Auto mode blocks deploys](claude-code-auto-mode-blocks-deploys.md) — the permission classifier denies wrangler deploys in auto mode; hand over deploy_rep_pages.sh or get a Bash rule first, check at thread start
 - [Alex record sheets next](alex-record-sheets-next-sep20.md) — build a record sheet per account now (lead with conflicts and blanks); account-plan-fields waits on the Mary Ann huddle; briefs only when a door opens
+- [Rep word is the truth](feedback-rep-word-is-the-truth.md) — what an AM, AE or partner says about an account is fact; a system that disagrees gets corrected, never the rep

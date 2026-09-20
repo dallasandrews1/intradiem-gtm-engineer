@@ -15,4 +15,6 @@ metadata:
 
 **Sep 20 2026 late:** the classifier also blocked this session from editing its own permission settings, even on Dallas's explicit ask, so he added the rules himself: `Bash(npx wrangler pages deploy:*)` and `Bash(automation/deploy_rep_pages.sh:*)` in the project's `.claude/settings.local.json` (backup `.bak_sep20`). UNPROVEN whether an allow rule beats the classifier in auto mode; the next deploy-bearing session finds out. If it is still denied, say so at once and fall back to Dallas running the script. Still stop for his go before every deploy.
 
+**PROVEN Sep 20 2026, later session:** the allow rules do NOT beat the classifier. A no-argument run of `automation/deploy_rep_pages.sh` (prints usage, deploys nothing) was denied with reason "Blind Apply". In auto mode Dallas runs the three lines himself; say so at the start of the thread.
+
 Related: [[wrangler-pages-force-delegation-trap]], [[shared-links-gate-sep20]].
