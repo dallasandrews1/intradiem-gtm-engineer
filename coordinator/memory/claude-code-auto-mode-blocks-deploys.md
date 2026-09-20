@@ -13,4 +13,6 @@ metadata:
 - Check at the START of a deploy-bearing thread whether deploys are permitted, so he is not told at the end.
 - Be exact about what THIS session did versus earlier ones; he reasonably reads "Claude" as one continuous worker.
 
+**Sep 20 2026 late:** the classifier also blocked this session from editing its own permission settings, even on Dallas's explicit ask, so he added the rules himself: `Bash(npx wrangler pages deploy:*)` and `Bash(automation/deploy_rep_pages.sh:*)` in the project's `.claude/settings.local.json` (backup `.bak_sep20`). UNPROVEN whether an allow rule beats the classifier in auto mode; the next deploy-bearing session finds out. If it is still denied, say so at once and fall back to Dallas running the script. Still stop for his go before every deploy.
+
 Related: [[wrangler-pages-force-delegation-trap]], [[shared-links-gate-sep20]].
