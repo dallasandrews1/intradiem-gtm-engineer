@@ -18,6 +18,7 @@ Dallas, Sep 20 2026, reviewing Keegan's index: every section on a seller page ha
 - An interactive tool stays only if it encodes a decision the rep would otherwise get wrong (the what-to-send picker stays because it says send nothing after a not-now); otherwise a plain table wins.
 - Never print live system state (campaign paused or running, replies so far) as static text on a seller page; it goes stale within days and reads as wrong. State belongs in the logs and the rundown.
 - A table column that repeats its group heading on every row is cut; keep a column only where the value varies.
+- One version of every page for everyone (Dallas, Sep 20 2026): leadership sees the same page the rep uses, never a frozen showcase copy. A single provenance line ("N people across N accounts, each checked as current <date>") is allowed at the foot because it is a freshness fact the rep can trust and it keeps figures quoted to leadership verifiable. Because leadership holds the links, date-driven pages must be kept current through their last dated move.
 - Applies to new AE, AM and partner pages from here on. Showcase framing still belongs on leadership-facing work, see [[deliverable-strength-framing]].
 
 Related: [[keegan-package-refresh-sep20]], [[feedback-severity-one-fact-not-explainer]], [[department-shelves-sep18]].

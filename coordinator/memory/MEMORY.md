@@ -682,3 +682,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [lemlist Salesforce sync overwrites lead fixes](lemlist-salesforce-sync-overwrites-lead-fixes.md) — leads linked to a Salesforce Contact revert within a day; fix Salesforce first; Blitz - Citizens left paused Sep 20
 - [Naveen OKR Tool List Sep20](naveen-okr-tool-list-sep20.md) — Naveen's three GTM objectives in the HR tool, tool calls Jul-Sep 2Q2026; Dallas's two-period set live at dallas-okrs.pages.dev, not yet sent or entered
 - [Seller pages: no fluff](feedback-seller-pages-no-fluff.md) — lead with the rep's next dated move; no counters, slogans, self-description or CRM echoed back; a tool stays only if it encodes a decision
+- [Rep index pages Sep20](rep-index-pages-sep20.md) — one index shape for every rep; hostname corrected: account-plans.pages.dev is NOT ours, target is intradiem-accounts.pages.dev, phase one additive
+- [Shared links gate Sep20](shared-links-gate-sep20.md) — 65 sent URLs registered; check_shared_links.py gates every deploy; a --force deploy drops any live page the folder lacks
+- [Wrangler pages --force trap](wrangler-pages-force-delegation-trap.md) — without --force an agent's pages create/deploy becomes a Workers deploy from the cwd; read the hostname back after create
