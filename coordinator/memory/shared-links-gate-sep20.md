@@ -16,4 +16,6 @@ metadata:
 - The deploy folder is the site. Anything live that is not in the folder disappears on the next deploy; before deploying, `pages_live_diff.py` shows what differs, but it cannot see a live page the folder lacks. The registry gate is what catches that.
 - Add every newly sent link to the registry the moment it is sent.
 
+**State at close, Sep 20 2026:** 44 holder entries, 97 URLs (32 are the new intradiem-accounts equivalents under a "Nobody yet" holder), gate 97 of 97 after all three deploys. `automation/check_holder_versions.py "<name>"` answers the sharper question for one person: are their links intact AND serving the newest staged bytes, fetched plain as well as cache-busted. Dallas asked exactly this about Jen Lee's email; run it after any deploy that touches a page leadership holds.
+
 Related: [[rep-index-pages-sep20]], [[wrangler-pages-force-delegation-trap]], [[feedback-seller-pages-no-fluff]].
