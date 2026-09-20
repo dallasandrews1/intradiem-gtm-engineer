@@ -676,3 +676,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Product Roadmap All-Hands Sep18](product-roadmap-allhands-sep18.md) — QO/BOO beta Q4 2026 and GA Q1 2027, EH Q1 2027, Capability Cloud TBD; where Dallas's work maps onto Product's needle
 - [AE Selfserve Project Sep18](ae-selfserve-project-sep18.md) — Sep 18 2026: AE Account Desk Claude project staged (three locked skills over Keegan's library); not uploaded; refresh order deploy, export, check, upload
 - [Sales Kits Roadmap Refresh Sep18](sales-kits-roadmap-refresh-sep18.md) — QO, BOO refreshed and new EH kit, all three LIVE (eh-sales-kit.pages.dev is new), repo uncommitted; two-source rule; BOO beta date conflict in the deck
+- [Keegan Package Refresh Sep20](keegan-package-refresh-sep20.md) — index, rooms and self-serve libraries now carry the execution kit and Product roadmap fit; DEPLOYED Sep 20; 15 blitz invites still stuck, Citizens lead rows still show adt.com and voya.com, fix rows before invites clear
+- [lemlist open tracking pending IT](lemlist-open-tracking-domain-pending-it.md) — tracking domain not configured, 0 opens is a tracking gap not a signal; read replies, tasks and step progress
+- [15Five week 11 Sep12-18](fifteenfive-week11-sep12-18.md) — all-hands week, w8 live on fifteenfive-backfill.pages.dev, 10 lines, not yet submitted
+- [lemlist Salesforce sync overwrites lead fixes](lemlist-salesforce-sync-overwrites-lead-fixes.md) — leads linked to a Salesforce Contact revert within a day; fix Salesforce first; Blitz - Citizens left paused Sep 20
