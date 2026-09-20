@@ -680,4 +680,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [lemlist open tracking pending IT](lemlist-open-tracking-domain-pending-it.md) — tracking domain not configured, 0 opens is a tracking gap not a signal; read replies, tasks and step progress
 - [15Five week 11 Sep12-18](fifteenfive-week11-sep12-18.md) — all-hands week, w8 live on fifteenfive-backfill.pages.dev, 10 lines, not yet submitted
 - [lemlist Salesforce sync overwrites lead fixes](lemlist-salesforce-sync-overwrites-lead-fixes.md) — leads linked to a Salesforce Contact revert within a day; fix Salesforce first; Blitz - Citizens left paused Sep 20
-- [Naveen OKR Tool List Sep20](naveen-okr-tool-list-sep20.md) — Naveen's three GTM objectives in the HR tool, tool calls Jul-Sep 2Q2026; Dallas's mirrored set proposed, not yet ratified
+- [Naveen OKR Tool List Sep20](naveen-okr-tool-list-sep20.md) — Naveen's three GTM objectives in the HR tool, tool calls Jul-Sep 2Q2026; Dallas's two-period set live at dallas-okrs.pages.dev, not yet sent or entered
+- [Seller pages: no fluff](feedback-seller-pages-no-fluff.md) — lead with the rep's next dated move; no counters, slogans, self-description or CRM echoed back; a tool stays only if it encodes a decision
