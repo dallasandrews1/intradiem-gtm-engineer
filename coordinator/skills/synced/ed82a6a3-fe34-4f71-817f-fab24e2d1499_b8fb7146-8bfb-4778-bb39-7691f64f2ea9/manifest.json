@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790018217818,
+  "lastUpdated": 1790019456935,
   "skills": [
     {
       "skillId": "import-memory",
@@ -161,8 +161,9 @@
       "skillId": "skill_011KAPTJwRr2e8MtqxEqzdKV",
       "name": "strategic-premortem",
       "description": "Combined Pre-Mortem and Red Team adversarial review skill. Three phases: (1) Pre-Mortem assumes the plan failed, writes a post-mortem with named people, named decisions, and top 3 failure modes ranked by probability. (2) Red Team attacks the current plan's defenses against each failure mode. (3) Verdict delivers one uncontrollable risk, one action item, and a confidence rating. Trigger on: pre-mortem, red team, stress test, what could go wrong, devil's advocate, attack this plan, destroy this idea, what am I missing, poke holes, sanity check, what's the risk, run the gauntlet. Also trigger proactively before irreversible moves — proposals to leadership, timeline commitments, team-wide launches, or public commitments. Not for routine execution, copy generation, or tactical requests — strategic inflection points only.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:10.958362Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:10.958250Z",
+      "backingPluginId": "plugin_01X1TMaPJ4eHmXy8dYgWwd5s"
     },
     {
       "skillId": "skill_019oucpU3NxcH2wnkXyW9tRw",
