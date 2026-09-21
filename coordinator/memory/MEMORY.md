@@ -699,3 +699,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Salesforce freshness gate Sep21](../../../../coordinator/memory/sf-freshness-gate-sep21.md) — builders fail closed on an unread pre-pipeline record; report-email feed staged, Outlook leg unproven; Keegan and Alex builds now stop until Vanguard and PNC records are read
+- [Call Capture Evaluation Sep21](call-capture-evaluation-sep21.md) — Sep 21 2026: Intradiem owns no call-capture tool (Otter is personal); Gong vs mid-tier plus own routing; live in-call assist wanted; Clay SF export costs actions not credits
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Naveen GTM physics + Stars relaunch Sep21](naveen-gtm-physics-stars-relaunch-sep21.md) — Clay co-founder talk, three laws; Naveen wants them applied to the Stars relaunch first week of Oct; Sep 22 call
