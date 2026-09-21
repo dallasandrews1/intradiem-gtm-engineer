@@ -715,3 +715,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Partner deliver-first Sep21](partner-deliver-first-sep21.md) — 12 Minute Meeting crossings get a brief and one-pagers before any post; Fidelity staged not deployed, held on an unread Salesforce record; unattended build blocked
 - [Partner channel is not for AEs](feedback-partner-channel-is-not-for-aes.md) — partner jobs speak to Frank and the partner seller; name the AE on a line, never route, mention or invite AEs
 - [Genna ICP titles package Sep21](genna-icp-titles-package-sep21.md) — every motion's accounts, titles, removals in one build.py; PDF + filter-ready xlsx staged in Deliverables, not yet sent
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Greenlight bespoke agent workaround Sep21](greenlight-bespoke-agent-workaround-sep21.md) — Jason Dowden offered @-mentionable agents; route to full Salesforce Notes via a Slack thread Claude reads; ask openly, nothing built
+- [Pipeline Council Oct 8 doubling ask](pipeline-council-oct8-doubling-ask.md) — John wants each channel to double meetings, five-field answer due Oct 8; ten bets drafted in motions/pipeline_council, not yet sent to Naveen
