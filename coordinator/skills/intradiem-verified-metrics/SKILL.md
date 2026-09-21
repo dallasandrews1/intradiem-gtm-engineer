@@ -11,7 +11,9 @@ description: >
   our numbers," "is that verified," "what can I say about [customer]," "can I use their CTO
   number," "update proof points," "add a case study." Load proactively when output includes an
   Intradiem number or a customer's own usage figure, or when a new case study/deck is uploaded.
-  Never skip because you "remember" a number — always check.
+  Also governs the three claim lanes (Sep 21 2026): Intradiem and customer outcomes, public
+  prospect facts (CMS data, rulings, filings: primary source, as-of date, send-time re-check),
+  and modeled estimates (1:1, labeled). Never skip because you "remember" a number. Always check.
 ---
 
 # Intradiem Verified Metrics and Proof Points
@@ -38,6 +40,18 @@ contexts. Intradiem sells into regulated buyers (healthcare, insurance, financia
 so an unverified number in front of a prospect is a brand and legal risk, not just a
 credibility one. Customer-sourced value data (Greenlight/Zuar) adds a second risk class: a
 customer's own data leaving its lane is a customer-trust / data-use breach, governed below.
+
+## Claim lanes (adopted Sep 21 2026)
+
+One truth standard, three speeds. Decide the lane before anything else; the tiers below apply inside Lane 1.
+
+- **Lane 1, Intradiem and customer outcome claims.** Any Intradiem statistic, ROI, customer result, customer name or Greenlight/Zuar figure. Governed by the Value Repository, the approval tiers and marketing's clearance list exactly as before. This is where the legal and customer-trust exposure sits, so nothing here loosens.
+- **Lane 2, public facts about a prospect or market.** CMS Star Ratings data, a court ruling, an agency memo, a filing, an earnings statement. Self-serve: no approval step and no Value Repository entry required. Three conditions, all mandatory: (1) a PRIMARY source (the agency file or memo itself; analyst and trade press are secondary and only support), (2) an as-of date carried with the fact, (3) a re-check against the primary source at send time. Keep the humility clause on anything about the prospect's own numbers: they know their exact picture better than we do.
+- **Lane 3, our own modeled estimates.** Forgone QBP, addressable percent, strike-engine ROI, any number we computed. 1:1 only, always labeled an estimate with its basis, never a headline number, never blended with a Lane 1 figure, never presented as Intradiem-verified.
+
+Anything that fits no lane is `[UNVERIFIED]`.
+
+Why Lane 2 has a freshness rule instead of an approval step: on Sep 21 2026 three confident Stars claims turned out stale, and none would have been caught by approval. CMS re-issued the 2026 Summary Ratings on Jul 22 2026 (34 of 307 universe contracts changed, 21 now at or above 4.0), and its Jun 17 2026 memo pulled complaints, appeals, members leaving, TTY and all Part D measures out of 2027 QBP ratings. A public fact that was true when filed can be wrong at send time.
 
 ## Data sources
 
@@ -83,6 +97,9 @@ Source decomposition of CTO: Coaching, Efficiency, Handle Time, UPT Alerts, UPT 
 7. **A customer's own Greenlight/Zuar figure defaults to CV-INTERNAL and stays out of prospect copy** until promoted to CV-1:1. A CV-1:1 figure goes ONLY into outreach directed back to that same customer's own buyers.
 8. **Never attach a unit ($ / hours / %) to a CTO figure** until the measure definition is confirmed in Greenlight. CTO is "Cost Taken Out" (cost savings), but do not publish it as a hard $ figure until the raw magnitude's unit (true dollars vs. an internal cost index) is confirmed. The all-time CTO rollup does NOT reconcile to the $529.6M company savings figure (different measure). Never sum the portal per-account CTO multiples into a portfolio "x."
 
+9. **Lane 2 facts carry a primary source and an as-of date, and are re-checked at send time.** If the source has been re-issued or superseded, the fact is re-pulled before it ships. Secondary coverage alone does not qualify a fact for Lane 2.
+10. **Lane 3 estimates are labeled as estimates with their basis** ("estimate from public CMS data") and stay 1:1. If the inputs are known stale (for example `stale_econ_carryforward`, or a pre-Clover `addressable_pct`), say so or leave the number out.
+
 ### Should
 1. Label industry benchmarks as benchmarks, never as Intradiem results.
 2. When several sources confirm a metric, cite the most recent and authoritative first (prefer the latest BusinessWire release or the Value Repository).
@@ -97,6 +114,8 @@ Source decomposition of CTO: Coaching, Efficiency, Handle Time, UPT Alerts, UPT 
 5. Never present the strike-engine's ROI assumptions as Intradiem-verified figures.
 6. **Never cite one customer's CTO/realized-value figure to a different account, blend CV figures across accounts, or make a CV figure public** — that is a customer-data breach, not just an unverified claim. Cross-account or public use requires promotion to CV-1:many (reference + marketing sign-off).
 7. Never frame a STALLED account (zero CTO on a live agent base) as a value/outcome story; it is a CS save signal.
+
+8. Never ship a Lane 2 fact on memory of an earlier pull, and never let a Lane 2 or Lane 3 item read as an Intradiem result. A public fact about a prospect proves we did the reading, not that Intradiem moved the number.
 
 ## New proof point ingestion workflow
 
@@ -130,3 +149,5 @@ When the same metric appears in multiple places, prefer in this order:
 3. intradiem.com (platform, success stories, bios)
 4. Greenlight/Zuar portal (internal customer usage — CV-tiered, never public without promotion)
 5. Analyst / third-party (industry context only, never as an Intradiem claim)
+
+Lane 2 facts sit outside this hierarchy: they cite the primary public source directly (the CMS file, the memo, the filing), with analyst and trade press as support only.
