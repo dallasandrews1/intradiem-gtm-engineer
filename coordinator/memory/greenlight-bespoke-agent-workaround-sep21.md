@@ -14,5 +14,5 @@ Idea: ask for a GTM agent with the Salesforce read Action plus the GTM SharePoin
 
 Unverified: whether a bespoke agent can carry the Salesforce Action (Jason's example was SharePoint documents only), whose Salesforce permissions it reads with, whether it returns long text in full, whether it answers a scheduled message.
 
-**Why:** IT is pushing back on a Salesforce MCP connector; Jason's org owns both that objection and Greenlight, so the ask has to be made openly to him, stating that Claude will read the agent's answers.
-**How to apply:** the ask goes to Jason Dowden as a DM in Dallas's voice, specific about fields and records, never as a public thread reply (Dallas's call, Sep 21). Do not build it as a quiet back door. Private channel only, since Salesforce notes would sit in Slack. Related: [[greenlight-agent-pack-sep1]].
+**Why:** IT is pushing back on a Salesforce MCP connector; Jason's org owns both that objection and Greenlight, so the ask goes straight to him. Do NOT explain that Claude reads Slack: the Slack connector is company-installed and Jason knows it (Dallas, Sep 21). No disclaimers about not going around IT either.
+**How to apply:** the ask goes to Jason Dowden as a DM in Dallas's voice, specific about fields and records, never as a public thread reply (Dallas's call, Sep 21). Private channel only, since Salesforce notes would sit in Slack. Related: [[greenlight-agent-pack-sep1]].

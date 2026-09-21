@@ -15,3 +15,6 @@ Draft: `motions/pipeline_council/Council_Oct8_Doubling_Bets_Sep21.md` in the mai
 **Why:** this is the first council where real budget decisions get made; Naveen is the channel owner and wants ideas, not a finished slide ([[naveen-builds-his-own-slides]], [[naveen-facing-comms-rules]]).
 
 **How to apply:** every meeting forecast in it is a Lane 3 modeled estimate, keep it labeled. Not yet sent to Naveen as of Sep 21. Also seen Sep 21: campaign_scorecard.py REST export errored on all 40 campaigns (zeros are a broken read; the connector relay still worked).
+
+**Sep 21 evening, first moves:** heat list alert hygiene fixed (review-flagged war-room rows held, tool domains excluded; still dry run, flip only on Dallas's explicit ask and Nate's ok); scorecard re-read gives 1,897 loaded / 190 launched / 1,707 waiting, drain 27 and 63 days; stamp plan refreshed (1,237 rows); off-cycle alumni watch found nothing because `Keegan_Alumni_264.csv` is still empty. Reply to Naveen drafted at `~/Desktop/Intradiem Deliverables/Pipeline Council Reply to Naveen Sep21.txt`, not sent. The M365 connector has no Mail.ReadWrite consent, so Outlook drafts can't be created from Claude; hand Dallas paste-ready text instead.
+
