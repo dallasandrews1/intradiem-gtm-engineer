@@ -712,3 +712,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Stars re-cut staged Sep21](stars-recut-staged-sep21.md) — campaigns paused, 13 of 85 leads hold, copy + measure_read + two-part Clay sheet staged; E1 prompt's live Clay home not found
+- [Partner deliver-first Sep21](partner-deliver-first-sep21.md) — 12 Minute Meeting crossings get a brief and one-pagers before any post; Fidelity staged not deployed, held on an unread Salesforce record; unattended build blocked
