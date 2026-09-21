@@ -688,7 +688,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Auto mode blocks deploys](claude-code-auto-mode-blocks-deploys.md) — the permission classifier denies wrangler deploys in auto mode; hand over deploy_rep_pages.sh or get a Bash rule first, check at thread start
 - [Alex record sheets next](alex-record-sheets-next-sep20.md) — build a record sheet per account now (lead with conflicts and blanks); account-plan-fields waits on the Mary Ann huddle; briefs only when a door opens
 - [Rep word is the truth](feedback-rep-word-is-the-truth.md) — what an AM, AE or partner says about an account is fact; a system that disagrees gets corrected, never the rep
-- [Partner event poster Sep20](partner-event-poster-sep20.md) — event-driven #gtm-partner-briefs poster for Frank, dry run, hooked to war room + alumni watch; one real event in 30 days until the war room sweeps his accounts
+- [Partner event poster Sep20](partner-event-poster-sep20.md) — LIVE Sep 21, 3 posts out, cap spent to Sep 28; Naveen and Haresh joined the channel Sep 20, so posts are leadership-visible
 
 ## Swept from -Users-dallasandrews on 2026-09-20
 - [One-pager Next block by department Sep20](../../../../coordinator/memory/onepager-next-block-by-department-sep20.md) — 12/40 ladder is partner-only; AE and AM pages swap it via shelf.with_next; rooms, plans.py and AE skills still carry it
