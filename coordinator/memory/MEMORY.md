@@ -704,3 +704,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Naveen GTM physics + Stars relaunch Sep21](naveen-gtm-physics-stars-relaunch-sep21.md) — Clay co-founder talk, three laws; Naveen wants them applied to the Stars relaunch first week of Oct; Sep 22 call
 - [HC Stars + QO campaign prep Sep21](hc-stars-qo-campaign-prep-sep21.md) — Sep 23 Cheryl meeting; hospital star rating has no queue measure, so plans and systems need two tracks; page + private brief in motions/star_ratings/hc_qo_campaign_sep23
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Stars refresh rehearsal Sep21](stars-refresh-rehearsal-sep21.md) — script wired; CMS re-issued 2026 ratings, 21 universe contracts now at or above 4.0; lead variables lack a measure read
+- [Clover ruling + Stars measure thesis Sep21](clover-ruling-stars-measure-thesis-sep21.md) — court plus CMS recalculation pulled ops measures out of 2027 QBP; reconciliation tab and addressable_pct are pre-Clover; October measure set unknown
+- [Value Repository gate relax proposal Sep21](value-repository-gate-relax-proposal-sep21.md) — Dallas finds the rules too strict; three-lane split proposed, not adopted, existing gate stands until he rules
