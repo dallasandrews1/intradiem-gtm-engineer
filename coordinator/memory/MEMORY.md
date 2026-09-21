@@ -713,3 +713,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Stars re-cut staged Sep21](stars-recut-staged-sep21.md) — campaigns paused, 13 of 85 leads hold, copy + measure_read + two-part Clay sheet staged; E1 prompt's live Clay home not found
 - [Partner deliver-first Sep21](partner-deliver-first-sep21.md) — 12 Minute Meeting crossings get a brief and one-pagers before any post; Fidelity staged not deployed, held on an unread Salesforce record; unattended build blocked
+- [Partner channel is not for AEs](feedback-partner-channel-is-not-for-aes.md) — partner jobs speak to Frank and the partner seller; name the AE on a line, never route, mention or invite AEs
+- [Genna ICP titles package Sep21](genna-icp-titles-package-sep21.md) — every motion's accounts, titles, removals in one build.py; PDF + filter-ready xlsx staged in Deliverables, not yet sent

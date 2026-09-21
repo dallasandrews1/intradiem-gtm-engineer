@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1789602220218,
+  "lastUpdated": 1790018217818,
   "skills": [
     {
       "skillId": "import-memory",
@@ -350,8 +350,9 @@
       "skillId": "skill_011HQ4Z2KxsfeLcEiuCBybN7",
       "name": "league-verified-metrics",
       "description": "League's source of truth for verified metrics, proof points, and customer value stories. Enforces citation discipline and 1:1/1:many approval-tier compliance. Primary source: League Value Repository Q1 2026 (updated quarterly). Trigger when citing League stats, ROI numbers, proof points, engagement metrics, clinical outcomes, financial impact, or customer results. Also trigger when building outreach, pitch prep, webinar content, marketing collateral, QBR materials, or any customer-facing content with League data. Trigger on \"what are our numbers,\" \"where did that stat come from,\" \"is that verified,\" \"what can I say about [customer],\" \"update proof points,\" or \"add case study data.\" Load proactively when generating content that includes a League number or when a new case study or pitch deck is uploaded. Never skip because you \"remember\" a number — always check.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:49.920695Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:49.920562Z",
+      "backingPluginId": "plugin_013y49PAHrcW1PvVoJ3SzsNc"
     },
     {
       "skillId": "skill_01PMPqyDgkQtPwyotAKB5gu6",
