@@ -7,7 +7,9 @@ metadata:
 
 **Trigger:** Mary Ann Chandler said in person at all-hands (so not in Otter or Slack) that the account work has great data and ideas but no plan for executing on them. Inger's index had one plan out of twelve accounts and no sign of whether any move happened.
 
-**Built Sep 20 2026, STAGED not deployed:**
+**Live check Sep 21 2026:** deployed. save-rooms.pages.dev/rogers/inger/ returns 200 with the Rogers Communications Save Room, and intradiem-accounts.pages.dev/inger/ links Rogers. The "staged" line below is history.
+
+**Built Sep 20 2026 (staged at the time):**
 - `motions/churn_risk_save_plan/apply_tracker_state.py`: done / slipped per move from the newest real PMO Progress tracker export, plus a hand-recorded `word` block in `data/move_state_<slug>.json` that wins over the tracker ([[feedback-rep-word-is-the-truth]]). No row and no word means no state; a passed date alone never marks a colleague's move slipped. Our own import drafts are never read as a record.
 - Cleveland Clinic room and the rep index render the state; slipped moves stay in the next-move block until done.
 - Rogers save room: `build_comms_plan_rogers.py`, `build_save_room_rogers.py`, facts in `data/rogers_fact_sheet.md`. Redacted AM-room shape ([[feedback-no-draft-copy-to-ams]]). Five people checked current, 0 credits.

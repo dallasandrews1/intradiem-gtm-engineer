@@ -19,5 +19,7 @@ Trap found: check_plans_site.py compares deploy-save-rooms and deploy-backoffice
 
 Paste-block trap: interactive zsh does not treat # lines as comments, and an apostrophe in one ("Frank's") hangs the shell at quote>. Terminal blocks for Dallas carry no comments and no apostrophes; chain with &&.
 
+Invented-date catch, Sep 21: the first rebuild dated Gary's second meeting Oct 5 and the conversion Oct 12 with no source; Dallas caught it. Removed and redeployed the same day. The only sourced forward date is the Salesforce next action, Sep 25. A customer-controlled event (their meeting, their introduction) never gets a placed date on a rep page; it reads "on a date they give". Rep-owned working dates are fine but say so when asked.
+
 **Why:** a package built from public research and a Sep 1 export went stale against the rep's own Salesforce notes within days.
 **How to apply:** before building or refreshing any rep package, read the rep's live pre-pipeline or opportunity record notes first; the rep's record sets the plan's starting stage ([[feedback-rep-word-is-the-truth]]).

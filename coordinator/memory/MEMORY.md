@@ -680,7 +680,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [lemlist open tracking pending IT](lemlist-open-tracking-domain-pending-it.md) — tracking domain not configured, 0 opens is a tracking gap not a signal; read replies, tasks and step progress
 - [15Five week 11 Sep12-18](fifteenfive-week11-sep12-18.md) — all-hands week, w8 live on fifteenfive-backfill.pages.dev, 10 lines, not yet submitted
 - [lemlist Salesforce sync overwrites lead fixes](lemlist-salesforce-sync-overwrites-lead-fixes.md) — leads linked to a Salesforce Contact revert within a day; fix Salesforce first; Blitz - Citizens left paused Sep 20
-- [Naveen OKR Tool List Sep20](naveen-okr-tool-list-sep20.md) — Naveen's three GTM objectives in the HR tool, tool calls Jul-Sep 2Q2026; Dallas's two-period set live at dallas-okrs.pages.dev, not yet sent or entered
+- [Naveen OKR Tool List Sep20](naveen-okr-tool-list-sep20.md) — Naveen's three GTM objectives in the HR tool, tool calls Jul-Sep 2Q2026; Sep 21 Naveen ruled: write THREE of your own under his GTM Engineering parent; page at dallas-okrs.pages.dev still shows the old 5-objective set
 - [Seller pages: no fluff](feedback-seller-pages-no-fluff.md) — lead with the rep's next dated move; no counters, slogans, self-description or CRM echoed back; a tool stays only if it encodes a decision
 - [Rep index pages Sep20](rep-index-pages-sep20.md) — one index shape for every rep; hostname corrected: account-plans.pages.dev is NOT ours, target is intradiem-accounts.pages.dev, phase one additive
 - [Shared links gate Sep20](shared-links-gate-sep20.md) — 65 sent URLs registered; check_shared_links.py gates every deploy; a --force deploy drops any live page the folder lacks
@@ -696,3 +696,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Side quest productized offer thinking Sep20](side-quest-productized-offer-thinking-sep20.md) — if Joey and Kathryn aim at a white-glove all-AI-tools offering: closed-loop adoption orchestration, charter deliverables map 1:1, Greenlight export by mid-Oct is the critical path
 - [Product all-hands deck design read Sep20](product-allhands-deck-design-read-sep20.md) — cinematic treatment for the exec presentation only, working pages stay calm; their deck is Open Sans + lime, not the Jul 30 kit
 - [Inger execution state + Rogers room Sep20](inger-execution-state-rogers-sep20.md) — Mary Ann all-hands concern; done/slipped feed, Rogers save room, shelf-only accounts off; staged; PMO export has no Cleveland Clinic rows
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Salesforce freshness gate Sep21](../../../../coordinator/memory/sf-freshness-gate-sep21.md) — builders fail closed on an unread pre-pipeline record; report-email feed staged, Outlook leg unproven; Keegan and Alex builds now stop until Vanguard and PNC records are read

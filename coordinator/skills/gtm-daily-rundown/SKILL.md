@@ -43,6 +43,8 @@ Dallas iterates fast, so he wants one consolidated morning DM that tells him wha
 
 20. `automation/logs/partner-events-<today-or-most-recent>.md` (partner event poster, event-driven, rides the war room and alumni watch runs, built Sep 20 2026, DRY RUN until `live` is true in `automation/config/partner_events.json`): what changed on Frank Ciccone's registered and pilot accounts and what was posted, or would post, in #gtm-partner-briefs. Carry its 'Rundown block' line under motion movement only when it is non-zero (a post went out or would, something is HELD, or a near-name CHECK needs Dallas's eye); a quiet run gets no line. A HELD aging line means the pre-pipeline export is stale and a fresh export is the unblock. Never carry evt ids into the DM.
 
+21. `automation/logs/sf-prepipeline-watch-<today-or-most-recent>.md` (sf-report-intake plus the Salesforce freshness gate, weekdays 7:15 once its plist is loaded, staged Sep 21 2026, read-only, never rebuilds): carry the lines under its newest run's 'Rundown block' verbatim in GATES AND BLOCKERS when any package is STALE or MISSING (a rep page that predates its Salesforce record is a blocker on that rep's next send), otherwise one line in MOTION MOVEMENT. If the log carries 'Intake problems', say so in one line. If the newest log is more than 3 business days old, say the Salesforce watch has not run.
+
 9. `automation/logs/daily-rundown-<yesterday-or-most-recent>.md`: the prior brief, to compute what changed since. If none exists, this is the first run; skip deltas and say so.
 
 ## Unattended ground rules (for scheduled runs)
