@@ -18,4 +18,6 @@ metadata:
 
 **State at close, Sep 20 2026:** 44 holder entries, 97 URLs (32 are the new intradiem-accounts equivalents under a "Nobody yet" holder), gate 97 of 97 after all three deploys. `automation/check_holder_versions.py "<name>"` answers the sharper question for one person: are their links intact AND serving the newest staged bytes, fetched plain as well as cache-busted. Dallas asked exactly this about Jen Lee's email; run it after any deploy that touches a page leadership holds.
 
+**Sep 20 2026, record sheets deploy:** 45 holder entries, 109 URLs, gate 109 of 109. Trap: `pages_live_diff.py --verify` with no file list checks nothing and exits 0; the whole-site proof is `--expect` with an empty list.
+
 Related: [[rep-index-pages-sep20]], [[wrangler-pages-force-delegation-trap]], [[feedback-seller-pages-no-fluff]].

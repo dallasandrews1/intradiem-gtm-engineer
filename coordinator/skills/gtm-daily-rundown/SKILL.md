@@ -41,6 +41,8 @@ Dallas iterates fast, so he wants one consolidated morning DM that tells him wha
 
 19. `automation/logs/receipts-refresh-<most-recent>.md` (receipts-refresh, Mondays 7:25 once its plist is loaded, staged Sep 13 2026, deterministic, never writes the ledger): the proposed receipts-ledger block. On Mondays carry ONE line under credits and receipts: credits logged since the ledger's last date, replies and meetings in the proposed block, the count of unconfirmed candidates, and the exact approve phrase (`APPROVE receipts-<date>`) so Dallas can reply in the thread. When the thread listener records that APPROVE, the block is pasted into credit_pipeline_receipts.md by hand or by a session on Dallas's word, never by the job. Never quote the block in the DM. If the file is older than 8 days, say the refresh has not run this week.
 
+20. `automation/logs/partner-events-<today-or-most-recent>.md` (partner event poster, event-driven, rides the war room and alumni watch runs, built Sep 20 2026, DRY RUN until `live` is true in `automation/config/partner_events.json`): what changed on Frank Ciccone's registered and pilot accounts and what was posted, or would post, in #gtm-partner-briefs. Carry its 'Rundown block' line under motion movement only when it is non-zero (a post went out or would, something is HELD, or a near-name CHECK needs Dallas's eye); a quiet run gets no line. A HELD aging line means the pre-pipeline export is stale and a fresh export is the unblock. Never carry evt ids into the DM.
+
 9. `automation/logs/daily-rundown-<yesterday-or-most-recent>.md`: the prior brief, to compute what changed since. If none exists, this is the first run; skip deltas and say so.
 
 ## Unattended ground rules (for scheduled runs)
