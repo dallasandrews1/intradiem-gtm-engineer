@@ -692,4 +692,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-20
 - [One-pager Next block by department Sep20](../../../../coordinator/memory/onepager-next-block-by-department-sep20.md) — 12/40 ladder is partner-only; AE and AM pages swap it via shelf.with_next; rooms, plans.py and AE skills still carry it
+- [Side quest Track B build Sep20](side-quest-track-b-build-sep20.md) — adapters (Greenlight + M365 Copilot), delivery contract spec, CSA intake page, offer sheet; sample data, 89 checks green, not deployed, uncommitted
 - [Side quest productized offer thinking Sep20](side-quest-productized-offer-thinking-sep20.md) — if Joey and Kathryn aim at a white-glove all-AI-tools offering: closed-loop adoption orchestration, charter deliverables map 1:1, Greenlight export by mid-Oct is the critical path
