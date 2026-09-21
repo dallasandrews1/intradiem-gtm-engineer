@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 6551a0aa-0fba-459f-903b-11900c01b9ed
-  modified: 2026-09-21T21:08:30.093Z
+  modified: 2026-09-21T23:30:59.679Z
 ---
 
 Sep 21 2026, #ai (C0A3NPDCE3G, ts 1790022610.053799): Jason Dowden (SVP Technology) said they will build "bespoke" Greenlight agents on request, e.g. a team SharePoint site pulled in as knowledge, added to any channel and called with @GreenlightAgentName. Greenlight also shows Internal Search, Web Search, M365 MCP and Zoom MCP toggles. Greenlight's Slack search reaches back only 60 days (Iktaer asked; Jason Jones to answer).
@@ -25,3 +25,4 @@ TEST RESULT Sep 21 2026 17:49 CDT: the plain Greenlight app DM in Slack (DM chan
 OPEN GAP: the Slack connector returns Greenlight's reply with EMPTY text (read_channel, read_thread and search all show a blank body, though search matched its keywords, so Slack indexes it). Greenlight posts blocks with no plain-text fallback. Until that changes Claude can see that Greenlight replied but not what it said, so Dallas pastes the answer in. Candidate fixes: ask Jason Jones to set the top-level text field on Greenlight's Slack posts, or have Greenlight write the answer to a canvas or file the connector can read (untested).
 Sep 21 later: Dallas confirmed the Greenlight Slack app cannot create a canvas or attach a file. Remaining routes to a hands-free read: Jason Jones sets the text field on Greenlight's Slack posts, or Greenlight desktop emails the result through its M365 MCP (untested, write ability unknown).
 Dallas's standard (Sep 21): the Salesforce notes read has to be autonomous; paste-in is not an acceptable end state, so the text-field ask to Jason Jones is the path. Drafts to the Jasons: problem, ask, example, nothing else.
+ASK SENT Sep 21 2026 18:03 CDT: Dallas DM'd Jason Dowden (DM D0BH1531F98), not Jason Jones, asking for a text field alongside Greenlight's blocks; no example included (example if asked: reply ts 1790030988.640679 in DM D0C3J5RQW8H). Jason replied 18:20 CDT "I'm not sure I'm following." The first ask was too shorthand; clarifying reply drafted same evening (what he sees vs what the API returns, blocks vs text, pass text on chat.postMessage, 5:49pm example). Lesson: asks to Jason Dowden need the plain picture first, API terms second. Separately unanswered: Dallas's 9:11 AM DM to Jason Jones asking whether a Salesforce or Zuar MCP connection for Claude was ever decided. When the fix ships, prove the loop end to end on the Assurant record: post prompt to the Greenlight DM, read the reply, mark the record read.
