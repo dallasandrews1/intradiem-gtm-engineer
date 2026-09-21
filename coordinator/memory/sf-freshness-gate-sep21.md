@@ -18,5 +18,7 @@ Built Sep 21 2026 after [[frank-assurant-package-sep16]] was found 15 days behin
 - Dallas's standard: he will not be the fallback memory. Anything he must do by hand has to be prompted by the rundown with the exact record and one action, never left to him to remember.
 - Hands-free routes, not built: (1) a record-triggered Flow emailing full Notes on change, a Salesforce admin ask and not a connector; (2) Frank's meeting-notes skill also posting to #gtm-partner-briefs, where Slack already reads.
 
+- Sep 21 2026: Dallas set up the report subscription himself (report type existed). First email due the next weekday 6:00 AM; plist stays unloaded until that email is ingested with a matching row count. Flow ask goes to Genna Barrett-Moeller directly (Dallas: she has Salesforce admin rights; Hilary Powers is the named admin and Genna can route to her). Decision: ask for the one build, NOT for Manage Flow access; that permission is org-wide and would read as a power ask beside the connector pushback. Revisit access only after several flows and a track record. Dallas likely lacks Manage Flow (he lacked admin rights for the lemlist ECA on Aug 31).
+
 **Why:** the data was already in the repo; the miss was that no builder had to look at it.
 **How to apply:** any new rep package builder calls `sf_require("<rep>/<account>")` and registers the package, with rec_key null and a reason when no pre-pipeline record exists.
