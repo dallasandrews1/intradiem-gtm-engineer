@@ -719,3 +719,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Greenlight bespoke agent workaround Sep21](greenlight-bespoke-agent-workaround-sep21.md) — Jason Dowden offered @-mentionable agents; route to full Salesforce Notes via a Slack thread Claude reads; ask openly, nothing built
 - [Pipeline Council Oct 8 doubling ask](pipeline-council-oct8-doubling-ask.md) — John wants each channel to double meetings, five-field answer due Oct 8; ten bets drafted in motions/pipeline_council, not yet sent to Naveen
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Heat Lane A Clay workflow unconnected](heat-lane-a-clay-workflow-unconnected.md) — Sep 21 live attempt posted nothing; Slack and lemlist nodes have no account connected, never published; config back to dry run
+- [Plain section titles](feedback-plain-section-titles.md) — headings and bullet lead-ins in plain literal words, never coined labels or internal shorthand
