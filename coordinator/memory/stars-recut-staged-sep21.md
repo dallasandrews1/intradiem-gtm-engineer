@@ -1,6 +1,6 @@
 ---
 name: stars-recut-staged-sep21
-description: Sep 21 2026 Stars re-cut APPLIED in lemlist (29 steps, 72 leads' variables), campaigns still PAUSED; before any restart pull 13 hold leads, Nate reads the page; Clay Polar sheet Part A still open
+description: Stars re-cut APPLIED Sep 21 (29 steps, 72 leads' variables) and 13 hold leads PULLED Sep 22, campaigns still PAUSED; before restart Nate reads the page, stray steps, Lane 2 re-check; Clay Polar Part A open
 metadata:
   type: project
 ---
@@ -19,4 +19,4 @@ Staged, nothing written to lemlist or Clay: `motions/star_ratings/Stars_Copy_Rec
 
 **APPLIED Sep 21 2026 on Dallas's explicit approval.** Variables: 72 of 72 leads read back exact. Steps: 31 operations ok (29 steps plus variant B on the Finance and Quality Email 1s), 46 of 46 fields exact, step counts unchanged, nothing outside the plan moved, every campaign read "paused" throughout and stays paused. Main-session spot-check through lemlist's read-only preview confirmed the new copy live. Left alone: Resurrection "just tried you" variant B (dormant, winner A), the breakup emails, the two STRAY steps. Before any restart: pull the 13 hold leads by hand, Nate's read, Lane 2 send-time re-check. Working method that held up: lemlist writes go through subagents with fixed plan files because update_sequence_step returns the whole step list per call; preview_sequence_update with a dummy newMessage is a cheap read of a step's live text.
 
-**Verified Sep 22 2026 (live lemlist read):** all three campaigns still paused, re-cut copy live on every step (Email 1s open on the CMS recalculation insight, measure_read second, Sep 4 call pass in). The 13 hold leads are STILL loaded (Clay Thornton at Clover confirmed in Finance with old "half a star from the bonus" vm_hook, no measure_read); that pull is the first restart step. The release-week cohort shell (movement_read) is still HOLD; no record of the Sep 22 cadence call outcome in Slack or meeting capture, so ask Dallas what was decided before touching it.
+**Verified Sep 22 2026 (live lemlist read):** all three campaigns still paused, re-cut copy live on every step (Email 1s open on the CMS recalculation insight, measure_read second, Sep 4 call pass in). The 13 hold leads were PULLED later on Sep 22 on Dallas's approval (Finance 3, Quality 2, Resurrection 8; 72 remain: 10 / 27 / 35; all 13 read back 404; log automation/logs/stars-hold-pull-2026-09-22.md). The release-week cohort shell (movement_read) is still HOLD; no record of the Sep 22 cadence call outcome in Slack or meeting capture, so ask Dallas what was decided before touching it.
