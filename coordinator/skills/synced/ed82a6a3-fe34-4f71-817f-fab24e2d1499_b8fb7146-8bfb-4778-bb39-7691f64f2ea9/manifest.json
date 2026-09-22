@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790077804945,
+  "lastUpdated": 1790090261731,
   "skills": [
     {
       "skillId": "import-memory",
@@ -201,8 +201,9 @@
       "skillId": "skill_016WWQvHjt3S19Hhqf1HAMQL",
       "name": "intradiem-competitive-intel",
       "description": "Competitive displacement orchestrator for Intradiem. Identifies competitor mentions (Verint, NICE, Calabrio, Assembled, Playvox, in-house RPA/scripts, status quo) and generates counter-narrative briefs with wedge analysis, reframe positioning, and trap-setting talking points. Trigger immediately when a competitor is named in any call, email, or note; when an RFP mentions competing solutions; or when a prospect says they're \"evaluating options.\" Built for the GTM Engineer to turn competitor mentions into operational wedges for Sales.",
-      "source": "custom",
-      "updatedAt": "2026-06-21T19:30:15.292974Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-21T19:30:15.292878Z",
+      "backingPluginId": "plugin_019StpNRM81TuvALSvdxKseo"
     },
     {
       "skillId": "skill_015e3GPS6YVYnh9MDkFG4os8",
