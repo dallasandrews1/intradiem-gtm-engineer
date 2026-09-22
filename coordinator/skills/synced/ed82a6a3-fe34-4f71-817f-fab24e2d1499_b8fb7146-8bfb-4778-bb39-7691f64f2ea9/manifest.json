@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790100183290,
+  "lastUpdated": 1790115652461,
   "skills": [
     {
       "skillId": "import-memory",
@@ -309,8 +309,9 @@
       "skillId": "skill_017yoBJnPx9gtDqD3ie1gvxS",
       "name": "league-daily-war-room",
       "description": "Daily signal scan for all Tier-1 accounts. Filters for M&A, leadership changes, earnings, regulatory shifts in last 24-72 hours. Ranks by urgency (Priority 1-4). Generates Tenbit++ outreach sequences for triggered accounts.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:55.174749Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:55.174642Z",
+      "backingPluginId": "plugin_01W3XbGCfv5khB7MxL2saEaK"
     },
     {
       "skillId": "skill_01QLT8qf6xBdfk8JB7fnWK3F",
