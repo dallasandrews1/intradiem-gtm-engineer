@@ -1,19 +1,19 @@
 ---
 name: bo-lemlist-empty-branches-sep22
-description: "Sep 22 2026: all four BO Expansion lemlist campaigns have EMPTY accepted/fallback branches with steps stranded on the root after the condition; Net-New has no branching; Nathan has no call number set up in lemlist"
+description: "Sep 22 2026: BO lemlist campaigns rebuilt to the branch skeleton; Payer/Ins/BPO moved to v2 campaigns because lemlist locks sequences once leads enter; Payer lead copy still owed"
 metadata:
   node_type: memory
   type: project
   originSessionId: b37fd0f6-84a0-4d6b-86e3-38bb0786240b
-  modified: 2026-09-22T23:13:21.865Z
+  modified: 2026-09-22T23:38:00.104Z
 ---
 
-Found Sep 22 2026 when Dallas asked why BO campaigns are so thin and why Nathan's number isn't a caller option on call steps.
+Sep 22 2026. The four BO Expansion campaigns had empty accepted/fallback branches (steps stranded on the root after the condition); Net-New had no branching. Rebuilt from BO_Copy_v2_Sep9.md (Version C) on the Blitz / Stars Finance skeleton. Everything lives in `motions/back_office_expansion/bo_rebuild_sep22/` (spec.py = copy + tree, build.py = REST builder, dry run default, branches.json = every seq id, BO_Rebuild_Copy_Sep22.md = review doc). gtm-copy-reviewer fixes applied.
 
-**BO structure defect:** BO Expansion Healthcare Payer (cam_N92Tgg29ncHWnYAD9), Financial Services (cam_x8ehMHnWSjBr2CLQe), Insurance (cam_HCu4jiFB8oinz2s3F), BPO (cam_Fy287YF9X5fjPYBSo) are 7 steps each: E1, visit, invite, condition, then DM, E2, one call gated to owner_cleared names. Both condition branches have zero steps; the DM, E2 and call sit on the root after the condition (API build Sep 2, see [[bo-lemlist-shells-built-sep2]]). Net-New (cam_DNErdZPANvC2sqRCK) is 6 steps, no branching. Comparison: Stars, Blitz and DWO campaigns run 20 to 33 steps, 5 sequences, 5 to 8 calls. Insurance activity to Sep 22: 33 E1 sent, 31 visits, 25 invites queued, nothing past the condition.
+State: FS (cam_x8ehMHnWSjBr2CLQe) and Net-New (cam_DNErdZPANvC2sqRCK) rebuilt in place, paused. New drafts with root split on lead variable `bo_e1_sent` (TRUE = got Sep 2 Email 1, follow-on path opening "re: <old subject>"): Payer v2 cam_tysjbaAP4vrcCATCJ, Insurance v2 cam_wLsY4xhaBH3tMdgkc (33 leads, tagged), BPO v2 cam_oYTypEKTjbs6TDZrt (24 leads, tagged, unsubscribed Drex Fitzwater removed). Payer lead copy was classifier-denied: 67 leads still in the old Payer campaign, 32 need the tag, 1 bounced. Old Payer/Ins/BPO campaigns are dead; archive after the Payer copy. National Grid opener_line replaced (no wound opener).
 
-**Fix route:** fill the two empty branch sequences by API (email, phone, linkedinSend, manual steps are accepted in a child branch; voice notes are not, UI only), add a has-phone sub-branch like the Stars Finance skeleton, and skip_step_for_everyone the stranded root steps (can't delete: leads reviewed). Copy through first-draft engine, sharpener, gtm-copy-reviewer.
+lemlist mechanics learned: once any lead enters a campaign, NO sequence in it accepts new steps (pausing doesn't help), so rebuild in a new campaign; never-launched campaigns allow step DELETE and adds. REST calls need a User-Agent header or Cloudflare returns 403/1010. Manual linkedinVoiceNote steps ARE accepted inside a branch (only AI voice is refused). create_campaign_with_sequence reports "running" but the campaign is a draft. Lead variables: POST adds only when the key is new to the campaign; after that use PATCH.
 
-**Nathan's number:** lemlist exposes no phone-number API. Caller numbers are per user: a connected personal number must be verified by Nathan under his own login (Settings > Call settings > + Add a number > Connect phone numbers); a purchased number needs Dallas (admin) to add Nathan under "Used by". Call button also needs a phone on the lead.
+Nathan's number: he had zero call tasks ever and zero dialer calls. Caller numbers are chosen in the dialer by the logged-in user, not on the call step.
 
-Related: [[lemlist-nathan-invite-steps-manual-sep22]], [[nathan-lemlist-phone-backfill-sep22]]
+Related: [[lemlist-nathan-invite-steps-manual-sep22]], [[nathan-lemlist-phone-backfill-sep22]], [[lemlist-salesforce-sync-overwrites-lead-fixes]]
