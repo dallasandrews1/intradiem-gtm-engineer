@@ -735,3 +735,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Stars relaunch mined lines Sep22](stars-relaunch-mined-lines-sep22.md) — 8 of 21 net-new parents have a public leadership line, none weld call center to bonus; three-part sequence staged, not loaded
 - [Mem0 quota exhausted Sep22](mem0-search-quota-exhausted-sep22.md) — mem0 search and add fail on quota until Oct 1 2026; file memory is the source, skip the mem0 calls
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Deliver the send version](feedback-deliver-the-send-version.md) — hand over copy you would send as-is; the rep's read is a sign-off, never an edit session; no self-labeled FIX or "weaker" in a deliverable
+- [Contract identity check Sep22](contract-identity-check-sep22.md) — copy reviews verify quotes, never contract identity; join every contract ID to marketing_name before Stars copy ships
+- [Rep copy review by canvas Sep22](rep-copy-review-canvas-sep22.md) — hand a rep copy in a Slack canvas, not a pages.dev page; no deploy gate and he can comment per email
