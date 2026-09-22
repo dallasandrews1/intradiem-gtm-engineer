@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790019456935,
+  "lastUpdated": 1790035870162,
   "skills": [
     {
       "skillId": "import-memory",
@@ -344,8 +344,9 @@
       "skillId": "skill_012LXv1MiG9EkG7oLfDEhyXL",
       "name": "league-shared-skill-creator",
       "description": "Guides any League employee through creating a well-formed, League-specific SKILL.md file ready to submit as a PR to workspace-agents. Trigger when someone says: create a skill, write a skill, build a skill, add a skill, make a skill, teach Claude to do something, or wants Claude to learn a workflow. Also trigger when someone describes a repetitive task and wants Claude to handle it consistently. Load proactively when the user is working in the workspace-agents repo and asks what to do next.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:47.528312Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:47.528167Z",
+      "backingPluginId": "plugin_013WgAZWP9u3ZrD9mjKAEoHD"
     },
     {
       "skillId": "skill_011HQ4Z2KxsfeLcEiuCBybN7",
