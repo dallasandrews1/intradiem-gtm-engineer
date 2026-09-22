@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790072997086,
+  "lastUpdated": 1790077804945,
   "skills": [
     {
       "skillId": "import-memory",
@@ -186,8 +186,9 @@
       "skillId": "skill_015g6JXkkbr5CpNpXLJgwKJF",
       "name": "clay-credit-steward",
       "description": "Clay credit budget steward for Intradiem's 5,000-credit allocation. Estimates credit cost BEFORE any enrichment run or new table build, maintains the append-only credit ledger, tracks burn by motion, computes cost-per-qualified-reply, flags at 60% consumed, and packages the renewal receipts story (credits in, qualified replies and meetings out). Trigger on: credit check, can we afford this run, clay budget, credit ledger, how many credits left, before building any new Clay table or adding enrichment columns, and weekly before the Friday readout. Load proactively whenever a Clay build or enrichment expansion is being planned.",
-      "source": "custom",
-      "updatedAt": "2026-07-06T03:49:58.066680Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-06T03:49:58.066547Z",
+      "backingPluginId": "plugin_01H6Btm2fZPrYnfjqfHdit3d"
     },
     {
       "skillId": "skill_01L49CNkF97GpvqX3yGGzfDP",
@@ -207,8 +208,9 @@
       "skillId": "skill_015e3GPS6YVYnh9MDkFG4os8",
       "name": "league-ae-pre-call-planner",
       "description": "Pre-call discovery planner for AEs. Takes a prospect, call type, and available research — then produces a call-ready \"Disco Prep Sheet\" the AE can open 10 minutes before a call and execute from. Includes account snapshot, hypotheses, persona-specific L1/L2/L3 pain maps for 8+ C-suite personas, Waterfall & Pivot question framework, MEDDIC pre-call status, AI readiness discovery threads, buying/governance committee mapping, and a timed 30-minute call flow. Trigger when the user says \"prep me for a call,\" \"discovery prep,\" \"disco prep,\" \"pre-call planner,\" \"call prep for [account],\" \"get me ready for my call with [name],\" or \"pull a prep sheet.\" Also trigger when a meeting is mentioned with a prospect name and the user wants to prepare. Load proactively when a calendar meeting with a prospect is referenced and preparation has not been discussed.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:07.010550Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:07.010391Z",
+      "backingPluginId": "plugin_01GJiWy7tm4PpNJ7DYgMuHJw"
     },
     {
       "skillId": "skill_01Rnq37PFaT3Ec4auDWY7ySG",
