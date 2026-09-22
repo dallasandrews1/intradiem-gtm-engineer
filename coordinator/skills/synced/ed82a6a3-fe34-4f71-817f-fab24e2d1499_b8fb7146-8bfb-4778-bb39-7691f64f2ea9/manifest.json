@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790069993083,
+  "lastUpdated": 1790072997086,
   "skills": [
     {
       "skillId": "import-memory",
@@ -148,8 +148,9 @@
       "skillId": "skill_015KWiNUYzCcQRUDrBAJte7H",
       "name": "intradiem-daily-war-room",
       "description": "Daily signal scan across Intradiem's outbound universes: the 32 Tier A+B Star Ratings parents, the back-office target list, and named strategic accounts. Sweeps last 24-72 hours for market events (earnings mentions, Stars language in filings, CMS releases), plan-level signals (quality leadership changes, hiring clusters), operational signals (outages, backlog news, cost mandates, BPO changes), and tech-stack signals (WFM/ACD/CCaaS moves: Verint, NICE, Calabrio, Genesys, Amazon Connect). Ranks Priority 1-4, maps each to an Intradiem play, logs fresh triggers for the TAM engine, and hands triggered accounts to the copy skills. Trigger on: run the war room, daily scan, morning sweep, what fired overnight, any breaking news on a target account. Run every business morning.",
-      "source": "custom",
-      "updatedAt": "2026-07-06T03:49:55.840960Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-06T03:49:55.840821Z",
+      "backingPluginId": "plugin_01AVKifYU796VyUU7GnC9jwf"
     },
     {
       "skillId": "skill_01X1wvTUXimBk2MT4VkS7BRU",
