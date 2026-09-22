@@ -731,3 +731,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Skills are the method, not reference](../../../../coordinator/memory/feedback-skills-are-the-method-not-reference.md) — run calibration + the domain skill before drafting; measure the whole set, don't point-fix the named instance
 - [lemlist sending domains Sep22](lemlist-sending-domains-sep22.md) — lemlist hosts the whole zone, so the IT ask is nameserver delegation not one TXT; intradiemhq.com is the live precedent
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Stars relaunch mined lines Sep22](stars-relaunch-mined-lines-sep22.md) — 8 of 21 net-new parents have a public leadership line, none weld call center to bonus; three-part sequence staged, not loaded
+- [Mem0 quota exhausted Sep22](mem0-search-quota-exhausted-sep22.md) — mem0 search and add fail on quota until Oct 1 2026; file memory is the source, skip the mem0 calls
