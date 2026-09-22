@@ -24,3 +24,6 @@ metadata:
 **Open:** the en dashes in Salesforce-recorded titles on Alex's rooms are FIXED and live (clean() in both builders). Verification note: right after a Pages deploy the first cache-busted samples can still return the prior page; re-sample before calling it a mismatch.
 
 Related: [[keegan-package-refresh-sep20]], [[department-shelves-sep18]].
+
+
+**Sep 21 2026:** Frank's index gained a call-order card (`order` list plus `room`) for accounts with a call plan but no dated room, and `brief` links on pages-only shelves. The old `build_frank_index.py` overwrote this page once during the QuickStart build; it is retired for Frank.

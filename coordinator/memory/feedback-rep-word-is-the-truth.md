@@ -18,3 +18,6 @@ Dallas, Sep 20 2026, mid-build on Alex Bauer's record sheets: always default to 
 EXTENSION, Sep 21 2026 (Dallas, drafting the Greenlight ask to Jason Dowden): the rule also governs how Dallas's own gates and tools are DESCRIBED to anyone outside GTM. Never frame a gate as compensating for rep carelessness. "Reps work accounts off records nobody's read" was cut because it is unsupported and because an SVP could repeat it to Sales. The true and safer framing is that context gets written down and cannot reach the next person who needs it, a retrieval problem (the Salesforce notes field caps at 255 characters everywhere Dallas can pull from), never a behavior problem. Dallas's words: "assuming reps work off of records nobody's read is not smart, but it is true that we need to make context something that never falls through the cracks."
 
 Related: [[alex-record-sheets-next-sep20]], [[feedback-seller-pages-no-fluff]], [[wfm-adjacency-customer-leak-open]], [[greenlight-bespoke-agent-workaround-sep21]].
+
+
+**Sep 21 2026 addendum (Frank QuickStart):** never report a rep's own intel back to them as confirmed ("your Heather test passed"). What they told you is fact; confirming it reads as doubt. Only report what the check found that they did not already know.
