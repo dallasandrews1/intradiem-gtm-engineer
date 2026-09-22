@@ -750,3 +750,10 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Clay Enrich Person + Contact Details routine](clay-enrich-person-contact-details-routine.md) — LinkedIn URL in, work email + mobile out, ~8 credits each; watch for personal-domain emails and stale-surname mailboxes
 - [Never send as Dallas](feedback-never-send-as-dallas.md) — draft and hand over, never call a send tool under his identity; survives any "stop asking permission" instruction
 - [ZeroBounce cannot catch a wrong address](zerobounce-cannot-catch-a-wrong-address.md) — proved on real rows: a personal-domain email passes as valid; run the domain check BEFORE deliverability
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [BCBS NC has no realized number](bcbs-nc-no-realized-number-sep22.md) — searched everywhere Sep 22; SharePoint has only pre-sale models, Greenlight has no CTO row; ask Nate, do not re-search
+- [Do not grade a colleague](feedback-dont-grade-colleagues-work.md) — attribute and move on, never "yours is better" or "X is right that"; praise from a peer reads as condescension
+- [Check what is built before proposing](feedback-check-whats-built-before-proposing.md) — lead with what is finished and ready to launch; a new framework goes after it and is for expansion, never a reason to redo
+- [Open items are not blockers](feedback-open-items-are-not-blockers.md) — when work is ready, hand it over first; open items go under their own heading labelled with what they actually change
+- [Stars messaging authored in Claude Code](stars-messaging-authored-in-claude-code.md) — Clay E1 prompt retired; measure thesis encoded in all 3 messaging skills, expires at the CMS October release

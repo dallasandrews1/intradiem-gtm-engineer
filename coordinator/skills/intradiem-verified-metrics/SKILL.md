@@ -60,6 +60,22 @@ Why Lane 2 has a freshness rule instead of an approval step: on Sep 21 2026 thre
 - **Public verified:** intradiem.com, BusinessWire record-results releases (Feb 2025, Feb 2026).
 - **Internal (to be added in the role):** Intradiem's official value deck, ROI methodology, customer reference list with approval status, and analyst materials. Replace the CONFIRM entries with these.
 
+### Star Ratings measure set (Lane 2, snapshot with a hard expiry)
+
+**Canonical source: `StarRatings_Measure_Reconciliation_Clover_Sep21.md` at the repo root.** Read it before writing any Star Ratings copy. It supersedes the Measure Reconciliation tab in `StarRatings_CliffEdge_Target_List.xlsx` and every pre-Clover file listed in its own "files that carry the pre-Clover thesis" table.
+
+What changed: on May 27 2026 a court held CMS exceeded its authority on 10 Star measures and skipped notice and comment on 10 more (Clover Insurance Co. v. HHS). CMS then voluntarily recalculated 2027 QBP ratings by HPMS memo on Jun 17 2026, using only Part C HEDIS, CAHPS and HOS. The recalculation was one-directional: a contract took the new rating only if it was higher. CMS re-issued the 2026 Summary Ratings on Jul 22 2026.
+
+**The durable six** (survive the CY2027 final rule AND stayed in the recalculation): Customer Service, Getting Needed Care, Getting Appointments and Care Quickly, Care Coordination, Rating of Health Plan, Health Plan Quality Improvement.
+
+**Of those, Intradiem's service operation only reaches Customer Service and, indirectly, Rating of Health Plan.** Getting Appointments, Getting Needed Care and Care Coordination are answered about the doctor's office, not the plan's service centre, so naming them to a quality leader reads as a mismatch. Two of the three Customer Service items are about the call itself (CMS MA & PDP CAHPS QA P&TS V15.0, Appendix K).
+
+**Retired as bonus-money claims, permanently:** complaints about the plan, appeals (both measures), members choosing to leave, call center interpreter and TTY, and all Part D measures. They remain published Star measures and real operational pain. They may be described as operational, never as what moves the bonus. The UHC $190M call-center line is history only.
+
+**Also stale until re-modelled:** `addressable_pct` and `addressable_forgone_qbp_musd` are pre-Clover; `qbp_avg` and any stated 2026 rating reflect the Oct 8 2025 table, so check a parent against the Jul 22 re-issue diff first.
+
+> **EXPIRY: the CMS October 2026 release.** This snapshot describes the 2027 QBP recalculation only. The Jun 17 memo states explicitly that CMS "is not announcing any policy or position here regarding the calculation of the 2027 Star Ratings, which will be issued in October 2026." Never write which measures "still count" beyond what the reconciliation table supports. Once the October file lands, every line above is unverified until the reconciliation doc is re-cut, and every per-contract measure read in live copy must be re-run before anything else ships.
+
 ## Approval tiers
 
 Company-level claims:

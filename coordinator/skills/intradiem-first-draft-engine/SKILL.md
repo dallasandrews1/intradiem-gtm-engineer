@@ -156,6 +156,12 @@ Contact order by day; who is estate owner, evaluator, sponsor, budget holder in 
 
 Every voice note script gets a 2 to 3 sentence written TL;DL that passes the same gates and stands alone if the audio is never played.
 
+## Star Ratings copy: read the measure set first
+
+Before drafting anything that names a Star Ratings measure, read `StarRatings_Measure_Reconciliation_Clover_Sep21.md` at the repo root, and the Star Ratings measure set section of `intradiem-verified-metrics`. Do not draft Stars copy from any file dated before Sep 21 2026; several live-looking files still carry the pre-Clover thesis and the reconciliation doc lists them by name.
+
+The short version for Gate 2: **Customer Service is the measure we reach.** Complaints, appeals, members leaving and the call center interpreter and TTY measure were pulled out of the 2027 bonus determination in June 2026 and are operational pain, never bonus-money claims. Getting Appointments, Getting Needed Care and Care Coordination are about the doctor's office, so they do not belong in copy aimed at a plan's service operation. This is a snapshot with a hard expiry at the CMS October 2026 release.
+
 ## Market rules
 
 - **UK / EU**: opt-out line in Email 1. Email 1 ending is the benchmark question or the offer note (see `motions/shared/Offer_Notes_Aug3.md`), never a calendar ask. Jack's `vertical-strategy-pack` skill governs UK account packs; Jack's UK product facts are CONFIRM tier in the Value Repository and ship only in UK copy on his authority.
