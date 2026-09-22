@@ -780,3 +780,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Clay exec-hire signal Sep22](clay-exec-hire-signal-sep22.md) — published workflow, 9 of 72 accounts fire; Clay code nodes are Python handler(context) with no datetime, and an absent key breaks a $.path reference
 - [Clay Signals vs batch Sep22](clay-signals-vs-batch-sep22.md) — Signals are UI-only here, audience_signal needs a pre-existing sig_ id; batch backfill and live signal are complementary; polar_tasks.tasks is a dict not a list
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Nathan lemlist invite steps manual Sep22](lemlist-nathan-invite-steps-manual-sep22.md) — 118 invite tasks piled up; 2 of 6 steps flipped to auto, Stars running campaigns + 2 classifier-denied still manual
