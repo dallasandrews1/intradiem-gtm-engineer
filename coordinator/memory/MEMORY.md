@@ -776,3 +776,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Use the paid stack](feedback-use-the-paid-stack.md) — Clay and lemlist are what Intradiem pays for; never build a signal on Apollo because the tool happens to be loaded
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Clay exec-hire signal Sep22](clay-exec-hire-signal-sep22.md) — published workflow, 9 of 72 accounts fire; Clay code nodes are Python handler(context) with no datetime, and an absent key breaks a $.path reference
+- [Clay Signals vs batch Sep22](clay-signals-vs-batch-sep22.md) — Signals are UI-only here, audience_signal needs a pre-existing sig_ id; batch backfill and live signal are complementary; polar_tasks.tasks is a dict not a list
