@@ -773,3 +773,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Blue Shield CA retired from Stars](bsca-retired-from-stars-sep22.md) — the July room was wrong not stale; gap sits in Getting Needed Care which we cannot claim, so the account moved to cost mandate
 - [Signal scoring model Sep22](signal-scoring-model-sep22.md) — scorer + exec signal built; Apollo people SEARCH costs zero lead credits so the signal is free at scale; "any contract" scoring measures company size; domains are the gate
 - [Lead with what Dallas must do](feedback-lead-with-what-dallas-must-do.md) — first line is his action list, drafts ready to send; reasoning underneath or in the log
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Use the paid stack](feedback-use-the-paid-stack.md) — Clay and lemlist are what Intradiem pays for; never build a signal on Apollo because the tool happens to be loaded
