@@ -757,3 +757,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Check what is built before proposing](feedback-check-whats-built-before-proposing.md) — lead with what is finished and ready to launch; a new framework goes after it and is for expansion, never a reason to redo
 - [Open items are not blockers](feedback-open-items-are-not-blockers.md) — when work is ready, hand it over first; open items go under their own heading labelled with what they actually change
 - [Stars messaging authored in Claude Code](stars-messaging-authored-in-claude-code.md) — Clay E1 prompt retired; measure thesis encoded in all 3 messaging skills, expires at the CMS October release
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [No fluff, scannable deliverables](feedback-no-fluff-scannable-deliverables.md) — delete any sentence that does not change a decision, carry a sourced fact or state a rule; conclusion first, tables over prose
+- [Strike room guide deployed](strike-room-guide-deployed-sep22.md) — strike-room-guide.pages.dev; method pages can be links, anything with contact detail is a file
