@@ -727,3 +727,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Frank QuickStart: Highmark + PennyMac Sep21](../../../../coordinator/memory/frank-quickstart-highmark-pennymac-sep21.md) — org charts to the front line plus call cards, staged not deployed; Clay live check stalled, run finalize script; BOO is beta so tracks follow marketing V04
 - [Talking points: defend before delivery](../../../../coordinator/memory/feedback-talking-points-defend-before-delivery.md) — two adversarial reviews until both pass; find missing answers yourself before flagging them
+
+## Swept from -Users-dallasandrews on 2026-09-21
+- [Skills are the method, not reference](../../../../coordinator/memory/feedback-skills-are-the-method-not-reference.md) — run calibration + the domain skill before drafting; measure the whole set, don't point-fix the named instance
