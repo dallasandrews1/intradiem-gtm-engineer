@@ -34,3 +34,13 @@ Also from the real screen: Clay's Signals section offers Topic intent, Job chang
 **Domain corrections validated by the first run.** Four of the five domains fixed that afternoon are among the top firing companies (Trinity Health 3, BCBS Michigan 2, Banner Health 2, CareSource 2), which is 9 of the 24 rows. Before the fix they pointed at medigold.com, wellmark.com, ssa.gov and commonwealthcarealliance.org. The silent-wrong-company defect would have cost 9 of 24 rows and substituted four organisations we do not target.
 
 **The multi-brand parent trap, in full.** Resolving a domain from a parent's most common `marketing_name` breaks when the parent administers plans for other companies. BCBS Michigan runs 9 contracts across 6 brands including Wellmark, Vermont Blue, WyoBlue and NextBlue. A first audit that only flagged parents with a TOP-TWO TIE missed Sanford Health, whose top brand won outright but still was not Sanford's own. Check every parent with 3+ brands, tie or not, and resolve on the PARENT name.
+
+**Downstream, Sep 22: deliberately NOT a Clay trigger.** A `clay_table` trigger pushes and there is nothing approved to push to, so building one would create leads nobody asked for. The house pattern fits better: `automation/run_exec_signal_sync.sh` pulls the table via `october-flywheel/sync_exec_signal.py`, re-scores, diffs against the last run, and writes `automation/logs/exec-signal-<date>.md` for the daily rundown to consolidate. Log-only. No launchd plist loaded yet, so it runs by hand.
+
+`clay tables rows list` caps `--limit` at 100, so the sync paginates on the returned cursor.
+
+After the refresh: 17 accounts carry `new_exec`, Tier 1 went 49 to 54, BCBS Michigan went 16 to 18 into the top four on the strength of a domain corrected the same afternoon. The combination bonus lands on exactly the pairs Genna named.
+
+**Scheduled Sep 22:** `com.dallasandrews.gtm.execsignal.plist`, weekdays 06:55, loaded and verified by kickstart. 06:55 because the morning is packed 06:40 to 07:45 and the rundown composes at 07:50.
+
+**ADDING A SCHEDULED JOB IS THREE EDITS, NOT ONE.** The plist alone leaves the log orphaned. The daily rundown does NOT glob `automation/logs/`; it reads an explicitly named list inside its prompt in `run_daily_rundown.sh`, so a new log must be added there by name or nothing ever reads it. And `run_swarm_heartbeat.sh` carries its own hardcoded expected-upstream-logs list, so without an entry there a silent job failure reads as a quiet day instead of MISSING. All three are now done for this job.

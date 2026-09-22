@@ -783,3 +783,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Nathan lemlist invite steps manual Sep22](lemlist-nathan-invite-steps-manual-sep22.md) — 118 invite tasks piled up; 2 of 6 steps flipped to auto, Stars running campaigns + 2 classifier-denied still manual
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Nathan lemlist phone backfill Sep22](nathan-lemlist-phone-backfill-sep22.md) — lemlist has NO phone-on-entry standard; ZoomInfo files first then Clay; 176 numbers written, CSV for Salesforce on Desktop
+- [BO lemlist empty branches Sep22](bo-lemlist-empty-branches-sep22.md) — 4 BO Expansion campaigns have empty branches, steps stranded after the condition; Nathan needs his own call number in lemlist
