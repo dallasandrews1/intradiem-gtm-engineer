@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790035870162,
+  "lastUpdated": 1790045276935,
   "skills": [
     {
       "skillId": "import-memory",
@@ -47,8 +47,9 @@
       "skillId": "skill_0136kGBs8TDZQEWw6dy1sHoV",
       "name": "intradiem-first-draft-engine",
       "description": "Pre-production thinking framework for Intradiem outreach messaging. Forces prospect-first cognition, single-idea message construction, and voice-matched drafting BEFORE any rules or checklists are applied. Produces a first draft that sounds like a real person wrote it in one sitting. Runs before intradiem-copy-sharpener, not after. Also the thinking layer for any edit to the Clay MessageGen system prompt. Trigger on any request to write, draft, or create Intradiem outreach messaging of any kind: emails, LinkedIn InMails, DMs, voice notes, follow-ups, Clay message variants, or any prospect-facing copy. Load proactively whenever messaging output is expected.",
-      "source": "custom",
-      "updatedAt": "2026-07-16T22:06:27.587642Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-16T22:06:27.587262Z",
+      "backingPluginId": "plugin_017qLa85aKFC1DyGBHEWS97S"
     },
     {
       "skillId": "skill_01S6h1rJmqTEGm4NpYzy5Chr",
