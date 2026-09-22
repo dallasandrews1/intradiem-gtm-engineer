@@ -730,3 +730,4 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-21
 - [Skills are the method, not reference](../../../../coordinator/memory/feedback-skills-are-the-method-not-reference.md) — run calibration + the domain skill before drafting; measure the whole set, don't point-fix the named instance
+- [lemlist sending domains Sep22](lemlist-sending-domains-sep22.md) — lemlist hosts the whole zone, so the IT ask is nameserver delegation not one TXT; intradiemhq.com is the live precedent
