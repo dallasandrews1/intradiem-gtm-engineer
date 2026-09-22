@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 49cec975-9025-487a-a2a7-8f44d1896c86
-  modified: 2026-08-10T11:46:31.809Z
+  modified: 2026-09-22T00:01:23.001Z
 ---
 
 10 Aug 2026, refining 7 Aug. Dallas rejected two successive versions of the Engine Room page ([[engine-room-deliverable-aug7]]). The final rule is stronger than the first pass:
@@ -31,4 +31,6 @@ The same anecdotes become strong with one change of subject. In nearly every cat
 5. Do not report outcome metrics for a phase that has not started. Reporting 0 meetings on a pre-send engine invites judgment on a dimension that is not live. Report readiness and unit economics instead, and have the raw number ready verbally.
 6. **The one line not to cross: nothing false.** Do not claim a gate holds if it does not. Describe the control that is actually enforced (the pre-wave real-row pass) rather than asserting a clean state. If a page stops disclosing a risk, the risk must actually be closed, and say so plainly in chat.
 
-Related: [[naveen-facing-comms-rules]], [[engine-room-deliverable-aug7]], [[clay-spend-posture-aggressive]].
+7. **A concrete example must never read as the boundary of the role.** Sep 21 2026, drafting to Jason Dowden (SVP Technology): "I build the prep material reps use before a call, account pages, one-pagers, call cards" was cut because it defines Dallas by one deliverable to someone who controls AI tooling decisions and has no view of the rest. Lead such an example with "Recent example:" or "I was asked for", which keeps the concreteness a non-GTM reader needs while signalling it is one of many. Same rule as 1: in an ambiguous role, whatever you name is what the role becomes. Never correct this by listing everything else he does, which reads defensive; the framing word carries it.
+
+Related: [[naveen-facing-comms-rules]], [[engine-room-deliverable-aug7]], [[clay-spend-posture-aggressive]], [[greenlight-bespoke-agent-workaround-sep21]].
