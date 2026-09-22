@@ -27,6 +27,8 @@ Frank Ciccone emailed Naveen and Dallas (cc Haresh, Kevin Jolliffe) at 4:30pm Se
 
 **Master link (Dallas, Sep 21 night: "a single master link that cuts all fluff"):** backoffice-maps.pages.dev/frank/ is the only link Frank gets. It is the shared no-fluff index (motions/shared/execution_kit/build_rep_index.py), which gained a call-order card type (`order` + `room`, no invented dates) and the three deliver-first shelves. TRAP: build_frank_index.py is the OLD counter page; my finalize script had overwritten the Sep 20 index with it, regressing the shape for a day. Retired for Frank; the finalize script now calls build_rep_index.py frank.
 
+**Sep 21 late: no loose ends.** The seven off-list executives became a fifth wave ("After wave 1 lands") with their own cards (pm_tech, pm_risk tracks restored); the 3xG caller line has a written default grounded in 3xG's site; the deck's last slide is facts to know, not asks. Reply notes carry no asks. 75 cards total. Redeployed.
+
 **Open:** run finalize_frank_quickstart.sh when Clay clears; PennyMac's Five9 record (Register Lead since Jan 30 2026) is unread, so pages carry the allow-stale stamp; Cianfrocco's dial is held for a warm route via the Optum relationship; 3xG must write its own "why is 3xG calling" lines.
 
 Related: [[frank-assurant-package-sep16]], [[keegan-three-account-package-sep17]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-talking-points-defend-before-delivery]].

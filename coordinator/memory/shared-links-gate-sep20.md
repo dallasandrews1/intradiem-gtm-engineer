@@ -21,3 +21,6 @@ metadata:
 **Sep 20 2026, record sheets deploy:** 45 holder entries, 109 URLs, gate 109 of 109. Trap: `pages_live_diff.py --verify` with no file list checks nothing and exits 0; the whole-site proof is `--expect` with an empty list.
 
 Related: [[rep-index-pages-sep20]], [[wrangler-pages-force-delegation-trap]], [[feedback-seller-pages-no-fluff]].
+
+
+**Sep 21 2026 night:** the post-deploy gate inside deploy_rep_pages.sh FAILED once on Pages cache lag (the same deploy passed on an immediate re-run, 115 of 115, and live matched staged). Before rolling back on a post-deploy FAIL, re-run check_shared_links.py once; roll back only if it fails twice.
