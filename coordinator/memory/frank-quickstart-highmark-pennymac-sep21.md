@@ -29,6 +29,8 @@ Frank Ciccone emailed Naveen and Dallas (cc Haresh, Kevin Jolliffe) at 4:30pm Se
 
 **Sep 21 late: no loose ends.** The seven off-list executives became a fifth wave ("After wave 1 lands") with their own cards (pm_tech, pm_risk tracks restored); the 3xG caller line has a written default grounded in 3xG's site; the deck's last slide is facts to know, not asks. Reply notes carry no asks. 75 cards total. Redeployed.
 
+**Final, Sep 21 night (Dallas: drop the unconfirmed eight rather than badge them):** finalize runs the sheet builder with --require-paid, so a card needs a live check plus a second source or it is off the chart. 163 people, 0 badges, 72 cards. Sean Bellus came off with them (title from Clay's index only, two empty live checks). 62 emails, 127 mobiles. A seller page makes one clean claim; asterisks cost more than the names.
+
 **Open:** run finalize_frank_quickstart.sh when Clay clears; PennyMac's Five9 record (Register Lead since Jan 30 2026) is unread, so pages carry the allow-stale stamp; Cianfrocco's dial is held for a warm route via the Optum relationship; 3xG must write its own "why is 3xG calling" lines.
 
 Related: [[frank-assurant-package-sep16]], [[keegan-three-account-package-sep17]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-talking-points-defend-before-delivery]].
