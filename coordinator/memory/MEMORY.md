@@ -740,3 +740,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Deliver the send version](feedback-deliver-the-send-version.md) — hand over copy you would send as-is; the rep's read is a sign-off, never an edit session; no self-labeled FIX or "weaker" in a deliverable
 - [Contract identity check Sep22](contract-identity-check-sep22.md) — copy reviews verify quotes, never contract identity; join every contract ID to marketing_name before Stars copy ships
 - [Rep copy review by canvas Sep22](rep-copy-review-canvas-sep22.md) — hand a rep copy in a Slack canvas, not a pages.dev page; no deploy gate and he can comment per email
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Stars trigger cohorts Sep22](stars-trigger-cohorts-sep22.md) — built on Genna's nine-signal model; 4 of 9 computable today; CMS tables have NO geography field and only ~8 of 93 parents are public; free county enrollment file unlocks three signals
+- [Strike rooms BCBSM + Vanguard Sep22](strikerooms-bcbsm-vanguard-sep22.md) — BCBSM is 4.5 at home and a 2 on Customer Service on the books it runs for other Blues; Vanguard held on an unread Salesforce record
