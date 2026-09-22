@@ -744,3 +744,9 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Stars trigger cohorts Sep22](stars-trigger-cohorts-sep22.md) — built on Genna's nine-signal model; 4 of 9 computable today; CMS tables have NO geography field and only ~8 of 93 parents are public; free county enrollment file unlocks three signals
 - [Strike rooms BCBSM + Vanguard Sep22](strikerooms-bcbsm-vanguard-sep22.md) — BCBSM is 4.5 at home and a 2 on Customer Service on the books it runs for other Blues; Vanguard held on an unread Salesforce record
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Rep clearance in a DM is the clearance](feedback-rep-clearance-in-dm-is-the-clearance.md) — a rep naming a customer or partner in Slack clears it for written copy; no second approval, only the number still needs a source
+- [Clay Enrich Person + Contact Details routine](clay-enrich-person-contact-details-routine.md) — LinkedIn URL in, work email + mobile out, ~8 credits each; watch for personal-domain emails and stale-surname mailboxes
+- [Never send as Dallas](feedback-never-send-as-dallas.md) — draft and hand over, never call a send tool under his identity; survives any "stop asking permission" instruction
+- [ZeroBounce cannot catch a wrong address](zerobounce-cannot-catch-a-wrong-address.md) — proved on real rows: a personal-domain email passes as valid; run the domain check BEFORE deliverability

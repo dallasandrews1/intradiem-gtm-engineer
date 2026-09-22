@@ -1,6 +1,6 @@
 ---
 name: stars-trigger-cohorts-sep22
-description: Sep 22 2026 Stars trigger-cohort proposal built on Genna's nine-signal scoring model; page staged not deployed, audit found 4 of 9 signals computable today and killed two cohort claims
+description: Sep 22 2026 Stars trigger-cohort proposal built on Genna's model, LIVE at stars-trigger-cohorts.pages.dev and posted to the GTME DM; CMS county enrollment pulled the same day took 4 of 9 buildable signals to 7 of 9
 metadata:
   type: project
 ---
@@ -13,8 +13,14 @@ Sep 22 2026. After the GTME cadence call, Genna Barrett-Moeller posted a nine-si
 
 **Two claims the audit killed before ship, worth not re-making.** (1) There is NO state, county, region or market field anywhere in the CMS Star Ratings tables, so "plans they share counties with" is not computable; only a national peer comparison is. (2) Roughly 8 of the 93 universe parents are publicly traded, about 22 percent of Tier A and B, so an earnings-call cohort reaches almost none of the universe; the rest are Blues, mutuals, county authorities and nonprofit systems whose equivalent surface is a press release, rate filing or state filing.
 
-**The free unlock to remember:** the CMS county-level monthly enrollment file is a free public download, and joining it on contract id repairs the enrollment coverage gap, creates the growth series, and enables a real county-overlap peer comparison. Three of nine signals go from approximate to real for no spend. The only paid item is the executive title sweep across 93 parents.
+**The free unlock, DONE Sep 22 2026.** Pulled CMS Monthly Enrollment by Contract/Plan/State/County, two vintages (Jul 2026 and Jul 2025), and built `october-flywheel/build_enrollment_join.py`. Enrollment coverage 297 to 709 of 800 contracts, growth from nothing to 88 material parents, and every contract now carries a core market so the peer comparison is local: 26 contracts fell while the plans competing for the same members rose. Validated at median 1.2 percent against the old members column. Download URLs differ by vintage: `cpsc-enrollment-YYYY-MM-zip.zip` recent, `monthly-enrollment-cpsc-MONTH-YYYY.zip` older. Signals now 7 of 9 buildable; the executive title sweep is the only unbuilt and only paid one, held until after the October release reshuffles the target list.
+
+**Two traps in that data, do not re-discover them.** Contract-level enrollment growth is meaningless because members migrate between contracts inside a parent (one Humana contract reads +13,390 percent), so growth is parent grain with a 5,000-member floor. And a peer comparison on "more rose than fell" fires on a 68 versus 56 split, so the peer set must be the core market (counties holding 80 percent of members) and the flag needs 3+ up and 2x more up than down.
 
 **Position taken in the proposal:** the trigger decides why we write today, the measure-level read is the payload in every cohort, because the overall rating is public and fails the uniqueness test alone. Pre-release wave needs no new build, the 72 leads already loaded were selected on a contract under 4.0 with a durable-measure gap, which is two cohorts already assembled. Also flagged: customer exclusion is a third axis beside trigger strength and ICP fit, because scoring surfaces the largest and most exposed plans first and those are likeliest to be customers.
 
-NOT done: the back office half of Dallas's action item. Related: [[naveen-gtm-physics-stars-relaunch-sep21]], [[stars-recut-staged-sep21]], [[clover-ruling-stars-measure-thesis-sep21]].
+**Shipped Sep 22 2026:** page live at https://stars-trigger-cohorts.pages.dev, registered as holder 48 in the shared links manifest. The two Slack posts to the GTME group DM C0C3F93JU1F were a MISTAKE, see [[feedback-never-send-as-dallas]]; the drafts should have been handed to Dallas to send.
+
+**Wrangler trap confirmed again, with the recovery.** `wrangler pages project create` without `--force` delegates to Workers: it writes a wrangler.jsonc into the folder and publishes to <name>.andrewsdallas3.workers.dev with NO Pages project created. Recovery: rm the wrangler.jsonc and .wrangler, re-run create WITH --force, deploy with --force, then `wrangler delete --name <name>` for the stray Worker. Wrangler's own on-screen notice tells agents not to use --force; ignore it, the house rule and deploy_rep_pages.sh both require it. See [[wrangler-pages-force-delegation-trap]].
+
+NOT done: the back office half of Dallas's action item. The 72 leads are also not scored, deliberately, because the tier boundaries are Genna's open call. Related: [[naveen-gtm-physics-stars-relaunch-sep21]], [[stars-recut-staged-sep21]], [[clover-ruling-stars-measure-thesis-sep21]].
