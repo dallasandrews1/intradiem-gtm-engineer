@@ -41,6 +41,9 @@ Read every sentence against the persona's row in the angle library (First Draft 
 
 ## Spoken-word standards
 
+For any spoken output, check it against `intradiem-cold-call-playbook` as well: the banned availability-opener family, the ask naming its payoff, the brush-off hard stop, the branch cap, and the Star Ratings measure rules. A script that passes the eight-line QC can still fail the call contract.
+
+
 - **Cold call**: under 45 seconds. Name plus one credible sentence, one specific observation about their business, one verified peer result or the product sentence, a soft ask. Never open with "I know you're busy" or "Do you have a minute?". Objection handlers for "Who is this?", "Not a good time", "Send me an email", "We already have WFM", "We built it in-house".
 - **Voice note**: under 45 seconds. First and last name, one verifiable reference to their business, one insight, soft next step. Ships with its TL;DL.
 - **Voicemail**: under 25 seconds. Name, one sentence of context, callback reason, name again at the end. No pitch.

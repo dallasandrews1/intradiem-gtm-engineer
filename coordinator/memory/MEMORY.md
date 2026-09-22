@@ -761,3 +761,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [No fluff, scannable deliverables](feedback-no-fluff-scannable-deliverables.md) — delete any sentence that does not change a decision, carry a sourced fact or state a rule; conclusion first, tables over prose
 - [Strike room guide deployed](strike-room-guide-deployed-sep22.md) — strike-room-guide.pages.dev; method pages can be links, anything with contact detail is a file
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Intradiem cold call playbook skill](intradiem-cold-call-playbook-skill.md) — built Sep 22; method layer over the Aug 2 repo canon, which the brief composer reads directly
+- [Never address someone not in the room](feedback-never-address-someone-not-in-the-room.md) — name an absent colleague as a fact; the action they were needed for becomes Dallas's own line
+- [Signals are horizontal](feedback-signals-are-horizontal.md) — scope a new signal across every motion it feeds before calling it expensive or recommending a delay; build once, point at everything

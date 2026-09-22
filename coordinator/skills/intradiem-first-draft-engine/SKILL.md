@@ -156,6 +156,10 @@ Contact order by day; who is estate owner, evaluator, sponsor, budget holder in 
 
 Every voice note script gets a 2 to 3 sentence written TL;DL that passes the same gates and stands alone if the audio is never played.
 
+## Spoken output goes to the call playbook
+
+If the output is spoken (dial script, opener, objection handle, voicemail, voice note, a Daily Action Brief call block), load `intradiem-cold-call-playbook` after this skill and before the QC pass. This skill supplies the one idea and the persona angle; the call playbook supplies the spoken shape, the branch handles and the live-call claim gate. The canonical call structure itself is `motions/shared/Cold_Call_Playbook_Aug2.md`, which the unattended brief composer reads directly.
+
 ## Star Ratings copy: read the measure set first
 
 Before drafting anything that names a Star Ratings measure, read `StarRatings_Measure_Reconciliation_Clover_Sep21.md` at the repo root, and the Star Ratings measure set section of `intradiem-verified-metrics`. Do not draft Stars copy from any file dated before Sep 21 2026; several live-looking files still carry the pre-Clover thesis and the reconciliation doc lists them by name.
