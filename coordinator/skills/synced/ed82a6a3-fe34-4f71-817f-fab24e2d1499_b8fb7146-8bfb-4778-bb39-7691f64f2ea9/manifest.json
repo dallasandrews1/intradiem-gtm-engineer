@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790059790005,
+  "lastUpdated": 1790069993083,
   "skills": [
     {
       "skillId": "import-memory",
@@ -177,8 +177,9 @@
       "skillId": "skill_014aQEL75xSGxLnesFt44gXb",
       "name": "intradiem-content-engine",
       "description": "Content repurposing engine. Turns one source asset (webinar, customer story, podcast, long-form blog, conference talk, analyst report) into a full multi-channel content set — blog post, LinkedIn carousel + single posts, a 3-touch nurture sequence, a sales one-pager, and social pull-quotes — all on-brand and consistent. Trigger on \"repurpose this\", \"turn this into content\", \"spin up content from [asset]\", \"make a content set from this webinar/story\", \"I need a campaign out of this\", or any moment a single piece of source material needs to become a coordinated content drop for Marketing. Built for the GTM Engineer to give Marketing volume and consistency from one input.",
-      "source": "custom",
-      "updatedAt": "2026-06-21T19:30:11.540741Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-21T19:30:11.540622Z",
+      "backingPluginId": "plugin_01Joeq4GgZkeLst9Nf4264cp"
     },
     {
       "skillId": "skill_015g6JXkkbr5CpNpXLJgwKJF",
