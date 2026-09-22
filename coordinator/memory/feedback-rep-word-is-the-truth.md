@@ -21,3 +21,6 @@ Related: [[alex-record-sheets-next-sep20]], [[feedback-seller-pages-no-fluff]], 
 
 
 **Sep 21 2026 addendum (Frank QuickStart):** never report a rep's own intel back to them as confirmed ("your Heather test passed"). What they told you is fact; confirming it reads as doubt. Only report what the check found that they did not already know.
+
+
+**Partner intel, Sep 21 2026 (Dallas on 3xG's S&P servicer figures):** a figure a partner attributes to a NAMED document they can open (a paywalled S&P servicer evaluation) is usable and carries that document as its source, even when Claude cannot open it. What stays held is a figure attributed to nothing, or contradicted by what could be opened. Wound-type figures (turnover, penalties, metrics below peers) go on a card as caller-side context, never as the opener.

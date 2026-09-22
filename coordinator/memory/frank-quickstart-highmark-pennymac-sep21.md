@@ -35,6 +35,10 @@ Frank Ciccone emailed Naveen and Dallas (cc Haresh, Kevin Jolliffe) at 4:30pm Se
 
 **Sep 21, late night, cards rebuilt on the cold-call playbook:** every card is now forcing function + two-choice friction + seams expansion + one concrete product line + lane-specific pressure-test ask + four handles + seat-matched 25-second voicemail. 72 cards, 59 distinct two-choice prompts, only same-title peers share. Claims gate PASS (product line maps to UPT idle prompts plus BOO next-best-item, both shipping); floor reviewer's conditions all applied. Deployed. Blue KC forcing function softened to the verified fact ("joining in April"), since whether its members move onto Highmark's own operation is unverified.
 
+**Round 5, all 72 cards read by the floor reviewer:** 33 of the other 56 failed on the fork and were replaced (FORK_FIX in talk_tracks.py); two forcing-function mistakes of mine fixed: the July cost realignment (the layoff) had been the opener on nine fulfillment cards, now "volume moving on rates again"; Blue KC on the Wholecare cards, now Medicare open enrollment Oct 15. Every fork is under ten words a side, 52 distinct across 72 cards, no banned words. Reviewer's verdict with those applied: yes, all 72 in front of reps tomorrow. Holds that stand: Cianfrocco warm route, Romito and Yakopovich confirm function first. Deployed.
+
+**SENT Sep 21 2026 night.** Reply-all with the one link, plus the Frank-only note and CSVs. Registered in the shared links manifest as sent. Next signal is Frank's or 3xG's word on what lands on real dials; the cards change off that, never off guesses.
+
 **Open:** run finalize_frank_quickstart.sh when Clay clears; PennyMac's Five9 record (Register Lead since Jan 30 2026) is unread, so pages carry the allow-stale stamp; Cianfrocco's dial is held for a warm route via the Optum relationship; 3xG must write its own "why is 3xG calling" lines.
 
 Related: [[frank-assurant-package-sep16]], [[keegan-three-account-package-sep17]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-talking-points-defend-before-delivery]].
