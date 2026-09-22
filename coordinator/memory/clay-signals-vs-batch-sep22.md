@@ -22,3 +22,9 @@ Valid workflow trigger types in this workspace: `manual`, `webhook`, `audience_s
 **Defect found:** Audiences holds 76 company records for 72 distinct domains. caloptima.org 2, chpw.org 3, essencehealthcare.com 2. Pre-existing duplicates; a signal firing on one could double-count.
 
 **polar_tasks.json gotcha:** `tasks` is a DICT keyed by task slug, not a list. An `.append` silently no-ops. Related: [[clay-exec-hire-signal-sep22]], [[signal-scoring-model-sep22]].
+
+**CORRECTED Sep 22 after seeing the real UI.** The New hire signal wizard does NOT take an Audiences segment. Step 1 "Select a source" offers Import CSV, Import from CRM, or Use existing Clay table, and asks for company domains or LinkedIn URLs. So the audience `audseg_0tlsbjxHmH2259r5rHx` is NOT the input to a signal; it remains useful for segmenting and for `audience_segment` triggers only. Feed the signal a domain CSV: `~/Desktop/Intradiem Deliverables/Stars Signal Watch Domains.csv`, 72 distinct domains, which also sidesteps the duplicate-record problem.
+
+Also from the real screen: Clay's Signals section offers Topic intent, Job change, New hire, Job posting, Promotion, News & fundraising, Web intent and Custom. Each signal writes to its OWN Clay table and lives in a Folder, so downstream wiring is likely a `clay_table` trigger rather than `audience_signal`. Four signals already exist in the workspace: two Job change (Monthly and Biweekly), one News & fundraising (Weekly), one Web intent, all Monitoring.
+
+**Lesson:** do not write a UI sheet's click path from an API's shape. The `audience_signal` trigger type existing did not mean the signal is created from an audience. Verify the screen first, which is the standing rule for Clay UI work.
