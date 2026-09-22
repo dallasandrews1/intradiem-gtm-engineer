@@ -41,4 +41,6 @@ Frank Ciccone emailed Naveen and Dallas (cc Haresh, Kevin Jolliffe) at 4:30pm Se
 
 **Open:** run finalize_frank_quickstart.sh when Clay clears; PennyMac's Five9 record (Register Lead since Jan 30 2026) is unread, so pages carry the allow-stale stamp; Cianfrocco's dial is held for a warm route via the Optum relationship; 3xG must write its own "why is 3xG calling" lines.
 
+**Sep 22: 3xG sent v2 briefs** (same filenames, regenerated, new "UPT MAP" section 7). Checked against v1 and primary sources: sent cards carry none of v2's wrong facts, no rebuild. v1's "Plaisse" platform is fabricated (it is SSE); v2's Sagility, Laguna-in-contact-center, Delaware date and rate-request figures are wrong. Section 7 is template text with an unsourced 10%+ claim, off V04, never call material. Log: automation/logs/frank-quickstart-2026-09-22.md. Trap: a 3xG brief re-issue under the same filename is a regeneration, so diff facts, not just the section they say changed.
+
 Related: [[frank-assurant-package-sep16]], [[keegan-three-account-package-sep17]], [[bo-map-pipeline-rep-sets-aug31]], [[feedback-talking-points-defend-before-delivery]].
