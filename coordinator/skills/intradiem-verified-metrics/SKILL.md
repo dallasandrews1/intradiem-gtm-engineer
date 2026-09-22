@@ -56,7 +56,7 @@ Why Lane 2 has a freshness rule instead of an approval step: on Sep 21 2026 thre
 ## Data sources
 
 - **Canonical:** `04-value-repository/Intradiem_Value_Repository.md`. Read it before citing any Intradiem number.
-- **Customer value registry:** `04-value-repository/Customer_Value_Registry.md` — per-account realized-value (CTO) figures, whitespace, maturity, NPS, from the Greenlight/Zuar portal. The repo governs how these may be used; the registry holds them. Read both before using any customer's own number.
+- **Customer value registry:** `04-value-repository/Customer_Value_Registry.md`: per-account realized-value (CTO) figures, whitespace, maturity, NPS, from the Greenlight/Zuar portal. The repo governs how these may be used; the registry holds them. Read both before using any customer's own number.
 - **Public verified:** intradiem.com, BusinessWire record-results releases (Feb 2025, Feb 2026).
 - **Internal (to be added in the role):** Intradiem's official value deck, ROI methodology, customer reference list with approval status, and analyst materials. Replace the CONFIRM entries with these.
 
@@ -79,14 +79,14 @@ What changed: on May 27 2026 a court held CMS exceeded its authority on 10 Star 
 ## Approval tiers
 
 Company-level claims:
-- `1:many` — public and broadly distributable (PR, website, analyst, marketing, webinar).
-- `1:1` — individual prospecting and internal use only; blind customer names unless logo-approved.
-- `CONFIRM` — not yet verified against an official Intradiem source. Never use externally.
+- `1:many`: public and broadly distributable (PR, website, analyst, marketing, webinar).
+- `1:1`: individual prospecting and internal use only; blind customer names unless logo-approved.
+- `CONFIRM`: not yet verified against an official Intradiem source. Never use externally.
 
-Customer-sourced value tiers (Greenlight/Zuar per-account data — added Jul 17 2026):
-- `CV-INTERNAL` — default on ingest. Usable to rank, prioritize, and target accounts. **Never in prospect-facing copy.** Every Greenlight figure starts here.
-- `CV-1:1` — citable **only** in outreach/materials directed back to that *same customer's* own buyers. Never to a third party, never blended across accounts, never public. Promotion out of CV-INTERNAL requires the measure's unit/definition confirmed in Greenlight (see unit note). This is the install-base personalization lane.
-- `CV-1:many` — public / other-logo / deck use. Promotion out of CV-1:1 requires named-reference or logo approval + marketing sign-off; on promotion the claim graduates into the VERIFIED 1:many table. Today only Humana qualifies.
+Customer-sourced value tiers (Greenlight/Zuar per-account data, added Jul 17 2026):
+- `CV-INTERNAL`: default on ingest. Usable to rank, prioritize, and target accounts. **Never in prospect-facing copy.** Every Greenlight figure starts here.
+- `CV-1:1`: citable **only** in outreach/materials directed back to that *same customer's* own buyers. Never to a third party, never blended across accounts, never public. Promotion out of CV-INTERNAL requires the measure's unit/definition confirmed in Greenlight (see unit note). This is the install-base personalization lane.
+- `CV-1:many`: public / other-logo / deck use. Promotion out of CV-1:1 requires named-reference or logo approval + marketing sign-off; on promotion the claim graduates into the VERIFIED 1:many table. Today only Humana qualifies.
 
 **CTO definition and unit note (verified against the Zuar export dated Jul 17 2026; supersedes any earlier "Capacity/Time Optimized" wording):** CTO = **"Cost Taken Out"** per customer, the cost savings attributable to Intradiem automation. It is NOT "Capacity/Time Optimized." In Product's enhancement-prioritization formula it is the numerator term (estimated cost savings if an enhancement were implemented), alongside customer demand and effort reduction. In the Greenlight/Zuar portal CTO appears in three forms:
 - **TOTAL CTO** (`total_cto_v2_sum`): a RAW MAGNITUDE of cost taken out (e.g. UnitedHealth 24.5M, CVS 15.1M over the period). It is NOT an "x" multiple, and it is NOT the sum of the per-source CTO rows (TOTAL runs materially larger than the broken-out sources).
@@ -120,7 +120,7 @@ Source decomposition of CTO: Coaching, Efficiency, Handle Time, UPT Alerts, UPT 
 1. Label industry benchmarks as benchmarks, never as Intradiem results.
 2. When several sources confirm a metric, cite the most recent and authoritative first (prefer the latest BusinessWire release or the Value Repository).
 3. When a needed number is unverified, derive from verified figures instead of inventing one, e.g., do not claim a churn percentage; cite net retention above 114% and record customer savings, which are verified.
-4. For a CV-1:1 send, prefer the reconciled Humana-style framing ("~X hours per agent per month") over the raw multiplier once the unit is confirmed — it is the on-brand, prospect-legible form.
+4. For a CV-1:1 send, prefer the reconciled Humana-style framing ("~X hours per agent per month") over the raw multiplier once the unit is confirmed, it is the on-brand, prospect-legible form.
 
 ### Never
 1. Never present a CONFIRM-tier or [UNVERIFIED] number as a confirmed Intradiem proof point externally.
@@ -128,7 +128,7 @@ Source decomposition of CTO: Coaching, Efficiency, Handle Time, UPT Alerts, UPT 
 3. Never fabricate or extrapolate an Intradiem-specific number, even if the math seems reasonable.
 4. Never use a customer name externally without confirmed reference approval.
 5. Never present the strike-engine's ROI assumptions as Intradiem-verified figures.
-6. **Never cite one customer's CTO/realized-value figure to a different account, blend CV figures across accounts, or make a CV figure public** — that is a customer-data breach, not just an unverified claim. Cross-account or public use requires promotion to CV-1:many (reference + marketing sign-off).
+6. **Never cite one customer's CTO/realized-value figure to a different account, blend CV figures across accounts, or make a CV figure public** ,  that is a customer-data breach, not just an unverified claim. Cross-account or public use requires promotion to CV-1:many (reference + marketing sign-off).
 7. Never frame a STALLED account (zero CTO on a live agent base) as a value/outcome story; it is a CS save signal.
 
 8. Never ship a Lane 2 fact on memory of an earlier pull, and never let a Lane 2 or Lane 3 item read as an Intradiem result. A public fact about a prospect proves we did the reading, not that Intradiem moved the number.
@@ -150,10 +150,10 @@ When new material is provided (case studies, releases, value decks, Greenlight e
 - Customer savings all-time high, full-year 2025 (BusinessWire Feb 18 2026) [1:many]
 - eNPS 79 in 2025 (BusinessWire Feb 18 2026) [1:many]
 - Next-generation platform released 2025 (BusinessWire Feb 18 2026) [1:many]
-- Humana: 7X ROI five years in; 2 hours of capacity per agent per month; 2.7M automated actions 2025; AHT −45s; occupancy +4% (public SWPP/Intradiem webinar) [1:many, named] — this is the CV-1:many bar
+- Humana: 7X ROI five years in; 2 hours of capacity per agent per month; 2.7M automated actions 2025; AHT −45s; occupancy +4% (public SWPP/Intradiem webinar) [1:many, named] ,  this is the CV-1:many bar
 - Company-wide customer savings $529.6M all-time vs $509.6M target (Greenlight home, Jul 17 2026) [internal fact; excludes Harmoniq-migrated; not a per-account or prospect claim]
 - Per-account CTO for 63 accounts (Customer_Value_Registry.md). CTO = "Cost Taken Out" (cost savings from automation). TOTAL CTO is a raw magnitude (e.g. UnitedHealth 24.5M, CVS 15.1M); the CTO Multiple = TOTAL CTO / AB Fixed (CVS 17.5x, Aetna 12.8x, Humana 5.81x; portfolio mean ~4.5x). [CV-INTERNAL; raw-magnitude unit CONFIRM in Greenlight before any unit-bearing use]
-- UK install base, blinded (Salesforce UK export, Aug 3 2026; repo section "UK install base — blinded facts"): two well-known UK insurers (general insurer since 2018, ~5,000 agents; private health insurer since 2022, ~1,100 agents) among seven UK accounts across six industries; longest UK tenure since 2015; roughly 37,000 CRM-recorded agents total. [1:1 BLINDED ONLY — existence/tenure/stack facts, never outcomes; never name a UK customer without recorded reference approval; the "two of the largest UK insurers" superlative is UNVERIFIED — say "well-known" or "major"]
+- UK install base, blinded (Salesforce UK export, Aug 3 2026; repo section "UK install base, blinded facts"): two well-known UK insurers (general insurer since 2018, ~5,000 agents; private health insurer since 2022, ~1,100 agents) among seven UK accounts across six industries; longest UK tenure since 2015; roughly 37,000 CRM-recorded agents total. [1:1 BLINDED ONLY, existence/tenure/stack facts, never outcomes; never name a UK customer without recorded reference approval; the "two of the largest UK insurers" superlative is UNVERIFIED, say "well-known" or "major"]
 
 CONFIRM before external use: NPS 71, 7x ROI / 3-month payback, under 1% churn, the CTO measure unit, and all strike-engine ROI assumptions.
 
@@ -163,7 +163,7 @@ When the same metric appears in multiple places, prefer in this order:
 1. Intradiem Value Repository + Customer Value Registry (this system's canonical docs)
 2. Latest BusinessWire record-results release
 3. intradiem.com (platform, success stories, bios)
-4. Greenlight/Zuar portal (internal customer usage — CV-tiered, never public without promotion)
+4. Greenlight/Zuar portal (internal customer usage, CV-tiered, never public without promotion)
 5. Analyst / third-party (industry context only, never as an Intradiem claim)
 
 Lane 2 facts sit outside this hierarchy: they cite the primary public source directly (the CMS file, the memo, the filing), with analyst and trade press as support only.

@@ -7,6 +7,8 @@ metadata:
 
 **Trigger:** group DM C0BFL82SREF (Dallas, Naveen, Nathan), Sep 22 2026. Naveen asked for strike rooms so he can cold call on Star Ratings and "learn the trade ground up", plus a docs explainer. Nathan named three accounts, then cut it to **BCBS of Michigan and Vanguard**; he already holds the California one. Naveen took Vanguard first.
 
+**SENT Sep 22 2026** to the group DM: two PDFs plus https://strike-room-guide.pages.dev (now a live sent URL, must not break). Open threads waiting on replies, not tasks: Nate's real BCBS of NC handle-time number, the AE's confirmation that the SagesS3 Vanguard intro is dead, and Dallas's standing offer to re-cut the stale July Blue Shield of California room.
+
 **Built** in `motions/star_ratings/strikerooms_sep22/` (markdown source) and rendered to `~/Desktop/Intradiem Deliverables/Strike Rooms Sep 22/` as HTML via `motions/shared/md_to_page.py`. Slack canvas creation returned Internal Server Error twice, so nothing was posted; the DM message was handed to Dallas as copy-paste.
 
 **BCBS of Michigan thesis (the thing worth keeping).** BCBSM's own Michigan contracts hold 4.5 (H9572, H5883). The sub-4.0 contracts under the BCBSM Mutual parent entity are the books it runs for OTHER Blues: Wellmark Advantage H5900 (Iowa/SD, ~43,900 members, 2 stars on Customer Service), NextBlue of North Dakota H6202, Vermont Blue Advantage H6898, WyoBlue H9326. Same operator, 4.5 at home and a 2 on Customer Service elsewhere, so the variable is execution. This is [[contract-identity-check-sep22]] paying off: without joining contract ID to marketing_name the copy would have told a Detroit exec their rating was bad when it is 4.5.

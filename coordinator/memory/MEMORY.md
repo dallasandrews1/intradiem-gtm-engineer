@@ -766,3 +766,10 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Intradiem cold call playbook skill](intradiem-cold-call-playbook-skill.md) — built Sep 22; method layer over the Aug 2 repo canon, which the brief composer reads directly
 - [Never address someone not in the room](feedback-never-address-someone-not-in-the-room.md) — name an absent colleague as a fact; the action they were needed for becomes Dallas's own line
 - [Signals are horizontal](feedback-signals-are-horizontal.md) — scope a new signal across every motion it feeds before calling it expensive or recommending a delay; build once, point at everything
+
+## Swept from -Users-dallasandrews on 2026-09-22
+- [Strike room section contract](strike-room-section-contract.md) — every room is §0 to §10 in the same order; the field guide navigates by number, so renaming a slot breaks every other room
+- [Make the call, do not hand it back](feedback-make-the-call-dont-hand-it-back.md) — Dallas is the decision maker; once I have context I decide and report with reasoning, never a menu
+- [Blue Shield CA retired from Stars](bsca-retired-from-stars-sep22.md) — the July room was wrong not stale; gap sits in Getting Needed Care which we cannot claim, so the account moved to cost mandate
+- [Signal scoring model Sep22](signal-scoring-model-sep22.md) — scorer + exec signal built; Apollo people SEARCH costs zero lead credits so the signal is free at scale; "any contract" scoring measures company size; domains are the gate
+- [Lead with what Dallas must do](feedback-lead-with-what-dallas-must-do.md) — first line is his action list, drafts ready to send; reasoning underneath or in the log
