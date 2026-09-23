@@ -800,3 +800,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Attract and Pursue page Sep23](attract-and-pursue-page-sep23.md) — pipeline diagram for Naveen to send Jen; live at attract-and-pursue.pages.dev; we help marketing fill the room, never promote ourselves
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Customer leak scan Sep23](customer-leak-scan-sep23.md) — BO Expansion customers are by design; Citizens sync-reverted to ADT (restored); paused WFM/DWO/Genesys hold real customers
