@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790136745821,
+  "lastUpdated": 1790143370753,
   "skills": [
     {
       "skillId": "import-memory",
@@ -171,8 +171,9 @@
       "skillId": "skill_019oucpU3NxcH2wnkXyW9tRw",
       "name": "league-ae-briefing",
       "description": "AE Briefing / Account Strike Packet. Generates 1-page forensic briefing with Primary Forcing Function, Playbook Hypothesis, Hidden Fear, Internal Enemy, and Strategic Intervention. Clinical tone, peer-level, output directly into chat for Slack channel copy.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:07.674490Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:07.674359Z",
+      "backingPluginId": "plugin_01Kc9rWiU1xAFu4Tz6ExwCMd"
     },
     {
       "skillId": "skill_014aQEL75xSGxLnesFt44gXb",
