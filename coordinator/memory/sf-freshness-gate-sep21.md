@@ -1,6 +1,6 @@
 ---
 name: sf-freshness-gate-sep21
-description: No-connector Salesforce fix: builders fail closed on an unread pre-pipeline record; scheduled report email feeds Last Modified; staged, Outlook leg unproven
+description: No-connector Salesforce fix; subscription emails arriving, attachment read proven Sep 23, blocked on 2 missing report columns (Name, Status); plist unloaded
 metadata:
   type: project
 ---
@@ -22,3 +22,5 @@ Built Sep 21 2026 after [[frank-assurant-package-sep16]] was found 15 days behin
 
 **Why:** the data was already in the repo; the miss was that no builder had to look at it.
 **How to apply:** any new rep package builder calls `sf_require("<rep>/<account>")` and registers the package, with rec_key null and a reason when no pre-pipeline record exists.
+
+- Sep 23 2026 status: emails arrive weekdays 6:00 AM (Sep 22: 5 rows, Sep 23: 6 rows). Outlook leg PROVEN: the M365 connector reads the CSV attachment (body carries only summary totals), row count matched. BLOCKER: the saved report kept Salesforce's default columns, NOT the click sheet's; it lacks Partner Pre-Pipeline Name and Status, so the intake reads 0 records. Dry run with the two columns simulated parses 6/6, no code change needed; keep the extra columns (12/40 Minute Meeting Date, Converted Opportunity are useful). Order: Dallas adds the 2 columns, next 6 AM email is ingested with --apply and a matching count, THEN load the plist. Nothing ingested yet, plist still unloaded.

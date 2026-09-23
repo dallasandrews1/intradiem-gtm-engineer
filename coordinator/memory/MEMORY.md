@@ -790,3 +790,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-22
 - [Clay is contact source of truth](feedback-clay-is-contact-source-of-truth.md) — settle contact disagreements with a Clay Enrich Person read, never 'check Salesforce'
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Stars call cards Sep22](stars-call-cards-sep22.md) — 28 per-person cards staged to the Frank bar, campaigns paused; under four stars say climb to four never bonus; measure moves are this year's ratings never the floor
