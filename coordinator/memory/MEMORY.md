@@ -809,3 +809,9 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Naveen 1:1 follow-up Sep23](naveen-1on1-followup-sep23.md) — demo end-screen prompt written; content desk LIVE at intradiem-content-desk.pages.dev for Melissa (not sent); Naveen caller variant of the Stars cards built, phone placeholder; angleProof swap waits on Jen
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Read the invite before picking the link](feedback-read-the-invite-before-picking-the-link.md) — meeting-link asks: read the calendar body first; Cleveland Clinic Sep 23 was the save room, not the Stars deck
+- [Cleveland Clinic: Cisco means DWO not QO Sep23](cleveland-clinic-cisco-dwo-not-qo-sep23.md) — Naveen's call; confirm the ACD before any Queue Optimizer pitch, Cisco shops get the DWO story; DWO canvas F0C425HSEQ1 supersedes the QO one
+- [Cleveland Clinic adoption numbers Aug26](cleveland-clinic-adoption-numbers-aug26.md) — realized figures live in the monthly adoption decks under Customer Success Review; $626K YTD at 1.7x, adoption 10%; WFM Verint, ACD Cisco
+- [Pressing account first in shared docs](feedback-pressing-account-first-in-shared-docs.md) — a canvas opens with the named account and its send version; generic tracks and method go after
