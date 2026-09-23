@@ -797,3 +797,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Keegan call asks built Sep23](../../../../coordinator/memory/keegan-call-asks-built-sep23.md) — former-customer flag, product filter, generic one-pager builder and index finder STAGED; deploy maps then rooms; Keegan's Sales Nav list pending
 - [memoryBlue call desks Sep23](memoryblue-call-desks-sep23.md) — SHELL staged: Tyler front office, Aiden back office; contacts and cards sealed behind a per-desk passphrase; fills only on Nate's go after Kevin signs off
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Attract and Pursue page Sep23](attract-and-pursue-page-sep23.md) — pipeline diagram for Naveen to send Jen; live at attract-and-pursue.pages.dev; we help marketing fill the room, never promote ourselves
