@@ -818,3 +818,9 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [VITO call cards for Naveen Sep23](vito-call-cards-naveen-sep23.md) — 10 DWO-message cards at Vanguard, BCBSM and Blue Shield CA, contacts enriched, staged not sent; Naveen's phone is in his Slack profile now
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [lemlist create-on-sync off Sep23](../../../../coordinator/memory/lemlist-salesforce-create-on-sync-off-sep23.md) — verified by canary flag read; 108-person Keegan alumni roster is lemlist list clt_zfPgevBcfyawwpP8L, no campaign; linked leads still bi-sync
+- [Keegan's room is the bar](feedback-keegan-room-is-the-bar.md) — every rep room is diffed against Keegan's vanguard room, one-pager shelf and selector attached
+- [Cleveland Clinic committee list Sep23](cleveland-clinic-committee-list-sep23.md) — 61 names, 33 campaign targets Clay-verified for Sierra and MAC; reply draft staged; Salesforce stale on Kull, Boissy, DeAngelo; Nate names the blocker
+- [Next moves must read alone](feedback-next-moves-must-read-alone.md) — rep-page moves: verb, person and role, one reason; no door/layer/gate/wave; overlay in motions/shared/plain_moves.json
