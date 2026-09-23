@@ -815,3 +815,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Cleveland Clinic: Cisco means DWO not QO Sep23](cleveland-clinic-cisco-dwo-not-qo-sep23.md) — Naveen's call; confirm the ACD before any Queue Optimizer pitch, Cisco shops get the DWO story; DWO canvas F0C425HSEQ1 supersedes the QO one
 - [Cleveland Clinic adoption numbers Aug26](cleveland-clinic-adoption-numbers-aug26.md) — realized figures live in the monthly adoption decks under Customer Success Review; $626K YTD at 1.7x, adoption 10%; WFM Verint, ACD Cisco
 - [Pressing account first in shared docs](feedback-pressing-account-first-in-shared-docs.md) — a canvas opens with the named account and its send version; generic tracks and method go after
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [VITO call cards for Naveen Sep23](vito-call-cards-naveen-sep23.md) — 10 DWO-message cards at Vanguard, BCBSM and Blue Shield CA, contacts enriched, staged not sent; Naveen's phone is in his Slack profile now
