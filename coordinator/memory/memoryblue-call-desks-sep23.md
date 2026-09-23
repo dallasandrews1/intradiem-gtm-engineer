@@ -1,6 +1,6 @@
 ---
 name: memoryblue-call-desks-sep23
-description: "Sep 23 2026: memoryBlue call desks SHELL staged (Tyler front office, Aiden back office); link in the clear, contacts and cards sealed by passphrase; fills only on Nate's go after Kevin's sign-off"
+description: "Sep 23 2026: memoryBlue call desks FILLED and staged (Tyler 689 front office, Aiden 121 back office); no new enrichment; Pages project created, deploy is Dallas's terminal; passphrases in automation/config/memoryblue_desk.json"
 metadata:
   type: project
 ---
@@ -12,3 +12,8 @@ metadata:
 **Design decision:** the Sep 22 rule (method pages are links, contact detail is a file) is kept on one link: rules, card shape and reporting are plain; contacts and per-person cards are sealed (PBKDF2 250k + AES-256-GCM via `encrypt.js`, WebCrypto in the browser); the CSV for their Salesforce is built in the browser. Passphrases in `automation/config/memoryblue_desk.json`, one per desk, `handed_to` null; link and passphrase travel in separate messages. Builder gate fails on any surname, domain, email, number or LinkedIn URL in the clear.
 
 **Fill order on the go:** contacts in Clay (exclusion union, domain match, sourced numbers) to `people/<desk>.json`; cards with `intradiem-cold-call-playbook` then `gtm-copy-reviewer` to `cards/<desk>.json`; build, then project create from an EMPTY folder with `--force` and deploy from Dallas's terminal; register URLs in the manifest. Confirm with Nate first: how memoryBlue introduces itself, folder names, CSV or page. Related: [[stars-call-cards-sep22]], [[strike-room-guide-deployed-sep22]], [[wrangler-pages-force-delegation-trap]], [[claude-code-auto-mode-blocks-deploys]].
+
+
+**Filled Sep 23 2026 (Dallas's go, assumed sign-off):** `fill.py` reads every lemlist campaign by REST (free), applies the exclusion union (BO Expansion campaigns are install-base and stay Nate's), dedupes by email and by name, splits desks, sets waves (1 Stars and Blitz, 2 direct number, 3 main line), flags came-from-a-customer from Keegan's alumni file plus stored Clay experience, and composes one card per person per family. 742 DWO executives without a number were NOT enriched (revisit when the desks run dry). Project `intradiem-call-desk` exists with a clean hostname; the classifier denied the deploy, so `automation/deploy_rep_pages.sh desk` runs from Dallas's terminal. Stars cards expire at the CMS October release. Log `automation/logs/memoryblue-desk-2026-09-23.md`.
+
+**Review lesson (Sep 23 2026):** re-voicing another rep's reviewed cards for a new caller needs a gate over EVERY spoken field (the assistant line was skipped) and phrase-level bans ("Belfield with Intradiem" slipped past "Belfield at"); swap numbers at sentence level, never the bare digits. Reviewer verdict after fixes: dial as-is. Passphrases handed to Dallas in chat Sep 23; `handed_to` still null until Nate has them.
