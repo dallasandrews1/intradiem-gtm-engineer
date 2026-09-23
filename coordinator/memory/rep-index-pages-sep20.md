@@ -27,3 +27,6 @@ Related: [[keegan-package-refresh-sep20]], [[department-shelves-sep18]].
 
 
 **Sep 21 2026:** Frank's index gained a call-order card (`order` list plus `room`) for accounts with a call plan but no dated room, and `brief` links on pages-only shelves. The old `build_frank_index.py` overwrote this page once during the QuickStart build; it is retired for Frank.
+
+
+**Sep 23 2026 redesign:** all four indexes now share `motions/shared/rep_index_theme.py` (hero with the rep's own moves for this week and next, date rail with relative-week chips, card anchors). Any look change goes in the theme, never in one builder. Headless Chrome's minimum window is 500px; check phone width with a 390px iframe, not a 400px screenshot. Log: `automation/logs/rep-pages-thread-2026-09-23.md`.
