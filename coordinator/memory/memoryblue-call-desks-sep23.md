@@ -1,6 +1,6 @@
 ---
 name: memoryblue-call-desks-sep23
-description: "Sep 23 2026: memoryBlue call desks FILLED and staged (Tyler 689 front office, Aiden 121 back office); no new enrichment; Pages project created, deploy is Dallas's terminal; passphrases in automation/config/memoryblue_desk.json"
+description: "Sep 23 2026: memoryBlue call desks LIVE at intradiem-call-desk.pages.dev (Tyler 688 front office, Aiden 121 back office); no new enrichment; passphrases in automation/config/memoryblue_desk.json; registered in the shared links manifest"
 metadata:
   type: project
 ---
@@ -17,3 +17,5 @@ metadata:
 **Filled Sep 23 2026 (Dallas's go, assumed sign-off):** `fill.py` reads every lemlist campaign by REST (free), applies the exclusion union (BO Expansion campaigns are install-base and stay Nate's), dedupes by email and by name, splits desks, sets waves (1 Stars and Blitz, 2 direct number, 3 main line), flags came-from-a-customer from Keegan's alumni file plus stored Clay experience, and composes one card per person per family. 742 DWO executives without a number were NOT enriched (revisit when the desks run dry). Project `intradiem-call-desk` exists with a clean hostname; the classifier denied the deploy, so `automation/deploy_rep_pages.sh desk` runs from Dallas's terminal. Stars cards expire at the CMS October release. Log `automation/logs/memoryblue-desk-2026-09-23.md`.
 
 **Review lesson (Sep 23 2026):** re-voicing another rep's reviewed cards for a new caller needs a gate over EVERY spoken field (the assistant line was skipped) and phrase-level bans ("Belfield with Intradiem" slipped past "Belfield at"); swap numbers at sentence level, never the bare digits. Reviewer verdict after fixes: dial as-is. Passphrases handed to Dallas in chat Sep 23; `handed_to` still null until Nate has them.
+
+**LIVE Sep 23 2026:** deployment 58ba2c74 via `deploy_rep_pages.sh desk` from Dallas's terminal, gate PASS at 121 URLs, three URLs registered in the manifest. Refresh path: `pull_lemlist.py`, `fill.py`, `build_desk.py --stage`, then the same deploy target.
