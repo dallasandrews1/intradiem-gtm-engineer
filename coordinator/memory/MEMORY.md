@@ -806,3 +806,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Render before calling it live](../../../../coordinator/memory/feedback-render-before-calling-it-live.md) — byte-identical deploys still shipped a broken tools bar Sep 23; one downscaled render after any layout change
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Naveen 1:1 follow-up Sep23](naveen-1on1-followup-sep23.md) — demo end-screen prompt written; content desk LIVE at intradiem-content-desk.pages.dev for Melissa (not sent); Naveen caller variant of the Stars cards built, phone placeholder; angleProof swap waits on Jen
