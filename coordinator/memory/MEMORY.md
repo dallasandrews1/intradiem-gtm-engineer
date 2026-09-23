@@ -803,3 +803,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Customer leak scan Sep23](customer-leak-scan-sep23.md) — BO Expansion customers are by design; Citizens sync-reverted to ADT (restored); paused WFM/DWO/Genesys hold real customers
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Render before calling it live](../../../../coordinator/memory/feedback-render-before-calling-it-live.md) — byte-identical deploys still shipped a broken tools bar Sep 23; one downscaled render after any layout change
