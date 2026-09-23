@@ -14,6 +14,8 @@ State: FS (cam_x8ehMHnWSjBr2CLQe) and Net-New (cam_DNErdZPANvC2sqRCK) rebuilt in
 
 lemlist mechanics learned: once any lead enters a campaign, NO sequence in it accepts new steps (pausing doesn't help), so rebuild in a new campaign; never-launched campaigns allow step DELETE and adds. REST calls need a User-Agent header or Cloudflare returns 403/1010. Manual linkedinVoiceNote steps ARE accepted inside a branch (only AI voice is refused). create_campaign_with_sequence reports "running" but the campaign is a draft. Lead variables: POST adds only when the key is new to the campaign; after that use PATCH.
 
+Pre-launch audit Sep 22 fixed: Clay Enrich Person on all 207 FS/Net-New leads (~1,650 credits): nobody left their company; 6 wrong/odd emails restored to Clay values (Heavener gs.com, Craig regions.com, Cattani centene.com, Arif Mohammed synchrony.com, Rumignani chase.com, Joe King centene.com); Cecilia Sun removed (at JPMC, no Clay work email); 164 US mobiles written (phone coverage 26 to ~190 of 208). Reply settings on all 5 now match Blitz Hartford (stop on reply + task, AI pause-all on scored replies). BLOCKER: API-made manual voice-note steps fail readiness ('Your step must have a specific sender'); 8 need Nathan picked as sender in the UI, sheet motions/shared/polar_sheets/Lemlist_Sheet_BO_VoiceNote_Sender_Sep22.md, polar task lemlist-bo-voicenote-sender.
+
 Launch plan (decided Sep 22): hold until Nathan signs off the copy (canvas), his dialer test passes, and the lemlist-lead-integrity audit on real rows is CLEAR; then start FS + Net-New and launch the three v2 drafts.
 
 Nathan's number: he had zero call tasks ever and zero dialer calls. Caller numbers are chosen in the dialer by the logged-in user, not on the call step.
