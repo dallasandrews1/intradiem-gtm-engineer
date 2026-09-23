@@ -793,3 +793,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Stars call cards Sep22](stars-call-cards-sep22.md) — 28 per-person cards staged to the Frank bar, campaigns paused; under four stars say climb to four never bonus; measure moves are this year's ratings never the floor
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Keegan call asks built Sep23](../../../../coordinator/memory/keegan-call-asks-built-sep23.md) — former-customer flag, product filter, generic one-pager builder and index finder STAGED; deploy maps then rooms; Keegan's Sales Nav list pending
+- [memoryBlue call desks Sep23](memoryblue-call-desks-sep23.md) — SHELL staged: Tyler front office, Aiden back office; contacts and cards sealed behind a per-desk passphrase; fills only on Nate's go after Kevin signs off
