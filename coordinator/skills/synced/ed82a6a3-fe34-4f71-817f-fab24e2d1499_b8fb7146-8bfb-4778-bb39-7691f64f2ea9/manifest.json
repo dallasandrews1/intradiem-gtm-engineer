@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790271885196,
+  "lastUpdated": 1790278497477,
   "skills": [
     {
       "skillId": "import-memory",
@@ -117,8 +117,9 @@
       "skillId": "skill_01L6eX5KBnVG3kWXJDooK9HW",
       "name": "naveen-weekly-readout",
       "description": "Friday readout generator for Naveen. Reads engine_state.json, impact.json, the Clay credit ledger, and the week's war-room logs, then drafts the weekly manager readout in two formats: a Slack-length message and a one-page brief. Enforces the operating posture: surfaced vs realized never blended, provisional targets co-shaped never defended, risks flagged early, peer-level tone with zero domain explainers, head-start framing never finished-product framing. Trigger on: Friday readout, weekly readout, update for Naveen, draft my manager update, what do I tell Naveen this week. Run every Friday; load proactively when Friday work begins.",
-      "source": "custom",
-      "updatedAt": "2026-07-06T03:50:00.338742Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-06T03:50:00.338639Z",
+      "backingPluginId": "plugin_01LzreYUndkfCA6uQowbngsc"
     },
     {
       "skillId": "skill_01VSdBf4FeY1cdQP9TqbHbeU",
@@ -199,8 +200,9 @@
       "skillId": "skill_01L49CNkF97GpvqX3yGGzfDP",
       "name": "league-full-pipeline",
       "description": "Master 7-phase autonomous account orchestrator. Runs complete research and outreach pipeline sequentially from Init through PDF generation. Trigger when starting a new Tier-1 account, running a full account pipeline, or launching an account from scratch. Includes 5-tier buying committee mapping and persona rules. Load proactively for any new account assignment.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:04.619958Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:04.619821Z",
+      "backingPluginId": "plugin_01BAygNyfcXFfiuEveyqv93u"
     },
     {
       "skillId": "skill_016WWQvHjt3S19Hhqf1HAMQL",
