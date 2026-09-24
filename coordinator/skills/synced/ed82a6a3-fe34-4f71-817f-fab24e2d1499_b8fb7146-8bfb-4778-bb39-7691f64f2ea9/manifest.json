@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790208156391,
+  "lastUpdated": 1790216268719,
   "skills": [
     {
       "skillId": "import-memory",
@@ -226,8 +226,9 @@
       "skillId": "skill_01F5Mbi71EADqjCS9EB9KZQH",
       "name": "league-ae-call-transcript",
       "description": "Post-call transcript processing engine for AEs. Ingests a sales call transcript (discovery, follow-up, demo, or EBC) and produces four outputs: (1) an Executive Brief using the BLUF + 4 Army-style framework, (2) a MEDDIC scorecard with gap analysis, (3) a 255-character Salesforce activity update, and (4) a Challenger-framework follow-up email to the prospect with self-scoring rubric. Trigger when a transcript file is uploaded, when the user says \"process this transcript,\" \"run my call notes,\" \"generate a call summary,\" \"brief from this call,\" \"debrief this call,\" or \"post-call outputs.\" Load proactively when a .txt, .docx, or .md file is uploaded and appears to contain a meeting transcript.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:06.422665Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:06.422471Z",
+      "backingPluginId": "plugin_01EqPEkQ6ejzMdHsofZWDY21"
     },
     {
       "skillId": "skill_01Cm1dxXn83UW7hZA9KX9Ldg",

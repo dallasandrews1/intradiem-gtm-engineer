@@ -834,3 +834,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Marketing tools never bypass marketing](feedback-marketing-tools-never-bypass-marketing.md) — no 'skip the design queue' framing to marketing; lead with marketing's own figures and wording
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Verify our-side people](feedback-verify-our-side-people.md) — Ted Lango shipped as Intradiem SVP 21 months after leaving; roster intradiem_people.json + check_our_side_people.py gate every Intradiem name on rep pages and call cards
+- [Account rooms hosting meeting Sep24](account-rooms-hosting-meeting-sep24.md) — Sierra + Carter 11:00 CT; split internal rooms (domain + SSO) from prospect pieces (per-viewer tracking to Salesforce); Paperflite is Carter's idea; 27 projects, 55 links, zero tracking today
+- [lemlist bodies: div not p](lemlist-body-format-div-not-p.md) — <p> renders bunched in lemlist; use motions/shared/lemlist_body_format.py; 206 of 207 bodies fixed Sep 23, verify by read-back not PATCH response

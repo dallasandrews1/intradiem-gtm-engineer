@@ -18,3 +18,5 @@ Aug 3 2026 Keegan/Nate sync decisions:
 - Still open: Keegan's updated former-customer Sales Nav contact report, due ~Aug 4-5 (see [[keegan-alumni-motion-aug3]]).
 
 Dallas also owes: adding Keegan to the GTM Outbound Nathan Slack channel, and verifying his work email on LinkedIn so Keegan can share Sales Nav lists directly. Related: [[keegan-sanders-profile-aug3]].
+
+> Correction, Sep 23 2026: the Ted Lango line above is wrong. Ted Lango left Intradiem in December 2024 and is VP, Workforce and Demand Management at American Express Global Business Travel since July 2026 (Clay Enrich Person, Sep 23 2026). Foss's overlap with Ted was MetLife (2018 to 2019), not Charter, and no introduction was ever confirmed. No Intradiem person is named as a mutual contact to Foss.
