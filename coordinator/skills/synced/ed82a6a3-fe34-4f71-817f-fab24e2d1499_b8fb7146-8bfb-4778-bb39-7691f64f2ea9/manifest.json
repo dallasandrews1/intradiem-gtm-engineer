@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790241800672,
+  "lastUpdated": 1790246606555,
   "skills": [
     {
       "skillId": "import-memory",
@@ -244,8 +244,9 @@
       "skillId": "skill_01Hf82ixtisp5kbfq6iqg7nc",
       "name": "league-accord-map",
       "description": "Accord MAP Architect. Triggers when prospect confirms go-live date or hard deadline. Reverse-engineers timeline from go-live using enterprise payer procurement benchmarks. Generates Accord workspace format with Give/Gets per phase.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:02.581736Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:02.581620Z",
+      "backingPluginId": "plugin_01VXJuoepLk3FxAUeuhmGGTj"
     },
     {
       "skillId": "skill_01HGoLL4Eek7e1DNudyevXKj",
