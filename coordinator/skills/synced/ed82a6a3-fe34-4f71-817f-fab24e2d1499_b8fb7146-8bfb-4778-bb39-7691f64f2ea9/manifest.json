@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790291538805,
+  "lastUpdated": 1790293420972,
   "skills": [
     {
       "skillId": "import-memory",
@@ -348,9 +348,10 @@
       "skillId": "skill_01MJX9UubbdYyaUp5hK3hfCJ",
       "name": "league-copy-sharpener",
       "description": "BDR Swipe File Sharpener. Takes drafted messaging and sharpens every word to send-ready C-suite quality. Applies CTA Philosophy (prospect is hero, feel not tell, meeting is their idea) plus 9 rules (So What Chain, Tenbit++ Framework, Length/Front-Loading, Brand-Light, Forcing Function Specificity, CTA Construction/Escalation, Persona/Tone, Linguistic Guardrails, Send-Ready Test). Includes LinkedIn touch logic, Day 1 blitz timeline, sign-off standards, and format-specific CTA rules. Returns sharpened copy plus CHANGES LOG.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:02.397685Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:02.397561Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01G6PF3KS6qcmaCWQV9SSx3K"
     },
     {
       "skillId": "skill_014JxFRuxg7pgbjznTBUDrvZ",
