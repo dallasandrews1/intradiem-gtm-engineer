@@ -850,3 +850,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Keegan SalesNav list in lemlist Sep24](keegan-salesnav-list-in-lemlist-sep24.md) — "Keegan's Search" list holds 95 of 264; 60 of those never came back in the People Database pull
+
+## Swept from -Users-dallasandrews on 2026-09-24
+- [Vanguard service message, Jenn East Sep24](vanguard-service-message-jenn-east-sep24.md) — two tracks: service message for ops seats, intraday for planning; QO spoken as new, no number

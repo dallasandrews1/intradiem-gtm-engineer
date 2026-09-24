@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790257313018,
+  "lastUpdated": 1790262872405,
   "skills": [
     {
       "skillId": "import-memory",
@@ -420,8 +420,9 @@
       "skillId": "skill_01Jt98vkk3UvPiWb1ffzPBbM",
       "name": "league-execution-roadmap",
       "description": "Use this skill to map out a day-by-day outreach sequence for a payer account over 10 business days. Trigger for any request involving daily touchpoint scheduling, outreach cadence planning, or sequencing cold emails, LinkedIn, voice notes, and calls across numbered days. Also trigger when someone has completed account research and is ready to start prospecting or execute on outreach. Recognizable phrases: execution roadmap, day-by-day plan, 10-day plan, outreach plan, daily cadence, pincer, High-Propensity Trio, map out days 1 through 10, book a meeting. Produces Week 1 foundation touches, Week 2 pincer escalation, Day 10 hail mary, with send-ready scripts for every touchpoint. Do NOT trigger for strike packets, call prep, transcript processing, competitive intel, or objection handling alone. For all cold call, voice note, and voicemail scripts, this skill automatically invokes league-cold-call-playbook to ensure gold-standard output quality.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:55.796720Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:55.796540Z",
+      "backingPluginId": "plugin_01JvKW4XrsdfMFNaiyH5UdNb"
     },
     {
       "skillId": "pdf",
