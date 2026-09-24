@@ -847,3 +847,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [Gate gaps never on rep pages](feedback-gate-gaps-never-on-rep-pages.md) — a freshness or stale warning goes to the log and gets fixed; stamp() is silent unless FRESH
 - [Signal panels: live doors only](feedback-signal-panels-live-doors-only.md) — actionable rows only, one clause each; the rest fold into one collapsed line; cards one line per signal
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Keegan SalesNav list in lemlist Sep24](keegan-salesnav-list-in-lemlist-sep24.md) — "Keegan's Search" list holds 95 of 264; 60 of those never came back in the People Database pull
