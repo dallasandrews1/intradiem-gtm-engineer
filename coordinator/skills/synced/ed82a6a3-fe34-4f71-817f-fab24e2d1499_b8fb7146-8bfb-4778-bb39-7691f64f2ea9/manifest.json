@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790195794716,
+  "lastUpdated": 1790208156391,
   "skills": [
     {
       "skillId": "import-memory",
@@ -40,8 +40,9 @@
       "skillId": "skill_01ES6jPKgUS9zLY5o7nTn5an",
       "name": "my-writing-style",
       "description": "Dallas Andrews's writing voice for messages he sends as himself - internal notes, emails, Slack, handoffs. Draft from this whenever writing something Dallas will send in his own name.",
-      "source": "custom",
-      "updatedAt": "2026-07-21T19:56:25.197360Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-21T19:56:25.195187Z",
+      "backingPluginId": "plugin_015BWF96CyrAb3omQor13j33"
     },
     {
       "skillId": "skill_0136kGBs8TDZQEWw6dy1sHoV",

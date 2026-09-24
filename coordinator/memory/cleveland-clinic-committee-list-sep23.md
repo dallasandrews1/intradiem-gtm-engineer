@@ -5,10 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 42be9592-5883-44a3-ab0f-46b5bf8aa1f6
-  modified: 2026-09-23T23:27:27.554Z
+  modified: 2026-09-23T23:51:02.471Z
 ---
 
 **Ask (Sep 23 2026, "Cleveland Clinic Retention Strategy" meeting, then Sierra's 14:38 CT email):** Dallas compiles the Cleveland Clinic contact list for the DWO-for-Stars save campaign, WFM leaders and up, blocker excluded; replies on Sierra's thread so Cheryl can run it by Mary Ann Chandler. Nate curates the final list and names the WFM-team blocker.
+
+**Page LIVE Sep 23 2026:** https://save-rooms.pages.dev/cleveland-clinic/inger/committee/ (builder `motions/churn_risk_save_plan/build_committee_page.py`, in Inger's room tree so the theme pass and the phase-one host move both cover it; Inger's room hero links it; registered in the shared links manifest). Dallas's rule the same evening: a list like this is a showcase, so it ships as a page on the room system plus the CSV, never as an email table. Names, tiers, routes and method on the page; emails and mobiles only in the CSV.
+
+**Revised the same evening (Dallas):** the ten people the save plan routes through Inger and Amy are NOT held out of the campaign and are never described as "already contacted" or as a separate account-team lane, which read as if Inger and Amy weren't doing their jobs. They sit inside the campaign list with an orange "Inger first" or "Amy first" chip naming the planned note and week, plus the line "confirm with Inger before anyone else writes." Campaign is now 43 in five groups (IT and platform added for the RFP evaluators). The group cards carry names, what they run, what they care about, what the note says, the ask and a watch line; headings are plain statements with counts.
 
 **Built:** 61 names in `motions/churn_risk_save_plan/data/cleveland_clinic_committee_sep23.csv` (Desktop copy in Intradiem Deliverables). Tiers: 33 campaign (WFM and contact center management, access ops and transformation, experience and quality, MA risk and value), 10 account-team-only (Rena, the Faini IT four, Goode, Letwin, Hemsoth, Becka, Restaino), 6 held (Kokoruda, Yerian, Laraway, Peacock, Chandra, Hatchett), 4 excluded or gone, 8 WFM users for proof only. 46 mobiles and 53 ccf.org emails from the Enrich Person and Find Contact Details routine, 378 credits. Reply body saved beside the CSV as "Cleveland Clinic - Reply to Sierra - Sep 23" (.html and .txt); the Microsoft 365 connector has no Mail.ReadWrite scope, so Outlook drafts cannot be created from here and Dallas pastes and attaches by hand.
 

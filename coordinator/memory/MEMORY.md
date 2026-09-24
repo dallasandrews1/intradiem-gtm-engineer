@@ -725,6 +725,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Plain section titles](feedback-plain-section-titles.md) — headings and bullet lead-ins in plain literal words, never coined labels or internal shorthand
 
 ## Swept from -Users-dallasandrews on 2026-09-21
+- [Frank 3xG split Sep23](frank-3xg-split-sep23.md) — /frank/3xg/ index staged for Jeremy, call plans repointed, Five9 line off; deploy maps then send the reply; parallel session was on build_rep_index.py
 - [Frank QuickStart: Highmark + PennyMac Sep21](../../../../coordinator/memory/frank-quickstart-highmark-pennymac-sep21.md) — org charts to the front line plus call cards, staged not deployed; Clay live check stalled, run finalize script; BOO is beta so tracks follow marketing V04
 - [Talking points: defend before delivery](../../../../coordinator/memory/feedback-talking-points-defend-before-delivery.md) — two adversarial reviews until both pass; find missing answers yourself before flagging them
 
@@ -824,3 +825,9 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Keegan's room is the bar](feedback-keegan-room-is-the-bar.md) — every rep room is diffed against Keegan's vanguard room, one-pager shelf and selector attached
 - [Cleveland Clinic committee list Sep23](cleveland-clinic-committee-list-sep23.md) — 61 names, 33 campaign targets Clay-verified for Sierra and MAC; reply draft staged; Salesforce stale on Kull, Boissy, DeAngelo; Nate names the blocker
 - [Next moves must read alone](feedback-next-moves-must-read-alone.md) — rep-page moves: verb, person and role, one reason; no door/layer/gate/wave; overlay in motions/shared/plain_moves.json
+- [Naveen is not on rep accounts](feedback-naveen-not-on-rep-accounts.md) — never "check with Naveen" on a rep, partner or prospect page; the owning account team or the rep is the route
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Save plan notes are plans, not a contact log](feedback-save-plan-notes-are-plans-not-contact-log.md) — never write "already contacted" from our own drafted rooms; only Salesforce, tracker rows or the rep's word count
+- [Rep-planned contacts: flag, never hold](feedback-rep-planned-contacts-flag-not-hold.md) — people a rep plans to reach stay on the campaign list with a "<Rep> first" chip and confirm-with-the-rep line; a separate lane reads as grading the rep
+- [Suggest, don't direct reps](feedback-suggest-dont-direct-reps.md) — rep pages: 'Suggested next steps' with the draft/contact/fact ready; never 'next move by owner' or tasks for Keegan/Nathan
