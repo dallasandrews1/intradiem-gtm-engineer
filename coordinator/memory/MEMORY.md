@@ -665,7 +665,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Feedback No Unresolved Contacts, Spend Credits](feedback-no-unresolved-contacts-spend-credits.md) — Sep 17 2026: no not_found or dual names on seller-facing maps; settle every name with paid Enrich Person before delivery
 - [Keegan Three Account Package Sep17](keegan-three-account-package-sep17.md) — Sep 17 2026: maps, rooms, briefs, one-pagers for Citizens, The Hartford, Vanguard; AE shape, builders, paid live gate, blitz defects found
 - [Keegan Execution Kit Sep18](keegan-execution-kit-sep18.md) — Sep 18 2026: 22-page one-pager shelf, sequence blueprints, room selector, Vanguard lemlist draft; staged not deployed; Bartolazo adt.com defect open
-- [Spot Bonus Program Sep18](spot-bonus-program-sep18.md) — $1M pool via co-CEO Jen; three picks chosen, outbound engine left out until it has meetings
+- [Spot Bonus Program Sep18](spot-bonus-program-sep18.md) — two-picks reply SENT Sep 24; Jenn East books the meeting; done-work email from Jen due week of Sep 28
 - [Intradiem Org Chart Sep18](intradiem-org-chart-sep18.md) — two co-CEOs, Dallas sits in Product; Jenn East vs Jen Lee; Rachel DiBello is Enterprise Sales Director
 - [Feedback Social Proof Ships Sep18](feedback-social-proof-ships-sep18.md) — Sep 18 2026: blinded peer outcomes are NOT blocked; share every published result; when Dallas delegates the calls, make them
 - [Wrangler Pages Needs Force Sep18](spot-bonus-program-sep18.md) — wrangler 4.135 sends pages deploys to workers.dev unless --force; clear .wrangler from the deploy folder
@@ -864,3 +864,5 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-24
 - [Nate call list job Sep24](nate-call-list-job-sep24.md) — LOADED live; lemlist lead score is UI-only, job scores the activities feed instead; first post Fri Sep 25 ~7:12am ET
+- [Picks point at the best asset](feedback-picks-point-at-the-best-asset.md) — when the strongest built thing cannot be a pick, make an eligible pick name it as the bar and link it
+- [Leadership reply answers only the ask](feedback-leadership-reply-answers-only-the-ask.md) — one line per question she named, links, nothing for the meeting; cut until "send as-is" is yes
