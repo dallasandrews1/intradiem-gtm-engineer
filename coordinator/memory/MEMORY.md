@@ -831,3 +831,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Save plan notes are plans, not a contact log](feedback-save-plan-notes-are-plans-not-contact-log.md) — never write "already contacted" from our own drafted rooms; only Salesforce, tracker rows or the rep's word count
 - [Rep-planned contacts: flag, never hold](feedback-rep-planned-contacts-flag-not-hold.md) — people a rep plans to reach stay on the campaign list with a "<Rep> first" chip and confirm-with-the-rep line; a separate lane reads as grading the rep
 - [Suggest, don't direct reps](feedback-suggest-dont-direct-reps.md) — rep pages: 'Suggested next steps' with the draft/contact/fact ready; never 'next move by owner' or tasks for Keegan/Nathan
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Marketing tools never bypass marketing](feedback-marketing-tools-never-bypass-marketing.md) — no 'skip the design queue' framing to marketing; lead with marketing's own figures and wording
