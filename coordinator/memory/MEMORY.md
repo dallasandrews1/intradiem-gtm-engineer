@@ -861,3 +861,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-24
 - [Restyle: check every slide family](feedback-restyle-check-every-slide-family.md) — page styles light-first with .dark overrides; render dark, light and screen slides before deploy
+
+## Swept from -Users-dallasandrews on 2026-09-24
+- [Nate call list job Sep24](nate-call-list-job-sep24.md) — LOADED live; lemlist lead score is UI-only, job scores the activities feed instead; first post Fri Sep 25 ~7:12am ET
