@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790238689175,
+  "lastUpdated": 1790241800672,
   "skills": [
     {
       "skillId": "import-memory",
@@ -251,8 +251,9 @@
       "skillId": "skill_01HGoLL4Eek7e1DNudyevXKj",
       "name": "league-objection-handler",
       "description": "Objection Handler. Triggers when prospect replies with pushback. Diagnoses objection category (Bad Timing, Build In-House, Competitor Eval, No Budget, Send Info). Applies Reframe Framework (Acknowledge → Insight Pivot → Soft CTA). Drafts 3-4 sentence response with calm, peer-to-peer, consultative tone.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:01.025335Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:01.025163Z",
+      "backingPluginId": "plugin_01RBoERcpv2RfgRmsFHUH6jn"
     },
     {
       "skillId": "skill_01Pb2z1kPH8HodwGFE631W26",
