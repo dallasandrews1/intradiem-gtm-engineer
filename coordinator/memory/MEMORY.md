@@ -858,3 +858,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [ChangeOS pilot prototype Sep24](changeos-pilot-prototype-sep24.md) — Derek settled it: Intradiem adoption + the playbook behind the flag, paid add-on; three-phase prototype built; Nov 3 calibration
 - [Wells Fargo package for Rachel Sep24](wells-fargo-rachel-package-sep24.md) — Jenn's "higher and broader" ask; 84-person committee enriched, room on the Keegan shape at motions/rachel/, STAGED
 - [BO FS campaign holds Wells Fargo COO Sep24](bo-fs-campaign-holds-wells-fargo-coo-sep24.md) — Scott Powell (COO, CRO from Jan) loaded in Nathan's FS campaign unsent; pull before the next step
+
+## Swept from -Users-dallasandrews on 2026-09-24
+- [Restyle: check every slide family](feedback-restyle-check-every-slide-family.md) — page styles light-first with .dark overrides; render dark, light and screen slides before deploy
