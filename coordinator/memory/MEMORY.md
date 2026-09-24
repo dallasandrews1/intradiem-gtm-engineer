@@ -843,3 +843,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-23
 - [First-contact DM shape](feedback-first-contact-dm-shape.md) — link on line one, one Quick version line, open ask; no pre-defending claims, no same-day offer
 - [Keegan door context Sep23](keegan-door-context-sep23.md) — 'worked at X' pills replaced by overlap + owner + outreach rule + use; 21 of 37 spells predate Intradiem
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [Gate gaps never on rep pages](feedback-gate-gaps-never-on-rep-pages.md) — a freshness or stale warning goes to the log and gets fixed; stamp() is silent unless FRESH
+- [Signal panels: live doors only](feedback-signal-panels-live-doors-only.md) — actionable rows only, one clause each; the rest fold into one collapsed line; cards one line per signal
