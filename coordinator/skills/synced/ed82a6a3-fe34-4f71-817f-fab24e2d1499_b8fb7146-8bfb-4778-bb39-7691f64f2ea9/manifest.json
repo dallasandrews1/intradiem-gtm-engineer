@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790278497477,
+  "lastUpdated": 1790280285014,
   "skills": [
     {
       "skillId": "import-memory",
@@ -139,8 +139,9 @@
       "skillId": "skill_01LFdknjY3Hn84pprrVcxd4X",
       "name": "intradiem-roi-business-case",
       "description": "CFO / Economic-Buyer Economic Impact Statement builder for Intradiem. Triggers once an Economic Buyer (CFO, VP Finance, COO, VP/SVP Operations or Customer Care) is identified. Extracts operational and financial data from call transcripts across contact-center AND back-office workforces (agent and back-office FTE counts, AHT or cost-per-transaction, shrinkage/idle time, backlog, attrition, training load, vendor/WFM spend, budgets) and generates a 1-page business case with Current State, Projected Impact, Cost of Inaction, and Implementation Timeline. Trigger on \"build the business case for [account]\", \"ROI for [account]\", \"economic impact statement\", \"CFO case\", or after any call where workforce cost metrics are discussed. Built for the GTM Engineer to convert operational discovery into financial justification.",
-      "source": "custom",
-      "updatedAt": "2026-06-21T19:30:07.900007Z"
+      "source": "plugin",
+      "updatedAt": "2026-06-21T19:30:07.899894Z",
+      "backingPluginId": "plugin_015xirZnbhNYabWd2ahrdU6b"
     },
     {
       "skillId": "skill_01LvH5mCkGUexw42hSyyacKf",
