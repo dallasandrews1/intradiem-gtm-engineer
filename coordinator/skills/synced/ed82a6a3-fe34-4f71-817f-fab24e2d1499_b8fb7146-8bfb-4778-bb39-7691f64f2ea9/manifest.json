@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790216268719,
+  "lastUpdated": 1790231479786,
   "skills": [
     {
       "skillId": "import-memory",
@@ -33,8 +33,9 @@
       "skillId": "skill_01GRc7e84DnaBsqMffzvEVzC",
       "name": "intradiem-copy-sharpener",
       "description": "Intradiem outreach copy quality gate. Takes drafted messaging and sharpens every word to send-ready C-suite quality. Applies CTA Philosophy (prospect is hero, feel not tell, meeting is their idea) plus 9 rules (So What Chain, Tenbit++ Framework, Length/Front-Loading, Brand-Light, Forcing Function Specificity, CTA Construction/Escalation, Persona/Tone, Linguistic Guardrails, Send-Ready Test) and a hard verified-claims gate against the Intradiem Value Repository. Runs AFTER intradiem-first-draft-engine. Trigger on any request to sharpen, review, or finalize Intradiem outreach copy: emails, LinkedIn, voice scripts, call scripts, Clay message variants. Returns sharpened copy plus CHANGES LOG.",
-      "source": "custom",
-      "updatedAt": "2026-07-16T22:06:32.069644Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-16T22:06:32.069520Z",
+      "backingPluginId": "plugin_01ViKRy8imDjGkhYyTnzqdbX"
     },
     {
       "skillId": "skill_01ES6jPKgUS9zLY5o7nTn5an",
