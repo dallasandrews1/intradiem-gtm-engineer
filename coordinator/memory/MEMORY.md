@@ -839,3 +839,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Verify our-side people](feedback-verify-our-side-people.md) — Ted Lango shipped as Intradiem SVP 21 months after leaving; roster intradiem_people.json + check_our_side_people.py gate every Intradiem name on rep pages and call cards
 - [Account rooms hosting meeting Sep24](account-rooms-hosting-meeting-sep24.md) — Sierra + Carter 11:00 CT; split internal rooms (domain + SSO) from prospect pieces (per-viewer tracking to Salesforce); Paperflite is Carter's idea; 27 projects, 55 links, zero tracking today
 - [lemlist bodies: div not p](lemlist-body-format-div-not-p.md) — <p> renders bunched in lemlist; use motions/shared/lemlist_body_format.py; 206 of 207 bodies fixed Sep 23, verify by read-back not PATCH response
+
+## Swept from -Users-dallasandrews on 2026-09-23
+- [First-contact DM shape](feedback-first-contact-dm-shape.md) — link on line one, one Quick version line, open ask; no pre-defending claims, no same-day offer
+- [Keegan door context Sep23](keegan-door-context-sep23.md) — 'worked at X' pills replaced by overlap + owner + outreach rule + use; 21 of 37 spells predate Intradiem
