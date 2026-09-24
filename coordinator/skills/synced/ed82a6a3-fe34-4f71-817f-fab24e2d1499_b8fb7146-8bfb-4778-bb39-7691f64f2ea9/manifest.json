@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790231479786,
+  "lastUpdated": 1790238689175,
   "skills": [
     {
       "skillId": "import-memory",
@@ -64,8 +64,9 @@
       "skillId": "skill_01H29PzVHykySgfCS3feusok",
       "name": "intradiem-backoffice-icp",
       "description": "Back-office ICP builder for Mandate 3 (200+ back-office contacts) and the BOO launch universe. Holds the ICP straw-man hypothesis to bring to Scott Kemme, the back-office persona pain maps (claims ops, shared services, document processing, payment ops), qualification and dedup rules against install-base contacts, and the sourcing spec for the Clay persona pull. Trigger on: back-office ICP, who buys back office, 200 contacts, back-office personas, BOO targeting, source back-office contacts, prep for the Scott Kemme conversation, back-office qualification rules. Load proactively when any back-office sourcing, targeting, or BOO launch work begins.",
-      "source": "custom",
-      "updatedAt": "2026-07-06T03:56:33.124939Z"
+      "source": "plugin",
+      "updatedAt": "2026-07-06T03:56:33.124817Z",
+      "backingPluginId": "plugin_01LzLsQgzA8rgySKWCbQrCYi"
     },
     {
       "skillId": "skill_01PVTZTKAowViytv17BuMmPb",
