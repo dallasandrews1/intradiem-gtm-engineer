@@ -1,11 +1,22 @@
 ---
 name: keegan-salesnav-list-in-lemlist-sep24
-description: Keegan's 264-lead Sales Navigator list was imported by Dallas into the lemlist contact list "Keegan's Search" (clt_fQpabfLBHJX9Ghpwc) on Sep 23 2026 late evening; the read found 95 contacts, not 264
+description: Keegan's 264-lead Sales Navigator list is fully in the lemlist contact list "Keegan's Search" (clt_fQpabfLBHJX9Ghpwc) as of Sep 24 2026; reconciled, 18 on the alumni page, 72 gate-cut, 174 never read; 114 of those are name and title only
 metadata:
   type: project
 ---
 
-Sep 23 2026 (23:34 ET). Dallas turned Keegan's saved search (id 1999259452, 264 leads) into a Sales Navigator lead list and imported it into lemlist by hand. Claude reads it through the lemlist connector (search_contacts with listId clt_fQpabfLBHJX9Ghpwc); no Clay import was needed. First read: 95 contacts, 34 created by the import, the rest matched contacts already in the CRM. Copy saved at motions/keegan/alumni/_lemlist_keegans_search_list_sep24.{json,csv}. Of the 95: 14 on the alumni page, 21 cut by the gate, 60 never returned by the lemlist People Database pull at all.
+Sep 24 2026 (16:53 ET read). Dallas pushed Keegan's saved search (id 1999259452) into lemlist by hand in two passes. The first 95 (Sep 23 and
+overnight) came with LinkedIn URLs and companies. The 169 pushed Sep 24 at 21:50 UTC came as name plus title ONLY (no URL, no company, 15
+with truncated surnames), the shape of a results-grid paste rather than an extension push. Full read saved at
+motions/keegan/alumni/_lemlist_keegans_search_list_sep24_full.json; per-person classes in Keegan_SalesNav_264_Reconciliation_Sep24.csv.
 
-**Why:** the Sales Navigator list is the only ground truth for Keegan's own definition; the lemlist People Database replica missed 60 of his first 95, so the "135 of 264" story needs the full list before it is final.
-**How to apply:** when the list reaches 264, rerun the reconciliation against Keegan_Former_Customer_Alumni_Sep23.csv, the verified roster and alumni.json. Related: [[keegan-door-context-sep23]], [[lemlist-salesforce-create-on-sync-off-sep23]].
+Reconciliation (log automation/logs/keegan-salesnav-264-2026-09-24.md): 18 on the alumni page, 72 in the People Database pull but gate-cut,
+174 never in the pull (60 with a URL, staged as Clay Enrich Person items in _clay_enrich_items_keegan_list_sep24.json, about 480 credits;
+114 need a URL first). The alumni page's "on Keegan's list" chip now means real list membership (18 of 65, was 59 under the replica match);
+deployed Sep 24, backoffice-maps f5d1545d, gate PASS.
+
+**Why:** the lemlist People Database replica of Keegan's search missed two thirds of his real list; his list is the only ground truth for his
+definition, and any "N of 264" story must come from list membership, never from the criteria match.
+**How to apply:** to grow the page from his list, first get URLs onto the 114 (extension re-push into the same list, or the SalesNav CSV into
+automation/inbox/salesnav/), then run the staged Clay items, read_clay_alumni_runs.py, rebuild and deploy maps. Related: [[keegan-door-context-sep23]],
+[[clay-enrich-person-contact-details-routine]], [[lemlist-salesforce-create-on-sync-off-sep23]].
