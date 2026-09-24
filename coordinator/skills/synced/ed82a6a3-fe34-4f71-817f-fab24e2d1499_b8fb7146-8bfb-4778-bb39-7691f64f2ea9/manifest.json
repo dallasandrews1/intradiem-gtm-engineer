@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790246606555,
+  "lastUpdated": 1790257313018,
   "skills": [
     {
       "skillId": "import-memory",
@@ -332,8 +332,9 @@
       "skillId": "skill_01JUNJVx3XgB6BmzEoFEfigm",
       "name": "league-brand-assistant",
       "description": "League's brand assistant skill. Apply this skill whenever an employee is working on anything visual, written, or design-related — including slide decks, web content, emails, social posts, internal documents, or UI components. Triggers include requests to check brand consistency, choose colours or fonts, review copy for on-brand voice, pick a logo variant, flag accessibility issues, or ask any question about League's visual identity. Also trigger proactively when the user shares creative work and brand compliance hasn't been explicitly mentioned — they almost certainly want it to be on-brand. When in doubt, apply this skill.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:53.669682Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:53.669544Z",
+      "backingPluginId": "plugin_01JPExfuNR93fwKiedZ4ST8q"
     },
     {
       "skillId": "skill_01KdPkqZeCdxvJd4vdZpW5Eh",
