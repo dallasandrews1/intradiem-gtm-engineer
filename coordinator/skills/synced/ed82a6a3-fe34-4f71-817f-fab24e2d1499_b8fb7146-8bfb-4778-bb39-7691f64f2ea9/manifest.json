@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790270683304,
+  "lastUpdated": 1790271885196,
   "skills": [
     {
       "skillId": "import-memory",
@@ -341,8 +341,9 @@
       "skillId": "skill_01KdPkqZeCdxvJd4vdZpW5Eh",
       "name": "league-brand-audit",
       "description": "Programmatic brand compliance auditor for League documents. Runs any PPTX, DOCX, or HTML file through the League design token system and produces a compliance scorecard with specific violations, off-brand colors, font issues, and actionable fixes. Trigger on: audit this deck, check brand compliance, run a brand audit, is this on-brand, check this document, brand check, compliance check, token audit. Also trigger proactively when a user has just finished creating a PPTX or DOCX deliverable — offer to audit it before they share it. Load this skill alongside league-brand-assistant for the full brand compliance workflow.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:51.299254Z"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:51.299130Z",
+      "backingPluginId": "plugin_01SRG5jh5sETHmg6Xo4uFz9Z"
     },
     {
       "skillId": "skill_01VmrNEekHfbvJQUa3Jwjrb2",
