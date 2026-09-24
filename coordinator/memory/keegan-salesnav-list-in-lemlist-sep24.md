@@ -1,6 +1,6 @@
 ---
 name: keegan-salesnav-list-in-lemlist-sep24
-description: Keegan's 264-lead Sales Navigator list is fully in lemlist ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) and fully read as of Sep 24 2026; 73 on the alumni page (120 total), 4 names unresolved; 170 lemlist rows still lack URL, email and mobile that the Sep 24 roster holds
+description: Keegan's 264-lead Sales Navigator list is fully in lemlist ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) and fully read as of Sep 24 2026; 73 on the alumni page (120 total), 4 names unresolved; roster written back to lemlist Sep 24 (URL 200, email 131, phone 182 of 264); 6 duplicate pairs left to merge
 metadata:
   type: project
 ---
@@ -24,7 +24,9 @@ Scott Davidson). Alumni page 65 to 120 and the Keegan index counter deployed (ba
 **Why:** the lemlist People Database replica of Keegan's search missed two thirds of his real list; his list is the only ground truth for his
 definition, and any "N of 264" story must come from list membership, never from the criteria match. Clay search by full_name plus current
 title resolves a name-only row to a LinkedIn URL for free, so a names-only paste is recoverable without a re-export.
-**How to apply:** next step is the lemlist write-back (URL, work email, mobile onto the 170 contacts by lemlist id; no campaign touched), then
-the 4 unresolved names from Keegan's own list. The Keegan index builder writes account_maps/keegan_index.html only; copy it into
+Write-back done Sep 24 evening: 166 contacts updated by id with fillEmptyOnly (stored values never replaced), list now reads URL 200 / email 131 /
+phone 182 of 264; 6 rows conflicted because the email or URL already sits on an older contact (Volz, Hyde, Griffin, Fiorella, Brooks, David M.),
+phone landed on each. Charles T Brooks's older record still reads Kemper while Clay reads Bamboo Insurance.
+**How to apply:** merge the 6 duplicate pairs (ids in the log) before any campaign load from this list; then the 4 unresolved names from Keegan's own list. The Keegan index builder writes account_maps/keegan_index.html only; copy it into
 deploy-backoffice-maps/keegan/ by hand before deploying maps. Related: [[keegan-door-context-sep23]],
 [[clay-enrich-person-contact-details-routine]], [[lemlist-salesforce-create-on-sync-off-sep23]].

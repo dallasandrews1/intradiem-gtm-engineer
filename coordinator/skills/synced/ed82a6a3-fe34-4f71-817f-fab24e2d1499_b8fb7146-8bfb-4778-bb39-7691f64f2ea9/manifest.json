@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790289136212,
+  "lastUpdated": 1790291538805,
   "skills": [
     {
       "skillId": "import-memory",
@@ -149,9 +149,10 @@
       "skillId": "skill_01M8U3N65udZu66ouBHSahzR",
       "name": "intradiem-signal-to-play",
       "description": "Closed-loop GTM engine that turns a single account signal into three synchronized outputs — a Marketing triggered-campaign brief, a Slack-ready Sales alert, and a send-ready personalized outreach draft — so Marketing and Sales act on the SAME trigger at the same time. Trigger on \"run the signal play for [account]\", \"signal to play\", \"turn this signal into outreach\", \"[account] just had [event], what do we do\", or any moment a real-world account signal (intent spike, leadership change, earnings/M&A, hiring surge, tech-stack shift, outage/disruption, regulatory deadline) needs to become coordinated GTM action. Mirrors Intradiem's own product thesis — real-time signals trigger automated action across the workforce — and doubles as an internal \"we run GTM the way our product runs operations\" proof point. Load proactively whenever a fresh account signal is surfaced.",
-      "source": "custom",
-      "updatedAt": "2026-06-21T19:30:04.330217Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-06-21T19:30:04.330124Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01DhdRYDS1dCVJrfTowCP45w"
     },
     {
       "skillId": "skill_01LFdknjY3Hn84pprrVcxd4X",
