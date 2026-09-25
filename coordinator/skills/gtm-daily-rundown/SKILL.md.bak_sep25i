@@ -45,8 +45,6 @@ Dallas iterates fast, so he wants one consolidated morning DM that tells him wha
 
 21. `automation/logs/sf-prepipeline-watch-<today-or-most-recent>.md` (sf-report-intake plus the Salesforce freshness gate, weekdays 7:15 once its plist is loaded, staged Sep 21 2026, read-only, never rebuilds): carry the lines under its newest run's 'Rundown block' verbatim in GATES AND BLOCKERS when any package is STALE or MISSING (a rep page that predates its Salesforce record is a blocker on that rep's next send), otherwise one line in MOTION MOVEMENT. If the log carries 'Intake problems', say so in one line. If the newest log is more than 3 business days old, say the Salesforce watch has not run.
 
-22. `automation/logs/messaging-canon-check-<most-recent>.md` (check_messaging_canon.py, on demand before a room or kit build, built Sep 25 2026, read-only, no schedule yet): the messaging canon drift check over the Rachel and Keegan builders. Carry ONE line under gates and blockers only when its header says exit code 1 (a live angle backed by a SUPERSEDED canon entry), naming the account and the entry id; a run with exit 0 gets no line. Unbacked lines are warnings and never reach the DM. Never name evt ids in the DM. If no file exists, say nothing.
-
 9. `automation/logs/daily-rundown-<yesterday-or-most-recent>.md`: the prior brief, to compute what changed since. If none exists, this is the first run; skip deltas and say so.
 
 ## Unattended ground rules (for scheduled runs)

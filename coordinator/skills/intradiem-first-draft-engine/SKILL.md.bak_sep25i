@@ -195,7 +195,3 @@ Rules for using it in copy:
 - Older reads are context for the rep's call notes, never a line in an email. Blank means say nothing about platforms; do not guess and do not infer a vendor from a job title.
 - The line is a fit statement, not a compliment: "on top of Verint, nothing replaced" is the shape. It goes in E1 for WFM personas and in the technical touch for everyone else, once per sequence.
 - Read the fields from the Audiences company record (by normalized domain) before drafting; if the record has no read, draft without a platform line.
-
-## Read the canon first (Sep 25 2026)
-
-Before drafting, load `motions/shared/messaging_canon.md` (rendered from `messaging_canon.json` by `messaging_canon.py`; the canon sits under the doctrine and never contradicts it). Use the current entry for the account, persona and motion when one exists: its angle, talk track, written line and the POV for AEs are the decided messaging, and a superseded entry is never drafted from. When a conversation decides a new line, add it as an entry (decided by, when, where) and supersede the old one with `messaging_canon.supersede()` rather than editing history; a proposed line from a colleague stays proposed until Dallas decides. `check_messaging_canon.py` reports any live room or kit angle a superseded entry backs.
