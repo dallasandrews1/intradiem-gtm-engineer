@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790319810507,
+  "lastUpdated": 1790323500811,
   "skills": [
     {
       "skillId": "import-memory",
@@ -301,17 +301,19 @@
       "skillId": "skill_01Pb2z1kPH8HodwGFE631W26",
       "name": "league-deal-desk",
       "description": "Weekly deal desk orchestrator. Generates Slack updates, ghostwrites champion-to-EB emails, and extracts MEDDPICC fields from transcripts. Output is account-specific deal briefing with structured sections ready for internal alignment.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:03.580821Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:03.580694Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01TK4Z5mX1Amkcisc5JGqHkQ"
     },
     {
       "skillId": "skill_01PoRdZSuoJ45jrhRMbSJYDA",
       "name": "league-competitive-intel",
       "description": "Competitive displacement orchestrator. Identifies competitor mentions (Epic, Accolade, Included Health, Wellframe, Castlight, build in-house, status quo) and generates counter-narrative briefs with wedge analysis, reframe positioning, and trap-setting talking points.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:58.629683Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:58.629552Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01KapZ4T48ozf4GL4LDfH5nZ"
     },
     {
       "skillId": "skill_01VCZfkHh4yWKozd1u1b3QVN",
