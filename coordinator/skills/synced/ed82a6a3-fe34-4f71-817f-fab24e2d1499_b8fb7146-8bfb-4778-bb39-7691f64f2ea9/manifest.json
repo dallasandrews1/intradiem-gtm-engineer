@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790351730962,
+  "lastUpdated": 1790355794701,
   "skills": [
     {
       "skillId": "import-memory",
@@ -65,9 +65,10 @@
       "skillId": "skill_01S6h1rJmqTEGm4NpYzy5Chr",
       "name": "intradiem-strike-sequence",
       "description": "Motion-agnostic account engine for Intradiem outbound. Turns an account into a full buying-committee outreach sequence staggered across business days with send-ready copy per contact. Default cadence is a five-touch multi-channel core (Centene Star Ratings is the built-in reference example); an extended arc is available for must-win contacts. Two modes: SEQUENCE (default, builds from existing engine/Clay research) and FULL (pulls from the TAM engine, signal engine, and Clay Contacts, then sequences). Runs any motion via a registry: Star Ratings cliff-edge is populated; back-office, install-base expansion/risk, competitive displacement, and cost-mandate are stubbed. Enforces two gates: verified-claims and current-customer exclusion. Trigger on: run the sequence, 10-day plan, execution roadmap, outreach plan, daily cadence, strike sequence, full pipeline, run the full engine for [account], build the sequence for [account], launch [account]. Load when an account is ready for outbound.",
-      "source": "custom",
-      "updatedAt": "2026-07-09T19:19:56.537952Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-07-09T19:19:56.537802Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_014dR9ZPrRLx9kZcCygaf9rh"
     },
     {
       "skillId": "skill_01H29PzVHykySgfCS3feusok",
