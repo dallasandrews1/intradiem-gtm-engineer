@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790325303544,
+  "lastUpdated": 1790330710383,
   "skills": [
     {
       "skillId": "import-memory",
@@ -380,9 +380,10 @@
       "skillId": "skill_01QLT8qf6xBdfk8JB7fnWK3F",
       "name": "league-app-audit",
       "description": "Digital Front Door Audit. Reviews iOS/Google Play app ratings for target payer. Extracts 1-star and 2-star complaints about fragmented UX, benefit navigation, login issues. Synthesizes into 3-bullet executive summary. Drafts 3-touch LinkedIn sequence for VP Digital Health / Director Member Experience.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:53.817614Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:53.817502Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01SwQo8eDxZgL8MS6uPpPb2M"
     },
     {
       "skillId": "skill_01JUNJVx3XgB6BmzEoFEfigm",
