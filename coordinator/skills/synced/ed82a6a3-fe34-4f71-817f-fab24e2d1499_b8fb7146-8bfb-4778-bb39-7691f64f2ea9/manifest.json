@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790293420972,
+  "lastUpdated": 1790305369227,
   "skills": [
     {
       "skillId": "import-memory",
@@ -324,9 +324,10 @@
       "skillId": "skill_01NHPAUrQ2XNWsJYNtz4dGwP",
       "name": "league-cfo-business-case",
       "description": "CFO Economic Impact Statement builder. Triggers once Economic Buyer identified. Extracts economic data from transcripts (members, costs, churn, vendors, budgets) and generates 1-page business case with Current State, Projected Impact, Cost of Inaction, and Implementation Timeline.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:57.787314Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:57.787207Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_016Tp4JQxzhSBLTaVns26kwV"
     },
     {
       "skillId": "skill_01UHC254uBt1eEWwhbg1RcJy",
