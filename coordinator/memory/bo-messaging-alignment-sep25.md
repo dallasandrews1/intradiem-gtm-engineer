@@ -1,0 +1,20 @@
+---
+name: bo-messaging-alignment-sep25
+description: "Sep 25 2026: BO campaign copy reconciled with marketing's V4 framework after Sierra's and Cheryl's DM notes; lead metric moved from idle hours to Cheryl's SLA-risk / capacity frame; aligned copy APPLIED to all five paused campaigns Sep 25, resume is Dallas's hand"
+metadata:
+  type: project
+---
+
+Sep 25 2026. Naveen asked Cheryl Eckel and Sierra Jones (group DM C0C3F93JU1F, thread 1790216786.941909) for feedback on the Sep 23 BO copy canvas (F0C44LAJ9HP). Sierra: "I think this works," but flagged it differs from marketing's V4 framework (BOO_Industry_Outreach_Messaging_Framework_V04.pdf, Sep 9). Cheryl: is "idle hours" the metric to lead with, vs SLA risk and capacity orchestration?
+
+The call (Dallas's decision maker rule applied): keep the Sep 23 shape and Nathan's voice (dated peak opener, one thread, question close on Email 1, demo ask from Email 2), take Cheryl's lead metric everywhere. Product sentence now: "shows whether the people on shift can clear what's piling up before turnaround slips, and moves the next case to whoever has the minutes." Idle hours (14 per associate) appears once per sequence, in LinkedIn DM 2 / proof email, as capacity back on the queue, never as the question. 15.4x ROI added at Email 2 (V4's economic-case slot). Figures, Optum-in-email-only, no product names, pilot-total and productivity-not-cost rules carried from V4 as written. Naveen wrote "before we launch" on Sep 24, but all five have been live since Sep 23.
+
+Send state at the time (lemlist stats Sep 25): Email 1 out to 216 of 243 leads; nothing after it sent except LinkedIn invites. So the aligned text lands on every unsent step (Email 2 onward, DMs, voicemails, breakup) and on Email 1 only for unreached leads.
+
+Staged: `motions/back_office_expansion/bo_rebuild_sep22/BO_Aligned_Copy_Sep25.md` (same content as the new canvas "BO campaigns, aligned copy Sep 25"). NOT applied to lemlist; apply is a REST PATCH per step as in apply_sep23, on Dallas's go after the group reads it. Question left open in the canvas for Cheryl: "turnaround" vs spelling out "SLA" for COO seats.
+
+Related: [[bo-lemlist-empty-branches-sep22]], [[rep-copy-review-canvas-sep22]], [[feedback-make-the-call-dont-hand-it-back]]
+
+**APPLIED Sep 25 2026 (Dallas's "make the exec decision and apply them all").** Decision on the open question: "turnaround" stays (TAT in insurance, service level in BPO); "SLA" would read as vendor language in a cold email, and BPO already carries "client SLAs" where it's native. Dallas paused all five first. Plan built as phrase + whole-message replacements over the live snapshot (apply_sep25/plan_build.py, dead-rule and leftover-language checks), 150 fields on 150 steps: Payer 39, FS 21, Insurance 33, BPO 33, Net-New 24. Every field read back exact, zero drift on untouched fields, all five still paused after. Snapshots BEFORE_/AFTER_ per campaign plus AFTER_LIVE re-read in apply_sep25/. Email 1 and the follow-on "re:" emails were edited too (only unreached leads get them). gtm-copy-reviewer run on the live digest after the apply. NOT resumed: Dallas resumes the five in the lemlist UI or asks for it.
+
+**Round 2, Sep 25.** gtm-copy-reviewer on the live text returned two findings. (1) UHC/Optum Liquid swap absent in FS, Insurance, BPO, Net-New: checked real rows over the lemlist export, UnitedHealthcare parent_account exists only in Payer (7 leads) where the swap is live; the other four hold zero UHC/Optum/McKesson rows, and a UHC lead belongs in Payer by design, so no change. Rule for next time: a reviewer's "if one ever gets loaded" is a list-gate question, answer it with a row read, not a copy edit. (2) "close to two working days each" appended to the 14 idle hours figure is an 8-hour-day conversion stapled onto a verified number; cut on 16 fields (apply2.py, all exact, zero drift, all five still paused). Total applied Sep 25: 166 fields. Canvas F0C4CLG845B and BO_Aligned_Copy_Sep25.md synced to the live text. Still not resumed.

@@ -866,3 +866,8 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [Nate call list job Sep24](nate-call-list-job-sep24.md) — LOADED live; lemlist lead score is UI-only, job scores the activities feed instead; first post Fri Sep 25 ~7:12am ET
 - [Picks point at the best asset](feedback-picks-point-at-the-best-asset.md) — when the strongest built thing cannot be a pick, make an eligible pick name it as the bar and link it
 - [Leadership reply answers only the ask](feedback-leadership-reply-answers-only-the-ask.md) — one line per question she named, links, nothing for the meeting; cut until "send as-is" is yes
+
+## Swept from -Users-dallasandrews on 2026-09-25
+- [BO messaging alignment Sep25](bo-messaging-alignment-sep25.md) — Cheryl's SLA-risk frame replaces idle hours as the lead; APPLIED to all five paused campaigns Sep 25 (150 fields exact), resume is Dallas's hand
+- [Rachel four-account package Sep25](rachel-four-account-package-sep25.md) — BofA, Centene, TD added to the Keegan shape; STAGED; Centene COO cold-emailed; TD NACO seat found
+- [signal-researcher cannot write](signal-researcher-agents-cannot-write.md) — extract its files from the transcript, never re-type
