@@ -1,6 +1,6 @@
 ---
 name: keegan-salesnav-list-in-lemlist-sep24
-description: Keegan's 264-lead Sales Navigator list is fully in lemlist ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) and fully read as of Sep 24 2026; 73 on the alumni page (120 total), 4 names unresolved; roster written back to lemlist Sep 24 (URL 200, email 131, phone 182 of 264); 6 duplicate pairs merged Sep 25, list whole at 264 with no shared identifiers
+description: Keegan's 264-lead Sales Navigator list ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) is read, deduped and written back as of Sep 25 2026: URL 258, work email 203, phone 256 of 264; 11 account people added to his maps and rooms; alumni page 137 with 90 from the list
 metadata:
   type: project
 ---
@@ -21,13 +21,16 @@ Enrich Person and Find Contact Details runs read all 170 unread people (1,238.6 
 that predates Intradiem, 72 gate-cut Sep 23, 6 no customer in history, 4 unresolved common names (Eric Johnson, Amit Anand, John Hogan,
 Scott Davidson). Alumni page 65 to 120 and the Keegan index counter deployed (backoffice-maps d7447df3, 6a149bb9).
 
+Sep 25 morning (Dallas: only useful with URL plus work email, and the account people on the maps): 56 URLs written from the Sep 23 pull,
+18 more exact-URL duplicate pairs merged into the older records (Hunter and Harrower merges denied by the classifier, left for Dallas), Foss
+merged into his Aug 6 campaign record, two more Clay passes (867.6 credits) and a second write-back of 74. List now URL 258 / email 203 /
+phone 256; 55 rows have a URL and no work email after two passes. 11 list people at Citizens, The Hartford and Vanguard added to the map
+sheets with title-inferred reporting lines and deployed (maps a702e527, rooms 65696749); alumni page 137, index 137.
+
 **Why:** the lemlist People Database replica of Keegan's search missed two thirds of his real list; his list is the only ground truth for his
-definition, and any "N of 264" story must come from list membership, never from the criteria match. Clay search by full_name plus current
-title resolves a name-only row to a LinkedIn URL for free, so a names-only paste is recoverable without a re-export.
-Write-back done Sep 24 evening: 166 contacts updated by id with fillEmptyOnly (stored values never replaced), list now reads URL 200 / email 131 /
-phone 182 of 264; 6 rows conflicted because the email or URL already sits on an older contact (Volz, Hyde, Griffin, Fiorella, Brooks, David M.),
-phone landed on each. Charles T Brooks's older record still reads Kemper while Clay reads Bamboo Insurance.
-Sep 25: the six pairs merged into the older records (list memberships moved to the survivors, so the list stays at 264; 8 rows now sit in a campaign).
-**How to apply:** the list is load-ready on identifiers; what remains is the 4 unresolved names from Keegan's own list, and Charles Brooks's campaign owner should hear that Clay reads him at Bamboo Insurance while the record says Kemper. The Keegan index builder writes account_maps/keegan_index.html only; copy it into
+definition. Clay search by full_name plus current title resolves a name-only row to a URL for free. Corporate mail domains differ from web
+domains (jci.com, fmr.com, intact.net), so an email check needs an alias table, not a bare domain match.
+**How to apply:** treat the list as load-ready except the 61 short rows named in the log. Keegan should correct the 11 inferred reporting
+lines on his maps. The Keegan index builder writes account_maps/keegan_index.html only; copy it and the three map pages into
 deploy-backoffice-maps/keegan/ by hand before deploying maps. Related: [[keegan-door-context-sep23]],
 [[clay-enrich-person-contact-details-routine]], [[lemlist-salesforce-create-on-sync-off-sep23]].
