@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790355794701,
+  "lastUpdated": 1790358199321,
   "skills": [
     {
       "skillId": "import-memory",
@@ -92,9 +92,10 @@
       "skillId": "skill_01SGguhGMoLyoaL5uMnkXQv1",
       "name": "intradiem-objection-handler",
       "description": "Objection handler for Intradiem outbound and mid-funnel replies. Triggers when a prospect replies with pushback. Diagnoses the category (Bad Timing, We Have WFM, Built In-House RPA, Evaluating Competitor, No Budget, Send Info, Wait for October Ratings) and applies the Reframe Framework (Acknowledge → Insight Pivot → Soft CTA) in a calm, peer-level 3-4 sentence response drafted in the sending rep's voice. Trigger on: prospect pushed back, they said no, objection reply, they're evaluating someone else, they said send info, they have Verint or NICE already, they built it in-house, how do I respond to this reply. Load proactively whenever a prospect reply lands from any motion.",
-      "source": "custom",
-      "updatedAt": "2026-07-06T03:56:31.727954Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-07-06T03:56:31.727744Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_017bjy5F8hXRfVf6vLSiNA3v"
     },
     {
       "skillId": "skill_01PuYjdwq1yLc4vCWeAtze3A",
