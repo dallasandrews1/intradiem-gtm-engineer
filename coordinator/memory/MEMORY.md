@@ -871,3 +871,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 - [BO messaging alignment Sep25](bo-messaging-alignment-sep25.md) — Cheryl's SLA-risk frame replaces idle hours as the lead; APPLIED to all five paused campaigns Sep 25 (150 fields exact), resume is Dallas's hand
 - [Rachel four-account package Sep25](rachel-four-account-package-sep25.md) — BofA, Centene, TD added to the Keegan shape; STAGED; Centene COO cold-emailed; TD NACO seat found
 - [signal-researcher cannot write](signal-researcher-agents-cannot-write.md) — extract its files from the transcript, never re-type
+
+## Swept from -Users-dallasandrews on 2026-09-25
+- [AE package review rules Sep25](ae-package-review-rules-sep25.md) — alumni exclusions, Salesforce address wins, no door/wave words, no Sales Navigator or Clay on rep pages
