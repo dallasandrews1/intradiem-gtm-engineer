@@ -880,3 +880,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-25
 - [Messaging canon is the source](feedback-messaging-canon-is-the-source.md) — decided angles and talk tracks live in motions/shared/messaging_canon.json; rooms and drafts read the current entry
+
+## Swept from -Users-dallasandrews on 2026-09-25
+- [Canonical rep host Sep25](canonical-rep-host-intradiem-accounts-sep25.md) — links to reps go on intradiem-accounts.pages.dev/<rep>/; refresh _staged_pre_job6 before a plans deploy
+- [Org map breadth rule](feedback-org-map-breadth-rule.md) — no row wider than six, sub-leads by title, leaf sets as a grid, render every map
