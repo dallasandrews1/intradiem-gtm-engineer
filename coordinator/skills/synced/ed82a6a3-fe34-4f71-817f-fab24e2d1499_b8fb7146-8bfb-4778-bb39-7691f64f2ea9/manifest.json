@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790358199321,
+  "lastUpdated": 1790372064935,
   "skills": [
     {
       "skillId": "import-memory",
@@ -348,9 +348,10 @@
       "skillId": "skill_01TKA6fcqvcVjSiZwuMp6Tpu",
       "name": "league-post-discovery",
       "description": "Post-Discovery Follow-Up orchestrator. Runs immediately after multi-stakeholder Discovery Calls. Produces a Forwardable Recap email (BLUF + Assigned Next Steps + Top Problems/Solutions) for the full room, then individual 1:1 follow-up emails per stakeholder, plus Salesforce Activity summary. The recap anchors the deal narrative; the 1:1s deepen individual threads. Trigger on any post-disco follow-up, recap email, discovery debrief, \"send the follow-ups,\" \"write the recap,\" or any request to summarize and follow up after a multi-stakeholder call.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:59.749162Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:59.748947Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01EqmK616z8dLodTAFKHNXgv"
     },
     {
       "skillId": "skill_01MJX9UubbdYyaUp5hK3hfCJ",
