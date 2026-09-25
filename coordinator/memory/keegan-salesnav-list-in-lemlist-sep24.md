@@ -1,6 +1,6 @@
 ---
 name: keegan-salesnav-list-in-lemlist-sep24
-description: Keegan's 264-lead Sales Navigator list is fully in lemlist ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) and fully read as of Sep 24 2026; 73 on the alumni page (120 total), 4 names unresolved; roster written back to lemlist Sep 24 (URL 200, email 131, phone 182 of 264); 6 duplicate pairs left to merge
+description: Keegan's 264-lead Sales Navigator list is fully in lemlist ("Keegan's Search", clt_fQpabfLBHJX9Ghpwc) and fully read as of Sep 24 2026; 73 on the alumni page (120 total), 4 names unresolved; roster written back to lemlist Sep 24 (URL 200, email 131, phone 182 of 264); 6 duplicate pairs merged Sep 25, list whole at 264 with no shared identifiers
 metadata:
   type: project
 ---
@@ -27,6 +27,7 @@ title resolves a name-only row to a LinkedIn URL for free, so a names-only paste
 Write-back done Sep 24 evening: 166 contacts updated by id with fillEmptyOnly (stored values never replaced), list now reads URL 200 / email 131 /
 phone 182 of 264; 6 rows conflicted because the email or URL already sits on an older contact (Volz, Hyde, Griffin, Fiorella, Brooks, David M.),
 phone landed on each. Charles T Brooks's older record still reads Kemper while Clay reads Bamboo Insurance.
-**How to apply:** merge the 6 duplicate pairs (ids in the log) before any campaign load from this list; then the 4 unresolved names from Keegan's own list. The Keegan index builder writes account_maps/keegan_index.html only; copy it into
+Sep 25: the six pairs merged into the older records (list memberships moved to the survivors, so the list stays at 264; 8 rows now sit in a campaign).
+**How to apply:** the list is load-ready on identifiers; what remains is the 4 unresolved names from Keegan's own list, and Charles Brooks's campaign owner should hear that Clay reads him at Bamboo Insurance while the record says Kemper. The Keegan index builder writes account_maps/keegan_index.html only; copy it into
 deploy-backoffice-maps/keegan/ by hand before deploying maps. Related: [[keegan-door-context-sep23]],
 [[clay-enrich-person-contact-details-routine]], [[lemlist-salesforce-create-on-sync-off-sep23]].
