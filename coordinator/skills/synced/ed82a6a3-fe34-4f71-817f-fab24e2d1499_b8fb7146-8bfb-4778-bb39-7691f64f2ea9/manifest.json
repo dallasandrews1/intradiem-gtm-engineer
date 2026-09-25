@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790330710383,
+  "lastUpdated": 1790348727325,
   "skills": [
     {
       "skillId": "import-memory",
@@ -459,9 +459,10 @@
       "skillId": "skill_01RY8aFWMecVLZozr9pRqCkq",
       "name": "weekly-portfolio-prioritization",
       "description": "Run the Portfolio Prioritization workflow every Friday at 3:00 PM to rank target payer accounts by ROI opportunity, generate a PDF, and email a summary.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:48.046161Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:48.045937Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01U4vgKYPjEPr5sti6zij79N"
     },
     {
       "skillId": "skill_01Udf1SAo65xeFuXSkzSfpE5",
