@@ -877,3 +877,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-25
 - [Rep pages: sticky and easy](feedback-rep-pages-sticky-and-easy.md) — accounts side by side, small honest rewards for action, all in the shared theme
+
+## Swept from -Users-dallasandrews on 2026-09-25
+- [Messaging canon is the source](feedback-messaging-canon-is-the-source.md) — decided angles and talk tracks live in motions/shared/messaging_canon.json; rooms and drafts read the current entry
