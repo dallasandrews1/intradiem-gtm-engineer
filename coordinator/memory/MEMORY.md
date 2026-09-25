@@ -874,3 +874,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-25
 - [AE package review rules Sep25](ae-package-review-rules-sep25.md) — alumni exclusions, Salesforce address wins, no door/wave words, no Sales Navigator or Clay on rep pages
+
+## Swept from -Users-dallasandrews on 2026-09-25
+- [Rep pages: sticky and easy](feedback-rep-pages-sticky-and-easy.md) — accounts side by side, small honest rewards for action, all in the shared theme
