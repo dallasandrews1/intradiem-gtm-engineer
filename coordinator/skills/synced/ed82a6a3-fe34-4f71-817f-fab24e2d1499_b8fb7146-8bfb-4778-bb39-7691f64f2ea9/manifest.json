@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790323500811,
+  "lastUpdated": 1790325303544,
   "skills": [
     {
       "skillId": "import-memory",
@@ -99,9 +99,10 @@
       "skillId": "skill_01PuYjdwq1yLc4vCWeAtze3A",
       "name": "clay-wave-runbook",
       "description": "Wave discipline for every Clay campaign. Enforces \"source the full universe once, process in waves\" and runs the per-wave checklist. Trigger on any Clay contact-volume decision or wave action - add contacts, load leads, fill the campaign, expand the campaign, next wave, wave 2, new batch, re-run enrichment, sync leads, how many contacts, load the rest, when do we go back, or starting/scaling any motion (Stars, Cost-Mandate, WFM-Adjacency, Install-Base, Back Office). Load proactively whenever a Clay build, campaign load, or launch is discussed. Canonical rules live in Clay_Golden_Standard.md section 16 and New_Motion_Build_Runbook.md at the project root - this skill enforces, those docs govern; if they disagree, the docs win.",
-      "source": "custom",
-      "updatedAt": "2026-07-15T23:04:00.537492Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-07-15T23:04:00.537341Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01KJnD6ALpS8Qro1jmWbehyA"
     },
     {
       "skillId": "skill_01NnVr86drBdE5XQ7hLDA5LG",
