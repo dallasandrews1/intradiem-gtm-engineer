@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790305369227,
+  "lastUpdated": 1790319810507,
   "skills": [
     {
       "skillId": "import-memory",
@@ -82,9 +82,10 @@
       "skillId": "skill_01PVTZTKAowViytv17BuMmPb",
       "name": "cognitive-calibration",
       "description": "Universal pre-execution thinking framework: before any substantive output, detect the user's operating mode (Execution, Strategy, Build, Conversation), run a silent failure-mode scan weighted to the task type, apply compensating behaviors for Claude's documented weaknesses vs GPT and Gemini, and enforce output discipline so the deliverable matches what the user needs. Built from 50+ forensic failure instances across live enterprise sales sessions. Fires on EVERY substantive request (strategy, execution, copy, analysis, research, deal planning, recommendations) and on browser-driven work: Chrome extension sessions, live Clay/Apollo/CRM verification, canvas sweeps, any task where page reads become reported claims or counts (Gate 2B). The cognitive foundation layer for all downstream skills.",
-      "source": "custom",
-      "updatedAt": "2026-07-14T22:47:00.581169Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-07-14T22:47:00.581015Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_0145SP8obM5vmDBSzVyeSQxY"
     },
     {
       "skillId": "skill_01SGguhGMoLyoaL5uMnkXQv1",
@@ -436,9 +437,10 @@
       "skillId": "skill_01PMPqyDgkQtPwyotAKB5gu6",
       "name": "league-shared-skill-reviewer",
       "description": "Reviews a League SKILL.md (and any accompanying REFERENCE.md or examples/) for compliance with the Code of Conduct, security requirements, and structural quality standards before a PR is merged. Produces a structured verdict with specific violations and recommended fixes. Trigger when someone says: review this skill, check this skill, audit this skill, is this skill ready to merge, does this skill pass, skill PR review, or skill quality check. Also trigger when a PR touches a SKILL.md file and the reviewer asks for a quality check. Load proactively when a SKILL.md file is opened and the context suggests review rather than authoring or editing.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:46.280034Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:46.279903Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01X8kpgtCF6ZAeZYzQ944XXt"
     },
     {
       "skillId": "skill_01DUt9CR1qszAu9FpAV4SG1S",
