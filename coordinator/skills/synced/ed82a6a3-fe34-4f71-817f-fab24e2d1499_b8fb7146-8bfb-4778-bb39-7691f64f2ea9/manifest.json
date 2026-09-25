@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790348727325,
+  "lastUpdated": 1790351730962,
   "skills": [
     {
       "skillId": "import-memory",
@@ -258,9 +258,10 @@
       "skillId": "skill_01Rnq37PFaT3Ec4auDWY7ySG",
       "name": "league-meddpicc",
       "description": "MEDDPICC Hygiene Pass. Runs after every Discovery Call and significant mid-funnel calls. Populates all 8 MEDDPICC fields with Salesforce text and confidence ratings (Strong/Moderate/Gap). Generates Gap Report with specific follow-up questions.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:04.217847Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:04.217727Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_012mcjigu9hDSt8wfF6JUwd8"
     },
     {
       "skillId": "skill_01F5Mbi71EADqjCS9EB9KZQH",

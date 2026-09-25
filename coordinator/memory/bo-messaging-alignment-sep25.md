@@ -1,6 +1,6 @@
 ---
 name: bo-messaging-alignment-sep25
-description: "Sep 25 2026: BO campaign copy reconciled with marketing's V4 framework after Sierra's and Cheryl's DM notes; lead metric moved from idle hours to Cheryl's SLA-risk / capacity frame; aligned copy APPLIED to all five paused campaigns Sep 25, resume is Dallas's hand"
+description: "Sep 25 2026: BO campaign copy reconciled with marketing's V4 framework after Sierra's and Cheryl's DM notes; lead metric moved from idle hours to Cheryl's SLA-risk / capacity frame; aligned copy APPLIED to all five paused campaigns Sep 25, resumed Sep 25 on Dallas's ask, all five running on the aligned copy"
 metadata:
   type: project
 ---
@@ -18,3 +18,5 @@ Related: [[bo-lemlist-empty-branches-sep22]], [[rep-copy-review-canvas-sep22]], 
 **APPLIED Sep 25 2026 (Dallas's "make the exec decision and apply them all").** Decision on the open question: "turnaround" stays (TAT in insurance, service level in BPO); "SLA" would read as vendor language in a cold email, and BPO already carries "client SLAs" where it's native. Dallas paused all five first. Plan built as phrase + whole-message replacements over the live snapshot (apply_sep25/plan_build.py, dead-rule and leftover-language checks), 150 fields on 150 steps: Payer 39, FS 21, Insurance 33, BPO 33, Net-New 24. Every field read back exact, zero drift on untouched fields, all five still paused after. Snapshots BEFORE_/AFTER_ per campaign plus AFTER_LIVE re-read in apply_sep25/. Email 1 and the follow-on "re:" emails were edited too (only unreached leads get them). gtm-copy-reviewer run on the live digest after the apply. NOT resumed: Dallas resumes the five in the lemlist UI or asks for it.
 
 **Round 2, Sep 25.** gtm-copy-reviewer on the live text returned two findings. (1) UHC/Optum Liquid swap absent in FS, Insurance, BPO, Net-New: checked real rows over the lemlist export, UnitedHealthcare parent_account exists only in Payer (7 leads) where the swap is live; the other four hold zero UHC/Optum/McKesson rows, and a UHC lead belongs in Payer by design, so no change. Rule for next time: a reviewer's "if one ever gets loaded" is a list-gate question, answer it with a row read, not a copy edit. (2) "close to two working days each" appended to the 14 idle hours figure is an 8-hour-day conversion stapled onto a verified number; cut on 16 fields (apply2.py, all exact, zero drift, all five still paused). Total applied Sep 25: 166 fields. Canvas F0C4CLG845B and BO_Aligned_Copy_Sep25.md synced to the live text. Still not resumed.
+
+**RESUMED Sep 25 2026** on Dallas's explicit "resume the five BO campaigns": all five paused to running over the lemlist connector, status read back running.
