@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790386492666,
+  "lastUpdated": 1790390700933,
   "skills": [
     {
       "skillId": "import-memory",
@@ -473,9 +473,10 @@
       "skillId": "skill_01Udf1SAo65xeFuXSkzSfpE5",
       "name": "league-shared-skill-editor",
       "description": "Guides any League employee through improving or editing an existing org skill from workspace-agents. Covers how to install the skill locally, manage the enterprise vs personal priority conflict, iterate safely, and submit a PR back to the org. Trigger when someone says: improve a skill, edit a skill, update a skill, fix a skill, change a skill, the skill isn't working right, I want to make a skill better, or iterate on a skill. Load proactively when someone is working with a skill file and mentions wanting to change it.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:44.996085Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:44.995977Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01922Fhi19CrsWMkEag6Lp8U"
     },
     {
       "skillId": "xlsx",
