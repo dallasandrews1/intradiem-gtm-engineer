@@ -891,3 +891,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 ## Swept from -Users-dallasandrews on 2026-09-26
 - [John exec brief, biweekly Sep26](john-exec-brief-biweekly-sep26.md) — SLT get a written one-page PDF by email before each alignment meeting; first edition for Oct 1 in Deliverables; bullets, traditional wording, no control-tower links
 - [Exec brief: lean](feedback-exec-brief-lean.md) — a cell is a phrase, one column, four blocks; first John brief rejected as wordy and messy Sep 26
+
+## Swept from -Users-dallasandrews on 2026-09-26
+- [Stars child shells Sep26](stars-child-shells-sep26.md) — six trigger-cohort campaigns DRAFT in lemlist, zero leads; REST step PATCH needs "type" in the body
