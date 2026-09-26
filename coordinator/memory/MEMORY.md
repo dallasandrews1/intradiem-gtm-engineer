@@ -894,3 +894,6 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-26
 - [Stars child shells Sep26](stars-child-shells-sep26.md) — six trigger-cohort campaigns DRAFT in lemlist, zero leads; REST step PATCH needs "type" in the body
+
+## Swept from -Users-dallasandrews on 2026-09-26
+- [DWO exec re-cut Sep26](dwo-exec-recut-sep26.md) — service track + ACD applied to 803 paused leads; canon dwo-exec-service-track-sep26; lead vars via POST /leads/{id}/variables

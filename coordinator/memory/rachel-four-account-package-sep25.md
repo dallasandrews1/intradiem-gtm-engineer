@@ -1,6 +1,6 @@
 ---
 name: rachel-four-account-package-sep25
-description: "Sep 25 2026: Rachel DiBello's Keegan-shape package extended from Wells Fargo to four accounts (Bank of America, Centene, TD Bank added); builders generalized to N accounts; committees enriched through Clay (about 3,400 credits); STAGED, deploy is Dallas's terminal"
+description: "Sep 25 2026: Rachel DiBello's Keegan-shape package extended to four accounts; DEPLOYED Sep 26 morning; maps re-treed Sep 26 afternoon into Front Office and Back Office on Keegan's shape, STAGED, redeploy owed from Dallas's terminal"
 metadata:
   type: project
 ---
@@ -9,7 +9,7 @@ metadata:
 
 **Index and alumni (afternoon):** build_rachel_index.py gives Rachel Keegan's exact front page (per-card links, warm first calls, builder link, alumni count 20, named product PDFs, finder) and motions/rachel/alumni/build_alumni_page.py her alumni page; the shared theme now lays cards four across with tap-to-mark-done checks and a progress chip on every rep index ([[feedback-rep-pages-sticky-and-easy]]).
 
-**Maps (afternoon):** all twelve re-treed to the six-sibling rule with sub-leads by title; the shared renderer now grids leaf sets and centers the top card on wide trees ([[feedback-org-map-breadth-rule]]). Kits rebuilt for the new per-manager groups; TD and Keegan-Vanguard E1 angles re-cut to the canon ([[feedback-messaging-canon-is-the-source]]); Vanguard lemlist E1 re-cut drafted at motions/keegan/blitz_vanguard_e1_recut_sep25.md, not pushed. Keegan's maps still run the old renderer and the Sales Navigator pill until his package is rebuilt.
+**Maps:** the Sep 25 re-tree (sub-leads by title, leaf grid) was rejected Sep 26; every account is now two maps, Front Office and Back Office, as labeled blocks on Keegan's tree shape, with an intro line per map and a "block" column on the sheet; the kit's TD door rule keys on "map|block" (log automation/logs/rachel-maps-retree-2026-09-26.md, rule [[feedback-org-map-breadth-rule]]). Kits rebuilt for the new per-manager groups; TD and Keegan-Vanguard E1 angles re-cut to the canon ([[feedback-messaging-canon-is-the-source]]); Vanguard lemlist E1 re-cut drafted at motions/keegan/blitz_vanguard_e1_recut_sep25.md, not pushed. Keegan's maps still run the old renderer and the Sales Navigator pill until his package is rebuilt.
 
 **State:** Wells Fargo was already LIVE on backoffice-maps and save-rooms (the intradiem-accounts host 404s for it: the plans deploy was never run). The three new accounts are STAGED under ~/Desktop/Intradiem Deliverables/deploy-backoffice-maps/rachel/<slug>/ and deploy-save-rooms/<slug>/rachel/ (room, brief/, one-pager/, one-pagers/ x11, sequence/); rep index at /rachel/ shows four cards. Deploy = `automation/deploy_rep_pages.sh` maps, rooms, plans from Dallas's terminal (auto mode denies wrangler). Register every sent URL in automation/config/shared_links_manifest.json.
 
