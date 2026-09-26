@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790403325858,
+  "lastUpdated": 1790409939204,
   "skills": [
     {
       "skillId": "import-memory",
@@ -128,9 +128,10 @@
       "skillId": "skill_01WPjAX7o4MHLygdZyp8qjUv",
       "name": "intradiem-verified-metrics",
       "description": "Intradiem's source of truth for verified metrics, proof points, customer value stories, and positioning. Enforces citation discipline and 1:1/1:many approval tiers, plus the customer-sourced value tiers (CV-INTERNAL / CV-1:1 / CV-1:many) for Greenlight/Zuar per-account CTO/realized-value data. Primary source: 04-value-repository/Intradiem_Value_Repository.md + Customer_Value_Registry.md. Trigger when citing Intradiem stats, ROI, NRR, proof points, customer results, per-account CTO figures, or competitive positioning; when building outreach, strike plans, pitch prep, or webinar/marketing/QBR content with Intradiem data; or on \"what are our numbers,\" \"is that verified,\" \"what can I say about [customer],\" \"can I use their CTO number,\" \"update proof points,\" \"add a case study.\" Load proactively when output includes an Intradiem number or a customer's own usage figure, or when a new case study/deck is uploaded. Never skip because you \"remember\" a number — always check.",
-      "source": "custom",
-      "updatedAt": "2026-07-18T07:15:41.683597Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-07-18T07:15:41.683456Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01VoExsEQuEZMpAyh3SfLEMV"
     },
     {
       "skillId": "skill_01L6eX5KBnVG3kWXJDooK9HW",
