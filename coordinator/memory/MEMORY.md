@@ -897,3 +897,7 @@ One line per memory. Hooks only, never content. Pull the file when its hook is r
 
 ## Swept from -Users-dallasandrews on 2026-09-26
 - [DWO exec re-cut Sep26](dwo-exec-recut-sep26.md) — service track + ACD applied to 803 paused leads; canon dwo-exec-service-track-sep26; lead vars via POST /leads/{id}/variables
+
+## Swept from -Users-dallasandrews on 2026-09-26
+- [Review docs end with the ask](feedback-review-docs-ask-not-changelog.md) — never a what-we-fixed list on a group review canvas; changelog goes in the log
+- [Voicemails must sound spoken](feedback-voicemails-must-sound-spoken.md) — structure is not enough; open on the person, one sayable idea, derive a spoken vm_hook per lead
