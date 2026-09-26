@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790409939204,
+  "lastUpdated": 1790417748801,
   "skills": [
     {
       "skillId": "import-memory",
@@ -191,9 +191,10 @@
       "skillId": "skill_01X1wvTUXimBk2MT4VkS7BRU",
       "name": "league-ae-initializer",
       "description": "AE system initialization and Canon lock. Indexes AE_Deal_Accelerator_Canon.md, BDR_Architect_Canon.md, and League_Payer_Value_Prop.pdf to establish session-wide constraints. Boot sequence for all downstream AE skills.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:07.907936Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:07.907810Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01LSCN1gxxFHfyhm5gUDXXFe"
     },
     {
       "skillId": "skill_011KAPTJwRr2e8MtqxEqzdKV",
