@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790390700933,
+  "lastUpdated": 1790397318657,
   "skills": [
     {
       "skillId": "import-memory",
@@ -323,9 +323,10 @@
       "skillId": "skill_01VCZfkHh4yWKozd1u1b3QVN",
       "name": "league-holistic-roadmap",
       "description": "NHPRI-standard holistic 10-Day Execution Roadmap with full 5-tier buying committee coverage. Supersedes league-execution-roadmap by expanding from High-Propensity Trio to ALL identified committee members (minimum 8, target 10-16 contacts across Champion, Economic Buyer, Technical/Legal, Executive Sponsor, and Operational/Pain layers). Produces a single send-ready .md file with buying committee summary table, staggered entry schedule, and complete outreach copy for every contact organized by tier. Trigger on: roadmap, 10-day plan, execution roadmap, outreach plan, daily cadence, holistic roadmap, full committee roadmap, NHPRI-standard roadmap, run the full roadmap for [account]. Also trigger when league-full-pipeline reaches Phase 5. Load this skill instead of league-execution-roadmap for any new roadmap request — it is the current gold standard.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:57.036216Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:57.036068Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01V1FJ51qrAfzoj5wbnTyrXV"
     },
     {
       "skillId": "skill_01NHPAUrQ2XNWsJYNtz4dGwP",
