@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790397318657,
+  "lastUpdated": 1790399721570,
   "skills": [
     {
       "skillId": "import-memory",
@@ -145,9 +145,10 @@
       "skillId": "skill_01VSdBf4FeY1cdQP9TqbHbeU",
       "name": "ai-readiness-assessment",
       "description": "AI Readiness Assessment — guided 5-dimension intake that scores whether a team is ready for an AI build. Trigger on phrases like \"I want to build an AI tool,\" \"can AI help with,\" \"we need an AI solution,\" \"how do I get started with AI,\" \"readiness check,\" \"AI assessment,\" \"is my team ready for AI,\" \"scope an AI project,\" \"build me something with AI,\" \"automate this with AI,\" \"can Claude do this for us,\" or \"I have an idea for AI.\" Also trigger proactively when someone describes a workflow problem and immediately jumps to requesting an AI tool without thinking through readiness — run the assessment first before building anything.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:48:10.556011Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:48:10.555882Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01FGgKejTXmyULZBuqeCCXo3"
     },
     {
       "skillId": "skill_01M8U3N65udZu66ouBHSahzR",
