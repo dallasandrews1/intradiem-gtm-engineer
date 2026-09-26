@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790399721570,
+  "lastUpdated": 1790403325858,
   "skills": [
     {
       "skillId": "import-memory",
@@ -414,9 +414,10 @@
       "skillId": "skill_01VmrNEekHfbvJQUa3Jwjrb2",
       "name": "league-artisan-agent-builder",
       "description": "Builds two copy-paste-ready Artisan (Ava) AI sales agents per target account — Digital Engagement (CIO/CTO/VP Digital) and Health Engagement (CMO/VP Pop Health/VP Quality). Gathers intelligence from Salesforce, Slack opportunity channels, web research, and project files, populates templates, verifies metrics, runs pre-mortem, and delivers final output. Trigger on: \"build artisan agents for [account]\", \"create agents for [account]\", \"artisan build\", \"set up outreach agents\", \"build ava agents\", \"run the artisan pipeline\", or any mention of Artisan/Ava agents with an account name. Load proactively when discussing a new target account that lacks agents.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:49.518700Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:49.518544Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01V2ViyH1fftw7c7LbCrEyP5"
     },
     {
       "skillId": "skill-creator",
