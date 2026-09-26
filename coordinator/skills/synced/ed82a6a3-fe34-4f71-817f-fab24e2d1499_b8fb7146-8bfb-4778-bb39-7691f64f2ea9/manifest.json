@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1790372064935,
+  "lastUpdated": 1790386492666,
   "skills": [
     {
       "skillId": "import-memory",
@@ -340,9 +340,10 @@
       "skillId": "skill_01UHC254uBt1eEWwhbg1RcJy",
       "name": "league-cold-call-playbook",
       "description": "Tier 1 payer executive cold call script generator and live-call playbook. Produces persona-calibrated openers, 30-second expansions, objection handles, and memorizable 20/45-second script variants for every cold call touchpoint. Trigger on any request involving: cold call, cold calling, call script, phone script, live call, dial script, what to say when they pick up, how to open a call, call opener, call framework, objection handling on the phone, what to say if they push back, voicemail script, hail mary call, Day 9 call, Day 10 call, \"what do I say,\" \"how do I open,\" \"give me a script,\" call prep for cold outreach, or any request to generate or sharpen spoken-word outreach for payer executives. Also trigger when league-execution-roadmap or league-full-pipeline reaches a step that requires a cold call script, voice note script, or voicemail script. Load proactively when Dallas is working on any Tier 1 account outreach that includes phone-based touchpoints, even if not explicitly asked.",
-      "source": "custom",
-      "updatedAt": "2026-05-30T21:47:59.147563Z",
-      "creatorType": "user"
+      "source": "plugin",
+      "updatedAt": "2026-05-30T21:47:59.147424Z",
+      "creatorType": "user",
+      "backingPluginId": "plugin_01Ngr9TbKyuytZwHcQ3B4jP9"
     },
     {
       "skillId": "skill_01TKA6fcqvcVjSiZwuMp6Tpu",
